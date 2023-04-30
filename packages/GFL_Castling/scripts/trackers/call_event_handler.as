@@ -72,6 +72,7 @@ class call_event : Tracker {
                         bool exsist_ac130 = false;
                         int j=-1;
                         for (uint i=0;i<GFL_event_array.length();i++){
+                            // mb break? What's the point of running whole array
                             if (GFL_event_array[i].m_eventkey==2) {exsist_ac130=true;j=i;}
                         }
                         if (exsist_ac130){

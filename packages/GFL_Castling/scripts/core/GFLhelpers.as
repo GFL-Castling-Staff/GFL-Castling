@@ -62,8 +62,7 @@ void editPlayerNade(const Metagame@ metagame, int characterId, string Itemkey, u
 }
 
 string getPlayerEquipmentKey(const Metagame@ metagame, int characterId, uint slot){
-	if (slot <0) return "";
-	if (slot >5) return "";
+	if (slot < 0 || slot > 5) return "";
 	const XmlElement@ targetCharacter = getCharacterInfo2(metagame,characterId);
 	if (targetCharacter is null) return "";
 	array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
@@ -74,8 +73,7 @@ string getPlayerEquipmentKey(const Metagame@ metagame, int characterId, uint slo
 }
 
 string getDeadPlayerEquipmentKey(const Metagame@ metagame, int characterId, uint slot){
-	if (slot <0) return "";
-	if (slot >5) return "";
+	if (slot < 0 || slot > 5) return "";
 	const XmlElement@ targetCharacter = getCharacterInfo2(metagame,characterId);
 	if (targetCharacter is null) return "";
 	array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
@@ -89,8 +87,7 @@ void getMyItem(const Metagame@ metagame, int characterId){
 }
 
 int getPlayerEquipmentAmount(const Metagame@ metagame, int characterId, uint slot){
-	if (slot <0) return -1;
-	if (slot >5) return -1;
+	if (slot < 0 || slot > 5) return -1;
 	const XmlElement@ targetCharacter = getCharacterInfo2(metagame,characterId);
 	if (targetCharacter is null) return -1;
 	array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
@@ -270,9 +267,7 @@ float getAimOrientation4(Vector3 s_pos, Vector3 e_pos) {
 	if(asin(dy/ds)>0) {
 		return (dir*1.0-1.57)*(-1.0);
 	}
-	else {
-		return (dir*(-1.0)-1.57)*(-1.0);
-	}
+	return (dir*(-1.0)-1.57)*(-1.0);
 }
 
 float getAimOrientation4(Vector3 e_pos) {
@@ -284,9 +279,7 @@ float getAimOrientation4(Vector3 e_pos) {
 	if(asin(dy/ds)>0) {
 		return (dir*1.0-1.57)*(-1.0);
 	}
-	else {
-		return (dir*(-1.0)-1.57)*(-1.0);
-	}
+	return (dir*(-1.0)-1.57)*(-1.0);
 }
 
 float getOrientation4(Vector3 a) {
@@ -298,9 +291,7 @@ float getOrientation4(Vector3 a) {
 	if(asin(dy/ds)>0) {
 		return (dir*1.0-1.57)*(-1.0);
 	}
-	else {
-		return (dir*(-1.0)-1.57)*(-1.0);
-	}
+	return (dir*(-1.0)-1.57)*(-1.0);
 }
 
 Vector3 getMultiplicationVector(Vector3 s_pos, Vector3 scale) {

@@ -52,237 +52,91 @@ class ItemDropEvent : Tracker {
             int cId = event.getIntAttribute("character_id");
             int pId = event.getIntAttribute("player_id");     
             int jud_num =  int(itemDropFileIndex[itemKey]);
+
             switch(jud_num)
             {
                 case 1:{
-                    if(checkQueue(pId,"mod3")){
-                        failedUpgrade(cId, pId, "firecontrol.carry_item");
-                    }
-                    else{
-                        startQueue(pId,"mod3");
-                        sendPrivateMessageKey(m_metagame, pId, "digimindupdate");
-                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
-                    } 
+                    upgrade(cId, pId, "mod3", "firecontrol.carry_item", "digimindupdate", "digimind_sfx1.wav")
                     break;
                 }
                 case 2:{
-                    if(checkQueue(pId,"truecore")){
-                        failedUpgrade(cId, pId, "core_mask.carry_item");
-                    }
-                    else{
-                        startQueue(pId,"truecore");
-                        sendPrivateMessageKey(m_metagame, pId, "truemask");
-                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                    }
+                    upgrade(cId, pId, "truecore", "core_mask.carry_item", "truemask", "sfx_equip.wav")
                     break;
                 }
                 case 3:{
-                    if(checkQueue(pId,"type88")){
-                        failedUpgrade(cId, pId, "upgrade_type88.carry_item");
-                    }
-                    else{
-                        startQueue(pId,"type88");
-                        sendPrivateMessageKey(m_metagame, pId, "upgrade_88type");
-                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                    }
+                    upgrade(cId, pId, "type88", "upgrade_type88.carry_item", "upgrade_88type", "sfx_equip.wav")
                     break;
                 }
                 case 4:{
-                    if(checkQueue(pId,"aa12")){
-                        failedUpgrade(cId, pId, "upgrade_aa12.carry_item");
-                    }
-                    else{
-                        startQueue(pId,"aa12");
-                        sendPrivateMessageKey(m_metagame, pId, "upgrade_aa12");
-                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                    }
+                    upgrade(cId, pId, "aa12", "upgrade_aa12.carry_item", "upgrade_aa12", "sfx_equip.wav")
                     break;
                 }
                 case 5:{
-                    if(checkQueue(pId,"m1garand")){
-                        failedUpgrade(cId, pId, "upgrade_m1.carry_item");
-                    }
-                    else{
-                        startQueue(pId,"m1garand");
-                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
-                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                    }
+                    upgrade(cId, pId, "m1garand", "upgrade_m1.carry_item", "upgrade_common", "sfx_equip.wav")
                     break;
                 } 
                 case 6:{
-                    if(checkQueue(pId,"fg42")){
-                        failedUpgrade(cId, pId, "upgrade_fg42.carry_item");
-                    }
-                    else{
-                        startQueue(pId,"fg42");
-                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
-                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                    }
+                    upgrade(cId, pId, "fg42", "upgrade_fg42.carry_item", "upgrade_common", "sfx_equip.wav")
                     break;
                 }
                 case 7:{
-                    if(checkQueue(pId,"g41")){
-                        failedUpgrade(cId, pId, "upgrade_g41.carry_item");
-                    }
-                    else{
-                        startQueue(pId,"g41");
-                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
-                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                    }
+                    upgrade(cId, pId, "g41", "upgrade_g41.carry_item", "upgrade_common", "sfx_equip.wav")
                     break;
                 }
                 case 8:{
-                    if(checkQueue(pId,"vz61")){
-                        failedUpgrade(cId, pId, "upgrade_vz61.carry_item");
-                    }
-                    else{
-                        startQueue(pId,"vz61");
-                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
-                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                    }
+                    upgrade(cId, pId, "vz61", "upgrade_vz61.carry_item", "upgrade_common", "sfx_equip.wav")
                     break;
                 }
                 case 9:{
-                    if(checkQueue(pId,"m1903_1")){
-                        failedUpgrade(cId, pId, "upgrade_m1903_1.carry_item");
-                    }
-                    else{
-                        startQueue(pId,"m1903_1");
-                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
-                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                    }
+                    upgrade(cId, pId, "m1903_1", "upgrade_m1903_1.carry_item", "upgrade_common", "sfx_equip.wav")
                     break;
                 }
                 case 10:{
-                    if(checkQueue(pId,"m1903_2")){
-                        failedUpgrade(cId, pId, "upgrade_m1903_2.carry_item");
-                    }
-                    else{
-                        startQueue(pId,"m1903_2");
-                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
-                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                    }
+                    upgrade(cId, pId, "m1903_2", "upgrade_m1903_2.carry_item", "upgrade_common", "sfx_equip.wav")
                     break;
                 }   
                 case 11:{
-                    if(checkQueue(pId,"fn49")){
-                        failedUpgrade(cId, pId, "upgrade_fn49.carry_item");
-                    }
-                    else{
-                        startQueue(pId,"fn49");
-                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
-                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                    }
+                    upgrade(cId, pId, "fn49", "upgrade_fn49.carry_item", "upgrade_common", "sfx_equip.wav")
                     break;
                 }     
                 case 12:{
-                    if(checkQueue(pId,"9a91")){
-                        failedUpgrade(cId, pId, "upgrade_9a91.carry_item");
-                    }
-                    else{
-                        startQueue(pId,"9a91");
-                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
-                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                    }
+                    upgrade(cId, pId, "9a91", "upgrade_9a91.carry_item", "upgrade_common", "sfx_equip.wav")
                     break;
                 }
                 case 13:{
-                    if(checkQueue(pId,"m14")){
-                        failedUpgrade(cId, pId, "upgrade_m14.carry_item");
-                    }
-                    else{
-                        startQueue(pId,"m14");
-                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
-                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                    }
+                    upgrade(cId, pId, "m14", "upgrade_m14.carry_item", "upgrade_common", "sfx_equip.wav")
                     break;
                 }
                 case 14:{
-                    if(checkQueue(pId,"g3")){
-                        failedUpgrade(cId, pId, "upgrade_g3.carry_item");
-                    }
-                    else{
-                        startQueue(pId,"g3");
-                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
-                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                    }
+                    upgrade(cId, pId, "g3", "upgrade_g3.carry_item", "upgrade_common", "sfx_equip.wav")
                     break;
                 }             
                 case 15:{
-                    if(checkQueue(pId,"m1897")){
-                        failedUpgrade(cId, pId, "upgrade_m1897.carry_item");
-                    }
-                    else{
-                        startQueue(pId,"m1897");
-                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
-                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                    }
+                    upgrade(cId, pId, "m1897", "upgrade_m1897.carry_item", "upgrade_common", "sfx_equip.wav")
                     break;
                 }
                 case 16:{
-                    if(checkQueue(pId,"stg44")){
-                        failedUpgrade(cId, pId, "upgrade_stg44.carry_item");
-                    }
-                    else{
-                        startQueue(pId,"stg44");
-                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
-                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                    }
+                    upgrade(cId, pId, "stg44", "upgrade_stg44.carry_item", "upgrade_common", "sfx_equip.wav")
                     break;
                 }   
                 case 17:{
-                    if(checkQueue(pId,"wa2000")){
-                        failedUpgrade(cId, pId, "upgrade_wa2000.carry_item");
-                    }
-                    else{
-                        startQueue(pId,"wa2000");
-                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
-                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                    }
+                    upgrade(cId, pId, "wa2000", "upgrade_wa2000.carry_item", "upgrade_common", "sfx_equip.wav")
                     break;
                 }
                 case 18:{
-                    if(checkQueue(pId,"pkp")){
-                        failedUpgrade(cId, pId, "upgrade_pkp.carry_item");
-                    }
-                    else{
-                        startQueue(pId,"pkp");
-                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
-                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                    }
+                    upgrade(cId, pId, "pkp", "upgrade_pkp.carry_item", "upgrade_common", "sfx_equip.wav")
                     break;
                 }
                 case 19:{
-                    if(checkQueue(pId,"scarl")){
-                        failedUpgrade(cId, pId, "upgrade_scarl.carry_item");
-                    }
-                    else{
-                        startQueue(pId,"scarl");
-                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
-                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                    }
+                    upgrade(cId, pId, "scarl", "upgrade_scarl.carry_item", "upgrade_common", "sfx_equip.wav")
                     break;
                 }
                 case 20:{
-                    if(checkQueue(pId,"scarh")){
-                        failedUpgrade(cId, pId, "upgrade_scarh.carry_item");
-                    }
-                    else{
-                        startQueue(pId,"scarh");
-                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
-                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                    }
+                    upgrade(cId, pId, "scarh", "upgrade_scarh.carry_item", "upgrade_common", "sfx_equip.wav")
                     break;
                 }
                 case 21:{
-                    if(checkQueue(pId,"cso")){
-                        failedUpgrade(cId, pId, "upgrade_cso.carry_item");
-                    }
-                    else{
-                        startQueue(pId,"cso");
-                        sendPrivateMessageKey(m_metagame, pId, "upgrade_common");
-                        playPrivateSound(m_metagame,"sfx_equip.wav",pId);
-                    }
+                    upgrade(cId, pId, "cso", "upgrade_cso.carry_item", "upgrade_common", "sfx_equip.wav")
                     break;
                 }
 
@@ -497,6 +351,13 @@ class ItemDropEvent : Tracker {
          playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
     }
 
+
+    protected void giveDigimindItem(int cId, int pId, string weapon_xml_name,string weapon_name){
+         addItemInBackpack(m_metagame,cId,"weapon",weapon_xml_name);
+         m_craftQueue.removeAt(findQueueIndex(pId,weapon_name));
+         playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+    }
+
     protected void failedUpgrade(int cId, int pId, string weapon_xml_name){
          addItemInBackpack(m_metagame,cId,"carry_item", weapon_xml_name);
          sendPrivateMessageKey(m_metagame, pId, "onlyonequeue_common");
@@ -699,12 +560,21 @@ class ItemDropEvent : Tracker {
             }
         }
     }
+    protected void upgrade(int cId, int pId, string pid_name, string item_name, string message_key, string wav){
+        if(checkQueue(pId, pid_name)){
+            failedUpgrade(cId, pId, item_name);
+        }
+        else{
+            startQueue(pId, pid_name);
+            sendPrivateMessageKey(m_metagame, pId, message_key);
+            playPrivateSound(m_metagame, wav, pId);
+        }
 
     protected void upgradeTimeout(int cId, int pId, string weapon_xml_name){
         addItemInBackpack(m_metagame,cId,"carry_item", weapon_xml_name);
         playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
         sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
-    }
+
     bool checkQueue(int pId,string type){
         for(uint i=0;i<m_craftQueue.size();i++){
             if(m_craftQueue[i].m_playerId==pId && m_craftQueue[i].m_typekey==type){
