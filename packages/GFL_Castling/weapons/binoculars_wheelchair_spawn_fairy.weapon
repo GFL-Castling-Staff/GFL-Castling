@@ -30,7 +30,7 @@
     <hud_icon filename="aimer.png" />
     <commonness value="0.02" can_respawn_with="1" in_stock="1" />
     <capacity value="1" source="rank" source_value="0.0" />
-    <inventory encumbrance="3.0" price="2000.0" />
+    <inventory encumbrance="3.0" price="500.0" />
     <projectile file="vehicle_drop_script.projectile" >
         <result class="notify_script" key="spawn_wheelchair"/>
     </projectile>

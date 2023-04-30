@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+<!--5.45mm普通弹，高肉伤中等穿深-->
+<weapon key="gkw_an94_agent_hunter_7n6.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<tag name="autorifle" />
+    <specification 
+	accuracy_factor="0.98" 
+	barrel_offset="0.5" 
+	class="0"
+    slot="0" 
+	magazine_size="30" 
+    carry_in_two_hands="1"
+	name="AN94 Agent Hunter-[7N6]" 
+    sight_range_modifier="1.25" 
+	projectile_speed="190" 
+	retrigger_time="0.12" 
+	suppressed="0" 
+    spread_range="0.2"
+    sustained_fire_diminish_rate="1.9"
+    sustained_fire_grow_step="0.3"
+    stab_enabled="1"/>
+	
+    <commonness value="0" in_stock="1" can_respawn_with="1" />
+    <inventory encumbrance="35.0" buy_price="1250.0" sell_price="700.0"/>
+    <capacity value="1" source="rank" source_value="0.0" />
+    <next_in_chain key="gkw_an94_agent_hunter_7n39.weapon" share_ammo="0" />
+
+    <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
+    <animation key="recoil" animation_key="recoil1" />
+    <animation key="recoil" animation_key="recoil2" />
+    <animation key="recoil" animation_key="recoil3" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+    <animation state_key="hold_on_wall" animation_key="still" />
+    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+    <animation state_key="stabbing" animation_key="melee, quick knife" />
+    <animation state_key="stabbing" animation_key="pistol whip 3" />
+	
+	<sound key="fire" fileref="an94mod3_fire_FromCOD16.wav" pitch_variety="0.02" volume="1" />
+    <sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="AN94_BREAK_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="AN94_BUILDOVER_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="AN94_DEFENSE_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="AN94_DIALOGUE2_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="AN94_FEED_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="AN94_FIX_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="AN94_FORMATION_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="AN94_GOATTACK_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="AN94_OPERATIONBEGIN_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="AN94_OPERATIONOVER_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="AN94_PHRASE_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="AN94_RETREAT_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="AN94_TIP_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="AN94_WIN_JP.wav" volume="1.0" pitch_variety="0"/>
+    <sound class="impact" fileref="rifle_drop.wav" />
+   
+	<model filename="gkw_ar_an94.xml" />
+    <hud_icon filename="gkw_an94.png" />
+    <effect class="muzzle" ref="muzzle_blue" />
+    <weak_hand_hold offset="0.3" />
+    <projectile file="bullet.projectile">
+        <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="1.34" kill_decay_end_time="1.95" />
+    </projectile>
+    <effect class="muzzle" ref="ejection_556" />
+    <stance state_key="running" accuracy="0.3" />
+    <stance state_key="walking" accuracy="0.5" />
+    <stance state_key="crouch_moving" accuracy="0.75" />
+    <stance state_key="prone_moving" accuracy="0.75" />
+    <stance state_key="standing" accuracy="0.85" />
+    <stance state_key="crouching" accuracy="1" />
+    <stance state_key="prone" accuracy="1.1" />
+    <stance state_key="over_wall" accuracy="1.1" />
+    <modifier class="speed" value="0.2" />
+</weapon>
+
+<!--5.45mm-->
+<weapon key="gkw_an94_agent_hunter_7n39.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<tag name="rifle" />
+    <specification 
+	barrel_offset="0.5" 
+    carry_in_two_hands="1"
+    accuracy_factor="1" 
+    class="4"
+    slot="0" 
+    magazine_size="30" 
+    name="AN94 Agent Hunter-[7N39]" 
+    projectile_speed="190.5" 
+    retrigger_time="0.05" 
+    last_burst_retrigger_time="0.3"
+    suppressed="1" 
+    projectiles_per_shot="2"
+    burst_shots="2"
+    sight_range_modifier="2.0"
+    sustained_fire_diminish_rate="1.8" 
+    sustained_fire_grow_step="0.35"/>
+	
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
+    <inventory encumbrance="35.0" buy_price="1250.0" sell_price="700.0"/>
+    <capacity value="1" source="rank" source_value="0.0" />
+    <next_in_chain key="gkw_an94_agent_hunter_7n6.weapon" share_ammo="0" />
+
+    <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
+    <animation key="recoil" animation_key="recoil1" />
+    <animation key="recoil" animation_key="recoil2" />
+    <animation key="recoil" animation_key="recoil3" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+    <animation state_key="hold_on_wall" animation_key="still" />
+    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+    <animation state_key="stabbing" animation_key="melee, quick knife" />
+    <animation state_key="stabbing" animation_key="pistol whip 3" />
+	
+	<sound key="fire" fileref="ak12_fire_FromBFH.wav" pitch_variety="0.02" volume="1.2" />
+    <sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="ak12_mgz_in_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="AK12_LOADING_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="AK12_TIP_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="AK12_FEED_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="AK12_FIX_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="AK12_OPERATIONBEGIN_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="AK12_BLACKACTION_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="AK12_GOATTACK_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
+    <sound key="cycle" fileref="AK12_MEET_JP.wav" volume="0.9" pitch_variety="0"/>
+    <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+   
+	<model filename="gkw_ar_an94.xml" />
+    <hud_icon filename="gkw_an94.png" />
+    
+    <weak_hand_hold offset="0.3" />
+    <projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="0" can_be_detected_by_driver="0" can_be_disarmed="0" radius="0.5"> 
+		<result class="spawn" instance_class="projectile" instance_key="ak12_7n39.projectile" min_amount="1" max_amount="1" offset="0 0.5 0" position_spread="0.5 0" direction_spread="0 0" />	
+		<trigger class="impact" time_to_live="0.2"  />
+		<rotation class="motion" />
+		<collision class="sticky" />
+    </projectile>
+    <effect class="muzzle" ref="ejection_556" />
+    <stance state_key="running" accuracy="1.0" />
+    <stance state_key="walking" accuracy="1.0" />
+    <stance state_key="crouch_moving" accuracy="1.0" />
+    <stance state_key="prone_moving" accuracy="1.0" />
+    <stance state_key="standing" accuracy="1.0" />
+    <stance state_key="crouching" accuracy="1" />
+    <stance state_key="prone" accuracy="1.1" />
+    <stance state_key="over_wall" accuracy="1.1" />
+    <modifier class="speed" value="0.2" />
+    <modifier class="detectability" value="-0.1" />
+</weapon>
+<!--近战模式，左手双管短霰弹枪，右手猎人斧头-->
+</weapons>
