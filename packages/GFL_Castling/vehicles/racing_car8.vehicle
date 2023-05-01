@@ -4,7 +4,7 @@
 
 	<control max_speed="31.0" acceleration="11.3" max_reverse_speed="14.0" max_rotation="0.7" max_water_depth="1.0" steer_smoothening="0.8" />
 
-	<physics max_health="20.0" mass="20" broken_mass="20" collision_response_factor="0.5" extent="1.152 0.0 2.432" offset="0 0.0 0" top_offset="0 1.28 0" collision_model_pos="0 0.32 0.0" collision_model_extent="1.792 0.832 3.072" visual_offset="0 0.0 0.0" preserve_motion_on_impact_factor="1.0" collision_softness="1.0" collision_response_factor="1.0" destroy_on_top_hit="1" destroy_on_top_hit_time="1.0" top_hit_tracking_time="1.4" gravity="-39" />
+	<physics max_health="20.0" mass="20" broken_mass="20" collision_response_factor="0.5" extent="1.152 0.0 2.432" offset="0 0.0 0" top_offset="0 1.28 0" collision_model_pos="0 0.32 0.0" collision_model_extent="1.792 0.832 3.072" visual_offset="0 0.0 0.0" preserve_motion_on_impact_factor="1.0" collision_softness="1.0"  destroy_on_top_hit="1" destroy_on_top_hit_time="1.0" top_hit_tracking_time="1.4" gravity="-39" />
 
 	<visual class="chassis" mesh_filename="racing_car.mesh" texture_filename="racing_car_yellow8.png" />
 	<visual class="chassis" key="broken" mesh_filename="racing_car_broken.mesh" texture_filename="racing_car_yellow8_broken.png" />

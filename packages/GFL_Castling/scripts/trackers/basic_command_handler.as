@@ -879,7 +879,9 @@ class BasicCommandHandler : Tracker {
 		} else  if(checkCommand(message, "spawn aks")) {
 			spawnInstanceNearPlayer(senderId, "par_aceso.vehicle", "vehicle", 1);
 		} else  if(checkCommand(message, "spawn pickup")) {
-			spawnInstanceNearPlayer(senderId, "wastelander.vehicle", "vehicle", 1);			 						
+			spawnInstanceNearPlayer(senderId, "wastelander.vehicle", "vehicle", 1);
+		} else  if(checkCommand(message, "spawn sgfq")) {
+			spawnInstanceNearPlayer(senderId, "par_cherub.vehicle", "vehicle", 1);					
 		} else  if(checkCommand(message, "tph")) {
 			spawnInstanceNearPlayer(senderId, "para_heal_skill.projectile", "projectile", 0);			 						
 		} else if (checkCommand(message,"givetestweapon")){
