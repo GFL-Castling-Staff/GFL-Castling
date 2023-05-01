@@ -18,7 +18,8 @@
     spread_range="0.2"
     sustained_fire_diminish_rate="1.9"
     sustained_fire_grow_step="0.3"
-    stab_enabled="1"/>
+    stab_enabled="1"
+    stab_range="5"/>
 	
     <commonness value="0" in_stock="1" can_respawn_with="1" />
     <inventory encumbrance="35.0" buy_price="1250.0" sell_price="700.0"/>
@@ -34,8 +35,7 @@
     <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
     <animation state_key="hold_on_wall" animation_key="still" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
-    <animation state_key="stabbing" animation_key="melee, quick knife" />
-    <animation state_key="stabbing" animation_key="pistol whip 3" />
+    <animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
 	
 	<sound key="fire" fileref="an94mod3_fire_FromCOD16.wav" pitch_variety="0.02" volume="1" />
     <sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.6" />
@@ -108,7 +108,9 @@
     burst_shots="2"
     sight_range_modifier="2.0"
     sustained_fire_diminish_rate="1.8" 
-    sustained_fire_grow_step="0.35"/>
+    sustained_fire_grow_step="0.35"
+    stab_enabled="1"
+    stab_range="5"/>
 	
     <commonness value="0" in_stock="0" can_respawn_with="1" />
     <inventory encumbrance="35.0" buy_price="1250.0" sell_price="700.0"/>
@@ -124,8 +126,7 @@
     <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
     <animation state_key="hold_on_wall" animation_key="still" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
-    <animation state_key="stabbing" animation_key="melee, quick knife" />
-    <animation state_key="stabbing" animation_key="pistol whip 3" />
+    <animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
 	
 	<sound key="fire" fileref="ak12_fire_FromBFH.wav" pitch_variety="0.02" volume="1.2" />
     <sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6" />
