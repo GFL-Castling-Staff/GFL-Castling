@@ -6,7 +6,7 @@
     <specification
 	retrigger_time="0.125"
 	last_burst_retrigger_time="0.125"
-	accuracy_factor="0.98"
+	accuracy_factor="0.8"
 	sustained_fire_grow_step="0.45"
 	sustained_fire_diminish_rate="1.6"
 	magazine_size="14"
@@ -20,7 +20,7 @@
 	projectile_speed="120"
 	spread_range="0.35"
 	burst_shots="1"
-	projectiles_per_shot="14"
+	projectiles_per_shot="10"
 	use_basic_muzzle_smoke_effect="0"
 	stab_enabled="1"/>
 	<commonness value="0.01" in_stock="0" can_respawn_with="1" />
