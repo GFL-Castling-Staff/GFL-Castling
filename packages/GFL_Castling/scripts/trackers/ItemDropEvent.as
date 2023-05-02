@@ -56,87 +56,87 @@ class ItemDropEvent : Tracker {
             switch(jud_num)
             {
                 case 1:{
-                    upgrade(cId, pId, "mod3", "firecontrol.carry_item", "digimindupdate", "digimind_sfx1.wav")
+                    upgrade(cId, pId, "mod3", "firecontrol.carry_item", "digimindupdate", "digimind_sfx1.wav");
                     break;
                 }
                 case 2:{
-                    upgrade(cId, pId, "truecore", "core_mask.carry_item", "truemask", "sfx_equip.wav")
+                    upgrade(cId, pId, "truecore", "core_mask.carry_item", "truemask", "sfx_equip.wav");
                     break;
                 }
                 case 3:{
-                    upgrade(cId, pId, "type88", "upgrade_type88.carry_item", "upgrade_88type", "sfx_equip.wav")
+                    upgrade(cId, pId, "type88", "upgrade_type88.carry_item", "upgrade_88type", "sfx_equip.wav");
                     break;
                 }
                 case 4:{
-                    upgrade(cId, pId, "aa12", "upgrade_aa12.carry_item", "upgrade_aa12", "sfx_equip.wav")
+                    upgrade(cId, pId, "aa12", "upgrade_aa12.carry_item", "upgrade_aa12", "sfx_equip.wav");
                     break;
                 }
                 case 5:{
-                    upgrade(cId, pId, "m1garand", "upgrade_m1.carry_item", "upgrade_common", "sfx_equip.wav")
+                    upgrade(cId, pId, "m1garand", "upgrade_m1.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
                 } 
                 case 6:{
-                    upgrade(cId, pId, "fg42", "upgrade_fg42.carry_item", "upgrade_common", "sfx_equip.wav")
+                    upgrade(cId, pId, "fg42", "upgrade_fg42.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
                 }
                 case 7:{
-                    upgrade(cId, pId, "g41", "upgrade_g41.carry_item", "upgrade_common", "sfx_equip.wav")
+                    upgrade(cId, pId, "g41", "upgrade_g41.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
                 }
                 case 8:{
-                    upgrade(cId, pId, "vz61", "upgrade_vz61.carry_item", "upgrade_common", "sfx_equip.wav")
+                    upgrade(cId, pId, "vz61", "upgrade_vz61.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
                 }
                 case 9:{
-                    upgrade(cId, pId, "m1903_1", "upgrade_m1903_1.carry_item", "upgrade_common", "sfx_equip.wav")
+                    upgrade(cId, pId, "m1903_1", "upgrade_m1903_1.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
                 }
                 case 10:{
-                    upgrade(cId, pId, "m1903_2", "upgrade_m1903_2.carry_item", "upgrade_common", "sfx_equip.wav")
+                    upgrade(cId, pId, "m1903_2", "upgrade_m1903_2.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
                 }   
                 case 11:{
-                    upgrade(cId, pId, "fn49", "upgrade_fn49.carry_item", "upgrade_common", "sfx_equip.wav")
+                    upgrade(cId, pId, "fn49", "upgrade_fn49.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
                 }     
                 case 12:{
-                    upgrade(cId, pId, "9a91", "upgrade_9a91.carry_item", "upgrade_common", "sfx_equip.wav")
+                    upgrade(cId, pId, "9a91", "upgrade_9a91.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
                 }
                 case 13:{
-                    upgrade(cId, pId, "m14", "upgrade_m14.carry_item", "upgrade_common", "sfx_equip.wav")
+                    upgrade(cId, pId, "m14", "upgrade_m14.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
                 }
                 case 14:{
-                    upgrade(cId, pId, "g3", "upgrade_g3.carry_item", "upgrade_common", "sfx_equip.wav")
+                    upgrade(cId, pId, "g3", "upgrade_g3.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
                 }             
                 case 15:{
-                    upgrade(cId, pId, "m1897", "upgrade_m1897.carry_item", "upgrade_common", "sfx_equip.wav")
+                    upgrade(cId, pId, "m1897", "upgrade_m1897.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
                 }
                 case 16:{
-                    upgrade(cId, pId, "stg44", "upgrade_stg44.carry_item", "upgrade_common", "sfx_equip.wav")
+                    upgrade(cId, pId, "stg44", "upgrade_stg44.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
                 }   
                 case 17:{
-                    upgrade(cId, pId, "wa2000", "upgrade_wa2000.carry_item", "upgrade_common", "sfx_equip.wav")
+                    upgrade(cId, pId, "wa2000", "upgrade_wa2000.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
                 }
                 case 18:{
-                    upgrade(cId, pId, "pkp", "upgrade_pkp.carry_item", "upgrade_common", "sfx_equip.wav")
+                    upgrade(cId, pId, "pkp", "upgrade_pkp.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
                 }
                 case 19:{
-                    upgrade(cId, pId, "scarl", "upgrade_scarl.carry_item", "upgrade_common", "sfx_equip.wav")
+                    upgrade(cId, pId, "scarl", "upgrade_scarl.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
                 }
                 case 20:{
-                    upgrade(cId, pId, "scarh", "upgrade_scarh.carry_item", "upgrade_common", "sfx_equip.wav")
+                    upgrade(cId, pId, "scarh", "upgrade_scarh.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
                 }
                 case 21:{
-                    upgrade(cId, pId, "cso", "upgrade_cso.carry_item", "upgrade_common", "sfx_equip.wav")
+                    upgrade(cId, pId, "cso", "upgrade_cso.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
                 }
 
@@ -344,14 +344,6 @@ class ItemDropEvent : Tracker {
         }  
     }
 
-
-    protected void giveDigimindItem(int cId, int pId, string weapon_xml_name,string weapon_name){
-         addItemInBackpack(m_metagame,cId,"weapon",weapon_xml_name);
-         m_craftQueue.removeAt(findQueueIndex(pId,weapon_name));
-         playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
-    }
-
-
     protected void giveDigimindItem(int cId, int pId, string weapon_xml_name,string weapon_name){
          addItemInBackpack(m_metagame,cId,"weapon",weapon_xml_name);
          m_craftQueue.removeAt(findQueueIndex(pId,weapon_name));
@@ -369,6 +361,7 @@ class ItemDropEvent : Tracker {
             deleteItemInStash(m_metagame,id,"carry_item",foobar);
         }
     }
+
 	array<string> illegalitem = {
         "immunity_mp5.carry_item",
         "immunity_g36c.carry_item",
@@ -560,20 +553,25 @@ class ItemDropEvent : Tracker {
             }
         }
     }
+
     protected void upgrade(int cId, int pId, string pid_name, string item_name, string message_key, string wav){
-        if(checkQueue(pId, pid_name)){
+        if(checkQueue(pId, pid_name))
+        {
             failedUpgrade(cId, pId, item_name);
         }
-        else{
+        else
+        {
             startQueue(pId, pid_name);
             sendPrivateMessageKey(m_metagame, pId, message_key);
             playPrivateSound(m_metagame, wav, pId);
         }
+    }
 
     protected void upgradeTimeout(int cId, int pId, string weapon_xml_name){
         addItemInBackpack(m_metagame,cId,"carry_item", weapon_xml_name);
         playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
         sendPrivateMessageKey(m_metagame, pId, "quest_timeout");
+    }
 
     bool checkQueue(int pId,string type){
         for(uint i=0;i<m_craftQueue.size();i++){
