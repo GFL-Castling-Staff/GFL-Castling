@@ -40,7 +40,7 @@ class player_data
         }
         if (check_id == -1) return false;
         if (m_inventory[check_id].m_own) return true;
-        else return false;
+        return false;
     }
 }
 

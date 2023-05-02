@@ -1063,10 +1063,10 @@ class BasicCommandHandler : Tracker {
 
 				c.setIntAttribute("character_id", characterId); 
 				c.setStringAttribute("container_type_class", "backpack");
-				
+				// create once instead of recreating three time
+				array<string> typeStr1 = {"weapon", "grenade", "carry_item"};
+				array<string> typeStr2 = {"weapons", "grenades", "carry_items"};
 				for (uint i = 0; i < 3; ++i) {
-					array<string> typeStr1 = {"weapon", "grenade", "carry_item"};
-					array<string> typeStr2 = {"weapons", "grenades", "carry_items"};
 					for (uint k = 0; k < typeStr1.size(); ++k) {
 						array<const XmlElement@>@ resources = getFactionResources(m_metagame, i, typeStr1[k], typeStr2[k]);
 						for (uint j = 0; j < resources.size(); ++j) {
