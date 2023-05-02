@@ -154,7 +154,7 @@
 		<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
 		<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 		<animation state_key="stabbing" animation_key="melee, bayonet"/>
-		<modifier class="hit_success_probability" value="-0.4"/>
+		<modifier class="hit_success_probability" value="-0.2"/>
 	</weapon>
 	<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_spas12_3203_skill.weapon">
 		<!-- Weapon specifications -->
@@ -300,6 +300,6 @@
 		<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
 		<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 		<animation state_key="stabbing" animation_key="melee, bayonet"/>
-		<modifier class="hit_success_probability" value="-0.4"/>
+		<modifier class="hit_success_probability" value="-0.2"/>
 	</weapon>
 </weapons>

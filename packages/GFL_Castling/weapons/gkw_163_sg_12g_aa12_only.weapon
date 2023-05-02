@@ -114,7 +114,7 @@
 	<hud_icon filename="gkw_aa12only_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="dragons_breath2.projectile" time_to_live="0.25">
-		<result class="blast" radius="2.5" damage="1.1" push="0.1" decal="1" faction_compare="not_equal"/>
+		<result class="blast" radius="2.5" damage="1.1" push="0.1" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.7"/>

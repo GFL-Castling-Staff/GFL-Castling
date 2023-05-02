@@ -5,7 +5,7 @@
 <tag name="autorifle" />
     <specification 
 	accuracy_factor="0.98" 
-	barrel_offset="0.4" 
+	barrel_offset_3d="0 0.1 0.6"
 	class="0"
     slot="0" 
 	magazine_size="30" 
@@ -92,11 +92,10 @@
 <tag name="autorifle" />
     <specification 
 	accuracy_factor="0.98" 
-	barrel_offset="0.65" 
+	barrel_offset_3d="0 0.1 0.6"
 	class="0"
     slot="0" 
 	magazine_size="30" 
-    barrel_offset_3d="0.0 0.65 0.0"
     carry_in_two_hands="1"
 	name="AK12 Agent Hunter-[7N39]" 
     sight_range_modifier="1.75" 
