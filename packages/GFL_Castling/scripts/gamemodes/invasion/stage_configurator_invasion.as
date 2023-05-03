@@ -567,16 +567,14 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 		{
 			Faction f(FactionConfig(2, "elid.xml", "E.L.I.D.", "0.3 0.17 0.11", "elid.xml"), createCommanderAiCommand(2, 0.80, 0.20));             
-			f.m_overCapacity = 70;
-            f.m_capacityOffset = 80;
-			f.m_capacityMultiplier = 0.001;
+            f.m_capacityOffset = 40;
+			f.m_capacityMultiplier = 0.00001;
 			stage.m_factions.insertLast(f);                                    
 		}
 		{
 			Faction f(FactionConfig(3, "sf.xml", "S.F.", "0.91 0.11 0.20", "sf.xml"), createCommanderAiCommand(3, 0.9, 0.1));
-			f.m_overCapacity = 70;                                             
             f.m_capacityOffset = 40;
-			f.m_capacityMultiplier = 0.001;
+			f.m_capacityMultiplier = 0.00001;
 			stage.m_factions.insertLast(f);
 		}
 
