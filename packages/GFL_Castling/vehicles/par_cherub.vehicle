@@ -19,19 +19,16 @@
     <tag name="jeep" />
     <tag name="light_combat" />
 
-    <tire_set offset="1.4 -0.0 +1.4" radius="0.5" />
-    <tire_set offset="1.4 -0.0 -1.4" radius="0.5" />
+    <tire_set offset="1.2 -0.0 +3.0" radius="0.5" />
+    <tire_set offset="1.2 -0.0 -3.0" radius="0.5" />
     <control 
 	max_speed="15.0" 
 	acceleration="10.0" 
 	max_reverse_speed="15.0" 
 	min_health_to_steer="0.0" 
-	max_rotation="2.8" 
+	max_rotation="0.9" 
 	max_water_depth="2.0" 
-    can_steer_in_water="0.6" 
-	steer_smoothening="0.8"
 	gears="1" />
-
     <physics 
 	max_health="40.0" 
 	blast_damage_threshold="2.0" 
@@ -42,26 +39,21 @@
 	preserve_motion_on_impact_factor="0.0"
     remove_collision_threshold="10.0"	
     gravity="-90"
-	extent="7.5 3.0 7.5" 
+	extent="2.83 2.0 5.55" 
 	offset="0.0 0 0.0" 
 	top_offset="0 4.0 0" 
-	collision_model_pos="0 4 0" 
-	collision_model_extent="2.0 2.0 2.0" 
-	visual_offset="0 0.5 0.0" />
-
+	collision_model_pos="0 0 0" 
+	collision_model_extent="2.5 2.0 5.55" 
+	visual_offset="0 2.5 0.0" />
     <modifier class="blast_damage" value="-3.0" />
-    <turret offset="0.0 -1.9 0.0" weapon_key="amos_none.weapon" weapon_offset="0.0 0 0" max_rotation_step="0.00036" rotation="0" rotation_range="0" weapon_recoil="0.0" physics_recoil="0.0" />
-    <visual class="turret" turret_index="0" mesh_filename="moth_dir.mesh" texture_filename="balloon.png"/>   
+    <turret offset="0 2.5 -1.5" weapon_key="uhlan_main_cannon" weapon_offset="0.0 0.45 4.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00065" />
+    <turret offset="0 2.5 -1.5" weapon_key="uhlan_main_cannon_2" weapon_offset="0.0 0.45 4.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00065" />
+    <visual class="chassis" mesh_filename="cherub.mesh" texture_filename="cherub_main.jpg" max_tilt="0.06" />
 
-    <turret offset="0 3.8 0" weapon_key="uhlan_main_cannon" weapon_offset="0.0 -0.15 1.5" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00065" />
-    <turret offset="0 3.8 0" weapon_key="uhlan_main_cannon_2" weapon_offset="0.0 -0.15 1.5" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00065" />
-    <visual class="turret" turret_index="1" mesh_filename="cherub.mesh" texture_filename="cherub_main.jpg" max_tilt="0.06" />
-	<visual class="turret" key="broken" mesh_filename="cherub.mesh" texture_filename="tank_2_broken.png" />
-
-    <character_slot type="driver" position="1.1 0.5 0.0" seat_position="0 3.5 0.0" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
-    <character_slot type="gunner" position="-1.1 0.5 0.0" seat_position="0 3.5 0.0" rotation="0" exit_rotation="-1.57" hiding="1" animation_id="37">
+    <character_slot type="driver" position="1.1 0.5 -2.0" seat_position="0 -0.8 -0.5" rotation="0" exit_rotation="-3.14" hiding="1" animation_id="36" />
+    <character_slot type="gunner" position="-1.1 0.5 -2.0" seat_position="0 -0.8 -1.5" rotation="0" exit_rotation="-3.14" hiding="1" animation_id="37">
+        <turret index="0" />
         <turret index="1" />
-        <turret index="2" />
     </character_slot>
     <!-- sound handling -->
     <rev_sound filename="tank_rev0.wav" low_pitch="0.5" high_pitch="0.7" low_rev="0.0" high_rev="1.0" volume="0.7" />
