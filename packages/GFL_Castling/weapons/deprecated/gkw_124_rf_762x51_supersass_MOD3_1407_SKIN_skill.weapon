@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="designated_marksman_rifle.animation_base" key="gkw_supersassmod3_1407_skill.weapon">
-
-
     <!--Weapon specifications-->
-    
     <specification 
 	retrigger_time="-1.0" 
 	accuracy_factor="1" 
@@ -22,21 +19,19 @@
 	projectile_speed="230.5" 
 	barrel_offset="0.4" 
 	projectiles_per_shot="1" />
-
-	<next_in_chain key="gkw_supersassmod3_1407.weapon" share_ammo="0" />
-	<!--Animations-->
+    <next_in_chain key="gkw_supersassmod3_1407.weapon" share_ammo="0" />
+    <!--Animations-->
     <inventory encumbrance="35.0" buy_price="120.0" sell_price="120.0" />
     <commonness value="0" in_stock="0" />
-
     <animation key="reload" animation_key="magBrifleRSASS" />
-	<animation key="reload" stance_key="prone" animation_key="magBrifleRpSASS" />	
+    <animation key="reload" stance_key="prone" animation_key="magBrifleRpSASS" />
     <animation state_key="next_in_chain_in" animation_key="change weapon in ssass" />
-	<!--Sounds-->
+    <!--Sounds-->
     <commonness value="0" in_stock="0" />
     <sound key="fire" fileref="sassskill_fire_FromCOD16.wav" pitch_variety="0.01" volume="1.2" />
     <sound key="magazine_out" fileref="sass_mgz_out_FromSQUAD.wav"  volume="0.55" />
     <sound key="magazine_in" fileref="sass_mgz_in_FromSQUAD.wav"  volume="0.55" />
-	<sound key="cycle" fileref="sass_cycle_FromCOD13.wav"  volume="0.4" />
+    <sound key="cycle" fileref="sass_cycle_FromCOD13.wav"  volume="0.4" />
     <sound key="cycle" fileref="SuperSASSMod_SKILL1_JP.wav"  volume="1.0" pitch_variety="0"/>
     <sound key="cycle" fileref="sass_cycle_FromCOD13.wav"  volume="0.4" />
     <sound key="cycle" fileref="SuperSASSMod_SKILL2_JP.wav"  volume="1.0" pitch_variety="0"/>
@@ -45,17 +40,10 @@
     <sound key="cycle" fileref="sass_cycle_FromCOD13.wav"  volume="0.4" />
     <sound key="cycle" fileref="SuperSASSMod_TIP_JP.wav"  volume="1.0" pitch_variety="0"/>
     <sound class="impact" fileref="rifle_drop.wav" />
-   
-	<!--Model, Icon, Cost-->
-   
+    <!--Model, Icon, Cost-->
     <model filename="gkw_rf_supersass.xml" />
     <hud_icon filename="gkw_supersass_1407.png" />
-
-
-	
-	<!--Ballistics-->
-	
-    
+    <!--Ballistics-->
     <projectiles_per_shot value="1" />
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
@@ -68,11 +56,9 @@
         faction_compare="not_equal" />
     </projectile>
     <effect class="muzzle" ref="ejection_76251" />
-    
     <!--Accuracy, Movement speed-->
-    
-	<stance state_key="running" accuracy="0.6" />
-	<stance state_key="walking" accuracy="0.7" />
+    <stance state_key="running" accuracy="0.6" />
+    <stance state_key="walking" accuracy="0.7" />
     <stance state_key="crouch_moving" accuracy="0.75" />
     <stance state_key="prone_moving" accuracy="0.75" />
     <stance state_key="standing" accuracy="0.85"/>
