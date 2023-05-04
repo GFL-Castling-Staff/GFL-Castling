@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon key="gkw_tac50_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<tag name="rifle" />
+    <!--Weapon specifications-->
+    <specification 
+	retrigger_time="-1.0" 
+	accuracy_factor="1" 
+	sustained_fire_grow_step="2" 
+	sustained_fire_diminish_rate="1.2" 
+	magazine_size="5" 
+	can_shoot_standing="1" 
+	can_shoot_crouching="1"
+	can_shoot_prone="1"
+	suppressed="0" 
+	name="TAC-50-[]" 
+	class="2"
+	reload_one_at_a_time="0" 
+	sight_range_modifier="2.25" 
+	projectile_speed="230.85" 
+	barrel_offset="0.57" 
+	projectiles_per_shot="1"
+    stab_enabled="1"
+	carry_in_two_hands="1"
+	burst_shots="1"
+	slot="0" />
+    <inventory encumbrance="35.0" buy_price="300.0" sell_price="200.0" />
+    <!--Animations-->
+    <animation key="cycle" animation_key="Brifle1.5" />
+    <animation key="cycle" stance_key="prone" animation_key="Brifle1.5p" />
+    <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
+    <animation key="recoil"  animation_key="recoil1" />
+    <animation key="recoil"  animation_key="recoil2" />
+    <animation key="recoil"  animation_key="recoil3" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+	<animation state_key="stabbing" animation_key="melee, quick knife" />
+	<animation state_key="stabbing" animation_key="pistol whip 3" />
+    <!--Sounds-->
+    <sound key="fire" fileref="tac50_fire_FromMOH2012.wav" volume="1.2" />
+    <sound key="cycle" fileref="tac50_cycle_FromCOD17.wav" volume="0.5"/>
+    <sound key="magazine_out" fileref="tac50_mgz_out_FromCOD16.wav" volume="0.5"/>
+    <sound key="magazine_in" fileref="tac50_mgz_in_FromCOD16.wav" volume="0.5"/>
+    <sound key="cycle_out" fileref="tac50_cycle_out_FromCOD16.wav" volume="0.5"/>
+    <sound key="cycle_in" fileref="tac50_cycle_in_FromCOD16.wav" volume="0.5"/>
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <!--Model, Icon, Cost-->
+    <model filename="gkw_rf_tac50c_n.xml" />
+    <hud_icon filename="gkw_tac50.png" />
+    <!-- <inventory encumbrance="10.0" price="4.0" /> -->
+    <!--Ballistics-->
+    <weak_hand_hold offset="0.3" />
+    <projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7"> 
+		<result class="spawn" instance_class="projectile" instance_key="tac50_ap.projectile" min_amount="5" max_amount="5" offset="0 0.5 0" position_spread="0.5 0" direction_spread="0 0" />	
+		<trigger class="impact" time_to_live="0.2"  />
+		<rotation class="motion" />
+		<collision class="sticky" />
+    </projectile>
+    <trail probability="1" key="BulletApTrail_rf"/>
+    <!--Accuracy, Movement speed-->
+    <stance state_key="running" accuracy="0.9" />
+    <stance state_key="walking" accuracy="1.1" />
+    <stance state_key="crouch_moving" accuracy="0.8" />
+    <stance state_key="prone_moving" accuracy="0.8" />
+    <stance state_key="standing" accuracy="1.1"/>
+    <stance state_key="crouching" accuracy="1.1" />
+    <stance state_key="prone" accuracy="1.1" />
+    <stance state_key="over_wall" accuracy="1.1" />
+</weapon>

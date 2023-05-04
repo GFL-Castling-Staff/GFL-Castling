@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon key="gkw_tac50.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon file="designated_marksman_rifle.animation_base" key="gkw_tac50.weapon">
 <tag name="rifle" />
     <!--Weapon specifications-->
     <specification 
@@ -18,11 +18,8 @@
 	sight_range_modifier="2.25" 
 	projectile_speed="230.85" 
 	barrel_offset="0.57" 
-	projectiles_per_shot="1"
-    stab_enabled="1"
-	carry_in_two_hands="1"
-	burst_shots="1"
-	slot="0" />
+	projectiles_per_shot="4"
+     />
     <inventory encumbrance="35.0" buy_price="300.0" sell_price="200.0" />
     <!--Animations-->
     <animation key="cycle" animation_key="Brifle1.5" />
@@ -51,12 +48,15 @@
     <!-- <inventory encumbrance="10.0" price="4.0" /> -->
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
-    <projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7"> 
-		<result class="spawn" instance_class="projectile" instance_key="tac50_ap.projectile" min_amount="4" max_amount="4" offset="0 0.5 0" position_spread="0.5 0" direction_spread="0 0" />	
-		<trigger class="impact" time_to_live="0.2"  />
-		<rotation class="motion" />
-		<collision class="sticky" />
-    </projectile>
+    <projectile file="ntw.projectile">
+        <result class="blast" 
+        damage="8" 
+        radius="2.5" 
+        decal="1" 
+        push="0.4" 
+        character_state="death"
+        faction_compare="not_equal"
+		/>
     <trail probability="1" key="BulletApTrail_rf"/>
     <!--Accuracy, Movement speed-->
     <stance state_key="running" accuracy="0.9" />
