@@ -179,21 +179,15 @@
     <model  />
     <hud_icon filename="testing.png" />
     <commonness value="0.0" />
-    <effect class="muzzle" ref="coeus" />
-    <effect class="muzzle" ref="coeusphere" />
-    <effect class="muzzle" ref="coeusmuzzle" lighting="1" />
     <sound key="fire" fileref="amos_fire.wav" pitch_variety="0.02" volume="1.5" />
-    <projectile file="at4.projectile">
-        <result class="blast" radius="8.5" damage="9" push="1" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
-        <effect class="result" key="terrain" ref="SmokeBurst" post_processing="1" />
-        <effect class="result" key="terrain" ref="Shine" lighting="0" />
-        <effect class="result" key="terrain" ref="HitTankSparks" lighting="0" />
-        <effect class="result" key="other" ref="SmokeBurst" post_processing="1" />
-        <effect class="result" key="other" ref="Shine" lighting="0" />
-        <effect class="result" key="other" ref="HitTankSparks" lighting="0" />
-        <effect class="result" key="static_object" copy="terrain" />
-        <effect class="result" key="vehicle" copy="terrain" />     
-        <effect class="result" key="character" copy="terrain" />   
+    <projectile file="amos_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7"> 
+		<result class="spawn" instance_class="projectile" instance_key="amos_ap.projectile" min_amount="3" max_amount="3" offset="0 0.5 0" position_spread="0.5 0" direction_spread="0 0" />	
+		<trigger class="impact" time_to_live="0.2"  />
+		<rotation class="motion" />
+		<collision class="sticky" />
+        <effect class="muzzle" ref="coeus" />
+        <effect class="muzzle" ref="coeusphere" />
+        <effect class="muzzle" ref="coeusmuzzle" lighting="1" />
     </projectile>
 </weapon>
 

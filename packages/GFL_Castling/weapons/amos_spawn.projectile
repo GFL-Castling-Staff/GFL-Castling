@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile  
+class="bullet" 
+name="Amos Spawn projectile" 
+key="amos_spawn.projectile" 
+slot="0"
+pulldown_in_air="6.0"
+on_ground_up="0 1 0"
+use_time_to_live="1"
+time_to_live="60"
+can_be_disarmed="0"
+can_be_detected_by_footmen="1"
+can_be_detected_by_driver="1"
+blast_damage_threshold="50"
+time_to_live_out_in_the_open="0"
+player_death_drop_owner_lock_time="0"
+radius="0.5">
+<effect class="result" key="terrain" ref="SmokeBurst" post_processing="1" />
+<effect class="result" key="terrain" ref="Shine" lighting="0" />
+<effect class="result" key="terrain" ref="HitTankSparks" lighting="0" />
+<effect class="result" key="other" ref="SmokeBurst" post_processing="1" />
+<effect class="result" key="other" ref="Shine" lighting="0" />
+<effect class="result" key="other" ref="HitTankSparks" lighting="0" />
+<effect class="result" key="static_object" copy="terrain" />
+<effect class="result" key="vehicle" copy="terrain" />     
+<effect class="result" key="character" copy="terrain" />  
+</projectile>
