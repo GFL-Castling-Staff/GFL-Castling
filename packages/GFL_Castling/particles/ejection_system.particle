@@ -187,8 +187,8 @@ particle_system ejection_50BMG
 {
     quota 150
     material bullet_shell_76251
-    particle_width 0.4
-	particle_height 0.4
+    particle_width 0.3
+	particle_height 0.3
 	cull_each false
 	renderer billboard
 	billboard_type point
