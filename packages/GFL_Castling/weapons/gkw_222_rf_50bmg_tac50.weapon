@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="designated_marksman_rifle.animation_base" key="gkw_tac50.weapon">
-<tag name="rifle" />
+    <tag name="rifle" />
     <!--Weapon specifications-->
     <specification 
 	retrigger_time="-1.0" 
 	accuracy_factor="1" 
-	sustained_fire_grow_step="2" 
-	sustained_fire_diminish_rate="1.2" 
+	sustained_fire_grow_step="2.5" 
+	sustained_fire_diminish_rate="1.7" 
 	magazine_size="5" 
 	can_shoot_standing="1" 
 	can_shoot_crouching="1"
@@ -16,9 +16,9 @@
 	class="2"
 	reload_one_at_a_time="0" 
 	sight_range_modifier="2.25" 
-	projectile_speed="230.85" 
+	projectile_speed="240" 
 	barrel_offset="0.57" 
-	projectiles_per_shot="4"
+	projectiles_per_shot="1"
      />
     <inventory encumbrance="35.0" buy_price="300.0" sell_price="200.0" />
     <!--Animations-->
@@ -28,12 +28,12 @@
     <animation key="recoil"  animation_key="recoil1" />
     <animation key="recoil"  animation_key="recoil2" />
     <animation key="recoil"  animation_key="recoil3" />
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
-	<animation state_key="stabbing" animation_key="melee, quick knife" />
-	<animation state_key="stabbing" animation_key="pistol whip 3" />
+    <animation state_key="stabbing" animation_key="melee, quick knife" />
+    <animation state_key="stabbing" animation_key="pistol whip 3" />
     <!--Sounds-->
     <sound key="fire" fileref="tac50_fire_FromMOH2012.wav" volume="1.2" />
     <sound key="cycle" fileref="tac50_cycle_FromCOD17.wav" volume="0.5"/>
@@ -45,27 +45,23 @@
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_tac50c_n.xml" />
     <hud_icon filename="gkw_tac50.png" />
-    <!-- <inventory encumbrance="10.0" price="4.0" /> -->
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
-    <projectile file="ntw.projectile">
-        <result class="blast" 
-        damage="8" 
-        radius="2.5" 
-        decal="1" 
-        push="0.4" 
-        character_state="death"
-        faction_compare="not_equal"
-		/>
+    <projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7"> 
+		<result class="spawn" instance_class="projectile" instance_key="tac50_ap.projectile" min_amount="4" max_amount="4" offset="0 0.5 0" position_spread="0.5 0" direction_spread="0 0" />	
+		<trigger class="impact"/>
+		<rotation class="motion" />
+		<collision class="sticky" />
+    </projectile>
     <trail probability="1" key="BulletApTrail_rf"/>
     <!--Accuracy, Movement speed-->
-    <stance state_key="running" accuracy="0.9" />
-    <stance state_key="walking" accuracy="1.1" />
-    <stance state_key="crouch_moving" accuracy="0.8" />
-    <stance state_key="prone_moving" accuracy="0.8" />
-    <stance state_key="standing" accuracy="1.1"/>
-    <stance state_key="crouching" accuracy="1.1" />
-    <stance state_key="prone" accuracy="1.1" />
-    <stance state_key="over_wall" accuracy="1.1" />
+    <stance state_key="running" accuracy="0.5" />
+    <stance state_key="walking" accuracy="0.55" />
+    <stance state_key="crouch_moving" accuracy="0.55" />
+    <stance state_key="standing" accuracy="0.95" />
+    <stance state_key="crouching" accuracy="0.98" />
+    <stance state_key="prone" accuracy="1.0" /> 
+    <stance state_key="prone_moving" accuracy="0.5" />
+    <stance state_key="over_wall" accuracy="1" />
     <modifier class="speed" value="-0.15" />
 </weapon>

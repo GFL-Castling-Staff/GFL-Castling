@@ -57,12 +57,12 @@
         <model filename="gkw_88type_gudan_gun.xml" />
         <hud_icon filename="gkw_88type_6503_mod3.png" />
         <weak_hand_hold offset="0.3" />
-        <projectile file="88type_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7"> 
-		<result class="spawn" instance_class="projectile" instance_key="88type_mrr.projectile" min_amount="6" max_amount="6" offset="0 0.5 0" position_spread="0.5 0" direction_spread="0 0" />	
-		<trigger class="impact" time_to_live="0.2"  />
-        <trail probability="1.0" key="laser_hyz" />
-		<rotation class="motion" />
-		<collision class="sticky" />
+        <projectile file="88type_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7">
+            <result class="spawn" instance_class="projectile" instance_key="88type_mrr.projectile" min_amount="6" max_amount="6" offset="0 0.5 0" position_spread="0.5 0" direction_spread="0 0" />
+            <trigger class="impact" time_to_live="0.2"  />
+            <trail probability="1.0" key="laser_hyz" />
+            <rotation class="motion" />
+            <collision class="sticky" />
         </projectile>
         <stance state_key="running" accuracy="1" />
         <stance state_key="walking" accuracy="1" />
