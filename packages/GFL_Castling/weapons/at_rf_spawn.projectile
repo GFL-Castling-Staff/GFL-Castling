@@ -83,7 +83,6 @@ radius="0.5"
     <effect class="result" key="vehicle" ref="Ct_Shine" lighting="0" />
     <effect class="result" key="vehicle" ref="Godray" lighting="0" />
 
-    <effect class="result" key="other" ref="BulletImpact" />
     <effect class="result" key="vehicle" ref="BulletImpact" />
     <effect class="result" key="terrain" ref="BulletImpact" />
     <effect class="result" key="character" ref="BulletImpact" />
@@ -91,6 +90,7 @@ radius="0.5"
 
     <effect class="result" key="terrain" ref="Bullet_Burnout_20mm"/>
     <effect class="result" key="static_object" copy="terrain" />
+    <effect class="result" key="other" copy="terrain" />
 
     <effect class="result" key="shield" ref="hitMetal" />
     <effect class="result" key="shield" ref="hitMetal_1" />
@@ -102,6 +102,6 @@ radius="0.5"
     <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="2" additive="0" />
     <effect class="result" key="character" ref="common_hit_effect_1" lighting="0"/>
     <effect class="result" key="character" ref="common_hit_effect_2" lighting="0" />
-    <trail probability="1.0" />
+    <trail probability="1" key="BulletApTrail_rf"/>
 
 </projectile>
