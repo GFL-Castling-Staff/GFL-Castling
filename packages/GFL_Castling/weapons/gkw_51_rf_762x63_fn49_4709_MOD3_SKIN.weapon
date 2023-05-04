@@ -49,7 +49,7 @@
         <result 
 		class="hit" 
 		kill_probability="2.5"
-		kill_probability_offset_on_successful_hit="3.5" 
+		kill_probability_offset_on_successful_hit="5.0" 
 		kill_decay_start_time="0.964" 
 		kill_decay_end_time="1.607"
 		/>
@@ -117,7 +117,7 @@
         <result 
 		class="hit" 
 		kill_probability="2.5"
-		kill_probability_offset_on_successful_hit="3.5" 
+		kill_probability_offset_on_successful_hit="5.0" 
 		kill_decay_start_time="0.964" 
 		kill_decay_end_time="1.607"
 		/>
