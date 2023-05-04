@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="designated_marksman_rifle.animation_base" key="gkw_dsr50_2101.weapon">
+<weapon key="gkw_dsr50_2101.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<tag name="rifle" />
     <!--Weapon specifications-->
     <specification 
 	retrigger_time="-1.0" 
@@ -13,6 +14,10 @@
 	suppressed="1" 
 	name="DSR-50-[Highest Bidder]" 
 	class="2"
+    slot="0"
+    stab_enabled="1"
+    stab_range="4"
+	carry_in_two_hands="1"
 	reload_one_at_a_time="0" 
 	sight_range_modifier="2.25" 
 	projectile_speed="240" 
@@ -23,6 +28,14 @@
     <animation key="cycle" animation_key="Brifle1.5" />
     <animation key="cycle" stance_key="prone" animation_key="Brifle1.5p" />
     <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
+    <animation key="recoil"  animation_key="recoil1" />
+    <animation key="recoil"  animation_key="recoil2" />
+    <animation key="recoil"  animation_key="recoil3" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+	<animation state_key="stabbing" animation_key="stabbing, bat" />
     <!--Sounds-->
     <sound key="fire" fileref="dsr50_Fire_FromCOD16AX50.wav" volume="1.9" />
     <sound key="cycle" fileref="dsr50_cycle_FromBF2042.wav" volume="0.8"/>
@@ -38,18 +51,12 @@
 
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
-    <projectile file="ntw.projectile" can_be_detected_by_footmen="0">
-        <result class="blast" 
-        damage="8.0" 
-        radius="3" 
-        decal="1" 
-        push="0.4" 
-        character_state="death"
-        faction_compare="not_equal"
-		/>
+    <projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7"> 
+		<result class="spawn" instance_class="projectile" instance_key="dsr50_ap.projectile" min_amount="5" max_amount="5" offset="0 0.5 0" position_spread="0.5 0" direction_spread="0 0" />	
+		<trigger class="impact" time_to_live="0.2"  />
+		<rotation class="motion" />
+		<collision class="sticky" />
     </projectile>
-    <modifier class="speed" value="-0.2" />
-
     <!--Accuracy, Movement speed-->
     <stance state_key="running" accuracy="1.1" />
     <stance state_key="walking" accuracy="1.1" />
@@ -59,6 +66,6 @@
     <stance state_key="crouching" accuracy="1.1" />
     <stance state_key="prone" accuracy="1.1" />
     <stance state_key="over_wall" accuracy="1.1" />
-    <modifier class="detectability" value="-0.05" />
-
+    <modifier class="detectability" value="-0.1" />
+    <modifier class="speed" value="-0.2" />
 </weapon>
