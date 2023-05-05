@@ -1527,11 +1527,11 @@
     <model filename="gkd_mg_mk48.xml">
         <requirement class="weapon" key="gkw_mk48.weapon" slot="0" />
     </model>
-    <model filename="kccod_ye_xmas.xml">
+    <model score="1500" filename="kccod_ye_xmas.xml">
         <requirement class="carry_item" key="costume_santa.carry_item" slot="0" />
         <requirement class="rank" range="0 100000" />
     </model>
-    <model filename="kccod_ye_xmas.xml">
+    <model score="1500" filename="kccod_ye_xmas.xml">
         <requirement class="carry_item" key="costume_santa_1" slot="0" />
         <requirement class="rank" range="0 100000" />
     </model>
