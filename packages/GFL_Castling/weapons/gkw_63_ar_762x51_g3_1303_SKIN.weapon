@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="two_hands_ar.animation_base" key="gkw_g3_1303.weapon">
+<weapon key="gkw_g3_1303.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <tag name="autorifle" />
     <specification 
-		accuracy_factor="1.0" 
-		barrel_offset="0.4" 
-		class="0"
-        slot="0" 
-		magazine_size="20" 
-		name="G3-[Parsty Cook on Battlefield]" 
-		projectile_speed="200.0" 
-		retrigger_time="0.1" 
-		suppressed="0" 
-		sustained_fire_diminish_rate="1.7" 
-		sustained_fire_grow_step="0.5" />
+    stab_enabled="1"
+	carry_in_two_hands="1"
+	burst_shots="1"
+	last_burst_retrigger_time="-1"
+    accuracy_factor="1.0" 
+    barrel_offset="0.4" 
+    class="0"
+    slot="0" 
+    magazine_size="20" 
+    spread_range="0.45"
+    name="G3-[Parsty Cook on Battlefield]" 
+    projectile_speed="200.0" 
+    retrigger_time="0.1" 
+    suppressed="0" 
+    sustained_fire_diminish_rate="2.2" 
+    sustained_fire_grow_step="0.8" />
+    <commonness value="0.2" in_stock="1" can_respawn_with="1" />
+    <animation key="recoil" animation_key="recoil1" />
+    <animation key="recoil" animation_key="recoil2" />
+    <animation key="recoil" animation_key="recoil3" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+    <animation state_key="hold_on_wall" animation_key="still" />
+    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+    <animation state_key="stabbing" animation_key="melee, quick knife" />
+    <animation state_key="stabbing" animation_key="pistol whip 3" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <inventory encumbrance="35.0" buy_price="7.0" sell_price="7.0" />
-    <commonness value="0" in_stock="0" />
     <sound key="fire" fileref="g3_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="g3_mgz_out_FromCOD17.wav" volume="0.4" />
     <sound key="magazine_in" fileref="g3_mgz_in_FromCOD17.wav" volume="0.4" />
@@ -24,15 +40,23 @@
     <hud_icon filename="gkw_g3_1303.png" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="1.9" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="1.125" kill_decay_end_time="1.875" />
+        <result class="hit"  kill_probability="3.0" kill_probability_offset_on_successful_hit="5.2" kill_decay_start_time="1.125" kill_decay_end_time="1.875" />
     </projectile>
     <effect class="muzzle" ref="ejection_76251" />
-    <stance state_key="running" accuracy="0.3" />
+    <stance state_key="running" accuracy="0.2" />
     <stance state_key="walking" accuracy="0.6" />
-    <stance state_key="crouch_moving" accuracy="0.8" />
-    <stance state_key="prone_moving" accuracy="0.8" />
+    <stance state_key="crouch_moving" accuracy="0.6" />
+    <stance state_key="prone_moving" accuracy="0.6" />
     <stance state_key="standing" accuracy="0.75" />
-    <stance state_key="crouching" accuracy="0.8" />
+    <stance state_key="crouching" accuracy="0.85" />
     <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" /> 
     <modifier class="detectability" value="0.0" />
+    <modifier class="speed" value="0.0" />
+    <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
+    <target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 </weapon>
