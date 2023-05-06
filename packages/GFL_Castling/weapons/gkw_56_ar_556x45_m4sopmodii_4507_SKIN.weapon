@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon key="gkw_m4sopmodii_4507.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
     <specification
-    accuracy_factor="0.98"
+    accuracy_factor="1.0"
     barrel_offset="0.4"
     class="0"
     slot="0"
@@ -31,7 +31,7 @@
     <commonness value="0" in_stock="0"/>
     <weak_hand_hold offset="0.2"/>
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="3.5" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.023" kill_decay_end_time="1.705"/>
+        <result class="hit" kill_probability="4.0" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.023" kill_decay_end_time="1.705"/>
     </projectile>
     <effect class="muzzle" ref="ejection_556"/>
     <modifier class="detectability" value="0.0"/>
@@ -50,11 +50,10 @@
     <stance state_key="walking" accuracy="0.45" />
     <stance state_key="crouch_moving" accuracy="0.9" />
     <stance state_key="prone_moving" accuracy="0.9" />
-    <stance state_key="standing" accuracy="0.9" />
+    <stance state_key="standing" accuracy="0.8" />
     <stance state_key="crouching" accuracy="0.95" />
     <stance state_key="prone" accuracy="1" />
     <stance state_key="over_wall" accuracy="1" />
-    <modifier class="speed" value="0.0"/>
     <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
     <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
     <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>

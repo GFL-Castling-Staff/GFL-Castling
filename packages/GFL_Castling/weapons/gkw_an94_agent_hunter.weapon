@@ -4,7 +4,7 @@
 <weapon key="gkw_an94_agent_hunter_7n6.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 <tag name="autorifle" />
     <specification 
-	accuracy_factor="0.98" 
+	accuracy_factor="1.0" 
 	barrel_offset="0.5" 
 	class="0"
     slot="0" 
@@ -75,7 +75,7 @@
     <effect class="muzzle" ref="muzzle_blue" />
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="1.34" kill_decay_end_time="1.95" />
+        <result class="hit" kill_probability="4.4" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="1.34" kill_decay_end_time="1.95" />
     </projectile>
     <effect class="muzzle" ref="ejection_556" />
     <stance state_key="running" accuracy="0.3" />
@@ -155,7 +155,7 @@
     
     <weak_hand_hold offset="0.3" />
     <projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="0" can_be_detected_by_driver="0" can_be_disarmed="0" radius="0.5"> 
-		<result class="spawn" instance_class="projectile" instance_key="ak12_7n39.projectile" min_amount="1" max_amount="1" offset="0 0.5 0" position_spread="0.5 0" direction_spread="0 0" />	
+		<result class="spawn" instance_class="projectile" instance_key="an94_7n39.projectile" min_amount="1" max_amount="1" offset="0 0.5 0" position_spread="0.5 0" direction_spread="0 0" />	
 		<trigger class="impact" time_to_live="0.2"  />
 		<rotation class="motion" />
 		<collision class="sticky" />
@@ -170,7 +170,7 @@
     <stance state_key="prone" accuracy="1.1" />
     <stance state_key="over_wall" accuracy="1.1" />
     <modifier class="speed" value="0.2" />
-    <modifier class="detectability" value="-0.1" />
+    <modifier class="detectability" value="-0.15" />
 </weapon>
-<!--近战模式，左手双管短霰弹枪，右手猎人斧头-->
+<!--氧化剂模式-->
 </weapons>
