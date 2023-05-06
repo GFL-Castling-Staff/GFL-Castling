@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectiles>
+<projectile  
+class="grenade" 
+name="DSR-50 AP projectile" 
+key="dsr50_ap.projectile" 
+slot="0"
+pulldown_in_air="15.0"
+on_ground_up="0 1 0"
+use_time_to_live="1"
+time_to_live="60"
+can_be_disarmed="0"
+can_be_detected_by_footmen="1"
+can_be_detected_by_driver="1"
+radius="0.3"
+time_to_live_out_in_the_open="150"
+player_death_drop_owner_lock_time="120"
+>
+	<result class="blast" radius="3.0" damage="8.0" push="0.3" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<trigger class="time" time_to_live="0" />	
+    <rotation class="random" />
+	<model mesh_filename="" />
+	<commonness value="0.0" can_respawn_with="0" in_stock="0"/>
+</projectile>
+
+<projectile  
+class="grenade" 
+name="TAC-50 AP projectile" 
+key="tac50_ap.projectile" 
+slot="0"
+pulldown_in_air="15.0"
+on_ground_up="0 1 0"
+use_time_to_live="1"
+time_to_live="60"
+can_be_disarmed="0"
+can_be_detected_by_footmen="1"
+can_be_detected_by_driver="1"
+radius="0.3"
+time_to_live_out_in_the_open="150"
+player_death_drop_owner_lock_time="120"
+>
+	<result class="blast" radius="3.5" damage="8.0" push="0.4" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<trigger class="time" time_to_live="0" />	
+    <rotation class="random" />
+	<model mesh_filename="" />
+	<commonness value="0.0" can_respawn_with="0" in_stock="0"/>
+</projectile>
+
+<projectile  
+class="grenade" 
+name="NTW-20 AP projectile" 
+key="ntw20_ap.projectile" 
+slot="0"
+pulldown_in_air="15.0"
+on_ground_up="0 1 0"
+use_time_to_live="1"
+time_to_live="60"
+can_be_disarmed="0"
+can_be_detected_by_footmen="1"
+can_be_detected_by_driver="1"
+radius="0.3"
+time_to_live_out_in_the_open="150"
+player_death_drop_owner_lock_time="120"
+>
+	<result class="blast" radius="4.0" damage="22.0" push="0.6" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<trigger class="time" time_to_live="0" />	
+    <rotation class="random" />
+	<model mesh_filename="" />
+	<commonness value="0.0" can_respawn_with="0" in_stock="0"/>
+</projectile>
+
+<projectile  
+class="grenade" 
+name="AK12 7N39 projectile" 
+key="ak12_7n39.projectile" 
+slot="0"
+pulldown_in_air="15.0"
+on_ground_up="0 1 0"
+use_time_to_live="1"
+time_to_live="60"
+can_be_disarmed="0"
+can_be_detected_by_footmen="1"
+can_be_detected_by_driver="1"
+radius="0.3"
+time_to_live_out_in_the_open="150"
+player_death_drop_owner_lock_time="120"
+>
+	<result class="blast" radius="1.5" damage="3.1" push="0.2" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<trigger class="time" time_to_live="0" />	
+    <rotation class="random" />
+	<model mesh_filename="" />
+	<commonness value="0.0" can_respawn_with="0" in_stock="0"/>
+</projectile>
+
+<projectile  
+class="grenade" 
+name="AN94 7N39 projectile" 
+key="an94_7n39.projectile" 
+slot="0"
+pulldown_in_air="15.0"
+on_ground_up="0 1 0"
+use_time_to_live="1"
+time_to_live="60"
+can_be_disarmed="0"
+can_be_detected_by_footmen="1"
+can_be_detected_by_driver="1"
+radius="0.3"
+time_to_live_out_in_the_open="150"
+player_death_drop_owner_lock_time="120"
+>
+	<result class="blast" radius="1.5" damage="3.1" push="0.2" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<trigger class="time" time_to_live="0" />	
+    <rotation class="random" />
+	<model mesh_filename="" />
+	<commonness value="0.0" can_respawn_with="0" in_stock="0"/>
+</projectile>
+</projectiles>
