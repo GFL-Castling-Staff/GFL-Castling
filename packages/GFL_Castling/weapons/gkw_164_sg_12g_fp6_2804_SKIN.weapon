@@ -11,7 +11,7 @@
 	suppressed="0" 
 	name="FABARM FP-6-[Satellite of Love]" 
 	class="1" 
-	reload_one_at_a_time="0.75"
+	reload_one_at_a_time="1"
 	sight_range_modifier="1" 
 	projectile_speed="120" 
 	barrel_offset="0.4" 
@@ -21,8 +21,8 @@
     <inventory encumbrance="12.5" buy_price="20.0" sell_price="20.0" />
     <!--Animations-->
     <commonness value="0" can_respawn_with="1" in_stock="0" />
-    <animation state_key="cycle" animation_key="Pshotgun0.7" />
-    <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.7p" />
+    <animation state_key="cycle" animation_key="Pshotgun0.5" />
+    <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />
     <animation key="reload" animation_key="reloading, oaat" />
     <!--Sounds-->
     <sound key="fire" fileref="fp6_fire_FromCOD10.wav" pitch_variety="0.05" volume="1.15" />
