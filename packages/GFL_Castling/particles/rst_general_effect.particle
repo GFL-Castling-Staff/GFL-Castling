@@ -1186,8 +1186,8 @@ particle_system general_weapon_activated_bullet_light
 {
 	quota 100
 	material point_soft_edge_100
-	particle_width 15
-	particle_height 15
+	particle_width 10
+	particle_height 10
 	renderer billboard
 	billboard_rotation_type vertex
 	iteration_interval 0.01

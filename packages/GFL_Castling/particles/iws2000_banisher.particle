@@ -1,0 +1,583 @@
+2023.3.17
+author: RST
+iws2000的武器特效
+
+
+-----------------------------------------iws2000-------------------------------------
+particle_system iws2000_recoil_smoke		//后坐力扬尘
+{
+	quota 300
+	emit_emitter_quota 300
+	material explosion_smoke_01
+	particle_width 1.5
+	particle_height 1.5
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type oriented_common
+	common_direction 0 0.3 -1
+
+	emitter Ellipsoid 
+	{
+		angle 30
+		colour 0.2 0.2 0.2 0.3
+		direction 0 1 0
+		emission_rate 50
+		position 0 -0.2 0
+		velocity -0.8
+		velocity_min -0.4
+		velocity_max -2
+		time_to_live 1.5
+		time_to_live_max 1.2
+		time_to_live_min 1.8
+		duration 0.15
+		width 3
+		height 0
+		depth 5
+		inner_width 3
+		inner_height 3
+		inner_depth 3
+	}
+	
+	affector ColourFader2
+	{
+		red1	 -0.18
+		green1  -0.19
+		blue1	-0.2
+		alpha1	-0.2
+		red2	 -0.4
+		green2  -0.5
+		blue2	-0.5
+		alpha2	-0.5
+		state_change 0.5
+
+	}
+	affector Scaler
+	{
+		rate 0.7
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start -150
+		rotation_speed_range_end 150
+		rotation_range_start 0
+		rotation_range_end 360
+	}
+	affector LinearForce
+	{
+		force_vector 0 0 0
+		force_application add
+	}
+
+}
+
+particle_system crescent_smoke_impact		//月牙冲击烟雾
+{
+	quota 300
+	emit_emitter_quota 300
+	material crescent_smoke
+	particle_width 3
+	particle_height 3
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type oriented_self
+	common_direction -1 0 0
+
+	emitter Point 
+	{
+		angle 45
+		colour 0.5 0.5 0.5 0.5
+		direction 0 1 0
+		emission_rate 20
+		position 0 -0.2 0
+		velocity -3.5
+		velocity_min -2 
+		velocity_max -6
+		time_to_live 1.5
+		time_to_live_min 1
+		time_to_live_max 1.3
+		duration 0.1
+	}
+	
+	affector ColourFader2
+	{
+		red1	 0.2
+		green1  0.2
+		blue1	0.2
+		alpha1	0
+		red2	 -5
+		green2  -5
+		blue2	-5
+		alpha2	-5
+		state_change 0.6
+	}
+	affector Scaler
+	{
+		rate 0.7
+	}
+	
+	affector LinearForce
+	{
+		force_vector 0 -0.2 0
+		force_application add
+	}
+
+}
+
+particle_system lens_circle		//光圈
+{
+	quota 300
+	emit_emitter_quota 300
+	material lens_circle
+	particle_width 3
+	particle_height 3
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type perpendicular_self
+	common_direction -1 0 0
+	common_up_vector 0 1 0
+
+	emitter Point 
+	{
+		angle 0
+		colour 0.5 0.5 0.5 0.5
+		direction 0 -1 0
+		emission_rate 20
+		position 0 0 0
+		velocity 1
+		time_to_live_min 0.3
+		time_to_live_max 0.3
+		duration 0.3
+	}
+	
+	affector ColourFader2
+	{
+		red1	 0.2
+		green1  0.2
+		blue1	0.2
+		alpha1	0
+		red2	 -5
+		green2  -5
+		blue2	-5
+		alpha2	-5
+		state_change 0.1
+	}
+	affector Scaler
+	{
+		rate 0.8
+	}
+
+}
+
+particle_system lens_circle_enlarge		//扩散光圈
+{
+	quota 300
+	emit_emitter_quota 300
+	material lens_circle
+	particle_width 8
+	particle_height 8
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type perpendicular_self
+	common_direction -1 0 0
+	common_up_vector 0 1 0
+
+	emitter Point 
+	{
+		angle 0
+		colour 0.7 0.5 0.5 1
+		direction 0 -1 0
+		emission_rate 10
+		position 0 0 0
+		velocity 1
+		time_to_live_min 0.1
+		time_to_live_max 0.1
+		duration 0.1
+	}
+	
+	affector ColourFader2
+	{
+		red1	 0.4
+		green1  0.5
+		blue1	0
+		alpha1	10
+		red2	 -5
+		green2  -5
+		blue2	-5
+		alpha2	-5
+		state_change 0.05
+	}
+	affector Scaler
+	{
+		rate 100
+	}
+
+}
+
+particle_system lens_flare_01		//镜头光晕_长条椭圆状
+{
+	quota 300
+	emit_emitter_quota 300
+	material lens_flare_01
+	particle_width 3.5
+	particle_height 3.5
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type oriented_self
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+
+	emitter Point 
+	{
+		angle 0
+		colour 0.8 0.8 0.5 0.5
+		direction 0 1 0
+		emission_rate 20
+		position 0 0 0
+		velocity -0.8
+		time_to_live 1.5
+		time_to_live_min 0.8
+		time_to_live_max 1
+		duration 0.1
+	}
+	
+	affector ColourFader2
+	{
+		red1	 0.3
+		green1  0.2
+		blue1	0
+		alpha1	0
+		red2	 -5
+		green2  -5
+		blue2	-5
+		alpha2	-5
+		state_change 0.3
+	}
+	affector Scaler
+	{
+		rate 0.7
+	}
+	
+	affector LinearForce
+	{
+		force_vector 0 0 0
+		force_application add
+	}
+
+}
+
+particle_system square_fill_20		//点扩散飞溅菱形方块特效
+{
+	quota 300
+	emit_emitter_quota 300
+	material square_fill_20
+	particle_width 0.3
+	particle_height 0.3
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type point
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+
+	emitter Ring 
+	{
+		angle 0
+		colour 0.5 0.5 0.5 0.5
+		direction 0 1 0
+		emission_rate 30
+		position 0 0 0
+		velocity -3
+		velocity_min -3
+		velocity_max -4
+		time_to_live 1.5
+		time_to_live_min 1
+		time_to_live_max 1.5
+		duration 0.1
+		width 5
+		height 5
+		depth 2
+		inner_width 0
+		inner_height 0
+	}
+	
+	affector ColourFader2
+	{
+		red1	 1
+		green1  1
+		blue1	1
+		alpha1	0
+		red2	 -5
+		green2  -5
+		blue2	-5
+		alpha2	-5
+		state_change 0.6
+	}
+	affector Scaler
+	{
+		rate 0.5
+	}
+	
+	affector LinearForce
+	{
+		force_vector 0 0 0
+		force_application add
+	}
+
+}
+
+particle_system point_penetrate_linear_light_iws2000	//点扩散冲击线性光斑
+{
+	quota 300
+	material R_point_01
+	particle_width 0.23
+	particle_height 1.2
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type oriented_self
+	
+	emitter Point
+	{
+		angle 40
+		colour 1 1 1 1
+		direction 0 -1 0
+		emission_rate 100
+		position 0 0 0
+		velocity -50
+		velocity_min -10
+		velocity_max -15
+		time_to_live_min 0.5
+		time_to_live_max 0.6
+		duration 0.08
+	}
+	
+	affector ColourFader2
+	{
+		red1	 10
+		green1  10
+		blue1	0
+		alpha1	10
+		red2	 10
+		green2  -10
+		blue2	-10
+		alpha2	10
+		state_change 0.15
+	}
+	affector Scaler
+	{
+		rate 0
+	}
+}
+particle_system anti_U_type_point_penetrate_particle_iws2000	//点扩散飞溅倒U粒子
+{
+	quota 300
+	material anti_u_type_flare_02
+	particle_width 2
+	particle_height 2
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type oriented_self
+	
+	emitter Point
+	{
+		angle 60
+		colour 1 1 0 1
+		direction 0 -1 0
+		emission_rate 10
+		position 0 0 0
+		velocity -50
+		velocity_min -10
+		velocity_max -20
+		time_to_live_min 0.3
+		time_to_live_max 0.4
+		duration 0.1
+	}
+	
+	affector ColourFader2
+	{
+		red1	 10
+		green1  10
+		blue1	0
+		alpha1	10
+		red2	 -10
+		green2  -10
+		blue2	-10
+		alpha2	10
+		state_change 0.1
+	}
+	affector Scaler
+	{
+		rate 2
+	}
+}
+
+particle_system v_type_impact_flare	//V形开合中心爆炸炫光
+{
+	quota 300
+	material v_type_flare_01
+	particle_width 7
+	particle_height 7
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type oriented_self
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 -1 0
+		emission_rate 30
+		position 0 0 0
+		velocity -1
+		time_to_live_min 0.2
+		time_to_live_max 0.3
+		duration 0.1
+	}
+	
+	affector ColourFader2
+	{
+		red1	 10
+		green1  10
+		blue1	0
+		alpha1	10
+		red2	 -10
+		green2  -10
+		blue2	-10
+		alpha2	10
+		state_change 0.1
+	}
+	affector Scaler
+	{
+		rate 20
+	}
+}
+
+particle_system center_area_lighting
+{
+	quota 300
+	material high_transparent_point
+	particle_width 7
+	particle_height 7
+	renderer billboard
+	billboard_type oriented_self
+	emitter Point
+	{
+		angle 90
+		colour 0.6 0.5 0.5 0.1
+		direction 0 1 0
+		emission_rate 50
+		position 0 0.5 0
+		velocity 0.001
+		velocity_min 0.001
+		velocity_max 0.001
+		time_to_live 1
+		time_to_live_min 0.3
+		time_to_live_max 0.4
+		duration 0.3
+	}
+
+	affector Scaler
+	{
+		rate -8
+	}
+	affector ColourFader2
+	{
+		red1	4
+		green1  4
+		blue1	-0.1
+		alpha1	1
+		red2	 -5
+		green2  -5
+		blue2	-5
+		alpha2	-5
+		state_change 0.1
+	}
+}
+
+
+--------------------------------------material-----------------------------------
+material alpha_blend_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend alpha_blend
+		}
+	}
+}
+
+material add_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+		}
+	}
+}
+
+material explosion_smoke_01 : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture explosion_smoke_01.png 	
+}}}}
+material crescent_smoke : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture crescent_smoke.png 	
+}}}}
+material lens_circle : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture lens_circle.png 	
+}}}}
+material lens_flare_01 : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture lens_flare_01.png 	
+}}}}
+material square_fill_20 : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture square_fill_20.png 	
+}}}}
+material anti_u_type_flare_02 : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture anti_u_type_flare_02.png 	
+}}}}
+material v_type_flare_01 : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture v_type_flare_01.png 	
+}}}}
+material high_transparent_point : alpha_blend_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture R_point_02.png 	
+}}}}
+material R_point_01 : alpha_blend_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture R_point_01.png 	
+}}}}
