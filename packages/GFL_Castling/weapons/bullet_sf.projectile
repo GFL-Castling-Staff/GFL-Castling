@@ -80,5 +80,6 @@
     <effect class="result" key="static_object" ref="LaserImpact_Red"/>
 
     <trail probability="1.0" key="red" />
-
+    <effect class="activated" ref="general_weapon_activated_bullet_light" lighting="0"/>
+    <effect class="activated" ref="general_weapon_activated_bullet_centerlight" lighting="0"/>    
 </projectile>

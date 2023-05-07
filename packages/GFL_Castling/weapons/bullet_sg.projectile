@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="10">
+<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
     <result class="hit" damage_origin_vehicle="0" />
     <trigger class="impact" />
     <rotation class="motion" />
@@ -65,16 +65,10 @@
     <effect class="result" key="terrain" ref="BulletImpactDust1" />
     <effect class="result" key="terrain" ref="BulletImpactDust2" />
     <effect class="result" key="terrain" ref="BulletImpactDust3" />
-    <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
-    <effect class="result" key="terrain" ref="LowDust"/>
-    <effect class="result" key="terrain" ref="Shine" lighting="0" />
-    <effect class="result" key="terrain" ref="Godray" lighting="0" />
 
     <effect class="result" key="vehicle" ref="Burst" use_surface_color="1" />
     <effect class="result" key="vehicle" ref="hitMetal" />
     <effect class="result" key="vehicle" ref="hitMetal_1" />
-    <effect class="result" key="vehicle" ref="Shine" lighting="0" />
-    <effect class="result" key="vehicle" ref="Godray" lighting="0" />
 
     <effect class="result" key="other" ref="BulletImpact" />
     <effect class="result" key="vehicle" ref="BulletImpact" />
@@ -93,5 +87,4 @@
 
     <trail probability="1.0" key="bullet_new" />
     <effect class="activated" ref="general_weapon_activated_bullet_light" lighting="0"/>
-    <effect class="activated" ref="general_weapon_activated_bullet_centerlight" lighting="0"/>    
 </projectile>
