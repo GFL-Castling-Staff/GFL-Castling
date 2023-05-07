@@ -40,7 +40,7 @@
         <model filename="gkw_sg_spas15.xml"/>
         <hud_icon filename="gkw_spas15.png"/>
         <weak_hand_hold offset="0.3"/>
-        <projectile file="bullet.projectile">
+        <projectile file="bullet_sg.projectile">
             <result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="0.3" kill_decay_end_time="0.6"/>
         </projectile>
 
@@ -123,7 +123,7 @@
         <model filename="gkw_sg_spas15.xml"/>
         <hud_icon filename="gkw_spas15_skill.png"/>
         <weak_hand_hold offset="0.3"/>
-        <projectile file="bullet.projectile">
+        <projectile file="bullet_sg.projectile">
             <result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.3" kill_decay_end_time="0.6"/>
         </projectile>
         <modifier class="speed" value="-0.35"/>

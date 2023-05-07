@@ -34,7 +34,7 @@
     <model filename="gkw_sg_mk3a1.xml"/>
     <hud_icon filename="gkw_mk3a1.png"/>
     <weak_hand_hold offset="0.3"/>
-    <projectile file="bullet.projectile">
+    <projectile file="bullet_sg.projectile">
         <result class="hit" 
         kill_probability="2.0"
         kill_probability_offset_on_successful_hit="1.0" 

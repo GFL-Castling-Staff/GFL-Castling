@@ -38,7 +38,7 @@
         <hud_icon filename="gkw_m1897mod3.png" />
         <!--Ballistics-->
         <weak_hand_hold offset="0.3" />
-        <projectile file="bullet.projectile">
+        <projectile file="bullet_sg.projectile">
             <result class="hit" 
         kill_probability="2.0" 
         kill_decay_start_time="0.05" 
@@ -95,7 +95,7 @@
         <hud_icon filename="gkw_m1897mod3_skill.png" />
         <!--Ballistics-->
         <weak_hand_hold offset="0.3" />
-        <projectile file="bullet.projectile" time_to_live="0.15">
+        <projectile file="bullet_sg.projectile" time_to_live="0.15">
             <result class="blast" radius="1.5" damage="1.1" push="0.75" decal="1" character_state="death"  faction_compare="not_equal"/>
             <trail probability="1.0" key="bullet_buckshot"/>
         </projectile>

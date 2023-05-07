@@ -34,7 +34,7 @@
         <hud_icon filename="gkw_fo-12.png" />
         <!--Ballistics-->
         <weak_hand_hold offset="0.3" />
-        <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
+        <projectile file="bullet_sg.projectile" can_be_detected_by_footmen="0">
         <result class="hit" 
         kill_probability="2.0"
         kill_probability_offset_on_successful_hit="0.15" 
@@ -86,7 +86,7 @@
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <!--Ballistics-->
         <weak_hand_hold offset="0.3" />
-        <projectile file="bullet.projectile" can_be_detected_by_footmen="0" time_to_live="0.3">
+        <projectile file="bullet_sg.projectile" can_be_detected_by_footmen="0" time_to_live="0.3">
         <result class="hit" 
         kill_probability="2.2" 
         kill_decay_start_time="0.15" 

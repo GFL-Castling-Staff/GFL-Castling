@@ -36,7 +36,7 @@
     <hud_icon filename="gkw_coltdefender_5505.png" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
-    <projectile file="bullet.projectile" time_to_live="0.5">
+    <projectile file="bullet_sg.projectile" time_to_live="0.5">
         <result class="hit" 
         kill_probability="6.0" 
         kill_probability_offset_on_successful_hit="12.0"
@@ -91,7 +91,7 @@
     <hud_icon filename="gkw_coltdefender_5505.png" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
-    <projectile file="bullet.projectile" time_to_live="0.5">
+    <projectile file="bullet_sg.projectile" time_to_live="0.5">
         <result class="hit" 
         kill_probability="6.0" 
         kill_probability_offset_on_successful_hit="12.0"

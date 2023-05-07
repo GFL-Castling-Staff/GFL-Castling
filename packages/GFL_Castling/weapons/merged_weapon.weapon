@@ -1791,7 +1791,7 @@
 	<model filename="gkw_sg_sat8.xml"/>
 	<hud_icon filename="gkw_sat8.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.25" kill_decay_end_time="0.65"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
@@ -1864,7 +1864,7 @@
 	<model filename="gkw_sg_supershorty.xml"/>
 	<hud_icon filename="gkw_supershorty.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.2" kill_decay_end_time="0.65"/>
 	</projectile>
 	<modifier class="speed" value="0.4"/>
@@ -1905,7 +1905,7 @@
 	<model filename="gkw_sg_aa12.xml"/>
 	<hud_icon filename="gkw_aa12.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.0" kill_decay_start_time="0.2" kill_decay_end_time="0.9"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.7"/>
@@ -1962,7 +1962,7 @@
 	<model filename="gkw_sg_aa12.xml"/>
 	<hud_icon filename="gkw_aa12_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.2" kill_decay_end_time="0.9"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.7"/>
@@ -2020,7 +2020,7 @@
 	<model filename="gkw_sg_m1014.xml"/>
 	<hud_icon filename="gkw_m1014.png"/>
 	<weak_hand_hold offset="0.2"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.3" kill_decay_start_time="0.3" kill_decay_end_time="0.5"/>
 	<trail probability="1.0" key="bullet_buckshot"/>
 	</projectile>
@@ -2077,7 +2077,7 @@
 	<model filename="gkw_sg_m1014_supp.xml"/>
 	<hud_icon filename="gkw_m1014_skill.png"/>
 	<weak_hand_hold offset="0.2"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.3" kill_decay_start_time="0.3" kill_decay_end_time="0.5"/>
 	<trail probability="1.0" key="bullet_buckshot"/>
 	</projectile>
@@ -2951,7 +2951,7 @@
 	<model filename="gkw_sg_m870.xml"/>
 	<hud_icon filename="gkw_m870.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="0.4" kill_decay_end_time="0.5"/>
 	<trail probability="1.0" key="bullet_buckshot"/>
 	</projectile>
@@ -3573,7 +3573,7 @@
 	<model filename="shotgun1.xml"/>
 	<hud_icon filename="gkw_liberator.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="0.3" kill_decay_start_time="0.3" kill_decay_end_time="0.5"/>
 	</projectile>
 	<stance state_key="walking" accuracy="0.5"/>
@@ -8966,7 +8966,7 @@
 	<model filename="gkw_sg_dp12.xml"/>
 	<hud_icon filename="gkw_dp12.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.15" kill_decay_start_time="0.3" kill_decay_end_time="0.5"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.55"/>
@@ -9021,7 +9021,7 @@
 	<model filename="gkw_sg_dp12.xml"/>
 	<hud_icon filename="gkw_dp12_4201.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.15" kill_decay_start_time="0.3" kill_decay_end_time="0.5"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.55"/>
@@ -14736,7 +14736,7 @@
 	<model filename="gkw_ltlx7000_melondove.xml"/>
 	<hud_icon filename="gkw_ltlx7000.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="0.3" kill_decay_end_time="0.5"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
@@ -14794,7 +14794,7 @@
 	<model filename="gkw_ltlx7000_melondove.xml"/>
 	<hud_icon filename="gkw_ltlx7000_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="blast" radius="3.0" damage="0.0" push="0.0" decal="0" character_state="wound" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
@@ -14997,7 +14997,7 @@
 	<model filename="gkw_sg_saiga12.xml"/>
 	<hud_icon filename="gkw_saiga12.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.25" kill_decay_end_time="0.45"/>
 	<trail probability="1.0" key="bullet_buckshot"/>
 	</projectile>
@@ -15052,7 +15052,7 @@
 	<model filename="gkw_sg_saiga12.xml"/>
 	<hud_icon filename="gkw_saiga12_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.45" kill_decay_end_time="0.5"/>
 	</projectile>
 	<modifier class="speed" value="-0.1"/>
@@ -15278,7 +15278,7 @@
 	<model filename="gkw_sg_ksg.xml"/>
 	<hud_icon filename="gkw_ksg.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="0.25" kill_decay_start_time="0.29" kill_decay_end_time="0.5"/>
 	</projectile>
 	<modifier class="speed" value="0.15"/>
@@ -15335,7 +15335,7 @@
 	<model filename="gkw_sg_ksg.xml"/>
 	<hud_icon filename="gkw_ksg_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="5" kill_decay_start_time="0.2" kill_decay_end_time="0.5"/>
 	<trail probability="1.0" key="bullet_new_deep"/>
 	</projectile>
@@ -15406,7 +15406,7 @@
 	<model filename="gkw_ks-23_from_melondove.xml"/>
 	<hud_icon filename="gkw_ks23.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="4.0" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.15" kill_decay_end_time="0.65"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.6"/>
@@ -16582,7 +16582,7 @@
 	<model filename="gkw_sg_m1897_mod3.xml"/>
 	<hud_icon filename="gkw_m1897.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.0" kill_decay_start_time="0.06" kill_decay_end_time="0.66"/>
 	<trail probability="1.0" key="bullet_buckshot"/>
 	</projectile>
@@ -16639,7 +16639,7 @@
 	<model filename="gkw_sg_m870.xml"/>
 	<hud_icon filename="gkw_m1897_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile" time_to_live="0.15">
+	<projectile file="bullet_sg.projectile" time_to_live="0.15">
 	<result class="blast" radius="1.5" damage="1.1" push="0.75" decal="1" character_state="death" faction_compare="not_equal"/>
 	<trail probability="1.0" key="bullet_buckshot"/>
 	</projectile>
@@ -17048,7 +17048,7 @@
 	<model filename="gkw_sg_usas12.xml"/>
 	<hud_icon filename="gkw_usas12.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.0" kill_decay_start_time="0.3" kill_decay_end_time="0.6"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.55"/>
@@ -17107,7 +17107,7 @@
 	<model filename="gkw_sg_usas12.xml"/>
 	<hud_icon filename="gkw_usas12_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.0" kill_decay_start_time="0.3" kill_decay_end_time="0.6"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.55"/>
@@ -18106,7 +18106,7 @@
 	<model filename="gkw_sg_caws_from_Eisen.xml"/>
 	<hud_icon filename="gkw_caws.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="0.2" kill_decay_end_time="0.4"/>
 	</projectile>
 	<modifier class="hit_success_probability" value="-0.4"/>
@@ -18222,7 +18222,7 @@
 	<hud_icon filename="gkw_spas12.png"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.32" kill_decay_end_time="0.6"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
@@ -18324,7 +18324,7 @@
 	<model filename="gkw_sg_spas12.xml"/>
 	<hud_icon filename="gkw_spas12_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile" time_to_live="0.3">
+	<projectile file="bullet_sg.projectile" time_to_live="0.3">
 	<result class="blast" radius="1.5" damage="1.1" push="0.1" decal="1" faction_compare="not_equal"/>
 	</projectile>
 	<modifier class="speed" value="-0.2"/>
@@ -19598,7 +19598,7 @@
 	<model filename="gkw_sg_fo-12.xml"/>
 	<hud_icon filename="gkw_fo-12.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
+	<projectile file="bullet_sg.projectile" can_be_detected_by_footmen="0">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.15" kill_decay_start_time="0.3" kill_decay_end_time="0.5"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
@@ -19653,7 +19653,7 @@
 	<hud_icon filename="gkw_fo-12_skill.png"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile" can_be_detected_by_footmen="0" time_to_live="0.3">
+	<projectile file="bullet_sg.projectile" can_be_detected_by_footmen="0" time_to_live="0.3">
 	<result class="hit" kill_probability="2.2" kill_decay_start_time="0.15" kill_decay_end_time="0.8"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
@@ -19710,7 +19710,7 @@
 	<model filename="gkw_sg_m37.xml"/>
 	<hud_icon filename="gkw_m37.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.37" kill_probability_offset_on_successful_hit="0.37" kill_decay_start_time="0.3" kill_decay_end_time="0.6"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
@@ -19768,7 +19768,7 @@
 	<model filename="gkw_fp6_melondove.xml"/>
 	<hud_icon filename="gkw_fp6.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.25" kill_decay_end_time="0.5"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.7"/>
@@ -19941,7 +19941,7 @@
 	<model filename="gkw_sg_m1897_mod3.xml"/>
 	<hud_icon filename="gkw_m1897mod3.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.0" kill_decay_start_time="0.05" kill_decay_end_time="0.48"/>
 	<trail probability="1.0" key="bullet_buckshot"/>
 	</projectile>
@@ -19998,7 +19998,7 @@
 	<model filename="gkw_sg_m1897_mod3.xml"/>
 	<hud_icon filename="gkw_m1897mod3_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile" time_to_live="0.15">
+	<projectile file="bullet_sg.projectile" time_to_live="0.15">
 	<result class="blast" radius="1.5" damage="1.1" push="0.75" decal="1" character_state="death" faction_compare="not_equal"/>
 	<trail probability="1.0" key="bullet_buckshot"/>
 	</projectile>
@@ -20273,7 +20273,7 @@
 	<model filename="gkw_sg_m500.xml"/>
 	<hud_icon filename="gkw_m500mod3.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="0.55" kill_decay_start_time="0.25" kill_decay_end_time="0.6"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.55"/>
@@ -20333,7 +20333,7 @@
 	<model filename="gkw_sg_m500.xml"/>
 	<hud_icon filename="gkw_m500_3707.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="0.55" kill_decay_start_time="0.25" kill_decay_end_time="0.6"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.55"/>
@@ -21040,7 +21040,7 @@
 	<model filename="gkw_sg_m590.xml"/>
 	<hud_icon filename="gkw_m590.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.25" kill_decay_end_time="0.55"/>
 	</projectile>
 	<modifier class="hit_success_probability" value="-0.45"/>
@@ -21097,7 +21097,7 @@
 	<hud_icon filename="gkw_m500.png"/>
 	<effect class="muzzle" ref="muzzle_sg"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="0.25" kill_decay_start_time="0.25" kill_decay_end_time="0.5"/>
 	</projectile>
 	<modifier class="hit_success_probability" value="-0.4"/>
@@ -22288,7 +22288,7 @@
 	<model filename="gkw_sg_spas15.xml"/>
 	<hud_icon filename="gkw_spas15.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="0.3" kill_decay_end_time="0.6"/>
 	</projectile>
 	<modifier class="detectability" value="0.45"/>
@@ -22346,7 +22346,7 @@
 	<model filename="gkw_sg_spas15.xml"/>
 	<hud_icon filename="gkw_spas15_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.3" kill_decay_end_time="0.6"/>
 	</projectile>
 	<modifier class="speed" value="-0.35"/>
@@ -22659,7 +22659,7 @@
 	<model filename="gkw_sg_m6asw.xml"/>
 	<hud_icon filename="gkw_m6asw.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="0.5" kill_decay_end_time="0.5"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
@@ -22724,7 +22724,7 @@
 	<model filename="gkw_sg_m6asw.xml"/>
 	<hud_icon filename="gkw_m6asw_skill.png"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
+	<projectile file="bullet_sg.projectile" can_be_detected_by_footmen="0">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="2.0" kill_decay_end_time="2.0"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.9"/>
@@ -22762,7 +22762,7 @@
 	<model filename="gkw_sg_type97.xml"/>
 	<hud_icon filename="gkw_97types.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="0.12" kill_decay_end_time="0.5"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
@@ -22817,7 +22817,7 @@
 	<model filename="gkw_sg_type97.xml"/>
 	<hud_icon filename="gkw_97typesmod3.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="1.2" kill_decay_start_time="0.12" kill_decay_end_time="0.75"/>
 	</projectile>
 	<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
@@ -22875,7 +22875,7 @@
 	<hud_icon filename="gkw_97types_5805.png"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="0.12" kill_decay_end_time="0.5"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
@@ -22931,7 +22931,7 @@
 	<hud_icon filename="gkw_97types_5805.png"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="1.2" kill_decay_start_time="0.12" kill_decay_end_time="0.75"/>
 	</projectile>
 	<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
@@ -22985,7 +22985,7 @@
 	<model filename="gkw_sg_mk3a1.xml"/>
 	<hud_icon filename="gkw_mk3a1.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="0.3" kill_decay_end_time="0.5"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.3"/>
@@ -23629,7 +23629,7 @@
 	<model filename="gkw_sg_m1887.xml"/>
 	<hud_icon filename="gkw_m1887.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="0.175" kill_decay_end_time="0.700"/>
 	<trail probability="1.0" key="bullet_buckshot"/>
 	</projectile>
@@ -25983,7 +25983,7 @@
 	<model filename="gkw_sg_m870.xml"/>
 	<hud_icon filename="gkw_nova.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.4" kill_decay_end_time="0.5"/>
 	<trail probability="1.0" key="bullet_buckshot"/>
 	</projectile>
@@ -26039,7 +26039,7 @@
 	<model filename="gkw_sg_m870.xml"/>
 	<hud_icon filename="gkw_nova_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.4" kill_decay_end_time="0.5"/>
 	<trail probability="1.0" key="bullet_buckshot"/>
 	</projectile>
@@ -28267,7 +28267,7 @@
 	<model filename="gkw_sg_rmb93.xml"/>
 	<hud_icon filename="gkw_rmb93.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="0.2" kill_decay_end_time="0.4"/>
 	</projectile>
 	<modifier class="speed" value="0.2"/>
@@ -28324,7 +28324,7 @@
 	<model filename="gkw_sg_rmb93.xml"/>
 	<hud_icon filename="gkw_rmb93mod3.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.4" kill_decay_end_time="0.4"/>
 	</projectile>
 	<modifier class="speed" value="0.3"/>
@@ -28381,7 +28381,7 @@
 	<model filename="gkw_sg_rmb93.xml"/>
 	<hud_icon filename="gkw_rmb93_4309.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="0.2" kill_decay_end_time="0.4"/>
 	</projectile>
 	<modifier class="speed" value="0.2"/>
@@ -28438,7 +28438,7 @@
 	<model filename="gkw_sg_rmb93.xml"/>
 	<hud_icon filename="gkw_rmb93_4309.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.4" kill_decay_end_time="0.4"/>
 	</projectile>
 	<modifier class="speed" value="0.3"/>
@@ -28868,7 +28868,7 @@
 	<model filename="gkw_sg_uts15.xml"/>
 	<hud_icon filename="gkw_uts15.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="3" kill_probability_offset_on_successful_hit="1.8" kill_decay_start_time="0.3" kill_decay_end_time="0.5"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.55"/>
@@ -34083,7 +34083,7 @@
 	<model filename="gkw_sg_sat8_1802.xml"/>
 	<hud_icon filename="gkw_sat8_1802.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.25" kill_decay_end_time="0.65"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
@@ -34137,7 +34137,7 @@
 	<model filename="gkw_sg_sat8_1802.xml"/>
 	<hud_icon filename="gkw_sat8_2601.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.25" kill_decay_end_time="0.65"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
@@ -34251,7 +34251,7 @@
 	<hud_icon filename="gkw_m500_3707.png"/>
 	<effect class="muzzle" ref="muzzle_sg"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="0.25" kill_decay_start_time="0.25" kill_decay_end_time="0.5"/>
 	</projectile>
 	<modifier class="hit_success_probability" value="-0.4"/>
@@ -38135,7 +38135,7 @@
 	<model filename="gkw_fp6_2804_From_melondove.xml"/>
 	<hud_icon filename="gkw_fp6_2804.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.25" kill_decay_end_time="0.5"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.7"/>
@@ -38558,7 +38558,7 @@
 	<model filename="gkw_sg_coltdefender.xml"/>
 	<hud_icon filename="gkw_coltdefender_5505.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile" time_to_live="0.5">
+	<projectile file="bullet_sg.projectile" time_to_live="0.5">
 	<result class="hit" kill_probability="6.0" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="1.0" kill_decay_end_time="1.0"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.7"/>
@@ -38612,7 +38612,7 @@
 	<model filename="gkw_sg_coltdefender.xml"/>
 	<hud_icon filename="gkw_coltdefender_5505.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile" time_to_live="0.5">
+	<projectile file="bullet_sg.projectile" time_to_live="0.5">
 	<result class="hit" kill_probability="6.0" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="1.0" kill_decay_end_time="1.0"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.7"/>
@@ -38713,7 +38713,7 @@
 	<model filename="gkw_sg_aa12_4401.xml"/>
 	<hud_icon filename="gkw_aa12_4401.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.0" kill_decay_start_time="0.2" kill_decay_end_time="0.9"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.7"/>
@@ -38769,7 +38769,7 @@
 	<model filename="gkw_sg_aa12_4401.xml"/>
 	<hud_icon filename="gkw_aa12_4401.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.2" kill_decay_end_time="0.9"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.7"/>
@@ -39840,7 +39840,7 @@
 	<effect class="muzzle" ref="MuzzleDual2"/>
 	<effect class="muzzle" ref="MuzzleSmokeDual2"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="0.4" kill_decay_end_time="0.5"/>
 	<trail probability="1.0" key="bullet_buckshot"/>
 	</projectile>
@@ -39901,7 +39901,7 @@
 	<model filename=""/>
 	<hud_icon filename="gkw_m870_3803.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="0.4" kill_decay_end_time="0.5"/>
 	<trail probability="1.0" key="bullet_buckshot"/>
 	</projectile>
@@ -40060,7 +40060,7 @@
 	<hud_icon filename="gkw_spas12_2408.png"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.32" kill_decay_end_time="0.6"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
@@ -40162,7 +40162,7 @@
 	<model filename="gkw_sg_spas12_2408_from_Eisen.xml"/>
 	<hud_icon filename="gkw_spas12_2408.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile" time_to_live="0.3">
+	<projectile file="bullet_sg.projectile" time_to_live="0.3">
 	<result class="blast" radius="1.5" damage="1.1" push="0.1" decal="1" faction_compare="not_equal"/>
 	</projectile>
 	<modifier class="speed" value="-0.2"/>
@@ -40299,7 +40299,7 @@
 	<model filename="gkw_sg_spas12_3203_from_Eisen.xml"/>
 	<hud_icon filename="gkw_spas12_3203.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.32" kill_decay_end_time="0.6"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
@@ -40419,7 +40419,7 @@
 	<model filename="gkw_sg_spas12_3203_from_Eisen.xml"/>
 	<hud_icon filename="gkw_spas12_3203.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="blast" radius="1.5" damage="1.1" push="0.1" decal="1" faction_compare="not_equal"/>
 	</projectile>
 	<modifier class="speed" value="-0.2"/>
@@ -40573,7 +40573,7 @@
 	<model filename="gkw_sg_m37.xml"/>
 	<hud_icon filename="gkw_m37_1105.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.37" kill_probability_offset_on_successful_hit="0.37" kill_decay_start_time="0.3" kill_decay_end_time="0.6"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
@@ -40839,7 +40839,7 @@
 	<model filename="gkw_sg_m590.xml"/>
 	<hud_icon filename="gkw_m590_1806.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.25" kill_decay_end_time="0.55"/>
 	</projectile>
 	<modifier class="hit_success_probability" value="-0.45"/>
@@ -41000,7 +41000,7 @@
 	<model filename="gkw_sg_ltlx7000_6702.xml"/>
 	<hud_icon filename="gkw_ltlx7000_6702.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="0.3" kill_decay_end_time="0.5"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
@@ -41057,7 +41057,7 @@
 	<model filename="gkw_sg_ltlx7000_6702.xml"/>
 	<hud_icon filename="gkw_ltlx7000_6702.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="blast" radius="3.0" damage="0.0" push="0.0" decal="0" character_state="wound" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
@@ -41824,7 +41824,7 @@
 	<model filename="gkw_ltlx7000_melondove.xml"/>
 	<hud_icon filename="gkw_ltlx7000_6101.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="0.3" kill_decay_end_time="0.5"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
@@ -41881,7 +41881,7 @@
 	<model filename="gkw_ltlx7000_melondove.xml"/>
 	<hud_icon filename="gkw_ltlx7000_6101.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet.projectile">
+	<projectile file="bullet_sg.projectile">
 	<result class="blast" radius="3.0" damage="0.0" push="0.0" decal="0" character_state="wound" faction_compare="not_equal"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>

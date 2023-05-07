@@ -38,7 +38,7 @@
     <hud_icon filename="gkw_ltlx7000.png" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
-    <projectile file="bullet.projectile">
+    <projectile file="bullet_sg.projectile">
         <result class="hit" 
         kill_probability="2.0"
         kill_probability_offset_on_successful_hit="0.6" 
@@ -95,7 +95,7 @@
     <hud_icon filename="gkw_ltlx7000_skill.png" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
-    <projectile file="bullet.projectile">
+    <projectile file="bullet_sg.projectile">
         <result class="blast" radius="3.0" damage="0.0" push="0.0" decal="0" character_state="wound" faction_compare="not_equal"/> 
     </projectile>
     <!--Accuracy, Movement speed-->

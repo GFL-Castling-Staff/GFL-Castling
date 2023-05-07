@@ -115,7 +115,7 @@
 		<hud_icon filename="gkw_spas12_3203.png" />
 		<!-- Ballistics -->
 		<weak_hand_hold offset="0.3" />
-		<projectile file="bullet.projectile">
+		<projectile file="bullet_sg.projectile">
 			<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.32" kill_decay_end_time="0.6"/>
 		</projectile>
 		<stance state_key="running" accuracy="0.8"/>
@@ -259,7 +259,7 @@
 		<hud_icon filename="gkw_spas12_3203.png" />
 		<!-- Ballistics -->
 		<weak_hand_hold offset="0.3" />
-		<projectile file="bullet.projectile">
+		<projectile file="bullet_sg.projectile">
 			<result class="blast" radius="1.5" damage="1.1" push="0.1" decal="1" faction_compare="not_equal"/>
 		</projectile>
 		<modifier class="speed" value="-0.2"/>

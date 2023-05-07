@@ -34,7 +34,7 @@
         <model filename="gkw_sg_usas12.xml"/>
         <hud_icon filename="gkw_usas12.png"/>
         <weak_hand_hold offset="0.3"/>
-        <projectile file="bullet.projectile">
+        <projectile file="bullet_sg.projectile">
             <result class="hit" kill_probability="2.0" kill_decay_start_time="0.3" kill_decay_end_time="0.6"/>
         </projectile>
         <stance state_key="running" accuracy="0.55"/>
@@ -113,7 +113,7 @@
         <model filename="gkw_sg_usas12.xml"/>
         <hud_icon filename="gkw_usas12_skill.png"/>
         <weak_hand_hold offset="0.3"/>
-        <projectile file="bullet.projectile">
+        <projectile file="bullet_sg.projectile">
             <result class="hit" kill_probability="2.0" kill_decay_start_time="0.3" kill_decay_end_time="0.6"/>
         </projectile>
         <stance state_key="running" accuracy="0.55"/>
