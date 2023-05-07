@@ -3302,7 +3302,7 @@
 </weapon>
 
 <weapon key="gkw_desert_eagle_s.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.4" accuracy_factor="0.9" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.0" magazine_size="7" suppressed="0" name="Desert Eagle" class="4" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="150.0" projectiles_per_shot="1" burst_shots="1" stab_enabled="1" carry_in_two_hands="0" slot="0"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.4" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="2.0" magazine_size="7" suppressed="0" name="Desert Eagle" class="4" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="180.0" projectiles_per_shot="1" burst_shots="1" stab_enabled="1" carry_in_two_hands="0" slot="0"/>
 	<inventory encumbrance="5.0" buy_price="100.0" sell_price="100.0"/>
 	<sound key="fire" fileref="deserteagle_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.15"/>
 	<sound key="magazine_out" fileref="DE_mgz_out_FromSAM4.wav" volume="0.5"/>
@@ -5278,7 +5278,7 @@
 </weapon>
 
 <weapon key="gkw_m4sopmodii.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="M4 SOPMOD II" projectile_speed="187.23" retrigger_time="0.086" suppressed="0" stance_accuracy_rate="3.0" sight_range_modifier="1.25" sustained_fire_diminish_rate="1.2" sustained_fire_grow_step="0.3" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="M4 SOPMOD II" projectile_speed="200" retrigger_time="0.086" suppressed="0" stance_accuracy_rate="3.0" sight_range_modifier="1.25" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.33" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory encumbrance="35.0" buy_price="7.0" sell_price="7.0"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
@@ -5306,12 +5306,12 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<stance state_key="running" accuracy="0.35"/>
+	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.45"/>
-	<stance state_key="crouch_moving" accuracy="0.9"/>
-	<stance state_key="prone_moving" accuracy="0.9"/>
-	<stance state_key="standing" accuracy="0.8"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.7"/>
+	<stance state_key="crouching" accuracy="0.9"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -5323,7 +5323,7 @@
 </weapon>
 
 <weapon key="gkw_ar15.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1" barrel_offset="0.8" class="4" burst_shots="1" slot="0" magazine_size="30" name="ST-AR15" projectile_speed="207.45" retrigger_time="-1" last_burst_retrigger_time="0.1" suppressed="1" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.8" sight_range_modifier="1.3" stab_enabled="1" carry_in_two_hands="1" spread_range="0.3" stance_accuracy_rate="2.0"/>
+	<specification accuracy_factor="1" barrel_offset="0.6" class="4" burst_shots="1" slot="0" magazine_size="30" name="ST-AR15" projectile_speed="200" retrigger_time="-1" last_burst_retrigger_time="0.1" stance_accuracy_rate="2.0" leave_crouch_accuracy_penalty="0.48" suppressed="1" spread_range="0.3" sustained_fire_diminish_rate="1.4" sustained_fire_grow_step="0.35" sight_range_modifier="2.0" stab_enabled="1" carry_in_two_hands="1"/>
 	<next_in_chain key="gkw_ar15_skill.weapon" share_ammo="0"/>
 	<inventory encumbrance="35.0" buy_price="7.0" sell_price="7.0"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
@@ -5340,14 +5340,16 @@
 	<result class="hit" kill_probability="4.2" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.292" kill_decay_end_time="2.154"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
-	<stance state_key="running" accuracy="0.3"/>
-	<stance state_key="walking" accuracy="0.65"/>
-	<stance state_key="crouch_moving" accuracy="0.9"/>
-	<stance state_key="prone_moving" accuracy="0.9"/>
-	<stance state_key="standing" accuracy="0.9"/>
+	<stance state_key="running" accuracy="0.5"/>
+	<stance state_key="walking" accuracy="0.5"/>
+	<stance state_key="crouch_moving" accuracy="0.55"/>
+	<stance state_key="standing" accuracy="0.5"/>
 	<stance state_key="crouching" accuracy="0.98"/>
-	<stance state_key="prone" accuracy="1"/>
-	<modifier class="detectability" value="0.0"/>
+	<stance state_key="prone" accuracy="1.1"/>
+	<stance state_key="prone_moving" accuracy="0.5"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="detectability" value="-0.1"/>
+	<modifier class="speed" value="0"/>
 	<tag name="autorifle"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
@@ -5359,7 +5361,6 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<modifier class="speed" value="0.0"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -30847,7 +30848,7 @@
 </weapon>
 
 <weapon key="gkw_m4sopmodiimod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="M4 SOPMOD II(MOD3)" projectile_speed="187.23" retrigger_time="0.075" suppressed="0" stance_accuracy_rate="4.5" sight_range_modifier="1.75" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.3" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="M4 SOPMOD II(MOD3)" projectile_speed="210" retrigger_time="0.075" suppressed="0" stance_accuracy_rate="4.5" sight_range_modifier="1.75" sustained_fire_diminish_rate="1.6" sustained_fire_grow_step="0.3" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory encumbrance="35.0" buy_price="200.0" sell_price="200.0"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
@@ -30876,10 +30877,10 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<stance state_key="running" accuracy="0.4"/>
+	<stance state_key="running" accuracy="0.45"/>
 	<stance state_key="walking" accuracy="0.45"/>
-	<stance state_key="crouch_moving" accuracy="0.8"/>
-	<stance state_key="prone_moving" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.8"/>
 	<stance state_key="crouching" accuracy="0.95"/>
 	<stance state_key="prone" accuracy="1"/>
@@ -30893,11 +30894,11 @@
 </weapon>
 
 <weapon key="gkw_ar15mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1" barrel_offset="0.8" can_shoot_prone="1" class="4" burst_shots="1" slot="0" magazine_size="30" name="ST-AR15(MOD3)-[SPR]" projectile_speed="247.45" retrigger_time="-1.0" last_burst_retrigger_time="0.1" suppressed="0" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.8" sight_range_modifier="2.25" stab_enabled="1" carry_in_two_hands="1" spread_range="0.3" stance_accuracy_rate="2.0"/>
+	<specification accuracy_factor="1" barrel_offset="0.6" can_shoot_prone="1" class="4" burst_shots="1" slot="0" magazine_size="30" name="ST-AR15(MOD3)-[SPR]" projectile_speed="240" retrigger_time="-1" last_burst_retrigger_time="0.1" stance_accuracy_rate="2.5" leave_crouch_accuracy_penalty="0.38" suppressed="1" spread_range="0.25" sustained_fire_diminish_rate="1.4" sustained_fire_grow_step="0.35" sight_range_modifier="2.25" stab_enabled="1" carry_in_two_hands="1"/>
 	<next_in_chain key="gkw_ar15mod3_skill.weapon" share_ammo="0"/>
 	<inventory encumbrance="35.0" buy_price="240.0" sell_price="240.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
-	<sound key="fire" fileref="ar15mod3_fire_FromCOD8.wav" pitch_variety="0.01" volume="1.2"/>
+	<sound key="fire" fileref="star15_fire_FromBLACKSQUAD.wav" pitch_variety="0.01" volume="1.2"/>
 	<sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.6"/>
 	<sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.6"/>
@@ -30910,22 +30911,23 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_ar_ar15mod3.xml"/>
 	<hud_icon filename="gkw_ar15mod3.png"/>
-	<commonness value="0.01" in_stock="0" can_respawn_with="1"/>
-	<capacity value="1" source="rank" source_value="0.0"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<effect class="muzzle" ref="muzzle_big_yellow"/>
 	<weak_hand_hold offset="0.2"/>
-	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="4.2" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="1.292" kill_decay_end_time="2.154"/>
+	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
+	<result class="hit" kill_probability="4.2" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="1.292" kill_decay_end_time="2.154"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
-	<stance state_key="running" accuracy="0.5"/>
-	<stance state_key="walking" accuracy="0.65"/>
+	<stance state_key="running" accuracy="0.6"/>
+	<stance state_key="walking" accuracy="0.6"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
-	<stance state_key="prone_moving" accuracy="0.6"/>
-	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.6"/>
 	<stance state_key="crouching" accuracy="0.98"/>
-	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="prone" accuracy="1.1"/>
+	<stance state_key="prone_moving" accuracy="0.5"/>
+	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="detectability" value="-0.1"/>
+	<modifier class="speed" value="0"/>
 	<tag name="autorifle"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
@@ -30937,7 +30939,6 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<modifier class="speed" value="0.0"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -30947,7 +30948,7 @@
 </weapon>
 
 <weapon key="gkw_ar15mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.066" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.2" magazine_size="30" can_shoot_standing="1" can_shoot_prone="0" carry_in_two_hands="0" spread_range="0.3" suppressed="0" name="ST-AR15(MOD3)-[Crime and punishment]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="200" projectiles_per_shot="2" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification retrigger_time="0.066" accuracy_factor="1" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="1.5" magazine_size="30" can_shoot_standing="1" can_shoot_prone="0" carry_in_two_hands="0" spread_range="0.3" suppressed="0" name="ST-AR15(MOD3)-[Crime and punishment]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="200" projectiles_per_shot="2" burst_shots="1" slot="0" stab_enabled="1"/>
 	<next_in_chain key="gkw_ar15mod3.weapon" share_ammo="0"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 2"/>
@@ -30982,24 +30983,22 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<model filename="none.xml"/>
 	<hud_icon filename="gkw_ar15mod3_skill.png"/>
-	<inventory encumbrance="35.0" price="240.0"/>
+	<inventory encumbrance="35.0" buy_price="240.0" sell_price="240.0"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="4.2" kill_probability_offset_on_successful_hit="0.3" kill_decay_start_time="0.01" kill_decay_end_time="0.35"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
-	<stance state_key="running" accuracy="0.2"/>
-	<stance state_key="walking" accuracy="0.65"/>
-	<stance state_key="crouch_moving" accuracy="0.65"/>
-	<stance state_key="prone_moving" accuracy="0.65"/>
-	<stance state_key="standing" accuracy="0.75"/>
-	<stance state_key="crouching" accuracy="0.9"/>
-	<stance state_key="prone" accuracy="0.95"/>
-	<modifier class="hit_success_probability" value="-0.20"/>
-	<tag name="autorifle"/>
-	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
-	<capacity value="1" source="rank" source_value="0.0"/>
+	<stance state_key="running" accuracy="0.85"/>
+	<stance state_key="walking" accuracy="0.85"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="prone" accuracy="0.85"/>
 	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="hit_success_probability" value="-0.2"/>
+	<tag name="autorifle"/>
 	<modifier class="speed" value="0.1"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -33036,6 +33035,7 @@
 	<stance state_key="standing" accuracy="0.85"/>
 	<stance state_key="crouching" accuracy="0.85"/>
 	<stance state_key="prone" accuracy="0.85"/>
+	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="hit_success_probability" value="-0.3"/>
 	<modifier class="speed" value="0.35"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -34450,7 +34450,7 @@
 </weapon>
 
 <weapon key="gkw_ar15_532.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1" barrel_offset="0.8" class="4" burst_shots="1" slot="0" magazine_size="30" name="ST-AR15-[A hat Floating to the Sea of Flowers]" projectile_speed="207.45" retrigger_time="-1" last_burst_retrigger_time="0.1" suppressed="1" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.8" sight_range_modifier="1.3" stab_enabled="1" carry_in_two_hands="1" spread_range="0.3" stance_accuracy_rate="2.0"/>
+	<specification accuracy_factor="1" barrel_offset="0.6" class="4" burst_shots="1" slot="0" magazine_size="30" name="ST-AR15-[A hat Floating to the Sea of Flowers]" projectile_speed="200" retrigger_time="-1" last_burst_retrigger_time="0.1" stance_accuracy_rate="2.0" leave_crouch_accuracy_penalty="0.48" suppressed="1" spread_range="0.3" sustained_fire_diminish_rate="1.4" sustained_fire_grow_step="0.35" sight_range_modifier="2.0" stab_enabled="1" carry_in_two_hands="1"/>
 	<next_in_chain key="gkw_ar15_skill.weapon" share_ammo="0"/>
 	<inventory encumbrance="35.0" buy_price="7.0" sell_price="7.0"/>
 	<commonness value="0" in_stock="0"/>
@@ -34467,14 +34467,16 @@
 	<result class="hit" kill_probability="4.2" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.292" kill_decay_end_time="2.154"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
-	<stance state_key="running" accuracy="0.3"/>
-	<stance state_key="walking" accuracy="0.65"/>
-	<stance state_key="crouch_moving" accuracy="0.9"/>
-	<stance state_key="prone_moving" accuracy="0.9"/>
-	<stance state_key="standing" accuracy="0.9"/>
+	<stance state_key="running" accuracy="0.5"/>
+	<stance state_key="walking" accuracy="0.5"/>
+	<stance state_key="crouch_moving" accuracy="0.55"/>
+	<stance state_key="standing" accuracy="0.5"/>
 	<stance state_key="crouching" accuracy="0.98"/>
-	<stance state_key="prone" accuracy="1"/>
-	<modifier class="detectability" value="0.0"/>
+	<stance state_key="prone" accuracy="1.1"/>
+	<stance state_key="prone_moving" accuracy="0.5"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="detectability" value="-0.1"/>
+	<modifier class="speed" value="0"/>
 	<tag name="autorifle"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
@@ -34486,7 +34488,6 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<modifier class="speed" value="0.0"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -34496,7 +34497,7 @@
 </weapon>
 
 <weapon key="gkw_ar15_30001.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1" barrel_offset="0.8" class="4" burst_shots="1" slot="0" magazine_size="30" name="ST-AR15-[Sleepy Summer Wind]" projectile_speed="207.45" retrigger_time="-1" last_burst_retrigger_time="0.1" suppressed="1" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.8" sight_range_modifier="1.3" stab_enabled="1" carry_in_two_hands="1" spread_range="0.3" stance_accuracy_rate="2.0"/>
+	<specification accuracy_factor="1" barrel_offset="0.6" class="4" burst_shots="1" slot="0" magazine_size="30" name="ST-AR15-[Sleepy Summer Wind]" projectile_speed="200" retrigger_time="-1" last_burst_retrigger_time="0.1" stance_accuracy_rate="2.0" leave_crouch_accuracy_penalty="0.48" suppressed="1" spread_range="0.3" sustained_fire_diminish_rate="1.4" sustained_fire_grow_step="0.35" sight_range_modifier="2.0" stab_enabled="1" carry_in_two_hands="1"/>
 	<next_in_chain key="gkw_ar15_skill.weapon" share_ammo="0"/>
 	<inventory encumbrance="35.0" buy_price="7.0" sell_price="7.0"/>
 	<commonness value="0" in_stock="0"/>
@@ -34513,14 +34514,16 @@
 	<result class="hit" kill_probability="4.2" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.292" kill_decay_end_time="2.154"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
-	<stance state_key="running" accuracy="0.3"/>
-	<stance state_key="walking" accuracy="0.65"/>
-	<stance state_key="crouch_moving" accuracy="0.9"/>
-	<stance state_key="prone_moving" accuracy="0.9"/>
-	<stance state_key="standing" accuracy="0.9"/>
+	<stance state_key="running" accuracy="0.5"/>
+	<stance state_key="walking" accuracy="0.5"/>
+	<stance state_key="crouch_moving" accuracy="0.55"/>
+	<stance state_key="standing" accuracy="0.5"/>
 	<stance state_key="crouching" accuracy="0.98"/>
-	<stance state_key="prone" accuracy="1"/>
-	<modifier class="detectability" value="0.0"/>
+	<stance state_key="prone" accuracy="1.1"/>
+	<stance state_key="prone_moving" accuracy="0.5"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="detectability" value="-0.1"/>
+	<modifier class="speed" value="0"/>
 	<tag name="autorifle"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
@@ -34532,7 +34535,6 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<modifier class="speed" value="0.0"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -43908,11 +43910,10 @@
 </weapon>
 
 <weapon key="gkw_ar15mod3_532.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1" barrel_offset="0.8" can_shoot_prone="1" class="4" burst_shots="1" slot="0" magazine_size="30" name="ST-AR15(MOD3)-[A hat Floating to the Sea of Flowers]-[SPR]" projectile_speed="247.45" retrigger_time="-1.0" last_burst_retrigger_time="0.1" suppressed="1" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.8" sight_range_modifier="2.25" stab_enabled="1" carry_in_two_hands="1" spread_range="0.3" stance_accuracy_rate="2.0"/>
+	<specification accuracy_factor="1" barrel_offset="0.6" can_shoot_prone="1" class="4" burst_shots="1" slot="0" magazine_size="30" name="ST-AR15(MOD3)-[A hat Floating to the Sea of Flowers]-[SPR]" projectile_speed="240" retrigger_time="-1" last_burst_retrigger_time="0.1" stance_accuracy_rate="2.5" leave_crouch_accuracy_penalty="0.38" suppressed="1" spread_range="0.25" sustained_fire_diminish_rate="1.4" sustained_fire_grow_step="0.35" sight_range_modifier="2.25" stab_enabled="1" carry_in_two_hands="1"/>
 	<next_in_chain key="gkw_ar15mod3_532_skill.weapon" share_ammo="0"/>
 	<inventory encumbrance="35.0" buy_price="240.0" sell_price="240.0"/>
 	<commonness value="0" in_stock="0"/>
-	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<sound key="fire" fileref="star15_fire_FromBLACKSQUAD.wav" pitch_variety="0.01" volume="1.2"/>
 	<sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.6"/>
@@ -43929,18 +43930,20 @@
 	<hud_icon filename="gkw_ar15_532.png"/>
 	<effect class="muzzle" ref="muzzle_big_yellow"/>
 	<weak_hand_hold offset="0.2"/>
-	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="4.2" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="1.292" kill_decay_end_time="2.154"/>
+	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
+	<result class="hit" kill_probability="4.2" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="1.292" kill_decay_end_time="2.154"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
-	<stance state_key="running" accuracy="0.3"/>
-	<stance state_key="walking" accuracy="0.65"/>
+	<stance state_key="running" accuracy="0.6"/>
+	<stance state_key="walking" accuracy="0.6"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
-	<stance state_key="prone_moving" accuracy="0.6"/>
-	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.6"/>
 	<stance state_key="crouching" accuracy="0.98"/>
-	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="prone" accuracy="1.1"/>
+	<stance state_key="prone_moving" accuracy="0.5"/>
+	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="detectability" value="-0.1"/>
+	<modifier class="speed" value="0"/>
 	<tag name="autorifle"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
@@ -43952,7 +43955,6 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<modifier class="speed" value="0.0"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -43962,11 +43964,9 @@
 </weapon>
 
 <weapon key="gkw_ar15mod3_532_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.066" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.2" magazine_size="30" spread_range="0.3" can_shoot_standing="1" can_shoot_prone="0" carry_in_two_hands="0" suppressed="0" name="ST-AR15(MOD3)-[A hat Floating to the Sea of Flowers]-[Crime and punishment]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="200" projectiles_per_shot="2" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification retrigger_time="0.066" accuracy_factor="1" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="1.5" magazine_size="30" can_shoot_standing="1" can_shoot_prone="0" carry_in_two_hands="0" spread_range="0.3" suppressed="0" name="ST-AR15(MOD3)-[Sleepy Summer Wind]-[Crime and punishment]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="200" projectiles_per_shot="2" burst_shots="1" slot="0" stab_enabled="1"/>
 	<next_in_chain key="gkw_ar15mod3_532.weapon" share_ammo="0"/>
-	<inventory encumbrance="35.0" buy_price="240.0" sell_price="240.0"/>
 	<commonness value="0" in_stock="0"/>
-	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 2"/>
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall dual"/>
@@ -44000,23 +44000,22 @@
 	<model filename="none.xml"/>
 	<hud_icon filename="gkw_ar15_532.png"/>
 	<weak_hand_hold offset="0.1"/>
+	<inventory encumbrance="35.0" buy_price="240.0" sell_price="240.0"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="4.2" kill_probability_offset_on_successful_hit="0.3" kill_decay_start_time="0.01" kill_decay_end_time="0.35"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
-	<stance state_key="running" accuracy="0.2"/>
-	<stance state_key="walking" accuracy="0.65"/>
-	<stance state_key="crouch_moving" accuracy="0.65"/>
-	<stance state_key="prone_moving" accuracy="0.65"/>
-	<stance state_key="standing" accuracy="0.75"/>
-	<stance state_key="crouching" accuracy="0.9"/>
-	<stance state_key="prone" accuracy="0.95"/>
-	<modifier class="speed" value="0.1"/>
-	<modifier class="hit_success_probability" value="-0.20"/>
-	<tag name="autorifle"/>
-	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
-	<capacity value="1" source="rank" source_value="0.0"/>
+	<stance state_key="running" accuracy="0.85"/>
+	<stance state_key="walking" accuracy="0.85"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="prone" accuracy="0.85"/>
 	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="hit_success_probability" value="-0.2"/>
+	<tag name="autorifle"/>
+	<modifier class="speed" value="0.1"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -44026,13 +44025,12 @@
 </weapon>
 
 <weapon key="gkw_ar15mod3_30001.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1" barrel_offset="0.8" can_shoot_prone="1" class="4" burst_shots="1" slot="0" magazine_size="30" name="ST-AR15(MOD3)-[Sleepy Summer Wind]-[SPR]" projectile_speed="247.45" retrigger_time="-1.0" last_burst_retrigger_time="0.1" suppressed="0" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.8" sight_range_modifier="2.25" stab_enabled="1" carry_in_two_hands="1" spread_range="0.3" stance_accuracy_rate="2.0"/>
+	<specification accuracy_factor="1" barrel_offset="0.6" can_shoot_prone="1" class="4" burst_shots="1" slot="0" magazine_size="30" name="ST-AR15(MOD3)-[Sleepy Summer Wind]-[SPR]" projectile_speed="240" retrigger_time="-1" last_burst_retrigger_time="0.1" stance_accuracy_rate="2.5" leave_crouch_accuracy_penalty="0.38" suppressed="1" spread_range="0.25" sustained_fire_diminish_rate="1.4" sustained_fire_grow_step="0.35" sight_range_modifier="2.25" stab_enabled="1" carry_in_two_hands="1"/>
 	<next_in_chain key="gkw_ar15mod3_30001_skill.weapon" share_ammo="0"/>
 	<inventory encumbrance="35.0" buy_price="240.0" sell_price="240.0"/>
 	<commonness value="0" in_stock="0"/>
-	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
-	<sound key="fire" fileref="ar15mod3_fire_FromCOD8.wav" pitch_variety="0.01" volume="1.2"/>
+	<sound key="fire" fileref="star15_fire_FromBLACKSQUAD.wav" pitch_variety="0.01" volume="1.2"/>
 	<sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.6"/>
 	<sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.6"/>
@@ -44047,18 +44045,20 @@
 	<hud_icon filename="gkw_ar15_30001.png"/>
 	<effect class="muzzle" ref="muzzle_big_yellow"/>
 	<weak_hand_hold offset="0.2"/>
-	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="4.2" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="1.292" kill_decay_end_time="2.154"/>
+	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
+	<result class="hit" kill_probability="4.2" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="1.292" kill_decay_end_time="2.154"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
-	<stance state_key="running" accuracy="0.3"/>
-	<stance state_key="walking" accuracy="0.65"/>
+	<stance state_key="running" accuracy="0.6"/>
+	<stance state_key="walking" accuracy="0.6"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
-	<stance state_key="prone_moving" accuracy="0.6"/>
-	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.6"/>
 	<stance state_key="crouching" accuracy="0.98"/>
-	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="prone" accuracy="1.1"/>
+	<stance state_key="prone_moving" accuracy="0.5"/>
+	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="detectability" value="-0.1"/>
+	<modifier class="speed" value="0"/>
 	<tag name="autorifle"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
@@ -44070,7 +44070,6 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<modifier class="speed" value="0.0"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -44080,11 +44079,9 @@
 </weapon>
 
 <weapon key="gkw_ar15mod3_30001_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.066" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.2" spread_range="0.3" magazine_size="30" can_shoot_standing="1" can_shoot_prone="0" carry_in_two_hands="0" suppressed="0" name="ST-AR15(MOD3)-[Sleepy Summer Wind]-[Crime and punishment]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="200" projectiles_per_shot="2" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification retrigger_time="0.066" accuracy_factor="1" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="1.5" magazine_size="30" can_shoot_standing="1" can_shoot_prone="0" carry_in_two_hands="0" spread_range="0.3" suppressed="0" name="ST-AR15(MOD3)-[Sleepy Summer Wind]-[Crime and punishment]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="200" projectiles_per_shot="2" burst_shots="1" slot="0" stab_enabled="1"/>
 	<next_in_chain key="gkw_ar15mod3_30001.weapon" share_ammo="0"/>
-	<inventory encumbrance="35.0" buy_price="240.0" sell_price="240.0"/>
 	<commonness value="0" in_stock="0"/>
-	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 2"/>
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall dual"/>
@@ -44118,23 +44115,22 @@
 	<model filename="none.xml"/>
 	<hud_icon filename="gkw_ar15_30001.png"/>
 	<weak_hand_hold offset="0.1"/>
+	<inventory encumbrance="35.0" buy_price="240.0" sell_price="240.0"/>
 	<projectile file="bullet.projectile">
 	<result class="hit" kill_probability="4.2" kill_probability_offset_on_successful_hit="0.3" kill_decay_start_time="0.01" kill_decay_end_time="0.35"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
-	<stance state_key="running" accuracy="0.2"/>
-	<stance state_key="walking" accuracy="0.65"/>
-	<stance state_key="crouch_moving" accuracy="0.65"/>
-	<stance state_key="prone_moving" accuracy="0.65"/>
-	<stance state_key="standing" accuracy="0.75"/>
-	<stance state_key="crouching" accuracy="0.9"/>
-	<stance state_key="prone" accuracy="0.95"/>
-	<modifier class="speed" value="0.1"/>
-	<modifier class="hit_success_probability" value="-0.20"/>
-	<tag name="autorifle"/>
-	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
-	<capacity value="1" source="rank" source_value="0.0"/>
+	<stance state_key="running" accuracy="0.85"/>
+	<stance state_key="walking" accuracy="0.85"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="prone" accuracy="0.85"/>
 	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="hit_success_probability" value="-0.2"/>
+	<tag name="autorifle"/>
+	<modifier class="speed" value="0.1"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -44914,7 +44910,7 @@
 </weapon>
 
 <weapon key="gkw_m4sopmodii_531.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="M4 SOPMOD II-[The Guarded Beloved]" projectile_speed="190" retrigger_time="0.086" suppressed="0" stance_accuracy_rate="3.0" sight_range_modifier="1.25" sustained_fire_diminish_rate="1.2" sustained_fire_grow_step="0.3" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="M4 SOPMOD II-[The Guarded Beloved]" projectile_speed="200" retrigger_time="0.086" suppressed="0" stance_accuracy_rate="3.0" sight_range_modifier="1.25" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.33" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory encumbrance="35.0" buy_price="7.0" sell_price="7.0"/>
 	<sound key="fire" fileref="m4sopmodii_fire_FromSAM4.wav" pitch_variety="0.05" volume="3"/>
@@ -44942,12 +44938,12 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<stance state_key="running" accuracy="0.35"/>
+	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.45"/>
-	<stance state_key="crouch_moving" accuracy="0.9"/>
-	<stance state_key="prone_moving" accuracy="0.9"/>
-	<stance state_key="standing" accuracy="0.8"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.7"/>
+	<stance state_key="crouching" accuracy="0.9"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -44959,9 +44955,9 @@
 </weapon>
 
 <weapon key="gkw_m4sopmodiimod3_531.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="M4 SOPMOD II(MOD3)-[The Guarded Beloved]" projectile_speed="187.23" retrigger_time="0.075" suppressed="0" stance_accuracy_rate="4.5" sight_range_modifier="1.75" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.3" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="M4 SOPMOD II(MOD3)-[The Guarded Beloved]" projectile_speed="210" retrigger_time="0.075" suppressed="0" stance_accuracy_rate="4.5" sight_range_modifier="1.75" sustained_fire_diminish_rate="1.6" sustained_fire_grow_step="0.3" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
-	<inventory buy_price="200.0" sell_price="200.0"/>
+	<inventory encumbrance="35.0" buy_price="200.0" sell_price="200.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<sound key="fire" fileref="m4sopmodii_fire_FromSAM4.wav" pitch_variety="0.05" volume="3"/>
 	<sound key="magazine_out" fileref="m4sopmodii_mgz_out_FromSAM4.wav" volume="2"/>
@@ -44988,10 +44984,10 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<stance state_key="running" accuracy="0.4"/>
+	<stance state_key="running" accuracy="0.45"/>
 	<stance state_key="walking" accuracy="0.45"/>
-	<stance state_key="crouch_moving" accuracy="0.8"/>
-	<stance state_key="prone_moving" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.8"/>
 	<stance state_key="crouching" accuracy="0.95"/>
 	<stance state_key="prone" accuracy="1"/>
@@ -45005,7 +45001,7 @@
 </weapon>
 
 <weapon key="gkw_m4sopmodii_551.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="M4 SOPMOD II-[Birdsong in the Woods]" projectile_speed="190" retrigger_time="0.086" suppressed="0" stance_accuracy_rate="3.0" sight_range_modifier="1.25" sustained_fire_diminish_rate="1.2" sustained_fire_grow_step="0.3" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="M4 SOPMOD II-[Birdsong in the Woods]" projectile_speed="200" retrigger_time="0.086" suppressed="0" stance_accuracy_rate="3.0" sight_range_modifier="1.25" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.33" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory encumbrance="35.0" buy_price="7.0" sell_price="7.0"/>
 	<sound key="fire" fileref="m4sopmodii_fire_FromSAM4.wav" pitch_variety="0.05" volume="3"/>
@@ -45033,12 +45029,12 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<stance state_key="running" accuracy="0.35"/>
+	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.45"/>
-	<stance state_key="crouch_moving" accuracy="0.9"/>
-	<stance state_key="prone_moving" accuracy="0.9"/>
-	<stance state_key="standing" accuracy="0.8"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.7"/>
+	<stance state_key="crouching" accuracy="0.9"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -45050,9 +45046,9 @@
 </weapon>
 
 <weapon key="gkw_m4sopmodiimod3_551.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="M4 SOPMOD II(MOD3)-[Birdsong in the Woods]" projectile_speed="187.23" retrigger_time="0.075" suppressed="0" stance_accuracy_rate="4.5" sight_range_modifier="1.75" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.3" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="M4 SOPMOD II(MOD3)-[Birdsong in the Woods]" projectile_speed="210" retrigger_time="0.075" suppressed="0" stance_accuracy_rate="4.5" sight_range_modifier="1.75" sustained_fire_diminish_rate="1.6" sustained_fire_grow_step="0.3" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
-	<inventory buy_price="200.0" sell_price="200.0"/>
+	<inventory encumbrance="35.0" buy_price="200.0" sell_price="200.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<sound key="fire" fileref="m4sopmodii_fire_FromSAM4.wav" pitch_variety="0.05" volume="3"/>
 	<sound key="magazine_out" fileref="m4sopmodii_mgz_out_FromSAM4.wav" volume="2"/>
@@ -45079,10 +45075,10 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<stance state_key="running" accuracy="0.4"/>
+	<stance state_key="running" accuracy="0.45"/>
 	<stance state_key="walking" accuracy="0.45"/>
-	<stance state_key="crouch_moving" accuracy="0.8"/>
-	<stance state_key="prone_moving" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.8"/>
 	<stance state_key="crouching" accuracy="0.95"/>
 	<stance state_key="prone" accuracy="1"/>
@@ -45096,7 +45092,7 @@
 </weapon>
 
 <weapon key="gkw_m4sopmodii_4507.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="M4 SOPMOD II-[Cocktail Party Exterminator]" projectile_speed="187.23" retrigger_time="0.086" suppressed="0" stance_accuracy_rate="3.0" sight_range_modifier="1.25" sustained_fire_diminish_rate="1.2" sustained_fire_grow_step="0.3" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="M4 SOPMOD II-[Cocktail Party Exterminator]" projectile_speed="200" retrigger_time="0.086" suppressed="0" stance_accuracy_rate="3.0" sight_range_modifier="1.25" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.33" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory encumbrance="35.0" buy_price="7.0" sell_price="7.0"/>
 	<sound key="fire" fileref="m4sopmodii_fire_FromSAM4.wav" pitch_variety="0.05" volume="3"/>
@@ -45124,12 +45120,12 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<stance state_key="running" accuracy="0.35"/>
+	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.45"/>
-	<stance state_key="crouch_moving" accuracy="0.9"/>
-	<stance state_key="prone_moving" accuracy="0.9"/>
-	<stance state_key="standing" accuracy="0.8"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.7"/>
+	<stance state_key="crouching" accuracy="0.9"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
@@ -45141,9 +45137,9 @@
 </weapon>
 
 <weapon key="gkw_m4sopmodiimod3_4507.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="M4 SOPMOD II(MOD3)-[Cocktail Party Exterminator]" projectile_speed="187.23" retrigger_time="0.075" suppressed="0" stance_accuracy_rate="4.5" sight_range_modifier="1.75" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.3" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="M4 SOPMOD II(MOD3)-[Cocktail Party Exterminator]" projectile_speed="210" retrigger_time="0.075" suppressed="0" stance_accuracy_rate="4.5" sight_range_modifier="1.75" sustained_fire_diminish_rate="1.6" sustained_fire_grow_step="0.3" spread_range="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
-	<inventory buy_price="200.0" sell_price="200.0"/>
+	<inventory encumbrance="35.0" buy_price="200.0" sell_price="200.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<sound key="fire" fileref="m4sopmodii_fire_FromSAM4.wav" pitch_variety="0.05" volume="3"/>
 	<sound key="magazine_out" fileref="m4sopmodii_mgz_out_FromSAM4.wav" volume="2"/>
@@ -45170,10 +45166,10 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<stance state_key="running" accuracy="0.4"/>
+	<stance state_key="running" accuracy="0.45"/>
 	<stance state_key="walking" accuracy="0.45"/>
-	<stance state_key="crouch_moving" accuracy="0.8"/>
-	<stance state_key="prone_moving" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.8"/>
 	<stance state_key="crouching" accuracy="0.95"/>
 	<stance state_key="prone" accuracy="1"/>
@@ -46878,6 +46874,7 @@
 	<stance state_key="standing" accuracy="0.85"/>
 	<stance state_key="crouching" accuracy="0.85"/>
 	<stance state_key="prone" accuracy="0.85"/>
+	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="hit_success_probability" value="-0.3"/>
 	<modifier class="speed" value="0.35"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
