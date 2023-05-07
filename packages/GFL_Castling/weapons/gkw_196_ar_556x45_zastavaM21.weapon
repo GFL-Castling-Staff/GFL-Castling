@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-<weapon file="two_hands_ar.animation_base" key="gkw_zasm21.weapon">
-    <specification 
+    <weapon file="two_hands_ar.animation_base" key="gkw_zasm21.weapon">
+        <specification 
 		accuracy_factor="1.0" 
 		barrel_offset="0.5" 
 		class="0"
@@ -9,58 +9,59 @@
 		magazine_size="30" 
 		name="Zastava M21" 
 		projectile_speed="200" 
-        spread_range="0.35"
+        spread_range="0.3"
 		retrigger_time="0.08824" 
 		suppressed="0"
+        stance_accuracy_rate="2.0"
         sight_range_modifier="1.5"
 		sustained_fire_diminish_rate="1.6" 
 		sustained_fire_grow_step="0.4" />
-    <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-    <inventory encumbrance="35.0" buy_price="21.0" sell_price="21.0" />
-    <sound key="fire" fileref="zastavam21_fire_FromCF.wav" pitch_variety="0.05" volume="1.25" />
-    <sound key="magazine_out" fileref="zastavam21_mgz_out_FromEFT.wav" volume="0.9" />
-    <sound key="magazine_in" fileref="zastavam21_mgz_in_FromEFT.wav" volume="0.9" />
-    <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ZastavaM21_LOADING_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ZastavaM21_PHRASE_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ZastavaM21_BLACKACTION_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ZastavaM21_FIX_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ZastavaM21_FEED_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ZastavaM21_MEET_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ZastavaM21_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ZastavaM21_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ZastavaM21_MOOD1_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ZastavaM21_APPRECIATE_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ZastavaM21_AGREE_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ZastavaM21_ACCEPT_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
-    <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="gkw_ar_zasm21.xml" />
-    <hud_icon filename="gkw_zasm21.png" />
-    <weak_hand_hold offset="0.2" />
-    <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="4.45" kill_decay_start_time="0.8" kill_decay_end_time="1.333" />
-    </projectile>
-    <effect class="muzzle" ref="ejection_556" />
-    <stance state_key="running" accuracy="0.55" />
-    <stance state_key="walking" accuracy="0.65" />
-    <stance state_key="crouch_moving" accuracy="0.6" />
-    <stance state_key="prone_moving" accuracy="0.6" />
-    <stance state_key="standing" accuracy="0.75" />
-    <stance state_key="crouching" accuracy="0.9" />
-    <stance state_key="prone" accuracy="1" />
-    <stance state_key="over_wall" accuracy="1" />
-    <modifier class="detectability" value="0.0" />
-</weapon>
+        <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
+        <inventory encumbrance="35.0" buy_price="21.0" sell_price="21.0" />
+        <sound key="fire" fileref="zastavam21_fire_FromCF.wav" pitch_variety="0.05" volume="1.25" />
+        <sound key="magazine_out" fileref="zastavam21_mgz_out_FromEFT.wav" volume="0.9" />
+        <sound key="magazine_in" fileref="zastavam21_mgz_in_FromEFT.wav" volume="0.9" />
+        <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
+        <sound key="cycle" fileref="ZastavaM21_LOADING_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
+        <sound key="cycle" fileref="ZastavaM21_PHRASE_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
+        <sound key="cycle" fileref="ZastavaM21_BLACKACTION_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
+        <sound key="cycle" fileref="ZastavaM21_FIX_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
+        <sound key="cycle" fileref="ZastavaM21_FEED_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
+        <sound key="cycle" fileref="ZastavaM21_MEET_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
+        <sound key="cycle" fileref="ZastavaM21_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
+        <sound key="cycle" fileref="ZastavaM21_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
+        <sound key="cycle" fileref="ZastavaM21_MOOD1_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
+        <sound key="cycle" fileref="ZastavaM21_APPRECIATE_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
+        <sound key="cycle" fileref="ZastavaM21_AGREE_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
+        <sound key="cycle" fileref="ZastavaM21_ACCEPT_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <model filename="gkw_ar_zasm21.xml" />
+        <hud_icon filename="gkw_zasm21.png" />
+        <weak_hand_hold offset="0.2" />
+        <projectile file="bullet.projectile">
+            <result class="hit"  kill_probability="4.45" kill_decay_start_time="0.8" kill_decay_end_time="1.333" />
+        </projectile>
+        <effect class="muzzle" ref="ejection_556" />
+        <stance state_key="running" accuracy="0.2" />
+        <stance state_key="walking" accuracy="0.5" />
+        <stance state_key="crouch_moving" accuracy="0.9" />
+        <stance state_key="prone_moving" accuracy="0.9" />
+        <stance state_key="standing" accuracy="0.9" />
+        <stance state_key="crouching" accuracy="0.95" />
+        <stance state_key="prone" accuracy="1" />
+        <stance state_key="over_wall" accuracy="1" />
+        <modifier class="detectability" value="0.0" />
+    </weapon>
 </weapons>

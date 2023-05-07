@@ -1181,6 +1181,99 @@ particle_system general_activated_at_smoke_trail
 		force_application add
 	}
 }
+
+particle_system general_weapon_activated_bullet_light
+{
+	quota 100
+	material point_soft_edge_100
+	particle_width 15
+	particle_height 15
+	renderer billboard
+	billboard_rotation_type vertex
+	iteration_interval 0.01
+	emitter Box
+	{
+		angle 360
+		colour 0.03 0.03 0.03 0.05
+		direction 0 1 0
+		emission_rate 10
+		position 0 0 0
+		velocity_min 0.1
+		velocity_max 0.3
+		time_to_live 0.05
+		duration 1
+		width 3
+		height 3
+		depth 1
+		
+	}
+	affector Scaler
+	{
+		rate 30
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	-180
+		rotation_speed_range_end	180
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+	affector ColourFader2
+	{
+		red1 	0
+		green1 	0
+		bule1 	0
+		alpha1 	0
+		red2 	-0.01
+		green2	-0.01
+		blue2	-0.01
+		alpha2	-0
+		state_change 1
+	}
+	affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+}
+
+particle_system general_weapon_activated_bullet_centerlight
+{
+	quota 100
+	material point_soft_edge_100_pass
+	particle_width 10
+	particle_height 10
+	renderer billboard
+	billboard_rotation_type vertex
+	iteration_interval 0.01
+	emitter Point
+	{
+		angle 360
+		colour 0.05 0.015 0.0 0.03
+		direction 0 1 0
+		emission_rate 10
+		position 0 0 0
+		velocity_min 0.1
+		velocity_max 0.3
+		time_to_live 0.05
+		duration 1
+		
+	}
+	affector Scaler
+	{
+		rate 30
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	-180
+		rotation_speed_range_end	180
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+	affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+}
 --------------------------------------material-----------------------------------
 material alpha_blend_base{
 	receive_shadows off
@@ -1212,6 +1305,15 @@ material point_soft_edge_100 : add_base
     pass{
         texture_unit{
             texture point_soft_edge_100.png 	
+}}}}
+material point_soft_edge_100_pass : add_base
+{   
+    technique{
+    pass{
+		depth_func always_pass
+        texture_unit{
+            texture point_soft_edge_100.png 	
+			tex_address_mode clamp
 }}}}
 material bow_flare : add_base
 {   
