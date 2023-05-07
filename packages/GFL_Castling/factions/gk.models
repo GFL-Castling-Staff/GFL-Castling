@@ -2354,4 +2354,7 @@
     <model filename="gkd_sp_naben.xml">
         <requirement class="weapon" key="gkr_paul.weapon" slot="0" />
     </model>
+    <model filename="kccod_human.xml">
+		<requirement class="weapon" slot="0" key="gkw_aks74u.weapon"/>
+	</model>
 </models>
