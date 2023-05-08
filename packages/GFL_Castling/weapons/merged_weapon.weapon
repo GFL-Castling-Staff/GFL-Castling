@@ -1376,7 +1376,7 @@
 </weapon>
 
 <weapon key="gkw_supersass.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate0="1.0" magazine_size="20" spread_range="0.45" can_shoot_standing="1" suppressed="1" name="Super SASS" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.0" stance_accuracy_rate="1.0" projectile_speed="230" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.0" magazine_size="20" spread_range="0.45" can_shoot_standing="1" suppressed="1" name="Super SASS" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.0" stance_accuracy_rate="1.0" projectile_speed="230" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="12.0" sell_price="12.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
 	<sound key="fire" fileref="sass_fire_FromCOD13.wav" pitch_variety="0.01" volume="1.1"/>
@@ -30410,7 +30410,7 @@
 </weapon>
 
 <weapon key="gkw_supersassmod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate0="1.0" magazine_size="20" spread_range="0.3" can_shoot_standing="1" suppressed="1" name="Super SASS(MOD3)" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.5" stance_accuracy_rate="2.0" projectile_speed="230" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.0" magazine_size="20" spread_range="0.3" can_shoot_standing="1" suppressed="1" name="Super SASS(MOD3)" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.5" stance_accuracy_rate="2.0" projectile_speed="230" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="120.0" sell_price="120.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
 	<sound key="fire" fileref="sass_fire_FromCOD13.wav" pitch_variety="0.01" volume="1.1"/>
@@ -33477,7 +33477,7 @@
 </weapon>
 
 <weapon key="gkw_supersass_1407.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate0="1.0" magazine_size="20" spread_range="0.45" can_shoot_standing="1" suppressed="1" name="Super SASS-[Wolfwalker]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.0" stance_accuracy_rate="1.0" projectile_speed="230" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.0" magazine_size="20" spread_range="0.45" can_shoot_standing="1" suppressed="1" name="Super SASS-[Wolfwalker]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.0" stance_accuracy_rate="1.0" projectile_speed="230" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="12.0" sell_price="12.0"/>
 	<commonness value="0" in_stock="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
@@ -44346,7 +44346,7 @@
 </weapon>
 
 <weapon key="gkw_supersassmod3_1407.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate0="1.0" magazine_size="20" spread_range="0.3" can_shoot_standing="1" suppressed="1" name="Super SASS(MOD3)-[Wolfwalker]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.5" stance_accuracy_rate="2.0" projectile_speed="230" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.0" magazine_size="20" spread_range="0.3" can_shoot_standing="1" suppressed="1" name="Super SASS(MOD3)-[Wolfwalker]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.5" stance_accuracy_rate="2.0" projectile_speed="230" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="120.0" sell_price="120.0"/>
 	<commonness value="0" in_stock="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
@@ -57597,4 +57597,3 @@
 </weapon>
 
 </weapons>
-
