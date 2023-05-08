@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
 	<weapon key="Jupiter_mg1.weapon">
-		<specification barrel_offset="0.5" retrigger_time="0.076" accuracy_factor="0.50" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.5" magazine_size="-1" suppressed="0" name="Bunker MG2" class="0" projectile_speed="180" spread_range="0.25" sight_range_modifier="10.6" ai_sight_range_modifier="10.05" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" />
+		<specification barrel_offset="0.5" retrigger_time="0.076" accuracy_factor="0.50" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.5" magazine_size="-1" suppressed="0" name="Bunker MG2" class="0" projectile_speed="180" spread_range="0.25" sight_range_modifier="1.5" ai_sight_range_modifier="1.0" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" />
 		<animation key="recoil" animation_key="recoil1" />
 		<animation key="recoil" animation_key="recoil2" />
 		<animation key="recoil" animation_key="recoil3" />
@@ -37,7 +37,7 @@
 		<modifier class="speed" value="-0.3" />
 	</weapon>
 	<weapon key="Jupiter_mg2.weapon">
-		<specification barrel_offset="0.5" retrigger_time="0.076" accuracy_factor="0.50" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.5" magazine_size="-1" suppressed="0" name="Bunker MG2" class="0" projectile_speed="180" spread_range="0.25" sight_range_modifier="10.6" ai_sight_range_modifier="10.05" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" />
+		<specification barrel_offset="0.5" retrigger_time="0.076" accuracy_factor="0.50" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.5" magazine_size="-1" suppressed="0" name="Bunker MG2" class="0" projectile_speed="180" spread_range="0.25" sight_range_modifier="1.5" ai_sight_range_modifier="1.0" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" />
 		<animation key="recoil" animation_key="recoil1" />
 		<animation key="recoil" animation_key="recoil2" />
 		<animation key="recoil" animation_key="recoil3" />
