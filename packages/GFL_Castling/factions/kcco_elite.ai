@@ -3,16 +3,17 @@
   <parameter class="accuracy_offset" value="0.05" /> 
   <parameter class="accuracy_offset_in_player_squad" value="0.05" />
   <parameter class="force_comparison_multiplier_to_call_reinforcements" value="1.0" />
-  <parameter class="burst_time" value="2.0" />
-  <parameter class="burst_time_variance" value="0.5" />
-  <parameter class="longer_burst_time" value="3.0" />
+
+  <parameter class="burst_time" value="0.4" />
+  <parameter class="burst_time_variance" value="0.2" />
+  <parameter class="longer_burst_time" value="2.0" />
   <parameter class="longer_burst_time_variance" value="0.5" />
   <parameter class="choose_enemy_time" value="0.5" />
 
-  <parameter class="wait_time" value="0.6" />
-  <parameter class="wait_time_variance" value="0.3" />
+  <parameter class="wait_time" value="1.0" />
+  <parameter class="wait_time_variance" value="0.6" />
 
-  <parameter class="strike_frequency_time" value="30.0" />
+  <parameter class="strike_frequency_time" value="20.0" />
   <parameter class="max_distance_to_throw_grenade" value="40.0" />
   <parameter class="min_distance_to_throw_grenade" value="10.0" />
   

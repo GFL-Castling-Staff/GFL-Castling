@@ -670,7 +670,7 @@
 		<ai filename="shield.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
 			<weapon key="sfw_aegis.weapon" enabled="1"/>
-			<carry_item key="kcco_ga.carry_item" enabled="1" />
+			<carry_item key="vest_aegis.carry_item" enabled="1" />
 		</resources>
 	</soldier>
 	<soldier name="sfw_aegis_swap" spawn_score="0.15" copy_from="default_spawn_ai">
@@ -678,7 +678,7 @@
 		<ai filename="shield.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
 			<weapon key="sfw_aegis_swap.weapon" enabled="1"/>
-			<carry_item key="kcco_ga.carry_item" enabled="1" />
+			<carry_item key="vest_aegis.carry_item" enabled="1" />
 		</resources>
 	</soldier>
 	<!--龙骑兵-->
