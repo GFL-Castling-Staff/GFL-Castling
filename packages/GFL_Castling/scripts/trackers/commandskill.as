@@ -190,8 +190,8 @@ class CommandSkill : Tracker {
                 case 1:{excuteAN94skill(cId,senderId,m_modifer);break;}
                 case 2:{excuteFirenadeskill(cId,senderId,m_modifer,c_weaponType);break;}
                 case 3:{excuteJusticeskill(cId,senderId,m_modifer);break;}
-                case 4:{excuteMP5skill(cId,senderId,m_modifer);break;}
-                case 5:{excuteMP5MOD3skill(cId,senderId,m_modifer);break;}
+                //case 4:{excuteMP5skill(cId,senderId,m_modifer);break;}
+                //case 5:{excuteMP5MOD3skill(cId,senderId,m_modifer);break;}
                 case 6:{excuteP22skill(cId,senderId,m_modifer);break;}
                 case 7:{excuteHS2000skill(cId,senderId,m_modifer);break;}
                 case 8:{excuteIntruderskill(cId,senderId,m_modifer);break;}
