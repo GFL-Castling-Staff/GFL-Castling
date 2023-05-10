@@ -97,7 +97,7 @@
 	stab_enabled="1"
 	carry_in_two_hands="1"
 	burst_shots="1"
-	spread_range="0.2"
+	spread_range="0.15"
 	last_burst_retrigger_time="-1"
 	slot="0"
 	use_basic_muzzle_smoke_effect="0"/>
@@ -116,14 +116,14 @@
 	<projectile file="dragons_breath2.projectile" time_to_live="0.25">
 		<result class="blast" radius="2.5" damage="1.1" push="0.1" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.5"/>
-	<stance state_key="walking" accuracy="0.7"/>
+	<stance state_key="running" accuracy="0.85"/>
+	<stance state_key="walking" accuracy="0.85"/>
 	<stance state_key="crouch_moving" accuracy="0.85"/>
 	<stance state_key="prone_moving" accuracy="0.85"/>
-	<stance state_key="standing" accuracy="0.8"/>
+	<stance state_key="standing" accuracy="0.85"/>
 	<stance state_key="crouching" accuracy="0.85"/>
 	<stance state_key="prone" accuracy="0.85"/>
-	<stance state_key="over_wall" accuracy="0.9"/>
+	<stance state_key="over_wall" accuracy="0.85"/>
 	<modifier class="detectability" value="0.45"/>
 	<modifier class="speed" value="-0.1" />
 	<tag name="shotgun"/>
