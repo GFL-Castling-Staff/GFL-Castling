@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="30mm HEI" key="30mm_hei.projectile" slot="1" pulldown_in_air="4" >
+    <result class="blast" 
+    radius="2.5" 
+    damage="1.1" 
+    push="0.1" 
+    decal="0" 
+    damage_origin_vehicle="0"
+    faction_compare="not_equal"
+    />
+    <trigger class="impact" />
+    <rotation class="motion" />
+
+    <model mesh_filename="40mm.mesh" texture_filename="40mm.png" />
+    <trail probability="1.0" />
+
+    <sound class="result" key="other" fileref="explosion1.wav" />
+    <sound class="result" key="other" fileref="explosion2.wav" />  
+
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="vehicle" copy="other" />
+    <sound class="result" key="character" copy="other" />
+
+    <effect class="result" type="splat_map" surface_tag="" size="2.0" atlas_index="0" layer="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="2.5" atlas_index="4" layer="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="2" additive="0" />
+
+
+    <effect class="activated" ref="general_activated_at_smoke_trail_smaller" />
+    <effect class="result" key="terrain" ref="result_cannon_blast_AmbientLight" lighting="0"/>
+    <effect class="result" key="terrain" ref="result_cannon_blast_smoke" lighting="0"/>    
+    <effect class="result" key="terrain" ref="hitGround_20mm" use_surface_color="1" />
+    <effect class="result" key="terrain" ref="BulletImpactDust4" />
+    <effect class="result" key="terrain" ref="BulletImpactDust5" />
+    <effect class="result" key="terrain" ref="BulletImpactDust6" />
+
+    <effect class="result" key="other" copy="terrain"/>
+    <effect class="result" key="static_object" copy="terrain" />
+    <effect class="result" key="character" copy="terrain" />
+    <effect class="result" key="shield" copy="terrain" />			
+    <effect class="result" key="vehicle" copy="terrain" />	
+
+    <effect class="result" key="vehicle" ref="hitMetal" />
+    <effect class="result" key="vehicle" ref="hitMetal_1" />
+
+    <effect class="result" key="terrain" ref="BulletImpact" />
+
+    <effect class="result" key="terrain" ref="Bullet_Burnout_20mm"/>
+
+    <effect class="result" key="shield" ref="hitMetal" />
+    <effect class="result" key="shield" ref="hitMetal_1" />
+
+
+    
+</projectile>

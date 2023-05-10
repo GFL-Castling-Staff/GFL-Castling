@@ -1182,6 +1182,61 @@ particle_system general_activated_at_smoke_trail
 	}
 }
 
+particle_system general_activated_at_smoke_trail_smaller
+{
+	quota 500
+	material rx1_smoke
+	particle_width 1.3
+	particle_height 1.3
+	renderer billboard
+	billboard_rotation_type vertex
+	iteration_interval 0.01
+	emitter Box
+	{
+		name rx1_linesmoke
+		angle 360
+		colour 1 1 1 0.1
+		direction 0 1 0
+		emission_rate 100
+		position 0 0 0
+		velocity_min 0.1
+		velocity_max 0.3
+		time_to_live 1
+		duration 1.5
+		width 3
+		height 3
+		depth 1
+		
+	}
+	affector Scaler
+	{
+		rate 1
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	-180
+		rotation_speed_range_end	180
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+	affector ColourFader2
+	{
+		red1 	0
+		green1 	0
+		bule1 	0
+		alpha1 	0.1
+		red2 	-0
+		green2	-0
+		blue2	-0
+		alpha2	-0.3
+		state_change 0.5
+	}
+	affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+}
+
 particle_system general_weapon_activated_bullet_light
 {
 	quota 100
