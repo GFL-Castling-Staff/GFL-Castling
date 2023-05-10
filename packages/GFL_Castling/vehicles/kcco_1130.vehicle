@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle name="Neo-SU Defence System" key="kcco_1130.vehicle" respawn_time="1200" map_view_atlas_index="32" minimum_fill_requirement="1.0" max_character_collision_speed_on_normal="8.0" max_character_collision_speed="8" character_leave_request_mode="friendly" allow_ai_to_use="1" allow_player_to_use="1" ai_driver_turns_to_target="1" ai_abandon_when_unsteerable="0" ai_stop_to_fight="1" soldier_capacity_offset="1" >
+<vehicle name="Neo-SU Defence System" key="kcco_1130.vehicle" owner="faction" respawn_time="1200" map_view_atlas_index="32" minimum_fill_requirement="1.0" max_character_collision_speed_on_normal="8.0" max_character_collision_speed="8" character_leave_request_mode="friendly" allow_ai_to_use="1" allow_player_to_use="1" ai_driver_turns_to_target="1" ai_abandon_when_unsteerable="0" ai_stop_to_fight="1" soldier_capacity_offset="1" >
     <tag name="metal_heavy" />
     <tag name="tow" />
     <tag name="light_combat" />
