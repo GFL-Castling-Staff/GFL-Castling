@@ -12,7 +12,7 @@
             projectile_speed="220" 
             spread_range="0.35"
             retrigger_time="0.085" 
-            sight_range_modifier="2.25"
+            sight_range_modifier="1.6"
             stance_accuracy_rate="8.0"
             leave_crouch_accuracy_penalty="0.38"
             suppressed="0" 
@@ -132,7 +132,7 @@
         <effect class="muzzle" ref="muzzle_yellow" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
-            <result class="hit"  kill_probability="1.9" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="0.1" kill_decay_end_time="0.375" />
+            <result class="hit"  kill_probability="1.9" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.05" kill_decay_end_time="0.5" />
         </projectile>
         <effect class="muzzle" ref="ejection_76239" />
         <stance state_key="running" accuracy="0.85" />
@@ -142,7 +142,7 @@
         <stance state_key="standing" accuracy="0.85" />
         <stance state_key="crouching" accuracy="0.85" />
         <stance state_key="prone" accuracy="0.85" />
-        <stance state_key="over_wall" accuracy="1" /> 
+        <stance state_key="over_wall" accuracy="0.85" /> 
         <modifier class="hit_success_probability" value="-0.3" />
         <modifier class="speed" value="0.35" />
         <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />

@@ -74,8 +74,8 @@
     <projectile file="bullet.projectile">
         <result class="hit"  
         kill_probability="1.75" 
-        kill_probability_offset_on_successful_hit="2.5"
-        kill_decay_start_time="0.22" 
+        kill_probability_offset_on_successful_hit="3.5"
+        kill_decay_start_time="0.2" 
         kill_decay_end_time="0.5" />
     </projectile>
     <effect class="muzzle" ref="ejection_9mm" />
