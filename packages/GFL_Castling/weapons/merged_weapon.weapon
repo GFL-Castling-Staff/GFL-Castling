@@ -18589,7 +18589,7 @@
 	<stance state_key="over_wall" accuracy="1.0"/>
 </weapon>
 
-<weapon key="gkw_galil_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_galilmod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
 	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="50" name="IMI Galil(MOD3)-[Eagle Eye Awakening]" projectile_speed="206.19" retrigger_time="0.0923" suppressed="0" spread_range="0.2" stance_accuracy_rate="0.1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" sight_range_modifier="2.0" sustained_fire_diminish_rate="3.0" sustained_fire_grow_step="0.2" stab_enabled="1" carry_in_two_hands="1"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
