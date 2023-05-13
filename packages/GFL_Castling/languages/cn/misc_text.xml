@@ -5,7 +5,6 @@
 	<text key="Confirmed, UAV is online, situational awareness is complete" text="确认，UAV上线，视野良好" />
 	<text key="Execution of air strikes" text="执行" />
 	<text key="Artillery strikes in progress" text="打击开始" />
-	<text key="Provocation Fairy" text="嘲讽妖精" />
 	<text key="Manticore x2" text="协议同归-启用两台蝎甲兽" />
 	<text key="Manticore x5" text="协议同归-启用五台蝎甲兽" />
 	<text key="Rescue Fairy" text="搜救妖精" />
@@ -45,7 +44,6 @@
 	<text key="Double Enjoyment Package" text="双人乐享全餐" />
 	<text key="Christmas coin" text="圣诞币" />
 	<text key="Artillery strikes in progress." text="确认,信道通畅,无人机突防中" />
-	<text key="Barrier Fairy" text="立盾妖精" />
 	<text key="Armor Fortification in progress." text="护甲加固蚀刻场加载中" />
 	<text key="Quick Restoration Contract" text="快速修复契约" />
 	<text key="Fairy Command:Reinforcement--Medic" text="妖精指令:增援--创伤小组" />
@@ -135,13 +133,18 @@
 
 	<text key="Black Fancy Motorbike" text="黑色高级摩托车"/>
 
+	<!-- 空投支援 -->
+
+	<text key="Barrier Fairy" text="立盾妖精" />
+	<text key="Armor Fortification" text="护甲加固" />
+	
 	<text key="Fury Fairy" text="暴怒妖精"/>	
 	<text key="Gunship support" text="很生气的炮艇支援"/>	
 	<text key="Confirm, checking gunship status" text="确认请求，正在检查炮艇机状态"/>	
 	<text key="Gunship status confirmed" text="炮艇机怒气值确认完毕"/>	
 
 	<text key="Warrior Fairy" text="勇士妖精"/>
-	<text key="Cruise missile" text="超勇的巡曳飞弹"/>
+	<text key="Cruise missile" text="超勇的武直支援"/>
 	<text key="Confirm, checking Helicopter status" text="确认请求，正在检查攻击直升机状态"/>	
 	<text key="Helicopter status confirmed" text="攻击直升机各参数确认完毕"/>
 
@@ -166,6 +169,9 @@
 	<text key="Airstrike Fairy" text="空袭妖精" />
 	<text key="Fatal Airstrike" text="致命空袭"/>
 
+	<text key="Provocation Fairy" text="嘲讽妖精" />
+	<text key="Deploy Target Drone" text="嘲讽靶机" />
+
 	<text key="droping in" text="投放中"/>
 
 	<text key="Tier 6 Equipment Ticket" text="Tier 6 装备兑换劵"/> 
@@ -180,7 +186,6 @@
 	<text key="Pierre II" text="Pierre II 皮埃尔 - 自行榴弹平台"/>
 	<text key="Chiara IV" text="Chiara IV 切尔拉 - 巡回式机枪车"/>
 	<text key="Martina V" text="Martina V 玛蒂娜 - 廉价运输悍马"/>
-	
 	
 	<text key="GK-Scarecrow" text="Scarecrow “稻草人”"/>
 	<text key="GK-Scarecrow-[Battlefield Purge]" text="Scarecrow “稻草人”-[战场清洗]"/>
@@ -267,7 +272,7 @@
 	<text key="Nimogen" text="Nimogen 妮莫金"/>
 	<text key="Adeline" text="Adeline 黑涅托"/>
 	<text key="Defender" text="Defender 防卫者"/>
-	<text key="E.I.L.D. Smasher" text="E.I.L.D. Smasher 感染头目"/>
+	<text key="E.L.I.D. Smasher" text="E.L.I.D. Smasher 感染头目"/>
 	<text key="Nyto-HawkEyes" text="Nyto-HawkEyes 涅托-鹰眼"/>
 	<text key="Nyto-Patroller" text="Nyto-Patroller 涅托-巡卫"/>
 	<text key="Nyto-Wrath" text="Nyto-Wrath 涅托-怒锤"/>
@@ -278,6 +283,7 @@
 	<text key="Strelet Plus" text="Strelet Plus 重炮士"/>
 	<text key="Teal" text="Teal 缇"/>
 	<text key="Grenadier" text="Grenadier 掷弹士"/>
+	<text key="Chasseur" text="Chasseur 重装猎兵"/>
 	<text key="Uhlan" text="枪骑兵-Uhlan 巡航坦克"/>
 	<text key="Pyxis" text="指南针-Pyxis 轻型碉堡"/>
 	<text key="The Apostle" text="“使徒”-The Apostle 全地形车"/>
@@ -286,10 +292,16 @@
 	<text key="Elenusinus Mysteries" text="厄琉息斯秘仪-Elenusinus"/>
 	<text key="Dish of Aceso" text="阿克索之皿-Aceso"/>
 
-	
+	<!-- 帕拉蒂斯普通单位命名多以历史兵种为主 -->
+	<!-- 帕拉蒂斯使用物品多以宗教相关 -->
 
-	<text key="E.I.L.D. Armed Infected" text="E.I.L.D. 武装感染者 "/>
-	<text key="E.I.L.D. Infected" text="E.I.L.D. 感染者 "/>
+	<text key="E.L.I.D. Armed Infected" text="E.L.I.D. 武装感染者 "/>
+	<text key="E.L.I.D. Infected" text="E.L.I.D. 感染者 "/>
+	<text key="E.L.I.D. Spitter" text="E.L.I.D. 喷吐者"/>
+	<text key="E.L.I.D. Rapid" text="E.L.I.D. 急速感染者"/>
+	<text key="Silicification E.L.I.D." text="E.L.I.D. 重度硅化感染者"/>
+
+	<!-- SF 支援台词 -->
 
 	<text key="Request Jupiter Air-Strike" text="请求木星打击" />
 	<text key="Confirm, Adjusting Jupiter rotation" text="确认,木星自旋调整中"/>
@@ -305,15 +317,16 @@
 	<text key="Confirm,Contacting to Dreamer" text="确认,正在联系梦想家"/>
 	<text key="Waypoint Strike On going!" text="航点打击已到达!"/>
 
+	<!-- KCCO 支援台词 -->
+	<text key="Argo-Vela" text="阿尔戈-船帆座"/>
+	<text key="Argo-Puppis" text="阿尔戈-船尾座"/>
+	<text key="Argo-Carina" text="阿尔戈-船底座"/>
 
  	<text key="To Hematite, request artillery support" text="呼叫赤铁矿行动小组，请求对该区域进行饱和式火力覆盖"/>
 	<text key="Hematite Saturation Artillery" text="赤铁矿-饱和式火力支援"/>
 	<text key="Request Carina fire support!" text="呼叫阿尔戈-船底座，请求平射炮定向打击"/>
 	<text key="Request Puppis fire support!" text="呼叫阿尔戈-船尾座，请求高射炮火力打击"/>
 	<text key="Request Vela fire support!" text="呼叫阿尔戈-船帆座，请求电磁炮歼灭打击"/>
-
-	<text key="Request Strelet Assemble" text="侦测到威胁信号，上传集结位置，启用下一批次射击士"/>
-	<text key="Request Sentinel Assemble" text="侦测到威胁信号，上传集结位置，启用下一批次警备士"/>
 
 	<text key="Request S.F. Assault Infanry" text="认证通过，节点指令已下达，请求投送突击小组"/>
 	<text key="Request S.F. Automation Infanry" text="认证通过，节点指令已下达，请派送自律战斗单元"/>
@@ -329,21 +342,26 @@
 	<text key="Engage enemy, request Quartz Squad" text="战区状态告急，呼叫石英分队，请求侧翼机动穿插"/>
 	<text key="Request a sweep squad here" text="呼叫操作员，该区域需要自律清扫小组，请求出动欧特鲁斯与肯陶罗斯"/>
 
-	
-	
 	<text key="Engage enemy, request Coeus Droping" text="呼叫HQ，前线战况焦灼，请求投送奎乌"/>
 	<text key="Engage enemy, request Typhon Droping" text="呼叫HQ，需求反装甲平台，请求投送提丰"/>
+
+	<!-- 帕拉蒂斯 支援台词 -->
+
+	<text key="Request Strelet Assemble" text="侦测到威胁信号，上传集结位置，启用下一批次射击士"/>
+	<text key="Request Sentinel Assemble" text="侦测到威胁信号，上传集结位置，启用下一批次警备士"/>
+	<text key="Sending position, ready to launch Iaso blessing" text="坐标已上传，请求伊阿索之匣，已准备赐福这片区域"/>
+	<text key="Droping our Baptized brother and sister here" text="让我们已受洗礼的手足们前往此地"/>
+	<text key="Spread out the father's sign here" text="于此将父亲大人的旨意传递"/>
+	<text key="He and us will take this gospel to you, old-world's soul" text="祂允我们将福音带给你们，旧世界的灵魂"/>
+
+	<text key="Trash is trash. Take more here." text="废物就是废物，把下一批废物叫来。"/>
+	<text key="Trashs, go and prove your worth and loyalty" text="废物们，前去证明你们的价值和忠诚"/>
+
 	<text key="Request Uhlan Assaulting" text="无法突破敌方战线，请求枪骑兵突袭，虚识图景已同步"/>
 	<text key="Send Our Uhlan here!" text="虫豸的防御在父亲大人的辉光面前没有任何意义，把枪骑兵挪到这来！"/>
 	<text key="Send Our Uhlan here!" text="敌人的抵抗都是徒劳！派枪骑兵到这来，把他们全送上天！"/>
 	<text key="Send Our Uhlan here!" text="逐一发送坦克，把他们全送上天！"/>
 
-	
-	
-	
-	<text key="Argo-Vela" text="阿尔戈-船帆座"/>
-	<text key="Argo-Puppis" text="阿尔戈-船尾座"/>
-	<text key="Argo-Carina" text="阿尔戈-船底座"/>
 	<text key="[Ogas Pulse Generator] Depolyment Package" text="[Ogas脉冲发生器] 部署包"/>
 	<text key="Ammunition Supply Crate" text="军火补给箱" />
 	<text key="U R NOT Warnned" text="假罚单——你因为开盒被惩罚了！
@@ -352,9 +370,11 @@
 	<text key="KCCO Scanning Grenade" text="特战部智能追踪手雷"/>
 	<text key="Ofanim's Might" text="座天使之威能"/>
 	<text key="Seraph's Blaze" text="炽天使之怒火"/>
+	<text key="Cherubim's Punish" text="智天使之惩戒"/>
 
 	<text key="AGM-64 Hornet" text="AGM-64 “黄蜂”导弹发射器"/>
 	<text key="BGM-71 TOW" text="BGM-71 “陶”反坦克导弹发射器"/>
+	<text key="Engineer Working" text="工兵正在部署中..."/>
 
 	<!-- 护甲新增翻译 -->
 	<text key="[...See you in the new world]" text="[……我们新世界再见吧]" />

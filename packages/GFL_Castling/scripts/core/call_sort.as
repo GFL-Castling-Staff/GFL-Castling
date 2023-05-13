@@ -12,9 +12,7 @@ array<string> getCallSorting() {
 		"target.call",
 		"gk_rocket_fairy.call",
 		"gk_rampage_fairy_ac130.call",
-		"martina.call",
-		"chiara.call",
-		"pierre.call"
+		"martina.call"
  	};
 
 	return sorting;
