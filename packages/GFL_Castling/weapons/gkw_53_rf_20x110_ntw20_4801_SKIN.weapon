@@ -4,7 +4,7 @@
     <tag name="antiarmor" />
     <!--Weapon specifications-->
     <specification 
-	retrigger_time="2.0" 
+	retrigger_time="-1" 
 	accuracy_factor="1" 
 	sustained_fire_grow_step="3.0" 
 	sustained_fire_diminish_rate="1.5" 
@@ -41,43 +41,31 @@
     <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
     <!--Sounds-->
     <sound key="fire" fileref="ntw20_fire_FromBF2042.wav" volume="1.6" />
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.6"/>
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="NTW20_DIALOGUE3_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="NTW20_PHRASE_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="NTW20_LOADING_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="NTW20_FORMATION_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="NTW20_BLACKACTION_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="NTW20_OPERATIONBEGIN_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="NTW20_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="NTW20_MEET_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="NTW20_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="NTW20_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="1.0"/>
     <sound key="magazine_out" fileref="ntw20_mgz_out_FromBF2042.wav" volume="0.7"/>
     <sound key="magazine_in" fileref="ntw20_mgz_in_FromBF2042.wav" volume="0.7"/>
     <sound key="cycle_out" fileref="ntw20_cycle_out_FromBF5.wav" volume="0.6"/>
-    <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.6"/>
+    <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.8"/>
+    <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.8"/>
+    <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.8"/>
+    <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.8"/>
+    <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.8"/>
+    <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.8"/>
+    <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.8"/>
+    <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.8"/>
+    <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.8"/>
+    <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.8"/>
+    <sound key="cycle_in" fileref="NTW20_DIALOGUE3_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle_in" fileref="NTW20_PHRASE_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle_in" fileref="NTW20_LOADING_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle_in" fileref="NTW20_FORMATION_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle_in" fileref="NTW20_BLACKACTION_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle_in" fileref="NTW20_OPERATIONBEGIN_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle_in" fileref="NTW20_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle_in" fileref="NTW20_MEET_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle_in" fileref="NTW20_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle_in" fileref="NTW20_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
+
     <sound class="impact" fileref="rifle_drop.wav" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_ntw20_4801fromIAQS.xml" />
@@ -91,6 +79,7 @@
 	<rotation class="motion" />
 	<collision class="sticky" />
     </projectile>
+    <effect class="muzzle" ref="at_bullet_smoke_trail" lighting="0"/> 
     <trail probability="1" key="BulletApTrail_rf"/>
     <!--Accuracy, Movement speed-->
     <stance state_key="running" accuracy="0.5" />

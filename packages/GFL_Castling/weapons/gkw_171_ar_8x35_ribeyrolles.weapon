@@ -42,10 +42,10 @@
         <stance state_key="prone" accuracy="1" />
         <stance state_key="over_wall" accuracy="1" /> 
     </weapon>
-    <weapon file="two_hands_ar.animation_base" key="gkw_ribeyrolles_skill.weapon">
+    <weapon file="two_hands_ar_hip.animation_base" key="gkw_ribeyrolles_skill.weapon">
         <!-- 人物模型来自于瓜鸽 The character model is made by MelonDove -->
         <specification
-            accuracy_factor="0.98"
+            accuracy_factor="0.95"
             barrel_offset="0.8"
             class="0"
             burst_shots="1"

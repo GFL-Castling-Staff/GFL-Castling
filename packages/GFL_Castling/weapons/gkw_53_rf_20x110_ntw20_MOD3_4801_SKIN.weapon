@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <weapon key="gkw_ntw20mod3_4801.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_ntw20mod3_4801.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
     <tag name="rifle" />
-	<tag name="antiarmor" />
+    <tag name="antiarmor" />
     <tag name="elite" />
-        <!--Weapon specifications-->
-        <specification 
+    <!--Weapon specifications-->
+    <specification 
         retrigger_time="-1" 
         accuracy_factor="1" 
         sustained_fire_grow_step="3.0" 
@@ -25,83 +25,71 @@
         stab_enabled="1"
         stab_range="4"
 	    carry_in_two_hands="1" />
-        <inventory encumbrance="35.0" buy_price="550.0" sell_price="450.0" />
-        <commonness value="0.0" in_stock="0" can_respawn_with="1" />
-        <!--Animations-->
-        <animation state_key="recoil" animation_key="recoil1, big" />
-	    <animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone" />
-	    <animation key="hold" animation_key="still, heavy weapon" />
-	    <animation state_key="hold_casual"	animation_key="still, carrying load" />
-        <animation state_key="running" animation_key="running, line infantry" />
-        <animation state_key="walking" animation_key="walking, line infantry" />
-        <animation state_key="walking_backwards" animation_key="walking, line infantry" />
-        <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
-	    <animation state_key="stabbing" animation_key="stabbing, bat" />
-        <animation key="cycle" animation_key="Brifle1.8" />
-        <animation key="cycle" stance_key="prone" animation_key="Brifle1.8p" />
-        <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
-        <!--Sounds-->
-        <sound key="fire" fileref="ntw20_fire_FromBF2042.wav" volume="1.6" />
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.6"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="NTW20_DIALOGUE3_JP.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="NTW20_PHRASE_JP.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="NTW20_LOADING_JP.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="NTW20_FORMATION_JP.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="NTW20_BLACKACTION_JP.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="NTW20_OPERATIONBEGIN_JP.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="NTW20_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="NTW20_MEET_JP.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="NTW20_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="NTW20_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="0.8" pitch_variety="0"/>
-        <sound key="magazine_out" fileref="ntw20_mgz_out_FromBF2042.wav" volume="0.7"/>
-        <sound key="magazine_in" fileref="ntw20_mgz_in_FromBF2042.wav" volume="0.7"/>
-        <sound key="cycle_out" fileref="ntw20_cycle_out_FromBF5.wav" volume="0.6"/>
-        <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.6"/>
-        <sound class="impact" fileref="rifle_drop.wav" />
-        <!--Model, Icon, Cost-->
-        <model filename="gkw_rf_ntw20_4801fromIAQS.xml" />
-        <hud_icon filename="gkw_ntw20_4801.png" />
-        <capacity value="1" source="rank" source_value="0.0" />
-        <!--Ballistics-->
-        <weak_hand_hold offset="0.3" />
-        <projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7"> 
-		<result class="spawn" instance_class="projectile" instance_key="ntw20_ap.projectile" min_amount="10" max_amount="10" offset="0 0.5 0" position_spread="0.5 0" direction_spread="0 0" />	
-		<trigger class="impact" time_to_live="0.2"  />
-		<rotation class="motion" />
-		<collision class="sticky" />
-        </projectile>
-        <trail probability="1" key="BulletApTrail_rf"/>
-        <!--Accuracy, Movement speed-->
-        <stance state_key="running" accuracy="0.5" />
-        <stance state_key="walking" accuracy="0.7" />
-        <stance state_key="crouch_moving" accuracy="0.7" />
-        <stance state_key="prone_moving" accuracy="0.7" />
-        <stance state_key="standing" accuracy="0.85"/>
-        <stance state_key="crouching" accuracy="0.85" />
-        <stance state_key="prone" accuracy="1.1" />
-        <stance state_key="over_wall" accuracy="1.1" />
-        <modifier class="speed" value="-0.15" />
-        <modifier class="detectability" value="-0.1"/>
-    </weapon>
+    <inventory encumbrance="35.0" buy_price="550.0" sell_price="450.0" />
+    <commonness value="0.0" in_stock="0" can_respawn_with="1" />
+    <!--Animations-->
+    <animation state_key="recoil" animation_key="recoil1, big" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone" />
+    <animation key="hold" animation_key="still, heavy weapon" />
+    <animation state_key="hold_casual"	animation_key="still, carrying load" />
+    <animation state_key="running" animation_key="running, line infantry" />
+    <animation state_key="walking" animation_key="walking, line infantry" />
+    <animation state_key="walking_backwards" animation_key="walking, line infantry" />
+    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+    <animation state_key="stabbing" animation_key="stabbing, bat" />
+    <animation key="cycle" animation_key="Brifle1.8" />
+    <animation key="cycle" stance_key="prone" animation_key="Brifle1.8p" />
+    <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
+    <!--Sounds-->
+    <sound key="fire" fileref="ntw20_fire_FromBF2042.wav" volume="1.6" />
+    <sound key="cycle" fileref="ntw20_cycle_FromBF5.wav" volume="1.0"/>
+    <sound key="magazine_out" fileref="ntw20_mgz_out_FromBF2042.wav" volume="0.7"/>
+    <sound key="magazine_in" fileref="ntw20_mgz_in_FromBF2042.wav" volume="0.7"/>
+    <sound key="cycle_out" fileref="ntw20_cycle_out_FromBF5.wav" volume="0.6"/>
+    <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.8"/>
+    <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.8"/>
+    <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.8"/>
+    <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.8"/>
+    <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.8"/>
+    <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.8"/>
+    <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.8"/>
+    <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.8"/>
+    <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.8"/>
+    <sound key="cycle_in" fileref="ntw20_cycle_in_FromBF5.wav" volume="0.8"/>
+    <sound key="cycle_in" fileref="NTW20_DIALOGUE3_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle_in" fileref="NTW20_PHRASE_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle_in" fileref="NTW20_LOADING_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle_in" fileref="NTW20_FORMATION_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle_in" fileref="NTW20_BLACKACTION_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle_in" fileref="NTW20_OPERATIONBEGIN_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle_in" fileref="NTW20_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle_in" fileref="NTW20_MEET_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle_in" fileref="NTW20_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="cycle_in" fileref="NTW20_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <!--Model, Icon, Cost-->
+    <model filename="gkw_rf_ntw20_4801fromIAQS.xml" />
+    <hud_icon filename="gkw_ntw20_4801.png" />
+    <capacity value="1" source="rank" source_value="0.0" />
+    <!--Ballistics-->
+    <weak_hand_hold offset="0.3" />
+    <projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7">
+        <result class="spawn" instance_class="projectile" instance_key="ntw20_ap.projectile" min_amount="10" max_amount="10" offset="0 0.5 0" position_spread="0.5 0" direction_spread="0 0" />
+        <trigger class="impact" time_to_live="0.2"  />
+        <rotation class="motion" />
+        <collision class="sticky" />
+    </projectile>
+    <effect class="muzzle" ref="at_bullet_smoke_trail" lighting="0"/>
+    <trail probability="1" key="BulletApTrail_rf"/>
+    <!--Accuracy, Movement speed-->
+    <stance state_key="running" accuracy="0.5" />
+    <stance state_key="walking" accuracy="0.7" />
+    <stance state_key="crouch_moving" accuracy="0.7" />
+    <stance state_key="prone_moving" accuracy="0.7" />
+    <stance state_key="standing" accuracy="0.85"/>
+    <stance state_key="crouching" accuracy="0.85" />
+    <stance state_key="prone" accuracy="1.1" />
+    <stance state_key="over_wall" accuracy="1.1" />
+    <modifier class="speed" value="-0.15" />
+    <modifier class="detectability" value="-0.1"/>
+</weapon>

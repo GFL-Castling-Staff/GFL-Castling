@@ -25,6 +25,7 @@
     stance_accuracy_rate="1.0"
 	projectiles_per_shot="1" />
     <inventory encumbrance="35.0" buy_price="300.0" sell_price="200.0" />
+    <commonness value="0.2" in_stock="0" can_respawn_with="1" />
     <!--Animations-->
     <animation key="cycle" animation_key="Brifle1.5" />
     <animation key="cycle" stance_key="prone" animation_key="Brifle1.3p" />

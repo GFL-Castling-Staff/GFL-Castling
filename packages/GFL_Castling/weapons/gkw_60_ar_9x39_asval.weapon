@@ -37,6 +37,7 @@
 	    <animation state_key="stabbing" animation_key="pistol whip 3" />
         <inventory encumbrance="35.0" buy_price="30.0" sell_price="30.0" />
         <next_in_chain key="gkw_asval_skill.weapon" share_ammo="1" />
+        <commonness value="0.2" in_stock="0" can_respawn_with="1" />
         <sound key="fire" fileref="asval_fire_FromFC6.wav" pitch_variety="0.05" volume="0.9" />
         <sound key="magazine_out" fileref="sr3mp_mgz_out_FromCOD16.wav" volume="0.35" />
         <sound key="magazine_in" fileref="sr3mp_mgz_in_FromCOD16.wav" volume="0.35" />

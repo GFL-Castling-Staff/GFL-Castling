@@ -3,21 +3,23 @@
     <weapon file="two_hands_ar.animation_base" key="gkw_an94mod3_blm.weapon">
         <specification 
 		accuracy_factor="1" 
-		barrel_offset="0.4" 
+        barrel_offset="0.5" 
 		class="0"
         slot="0" 
 		magazine_size="30" 
 		name="AN-94(MOD3)-['Antiya']" 
-		projectile_speed="244.28" 
+        projectile_speed="250" 
 		retrigger_time="0.1" 
-		suppressed="1" 
+        suppressed="0" 
+        stance_accuracy_rate="2.5"
+        spread_range="0.28"
         sight_range_modifier="1.5"
-		sustained_fire_diminish_rate="1.8" 
+        sustained_fire_diminish_rate="1.5" 
 		sustained_fire_grow_step="0.35"/>
         <next_in_chain key="gkw_an94mod3_blm_skill.weapon" share_ammo="1" />
-        <animation state_key="hold_casual"			animation_key="dancing, kazachok" />
+        <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
-        <inventory encumbrance="35.0" buy_price="270.0" sell_price="270.0" />
+        <inventory encumbrance="35.0" buy_price="400.0" sell_price="400.0" />
         <capacity value="1" source="rank" source_value="0.0" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
          <sound key="fire" fileref="an94mod3_fire_FromCOD16.wav" pitch_variety="0.02" volume="1" />
@@ -59,15 +61,15 @@
             <result class="hit"  kill_probability="4.3" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.8" kill_decay_end_time="1.333" />
         </projectile>
         <effect class="muzzle" ref="ejection_556" />
-        <stance state_key="running" accuracy="0.2" />
-        <stance state_key="walking" accuracy="0.5" />
+        <stance state_key="running" accuracy="0.3" />
+        <stance state_key="walking" accuracy="0.6" />
         <stance state_key="crouch_moving" accuracy="0.9" />
         <stance state_key="prone_moving" accuracy="0.9" />
         <stance state_key="standing" accuracy="0.9" />
         <stance state_key="crouching" accuracy="0.95" />
         <stance state_key="prone" accuracy="1" />
         <stance state_key="over_wall" accuracy="1" />
-        <modifier class="speed" value="0.35" />
+        <modifier class="speed" value="0.1" />
         <modifier class="detectability" value="-0.1" />
     </weapon>
     <weapon file="two_hands_ar.animation_base" key="gkw_an94mod3_blm_skill.weapon">
@@ -78,20 +80,22 @@
         slot="0" 
 		magazine_size="30" 
 		name="AN-94(MOD3)-['Antiya']-[Doll Trigger]" 
-		projectile_speed="244.28" 
-		retrigger_time="0.05" 
-        last_burst_retrigger_time="0.3"
-		suppressed="1" 
+        projectile_speed="250" 
+        retrigger_time="0.033" 
+        last_burst_retrigger_time="0.1"
+        suppressed="0" 
+        stance_accuracy_rate="2.5"
+        spread_range="0.28"
         projectiles_per_shot="2"
         burst_shots="2"
         sight_range_modifier="2.0"
-		sustained_fire_diminish_rate="1.8" 
+        sustained_fire_diminish_rate="1.5" 
 		sustained_fire_grow_step="0.35"/>
         <next_in_chain key="gkw_an94mod3_blm.weapon" share_ammo="1" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
-        <inventory encumbrance="35.0" buy_price="270.0" sell_price="270.0" />
+        <inventory encumbrance="35.0" buy_price="400.0" sell_price="400.0" />
         <capacity value="1" source="rank" source_value="0.0" />
         <sound key="fire" fileref="an94mod3skill_fire_FromCOD16.wav" pitch_variety="0.02" volume="1" />
         <sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.6" />
@@ -116,8 +120,8 @@
             <result class="hit" kill_probability="3.5" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="2.8" kill_decay_end_time="3.333" />
         </projectile>
         <effect class="muzzle" ref="ejection_556" />
-        <stance state_key="running" accuracy="0.2" />
-        <stance state_key="walking" accuracy="0.5" />
+        <stance state_key="running" accuracy="0.3" />
+        <stance state_key="walking" accuracy="0.6" />
         <stance state_key="crouch_moving" accuracy="0.9" />
         <stance state_key="prone_moving" accuracy="0.9" />
         <stance state_key="standing" accuracy="0.9" />
@@ -125,5 +129,6 @@
         <stance state_key="prone" accuracy="1" />
         <stance state_key="over_wall" accuracy="1" />
         <modifier class="detectability" value="-0.1" />
+        <modifier class="speed" value="-0.1" />
     </weapon>
 </weapons>
