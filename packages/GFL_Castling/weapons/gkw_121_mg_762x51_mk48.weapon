@@ -2,24 +2,24 @@
 <weapons>
     <weapon file="heavy_mg_standing.animation_base" key="gkw_mk48.weapon">
         <specification 
-      barrel_offset="0.5" 
-      retrigger_time="0.096" 
-      accuracy_factor="1.0" 
-      sustained_fire_grow_step="0.75" 
-      sustained_fire_diminish_rate="1.5" 
-      magazine_size="100" 
-      suppressed="0" 
-      name="Mk 48" 
-      class="0" 
-      projectile_speed="248" 
-      stance_accuracy_rate="0.5"
-      sight_range_modifier="1.3"
-      can_shoot_standing="1" 
-      can_shoot_crouching="1"
-      can_shoot_prone="1"
-      carry_in_two_hands="1"
-      stab_enabled="1"      
-      />
+        barrel_offset="0.5" 
+        retrigger_time="0.096" 
+        accuracy_factor="1.0" 
+        sustained_fire_grow_step="0.75" 
+        sustained_fire_diminish_rate="1.5" 
+        magazine_size="100" 
+        suppressed="0" 
+        name="Mk 48" 
+        class="0" 
+        projectile_speed="248" 
+        stance_accuracy_rate="0.5"
+        sight_range_modifier="1.3"
+        can_shoot_standing="1" 
+        can_shoot_crouching="1"
+        can_shoot_prone="1"
+        carry_in_two_hands="1"
+        stab_enabled="1"      
+        />
         <animation key="reload" animation_key="reloading, Machine gun 2.4" />
         <inventory encumbrance="50.0" buy_price="48.0" sell_price="48.0" />
         <next_in_chain key="gkw_mk48_skill.weapon" share_ammo="1" />
@@ -45,20 +45,20 @@
     </weapon>
     <weapon file="heavy_mg.animation_base" key="gkw_mk48_skill.weapon">
         <specification 
-      barrel_offset="0.5" 
-      retrigger_time="0.096" 
-      accuracy_factor="1.0" 
-      sustained_fire_grow_step="0.1" 
-      sustained_fire_diminish_rate="1.5" 
-      magazine_size="100" 
-      suppressed="0" 
-      name="Mk 48-[Hunting Impulse]" 
-      class="0" 
-      projectile_speed="248" 
-      sight_range_modifier="1.5"
-      can_shoot_standing="0" 
-      can_shoot_crouching="1"
-      can_shoot_prone="1"/>
+        barrel_offset="0.5" 
+        retrigger_time="0.096" 
+        accuracy_factor="1.0" 
+        sustained_fire_grow_step="0.1" 
+        sustained_fire_diminish_rate="1.5" 
+        magazine_size="100" 
+        suppressed="0" 
+        name="Mk 48-[Hunting Impulse]" 
+        class="0" 
+        projectile_speed="248" 
+        sight_range_modifier="1.5"
+        can_shoot_standing="0" 
+        can_shoot_crouching="1"
+        can_shoot_prone="1"/>
         <animation key="reload" animation_key="reloading, Machine gun 2.4" />
         <inventory encumbrance="50.0" buy_price="48.0" sell_price="48.0" />
         <next_in_chain key="gkw_mk48.weapon" share_ammo="1" />
