@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicle name="KCCO jammer" key="kcco_emp_jammer.vehicle" jams_enemy_radio="1" reserves_spawn_point="0" usable_for_cover="0" time_to_live="6" time_to_live_out_in_the_open="0">
+	<tire_set offset="1.0 0.0 1.0" radius="0.65" />
+	<tire_set offset="1.0 0.0 -1.0" radius="0.65" />
+	<modifier class="blast_damage" value="-200.0" />
+	<modifier class="blast_range" value="-200.0" />
+	<control max_speed="20.0" acceleration="6.7" max_reverse_speed="6.0" max_rotation="0.8" max_water_depth="1.9" />
+	<physics max_health="50.0" mass="25000.0" extent="0.1 0.1 0.1" offset="0 0.0 0" top_offset="0 1 0" collision_model_pos="0 3.0 0" collision_model_extent="0 0 0" visual_offset="0 0.4 0.0" collision_response_factor="0.0"
+	preserve_motion_on_impact_factor="0.0"/>
+	
+	<effect event_key="idle_chassis" ref="TracerFlash_sf_jammer" lighting="0" post_processing="0" offset="0 1 0"/>
+</vehicle>

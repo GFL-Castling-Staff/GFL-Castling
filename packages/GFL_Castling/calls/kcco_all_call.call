@@ -143,4 +143,14 @@
 		<capacity value="100" source="rank" source_value="0.0" />
 		<inventory encumbrance="0.0" price="150.0" />
 	</call>
+	<!-- 军方EMP压制炮击 -->
+	<call name="Argo-Emp" key="kcco_argo_emp.call" initiation_comment1="Request EMP suppressive fire support!" acknowledge_comment="Receive, we are adjusting artillery angle" acknowledge_time="0" launch_comment="Clearing" notify_metagame="1">
+		<round instances="2" instance_class="grenade" instance_key="artillery_emp_155.projectile" instance_spread="6 6 6" common_spread="2 0 2" launch_time="2.0" spawn_time="4.0">
+			<sound class="launch" fileref="argo_carina_firesupport_FromSAM4.wav" volume="0.8" />
+			<sound class="spawn" fileref="woosh1.wav" volume="1.0" />
+		</round>
+		<hud_icon filename="call_kcco_carina.png" />
+		<capacity value="100" source="rank" source_value="0.0" />
+		<inventory encumbrance="0.0" price="150.0" />
+	</call>
 </calls>
