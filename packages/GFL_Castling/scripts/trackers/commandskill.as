@@ -3561,7 +3561,7 @@ class CommandSkill : Tracker {
                     }
                     if (count == 3 ){
                         int is2_exist = getNumberedVehicle(m_metagame,factionid,"is2_m1895.vehicle");
-                        if (is2_exist < 3)
+                        if (is2_exist < 2)
                         {
                             Vector3 u_pos = getAimUnitPosition(c_pos,target_pos,8.0);
                             u_pos = u_pos.add(Vector3(0,25,0));
@@ -3599,7 +3599,7 @@ class CommandSkill : Tracker {
                         insertCommonStrike(characterId,factionid,15,target_pos.add(Vector3(3,40,3)),target_pos.add(Vector3(3,0,3)));
                         insertCommonStrike(characterId,factionid,15,target_pos.add(Vector3(-3,40,-3)),target_pos.add(Vector3(-3,0,-3))); 
                     }
-                    addCooldown("Nagant",300,characterId,modifer);
+                    addCooldown("Nagant",240,characterId,modifer);
                 }
             }
         }        
