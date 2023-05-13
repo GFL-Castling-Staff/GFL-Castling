@@ -29,7 +29,7 @@
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <commonness value="0.0001" in_stock="0" />
         <inventory encumbrance="35.0" buy_price="170.0" sell_price="170.0" />
-        <next_in_chain key="gkw_galilmod3_skill.weapon" share_ammo="1" />
+        <next_in_chain key="gkw_galilmod3_skill.weapon" share_ammo="0" />
         <sound key="fire" fileref="galilace_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2" />
         <sound key="magazine_out" fileref="galilace_mgz_out_FromCOD16.wav" volume="0.4" />
         <sound key="magazine_in" fileref="galilace_mgz_in_FromCOD16.wav" volume="0.4" />
@@ -113,7 +113,7 @@
         <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
         <inventory encumbrance="35.0" buy_price="170.0" sell_price="170.0" />
         <commonness value="0" in_stock="0" />
-        <next_in_chain key="gkw_galilmod3.weapon" share_ammo="1" />
+        <next_in_chain key="gkw_galilmod3.weapon" share_ammo="0" />
         <sound key="fire" fileref="galilmodskill_fire_FromCSGO.wav" pitch_variety="0.05" volume="1.4" />
         <sound key="magazine_out" fileref="galilace_mgz_out_FromCOD16.wav" volume="0.4" />
         <sound key="magazine_in" fileref="galilace_mgz_in_FromCOD16.wav" volume="0.4" />
