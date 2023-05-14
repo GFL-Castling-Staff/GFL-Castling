@@ -430,6 +430,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_rmb93_4309.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_357_8107.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_tar21_8106.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_uzi_7907.weapon", "weapon", 1.0f),
 
 		ScoredResource("gkw_m870_3803.weapon", "weapon", 1.0f)
 			}
@@ -1964,7 +1965,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 			);
 	}
 	protected void setupskinbox4() {
-		// 春节
+		// 春节和正月
 		array<Resource@> deliveryList = {
 			 Resource("gki_skinbox_springfes.carry_item", "carry_item")
 		};
@@ -2009,6 +2010,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_lewis_5501.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_dp12_4201.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_pa15_4202.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_uzi_7907.weapon", "weapon", 1.0f),
 
 		ScoredResource("gkw_QBZ95_405.weapon","weapon",1.0f)
 			}

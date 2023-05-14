@@ -50,6 +50,7 @@ dictionary commandSkillIndex = {
         {"gkw_vz61_only.weapon",2},
         {"gkw_klin.weapon",2},
         {"gkw_uzi.weapon",2},
+        {"gkw_uzi_7907.weapon",2},
         {"gkw_mp40.weapon",2},
         {"gkw_kp31mod3.weapon",2},
         {"gkw_kp31mod3_310.weapon",2},
@@ -283,6 +284,8 @@ dictionary commandSkillIndex = {
         //燃烧链接 UZI
         {"gkw_uzimod3.weapon",50},
         {"gkw_uzimod3_skill.weapon",50},
+        {"gkw_uzimod3_7907.weapon",50},
+        {"gkw_uzimod3_7907_skill.weapon",50},
 
         //瞄准射击 锁人版
         {"gkw_m1903.weapon",51},

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-    <weapon key="gkw_uzimod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <weapon key="gkw_uzimod3_7907.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
         <tag name="smg" />
         <tag name="elite" />
         <specification 
@@ -12,7 +12,7 @@
 		magazine_size="32"
         carry_in_two_hands="0"
         use_basic_muzzle_smoke_effect="0" 
-		name="Micro Uzi(MOD3)" 
+		name="Micro Uzi(MOD3)-[New Maple Silhouette]" 
 		projectile_speed="105" 
 		suppressed="0"
 		projectiles_per_shot="2"
@@ -24,7 +24,7 @@
         stab_enabled="1"/>
         <commonness value="0.0001" in_stock="0" can_respawn_with="1" />
         <inventory encumbrance="12.5" buy_price="200.0" sell_price="200.0" />
-        <next_in_chain key="gkw_uzimod3_skill.weapon" share_ammo="0" />
+        <next_in_chain key="gkw_uzimod3_7907_skill.weapon" share_ammo="0" />
         <effect class="muzzle" ref="ejection_9mm" />
         <animation state_key="recoil"	animation_key="recoil, pistol dual 1" />
         <animation state_key="recoil"	animation_key="recoil, pistol dual 2" />
@@ -53,7 +53,7 @@
         <sound key="cycle" fileref="uzi_cycle_FromCOD16.wav" volume="0.35" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename=""/>
-        <hud_icon filename="gkw_microuzimod3.png"/>
+        <hud_icon filename="gkw_microuzi_7907.png"/>
         <capacity value="1" source="rank" source_value="0" />
         <weak_hand_hold offset="0.2" />
         <effect class="muzzle" ref="MuzzleDual1" />
@@ -80,7 +80,7 @@
         <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
         <target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
     </weapon>
-    <weapon key="gkw_uzimod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <weapon key="gkw_uzimod3_7907_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
         <tag name="smg" />
         <tag name="elite" />
         <specification 
@@ -90,7 +90,7 @@
 		class="0"
         slot="0"
 		magazine_size="32" 
-		name="Micro Uzi(MOD3)" 
+		name="Micro Uzi(MOD3)-[New Maple Silhouette]" 
 		projectile_speed="125" 
 		suppressed="1" 
         carry_in_two_hands="0"
@@ -105,7 +105,7 @@
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <inventory encumbrance="12.5" buy_price="200.0" sell_price="200.0" />
         <capacity value="1" source="rank" source_value="0" />
-        <next_in_chain key="gkw_uzimod3.weapon" share_ammo="0" />
+        <next_in_chain key="gkw_uzimod3_7907.weapon" share_ammo="0" />
         <animation state_key="recoil" animation_key="recoil, pistol 2" />
         <animation state_key="recoil" stance_key="prone" animation_key="recoil, smg1, prone" />
         <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol" />
@@ -131,7 +131,7 @@
         <sound key="cycle" fileref="uzi_cycle_FromCOD16.wav" volume="0.35" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_smg_uzimod3.xml"/>
-        <hud_icon filename="gkw_microuzimod3_skill.png"/>
+        <hud_icon filename="gkw_microuzi_7907.png"/>
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
             <result class="hit"  kill_probability="1.65" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.25" kill_decay_end_time="0.5" />

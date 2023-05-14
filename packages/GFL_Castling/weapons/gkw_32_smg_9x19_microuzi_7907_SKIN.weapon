@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon key="gkw_uzi.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_uzi_7907.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
     <tag name="smg" />
     <specification 
 		accuracy_factor="0.8" 
@@ -9,7 +9,7 @@
         slot="0"
 		magazine_size="32" 
         carry_in_two_hands="0"
-		name="Micro Uzi" 
+		name="Micro Uzi-[New Maple Silhouette]" 
 		projectile_speed="105" 
 		suppressed="0" 
 		projectiles_per_shot="2"
@@ -20,7 +20,7 @@
         sustained_fire_diminish_rate="1.5"
         use_basic_muzzle_smoke_effect="0"	
         stab_enabled="1"/>
-    <commonness value="0.2" in_stock="1" can_respawn_with="1" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
     <inventory encumbrance="12.5" buy_price="10.0" sell_price="10.0" />
     <capacity value="1" source="rank" source_value="0.0" />
     <effect class="muzzle" ref="ejection_9mm" />
@@ -51,7 +51,7 @@
     <sound key="cycle" fileref="uzi_cycle_FromCOD16.wav" volume="0.35" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename=""/>
-    <hud_icon filename="gkw_microuzi.png"/>
+    <hud_icon filename="gkw_microuzi_7907.png"/>
     <effect class="muzzle" ref="MuzzleDual1" />
     <effect class="muzzle" ref="MuzzleSmokeDual1" />
     <effect class="muzzle" ref="MuzzleDual2" />

@@ -11,7 +11,7 @@
 	sustained_fire_diminish_rate="0.33" 
 	magazine_size="4" 
 	can_shoot_standing="1" 
-	can_shoot_crouching="1"
+	can_shoot_crouching="0"
 	can_shoot_prone="0"
 	suppressed="0" 
 	name="Code:Minotauros" 
@@ -21,10 +21,10 @@
 	projectile_speed="76.0" 
 	carry_in_two_hands="0" 
 	projectiles_per_shot="5" 
-	stab_enabled="0"
+	stab_enabled="1"
     stab_range="2"
 	barrel_offset_3d="0.6 1 0.5"/>
-    <animation state_key="recoil"	animation_key="recoil, teslatrooper" />
+    <animation state_key="recoil" animation_key="recoil, teslatrooper" />
     <animation key="reload" animation_key="change weapon, large mecha" />
     <animation state_key="cycle" animation_key="still_big_unit" />
     <animation key="walking" target_key="walking_big_unit" />
