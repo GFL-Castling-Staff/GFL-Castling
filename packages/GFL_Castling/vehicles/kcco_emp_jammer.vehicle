@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle name="KCCO jammer" key="kcco_emp_jammer.vehicle" jams_enemy_radio="1" reserves_spawn_point="0" usable_for_cover="0" time_to_live="6" time_to_live_out_in_the_open="0">
+<vehicle name="KCCO jammer" key="kcco_emp_jammer.vehicle" jams_enemy_radio="1" reserves_spawn_point="0" usable_for_cover="0" time_to_live="75" time_to_live_out_in_the_open="0">
 	<tire_set offset="1.0 0.0 1.0" radius="0.65" />
 	<tire_set offset="1.0 0.0 -1.0" radius="0.65" />
 	<modifier class="blast_damage" value="-200.0" />
