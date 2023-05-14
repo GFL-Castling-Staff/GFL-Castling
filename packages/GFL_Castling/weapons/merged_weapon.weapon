@@ -3300,11 +3300,11 @@
 
 <weapon key="gkw_desert_eagle.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.4" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2.0" magazine_size="7" suppressed="0" name="Desert Eagle" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="180.0" projectiles_per_shot="1" carry_in_two_hands="0" burst_shots="1" stab_enabled="1"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.4" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" magazine_size="7" suppressed="0" name="Desert Eagle" class="4" slot="0" spread_range="0.3" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="180.0" projectiles_per_shot="1" carry_in_two_hands="0" burst_shots="1" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="100.0" sell_price="50.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<next_in_chain key="gkw_desert_eagle_s.weapon" share_ammo="1"/>
+	<next_in_chain key="gkw_desert_eagle_skill.weapon" share_ammo="1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol 2"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone"/>
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol"/>
@@ -3331,8 +3331,8 @@
 	<model filename="gkw_hg_deserteagle.xml"/>
 	<hud_icon filename="gkw_deserteagle.png"/>
 	<weak_hand_hold offset="0.1"/>
-	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="0.15" kill_decay_end_time="0.35"/>
+	<projectile file="bullet.projectile" time_to_live="0.25">
+	<result class="hit" kill_probability="5.0" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.5" kill_decay_end_time="0.5"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.85"/>
@@ -3345,11 +3345,11 @@
 	<modifier class="speed" value="1.0"/>
 </weapon>
 
-<weapon key="gkw_desert_eagle_s.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_desert_eagle_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.4" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2.0" magazine_size="7" suppressed="0" name="Desert Eagle" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="180.0" projectiles_per_shot="1" carry_in_two_hands="0" burst_shots="1" stab_enabled="1"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.4" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" magazine_size="7" suppressed="0" name="Desert Eagle-[Deterrent Mark]" class="4" slot="0" spread_range="0.3" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="180.0" projectiles_per_shot="1" carry_in_two_hands="0" burst_shots="1" stab_enabled="1"/>
 	<commonness in_stock="0" can_respawn_with="1"/>
-	<inventory encumbrance="5.0" buy_price="100.0" sell_price="50.0"/>
+	<inventory encumbrance="5.0" buy_price="100.0" sell_price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<next_in_chain key="gkw_desert_eagle.weapon" share_ammo="1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol 2"/>
@@ -3376,10 +3376,10 @@
 	<sound key="magazine_in" fileref="DE_mgz_in_FromSAM4.wav" volume="0.5"/>
 	<sound key="cycle" fileref="DE_cycle_FromCOD4R.wav" volume="0.6"/>
 	<model filename="gkw_hg_deserteagle.xml"/>
-	<hud_icon filename="gkw_deserteagle.png"/>
+	<hud_icon filename="gkw_deserteagle_skill.png"/>
 	<weak_hand_hold offset="0.1"/>
-	<projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7">
-	<result class="spawn" instance_class="projectile" instance_key="desert_eagle.projectile" min_amount="5" max_amount="5" offset="0 0.5 0" position_spread="0.5 0" direction_spread="0 0"/>
+	<projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.5" time_to_live="0.22">
+	<result class="spawn" instance_class="projectile" instance_key="desert_eagle.projectile" min_amount="5" max_amount="5" offset="0 1.0 0" position_spread="0.3 0.2" direction_spread="0 0"/>
 	<effect class="result" key="terrain" ref="Ct_Shine_50AE"/>
 	<effect class="result" key="other" ref="Ct_Shine_50AE"/>
 	<effect class="result" key="vehicle" ref="Ct_Shine_50AE"/>
@@ -3387,7 +3387,111 @@
 	<effect class="result" key="shield" ref="Ct_Shine_50AE"/>
 	<effect class="result" key="static_object" ref="Ct_Shine_50AE"/>
 	<trail probability="1.0" key="bullet_new_he"/>
-	<trigger class="impact" time_to_live="0.2"/>
+	<trigger class="impact"/>
+	<rotation class="motion"/>
+	<collision class="sticky"/>
+	</projectile>
+	<stance state_key="running" accuracy="0.8"/>
+	<stance state_key="walking" accuracy="0.85"/>
+	<stance state_key="crouch_moving" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.8"/>
+	<stance state_key="standing" accuracy="0.9"/>
+	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="speed" value="1.0"/>
+</weapon>
+
+<weapon key="gkw_desert_eagle_6501.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<tag name="pistol"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.4" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" magazine_size="7" suppressed="0" name="Desert Eagle-[Blue Sky Garuda]" class="4" slot="0" spread_range="0.3" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="180.0" projectiles_per_shot="1" carry_in_two_hands="0" burst_shots="1" stab_enabled="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="5.0" buy_price="100.0" sell_price="50.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<next_in_chain key="gkw_desert_eagle_6501_skill.weapon" share_ammo="1"/>
+	<animation state_key="recoil" animation_key="recoil, pistol 2"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol"/>
+	<animation state_key="reload" animation_key="reloading, SA OHG 0.5"/>
+	<animation state_key="reload" animation_key="reloading2, SA OHG 0.5"/>
+	<animation state_key="hold" animation_key="still, pistol 2"/>
+	<animation state_key="hold_casual" animation_key="hold_casual, pistol 2"/>
+	<animation state_key="hold_on_wall" animation_key="hold, overwall pistol"/>
+	<animation state_key="still_against_wall" animation_key="hold_casual, pistol 4"/>
+	<animation state_key="running" animation_key="running, pistol 2"/>
+	<animation state_key="walking" animation_key="walking, pistol 2"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, pistol"/>
+	<animation state_key="crouching" animation_key="crouch, pistol 2"/>
+	<animation state_key="crouch_moving" animation_key="crouching forwards, single hand carry"/>
+	<animation state_key="crouch_moving_backwards" animation_key="crouching backwards, pistol 2"/>
+	<animation state_key="prone_still" animation_key="prone_still, pistol"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
+	<animation state_key="stabbing" animation_key="pistol whip"/>
+	<animation state_key="stabbing" animation_key="pistol whip 3"/>
+	<sound key="fire" fileref="deserteagle_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.15"/>
+	<sound key="magazine_out" fileref="DE_mgz_out_FromSAM4.wav" volume="0.5"/>
+	<sound key="magazine_in" fileref="DE_mgz_in_FromSAM4.wav" volume="0.5"/>
+	<sound key="cycle" fileref="DE_cycle_FromCOD4R.wav" volume="0.6"/>
+	<model filename="gkw_hg_deserteagle.xml"/>
+	<hud_icon filename="gkw_deserteagle.png"/>
+	<weak_hand_hold offset="0.1"/>
+	<projectile file="bullet.projectile" time_to_live="0.25">
+	<result class="hit" kill_probability="5.0" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.5" kill_decay_end_time="0.5"/>
+	</projectile>
+	<stance state_key="running" accuracy="0.8"/>
+	<stance state_key="walking" accuracy="0.85"/>
+	<stance state_key="crouch_moving" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.8"/>
+	<stance state_key="standing" accuracy="0.9"/>
+	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="speed" value="1.0"/>
+</weapon>
+
+<weapon key="gkw_desert_eagle_6501_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<tag name="pistol"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.4" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" magazine_size="7" suppressed="0" name="Desert Eagle-[Blue Sky Garuda]-[Deterrent Mark]" class="4" slot="0" spread_range="0.3" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="180.0" projectiles_per_shot="1" carry_in_two_hands="0" burst_shots="1" stab_enabled="1"/>
+	<commonness in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="5.0" buy_price="100.0" sell_price="100.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<next_in_chain key="gkw_desert_eagle_6501.weapon" share_ammo="1"/>
+	<animation state_key="recoil" animation_key="recoil, pistol 2"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol"/>
+	<animation state_key="reload" animation_key="reloading, SA OHG 0.5"/>
+	<animation state_key="reload" animation_key="reloading2, SA OHG 0.5"/>
+	<animation state_key="hold" animation_key="still, pistol 2"/>
+	<animation state_key="hold_casual" animation_key="hold_casual, pistol 2"/>
+	<animation state_key="hold_on_wall" animation_key="hold, overwall pistol"/>
+	<animation state_key="still_against_wall" animation_key="hold_casual, pistol 4"/>
+	<animation state_key="running" animation_key="running, pistol 2"/>
+	<animation state_key="walking" animation_key="walking, pistol 2"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, pistol"/>
+	<animation state_key="crouching" animation_key="crouch, pistol 2"/>
+	<animation state_key="crouch_moving" animation_key="crouching forwards, single hand carry"/>
+	<animation state_key="crouch_moving_backwards" animation_key="crouching backwards, pistol 2"/>
+	<animation state_key="prone_still" animation_key="prone_still, pistol"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
+	<animation state_key="stabbing" animation_key="pistol whip"/>
+	<animation state_key="stabbing" animation_key="pistol whip 3"/>
+	<sound key="fire" fileref="deserteagle_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.15"/>
+	<sound key="magazine_out" fileref="DE_mgz_out_FromSAM4.wav" volume="0.5"/>
+	<sound key="magazine_in" fileref="DE_mgz_in_FromSAM4.wav" volume="0.5"/>
+	<sound key="cycle" fileref="DE_cycle_FromCOD4R.wav" volume="0.6"/>
+	<model filename="gkw_hg_deserteagle.xml"/>
+	<hud_icon filename="gkw_deserteagle.png"/>
+	<weak_hand_hold offset="0.1"/>
+	<projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.5" time_to_live="0.22">
+	<result class="spawn" instance_class="projectile" instance_key="desert_eagle.projectile" min_amount="5" max_amount="5" offset="0 1.0 0" position_spread="0.3 0.2" direction_spread="0 0"/>
+	<effect class="result" key="terrain" ref="Ct_Shine_50AE"/>
+	<effect class="result" key="other" ref="Ct_Shine_50AE"/>
+	<effect class="result" key="vehicle" ref="Ct_Shine_50AE"/>
+	<effect class="result" key="character" ref="Ct_Shine_50AE"/>
+	<effect class="result" key="shield" ref="Ct_Shine_50AE"/>
+	<effect class="result" key="static_object" ref="Ct_Shine_50AE"/>
+	<trail probability="1.0" key="bullet_new_he"/>
+	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<collision class="sticky"/>
 	</projectile>
@@ -57016,7 +57120,7 @@
 </weapon>
 
 <weapon key="kcco_2A42_30mm_hei">
-	<specification slot="2" retrigger_time="0.109" accuracy_factor="0.95" spread_range="0.15" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0581" cooldown_start="0.6567" cooldown_end="0.3334" sight_range_modifier="1.5" ai_sight_range_modifier="0.8" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="2A42 30mm HEI" projectile_speed="120.0" class="0" barrel_offset="1.2" projectiles_per_shot="1"/>
+	<specification slot="2" retrigger_time="0.2" accuracy_factor="0.95" spread_range="0.15" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.6667" cooldown_start="0.6567" cooldown_end="0.3334" sight_range_modifier="1.5" ai_sight_range_modifier="0.8" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="2A42 30mm HEI" projectile_speed="120.0" class="0" barrel_offset="1.2" projectiles_per_shot="1"/>
 	<sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.15"/>
 	<sound key="magazine_out" fileref="mg_clip_out.wav"/>
 	<sound key="magazine_in" fileref="mg_clip_in.wav"/>
@@ -57031,7 +57135,7 @@
 </weapon>
 
 <weapon key="kcco_2A42_30mm_apds">
-	<specification slot="2" retrigger_time="0.109" accuracy_factor="0.95" spread_range="0.15" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.8349" cooldown_start="0.79" cooldown_end="0.6001" sight_range_modifier="1.5" ai_sight_range_modifier="0.8" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="2A42 30mm APDS" projectile_speed="120.0" class="0" barrel_offset="1.2" projectiles_per_shot="1"/>
+	<specification slot="2" retrigger_time="0.2" accuracy_factor="0.95" spread_range="0.15" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1" cooldown_start="0.79" cooldown_end="0.6001" sight_range_modifier="1.5" ai_sight_range_modifier="0.8" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="2A42 30mm APDS" projectile_speed="120.0" class="0" barrel_offset="1.2" projectiles_per_shot="1"/>
 	<sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.15"/>
 	<sound key="magazine_out" fileref="mg_clip_out.wav"/>
 	<sound key="magazine_in" fileref="mg_clip_in.wav"/>

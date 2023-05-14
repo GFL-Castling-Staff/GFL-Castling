@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-<weapon key="gkw_desert_eagle.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_desert_eagle_6501.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 <tag name="pistol" />
     <specification
 	retrigger_time="-1"	
@@ -10,7 +10,7 @@
 	sustained_fire_diminish_rate="2.0"
 	magazine_size="7"
 	suppressed="0"
-	name="Desert Eagle"
+	name="Desert Eagle-[Blue Sky Garuda]"
 	class="4"
     slot="0"
     spread_range="0.3"
@@ -21,10 +21,10 @@
     carry_in_two_hands="0"
 	burst_shots="1"
     stab_enabled="1"/>
-    <commonness value="0.2" in_stock="0" can_respawn_with="1" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
 	<inventory encumbrance="5.0" buy_price="100.0" sell_price="50.0"/>
 	<capacity value="1" source="rank" source_value="0.0" />
-    <next_in_chain key="gkw_desert_eagle_skill.weapon" share_ammo="1" />
+    <next_in_chain key="gkw_desert_eagle_6501_skill.weapon" share_ammo="1" />
 
     <animation state_key="recoil" animation_key="recoil, pistol 2" />
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone" />
@@ -52,7 +52,7 @@
     <sound key="cycle" fileref="DE_cycle_FromCOD4R.wav" volume="0.6" />
 
     <model filename="gkw_hg_deserteagle.xml" />
-    <hud_icon filename="gkw_deserteagle.png" />
+    <hud_icon filename="gkw_deserteagle_6501.png" />
 
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet.projectile" time_to_live="0.25">
@@ -70,7 +70,7 @@
     <modifier class="speed" value="1.0" />
 </weapon>
 
-<weapon key="gkw_desert_eagle_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_desert_eagle_6501_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 <tag name="pistol" />
     <specification
 	retrigger_time="-1"	
@@ -80,7 +80,7 @@
 	sustained_fire_diminish_rate="2.0"
 	magazine_size="7"
 	suppressed="0"
-	name="Desert Eagle-[Deterrent Mark]"
+	name="Desert Eagle-[Blue Sky Garuda]-[Deterrent Mark]"
 	class="4"
     slot="0"
     spread_range="0.3"
@@ -94,7 +94,7 @@
     <commonness in_stock="0" can_respawn_with="1" />
 	<inventory encumbrance="5.0" buy_price="100.0" sell_price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0" />
-    <next_in_chain key="gkw_desert_eagle.weapon" share_ammo="1" />
+    <next_in_chain key="gkw_desert_eagle_6501.weapon" share_ammo="1" />
 
     <animation state_key="recoil" animation_key="recoil, pistol 2" />
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone" />
@@ -122,7 +122,7 @@
     <sound key="cycle" fileref="DE_cycle_FromCOD4R.wav" volume="0.6" />
 
     <model filename="gkw_hg_deserteagle.xml" />
-    <hud_icon filename="gkw_deserteagle_skill.png" />
+    <hud_icon filename="gkw_deserteagle_6501.png" />
 
     <weak_hand_hold offset="0.1" />
     <projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.5" time_to_live="0.22"> 
