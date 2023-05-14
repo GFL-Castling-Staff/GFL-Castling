@@ -23,9 +23,9 @@
     <tag name="heavy_combat" />
     <tag name="any_tank" />
 
-    <tire_set offset="1.5 -0.0 +2.0" radius="0.5" />
-    <tire_set offset="0.5 -0.0 -0.0" radius="0.5" />
-    <tire_set offset="1.5 -0.0 -2.0" radius="0.5" />
+    <tire_set offset="1.4 -0.0 +1.8" radius="0.5" />
+    <tire_set offset="0.0 -0.0 -1.8" radius="0.5" />   
+    <tire_set offset="1.4 -0.0 -1.8" radius="0.5" />
 
     <control 
     max_speed="20.0" 
@@ -36,12 +36,16 @@
     max_water_depth="2.0" 
     tracked="1" 
     gears="1"
-	steer_smoothening="0.98" />
+	steer_smoothening="0.6" 
+    max_limiter_speed="6.0"
+    tracked_visual_tire_max_rotation="1.0" 
+    tracked_visual_tire_rotation_smoothening="0.9" 
+    simulated_speed_factor="0.1" />
 
     <physics 
     max_health="60.0" 
     blast_damage_threshold="2.0" 
-    mass="150.0" 
+    mass="300.0" 
     broken_mass="100"
     gravity="-70"
     remove_collision_threshold="0.6"   
@@ -50,22 +54,24 @@
     top_offset="0 3.0 0" 
     collision_model_pos="0 0.9 0" 
     collision_model_extent="4.7 1.8 8.0" 
-    visual_offset="0 1.6 0.0" />
+    visual_offset="0 2.0 0.0" 
+    drag_offset="-0.1" friction_offset="-0.1"/>
 
     <modifier class="blast_damage" value="-2.0" />
     <turret offset="0 2.5 -1.4" weapon_key="vehicle_none_kurgant" weapon_offset="0 0 0" weapon_recoil="0.2" physics_recoil="0.0" max_rotation_step="0.00065"  rotation_range="6.28" />
-    <turret parent_turret_index="0" offset="0.3 0.85 -0.2" weapon_key="kcco_2A42_30mm_hei" weapon_offset="0 0 0" weapon_recoil="0.15" physics_recoil="0.0" max_rotation_step="0.00065" rotation_range="0.05" />
-    <turret parent_turret_index="0" offset="-0.3 0.85 -0.2" weapon_key="kcco_2A42_30mm_apds" weapon_offset="0 0 0" weapon_recoil="0.15" physics_recoil="0.0" max_rotation_step="0.00065" rotation_range="0.05" />
+    <turret offset="0.2 1.12 -0.2" weapon_key="kcco_2A42_30mm_hei" weapon_offset="0 0 0" weapon_recoil="0.09" physics_recoil="0.0" max_rotation_step="0.00065" rotation_range="0.05" parent_turret_index="0" />
+    <turret offset="-0.2 1.12 -0.2" weapon_key="kcco_2A42_30mm_apds" weapon_offset="0 0 0" weapon_recoil="0.09" physics_recoil="0.0" max_rotation_step="0.00065" rotation_range="0.05" parent_turret_index="0" />
 
     <visual class="chassis" mesh_filename="neosu_kuergants_main.mesh" texture_filename="neosu_kuergants_main.jpg"/>
-    <visual class="turret" turret_index="0" mesh_filename="neosu_kuergants_turret.mesh" texture_filename="neosu_kuergants_main.jpg" offset="0 -0.7 -0.7" />
+    <visual class="turret" turret_index="0" mesh_filename="neosu_kuergants_turret.mesh" texture_filename="neosu_kuergants_main.jpg"/> 
+    <visual class="turret" turret_index="1" mesh_filename="moth_dir.mesh" texture_filename="balloon.png"/>
 
-    <visual class="track" mesh_filename="neosu_kuergants_track.mesh" offset="1.55 -0.65 0.1">
+    <visual class="track" mesh_filename="neosu_kuergants_track.mesh" offset="1.55 -0.65 0.05">
         <part texture_filename="neosu_kuergants_track.jpg" texture_animation="translate" tire_binding="0" />                
         <part texture_filename="neosu_kuergants_main.jpg" />
         <part texture_filename="neosu_kuergants_wheel.jpg" texture_animation="rotate" tire_binding="0" />
     </visual>
-    <visual class="track" mesh_filename="neosu_kuergants_track.mesh" offset="-1.55 -0.65 0.1">
+    <visual class="track" mesh_filename="neosu_kuergants_track.mesh" offset="-1.55 -0.65 0.05">
         <part texture_filename="neosu_kuergants_track.jpg" texture_animation="translate" tire_binding="1" />
         <part texture_filename="neosu_kuergants_main.jpg" />        
         <part texture_filename="neosu_kuergants_wheel.jpg" texture_animation="rotate" tire_binding="1" />
@@ -73,8 +79,8 @@
 
     <!-- broken -->
     <!-- class="track" dont work -->
-    <character_slot type="driver" position="1.1 0.5 -2.3" seat_position="0 -0.8 -0.5" rotation="0" exit_rotation="-3.14" hiding="1" animation_id="36" />
-    <character_slot type="gunner" position="-1.1 0.5 -2.3" seat_position="0 -0.8 -1.5" rotation="0" exit_rotation="-3.14" hiding="1" animation_id="37">
+    <character_slot type="driver" position="1.1 0.5 -2.7" seat_position="0 -0.8 -0.5" rotation="0" exit_rotation="-3.14" hiding="1" animation_id="36" />
+    <character_slot type="gunner" position="-1.1 0.5 -2.7" seat_position="0 -0.8 -1.5" rotation="0" exit_rotation="-3.14" hiding="1" animation_id="37">
         <turret index="0" />
         <turret index="1" />
         <turret index="2" />
