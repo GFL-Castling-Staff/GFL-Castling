@@ -370,8 +370,20 @@
         <requirement class="weapon" key="gkw_desert_eagle.weapon" slot="0" />
     </model>
     <model filename="gkd_hg_desert_eagle_s.xml">
-        <requirement class="weapon" key="gkw_desert_eagle_s.weapon" slot="0" />
+        <requirement class="weapon" key="gkw_desert_eagle_skill.weapon" slot="0" />
     </model>
+    <model filename="gkd_hg_desert_eagle_6501.xml">
+        <requirement class="weapon" key="gkw_desert_eagle_6501.weapon" slot="0" />
+    </model>
+    <model filename="gkd_hg_desert_eagle_6501.xml">
+        <requirement class="weapon" key="gkw_desert_eagle_6501_skill.weapon" slot="0" />
+    </model>
+    <model filename="gkd_hg_desert_eagle_6501_2.xml">
+        <requirement class="weapon" key="gkw_desert_eagle_6501.weapon" slot="0" />
+    </model>
+    <model filename="gkd_hg_desert_eagle_6501_2.xml">
+        <requirement class="weapon" key="gkw_desert_eagle_6501_skill.weapon" slot="0" />
+    </model>        
     <model filename="gkd_hg_fn57.xml">
         <requirement class="weapon" key="gkw_fn57.weapon" slot="0" />
     </model>

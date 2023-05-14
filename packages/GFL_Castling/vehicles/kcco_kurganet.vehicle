@@ -58,9 +58,9 @@
     drag_offset="-0.1" friction_offset="-0.1"/>
 
     <modifier class="blast_damage" value="-2.0" />
-    <turret offset="0 2.5 -1.4" weapon_key="vehicle_none_kurgant" weapon_offset="0 0 0" weapon_recoil="0.2" physics_recoil="0.0" max_rotation_step="0.00065"  rotation_range="6.28" />
-    <turret offset="0.2 1.12 -0.2" weapon_key="kcco_2A42_30mm_hei" weapon_offset="0 0 0" weapon_recoil="0.09" physics_recoil="0.0" max_rotation_step="0.00065" rotation_range="0.05" parent_turret_index="0" />
-    <turret offset="-0.2 1.12 -0.2" weapon_key="kcco_2A42_30mm_apds" weapon_offset="0 0 0" weapon_recoil="0.09" physics_recoil="0.0" max_rotation_step="0.00065" rotation_range="0.05" parent_turret_index="0" />
+    <turret offset="0 2.5 -1.4" weapon_key="vehicle_none_kurgant" weapon_offset="0 0 0" weapon_recoil="0.2" physics_recoil="0.0" max_rotation_step="0.0004"  rotation_range="6.28" />
+    <turret parent_turret_index="0" offset="0.2 0.75 0" weapon_key="kcco_2A42_30mm_hei" weapon_offset="0 0 0" weapon_recoil="0.08" physics_recoil="0.0" max_rotation_step="0.00065" rotation_range="0.05" />
+    <turret parent_turret_index="0" offset="-0.2 0.75 0" weapon_key="kcco_2A42_30mm_apds" weapon_offset="0 0 0" weapon_recoil="0.08" physics_recoil="0.0" max_rotation_step="0.00065" rotation_range="0.05" />
 
     <visual class="chassis" mesh_filename="neosu_kuergants_main.mesh" texture_filename="neosu_kuergants_main.jpg"/>
     <visual class="turret" turret_index="0" mesh_filename="neosu_kuergants_turret.mesh" texture_filename="neosu_kuergants_main.jpg"/> 

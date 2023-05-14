@@ -431,6 +431,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_357_8107.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_tar21_8106.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_uzi_7907.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_desert_eagle_6501.weapon", "weapon", 1.0f),
 
 		ScoredResource("gkw_m870_3803.weapon", "weapon", 1.0f)
 			}
@@ -1324,7 +1325,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_contender.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_cz75.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_nz75.weapon", "weapon", 0.2f),
-				ScoredResource("gkw_desert_eagle_s.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_desert_eagle.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_dp12.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_dsr50.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_fal.weapon", "weapon", 0.2f),
@@ -1471,7 +1472,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_contender.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_cz75.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_nz75.weapon", "weapon", 0.2f),
-				ScoredResource("gkw_desert_eagle_s.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_desert_eagle.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_grizzly.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_hp35.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_hs2000.weapon", "weapon", 0.2f),

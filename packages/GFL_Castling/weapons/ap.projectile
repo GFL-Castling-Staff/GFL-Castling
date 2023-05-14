@@ -131,7 +131,7 @@ radius="0.3"
 time_to_live_out_in_the_open="150"
 player_death_drop_owner_lock_time="120"
 >
-	<result class="blast" radius="4.0" damage="5.1" push="0.2" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" radius="3.5" damage="2.1" push="0.2" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trigger class="time" time_to_live="0" />	
     <rotation class="random" />
 	<model mesh_filename="" />
