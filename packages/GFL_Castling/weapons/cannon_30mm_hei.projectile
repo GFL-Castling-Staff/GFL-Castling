@@ -12,7 +12,7 @@
     <rotation class="motion" />
 
     <model mesh_filename="40mm.mesh" texture_filename="40mm.png" />
-    <trail probability="1.0" />
+    <trail probability="1.0" key="bullet_new" />
 
     <sound class="result" key="other" fileref="explosion1.wav" />
     <sound class="result" key="other" fileref="explosion2.wav" />  
@@ -27,7 +27,6 @@
     <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="2" additive="0" />
 
 
-    <effect class="activated" ref="general_activated_at_smoke_trail_smaller" />
     <effect class="result" key="terrain" ref="result_cannon_blast_AmbientLight" lighting="0"/>
     <effect class="result" key="terrain" ref="result_cannon_blast_smoke" lighting="0"/>    
     <effect class="result" key="terrain" ref="hitGround_20mm" use_surface_color="1" />
