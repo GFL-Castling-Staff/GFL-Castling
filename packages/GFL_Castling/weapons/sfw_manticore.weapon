@@ -42,6 +42,7 @@
 	<sound key="cycle" fileref="mossberg500_cycle.wav" />
 	<sound key="reload_one" fileref="mossberg500_reload.wav" />
 	<sound class="impact" fileref="rifle_drop.wav" />
+	<drop_on_death_result class="spawn" instance_class="projectile" instance_key="spontaneous_explosion_spawn.projectile" min_amount="1.0" max_amount="1.0" offset="0 2.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<model filename="" />
 	<hud_icon filename="sfw_manticore.png" />
 	<shield offset="2.7 3.0 1.5" extent="0.3 5.0 4.0" usable_for_cover="0"/>
