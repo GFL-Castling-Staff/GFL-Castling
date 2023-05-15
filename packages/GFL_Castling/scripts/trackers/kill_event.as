@@ -69,6 +69,11 @@ class kill_event : Tracker {
         {"gkw_ar15mod3_30001_skill.weapon",3},
         {"gkw_hk416_agent_hv.weapon",3},
         {"gkw_hk416_agent_fmj.weapon",3},
+        {"gkw_asval.weapon",3},
+        {"gkw_asval_2907.weapon",3},
+        {"gkw_asvalmod3.weapon",3},
+        {"gkw_asvalmod3_2907.weapon",3},
+        {"gkw_ribeyrollesmod3_skill.weapon",3},
 
         // SMG——3kills
         {"gkw_ump40.weapon",3},

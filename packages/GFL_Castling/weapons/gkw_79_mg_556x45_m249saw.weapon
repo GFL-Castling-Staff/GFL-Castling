@@ -3,12 +3,15 @@
 	<specification 
     barrel_offset="0.5"
     retrigger_time="-1"
-    accuracy_factor="0.98"
-    sustained_fire_grow_step="0.3"
-    sustained_fire_diminish_rate="2.1"
-    spread_range="0.2"
-    stance_accuracy_rate="1.5"
-    magazine_size="500"
+    accuracy_factor="0.85"
+    leave_crouch_accuracy_penalty="0.25"
+	sustained_fire_diminish_rate="1.2" 
+	sustained_fire_grow_step="0.35"
+    spread_range="0.35"
+    stance_accuracy_rate="1.0"
+    cooldown_start="0.75"
+    cooldown_end="0.3" 
+    magazine_size="-1"
     suppressed="0"
     name="M249 SAW"
     can_shoot_standing="1"
@@ -16,7 +19,7 @@
     can_shoot_prone="1"
     class="1"
     projectile_speed="190"
-    sight_range_modifier="1.2"
+    sight_range_modifier="1.75"
     stab_enabled="1"
     carry_in_two_hands="1"
     burst_shots="1"
@@ -32,7 +35,7 @@
 	<model filename="gkw_mg_m249.xml"/>
 	<hud_icon filename="gkw_m249.png"/>
 	<projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.967" kill_decay_end_time="3.279"/>
+        <result class="hit" kill_probability="4.2" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.967" kill_decay_end_time="3.279"/>
         <trail probability="1.0" key="bullet_new_deep"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
@@ -40,7 +43,7 @@
     <stance state_key="walking" accuracy="0.4"/>
     <stance state_key="crouch_moving" accuracy="0.5"/>
     <stance state_key="prone_moving" accuracy="0.5"/>
-    <stance state_key="standing" accuracy="0.6"/>
+    <stance state_key="standing" accuracy="0.5"/>
     <stance state_key="crouching" accuracy="0.85"/>
     <stance state_key="prone" accuracy="1.0"/>
     <stance state_key="over_wall" accuracy="1.0"/>
