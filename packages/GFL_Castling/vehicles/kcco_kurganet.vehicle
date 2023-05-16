@@ -58,9 +58,9 @@
     drag_offset="-0.1" friction_offset="-0.1"/>
 
     <modifier class="blast_damage" value="-2.0" />
-    <turret offset="0 2.0 -0.8" weapon_key="vehicle_none_kurgant" weapon_offset="0 0 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.0004"  rotation_range="6.28" />
-    <turret parent_turret_index="0" offset="0 0 0" weapon_key="kcco_2A42_30mm_hei" weapon_offset="0.2 1.15 0.1" weapon_recoil="0.08" physics_recoil="0.0" max_rotation_step="0.0005" rotation_range="0.05" />
-    <turret parent_turret_index="0" offset="0 0 0" weapon_key="kcco_2A42_30mm_apds" weapon_offset="-0.2 1.15 0.1" weapon_recoil="0.08" physics_recoil="0.0" max_rotation_step="0.0005" rotation_range="0.05" />
+    <turret offset="0 2.14 -0.8" weapon_key="vehicle_none_kurgant" weapon_offset="0 0 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.0004"  rotation_range="6.28" />
+    <turret parent_turret_index="0" offset="0 0 0" weapon_key="kcco_2A42_30mm_hei" weapon_offset="0.17 1.1 0.1" weapon_recoil="0.08" physics_recoil="0.0" max_rotation_step="0.0005" rotation_range="0.001" />
+    <turret parent_turret_index="0" offset="0 0 0" weapon_key="kcco_2A42_30mm_apds" weapon_offset="-0.17 1.1 0.1" weapon_recoil="0.08" physics_recoil="0.0" max_rotation_step="0.0005" rotation_range="0.001" />
     <turret parent_turret_index="0" offset="0 0 0" weapon_key="kuergants_missile_1.weapon" weapon_offset="0.8 1.35 -1.1" weapon_recoil="0.08" physics_recoil="0.0" max_rotation_step="0.0005" rotation_range="0.05" />
     <turret parent_turret_index="0" offset="0 0 0" weapon_key="kuergants_missile_2.weapon" weapon_offset="-0.8 1.35 -1.1" weapon_recoil="0.08" physics_recoil="0.0" max_rotation_step="0.0005" rotation_range="0.05" />
     <turret offset="0 2.5 -1.4" weapon_key="vehicle_none_kurgant" weapon_offset="0 0 -0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.0004"  rotation_range="6.28" />
@@ -72,8 +72,8 @@
     <visual class="turret" turret_index="2" mesh_filename="moth_dir.mesh" texture_filename="balloon.png" offset="0 -4.64 -1.24"/>
     <visual class="turret" turret_index="3" mesh_filename="moth_dir.mesh" texture_filename="balloon.png" offset="0 -4.64 -1.24"/>
     <visual class="turret" turret_index="4" mesh_filename="moth_dir.mesh" texture_filename="balloon.png" offset="0 -4.64 -1.24"/>
-    <visual class="turret" turret_index="5" mesh_filename="neosu_kuergants_turret.mesh" texture_filename="neosu_kuergants_main.jpg" offset="0 -1.14 -0.64"/> 
-    <visual class="turret" key="broken" turret_index="5" mesh_filename="neosu_kuergants_turret.mesh" texture_filename="tank_2_broken.png" offset="0 -1.14 -0.64"/> 
+    <visual class="turret" turret_index="5" mesh_filename="neosu_kuergants_turret.mesh" texture_filename="neosu_kuergants_main.jpg" offset="0 -1.0 -0.64"/> 
+    <visual class="turret" key="broken" turret_index="5" mesh_filename="neosu_kuergants_turret.mesh" texture_filename="tank_2_broken.png" offset="0 -1.0 -0.64"/> 
 
     <visual class="track" mesh_filename="neosu_kuergants_track.mesh" offset="1.55 -0.65 0.05">
         <part texture_filename="neosu_kuergants_track.jpg" texture_animation="translate" tire_binding="0" />                
