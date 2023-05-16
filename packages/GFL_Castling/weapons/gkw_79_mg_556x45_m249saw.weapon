@@ -2,15 +2,15 @@
 <weapon key="gkw_m249saw.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification 
     barrel_offset="0.5"
-    retrigger_time="-1"
+    retrigger_time="0.08"
     accuracy_factor="0.85"
     leave_crouch_accuracy_penalty="0.25"
 	sustained_fire_diminish_rate="1.2" 
 	sustained_fire_grow_step="0.35"
     spread_range="0.35"
     stance_accuracy_rate="1.0"
-    cooldown_start="0.75"
-    cooldown_end="0.3" 
+    cooldown_start="40.75"
+    cooldown_end="30.55" 
     magazine_size="-1"
     suppressed="0"
     name="M249 SAW"
@@ -23,7 +23,7 @@
     stab_enabled="1"
     carry_in_two_hands="1"
     burst_shots="1"
-    last_burst_retrigger_time="-1"
+    last_burst_retrigger_time="0.08"
     slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 4"/>
 	<inventory encumbrance="50.0" buy_price="49.0" sell_price="49.0"/>
