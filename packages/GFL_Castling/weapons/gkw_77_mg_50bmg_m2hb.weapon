@@ -3,18 +3,19 @@
     <weapon key="gkw_m2hb.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
         <specification 
         barrel_offset="0.5"
-        accuracy_factor="0.9"
+        accuracy_factor="0.75"
         class="0"
         magazine_size="250"
         name="Browning M2HB"
         projectile_speed="200"
         retrigger_time="0.109"
+        leave_crouch_accuracy_penalty="0.35"
         suppressed="0"
-        stance_accuracy_rate="0.05"
+        stance_accuracy_rate="0.5"
         spread_range="0.45"
         sustained_fire_diminish_rate="1.9"
         sustained_fire_grow_step="1.0"
-        sight_range_modifier="1.3"
+        sight_range_modifier="1.5"
         can_shoot_prone="1"
         stab_enabled="1"
         carry_in_two_hands="1"
@@ -35,7 +36,7 @@
         <model filename="gkw_mg_m2hb_n.xml"/>
         <hud_icon filename="gkw_m2hb.png"/>
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="5.6"  kill_decay_start_time="1.0" kill_decay_end_time="2.0"/>
+            <result class="hit" kill_probability="8.0" kill_probability_offset_on_successful_hit="0.75" kill_decay_start_time="1.0" kill_decay_end_time="2.0"/>
         </projectile>
         <effect class="muzzle" ref="ejection_50BMG"/>
         <stance state_key="running" accuracy="0.2"/>
@@ -77,14 +78,15 @@
         magazine_size="250"
         barrel_offset="0.8"
         name="Browning M2HB-[Terminating Barrage]"
-        spread_range="0.15"
+        spread_range="0.3"
         projectile_speed="200"
         retrigger_time="-1"
         suppressed="0"
-        stance_accuracy_rate="0.1"
+        leave_crouch_accuracy_penalty="0.35"
+        stance_accuracy_rate="0.5"
         sustained_fire_diminish_rate="1.5"
         sustained_fire_grow_step="1.0"
-        sight_range_modifier="1.3"
+        sight_range_modifier="2.15"
         stab_enabled="1"
         carry_in_two_hands="1"
         burst_shots="1"
@@ -104,7 +106,7 @@
         <model filename="gkw_mg_m2hb.xml"/>
         <hud_icon filename="gkw_m2hb_skill.png"/>
         <projectile file="bullet_he.projectile">
-            <result class="blast" damage="2.1" radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+            <result class="blast" damage="4.1" radius="3.5" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
             <trail probability="1.0" key="BulletApTrail_ct"/>
         </projectile>
         <effect class="muzzle" ref="ejection_50BMG"/>
@@ -117,7 +119,7 @@
         <stance state_key="crouching" accuracy="0.85"/>
         <stance state_key="prone" accuracy="1.8"/>
         <stance state_key="over_wall" accuracy="1.8"/>
-        <modifier class="speed" value="-0.25"/>
+        <modifier class="speed" value="-0.3"/>
         <animation state_key="recoil" animation_key="recoil_hip_unlimit"/>
         <animation state_key="recoil" stance_key="over_wall" animation_key="recoil_unlimit"/>
         <animation state_key="recoil" stance_key="prone" animation_key="recoil_prone_unlimit"/>
