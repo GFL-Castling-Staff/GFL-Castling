@@ -7,12 +7,14 @@
         class="0"
         slot="0" 
         magazine_size="20" 
-        name="ASH-12.7" 
-        projectile_speed="125" 
+        name="ASH-12.7(PS-12C)" 
+        projectile_speed="165" 
         retrigger_time="0.12" 
+        stance_accuracy_rate="2.0"
         suppressed="0" 
-        sustained_fire_diminish_rate="1.8" 
-        sustained_fire_grow_step="0.3" />
+        spread_range="0.35"
+        sustained_fire_diminish_rate="2.0" 
+        sustained_fire_grow_step="0.75" />
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
         <inventory encumbrance="35.0" buy_price="200.0" sell_price="200.0" />
@@ -26,16 +28,17 @@
         <hud_icon filename="gkw_ash127.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
-            <result class="hit"  kill_probability="2.2" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.08" kill_decay_end_time="0.6" />
+            <result class="hit"  kill_probability="3.0" kill_probability_offset_on_successful_hit="7.5" kill_decay_start_time="0.08" kill_decay_end_time="0.6" />
         </projectile>
         <effect class="muzzle" ref="ejection_76251"/>
-        <stance state_key="running" accuracy="0.45" />
-        <stance state_key="walking" accuracy="0.75" />
-        <stance state_key="crouch_moving" accuracy="0.9" />
-        <stance state_key="prone_moving" accuracy="0.9" />
-        <stance state_key="standing" accuracy="0.9" />
-        <stance state_key="crouching" accuracy="0.95" />
-        <stance state_key="prone" accuracy="1" />
+        <stance state_key="running" accuracy="0.85" />
+        <stance state_key="walking" accuracy="0.85" />
+        <stance state_key="crouch_moving" accuracy="0.85" />
+        <stance state_key="prone_moving" accuracy="0.85" />
+        <stance state_key="standing" accuracy="0.85" />
+        <stance state_key="crouching" accuracy="0.85" />
+        <stance state_key="prone" accuracy="0.85" />
+        <stance state_key="over_wall" accuracy="0.85" /> 
         <modifier class="hit_success_probability" value="-0.2" />
         <modifier class="speed" value="0.2" />
     </weapon>
@@ -46,12 +49,14 @@
         class="0"
         slot="0" 
         magazine_size="20" 
-        name="ASH-12.7-[Elimination Focus]" 
-        projectile_speed="125" 
+        name="ASH-12.7-[Elimination Focus]-(PS-12B)" 
+        projectile_speed="195" 
         retrigger_time="0.12" 
         suppressed="0" 
-        sustained_fire_diminish_rate="1.8" 
-        sustained_fire_grow_step="0.3" />
+        stance_accuracy_rate="2.0"
+        spread_range="0.3"
+        sustained_fire_diminish_rate="2.2" 
+        sustained_fire_grow_step="0.75" />
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
         <inventory encumbrance="35.0" buy_price="200.0" sell_price="200.0" />
@@ -65,16 +70,20 @@
         <model filename="gkw_ar_ash127.xml" />
         <hud_icon filename="gkw_ash127_skill.png" />
         <weak_hand_hold offset="0.2" />
-        <projectile file="bullet.projectile">
-            <result class="blast" radius="2.5" damage="2.5" push="0.1" decal="1" faction_compare="not_equal" />
+        <projectile file="ar_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.5"> 
+		  <result class="spawn" instance_class="projectile" instance_key="shak12_ps12b.projectile" min_amount="3" max_amount="3" offset="0 0.5 0" position_spread="0.5 0" direction_spread="0 0" />	
+		  <trigger class="impact" time_to_live="0.2"  />
+		  <rotation class="motion" />
+		  <collision class="sticky" />
         </projectile>
         <effect class="muzzle" ref="ejection_76251"/>
         <stance state_key="running" accuracy="0.45" />
-        <stance state_key="walking" accuracy="0.75" />
-        <stance state_key="crouch_moving" accuracy="0.9" />
-        <stance state_key="prone_moving" accuracy="0.9" />
-        <stance state_key="standing" accuracy="0.75" />
-        <stance state_key="crouching" accuracy="0.8" />
+        <stance state_key="walking" accuracy="0.5" />
+        <stance state_key="crouch_moving" accuracy="0.65" />
+        <stance state_key="prone_moving" accuracy="0.65" />
+        <stance state_key="standing" accuracy="0.65" />
+        <stance state_key="crouching" accuracy="0.85" />
         <stance state_key="prone" accuracy="1" />
+        <stance state_key="over_wall" accuracy="1" /> 
     </weapon>
 </weapons>
