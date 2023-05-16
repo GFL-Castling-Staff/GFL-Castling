@@ -479,9 +479,7 @@
 	</soldier>
 	<!--人类士兵 LV75-80-->
 	<soldier name="kcco_ar_human" spawn_score="0.75" copy_from="default_bot">
-		<ai filename="default.ai" >
-			
-		</ai>
+		<ai filename="default.ai" ></ai>
 		<character filename="default_kcco_human.character" />
 		<models file="kcco_human_basic.models" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_carry_items="1" clear_grenades="1">
@@ -490,11 +488,11 @@
 			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
 			<projectile key="kcco_smartgrenade_1.projectile" enabled="1.0" />
 			<call key="kcco_assault.call" />
+			<call key="kcco_dog.call" />
+			<call key="kcco_quartz.call" />	
 			<call key="kcco_zircon.call" />
 			<call key="kcco_zircon1.call" />
-			<call key="kcco_assault.call" />	
-			<call key="kcco_quartz.call" />		
-			<call key="kcco_dog.call" />			
+			<call key="kcco_argo_puppis_three.call" />				
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="weapon" slot="1" probability="0.25" />
@@ -520,11 +518,11 @@
 			<projectile key="kcco_ap_grenade.projectile" enabled="1" />
 			<projectile key="kcco_smartgrenade_1.projectile" enabled="1.0" />
 			<call key="kcco_assault.call" />
+			<call key="kcco_dog.call" />
+			<call key="kcco_quartz.call" />	
 			<call key="kcco_zircon.call" />
 			<call key="kcco_zircon1.call" />
-			<call key="kcco_assault.call" />	
-			<call key="kcco_quartz.call" />		
-			<call key="kcco_dog.call" />
+			<call key="kcco_argo_vela_precision.call" />	
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="weapon" slot="1" probability="0.75" />
@@ -673,10 +671,21 @@
 		<resources clear_calls="1" clear_grenades="1" clear_carry_items="1" clear_weapons="1" clear_vehicles="1">
 			<weapon key="kcco_aegis.weapon" enabled="1" />
 			<carry_item key="vest_aegis_5" enabled="1" />
+			<call key="kcco_assault.call" />
+			<call key="kcco_zircon.call" />
+			<call key="kcco_zircon1.call" />
+			<call key="kcco_assault.call" />	
+			<call key="kcco_quartz.call" />		
+			<call key="kcco_dog.call" />
+			<call key="kcco_argo_carina_tcs.call" />
 		</resources>
 		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.5" max="0.8" />
+			<attribute weight="1.0" min="10.015" max="13.008" />
 		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="1500" max="2000" />
+			<attribute weight="4.0" min="500" max="1500" />
+		</attribute_config>	
 	</soldier>
 	<!-- aegis 圣盾SWAP军方版本 -->
 	<soldier name="kcco_aegis_swap" spawn_score="0" copy_from="default_bot">
@@ -685,10 +694,21 @@
 		<resources clear_calls="1" clear_grenades="1" clear_carry_items="1" clear_weapons="1" clear_vehicles="1">
 			<weapon key="kcco_aegis_swap.weapon" enabled="1" />
 			<carry_item key="vest_aegis.carry_item" enabled="1" />
+			<call key="kcco_assault.call" />
+			<call key="kcco_zircon.call" />
+			<call key="kcco_zircon1.call" />
+			<call key="kcco_assault.call" />	
+			<call key="kcco_quartz.call" />		
+			<call key="kcco_dog.call" />
+			<call key="kcco_argo_carina_tcs.call" />
 		</resources>
 		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.5" max="0.8" />
+			<attribute weight="1.0" min="13.015" max="15.008" />
 		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="1500" max="2000" />
+			<attribute weight="4.0" min="500" max="1500" />
+		</attribute_config>	
 	</soldier>	
 	<!-- dactyl指灵\地雷 -->
 	<soldier name="kcco_dactyl" spawn_score="0.1" copy_from="default_bot">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <calls>
-    <!-- 军方82mm迫击炮支援（基础步兵） -->
+    <!-- 军方82mm迫击炮支援（基础独眼） -->
 	<call name="Hematite Mortar Support" key="kcco_mortar.call" initiation_comment1="To Hematite, request mortar support!" acknowledge_comment="Receive, we are adjusting artillery angle" acknowledge_time="0" launch_comment="Orders, three salvo" notify_metagame="1">
 		<round instances="12" instance_class="grenade" instance_key="artillery_shell_82.projectile" instance_spread="10 10 10" common_spread="6 0 6" launch_time="3.0" spawn_time="5.0">
 			<sound class="launch" fileref="kcco_artillery_FromBF2042.wav" volume="0.6" />
@@ -13,6 +13,60 @@
 			<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
 		</round>
 		<hud_icon filename="call_kcco_Hephaestus.png" />
+		<!-- <capacity value="0" source="rank" source_value="0.0" /> -->
+		<capacity value="100" source="rank" source_value="0.0" />
+		<inventory encumbrance="0.0" price="50.0" />
+	</call>
+	<!-- 军方203mm校准炮击（人类基础步兵） -->
+	<call name="Argo-Puppis Three-Shot Calibration" key="kcco_argo_puppis_three.call" initiation_comment1="Request Puppis fire support!" acknowledge_comment="Receive, we are adjusting artillery angle" acknowledge_time="0" launch_comment="Orders, three salvo" notify_metagame="1">
+		<round instances="1" instance_class="grenade" instance_key="artillery_shell_203.projectile" instance_spread="0 0 0" common_spread="0 0 0" launch_time="1.5" spawn_time="3.0">
+			<sound class="launch" fileref="argo_puppis_firesupport_FromBF1.wav" volume="2.6" />
+			<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+		</round>
+		<round instances="1" instance_class="grenade" instance_key="artillery_shell_203.projectile" instance_spread="4 4 4" common_spread="3 0 3" launch_time="3.5" spawn_time="5.0">
+			<sound class="launch" fileref="argo_puppis_firesupport_FromBF1.wav" volume="2.6" />
+			<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+		</round>
+		<round instances="1" instance_class="grenade" instance_key="artillery_shell_203.projectile" instance_spread="8 8 8" common_spread="6 0 6" launch_time="5.5" spawn_time="7.0">
+			<sound class="launch" fileref="argo_puppis_firesupport_FromBF1.wav" volume="2.6" />
+			<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+		</round>
+		<hud_icon filename="call_kcco_puppis.png" />
+		<!-- <capacity value="0" source="rank" source_value="0.0" /> -->
+		<capacity value="100" source="rank" source_value="0.0" />
+		<inventory encumbrance="0.0" price="50.0" />
+	</call>
+	<!-- 军方310mm炮击（盾卫侦察） -->
+	<call name="Argo-Carina Targeted Clearance Shelling" key="kcco_argo_carina_tcs.call" initiation_comment1="Request Carina,enemy positions have been marked!" acknowledge_comment="Receive, we are adjusting artillery angle" acknowledge_time="0" launch_comment="Clearing" notify_metagame="1">
+		<round instances="2" instance_class="grenade" instance_key="artillery_shell_310.projectile" instance_spread="0 0 0" common_spread="0 0 0" launch_time="5.0" spawn_time="8.0">
+			<sound class="launch" fileref="argo_carina_firesupport_FromSAM4.wav" volume="0.8" />
+			<sound class="spawn" fileref="woosh1.wav" volume="1.0" />
+		</round>
+		<round instances="2" instance_class="grenade" instance_key="artillery_shell_310.projectile" instance_spread="5 5 5" common_spread="5 0 5" launch_time="5.0" spawn_time="9.5">
+			<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+		</round>
+		<round instances="2" instance_class="grenade" instance_key="artillery_shell_310.projectile" instance_spread="10 10 10" common_spread="10 0 10" launch_time="5.0" spawn_time="10.0">
+			<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+		</round>
+		<hud_icon filename="call_kcco_carina.png" />
+		<capacity value="100" source="rank" source_value="0.0" />
+		<inventory encumbrance="0.0" price="50.0" />
+	</call>
+	<!-- 军方420mm激光炮击（人类士兵士官） -->
+	<call name="Argo-Vela Precision Fire Support" key="kcco_argo_vela_precision.call" initiation_comment1="Request Vela precision fire support!" acknowledge_comment="Receive, we are adjusting artillery angle" acknowledge_time="0" launch_comment="Clearing" notify_metagame="1">
+		<round instances="1" instance_class="grenade" instance_key="artillery_laser_420.projectile" instance_spread="1 1 1" common_spread="2 0 2" launch_time="2.5" spawn_time="3.0" initial_speed_to_target="120.0">
+			<sound class="launch" fileref="argo_vela_Friesupport_laser_FromDOOMETEMAL.wav" volume="0.4" />
+			<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+		</round>
+		<round instances="1" instance_class="grenade" instance_key="artillery_laser_420.projectile" instance_spread="4 4 4" common_spread="4 0 4" launch_time="4.5" spawn_time="5.0" initial_speed_to_target="120.0">
+			<sound class="launch" fileref="kcco_artillery_FromBF2042.wav" volume="0.9" />
+			<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+		</round>
+		<round instances="1" instance_class="grenade" instance_key="artillery_laser_420.projectile" instance_spread="8 8 8" common_spread="8 0 8" launch_time="6.5" spawn_time="7.0" initial_speed_to_target="120.0">
+			<sound class="launch" fileref="kcco_artillery_FromBF2042.wav" volume="0.9" />
+			<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+		</round>
+		<hud_icon filename="call_kcco_vela.png" />
 		<!-- <capacity value="0" source="rank" source_value="0.0" /> -->
 		<capacity value="100" source="rank" source_value="0.0" />
 		<inventory encumbrance="0.0" price="50.0" />
