@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="two_hands_ar.animation_base" key="gkw_scarl_only.weapon">
     <specification 
-	accuracy_factor="0.98" 
+	accuracy_factor="1.0" 
 	barrel_offset="0.4" 
 	class="0"
 	slot="0" 
@@ -10,6 +10,7 @@
 	projectile_speed="200.00" 
 	retrigger_time="0.092" 
 	suppressed="1" 
+    spread_range="0.3"
     sight_range_modifier="1.75"
     stance_accuracy_rate="1.0"
     sustained_fire_grow_step="0.3" 
@@ -26,16 +27,15 @@
     <hud_icon filename="gkw_scarl_only.png" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0" can_be_detected_by_driver="0">
-        <result class="hit"  kill_probability="1.85" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="0.788" kill_decay_end_time="1.32" />
-    </projectile>
+        <result class="hit"  kill_probability="4.25" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.788" kill_decay_end_time="1.32" />
     <effect class="muzzle" ref="ejection_556" />
-    <stance state_key="running" accuracy="0.6" />
-    <stance state_key="walking" accuracy="0.85" />
+    <stance state_key="running" accuracy="0.2" />
+    <stance state_key="walking" accuracy="0.5" />
     <stance state_key="crouch_moving" accuracy="0.85" />
-    <stance state_key="standing" accuracy="0.95" />
-    <stance state_key="crouching" accuracy="0.98" />
-    <stance state_key="prone" accuracy="0.98" /> 
-    <stance state_key="prone_moving" accuracy="0.5" />
+    <stance state_key="prone_moving" accuracy="0.85" />
+    <stance state_key="standing" accuracy="0.85" />
+    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="prone" accuracy="1" />
     <stance state_key="over_wall" accuracy="1" />
     <modifier class="detectability" value="-0.05" />
     <modifier class="speed" value="+0.05" />
