@@ -18,7 +18,7 @@
 		<inventory encumbrance="0.0" price="50.0" />
 	</call>
 	<!-- 军方203mm校准炮击（人类基础步兵） -->
-	<call name="Argo-Puppis Three-Shot Calibration" key="kcco_argo_puppis_three.call" initiation_comment1="Request Puppis fire support!" acknowledge_comment="Receive, we are adjusting artillery angle" acknowledge_time="0" launch_comment="Orders, three salvo" notify_metagame="1">
+	<call name="Argo-Puppis Three-Shot Calibration" key="kcco_argo_puppis_three.call" initiation_comment1="Request Puppis three corrective shots fire support!" acknowledge_comment="Receive, we are adjusting artillery angle" acknowledge_time="0" launch_comment="Orders, three salvo" notify_metagame="1">
 		<round instances="1" instance_class="grenade" instance_key="artillery_shell_203.projectile" instance_spread="0 0 0" common_spread="0 0 0" launch_time="1.5" spawn_time="3.0">
 			<sound class="launch" fileref="argo_puppis_firesupport_FromBF1.wav" volume="2.6" />
 			<sound class="spawn" fileref="woosh1.wav" volume="0.2" />
