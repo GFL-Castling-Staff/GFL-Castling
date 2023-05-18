@@ -30,6 +30,9 @@ dictionary callLaunchIndex = {
     // 炮击妖精
     {"gk_bombardment_fairy.call",6},
 
+    // 立盾妖精
+    {"gk_repair_fairy.call.call",7},
+
     // 空空投
     {"",0}
 };
@@ -211,17 +214,11 @@ class call_event : Tracker {
                     }
                     case 6:{
                         if(findCooldown(playerName,"bombardment")){
-                            const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-                            if (character !is null) {
-                                dictionary a;
-                                a["%time"] = ""+getCooldown(playerName,"bombardment");                        
-                                sendPrivateMessageKey(m_metagame,playerId,"bombcooldown",a);
-                                GiveRP(m_metagame,characterId,500);
-                            }
-                        }
+                            returnCooldown("bombardment", 500, characterId, playerName, playerId, "bombcooldown")
+                            break;
+                        }                        
                         else {
                             m_cooldown.insertLast(Call_Cooldown(playerName,playerId,90.0,"bombardment"));
-                            // m_cooldown.insertLast(Call_Cooldown(playerName,playerId,5.0,"bombardment"));
                             playSoundAtLocation(m_metagame,"kcco_dn_1.wav",factionId,position,1.5);
                             sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
                             int flagId = m_DummyCallID + 15000;
@@ -236,7 +233,29 @@ class call_event : Tracker {
                             GFL_event_array.insertLast(GFL_event(characterId,factionId,int(GFL_Event_Index["bomb_fairy"]),stringToVector3(position),1.0,-1.0,flagId));
                         }
                         break;
-                    }                    
+                    }    
+                    case 7:{
+                        if(findCooldown(playerName,"barrier")){
+                            returnCooldown("barrier", 500, characterId, playerName, playerId, "barriercooldown")
+                            break;
+                        }
+                        else {
+                            Vector3 call_pos = stringToVector3(position);
+                            Vector3 v_offset = Vector3(0,40,0);
+                            m_cooldown.insertLast(Call_Cooldown(playerName,playerId,90.0,"barrier"));
+                            sendFactionMessageKey(m_metagame,factionId,"barrierfight");
+                            int flagId = m_DummyCallID + 15000;
+                            ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,call_pos,"foobar");
+                            FairyRequest.setIconTypeKey("call_marker_drop");
+                            FairyRequest.setIndex(8);
+                            FairyRequest.setSize(0.5);
+                            FairyRequest.setDummyId(flagId);
+                            addCastlingMarker(FairyRequest);
+                            m_DummyCallID++;
+                            CreateDirectProjectile(m_metagame,call_pos.add(v_offset),call_pos,"repair_fairy.projectile",characterId,factionId,50);
+                        }
+                        break;                        
+                    }                
                     default:
                         break;
                 }
@@ -245,6 +264,16 @@ class call_event : Tracker {
 			else if(phase == "queue"){
                 addCustomStatToCharacter(m_metagame,"radio_call",event.getIntAttribute("character_id"));
             }
+        }
+    }
+
+    protected void returnCooldown(string player_name, int rp, int characterId, string playerName, int playerId, string message) {
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            dictionary a;
+            a["%time"] = ""+getCooldown(playerName, player_name);
+            sendPrivateMessageKey(m_metagame,playerId, message,a);
+            GiveRP(m_metagame,characterId,rp);
         }
     }
 

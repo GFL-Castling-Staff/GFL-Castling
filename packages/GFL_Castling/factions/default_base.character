@@ -67,15 +67,13 @@
 
 	<parameter class="warn_about_overencumbered_time" value="4.0" />
 
-	<parameter class="detectability_prone" value="0.75" />
-	<parameter class="detectability_wounded" value="0.6" />
-	<parameter class="detectability_crouching" value="0.75" />
+	<parameter class="detectability_prone" value="0.6" />
+	<parameter class="detectability_wounded" value="0.75" />
+	<parameter class="detectability_crouching" value="0.72" />
 	<parameter class="detectability_crouch_moving" value="0.8" />
 	<parameter class="detectability_walking" value="0.95" />
 	<parameter class="detectability_still" value="0.88" />
 	<parameter class="detectability_running" value="1.0" />
-
-	<!-- <parameter class="default_squad_config_index" value="0" /> -->
 
 	<parameter class="gravity" value="-40.0" />
 	<parameter class="skydiving_gravity" value="-15.0" />
@@ -168,7 +166,11 @@
 	<comment key="rocketfight" text="[火箭妖精] 嘻嘻……我在你上面……"/>
 	<comment key="rocketcooldown" text="[火箭妖精] 火箭发射器弹药装填中，请稍后请求，预计&#37;time秒后可进行火力覆盖。已返还本次呼叫所需费用"/>
 
-	<comment key="minedrop" text="[地雷妖精] 布雷仓投放中"/>
+	<comment key="minedrop" text="[地雷妖精] 弹跳贝蒂投放中~"/>
+
+	<comment key="barriercallstarthint" text="[立盾妖精] 确认，护盾充能中"/>
+	<comment key="barrierfight" text="[立盾妖精] 护甲加固蚀刻场加载中"/>
+	<comment key="barriercooldown" text="[立盾妖精] 正在重新充能，预计&#37;time秒后可再次部署。已返还本次呼叫所需费用"/>
 
 	<comment key="VODcooldown" text="点歌机正在工作，请稍后呼叫，预计&#37;time秒后可使用。"/>
 	<comment key="VODvoid" text="请在/sing后输入歌曲序号"/>

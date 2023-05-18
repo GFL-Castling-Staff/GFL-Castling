@@ -67,15 +67,14 @@
 
 	<parameter class="warn_about_overencumbered_time" value="4.0" />
 
-	<parameter class="detectability_prone" value="0.75" />
-	<parameter class="detectability_wounded" value="0.6" />
-	<parameter class="detectability_crouching" value="0.75" />
+	<parameter class="detectability_prone" value="0.6" />
+	<parameter class="detectability_wounded" value="0.75" />
+	<parameter class="detectability_crouching" value="0.72" />
 	<parameter class="detectability_crouch_moving" value="0.8" />
 	<parameter class="detectability_walking" value="0.95" />
 	<parameter class="detectability_still" value="0.88" />
 	<parameter class="detectability_running" value="1.0" />
 
-<!-- <parameter class="default_squad_config_index" value="0" /> -->
 
 	<parameter class="gravity" value="-40.0" />
 	<parameter class="skydiving_gravity" value="-15.0" />
@@ -141,6 +140,7 @@
 	<comment key="redeploycooldowndone" text="Redelpoy System is available"/>
 	<comment key="redeploycooldownhint" text="Redelpoy System has &#37;time seconds to use again"/>
 
+
 	<comment key="ppkmod3killannaounce" text="PPKMOD3 has &#37; punishment"/>
 	<comment key="ppkmod3killstage1" text="PPKMOD3 reach lv1"/>
 	<comment key="ppkmod3killstage2" text="PPKMOD3 reach lv2"/>
@@ -166,6 +166,12 @@
 	<comment key="rocketcallstarthint" text="[Rocket Fairy] The artillery position has obtained, launching fire support"/>
 	<comment key="rocketfight" text="[Rocket Fairy] Heheh... Up here..."/>
 	<comment key="rocketcooldown" text="[Rocket Fairy] Rocket launcher is out of ammunition,will come back in &#37;time seconds. The cost of the call has been refunded"/>
+
+	<comment key="minedrop" text="[Mine Fairy] Deploying Jump Betty"/>
+
+	<comment key="barriercallstarthint" text="[Barrier Fairy] Data has been confirmed"/>
+	<comment key="barrierfight" text="[Barrier Fairy] Armor Fortification in progress."/>
+	<comment key="barriercooldown" text="[Barrier Fairy] Shield need recharge,will come back in &#37;time seconds. The cost of the call has been refunded"/>"/>
 
 	<comment key="callcooldown" text="[Fairy System] busy,will come back in &#37;time seconds. The cost of the call has been refunded"/>
 	

@@ -113,10 +113,16 @@
     </call>
     <!-- 立盾妖精 -->
     <call name="Barrier Fairy" key="gk_repair_fairy.call" initiation_comment1="Barrier Fairy" initiation_comment2="Armor Fortification" acknowledge_comment="Data has been confirmed" acknowledge_time="0" launch_comment="Armor Fortification in progress." notify_metagame="1">
-        <round instances="1" instance_class="grenade" instance_key="repair_fairy.projectile" instance_spread="0 0 0" common_spread="0 0 0" launch_time="2.0" spawn_time="3.0" horizontal_offset_at_spawn="0.0">
-            <sound class="launch" fileref="artillery_barrage_1.wav" volume="1.0" />
-            <sound class="launch" fileref="artillery_barrage_2.wav" volume="1.0" />
-            <sound class="spawn" fileref="woosh1.wav" volume="0.2" />
+        <round 
+        instances="0"
+        instance_class="projectile"
+        instance_key=""
+        launch_time="1.0"
+        spawn_time="1.0">
+        </round>
+
+        <round launch_time="1.0"
+        spawn_time="1.0">
         </round>
         <hud_icon filename="calll_Barrier_Fairy.png" />
         <capacity value="0" source="rank" source_value="0.0" />
