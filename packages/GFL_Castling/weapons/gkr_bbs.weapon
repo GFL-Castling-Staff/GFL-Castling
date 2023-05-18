@@ -45,8 +45,6 @@
 
     <projectile file="bbs_r.projectile" />
 
-    <drop_on_death_result class="spawn" instance_class="projectile" instance_key="spontaneous_explosion_spawn.projectile" min_amount="1.0" max_amount="1.0" offset="0 2.0 0" position_spread="0 0" direction_spread="0 0"/>
-
     <model filename=""/>
     
     <stance state_key="running" accuracy="0.8"/>

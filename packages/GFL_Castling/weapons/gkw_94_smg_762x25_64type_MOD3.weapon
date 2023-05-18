@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<weapons>
 <weapon file="two_hands_smg.animation_base" key="gkw_64typemod3.weapon">
 <tag name="elite" />
 <tag name="smg" />
@@ -43,3 +44,48 @@
     <modifier class="detectability" value="-0.10" />
     <modifier class="speed" value="0.25" />
 </weapon>
+<weapon file="two_hands_smg.animation_base" key="gkw_64typemod3_dummy.weapon">
+<tag name="punchme" />
+    <specification 
+		accuracy_factor="0.85" 
+		barrel_offset="0.4" 
+		class="0"
+        slot="0" 
+		magazine_size="30" 
+		name="Type 64 SMG(MOD3)" 
+		projectile_speed="120" 
+		retrigger_time="0.05" 
+		suppressed="0" 
+        spread_range="0.2"
+		sustained_fire_diminish_rate="2.75" 
+		sustained_fire_grow_step="0.15"
+		sight_range_modifier="1" />
+    <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
+    <commonness value="1.0" in_stock="0" can_respawn_with="1" />
+    <inventory encumbrance="12.5" buy_price="0" sell_price="0" />
+    <sound key="fire" fileref="type64_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
+    <sound key="magazine_out" fileref="type64_mgz_out_FromCOD15.wav" volume="1.0" />
+    <sound key="magazine_in" fileref="type64_mgz_in_FromCOD15.wav" volume="1.0" />
+    <sound key="cycle" fileref="type64_cycle_FromCOD18.wav" volume="1.0" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="gkw_smg_64type.xml" />
+    <hud_icon filename="gkw_64typemod3.png" />
+    <weak_hand_hold offset="0.2" />
+    <projectile file="bullet_ai.projectile" time_to_live="0.15">
+        <result class="hit"  kill_probability="0" kill_decay_start_time="0.3" kill_decay_end_time="0.5" />
+        <trail probability="1.0" key="bullet_short"/>
+    </projectile>
+    <drop_on_death_result class="spawn" instance_class="projectile" instance_key="deathstun.projectile" min_amount="1.0" max_amount="1.0" offset="0 2.0 0" position_spread="0 0" direction_spread="0 0"/>
+    <stance state_key="running" accuracy="0.85" />
+    <stance state_key="walking" accuracy="0.85" />
+    <stance state_key="standing" accuracy="0.85" />
+    <stance state_key="crouching" accuracy="0.85" />
+    <stance state_key="crouch_moving" accuracy="0.85" />
+    <stance state_key="prone" accuracy="0.85" />
+    <stance state_key="prone_moving" accuracy="0.85" />
+    <stance state_key="over_wall" accuracy="0.85" />
+    <modifier class="hit_success_probability" value="0" />
+    <modifier class="detectability" value="0.5" />
+    <modifier class="speed" value="0" />
+</weapon>
+</weapons>

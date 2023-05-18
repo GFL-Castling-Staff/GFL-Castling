@@ -3221,20 +3221,7 @@ class CommandSkill : Tracker {
     }
 
     void excute64typemod3Skill(int characterId,int playerId,SkillModifer@ modifer){
-        bool ExistQueue = false;
-        int j=-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="64type") {
-                ExistQueue=true;
-                j=i;
-            }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            return;
-        }
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"64type",true)) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
@@ -3262,10 +3249,10 @@ class CommandSkill : Tracker {
                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                     array<Spawn_request@> spawn_soldier =
                     {
-                        Spawn_request("GK_target",1)
+                        Spawn_request("Dummy_64type",10)
                     };    
-                    tasker.add(DelaySpawnSoldier(m_metagame,2.0,factionid,spawn_soldier,aim_pos,0,0));  
-                    addCooldown("64type",20,characterId,modifer);
+                    tasker.add(DelaySpawnSoldier(m_metagame,2.0,factionid,spawn_soldier,aim_pos,9.5,9.5));  
+                    addCooldown("64type",40,characterId,modifer);
                 }
             }
         }
