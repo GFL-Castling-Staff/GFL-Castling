@@ -4,11 +4,11 @@
         <specification 
         barrel_offset="0.5" 
         retrigger_time="0.0923" 
-        accuracy_factor="0.85" 
+        accuracy_factor="0.8" 
         sustained_fire_grow_step="0.45" 
         sustained_fire_diminish_rate="1.45" 
-        magazine_size="100" 
-        spread_range="0.35"
+        magazine_size="200" 
+        spread_range="0.45"
         suppressed="1" 
         name="AEK-999 Barsuk" 
         leave_crouch_accuracy_penalty="0.35"
@@ -18,7 +18,7 @@
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <animation key="reload" animation_key="reloading, Machine gun 1.6" />
         <inventory encumbrance="50.0" buy_price="45.0" sell_price="45.0" />
-        <next_in_chain key="gkw_aek999_skill.weapon" share_ammo="0" />
+        <next_in_chain key="gkw_aek999_skill.weapon" share_ammo="1" />
         <sound key="fire" fileref="aek999_fire_FromCF.wav" pitch_variety="0.05" volume="1" />
         <sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6" />
         <sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.6" />
@@ -46,7 +46,7 @@
         accuracy_factor="1.0" 
         sustained_fire_grow_step="0.3" 
         sustained_fire_diminish_rate="2.0" 
-        magazine_size="210" 
+        magazine_size="200" 
         spread_range="0.35"
         suppressed="1" 
         name="AEK-999 Barsuk-[Hunting Impulse N]" 
@@ -59,7 +59,7 @@
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <animation key="reload" animation_key="reloading, Machine gun 2.0" />
         <inventory encumbrance="50.0" buy_price="45.0" sell_price="45.0" />
-        <next_in_chain key="gkw_aek999.weapon" share_ammo="0" />
+        <next_in_chain key="gkw_aek999.weapon" share_ammo="1" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <sound key="fire" fileref="aek999skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1" />
         <sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6" />

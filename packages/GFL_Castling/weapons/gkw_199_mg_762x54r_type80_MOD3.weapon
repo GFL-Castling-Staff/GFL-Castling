@@ -11,7 +11,7 @@
         sustained_fire_diminish_rate="0.002"
         cooldown_start="0.25"
         cooldown_end="0.0" 
-        spread_range="0.35"
+        spread_range="0.45"
         magazine_size="-1" 
         suppressed="0" 
         stance_accuracy_rate="0.8"
@@ -35,7 +35,7 @@
         <sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.6" />
         <sound key="cycle" fileref="qjy80_cycle_FromCOD16.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav" />
-        <model filename="gkw_mg_type80.xml" />
+        <model filename="gkw_mg_type80_n.xml" />
         <commonness value="0.001" in_stock="0" can_respawn_with="1" />
         <hud_icon filename="gkw_80type_mod3.png" />
         <projectile file="bullet.projectile">
@@ -62,7 +62,7 @@
         sustained_fire_diminish_rate="0.002"
         cooldown_start="0.25"
         cooldown_end="0.0" 
-        spread_range="0.35"
+        spread_range="0.45"
         magazine_size="-1" 
         stance_accuracy_rate="0.5"
         leave_crouch_accuracy_penalty="0.35"
@@ -86,7 +86,7 @@
         <sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.6" />
         <sound key="cycle" fileref="qjy80_cycle_FromCOD16.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav" />
-        <model filename="gkw_mg_type80_n.xml" />
+        <model filename="gkw_mg_type80.xml" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <hud_icon filename="gkw_80type_mod3_skill.png" />
         <projectile file="bullet_80type.projectile">

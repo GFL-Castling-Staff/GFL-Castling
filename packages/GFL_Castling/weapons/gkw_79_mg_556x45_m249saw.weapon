@@ -5,19 +5,19 @@
     retrigger_time="0.08"
     accuracy_factor="0.85"
     leave_crouch_accuracy_penalty="0.25"
-	sustained_fire_diminish_rate="1.2" 
-	sustained_fire_grow_step="0.35"
+	sustained_fire_diminish_rate="0.012" 
+	sustained_fire_grow_step="0.0035"
     spread_range="0.35"
     stance_accuracy_rate="1.0"
-    cooldown_start="40.75"
-    cooldown_end="30.55" 
-    magazine_size="500"
+    cooldown_start="1.0"
+    cooldown_end="0.25" 
+    magazine_size="-1"
     suppressed="0"
     name="M249 SAW"
     can_shoot_standing="1"
     can_shoot_crouching="1"
     can_shoot_prone="1"
-    class="1"
+    class="0"
     projectile_speed="190"
     sight_range_modifier="1.75"
     stab_enabled="1"
@@ -56,18 +56,24 @@
 	<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
-    <animation key="cycle" animation_key="cycle_2h_hip_600rpm"/>
-    <animation key="cycle" stance_key="crouching" animation_key="cycle_2h_hip_750rpm"/>
-    <animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_1000rpm_prone"/>
-    <animation key="cycle" stance_key="over_wall" animation_key="cycle_2h_rifle_1000rpm"/>
-    <animation state_key="recoil" animation_key="recoil_hip_unlimit"/>
-    <animation state_key="recoil" stance_key="over_wall" animation_key="recoil_unlimit"/>
-    <animation state_key="recoil" stance_key="prone" animation_key="recoil_prone_unlimit"/>
-	<animation state_key="hold" animation_key="hold, lmg"/>
-	<animation state_key="running" animation_key="running, line infantry"/>
-	<animation state_key="walking" animation_key="walking, hip fire"/>
-	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
-	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
-	<animation state_key="stabbing" animation_key="melee, quick knife"/>
-	<animation state_key="stabbing" animation_key="pistol whip 3"/>
+    <animation key="reload" animation_key="reloading, Machine gun 2.8" />
+    <animation state_key="recoil" animation_key="recoil, hip fire" />
+    <animation state_key="recoil" animation_key="recoil2, hip fire" />
+    <animation state_key="recoil" animation_key="recoil3, hip fire" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil1" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil2" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil3" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil1" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil2" />
+    <animation key="recoil" stance_key="crouching" animation_key="recoil3" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+    <animation state_key="hold" animation_key="hold, lmg" />
+    <animation state_key="hold_on_wall" animation_key="still" />
+    <animation state_key="walking" animation_key="walking, hip fire" />
+    <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
+    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+    <animation state_key="stabbing" animation_key="melee, quick knife" />
+    <animation state_key="stabbing" animation_key="pistol whip 3" />
 </weapon>

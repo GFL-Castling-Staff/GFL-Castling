@@ -899,4 +899,34 @@
 			<attribute weight="1.0" min="0.0" max="0.05" />
 		</attribute_config>
 	</soldier>
+	<!-- KCCO石英小队重装工兵(重枪管突击步枪) LV100-110-->
+	<!-- <soldier name="kcco_quartz_heavy_armored_sapper" spawn_score="0.05" copy_from="default_bot">
+		<character filename="default_kcco_human.character" >
+			<animation key="stunned" target_key="stunned_sit 1.0" />
+		</character>
+		<model filename="kccod_human_sio2.xml" />
+		<ai filename="kcco_human_smg.ai" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="kcco_aks74u.weapon" enabled="1" />
+			<carry_item key="vest_80hp_25" />
+			<projectile key="kcco_smartgrenade_1.projectile" enabled="1" />
+			<projectile key="kcco_ap_grenade.projectile" enabled="1" />
+			<call key="kcco_Hephaestus.call" />
+			<call key="kcco_argo_vela.call" />
+			<call key="kcco_argo_puppis.call" />
+			<call key="kcco_argo_carina.call" />
+			<call key="kcco_argo_emp.call" />
+			<call key="kcco_assault.call" />		
+		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="carry_item" slot="1" probability="1" />
+			<item_class_existence class="carry_item" slot="0" probability="0.001" />
+		</item_class_existence_config>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="33.633" max="57.433" />
+		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="5000" max="5000" />
+		</attribute_config>							
+	</soldier> -->
 </faction>

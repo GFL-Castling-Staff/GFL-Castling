@@ -70,7 +70,7 @@
     <sound key="cycle" fileref="AN94_WIN_JP.wav" volume="1.0" pitch_variety="0"/>
     <sound class="impact" fileref="rifle_drop.wav" />
    
-	<model filename="gkw_ar_an94.xml" />
+	<model filename="gkw_an94_bayonet.xml" />
     <hud_icon filename="gkw_an94.png" />
     <effect class="muzzle" ref="muzzle_blue" />
     <weak_hand_hold offset="0.3" />
@@ -150,7 +150,7 @@
     <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" />
    
-	<model filename="gkw_ar_an94.xml" />
+	<model filename="gkw_an94_bayonet.xml" />
     <hud_icon filename="gkw_an94.png" />
     
     <weak_hand_hold offset="0.3" />
