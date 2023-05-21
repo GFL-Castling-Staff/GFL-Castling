@@ -22,7 +22,7 @@
         <inventory encumbrance="35.0" buy_price="400.0" sell_price="400.0" />
         <capacity value="1" source="rank" source_value="0.0" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
-         <sound key="fire" fileref="an94mod3_fire_FromCOD16.wav" pitch_variety="0.02" volume="1" />
+        <sound key="fire" fileref="an94mod3_fire_FromCOD16.wav" pitch_variety="0.02" volume="1" />
         <sound key="magazine_out" fileref="an94_mgz_out_FromCOD16.wav" volume="0.6" />
         <sound key="magazine_in" fileref="an94_mgz_in_FromCOD16.wav" volume="0.6" />
         <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6" />
@@ -86,7 +86,7 @@
         suppressed="0" 
         stance_accuracy_rate="2.5"
         spread_range="0.28"
-        projectiles_per_shot="2"
+        projectiles_per_shot="1"
         burst_shots="2"
         sight_range_modifier="2.0"
         sustained_fire_diminish_rate="1.5" 

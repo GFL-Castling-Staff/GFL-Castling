@@ -31,7 +31,7 @@ dictionary callLaunchIndex = {
     {"gk_bombardment_fairy.call",6},
 
     // 立盾妖精
-    {"gk_repair_fairy.call.call",7},
+    {"gk_repair_fairy.call",7},
 
     // 空空投
     {"",0}
