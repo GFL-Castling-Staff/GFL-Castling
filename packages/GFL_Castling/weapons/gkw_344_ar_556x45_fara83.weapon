@@ -2,18 +2,18 @@
 <weapon file="two_hands_ar.animation_base" key="gkw_fara83.weapon">
     <specification 
 		accuracy_factor="1.0" 
-		barrel_offset="0.8" 
+		barrel_offset="0.5" 
 		class="0"
         slot="0" 
 		magazine_size="30" 
 		name="FARA 83" 
-		projectile_speed="208.5" 
+		projectile_speed="200" 
 		retrigger_time="0.08" 
         spread_range="0.3"
         stance_accuracy_rate="2.5"
 		suppressed="0" 
-		sustained_fire_diminish_rate="1.8" 
-		sustained_fire_grow_step="0.65" 
+		sustained_fire_diminish_rate="1.6" 
+		sustained_fire_grow_step="0.6" 
 		sight_range_modifier="1"/>
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <inventory encumbrance="35.0" buy_price="8.0" sell_price="8.0" />
@@ -22,7 +22,7 @@
     <sound key="magazine_in" fileref="fara83_mgz_in_FromCOD17.wav" volume="0.7" />
     <sound key="cycle" fileref="fara83_cycle_FromCOD17.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-    <model filename="gkw_smg_fara83.xml" />
+    <model filename="gkw_ar_fara83.xml" />
     <hud_icon filename="gkw_fara83.png" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
