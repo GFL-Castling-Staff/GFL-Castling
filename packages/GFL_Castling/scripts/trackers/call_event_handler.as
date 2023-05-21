@@ -31,7 +31,7 @@ dictionary callLaunchIndex = {
     {"gk_bombardment_fairy.call",6},
 
     // 立盾妖精
-    {"gk_repair_fairy.call.call",7},
+    {"gk_repair_fairy.call",7},
 
     // 空空投
     {"",0}
@@ -214,7 +214,7 @@ class call_event : Tracker {
                     }
                     case 6:{
                         if(findCooldown(playerName,"bombardment")){
-                            returnCooldown("bombardment", 500, characterId, playerName, playerId, "bombcooldown")
+                            returnCooldown("bombardment", 500, characterId, playerName, playerId, "bombcooldown");
                             break;
                         }                        
                         else {
@@ -236,7 +236,7 @@ class call_event : Tracker {
                     }    
                     case 7:{
                         if(findCooldown(playerName,"barrier")){
-                            returnCooldown("barrier", 500, characterId, playerName, playerId, "barriercooldown")
+                            returnCooldown("barrier", 500, characterId, playerName, playerId, "barriercooldown");
                             break;
                         }
                         else {

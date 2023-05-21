@@ -16,14 +16,14 @@
 	projectiles_per_shot="1"
 	burst_shots="1"
     spread_range="0.3"
-     />
+    />
     <!--Animations-->
     <inventory encumbrance="5.0" buy_price="30.0" sell_price="30.0" />
     <!--Sounds-->
-    <sound key="fire" fileref="tt33_fire_FromCOD9.wav" pitch_variety="0.05" volume="1.6"/>
-	<sound key="magazine_out" fileref="tt33_mgz_out_FromSQUAD.wav" volume="0.9"/>
-	<sound key="magazine_in" fileref="tt33_mgz_in_FromSQUAD.wav" volume="0.9"/>
-	<sound key="cycle" fileref="tt33_cycle_FromSQUAD.wav" volume="0.9"/>
+    <sound key="fire" fileref="p30_fire_FromPAYDAY2.wav" pitch_variety="0.05" volume="1.5"/>
+	<sound key="magazine_out" fileref="p30_mgz_out_FromCOD4R.wav" volume="0.9"/>
+	<sound key="magazine_in" fileref="p30_mgz_in_FromCOD4R.wav" volume="0.9"/>
+	<sound key="cycle" fileref="p30_cycle_FromCOD4R.wav" volume="0.9"/>
     <!--Model, Icon, Cost-->
     <model filename="gkw_hg_p30.xml" />
     <hud_icon filename="gkw_p30.png" />
