@@ -26,15 +26,8 @@ dictionary MOD3craftList = {
     {"gkw_g36_6807.weapon","gkw_g36mod3_6807.weapon"},
     {"gkw_g36_1904.weapon","gkw_g36mod3_1904.weapon"},
 
-    {"gkw_g36_skill.weapon","gkw_g36mod3.weapon"},
-    {"gkw_g36_1507_skill.weapon","gkw_g36mod3_1507.weapon"},
-    {"gkw_g36_6807_skill.weapon","gkw_g36mod3_6807.weapon"},
-    {"gkw_g36_1904_skill.weapon","gkw_g36mod3_1904.weapon"},
-
     {"gkw_m4a1.weapon","gkw_m4a1mod3.weapon"},
     {"gkw_m4a1_530.weapon","gkw_m4a1mod3_530.weapon"},
-    {"gkw_m4a1_skill.weapon","gkw_m4a1mod3.weapon"},
-    {"gkw_m4a1_530_skill.weapon","gkw_m4a1mod3_530.weapon"},
 
     {"gkw_m4sopmodii.weapon","gkw_m4sopmodiimod3.weapon"},
     {"gkw_m4sopmodii_531.weapon","gkw_m4sopmodiimod3_531.weapon"},
@@ -209,6 +202,8 @@ dictionary MOD3craftList = {
     {"gkw_aps_4306.weapon","gkw_apsmod3_4306.weapon"},
     {"gkw_aps_6808.weapon","gkw_apsmod3_6808.weapon"},
 
+    {"gkw_makarov.weapon","gkw_makarovmod3.weapon"},
+    {"gkw_qsz92.weapon","gkw_qsz92mod3.weapon"},
 
     {"666","-1"}
 };

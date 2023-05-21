@@ -214,7 +214,7 @@ class call_event : Tracker {
                     }
                     case 6:{
                         if(findCooldown(playerName,"bombardment")){
-                            returnCooldown("bombardment", 500, characterId, playerName, playerId, "bombcooldown")
+                            returnCooldown("bombardment", 500, characterId, playerName, playerId, "bombcooldown");
                             break;
                         }                        
                         else {
@@ -236,7 +236,7 @@ class call_event : Tracker {
                     }    
                     case 7:{
                         if(findCooldown(playerName,"barrier")){
-                            returnCooldown("barrier", 500, characterId, playerName, playerId, "barriercooldown")
+                            returnCooldown("barrier", 500, characterId, playerName, playerId, "barriercooldown");
                             break;
                         }
                         else {
