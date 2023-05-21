@@ -96,9 +96,6 @@
     <model filename="gkd_ar_f2000.xml">
         <requirement class="weapon" key="gkw_f2000.weapon" slot="0" />
     </model>
-    <model filename="gkd_ar_f2000.xml">
-        <requirement class="weapon" key="gkw_f2000_skill.weapon" slot="0" />
-    </model>
     <model filename="gkd_ar_famas.xml">
         <requirement class="weapon" key="gkw_famas.weapon" slot="0" />
     </model>
@@ -2293,5 +2290,8 @@
 	</model>
     <model filename="gkd_hg_qsz92mod3.xml">
 		<requirement class="weapon" slot="0" key="gkw_qsz92mod3.weapon"/>
+	</model>
+    <model filename="gkd_ar_hk33.xml">
+		<requirement class="weapon" slot="0" key="gkw_hk33.weapon"/>
 	</model>    
 </models>
