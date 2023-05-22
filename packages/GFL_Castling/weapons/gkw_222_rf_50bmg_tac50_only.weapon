@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-<weapon key="gkw_tac50_ap_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_tac50_only_ap.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 <tag name="rifle" />
     <!--Weapon specifications-->
     <specification 
@@ -25,7 +25,7 @@
 	burst_shots="1"
 	slot="0" />
     <inventory encumbrance="35.0" buy_price="300.0" sell_price="200.0" />
-    <next_in_chain key="gkw_tac50_he_only.weapon" share_ammo="1" />
+    <next_in_chain key="gkw_tac50_only_he.weapon" share_ammo="1" />
     <!--Animations-->
     <animation key="cycle" animation_key="Brifle1.5" />
     <animation key="cycle" stance_key="prone" animation_key="Brifle1.5p" />
@@ -69,7 +69,7 @@
     <stance state_key="prone" accuracy="1.1" />
     <stance state_key="over_wall" accuracy="1.1" />
 </weapon>
-<weapon key="gkw_tac50_he_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_tac50_only_he.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 <tag name="rifle" />
     <!--Weapon specifications-->
     <specification 
@@ -94,7 +94,7 @@
 	burst_shots="1"
 	slot="0" />
     <inventory encumbrance="35.0" buy_price="300.0" sell_price="200.0" />
-    <next_in_chain key="gkw_tac50_ap_only.weapon" share_ammo="1" />
+    <next_in_chain key="gkw_tac50_only_ap.weapon" share_ammo="1" />
     <!--Animations-->
     <animation key="cycle" animation_key="Brifle1.5" />
     <animation key="cycle" stance_key="prone" animation_key="Brifle1.5p" />
