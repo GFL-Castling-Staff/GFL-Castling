@@ -72,20 +72,11 @@
     <model filename="gkd_ar_art556.xml">
         <requirement class="weapon" key="gkw_art556.weapon" slot="0" />
     </model>
-    <model filename="gkd_ar_art556.xml">
-        <requirement class="weapon" key="gkw_art556_skill.weapon" slot="0" />
-    </model>
     <model filename="gkd_ar_art556_1803.xml">
         <requirement class="weapon" key="gkw_art556_1803.weapon" slot="0" />
     </model>
-    <model filename="gkd_ar_art556_1803.xml">
-        <requirement class="weapon" key="gkw_art556_1803_skill.weapon" slot="0" />
-    </model>
     <model filename="gkd_ar_art556_2803.xml">
         <requirement class="weapon" key="gkw_art556_2803.weapon" slot="0" />
-    </model>
-    <model filename="gkd_ar_art556_2803.xml">
-        <requirement class="weapon" key="gkw_art556_2803_skill.weapon" slot="0" />
     </model>
     <model filename="gkd_ar_arx160.xml">
         <requirement class="weapon" key="gkw_arx160.weapon" slot="0" />
@@ -104,9 +95,6 @@
     </model>
     <model filename="gkd_ar_f2000.xml">
         <requirement class="weapon" key="gkw_f2000.weapon" slot="0" />
-    </model>
-    <model filename="gkd_ar_f2000.xml">
-        <requirement class="weapon" key="gkw_f2000_skill.weapon" slot="0" />
     </model>
     <model filename="gkd_ar_famas.xml">
         <requirement class="weapon" key="gkw_famas.weapon" slot="0" />
@@ -279,14 +267,8 @@
     <model filename="gkd_ar_rfb.xml">
         <requirement class="weapon" key="gkw_rfb.weapon" slot="0" />
     </model>
-    <model filename="gkd_ar_rfb.xml">
-        <requirement class="weapon" key="gkw_rfb_skill.weapon" slot="0" />
-    </model>
     <model filename="gkd_ar_rfb_1601.xml">
         <requirement class="weapon" key="gkw_rfb_1601.weapon" slot="0" />
-    </model>
-    <model filename="gkd_ar_rfb_1601.xml">
-        <requirement class="weapon" key="gkw_rfb_1601_skill.weapon" slot="0" />
     </model>
     <model filename="gkd_ar_ribeyrolles.xml">
         <requirement class="weapon" key="gkw_ribeyrolles.weapon" slot="0" />
@@ -647,6 +629,12 @@
     </model>
     <model filename="gkd_rf_tac50.xml">
         <requirement class="weapon" key="gkw_tac50.weapon" slot="0" />
+    </model>
+    <model filename="gkd_rf_tac50.xml">
+        <requirement class="weapon" key="gkw_tac50_ap_only.weapon" slot="0" />
+    </model>
+    <model filename="gkd_rf_tac50.xml">
+        <requirement class="weapon" key="gkw_tac50_he_only.weapon" slot="0" />
     </model>
     <model filename="gkd_ar_qbz191.xml">
         <requirement class="weapon" key="gkw_qbz191.weapon" slot="0" />
@@ -1206,9 +1194,6 @@
     <model filename="gkd_t91_melondove.xml">
         <requirement class="weapon" key="gkw_t91.weapon" slot="0" />
     </model>
-    <model filename="gkd_t91_melondove.xml">
-        <requirement class="weapon" key="gkw_t91_skill.weapon" slot="0" />
-    </model>
     <model filename="gkd_k11_melondove.xml">
         <requirement class="weapon" key="gkw_k11_20mm_impact.weapon" slot="0" />
     </model>
@@ -1217,9 +1202,6 @@
     </model>
     <model filename="gkd_r5_melondove.xml">
         <requirement class="weapon" key="gkw_r5.weapon" slot="0" />
-    </model>
-    <model filename="gkd_r5_melondove.xml">
-        <requirement class="weapon" key="gkw_r5_skill.weapon" slot="0" />
     </model>
     <model filename="gkd_ar_fnfal_308.xml">
         <requirement class="weapon" key="gkw_fal_308.weapon" slot="0" />
@@ -1316,9 +1298,6 @@
     </model>
     <model filename="gkd_ar_acr.xml">
         <requirement class="weapon" key="gkw_acr.weapon" slot="0" />
-    </model>
-    <model filename="gkd_ar_acr.xml">
-        <requirement class="weapon" key="gkw_acr_skill.weapon" slot="0" />
     </model>
     <model filename="gkd_ar_hk416_3401.xml">
         <requirement class="weapon" key="gkw_hk416_3401.weapon" slot="0" />
@@ -2024,14 +2003,8 @@
     <model filename="gkd_ar_r5_5302.xml">
         <requirement class="weapon" key="gkw_r5_5302.weapon" slot="0" />
     </model>
-    <model filename="gkd_ar_r5_5302.xml">
-        <requirement class="weapon" key="gkw_r5_5302_skill.weapon" slot="0" />
-    </model>
     <model filename="gkd_ar_r5_5302_skill.xml">
         <requirement class="weapon" key="gkw_r5_5302.weapon" slot="0" />
-    </model>
-    <model filename="gkd_ar_r5_5302_skill.xml">
-        <requirement class="weapon" key="gkw_r5_5302_skill.weapon" slot="0" />
     </model>
     <model filename="gkd_mg_pm1910_5307.xml">
         <requirement class="weapon" key="gkw_pm1910_5307.weapon" slot="0" />
@@ -2323,5 +2296,8 @@
 	</model>
     <model filename="gkd_hg_qsz92mod3.xml">
 		<requirement class="weapon" slot="0" key="gkw_qsz92mod3.weapon"/>
+	</model>
+    <model filename="gkd_ar_hk33.xml">
+		<requirement class="weapon" slot="0" key="gkw_hk33.weapon"/>
 	</model>    
 </models>
