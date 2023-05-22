@@ -339,6 +339,7 @@ class DelayAntiPersonSnipeRequest :Task{
 	protected Vector3 m_pos_2;
 	protected string m_airstrike_key;	
 	protected bool m_shoot = false;
+	protected MutilProjectile@ m_projectiles=null;
 
 
 	DelayAntiPersonSnipeRequest(GameMode@ metagame, float time, int cId,int fId, string airstrike_key,Vector3 pos1,int target) {
@@ -351,6 +352,17 @@ class DelayAntiPersonSnipeRequest :Task{
 		m_airstrike_key=airstrike_key;
 		m_target_id = target;
 	}
+
+	DelayAntiPersonSnipeRequest(GameMode@ metagame, float time, int cId,int fId, MutilProjectile@ airstrike_key,Vector3 pos1,int target) {
+		@m_metagame = metagame;
+		m_time = time;
+		m_addtime = time + 0.05;
+		m_character_id = cId;
+		m_faction_id =fId;
+		m_pos_1=pos1;
+		@m_projectiles = airstrike_key;
+		m_target_id = target;
+	}	
 
 	void setKey(string key)
 	{
@@ -376,7 +388,14 @@ class DelayAntiPersonSnipeRequest :Task{
 			}
 		}		
 		if (m_addtime < 0 && m_timeLeft < 0){
-			CreateDirectProjectile(m_metagame,m_pos_2.add(Vector3(0,10,0)),m_pos_2,m_airstrike_key,m_character_id,m_faction_id,300);
+			if(m_projectiles !is null)
+			{
+				CreateMutilDirectProjectile(m_metagame,m_pos_2.add(Vector3(0,10,0)),m_pos_2,m_projectiles.m_key,m_character_id,m_faction_id,300,m_projectiles.m_num);
+			}		
+			else
+			{
+				CreateDirectProjectile(m_metagame,m_pos_2.add(Vector3(0,10,0)),m_pos_2,m_airstrike_key,m_character_id,m_faction_id,300);
+			}	
 		}
 	}
 

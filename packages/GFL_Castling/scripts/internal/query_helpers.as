@@ -500,11 +500,7 @@ void sendFactionMessageKeySaidAsCharacter(const Metagame@ metagame, int factionI
 }
 
 // -------------------------------------------------------
-void notify(const Metagame@ metagame, string key, dictionary@ replacements = dictionary(), string dict = "", int playerId = -1, bool alert = false, string titleKey = "", float priority = 1.0, float width = -1.0) {
-	_log(" * notification message: " + key, 1);
-
-	//string command = "command class='notify' dict='" + dict + "' key='" + key + "'>";
-	
+void notify(const Metagame@ metagame, string key, dictionary@ replacements = dictionary(), string dict = "", int playerId = -1, bool alert = false, string titleKey = "", float priority = 1.0, float width = -1.0) {	
 	XmlElement command("command");
 	command.setStringAttribute("class", "notify");
 	command.setStringAttribute("dict", dict);

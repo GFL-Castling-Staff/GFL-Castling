@@ -44,6 +44,7 @@ dictionary commandSkillIndex = {
         {"gkw_vector.weapon",2},
         {"gkw_vector_549.weapon",2},
         {"gkw_vector_549_skill.weapon",2},
+        {"gkw_vector_hellfire_sticky.weapon",2},
         {"gkw_vector_1901.weapon",2},
 
         {"gkw_vz61.weapon",2},
@@ -216,16 +217,10 @@ dictionary commandSkillIndex = {
 
         // HK416MOD3
         {"gkw_hk416mod3.weapon",36},
-        {"gkw_hk416mod3_skill.weapon",36},
         {"gkw_hk416_537_mod3.weapon",36},
-        {"gkw_hk416_537_mod3_skill.weapon",36},
         {"gkw_hk416_6505_mod3.weapon",36},
-        {"gkw_hk416_6505_mod3_skill.weapon",36},
         {"gkw_hk416mod3_805.weapon",36},
-        {"gkw_hk416mod3_805_skill.weapon",36},
-
         {"gkw_hk416_3401_mod3.weapon",37},
-        {"gkw_hk416_3401_mod3_skill.weapon",37},
 
         // SMG 手雷
         {"gkw_m3.weapon",38},
@@ -259,11 +254,8 @@ dictionary commandSkillIndex = {
 
         // G41_only
         {"gkw_g41_only.weapon",46},
-        {"gkw_g41_only_skill.weapon",46},
         {"gkw_g41_2401_only.weapon",46},
-        {"gkw_g41_2401_only_skill.weapon",46},
         {"gkw_g41_7406_only.weapon",46},
-        {"gkw_g41_7406_only_skill.weapon",46},
 
         // UMP45MOD3
         {"gkw_ump45mod3.weapon",47},
@@ -406,6 +398,7 @@ dictionary commandSkillIndex = {
         {"gkw_m1895mod3_5309.weapon",67},
         {"gkw_m1895mod3_5309_skill.weapon",67},
         
+        {"gkw_m1891mod3.weapon",68},
 
 
         // 下面这行是用来占位的，在这之上添加新的枪和index即可

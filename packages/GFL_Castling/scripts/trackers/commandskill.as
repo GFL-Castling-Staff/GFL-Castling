@@ -254,7 +254,7 @@ class CommandSkill : Tracker {
                 case 65:{excuteWerlodskill(cId,senderId,m_modifer);break;}
                 case 66:{excutePA15skill(cId,senderId,m_modifer);break;}
                 case 67:{excuteNagantM1895skill(cId,senderId,m_modifer);break;}
-                
+                case 68:{excuteMosinNagant(cId,senderId,m_modifer);break;}
 
                 default:
                     break;
@@ -319,6 +319,7 @@ class CommandSkill : Tracker {
                             playPrivateSound(m_metagame,"skilldone.wav",SkillArray[a].m_skillInfo.m_player_id);
                         }
                         sendFactionMessageKeySaidAsCharacter(m_metagame,0,SkillArray[a].m_character_id,"skillcooldowndone");
+                        notify(m_metagame, "Hint - Skill Cooldown Done",dictionary(), "misc", SkillArray[a].m_skillInfo.m_player_id, false, "", 1.0);
                         SkillArray.removeAt(a);
                     }
                     else if (SkillArray[a].m_charge_mode=="constant"){
@@ -425,7 +426,7 @@ class CommandSkill : Tracker {
         if(lefttime == "") return false;
         dictionary a;
         a["%time"] = lefttime;
-        sendPrivateMessageKey(metagame,pId,"skillcooldownhint",a);
+        notify(metagame, "Hint - Skill Cooldown Hint", a, "misc", pId, false, "", 1.0);
         return true;
     }
 
@@ -509,7 +510,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -533,7 +534,7 @@ class CommandSkill : Tracker {
                     string target = player.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
-                    if(weaponname=="gkw_vector.weapon" || weaponname=="gkw_vector_549.weapon" || weaponname=="gkw_vector_549_skill.weapon" || weaponname=="gkw_vector_1901.weapon") {
+                    if(weaponname=="gkw_vector.weapon" || weaponname=="gkw_vector_549.weapon" || weaponname=="gkw_vector_549_skill.weapon" || weaponname=="gkw_vector_1901.weapon" || weaponname =="gkw_vector_hellfire_sticky.weapon") {
                         array<string> Voice={
                             "Vector_SKILL1_JP.wav",
                             "Vector_SKILL2_JP.wav",
@@ -912,7 +913,7 @@ class CommandSkill : Tracker {
                 if (ExistQueue && SkillArray[j].m_charge >= 6){
                     dictionary a;
                     a["%time"] = ""+SkillArray[j].m_time;
-                    sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+                    notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
                     return;
                 }
                 if(SkillArray[j].m_charge <6){
@@ -1015,15 +1016,13 @@ class CommandSkill : Tracker {
         if (ExistQueue && mod3==false){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            //_log("skill cooldown" + SkillArray[j].m_time);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             return;
         }
         if (ExistQueue && mod3 && SkillArray[j].m_charge>3){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            //_log("skill cooldown" + SkillArray[j].m_time);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -1211,7 +1210,7 @@ class CommandSkill : Tracker {
                 if (ExistQueue && SkillArray[j].m_charge >=3){
                     dictionary a;
                     a["%time"] = ""+SkillArray[j].m_time;
-                    sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+                    notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
                     //_log("skill cooldown" + SkillArray[j].m_time);
                     return;
                 }
@@ -1254,7 +1253,7 @@ class CommandSkill : Tracker {
                 if (ExistQueue && SkillArray[j].m_charge >=3){
                     dictionary a;
                     a["%time"] = ""+SkillArray[j].m_time;
-                    sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+                    notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
                     //_log("skill cooldown" + SkillArray[j].m_time);
                     return;
                 }
@@ -1503,7 +1502,7 @@ class CommandSkill : Tracker {
         if (ExistQueue && SkillArray[j].m_charge>3 ){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -1581,7 +1580,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -1626,7 +1625,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -1684,7 +1683,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -1729,7 +1728,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -1773,7 +1772,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -1802,7 +1801,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -1905,7 +1904,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -1950,7 +1949,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -1998,7 +1997,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -2052,7 +2051,7 @@ class CommandSkill : Tracker {
                 if (ExistQueue && SkillArray[j].m_charge >=3){
                     dictionary a;
                     a["%time"] = ""+SkillArray[j].m_time;
-                    sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+                    notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
                     //_log("skill cooldown" + SkillArray[j].m_time);
                     return;
                 }
@@ -2098,7 +2097,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -2135,7 +2134,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -2252,7 +2251,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -2297,7 +2296,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -2322,7 +2321,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             return;
         }
         const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
@@ -2394,7 +2393,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -2423,14 +2422,14 @@ class CommandSkill : Tracker {
         if (ExistQueue && mod3==false){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         if (ExistQueue && mod3 && SkillArray[j].m_charge>3){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -2483,7 +2482,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -2684,7 +2683,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             return;
         }
         const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
@@ -2859,7 +2858,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             return;
         }
         const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
@@ -2940,20 +2939,7 @@ class CommandSkill : Tracker {
     }
 
     void excuteMosinNagant(int characterId,int playerId,SkillModifer@ modifer){
-        bool ExistQueue = false;
-        int j=-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="sniper") {
-                ExistQueue=true;
-                j=i;
-            }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            return;
-        }
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"mosin")) return;
         const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
         if (characterinfo is null) return;
         const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
@@ -2993,21 +2979,21 @@ class CommandSkill : Tracker {
                 int target_id = affectedCharacter[closestIndex].getIntAttribute("id");
                 playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                DelayAntiPersonSnipeRequest@ snipe_quest = DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_hit_kennedy.projectile",c_pos.add(Vector3(0,0.5,0)),target_id);
-                snipe_quest.setKey("sniper_bullet_carcano.projectile");
+                DelayAntiPersonSnipeRequest@ snipe_quest = DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,MutilProjectile("snipe_50.projectile",5),c_pos.add(Vector3(0,0.5,0)),target_id);
                 tasker.add(snipe_quest);
-                addCooldown("sniper",5,characterId,modifer);
+                addCooldown("mosin",15,characterId,modifer);
                 array<string> Voice={
-                "Carcano1938_SKILL1_JP.wav",
-                "Carcano1938_SKILL2_JP.wav",
-                "Carcano1938_SKILL3_JP.wav"
+                "M1891Mod_SKILL1_JP.wav",
+                "M1891Mod_SKILL2_JP.wav",
+                "M1891Mod_SKILL3_JP.wav",
+                "M1891Mod_ATTACK_JP.wav"
                 };
                 playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.0);                            
             }
         }
         else{
             sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"snipe_skill_notfound");
-            addCooldown("sniper",3,characterId,modifer,"normal",false);
+            addCooldown("mosin",3,characterId,modifer,"normal",false);
         }  
     }
 
@@ -3023,8 +3009,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            //_log("skill cooldown" + SkillArray[j].m_time);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -3141,8 +3126,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            //_log("skill cooldown" + SkillArray[j].m_time);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             return;
         }
 
@@ -3187,7 +3171,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -3270,7 +3254,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -3381,7 +3365,7 @@ class CommandSkill : Tracker {
                 if (ExistQueue && SkillArray[j].m_charge >=3){
                     dictionary a;
                     a["%time"] = ""+SkillArray[j].m_time;
-                    sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+                    notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
                     return;
                 }
                 if(SkillArray[j].m_charge <3){
