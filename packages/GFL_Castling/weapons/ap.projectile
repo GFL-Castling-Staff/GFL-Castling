@@ -7,6 +7,7 @@
     <result class="spawn" instance_class="grenade" instance_key="spontaneous_explosion.projectile" min_amount="1" max_amount="1" offset="0 0 0" position_spread="0 0" direction_spread="0.0 0.0" />
 	<rotation class="random" />
     <commonness value="0.0" />
+    <model mesh_filename="" />
 
     <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_1.wav" volume="1.5" />
     <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_2.wav" volume="1.5" />

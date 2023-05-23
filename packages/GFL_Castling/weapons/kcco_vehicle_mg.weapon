@@ -99,6 +99,11 @@
     <hud_icon filename="commander_ye.png" />
     <commonness value="0.0" />
 
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+    <target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+	<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
 
     <weak_hand_hold offset="0.4" />
     <projectile file="cannon_30mm_hei.projectile">
@@ -136,7 +141,12 @@
 
     <hud_icon filename="commander_ye.png" />
     <commonness value="0.0" />
-
+    
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+    <target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+	<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
 
     <weak_hand_hold offset="0.4" />
     <projectile file="cannon_30mm_apds.projectile">
