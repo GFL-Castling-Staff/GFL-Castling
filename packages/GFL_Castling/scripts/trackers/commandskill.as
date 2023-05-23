@@ -28,8 +28,6 @@ class SkillTrigger{
     int m_charge=1;
     string m_charge_mode;
     bool m_alert;
-    // int m_player_id=-1;
-    // string m_playername="";
     SkillModifer@ m_skillInfo;
 
     SkillTrigger(int characterId, float time,string weapontype,string charge_mode="normal",bool alert = true){
@@ -294,6 +292,10 @@ class CommandSkill : Tracker {
     }
 	protected void handleMatchEndEvent(const XmlElement@ event) {
         m_ended=true;
+        while(KillCountArray.length()>0)   
+        {
+            KillCountArray.removeLast();
+        }
     }
     void update(float time) {
         if(DontSpamingYourFuckingSkillWhileCoolDownBro.length()>0){
@@ -2976,19 +2978,52 @@ class CommandSkill : Tracker {
             }
 
             if (closestIndex >= 0){
+                int fire_num = 2;
+                modifer.setCooldownMinus(0);
+                modifer.setCooldownReduction(1.0);
+                int mosin_level = findKillCountIndex(characterId,"mosinnagant");
+                fire_num = int(min(int(floor(mosin_level/10))+2,8));
                 int target_id = affectedCharacter[closestIndex].getIntAttribute("id");
-                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
-                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                DelayAntiPersonSnipeRequest@ snipe_quest = DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,MutilProjectile("snipe_50.projectile",5),c_pos.add(Vector3(0,0.5,0)),target_id);
-                tasker.add(snipe_quest);
-                addCooldown("mosin",15,characterId,modifer);
+                if (mosin_level < 20)
+                {
+                    playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
+                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    DelayAntiPersonSnipeRequest@ snipe_quest = DelayAntiPersonSnipeRequest(m_metagame,2.5,characterId,factionid,MutilProjectile("snipe_mosin.projectile",fire_num),c_pos.add(Vector3(0,0.5,0)),target_id);
+                    tasker.add(snipe_quest);
+                }
+                else if (mosin_level <40 && mosin_level >=20 )
+                {
+                    playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
+                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    DelayAntiPersonSnipeRequest@ snipe_quest = DelayAntiPersonSnipeRequest(m_metagame,2,characterId,factionid,MutilProjectile("snipe_mosin.projectile",fire_num),c_pos.add(Vector3(0,0.5,0)),target_id);
+                    tasker.add(snipe_quest);
+                }
+                else if (mosin_level>=40)
+                {
+                    playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
+                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    DelayAntiPersonSnipeRequest@ snipe_quest = DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,MutilProjectile("snipe_mosin.projectile",fire_num),c_pos.add(Vector3(0,0.5,0)),target_id);
+                    tasker.add(snipe_quest);
+                }
+                if (mosin_level < 10)
+                {
+                    addCooldown("mosin",15,characterId,modifer);
+                }
+                else if (mosin_level < 30 && mosin_level >=10)
+                {
+                    addCooldown("mosin",10,characterId,modifer);
+                }
+                else if (mosin_level >=30)
+                {
+                    addCooldown("mosin",5,characterId,modifer);
+                }                
                 array<string> Voice={
                 "M1891Mod_SKILL1_JP.wav",
                 "M1891Mod_SKILL2_JP.wav",
                 "M1891Mod_SKILL3_JP.wav",
                 "M1891Mod_ATTACK_JP.wav"
                 };
-                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.0);                            
+                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.5);                            
             }
         }
         else{
