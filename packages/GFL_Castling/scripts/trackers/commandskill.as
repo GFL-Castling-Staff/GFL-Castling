@@ -2792,7 +2792,13 @@ class CommandSkill : Tracker {
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                         tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_blast_30.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                         addCooldown("sniper",12,characterId,modifer);
-                    }                                        
+                    }
+                    else if (weapon_name == "gkw_scarh_only.weapon"){
+                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_blast_30.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        addCooldown("sniper",10,characterId,modifer);
+                    }                                         
                     else if (weapon_name == "gkw_qbu88.weapon" || weapon_name == "gkw_qbu88_skill.weapon" || weapon_name == "gkw_qbu88_5502.weapon" || weapon_name == "gkw_qbu88_5502_skill.weapon"){
                         playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
@@ -3731,5 +3737,4 @@ class CommandSkill : Tracker {
             }
         }        
     }
-    
 }
