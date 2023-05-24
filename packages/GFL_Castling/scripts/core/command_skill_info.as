@@ -325,12 +325,9 @@ dictionary commandSkillIndex = {
 
         {"gkw_98k.weapon",51},
         {"gkw_98k_skill.weapon",51},
-        {"gkw_98kmod3.weapon",51},
-        {"gkw_98kmod3_skill.weapon",51},
         {"gkw_98k_4301.weapon",51},
         {"gkw_98k_4301_skill.weapon",51},
-        {"gkw_98kmod3_4301.weapon",51},
-        {"gkw_98kmod3_4301_skill.weapon",51},
+
 
         //墨尔斯假面 乐
         {"gkw_carcano1938.weapon",52},
@@ -400,6 +397,10 @@ dictionary commandSkillIndex = {
         
         {"gkw_m1891mod3.weapon",68},
 
+        {"gkw_98kmod3.weapon",69},
+        {"gkw_98kmod3_skill.weapon",69},
+        {"gkw_98kmod3_4301.weapon",69},
+        {"gkw_98kmod3_4301_skill.weapon",69},
 
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}

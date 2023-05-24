@@ -368,8 +368,8 @@
 	<!-- player group -->
 
 	<soldier name="default" spawn_score="0.0">
-		<!-- <character filename="default_sf.text_lines"/> -->
-		<character filename="cerberus.character" />
+		<character filename="default_sf.text_lines"/>
+		<!-- <character filename="cerberus.character" /> -->
 		<ai filename="default.ai" />
 
 		<model file="sfd_vespid.xml" />
@@ -1120,8 +1120,8 @@
 
 	<!-- 强无敌 -->
 	<soldier name="sf_manticore" firstnames="sf_first.name" lastnames_file="sf_last.name" squad_size_xp_cap="0.0" spawn_score="0.5">
-		<models filename="sf_qwd.models" />
 		<character filename="qwd.character" />
+		<model filename="sfd_manticore_neo.xml" />
 		<ai filename="manticore.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
 			<weapon key="sfw_manticore.weapon"/>

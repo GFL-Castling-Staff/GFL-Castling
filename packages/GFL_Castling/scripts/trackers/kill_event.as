@@ -454,6 +454,7 @@ class kill_event : Tracker {
                 if(j>=0){
                     KillCountArray[j].add();
                     int kill_num = KillCountArray[j].m_killnum;
+                    _log("成功积累"+ kill_num);
                     switch(kill_num)
                     {
                         case 10:{notify(m_metagame, "Skill - Mosin Nagant LV1", dictionary(), "misc", playerId, false, "", 1.0);break;}
@@ -491,8 +492,6 @@ class kill_event : Tracker {
                         SkillArray[i].m_time-=1.0;
                     }
                 }
-
-
             }
 
             if (Solider_Name=="") return;
@@ -597,6 +596,10 @@ class kill_count{
     void add(){
         m_killnum++;
     }
+    
+    void add(int num){
+        m_killnum += num;
+    }    
 }
 
 int findSkillIndex(int cId,string key){
@@ -638,6 +641,30 @@ int findKillCountIndex(int cId,string type){
 int findKillCountIndex(int cId){
     for (uint i=0;i<KillCountArray.length();i++){
         if (KillCountArray[i].m_characterId==cId) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+class no_delete_data{
+    string m_playername;
+    int m_num=0;
+    string m_data_key;
+    no_delete_data(string a,int b,string c){
+        m_playername=a;
+        m_num=b;
+        m_data_key = c;
+    }
+
+    void add(){
+        m_num++;
+    }
+}
+
+int findNodeleteDataIndex(string name,string type){
+    for (uint i=0;i<No_Delete_DataArray.length();i++){
+        if (No_Delete_DataArray[i].m_playername==name && No_Delete_DataArray[i].m_data_key == type ) {
             return i;
         }
     }
