@@ -3096,11 +3096,11 @@ class CommandSkill : Tracker {
                         {
                             case 1:
                             {
-                                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.0s",false);
+                                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
                                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
-                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
-                                addCooldown("sniper",25,characterId,modifer);
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
+                                addCooldown("kar98k",25,characterId,modifer);
                                 break;
                             }
                             case 2:
@@ -3108,8 +3108,8 @@ class CommandSkill : Tracker {
                                 playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
                                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
-                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.75,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
-                                addCooldown("sniper",25,characterId,modifer);
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
+                                addCooldown("kar98k",25,characterId,modifer);
                                 break;
                             }
                             case 3:
@@ -3117,8 +3117,8 @@ class CommandSkill : Tracker {
                                 playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1s",false);
                                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.0,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
-                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
-                                addCooldown("sniper",20,characterId,modifer);
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
+                                addCooldown("kar98k",20,characterId,modifer);
                                 break;
                             }
                             case 4:
@@ -3126,8 +3126,8 @@ class CommandSkill : Tracker {
                                 playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 0.8s",false);
                                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.8,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
-                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.05,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
-                                addCooldown("sniper",20,characterId,modifer);
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
+                                addCooldown("kar98k",20,characterId,modifer);
                                 break;
                             }                                                                                    
                             default:
@@ -3135,8 +3135,8 @@ class CommandSkill : Tracker {
                                 playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
                                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
-                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.75,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
-                                addCooldown("sniper",25,characterId,modifer);
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
+                                addCooldown("kar98k",25,characterId,modifer);
                                 break;                                
                             };
                         }
@@ -3148,11 +3148,11 @@ class CommandSkill : Tracker {
                         {
                             case 1:
                             {
-                                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.0s",false);
+                                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
                                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
-                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
-                                addCooldown("sniper",25,characterId,modifer);
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                                addCooldown("kar98k",25,characterId,modifer);
                                 break;
                             }
                             case 2:
@@ -3160,8 +3160,8 @@ class CommandSkill : Tracker {
                                 playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
                                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
-                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.75,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
-                                addCooldown("sniper",25,characterId,modifer);
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                                addCooldown("kar98k",25,characterId,modifer);
                                 break;
                             }
                             case 3:
@@ -3169,8 +3169,8 @@ class CommandSkill : Tracker {
                                 playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1s",false);
                                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.0,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
-                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
-                                addCooldown("sniper",20,characterId,modifer);
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                                addCooldown("kar98k",20,characterId,modifer);
                                 break;
                             }
                             case 4:
@@ -3178,8 +3178,8 @@ class CommandSkill : Tracker {
                                 playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 0.8s",false);
                                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.8,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
-                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.05,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
-                                addCooldown("sniper",20,characterId,modifer);
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                                addCooldown("kar98k",20,characterId,modifer);
                                 break;
                             }                                                                                    
                             default:
@@ -3187,8 +3187,8 @@ class CommandSkill : Tracker {
                                 playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
                                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
-                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.75,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
-                                addCooldown("sniper",25,characterId,modifer);
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                                addCooldown("kar98k",25,characterId,modifer);
                                 break;                                
                             };
                         }                        
@@ -3197,7 +3197,7 @@ class CommandSkill : Tracker {
             }
             else{
                 sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"snipe_skill_notfound");
-                addCooldown("sniper",3,characterId,modifer,"normal",false);
+                addCooldown("kar98k",3,characterId,modifer,"normal",false);
             }  
         } 
     }
