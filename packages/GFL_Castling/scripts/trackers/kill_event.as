@@ -516,9 +516,11 @@ class kill_event : Tracker {
         if(player is null) return;
         int cId= player.getIntAttribute("character_id");
         if(cId==-1) return;
-        int index=findKillCountIndex(cId);
-        if(index==-1) return;
-        KillCountArray.removeAt(index);
+        array<int> indexes = findAllKillCountIndexes(cId);
+        if (indexes.length() == 0) return;
+        for (int i = indexes.length() - 1; i >= 0; i--) {
+            KillCountArray.removeAt(indexes[i]);
+        }
     }
     void update(float time){
         if(HealOnKill_track.length()>0){
@@ -645,6 +647,16 @@ int findKillCountIndex(int cId){
         }
     }
     return -1;
+}
+
+array<int> findAllKillCountIndexes(int cId) {
+    array<int> indexes;
+    for (uint i = 0; i < KillCountArray.length(); i++) {
+        if (KillCountArray[i].m_characterId == cId) {
+            indexes.insertLast(i);
+        }
+    }
+    return indexes;
 }
 
 class no_delete_data{

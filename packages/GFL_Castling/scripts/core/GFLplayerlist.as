@@ -155,11 +155,11 @@ class GFL_playerlist_system : Tracker {
             GFL_playerInfo@ player = CT_PlayerList[index_last];
             if(player.m_rp >0)
             {
-                GiveRP(m_metagame,player.m_characterid,player.m_rp);
+                GiveRP(m_metagame,player.getPlayerCid(),player.m_rp);
             }
             if(player.m_xp >0)
             {
-                GiveXP(m_metagame,player.m_characterid,player.m_xp);
+                GiveXP(m_metagame,player.getPlayerCid(),player.m_xp);
             }            
             CT_PlayerList.removeLast();
         }  
@@ -183,6 +183,40 @@ class GFL_playerlist_system : Tracker {
         string armor = equipment.getWeapon(3);
         if(startsWith(armor,"srexo_t6")) healCharacter(m_metagame,cid,2);
     }
+
+    protected void handleMatchEndEvent(const XmlElement@ event){
+		const XmlElement@ winCondition = event.getFirstElementByTagName("win_condition");
+		if (winCondition !is null) {
+			int factionId = winCondition.getIntAttribute("faction_id");
+            if (factionId == 0) 
+            {
+                if(CT_PlayerList.length() <= 0) return;
+                for(uint i=0;i<CT_PlayerList.length();i++){
+                    string c_weaponType = CT_PlayerList[i].getPlayerEquipment().getWeapon(0);
+                    if(
+                        c_weaponType != "gkw_98kmod3.weapon" &&
+                        c_weaponType != "gkw_98kmod3_skill.weapon" &&
+                        c_weaponType != "gkw_98kmod3_4301.weapon" &&
+                        c_weaponType != "gkw_98kmod3_4301_skill.weapon")
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        string strname= CT_PlayerList[i].getPlayerPid();
+                        int j = findNodeleteDataIndex(strname,"kar98k");
+
+                        if(j>=0){
+                            No_Delete_DataArray[j].add();
+                        }
+                        else{
+                            No_Delete_DataArray.insertLast(no_delete_data(strname,1,"kar98k"));       
+                        }                        
+                    }
+                }
+            }
+        }
+    }    
 }
 
 // 删 - 单个玩家
@@ -297,7 +331,7 @@ string getPlayerWeaponFromListByID(int cid, int weaponnum) {
     int index = -1;
     if(CT_PlayerList.length()>0){
         for(uint i=0;i<CT_PlayerList.length();i++){
-            if(CT_PlayerList[i].m_characterid == cid)
+            if(CT_PlayerList[i].getPlayerCid() == cid)
             {
                 index = i;
             }
@@ -314,7 +348,7 @@ string getPlayerWeaponFromListByPID(int pid, int weaponnum) {
     int index = -1;
     if(CT_PlayerList.length()>0){
         for(uint i=0;i<CT_PlayerList.length();i++){
-            if(CT_PlayerList[i].m_playerid == pid)
+            if(CT_PlayerList[i].getPlayerPid() == pid)
             {
                 index = i;
             }
@@ -330,7 +364,7 @@ string getPlayerWeaponFromListByPID(int pid, int weaponnum) {
 bool checkCharacterIdisPlayerOwn(int cid) {
     if(CT_PlayerList.length()>0){
         for(uint i=0;i<CT_PlayerList.length();i++){
-            if(CT_PlayerList[i].m_characterid == cid) return true;
+            if(CT_PlayerList[i].getPlayerCid() == cid) return true;
         }
     }
     return false;
@@ -339,7 +373,7 @@ bool checkCharacterIdisPlayerOwn(int cid) {
 void givePlayerRPcount(int playerid,int rp_count){
     if(CT_PlayerList.length()>0){
         for(uint i=0;i<CT_PlayerList.length();i++){
-            if(CT_PlayerList[i].m_playerid == playerid){
+            if(CT_PlayerList[i].getPlayerPid() == playerid){
                 CT_PlayerList[i].m_rp +=rp_count;
             }
         }
@@ -349,7 +383,7 @@ void givePlayerRPcount(int playerid,int rp_count){
 void givePlayerXPcount(int playerid,float xp_count){
     if(CT_PlayerList.length()>0){
         for(uint i=0;i<CT_PlayerList.length();i++){
-            if(CT_PlayerList[i].m_playerid == playerid){
+            if(CT_PlayerList[i].getPlayerPid() == playerid){
                 CT_PlayerList[i].m_xp +=xp_count;
             }
         }
