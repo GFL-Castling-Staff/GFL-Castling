@@ -52,17 +52,25 @@
 
     <weak_hand_hold offset="0.2" />
     <projectile file="destroyer.projectile">
-      <result class="blast"  damage="1.9"  radius="2.5" decal="1" push="0" character_state="death" faction_compare="not_equal"/> 
+      <result class="blast"  damage="2.1"  radius="2.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal"/> 
     </projectile>
      
     <stance state_key="running" accuracy="0.5" />
     <stance state_key="walking" accuracy="0.6" />
     <stance state_key="crouch_moving" accuracy="0.8" />
     <stance state_key="prone_moving" accuracy="0.8" />
-
     <stance state_key="standing" accuracy="0.98" />
     <stance state_key="crouching" accuracy="1.1" />
     <stance state_key="prone" accuracy="1.2" />
-    
+    <stance state_key="over_wall" accuracy="1.2" />
     <modifier class="speed" value="-0.2" />
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.1" />
+	  <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	  <target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
+	  <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
+    <target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="15.0" />
+    <target_factors tag="autorifle" distance="1.25" direction="0.0" squad_command="1.0" base_score="12.0" />
+	  <target_factors tag="machine gun" distance="2.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
+	  <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="15.0"/>
+	  <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
 </weapon>
