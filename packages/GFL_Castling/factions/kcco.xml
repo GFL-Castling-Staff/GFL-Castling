@@ -555,6 +555,7 @@
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="kcco_sg.weapon" enabled="1" />
 			<weapon key="kcco_rpg7.weapon" enabled="1" />
+			<weapon key="kcco_pf98.weapon" enabled="1" />
 			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
 			<call key="kcco_assault.call" />
 			<call key="kcco_zircon.call" />
@@ -817,7 +818,10 @@
 			<item_class_existence class="carry_item" slot="0" probability="0.001" />
 		</item_class_existence_config>
 		<attribute_config class="xp">
-			<attribute weight="1.0" min="33.633" max="57.433" />
+			<attribute weight="1.0" min="5.0" max="5.0" />
+			<attribute weight="1.0" min="4.0" max="4.0" />
+			<attribute weight="1.0" min="3.0" max="3.0" />
+			<attribute weight="1.0" min="2.0" max="2.0" />
 		</attribute_config>
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="5000" max="5000" />
@@ -844,6 +848,7 @@
 		<ai filename="kcco_human_mg.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="kcco_pkp.weapon" enabled="1" />
+			<weapon key="kcco_pf98.weapon" enabled="1" />
 			<carry_item key="vest_50hp_tank.carry_item" />
 			<call key="kcco_Hephaestus.call" />
 			<call key="kcco_argo_vela.call" />
@@ -851,15 +856,19 @@
 			<call key="kcco_argo_carina.call" />
 			<call key="kcco_argo_emp.call" />	
 			<call key="kcco_deploy_coeus.call" />
-			<call key="kcco_deploy_typhon.call" />			
+			<call key="kcco_deploy_typhon.call" />
 		</resources>
 		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="0.75" />
 			<item_class_existence class="carry_item" slot="1" probability="1" />
 			<!-- note, always backpack items -->
 			<item_class_existence class="carry_item" slot="0" probability="0.001" />
 		</item_class_existence_config>
 		<attribute_config class="xp">
-			<attribute weight="1.0" min="100" max="100" />
+			<attribute weight="1.0" min="5.0" max="5.0" />
+			<attribute weight="1.0" min="4.0" max="4.0" />
+			<attribute weight="1.0" min="3.0" max="3.0" />
+			<attribute weight="1.0" min="2.0" max="2.0" />
 		</attribute_config>
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="5000" max="7500" />

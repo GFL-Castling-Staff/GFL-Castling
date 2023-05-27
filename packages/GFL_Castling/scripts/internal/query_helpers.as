@@ -141,8 +141,13 @@ const XmlElement@ getPlayerByIdOrNameFromCommand(Metagame@ metagame, string mess
 
 // --------------------------------------------------------
 const XmlElement@ getCharacterInfo(const Metagame@ metagame, int characterId) {
-	return getGenericObjectInfo(metagame, "character", characterId);
+	const XmlElement@ info = getGenericObjectInfo(metagame, "character", characterId);
+	if (info !is null && info.getIntAttribute("id") == -1) {
+			return null;
+	}
+	return info;
 }
+
 
 // --------------------------------------------------------
 array<const XmlElement@>@ getBases(const Metagame@ metagame) {

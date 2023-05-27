@@ -552,6 +552,30 @@
 			</attribute_config>
 		</resources>
 	</soldier>
+	<soldier name="parw_grenadier" spawn_score="0.75" squad_size_xp_cap="0.5" copy_from="default_ai">
+		<ai filename="pard_thrower.ai" />
+		<character filename="paradeus.text_lines">
+			<sound key="death" fileref="kill_sound_kcco_bot01.wav" volume="0.4" pitch_variety="0.025"/>
+			<sound key="death" fileref="kill_sound_kcco_bot02.wav" volume="0.4" pitch_variety="0.025"/>
+			<sound key="death" fileref="kill_sound_kcco_bot03.wav" volume="0.4" pitch_variety="0.025"/>
+		</character>
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="parw_thrower.weapon" enabled="1" probability="1.0" />
+			<projectile key="parw_grenade.projectile" enabled="1" probability="1.0" />
+			<weapon key="parw_rocket.weapon" enabled="1" probability="1.0" />
+			<carry_item key="vest_40hp_10" />
+			<attribute_config class="xp">
+				<attribute weight="1.0" min="1.0" max="2.0" />
+				<attribute weight="0.75" min="3.0" max="4.0" />
+				<attribute weight="0.5" min="5.0" max="6.0" />
+				<attribute weight="0.25" min="7.0" max="8.0" />
+				<attribute weight="0.1" min="9.0" max="10.0" />
+			</attribute_config>
+			<attribute_config class="rp">
+				<attribute weight="1.0" min="400.0" max="420.0" />
+			</attribute_config>
+		</resources>
+	</soldier>	
 	<soldier name="alina" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<character filename="default_pard_nyto.character">
 			<parameter class="can_use_vehicles" value="0" /> 
@@ -584,7 +608,7 @@
 			<model filename="pard_teal.xml" />
 			<carry_item key="vest_50hp_tank.carry_item" />
 			<attribute_config class="xp">
-				<attribute weight="1.0" min="350.0" max="450.833" />
+				<attribute weight="1.0" min="20.0" max="20" />
 			</attribute_config>
 			<attribute_config class="rp">
 				<attribute weight="1.0" min="3000.0" max="5000.0" />
@@ -592,16 +616,23 @@
 		</resources>
 	</soldier>
 	<soldier name="eagleyes" spawn_score="0.2" squad_size_xp_cap="0.5" copy_from="default_ai">
-		<character filename="default_pard_nyto.character"/>
-		<ai filename="elite.ai" />
+		<character filename="default_pard_nyto.character">
+			<parameter class="being_stunned_steer_amount" value="1.0" />
+			<animation key="stunned" target_key="jump, dreamer" />
+			<parameter class="can_use_vehicles" value="0" /> 
+			<parameter class="walking_steer_amount" value="0.63" />
+			<parameter class="running_steer_amount" value="0.63" />
+		</character>
+		<ai filename="nyto_eagleyes.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_eagleyes.weapon" enabled="1" />
 			<model filename="pard_eagleyes.xml" />
 			<carry_item key="vest_40hp.carry_item" />
 			<call key="para_assault.call" />
 			<call key="para_eod.call" />
+			<projectile key="selfstun.projectile" enabled="1" probability="1.0" />		
 			<attribute_config class="xp">
-				<attribute weight="1.0" min="350.0" max="450.833" />
+				<attribute weight="1.0" min="20.0" max="20" />
 			</attribute_config>
 			<attribute_config class="rp">
 				<attribute weight="1.0" min="3000.0" max="5000.0" />
@@ -618,7 +649,7 @@
 			<call key="para_assault.call" />
 			<call key="para_eod.call" />
 			<attribute_config class="xp">
-				<attribute weight="1.0" min="350.0" max="450.833" />
+				<attribute weight="1.0" min="20.0" max="20" />
 			</attribute_config>
 			<attribute_config class="rp">
 				<attribute weight="1.0" min="3000.0" max="5000.0" />
