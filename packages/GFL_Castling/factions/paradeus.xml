@@ -617,8 +617,8 @@
 	</soldier>
 	<soldier name="eagleyes" spawn_score="0.2" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<character filename="default_pard_nyto.character">
-			<parameter class="being_stunned_steer_amount" value="1.0" />
-			<animation key="stunned" target_key="jump, dreamer" />
+			<parameter class="being_stunned_steer_amount" value="0.6" />
+			<animation key="stunned" target_key="rush jump" />
 			<parameter class="can_use_vehicles" value="0" /> 
 			<parameter class="walking_steer_amount" value="0.63" />
 			<parameter class="running_steer_amount" value="0.63" />

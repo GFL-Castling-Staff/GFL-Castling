@@ -19,6 +19,7 @@
     />
     <!--Animations-->
     <inventory encumbrance="5.0" buy_price="30.0" sell_price="30.0" />
+    <commonness value="0.2" in_stock="0" can_respawn_with="1" />
     <!--Sounds-->
     <sound key="fire" fileref="p30_fire_FromPAYDAY2.wav" pitch_variety="0.05" volume="1.5"/>
 	<sound key="magazine_out" fileref="p30_mgz_out_FromCOD4R.wav" volume="0.9"/>

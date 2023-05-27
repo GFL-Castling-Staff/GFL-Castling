@@ -18,6 +18,7 @@
     spread_range="0.23"/>
     <!--Animations-->
     <inventory encumbrance="5.0" buy_price="150.0" sell_price="150.0" />
+    <commonness value="0.0001" in_stock="0" can_respawn_with="1" />
     <!--Sounds-->
     <sound key="fire" fileref="pm_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.5"/>
 	<sound key="magazine_out" fileref="pm_mgz_out_FromCOD16.wav" volume="0.9"/>
