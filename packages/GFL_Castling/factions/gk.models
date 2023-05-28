@@ -1832,6 +1832,9 @@
     <model filename="gkd_rf_obrmod3.xml">
         <requirement class="weapon" key="gkw_obrmod3.weapon" slot="0" />
     </model>
+    <model filename="gkd_rf_obrmod3.xml">
+        <requirement class="weapon" key="gkw_obrmod3_skill.weapon" slot="0" />
+    </model>
     <model filename="gkd_mg_m240l.xml">
         <requirement class="weapon" key="gkw_m240l.weapon" slot="0" />
     </model>
