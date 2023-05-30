@@ -15,7 +15,7 @@
         last_burst_retrigger_time="0.1"
         stance_accuracy_rate="2.5"
         leave_crouch_accuracy_penalty="0.38"
-        suppressed="1"
+        suppressed="0"
         spread_range="0.25"
         sustained_fire_diminish_rate="1.4"
         sustained_fire_grow_step="0.35"
@@ -56,6 +56,8 @@
         <modifier class="speed" value="0" />
     </weapon>
     <weapon key="gkw_ar15mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <tag name="autorifle"/>
+    <tag name="elite"/>
         <specification 
         retrigger_time="0.066"
         accuracy_factor="1"
@@ -70,7 +72,7 @@
         name="ST-AR15(MOD3)-[Crime and punishment]"
         class="0"
         reload_one_at_a_time="0"
-        sight_range_modifier="1.0"
+        sight_range_modifier="1.25"
         projectile_speed="200"
         projectiles_per_shot="2"
         burst_shots="1"
