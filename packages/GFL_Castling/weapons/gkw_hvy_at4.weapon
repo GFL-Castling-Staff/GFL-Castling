@@ -52,6 +52,7 @@
     <stance state_key="prone_moving" accuracy="1.0" />
     <stance state_key="over_wall" accuracy="1" />
     <modifier class="detectability" value="0.2" />
+    <modifier class="hit_success_probability" value="0.1" />
 </weapon>
 <weapon file="gf_hvy.base_weapon" key="gkw_hvy_at4_incendiary.weapon">
     <specification 
@@ -103,6 +104,7 @@
     <stance state_key="prone_moving" accuracy="1.0" />
     <stance state_key="over_wall" accuracy="1" />
     <modifier class="detectability" value="0.2" />
+    <modifier class="hit_success_probability" value="0.1" />
 </weapon>
 <weapon file="two_hands_single_hg_auto.animation_base" key="gkw_at4_tec-9.weapon">
 	<!--Weapon specifications-->
