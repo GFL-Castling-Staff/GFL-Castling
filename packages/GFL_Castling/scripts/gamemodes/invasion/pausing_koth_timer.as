@@ -30,7 +30,7 @@ class PausingKothTimer : Tracker {
 			XmlElement command("command");
 			command.setStringAttribute("class", "change_game_settings");
 			for (uint i = 0; i < m_metagame.getFactions().size(); ++i) {
-				if (i == 0) {
+				if (i != 0) {
 					XmlElement faction("faction");
 					command.appendChild(faction);
 				}
