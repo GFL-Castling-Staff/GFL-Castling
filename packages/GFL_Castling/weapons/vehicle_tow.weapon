@@ -83,7 +83,7 @@
     <effect class="muzzle" ref="CannonSmokeBig" />
     <effect class="muzzle" ref="CannonSmokeBigSphere" />
 
-    <sound class="operation" key="fire" fileref="ataka_fire01_fromWT.wav" volume="1.2" />
+    <sound class="operation" key="fire" fileref="ataka_fire01_fromWT.wav" volume="1.0" />
 </weapon> 
 <weapon key="kuergants_missile_2.weapon">
     <specification 
@@ -126,6 +126,6 @@
     <effect class="muzzle" ref="CannonSmokeBig" />
     <effect class="muzzle" ref="CannonSmokeBigSphere" />
 
-    <sound class="operation" key="fire" fileref="ataka_fire01_fromWT.wav" volume="1.2" />
+    <sound class="operation" key="fire" fileref="ataka_fire01_fromWT.wav" volume="1.0" />
 </weapon>
 </weapons>

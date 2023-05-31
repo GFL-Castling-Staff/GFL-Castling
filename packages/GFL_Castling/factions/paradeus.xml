@@ -575,6 +575,28 @@
 				<attribute weight="1.0" min="400.0" max="420.0" />
 			</attribute_config>
 		</resources>
+	</soldier>
+	<soldier name="parw_defender" spawn_score="3.0" squad_size_xp_cap="0.5" copy_from="default_ai">
+		<ai filename="pard_defender.ai" />
+		<model filename="pard_punish.xml" />
+		<character filename="paradeus.text_lines">
+			<sound key="death" fileref="kill_sound_kcco_bot01.wav" volume="0.4" pitch_variety="0.025"/>
+			<sound key="death" fileref="kill_sound_kcco_bot02.wav" volume="0.4" pitch_variety="0.025"/>
+			<sound key="death" fileref="kill_sound_kcco_bot03.wav" volume="0.4" pitch_variety="0.025"/>
+			<parameter class="can_use_vehicles" value="0" /> 
+			<parameter class="walking_steer_amount" value="0.63" />
+			<parameter class="running_steer_amount" value="0.63" />			
+		</character>
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="parw_punish_shield.weapon" />
+			<projectile key="selfnone_punish.projectile" />
+			<carry_item key="vest_40hp_10" />
+			<item_class_existence_config>
+				<item_class_existence class="weapon" slot="1" probability="1" />
+				<item_class_existence class="carry_item" slot="1" probability="1" />
+				<item_class_existence class="carry_item" slot="0" probability="0.001" />
+			</item_class_existence_config>
+		</resources>
 	</soldier>	
 	<soldier name="alina" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<character filename="default_pard_nyto.character">
@@ -773,7 +795,7 @@
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_doppelsoldner_rocket.weapon" enabled="1" />
 			<carry_item key="pard_roarer_15" />
-			<projectile key="selfnone.projectile" enabled="1" />
+			<projectile key="selfnone_mecha.projectile" enabled="1" />
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="weapon" slot="1" probability="1" />
@@ -876,12 +898,6 @@
 		<ai filename="chicken.ai" />
 		<models>
 			<model filename="chick_en1.xml" />
-			<model filename="chick_en2.xml" />
-			<model filename="chick_rooster.xml" />
-			<model filename="chick_brown.xml" />
-			<model filename="chick_yellow.xml" />
-			<model filename="chick_glasses.xml" />
-			<model filename="chick_bananchick.xml" />
 		</models>
 		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
 		</resources>

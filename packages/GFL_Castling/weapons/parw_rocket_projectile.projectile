@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="rocket" slot="2" pulldown_in_air="13" radius="0.4">
     <tag name="rocket"/>
-	
-    <result class="blast"  damage="30" radius="4.5" decal="1" push="0" character_state="death"  faction_compare="not_equal" damage_origin_vehicle="0"/>
     <trigger class="impact" />
     <rotation class="motion" />
-    <model mesh_filename="mk153HEAT.xml" />
+    <model mesh_filename="parw_panzerfaust_projectile.xml" />
 
     <commonness value="0.0" />
 
