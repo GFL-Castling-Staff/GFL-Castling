@@ -28,7 +28,7 @@
     <parameter class="longer_burst_time" value="2.5" />
     <parameter class="longer_burst_time_variance" value="0.5" />
     <parameter class="accuracy_penalty_range" value="0.07" />
-    <parameter class="melee_attack_wait_time" value="0.1" />
+    <parameter class="melee_attack_wait_time" value="0.75" />
     <parameter class="shooting_against_vehicle_burst_time" value="0.5" />
     <parameter class="fighting_favor_helping_probability" value="0.7" />
     <parameter class="check_need_for_help_range" value="40.0" />
@@ -71,8 +71,6 @@
     <parameter class="max_distance_to_throw_grenade" value="15.0" />
     <parameter class="min_number_of_enemies_to_throw_grenade" value="1" />
 	<parameter class="grenade_throw_hold_time" value="0.1" />
-	<parameter class="melee_attack_wait_time" value="0.33" />
-  <parameter class="choose_enemy_time" value="0.75" />
-  <parameter class="grenade_throw_over_obstacle_offset_min" value="-0.5" />
-  <parameter class="grenade_throw_over_obstacle_offset_max" value="3.5" />
+    <parameter class="grenade_throw_over_obstacle_offset_min" value="-0.5" />
+    <parameter class="grenade_throw_over_obstacle_offset_max" value="3.5" />
 </ai>
