@@ -106,12 +106,86 @@ particle_system ct_para_heal_woosh_6rad
     }
 }
 
-particle_system ct_kcco_sniper_woosh
+particle_system ct_kcco_sniper_purple_woosh
 {
     quota 50
     material woosh
-    particle_width 13.5
-    particle_height 13.5
+    particle_width 9
+    particle_height 9
+    renderer billboard 
+    billboard_type oriented_common
+    common_up_vector 0 0 1 
+
+    emitter Point 
+    {
+    colour	0.5 0.1 0.8 0.8
+    position 0 0 0
+    direction	0 1 0
+    emission_rate	21
+    time_to_live	3
+    duration	0.05
+    duration_min	0.05
+    duration_max	0.05
+    }
+
+    affector Scaler 
+    {
+        rate 20.0
+    }
+
+    affector ColourFader
+    {
+        red	+0.05
+        green	-1.0
+        blue	-+0.08
+        alpha	-0.3
+    }
+}
+
+
+particle_system ct_kcco_sniper_yellow_woosh
+{
+    quota 50
+    material woosh
+    particle_width 12
+    particle_height 12
+    renderer billboard 
+    billboard_type oriented_common
+    common_up_vector 0 0 1 
+
+    emitter Point 
+    {
+    colour	0.8 0.8 0.1 0.8
+    position 0 0 0
+    direction	0 1 0
+    emission_rate	21
+    time_to_live	3
+    duration	0.05
+    duration_min	0.05
+    duration_max	0.05
+    }
+
+    affector Scaler 
+    {
+        rate 20.0
+    }
+
+    affector ColourFader
+    {
+        red	+0.08
+        green	+0.08
+        blue	-1.0
+        alpha	-0.3
+    }
+}
+
+
+particle_system ct_kcco_sniper_red_woosh
+{
+    quota 50
+    material woosh
+    particle_width 20
+    particle_height 20
     renderer billboard 
     billboard_type oriented_common
     common_up_vector 0 0 1 

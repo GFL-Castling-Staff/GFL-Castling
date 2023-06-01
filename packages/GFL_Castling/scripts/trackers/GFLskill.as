@@ -615,10 +615,10 @@ class GFLskill : Tracker {
 						}
 					}
 				//根据区域内敌人数量执行不同的脚本弹头：
-				//0~5：精准狙击
-				//6~15：精准炮击
-				//15~25：中等范围迫击炮打击
-				//25以上：call大伊万
+				//0~3：精准狙击
+				//4~8：精准炮击
+				//9~15：中等范围迫击炮打击
+				//15以上：call大伊万
 				uint num_jud = affectedCharacter.length();
 				Vector3 sniperPos = stringToVector3(character.getStringAttribute("position"));
 				sniperPos = sniperPos.add(Vector3(0,0.1,0));
