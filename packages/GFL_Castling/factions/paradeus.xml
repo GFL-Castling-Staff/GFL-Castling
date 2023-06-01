@@ -576,7 +576,7 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="parw_defender" spawn_score="3.0" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="parw_defender" spawn_score="10.0" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="pard_defender.ai" />
 		<model filename="pard_punish.xml" />
 		<character filename="paradeus.text_lines">
@@ -590,7 +590,7 @@
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_punish_shield.weapon" enabled="1"/>
 			<projectile key="selfnone_punish.projectile" enabled="1"/>
-			<carry_item key="vest_40hp_25" enabled="1"/>
+			<carry_item key="vest_40hp_10" enabled="1"/>
 		</resources>
 	</soldier>	
 	<soldier name="alina" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
@@ -599,6 +599,7 @@
 			<parameter class="walking_steer_amount" value="0.63" />
 			<parameter class="running_steer_amount" value="0.63" />
 			<parameter class="stopping_velocity_threshold" value="0.05" />
+			<animation key="stunned" target_key="stunned_sit 1.0" />
 		</character>
 		<ai filename="excutioner.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
