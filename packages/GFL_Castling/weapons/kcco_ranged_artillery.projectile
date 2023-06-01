@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="artillery shell" slot="2" key="kcco_ranged_artillery.projectile" pulldown_in_air="90.0">
-    <result class="blast" radius="6.0" damage="1.8" push="0.4" decal="1" faction_compare="not_equal"/>
+    <result class="blast" radius="5.4" damage="2.4" push="0.4" decal="1" faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="motion" />
     <model mesh_filename="mortar_shell.xml" />

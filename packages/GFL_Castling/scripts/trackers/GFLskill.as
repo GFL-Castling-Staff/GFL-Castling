@@ -607,7 +607,7 @@ class GFLskill : Tracker {
 				for(uint i=0;i<m_fnum;i++) 
 					if(i!=factionid) {
 						array<const XmlElement@> affectedCharacter2;
-						affectedCharacter2 = getCharactersNearPosition(m_metagame,pos_smartbullet,i,24.0f);
+						affectedCharacter2 = getCharactersNearPosition(m_metagame,pos_smartbullet,i,20.0f);
 						if (affectedCharacter2 !is null){
 							for(uint x=0;x<affectedCharacter2.length();x++){
 								affectedCharacter.insertLast(affectedCharacter2[x]);
@@ -623,7 +623,7 @@ class GFLskill : Tracker {
 				Vector3 sniperPos = stringToVector3(character.getStringAttribute("position"));
 				sniperPos = sniperPos.add(Vector3(0,0.1,0));
 				if (num_jud>0){
-					if (num_jud<=5) {
+					if (num_jud<=3) {
 						uint luckyGuyindex = rand(0,affectedCharacter.length()-1);
 						uint luckyGuyid = affectedCharacter[luckyGuyindex].getIntAttribute("id");
 						const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
@@ -634,11 +634,11 @@ class GFLskill : Tracker {
 							break;
 						}
 					}			
-					else if (num_jud<=15) {
+					else if (num_jud<=8) {
 						CreateProjectile(m_metagame,pos_smartbullet,pos_smartbullet,"kcco_smartbullet_2.projectile",characterId,factionid,240,0.01);
 						break;						
 					}			
-					else if (num_jud<=25) {
+					else if (num_jud<=15) {
 						CreateProjectile(m_metagame,pos_smartbullet,pos_smartbullet,"kcco_smartbullet_3.projectile",characterId,factionid,240,0.01);
 						break;						
 					}			

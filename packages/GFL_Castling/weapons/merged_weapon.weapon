@@ -52324,7 +52324,7 @@
 	<tag name="sniper"/>
 	<tag name="antiarmor"/>
 	<tag name="mecha"/>
-	<specification retrigger_time="12" accuracy_factor="3.0" sustained_fire_grow_step="0" sustained_fire_diminish_rate="0.5" magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="1" name="KCCO Elite Sniper" class="0" reload_one_at_a_time="0" sight_range_modifier="2.5" ai_sight_range_modifier="1.05" projectile_speed="280.0" carry_in_two_hands="1" projectiles_per_shot="1" slot="0" stab_enabled="1" barrel_offset="0.8"/>
+	<specification retrigger_time="8" accuracy_factor="3.0" sustained_fire_grow_step="0" sustained_fire_diminish_rate="0.5" magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="1" name="KCCO Elite Sniper" class="0" reload_one_at_a_time="0" sight_range_modifier="2.5" ai_sight_range_modifier="1.05" projectile_speed="280.0" carry_in_two_hands="1" projectiles_per_shot="1" slot="0" stab_enabled="1" barrel_offset="0.8"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>
