@@ -19,4 +19,8 @@
   <parameter class="fire_open_min_time" value="8.0" />
   <parameter class="willingness_to_charge" value="1.0" />
   <parameter class="reaction_time_after_choosing_target" value="-1.0" />
+	<parameter class="day_reaction_time_to_fight_min" value="0.25" />
+	<parameter class="day_reaction_time_to_fight_max" value="0.25" />
+	<parameter class="night_reaction_time_to_fight_min" value="0.3" />
+	<parameter class="night_reaction_time_to_fight_max" value="0.3" />  
 </ai>

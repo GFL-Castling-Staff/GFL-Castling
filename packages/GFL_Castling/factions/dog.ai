@@ -15,9 +15,9 @@
   <parameter class="check_vehicles_interval" value="0.0" />
   <parameter class="check_vehicles_while_fire_open_interval" value="0.0" />  
   
-  <parameter class="day_reaction_time_to_fight_min" value="0.0" />
+  <parameter class="day_reaction_time_to_fight_min" value="0.1" />
   <parameter class="day_reaction_time_to_fight_max" value="0.1" />
-  <parameter class="night_reaction_time_to_fight_min" value="0.0" />
+  <parameter class="night_reaction_time_to_fight_min" value="0.1" />
   <parameter class="night_reaction_time_to_fight_max" value="0.1" />
   <parameter class="choose_enemy_time" value="0.1" />
   <parameter class="team_member_monitor_enemies_time" value="0.5" />

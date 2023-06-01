@@ -44,6 +44,9 @@
   <parameter class="force_as_leader" value="1.0" />
 	<parameter class="fighting_melee_move_radius" value="2.0" />
 	<parameter class="fighting_regular_move_radius" value="6.0" />
-
+  <parameter class="day_reaction_time_to_fight_min" value="0.2" />
+  <parameter class="day_reaction_time_to_fight_max" value="0.4" />
+  <parameter class="night_reaction_time_to_fight_min" value="0.4" />
+  <parameter class="night_reaction_time_to_fight_max" value="0.7" />
 
 </ai>

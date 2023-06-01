@@ -516,13 +516,13 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="parw_dog" spawn_score="0.5" copy_from="default_ai">
+	<soldier name="parw_dog" spawn_score="0.4" copy_from="default_ai">
 		<ai filename="para_dog.ai"/>
 		<model filename="pard_germdog.xml" />
 		<character filename="pard_germdog.character" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_germdog.weapon" enabled="1" probability="1.0"/>
-			<carry_item key="pard_ar.carry_item" />
+			<carry_item key="para_vest_15hp_elite.carry_item" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="1.0" max="5.6" />
 			</attribute_config>
@@ -745,7 +745,7 @@
 		</resources>
 	</soldier>
 	<soldier name="infected" spawn_score="0.0" squad_size_xp_cap="0.5">
-		<ai filename="melee.ai" />
+		<ai filename="infected.ai" />
 		<model filename="pard_zombie.xml" />
 		<character filename="infected.character" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">

@@ -13,5 +13,8 @@
   <parameter class="using_cover_min_time" value="0.0" />
 	<parameter class="using_cover_max_time" value="0.0" />
   <parameter class="choose_enemy_time" value="0.3" />
-
+  <parameter class="day_reaction_time_to_fight_min" value="0.5" />
+  <parameter class="day_reaction_time_to_fight_max" value="0.8" />
+  <parameter class="night_reaction_time_to_fight_min" value="0.5" />
+  <parameter class="night_reaction_time_to_fight_max" value="0.8" />
 </ai>

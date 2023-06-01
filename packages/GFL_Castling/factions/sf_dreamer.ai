@@ -10,5 +10,8 @@
   <parameter class="fighting_melee_move_radius" value="3.0" />
   <parameter class="fighting_regular_move_radius" value="30.0" />
   <parameter class="uses_vehicles" value="0.0" />
-
+  <parameter class="day_reaction_time_to_fight_min" value="0.2" />
+  <parameter class="day_reaction_time_to_fight_max" value="0.6" />
+  <parameter class="night_reaction_time_to_fight_min" value="0.4" />
+  <parameter class="night_reaction_time_to_fight_max" value="0.8" />
 </ai>
