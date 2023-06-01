@@ -29198,6 +29198,7 @@
 	<stance state_key="prone_moving" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="detectability" value="0.2"/>
+	<modifier class="hit_success_probability" value="0.1"/>
 	<tag name="bazooka"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
@@ -29248,6 +29249,7 @@
 	<stance state_key="prone_moving" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="detectability" value="0.2"/>
+	<modifier class="hit_success_probability" value="0.1"/>
 	<tag name="bazooka"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
@@ -29354,6 +29356,7 @@
 	<stance state_key="prone_moving" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="detectability" value="0.2"/>
+	<modifier class="hit_success_probability" value="0.1"/>
 	<tag name="bazooka"/>
 	<inventory encumbrance="50.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -29406,6 +29409,7 @@
 	<stance state_key="prone_moving" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="detectability" value="0.2"/>
+	<modifier class="hit_success_probability" value="0.1"/>
 	<tag name="bazooka"/>
 	<inventory encumbrance="50.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -29567,6 +29571,7 @@
 	<stance state_key="prone_moving" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
 	<modifier class="detectability" value="0.2"/>
+	<modifier class="hit_success_probability" value="0.2"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
 	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
@@ -29621,6 +29626,7 @@
 	<stance state_key="prone_moving" accuracy="0.3"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="detectability" value="0.3"/>
+	<modifier class="hit_success_probability" value="0.2"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
 	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
@@ -29670,6 +29676,7 @@
 	<stance state_key="prone" accuracy="0.8"/>
 	<modifier class="speed" value="-3.0"/>
 	<modifier class="detectability" value="0.25"/>
+	<modifier class="hit_success_probability" value="0.2"/>
 	<tag name="bazooka"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.3"/>
@@ -29825,6 +29832,7 @@
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
 	<modifier class="speed" value="-5.0"/>
+	<modifier class="hit_success_probability" value="0.3"/>
 	<modifier class="detectability" value="0.5"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
@@ -29918,6 +29926,7 @@
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="-5.0"/>
 	<modifier class="detectability" value="0.5"/>
+	<modifier class="hit_success_probability" value="0.3"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
 	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
@@ -53502,10 +53511,10 @@
 <weapon key="parw_punish_shield.weapon" transform_on_consume="parw_punish_axe.weapon" time_to_live_out_in_the_open="0" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
 	<tag name="melee"/>
 	<tag name="shieild"/>
-	<specification stab_enabled="0" accuracy_factor="0.95" barrel_offset="0.1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" carry_in_two_hands="1" class="0" burst_shots="1" slot="0" magazine_size="0" retrigger_time="1.0" name="Defender" use_basic_muzzle_smoke_effect="0" suppressed="0"/>
+	<specification stab_enabled="1" accuracy_factor="0.95" barrel_offset="0.1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" carry_in_two_hands="1" class="0" burst_shots="1" slot="0" magazine_size="0" retrigger_time="1.0" name="Defender" use_basic_muzzle_smoke_effect="0" suppressed="0"/>
 	<animation key="running" animation_key="running, defender shield"/>
 	<animation state_key="recoil" animation_key="pistol whip"/>
-	<animation state_key="stabbing" animation_key="pistol whip"/>
+	<animation state_key="stabbing" animation_key="trigger, defender shield"/>
 	<animation state_key="reload" animation_key="recoil, pistol dual 1"/>
 	<sound key="fire" fileref="" pitch_variety="0.05" volume="1"/>
 	<sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8"/>
@@ -53526,7 +53535,7 @@
 	<stance state_key="over_wall" accuracy="1.0"/>
 	<commonness value="0.01" can_respawn_with="1" in_stock="1"/>
 	<inventory encumbrance="18.0" price="0.0"/>
-	<shield offset="-0.2 -0.35 0" extent="0.4 1.4 1.6" usable_for_cover="0"/>
+	<shield offset="-0.3 -0.35 0" extent="1.2 1.4 1.6" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
@@ -53536,7 +53545,7 @@
 	<modifier class="projectile_blast_result" input_character_state="none" output_character_state="none" consumes_item="1"/>
 	<modifier class="detectability" value="1.0"/>
 	<modifier class="speed" value="-0.2"/>
-	<modifier class="hit_success_probability" value="-0.55"/>
+	<modifier class="hit_success_probability" value="-0.65"/>
 </weapon>
 
 <weapon key="parw_punish_axe.weapon" time_to_live_out_in_the_open="0" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
@@ -56130,7 +56139,7 @@
 	<effect class="muzzle" ref="BiggerMuzzle"/>
 	<effect class="muzzle" ref="CannonSmokeBig"/>
 	<effect class="muzzle" ref="CannonSmokeBigSphere"/>
-	<sound class="operation" key="fire" fileref="ataka_fire01_fromWT.wav" volume="1.2"/>
+	<sound class="operation" key="fire" fileref="ataka_fire01_fromWT.wav" volume="1.0"/>
 </weapon>
 
 <weapon key="kuergants_missile_2.weapon">
@@ -56151,7 +56160,7 @@
 	<effect class="muzzle" ref="BiggerMuzzle"/>
 	<effect class="muzzle" ref="CannonSmokeBig"/>
 	<effect class="muzzle" ref="CannonSmokeBigSphere"/>
-	<sound class="operation" key="fire" fileref="ataka_fire01_fromWT.wav" volume="1.2"/>
+	<sound class="operation" key="fire" fileref="ataka_fire01_fromWT.wav" volume="1.0"/>
 </weapon>
 
 <weapon key="vehicle_hornet.weapon">

@@ -9,8 +9,8 @@
     <parameter class="defending_authority_offset_to_join_squad" value="100.0" />
     <parameter class="value_increase_required_to_join_defend_squad" value="0" />
     <parameter class="favor_joining_player_squad_value_increase" value="0" />
-    <parameter class="default_fighting_separation" value="5.0" />
-    <parameter class="boosted_fighting_separation" value="3.0" />
+    <parameter class="default_fighting_separation" value="3.0" />
+    <parameter class="boosted_fighting_separation" value="1.0" />
     <parameter class="run_limit_margin" value="3.0" />
     <parameter class="run_limit" value="8.0" />
     <parameter class="vehicle_target_aim_time" value="0.0" />
@@ -28,12 +28,12 @@
     <parameter class="longer_burst_time" value="2.5" />
     <parameter class="longer_burst_time_variance" value="0.5" />
     <parameter class="accuracy_penalty_range" value="0.07" />
-    <parameter class="melee_attack_wait_time" value="0.1" />
+    <parameter class="melee_attack_wait_time" value="0.75" />
     <parameter class="shooting_against_vehicle_burst_time" value="0.5" />
     <parameter class="fighting_favor_helping_probability" value="0.7" />
     <parameter class="check_need_for_help_range" value="40.0" />
     <parameter class="check_fellows_for_shield_use_range" value="60.0" />
-    <parameter class="max_active_shields_per_fellows" value="100.00" />
+    <parameter class="max_active_shields_per_fellows" value="0" />
     <parameter class="fighting_against_vehicle_separation" value="2.0" />
     <parameter class="fighting_against_vehicle_move_radius" value="2.0" />
     <parameter class="day_reaction_time_to_fight_min" value="0.3" />
@@ -52,6 +52,7 @@
     <parameter class="leaving_cover_separation" value="10.0" />
     <parameter class="fighting_approach_alarm_max_soldiers" value="12" />
     <parameter class="accuracy_offset" value="0.0" />
+    <parameter class="grenade_throw_hold_time" value="0.05" />
     <parameter class="using_cover_min_time" value="0.0" />
     <parameter class="using_cover_max_time" value="0.0" />
     <parameter class="fire_open_min_time" value="12.0" />
@@ -60,19 +61,16 @@
     <parameter class="celebrating_comment_probability" value="0.0" />
     <parameter class="celebrating_stab_probability" value="1.0" />
     <parameter class="willingness_to_charge" value="1.0" />
-    <parameter class="stab_range" value="4.0" />
-    <parameter class="reaction_time_after_choosing_target" value="0.1" />
+    <parameter class="stab_range" value="3.5" />
     <parameter class="avoid_moving_vehicles" value="0" />
     <parameter class="fighting_melee_move_radius" value="1.0" />
-    <parameter class="fighting_regular_move_radius" value="3.0" />
-    <parameter class="throw_grenade_time_interval_max" value="2.0" />
-    <parameter class="throw_grenade_time_interval_min" value="0.5" />
-    <parameter class="min_distance_to_throw_grenade" value="1.0" />
-    <parameter class="max_distance_to_throw_grenade" value="15.0" />
-    <parameter class="min_number_of_enemies_to_throw_grenade" value="1" />
-	<parameter class="grenade_throw_hold_time" value="0.1" />
-	<parameter class="melee_attack_wait_time" value="0.33" />
-  <parameter class="choose_enemy_time" value="0.75" />
-  <parameter class="grenade_throw_over_obstacle_offset_min" value="-0.5" />
-  <parameter class="grenade_throw_over_obstacle_offset_max" value="3.5" />
+    <parameter class="fighting_regular_move_radius" value="1.0" />
+    <parameter class="throw_grenade_time_interval_max" value="0.2" />
+    <parameter class="throw_grenade_time_interval_min" value="0.1" />
+    <parameter class="min_distance_to_throw_grenade" value="0.0" />
+    <parameter class="max_distance_to_throw_grenade" value="8.0" />
+    <parameter class="min_number_of_enemies_to_throw_grenade" value="1.0" />
+    <parameter class="reaction_time_after_choosing_target" value="-1" />  
+    <parameter class="grenade_throw_over_obstacle_offset_min" value="3.0" />
+    <parameter class="grenade_throw_over_obstacle_offset_max" value="4.0" />    
 </ai>
