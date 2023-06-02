@@ -585,7 +585,8 @@
 			<sound key="death" fileref="kill_sound_kcco_bot03.wav" volume="0.4" pitch_variety="0.025"/>
 			<parameter class="can_use_vehicles" value="0" /> 
 			<parameter class="walking_steer_amount" value="0.63" />
-			<parameter class="running_steer_amount" value="0.63" />			
+			<parameter class="running_steer_amount" value="0.63" />		
+			<animation key="stunned" target_key="stunned_sit 1.0" />
 		</character> 
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_punish_shield.weapon" enabled="1"/>
@@ -599,7 +600,6 @@
 			<parameter class="walking_steer_amount" value="0.63" />
 			<parameter class="running_steer_amount" value="0.63" />
 			<parameter class="stopping_velocity_threshold" value="0.05" />
-			<animation key="stunned" target_key="stunned_sit 1.0" />
 		</character>
 		<ai filename="excutioner.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
