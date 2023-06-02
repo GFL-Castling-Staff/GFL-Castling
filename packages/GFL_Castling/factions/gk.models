@@ -2312,4 +2312,16 @@
     <model filename="gkd_ar_hk33.xml">
 		<requirement class="weapon" slot="0" key="gkw_hk33.weapon"/>
 	</model>    
-</models>
+    <model filename="gkd_smg_type100mod3.xml">
+		<requirement class="weapon" slot="0" key="gkw_type100mod3.weapon"/>
+	</model>
+    <model filename="gkd_smg_type100mod3.xml">
+		<requirement class="weapon" slot="0" key="gkw_type100mod3_skill.weapon"/>
+	</model> 
+    <model filename="gkd_smg_type100_4004.xml">
+		<requirement class="weapon" slot="0" key="gkw_type100mod3_4004.weapon"/>
+	</model>
+    <model filename="gkd_smg_type100_4004.xml">
+		<requirement class="weapon" slot="0" key="gkw_type100mod3_4004_skill.weapon"/>
+	</model>          
+</models> 

@@ -205,5 +205,15 @@ dictionary MOD3craftList = {
     {"gkw_makarov.weapon","gkw_makarovmod3.weapon"},
     {"gkw_qsz92.weapon","gkw_qsz92mod3.weapon"},
 
+    {"gkw_type100.weapon","gkw_type100mod3.weapon"},
+    {"gkw_type100_1.weapon","gkw_type100mod3weapon."},
+    {"gkw_type100_skill.weapon","gkw_type100mod3.weapon"},
+    {"gkw_type100_4004.weapon","gkw_type100mod3_4004.weapon"},
+    {"gkw_type100_4004_skill.weapon","gkw_type100mod3_4004.weapon"},
+
+    {"gkw_m1919a4.weapon","gkw_m1919a4mod3.weapon"},
+    {"gkw_m1919a4_skill.weapon","gkw_m1919a4mod3.weapon"},
+
+
     {"666","-1"}
 };
