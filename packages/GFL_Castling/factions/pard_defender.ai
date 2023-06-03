@@ -19,7 +19,7 @@
     <parameter class="guard_wait_time_min" value="5.0" />
     <parameter class="guard_wait_time_max" value="15.0" />
     <parameter class="guard_steps" value="2" />
-    <parameter class="wait_time" value="0.5" />
+    <parameter class="wait_time" value="0.3" />
     <parameter class="wait_time_variance" value="0.6" />
     <parameter class="burst_time" value="0.3" />
     <parameter class="burst_time_variance" value="0.2" />
@@ -36,9 +36,9 @@
     <parameter class="max_active_shields_per_fellows" value="0" />
     <parameter class="fighting_against_vehicle_separation" value="2.0" />
     <parameter class="fighting_against_vehicle_move_radius" value="2.0" />
-    <parameter class="day_reaction_time_to_fight_min" value="0.3" />
-    <parameter class="day_reaction_time_to_fight_max" value="0.6" />
-    <parameter class="night_reaction_time_to_fight_min" value="0.8" />
+    <parameter class="day_reaction_time_to_fight_min" value="0.4" />
+    <parameter class="day_reaction_time_to_fight_max" value="0.7" />
+    <parameter class="night_reaction_time_to_fight_min" value="0.7" />
     <parameter class="night_reaction_time_to_fight_max" value="1.1" />
     <parameter class="willingness_to_guard" value="0.2" />
     <parameter class="minimum_distance_to_consider_deploying_cover" value="18.0" />
@@ -61,7 +61,7 @@
     <parameter class="celebrating_comment_probability" value="0.0" />
     <parameter class="celebrating_stab_probability" value="1.0" />
     <parameter class="willingness_to_charge" value="1.0" />
-    <parameter class="stab_range" value="4.2" />
+    <parameter class="stab_range" value="5.0" />
     <parameter class="avoid_moving_vehicles" value="0" />
     <parameter class="fighting_melee_move_radius" value="1.0" />
     <parameter class="fighting_regular_move_radius" value="1.0" />
