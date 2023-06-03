@@ -121,6 +121,8 @@
         {"upgrade_scarl.carry_item",19},
         {"upgrade_scarh.carry_item",20},
         {"upgrade_cso.carry_item",21},
+        {"upgrade_type4.carry_item",22},
+        {"upgrade_sr3mp.carry_item",23},
 
         {"666",0}
     };
