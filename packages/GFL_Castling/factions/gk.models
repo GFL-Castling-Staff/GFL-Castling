@@ -756,9 +756,6 @@
     <model filename="gkd_mg_rpk16.xml">
         <requirement class="weapon" key="gkw_rpk16_defyAI.weapon" slot="0" />
     </model>
-    <model filename="gkd_rf_4type.xml">
-        <requirement class="weapon" key="gkw_4type.weapon" slot="0" />
-    </model>
     <model filename="gkd_rf_88typemod3.xml">
         <requirement class="weapon" key="gkw_88typemod3.weapon" slot="0" />
     </model>
@@ -1353,6 +1350,12 @@
     <model filename="gkd_rf_4type.xml">
         <requirement class="weapon" key="gkw_4type.weapon" slot="0" />
     </model>
+    <model filename="gkd_rf_4type.xml">
+        <requirement class="weapon" key="gkw_4type_only.weapon" slot="0" />
+    </model>
+    <model filename="gkd_rf_4type.xml">
+        <requirement class="weapon" key="gkw_4type_only_skill.weapon" slot="0" />
+    </model>        
     <model filename="gkd_rf_carcano1938.xml">
         <requirement class="weapon" key="gkw_carcano1938.weapon" slot="0" />
     </model>

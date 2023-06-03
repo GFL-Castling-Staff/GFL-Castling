@@ -11316,32 +11316,39 @@
 </weapon>
 
 <weapon key="gkw_4type.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<tag name="has_bayonet"/>
 	<tag name="rifle"/>
-	<specification retrigger_time="0.125" accuracy_factor="0.99" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="1.7" magazine_size="10" can_shoot_standing="1" spread_range="0.28" suppressed="0" name="4 Type" class="4" burst_shots="1" reload_one_at_a_time="1" projectile_speed="228.72" barrel_offset="0.6" projectiles_per_shot="1" slot="0"/>
-	<animation key="cycle" animation_key="Brifle1"/>
+	<specification retrigger_time="0.175" accuracy_factor="0.95" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="1.0" magazine_size="10" can_shoot_standing="1" spread_range="0.28" suppressed="0" name="4 Type" class="4" burst_shots="1" reload_one_at_a_time="1" projectile_speed="175" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="1.5" stab_range="2.5" stab_enabled="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, clip"/>
 	<weak_hand_hold offset="0.3"/>
 	<sound key="fire" fileref="type4_fire_FromCOD14.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="cycle" fileref="type4_cycle_FromCOD14.wav" volume="0.4"/>
-	<sound key="reload_one" fileref="m1garand_reload_one_FromPOSTSCRIPTUM.wav" volume="0.6"/>
-	<sound key="last_ammo" fileref="type4_ping_FromCOD14.wav" volume="1.0"/>
+	<sound key="reload_one" fileref="m1garand_reload_one_FromPOSTSCRIPTUM.wav" volume="0.75"/>
+	<sound key="last_ammo" fileref="type4_ping_FromCOD14.wav" pitch_variety="0.0" volume="2.0"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
 	<model filename="gkw_rf_4type.xml"/>
 	<hud_icon filename="gkw_4type.png"/>
-	<inventory encumbrance="35.0" price="5.0"/>
+	<inventory encumbrance="35.0" price="40.0"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
+	<result class="hit" kill_probability="5.0" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="1.0" kill_decay_end_time="1.0"/>
+	<trail probability="1" key="BulletApTrail_rf"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
-	<stance state_key="running" accuracy="0.9"/>
-	<stance state_key="walking" accuracy="0.9"/>
-	<stance state_key="crouch_moving" accuracy="0.9"/>
-	<stance state_key="prone_moving" accuracy="0.9"/>
-	<stance state_key="standing" accuracy="0.95"/>
-	<stance state_key="crouching" accuracy="0.98"/>
-	<stance state_key="prone" accuracy="1"/>
-	<stance state_key="over_wall" accuracy="1"/>
+	<stance state_key="running" accuracy="0.35"/>
+	<stance state_key="walking" accuracy="0.5"/>
+	<stance state_key="crouch_moving" accuracy="0.5"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.92"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="prone_moving" accuracy="0.3"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 	<modifier class="detectability" value="-0.1"/>
+	<modifier class="speed" value="0.1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
@@ -11350,7 +11357,116 @@
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>
-	<animation state_key="stabbing" animation_key="melee, bayonet"/>
+	<animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+</weapon>
+
+<weapon key="gkw_4type_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<tag name="rifle"/>
+	<tag name="elite"/>
+	<specification retrigger_time="0.175" accuracy_factor="0.98" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="1.0" magazine_size="10" can_shoot_standing="1" spread_range="0.25" suppressed="0" name="Type 4-[Arisaka AP Rounds]" class="4" burst_shots="1" reload_one_at_a_time="1" projectile_speed="180" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="1.85" stab_range="2.5" stab_enabled="1" slot="0"/>
+	<next_in_chain key="gkw_4type_only_skill.weapon" share_ammo="1"/>
+	<animation key="reload" animation_key="reloading, clip"/>
+	<weak_hand_hold offset="0.3"/>
+	<sound key="fire" fileref="type4_fire_FromCOD14.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="cycle" fileref="type4_cycle_FromCOD14.wav" volume="0.4"/>
+	<sound key="reload_one" fileref="m1garand_reload_one_FromPOSTSCRIPTUM.wav" volume="0.75"/>
+	<sound key="last_ammo" fileref="type4_ping_FromCOD14.wav" pitch_variety="0.0" volume="2.0"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<model filename="gkw_rf_4type.xml"/>
+	<hud_icon filename="gkw_4type_only.png"/>
+	<inventory encumbrance="35.0" price="200.0"/>
+	<projectile file="bullet.projectile">
+	<result class="hit" kill_probability="7.7" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="1.0" kill_decay_end_time="1.0"/>
+	<trail probability="1" key="BulletApTrail_rf"/>
+	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
+	<stance state_key="running" accuracy="0.4"/>
+	<stance state_key="walking" accuracy="0.6"/>
+	<stance state_key="crouch_moving" accuracy="0.5"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.92"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="prone_moving" accuracy="0.3"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
+	<modifier class="detectability" value="-0.1"/>
+	<modifier class="speed" value="0.1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation key="recoil" animation_key="recoil1"/>
+	<animation key="recoil" animation_key="recoil2"/>
+	<animation key="recoil" animation_key="recoil3"/>
+	<animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+</weapon>
+
+<weapon key="gkw_4type_only_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<tag name="rifle"/>
+	<tag name="elite"/>
+	<specification retrigger_time="1" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="3.0" magazine_size="10" can_shoot_standing="0" can_shoot_crouching="1" spread_range="0.1" suppressed="0" name="Type 4-[Arisaka AP Rounds]-[Dead Line Strike]" class="4" burst_shots="1" reload_one_at_a_time="1" projectile_speed="300" barrel_offset="0.6" projectiles_per_shot="10" stance_accuracy_rate="1.85" stab_range="2.5" stab_enabled="1" slot="0"/>
+	<next_in_chain key="gkw_4type_only.weapon" share_ammo="1"/>
+	<animation key="reload" animation_key="reloading, clip"/>
+	<weak_hand_hold offset="0.3"/>
+	<sound key="fire" fileref="type4_fire_FromCOD14.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="cycle" fileref="type4_cycle_FromCOD14.wav" volume="0.4"/>
+	<sound key="reload_one" fileref="m1garand_reload_one_FromPOSTSCRIPTUM.wav" volume="0.75"/>
+	<sound key="last_ammo" fileref="type4_ping_FromCOD14.wav" pitch_variety="0.0" volume="2.0"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<model filename="gkw_rf_4type.xml"/>
+	<hud_icon filename="gkw_4type_only_skill.png"/>
+	<inventory encumbrance="35.0" price="40.0"/>
+	<projectile file="bullet.projectile">
+	<result class="hit" kill_probability="3.5" kill_probability_offset_on_successful_hit="0.05" kill_decay_start_time="1.0" kill_decay_end_time="1.0"/>
+	<trail probability="1" key="BulletApTrail_rf"/>
+	</projectile>
+	<stance state_key="running" accuracy="1"/>
+	<stance state_key="walking" accuracy="1"/>
+	<stance state_key="crouch_moving" accuracy="1"/>
+	<stance state_key="prone_moving" accuracy="1"/>
+	<stance state_key="standing" accuracy="1"/>
+	<stance state_key="crouching" accuracy="1"/>
+	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="detectability" value="-0.1"/>
+	<modifier class="speed" value="-0.05"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<animation key="recoil" animation_key="recoil1, big"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
+	<animation state_key="running" animation_key="running, line infantry"/>
+	<animation state_key="walking" animation_key="walking, line infantry"/>
+	<animation state_key="walking_backwards" animation_key="walking, line infantry"/>
+	<animation state_key="hold_on_wall" animation_key="hold, line infantry"/>
+	<animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
+	<animation state_key="crouching" animation_key="delayshot"/>
+	<animation state_key="crouch_moving" animation_key="walking"/>
+	<animation state_key="crouch_moving_backwards" animation_key="walking backwards"/>
+	<animation state_key="crouch still" animation_key="still"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -15021,7 +15137,13 @@
 	<sound key="magazine_out" fileref="type100_mgz_out_FromBFBC2.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="type100_mgz_in_FromBFBC2.wav" volume="0.6"/>
 	<sound key="cycle" fileref="type100_cycle_FromBFBC2.wav" volume="0.6"/>
-	<sound key="stab" fileref="grenade_throw1.wav" pitch_variety="0.05" volume="0.8"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_smg_type100.xml"/>
 	<hud_icon filename="gkw_type100.png"/>
@@ -15076,7 +15198,13 @@
 	<sound key="magazine_out" fileref="type100_mgz_out_FromBFBC2.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="type100_mgz_in_FromBFBC2.wav" volume="0.6"/>
 	<sound key="cycle" fileref="type100_cycle_FromBFBC2.wav" volume="0.6"/>
-	<sound key="stab" fileref="grenade_throw1.wav" pitch_variety="0.05" volume="0.8"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_smg_type100.xml"/>
 	<hud_icon filename="gkw_type100.png"/>
@@ -15134,11 +15262,17 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<animation state_key="stabbing" animation_key="melee, bayonet"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
 	<sound key="fire" fileref="type100_fire_FromCOD18.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="type100_mgz_out_FromBFBC2.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="type100_mgz_in_FromBFBC2.wav" volume="0.6"/>
 	<sound key="cycle" fileref="type100_cycle_FromBFBC2.wav" volume="0.6"/>
-	<sound key="stab" fileref="grenade_throw1.wav" pitch_variety="0.05" volume="0.8"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_smg_type100.xml"/>
 	<hud_icon filename="gkw_type100.png"/>
@@ -15193,7 +15327,13 @@
 	<sound key="magazine_out" fileref="type100_mgz_out_FromBFBC2.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="type100_mgz_in_FromBFBC2.wav" volume="0.6"/>
 	<sound key="cycle" fileref="type100_cycle_FromBFBC2.wav" volume="0.6"/>
-	<sound key="stab" fileref="grenade_throw1.wav" pitch_variety="0.05" volume="0.8"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_smg_type100_4004.xml"/>
 	<hud_icon filename="gkw_type100_4004.png"/>
@@ -15248,7 +15388,13 @@
 	<sound key="magazine_out" fileref="type100_mgz_out_FromBFBC2.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="type100_mgz_in_FromBFBC2.wav" volume="0.6"/>
 	<sound key="cycle" fileref="type100_cycle_FromBFBC2.wav" volume="0.6"/>
-	<sound key="stab" fileref="grenade_throw1.wav" pitch_variety="0.05" volume="0.8"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_smg_type100_4004.xml"/>
 	<hud_icon filename="gkw_type100_4004.png"/>
@@ -15311,7 +15457,13 @@
 	<sound key="magazine_out" fileref="type100_mgz_out_FromBFBC2.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="type100_mgz_in_FromBFBC2.wav" volume="0.6"/>
 	<sound key="cycle" fileref="type100_cycle_FromBFBC2.wav" volume="0.6"/>
-	<sound key="stab" fileref="grenade_throw1.wav" pitch_variety="0.05" volume="0.8"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_smg_type100.xml"/>
 	<hud_icon filename="gkw_type100mod3.png"/>
@@ -15367,7 +15519,13 @@
 	<sound key="magazine_out" fileref="type100_mgz_out_FromBFBC2.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="type100_mgz_in_FromBFBC2.wav" volume="0.6"/>
 	<sound key="cycle" fileref="type100_cycle_FromBFBC2.wav" volume="0.6"/>
-	<sound key="stab" fileref="grenade_throw1.wav" pitch_variety="0.05" volume="0.8"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_smg_type100.xml"/>
 	<hud_icon filename="gkw_type100mod3.png"/>
@@ -15430,7 +15588,13 @@
 	<sound key="magazine_out" fileref="type100_mgz_out_FromBFBC2.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="type100_mgz_in_FromBFBC2.wav" volume="0.6"/>
 	<sound key="cycle" fileref="type100_cycle_FromBFBC2.wav" volume="0.6"/>
-	<sound key="stab" fileref="grenade_throw1.wav" pitch_variety="0.05" volume="0.8"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_smg_type100.xml"/>
 	<hud_icon filename="gkw_type100_4004.png"/>
@@ -15486,7 +15650,13 @@
 	<sound key="magazine_out" fileref="type100_mgz_out_FromBFBC2.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="type100_mgz_in_FromBFBC2.wav" volume="0.6"/>
 	<sound key="cycle" fileref="type100_cycle_FromBFBC2.wav" volume="0.6"/>
-	<sound key="stab" fileref="grenade_throw1.wav" pitch_variety="0.05" volume="0.8"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_smg_type100.xml"/>
 	<hud_icon filename="gkw_type100_4004.png"/>

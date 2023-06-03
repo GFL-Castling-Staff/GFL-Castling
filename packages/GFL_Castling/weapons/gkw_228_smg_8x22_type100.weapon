@@ -44,7 +44,13 @@
     <sound key="magazine_out" fileref="type100_mgz_out_FromBFBC2.wav" volume="0.6" />
     <sound key="magazine_in" fileref="type100_mgz_in_FromBFBC2.wav" volume="0.6" />
     <sound key="cycle" fileref="type100_cycle_FromBFBC2.wav" volume="0.6" />
-    <sound key="stab" fileref="grenade_throw1.wav" pitch_variety="0.05" volume="0.8"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
     <model filename="gkw_smg_type100.xml" />
     <hud_icon filename="gkw_type100.png" />
@@ -116,7 +122,13 @@
     <sound key="magazine_out" fileref="type100_mgz_out_FromBFBC2.wav" volume="0.6" />
     <sound key="magazine_in" fileref="type100_mgz_in_FromBFBC2.wav" volume="0.6" />
     <sound key="cycle" fileref="type100_cycle_FromBFBC2.wav" volume="0.6" />
-    <sound key="stab" fileref="grenade_throw1.wav" pitch_variety="0.05" volume="0.8"/>
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
     <model filename="gkw_smg_type100.xml" />
     <hud_icon filename="gkw_type100.png" />
