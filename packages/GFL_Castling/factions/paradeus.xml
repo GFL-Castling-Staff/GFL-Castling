@@ -576,7 +576,7 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="parw_defender" spawn_score="10.0" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="parw_defender" spawn_score="0.75" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="pard_defender.ai" />
 		<model filename="pard_punish.xml" />
 		<character filename="paradeus.text_lines">
