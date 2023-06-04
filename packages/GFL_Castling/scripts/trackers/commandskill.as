@@ -255,6 +255,7 @@ class CommandSkill : Tracker {
                 case 67:{excuteNagantM1895skill(cId,senderId,m_modifer);break;}
                 case 68:{excuteMosinNagant(cId,senderId,m_modifer);break;}
                 case 69:{excuteKar98k(cId,senderId,m_modifer);break;}
+                case 70:{excuteGM6Lynx(cId,senderId,m_modifer);break;}
 
                 default:
                     break;
@@ -3202,6 +3203,126 @@ class CommandSkill : Tracker {
         } 
     }
 
+    void excuteGM6Lynx(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"GM6")) return;
+        const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
+        if (characterinfo is null) return;
+        const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
+        if (playerinfo is null) return;
+        if (playerinfo.hasAttribute("aim_target")) {
+            string target = playerinfo.getStringAttribute("aim_target");
+            Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
+            Vector3 s_pos = stringToVector3(target);
+            int factionid = characterinfo.getIntAttribute("faction_id");
+    
+            int m_fnum = m_metagame.getFactionCount();
+            array<const XmlElement@> affectedCharacter;
+            for(int i=0;i<m_fnum;i++) {
+                if(i!=factionid) {
+                    array<const XmlElement@> affectedCharacter2;
+                    affectedCharacter2 = getCharactersNearPosition(m_metagame,s_pos,i,10.0f);
+                    if (affectedCharacter2 !is null){
+                        for(uint x=0;x<affectedCharacter2.length();x++){
+                            affectedCharacter.insertLast(affectedCharacter2[x]);
+                        }
+                    }
+                }
+            }
+
+            if (affectedCharacter !is null && affectedCharacter.length > 0){
+                int closestIndex = -1;
+                int secondClosestIndex = -1;
+                int thirdClosestIndex = -1;
+                float closestDistance = -1.0f;
+                float secondClosestDistance = -1.0f;
+                float thirdClosestDistance = -1.0f;     
+                array<string> Voice={
+                "Gm6Lynx_SKILL1_JP.wav",
+                "Gm6Lynx_SKILL2_JP.wav",
+                "Gm6Lynx_SKILL3_JP.wav"
+                };                        
+                for (uint i = 0; i < affectedCharacter.length(); i++) {
+                    float distance = getPositionDistance(s_pos, stringToVector3(affectedCharacter[i].getStringAttribute("position")));
+                    if (distance < closestDistance || closestDistance < 0.0f) {
+                        thirdClosestDistance = secondClosestDistance;
+                        thirdClosestIndex = secondClosestIndex;
+                        
+                        secondClosestDistance = closestDistance;
+                        secondClosestIndex = closestIndex;
+
+                        closestDistance = distance;
+                        closestIndex = i;
+                    } else if (distance < secondClosestDistance || secondClosestDistance < 0.0f) {
+                        thirdClosestDistance = secondClosestDistance;
+                        thirdClosestIndex = secondClosestIndex;
+
+                        secondClosestDistance = distance;
+                        secondClosestIndex = i;
+                    } else if (distance < thirdClosestDistance || thirdClosestDistance < 0.0f) {
+                        thirdClosestDistance = distance;
+                        thirdClosestIndex = i;
+                    }
+                }
+                if (thirdClosestIndex == -1) {
+                    thirdClosestIndex = closestIndex;
+                }
+
+                if (secondClosestIndex == -1) {
+                    secondClosestIndex = closestIndex;
+                }
+                if (closestIndex >= 0 && secondClosestIndex >= 0 && thirdClosestIndex >= 0){
+                    if (closestIndex != secondClosestIndex && closestIndex != thirdClosestIndex && secondClosestIndex != thirdClosestIndex){
+                        int target_id_1 = affectedCharacter[closestIndex].getIntAttribute("id");
+                        int target_id_2 = affectedCharacter[secondClosestIndex].getIntAttribute("id");
+                        int target_id_3 = affectedCharacter[thirdClosestIndex].getIntAttribute("id");
+                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_blast_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipsnipe_blast_20e_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.3,characterId,factionid,"snipe_blast_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_3));                        
+                        addCooldown("GM6",30,characterId,modifer);
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.2);                            
+                    }
+                    else if (closestIndex == secondClosestIndex && closestIndex != thirdClosestIndex) {
+                        int target_id_1 = affectedCharacter[closestIndex].getIntAttribute("id");
+                        int target_id_2 = affectedCharacter[thirdClosestIndex].getIntAttribute("id");
+                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_blast_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipe_blast_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));                        
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipe_blast_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
+                        addCooldown("GM6",30,characterId,modifer);      
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.2);                            
+                    }
+                    else if (closestIndex == thirdClosestIndex && closestIndex != secondClosestIndex) {
+                        int target_id_1 = affectedCharacter[closestIndex].getIntAttribute("id");
+                        int target_id_2 = affectedCharacter[secondClosestIndex].getIntAttribute("id");
+                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_blast_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipe_blast_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));                        
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipe_blast_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
+                        addCooldown("GM6",30,characterId,modifer);        
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.2);                            
+                    }
+                    else if (closestIndex == secondClosestIndex && closestIndex == thirdClosestIndex) {
+                        int target_id_1 = affectedCharacter[closestIndex].getIntAttribute("id");
+                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_blast_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipe_blast_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));                        
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipe_blast_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
+                        addCooldown("GM6",30,characterId,modifer);     
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.2);                            
+                    }
+                }
+            }
+            else{
+                sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"snipe_skill_notfound");
+                addCooldown("GM6",3,characterId,modifer,"normal",false);
+            }  
+        } 
+    }
     void excuteG41Onlyskill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j=-1;
