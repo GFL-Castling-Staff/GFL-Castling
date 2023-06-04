@@ -47,7 +47,6 @@ class kill_event : Tracker {
 
 
         // 近战定位HG
-        {"gkw_m1911_mod3.weapon",2},
         {"gkw_m950amod3.weapon",3},
         {"gkw_m950amod3_702.weapon",3},
         {"gkw_m950amod3_4302.weapon",3},
@@ -408,9 +407,18 @@ class kill_event : Tracker {
                     updateHealByKillEvent(characterId,factionId,4,30,"vest",kill_to_heal_scale);
                 }
             }
+            if(c_weaponType=="gkw_m1911_mod3.weapon")){
+                if ((startsWith(c_armorType,"bp_")))
+                {
+                    updateHealByKillEvent(characterId,factionId,4,15,"weapon",kill_to_heal_scale*2);
+                }
+                else
+                {
+                    updateHealByKillEvent(characterId,factionId,4,15,"weapon",kill_to_heal_scale);
+                }
+            }            
+
             updateHealByKillEvent(characterId,factionId,int(healOnKillWeaponList[c_weaponType]),15,"weapon",kill_to_heal_scale);
-
-
 
             if(KillerWeaponKey=="gkw_ppkmod3.weapon" || KillerWeaponKey=="gkw_ppkmod3_3905.weapon"){
                 // 乌鸦是猪，望周知
