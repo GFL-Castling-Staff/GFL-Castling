@@ -185,10 +185,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
-		addStage(setupStage106());		  // map106 E30 Route by diling
-		// addStage(setupStage1_rust());          // map2_?
+		addStage(setupStage1_rust());     // map2_c by diling
 		// addStage(setupStageRace());          // DEJAHU
-		addStage(setupStage1());          // map2
 		addStage(setupStage10());         // map10
 		addStage(setupStageXmas()); 
 		addStage(setupStage7());          // map6c by diling
@@ -219,6 +217,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage108());		  // xiaoxieshen by diling
 		// addStage(setupStage11());         // map13
 		addStage(setupStage4());          // map7
+		addStage(setupStage1());          // map2
 	}
 
 	// --------------------------------------------
@@ -381,7 +380,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));					
 		}
 		// metadata
 		stage.m_primaryObjective = "capture";
@@ -655,7 +657,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
 		}                
 		stage.m_primaryObjective = "koth";
 		stage.m_kothTargetBase = "All Center Base";
@@ -712,7 +717,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
 		}		
 		stage.m_primaryObjective = "capture";
 		setDefaultAttackBreakTimes(stage);
@@ -775,7 +783,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
 		}		
 		stage.m_primaryObjective = "capture";
 		setDefaultAttackBreakTimes(stage);
@@ -888,7 +899,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
 		}		
 		stage.m_primaryObjective = "capture";
 		setDefaultAttackBreakTimes(stage);
@@ -933,7 +947,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
 		}
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));                                                  
@@ -1005,7 +1022,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
 		}
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));                                                  
@@ -1035,21 +1055,18 @@ class StageConfiguratorInvasion : StageConfigurator {
 		Stage@ stage = createStage();
 		stage.m_mapInfo.m_name = "Casake Bay";
 		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map2_c";
-		stage.m_mapInfo.m_id = "map2_?";
+		stage.m_mapInfo.m_id = "map2_c";
 		
-		stage.m_includeLayers.insertLast("layer1.invasion"); 
-
-		stage.addTracker(jupiter(m_metagame));
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
 		stage.addTracker(CommsCapacityHandler(m_metagame));
-		stage.m_maxSoldiers = 12 * 13;                                             // was 12*7 in 1.65, 1 base added
+		stage.m_maxSoldiers = 12 * 13; 
 
 		stage.m_soldierCapacityVariance = 0.3;
-		stage.m_playerAiCompensation = 2 + m_playerAiCompensation_offset;                                         // was 4 (1.82)
-        stage.m_playerAiReduction = 2;                                          // was 2 (test3)    
+		stage.m_playerAiCompensation = 2 + m_playerAiCompensation_offset;
+        stage.m_playerAiReduction = 2;
 
-		stage.m_minRandomCrates = 5; 
-		stage.m_maxRandomCrates = 8;
+		stage.m_minRandomCrates = 2; 
+		stage.m_maxRandomCrates = 4;
 
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));                                                  
@@ -1060,11 +1077,34 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 		{
 			Faction f(getFactionConfigs()[getRandomEnemyIndex()], createCommanderAiCommand(1));
-			f.m_overCapacity = 50;                                               // was 30 (test2)
-			f.m_capacityOffset = 20;                                                 // was 5 (1.81)
-			stage.m_factions.insertLast(f);                                         // was 0 in 1.65
+			f.m_overCapacity = 50;
+			f.m_capacityOffset = 20;
+			stage.m_factions.insertLast(f);
 		}
-		
+		{
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_assault.call", "sf_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_mecha.call", "sf_mecha_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_mecha_inf.call", "sf_mecha_inf_sub.call", array<string> = {""}, false,false,false,"infantry"));
+
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_assault.call", "kcco_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_zircon.call", "kcco_zircon_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_zircon1.call", "kcco_zircon1_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_dog.call", "kcco_dog_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_quartz.call", "kcco_quartz_sub.call", array<string> = {""}, false,false,false,"infantry"));		
+			
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+
+		}
+
+		{
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+		}
 		// metadata
 		stage.m_primaryObjective = "capture";
 		setDefaultAttackBreakTimes(stage);
@@ -1121,7 +1161,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
 		}	
 		{
 			XmlElement command("command");
@@ -1194,7 +1237,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
 		}	
 		{
 			XmlElement command("command");
@@ -1285,14 +1331,16 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
 		}
 
 		// metadata
 		stage.m_primaryObjective = "koth";
 		stage.m_kothTargetBase = "Power Plant";
 
-		
 		return stage;
 	} 
 
@@ -1442,7 +1490,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
 		}
 		// metadata
 		stage.m_primaryObjective = "capture";
@@ -1488,7 +1539,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
 		}
 
 		{
@@ -1584,7 +1638,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
 		}
 
 		// metadata
@@ -1647,7 +1704,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
 		}
 		// metadata
 		stage.m_primaryObjective = "capture";
@@ -1711,7 +1771,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
 		}
 		// metadata
 		stage.m_primaryObjective = "capture";
@@ -1840,7 +1903,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
 		}
 		// metadata
 		stage.m_primaryObjective = "capture";
@@ -1921,7 +1987,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
 		}
 		{
 			XmlElement command("command");
@@ -2061,7 +2130,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
 		}
 		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.6, 0.15));   
@@ -2156,7 +2228,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
 		}
 		// metadata
 		stage.m_primaryObjective = "capture";
@@ -2226,7 +2301,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
 		}
 		{
 			XmlElement command("command");
@@ -2307,7 +2385,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
 		}
 		// metadata
 		stage.m_primaryObjective = "koth";
@@ -2368,7 +2449,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
 		}
 		// metadata
 		stage.m_primaryObjective = "capture";
@@ -2445,7 +2529,10 @@ class StageConfiguratorInvasion : StageConfigurator {
 		{
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
 		}
 		// metadata
 		stage.m_primaryObjective = "capture";
