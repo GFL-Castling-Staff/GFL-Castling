@@ -20,7 +20,8 @@
     spawn_instance_key="paul_r.projectile" 
     slot="0" 
     stab_enabled="1"/>
-    
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
+
     <animation state_key="recoil" 		animation_key="repairing, small wrench" />
     <animation state_key="reload" 		animation_key="still, single hand carry" />
     <animation state_key="hold" 		animation_key="still, single hand carry" />
