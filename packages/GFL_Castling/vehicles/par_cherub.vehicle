@@ -4,6 +4,7 @@
 	name="Cherub" 
 	key="par_cherub.vehicle" 
 	respawn_time="100" 
+	owner="faction" 
 	time_to_live_unsteerable="30" 
 	map_view_atlas_index="39" 
 	minimum_fill_requirement="1.0" 
@@ -11,6 +12,7 @@
 	max_character_collision_speed="30"
 	character_leave_request_mode="friendly" 
 	allow_ai_to_use="1"
+	soldier_capacity_offset="2" 
 	ai_driver_turns_to_target="1"
 	ai_abandon_when_unsteerable="0"
 	ai_stop_to_fight="1" 
@@ -23,17 +25,17 @@
     <tire_set offset="0.8 -0.0 -1.8" radius="0.4" />
     <control 
 	max_speed="15.0" 
-	acceleration="10.0" 
+	acceleration="15.0" 
 	max_reverse_speed="15.0" 
 	min_health_to_steer="3" 
 	max_rotation="1.9" 
 	max_water_depth="3.0" 
     can_steer_in_water="0.6" 
-    max_limiter_speed="6.0" 
+    max_limiter_speed="10.0" 
 	gears="0"  
     tracked="1"/>
     <physics 
-	max_health="20.0" 
+	max_health="30.0" 
 	blast_damage_threshold="2.0" 
 	mass="50.0" 
 	broken_mass="30"
@@ -49,8 +51,8 @@
 	collision_model_extent="2.5 2.0 5.55" 
 	visual_offset="0 0.5 0.0" />
 
-    <turret offset="0 3.0 0" weapon_key="uhlan_main_cannon" weapon_offset="0.0 -0.19 3.5" weapon_recoil="0.0" physics_recoil="0.0" rotation_range="0.1" max_rotation_step="0.00065" />
-    <turret offset="0 3.0 0" weapon_key="uhlan_main_cannon_2" weapon_offset="0.0 -0.19 3.5" weapon_recoil="0.0" physics_recoil="0.0" rotation_range="0.1" max_rotation_step="0.00065" />
+    <turret offset="0 3.0 0" weapon_key="cherub_weapon_1" weapon_offset="0.0 -0.19 3.5" weapon_recoil="0.0" physics_recoil="0.0" rotation_range="0.15" max_rotation_step="0.00065" />
+    <turret offset="0 3.0 0" weapon_key="cherub_weapon_2" weapon_offset="0.0 -0.19 3.5" weapon_recoil="0.0" physics_recoil="0.0" rotation_range="0.15" max_rotation_step="0.00065" />
     <visual class="turret" turret_index="0" mesh_filename="cherub.mesh" texture_filename="cherub_main.jpg" max_tilt="0.06" />
 	<visual class="turret" key="broken" mesh_filename="cherub.mesh" texture_filename="tank_2_broken.png" />
 
@@ -90,11 +92,11 @@
 
     <event key="spot_rp_reward">
         <trigger class="spot" />
-        <result class="reward" rp="150.0" />
+        <result class="reward" rp="50.0" />
     </event>
     <event key="destroy_rp_reward">
         <trigger class="destroy" />
-        <result class="reward" rp="1000.0" />
+        <result class="reward" rp="300.0" />
     </event>
     <event>
         <trigger class="destroy" />
@@ -111,9 +113,5 @@
     <event>
         <trigger class="destroy" />
         <result class="spawn" instance_class="visual_item" instance_key="burning_piece_armor4.visual_item" min_amount="1" max_amount="2" offset="0 3.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.25" />
-    </event>
-    <event>
-        <trigger class="cleanup" />
-        <result class="spawn" instance_class="visual_item" instance_key="burning_piece_cleanup.visual_item" min_amount="20" max_amount="30" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.1" />
     </event>
 </vehicle>

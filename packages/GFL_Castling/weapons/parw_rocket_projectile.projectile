@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="rocket" slot="2" pulldown_in_air="13" radius="0.4">
+<projectile class="grenade" name="rocket" slot="2" pulldown_in_air="13" radius="0.4" key="parw_rocket_projectile">
     <tag name="rocket"/>
     <trigger class="impact" />
     <rotation class="motion" />
@@ -34,7 +34,7 @@
     <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
     <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="1" />
     <effect class="result" type="splat_map" surface_tag="" size="6.5" atlas_index="4" layer="0" />
-    <effect class="result" type="splat_map" surface_tag="" size="8.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
+    <effect class="result" type="splat_map" surface_tag="" size="8.0" atlas_index="0" layer="2" additive="0" />
 
     <effect class="result" key="other" ref="SmokeTop" post_processing="1" />
     <effect class="result" key="other" ref="Smoke" post_processing="1" />
