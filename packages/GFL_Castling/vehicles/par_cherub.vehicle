@@ -51,8 +51,8 @@
 	collision_model_extent="2.5 2.0 4.8" 
 	visual_offset="0 0.5 0.0" />
 
-    <turret offset="0 3.0 0" weapon_key="cherub_weapon_1" weapon_offset="0.0 -0.19 2.5" weapon_recoil="0.0" physics_recoil="0.0" rotation_range="0.15" max_rotation_step="0.00065" />
-    <turret offset="0 3.0 0" weapon_key="cherub_weapon_2" weapon_offset="0.0 -0.19 2.5" weapon_recoil="0.0" physics_recoil="0.0" rotation_range="0.15" max_rotation_step="0.00065" />
+    <turret offset="0 3.0 0" weapon_key="cherub_weapon_1" weapon_offset="0.0 -0.19 2.8" weapon_recoil="0.0" physics_recoil="0.0" rotation_range="0.2" max_rotation_step="0.00065" />
+    <turret offset="0 3.0 0" weapon_key="cherub_weapon_2" weapon_offset="0.0 -0.19 2.8" weapon_recoil="0.0" physics_recoil="0.0" rotation_range="0.2" max_rotation_step="0.00065" />
     <visual class="turret" turret_index="0" mesh_filename="cherub.mesh" texture_filename="cherub_main.jpg" max_tilt="0.06" />
 	<visual class="turret" key="broken" mesh_filename="cherub.mesh" texture_filename="tank_2_broken.png" />
 
