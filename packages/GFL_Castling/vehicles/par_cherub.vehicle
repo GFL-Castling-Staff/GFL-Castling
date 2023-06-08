@@ -46,9 +46,9 @@
     gravity="-90"
 	extent="2.5 2.0 5.55" 
 	offset="0.0 0 0.0" 
-	top_offset="0 3.0 0" 
+	top_offset="0 4.0 0" 
 	collision_model_pos="0 3.0 0" 
-	collision_model_extent="2.5 2.0 5.55" 
+	collision_model_extent="2.5 2.0 4.8" 
 	visual_offset="0 0.5 0.0" />
 
     <turret offset="0 3.0 0" weapon_key="cherub_weapon_1" weapon_offset="0.0 -0.19 2.5" weapon_recoil="0.0" physics_recoil="0.0" rotation_range="0.15" max_rotation_step="0.00065" />

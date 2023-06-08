@@ -802,6 +802,7 @@
 		<ai filename="kcco_human_smg.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="kcco_aks74u.weapon" enabled="1" />
+			<weapon key="kcco_sticky_bomb.weapon" enabled="1" />
 			<carry_item key="vest_40hp.carry_item" />
 			<projectile key="kcco_smartgrenade_1.projectile" enabled="1" />
 			<projectile key="kcco_ap_grenade.projectile" enabled="1" />
@@ -813,6 +814,7 @@
 			<call key="kcco_assault.call" />		
 		</resources>
 		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="0.75" />
 			<item_class_existence class="carry_item" slot="1" probability="1" />
 			<!-- note, always backpack items -->
 			<item_class_existence class="carry_item" slot="0" probability="0.001" />
