@@ -143,14 +143,16 @@
         slot="2" 
         barrel_offset="0" 
         projectiles_per_shot="1" 
+        use_basic_muzzle_smoke_effect="0"
         spread_range="0.02"/>
         <model />
         <hud_icon filename="uhlan_main_cannon.png" />
         <commonness value="0.0" />
-        <projectile file="bullet_paradeus.projectile" time_to_live="1.0">
+        <projectile file="laser_paradeus.projectile" time_to_live="1.0">
             <result class="blast" damage="0.2" radius="2.0" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
             <trail probability="1.0" key="laser_cherub" />        
         </projectile>
+        <effect class="muzzle" ref="sawsnone" />
         <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
         <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
         <target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
@@ -181,14 +183,16 @@
         slot="2" 
         barrel_offset="0" 
         projectiles_per_shot="1" 
+        use_basic_muzzle_smoke_effect="0"
         spread_range="0.02"/>
         <model />
         <hud_icon filename="uhlan_main_cannon.png" />
         <commonness value="0.0" />
-        <projectile file="bullet_paradeus.projectile" time_to_live="1.0">
+        <projectile file="laser_paradeus.projectile" time_to_live="1.0">
             <result class="hit" kill_probability="2.0" kill_decay_start_time="1.0" kill_decay_end_time="1.0" />
             <trail probability="1.0" key="laser_cherub" />        
         </projectile>
+        <effect class="muzzle" ref="sawsnone" />
         <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
         <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
         <target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />

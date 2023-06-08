@@ -66,7 +66,11 @@
         <result class="hit"  kill_probability="2.0" kill_decay_start_time="0.5" kill_decay_end_time="0.5" />
     </projectile>
 </weapon>
-<weapon key="kcco_2A42_30mm_hei">
+<weapon key="kcco_2A42_30mm_hei" 
+ai_burst_time="5" 
+ai_burst_time_variance="0" 
+ai_burst_wait_time="1.0" 
+ai_burst_wait_time_variance="0">
     <specification 
     slot="2" 
     retrigger_time="0.2"
@@ -109,7 +113,11 @@
     <projectile file="cannon_30mm_hei.projectile">
     </projectile>
 </weapon>
-<weapon key="kcco_2A42_30mm_apds">
+<weapon key="kcco_2A42_30mm_apds"
+ai_burst_time="5" 
+ai_burst_time_variance="0" 
+ai_burst_wait_time="1.0" 
+ai_burst_wait_time_variance="0">
     <specification 
     slot="2" 
     retrigger_time="0.2"

@@ -881,7 +881,7 @@ class BasicCommandHandler : Tracker {
 		} else  if(checkCommand(message, "spawn pickup")) {
 			spawnInstanceNearPlayer(senderId, "wastelander.vehicle", "vehicle", 1);
 		} else  if(checkCommand(message, "spawn sgfq")) {
-			spawnInstanceNearPlayer(senderId, "par_cherub.vehicle", "vehicle", 1);				
+			spawnInstanceNearPlayer(senderId, "par_cherub.vehicle", "vehicle", 0);				
 		} else  if(checkCommand(message, "spawn k25")) {
 			spawnInstanceNearPlayer(senderId, "neosu_kuergants.vehicle", "vehicle", 1);							
 		} else  if(checkCommand(message, "spawnk25")) {
