@@ -129,12 +129,19 @@ class ServerHelper : Tracker {
             int characterId= playerInfo.getIntAttribute("character_id");
             string strname= playerInfo.getStringAttribute("name");
             int j = findNodeleteDataIndex(strname,"kar98k");
-
             if(j>=0){
                 No_Delete_DataArray[j].add();
+                const XmlElement@ characterInfo = getCharacterInfo(m_metagame,characterId);
+                if (characterInfo is null) return;
+                string c_pos = characterInfo.getStringAttribute("position");
+                spawnStaticProjectile(m_metagame,"particle_effect_98k_medal.projectile",c_pos,characterId,characterInfo.getIntAttribute("faction_id"));
             }
             else{
                 No_Delete_DataArray.insertLast(no_delete_data(strname,1,"kar98k"));       
+                const XmlElement@ characterInfo = getCharacterInfo(m_metagame,characterId);
+                if (characterInfo is null) return;
+                string c_pos = characterInfo.getStringAttribute("position");
+                spawnStaticProjectile(m_metagame,"particle_effect_98k_medal.projectile",c_pos,characterId,characterInfo.getIntAttribute("faction_id"));                            
             }
         }
 

@@ -3,12 +3,6 @@ author: RST
 授权[异向易位]MOD制作组修改使用
 通用航弹特效 支援特效
 
-包含 
-missile_result_cannon_blast_fire
-missile_result_cannon_blast_AmbientLight
-missile_activated_cannon_flysmoke
-missile_result_expanding_fire
-
 particle_system missile_result_cannon_blast_fire
 {
 	quota 500
@@ -154,7 +148,24 @@ particle_system missile_activated_cannon_flysmoke
 		keep_velocity false
 	}
 }
-
+particle_system missile_activated_cannon_flysmoke_larger : missile_activated_cannon_flysmoke
+{
+	particle_width 4
+	particle_height 4
+	time_to_live_min 0.6
+	time_to_live_max 0.9
+}
+particle_system missile_activated_cannon_flysmoke_smaller : missile_activated_cannon_flysmoke
+{
+	particle_width 1
+	particle_height 1
+	time_to_live_min 0.3
+	time_to_live_max 0.6
+	affector Scaler
+	{
+		rate 0.5
+	}
+}
 
 particle_system missile_result_expanding_fire
 {
@@ -203,11 +214,6 @@ particle_system missile_result_expanding_fire
 	}
 }
 
-
-
-
-
-
 material alpha_blend_base{
 	receive_shadows off
 	technique{
@@ -239,18 +245,4 @@ material hollow_blast_smoke_01_pass : add_base
         depth_func always_pass
         texture_unit{
             texture hollow_blast_smoke_01.png 	
-}}}}
-material add_smoke_2 : add_base
-{   
-    technique{
-    pass{
-        texture_unit{
-            texture add_smoke_2.png 	
-}}}}
-material point_soft_edge_100 : add_base
-{   
-    technique{
-    pass{
-        texture_unit{
-            texture point_soft_edge_100.png 	
 }}}}

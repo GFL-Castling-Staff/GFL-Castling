@@ -1124,7 +1124,6 @@ particle_system general_weapon_result_blast_spray_2 : general_weapon_result_blas
 		duration 0.1
 	}
 }
-
 particle_system general_weapon_result_blast_fire
 {
 	quota 50
@@ -1244,7 +1243,6 @@ particle_system general_weapon_result_blast_fire_wave
 		keep_velocity false
 	}
 }
-
 particle_system general_activated_at_smoke_trail
 {
 	quota 500
@@ -1299,7 +1297,6 @@ particle_system general_activated_at_smoke_trail
 		force_application add
 	}
 }
-
 particle_system general_activated_at_smoke_trail_smaller
 {
 	quota 500
@@ -1447,6 +1444,42 @@ particle_system general_weapon_activated_bullet_centerlight
 		force_application add
 	}
 }
+
+particle_system alert_center_redlight
+{
+	quota 100
+	material point_soft_edge_100
+	particle_width 4
+	particle_height 4
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0.01
+	
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 40
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 0.12
+		duration 0
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.7 0 0 1
+		time1 1
+		colour1 0 0 0 0
+	}
+}
+
+
 --------------------------------------material-----------------------------------
 material alpha_blend_base{
 	receive_shadows off

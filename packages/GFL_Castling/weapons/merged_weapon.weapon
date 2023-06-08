@@ -21987,7 +21987,7 @@
 	<tag name="machine gun"/>
 	<tag name="elite"/>
 	<specification barrel_offset="0.6" retrigger_time="0.046" accuracy_factor="1.0" sustained_fire_grow_step="-0.08" sustained_fire_diminish_rate="-1.0" spread_range="0.5" magazine_size="100" suppressed="0" name="Browning M1919A4(MOD3)" class="0" projectile_speed="225" sight_range_modifier="1.5" stab_enabled="1" stance_accuracy_rate="0.85" carry_in_two_hands="1" burst_shots="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0" leave_crouch_accuracy_penalty="0.25"/>
-	<commonness value="0.0001" in_stock="1" can_respawn_with="1"/>
+	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="50.0" buy_price="300.0" sell_price="300.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<next_in_chain key="gkw_m1919a4mod3_skill.weapon" share_ammo="0"/>
@@ -22071,7 +22071,7 @@
 	<sound key="cycle_out" fileref="m1919a4_cycle_FromRS2V.wav" volume="0.8"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_m1919a4lmg.xml"/>
-	<hud_icon filename="gkw_m1919a4mod3.png"/>
+	<hud_icon filename="gkw_m1919a4mod3_skill.png"/>
 	<projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="m1919a4.projectile" min_amount="3" max_amount="3" offset="0 0.5 0" position_spread="0.5 0" direction_spread="0 0"/>
 	<trigger class="impact" time_to_live="0.2"/>
@@ -29774,6 +29774,7 @@
 <weapon key="gkr_paul.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="wrench"/>
 	<specification retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="1.0" magazine_size="50" carry_in_two_hands="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" sight_range_modifier="2.5" name="Paul Korchagin" projectile_speed="10.0" consume="0" class="5" spawn_instance_class="projectile" spawn_instance_key="paul_r.projectile" slot="0" stab_enabled="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<animation state_key="recoil" animation_key="repairing, small wrench"/>
 	<animation state_key="reload" animation_key="still, single hand carry"/>
 	<animation state_key="hold" animation_key="still, single hand carry"/>
@@ -50118,7 +50119,7 @@
 <weapon key="sfw_manticore.weapon" time_to_live_out_in_the_open="0" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
 	<tag name="mecha"/>
 	<tag name="antiarmor"/>
-	<specification retrigger_time="0.08" accuracy_factor="1.0" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.0" magazine_size="30" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" spread_range="0.2" suppressed="0" name="SF-Manticore" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="80" carry_in_two_hands="1" barrel_offset="0.85" projectiles_per_shot="4" stab_enabled="1"/>
+	<specification retrigger_time="0.08" accuracy_factor="1.0" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.0" magazine_size="30" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" spread_range="0.1" suppressed="0" name="SF-Manticore" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="80" carry_in_two_hands="1" barrel_offset="0.85" projectiles_per_shot="5" stab_enabled="1"/>
 	<animation state_key="recoil" animation_key="recoil 3, hydra and manticore"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil 3, hydra and manticore"/>
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil 3, hydra and manticore"/>
@@ -50150,7 +50151,7 @@
 	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<projectile file="qwd.projectile">
-	<result class="hit" kill_probability="1.95" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="0.1" kill_decay_end_time="1.0"/>
+	<result class="hit" kill_probability="1.95" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.1" kill_decay_end_time="1.0"/>
 	</projectile>
 	<effect class="muzzle" ref="muzzle_cannon_fire_smoke" lighting="0"/>
 	<stance state_key="running" accuracy="0.8"/>
@@ -52778,9 +52779,9 @@
 	<inventory encumbrance="0.0" price="0.0"/>
 </weapon>
 
-<weapon name="Tracer Dart (Accurate)" key="kcco_tracer_dart_accurate.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="kcco_tracer_dart_accurate.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="assault"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1.5" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="0.65" magazine_size="1" can_shoot_standing="1" carry_in_two_hands="0" suppressed="1" name="tracer" class="3" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="60.0" projectiles_per_shot="1" slot="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.5" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="0.65" magazine_size="1" can_shoot_standing="1" carry_in_two_hands="0" suppressed="1" name="Tracer Dart (Accurate)" class="3" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="60.0" projectiles_per_shot="1" slot="1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil, smg1, prone"/>
 	<animation state_key="reload" animation_key="reloading, pistol"/>
@@ -52803,7 +52804,6 @@
 	<hud_icon filename="hud_tracer.png"/>
 	<commonness value="10.0" can_respawn_with="0" in_stock="1"/>
 	<inventory encumbrance="0.0" price="80.0"/>
-	<projectiles_per_shot value="1"/>
 	<weak_hand_hold offset="0.1"/>
 	<capacity value="4" source="rank" source_value="0.0"/>
 	<projectile file="kcco_tracer_dart_accurate.projectile">
@@ -52821,9 +52821,9 @@
 	<stance state_key="over_wall" accuracy="1"/>
 </weapon>
 
-<weapon name="Tracer Dart (Ranged)" key="kcco_tracer_dart_ranged.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="kcco_tracer_dart_ranged.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="assault"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1.5" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="0.65" magazine_size="1" can_shoot_standing="1" carry_in_two_hands="0" suppressed="1" name="tracer" class="3" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="60.0" projectiles_per_shot="1" slot="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.5" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="0.65" magazine_size="1" can_shoot_standing="1" carry_in_two_hands="0" suppressed="1" name="Tracer Dart (Ranged)" class="3" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="60.0" projectiles_per_shot="1" slot="1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil, smg1, prone"/>
 	<animation state_key="reload" animation_key="reloading, pistol"/>
@@ -52846,7 +52846,6 @@
 	<hud_icon filename="hud_tracer.png"/>
 	<commonness value="10.0" can_respawn_with="0" in_stock="1"/>
 	<inventory encumbrance="0.0" price="80.0"/>
-	<projectiles_per_shot value="1"/>
 	<weak_hand_hold offset="0.1"/>
 	<capacity value="4" source="rank" source_value="0.0"/>
 	<projectile file="kcco_tracer_dart_ranged.projectile">
@@ -53121,7 +53120,7 @@
 	<tag name="bazooka"/>
 	<tag name="antiarmor"/>
 	<tag name="elite"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" suppressed="0" name="PF-98M 120mm Rocket(C)" class="3" reload_one_at_a_time="1" sight_range_modifier="1.5" projectile_speed="75.0" slot="1" projectiles_per_shot="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="PF-98M 120mm Rocket(C)" class="3" reload_one_at_a_time="1" sight_range_modifier="1.5" projectile_speed="75.0" stance_accuracy_rate="1.0" slot="1" projectiles_per_shot="1"/>
 	<animation key="recoil" animation_key="recoil, law"/>
 	<animation key="cycle" animation_key="Brifle1"/>
 	<animation key="reload" animation_key="reloading, pf98"/>
@@ -53136,7 +53135,9 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="kccow_pf98.xml"/>
 	<ballistics near_far_distance="1000.0" speed_estimation_near="75.0" speed_estimation_far="75.0" max_speed="75.0" randomness="0.0"/>
-	<projectile file="120mm_pf98.projectile"/>
+	<projectile file="120mm_pf98.projectile">
+	<result class="blast" radius="7.0" damage="80.0" push="1.0" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	</projectile>
 	<weak_hand_hold offset="0.3"/>
 	<capacity value="4" source="rank" source_value="0.0"/>
 	<addon_model filename="pf98_backpack.xml"/>
@@ -53145,6 +53146,14 @@
 	<inventory encumbrance="10.0" price="0.0"/>
 	<effect class="muzzle" ref="muzzle_cannon_fire_smoke" lighting="0"/>
 	<effect class="muzzle" ref="muzzle_cannon_fire_light" lighting="0"/>
+	<stance state_key="running" accuracy="0.3"/>
+	<stance state_key="walking" accuracy="0.3"/>
+	<stance state_key="crouch_moving" accuracy="1.0"/>
+	<stance state_key="standing" accuracy="0.5"/>
+	<stance state_key="crouching" accuracy="1.0"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="prone_moving" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="-0.3"/>
 </weapon>
 
@@ -53191,6 +53200,47 @@
 	<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+</weapon>
+
+<weapon key="kcco_sticky_bomb.weapon" force_as_shoots_blast_projectiles="1" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<tag name="bazooka"/>
+	<tag name="antiarmor"/>
+	<specification slot="1" retrigger_time="0.1" last_burst_retrigger_time="0.1" spread_range="0.05" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="0.65" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="0" suppressed="1" name="Sticky AT Grenade" class="3" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100.0" barrel_offset="1.5" projectiles_per_shot="1" stab_enabled="0" stab_range="0" use_basic_muzzle_smoke_effect="0"/>
+	<animation state_key="recoil" animation_key="melee, ninjato whip"/>
+	<animation state_key="cycle" animation_key="still, single hand carry"/>
+	<animation state_key="reload" animation_key="still, single hand carry"/>
+	<animation state_key="hold" animation_key="still, single hand carry"/>
+	<animation state_key="hold_on_wall" animation_key="still, single hand carry"/>
+	<animation state_key="hold_casual" animation_key="still, single hand carry"/>
+	<animation state_key="still_against_wall" animation_key="still, single hand carry"/>
+	<animation state_key="crouching" animation_key="crouch, still, single hand carry"/>
+	<animation state_key="running" animation_key="running, single hand carry"/>
+	<animation state_key="walking" animation_key="walking, single hand carry"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, single hand carry"/>
+	<animation state_key="crouch_moving" animation_key="crouching forwards, single hand carry"/>
+	<animation state_key="crouch_moving_backwards" animation_key="crouching backwards, single hand carry"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
+	<sound key="fire" fileref="grenade_throw1.wav" pitch_variety="0.05" volume="1"/>
+	<sound key="magazine_out" fileref=""/>
+	<sound key="magazine_in" fileref=""/>
+	<sound key="cycle" fileref=""/>
+	<model filename="mills_bomb_grenade.xml"/>
+	<hud_icon filename="testing.png"/>
+	<commonness value="1.0" can_respawn_with="0" in_stock="1"/>
+	<inventory encumbrance="0.0" price="0.0"/>
+	<weak_hand_hold offset="0.1"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<projectile file="kcco_sticky_bomb.projectile">
+	</projectile>
+	<ballistics curve_height="15" near_far_distance="0" speed_estimation_near="0" speed_estimation_far="58" max_speed="28" randomness="0" tweak_factor="1.2"/>
+	<stance state_key="running" accuracy="1"/>
+	<stance state_key="walking" accuracy="1"/>
+	<stance state_key="standing" accuracy="1"/>
+	<stance state_key="crouching" accuracy="1"/>
+	<stance state_key="crouch_moving" accuracy="1"/>
+	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="prone_moving" accuracy="1"/>
+	<stance state_key="over_wall" accuracy="1"/>
 </weapon>
 
 <weapon key="parw_streletplus.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -55940,7 +55990,7 @@
 	</projectile>
 </weapon>
 
-<weapon key="kcco_2A42_30mm_hei">
+<weapon key="kcco_2A42_30mm_hei" ai_burst_time="5" ai_burst_time_variance="0" ai_burst_wait_time="1.0" ai_burst_wait_time_variance="0">
 	<specification slot="2" retrigger_time="0.2" accuracy_factor="0.95" spread_range="0.15" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.6667" cooldown_start="0.6567" cooldown_end="0.3334" sight_range_modifier="1.75" ai_sight_range_modifier="1" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="2A42 30mm HEI" projectile_speed="120.0" class="0" barrel_offset="1.2" projectiles_per_shot="1"/>
 	<sound key="fire" fileref="2a42_fire_FromWARTHUNDER.wav" pitch_variety="0.05" volume="1.4"/>
 	<sound key="magazine_out" fileref="mg_clip_out.wav"/>
@@ -55960,7 +56010,7 @@
 	</projectile>
 </weapon>
 
-<weapon key="kcco_2A42_30mm_apds">
+<weapon key="kcco_2A42_30mm_apds" ai_burst_time="5" ai_burst_time_variance="0" ai_burst_wait_time="1.0" ai_burst_wait_time_variance="0">
 	<specification slot="2" retrigger_time="0.2" accuracy_factor="0.95" spread_range="0.15" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1" cooldown_start="0.79" cooldown_end="0.6001" sight_range_modifier="1.75" ai_sight_range_modifier="1" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="2A42 30mm APDS" projectile_speed="120.0" class="0" barrel_offset="1.2" projectiles_per_shot="1"/>
 	<sound key="fire" fileref="2a42_fire_FromWARTHUNDER.wav" pitch_variety="0.05" volume="1.4"/>
 	<sound key="magazine_out" fileref="mg_clip_out.wav"/>
@@ -56160,14 +56210,15 @@
 </weapon>
 
 <weapon key="cherub_weapon_1">
-	<specification retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.333" cooldown_start="0.6567" cooldown_end="0.3334" sight_range_modifier="1.25" ai_sight_range_modifier="1.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Cherub Laser" class="0" projectile_speed="200" slot="2" barrel_offset="0" projectiles_per_shot="1" spread_range="0.02"/>
+	<specification retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.333" cooldown_start="0.6567" cooldown_end="0.3334" sight_range_modifier="1.25" ai_sight_range_modifier="1.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Cherub Laser" class="0" projectile_speed="200" slot="2" barrel_offset="0" projectiles_per_shot="1" use_basic_muzzle_smoke_effect="0" spread_range="0.02"/>
 	<model/>
 	<hud_icon filename="uhlan_main_cannon.png"/>
 	<commonness value="0.0"/>
-	<projectile file="bullet_paradeus.projectile" time_to_live="1.0">
+	<projectile file="laser_paradeus.projectile" time_to_live="1.0">
 	<result class="blast" damage="0.2" radius="2.0" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="laser_cherub"/>
 	</projectile>
+	<effect class="muzzle" ref="sawsnone"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -56179,14 +56230,15 @@
 </weapon>
 
 <weapon key="cherub_weapon_2">
-	<specification retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="2.0" cooldown_start="0.7900" cooldown_end="0.6001" sight_range_modifier="1.25" ai_sight_range_modifier="1.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Cherub Laser" class="0" projectile_speed="200" slot="2" barrel_offset="0" projectiles_per_shot="1" spread_range="0.02"/>
+	<specification retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="2.0" cooldown_start="0.7900" cooldown_end="0.6001" sight_range_modifier="1.25" ai_sight_range_modifier="1.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Cherub Laser" class="0" projectile_speed="200" slot="2" barrel_offset="0" projectiles_per_shot="1" use_basic_muzzle_smoke_effect="0" spread_range="0.02"/>
 	<model/>
 	<hud_icon filename="uhlan_main_cannon.png"/>
 	<commonness value="0.0"/>
-	<projectile file="bullet_paradeus.projectile" time_to_live="1.0">
+	<projectile file="laser_paradeus.projectile" time_to_live="1.0">
 	<result class="hit" kill_probability="2.0" kill_decay_start_time="1.0" kill_decay_end_time="1.0"/>
 	<trail probability="1.0" key="laser_cherub"/>
 	</projectile>
+	<effect class="muzzle" ref="sawsnone"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -56700,7 +56752,7 @@
 	<effect class="muzzle" ref="BiggerMuzzle"/>
 	<effect class="muzzle" ref="CannonSmokeBig"/>
 	<effect class="muzzle" ref="CannonSmokeBigSphere"/>
-	<sound class="operation" key="fire" fileref="ataka_fire01_fromWT.wav" volume="1.0"/>
+	<sound class="operation" key="fire" fileref="ataka_fire01_fromWT.wav" volume="0.9"/>
 </weapon>
 
 <weapon key="kuergants_missile_2.weapon">
@@ -56721,7 +56773,7 @@
 	<effect class="muzzle" ref="BiggerMuzzle"/>
 	<effect class="muzzle" ref="CannonSmokeBig"/>
 	<effect class="muzzle" ref="CannonSmokeBigSphere"/>
-	<sound class="operation" key="fire" fileref="ataka_fire01_fromWT.wav" volume="1.0"/>
+	<sound class="operation" key="fire" fileref="ataka_fire01_fromWT.wav" volume="0.9"/>
 </weapon>
 
 <weapon key="vehicle_hornet.weapon">

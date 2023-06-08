@@ -3089,6 +3089,11 @@ class CommandSkill : Tracker {
                     secondClosestIndex = closestIndex;
                 }
                 if (closestIndex >= 0 && secondClosestIndex >= 0){
+                    array<string> Voice={
+                    "98KMod_SKILL1_JP.wav",
+                    "98KMod_SKILL2_JP.wav",
+                    "98KMod_SKILL3_JP.wav"
+                    };
                     if(closestIndex != secondClosestIndex)
                     {
                         int target_id_1 = affectedCharacter[closestIndex].getIntAttribute("id");
@@ -3102,6 +3107,7 @@ class CommandSkill : Tracker {
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
                                 addCooldown("kar98k",25,characterId,modifer);
+                                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.5);
                                 break;
                             }
                             case 2:
@@ -3111,6 +3117,7 @@ class CommandSkill : Tracker {
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
                                 addCooldown("kar98k",25,characterId,modifer);
+                                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.5);
                                 break;
                             }
                             case 3:
@@ -3120,6 +3127,7 @@ class CommandSkill : Tracker {
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.0,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
                                 addCooldown("kar98k",20,characterId,modifer);
+                                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.5);
                                 break;
                             }
                             case 4:
@@ -3129,6 +3137,7 @@ class CommandSkill : Tracker {
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.8,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
                                 addCooldown("kar98k",20,characterId,modifer);
+                                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.5);
                                 break;
                             }                                                                                    
                             default:
@@ -3138,6 +3147,7 @@ class CommandSkill : Tracker {
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
                                 addCooldown("kar98k",25,characterId,modifer);
+                                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.5);
                                 break;                                
                             };
                         }
@@ -3154,6 +3164,7 @@ class CommandSkill : Tracker {
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                                 addCooldown("kar98k",25,characterId,modifer);
+                                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.5);
                                 break;
                             }
                             case 2:
@@ -3163,6 +3174,7 @@ class CommandSkill : Tracker {
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                                 addCooldown("kar98k",25,characterId,modifer);
+                                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.5);
                                 break;
                             }
                             case 3:
@@ -3172,6 +3184,7 @@ class CommandSkill : Tracker {
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.0,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                                 addCooldown("kar98k",20,characterId,modifer);
+                                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.5);
                                 break;
                             }
                             case 4:
@@ -3181,6 +3194,7 @@ class CommandSkill : Tracker {
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.8,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                                 addCooldown("kar98k",20,characterId,modifer);
+                                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.5);
                                 break;
                             }                                                                                    
                             default:
@@ -3190,6 +3204,7 @@ class CommandSkill : Tracker {
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                                 tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                                 addCooldown("kar98k",25,characterId,modifer);
+                                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.5);
                                 break;                                
                             };
                         }                        

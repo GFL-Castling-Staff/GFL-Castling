@@ -208,9 +208,17 @@ class GFL_playerlist_system : Tracker {
 
                         if(j>=0){
                             No_Delete_DataArray[j].add();
+                            const XmlElement@ characterInfo = getCharacterInfo(m_metagame, CT_PlayerList[i].getPlayerCid());
+                            if (characterInfo is null) return;
+                            string c_pos = characterInfo.getStringAttribute("position");
+                            spawnStaticProjectile(m_metagame,"particle_effect_98k_medal.projectile",c_pos,CT_PlayerList[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));
                         }
                         else{
                             No_Delete_DataArray.insertLast(no_delete_data(strname,1,"kar98k"));       
+                            const XmlElement@ characterInfo = getCharacterInfo(m_metagame, CT_PlayerList[i].getPlayerCid());
+                            if (characterInfo is null) return;
+                            string c_pos = characterInfo.getStringAttribute("position");
+                            spawnStaticProjectile(m_metagame,"particle_effect_98k_medal.projectile",c_pos,CT_PlayerList[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));                            
                         }                        
                     }
                 }

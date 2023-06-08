@@ -1,0 +1,99 @@
+particle_system 98k_medal_gain01		//上升缩小
+{
+	quota 50
+	material 98k_medal
+	particle_width 6
+	particle_height 6
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 10
+		position 0 1 0
+		velocity 2
+		time_to_live 0.2
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate -20
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 1
+		time1 0.7
+		colour1 1 1 1 1
+		time2 1
+		colour2 1 1 1 1
+	}
+	affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+}
+particle_system 98k_medal_gain02		//固定
+{
+	quota 50
+	material 98k_medal
+	particle_width 2
+	particle_height 2
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 10
+		position 0 1.4 0
+		velocity 0.00001
+		time_to_live 10
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate 0
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0 0 0 0
+		time1 0.0175
+		colour1 0 0 0 0
+		time2 0.04
+		colour2 1 1 1 1.0
+		time3 0.9
+		colour3 1 1 1 1.0
+		time4 1
+		colour4 0 0 0 0
+	}
+	affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+}
+
+material 98k_medal : alpha_blend_base
+{   
+    technique{
+    pass{
+		depth_func always_pass
+        texture_unit{
+            texture 98k_medal.png 	
+}}}}
