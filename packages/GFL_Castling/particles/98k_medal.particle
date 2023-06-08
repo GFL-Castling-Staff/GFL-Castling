@@ -18,14 +18,14 @@ particle_system 98k_medal_gain01		//上升缩小
 		colour 1 1 1 1
 		direction 0 1 0
 		emission_rate 10
-		position 0 1 0
+		position 0 3 0
 		velocity 2
 		time_to_live 0.2
 		duration 0.1
 	}
 	affector Scaler
 	{
-		rate 80
+		rate 8
 	}
 	affector ColourInterpolator
 	{
@@ -61,7 +61,7 @@ particle_system 98k_medal_gain02		//固定
 		colour 0 0 0 0
 		direction 0 1 0
 		emission_rate 10
-		position 0 1.4 0
+		position 0 3.4 0
 		velocity 0.00001
 		time_to_live 2
 		duration 0.1
@@ -97,3 +97,15 @@ material 98k_medal : add_base
         texture_unit{
             texture 98k_medal.png 	
 }}}}
+
+material add_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+		}
+	}
+}
