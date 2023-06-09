@@ -1,0 +1,428 @@
+author: RST
+2023.2.7
+用于helldiver mod
+重型机枪通用特效 支援特效
+
+		<effect class="result" key="terrain" ref="MG_hvy_hit_smoke" lighting="0"/>
+		<effect class="result" key="terrain" ref="MG_hvy_hit_leave" lighting="0" post_processing="1"/>
+		<effect class="result" key="terrain" ref="MG_heavy_up_dust_1" lighting="0"/>
+		<effect class="result" key="terrain" ref="MG_heavy_up_dust_2" lighting="0"/>
+		<effect class="result" key="terrain" ref="MG_heavy_up_dust_3" lighting="0"/>
+		<effect class="result" key="terrain" ref="MG_heavy_up_dust_4" lighting="0"/>
+		<effect class="result" key="terrain" ref="MG_hvy_spread_dust" lighting="0"/>
+		<effect class="result" key="terrain" ref="MG_hvy_hit_light" lighting="0" post_processing="1"/>
+
+particle_system MG_hvy_hit_smoke
+{
+	quota 500
+	material wand_smoke
+	particle_width 2
+	particle_height 2
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Box
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 20
+		position 0 0.5 0
+		velocity 0.001
+		time_to_live_min 1.5
+		time_to_live_max 2
+		duration 0.3
+        depth 0.1
+        height 4
+        width 4
+	}
+	affector Scaler
+	{
+		rate 1
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	30
+		rotation_speed_range_end	-30
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 0.5
+		time1 0.5
+		colour1 0.75 0.75 0.75 0.3
+		time2 1
+		colour2 1 1 1 0
+	}
+	affector LinearForce{
+		force_vector 0 1 0
+		force_application add
+	}
+}
+particle_system MG_hvy_hit_leave
+{
+	quota 500
+	material Tex_0147_1_pass
+	particle_width 0.7
+	particle_height 0.7
+	renderer billboard
+	billboard_type perpendicular_self
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Box
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 30
+		position 0 0 0
+		velocity 0.0001
+		time_to_live_min 3.5
+		time_to_live_max 4
+		duration 0.1
+        depth 0.01
+        height 2
+        width 2
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 1
+		time1 0.7
+		colour1 1 1 1 1
+		time2 1
+		colour2 0 0 0 0
+	}
+}
+
+particle_system MG_hvy_hit_cross_blast
+{
+	quota 800
+    emit_emitter_quota 800
+	material blast_smoke_cross_alpha
+	particle_width 1
+	particle_height 1
+	renderer billboard	
+	billboard_rotation_type vertex
+	billboard_type oriented_self
+    accurate_facing on
+	emitter Ring{
+		angle 0
+		colour 1 1 0 1
+		direction 1 0 0
+		emission_rate 100
+		position 0 0 0
+		velocity 0.1
+		time_to_live 0.1
+		duration 0.1
+        depth 4
+        width 6
+        height 6
+        emit_emitter tag1
+	}
+    emitter Point{
+        name tag1
+		angle 180
+		colour 0.7 0.7 0.7 0.5
+		direction 0 0 1
+		emission_rate 200
+		position 0 0 0
+		velocity 1
+		time_to_live 0.6
+		duration 0.1
+    }
+    affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 0.7
+		time1 0.5
+		colour1 0.75 0.75 0.75 0.5
+		time2 1
+		colour2 1 1 1 0
+	}
+}
+
+
+
+particle_system MG_heavy_up_dust_1
+{
+	quota 150
+	material Tex_Spark17A
+	particle_width 4
+	particle_height 4
+	renderer billboard
+	billboard_type oriented_self
+	billboard_origin bottom_center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 5
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 10
+		position 0 1 0
+		velocity 1
+		time_to_live 0.5
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate 1
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 1
+		time1 0.9
+		colour1 0.7 0.7 0.7 0
+		time2 1
+		colour2 0 0 0 0
+	}
+}
+particle_system MG_heavy_up_dust_2 : MG_heavy_up_dust_1
+{
+    material Tex_Spark18A
+    emitter Point
+	{
+        rate 20
+		position 0 0 0
+		velocity 0.001
+		time_to_live 0.5
+	}
+}
+particle_system MG_heavy_up_dust_3 : MG_heavy_up_dust_1
+{
+    material Tex_Spark25
+    emitter Point
+	{
+        rate 30
+		position 0 0 0
+		velocity 15
+		time_to_live 0.22
+	}
+}
+particle_system MG_heavy_up_dust_4 : MG_heavy_up_dust_1
+{
+    material Tex_Spark26
+    emitter Point
+	{
+		position 0 0 0
+		velocity 4
+		time_to_live 0.45
+	}
+}
+
+
+particle_system MG_hvy_spread_dust
+{
+	quota 50
+	material Dust2
+	particle_width 1
+	particle_height 1
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 20
+		position 0 0 0
+		velocity 10
+		time_to_live 0.3
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate 20
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 1
+		time1 0.7
+		colour1 1 1 1 1
+		time2 1
+		colour2 0 0 0 0
+	}
+}
+
+particle_system MG_hvy_hit_light
+{
+	quota 200
+	material point_soft_edge_100_pass
+	particle_width 10
+	particle_height 10
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 10
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 0.12
+		duration 0.1
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.5 0.15 0 1
+		time1 0.7
+		colour1 0.5 0.15 0 1
+		time2 1
+		colour2 0 0 0 0
+	}
+}
+
+
+
+
+
+
+material alpha_blend_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend alpha_blend
+		}
+	}
+}
+
+material add_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+		}
+	}
+}
+material wand_smoke : alpha_blend_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture wand_smoke.png 	
+}}}}
+material blast_smoke_cross_alpha : alpha_blend_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture blast_smoke_cross_alpha.png 	
+}}}}
+material Tex_0147_1_pass : alpha_blend_base
+{   
+    technique{
+    pass{
+        depth_func always_pass
+        texture_unit{
+            texture Tex_0147_1.png 	
+}}}}
+material Tex_Spark18A : alpha_blend_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture Tex_Spark18A.png 	
+}}}}
+material Tex_Spark17A : alpha_blend_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture Tex_Spark17A.png 	
+}}}}
+material Tex_Spark25 : alpha_blend_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture Tex_Spark25.png 	
+}}}}
+material Tex_Spark26 : alpha_blend_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture Tex_Spark26.png 	
+}}}}
+material Tex_Spark06A : alpha_blend_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture Tex_Spark06A.png 	
+}}}}
+material Dust2 : alpha_blend_base
+{   
+    technique{
+    pass{
+        depth_func always_pass
+        texture_unit{
+            texture Tex_Glow16A.png 	
+}}}}
+material Dust : alpha_blend_base
+{   
+    technique{
+    pass{
+        depth_func always_pass
+        texture_unit{
+            texture Particle_Swarm_02.png 	
+        }
+        texture_unit{
+            texture point_soft_edge_alpha.png 
+			alpha_op_ex modulate texture current
+			scroll_anim 0 0
+			tex_address_mode wrap
+	}
+}}}

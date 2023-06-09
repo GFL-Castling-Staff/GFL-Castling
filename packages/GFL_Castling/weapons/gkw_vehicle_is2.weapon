@@ -69,31 +69,32 @@
         <weak_hand_hold offset="0.4" />
         <projectile file="bullet_ai.projectile">
             <result class="blast" damage="4.1" radius="4.25" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+            
             <effect class="result" key="terrain" ref="hitGround" use_surface_color="1" />
-            <effect class="result" key="terrain" ref="BulletImpactDust1" />
-            <effect class="result" key="terrain" ref="BulletImpactDust2" />
-            <effect class="result" key="terrain" ref="BulletImpactDust3" />
-            <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
-            <effect class="result" key="terrain" ref="LowDust"/>
-            <effect class="result" key="terrain" ref="Shine" lighting="0" />
-            <effect class="result" key="terrain" ref="Godray" lighting="0" />
-            <effect class="result" key="vehicle" ref="Burst" use_surface_color="1" />
+
+
+            <effect class="result" key="terrain" ref="MG_hvy_hit_smoke" lighting="0"/>
+            <effect class="result" key="terrain" ref="MG_hvy_hit_leave" lighting="0" post_processing="1"/>
+            <effect class="result" key="terrain" ref="MG_heavy_up_dust_1" lighting="0"/>
+            <effect class="result" key="terrain" ref="MG_heavy_up_dust_2" lighting="0"/>
+            <effect class="result" key="terrain" ref="MG_heavy_up_dust_3" lighting="0"/>
+            <effect class="result" key="terrain" ref="MG_heavy_up_dust_4" lighting="0"/>
+            <effect class="result" key="terrain" ref="MG_hvy_spread_dust" lighting="0"/>
+            <effect class="result" key="terrain" ref="MG_hvy_hit_light" lighting="0" post_processing="1"/>
+
+            <effect class="result" key="static_object" copy="terrain" />
+            <effect class="result" key="vehicle" copy="terrain" />     
+            <effect class="result" key="character" copy="terrain" />
+            <effect class="result" key="other" copy="terrain" />
+
             <effect class="result" key="vehicle" ref="hitMetal" />
             <effect class="result" key="vehicle" ref="hitMetal_1" />
-            <effect class="result" key="vehicle" ref="Shine" lighting="0" />
-            <effect class="result" key="vehicle" ref="Godray" lighting="0" />
-            <effect class="result" key="other" ref="BulletImpact" />
-            <effect class="result" key="vehicle" ref="BulletImpact" />
-            <effect class="result" key="terrain" ref="BulletImpact" />
-            <effect class="result" key="character" ref="BulletImpact" />
-            <effect class="result" key="shield" ref="BulletImpact" />
-            <effect class="result" key="character" ref="common_hit_effect_1" lighting="0"/>
-            <effect class="result" key="character" ref="common_hit_effect_2" lighting="0" />
-            <effect class="result" key="terrain" ref="Bullet_Burnout"/>
-            <effect class="result" key="static_object" copy="terrain" />
             <effect class="result" key="shield" ref="hitMetal" />
             <effect class="result" key="shield" ref="hitMetal_1" />
-            <trail probability="1.0" key="BulletMgTrail"/>
+            <effect class="result" key="terrain" ref="Bullet_Burnout"/>
+            <effect class="activated" ref="general_weapon_activated_bullet_light" lighting="0"/>
+            <effect class="activated" ref="general_weapon_activated_bullet_centerlight" lighting="0"/>   
+            <trail probability="1.0" key="bullet_hmg"/>
         </projectile>
     </weapon>
     <weapon key="vehicle_is2_dt.weapon" ai_burst_time="0.8" ai_burst_time_variance="0.2" ai_burst_wait_time="0.6" ai_burst_wait_time_variance="0.2">
