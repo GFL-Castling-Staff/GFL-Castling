@@ -550,6 +550,12 @@ particle_system real_up_smoke_1
 		rotation_range_end	360
 	}
 }
+particle_system real_up_smoke_2 :real_up_smoke_1
+{
+	particle_width 8
+	particle_height 8	
+}
+
 particle_system real_up_smoke_beam
 {
 	quota 1000
