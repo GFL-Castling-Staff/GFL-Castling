@@ -73,8 +73,6 @@
         "hand_grenade.projectile",
         "hand_88grenade.projectile",
         "hand_atgrenade.projectile",
-        "hand_golyat.throwable",
-        "hand_golyat_b.throwable",
         "c4.projectile"
     };
 

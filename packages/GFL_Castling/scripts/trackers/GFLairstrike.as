@@ -85,6 +85,8 @@ dictionary airstrikeIndex = {
         // 地雷妖精
         {"mine_strafe",18},        
 
+        {"30mm_strafe_missle",19},
+
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
 };

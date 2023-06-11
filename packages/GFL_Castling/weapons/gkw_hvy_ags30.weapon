@@ -86,7 +86,7 @@
 	spread_range="0.2"/>
 	<next_in_chain key="gkw_aps_pdw.weapon" share_ammo="0"/>
 	<inventory encumbrance="100.0" buy_price="450.0" sell_price="400.0" />
-    <commonness value="0.2" in_stock="1" can_respawn_with="1" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
     <capacity value="0" source="rank" source_value="0.0" />
 	<capacity value="1" source="rank" source_value="10.0"/>
 	<animation key="reload" animation_key="reloading, agl 4.0"/>

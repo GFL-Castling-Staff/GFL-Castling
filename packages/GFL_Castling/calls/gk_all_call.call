@@ -278,5 +278,45 @@
         <capacity value="0" source="rank" source_value="0.0" />
         <capacity value="100" source="rank" source_value="1.0" />
         <inventory encumbrance="0.0" price="500.0" />
-    </call>    
+    </call>
+
+    <call name="" key="gk_vehicle_pierre.call"
+        initiation_comment1=""
+        acknowledge_comment=""
+        launch_comment=""
+        notify_metagame="1">
+
+        <round launch_time="1.0" spawn_time="2.0">
+        </round>
+
+        <hud_icon filename="testing.png" />
+        <capacity value="100" source="rank" source_value="0.0" />
+        <inventory encumbrance="0.0" price="0.0" />
+    </call>
+    <call name="" key="gk_vehicle_chiara.call"
+        initiation_comment1=""
+        acknowledge_comment=""
+        launch_comment=""
+        notify_metagame="1">
+
+        <round launch_time="1.0" spawn_time="2.0">
+        </round>
+
+        <hud_icon filename="testing.png" />
+        <capacity value="100" source="rank" source_value="0.0" />
+        <inventory encumbrance="0.0" price="0.0" />
+    </call>
+        <call name="" key="gk_vehicle_martina.call"
+        initiation_comment1=""
+        acknowledge_comment=""
+        launch_comment=""
+        notify_metagame="1">
+
+        <round launch_time="1.0" spawn_time="2.0">
+        </round>
+
+        <hud_icon filename="testing.png" />
+        <capacity value="100" source="rank" source_value="0.0" />
+        <inventory encumbrance="0.0" price="0.0" />
+    </call>
 </calls>

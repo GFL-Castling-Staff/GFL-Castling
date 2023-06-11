@@ -4,19 +4,20 @@
 	<specification 
     retrigger_time="3.0"
     accuracy_factor="1.0"
-    sustained_fire_grow_step="2.0"
-    sustained_fire_diminish_rate="0.4"
+    sustained_fire_grow_step="5.0"
+    sustained_fire_diminish_rate="1.0"
     magazine_size="1"
     can_shoot_standing="0"
     can_shoot_crouching="1"
     can_shoot_prone="1"
     suppressed="0"
-    name="Javelin"
+    name="FGM-148 Javelin"
     class="3"
     consume="1"
     reload_one_at_a_time="1"
-    sight_range_modifier="3.0"
-    ai_sight_range_modifier="1.05"
+    sight_range_modifier="2.0"
+    ai_sight_range_modifier="1.0"
+    stance_accuracy_rate="0.5"
     projectile_speed="400.0"
     slot="1"
     projectiles_per_shot="1"
@@ -27,6 +28,7 @@
 	<animation key="reload" stance_key="prone" animation_key="reloading, sniper1, prone"/>
 	<animation key="hold" animation_key="still, with law"/>
 	<animation key="hold_on_wall" animation_key="still, with law"/>
+    <animation state_key="changing_weapon_in" 	animation_key="change weapon in,jav" />
 	<sound key="cycle" fileref="sniper_cycle.wav"/>
 	<sound key="magazine_out" fileref="sniper_clip_out.wav"/>
 	<sound key="magazine_in" fileref="sniper_clip_in.wav"/>
@@ -40,12 +42,13 @@
 	<capacity value="4" source="rank" source_value="0.0"/>
 	<hud_icon filename="hud_javelin.png"/>
 	<inventory encumbrance="30.0" buy_price="1000.0" sell_price="100.0"/>
-	<stance state_key="running" accuracy="1.0"/>
-	<stance state_key="walking" accuracy="1.0"/>
-	<stance state_key="crouch_moving" accuracy="1.0"/>
-	<stance state_key="standing" accuracy="1.0"/>
+	<stance state_key="running" accuracy="0.1"/>
+	<stance state_key="walking" accuracy="0.2"/>
+	<stance state_key="crouch_moving" accuracy="0.1"/>
+	<stance state_key="standing" accuracy="0.5"/>
 	<stance state_key="crouching" accuracy="1.0"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="prone_moving" accuracy="1.0"/>
-	<stance state_key="over_wall" accuracy="1.0"/>
+	<stance state_key="prone" accuracy="0.1"/>
+	<stance state_key="prone_moving" accuracy="0.1"/>
+	<stance state_key="over_wall" accuracy="0.5"/>
+    <modifier class="speed" value="-0.3" />
 </weapon>

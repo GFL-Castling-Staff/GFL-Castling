@@ -69,12 +69,11 @@
         <weak_hand_hold offset="0.4" />
         <projectile file="bullet_ai.projectile">
             <result class="blast" damage="4.1" radius="4.25" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-            
             <effect class="result" key="terrain" ref="hitGround" use_surface_color="1" />
-
-
-            <effect class="result" key="terrain" ref="MG_hvy_hit_smoke" lighting="0"/>
-            <effect class="result" key="terrain" ref="MG_hvy_hit_leave" lighting="0" post_processing="1"/>
+            <effect class="result" key="terrain" ref="BulletImpactDust1" />
+            <effect class="result" key="terrain" ref="BulletImpactDust2" />
+            <effect class="result" key="terrain" ref="BulletImpactDust3" />
+            <effect class="result" key="terrain" ref="MG_hvy_hit_leave_smaller" lighting="0" post_processing="1"/>
             <effect class="result" key="terrain" ref="MG_heavy_up_dust_1" lighting="0"/>
             <effect class="result" key="terrain" ref="MG_heavy_up_dust_2" lighting="0"/>
             <effect class="result" key="terrain" ref="MG_heavy_up_dust_3" lighting="0"/>
@@ -91,7 +90,6 @@
             <effect class="result" key="vehicle" ref="hitMetal_1" />
             <effect class="result" key="shield" ref="hitMetal" />
             <effect class="result" key="shield" ref="hitMetal_1" />
-            <effect class="result" key="terrain" ref="Bullet_Burnout"/>
             <effect class="activated" ref="general_weapon_activated_bullet_light" lighting="0"/>
             <effect class="activated" ref="general_weapon_activated_bullet_centerlight" lighting="0"/>   
             <trail probability="1.0" key="bullet_hmg"/>

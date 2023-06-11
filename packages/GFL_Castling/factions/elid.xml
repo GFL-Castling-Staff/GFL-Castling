@@ -414,6 +414,9 @@
 		<character filename="infected.character" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_infected.weapon" enabled="1" />
+			<carry_item key="vest_15hp_elite.carry_item" />
+			<carry_item key="vest_15hp_elite_3" />
+			<carry_item key="vest_15hp_elite_5" />
 			<carry_item key="pard_infected.carry_item" />
 		</resources>
 		<attribute_config class="xp">
@@ -434,7 +437,10 @@
 		<character filename="infected.character" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="elid_armed.weapon" enabled="1" />
-			<carry_item key="sf_ar.carry_item" />
+			<carry_item key="vest_15hp_elite.carry_item" />
+			<carry_item key="vest_15hp_elite_3" />
+			<carry_item key="vest_15hp_elite_5" />
+			<carry_item key="pard_infected.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.0" max="0.033" />

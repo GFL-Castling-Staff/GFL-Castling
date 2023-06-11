@@ -33,19 +33,30 @@ dictionary callLaunchIndex = {
     // 立盾妖精
     {"gk_repair_fairy.call",7},
 
+    {"gk_vehicle_pierre.call",8},
+    {"gk_vehicle_chiara.call",9},
+    {"gk_vehicle_martina.call",10},
+
+
     // 空空投
     {"",0}
+};
+
+array<string> vehicle_drop_call = {
+    "gk_vehicle_pierre.call",
+    "gk_vehicle_martina.call",
+    "gk_vehicle_chiara.call"
 };
 
 //Originally created by NetherCrow
 // 11:25:26: SCRIPT:  received: TagName=call_event call_key=kcco_Hephaestus.call character_id=298 faction_id=0 id=0 phase=queue player_id=0 target_position=944.656 17.7529 563.095 
 // 11:26:10: SCRIPT:  received: TagName=call_event call_key=kcco_Hephaestus.call character_id=298 faction_id=0 id=0 phase=launch player_id=0 target_position=944.656 17.7529 563.095 
 // 11:26:54: SCRIPT:  received: TagName=call_event call_key=kcco_Hephaestus.call character_id=298 faction_id=0 id=0 phase=end player_id=0 target_position=944.656 17.7529 563.095
+array<Call_Cooldown@> m_cooldown;
 
 class call_event : Tracker {
 	protected Metagame@ m_metagame;
     protected int m_DummyCallID=0;
-    protected array<Call_Cooldown@> m_cooldown;
 
 	call_event(Metagame@ metagame) {
 		@m_metagame = @metagame;
@@ -255,13 +266,85 @@ class call_event : Tracker {
                             CreateDirectProjectile(m_metagame,call_pos.add(v_offset),call_pos,"repair_fairy.projectile",characterId,factionId,50);
                         }
                         break;                        
-                    }                
+                    }
+                    case 8:{
+                        if(findCooldown(playerName,"vehicle")){
+                            returnCooldown("vehicle", 2000, characterId, playerName, playerId, "vehicle_drop_cooldown");
+                            break;
+                        }
+                        else {
+                            Vector3 call_pos = stringToVector3(position);
+                            Vector3 v_offset = Vector3(0,50,0);
+                            call_pos = call_pos.add(v_offset);
+                            m_cooldown.insertLast(Call_Cooldown(playerName,playerId,600.0,"vehicle"));
+                            int flagId = m_DummyCallID + 15000;
+                            ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,call_pos,"foobar");
+                            FairyRequest.setIconTypeKey("call_marker_drop");
+                            FairyRequest.setIndex(8);
+                            FairyRequest.setSize(0.5);
+                            FairyRequest.setDummyId(flagId);
+                            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                            tasker.add(TimerMarker(m_metagame,3,FairyRequest));
+                            m_DummyCallID++;
+                            float ori4 = rand(0.0,3.14);
+                            spawnVehicle(m_metagame,1,factionId,call_pos,Orientation(0,1,0,ori4),"pierre.vehicle");
+                        }
+                        break;
+                    }
+                    case 9:{
+                        if(findCooldown(playerName,"vehicle")){
+                            returnCooldown("vehicle", 1000, characterId, playerName, playerId, "vehicle_drop_cooldown");
+                            break;
+                        }
+                        else {
+                            Vector3 call_pos = stringToVector3(position);
+                            Vector3 v_offset = Vector3(0,50,0);
+                            call_pos = call_pos.add(v_offset);
+                            m_cooldown.insertLast(Call_Cooldown(playerName,playerId,300.0,"vehicle"));
+                            int flagId = m_DummyCallID + 15000;
+                            ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,call_pos,"foobar");
+                            FairyRequest.setIconTypeKey("call_marker_drop");
+                            FairyRequest.setIndex(8);
+                            FairyRequest.setSize(0.5);
+                            FairyRequest.setDummyId(flagId);
+                            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                            tasker.add(TimerMarker(m_metagame,3,FairyRequest));                            
+                            m_DummyCallID++;
+                            float ori4 = rand(0.0,3.14);
+                            spawnVehicle(m_metagame,1,factionId,call_pos,Orientation(0,1,0,ori4),"chiara.vehicle");
+                        }
+                        break;
+                    }
+                    case 10:{
+                        if(findCooldown(playerName,"vehicle")){
+                            returnCooldown("vehicle", 400, characterId, playerName, playerId, "vehicle_drop_cooldown");
+                            break;
+                        }
+                        else {
+                            Vector3 call_pos = stringToVector3(position);
+                            Vector3 v_offset = Vector3(0,50,0);
+                            call_pos = call_pos.add(v_offset);
+                            m_cooldown.insertLast(Call_Cooldown(playerName,playerId,120.0,"vehicle"));
+                            int flagId = m_DummyCallID + 15000;
+                            ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,call_pos,"foobar");
+                            FairyRequest.setIconTypeKey("call_marker_drop");
+                            FairyRequest.setIndex(8);
+                            FairyRequest.setSize(0.5);
+                            FairyRequest.setDummyId(flagId);
+                            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                            tasker.add(TimerMarker(m_metagame,3,FairyRequest));
+                            m_DummyCallID++;
+                            float ori4 = rand(0.0,3.14);
+                            spawnVehicle(m_metagame,1,factionId,call_pos,Orientation(0,1,0,ori4),"martina.vehicle");
+                        }
+                        break;
+                    }                    
                     default:
                         break;
                 }
             }
 
-			else if(phase == "queue"){
+			else if(phase == "queue" && vehicle_drop_call.find(callKey) < 0){
                 addCustomStatToCharacter(m_metagame,"radio_call",event.getIntAttribute("character_id"));
             }
         }
@@ -317,24 +400,6 @@ class call_event : Tracker {
         }
     }
 
-    bool findCooldown(string pName,string type){
-        for(uint i=0;i<m_cooldown.size();i++){
-            if(m_cooldown[i].m_playerName==pName && m_cooldown[i].m_type==type){
-                return true;
-            }
-        }
-        return false;
-    }
-
-    float getCooldown(string pName,string type){
-        for(uint i=0;i<m_cooldown.size();i++){
-            if(m_cooldown[i].m_playerName==pName && m_cooldown[i].m_type==type){
-                return m_cooldown[i].m_time;
-            }
-        }
-        return 0;
-    }
-
 }
 
 class Call_Cooldown{
@@ -348,4 +413,22 @@ class Call_Cooldown{
         m_playerid=pId;
         m_type=type;
     }
+}
+
+bool findCooldown(string pName,string type){
+    for(uint i=0;i<m_cooldown.size();i++){
+        if(m_cooldown[i].m_playerName==pName && m_cooldown[i].m_type==type){
+            return true;
+        }
+    }
+    return false;
+}
+
+float getCooldown(string pName,string type){
+    for(uint i=0;i<m_cooldown.size();i++){
+        if(m_cooldown[i].m_playerName==pName && m_cooldown[i].m_type==type){
+            return m_cooldown[i].m_time;
+        }
+    }
+    return 0;
 }
