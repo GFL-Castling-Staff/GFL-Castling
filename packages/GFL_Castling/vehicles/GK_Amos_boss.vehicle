@@ -67,7 +67,7 @@
         <trigger class="create" />
         <result class="map_enable" />
     </event>
-    <item_container class="armory" offset="0.0 0.78 -8.25" soldier_group="default"/>
+    <item_container class="armory" offset="0.0 0.78 -8.25" soldier_group="amos"/>
     <spawn_point offset="0 21 -12.5"/>
     <effect event_key="health" value="90" ref="BrokenSparkle" post_processing="0" offset="-2.0 4.44 +5.0" />
     <effect event_key="health" value="67.5" ref="SmallSmokeVehicle" offset="-2.0 4.44 +5.0" />

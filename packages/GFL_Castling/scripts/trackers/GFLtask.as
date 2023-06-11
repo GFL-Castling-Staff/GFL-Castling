@@ -54,6 +54,61 @@ class VestRecoverTask : Task {
 	}
 }
 
+class TimerMarker : Task {
+    protected Metagame@ m_metagame;
+	protected float m_time;	
+	protected ManualCallTask@ m_info;
+	protected float m_timeLeft;
+	protected bool m_end=false;
+
+	TimerMarker(Metagame@ metagame, float time,ManualCallTask@ call_info)
+	{
+		@m_metagame = metagame;
+		@m_info = call_info;
+		m_time = time;
+	}
+
+    void start() {
+		m_timeLeft=m_time;
+        XmlElement command("command");
+		command.setStringAttribute("class", "set_marker");
+		command.setIntAttribute("id", m_info.m_callId);
+		command.setIntAttribute("faction_id", m_info.m_factions);
+		command.setIntAttribute("atlas_index", m_info.m_atlasIndex);
+		command.setFloatAttribute("size", m_info.m_size);
+		command.setFloatAttribute("range", m_info.m_range);
+		command.setIntAttribute("enabled", 1);
+		command.setStringAttribute("position", m_info.m_pos.toString());
+		command.setStringAttribute("text", "");
+		command.setStringAttribute("type_key", m_info.m_typeKey);
+		command.setBoolAttribute("show_in_map_view", true);
+		command.setBoolAttribute("show_in_game_view", true);
+		command.setBoolAttribute("show_at_screen_edge", false);
+        m_metagame.getComms().send(command);		
+	}
+
+    void update(float time) {
+		m_timeLeft -= time;
+		if (m_timeLeft < 0)
+		{
+			XmlElement command("command");
+			command.setStringAttribute("class", "set_marker");
+			command.setIntAttribute("id", m_info.m_callId);
+			command.setIntAttribute("faction_id", m_info.m_factions);
+			command.setIntAttribute("enabled", 0);
+			m_metagame.getComms().send(command);
+			m_end = true;
+		}
+	}
+
+    bool hasEnded() const {
+		if (m_end) {
+			return true;
+		}
+		return false;
+	}	
+}
+
 class AOEVestRecoverTask : Task {
     protected Metagame@ m_metagame;
 	protected float m_time;
