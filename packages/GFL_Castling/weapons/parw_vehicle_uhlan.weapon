@@ -202,5 +202,6 @@
         <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 
         <sound class="operation" key="fire" fileref="cherub_fire.wav" volume="0.75"/>
+        <shield offset="-0.0 -1.0 -2.0" extent="1 1 1" />
     </weapon>    
 </weapons>
