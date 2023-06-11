@@ -61,10 +61,10 @@
         <!--Weapon specifications-->
         <specification 
         retrigger_time="-1.0" 
-        accuracy_factor="0.98" 
+        accuracy_factor="1.0" 
         sustained_fire_grow_step="0.7" 
         sustained_fire_diminish_rate="1.0" 
-        spread_range="0.25"
+        spread_range="0.2"
         magazine_size="10" 
         suppressed="0" 
         name="Mondragon M1908-[Conviction of Certain Victory]" 
@@ -107,14 +107,22 @@
         </projectile>
         <effect class="muzzle" ref="ejection_76251" />
         <!--Accuracy, Movement speed-->
-        <stance state_key="running" accuracy="0.7" />
-        <stance state_key="walking" accuracy="0.7" />
-        <stance state_key="crouch_moving" accuracy="0.7" />
-        <stance state_key="prone_moving" accuracy="0.7" />
-        <stance state_key="standing" accuracy="0.7"/>
-        <stance state_key="crouching" accuracy="0.85" />
-        <stance state_key="prone" accuracy="0.7" />
-        <stance state_key="over_wall" accuracy="0.7" />
+        <stance state_key="running" accuracy="0.85" />
+        <stance state_key="walking" accuracy="0.85" />
+        <stance state_key="crouch_moving" accuracy="0.85" />
+        <stance state_key="prone_moving" accuracy="0.85" />
+        <stance state_key="standing" accuracy="0.85"/>
+        <stance state_key="crouching" accuracy="0.95" />
+        <stance state_key="prone" accuracy="1.0" />
+        <stance state_key="over_wall" accuracy="1.0" />
         <modifier class="speed" value="0.05" />
+        <animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
+        <sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+        <sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+        <sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+        <sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+        <sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+        <sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0"/>
+        <sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0"/>        
     </weapon>
 </weapons>
