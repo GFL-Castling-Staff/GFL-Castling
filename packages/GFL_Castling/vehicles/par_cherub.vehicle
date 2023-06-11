@@ -33,10 +33,12 @@
     can_steer_in_water="0.6" 
     max_limiter_speed="10.0" 
 	gears="0"  
-    tracked="1"/>
+    tracked="1"    
+    simulated_speed_factor="0.1" />
+
     <physics 
 	max_health="30.0" 
-	blast_damage_threshold="2.0" 
+	blast_damage_threshold="1.0" 
 	mass="50.0" 
 	broken_mass="30"
     collision_response_factor="0.1"
@@ -47,17 +49,18 @@
 	extent="2.5 2.0 5.55" 
 	offset="0.0 0 0.0" 
 	top_offset="0 4.0 0" 
-	collision_model_pos="0 1.0 0" 
+	collision_model_pos="0 3.0 0" 
 	collision_model_extent="2.5 2.0 4.8" 
-	visual_offset="0 0.5 0.0" />
+	visual_offset="0 0.5 0.0"     
+    drag_offset="-0.1" friction_offset="-0.1"/>
 
     <turret offset="0 3.0 0" weapon_key="cherub_weapon_1" weapon_offset="0.0 -0.19 2.8" weapon_recoil="0.0" physics_recoil="0.0" rotation_range="0.5" max_rotation_step="0.0009" />
     <turret offset="0 3.0 0" weapon_key="cherub_weapon_2" weapon_offset="0.0 -0.19 2.8" weapon_recoil="0.0" physics_recoil="0.0" rotation_range="0.5" max_rotation_step="0.0009" />
     <visual class="turret" turret_index="0" mesh_filename="cherub.mesh" texture_filename="cherub_main.jpg" max_tilt="0.06" />
 	<visual class="turret" key="broken" mesh_filename="cherub.mesh" texture_filename="tank_2_broken.png" />
 
-    <character_slot type="driver" position="1.1 0.5 0.0" seat_position="0 3.5 -0.5" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
-    <character_slot type="gunner" position="-1.1 0.5 0.0" seat_position="0 3.5 0.5" rotation="0" exit_rotation="-1.57" hiding="1" animation_id="36">
+    <character_slot type="driver" position="1.1 0.5 0.0" seat_position="0 3.0 -0.5" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
+    <character_slot type="gunner" position="-1.1 0.5 0.0" seat_position="0 3.0 0.5" rotation="0" exit_rotation="-1.57" hiding="1" animation_id="36">
         <turret index="0" />
         <turret index="1" />
     </character_slot>
