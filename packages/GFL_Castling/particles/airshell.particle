@@ -7,8 +7,8 @@ particle_system missile_result_cannon_blast_fire
 {
 	quota 500
 	material add_smoke_2
-	particle_width 8
-	particle_height 8
+	particle_width 5
+	particle_height 5
 	renderer billboard
 	billboard_type point
 	billboard_origin center
@@ -194,7 +194,7 @@ particle_system missile_result_expanding_fire
 	}
 	affector Scaler
 	{
-		rate 200
+		rate 150
 	}
 		affector Rotator
 	{
