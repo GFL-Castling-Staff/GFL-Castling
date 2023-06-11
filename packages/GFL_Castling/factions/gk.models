@@ -2356,5 +2356,11 @@
     </model>
     <model filename="gkd_sg_tps.xml">
         <requirement class="weapon" key="gkw_tps.weapon" slot="0" />
-    </model>            
+    </model>
+    <model filename="gkd_ar_ots12.xml">
+        <requirement class="weapon" key="gkw_ots12.weapon" slot="0" />
+    </model>           
+    <model filename="gkd_ar_ots12_3605.xml">
+        <requirement class="weapon" key="gkw_ots12_3605.weapon" slot="0" />
+    </model>
 </models> 

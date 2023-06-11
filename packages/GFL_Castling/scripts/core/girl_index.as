@@ -106,7 +106,7 @@ dictionary tdoll_index = {
     {"102","gkw_ump40.weapon"},
     {"103","gkw_ump45.weapon"},
     {"104","gkw_g36c.weapon"},
-    {"105",""},
+    {"105","gkw_ots12.weapon"},
     {"106","gkw_fal.weapon"},
     {"107","gkw_f2000.weapon"},
     {"108",""},
