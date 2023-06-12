@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon key="gkw_mp7_6806.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_mp7_2405.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
     <tag name="smg" />
     <specification 
         accuracy_factor="0.98" 
@@ -9,7 +9,7 @@
         slot="0"
 		magazine_size="40" 
         carry_in_two_hands="0"
-		name="HK MP7-[Fall of the Stars]" 
+		name="HK MP7-[Lollipop Ammo]" 
 		projectile_speed="190" 
         stance_accuracy_rate="4.0"
         spread_range="0.1"
@@ -44,8 +44,8 @@
     <sound key="magazine_in" fileref="mp7_mgz_in_FromCOD16.wav" volume="0.5" />
     <sound key="cycle" fileref="mp7_cycle_FromCOD16.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="gkw_smg_mp7.xml"/>
-    <hud_icon filename="gkw_mp7_6806.png"/>
+    <model filename="gkw_smg_mp7_2405.xml"/>
+    <hud_icon filename="gkw_mp7_2405.png"/>
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0" can_be_detected_by_driver="0">
         <result class="hit"  kill_probability="2.75" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.1" kill_decay_end_time="0.35" />

@@ -663,6 +663,9 @@
     <model filename="gkd_rf_tac50.xml">
         <requirement class="weapon" key="gkw_tac50_only_he.weapon" slot="0" />
     </model>
+    <model filename="gkd_rf_tac50_2602.xml">
+        <requirement class="weapon" key="gkw_tac50_2602.weapon" slot="0" />
+    </model>    
     <model filename="gkd_ar_qbz191.xml">
         <requirement class="weapon" key="gkw_qbz191.weapon" slot="0" />
     </model>
@@ -2366,4 +2369,7 @@
     <model filename="gkd_hg_m327.xml">
         <requirement class="weapon" key="gkw_m327.weapon" slot="0" />
     </model>    
+    <model filename="gkd_smg_mp7_2405.xml">
+        <requirement class="weapon" key="gkw_mp7_2405.weapon" slot="0" />
+    </model>        
 </models> 
