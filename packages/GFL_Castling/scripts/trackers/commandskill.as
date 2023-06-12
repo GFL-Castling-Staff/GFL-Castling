@@ -557,7 +557,7 @@ class CommandSkill : Tracker {
                         };
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     }
-                    if(weaponname=="gkw_mp40.weapon") {
+                    if(weaponname=="gkw_mp40.weapon" || weaponname=="gkw_mp40_902.weapon") {
                         array<string> Voice={
                             "MP40_SKILL1_JP.wav",
                             "MP40_SKILL2_JP.wav",
@@ -603,7 +603,7 @@ class CommandSkill : Tracker {
                 }
             }
         }
-        if(weaponname=="gkw_kp31mod3.weapon" || weaponname=="gkw_kp31mod3_310.weapon"){
+        if(weaponname=="gkw_kp31mod3.weapon" || weaponname=="gkw_kp31mod3_310.weapon" || weaponname=="gkw_kp31mod3_3101.weapon"){
             addCooldown("FIRENADE",12,characterId,modifer);
         }
         else{
