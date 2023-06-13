@@ -27,9 +27,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.5919922"
-     inkscape:cx="-1801.544"
-     inkscape:cy="408.78917"
+     inkscape:zoom="3.3488136"
+     inkscape:cx="2555.8305"
+     inkscape:cy="942.72193"
      inkscape:document-units="px"
      inkscape:current-layer="layer10"
      showgrid="true"
@@ -8906,6 +8906,18 @@ penetrability = 0.4;</desc>
          x="2672.3684"
          y="1407.4264"
          style="font-size:8px;line-height:1.25;font-family:sans-serif">barells</tspan></text>
+    <rect
+       style="display:inline;fill:#855e00;fill-opacity:1;stroke:none;enable-background:new"
+       id="mesh_template9-14"
+       width="4.961926"
+       height="4.9513102"
+       x="2610.9431"
+       y="860.51514"
+       inkscape:label="#mesh_template"
+       transform="rotate(0.56397204)">
+      <desc
+         id="desc7569-7-1-1-0-37-49-0-3">name = hedgehog; mesh_name = hedgehog.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 7 0 64 64; collision_model_type = 1; collision_model_size = 1.2 1.2 1.2; penetrability = 0.4; see_through = 1;static_object_type_key=hedgehog.static_object;</desc>
+    </rect>
   </g>
   <g
      sodipodi:insensitive="true"
@@ -60836,7 +60848,7 @@ tag = apc;</desc>
        inkscape:groupmode="layer"
        id="layer40"
        inkscape:label="spawnpoints"
-       style="display:none">
+       style="display:inline">
       <rect
          inkscape:transform-center-y="110.4922"
          inkscape:transform-center-x="212.47229"
