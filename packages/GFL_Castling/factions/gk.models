@@ -2374,5 +2374,26 @@
     </model>    
     <model filename="gkd_smg_mp7_2405.xml">
         <requirement class="weapon" key="gkw_mp7_2405.weapon" slot="0" />
-    </model>        
+    </model> 
+    <model filename="gkd_mg_bren.xml">
+        <requirement class="weapon" key="gkw_bren.weapon" slot="0" />
+    </model>      
+    <model filename="gkd_mg_brenmod3.xml">
+        <requirement class="weapon" key="gkw_brenmod3.weapon" slot="0" />
+    </model>   
+    <model filename="gkd_mg_brenmod3.xml">
+        <requirement class="weapon" key="gkw_brenmod3_skill.weapon" slot="0" />
+    </model>   
+    <model filename="gkd_ar_a91.xml">
+        <requirement class="weapon" key="gkw_a91.weapon" slot="0" />
+    </model> 
+    <model filename="gkd_ar_a91.xml">
+        <requirement class="weapon" key="gkw_a91_skill.weapon" slot="0" />
+    </model>   
+    <model filename="gkd_ar_a91_4403.xml">
+        <requirement class="weapon" key="gkw_a91_4403.weapon" slot="0" />
+    </model> 
+    <model filename="gkd_ar_a91_4403_d.xml">
+        <requirement class="weapon" key="gkw_a91_4403_skill.weapon" slot="0" />
+    </model>  
 </models> 

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+<weapon key="gkw_a91_4403.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <specification 
+	accuracy_factor="1.0" 
+	barrel_offset="0.5" 
+	class="0"
+    slot="0"
+	magazine_size="30" 
+	name="A91-[Inflammable Oolong Tea]" 
+	projectile_speed="195" 
+	retrigger_time="0.075" 
+    carry_in_two_hands="1"
+	suppressed="0" 
+    stance_accuracy_rate="2.8"
+	sustained_fire_diminish_rate="1.8" 
+	sustained_fire_grow_step="0.35"
+    spread_range="0.35"
+	stab_enabled="1"
+	stab_range="3" />
+    <next_in_chain key="gkw_a91_4403_skill.weapon" share_ammo="0" />
+    <commonness value="0.2" in_stock="0" can_respawn_with="1" />
+	<inventory encumbrance="25.0" buy_price="100.0" sell_price="91.0"/>
+	<capacity value="1" source="rank" source_value="0.0" />
+    <animation key="recoil" animation_key="recoil1" />
+    <animation key="recoil" animation_key="recoil2" />
+    <animation key="recoil" animation_key="recoil3" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+    <animation state_key="hold_on_wall" animation_key="still" />
+    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+    <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
+    <animation state_key="stabbing" animation_key="melee, quick knife" />
+    <sound key="fire" fileref="famas_fire_FromCOD17.wav" pitch_variety="0" volume="0.9" />
+    <sound key="magazine_out" fileref="famas_mgz_out_FromCOD6R.wav" volume="0.9" />
+    <sound key="magazine_in" fileref="famas_mgz_in_FromCOD6R.wav" volume="0.9" />
+    <sound key="cycle" fileref="famas_cycle_FromCOD6R.wav" volume="0.9" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="gkw_ar_a91.xml" />
+    <hud_icon filename="gkw_a91_4403.png" />
+    <weak_hand_hold offset="0.2" />
+    <projectile file="bullet.projectile">
+        <result class="hit"  kill_probability="4.6" kill_decay_start_time="1.25" kill_decay_end_time="1.8" />
+    </projectile>
+    <effect class="muzzle" ref="ejection_556" />
+    <stance state_key="running" accuracy="0.3" />
+    <stance state_key="walking" accuracy="0.55" />
+    <stance state_key="crouch_moving" accuracy="0.75" />
+    <stance state_key="prone_moving" accuracy="0.75" />
+    <stance state_key="standing" accuracy="0.85" />
+    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" />
+</weapon>
+<weapon key="gkw_a91_4403_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <specification 
+	accuracy_factor="1.0" 
+	barrel_offset="0.5" 
+	class="0"
+    slot="0"
+	magazine_size="5" 
+	name="A91-[Inflammable Oolong Tea]-[Strike Mode]" 
+	projectile_speed="125" 
+	retrigger_time="0.75" 
+    carry_in_two_hands="0"
+	suppressed="0" 
+    stance_accuracy_rate="2.8"
+	sustained_fire_diminish_rate="1.8" 
+	sustained_fire_grow_step="0.35"
+	stab_enabled="1"
+	stab_range="3"
+    use_basic_muzzle_smoke_effect="0" />
+    <next_in_chain key="gkw_a91_4403.weapon" share_ammo="0" />
+    <commonness value="0.2" in_stock="0" can_respawn_with="1" />
+	<inventory encumbrance="25.0" buy_price="100.0" sell_price="91.0"/>
+	<capacity value="1" source="rank" source_value="0.0" />
+    <animation state_key="recoil" animation_key="recoil, pistol" />
+    <animation state_key="hold" animation_key="still, brute" />
+    <animation state_key="hold_on_wall" animation_key="still, brute" />
+    <animation state_key="reload" animation_key="still, brute" />
+    <animation state_key="still_against_wall" animation_key="still, brute" />
+    <animation state_key="walking_backwards" animation_key="walking backwards, brute" />
+    <animation state_key="crouching" animation_key="crouch still, brute" />
+    <animation state_key="running" animation_key="running2, ninja" />
+    <animation state_key="walking" animation_key="walking, brute" />
+    <animation state_key="stabbing" animation_key="a91, quick knife" />
+    <sound key="fire" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0" volume="0.9" />
+    <sound key="effect" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.7" />
+    <sound key="effect" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.7" />
+    <sound key="effect" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.7" />
+    <sound key="stab_hit_any" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
+	<sound key="stab_hit_any" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
+	<sound key="stab_hit_any" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
+    <model filename="a91_knife.xml" />
+    <hud_icon filename="gkw_a91_4403_d.png" />
+    <weak_hand_hold offset="0.2" />
+    <projectile file="a91.projectile">
+        <result class="blast" radius="2.5" damage="8.1" push="0.2" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+    </projectile>
+    <effect class="muzzle" ref="" lighting="0"/> 
+    <stance state_key="running" accuracy="1" />
+    <stance state_key="walking" accuracy="1" />
+    <stance state_key="crouch_moving" accuracy="1" />
+    <stance state_key="prone_moving" accuracy="1" />
+    <stance state_key="standing" accuracy="1" />
+    <stance state_key="crouching" accuracy="1" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" />
+    <modifier class="speed" value="0.8" />
+    <modifier class="hit_success_probability" value="-0.4" />
+</weapon>
+</weapons>

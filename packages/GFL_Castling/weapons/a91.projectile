@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="A91 Knife projectile" key="a91.projectile" slot="0" radius="0.3" pulldown_in_air="6">
+    <tag name="grenade" />
+    <result class="blast" radius="2.5" damage="8.1" push="0.2" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<rotation class="motion" />
+    <trigger class="impact"/>
+	<model mesh_filename="a91_knife.xml" />
+    <hud_icon filename="hud_grenade.png" />
+    <sound class="result" key="other" fileref="melee_impact_flesh3_fromFO4.wav" volume="2.8" />
+    <sound class="result" key="other" fileref="melee_impact_flesh3_fromFO4.wav" volume="2.8" />
+    <sound class="result" key="other" fileref="melee_impact_flesh3_fromFO4.wav" volume="2.8" />    
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="vehicle" copy="other" />
+    <sound class="result" key="character" copy="other" />   
+</projectile>
