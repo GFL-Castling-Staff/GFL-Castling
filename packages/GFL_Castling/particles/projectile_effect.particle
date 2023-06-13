@@ -94,3 +94,47 @@ particle_system at_bullet_smoke_trail
 		state_change 0.33
 	}
 }
+
+particle_system at_bullet_aiming_trail
+{
+	quota 100
+	material common_point_sprite
+	particle_width 1.0
+	particle_height 120
+	renderer billboard
+	billboard_type oriented_self
+	billboard_origin bottom_center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 0 0 1
+		direction 0 1 0
+		emission_rate 10
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 0.6
+		duration 0.1
+	}
+	
+	affector Scaler
+	{
+		rate -1.66 
+	}
+
+	affector ColourFader2
+	{
+		red1 	0
+		green1 	0
+		blue1 	0
+		alpha1 	0
+		red2 	-0
+		green2	-0
+		blue2	-0
+		alpha2	-2
+		state_change 0.5
+	}
+}

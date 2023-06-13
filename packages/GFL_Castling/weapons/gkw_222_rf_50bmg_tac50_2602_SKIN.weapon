@@ -52,7 +52,17 @@
 		<trigger class="impact"/>
 		<rotation class="motion" />
 		<collision class="sticky" />
+		<effect class="result" key="character" ref="center_area_lighting" />  
+		<effect class="result" key="character" ref="lens_circle_enlarge" />  
+		<effect class="result" key="character" ref="v_type_impact_flare" />  
+		<effect class="result" key="character" ref="lens_flare_01" />  
+		<effect class="result" key="character" ref="lens_circle" />  		
+		<effect class="result" key="vehicle" copy="character" />
+		<effect class="result" key="static_object" copy="character" />
+		<effect class="result" key="terrain" copy="character" />  
+		<effect class="result" key="other" copy="character"/>		
 	</projectile>
+    <effect class="muzzle" ref="at_bullet_aiming_trail" lighting="0"/> 
 	<!--Accuracy, Movement speed-->
 	<stance state_key="running" accuracy="0.5" />
 	<stance state_key="walking" accuracy="0.55" />

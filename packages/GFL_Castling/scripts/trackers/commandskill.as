@@ -420,6 +420,13 @@ class CommandSkill : Tracker {
         }
     }
 
+    bool canCastSkill(const XmlElement@ character){
+        int death = character.getIntAttribute("dead");
+        int wound = character.getIntAttribute("wounded");
+        if (death == 1 || wound == 1) return false;
+        return true;
+    }
+
     string getCooldownFromIndex(int j)
     {
         return ""+SkillArray[j].m_time;
@@ -937,10 +944,11 @@ class CommandSkill : Tracker {
                     }
                     string target = playerinfo.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
-                    Vector3 s_pos = stringToVector3(target);        
+                    Vector3 s_pos = stringToVector3(target);
+                    s_pos = s_pos.add(Vector3(0,2,0));
                     int factionid = characterinfo.getIntAttribute("faction_id");
 
-                    CreateDirectProjectile(m_metagame,c_pos,s_pos,'baibaozi_skill.projectile',characterId,factionid,120);
+                    CreateDirectProjectile_T(m_metagame,c_pos,s_pos,'baibaozi_skill.projectile',characterId,factionid,1.0);
                     // array<string> Voice={
                     // "Excutioner_buhuo_SKILL02_JP.wav",
                     // "Excutioner_buhuo_SKILL03_JP.wav",
@@ -957,6 +965,7 @@ class CommandSkill : Tracker {
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (!canCastSkill(character)) return;
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
                     string target = player.getStringAttribute("aim_target");
@@ -983,6 +992,7 @@ class CommandSkill : Tracker {
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"stg44mod3")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1032,6 +1042,7 @@ class CommandSkill : Tracker {
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1076,6 +1087,7 @@ class CommandSkill : Tracker {
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"AAgrenade")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1149,6 +1161,7 @@ class CommandSkill : Tracker {
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"APgrenade")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1318,6 +1331,7 @@ class CommandSkill : Tracker {
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"PP-19")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1513,6 +1527,7 @@ class CommandSkill : Tracker {
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1591,6 +1606,7 @@ class CommandSkill : Tracker {
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1636,6 +1652,7 @@ class CommandSkill : Tracker {
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1694,6 +1711,7 @@ class CommandSkill : Tracker {
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1739,6 +1757,7 @@ class CommandSkill : Tracker {
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1812,6 +1831,7 @@ class CommandSkill : Tracker {
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1915,6 +1935,7 @@ class CommandSkill : Tracker {
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1960,6 +1981,7 @@ class CommandSkill : Tracker {
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -2008,6 +2030,7 @@ class CommandSkill : Tracker {
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -2145,6 +2168,7 @@ class CommandSkill : Tracker {
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
