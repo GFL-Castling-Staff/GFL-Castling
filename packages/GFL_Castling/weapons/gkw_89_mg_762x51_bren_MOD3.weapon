@@ -7,20 +7,20 @@
     <specification 
     barrel_offset="0.6" 
     retrigger_time="0.125" 
-    accuracy_factor="1.0" 
+    accuracy_factor="0.95" 
     sustained_fire_grow_step="0.45" 
     sustained_fire_diminish_rate="2.4" 
     spread_range="0.4"
     magazine_size="30" 
     suppressed="0" 
-    name="BREN LMG(MOD3)"
+    name="Bren L4 LMG(MOD3)"
     class="0" 
     stab_enabled="1"
-    stance_accuracy_rate="1.5"
+    stance_accuracy_rate="2.0"
     projectile_speed="215"
     sight_range_modifier="1.75"/>
     <next_in_chain key="gkw_brenmod3_skill.weapon" share_ammo="1" />
-    <commonness value="0.2" in_stock="0" can_respawn_with="1" />
+    <commonness value="0.001" in_stock="0" can_respawn_with="1" />
 	<inventory encumbrance="25.0" buy_price="250.0" sell_price="200.0"/>
 	<capacity value="1" source="rank" source_value="0.0" />
     <animation state_key="recoil" animation_key="recoil, hip fire" />
@@ -52,16 +52,17 @@
     <hud_icon filename="gkw_brenmkmod3.png" />
     <projectile file="bullet.projectile">
         <result class="hit" kill_probability="3.25" kill_probability_offset_on_successful_hit="3.75" kill_decay_start_time="1.147" kill_decay_end_time="1.912" />
+        <trail probability="1.0" key="BulletMgTrail" />
     </projectile>
     <effect class="muzzle" ref="ejection_76251" />
-    <stance state_key="running" accuracy="0.3" />
-    <stance state_key="walking" accuracy="0.5" />
+    <stance state_key="running" accuracy="0.55" />
+    <stance state_key="walking" accuracy="0.65" />
     <stance state_key="crouch_moving" accuracy="0.75" />
     <stance state_key="prone_moving" accuracy="0.75" />
-    <stance state_key="standing" accuracy="0.85" />
-    <stance state_key="crouching" accuracy="0.95" />
-    <stance state_key="prone" accuracy="1.15" />
-    <stance state_key="over_wall" accuracy="1.15" />
+    <stance state_key="standing" accuracy="0.75" />
+    <stance state_key="crouching" accuracy="0.9" />
+    <stance state_key="prone" accuracy="1.0" />
+    <stance state_key="over_wall" accuracy="1.0" />
 </weapon>
 <weapon key="gkw_brenmod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 <tag name="machine gun"/>
@@ -74,23 +75,24 @@
     accuracy_factor="1.0" 
     sustained_fire_grow_step="0.45" 
     sustained_fire_diminish_rate="2.4" 
-    spread_range="0.4"
+    spread_range="0.3"
     magazine_size="30" 
     suppressed="0" 
-    name="BREN LMG(MOD3)-[Disparity of the Strong]"
+    name="Bren L4 LMG(MOD3)-[Disparity of the Strong]"
+    leave_crouch_accuracy_penalty="0.45"
     class="4" 
     burst_shots="5"
     stab_enabled="1"
     stance_accuracy_rate="1.5"
     projectile_speed="215"
-    sight_range_modifier="1.75"/>
+    sight_range_modifier="2.0"/>
     <next_in_chain key="gkw_brenmod3.weapon" share_ammo="1" />
     <commonness value="0.2" in_stock="0" can_respawn_with="1" />
 	<inventory encumbrance="25.0" buy_price="75.0" sell_price="50.0"/>
 	<capacity value="1" source="rank" source_value="0.0" />
-    <animation state_key="recoil" animation_key="recoil, hip fire" />
-	<animation state_key="recoil" animation_key="recoil2, hip fire" />
-	<animation state_key="recoil" animation_key="recoil3, hip fire" />
+    <animation key="recoil" animation_key="recoil1" />
+    <animation key="recoil" animation_key="recoil2" />
+    <animation key="recoil" animation_key="recoil3" />
 	<animation key="recoil" stance_key="over_wall" animation_key="recoil1" />
 	<animation key="recoil" stance_key="over_wall" animation_key="recoil2" />
 	<animation key="recoil" stance_key="over_wall" animation_key="recoil3" />
@@ -100,10 +102,7 @@
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
-	<animation state_key="hold" animation_key="hold, lmg" />
 	<animation state_key="hold_on_wall" animation_key="still" />
-	<animation state_key="walking" animation_key="walking, hip fire" />
-    <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
 	<animation state_key="stabbing" animation_key="melee, quick knife" />
 	<animation state_key="stabbing" animation_key="pistol whip 3" />
@@ -117,10 +116,11 @@
     <hud_icon filename="gkw_brenmkmod3.png" />
     <projectile file="bullet.projectile">
         <result class="hit" kill_probability="3.25" kill_probability_offset_on_successful_hit="5.25" kill_decay_start_time="1.147" kill_decay_end_time="1.912" />
+        <trail probability="1.0" key="BulletMgTrail" />    
     </projectile>
     <effect class="muzzle" ref="ejection_76251" />
-    <stance state_key="running" accuracy="0.3" />
-    <stance state_key="walking" accuracy="0.5" />
+    <stance state_key="running" accuracy="0.1" />
+    <stance state_key="walking" accuracy="0.3" />
     <stance state_key="crouch_moving" accuracy="0.75" />
     <stance state_key="prone_moving" accuracy="0.75" />
     <stance state_key="standing" accuracy="0.85" />
