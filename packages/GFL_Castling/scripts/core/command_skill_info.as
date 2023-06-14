@@ -4,6 +4,8 @@ array<string> AR_grenade_AntiArmor = {
     "gkw_xm8.weapon",
     "gkw_xm8_5606.weapon",
     "gkw_g3.weapon",
+    "gkw_a91.weapon",
+    "gkw_a91_4403.weapon",
     "gkw_m4sopmodii_531.weapon",
     "gkw_m4sopmodii_551.weapon",
     "gkw_m4sopmodii_4507.weapon",
