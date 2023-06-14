@@ -254,7 +254,7 @@ dictionary tdoll_index = {
     {"251","gkw_x95.weapon"},
     {"252","gkw_ksvk.weapon"},
     {"253","gkw_lewis.weapon"},
-    {"254",""},
+    {"254","gkw_ukm2000.weapon"},
     {"255",""},
     {"256",""},
     {"257","gkw_m200.weapon"},
