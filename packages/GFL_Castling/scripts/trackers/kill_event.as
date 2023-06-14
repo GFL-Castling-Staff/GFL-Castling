@@ -89,6 +89,8 @@ class kill_event : Tracker {
         {"gkw_ump45mod3_3403.weapon",3},
         {"gkw_vector_agent_hpi.weapon",3},
         {"gkw_vector_agent_fmj.weapon",3},
+        {"gkw_mpk.weapon",3},
+        {"gkw_mpl.weapon",3},
 
         {"gkw_ump45_5405.weapon",3},
         {"gkw_ump45mod3_5405.weapon",3},
