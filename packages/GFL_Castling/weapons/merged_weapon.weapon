@@ -11271,7 +11271,7 @@
 	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
-	<sound key="cycle_out" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_m1918.xml"/>
 	<hud_icon filename="gkw_m1918.png"/>
@@ -11309,7 +11309,7 @@
 	<sound key="fire" fileref="m1918_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
-	<sound key="cycle_out" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_m1918.xml"/>
 	<hud_icon filename="gkw_m1918_skill.png"/>
@@ -30327,7 +30327,7 @@
 	<sound key="fire" fileref="bren_fire_FromCOD14.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="bren_mgz_out_FromPOSTSCRIPTUM.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="bren_mgz_in_FromREALLIFE.wav" volume="0.6"/>
-	<sound key="cycle_out" fileref="bren_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>
+	<sound key="cycle" fileref="bren_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_m1918.xml"/>
 	<hud_icon filename="gkw_brenmk.png"/>
@@ -30378,7 +30378,7 @@
 	<sound key="fire" fileref="bren_fire_FromCOD14.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="bren_mgz_out_FromPOSTSCRIPTUM.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="bren_mgz_in_FromREALLIFE.wav" volume="0.6"/>
-	<sound key="cycle_out" fileref="bren_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>
+	<sound key="cycle" fileref="bren_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_bren_mk4.xml"/>
 	<hud_icon filename="gkw_brenmkmod3.png"/>
@@ -30426,7 +30426,7 @@
 	<sound key="fire" fileref="bren_fire_FromCOD14.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="bren_mgz_out_FromPOSTSCRIPTUM.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="bren_mgz_in_FromREALLIFE.wav" volume="0.6"/>
-	<sound key="cycle_out" fileref="bren_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>
+	<sound key="cycle" fileref="bren_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_bren_mk4_n.xml"/>
 	<hud_icon filename="gkw_brenmkmod3.png"/>
@@ -30446,7 +30446,7 @@
 </weapon>
 
 <weapon key="gkw_a91.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.5" class="0" slot="0" magazine_size="30" name="A91" projectile_speed="195" retrigger_time="0.075" carry_in_two_hands="1" suppressed="0" stance_accuracy_rate="2.8" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.35" spread_range="0.35" stab_enabled="1" stab_range="3"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.5" class="0" slot="0" magazine_size="30" name="KBP A-91" projectile_speed="195" retrigger_time="0.075" carry_in_two_hands="1" suppressed="0" stance_accuracy_rate="2.8" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.35" spread_range="0.35" stab_enabled="1" stab_range="3"/>
 	<next_in_chain key="gkw_a91_skill.weapon" share_ammo="0"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="25.0" buy_price="100.0" sell_price="91.0"/>
@@ -30484,9 +30484,9 @@
 </weapon>
 
 <weapon key="gkw_a91_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.5" class="4" slot="0" magazine_size="5" name="A91-[Strike Mode]" projectile_speed="125" retrigger_time="-1" last_burst_retrigger_time="0.85" carry_in_two_hands="0" suppressed="0" projectiles_per_shot="5" stance_accuracy_rate="2.8" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.35" stab_enabled="1" stab_range="3" use_basic_muzzle_smoke_effect="0"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.5" class="4" slot="0" magazine_size="5" name="KBP A-91-[Strike Mode]" projectile_speed="125" retrigger_time="-1" last_burst_retrigger_time="0.85" carry_in_two_hands="0" suppressed="0" projectiles_per_shot="5" stance_accuracy_rate="2.8" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.35" stab_enabled="1" stab_range="3" use_basic_muzzle_smoke_effect="0"/>
 	<next_in_chain key="gkw_a91.weapon" share_ammo="0"/>
-	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="25.0" buy_price="100.0" sell_price="91.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation state_key="recoil" animation_key="recoil, pistol"/>
@@ -30526,9 +30526,9 @@
 </weapon>
 
 <weapon key="gkw_a91_4403.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.5" class="0" slot="0" magazine_size="30" name="A91-[Inflammable Oolong Tea]" projectile_speed="195" retrigger_time="0.075" carry_in_two_hands="1" suppressed="0" stance_accuracy_rate="2.8" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.35" spread_range="0.35" stab_enabled="1" stab_range="3"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.5" class="0" slot="0" magazine_size="30" name="KBP A-91-[Inflammable Oolong Tea]" projectile_speed="195" retrigger_time="0.075" carry_in_two_hands="1" suppressed="0" stance_accuracy_rate="2.8" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.35" spread_range="0.35" stab_enabled="1" stab_range="3"/>
 	<next_in_chain key="gkw_a91_4403_skill.weapon" share_ammo="0"/>
-	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="25.0" buy_price="100.0" sell_price="91.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation key="recoil" animation_key="recoil1"/>
@@ -30564,9 +30564,9 @@
 </weapon>
 
 <weapon key="gkw_a91_4403_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.5" class="4" slot="0" magazine_size="5" name="A91-[Inflammable Oolong Tea]-[Strike Mode]" projectile_speed="125" retrigger_time="-1" last_burst_retrigger_time="0.85" carry_in_two_hands="0" suppressed="0" projectiles_per_shot="5" stance_accuracy_rate="2.8" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.35" stab_enabled="1" stab_range="3" use_basic_muzzle_smoke_effect="0"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.5" class="4" slot="0" magazine_size="5" name="KBP A-91-[Inflammable Oolong Tea]-[Strike Mode]" projectile_speed="125" retrigger_time="-1" last_burst_retrigger_time="0.85" carry_in_two_hands="0" suppressed="0" projectiles_per_shot="5" stance_accuracy_rate="2.8" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.35" stab_enabled="1" stab_range="3" use_basic_muzzle_smoke_effect="0"/>
 	<next_in_chain key="gkw_a91_4403.weapon" share_ammo="0"/>
-	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="25.0" buy_price="100.0" sell_price="91.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation state_key="recoil" animation_key="recoil, pistol"/>
@@ -30709,6 +30709,63 @@
 	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
 	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
 	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
+</weapon>
+
+<weapon key="gkw_chauchat.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<tag name="machine gun"/>
+	<tag name="lmg"/>
+	<specification barrel_offset="0.6" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="1.5" spread_range="0.18" magazine_size="20" suppressed="0" name="FM Chauchat Model 1915" class="1" stab_enabled="1" stance_accuracy_rate="2.0" projectile_speed="180" sight_range_modifier="2.0"/>
+	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="25.0" buy_price="75.0" sell_price="50.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<animation key="reload" animation_key="reloading, Machine gun 1.2"/>
+	<animation state_key="recoil" animation_key="recoil_unlimit"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil_unlimit"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil_prone_unlimit"/>
+	<animation key="cycle" animation_key="cycle_2h_rifle_240rpm"/>
+	<animation key="cycle" animation_key="cycle_2h_rifle_180rpm"/>
+	<animation key="cycle" animation_key="cycle_2h_rifle_240rpm"/>
+	<animation key="cycle" animation_key="cycle_2h_rifle_120rpm"/>
+	<animation key="cycle" animation_key="cycle_2h_rifle_240rpm"/>
+	<animation key="cycle" animation_key="cycle_2h_rifle_200rpm"/>
+	<animation key="cycle" animation_key="cycle_2h_rifle_240rpm"/>
+	<animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_240rpm_prone"/>
+	<animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_180rpm_prone"/>
+	<animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_240rpm_prone"/>
+	<animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_120rpm_prone"/>
+	<animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_240rpm_prone"/>
+	<animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_200rpm_prone"/>
+	<animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_240rpm_prone"/>
+	<animation state_key="hold_on_wall" animation_key="still"/>
+	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+	<animation state_key="stabbing" animation_key="melee, quick knife"/>
+	<animation state_key="stabbing" animation_key="pistol whip 3"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
+	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
+	<sound key="fire" fileref="chauchat_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="chauchat_mgz_out_FromPOSTSCRIPTUM.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="chauchat_mgz_in_FromPOSTSCRIPTUM.wav" volume="0.6"/>
+	<sound key="cycle_out" fileref="chauchat_cycle_FromBF5.wav" volume="0.6"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename="gkw_mg_chauchatm1915.xml"/>
+	<hud_icon filename="gkw_chauchatm1915.png"/>
+	<projectile file="bullet.projectile">
+	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="5.5" kill_decay_start_time="1.147" kill_decay_end_time="1.912"/>
+	<trail probability="1.0" key="BulletMgTrail"/>
+	</projectile>
+	<effect class="muzzle" ref="ejection_76251"/>
+	<stance state_key="running" accuracy="0.3"/>
+	<stance state_key="walking" accuracy="0.5"/>
+	<stance state_key="crouch_moving" accuracy="0.75"/>
+	<stance state_key="prone_moving" accuracy="0.75"/>
+	<stance state_key="standing" accuracy="0.75"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
 </weapon>
 
 <weapon key="target.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -34343,7 +34400,7 @@
 	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
-	<sound key="cycle_out" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_m1918_mod3.xml"/>
 	<hud_icon filename="gkw_m1918mod3.png"/>
@@ -34382,7 +34439,7 @@
 	<sound key="fire" fileref="m1918_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
-	<sound key="cycle_out" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_m1918_mod3.xml"/>
 	<hud_icon filename="gkw_m1918mod3_skill.png"/>
@@ -39976,7 +40033,7 @@
 	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
-	<sound key="cycle_out" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_m1918.xml"/>
 	<hud_icon filename="gkw_m1918_102.png"/>
@@ -40014,7 +40071,7 @@
 	<sound key="fire" fileref="m1918_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
-	<sound key="cycle_out" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_m1918.xml"/>
 	<hud_icon filename="gkw_m1918_102.png"/>
@@ -40055,7 +40112,7 @@
 	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
-	<sound key="cycle_out" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_m1918.xml"/>
 	<hud_icon filename="gkw_m1918_806.png"/>
@@ -40093,7 +40150,7 @@
 	<sound key="fire" fileref="m1918_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
-	<sound key="cycle_out" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_m1918.xml"/>
 	<hud_icon filename="gkw_m1918_806.png"/>
@@ -40134,7 +40191,7 @@
 	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
-	<sound key="cycle_out" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_m1918.xml"/>
 	<hud_icon filename="gkw_m1918_1606.png"/>
@@ -40172,7 +40229,7 @@
 	<sound key="fire" fileref="m1918_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
-	<sound key="cycle_out" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_m1918.xml"/>
 	<hud_icon filename="gkw_m1918_1606.png"/>
@@ -45881,7 +45938,7 @@
 	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
-	<sound key="cycle_out" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_m1918_mod3.xml"/>
 	<hud_icon filename="gkw_m1918_102.png"/>
@@ -45920,7 +45977,7 @@
 	<sound key="fire" fileref="m1918_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
-	<sound key="cycle_out" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_m1918_mod3.xml"/>
 	<hud_icon filename="gkw_m1918_102.png"/>
@@ -45962,7 +46019,7 @@
 	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
-	<sound key="cycle_out" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_m1918_mod3.xml"/>
 	<hud_icon filename="gkw_m1918_806.png"/>
@@ -46001,7 +46058,7 @@
 	<sound key="fire" fileref="m1918_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
-	<sound key="cycle_out" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_m1918_mod3.xml"/>
 	<hud_icon filename="gkw_m1918_806.png"/>
@@ -46043,7 +46100,7 @@
 	<sound key="fire" fileref="m1918_fire_FromWF.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
-	<sound key="cycle_out" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_m1918_mod3.xml"/>
 	<hud_icon filename="gkw_m1918_1606.png"/>
@@ -46081,7 +46138,7 @@
 	<sound key="fire" fileref="m1918_fire_FromRS2V.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="magazine_out" fileref="m1918_mgz_out_FromRS2V.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6"/>
-	<sound key="cycle_out" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
+	<sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_m1918_mod3.xml"/>
 	<hud_icon filename="gkw_m1918_1606.png"/>
