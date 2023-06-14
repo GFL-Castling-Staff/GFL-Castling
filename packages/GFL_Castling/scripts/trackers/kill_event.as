@@ -201,6 +201,8 @@ class kill_event : Tracker {
         {"gkw_vp1915_6604.weapon",3},
         {"gkw_ro635.weapon",3},
         {"gkw_ro635mod3.weapon",3},
+        {"gkw_ro635_534.weapon",3},
+        {"gkw_ro635mod3_534.weapon",3},
 
         //短突
         {"gkw_ak74u.weapon",5},
