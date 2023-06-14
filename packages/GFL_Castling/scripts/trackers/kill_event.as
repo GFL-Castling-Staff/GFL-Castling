@@ -192,6 +192,8 @@ class kill_event : Tracker {
         {"gkw_sr3mp_skill.weapon",4},
         {"gkw_ro635.weapon",3},
         {"gkw_ro635mod3.weapon",3},
+        {"gkw_ro635_534.weapon",3},
+        {"gkw_ro635mod3_534.weapon",3},
         {"gkw_honeybadger.weapon",3},
         {"gkw_honeybadger_4005.weapon",3},
         {"gkw_g36c.weapon",3},
