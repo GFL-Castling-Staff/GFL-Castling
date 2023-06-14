@@ -2402,7 +2402,10 @@
     <model filename="gkd_smg_mpk.xml">
         <requirement class="weapon" key="gkw_mpk.weapon" slot="0" />
     </model> 
+    <model filename="gkd_mg_ukm2000.xml">
+        <requirement class="weapon" key="gkw_ukm2000.weapon" slot="0" />
+    </model> 
     <model filename="gkd_mg_chauchatm1915.xml">
         <requirement class="weapon" key="gkw_chauchat.weapon" slot="0" />
-    </model>     
+    </model>
 </models> 
