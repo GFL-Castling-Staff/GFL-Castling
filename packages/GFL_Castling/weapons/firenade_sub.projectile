@@ -18,6 +18,10 @@
     <effect class="result" key="terrain" ref="molotov_smoke"/>
 	<effect class="result" key="other" copy="terrain"/>
     <effect class="result" key="static_object" copy="terrain" />
-    <effect class="result" key="character" copy="terrain" />
     <effect class="result" key="vehicle" copy="terrain" />
+    
+    <effect class="result" key="character" ref="molotov_fire_01"/>
+    <effect class="result" key="character" ref="molotov_fire_02"/>
+    <effect class="result" key="character" ref="molotov_smoke"/>
+
 </projectile>

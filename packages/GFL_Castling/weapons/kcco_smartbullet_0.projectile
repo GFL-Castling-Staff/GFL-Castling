@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<projectiles>
 <projectile class="grenade" name="KCCO Scanning bullet" key="kcco_smartbullet_0.projectile" slot="3"  pulldown_in_air="20"  radius="0.1" drop_count_factor_on_death="0.25" drop_count_factor_on_player_death="1"  time_to_live_out_in_the_open="15">
 
     <result class="notify_script" key="kcco_sniper_scan" />
@@ -19,3 +20,54 @@
     <effect class="activated" ref="TracerFlash" lighting="0" />
     <effect class="activated" ref="TracerFlash" lighting="0" />
 </projectile>
+<projectile class="grenade" name="KCCO Sniper Anti-Armor Bullet" key="kcco_smartbullet_AA.projectile" slot="3"  pulldown_in_air="4"  radius="4" drop_count_factor_on_death="0.25" drop_count_factor_on_player_death="1"  time_to_live_out_in_the_open="1" use_time_to_live="1" time_to_live="1" can_be_disarmed="0">
+
+    <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1" kill_decay_end_time="1"/>   
+    <trigger class="impact">
+       <collider class="terrain" enabled="0" />
+       <collider class="static_object" enabled="0" />
+       <collider class="vehicle" enabled="1" />
+       <collider class="character" enabled="1" faction_compare="not_equal"/>
+    </trigger>
+    <rotation class="random" />
+
+    <!-- <model mesh_filename="kcco_grenade_1.xml" />  -->
+    <hud_icon filename="88r.png" />
+    <commonness value="0.0" />
+    <!-- <effect class="activated" ref="Propulsion_gl" /> -->
+</projectile>
+<projectile class="grenade" name="KCCO Sniper Anti-Armor Bullet S5" key="kcco_smartbullet_AA_s5.projectile" slot="3"  pulldown_in_air="60"  radius="0.1" drop_count_factor_on_death="0.25" drop_count_factor_on_player_death="1"  time_to_live_out_in_the_open="15">
+
+    <result class="spawn" instance_class="projectile" instance_key="kcco_smartbullet_AA_s.projectile"  min_amount="6" max_amount="6" offset="0 40 0" position_spread="10.0 0.0" direction_spread="0.0 0.0" />
+    <trigger class="time" time_to_live="0.01"/>
+
+    <rotation class="random" />
+
+    <!-- <model mesh_filename="kcco_grenade_1.xml" />  -->
+    <hud_icon filename="88r.png" />
+    <commonness value="0.0" />
+</projectile>
+<projectile class="grenade" name="KCCO Sniper Anti-Armor Bullet S1" key="kcco_smartbullet_AA_s1.projectile" slot="3"  pulldown_in_air="60"  radius="0.1" drop_count_factor_on_death="0.25" drop_count_factor_on_player_death="1"  time_to_live_out_in_the_open="15">
+
+    <result class="spawn" instance_class="projectile" instance_key="kcco_smartbullet_AA_s.projectile"  min_amount="1" max_amount="1" offset="0 40 0" position_spread="0.0 0.0" direction_spread="0.0 0.0" />
+    <trigger class="time" time_to_live="0.01"/>
+
+    <rotation class="random" />
+
+    <!-- <model mesh_filename="kcco_grenade_1.xml" />  -->
+    <hud_icon filename="88r.png" />
+    <commonness value="0.0" />
+</projectile>
+<projectile class="grenade" name="KCCO Sniper Anti-Armor Bullet S" key="kcco_smartbullet_AA_s.projectile" slot="3"  pulldown_in_air="90"  radius="5" drop_count_factor_on_death="0.25" drop_count_factor_on_player_death="1"  time_to_live_out_in_the_open="15">
+
+    <result class="spawn" instance_class="projectile" instance_key="kcco_smartbullet_AA.projectile"  min_amount="1" max_amount="1" offset="0 0 0" position_spread="1.0 0.0" direction_spread="0.0 0.0" />
+    <trigger class="impact"/>
+
+    <rotation class="random" />
+
+    <!-- <model mesh_filename="kcco_grenade_1.xml" />  -->
+    <hud_icon filename="88r.png" />
+    <commonness value="0.0" />
+    <!-- <effect class="activated" ref="Propulsion_gl" /> -->
+</projectile>
+</projectiles>

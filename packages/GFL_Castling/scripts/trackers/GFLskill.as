@@ -630,15 +630,18 @@ class GFLskill : Tracker {
 						Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
 						const XmlElement@ LiveGuy = getCharacterInfo(m_metagame, characterId);
 						if(LiveGuy !is null){
+							CreateProjectile(m_metagame,sniperPos,luckyGuyPos,"kcco_smartbullet_AA.projectile",characterId,factionid,240,0.01);
 							CreateProjectile(m_metagame,sniperPos,luckyGuyPos,"kcco_smartbullet_1.projectile",characterId,factionid,240,0.01);
 							break;
 						}
 					}			
 					else if (num_jud<=8) {
+						CreateProjectile(m_metagame,pos_smartbullet,pos_smartbullet,"kcco_smartbullet_AA_s1.projectile",characterId,factionid,240,0.01);
 						CreateProjectile(m_metagame,pos_smartbullet,pos_smartbullet,"kcco_smartbullet_2.projectile",characterId,factionid,240,0.01);
 						break;						
 					}			
 					else if (num_jud<=15) {
+						CreateProjectile(m_metagame,pos_smartbullet,pos_smartbullet,"kcco_smartbullet_AA_s5.projectile",characterId,factionid,240,0.01);
 						CreateProjectile(m_metagame,pos_smartbullet,pos_smartbullet,"kcco_smartbullet_3.projectile",characterId,factionid,240,0.01);
 						break;						
 					}			
