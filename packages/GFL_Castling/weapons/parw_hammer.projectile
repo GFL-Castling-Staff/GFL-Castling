@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="" slot="1" pulldown_in_air="1.0" can_be_detected_by_driver="0" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" key="parw_hammer.projectile">
+<projectile class="grenade" name="" slot="1" pulldown_in_air="4.0" can_be_detected_by_driver="0" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" key="parw_hammer.projectile">
     <tag name="grenade"/>
     <collision class="impact" />    
-    <trigger class="time" time_to_live="1.5"/>
+    <trigger class="time" time_to_live="1.0"/>
 
     <rotation class="motion" />
     <model/>
