@@ -1538,15 +1538,6 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 
 		{
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
-            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
-            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
-            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
-		}
-
-		{
 			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.4, 0.15)); 
 			f.m_overCapacity = 0;
 			f.m_capacityOffset = 0; 

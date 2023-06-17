@@ -3,7 +3,7 @@
     <result class="spawn" instance_class="grenade" instance_key="blast_ju87.projectile" min_amount="1" max_amount="1" offset="0 6 0" position_spread="0 0" direction_spread="0 0" />
     <trigger class="time" time_to_live="3.0"/>
     <rotation class="motion" />
-    <model mesh_filename="shell_sc250ja_desert.xml" />
+    <model mesh_filename="shell_sc1000ja.mesh" texture_filename="shell_sc1000ja.jpg" />
     <commonness value="0.0" />
 
     <sound class="result" key="other" fileref="explosion_FromFC5_1.wav" volume="4.0" />
