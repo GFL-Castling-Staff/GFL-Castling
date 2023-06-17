@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="K11 20mm" slot="1" pulldown_in_air="8.0" can_be_detected_by_driver="0" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" key="k11_remote.projectile">
     <tag name="grenade"/>
     <result class="blast" radius="5" damage="5.0" push="0.2" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>

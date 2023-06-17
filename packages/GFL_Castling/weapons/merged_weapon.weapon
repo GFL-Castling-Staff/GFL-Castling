@@ -54581,7 +54581,7 @@
 
 <weapon key="parw_thrower.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="shotgun"/>
-	<specification retrigger_time="-1" accuracy_factor="0.8" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="1.0" magazine_size="8" can_shoot_standing="1" suppressed="0" name="Grenadier" class="4" burst_shots="2" last_burst_retrigger_time="1.0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="85" barrel_offset="0.4" projectiles_per_shot="8" spread_range="0.25" stab_enabled="1" carry_in_two_hands="1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="0.25" accuracy_factor="0.8" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="1.0" magazine_size="8" can_shoot_standing="1" suppressed="0" name="Slinger" class="4" burst_shots="2" last_burst_retrigger_time="1.0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="85" barrel_offset="0.4" projectiles_per_shot="6" spread_range="0.18" stab_enabled="1" carry_in_two_hands="1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory encumbrance="20.0" buy_price="0.0" sell_price="0.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
 	<sound key="fire" fileref="Grenadier_fire_FromCOD13.wav" volume="1.05"/>
@@ -54592,8 +54592,53 @@
 	<model filename="parw_thrower_gun.xml"/>
 	<hud_icon filename="parw_grenadier.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="bullet_paradeus.projectile" time_to_live="0.3">
-	<result class="hit" kill_probability="2.0" kill_decay_start_time="0.18" kill_decay_end_time="0.3"/>
+	<projectile file="bullet_paradeus.projectile" time_to_live="0.28">
+	<result class="hit" kill_probability="2.0" kill_decay_start_time="0.12" kill_decay_end_time="0.28"/>
+	</projectile>
+	<stance state_key="running" accuracy="0.7"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
+	<tag name="shotgun"/>
+	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<animation key="recoil" animation_key="recoil1, big"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation state_key="hold_on_wall" animation_key="still"/>
+	<animation state_key="running" animation_key="running, bayonet"/>
+	<animation state_key="stabbing" animation_key="enemy melee, whip 1"/>
+	<animation state_key="stabbing" animation_key="enemy melee, whip 2"/>
+	<animation state_key="stabbing" animation_key="enemy melee, whip 3"/>
+</weapon>
+
+<weapon key="parw_grenadier.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<tag name="shotgun"/>
+	<specification retrigger_time="0.33" accuracy_factor="0.95" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.0" magazine_size="30" can_shoot_standing="1" suppressed="0" name="Grenadier" class="0" last_burst_retrigger_time="1.0" reload_one_at_a_time="0" sight_range_modifier="1.05" projectile_speed="85" barrel_offset="0.4" projectiles_per_shot="6" spread_range="0.14" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<inventory encumbrance="20.0" buy_price="0.0" sell_price="0.0"/>
+	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
+	<sound key="fire" fileref="Grenadier_fire_FromCOD13.wav" volume="1.05"/>
+	<sound key="magazine_out" fileref="Grenadier_mgz_out_FromCOD13.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="Grenadier_mgz_in_FromCOD13.wav" volume="0.4"/>
+	<sound key="cycle" fileref="Grenadier_cycle_FromCOD13.wav" volume="0.4"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename="parw_greanadier.xml"/>
+	<hud_icon filename="parw_grenadier.png"/>
+	<weak_hand_hold offset="0.3"/>
+	<projectile file="bullet_paradeus.projectile" time_to_live="0.35">
+	<result class="hit" kill_probability="2.0" kill_decay_start_time="0.15" kill_decay_end_time="0.35"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.7"/>
 	<stance state_key="walking" accuracy="0.8"/>
@@ -55029,6 +55074,7 @@
 	<tag name="bazooka"/>
 	<specification retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="0.25" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="Seraph's Blaze" class="3" consume="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100.0" slot="1" projectiles_per_shot="1"/>
 	<inventory encumbrance="3.0" buy_price="5.0" sell_price="5.0"/>
+	<drop_on_death_result class="spawn" instance_class="weapon" instance_key="parw_rocket_player.weapon" min_amount="0" max_amount="1" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<capacity value="2" source="rank" source_value="0.0"/>
 	<capacity value="4" source="rank" source_value="2.1"/>
 	<capacity value="6" source="rank" source_value="4.1"/>
@@ -55051,6 +55097,44 @@
 	<model filename="parw_rocket.xml"/>
 	<projectile file="parw_rocket_projectile.projectile">
 	<result class="blast" damage="15.0" radius="4.5" decal="1" push="0.75" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	</projectile>
+	<ballistics curve_height="4.5" near_far_distance="5.0" speed_estimation_near="100.0" speed_estimation_far="100.0" max_speed="150.0" randomness="0.0" tweak_factor="1.675"/>
+	<weak_hand_hold offset="0.3"/>
+	<hud_icon filename="rocket.png"/>
+	<effect class="muzzle" ref="LawMuzzle"/>
+	<effect class="muzzle" ref="UpDust"/>
+	<stance state_key="running" accuracy="0.2"/>
+	<stance state_key="walking" accuracy="0.5"/>
+	<stance state_key="crouch_moving" accuracy="0.9"/>
+	<stance state_key="standing" accuracy="1"/>
+	<stance state_key="crouching" accuracy="1"/>
+	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="prone_moving" accuracy="0.9"/>
+	<stance state_key="over_wall" accuracy="1"/>
+</weapon>
+
+<weapon time_to_live_out_in_the_open="0" drop_count_limit_in_range="3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0.0" key="parw_rocket_player.weapon">
+	<tag name="bazooka"/>
+	<specification retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="0.25" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="Seraph's Blaze" class="3" consume="1" reload_one_at_a_time="1" sight_range_modifier="1.75" projectile_speed="100.0" slot="1" projectiles_per_shot="1"/>
+	<inventory encumbrance="5.0" buy_price="20.0" sell_price="20.0"/>
+	<capacity value="6" source="rank" source_value="0"/>
+	<commonness value="0.1" in_stock="1" can_respawn_with="1"/>
+	<animation key="recoil" animation_key="recoil, law"/>
+	<animation key="cycle" animation_key="Brifle0.4"/>
+	<animation key="reload" animation_key="reloading, m24"/>
+	<animation key="reload" stance_key="prone" animation_key="reloading, sniper1, prone"/>
+	<animation key="hold" animation_key="still, with law"/>
+	<animation key="hold_on_wall" animation_key="still, with law"/>
+	<sound key="fire" fileref="panzerfaust_fire_FromPOSTSCRIPTUM.wav" volume="1.7"/>
+	<sound key="cycle" fileref=""/>
+	<sound key="magazine_out" fileref=""/>
+	<sound key="magazine_in" fileref=""/>
+	<sound key="cycle_out" fileref=""/>
+	<sound key="cycle_in" fileref=""/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename="parw_rocket.xml"/>
+	<projectile file="parw_rocket_projectile.projectile">
+	<result class="blast" damage="25.0" radius="4.5" decal="1" push="0.75" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
 	<ballistics curve_height="4.5" near_far_distance="5.0" speed_estimation_near="100.0" speed_estimation_far="100.0" max_speed="150.0" randomness="0.0" tweak_factor="1.675"/>
 	<weak_hand_hold offset="0.3"/>
@@ -55244,6 +55328,56 @@
 	<modifier class="detectability" value="1.0"/>
 	<modifier class="speed" value="0.4"/>
 	<modifier class="hit_success_probability" value="0"/>
+</weapon>
+
+<weapon on_ground_up="0 0 1" key="parw_hammer.weapon" time_to_live_out_in_the_open="0" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+	<tag name="melee"/>
+	<specification accuracy_factor="1.0" barrel_offset_3d="2.5 0 0.2" can_shoot_standing="1" class="0" slot="0" magazine_size="999" name="Maccabee" projectile_speed="80" retrigger_time="1.5" suppressed="0" sustained_fire_diminish_rate="2.0" sustained_fire_grow_step="1.0" carry_in_two_hands="0" use_basic_muzzle_smoke_effect="0" stab_enabled="1" stab_range="3.0"/>
+	<animation state_key="recoil" animation_key="recoil, hammer"/>
+	<animation state_key="running" animation_key="running, single hand carry"/>
+	<animation state_key="stabbing" animation_key="hammer whip"/>
+	<animation state_key="reload" animation_key="recoil, pistol dual 1"/>
+	<animation state_key="hold" animation_key="still, riot shield,aegissergeantGA"/>
+	<animation state_key="hold_casual" animation_key="crouching still, riot shield,aegissergeantGA"/>
+	<animation state_key="hold_on_wall" animation_key="crouching still, riot shield,aegissergeantGA"/>
+	<animation state_key="still_against_wall" animation_key="still, riot shield,aegissergeantGA"/>
+	<animation state_key="crouching" animation_key="crouching still, riot shield,aegissergeantGA"/>
+	<animation state_key="crouch_moving" animation_key="crouching forwards, riot shield, aegissergeantGA"/>
+	<animation state_key="crouch_moving_backwards" animation_key="crouching forwards, riot shield, aegissergeantGA"/>
+	<animation state_key="walking" animation_key="walking, riot shield, aegissergeantGA"/>
+	<animation state_key="walking_backwards" animation_key="walking, riot shield, aegissergeantGA"/>
+	<animation state_key="prone_still" animation_key="prone_still, pistol dual"/>
+	<sound key="fire" fileref="Nytoportal_fire_FromCOD13.wav" pitch_variety="0.03" volume="1.0"/>
+	<sound key="stab" fileref="wrath_hammer_1.wav" pitch_variety="0.03" volume="1.5"/>
+	<sound key="stab" fileref="wrath_hammer_2.wav" pitch_variety="0.03" volume="1.5"/>
+	<sound key="stab_hit" fileref="melee_hit_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="2.5"/>
+	<sound key="stab_hit" fileref="melee_hit_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="2.5"/>
+	<sound key="stab_hit_any" fileref="melee_hit_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="1.6"/>
+	<sound key="stab_hit_any" fileref="melee_hit_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="1.6"/>
+	<projectile file="parw_hammer.projectile">
+	<result class="blast" radius="5" damage="5.0" push="0.2" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	</projectile>
+	<ballistics curve_height="2.0" near_far_distance="0.0" speed_estimation_near="10.0" speed_estimation_far="50.0" max_speed="80.0" randomness="0.0" tweak_factor="4.5"/>
+	<model filename="parw_hammer.xml"/>
+	<effect class="muzzle" ref="sawsnone"/>
+	<hud_icon filename="testing.png"/>
+	<commonness value="1.0" can_respawn_with="1" in_stock="1"/>
+	<inventory encumbrance="11.0" price="0.0"/>
+	<modifier class="hit_success_probability" value="-1.0"/>
+	<modifier class="speed" value="-0.3"/>
+	<stance state_key="running" accuracy="1"/>
+	<stance state_key="walking" accuracy="1"/>
+	<stance state_key="crouch_moving" accuracy="1"/>
+	<stance state_key="standing" accuracy="1"/>
+	<stance state_key="crouching" accuracy="1"/>
+	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="prone_moving" accuracy="1"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<inventory encumbrance="0.0" buy_price="1.0" sell_price="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 </weapon>
 
 <weapon key="parw_germdog.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">

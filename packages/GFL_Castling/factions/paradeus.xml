@@ -518,6 +518,25 @@
 			</attribute_config>
 		</resources>
 	</soldier>
+	<!-- 重锤 -->
+	<soldier name="parw_hammer" spawn_score="1.0" squad_size_xp_cap="0.5" copy_from="default_ai">
+		<ai filename="para_hammer.ai"/>
+		<character filename="paradeus.text_lines">
+			<sound key="death" fileref="kill_sound_kcco_bot01.wav" volume="0.4" pitch_variety="0.025"/>
+			<sound key="death" fileref="kill_sound_kcco_bot02.wav" volume="0.4" pitch_variety="0.025"/>
+			<sound key="death" fileref="kill_sound_kcco_bot03.wav" volume="0.4" pitch_variety="0.025"/>
+		</character>		
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="parw_hammer.weapon" enabled="1" probability="1.0" />
+			<carry_item key="para_vest_15hp_elite.carry_item" />
+			<attribute_config class="xp">
+				<attribute weight="1.0" min="1.0" max="5.6" />
+			</attribute_config>
+			<attribute_config class="rp">
+				<attribute weight="1.0" min="700.0" max="1500.0" />
+			</attribute_config>
+		</resources>
+	</soldier>	
 	<soldier name="parw_dog" spawn_score="0.4" copy_from="default_ai">
 		<ai filename="para_dog.ai"/>
 		<model filename="pard_germdog.xml" />

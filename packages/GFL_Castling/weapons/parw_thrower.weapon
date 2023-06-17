@@ -4,7 +4,7 @@
 	<tag name="shotgun" />
 	<!--Weapon specifications-->
 	<specification 
-	retrigger_time="-1" 
+	retrigger_time="0.25" 
 	accuracy_factor="0.8" 
 	sustained_fire_grow_step="4.0" 
 	sustained_fire_diminish_rate="1.0" 

@@ -87,7 +87,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		setupUnlockManager();
 		setupItemDeliveryOrganizer();
 		setupPenaltyManager();
-		//setupLocalBanManager();
+		setupLocalBanManager();
 		setupTestingToolsTracker();
 
 		if (m_userSettings.m_continue) {
@@ -173,6 +173,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 	// --------------------------------------------
 	protected void setupLocalBanManager() {
 		@m_localBanManager = LocalBanManager(this);
+		addTracker(BanManager(this,true));
 	}
 	
 	// --------------------------------------------
@@ -281,7 +282,6 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		addTracker(kill_event(this,getUserSettings()));
 		addTracker(ManualCall(this));
 		addTracker(ServerHelper(this));
-		addTracker(BanManager(this,true));
 		addTracker(CommandSkill(this));
 		addTracker(ItemDropEvent(this));
 		addTracker(vehicle_spawn(this));
