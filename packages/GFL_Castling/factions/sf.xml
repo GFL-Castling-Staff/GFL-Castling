@@ -665,17 +665,17 @@
 		</resources>
 	</soldier>
 	<!-- 圣盾 -->
-	<soldier name="sfw_aegis" spawn_score="0.75" copy_from="default_spawn_ai">
+	<soldier name="sfw_aegis" spawn_score="0.5" copy_from="default_spawn_ai">
 		<model filename="sfd_aegis_1.xml" />
-		<ai filename="shield.ai" />
+		<ai filename="aegis.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
 			<weapon key="sfw_aegis.weapon" enabled="1"/>
 			<carry_item key="vest_aegis.carry_item" enabled="1" />
 		</resources>
 	</soldier>
-	<soldier name="sfw_aegis_swap" spawn_score="0.15" copy_from="default_spawn_ai">
+	<soldier name="sfw_aegis_swap" spawn_score="0.25" copy_from="default_spawn_ai">
 		<model filename="sfd_aegis_swap.xml" />
-		<ai filename="shield.ai" />
+		<ai filename="aegis.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
 			<weapon key="sfw_aegis_swap.weapon" enabled="1"/>
 			<carry_item key="vest_aegis.carry_item" enabled="1" />

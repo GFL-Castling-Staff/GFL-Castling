@@ -1139,12 +1139,11 @@ class GFLskill : Tracker {
 			case 42: {// 敌方干扰者技能
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-				if (character !is null) {
-					Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
-					int factionid = character.getIntAttribute("faction_id");
-					spawnVehicle(m_metagame,1,factionid,grenade_pos,Orientation(0,1,0,0.1),"sf_boss_intruder_skill.vehicle");
-					GFL_event_array.insertLast(GFL_event(characterId,factionid,int(GFL_Event_Index["intruder_spawn"]),grenade_pos));
-				}
+				if (character is null) return;
+				Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
+				int factionid = character.getIntAttribute("faction_id");
+				spawnVehicle(m_metagame,1,factionid,grenade_pos,Orientation(0,1,0,0.1),"sf_boss_intruder_skill.vehicle");
+				GFL_event_array.insertLast(GFL_event(characterId,factionid,int(GFL_Event_Index["intruder_spawn"]),grenade_pos));
 				break;			
 			}
 
@@ -1163,6 +1162,12 @@ class GFLskill : Tracker {
 					tasker.add(DelayCommonCallRequest(m_metagame,3,characterId,factionid,"mine_strafe",aimer_pos,aim_pos));
 				}
 				break;					
+			}
+
+			case 44: {// 铁血圣盾swap
+				int characterId = event.getIntAttribute("character_id");
+				healCharacter(m_metagame,characterId,10);
+				break;			
 			}
 
             default:

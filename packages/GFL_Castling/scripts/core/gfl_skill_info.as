@@ -170,6 +170,10 @@ dictionary gameSkillIndex = {
         // 地雷妖精
 		{"fc_mine",43},
 
+		{"sfw_aegis_selfheal",44},
+
+        
+
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
 };

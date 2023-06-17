@@ -695,7 +695,7 @@ void excuteHK416Healevent(GameMode@ metagame,GFL_event@ eventinfo){
 
 void excuteSFIntruderSkillevent(GameMode@ metagame,GFL_event@ eventinfo){
     eventinfo.m_time=2.0;
-    spawnSoldier(metagame,9,eventinfo.m_factionid,eventinfo.m_pos,"sf_dinergate",4,4);
+    spawnSoldier(metagame,6,eventinfo.m_factionid,eventinfo.m_pos,"sf_dinergate",4,4);
     eventinfo.m_phase++;
     if(eventinfo.m_phase>3){
         eventinfo.m_enable=false;
