@@ -185,16 +185,16 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 	// ------------------------------------------------------------------------------------------------
 	protected void setupNormalStages() {
-		addStage(setupStage21());
 		addStage(setupStage1_rust());     // map2_c by diling
 		// addStage(setupStageRace());          // DEJAHU
 		addStage(setupStage10());         // map10
 		addStage(setupStageXmas()); 
+		addStage(setupStage21());
 		addStage(setupStage7());          // map6c by diling
+		addStage(setupStage8());          // map8
 		addStage(setupStage19());		  // map18    
 		addStage(setupStage6());          // map5
 		addStage(setupStage13());         // map16
-		addStage(setupStage8());          // map8
 		addStage(setupStage2());          // map4 c
 		addStage(setupStage103()); 		  // map103 Palo Island by diling
 		// addStage(setupEggStage());		  // 上坟
