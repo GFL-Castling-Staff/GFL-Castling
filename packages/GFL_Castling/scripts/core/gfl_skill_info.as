@@ -172,6 +172,8 @@ dictionary gameSkillIndex = {
 
 		{"sfw_aegis_selfheal",44},
 
+		{"c96_skill",45},
+
         
 
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可

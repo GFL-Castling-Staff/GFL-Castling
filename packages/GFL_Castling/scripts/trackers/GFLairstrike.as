@@ -87,6 +87,8 @@ dictionary airstrikeIndex = {
 
         {"30mm_strafe_missle",19},
 
+        {"ju87_assault",20},
+
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
 };
@@ -567,6 +569,11 @@ class GFLairstrike : Tracker {
                     Airstrike_strafe.removeAt(a);
                     break;
                 }
+                case 20:{
+                    CreateDirectProjectile(m_metagame,start_pos,end_pos,"ju87.projectile",cid,fid,25);
+                    Airstrike_strafe.removeAt(a);
+                    break;
+                }                   
                 default:
                     break;
             }

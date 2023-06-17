@@ -1170,6 +1170,19 @@ class GFLskill : Tracker {
 				break;			
 			}
 
+			case 45:{
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					Vector3 m_pos = stringToVector3(event.getStringAttribute("position"));
+					int factionId = character.getIntAttribute("faction_id");
+					spawnStaticProjectile(m_metagame,"skill_c96_flare_float.projectile",m_pos,characterId,factionId);
+					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+					tasker.add(Ju87_Assault(m_metagame,3.5,characterId,factionId,m_pos.add(Vector3(0,-10,0))));
+				}
+				break;
+			}
+
             default:
                 break;
 		}

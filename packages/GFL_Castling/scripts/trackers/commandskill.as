@@ -3682,7 +3682,7 @@ class CommandSkill : Tracker {
                     string target = player.getStringAttribute("aim_target");
                     Vector3 aim_pos = stringToVector3(target);
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
-                    aim_pos = aim_pos.add(Vector3(0,12,0));
+                    aim_pos = aim_pos.add(Vector3(0,9,0));
                     int factionid = character.getIntAttribute("faction_id");
                     array<string> Voice={
                         "C96Mod_SKILL1_JP.wav",
@@ -3694,7 +3694,7 @@ class CommandSkill : Tracker {
                     playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
                     c_pos=c_pos.add(Vector3(0,2.25,0));
                     CreateDirectProjectile_T(m_metagame,c_pos,aim_pos,"skill_c96_flare.projectile",characterId,factionid,1.5);
-                    addCooldown("C96",120,characterId,modifer);
+                    addCooldown("C96",90,characterId,modifer);
                 }
             }
         }

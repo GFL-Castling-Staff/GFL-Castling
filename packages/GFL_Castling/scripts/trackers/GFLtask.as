@@ -655,3 +655,59 @@ class strafe_task_30mm : event_call_task {
 		m_pos2 = m_pos2.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));					
 	}
 }
+
+class Ju87_Assault :Task{
+	protected Metagame@ m_metagame;
+	protected float m_time;
+	protected float m_time_1;
+    protected int m_character_id;
+    protected int m_faction_id;
+	protected float m_timeLeft;
+	protected float m_timeLeft_1;
+	protected Vector3 m_pos;
+	protected bool m_started;
+
+	Ju87_Assault(Metagame@ metagame, float time, int cId,int fId,Vector3 pos,float time1 =5.0) {
+		@m_metagame = metagame;
+		m_time = time;
+		m_time_1 = time1;
+		m_character_id = cId;
+		m_faction_id =fId;
+		m_pos=pos;
+	}
+
+	void start() {
+		m_timeLeft=m_time;
+		m_timeLeft_1 = m_time_1;
+		m_started = false;
+	}
+
+	void update(float time) {
+		m_timeLeft -= time;
+		if (m_timeLeft < 0 && !m_started)
+		{
+			m_started = true;
+			playSoundAtLocation(m_metagame,"stuka_bomber_assault.wav",m_faction_id,m_pos,0.7);
+		}
+		if(m_started)
+		{
+			m_timeLeft_1 -= time;
+		}
+		if(m_timeLeft_1 < 0)
+		{
+			float rand_angle = rand(-3.14,3.14);
+			float rand_x = 50*cos(rand_angle);
+			float rand_y = 50*sin(rand_angle);
+			Vector3 start_pos = m_pos.add(Vector3(rand_x,0,rand_y));
+			start_pos = start_pos.add(Vector3(0,50,0));
+			insertCommonStrike(m_character_id,m_faction_id,"ju87_assault",start_pos,m_pos);
+		}
+	}
+
+    bool hasEnded() const {
+		if (m_timeLeft_1 < 0) {
+			return true;
+		}
+		return false;
+	}
+}
