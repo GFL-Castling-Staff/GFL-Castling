@@ -342,7 +342,7 @@
 	</soldier>
 	<soldier name="special_forces_404" spawn_score="0.1" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<ai filename="elite.ai" />
-		<resources file="gk.resources" clear_weapons="1" clear_carry_items="1">
+		<resources file="gk.resources" clear_weapons="1" clear_carry_items="1" clear_calls="1">
 		    <weapon key="gkw_404_g11mod3.weapon" />
 			<weapon key="gkw_404_hk416mod3.weapon" />
 			<weapon key="gkw_404_ump45mod3.weapon" />
@@ -1367,7 +1367,7 @@
 		</character>
 		<model filename="sfd_agent.xml" />
 		<ai filename="hydra.ai" />
-		<resources clear_vehicles="1" clear_weapons="1" clear_grenades="1" clear_carry_items="1">
+		<resources clear_vehicles="1" clear_weapons="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="ff_agent.weapon" />
 			<carry_item key="bp_t5_16lab.carry_item" />
 		</resources>
@@ -1387,7 +1387,7 @@
 		</character>
 		<model filename="sfd_scarecrow.xml" />
 		<ai filename="dummy_scarecrow.ai" />
-		<resources clear_vehicles="1" clear_weapons="1" clear_grenades="1" clear_carry_items="1">
+		<resources clear_vehicles="1" clear_weapons="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="ff_scarecrow_dummy.weapon" />
 			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
@@ -1407,7 +1407,7 @@
 		</character>
 		<model filename="gkd_smg_type64mod3.xml" />
 		<ai filename="dummy_scarecrow.ai" />
-		<resources clear_vehicles="1" clear_weapons="1" clear_grenades="1" clear_carry_items="1">
+		<resources clear_vehicles="1" clear_weapons="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="gkw_64typemod3_dummy.weapon" />
 			<carry_item key="exo_dummy_64type.carry_item" />
 		</resources>

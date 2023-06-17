@@ -570,7 +570,7 @@ class GFLairstrike : Tracker {
                     break;
                 }
                 case 20:{
-                    CreateDirectProjectile(m_metagame,start_pos,end_pos,"ju87.projectile",cid,fid,25);
+                    CreateDirectProjectile(m_metagame,start_pos,end_pos,"ju87.projectile",cid,fid,30);
                     Airstrike_strafe.removeAt(a);
                     break;
                 }                   
