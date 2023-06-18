@@ -442,6 +442,9 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_mp7_2405.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_mp40_902.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_a91_4403.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_ump9_3404.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_mk3a1_30007.weapon", "weapon", 1.0f),
+
 		ScoredResource("gkw_m870_3803.weapon", "weapon", 1.0f)
 			}
 		};
@@ -1326,6 +1329,8 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_a91.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_chauchat.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_ukm2000.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_pm1910.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_defender.weapon", "weapon", 0.3f),
 
 
 				ScoredResource("gkw_hk21.weapon", "weapon", 0.2f),
@@ -1448,8 +1453,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_savage99.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_tps.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_m327.weapon", "weapon", 0.2f),
-				ScoredResource("gkw_ump9_3404.weapon", "weapon", 0.2f),
-				ScoredResource("gkw_mk3a1_30007.weapon", 0.2f),
+
 
 
 				ScoredResource("gkw_negev.weapon", "weapon", 0.2f)
@@ -1760,6 +1764,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_hawk97.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_nova.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_uts15.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_defender.weapon", "weapon", 0.3f),
 
 
 				ScoredResource("gkw_aa12.weapon", "weapon", 0.2f),
@@ -1817,6 +1822,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_pk.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_type80.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_chauchat.weapon", "weapon", 0.3f),
+				ScoredResource("gkw_pm1910.weapon", "weapon", 0.3f),
 
 				ScoredResource("gkw_kord.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_lewis.weapon", "weapon", 0.2f),
