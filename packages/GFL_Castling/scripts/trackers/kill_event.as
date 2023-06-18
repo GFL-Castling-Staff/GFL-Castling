@@ -475,7 +475,7 @@ class kill_event : Tracker {
                 if(j>=0){
                     KillCountArray[j].add();
                     int kill_num = KillCountArray[j].m_killnum;
-                    _log("成功积累"+ kill_num);
+                    // _log("成功积累"+ kill_num);
                     switch(kill_num)
                     {
                         case 10:{notify(m_metagame, "Skill - Mosin Nagant LV1", dictionary(), "misc", playerId, false, "", 1.0);break;}
