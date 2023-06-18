@@ -73,8 +73,6 @@
         "hand_grenade.projectile",
         "hand_88grenade.projectile",
         "hand_atgrenade.projectile",
-        "hand_golyat.throwable",
-        "hand_golyat_b.throwable",
         "c4.projectile"
     };
 
@@ -121,6 +119,8 @@
         {"upgrade_scarl.carry_item",19},
         {"upgrade_scarh.carry_item",20},
         {"upgrade_cso.carry_item",21},
+        {"upgrade_type4.carry_item",22},
+        {"upgrade_sr3mp.carry_item",23},
 
         {"666",0}
     };
@@ -150,6 +150,8 @@
         {"scarl",19},
         {"scarh",20},
         {"cso",21},
+        {"type4",22},
+        {"sr3mp",23},
 
         {"666",0}
     };
@@ -242,8 +244,6 @@
 		Resource("gk_snipe_fairy.call", "call"),
 		Resource("gk_yaoren_fairy.call", "call"),
 		Resource("martina.call", "call"),
-		Resource("chiara.call", "call"),
-		Resource("pierre.call", "call"),
 		Resource("gk_repair_fairy.call", "call"),
 		Resource("target.call", "call")
 	};
@@ -260,8 +260,6 @@
 		Resource("gk_snipe_fairy.call", "call"),
 		Resource("gk_yaoren_fairy.call", "call"),
 		Resource("martina.call", "call"),
-		Resource("chiara.call", "call"),
-		Resource("pierre.call", "call"),
 		Resource("gk_repair_fairy.call", "call"),
 		Resource("target.call", "call")
 	};

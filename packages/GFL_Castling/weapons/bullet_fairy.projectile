@@ -37,4 +37,6 @@
     <sound class="result" key="static_object" copy="other" />
     <sound class="result" key="vehicle" copy="other" />
     <sound class="result" key="character" copy="other" />
+    <effect class="activated" ref="general_weapon_activated_bullet_light" lighting="0"/>
+    <effect class="activated" ref="general_weapon_activated_bullet_centerlight" lighting="0"/>    
 </projectile>

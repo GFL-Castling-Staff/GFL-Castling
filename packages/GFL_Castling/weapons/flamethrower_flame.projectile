@@ -19,11 +19,17 @@
     <sound class="result" key="character" copy="other" />
     <effect class="activated" ref="FlamePropulsion" lighting="0" />
     <effect class="activated" ref="FlameSparkle" lighting="0" />
-    <effect class="result" ref="SmokePropulsionEnd" />
-    <effect class="result" ref="FlamePropulsionEnd" lighting="0" />
-    <effect class="result" ref="FlameSparkleEnd" lighting="0" />
+
     <effect class="result" key="terrain" ref="BurnOut_short" post_processing="1" />
-    <!-- <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" /> -->
+    <effect class="result" key="terrain" ref="molotov_fire_01"/>
+    <effect class="result" key="terrain" ref="molotov_fire_02"/>
+    <effect class="result" key="terrain" ref="molotov_smoke"/>
+	<effect class="result" key="other" copy="terrain"/>
+    <effect class="result" key="static_object" copy="terrain" />
+    <effect class="result" key="character" copy="terrain" />
+    <effect class="result" key="vehicle" copy="terrain" />    
+    
     <effect class="result" type="splat_map" surface_tag="" size="2.0" atlas_index="4" layer="0" />
+
     <trail probability="1.0" key="FlamethrowerTrail" />
 </projectile>

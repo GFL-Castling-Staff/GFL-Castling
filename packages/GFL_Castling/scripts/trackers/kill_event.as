@@ -47,7 +47,6 @@ class kill_event : Tracker {
 
 
         // 近战定位HG
-        {"gkw_m1911_mod3.weapon",2},
         {"gkw_m950amod3.weapon",3},
         {"gkw_m950amod3_702.weapon",3},
         {"gkw_m950amod3_4302.weapon",3},
@@ -55,6 +54,7 @@ class kill_event : Tracker {
         {"gkw_apsmod3_4306.weapon",3},
         {"gkw_apsmod3_6808.weapon",3},
         {"gkw_c96mod3.weapon",3},
+        {"gkw_makarovmod3.weapon",3},
         {"ff_alchemist.weapon",3},
         {"ff_alchemist_skill.weapon",3},
 
@@ -67,12 +67,21 @@ class kill_event : Tracker {
         {"gkw_ar15mod3_skill.weapon",3},
         {"gkw_ar15mod3_532_skill.weapon",3},
         {"gkw_ar15mod3_30001_skill.weapon",3},
+        {"gkw_hk416_agent_hv.weapon",3},
+        {"gkw_hk416_agent_fmj.weapon",3},
+        {"gkw_asval.weapon",3},
+        {"gkw_asval_2907.weapon",3},
+        {"gkw_asvalmod3.weapon",3},
+        {"gkw_asvalmod3_2907.weapon",3},
+        {"gkw_ribeyrollesmod3_skill.weapon",3},
 
         // SMG——3kills
         {"gkw_ump40.weapon",3},
         {"gkw_ump9.weapon",3},
+        {"gkw_ump9_3404.weapon",3},
         {"gkw_ump45.weapon",3},
         {"gkw_ump9mod3.weapon",3},
+        {"gkw_ump9mod3_3404.weapon",3},
         {"gkw_ump45mod3.weapon",3},
         {"gkw_ump45_410.weapon",3},
         {"gkw_ump45_535.weapon",3},
@@ -80,6 +89,10 @@ class kill_event : Tracker {
         {"gkw_ump45mod3_410.weapon",3},
         {"gkw_ump45mod3_535.weapon",3},
         {"gkw_ump45mod3_3403.weapon",3},
+        {"gkw_vector_agent_hpi.weapon",3},
+        {"gkw_vector_agent_fmj.weapon",3},
+        {"gkw_mpk.weapon",3},
+        {"gkw_mpl.weapon",3},
 
         {"gkw_ump45_5405.weapon",3},
         {"gkw_ump45mod3_5405.weapon",3},
@@ -96,6 +109,10 @@ class kill_event : Tracker {
         {"gkw_type100.weapon",3},
         {"gkw_type100_1.weapon",3},
         {"gkw_type100_4004.weapon",3},
+        {"gkw_type100mod3.weapon",3},
+        {"gkw_type100mod3_4004.weapon",3},
+        {"gkw_type100mod3_skill.weapon",3},   
+        {"gkw_type100mod3_4004_skill.weapon",3},
         {"gkw_sp9.weapon",3},
         {"gkw_sp9_6303.weapon",3},
         {"gkw_vector.weapon",3},
@@ -122,6 +139,7 @@ class kill_event : Tracker {
         {"gkw_mab38mod3_oc.weapon",3},        
         {"gkw_klin.weapon",3},
         {"gkw_mp40.weapon",3},
+        {"gkw_mp40_902.weapon",3},
         {"gkw_mp5.weapon",3},
         {"gkw_mp5mod3.weapon",3},
         {"gkw_mp5_3.weapon",3},
@@ -152,8 +170,9 @@ class kill_event : Tracker {
         {"gkw_ppsh41mod3.weapon",3},
         {"gkw_ppsh41_602.weapon",3},
         {"gkw_ppsh41mod3_602.weapon",3},
-        {"gkw_mp7.weapon",3},
-        {"gkw_mp7_6806.weapon",3},
+        {"gkw_mp7.weapon",4},
+        {"gkw_mp7_2405.weapon",4},
+        {"gkw_mp7_6806.weapon",4},
         {"gkw_idw.weapon",3},
         {"gkw_idw_2108.weapon",3},
         {"gkw_idw_3205.weapon",3},
@@ -170,38 +189,38 @@ class kill_event : Tracker {
         {"gkw_kp31mod3_310.weapon",3},
         {"gkw_kp31_3101.weapon",3},
         {"gkw_kp31mod3_3101.weapon",3},        
-        {"gkw_p90.weapon",3},
-        {"gkw_p90_2802.weapon",3},
+        {"gkw_p90.weapon",4},
+        {"gkw_p90_2802.weapon",4},
         {"gkw_augpara.weapon",3},
         {"gkw_augpara_5503.weapon",3},
-        {"gkw_cms.weapon",3},
+        {"gkw_cms.weapon",4},
         {"gkw_cms_aps.weapon",3},
-        {"gkw_cms_st.weapon",3},
-        {"gkw_cms_6403.weapon",3},
+        {"gkw_cms_st.weapon",4},
+        {"gkw_cms_6403.weapon",4},
         {"gkw_cms_6403_aps.weapon",3},
-        {"gkw_cms_6403_st.weapon",3},
+        {"gkw_cms_6403_st.weapon",4},
         {"gkw_vp1915.weapon",3},
         {"gkw_vp1915_6604.weapon",3},
-
-        //短突
-        {"gkw_ak74u.weapon",5},
-        {"gkw_ak74u_3002.weapon",5},
-        {"gkw_ak74u_skill.weapon",3},
-        {"gkw_ak74u_3002_skill.weapon",3},
-        {"gkw_sr3mp.weapon",4},
-        {"gkw_sr3mp_skill.weapon",4},
         {"gkw_ro635.weapon",3},
         {"gkw_ro635mod3.weapon",3},
         {"gkw_ro635_534.weapon",3},
         {"gkw_ro635mod3_534.weapon",3},
-        {"gkw_honeybadger.weapon",3},
-        {"gkw_honeybadger_4005.weapon",3},
+
+        //短突
+        {"gkw_ak74u.weapon",5},
+        {"gkw_ak74u_3002.weapon",5},
+        {"gkw_ak74u_skill.weapon",4},
+        {"gkw_ak74u_3002_skill.weapon",4},
+        {"gkw_sr3mp.weapon",4},
+        {"gkw_sr3mp_skill.weapon",4},
+        {"gkw_honeybadger.weapon",4},
+        {"gkw_honeybadger_4005.weapon",4},
         {"gkw_g36c.weapon",3},
-        {"gkw_g36c_mod3.weapon",3},
-        {"gkw_g36c_mod3_skill.weapon",3},
+        {"gkw_g36c_mod3.weapon",4},
+        {"gkw_g36c_mod3_skill.weapon",5},
         {"gkw_g36c_3103.weapon",3},
-        {"gkw_g36c_mod3_3103.weapon",3},
-        {"gkw_g36c_mod3_3103_skill.weapon",3},
+        {"gkw_g36c_mod3_3103.weapon",4},
+        {"gkw_g36c_mod3_3103_skill.weapon",5},
         {"gkw_x95.weapon",4},
         {"gkw_ar57.weapon",4},
 
@@ -326,79 +345,88 @@ class kill_event : Tracker {
             
             
             //只查询我方杀敌
-            if (factionId==0 && characterId > 0){
-                string c_weaponType = getPlayerWeaponFromListByID(characterId,0);
-                string c_armorType = getPlayerWeaponFromListByID(characterId,3);
-                int kill_to_heal_scale = 1;
+            if (!(factionId==0) || !(characterId > 0)) return;
+
+            string c_weaponType = getPlayerWeaponFromListByID(characterId,0);
+            string c_armorType = getPlayerWeaponFromListByID(characterId,3);
+            int kill_to_heal_scale = 1;
+            if(reward_pool_key=="rare" || reward_pool_key=="elite")
+            {
+                kill_to_heal_scale = 2;
+            }
+            if(reward_pool_key=="boss")
+            {
+                kill_to_heal_scale = 5;
+            }
+
+            if(c_weaponType=="gkw_ppkmod3.weapon" || c_weaponType =="gkw_ppkmod3_3905.weapon"){
+                int i = findSkillIndex(characterId,"PPKMOD3");
+                if(i >=0){
+                    SkillArray[i].m_time-=1.0;
+                    if(KillerWeaponKey=="gkw_ppkmod3.weapon" || KillerWeaponKey=="gkw_ppkmod3_3905.weapon"){
+                        SkillArray[i].m_time-=1.0;
+                    }
+                }
+            }
+
+            if(c_weaponType=="gkw_m1895mod3_5309.weapon" 
+            || c_weaponType =="gkw_m1895mod3_5309_skill.weapon"
+            || c_weaponType =="gkw_m1895mod3_7107.weapon"
+            || c_weaponType =="gkw_m1895mod3_7107_skill.weapon"
+            || c_weaponType =="gkw_m1895mod3.weapon"
+            || c_weaponType =="gkw_m1895mod3_skill.weapon"
+            ){
+                int i = findSkillIndex(characterId,"Nagant");
+                if(i >=0){
+                    SkillArray[i].m_time-=2.0;
+                }
+            }
+
+            if(startsWith(c_armorType,'acbp_t6')){
+                float scale = 1.0;
                 if(reward_pool_key=="rare" || reward_pool_key=="elite")
                 {
-                    kill_to_heal_scale = 2;
+                    scale = 2.0;
                 }
                 if(reward_pool_key=="boss")
                 {
-                    kill_to_heal_scale = 5;
+                    scale = 4.0;
                 }
-
-                if(c_weaponType=="gkw_ppkmod3.weapon" || c_weaponType =="gkw_ppkmod3_3905.weapon"){
-                    int i = findSkillIndex(characterId,"PPKMOD3");
-                    if(i >=0){
-                        SkillArray[i].m_time-=1.0;
-                        if(KillerWeaponKey=="gkw_ppkmod3.weapon" || KillerWeaponKey=="gkw_ppkmod3_3905.weapon"){
-                            SkillArray[i].m_time-=1.0;
-                        }
+                int i = findSkillIndex(characterId);
+                if(i >=0){
+                    if(SkillArray[i].m_time >=30.0){
+                        SkillArray[i].m_time-=1.0 *scale;
                     }
-                }
-
-                if(c_weaponType=="gkw_m1895mod3_5309.weapon" 
-                || c_weaponType =="gkw_m1895mod3_5309_skill.weapon"
-                || c_weaponType =="gkw_m1895mod3_7107.weapon"
-                || c_weaponType =="gkw_m1895mod3_7107_skill.weapon"
-                || c_weaponType =="gkw_m1895mod3.weapon"
-                || c_weaponType =="gkw_m1895mod3_skill.weapon"
-                ){
-                    int i = findSkillIndex(characterId,"Nagant");
-                    if(i >=0){
-                        SkillArray[i].m_time-=2.0;
+                    else{
+                        SkillArray[i].m_time-=0.5 *scale;
                     }
                 }
-
-                if(startsWith(c_armorType,'acbp_t6')){
-                    float scale = 1.0;
-                    if(reward_pool_key=="rare" || reward_pool_key=="elite")
-                    {
-                        scale = 2.0;
-                    }
-                    if(reward_pool_key=="boss")
-                    {
-                        scale = 4.0;
-                    }
-                    int i = findSkillIndex(characterId);
-                    if(i >=0){
-                        if(SkillArray[i].m_time >=30.0){
-                            SkillArray[i].m_time-=1.0 *scale;
-                        }
-                        else{
-                            SkillArray[i].m_time-=0.5 *scale;
-                        }
-                    }
-                }
-                // if(startsWith(c_armorType,"srexo_t6")){
-                //     updateHealByKillEvent(characterId,factionId,4,30,"vest",kill_to_heal_scale);
-                // }
-                if(startsWith(c_armorType,"tms_t6")){
-                    if (c_weaponType=="gkw_hawk97mod3.weapon" || c_weaponType =="gkw_hawk97mod3_5805.weapon")
-                    {
-                        updateHealByKillEvent(characterId,factionId,4,30,"vest",kill_to_heal_scale+1);
-                    }
-                    else
-                    {
-                        updateHealByKillEvent(characterId,factionId,4,30,"vest",kill_to_heal_scale);
-                    }
-                }
-                updateHealByKillEvent(characterId,factionId,int(healOnKillWeaponList[c_weaponType]),15,"weapon",kill_to_heal_scale);
             }
+            if(startsWith(c_armorType,"exo_x_t6")){
+                updateHealByKillEvent(characterId,factionId,10,60,"vest",kill_to_heal_scale);
+            }
+            if(startsWith(c_armorType,"tms_t6")){
+                if (c_weaponType=="gkw_hawk97mod3.weapon" || c_weaponType =="gkw_hawk97mod3_5805.weapon")
+                {
+                    updateHealByKillEvent(characterId,factionId,4,30,"vest",kill_to_heal_scale+1);
+                }
+                else
+                {
+                    updateHealByKillEvent(characterId,factionId,4,30,"vest",kill_to_heal_scale);
+                }
+            }
+            if(c_weaponType=="gkw_m1911_mod3.weapon"){
+                if ((startsWith(c_armorType,"bp_")))
+                {
+                    updateHealByKillEvent(characterId,factionId,4,15,"weapon",kill_to_heal_scale*2);
+                }
+                else
+                {
+                    updateHealByKillEvent(characterId,factionId,4,15,"weapon",kill_to_heal_scale);
+                }
+            }            
 
-
+            updateHealByKillEvent(characterId,factionId,int(healOnKillWeaponList[c_weaponType]),15,"weapon",kill_to_heal_scale);
 
             if(KillerWeaponKey=="gkw_ppkmod3.weapon" || KillerWeaponKey=="gkw_ppkmod3_3905.weapon"){
                 // 乌鸦是猪，望周知
@@ -441,6 +469,52 @@ class kill_event : Tracker {
                 }
             }
 
+            if(KillerWeaponKey=="blast_snipe_mosin.projectile" && killway=="blast")
+            {
+                int j = findKillCountIndex(characterId,"mosinnagant");
+                if(j>=0){
+                    KillCountArray[j].add();
+                    int kill_num = KillCountArray[j].m_killnum;
+                    // _log("成功积累"+ kill_num);
+                    switch(kill_num)
+                    {
+                        case 10:{notify(m_metagame, "Skill - Mosin Nagant LV1", dictionary(), "misc", playerId, false, "", 1.0);break;}
+                        case 20:{notify(m_metagame, "Skill - Mosin Nagant LV2", dictionary(), "misc", playerId, false, "", 1.0);break;}
+                        case 30:{notify(m_metagame, "Skill - Mosin Nagant LV3", dictionary(), "misc", playerId, false, "", 1.0);break;}
+                        case 40:{notify(m_metagame, "Skill - Mosin Nagant LV4", dictionary(), "misc", playerId, false, "", 1.0);break;}
+                        case 505:
+                        {
+                            notify(m_metagame, "Skill - Mosin Nagant LV5", dictionary(), "misc", playerId, false, "", 1.0);
+                            addItemInBackpack(m_metagame,characterId,"carry_item","hayha_chip.carry_item");
+                            break;
+                        }                        
+                        default: break;
+                    }
+                    if (kill_num >= 30)
+                    {
+                        healCharacter(m_metagame,characterId,1);
+                    }
+                }
+                else{
+                    KillCountArray.insertLast(kill_count(characterId,1,"mosinnagant"));
+                }
+            }
+
+            if(KillerWeaponKey=="gkw_m1891mod3.projectile" && killway=="hit")
+            {
+                int i = findSkillIndex(characterId,"mosin");
+                if(i >=0){
+                    if(reward_pool_key=="boss")
+                    {
+                        SkillArray[i].m_time-=3.0;
+                    }
+                    else
+                    {
+                        SkillArray[i].m_time-=1.0;
+                    }
+                }
+            }
+
             if (Solider_Name=="") return;
 
             if(SFbossList.find(Solider_Name)>-1 && characterId > 0){
@@ -463,9 +537,11 @@ class kill_event : Tracker {
         if(player is null) return;
         int cId= player.getIntAttribute("character_id");
         if(cId==-1) return;
-        int index=findKillCountIndex(cId);
-        if(index==-1) return;
-        KillCountArray.removeAt(index);
+        array<int> indexes = findAllKillCountIndexes(cId);
+        if (indexes.length() == 0) return;
+        for (int i = indexes.length() - 1; i >= 0; i--) {
+            KillCountArray.removeAt(indexes[i]);
+        }
     }
     void update(float time){
         if(HealOnKill_track.length()>0){
@@ -543,6 +619,10 @@ class kill_count{
     void add(){
         m_killnum++;
     }
+    
+    void add(int num){
+        m_killnum += num;
+    }    
 }
 
 int findSkillIndex(int cId,string key){
@@ -584,6 +664,40 @@ int findKillCountIndex(int cId,string type){
 int findKillCountIndex(int cId){
     for (uint i=0;i<KillCountArray.length();i++){
         if (KillCountArray[i].m_characterId==cId) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+array<int> findAllKillCountIndexes(int cId) {
+    array<int> indexes;
+    for (uint i = 0; i < KillCountArray.length(); i++) {
+        if (KillCountArray[i].m_characterId == cId) {
+            indexes.insertLast(i);
+        }
+    }
+    return indexes;
+}
+
+class no_delete_data{
+    string m_playername;
+    int m_num=0;
+    string m_data_key;
+    no_delete_data(string a,int b,string c){
+        m_playername=a;
+        m_num=b;
+        m_data_key = c;
+    }
+
+    void add(){
+        m_num++;
+    }
+}
+
+int findNodeleteDataIndex(string name,string type){
+    for (uint i=0;i<No_Delete_DataArray.length();i++){
+        if (No_Delete_DataArray[i].m_playername==name && No_Delete_DataArray[i].m_data_key == type ) {
             return i;
         }
     }

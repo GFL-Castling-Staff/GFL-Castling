@@ -142,6 +142,92 @@ particle_system shadow_real_up_smoke_leave_2 : shadow_real_up_smoke
     }
 }
 
+particle_system shadow_real_up_smoke_leave_3 : shadow_real_up_smoke
+{
+    particle_width 10
+	particle_height 7.5
+    material Tex_Smoke17C_real
+    billboard_type perpendicular_common
+    billboard_origin center_right
+    emitter Ring
+	{
+		angle 30
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 10
+		position 1 -0.1 -3
+		velocity 0.00001
+		time_to_live 4
+		duration 0.1
+	}
+    affector Scaler
+	{
+		rate 0.5
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.25 0.25 0.25 0.3
+		time1 0.4
+		colour1 0.15 0.15 0.15 0.65
+		time2 1
+		colour2 0 0 0 0.1
+	}
+    affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+    affector Rotator
+	{
+		rotation_speed_range_start	5
+		rotation_speed_range_end	5
+		rotation_range_start	120
+		rotation_range_end 90
+    }
+}
+particle_system shadow_real_up_smoke_leave_4 : shadow_real_up_smoke
+{
+    particle_width 7
+	particle_height 7
+    material Tex_Smoke17C_real
+    billboard_type perpendicular_common
+    billboard_origin center
+    emitter Ring
+	{
+		angle 30
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 10
+		position 0 0 0
+		velocity 0.00001
+		time_to_live 4
+		duration 0.1
+	}
+    affector Scaler
+	{
+		rate 2
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.25 0.25 0.25 0.3
+		time1 0.4
+		colour1 0.15 0.15 0.15 0.65
+		time2 1
+		colour2 0 0 0 0.1
+	}
+    affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+    affector Rotator
+	{
+		rotation_speed_range_start	5
+		rotation_speed_range_end	5
+		rotation_range_start	120
+		rotation_range_end 90
+    }
+}
 
 
 

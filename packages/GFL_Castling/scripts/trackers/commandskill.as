@@ -19,6 +19,7 @@
 
 array<SkillTrigger@> SkillArray;
 array<kill_count@> KillCountArray;
+array<no_delete_data@> No_Delete_DataArray;
 
 class SkillTrigger{
     int m_character_id;
@@ -28,8 +29,6 @@ class SkillTrigger{
     int m_charge=1;
     string m_charge_mode;
     bool m_alert;
-    // int m_player_id=-1;
-    // string m_playername="";
     SkillModifer@ m_skillInfo;
 
     SkillTrigger(int characterId, float time,string weapontype,string charge_mode="normal",bool alert = true){
@@ -254,7 +253,9 @@ class CommandSkill : Tracker {
                 case 65:{excuteWerlodskill(cId,senderId,m_modifer);break;}
                 case 66:{excutePA15skill(cId,senderId,m_modifer);break;}
                 case 67:{excuteNagantM1895skill(cId,senderId,m_modifer);break;}
-                
+                case 68:{excuteMosinNagant(cId,senderId,m_modifer);break;}
+                case 69:{excuteKar98k(cId,senderId,m_modifer);break;}
+                case 70:{excuteGM6Lynx(cId,senderId,m_modifer);break;}
 
                 default:
                     break;
@@ -294,6 +295,10 @@ class CommandSkill : Tracker {
     }
 	protected void handleMatchEndEvent(const XmlElement@ event) {
         m_ended=true;
+        while(KillCountArray.length()>0)   
+        {
+            KillCountArray.removeLast();
+        }
     }
     void update(float time) {
         if(DontSpamingYourFuckingSkillWhileCoolDownBro.length()>0){
@@ -319,6 +324,7 @@ class CommandSkill : Tracker {
                             playPrivateSound(m_metagame,"skilldone.wav",SkillArray[a].m_skillInfo.m_player_id);
                         }
                         sendFactionMessageKeySaidAsCharacter(m_metagame,0,SkillArray[a].m_character_id,"skillcooldowndone");
+                        notify(m_metagame, "Hint - Skill Cooldown Done",dictionary(), "misc", SkillArray[a].m_skillInfo.m_player_id, false, "", 1.0);
                         SkillArray.removeAt(a);
                     }
                     else if (SkillArray[a].m_charge_mode=="constant"){
@@ -414,6 +420,13 @@ class CommandSkill : Tracker {
         }
     }
 
+    bool canCastSkill(const XmlElement@ character){
+        int death = character.getIntAttribute("dead");
+        int wound = character.getIntAttribute("wounded");
+        if (death == 1 || wound == 1) return false;
+        return true;
+    }
+
     string getCooldownFromIndex(int j)
     {
         return ""+SkillArray[j].m_time;
@@ -425,7 +438,7 @@ class CommandSkill : Tracker {
         if(lefttime == "") return false;
         dictionary a;
         a["%time"] = lefttime;
-        sendPrivateMessageKey(metagame,pId,"skillcooldownhint",a);
+        notify(metagame, "Hint - Skill Cooldown Hint", a, "misc", pId, false, "", 1.0);
         return true;
     }
 
@@ -509,7 +522,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -533,7 +546,7 @@ class CommandSkill : Tracker {
                     string target = player.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
-                    if(weaponname=="gkw_vector.weapon" || weaponname=="gkw_vector_549.weapon" || weaponname=="gkw_vector_549_skill.weapon" || weaponname=="gkw_vector_1901.weapon") {
+                    if(weaponname=="gkw_vector.weapon" || weaponname=="gkw_vector_549.weapon" || weaponname=="gkw_vector_549_skill.weapon" || weaponname=="gkw_vector_1901.weapon" || weaponname =="gkw_vector_hellfire_sticky.weapon") {
                         array<string> Voice={
                             "Vector_SKILL1_JP.wav",
                             "Vector_SKILL2_JP.wav",
@@ -551,7 +564,7 @@ class CommandSkill : Tracker {
                         };
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     }
-                    if(weaponname=="gkw_mp40.weapon") {
+                    if(weaponname=="gkw_mp40.weapon" || weaponname=="gkw_mp40_902.weapon") {
                         array<string> Voice={
                             "MP40_SKILL1_JP.wav",
                             "MP40_SKILL2_JP.wav",
@@ -559,7 +572,7 @@ class CommandSkill : Tracker {
                         };
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     }
-                    if(weaponname=="gkw_uzi.weapon" || weaponname=="gkw_uzimod3.weapon" || weaponname=="gkw_uzimod3_skill.weapon") {
+                    if(weaponname=="gkw_uzi.weapon" || weaponname=="gkw_uzi_7907.weapon") {
                         array<string> Voice={
                             "MicroUZI_SKILL1_JP.wav",
                             "MicroUZI_SKILL2_JP.wav",
@@ -597,7 +610,7 @@ class CommandSkill : Tracker {
                 }
             }
         }
-        if(weaponname=="gkw_kp31mod3.weapon" || weaponname=="gkw_kp31mod3_310.weapon"){
+        if(weaponname=="gkw_kp31mod3.weapon" || weaponname=="gkw_kp31mod3_310.weapon" || weaponname=="gkw_kp31mod3_3101.weapon"){
             addCooldown("FIRENADE",12,characterId,modifer);
         }
         else{
@@ -912,7 +925,7 @@ class CommandSkill : Tracker {
                 if (ExistQueue && SkillArray[j].m_charge >= 6){
                     dictionary a;
                     a["%time"] = ""+SkillArray[j].m_time;
-                    sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+                    notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
                     return;
                 }
                 if(SkillArray[j].m_charge <6){
@@ -931,10 +944,11 @@ class CommandSkill : Tracker {
                     }
                     string target = playerinfo.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
-                    Vector3 s_pos = stringToVector3(target);        
+                    Vector3 s_pos = stringToVector3(target);
+                    s_pos = s_pos.add(Vector3(0,2,0));
                     int factionid = characterinfo.getIntAttribute("faction_id");
 
-                    CreateDirectProjectile(m_metagame,c_pos,s_pos,'baibaozi_skill.projectile',characterId,factionid,120);
+                    CreateDirectProjectile_T(m_metagame,c_pos,s_pos,'baibaozi_skill.projectile',characterId,factionid,1.0);
                     // array<string> Voice={
                     // "Excutioner_buhuo_SKILL02_JP.wav",
                     // "Excutioner_buhuo_SKILL03_JP.wav",
@@ -951,6 +965,7 @@ class CommandSkill : Tracker {
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (!canCastSkill(character)) return;
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
                     string target = player.getStringAttribute("aim_target");
@@ -977,6 +992,7 @@ class CommandSkill : Tracker {
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"stg44mod3")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1015,19 +1031,18 @@ class CommandSkill : Tracker {
         if (ExistQueue && mod3==false){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            //_log("skill cooldown" + SkillArray[j].m_time);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             return;
         }
         if (ExistQueue && mod3 && SkillArray[j].m_charge>3){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            //_log("skill cooldown" + SkillArray[j].m_time);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1072,6 +1087,7 @@ class CommandSkill : Tracker {
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"AAgrenade")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1145,6 +1161,7 @@ class CommandSkill : Tracker {
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"APgrenade")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1211,7 +1228,7 @@ class CommandSkill : Tracker {
                 if (ExistQueue && SkillArray[j].m_charge >=3){
                     dictionary a;
                     a["%time"] = ""+SkillArray[j].m_time;
-                    sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+                    notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
                     //_log("skill cooldown" + SkillArray[j].m_time);
                     return;
                 }
@@ -1254,7 +1271,7 @@ class CommandSkill : Tracker {
                 if (ExistQueue && SkillArray[j].m_charge >=3){
                     dictionary a;
                     a["%time"] = ""+SkillArray[j].m_time;
-                    sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+                    notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
                     //_log("skill cooldown" + SkillArray[j].m_time);
                     return;
                 }
@@ -1314,6 +1331,7 @@ class CommandSkill : Tracker {
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"PP-19")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1503,12 +1521,13 @@ class CommandSkill : Tracker {
         if (ExistQueue && SkillArray[j].m_charge>3 ){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1581,12 +1600,13 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1626,12 +1646,13 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1684,12 +1705,13 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1729,12 +1751,13 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1773,7 +1796,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -1802,12 +1825,13 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1837,7 +1861,7 @@ class CommandSkill : Tracker {
                         playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
                         addCooldown("Flashbang",16,characterId,modifer);
                     }
-                    if(weaponname=="gkw_ump9.weapon" || weaponname=="gkw_ump9_409.weapon" || weaponname=="gkw_ump9_536.weapon" || weaponname=="gkw_ump9_6704.weapon" || weaponname=="gkw_ump9_6704_skill.weapon") {
+                    if(weaponname=="gkw_ump9.weapon" || weaponname=="gkw_ump9_409.weapon" || weaponname=="gkw_ump9_536.weapon" || weaponname=="gkw_ump9_3404.weapon"  || weaponname=="gkw_ump9_6704.weapon" || weaponname=="gkw_ump9_6704_skill.weapon") {
                         array<string> Voice={
                             "UMP9_skill1.wav",
                             "UMP9_skill2.wav",
@@ -1905,12 +1929,13 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1950,12 +1975,13 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -1998,12 +2024,13 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -2052,7 +2079,7 @@ class CommandSkill : Tracker {
                 if (ExistQueue && SkillArray[j].m_charge >=3){
                     dictionary a;
                     a["%time"] = ""+SkillArray[j].m_time;
-                    sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+                    notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
                     //_log("skill cooldown" + SkillArray[j].m_time);
                     return;
                 }
@@ -2098,7 +2125,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             _log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -2135,12 +2162,13 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
@@ -2252,7 +2280,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -2277,7 +2305,7 @@ class CommandSkill : Tracker {
                     // tasker.add(DelayAirstrikeRequest(m_metagame,3.0,characterId,factionid,stringToVector3(target),"a10_strafe"));
 
                     tasker.add(strafe_task_30mm(m_metagame,3.0,characterId,factionid,c_pos,stringToVector3(target)));
-                    tasker.add(strafe_task_30mm(m_metagame,3.0,characterId,factionid,c_pos,stringToVector3(target)));
+                    tasker.add(DelayAirstrikeRequest(m_metagame,3.0,characterId,factionid,stringToVector3(target),"a10_rocket_strafe",true));
                     tasker.add(strafe_task_30mm(m_metagame,3.0,characterId,factionid,c_pos,stringToVector3(target)));
                     addCooldown("MG4MOD3",90,characterId,modifer);
                 }
@@ -2297,7 +2325,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -2322,7 +2350,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             return;
         }
         const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
@@ -2394,7 +2422,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -2423,14 +2451,14 @@ class CommandSkill : Tracker {
         if (ExistQueue && mod3==false){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
         if (ExistQueue && mod3 && SkillArray[j].m_charge>3){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -2483,7 +2511,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -2530,7 +2558,7 @@ class CommandSkill : Tracker {
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character is null) return;
         const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
-        if (player !is null) return;
+        if (player is null) return;
         if (player.hasAttribute("aim_target")) {
             string target = player.getStringAttribute("aim_target");
             int factionid = character.getIntAttribute("faction_id");
@@ -2684,7 +2712,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             return;
         }
         const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
@@ -2717,7 +2745,7 @@ class CommandSkill : Tracker {
                 int closestIndex = -1;
                 float closestDistance = -1.0f;                
                 for(uint i=0;i<affectedCharacter.length();i++){
-                    float distance = getPositionDistance(c_pos, stringToVector3(affectedCharacter[i].getStringAttribute("position")));
+                    float distance = getPositionDistance(s_pos, stringToVector3(affectedCharacter[i].getStringAttribute("position")));
                     if (distance < closestDistance || closestDistance < 0.0){
                         closestDistance = distance;
                         closestIndex = i;
@@ -2739,37 +2767,37 @@ class CommandSkill : Tracker {
                     ){
                         playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_hit_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                         addCooldown("sniper",20,characterId,modifer);
                     }
                     else if (weapon_name == "gkw_m1903.weapon" || weapon_name=="gkw_m1903_exp.weapon" || weapon_name=="gkw_m1903_only.weapon"){
                         playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_hit_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_60.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                         addCooldown("sniper",20,characterId,modifer);
                     }
                     else if (weapon_name == "gkw_m1903_302.weapon" || weapon_name=="gkw_m1903_302_exp.weapon" || weapon_name=="gkw_m1903_302_only.weapon"){
                         playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_hit_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_60.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                         addCooldown("sniper",20,characterId,modifer);
                     }                    
                     else if (weapon_name == "gkw_m1891.weapon"){
                         playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_hit_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
-                        addCooldown("sniper",25,characterId,modifer);
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_80.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        addCooldown("sniper",30,characterId,modifer);
                     }
                     else if (weapon_name == "gkw_m21.weapon"){
                         playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_hit_40.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_40.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                         addCooldown("sniper",15,characterId,modifer);
                     }
                     else if (weapon_name == "gkw_psg1.weapon"){
-                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
+                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_hit_40.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_40.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                         addCooldown("sniper",15,characterId,modifer);
                     }                                        
                     else if (weapon_name == "gkw_sv98.weapon" || weapon_name =="gkw_sv98_502.weapon" || weapon_name=="gkw_sv98_1906.weapon"){
@@ -2789,7 +2817,13 @@ class CommandSkill : Tracker {
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                         tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_blast_30.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                         addCooldown("sniper",12,characterId,modifer);
-                    }                                        
+                    }
+                    else if (weapon_name == "gkw_scarh_only.weapon"){
+                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_blast_30.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        addCooldown("sniper",10,characterId,modifer);
+                    }                                         
                     else if (weapon_name == "gkw_qbu88.weapon" || weapon_name == "gkw_qbu88_skill.weapon" || weapon_name == "gkw_qbu88_5502.weapon" || weapon_name == "gkw_qbu88_5502_skill.weapon"){
                         playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
@@ -2805,37 +2839,37 @@ class CommandSkill : Tracker {
                     else if (weapon_name == "gkw_98k.weapon" || weapon_name == "gkw_98k_skill.weapon"){
                         playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_hit_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                         addCooldown("sniper",20,characterId,modifer);
                     }
                     else if (weapon_name == "gkw_98kmod3.weapon" || weapon_name == "gkw_98kmod3_skill.weapon"){
                         playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_hit_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                         addCooldown("sniper",18,characterId,modifer);
                     }
                     else if (weapon_name == "gkw_98k_4301.weapon" || weapon_name == "gkw_98k_4301_skill.weapon"){
                         playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_hit_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                         addCooldown("sniper",20,characterId,modifer);
                     }
                     else if (weapon_name == "gkw_98kmod3_4301.weapon" || weapon_name == "gkw_98kmod3_4301_skill.weapon"){
                         playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_hit_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                         addCooldown("sniper",18,characterId,modifer);
                     }                    
                     else if (weapon_name == "gkw_supersass.weapon" || weapon_name=="gkw_supersass_1407.weapon"){
                         playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_hit_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                         addCooldown("sniper",20,characterId,modifer);
                     }  
                     else if (weapon_name == "gkw_supersassmod3.weapon" || weapon_name=="gkw_supersassmod3_1407.weapon" || weapon_name == "gkw_supersassmod3_skill.weapon" || weapon_name=="gkw_supersassmod3_1407_skill.weapon"){
                         playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_hit_40.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_40.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                         addCooldown("sniper",20,characterId,modifer);
                     }
                 }
@@ -2848,20 +2882,7 @@ class CommandSkill : Tracker {
     }
 
     void excuteCarcano1938(int characterId,int playerId,SkillModifer@ modifer){
-        bool ExistQueue = false;
-        int j=-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="sniper") {
-                ExistQueue=true;
-                j=i;
-            }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            return;
-        }
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"sniper")) return;
         const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
         if (characterinfo is null) return;
         const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
@@ -2896,7 +2917,7 @@ class CommandSkill : Tracker {
                         int closestIndex = -1;
                         float closestDistance = -1.0f;                
                         for(uint i=0;i<affectedCharacter.length();i++){
-                            float distance = getPositionDistance(c_pos, stringToVector3(affectedCharacter[i].getStringAttribute("position")));
+                            float distance = getPositionDistance(s_pos, stringToVector3(affectedCharacter[i].getStringAttribute("position")));
                             if (distance < closestDistance || closestDistance < 0.0){
                                 closestDistance = distance;
                                 closestIndex = i;
@@ -2940,20 +2961,7 @@ class CommandSkill : Tracker {
     }
 
     void excuteMosinNagant(int characterId,int playerId,SkillModifer@ modifer){
-        bool ExistQueue = false;
-        int j=-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="sniper") {
-                ExistQueue=true;
-                j=i;
-            }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            return;
-        }
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"mosin")) return;
         const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
         if (characterinfo is null) return;
         const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
@@ -2982,7 +2990,7 @@ class CommandSkill : Tracker {
             int closestIndex = -1;
             float closestDistance = -1.0f;                
             for(uint i=0;i<affectedCharacter.length();i++){
-                float distance = getPositionDistance(c_pos, stringToVector3(affectedCharacter[i].getStringAttribute("position")));
+                float distance = getPositionDistance(s_pos, stringToVector3(affectedCharacter[i].getStringAttribute("position")));
                 if (distance < closestDistance || closestDistance < 0.0){
                     closestDistance = distance;
                     closestIndex = i;
@@ -2990,27 +2998,370 @@ class CommandSkill : Tracker {
             }
 
             if (closestIndex >= 0){
+                int fire_num = 2;
+                modifer.setCooldownMinus(0);
+                modifer.setCooldownReduction(1.0);
+                int index = findKillCountIndex(characterId,"mosinnagant");
+                int mosin_level = 0;
+                if(index>=0)
+                {
+                    mosin_level = KillCountArray[index].m_killnum;
+                }
+                fire_num = int(min(int(floor(mosin_level/10))+2,8));
                 int target_id = affectedCharacter[closestIndex].getIntAttribute("id");
-                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
-                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                DelayAntiPersonSnipeRequest@ snipe_quest = DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_hit_kennedy.projectile",c_pos.add(Vector3(0,0.5,0)),target_id);
-                snipe_quest.setKey("sniper_bullet_carcano.projectile");
-                tasker.add(snipe_quest);
-                addCooldown("sniper",5,characterId,modifer);
+                if (mosin_level < 20)
+                {
+                    playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
+                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    DelayAntiPersonSnipeRequest@ snipe_quest = DelayAntiPersonSnipeRequest(m_metagame,2.5,characterId,factionid,MutilProjectile("snipe_mosin.projectile",fire_num),c_pos.add(Vector3(0,0.5,0)),target_id);
+                    tasker.add(snipe_quest);
+                }
+                else if (mosin_level <40 && mosin_level >=20 )
+                {
+                    playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
+                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    DelayAntiPersonSnipeRequest@ snipe_quest = DelayAntiPersonSnipeRequest(m_metagame,2,characterId,factionid,MutilProjectile("snipe_mosin.projectile",fire_num),c_pos.add(Vector3(0,0.5,0)),target_id);
+                    tasker.add(snipe_quest);
+                }
+                else if (mosin_level>=40)
+                {
+                    playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
+                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    DelayAntiPersonSnipeRequest@ snipe_quest = DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,MutilProjectile("snipe_mosin.projectile",fire_num),c_pos.add(Vector3(0,0.5,0)),target_id);
+                    tasker.add(snipe_quest);
+                }
+                if (mosin_level < 10)
+                {
+                    addCooldown("mosin",15,characterId,modifer);
+                }
+                else if (mosin_level < 30 && mosin_level >=10)
+                {
+                    addCooldown("mosin",10,characterId,modifer);
+                }
+                else if (mosin_level >=30)
+                {
+                    addCooldown("mosin",5,characterId,modifer);
+                }                
                 array<string> Voice={
-                "Carcano1938_SKILL1_JP.wav",
-                "Carcano1938_SKILL2_JP.wav",
-                "Carcano1938_SKILL3_JP.wav"
+                "M1891Mod_SKILL1_JP.wav",
+                "M1891Mod_SKILL2_JP.wav",
+                "M1891Mod_SKILL3_JP.wav",
+                "M1891Mod_ATTACK_JP.wav"
                 };
-                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.0);                            
+                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.5);                            
             }
         }
         else{
             sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"snipe_skill_notfound");
-            addCooldown("sniper",3,characterId,modifer,"normal",false);
+            addCooldown("mosin",3,characterId,modifer,"normal",false);
         }  
     }
 
+    void excuteKar98k(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"kar98k")) return;
+        const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
+        if (characterinfo is null) return;
+        const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
+        if (playerinfo is null) return;
+        if (playerinfo.hasAttribute("aim_target")) {
+            int index = findNodeleteDataIndex(modifer.m_playername,"kar98k");
+            int medal_num = 0;
+            if (index>=0)
+            {
+                medal_num = No_Delete_DataArray[index].m_num;
+            }
+            medal_num = min(medal_num,4);
+            string target = playerinfo.getStringAttribute("aim_target");
+            Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
+            Vector3 s_pos = stringToVector3(target);
+            int factionid = characterinfo.getIntAttribute("faction_id");
+    
+            int m_fnum = m_metagame.getFactionCount();
+            array<const XmlElement@> affectedCharacter;
+            for(int i=0;i<m_fnum;i++) {
+                if(i!=factionid) {
+                    array<const XmlElement@> affectedCharacter2;
+                    affectedCharacter2 = getCharactersNearPosition(m_metagame,s_pos,i,10.0f);
+                    if (affectedCharacter2 !is null){
+                        for(uint x=0;x<affectedCharacter2.length();x++){
+                            affectedCharacter.insertLast(affectedCharacter2[x]);
+                        }
+                    }
+                }
+            }
+
+            if (affectedCharacter !is null && affectedCharacter.length > 0){
+                int closestIndex = -1;
+                int secondClosestIndex = -1;
+                float closestDistance = -1.0f;
+                float secondClosestDistance = -1.0f;              
+                for (uint i = 0; i < affectedCharacter.length(); i++) {
+                    float distance = getPositionDistance(s_pos, stringToVector3(affectedCharacter[i].getStringAttribute("position")));
+
+                    if (distance < closestDistance || closestDistance < 0.0) {
+                        secondClosestDistance = closestDistance;
+                        secondClosestIndex = closestIndex;
+
+                        closestDistance = distance;
+                        closestIndex = i;
+                    } else if (distance < secondClosestDistance || secondClosestDistance < 0.0) {
+                        secondClosestDistance = distance;
+                        secondClosestIndex = i;
+                    }
+                }
+                if (secondClosestIndex == -1) {
+                    secondClosestIndex = closestIndex;
+                }
+                if (closestIndex >= 0 && secondClosestIndex >= 0){
+                    array<string> Voice={
+                    "98KMod_SKILL1_JP.wav",
+                    "98KMod_SKILL2_JP.wav",
+                    "98KMod_SKILL3_JP.wav"
+                    };
+                    if(closestIndex != secondClosestIndex)
+                    {
+                        int target_id_1 = affectedCharacter[closestIndex].getIntAttribute("id");
+                        int target_id_2 = affectedCharacter[secondClosestIndex].getIntAttribute("id");
+                        switch(medal_num)
+                        {
+                            case 1:
+                            {
+                                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
+                                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
+                                addCooldown("kar98k",25,characterId,modifer);
+                                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.5);
+                                break;
+                            }
+                            case 2:
+                            {
+                                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
+                                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
+                                addCooldown("kar98k",25,characterId,modifer);
+                                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.5);
+                                break;
+                            }
+                            case 3:
+                            {
+                                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1s",false);
+                                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.0,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
+                                addCooldown("kar98k",20,characterId,modifer);
+                                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.5);
+                                break;
+                            }
+                            case 4:
+                            {
+                                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 0.8s",false);
+                                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.8,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
+                                addCooldown("kar98k",20,characterId,modifer);
+                                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.5);
+                                break;
+                            }                                                                                    
+                            default:
+                            {
+                                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
+                                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
+                                addCooldown("kar98k",25,characterId,modifer);
+                                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.5);
+                                break;                                
+                            };
+                        }
+                    }
+                    else
+                    {
+                        int target_id = affectedCharacter[closestIndex].getIntAttribute("id");
+                        switch(medal_num)
+                        {
+                            case 1:
+                            {
+                                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
+                                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                                addCooldown("kar98k",25,characterId,modifer);
+                                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.5);
+                                break;
+                            }
+                            case 2:
+                            {
+                                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
+                                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                                addCooldown("kar98k",25,characterId,modifer);
+                                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.5);
+                                break;
+                            }
+                            case 3:
+                            {
+                                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1s",false);
+                                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.0,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                                addCooldown("kar98k",20,characterId,modifer);
+                                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.5);
+                                break;
+                            }
+                            case 4:
+                            {
+                                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 0.8s",false);
+                                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.8,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                                addCooldown("kar98k",20,characterId,modifer);
+                                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.5);
+                                break;
+                            }                                                                                    
+                            default:
+                            {
+                                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
+                                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                                tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.25,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                                addCooldown("kar98k",25,characterId,modifer);
+                                playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.5);
+                                break;                                
+                            };
+                        }                        
+                    }
+                }
+            }
+            else{
+                sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"snipe_skill_notfound");
+                addCooldown("kar98k",3,characterId,modifer,"normal",false);
+            }  
+        } 
+    }
+
+    void excuteGM6Lynx(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"GM6")) return;
+        const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
+        if (characterinfo is null) return;
+        const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
+        if (playerinfo is null) return;
+        if (playerinfo.hasAttribute("aim_target")) {
+            string target = playerinfo.getStringAttribute("aim_target");
+            Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
+            Vector3 s_pos = stringToVector3(target);
+            int factionid = characterinfo.getIntAttribute("faction_id");
+    
+            int m_fnum = m_metagame.getFactionCount();
+            array<const XmlElement@> affectedCharacter;
+            for(int i=0;i<m_fnum;i++) {
+                if(i!=factionid) {
+                    array<const XmlElement@> affectedCharacter2;
+                    affectedCharacter2 = getCharactersNearPosition(m_metagame,s_pos,i,10.0f);
+                    if (affectedCharacter2 !is null){
+                        for(uint x=0;x<affectedCharacter2.length();x++){
+                            affectedCharacter.insertLast(affectedCharacter2[x]);
+                        }
+                    }
+                }
+            }
+
+            if (affectedCharacter !is null && affectedCharacter.length > 0){
+                int closestIndex = -1;
+                int secondClosestIndex = -1;
+                int thirdClosestIndex = -1;
+                float closestDistance = -1.0f;
+                float secondClosestDistance = -1.0f;
+                float thirdClosestDistance = -1.0f;     
+                array<string> Voice={
+                "Gm6Lynx_SKILL1_JP.wav",
+                "Gm6Lynx_SKILL2_JP.wav",
+                "Gm6Lynx_SKILL3_JP.wav"
+                };                        
+                for (uint i = 0; i < affectedCharacter.length(); i++) {
+                    float distance = getPositionDistance(s_pos, stringToVector3(affectedCharacter[i].getStringAttribute("position")));
+                    if (distance < closestDistance || closestDistance < 0.0f) {
+                        thirdClosestDistance = secondClosestDistance;
+                        thirdClosestIndex = secondClosestIndex;
+                        
+                        secondClosestDistance = closestDistance;
+                        secondClosestIndex = closestIndex;
+
+                        closestDistance = distance;
+                        closestIndex = i;
+                    } else if (distance < secondClosestDistance || secondClosestDistance < 0.0f) {
+                        thirdClosestDistance = secondClosestDistance;
+                        thirdClosestIndex = secondClosestIndex;
+
+                        secondClosestDistance = distance;
+                        secondClosestIndex = i;
+                    } else if (distance < thirdClosestDistance || thirdClosestDistance < 0.0f) {
+                        thirdClosestDistance = distance;
+                        thirdClosestIndex = i;
+                    }
+                }
+                if (thirdClosestIndex == -1) {
+                    thirdClosestIndex = closestIndex;
+                }
+
+                if (secondClosestIndex == -1) {
+                    secondClosestIndex = closestIndex;
+                }
+                if (closestIndex >= 0 && secondClosestIndex >= 0 && thirdClosestIndex >= 0){
+                    if (closestIndex != secondClosestIndex && closestIndex != thirdClosestIndex && secondClosestIndex != thirdClosestIndex){
+                        int target_id_1 = affectedCharacter[closestIndex].getIntAttribute("id");
+                        int target_id_2 = affectedCharacter[secondClosestIndex].getIntAttribute("id");
+                        int target_id_3 = affectedCharacter[thirdClosestIndex].getIntAttribute("id");
+                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_blast_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipsnipe_blast_20e_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.3,characterId,factionid,"snipe_blast_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_3));                        
+                        addCooldown("GM6",30,characterId,modifer);
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.2);                            
+                    }
+                    else if (closestIndex == secondClosestIndex && closestIndex != thirdClosestIndex) {
+                        int target_id_1 = affectedCharacter[closestIndex].getIntAttribute("id");
+                        int target_id_2 = affectedCharacter[thirdClosestIndex].getIntAttribute("id");
+                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_blast_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipe_blast_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));                        
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipe_blast_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
+                        addCooldown("GM6",30,characterId,modifer);      
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.2);                            
+                    }
+                    else if (closestIndex == thirdClosestIndex && closestIndex != secondClosestIndex) {
+                        int target_id_1 = affectedCharacter[closestIndex].getIntAttribute("id");
+                        int target_id_2 = affectedCharacter[secondClosestIndex].getIntAttribute("id");
+                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_blast_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipe_blast_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));                        
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipe_blast_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_2));
+                        addCooldown("GM6",30,characterId,modifer);        
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.2);                            
+                    }
+                    else if (closestIndex == secondClosestIndex && closestIndex == thirdClosestIndex) {
+                        int target_id_1 = affectedCharacter[closestIndex].getIntAttribute("id");
+                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_blast_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipe_blast_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));                        
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipe_blast_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id_1));
+                        addCooldown("GM6",30,characterId,modifer);     
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.2);                            
+                    }
+                }
+            }
+            else{
+                sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"snipe_skill_notfound");
+                addCooldown("GM6",3,characterId,modifer,"normal",false);
+            }  
+        } 
+    }
     void excuteG41Onlyskill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j=-1;
@@ -3023,8 +3374,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            //_log("skill cooldown" + SkillArray[j].m_time);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -3050,22 +3400,7 @@ class CommandSkill : Tracker {
         }
     }
     void excuteWeaverskill(int characterId,int playerId,SkillModifer@ modifer){
-        bool ExistQueue = false;
-        int j=-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="FF_WEAVER") {
-                ExistQueue=true;
-                j=i;
-            }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            //_log("skill cooldown" + SkillArray[j].m_time);
-            return;
-        }
-
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"FF_WEAVER")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
@@ -3074,35 +3409,21 @@ class CommandSkill : Tracker {
                     string target = player.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(target);
                     int factionid = character.getIntAttribute("faction_id");
-                    // array<string> Voice={
-                    //     "G41_SKILL1_JP.wav",
-                    //     "G41_SKILL2_JP.wav",
-                    //     "G41_SKILL3_JP.wav"
-                    // };
-                    // playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    array<string> Voice={
+                        "Weaver_buhuo_ATTACK_JP.wav",
+                        "Weaver_buhuo_SKILL02_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     c_pos=c_pos.add(Vector3(0,1,0));
                     CreateDirectProjectile(m_metagame,c_pos.add(Vector3(0,1,0)),c_pos,"ff_weaver_skill_scan.projectile",characterId,factionid,6.0);
                     addCooldown("FF_WEAVER",25,characterId,modifer);
                 }
             }
         }
-    }   
+    }
+
     void excuteUZImod3skill(int characterId,int playerId,SkillModifer@ modifer){
-        bool ExistQueue = false;
-        int j=-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="FIRENADE") {
-                ExistQueue=true;
-                j=i;
-            }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            //_log("skill cooldown" + SkillArray[j].m_time);
-            return;
-        }
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"FIRENADE")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
@@ -3134,21 +3455,7 @@ class CommandSkill : Tracker {
         addCooldown("FIRENADE",15,characterId,modifer);
     }
     void excuteF1skill(int characterId,int playerId,SkillModifer@ modifer){
-        bool ExistQueue = false;
-        int j=-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="F1") {
-                ExistQueue=true;
-                j=i;
-            }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            //_log("skill cooldown" + SkillArray[j].m_time);
-            return;
-        }
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"F1")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
@@ -3184,8 +3491,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            //_log("skill cooldown" + SkillArray[j].m_time);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             return;
         }
 
@@ -3230,7 +3536,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             return;
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -3264,20 +3570,7 @@ class CommandSkill : Tracker {
     }
 
     void excute64typemod3Skill(int characterId,int playerId,SkillModifer@ modifer){
-        bool ExistQueue = false;
-        int j=-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="64type") {
-                ExistQueue=true;
-                j=i;
-            }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
-            return;
-        }
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"64type",true)) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
@@ -3305,10 +3598,10 @@ class CommandSkill : Tracker {
                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                     array<Spawn_request@> spawn_soldier =
                     {
-                        Spawn_request("GK_target",1)
+                        Spawn_request("Dummy_64type",10)
                     };    
-                    tasker.add(DelaySpawnSoldier(m_metagame,2.0,factionid,spawn_soldier,aim_pos,0,0));  
-                    addCooldown("64type",20,characterId,modifer);
+                    tasker.add(DelaySpawnSoldier(m_metagame,2.0,factionid,spawn_soldier,aim_pos,9.5,9.5));  
+                    addCooldown("64type",40,characterId,modifer);
                 }
             }
         }
@@ -3326,7 +3619,7 @@ class CommandSkill : Tracker {
         if (ExistQueue){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
-            sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
@@ -3389,7 +3682,7 @@ class CommandSkill : Tracker {
                     string target = player.getStringAttribute("aim_target");
                     Vector3 aim_pos = stringToVector3(target);
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
-                    aim_pos = aim_pos.add(Vector3(0,12,0));
+                    aim_pos = aim_pos.add(Vector3(0,9,0));
                     int factionid = character.getIntAttribute("faction_id");
                     array<string> Voice={
                         "C96Mod_SKILL1_JP.wav",
@@ -3401,7 +3694,7 @@ class CommandSkill : Tracker {
                     playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
                     c_pos=c_pos.add(Vector3(0,2.25,0));
                     CreateDirectProjectile_T(m_metagame,c_pos,aim_pos,"skill_c96_flare.projectile",characterId,factionid,1.5);
-                    addCooldown("C96",120,characterId,modifer);
+                    addCooldown("C96",90,characterId,modifer);
                 }
             }
         }
@@ -3437,7 +3730,7 @@ class CommandSkill : Tracker {
                 if (ExistQueue && SkillArray[j].m_charge >=3){
                     dictionary a;
                     a["%time"] = ""+SkillArray[j].m_time;
-                    sendPrivateMessageKey(m_metagame,playerId,"skillcooldownhint",a);
+                    notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
                     return;
                 }
                 if(SkillArray[j].m_charge <3){
@@ -3561,7 +3854,7 @@ class CommandSkill : Tracker {
                     }
                     if (count == 3 ){
                         int is2_exist = getNumberedVehicle(m_metagame,factionid,"is2_m1895.vehicle");
-                        if (is2_exist < 3)
+                        if (is2_exist < 2)
                         {
                             Vector3 u_pos = getAimUnitPosition(c_pos,target_pos,8.0);
                             u_pos = u_pos.add(Vector3(0,25,0));
@@ -3599,10 +3892,9 @@ class CommandSkill : Tracker {
                         insertCommonStrike(characterId,factionid,15,target_pos.add(Vector3(3,40,3)),target_pos.add(Vector3(3,0,3)));
                         insertCommonStrike(characterId,factionid,15,target_pos.add(Vector3(-3,40,-3)),target_pos.add(Vector3(-3,0,-3))); 
                     }
-                    addCooldown("Nagant",300,characterId,modifer);
+                    addCooldown("Nagant",240,characterId,modifer);
                 }
             }
         }        
     }
-    
 }

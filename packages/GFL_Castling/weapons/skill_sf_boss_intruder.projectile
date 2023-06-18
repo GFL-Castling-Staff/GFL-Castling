@@ -2,7 +2,7 @@
 <projectile class="grenade" name="SF Boss Intruder Skill" key="skill_sf_boss_intruder.projectile" slot="0"  pulldown_in_air="0"  radius="0.1" drop_count_factor_on_death="0.25" drop_count_factor_on_player_death="0"  time_to_live_out_in_the_open="0">
 
     <result class="notify_script" key="sf_boss_intruder_skill" />
-    <trigger class="time" time_to_live="0"/>
+    <trigger class="time" time_to_live="0.5"/>
 
     <rotation class="random" />
 
@@ -17,7 +17,5 @@
     <sound class="result" key="static_object" copy="other" />
     <sound class="result" key="vehicle" copy="other" />
     <sound class="result" key="character" copy="other" />
-    <effect class="activated" ref="TracerFlash" lighting="0" />
-    <effect class="activated" ref="TracerFlash" lighting="0" />
     <effect class="activated" ref="TracerFlash" lighting="0" />
 </projectile>

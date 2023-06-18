@@ -39,6 +39,8 @@
         <hud_icon filename="gkw_iws2000_7308.png" />
         <!--Ballistics-->
         <weak_hand_hold offset="0.3" />
+        <effect class="muzzle" ref="iws2000_recoil_smoke" />
+        <effect class="muzzle" ref="crescent_smoke_impact" />        
         <projectile file="bullet_iwsAPFSDS.projectile">
             <result class="blast" 
         damage="14" 
@@ -100,6 +102,8 @@
         <hud_icon filename="gkw_iws2000_7308.png" />
         <!--Ballistics-->
         <weak_hand_hold offset="0.3" />
+        <effect class="muzzle" ref="iws2000_recoil_smoke" />
+        <effect class="muzzle" ref="crescent_smoke_impact" />
         <projectile file="bullet_iwsAPFSDS.projectile">
             <result class="blast" 
             damage="18" 

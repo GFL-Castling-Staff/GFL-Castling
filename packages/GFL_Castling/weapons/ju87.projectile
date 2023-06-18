@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="SC1000" slot="2" key="ju87.projectile" pulldown_in_air="4">
+    <result class="spawn" instance_class="grenade" instance_key="blast_ju87.projectile" min_amount="1" max_amount="1" offset="0 6 0" position_spread="0 0" direction_spread="0 0" />
+    <trigger class="time" time_to_live="3.0"/>
+    <rotation class="motion" />
+    <model mesh_filename="shell_sc1000ja.mesh" texture_filename="shell_sc1000ja.jpg" />
+    <commonness value="0.0" />
+
+    <sound class="result" key="other" fileref="explosion_FromFC5_1.wav" volume="4.0" />
+    <sound class="result" key="other" fileref="explosion_FromFC5_2.wav" volume="4.0" />
+
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="vehicle" copy="other" />
+    <sound class="result" key="character" copy="other" />
+
+	<effect class="result" key="terrain" ref="SMS_camera_light" lighting="0" /> 
+	<effect class="result" key="terrain" ref="SMS_camera_light_colour_render" lighting="0" post_processing="0"/> 
+	<effect class="result" key="terrain" ref="shadow_SMS_1" lighting="0" post_processing="1"/> 
+	<effect class="result" key="terrain" ref="shadow_SMS_2" lighting="0" post_processing="1"/> 
+	<effect class="result" key="terrain" ref="shadow_SMS_3" lighting="0" post_processing="1"/> 
+	<effect class="result" key="terrain" ref="SMS_vertical_smoke" lighting="0" post_processing="1"/> 
+	<effect class="result" key="terrain" ref="SMS_Ring_smoke" lighting="0" post_processing="1"/> 
+	<effect class="result" key="terrain" ref="SMS_up_spark" lighting="0" post_processing="1"/> 
+	<effect class="result" key="terrain" ref="SMS_impact_leave_dirt" lighting="0" post_processing="1"/> 
+	<effect class="result" key="terrain" ref="SMS_impact_leave_smoke" lighting="0" post_processing="1"/>   
+
+	<effect class="result" key="other" copy="terrain"/>
+	<effect class="result" key="static_object" copy="terrain" />
+	<effect class="result" key="character" copy="terrain" />
+	<effect class="result" key="shield" copy="terrain" />			
+	<effect class="result" key="vehicle" copy="terrain" />
+
+</projectile>

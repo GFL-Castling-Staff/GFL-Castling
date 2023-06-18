@@ -1,0 +1,480 @@
+author: RST
+2023.2.7
+Adapted for GFL:Castling
+
+原Shredder Missile Strike撕裂者导弹 支援特效
+
+import Tex_Smoke17C_real from "real_blast_effect.particle"
+
+particle_system SMS_camera_light
+{
+	quota 200
+	material point_soft_edge_100_pass
+	particle_width 35
+	particle_height 35
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 50
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 1.5
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate 0
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 1
+		time1 0.3
+		colour1 1 0.9 0.9 1
+		time2 1
+		colour2 0 0 0 0
+	}
+}
+particle_system SMS_camera_light_colour_render
+{
+	quota 200
+	material point_soft_edge_100_pass
+	particle_width 35 
+	particle_height 35
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 10
+		position 0 5 0
+		velocity 0.0001
+		time_to_live 3
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate 0
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 0.3 0 1
+		time1 0.7
+		colour1 1 0.3 0 1
+		time2 1
+		colour2 0 0 0 0
+	}
+}
+
+particle_system shadow_SMS_1 
+{
+    quota 200
+    particle_width 30
+	particle_height 30
+    material Tex_Smoke17C_real_pass
+    renderer billboard
+    billboard_type perpendicular_common
+    billboard_origin center_right
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+
+    emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 10
+		position 0 0 0
+		velocity 0.00001
+		time_to_live 6
+		duration 0.1
+	}
+    affector Scaler
+	{
+		rate 1
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.25 0.25 0.25 0.3
+		time1 0.4
+		colour1 0.15 0.15 0.15 0.65
+		time2 1
+		colour2 0 0 0 0.1
+	}
+    affector Rotator
+	{
+		rotation_speed_range_start	5
+		rotation_speed_range_end	5
+		rotation_range_start	120
+		rotation_range_end 120
+    }
+}
+particle_system shadow_SMS_2 : shadow_SMS_1
+{
+    emitter Point{}
+    affector Scaler{}
+	affector ColourInterpolator{}
+    affector Rotator
+	{
+		rotation_range_start 240
+		rotation_range_end 240
+    }
+}
+particle_system shadow_SMS_3 : shadow_SMS_1
+{
+    emitter Point{}
+    affector Scaler{}
+	affector ColourInterpolator{}
+    affector Rotator
+	{
+		rotation_range_start 0
+		rotation_range_end 0
+    }
+}
+
+
+particle_system SMS_vertical_smoke
+{
+	quota 800
+	material Tex_Smoke17C_real
+	particle_width 5
+	particle_height 5
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Box
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 70
+		position 0 3 0
+		velocity 0.0001
+		time_to_live 3
+		duration 3.5
+        depth 20
+        width 10
+        height 10
+	}
+	affector Scaler
+	{
+		rate 1
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	30
+		rotation_speed_range_end	-30
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.4 0.4 0.4 0.6
+		time1 0.7
+		colour1 0.6 0.6 0.6 0.3
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector LinearForce{
+		force_vector 0 3.5 0
+		force_application add
+	}
+}
+particle_system SMS_Ring_smoke
+{
+	quota 800
+	material Tex_Smoke17C_real
+	particle_width 5
+	particle_height 5
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Ring
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 50
+		position 0 20 0
+		velocity 0.0001
+		time_to_live 4
+		duration 3
+        depth 4
+        width 18
+        height 18
+        inner_height 0.6
+        inner_width 0.6
+	}
+	affector Scaler
+	{
+		rate 5
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	30
+		rotation_speed_range_end	-30
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.6 0.6 0.6 0.3
+		time1 0.7
+		colour1 0.7 0.7 0.7 0.1
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector LinearForce{
+		force_vector 0 -2 0
+		force_application add
+	}
+}
+
+
+
+particle_system SMS_up_spark
+{
+	quota 500
+	material pump_flare_03_01_pass
+	particle_width 0.4
+	particle_height 0.4
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Box
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 80
+		position 0 1.5 0
+		velocity 1
+		time_to_live_min 1
+		time_to_live_max 3
+        duration 4
+        depth 5
+        width 15
+        height 15
+	}
+	affector Scaler
+	{
+		rate -0.06
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 0.3 0 1
+		time1 0.7
+		colour1 1 0.3 0 1
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector LinearForce{
+		force_vector 0 4 0
+		force_application add
+	}
+	affector DirectionRandomiser 
+	{
+		randomness 20
+		scope 50
+		keep_velocity false
+	}
+}
+
+particle_system SMS_impact_leave_dirt
+{
+	quota 50
+	material Tex_0147_1_SMS
+	particle_width 25
+	particle_height 25
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 10
+		position 0 0.5 0
+		velocity 0.0001
+		time_to_live 12
+		duration 0.1
+	}
+    affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 1
+		time1 0.7
+		colour1 1 1 1 1
+		time2 1
+		colour2 0 0 0 0
+	}
+}
+particle_system SMS_impact_leave_smoke
+{
+	quota 50
+	material Tex_Smoke17C_real_pass
+	particle_width 30
+	particle_height 30
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 10
+		position 0 0.5 0
+		velocity 0.0001
+		time_to_live 12
+		duration 0.1
+	}
+    affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.5 0.5 0.5 0.6
+		time1 0.7
+		colour1 0.5 0.5 0.5 0.6
+		time2 1
+		colour2 0 0 0 0
+	}
+}
+particle_system SMS_impact_leave_smoke_shorttime : SMS_impact_leave_smoke
+{
+	emitter Point
+	{
+		time_to_live 5
+	}
+}
+
+
+
+material alpha_blend_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend alpha_blend
+		}
+	}
+}
+
+material add_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+		}
+	}
+}
+material Tex_Smoke17C_real_pass : Tex_Smoke17C_real
+{
+	receive_shadows off
+	technique{
+		pass{
+            depth_func always_pass
+		}
+	}
+}
+
+material point_soft_edge_100_pass : add_base
+{   
+    technique{
+    pass{
+        depth_func always_pass
+        texture_unit{
+            texture point_soft_edge_100.png 	
+}}}}
+material point_soft_edge_100_colour_blend : add_base
+{   
+    technique{
+    pass{
+        scene_blend colour_blend
+        texture_unit{
+            texture point_soft_edge_100.png 	
+}}}}
+material pump_flare_03_01_pass : add_base
+{   
+    technique{
+    pass{
+        depth_func always_pass
+        texture_unit{
+            texture pump_flare_03_01.png 	
+		}
+	}
+}}
+material Tex_0147_1_SMS : alpha_blend_base
+{   
+    technique{
+    pass{
+        depth_func always_pass
+        texture_unit{
+            texture Tex_0147_1.png 	
+		}
+	}
+}}
+
+

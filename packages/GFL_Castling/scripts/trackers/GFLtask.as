@@ -54,6 +54,61 @@ class VestRecoverTask : Task {
 	}
 }
 
+class TimerMarker : Task {
+    protected Metagame@ m_metagame;
+	protected float m_time;	
+	protected ManualCallTask@ m_info;
+	protected float m_timeLeft;
+	protected bool m_end=false;
+
+	TimerMarker(Metagame@ metagame, float time,ManualCallTask@ call_info)
+	{
+		@m_metagame = metagame;
+		@m_info = call_info;
+		m_time = time;
+	}
+
+    void start() {
+		m_timeLeft=m_time;
+        XmlElement command("command");
+		command.setStringAttribute("class", "set_marker");
+		command.setIntAttribute("id", m_info.m_callId);
+		command.setIntAttribute("faction_id", m_info.m_factions);
+		command.setIntAttribute("atlas_index", m_info.m_atlasIndex);
+		command.setFloatAttribute("size", m_info.m_size);
+		command.setFloatAttribute("range", m_info.m_range);
+		command.setIntAttribute("enabled", 1);
+		command.setStringAttribute("position", m_info.m_pos.toString());
+		command.setStringAttribute("text", "");
+		command.setStringAttribute("type_key", m_info.m_typeKey);
+		command.setBoolAttribute("show_in_map_view", true);
+		command.setBoolAttribute("show_in_game_view", true);
+		command.setBoolAttribute("show_at_screen_edge", false);
+        m_metagame.getComms().send(command);		
+	}
+
+    void update(float time) {
+		m_timeLeft -= time;
+		if (m_timeLeft < 0)
+		{
+			XmlElement command("command");
+			command.setStringAttribute("class", "set_marker");
+			command.setIntAttribute("id", m_info.m_callId);
+			command.setIntAttribute("faction_id", m_info.m_factions);
+			command.setIntAttribute("enabled", 0);
+			m_metagame.getComms().send(command);
+			m_end = true;
+		}
+	}
+
+    bool hasEnded() const {
+		if (m_end) {
+			return true;
+		}
+		return false;
+	}	
+}
+
 class AOEVestRecoverTask : Task {
     protected Metagame@ m_metagame;
 	protected float m_time;
@@ -339,18 +394,30 @@ class DelayAntiPersonSnipeRequest :Task{
 	protected Vector3 m_pos_2;
 	protected string m_airstrike_key;	
 	protected bool m_shoot = false;
+	protected MutilProjectile@ m_projectiles=null;
 
 
 	DelayAntiPersonSnipeRequest(GameMode@ metagame, float time, int cId,int fId, string airstrike_key,Vector3 pos1,int target) {
 		@m_metagame = metagame;
 		m_time = time;
-		m_addtime = time + 0.1;
+		m_addtime = time + 0.05;
 		m_character_id = cId;
 		m_faction_id =fId;
 		m_pos_1=pos1;
 		m_airstrike_key=airstrike_key;
 		m_target_id = target;
 	}
+
+	DelayAntiPersonSnipeRequest(GameMode@ metagame, float time, int cId,int fId, MutilProjectile@ airstrike_key,Vector3 pos1,int target) {
+		@m_metagame = metagame;
+		m_time = time;
+		m_addtime = time + 0.05;
+		m_character_id = cId;
+		m_faction_id =fId;
+		m_pos_1=pos1;
+		@m_projectiles = airstrike_key;
+		m_target_id = target;
+	}	
 
 	void setKey(string key)
 	{
@@ -370,13 +437,20 @@ class DelayAntiPersonSnipeRequest :Task{
 			if (characterinfo !is null){
 				m_pos_2 = stringToVector3(characterinfo.getStringAttribute("position"));
 				float dis = getFlatPositionDistance(m_pos_1,m_pos_2);
-				CreateDirectProjectile(m_metagame,m_pos_1,m_pos_2,m_bullet_key,m_character_id,m_faction_id,float(max(dis/0.1,40.0)));
+				CreateDirectProjectile(m_metagame,m_pos_1,m_pos_2,m_bullet_key,m_character_id,m_faction_id,float(max(dis/0.05,40.0)));
 				playSoundAtLocation(m_metagame,"BT_rifle.wav",m_faction_id,m_pos_1,2.0);
 				m_shoot = true;
 			}
 		}		
 		if (m_addtime < 0 && m_timeLeft < 0){
-			CreateDirectProjectile(m_metagame,m_pos_2.add(Vector3(0,9,0)),m_pos_2,m_airstrike_key,m_character_id,m_faction_id,90);
+			if(m_projectiles !is null)
+			{
+				CreateMutilDirectProjectile(m_metagame,m_pos_2.add(Vector3(0,10,0)),m_pos_2,m_projectiles.m_key,m_character_id,m_faction_id,300,m_projectiles.m_num);
+			}		
+			else
+			{
+				CreateDirectProjectile(m_metagame,m_pos_2.add(Vector3(0,10,0)),m_pos_2,m_airstrike_key,m_character_id,m_faction_id,300);
+			}	
 		}
 	}
 
@@ -579,5 +653,61 @@ class strafe_task_30mm : event_call_task {
 		m_pos1 = m_pos1.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
 		m_pos1 = m_pos1.add(Vector3(0,-20*(sqrt(float(1/m_excute_Limit)*m_excute_time)),0));
 		m_pos2 = m_pos2.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));					
+	}
+}
+
+class Ju87_Assault :Task{
+	protected Metagame@ m_metagame;
+	protected float m_time;
+	protected float m_time_1;
+    protected int m_character_id;
+    protected int m_faction_id;
+	protected float m_timeLeft;
+	protected float m_timeLeft_1;
+	protected Vector3 m_pos;
+	protected bool m_started;
+
+	Ju87_Assault(Metagame@ metagame, float time, int cId,int fId,Vector3 pos,float time1 =5.0) {
+		@m_metagame = metagame;
+		m_time = time;
+		m_time_1 = time1;
+		m_character_id = cId;
+		m_faction_id =fId;
+		m_pos=pos;
+	}
+
+	void start() {
+		m_timeLeft=m_time;
+		m_timeLeft_1 = m_time_1;
+		m_started = false;
+	}
+
+	void update(float time) {
+		m_timeLeft -= time;
+		if (m_timeLeft < 0 && !m_started)
+		{
+			m_started = true;
+			playSoundAtLocation(m_metagame,"stuka_bomber_assault.wav",m_faction_id,m_pos,0.7);
+		}
+		if(m_started)
+		{
+			m_timeLeft_1 -= time;
+		}
+		if(m_timeLeft_1 < 0)
+		{
+			float rand_angle = rand(-3.14,3.14);
+			float rand_x = 50*cos(rand_angle);
+			float rand_y = 50*sin(rand_angle);
+			Vector3 start_pos = m_pos.add(Vector3(rand_x,0,rand_y));
+			start_pos = start_pos.add(Vector3(0,50,0));
+			insertCommonStrike(m_character_id,m_faction_id,"ju87_assault",start_pos,m_pos);
+		}
+	}
+
+    bool hasEnded() const {
+		if (m_timeLeft_1 < 0) {
+			return true;
+		}
+		return false;
 	}
 }

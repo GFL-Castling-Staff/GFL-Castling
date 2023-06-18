@@ -33,8 +33,8 @@
         <hud_icon filename="gkw_aa12.png" />
         <!--Ballistics-->
         <weak_hand_hold offset="0.3" />
-        <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="2.0" kill_decay_start_time="0.3" kill_decay_end_time="0.5" />
+        <projectile file="bullet_sg.projectile">
+            <result class="hit" kill_probability="2.0" kill_decay_start_time="0.2" kill_decay_end_time="0.9" />
         </projectile>
         <!--Accuracy, Movement speed-->
         <stance state_key="running" accuracy="0.7" />
@@ -82,8 +82,8 @@
         <hud_icon filename="gkw_aa12_skill.png" />
         <!--Ballistics-->
         <weak_hand_hold offset="0.3" />
-        <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.3" kill_decay_end_time="0.5" />
+        <projectile file="bullet_sg.projectile">
+            <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.2" kill_decay_end_time="0.9" />
         </projectile>
         <!--Accuracy, Movement speed-->
         <stance state_key="running" accuracy="0.7" />

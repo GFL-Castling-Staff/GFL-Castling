@@ -68,7 +68,7 @@
         <inventory encumbrance="8.0" price="10.0" />
         <modifier class="speed" value="-0.2" />
     </weapon>
-    <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0.0" drop_count_factor_on_player_death="0.0" drop_count_limit_in_range="3" key="cover_deploy_enemy.weapon" radius="0.25" time_to_live_out_in_the_open="30.0">
+    <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0.0" drop_count_factor_on_player_death="0.0" drop_count_limit_in_range="3" key="cover_deploy_enemy_1.weapon" radius="0.25" time_to_live_out_in_the_open="30.0">
         <tag name="engineer" />
         <specification 
             magazine_size="1" 
@@ -76,7 +76,7 @@
             can_shoot_crouching="1" 
             carry_in_two_hands="1" 
             can_shoot_prone="0" 
-            name="Hesco Bastion Deploying" 
+            name="Engineer Working" 
             class="5" 
             spawn_instance_class="vehicle" 
             spawn_instance_key="cover1.vehicle" 
@@ -106,7 +106,7 @@
         <modifier class="speed" value="-0.2" />
         <addon_model filename="sf_engineer_backpack.xml" />
     </weapon>
-    <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0.0" drop_count_factor_on_player_death="0.0" drop_count_limit_in_range="3" key="cover_deploy_enemy.weapon" radius="0.25" time_to_live_out_in_the_open="30.0">
+    <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0.0" drop_count_factor_on_player_death="0.0" drop_count_limit_in_range="3" key="cover_deploy_enemy_2.weapon" radius="0.25" time_to_live_out_in_the_open="30.0">
         <tag name="engineer" />
         <specification 
             magazine_size="1" 
@@ -114,7 +114,7 @@
             can_shoot_crouching="1" 
             carry_in_two_hands="1" 
             can_shoot_prone="0" 
-            name="Sandbag Deploying" 
+            name="Engineer Working" 
             class="5" 
             spawn_instance_class="vehicle" 
             spawn_instance_key="cover2.vehicle" 
@@ -143,5 +143,7 @@
         <inventory encumbrance="4.0" price="0.0" />
         <modifier class="speed" value="-0.2" />
         <addon_model filename="sf_engineer_backpack.xml" />
-    </weapon>        
+    </weapon>
+       
+
 </weapons>

@@ -26,10 +26,8 @@ class player_data
         if((m_corenum-num) <0){
             return false;
         }
-        else{
-            m_corenum -= num;
-            return true;
-        }
+        m_corenum -= num;
+        return true;
     }
 
     bool checkTdollAvailable(int doll_index){
@@ -42,7 +40,7 @@ class player_data
         }
         if (check_id == -1) return false;
         if (m_inventory[check_id].m_own) return true;
-        else return false;
+        return false;
     }
 }
 

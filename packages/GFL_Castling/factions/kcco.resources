@@ -19,6 +19,7 @@
 	<weapon key="kcco_othrusdog_s"/>
 	<weapon key="kcco_fe2o3_svd.weapon"/>
 	<weapon key="kcco_aks74u.weapon"/>
+	<weapon key="kcco_sticky_bomb.weapon" enabled="1" />
 
 	
 	<!-- 副手武器 -->
@@ -28,13 +29,7 @@
 
 	
 	<!-- 护甲 -->
-	<carry_item key="kcco_ar.carry_item" />
-	<carry_item key="kcco_dog.carry_item" />
-	<carry_item key="kcco_ga.carry_item" />
 	<carry_item key="kcco_sg.carry_item" />
-	<carry_item key="kcco_qwd.carry_item"/>
-	<carry_item key="kcco_boom.carry_item"/>
-	<carry_item key="kcco_flamethrower.carry_item"/>
 	
 	<!-- 手雷位 -->
 	<projectile key="kcco_smartgrenade_1.projectile" />
@@ -51,6 +46,7 @@
 	<vehicle key="sandstorm.vehicle" />
 	<vehicle key="aa_emplacement.vehicle" enabled="1"/>
 	<vehicle key="atv_base_kcco.vehicle"/>
+	<vehicle key="neosu_kuergants.vehicle"/>
 
 	<vehicle key="bgm71_tow.vehicle" enabled="0"/>
 	<vehicle key="kcco_1130.vehicle"/>
@@ -60,8 +56,13 @@
 	<vehicle key="deployable_minig.vehicle" />
 	<vehicle key="deployable_minig_2.vehicle" />
 	<!-- 增援 -->
+	<call key="kcco_mortar.call" />
+	<call key="kcco_argo_puppis_three.call" />
+	<call key="kcco_argo_carina_tcs.call" />
+	<call key="kcco_argo_vela_precision.call" />
+	<call key="kcco_argo_emp.call" />
 	<call key="kcco_argo_puppis.call" />
-	<call key="kcco_argo_vela.call" />
 	<call key="kcco_argo_carina.call" />
+	<call key="kcco_argo_vela.call" />
 	<call key="kcco_Hephaestus.call" />
 </resources>

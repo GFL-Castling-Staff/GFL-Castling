@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 体素模型由FA提供 -->
 <weapons>
-<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_m1_sf_6907.weapon">
+<weapon key="gkw_m1_sf_6907.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle" />
     <specification 
 	retrigger_time="-1" 
@@ -10,7 +10,7 @@
 	sustained_fire_grow_step="2.0" 
 	sustained_fire_diminish_rate="3.0"
 	magazine_size="30" 
-	spread_range="0.27"
+	spread_range="0.25"
 	stance_accuracy_rate="0.75"
 	can_shoot_standing="1" 
 	suppressed="0" 
@@ -24,9 +24,10 @@
 	projectiles_per_shot="1"
 	slot="0"
 	stab_enabled="1"
-	stab_range="4.5"
-	/>
-    <effect class="muzzle" ref="ejection_76251" />
+	stab_range="4.5"/>
+	<inventory encumbrance="35.0" price="498.0" />
+    <capacity value="1" source="rank" source_value="0.0" />
+	<commonness value="0" in_stock="0" can_respawn_with="1" />
     <next_in_chain key="gkw_m1_sf_6907_skill.weapon" share_ammo="1" />
     <animation state_key="reload" animation_key="reloading, Machine gun 2.0" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
@@ -36,8 +37,6 @@
 	<animation key="recoil" animation_key="recoil2" />
 	<animation key="recoil" animation_key="recoil3" />
 	<animation state_key="stabbing"	animation_key="melee, bayonet_6hp" />
-	<commonness value="0" in_stock="0" can_respawn_with="1" />
-    <weak_hand_hold offset="0.3" />
     <sound key="fire" fileref="m1garand_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.6"/>
     <sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6" />
     <sound key="magazine_out" fileref="t44_mgz_out_FromCOD17.wav" volume="0.45" />
@@ -52,23 +51,17 @@
 	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0" />
     <model filename="gkw_rf_m1_sf.xml" />
     <hud_icon filename="gkw_m1_6907.png" />
-    <inventory encumbrance="35.0" price="498.0" />
-    <capacity value="1" source="rank" source_value="0.0" />
+    <weak_hand_hold offset="0.3" />
     <projectile file="bullet_sf_player.projectile">
-        <result 
-		class="hit" 
-		kill_probability="2.8"
-		kill_probability_offset_on_successful_hit="4.5" 
-		kill_decay_start_time="0.964" 
-		kill_decay_end_time="1.607"
-		/>
+        <result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="9.75" kill_decay_start_time="0.964" kill_decay_end_time="1.607"/>
     </projectile>
+	<effect class="muzzle" ref="ejection_76251" />
     <stance state_key="running" accuracy="0.3" />
-    <stance state_key="walking" accuracy="0.7" />
-    <stance state_key="crouch_moving" accuracy="0.9" />
-    <stance state_key="prone_moving" accuracy="0.9" />
-    <stance state_key="standing" accuracy="0.8" />
-    <stance state_key="crouching" accuracy="0.98" />
+   <stance state_key="walking" accuracy="0.65" />
+    <stance state_key="crouch_moving" accuracy="0.7" />
+    <stance state_key="prone_moving" accuracy="0.7" />
+    <stance state_key="standing" accuracy="0.75" />
+    <stance state_key="crouching" accuracy="0.9" />
     <stance state_key="prone" accuracy="1" />
     <stance state_key="over_wall" accuracy="1" />
     <modifier class="speed" value="-0.1"/>
@@ -79,17 +72,19 @@
     <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
     <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
 </weapon>
-<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_m1_sf_6907_skill.weapon">
+<weapon key="gkw_m1_sf_6907_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle" />
     <specification 
 	retrigger_time="0.2" 
 	accuracy_factor="1" 
-	sustained_fire_grow_step="1.5" 
+	sustained_fire_grow_step="1.75" 
 	sustained_fire_diminish_rate="3.0"
 	magazine_size="30" 
 	can_shoot_standing="0"
     can_shoot_crouching="1" 
 	suppressed="0" 
+	spread_range="0.4"
+	stance_accuracy_rate="0.75"
 	name="M1 Garand The Evil Corrupted" 
 	class="0" 
 	reload_one_at_a_time="0" 
@@ -99,9 +94,10 @@
 	projectiles_per_shot="1"
 	slot="0"
 	stab_enabled="1"
-	stab_range="4.5"
-	/>
-    <effect class="muzzle" ref="ejection_76251" />
+	stab_range="4.5"/>
+    <inventory encumbrance="35.0" price="498.0" />
+    <capacity value="1" source="rank" source_value="0.0" />
+	<commonness value="0" in_stock="0" can_respawn_with="1" />
     <next_in_chain key="gkw_m1_sf_6907.weapon" share_ammo="1" />
     <animation state_key="reload" animation_key="reloading, Machine gun 2.0" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
@@ -111,8 +107,6 @@
 	<animation key="recoil" animation_key="recoil2" />
 	<animation key="recoil" animation_key="recoil3" />
 	<animation state_key="stabbing"	animation_key="melee, bayonet_6hp" />
-	<commonness value="0" in_stock="0" can_respawn_with="1" />
-    <weak_hand_hold offset="0.3" />
     <sound key="fire" fileref="m1garand_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.4"/>
     <sound key="cycle" fileref="m1garand_cycle_FromPOSTSCRIPTUM.wav" volume="0.6" />
     <sound key="magazine_out" fileref="t44_mgz_out_FromCOD17.wav" volume="0.45" />
@@ -127,26 +121,20 @@
 	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0" />
     <model filename="gkw_rf_m1_sf_2.xml" />
     <hud_icon filename="gkw_m1_6907.png" />
-    <inventory encumbrance="35.0" price="498.0" />
-    <capacity value="1" source="rank" source_value="0.0" />
+    <weak_hand_hold offset="0.3" />
     <projectile file="bullet_sf_player.projectile">
-        <result 
-		class="hit" 
-		kill_probability="2.8"
-		kill_probability_offset_on_successful_hit="4.0" 
-		kill_decay_start_time="0.964" 
-		kill_decay_end_time="1.607"
-		/>
+        <result class="hit" kill_probability="3.25" kill_probability_offset_on_successful_hit="5.75" kill_decay_start_time="0.964" kill_decay_end_time="1.607"/>
     </projectile>
+	<effect class="muzzle" ref="ejection_76251" />
     <stance state_key="running" accuracy="0.3" />
-    <stance state_key="walking" accuracy="0.7" />
-    <stance state_key="crouch_moving" accuracy="0.9" />
-    <stance state_key="prone_moving" accuracy="0.9" />
-    <stance state_key="standing" accuracy="0.8" />
-    <stance state_key="crouching" accuracy="0.98" />
-    <stance state_key="prone" accuracy="1" />
-    <stance state_key="over_wall" accuracy="1" />
-	<modifier class="detectability" value="0.3"/>
+    <stance state_key="walking" accuracy="0.6" />
+    <stance state_key="crouch_moving" accuracy="0.75" />
+    <stance state_key="prone_moving" accuracy="0.75" />
+    <stance state_key="standing" accuracy="0.75" />
+    <stance state_key="crouching" accuracy="0.85" />
+    <stance state_key="prone" accuracy="1.0" />
+    <stance state_key="over_wall" accuracy="1.0" />
+	<modifier class="detectability" value="0.15"/>
     <modifier class="speed" value="0.1"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />

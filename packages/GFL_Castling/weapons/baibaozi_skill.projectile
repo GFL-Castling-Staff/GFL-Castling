@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectiles>
-<projectile class="grenade" name="30mm" slot="1" pulldown_in_air="8.0" key="baibaozi_skill.projectile">
+<projectile class="grenade" name="" slot="1" pulldown_in_air="2.0" key="baibaozi_skill.projectile">
     <tag name="grenade"/>
     <result class="spawn" instance_class="projectile" instance_key="baibaozi_skill_sub.projectile" min_amount="4" max_amount="4" offset="0 1.5 0" position_spread="0.32 0.32" direction_spread="0.0 0.0" />
-	<trigger class="impact"> 
-			<collider class="terrain" enabled="1" />  
-			<collider class="static_object" enabled="1" />  
-			<collider class="vehicle" enabled="1" /> 
-			<collider class="character" enabled="1"  />
-	</trigger>
+    <trigger class="time" time_to_live="1.0"/>
     <rotation class="none" />
     <model mesh_filename="baibaozi_skill_shell.xml" />
 

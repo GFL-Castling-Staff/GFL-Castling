@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>	
+<weapon key="gkw_p017_missile_launcher_agent.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0"> 
+
+    <specification 	
+    slot="1" 	
+    retrigger_time="1.2" 
+	last_burst_retrigger_time="1.2"
+    accuracy_factor="1.0" 
+	spread_range="0.35"
+	stance_accuracy_rate="1.0"
+    sustained_fire_grow_step="0.8" 
+    sustained_fire_diminish_rate="3" 
+    magazine_size="6" 
+    can_shoot_standing="1" 
+    can_shoot_crouching="1" 
+	can_shoot_prone="1"	
+    suppressed="0" 
+	class="3" 
+	comsune="1"
+    name="P-017 Missile launcher" 
+	burst_shots="1" 
+    projectiles_per_shot="6" 
+    projectile_speed="100.0"
+	barrel_offset="1.5" 
+	carry_in_two_hands="1" 
+	stab_enabled="0" 
+	stab_range="0" /> 
+
+ <commonness value="0" can_respawn_with="0" in_stock="1" /> 
+ <inventory encumbrance="25.0" price="0.0" sell="0.0"/> 
+
+ <animation key="recoil" animation_key="recoil, law" />
+ <animation key="cycle" animation_key="Brifle1"/>
+ <animation key="reload" animation_key="no_reload"/>
+ <animation key="hold" animation_key="still, with law"/>
+ <animation key="hold_on_wall" animation_key="still, with law"/>
+ <sound key="fire" fileref="m202_flash_shot.wav" />
+ <sound key="cycle" fileref="sniper_cycle.wav" />
+ <sound key="magazine_out" fileref="sniper_clip_out.wav" />
+ <sound key="magazine_in" fileref="sniper_clip_in.wav" />
+ <sound key="cycle_out" fileref="sniper_cycle_out.wav" />
+ <sound key="cycle_in" fileref="sniper_cycle_in.wav" />
+ <sound class="impact" fileref="rifle_drop.wav" />
+
+ <model filename="m202_model.xml" />
+ <hud_icon filename="testing.png" />
+
+ <projectile file="agent_p017_missile.projectile" pulldown_in_air="48" can_be_detected_by_footmen="1" time_to_live="3" can_be_detected_by_driver="1" can_be_disarmed="0" > 
+	
+    <result class="spawn" instance_class="projectile" instance_key="agent_p017_missile.projectile" min_amount="1" max_amount="1" offset="0 0.5 0" position_spread="2 0" direction_spread="0.1 0" />
+	<trigger class="impact" time_to_live="0.11"  />
+	<rotation class="motion" />
+ </projectile>
+ <ballistics curve_height="16" near_far_distance="0" speed_estimation_near="0" speed_estimation_far="58" max_speed="40" randomness="0"  tweak_factor="1.48"/> 
+
+ <stance state_key="running" accuracy="0.75" /> 
+ <stance state_key="walking" accuracy="0.75" />
+ <stance state_key="standing" accuracy="0.8" />
+ <stance state_key="crouching" accuracy="0.85" />
+ <stance state_key="crouch_moving" accuracy="0.85" />
+ <stance state_key="prone" accuracy="1" /> 
+ <stance state_key="prone_moving" accuracy="1" />
+ <stance state_key="over_wall" accuracy="1" />  
+ <modifier class="speed" value="-0.2" />  
+</weapon>

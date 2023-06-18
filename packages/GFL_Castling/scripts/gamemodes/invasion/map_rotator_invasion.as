@@ -29,6 +29,7 @@ array<string> BadAssMapList = {
 	"Echo",
 	"Dead Zone",
 	"Swan River",
+	"Elk Island",
 	"Palo Island"
 };
 

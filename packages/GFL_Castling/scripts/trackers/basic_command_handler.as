@@ -875,21 +875,23 @@ class BasicCommandHandler : Tracker {
 		} else  if(checkCommand(message, "spawnybc")) {
 			spawnInstanceNearPlayer(senderId, "kcco_trans_truck.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "spawn my")) {
-			spawnInstanceNearPlayer(senderId, "par_elenusinus.vehicle", "vehicle", 1); 		
+			spawnInstanceNearPlayer(senderId, "par_elenusinus.vehicle", "vehicle", 0); 		
 		} else  if(checkCommand(message, "spawn aks")) {
-			spawnInstanceNearPlayer(senderId, "par_aceso.vehicle", "vehicle", 1);
+			spawnInstanceNearPlayer(senderId, "par_aceso.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "spawn pickup")) {
-			spawnInstanceNearPlayer(senderId, "wastelander.vehicle", "vehicle", 1);			 						
+			spawnInstanceNearPlayer(senderId, "wastelander.vehicle", "vehicle", 1);
+		} else  if(checkCommand(message, "spawn sgfq")) {
+			spawnInstanceNearPlayer(senderId, "par_cherub.vehicle", "vehicle", 0);				
+		} else  if(checkCommand(message, "spawn k25")) {
+			spawnInstanceNearPlayer(senderId, "neosu_kuergants.vehicle", "vehicle", 1);							
+		} else  if(checkCommand(message, "spawnk25")) {
+			spawnInstanceNearPlayer(senderId, "neosu_kuergants.vehicle", "vehicle", 0);							
 		} else  if(checkCommand(message, "tph")) {
 			spawnInstanceNearPlayer(senderId, "para_heal_skill.projectile", "projectile", 0);			 						
 		} else if (checkCommand(message,"givetestweapon")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_m4sopmodii_4507.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_mab38_oc.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_saf_6607.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_pa15_4202.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_vector_549.weapon");		
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_hk416_agent.weapon");		
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_mp40_902.weapon");	
 		} else if (checkCommand(message,"gsft")){		
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","skill_sf_boss_intruder.projectile");			
@@ -1061,10 +1063,10 @@ class BasicCommandHandler : Tracker {
 
 				c.setIntAttribute("character_id", characterId); 
 				c.setStringAttribute("container_type_class", "backpack");
-				
+				// create once instead of recreating three time
+				array<string> typeStr1 = {"weapon", "grenade", "carry_item"};
+				array<string> typeStr2 = {"weapons", "grenades", "carry_items"};
 				for (uint i = 0; i < 3; ++i) {
-					array<string> typeStr1 = {"weapon", "grenade", "carry_item"};
-					array<string> typeStr2 = {"weapons", "grenades", "carry_items"};
 					for (uint k = 0; k < typeStr1.size(); ++k) {
 						array<const XmlElement@>@ resources = getFactionResources(m_metagame, i, typeStr1[k], typeStr2[k]);
 						for (uint j = 0; j < resources.size(); ++j) {

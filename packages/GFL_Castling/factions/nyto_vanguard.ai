@@ -1,21 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ai filename="eod.ai">
-    <parameter class="burst_time" value="1.0" />
-    <parameter class="burst_time_variance" value="0" />
+<ai filename="default.ai">
+    <parameter class="in_trenches_fade_off_timer" value="5.0" />
+    <parameter class="burst_time" value="1.25" />
+    <parameter class="burst_time_variance" value="0.25" />
     <parameter class="longer_burst_time" value="1.5" />
-    <parameter class="longer_burst_time_variance" value="0" />
+    <parameter class="longer_burst_time_variance" value="0.25" />
 
-    <parameter class="choose_enemy_time" value="0.3" />
+    <parameter class="choose_enemy_time" value="0.75" />
     <parameter class="fighting_melee_move_radius" value="3.0" />
     <parameter class="fighting_regular_move_radius" value="10.0" />
 
-    <parameter class="wait_time" value="0.5" />
-    <parameter class="wait_time_variance" value="0" />
+    <parameter class="wait_time" value="1.2" />
+    <parameter class="wait_time_variance" value="0.2" />
 
-    <parameter class="willingness_to_charge" value="0.6" />
+    <parameter class="willingness_to_charge" value="0.8" />
+    <parameter class="active_guarding_probability" value="0.5" />
+    <parameter class="willingness_to_guard" value="0.5" />
 
-	<parameter class="fighting_approach_alarm_spread_max_range" value="30.0" />
+    <parameter class="monitor_enemies_max_dot_range" value="2.0" />
+    <parameter class="monitor_enemies_min_dot_range_offset" value="2.0" />
+    <parameter class="choose_enemy_max_dot_range" value="2.0" />
+    <parameter class="choose_enemy_min_dot_range_offset" value="2.0" />
+
+	<parameter class="fighting_approach_alarm_spread_max_range" value="45.0" />
 	<parameter class="fighting_approach_alarm_max_soldiers" value="20" /> 
-	<parameter class="leading_inspect_alarm_spread_out_distance" value="30.0" />
-	<parameter class="leading_inspect_alarm_min_distance" value="20.0" />
+	<parameter class="leading_inspect_alarm_spread_out_distance" value="50.0" />
+	<parameter class="leading_inspect_alarm_min_distance" value="50.0" />
+    <parameter class="force_as_leader" value="1.0" />
+
+    <parameter class="guard_range_from_leader_margin" value="15.0" />
+    <parameter class="guard_range_from_leader_step" value="20.0" />
+    <parameter class="guard_wait_time_min" value="3.0" />
+    <parameter class="guard_wait_time_max" value="7.0" />
+    <parameter class="guard_steps" value="4" />
+
+    <parameter class="using_cover_min_time" value="1.5" />
+    <parameter class="using_cover_max_time" value="3.0" />
+
+    <parameter class="dive_from_grenade_probability" value="0.5" />
+
+    <parameter class="day_reaction_time_to_fight_min" value="0.3" />
+    <parameter class="day_reaction_time_to_fight_max" value="0.4" />
+    <parameter class="night_reaction_time_to_fight_min" value="0.3" />
+    <parameter class="night_reaction_time_to_fight_max" value="0.4" />  
+
+    <parameter class="fighting_melee_move_radius" value="1.0" />
+    <parameter class="fighting_regular_move_radius" value="5.0" />    
 </ai>

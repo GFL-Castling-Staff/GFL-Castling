@@ -8,6 +8,8 @@
 	<projectile file="narciss.projectile" />
 	<projectile file="gkw_cz75_axe.projectile" />
 
+	<projectile file="at_rf_spawn.projectile" />
+
 	<projectile file="parw_grenade.throwable" />
 	<projectile file="allmine.throwable" />
 	<projectile file="c4.throwable" />
@@ -89,6 +91,10 @@
 	<projectile file="ff_alchemist_skill_kill.projectile"/>	
 	
 	<projectile file="88typeGUNDAM_rocket.projectile"/>	
+
+	<!-- Amos -->
+	<projectile file="amos_spawn.projectile"/>
+	<projectile file="amos_ap.projectile"/>
 	
 	<projectile file="ASW_A10_strafe.projectile"/>
 	<projectile file="ASW_A10_rocket.projectile"/>
@@ -130,9 +136,20 @@
 	<projectile file="elenusis_acid_bomb.projectile"/>	
 	<projectile file="elenusis_acid_bomb_spawn.projectile"/>	
 
-	<projectile file="mon200_blast.projectile"/>	
+	<projectile file="mon200_blast.projectile"/>
+	<!-- 小爱MOD3以及高达 -->
+	<projectile file="88type_rf_spawn.projectile"/>
+	<projectile file="88type_mrr.projectile"/>
+	<projectile file="88type_gundam_mrr.projectile"/>
+	<!-- 特工系列弹头 -->	
 	<projectile file="agent_arrow_bomb_blast.projectile"/>
-
+	<projectile file="agent_p017_missile.projectile"/>
+	<projectile file="m32a1_grenade.projectile"/>
+	<projectile file="ct_general_spawn.projectile"/>
+	<projectile file="agent_firebolt_spawn.projectile"/>
+	<projectile file="firebolt_incinerator_damage.projectile"/>
+	<!-- 反器材狙击步枪分弹头 -->
+	<projectile file="ap.projectile"/>
 	<!-- 载具用烟雾弹 -->
 	<projectile file="smoke_grenade_v.projectile" />
 	<projectile file="smoke_grenade_v_detect.projectile" />

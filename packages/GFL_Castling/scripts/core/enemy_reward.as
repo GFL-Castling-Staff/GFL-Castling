@@ -5,9 +5,8 @@ int getRPKillReward(string name) {
         int key = int(RP_enemy_index[name]);
         return key;
     }
-    else{
-        return 0;
-    }
+    return 0;
+
 }
 
 dictionary RP_enemy_index = {
@@ -25,19 +24,20 @@ dictionary RP_enemy_index = {
 
 
     {"para_streletplus",20},
-    {"para_streletplus_richman",20},
     {"parw_commander",100},
     {"alina",300},
     {"teal",450},
-    {"eagleyes",150},
-    {"vanguard",150},
+    {"eagleyes",300},
+    {"vanguard",250},
+    {"wrath",250},
     {"Nimogen",300},
     {"Narciss",300},
     {"Adeline",300},
     {"smasher",250},
     {"Paradeus_doppelsoldner",250},
     {"Paradeus_roarer",250},
-    {"Thunder",200},
+    {"Thunder",300},
+    {"parw_grenadier",100},
 
     {"sfw_nemeum",50},
     {"sfw_nemeum_swap",75},
@@ -76,9 +76,7 @@ float getXPKillReward(string name) {
         float key = float(XP_enemy_index[name]);
         return key;
     }
-    else{
-        return 0.0;
-    }
+    return 0.0;
 }
 
 dictionary XP_enemy_index = {
@@ -95,12 +93,12 @@ dictionary XP_enemy_index = {
     {"kcco_zircon_squadleader",0.015},
 
     {"para_streletplus",0.002},
-    {"para_streletplus_richman",0.002},
-    {"parw_commander",0.001},
+    {"parw_commander",0.005},
     {"alina",0.02},
     {"teal",0.02},
     {"eagleyes",0.02},
     {"vanguard",0.02},
+    {"wrath",0.02},
     {"Nimogen",0.02},
     {"Narciss",0.02},
     {"Adeline",0.02},
@@ -108,6 +106,7 @@ dictionary XP_enemy_index = {
     {"Paradeus_doppelsoldner",0.01},
     {"Paradeus_roarer",0.01},
     {"Thunder",0.015},
+    {"parw_grenadier",0.003},
 
     {"sfw_nemeum",0.003},
     {"sfw_nemeum_swap",0.005},
@@ -186,6 +185,7 @@ dictionary reward_pool_list= {
     {"kcco_teslatrooper","rare"},
     {"kcco_human_sniper","rare"},
     {"kcco_ar_human_tel","rare"},
+    {"parw_grenadier","rare"},
 
     {"sfw_nemeum","uncommon"},
     {"sfw_nemeum_swap","uncommon"},

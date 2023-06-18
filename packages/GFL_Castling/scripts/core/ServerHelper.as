@@ -7,6 +7,8 @@
 #include "task_sequencer.as"
 #include "GFLhelpers.as"
 #include "GFLparameters.as"
+#include "kill_event.as"
+#include "commandskill.as"
 
 //Originally created by NetherCrow
 
@@ -90,6 +92,56 @@ class ServerHelper : Tracker {
                 playSoundAtLocation(m_metagame,"objective_priority.wav",faction,pos);
                 sendPrivateMessageKey(m_metagame, playerId, "ServerQuickChatAlert004",a);
                 sendPrivateMessageKey(m_metagame, playerId, "ServerQuickChatAlert002",dictionary());
+            }
+        }
+
+        if(checkCommand(message,"addmosin_level")){
+            const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+            if (playerInfo is null) return;				
+            int characterId= playerInfo.getIntAttribute("character_id");
+
+            int j = findKillCountIndex(characterId,"mosinnagant");
+            if(j>=0){
+                KillCountArray[j].add(9);
+            }
+            else{
+                KillCountArray.insertLast(kill_count(characterId,9,"mosinnagant"));       
+            }
+        }
+
+        if(checkCommand(message,"addmosin_500")){
+            const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+            if (playerInfo is null) return;				
+            int characterId= playerInfo.getIntAttribute("character_id");
+
+            int j = findKillCountIndex(characterId,"mosinnagant");
+            if(j>=0){
+                KillCountArray[j].add(500);
+            }
+            else{
+                KillCountArray.insertLast(kill_count(characterId,500,"mosinnagant"));       
+            }
+        }
+
+        if(checkCommand(message,"add98klevel")){
+            const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+            if (playerInfo is null) return;				
+            int characterId= playerInfo.getIntAttribute("character_id");
+            string strname= playerInfo.getStringAttribute("name");
+            int j = findNodeleteDataIndex(strname,"kar98k");
+            if(j>=0){
+                No_Delete_DataArray[j].add();
+                const XmlElement@ characterInfo = getCharacterInfo(m_metagame,characterId);
+                if (characterInfo is null) return;
+                string c_pos = characterInfo.getStringAttribute("position");
+                spawnStaticProjectile(m_metagame,"particle_effect_98k_medal.projectile",c_pos,characterId,characterInfo.getIntAttribute("faction_id"));
+            }
+            else{
+                No_Delete_DataArray.insertLast(no_delete_data(strname,1,"kar98k"));       
+                const XmlElement@ characterInfo = getCharacterInfo(m_metagame,characterId);
+                if (characterInfo is null) return;
+                string c_pos = characterInfo.getStringAttribute("position");
+                spawnStaticProjectile(m_metagame,"particle_effect_98k_medal.projectile",c_pos,characterId,characterInfo.getIntAttribute("faction_id"));                            
             }
         }
 

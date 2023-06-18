@@ -13,8 +13,6 @@
      class="0"
      supperessed="0"
      use_basic_muzzle_smoke_effect="0"
-	 
-	 success_probability="14.0"
      stab_enabled="1"
      stab_range="5"
     />
@@ -56,6 +54,15 @@
     <stance state_key="prone" accuracy="1" /> 
     <stance state_key="prone_moving" accuracy="1" />
     <stance state_key="over_wall" accuracy="1" /> 
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.1" />
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
+    <target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="15.0" />
+    <target_factors tag="autorifle" distance="1.25" direction="0.0" squad_command="1.0" base_score="12.0" />
+	<target_factors tag="machine gun" distance="2.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
+	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="15.0"/>
+	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
 
     <hud_icon filename="sfw_excutioner1.png" />
     <effect class="muzzle" ref="sawsnone" />
@@ -91,5 +98,4 @@
 	<sound key="stab_hit_any" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
 	<sound key="stab_hit_any" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
 	<sound key="stab_hit_any" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
-     
 </weapon>

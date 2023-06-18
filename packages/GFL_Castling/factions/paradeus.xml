@@ -486,6 +486,8 @@
 			<call key="pard_zombie.call" />
 			<call key="para_assault.call" />
 			<call key="para_eod.call" />
+			<call key="para_deploy_cherub.call" />
+			<call key="para_deploy_uhlan.call" />			
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="400.0" max="450.0" />
 			</attribute_config>
@@ -516,13 +518,32 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="parw_dog" spawn_score="0.5" copy_from="default_ai">
+	<!-- 重锤 -->
+	<soldier name="parw_hammer" spawn_score="1.0" squad_size_xp_cap="0.5" copy_from="default_ai">
+		<ai filename="para_hammer.ai"/>
+		<character filename="paradeus.text_lines">
+			<sound key="death" fileref="kill_sound_kcco_bot01.wav" volume="0.4" pitch_variety="0.025"/>
+			<sound key="death" fileref="kill_sound_kcco_bot02.wav" volume="0.4" pitch_variety="0.025"/>
+			<sound key="death" fileref="kill_sound_kcco_bot03.wav" volume="0.4" pitch_variety="0.025"/>
+		</character>		
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="parw_hammer.weapon" enabled="1" probability="1.0" />
+			<carry_item key="para_vest_15hp_elite.carry_item" />
+			<attribute_config class="xp">
+				<attribute weight="1.0" min="1.0" max="5.6" />
+			</attribute_config>
+			<attribute_config class="rp">
+				<attribute weight="1.0" min="700.0" max="1500.0" />
+			</attribute_config>
+		</resources>
+	</soldier>	
+	<soldier name="parw_dog" spawn_score="0.4" copy_from="default_ai">
 		<ai filename="para_dog.ai"/>
 		<model filename="pard_germdog.xml" />
 		<character filename="pard_germdog.character" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_germdog.weapon" enabled="1" probability="1.0"/>
-			<carry_item key="pard_ar.carry_item" />
+			<carry_item key="para_vest_15hp_elite.carry_item" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="1.0" max="5.6" />
 			</attribute_config>
@@ -552,6 +573,59 @@
 			</attribute_config>
 		</resources>
 	</soldier>
+	<soldier name="parw_grenadier" spawn_score="0.75" squad_size_xp_cap="0.5" copy_from="default_ai">
+		<model filename="pard_thrower_swap.xml" />
+		<ai filename="pard_thrower.ai" >
+			<parameter class="burst_time" value="1.0" />
+			<parameter class="burst_time_variance" value="0" />
+			<parameter class="longer_burst_time" value="1.0" />
+			<parameter class="longer_burst_time_variance" value="0" />
+			<parameter class="wait_time" value="0.3" />
+			<parameter class="wait_time_variance" value="0.1" />
+		</ai>
+		<character filename="paradeus.text_lines">
+			<sound key="death" fileref="kill_sound_kcco_bot01.wav" volume="0.4" pitch_variety="0.025"/>
+			<sound key="death" fileref="kill_sound_kcco_bot02.wav" volume="0.4" pitch_variety="0.025"/>
+			<sound key="death" fileref="kill_sound_kcco_bot03.wav" volume="0.4" pitch_variety="0.025"/>
+		</character>
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="parw_grenadier.weapon" enabled="1" probability="1.0" />
+			<projectile key="parw_grenade.projectile" enabled="1" probability="1.0" />
+			<weapon key="parw_rocket.weapon" enabled="1" probability="1.0" />
+			<carry_item key="vest_40hp_15" />
+			<attribute_config class="xp">
+				<attribute weight="1.0" min="1.0" max="2.0" />
+				<attribute weight="0.75" min="3.0" max="4.0" />
+				<attribute weight="0.5" min="5.0" max="6.0" />
+				<attribute weight="0.25" min="7.0" max="8.0" />
+				<attribute weight="0.1" min="9.0" max="10.0" />
+			</attribute_config>
+			<attribute_config class="rp">
+				<attribute weight="1.0" min="400.0" max="420.0" />
+			</attribute_config>
+		</resources>
+	</soldier>
+	<soldier name="parw_defender" spawn_score="1.0" squad_size_xp_cap="0.5" copy_from="default_ai">
+		<ai filename="pard_defender.ai" />
+		<model filename="pard_punish.xml" />
+		<character filename="paradeus.text_lines">
+			<sound key="death" fileref="kill_sound_kcco_bot01.wav" volume="0.4" pitch_variety="0.025"/>
+			<sound key="death" fileref="kill_sound_kcco_bot02.wav" volume="0.4" pitch_variety="0.025"/>
+			<sound key="death" fileref="kill_sound_kcco_bot03.wav" volume="0.4" pitch_variety="0.025"/>
+			<parameter class="can_use_vehicles" value="0" /> 
+			<parameter class="walking_steer_amount" value="0.63" />
+			<parameter class="running_steer_amount" value="0.63" />		
+			<animation key="stunned" target_key="stunned_sit 1.0" />
+		</character> 
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="parw_punish_shield.weapon" enabled="1"/>
+			<projectile key="selfnone_punish.projectile" enabled="1"/>
+			<carry_item key="vest_40hp_10" enabled="1"/>
+		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="grenade" slot="0" probability="1.0" />
+		</item_class_existence_config>		
+	</soldier>	
 	<soldier name="alina" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<character filename="default_pard_nyto.character">
 			<parameter class="can_use_vehicles" value="0" /> 
@@ -563,6 +637,9 @@
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_alina.weapon" enabled="1" />
 			<carry_item key="vest_40hp.carry_item" />
+			<call key="pard_zombie_nyto.call" />
+			<call key="para_deploy_cherub_nyto.call" />
+			<call key="para_deploy_uhlan_nyto.call" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="330.0" max="350.833" />
 			</attribute_config>
@@ -584,7 +661,7 @@
 			<model filename="pard_teal.xml" />
 			<carry_item key="vest_50hp_tank.carry_item" />
 			<attribute_config class="xp">
-				<attribute weight="1.0" min="350.0" max="450.833" />
+				<attribute weight="1.0" min="20.0" max="20" />
 			</attribute_config>
 			<attribute_config class="rp">
 				<attribute weight="1.0" min="3000.0" max="5000.0" />
@@ -592,16 +669,26 @@
 		</resources>
 	</soldier>
 	<soldier name="eagleyes" spawn_score="0.2" squad_size_xp_cap="0.5" copy_from="default_ai">
-		<character filename="default_pard_nyto.character"/>
-		<ai filename="elite.ai" />
+		<character filename="default_pard_nyto.character">
+			<parameter class="being_stunned_steer_amount" value="0.6" />
+			<animation key="stunned" target_key="rush jump" />
+			<parameter class="can_use_vehicles" value="0" /> 
+			<parameter class="walking_steer_amount" value="0.63" />
+			<parameter class="running_steer_amount" value="0.63" />
+		</character>
+		<ai filename="nyto_eagleyes.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_eagleyes.weapon" enabled="1" />
 			<model filename="pard_eagleyes.xml" />
 			<carry_item key="vest_40hp.carry_item" />
+			<call key="pard_zombie_nyto.call" />
 			<call key="para_assault.call" />
 			<call key="para_eod.call" />
+			<call key="para_deploy_cherub_nyto.call" />
+			<call key="para_deploy_uhlan_nyto.call" />
+			<projectile key="selfstun.projectile" enabled="1" probability="1.0" />		
 			<attribute_config class="xp">
-				<attribute weight="1.0" min="350.0" max="450.833" />
+				<attribute weight="1.0" min="20.0" max="20" />
 			</attribute_config>
 			<attribute_config class="rp">
 				<attribute weight="1.0" min="3000.0" max="5000.0" />
@@ -615,10 +702,13 @@
 			<weapon key="parw_vanguard.weapon" enabled="1" />
 			<model filename="pard_vanguard.xml" />
 			<carry_item key="vest_40hp.carry_item" />
+			<call key="pard_zombie_nyto.call" />
 			<call key="para_assault.call" />
 			<call key="para_eod.call" />
+			<call key="para_deploy_cherub_nyto.call" />
+			<call key="para_deploy_uhlan_nyto.call" />
 			<attribute_config class="xp">
-				<attribute weight="1.0" min="350.0" max="450.833" />
+				<attribute weight="1.0" min="20.0" max="20" />
 			</attribute_config>
 			<attribute_config class="rp">
 				<attribute weight="1.0" min="3000.0" max="5000.0" />
@@ -644,6 +734,25 @@
 			</attribute_config>
 		</resources>
 	</soldier>
+	<soldier name="nyto_support" spawn_score="0" squad_size_xp_cap="0.5" copy_from="default_ai">
+		<character filename="default_pard_nyto.character">
+			<parameter class="can_use_vehicles" value="0" /> 
+			<parameter class="walking_steer_amount" value="0.63" />
+			<parameter class="running_steer_amount" value="0.63" />
+			<parameter class="stopping_velocity_threshold" value="0.05" />
+		</character>
+		<ai filename="nyto_wrath.ai" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="parw_wrath.weapon" enabled="1" />
+			<carry_item key="vest_40hp.carry_item" />
+			<attribute_config class="xp">
+				<attribute weight="1.0" min="330.0" max="350.833" />
+			</attribute_config>
+			<attribute_config class="rp">
+				<attribute weight="1.0" min="700.0" max="1500.0" />
+			</attribute_config>
+		</resources>
+	</soldier>	
 	<soldier name="Nimogen" spawn_score="0.05" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<character filename="default_pard_nyto.character"/>
 		<ai filename="sniper.ai" />
@@ -651,8 +760,11 @@
 			<weapon key="parw_nimogen.weapon" enabled="1" />
 			<model filename="pard_nimogen.xml" />
 			<carry_item key="vest_40hp.carry_item" />
+			<call key="pard_zombie_nyto.call" />
 			<call key="para_assault.call" />
 			<call key="para_eod.call" />
+			<call key="para_deploy_cherub_nyto.call" />
+			<call key="para_deploy_uhlan_nyto.call" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="350.0" max="450.833" />
 			</attribute_config>
@@ -684,9 +796,11 @@
 			<weapon key="parw_nyto_black.weapon" enabled="1" />
 			<model filename="pard_boss_nyto_black.xml" />
 			<carry_item key="vest_40hp.carry_item" />
-			<call key="pard_zombie.call" />
+			<call key="pard_zombie_nyto.call" />
 			<call key="para_assault.call" />
 			<call key="para_eod.call" />			
+			<call key="para_deploy_cherub_nyto.call" />
+			<call key="para_deploy_uhlan_nyto.call" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="330.0" max="350.833" />
 			</attribute_config>
@@ -696,7 +810,7 @@
 		</resources>
 	</soldier>
 	<soldier name="infected" spawn_score="0.0" squad_size_xp_cap="0.5">
-		<ai filename="melee.ai" />
+		<ai filename="infected.ai" />
 		<model filename="pard_zombie.xml" />
 		<character filename="infected.character" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
@@ -742,7 +856,7 @@
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_doppelsoldner_rocket.weapon" enabled="1" />
 			<carry_item key="pard_roarer_15" />
-			<projectile key="selfnone.projectile" enabled="1" />
+			<projectile key="selfnone_mecha.projectile" enabled="1" />
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="weapon" slot="1" probability="1" />
@@ -845,12 +959,6 @@
 		<ai filename="chicken.ai" />
 		<models>
 			<model filename="chick_en1.xml" />
-			<model filename="chick_en2.xml" />
-			<model filename="chick_rooster.xml" />
-			<model filename="chick_brown.xml" />
-			<model filename="chick_yellow.xml" />
-			<model filename="chick_glasses.xml" />
-			<model filename="chick_bananchick.xml" />
 		</models>
 		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
 		</resources>

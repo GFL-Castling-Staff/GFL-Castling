@@ -11,7 +11,7 @@
 	sustained_fire_diminish_rate="0.33" 
 	magazine_size="4" 
 	can_shoot_standing="1" 
-	can_shoot_crouching="1"
+	can_shoot_crouching="0"
 	can_shoot_prone="0"
 	suppressed="0" 
 	name="Code:Minotauros" 
@@ -24,7 +24,7 @@
 	stab_enabled="0"
     stab_range="2"
 	barrel_offset_3d="0.6 1 0.5"/>
-    <animation state_key="recoil"	animation_key="recoil, teslatrooper" />
+    <animation state_key="recoil" animation_key="recoil, teslatrooper" />
     <animation key="reload" animation_key="change weapon, large mecha" />
     <animation state_key="cycle" animation_key="still_big_unit" />
     <animation key="walking" target_key="walking_big_unit" />
@@ -34,6 +34,7 @@
     <sound key="reload_one" fileref="Teslatrooper_reload_FromBF5.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <weak_hand_hold offset="0.2" />
+    <drop_on_death_result class="spawn" instance_class="projectile" instance_key="spontaneous_explosion_spawn.projectile" min_amount="1.0" max_amount="1.0" offset="0 2.0 0" position_spread="0 0" direction_spread="0 0"/>
     <projectile file="Doppelsoldner_rocket.projectile" >
         <result class="blast" radius="3.0" damage="2" push="0.2" decal="1" faction_compare="not_equal"/>
     </projectile>

@@ -40,8 +40,8 @@
   <parameter class="force_comparison_multiplier_to_call_reinforcements" value="0.8" />
   <parameter class="call_reinforcements_max_distance" value="40.0" />
   <parameter class="fighting_approach_alarm_spread_max_range" value="40.0" />
-  <parameter class="default_fighting_separation" value="3.0" />
-  <parameter class="boosted_fighting_separation" value="3.0" />
+  <parameter class="default_fighting_separation" value="8.0" />
+  <parameter class="boosted_fighting_separation" value="4.0" />
   <parameter class="run_limit_margin" value="2.0" />
   <parameter class="run_limit" value="6.0" />
   <parameter class="throw_grenade_time_interval_max" value="30.0" />
@@ -70,10 +70,10 @@
   <parameter class="max_active_shields_per_fellows" value="10.0" /> 
   <parameter class="fighting_against_vehicle_separation" value="7.0" />
   <parameter class="fighting_against_vehicle_move_radius" value="30.0" />
-  <parameter class="day_reaction_time_to_fight_min" value="0.6" />
-  <parameter class="day_reaction_time_to_fight_max" value="0.8" />
-  <parameter class="night_reaction_time_to_fight_min" value="1.3" />
-  <parameter class="night_reaction_time_to_fight_max" value="1.8" />
+  <parameter class="day_reaction_time_to_fight_min" value="0.4" />
+  <parameter class="day_reaction_time_to_fight_max" value="0.7" />
+  <parameter class="night_reaction_time_to_fight_min" value="0.7" />
+  <parameter class="night_reaction_time_to_fight_max" value="1.1" />
   <parameter class="willingness_to_guard" value="0.15" />
   <parameter class="minimum_distance_to_consider_deploying_cover" value="18.0" />
   <parameter class="recheck_cover_over_shootability_time" value="3.0" />

@@ -18,6 +18,10 @@
 	<weapon key="parw_rocket.weapon" />
 	<weapon key="parw_police.weapon"/>
 	<weapon key="parw_thunder.weapon"/>
+	<weapon key="parw_punish_shield.weapon"/>
+	<weapon key="parw_punish_axe.weapon"/>
+	<weapon key="parw_hammer.weapon"/>
+
 
 	
 	<weapon key="parw_eagleyes.weapon"/>
@@ -34,6 +38,7 @@
 	<vehicle key="par_elenusinus.vehicle" />
 	<vehicle key="par_aceso.vehicle"/>
 	<vehicle key="paradeus_uhlan.vehicle" />
+	<vehicle key="par_cherub.vehicle" />
 	<vehicle key="par_compass.vehicle" />
 	<vehicle key="par_sentrytower.vehicle"/>
 	<vehicle key="atv_base_pard.vehicle"/>
@@ -49,6 +54,7 @@
 	<projectile key="parw_grenade.projectile"/>
 	<projectile key="para_heal_skill.projectile"/>
 	<projectile key="selfstun.projectile"/>
+	<projectile key="selfnone_punish.projectile"/>
 
 	<!-- 护甲 -->
 	<carry_item key="pard_nyto.carry_item" />

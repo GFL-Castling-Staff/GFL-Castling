@@ -23,12 +23,10 @@
 
   
   <projectile file="artillery_jupiter_420.projectile" />
-  <projectile file="artillery_laser_420.projectile" />
+  <projectile file="kcco_artillery_shell.projectile" />
   <projectile file="artillery_rocket_fairies.projectile" />
   <projectile file="artillery_rocket_fairies_emp.projectile" />
   <projectile file="artillery_shell_152.projectile" />
-  <projectile file="artillery_shell_310.projectile" />
-  <projectile file="artillery_shell_203.projectile" />
   <projectile file="artillery_shell_destroyer.projectile" />
 
   
@@ -129,7 +127,7 @@
   <projectile file="grenade_m67.projectile" />
   <projectile file="m200_snipe.projectile"/>
   <projectile file="blast_damage.projectile"/>
-  <!-- <projectile file="kcco_agl.projectile"/> -->
+  <projectile file="ar_spawn.projectile"/>
   <projectile file="grenade_scarecrow.projectile"/>
 
   <projectile file="snipe_bullet.projectile"/>
@@ -140,5 +138,9 @@
 
   <projectile file="skill_c96_flare.projectile"/>
   <projectile file="skill_c96_flare_float.projectile"/>
+  <projectile file="ju87.projectile"/>
 
+
+  <projectile file="kcco_sticky_bomb.projectile"/>
+  <projectile file="sfw_aegis_heal.projectile"/>
 </projectiles>

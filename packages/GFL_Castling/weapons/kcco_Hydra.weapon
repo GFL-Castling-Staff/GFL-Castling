@@ -16,6 +16,7 @@
 	suppressed="0"
 	name="Code:Hydra"
 	class="0"
+	slot="0"
 	reload_one_at_a_time="0"
 	sight_range_modifier="1.0"
 	projectile_speed="80"
@@ -40,8 +41,8 @@
 	<sound key="fire" fileref="Manticore_fire_FromSQUAD.wav" volume="1.8"/>
 	<sound key="magazine_out" fileref="qwd_re.wav" volume="0.5"/>
 	<sound key="cycle" fileref="mossberg500_cycle.wav"/>
-	<sound key="reload_one" fileref="mossberg500_reload.wav"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
+	<drop_on_death_result class="spawn" instance_class="projectile" instance_key="spontaneous_explosion_spawn.projectile" min_amount="1.0" max_amount="1.0" offset="0 2.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<model filename=""/>
 	<hud_icon filename="kccow_qwd.png"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="0">
@@ -118,13 +119,13 @@
 	<effect class="muzzle" ref="UpDust"/>
 	<effect class="muzzle" ref="muzzle_small_yellow"/>	
 	
-	<shield offset="1.2 -2.0 0" extent="0.2 5.0 4.0" usable_for_cover="0"/>
+	<!-- <shield offset="1.2 -2.0 0" extent="0.2 5.0 4.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/> -->
 	<stance state_key="running" accuracy="0.9"/>
 	<stance state_key="walking" accuracy="0.9"/>
 	<stance state_key="crouch_moving" accuracy="0.9"/>
@@ -145,7 +146,7 @@
     <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
 </weapon>
 
-<weapon key="kccow_hydra_at.weapon" time_to_live_out_in_the_open="0" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+<weapon key="kccow_hydra_at.weapon" force_as_shoots_blast_projectiles="1" time_to_live_out_in_the_open="0" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
 	<tag name="antiarmor"/>
 	<tag name="mecha"/>
 	<specification 
@@ -159,7 +160,7 @@
 	can_shoot_prone="0"
 	suppressed="0"
 	name="Code:Hydra"
-	class="0"
+	class="3"
 	consume="1"
 	slot="1"
 	reload_one_at_a_time="0"
@@ -171,9 +172,9 @@
 	stab_enabled="1"/>
 	<commonness value="0.1" in_stock="1"/>
 	<capacity value="20" source="rank" source_value="0" />
-	<animation state_key="recoil"	animation_key="recoil 3, hydra and manticore" />
-	<animation state_key="recoil" stance_key="prone" animation_key="recoil 3, hydra and manticore" />
-	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil 3, hydra and manticore" />.	
+	<animation state_key="recoil"	animation_key="recoil 4, hydra and manticore" />
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil 4, hydra and manticore" />
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil 4, hydra and manticore" />.	
 	<animation state_key="hold" animation_key="still 1, hydra and manticore" />
 	<animation state_key="hold_on_wall" animation_key="still 1, hydra and manticore" />
 	<animation state_key="hold_casual" animation_key="still 1, hydra and manticore" />
@@ -185,8 +186,6 @@
 	<animation state_key="crouch_moving_backwards"	animation_key="walking 1, hydra and manticore" />
 	<animation state_key="reload" animation_key="reload, hydra and manticore" />
 	<animation key="stabbing" animation_key="stabbing, hydra and manticore" />
-
-	<animation key="stabbing" animation_key="stabbing, hydra and manticore"/>
 	<sound key="fire" fileref="Manticore_fire_FromSQUAD.wav" volume="1.8"/>
 	<sound key="magazine_out" fileref="qwd_re.wav" volume="0.5"/>
 	<sound key="cycle" fileref="mossberg500_cycle.wav"/>
@@ -203,13 +202,13 @@
     <effect class="muzzle" ref="coeusphere" />
     <effect class="muzzle" ref="coeusmuzzle" lighting="0" />
 
-	<shield offset="2.7 3.0 1.5" extent="0.3 5.0 4.0" usable_for_cover="0"/>
+	<!-- <shield offset="2.7 3.0 1.5" extent="0.3 5.0 4.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/> -->
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.8"/>
 	<stance state_key="crouch_moving" accuracy="0.75"/>

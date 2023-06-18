@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="Accurate Missile" slot="2" key="kcco_accurate_missile.projectile" pulldown_in_air="150.0">
-    <result class="blast" radius="9.0" damage="30" push="4" decal="1" faction_compare="not_equal"/>
+<projectile class="grenade" name="Accurate Missile" slot="2" radius="2.0" key="kcco_accurate_missile.projectile" pulldown_in_air="150.0">
+    <result class="blast" radius="10.0" damage="30" push="4" decal="1" faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="motion" />
     <model mesh_filename="kcco_artillery_shell.xml" />

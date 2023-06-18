@@ -4,11 +4,23 @@
 #include "Spawn_request.as"
 #include "GFLparameters.as"
 
-//别抄了学不会的，有需求请联系 冥府乌鸦NetherCrow 为你解惑，不识趣的不建议来。
+//严禁无授权转载
 //Credit: NetherCrow & Castling Staff
 //Contributor: Saiwa
 //Inspired by Pasik & Unit G17 & RWR ww2 DLC staff
 //Don't copy without gimme a ask and if you has some question about script just contact @NetherCrowCSOLYOO in rwr discord #modding
+
+class MutilProjectile
+{
+	string m_key;
+	int m_num;
+	MutilProjectile(){}
+	MutilProjectile(string key,int num)
+	{
+		m_key=key;
+		m_num=num;
+	}
+}
 
 void playSoundAtLocation(const Metagame@ metagame, string filename, int factionId, const Vector3@ position, float volume=1.0) {
 	XmlElement command("command");
@@ -62,8 +74,7 @@ void editPlayerNade(const Metagame@ metagame, int characterId, string Itemkey, u
 }
 
 string getPlayerEquipmentKey(const Metagame@ metagame, int characterId, uint slot){
-	if (slot <0) return "";
-	if (slot >5) return "";
+	if (slot < 0 || slot > 5) return "";
 	const XmlElement@ targetCharacter = getCharacterInfo2(metagame,characterId);
 	if (targetCharacter is null) return "";
 	array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
@@ -74,8 +85,7 @@ string getPlayerEquipmentKey(const Metagame@ metagame, int characterId, uint slo
 }
 
 string getDeadPlayerEquipmentKey(const Metagame@ metagame, int characterId, uint slot){
-	if (slot <0) return "";
-	if (slot >5) return "";
+	if (slot < 0 || slot > 5) return "";
 	const XmlElement@ targetCharacter = getCharacterInfo2(metagame,characterId);
 	if (targetCharacter is null) return "";
 	array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
@@ -89,8 +99,7 @@ void getMyItem(const Metagame@ metagame, int characterId){
 }
 
 int getPlayerEquipmentAmount(const Metagame@ metagame, int characterId, uint slot){
-	if (slot <0) return -1;
-	if (slot >5) return -1;
+	if (slot < 0 || slot > 5) return -1;
 	const XmlElement@ targetCharacter = getCharacterInfo2(metagame,characterId);
 	if (targetCharacter is null) return -1;
 	array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
@@ -270,9 +279,7 @@ float getAimOrientation4(Vector3 s_pos, Vector3 e_pos) {
 	if(asin(dy/ds)>0) {
 		return (dir*1.0-1.57)*(-1.0);
 	}
-	else {
-		return (dir*(-1.0)-1.57)*(-1.0);
-	}
+	return (dir*(-1.0)-1.57)*(-1.0);
 }
 
 float getAimOrientation4(Vector3 e_pos) {
@@ -284,9 +291,7 @@ float getAimOrientation4(Vector3 e_pos) {
 	if(asin(dy/ds)>0) {
 		return (dir*1.0-1.57)*(-1.0);
 	}
-	else {
-		return (dir*(-1.0)-1.57)*(-1.0);
-	}
+	return (dir*(-1.0)-1.57)*(-1.0);
 }
 
 float getOrientation4(Vector3 a) {
@@ -298,9 +303,7 @@ float getOrientation4(Vector3 a) {
 	if(asin(dy/ds)>0) {
 		return (dir*1.0-1.57)*(-1.0);
 	}
-	else {
-		return (dir*(-1.0)-1.57)*(-1.0);
-	}
+	return (dir*(-1.0)-1.57)*(-1.0);
 }
 
 Vector3 getMultiplicationVector(Vector3 s_pos, Vector3 scale) {
@@ -578,6 +581,26 @@ void CreateDirectProjectile_T(Metagame@ m_metagame,Vector3 startPos,Vector3 endP
 		" character_id='" + cId + "'" +
 		" offset='" + direction.toString() + "' />";
 	m_metagame.getComms().send(c);
+}
+
+void CreateMutilDirectProjectile(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,string key,int cId,int fId,float initspeed,int num){
+	initspeed=initspeed/60;
+	Vector3 direction = endPos.subtract(startPos);
+	float Vmod = sqrt(pow(direction.get_opIndex(0),2)  + pow(direction.get_opIndex(1),2) + pow(direction.get_opIndex(2),2));
+	if (Vmod< 0.00001f) Vmod= 0.00001f;
+	direction.set(direction.get_opIndex(0)/Vmod,direction.get_opIndex(1)/Vmod,direction.get_opIndex(2)/Vmod);
+	direction = direction.scale(initspeed);
+	string c = 
+		"<command class='create_instance'" +
+		" faction_id='" + fId + "'" +
+		" instance_class='grenade'" +
+		" instance_key='" + key + "'" +
+		" position='" + startPos.toString() + "'" +
+		" character_id='" + cId + "'" +
+		" offset='" + direction.toString() + "' />";
+	for(int i=1;i<=num;i++){
+		m_metagame.getComms().send(c);
+	}
 }
 
 float getFlatPositionDistance(const Vector3@ pos1, const Vector3@ pos2) {

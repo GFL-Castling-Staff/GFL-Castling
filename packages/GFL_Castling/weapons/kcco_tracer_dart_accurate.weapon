@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon name="Tracer Dart (Accurate)" file="KCCO.base_weapon" key="kcco_tracer_dart_accurate.weapon">
+<weapon file="KCCO.base_weapon" key="kcco_tracer_dart_accurate.weapon">
     <tag name="assault" />       
 	
     <specification
@@ -11,7 +11,7 @@
 	can_shoot_standing="1"
 	carry_in_two_hands="0" 
 	suppressed="1"
-	name="tracer"
+	name="Tracer Dart (Accurate)"
 	class="3"
 	reload_one_at_a_time="1"
 	sight_range_modifier="1.0"
@@ -44,7 +44,6 @@
     <commonness value="10.0" can_respawn_with="0" in_stock="1" />
     <inventory encumbrance="0.0" price="80.0" />
 
-    <projectiles_per_shot value="1" />
     <weak_hand_hold offset="0.1" />
 
     <capacity value="4" source="rank" source_value="0.0" /> 

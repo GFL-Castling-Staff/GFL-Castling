@@ -3399,21 +3399,21 @@
         <voxel x="7" y="43" z="11" r="0.839216" g="0.254902" b="0.439216" a="1.000000" />C
     </voxels>
     <skeleton>
-        <particle x="0.500000" y="56.500000" z="6.500000" invMass="15.000000" id="50" name="head" bodyAreaHint="2" />
-        <particle x="0.500000" y="49.500000" z="6.500000" invMass="10.000000" id="45" name="neck" bodyAreaHint="2" />
-        <particle x="-6.500000" y="46.500000" z="6.500000" invMass="8.000000" id="15" name="rightshoulder" bodyAreaHint="2" />
-        <particle x="7.500000" y="46.500000" z="6.500000" invMass="8.000000" id="25" name="leftshoulder" bodyAreaHint="2" />
-        <particle x="-14.500000" y="46.500000" z="6.500000" invMass="70.000000" id="12274576" name="rightelbow" bodyAreaHint="2" />
-        <particle x="15.500000" y="46.500000" z="6.500000" invMass="70.000000" id="12273840" name="leftelbow" bodyAreaHint="2" />
-        <particle x="-21.500000" y="45.500000" z="6.500000" invMass="200.000000" id="12274112" name="righthand" bodyAreaHint="2" />
-        <particle x="22.500000" y="45.500000" z="6.500000" invMass="200.000000" id="12273488" name="lefthand" bodyAreaHint="2" />
-        <particle x="0.500000" y="36.500000" z="6.500000" invMass="10.000000" id="1" name="midspine" bodyAreaHint="1" />
-        <particle x="-4.500000" y="29.500000" z="6.500000" invMass="10.000000" id="10" name="righthip" bodyAreaHint="1" />
-        <particle x="5.500000" y="29.500000" z="6.500000" invMass="10.000000" id="20" name="lefthip" bodyAreaHint="1" />
-        <particle x="-4.500000" y="14.500000" z="6.500000" invMass="15.000000" id="12285328" name="rightknee" bodyAreaHint="1" />
-        <particle x="5.500000" y="14.500000" z="6.500000" invMass="15.000000" id="21" name="leftknee" bodyAreaHint="1" />
-        <particle x="-4.500000" y="1.500000" z="6.500000" invMass="20.000000" id="12285680" name="rightfoot" bodyAreaHint="1" />
-        <particle x="5.500000" y="1.500000" z="6.500000" invMass="20.000000" id="22" name="leftfoot" bodyAreaHint="1" />
+        <particle x="0.500000" y="57.500000" z="5.500000" invMass="15.000000" id="50" name="head" bodyAreaHint="2" />
+        <particle x="0.500000" y="50.500000" z="5.500000" invMass="10.000000" id="45" name="neck" bodyAreaHint="2" />
+        <particle x="-6.500000" y="47.500000" z="5.500000" invMass="8.000000" id="15" name="rightshoulder" bodyAreaHint="2" />
+        <particle x="7.500000" y="47.500000" z="5.500000" invMass="8.000000" id="25" name="leftshoulder" bodyAreaHint="2" />
+        <particle x="-14.500000" y="47.500000" z="5.500000" invMass="70.000000" id="12274576" name="rightelbow" bodyAreaHint="2" />
+        <particle x="15.500000" y="47.500000" z="5.500000" invMass="70.000000" id="12273840" name="leftelbow" bodyAreaHint="2" />
+        <particle x="-21.500000" y="46.500000" z="5.500000" invMass="200.000000" id="12274112" name="righthand" bodyAreaHint="2" />
+        <particle x="22.500000" y="46.500000" z="5.500000" invMass="200.000000" id="12273488" name="lefthand" bodyAreaHint="2" />
+        <particle x="0.500000" y="37.500000" z="5.500000" invMass="10.000000" id="1" name="midspine" bodyAreaHint="1" />
+        <particle x="-4.500000" y="30.500000" z="5.500000" invMass="10.000000" id="10" name="righthip" bodyAreaHint="1" />
+        <particle x="5.500000" y="30.500000" z="5.500000" invMass="10.000000" id="20" name="lefthip" bodyAreaHint="1" />
+        <particle x="-4.500000" y="15.500000" z="5.500000" invMass="15.000000" id="12285328" name="rightknee" bodyAreaHint="1" />
+        <particle x="5.500000" y="15.500000" z="5.500000" invMass="15.000000" id="21" name="leftknee" bodyAreaHint="1" />
+        <particle x="-4.500000" y="2.500000" z="5.500000" invMass="20.000000" id="12285680" name="rightfoot" bodyAreaHint="1" />
+        <particle x="5.500000" y="2.500000" z="5.500000" invMass="20.000000" id="22" name="leftfoot" bodyAreaHint="1" />
         <stick a="12285680" b="12285328" />
         <stick a="12285328" b="10" />
         <stick a="10" b="20" />

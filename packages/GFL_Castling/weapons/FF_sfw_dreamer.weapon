@@ -24,8 +24,6 @@
 	projectiles_per_shot="1" />
 
 	<next_in_chain key="ff_dreamer_skill.weapon" share_ammo="0" />
-
-
 	<animation state_key="recoil"	animation_key="recoil2, dreamer" />
     <animation key="recoil" stance_key="over_wall" animation_key="recoil2, dreamer" />
     <animation key="recoil" stance_key="crouching" animation_key="recoil2, dreamer" />
@@ -158,7 +156,6 @@
     use_basic_muzzle_smoke_effect="0" />
 
 	<next_in_chain key="ff_dreamer.weapon" share_ammo="0" />
-
 	<animation state_key="recoil"	animation_key="recoil2, dreamer" />
     <animation key="recoil" stance_key="over_wall" animation_key="recoil2, dreamer" />
     <animation key="recoil" stance_key="crouching" animation_key="recoil2, dreamer" />
@@ -173,7 +170,7 @@
     <animation state_key="crouch_moving" animation_key="walking, dreamer" />
     <animation state_key="crouch_moving_backwards" animation_key="walking backwards, dreamer" />
 	<animation state_key="reload" animation_key="reloading, dreamer3" />
-    <sound key="fire" fileref="Typhon_Fire.wav" pitch_variety="0.00" volume="0.2" />
+    <sound key="fire" fileref="cherub_fire.wav" pitch_variety="0.00" volume="0.2" />
     <sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8" />
     <sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8" />
     <sound key="cycle" fileref="kccoar_cycle_FromINS.wav" volume="0.8" />
@@ -188,7 +185,6 @@
 	<projectile file="rocket_dreamer.projectile">
 		<result class="blast"  damage="0.6"  radius="5.5" decal="1" push="0.2" character_state="death"  faction_compare="not_equal" damage_as_probability="1"/>
     </projectile>
-    
 	<stance state_key="running" accuracy="0.85" />
     <stance state_key="walking" accuracy="0.85" />
     <stance state_key="crouch_moving" accuracy="0.9" />

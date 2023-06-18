@@ -4,6 +4,8 @@ array<string> AR_grenade_AntiArmor = {
     "gkw_xm8.weapon",
     "gkw_xm8_5606.weapon",
     "gkw_g3.weapon",
+    "gkw_a91.weapon",
+    "gkw_a91_4403.weapon",
     "gkw_m4sopmodii_531.weapon",
     "gkw_m4sopmodii_551.weapon",
     "gkw_m4sopmodii_4507.weapon",
@@ -44,13 +46,16 @@ dictionary commandSkillIndex = {
         {"gkw_vector.weapon",2},
         {"gkw_vector_549.weapon",2},
         {"gkw_vector_549_skill.weapon",2},
+        {"gkw_vector_hellfire_sticky.weapon",2},
         {"gkw_vector_1901.weapon",2},
 
         {"gkw_vz61.weapon",2},
         {"gkw_vz61_only.weapon",2},
         {"gkw_klin.weapon",2},
         {"gkw_uzi.weapon",2},
+        {"gkw_uzi_7907.weapon",2},
         {"gkw_mp40.weapon",2},
+        {"gkw_mp40_902.weapon",2},
         {"gkw_kp31mod3.weapon",2},
         {"gkw_kp31mod3_310.weapon",2},
         {"gkw_kp31mod3_3101.weapon",2},
@@ -215,16 +220,10 @@ dictionary commandSkillIndex = {
 
         // HK416MOD3
         {"gkw_hk416mod3.weapon",36},
-        {"gkw_hk416mod3_skill.weapon",36},
         {"gkw_hk416_537_mod3.weapon",36},
-        {"gkw_hk416_537_mod3_skill.weapon",36},
         {"gkw_hk416_6505_mod3.weapon",36},
-        {"gkw_hk416_6505_mod3_skill.weapon",36},
         {"gkw_hk416mod3_805.weapon",36},
-        {"gkw_hk416mod3_805_skill.weapon",36},
-
         {"gkw_hk416_3401_mod3.weapon",37},
-        {"gkw_hk416_3401_mod3_skill.weapon",37},
 
         // SMG 手雷
         {"gkw_m3.weapon",38},
@@ -258,11 +257,8 @@ dictionary commandSkillIndex = {
 
         // G41_only
         {"gkw_g41_only.weapon",46},
-        {"gkw_g41_only_skill.weapon",46},
         {"gkw_g41_2401_only.weapon",46},
-        {"gkw_g41_2401_only_skill.weapon",46},
         {"gkw_g41_7406_only.weapon",46},
-        {"gkw_g41_7406_only_skill.weapon",46},
 
         // UMP45MOD3
         {"gkw_ump45mod3.weapon",47},
@@ -283,6 +279,8 @@ dictionary commandSkillIndex = {
         //燃烧链接 UZI
         {"gkw_uzimod3.weapon",50},
         {"gkw_uzimod3_skill.weapon",50},
+        {"gkw_uzimod3_7907.weapon",50},
+        {"gkw_uzimod3_7907_skill.weapon",50},
 
         //瞄准射击 锁人版
         {"gkw_m1903.weapon",51},
@@ -330,12 +328,9 @@ dictionary commandSkillIndex = {
 
         {"gkw_98k.weapon",51},
         {"gkw_98k_skill.weapon",51},
-        {"gkw_98kmod3.weapon",51},
-        {"gkw_98kmod3_skill.weapon",51},
         {"gkw_98k_4301.weapon",51},
         {"gkw_98k_4301_skill.weapon",51},
-        {"gkw_98kmod3_4301.weapon",51},
-        {"gkw_98kmod3_4301_skill.weapon",51},
+
 
         //墨尔斯假面 乐
         {"gkw_carcano1938.weapon",52},
@@ -349,7 +344,6 @@ dictionary commandSkillIndex = {
 
         // 这几位都要重做
         {"gkw_tac50.weapon",53},
-        {"gkw_gm6.weapon",53},
         {"gkw_m82a1.weapon",53},
         {"gkw_m82a1_skill.weapon",53},
         {"gkw_gepardm1.weapon",53},
@@ -403,7 +397,14 @@ dictionary commandSkillIndex = {
         {"gkw_m1895mod3_5309.weapon",67},
         {"gkw_m1895mod3_5309_skill.weapon",67},
         
+        {"gkw_m1891mod3.weapon",68},
 
+        {"gkw_98kmod3.weapon",69},
+        {"gkw_98kmod3_skill.weapon",69},
+        {"gkw_98kmod3_4301.weapon",69},
+        {"gkw_98kmod3_4301_skill.weapon",69},
+
+        {"gkw_gm6.weapon",70},
 
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}

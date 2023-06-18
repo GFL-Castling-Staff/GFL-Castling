@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_m950a.weapon">
-    <tag name="pistol" />
+<tag name="pistol" />
     <!--Weapon specifications-->
     <specification
 	retrigger_time="0.08"
@@ -14,24 +14,16 @@
 	class="0"
     slot="0"
     stance_accuracy_rate="3"
-    stab_enabled="1"
-	carry_in_two_hands="0"
 	reload_one_at_a_time="0"
 	sight_range_modifier="1.0"
 	projectile_speed="120"
 	projectiles_per_shot="1"
-    />
+    carry_in_two_hands="0"
+    stab_enabled="1"/>
     <!--base-->
     <commonness value="0.2" in_stock="0" can_respawn_with="1" />
     <capacity value="1" source="rank" source_value="0.0" />
-    <inventory encumbrance="5.0" buy_price="20.0" sell_price="20.0" />
-    <modifier class="speed" value="+1.0" />
-    <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
-    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
-    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
-    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
-    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
-    <target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
+    <inventory encumbrance="5.0" buy_price="20.0" sell_price="15.0" />
     <animation state_key="recoil" animation_key="recoil, pistol 2" />
     <animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone" />
     <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol" />
@@ -74,4 +66,11 @@
     <stance state_key="crouching" accuracy="0.95" />
     <stance state_key="prone" accuracy="1" />
     <stance state_key="over_wall" accuracy="1" />
+    <modifier class="speed" value="+1.0" />
+    <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
+    <target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 </weapon>

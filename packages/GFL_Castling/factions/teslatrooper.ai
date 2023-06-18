@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ai>
-	<parameter class="force_as_leader" value="0" />
+	<parameter class="force_as_leader" value="1" />
 	<parameter class="vehicle_stuck_short_time" value="1000.0" />
 	<parameter class="in_trenches_fade_off_timer" value="4.0" />
 	<parameter class="accuracy_penalty_wear_off_rate" value="0.333" /> 
@@ -71,10 +71,10 @@
 	<parameter class="max_active_shields_per_fellows" value="1.00" /> 
 	<parameter class="fighting_against_vehicle_separation" value="7.0" />
 	<parameter class="fighting_against_vehicle_move_radius" value="30.0" />
-	<parameter class="day_reaction_time_to_fight_min" value="0.6" />
+	<parameter class="day_reaction_time_to_fight_min" value="0.5" />
 	<parameter class="day_reaction_time_to_fight_max" value="0.8" />
-	<parameter class="night_reaction_time_to_fight_min" value="1.3" />
-	<parameter class="night_reaction_time_to_fight_max" value="1.8" />
+	<parameter class="night_reaction_time_to_fight_min" value="0.5" />
+	<parameter class="night_reaction_time_to_fight_max" value="0.8" />
 	<parameter class="willingness_to_guard" value="0.1" />
 	<parameter class="recheck_cover_over_shootability_time" value="3.0" />
 	<parameter class="max_objects_per_sqm_to_consider_deployment" value="0.08" />
@@ -101,6 +101,5 @@
 	<parameter class="uses_vehicles" value="0" />
 	<parameter class="willingness_to_charge" value="1.0" />
 	<parameter class="stab_range" value="3.0" />
-    <parameter class="fighting_regular_move_radius" value="20.0" />
-	<parameter class="uses_vehicles" value="0" />
+    <parameter class="fighting_regular_move_radius" value="2.0" />
 </ai>

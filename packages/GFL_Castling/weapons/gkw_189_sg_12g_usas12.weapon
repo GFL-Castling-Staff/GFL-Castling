@@ -34,7 +34,7 @@
         <model filename="gkw_sg_usas12.xml"/>
         <hud_icon filename="gkw_usas12.png"/>
         <weak_hand_hold offset="0.3"/>
-        <projectile file="bullet.projectile">
+        <projectile file="bullet_sg.projectile">
             <result class="hit" kill_probability="2.0" kill_decay_start_time="0.3" kill_decay_end_time="0.6"/>
         </projectile>
         <stance state_key="running" accuracy="0.55"/>
@@ -76,7 +76,7 @@
         <animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
         <animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
         <animation state_key="stabbing" animation_key="melee, bayonet"/>
-        <modifier class="hit_success_probability" value="-0.4"/>
+        <modifier class="hit_success_probability" value="-0.2"/>
     </weapon>
     <weapon key="gkw_usas12_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
         <specification 
@@ -113,7 +113,7 @@
         <model filename="gkw_sg_usas12.xml"/>
         <hud_icon filename="gkw_usas12_skill.png"/>
         <weak_hand_hold offset="0.3"/>
-        <projectile file="bullet.projectile">
+        <projectile file="bullet_sg.projectile">
             <result class="hit" kill_probability="2.0" kill_decay_start_time="0.3" kill_decay_end_time="0.6"/>
         </projectile>
         <stance state_key="running" accuracy="0.55"/>
@@ -154,6 +154,6 @@
         <animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
         <animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
         <animation state_key="stabbing" animation_key="melee, bayonet"/>
-        <modifier class="hit_success_probability" value="-0.4"/>
+        <modifier class="hit_success_probability" value="-0.2"/>
     </weapon>
 </weapons>

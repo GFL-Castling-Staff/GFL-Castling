@@ -327,6 +327,41 @@ particle_system pa15_result_blast_stop		//停
 	}
 }
 
+particle_system hammer_activated   //光球
+{
+	quota 50
+	material hammer_projectile
+	particle_width 0.8
+	particle_height 0.8
+	cull_each true
+	renderer billboard
+	sorted true
+	local_space false
+	iteration_interval 0
+	nonvisible_update_timeout 0
+
+	emitter Point
+	{
+		angle 180
+		colour 1 1 1 1
+		direction 1 0 0
+		emission_rate 50
+		position 0 0 0
+		velocity 0.5
+		time_to_live_min 0.02
+		time_to_live_max 0.02
+		duration 4
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start 90
+		rotation_speed_range_end -90
+		rotation_range_start 0
+		rotation_range_end 360
+	}
+}
+
 --------------------------------------material-----------------------------------
 material alpha_blend_base{
 	receive_shadows off
@@ -409,4 +444,11 @@ material pa15_stop : add_base
     pass{
         texture_unit{
             texture pa15_stop.png 	
+}}}}
+material hammer_projectile : alpha_blend_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture hammer_projectile.png 	
 }}}}

@@ -7,7 +7,6 @@
 // --------------------------------------------
 class GameModeCampaign : GameModeInvasion {
 	// --------------------------------------------
-	protected DifficultyTracker@ m_difficultyTracker;
 
 	// --------------------------------------------
 	GameModeCampaign(UserSettings@ settings) {
@@ -16,7 +15,6 @@ class GameModeCampaign : GameModeInvasion {
 
 	// --------------------------------------------
 	void init() {
-		setupDifficultyTracker();
 
 		GameModeInvasion::init();
 
@@ -48,14 +46,9 @@ class GameModeCampaign : GameModeInvasion {
 	
 	// --------------------------------------------
 	protected void setupMapRotator() {
-		// StageConfigurator registers itself to map rotator, waiting to be called at a specific time
-		MapRotatorCampaign mapRotatorCampaign(this);
-		StageConfiguratorCampaign configurator(this, mapRotatorCampaign);
-		@m_mapRotator = @mapRotatorCampaign;
-		
-		if (m_difficultyTracker !is null) {
-			m_difficultyTracker.setMapRotator(mapRotatorCampaign);
-		}
+
+		@m_mapRotator = MapRotatorInvasion(this);
+		StageConfiguratorInvasion configurator(this, m_mapRotator);
 	}
 
 	// --------------------------------------------
@@ -69,33 +62,13 @@ class GameModeCampaign : GameModeInvasion {
 	}
 
 	// --------------------------------------------
-	protected void setupMinibosses() {
-		// skip for single player
-	}
-
-    // --------------------------------------------
-	protected void setupDogs() {
-		// skip for single player
-	}
-
-	// --------------------------------------------
-    protected void setupRipper() {
-		// skip for single player
-	}	
-	
-	// --------------------------------------------
-    protected void setupGrinch() {
-		// skip for single player
-	}		
-
-	// --------------------------------------------
 	protected void setupDisableRadioAtMatchOver() {
 		// skip for single player, not really needed
 	}
 
 	// --------------------------------------------
 	protected void setupItemDeliveryOrganizer() {
-		ItemDeliveryConfiguratorCampaign configurator(this);
+		ItemDeliveryConfiguratorInvasion configurator(this);
 		@m_itemDeliveryOrganizer = ItemDeliveryOrganizer(this, configurator);
 	}
 
@@ -116,18 +89,11 @@ class GameModeCampaign : GameModeInvasion {
 
 	// --------------------------------------------
 	protected void setupDifficultyTracker() {
-		if (getUserSettings().m_difficultyTrackerEnabled) {
-			@m_difficultyTracker = DifficultyTracker(this);
-		}
 	}	
 
 	// --------------------------------------------
 	void postBeginMatch() {
 		GameModeInvasion::postBeginMatch();
-		
-		if (m_difficultyTracker !is null) {
-			addTracker(m_difficultyTracker);
-		}
 	}
 
 	// --------------------------------------------

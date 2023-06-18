@@ -38,6 +38,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
         <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="13.5" kill_decay_start_time="0.895" kill_decay_end_time="1.659"/>
+		<trail probability="1" key="BulletApTrail_rf"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251" />
     <stance state_key="running" accuracy="0.1" />

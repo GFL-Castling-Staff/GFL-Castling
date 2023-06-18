@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon key="gkw_webley_5601.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-    <tag name="pistol" />
+<tag name="pistol" />
     <specification
 	retrigger_time="-1"	
 	last_burst_retrigger_time="0.3"
@@ -30,7 +30,6 @@
     <animation state_key="reload"	animation_key="reloading, SA OHG 0.5" />
     <animation state_key="reload"	animation_key="reloading2, SA OHG 0.5" />
     <animation state_key="hold" animation_key="hold, pistol"/>
-    <animation state_key="hold_casual" animation_key="dancing, kazachok"/>
     <animation state_key="hold_on_wall" animation_key="hold, overwall pistol"/>
     <animation state_key="still_against_wall" animation_key="hold_casual, pistol 4"/>
     <animation state_key="running" animation_key="running, pistol"/>

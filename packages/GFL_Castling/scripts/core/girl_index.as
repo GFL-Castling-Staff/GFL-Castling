@@ -3,7 +3,7 @@ string getGFLkey(string num) {
     if (key!=""){
         return key;
     } 
-    else return "";
+    return "";
 }
 
 dictionary tdoll_index = {
@@ -14,12 +14,12 @@ dictionary tdoll_index = {
     {"5","gkw_m1895.weapon"},
     {"6","gkw_tt33.weapon"},
     {"7","gkw_aps.weapon"},
-    {"8",""},
+    {"8","gkw_makarov.weapon"},
     {"9",""},
     {"10","gkw_ppk.weapon"},
     {"11",""},
     {"12","gkw_c96.weapon"},
-    {"13",""},
+    {"13","gkw_qsz92.weapon"},
     {"14",""},
     {"15",""},
     {"16","gkw_thompson.weapon"},
@@ -90,7 +90,7 @@ dictionary tdoll_index = {
     {"86","gkw_mg42.weapon"},
     {"87","gkw_mg34.weapon"},
     {"88","gkw_mg3.weapon"},
-    {"89",""},
+    {"89","gkw_bren.weapon"},
     {"90",""},
     {"91","gkw_mp446.weapon"},
     {"92",""},
@@ -106,7 +106,7 @@ dictionary tdoll_index = {
     {"102","gkw_ump40.weapon"},
     {"103","gkw_ump45.weapon"},
     {"104","gkw_g36c.weapon"},
-    {"105",""},
+    {"105","gkw_ots12.weapon"},
     {"106","gkw_fal.weapon"},
     {"107","gkw_f2000.weapon"},
     {"108",""},
@@ -183,7 +183,7 @@ dictionary tdoll_index = {
     {"179","gkw_dsr50.weapon"},
     {"180",""},
     {"181","gkw_t91.weapon"},
-    {"182",""},
+    {"182","gkw_wz29.weapon"},
     {"183","gkw_contender.weapon"},
     {"184",""},
     {"185","gkw_ameli.weapon"},
@@ -228,7 +228,7 @@ dictionary tdoll_index = {
     {"224","gkw_pm06.weapon"},
     {"225",""},
     {"226",""},
-    {"227",""},
+    {"227","gkw_a91.weapon"},
     {"228","gkw_type100.weapon"},
     {"229","gkw_m870.weapon"},
     {"230","gkw_obr.weapon"},
@@ -254,7 +254,7 @@ dictionary tdoll_index = {
     {"251","gkw_x95.weapon"},
     {"252","gkw_ksvk.weapon"},
     {"253","gkw_lewis.weapon"},
-    {"254",""},
+    {"254","gkw_ukm2000.weapon"},
     {"255",""},
     {"256",""},
     {"257","gkw_m200.weapon"},
@@ -264,12 +264,12 @@ dictionary tdoll_index = {
     {"261","gkw_qbu88.weapon"},
     {"262",""},
     {"263","gkw_mg36.weapon"},
-    {"264",""},
-    {"265",""},
+    {"264","gkw_chauchat.weapon"},
+    {"265","gkw_hk33.weapon"},
     {"266","gkw_r93.weapon"},
     {"267",""},
     {"268",""},
-    {"269",""},
+    {"269","gkw_p30.weapon"},
     {"270","gkw_4type.weapon"},
     {"271",""},
     {"272","gkw_desert_eagle_s.weapon"},
@@ -302,7 +302,7 @@ dictionary tdoll_index = {
     {"299",""},
     {"300",""},
     {"301",""},
-    {"302",""},
+    {"302","gkw_defender.weapon"},
     {"303","gkw_hp35.weapon"},
     {"304","gkw_saf.weapon"},
     {"305",""},
@@ -319,7 +319,7 @@ dictionary tdoll_index = {
     {"316","gkw_liu.weapon"},
     {"317","gkw_m1908.weapon"},
     {"318","gkw_vhs.weapon"},
-    {"319",""},
+    {"319","gkw_pm1910.weapon"},
     {"320","gkw_gm6.weapon"},
     {"321",""},
     {"322","gkw_qsb91.weapon"},
@@ -363,13 +363,13 @@ dictionary tdoll_index = {
     {"360",""},
     {"361","gkw_qbz191.weapon"},
     {"362",""},
-    {"363",""},
-    {"364",""},
+    {"363","gkw_mpl.weapon"},
+    {"364","gkw_mpk.weapon"},
     {"365",""},
     {"366","gkw_spas15.weapon"},
     {"367","gkw_mk3a1.weapon"},
     {"368","gkw_uts15.weapon"},
-    {"369",""},
+    {"369","gkw_m327.weapon"},
     {"370",""},
     {"371",""},
     {"372","gkw_ar18.weapon"},
@@ -382,6 +382,8 @@ dictionary tdoll_index = {
 
 
     {"381","gkw_m110.weapon"},
+
+    {"387","gkw_tps.weapon"},
 
     {"-1",""}
 

@@ -43,7 +43,7 @@
 		<inventory encumbrance="0.0" price="500.0" />
 	</call>
 
-	<!-- 锆石，装甲机械 -->
+	<!-- 锆石，机甲分队 -->
 	<call key="kcco_zircon_1.call" radio_view_text="Armored Mecha" initiation_comment1="Engage enemy, request Zircon mecha" acknowledge_comment="Roger" notify_metagame="1" consume_rp="0" show_target_marker="0">
 		<tag name="reinforcements" />
 		<hud_icon filename="call_Airbone_Traumateam.png" />
@@ -80,7 +80,7 @@
 		</round>
 		<inventory encumbrance="0.0" price="500.0" />
 	</call>
-
+    <!-- 弓狗 -->
 	<call key="kcco_dog.call" radio_view_text="Sweeping troops" initiation_comment1="Request a sweep squad here" acknowledge_comment="Roger" notify_metagame="1" consume_rp="0" show_target_marker="0">
 		<tag name="reinforcements" />
 		<hud_icon filename="call_Airbone_Traumateam.png" />
@@ -112,7 +112,7 @@
 		<inventory encumbrance="0.0" price="500.0" />
 	</call>	
 
-	<!-- 痛风 -->
+	<!-- 提丰 -->
 	<call key="kcco_deploy_typhon.call" radio_view_text="Deploy Typhon" initiation_comment1="Engage enemy, request Typhon Droping" acknowledge_comment="Roger" notify_metagame="1" consume_rp="0" show_target_marker="0">
 		<tag name="reinforcements" />
 		<hud_icon filename="call_Airbone_Traumateam.png" />

@@ -5,10 +5,10 @@
         <specification 
         barrel_offset="0.5" 
         retrigger_time="0.0923" 
-        accuracy_factor="0.98" 
+        accuracy_factor="0.8" 
         sustained_fire_grow_step="0.8" 
-        sustained_fire_diminish_rate="1.0"
-        spread_range="0.3"
+        sustained_fire_diminish_rate="1.2"
+        spread_range="0.45"
         magazine_size="100" 
         suppressed="0" 
         stance_accuracy_rate="1.0"
@@ -16,6 +16,7 @@
         class="0" 
         projectile_speed="200" 
         sight_range_modifier="1.3"
+        leave_crouch_accuracy_penalty="0.35"
         slot="0"
         can_shoot_standing="1" 
         can_shoot_crouching="1"
@@ -36,15 +37,15 @@
         <commonness value="0.2" in_stock="0" can_respawn_with="1" />
         <hud_icon filename="gkw_pk.png" />
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="1.2" kill_decay_start_time="1.5" kill_decay_end_time="1.6" />
+            <result class="hit" kill_probability="3.3" kill_probability_offset_on_successful_hit="3.2" kill_decay_start_time="1.5" kill_decay_end_time="1.6" />
             <trail probability="1.0" key="bullet_new_deep"/>
         </projectile>
         <effect class="muzzle" ref="ejection_76251" />
         <stance state_key="running" accuracy="0.5" />
         <stance state_key="walking" accuracy="0.55" />
         <stance state_key="crouch_moving" accuracy="0.65" />
-        <stance state_key="standing" accuracy="0.6" />
-        <stance state_key="crouching" accuracy="0.8" />
+        <stance state_key="standing" accuracy="0.5" />
+        <stance state_key="crouching" accuracy="0.85" />
         <stance state_key="prone" accuracy="1.2" />
         <stance state_key="prone_moving" accuracy="0.5" />
         <stance state_key="over_wall" accuracy="1.2" />
@@ -54,8 +55,8 @@
         <specification 
         barrel_offset_3d="0 0.1 1.2"
         retrigger_time="0.0923" 
-        accuracy_factor="0.98" 
-        spread_range="0.2"
+        accuracy_factor="1.0" 
+        spread_range="0.35"
         sustained_fire_grow_step="0.8" 
         sustained_fire_diminish_rate="1.0"
         magazine_size="250" 

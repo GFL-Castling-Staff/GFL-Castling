@@ -86,5 +86,6 @@
     <effect class="result" key="shield" ref="hitMetal_1" />
 
     <trail probability="1.0"/>
-
+    <effect class="activated" ref="general_weapon_activated_bullet_light" lighting="0"/>
+    <effect class="activated" ref="general_weapon_activated_bullet_centerlight" lighting="0"/>    
 </projectile>

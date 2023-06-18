@@ -22,7 +22,7 @@
 	<tire_set offset="0.96 0 1.7" radius="0.48" />
 	<tire_set offset="0.96 0 -1.7" radius="0.48" />
 	<control 
-	max_speed="35.0" 
+	max_speed="42.5" 
 	max_limiter_speed="15"
 	acceleration="7.0" 
 	max_reverse_speed="25.0" 
@@ -31,7 +31,7 @@
 	max_water_depth="1.3" 
 	steer_smoothening="0.5" />
 	<physics 
-	max_health="50.0" 
+	max_health="75.0" 
 	mass="50.0" 
 	remove_collision_threshold="0.2"
 	extent="2.08 0.0 4.0" 

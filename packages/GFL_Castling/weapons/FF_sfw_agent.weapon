@@ -21,7 +21,6 @@
 		sustained_fire_diminish_rate="1.0"
 		sustained_fire_grow_step="1" />
 
-
       <animation state_key="recoil" animation_key="recoil, agent" />
       <animation state_key="reload"	animation_key="reload, agent" />
       <animation state_key="hold"	animation_key="still, agent" />
@@ -35,7 +34,6 @@
       <animation state_key="crouch_moving" animation_key="walking, agent" />
       <animation state_key="crouch_moving_backwards" animation_key="walking, agent" />
       <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
-
 
       <!-- <animation state_key="reload" animation_key="pistol whip" /> -->
       <!-- <animation state_key="reload" animation_key="pistol whip 2" /> -->
@@ -51,22 +49,19 @@
     <sound key="cycle" fileref="" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="" />
-
     <hud_icon filename="sfw_agent.png" />
-
-
-
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet_sf.projectile">
         <result class="blast"  damage="0.375" radius="2.0" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_as_probability="1" />
     </projectile>
-
-
-    <stance state_key="standing" accuracy="0.98" />
-    <stance state_key="crouching" accuracy="0.98" />
-    <stance state_key="standing" accuracy="1" />
-    <stance state_key="crouching" accuracy="1" />
-    <stance state_key="prone" accuracy="1.2" />
+    <stance state_key="running" accuracy="0.85"/>
+    <stance state_key="walking" accuracy="0.85"/>
+    <stance state_key="crouch_moving" accuracy="0.85"/>
+    <stance state_key="prone_moving" accuracy="0.85"/>
+    <stance state_key="standing" accuracy="0.9"/>
+    <stance state_key="crouching" accuracy="0.95"/>
+    <stance state_key="prone" accuracy="1.0"/>
+    <stance state_key="over_wall" accuracy="1.0"/>
     <modifier class="speed" value="-0.2" />
     <shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0" />
     <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />

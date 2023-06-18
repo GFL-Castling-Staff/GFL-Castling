@@ -126,7 +126,6 @@
 	<rank xp="620.833" name="Penglaisi"><hud_icon filename="Thank_you_penglaisi.png" /></rank>
 	<rank xp="660.833" name="woshiEOE"><hud_icon filename="Thank_you_woshiEOE_1999.png" /></rank>
 	<rank xp="710.833" name="VIVI"><hud_icon filename="Thank_you_VIVI.png" /></rank>
-	<rank xp="760.833" name="Melondove"><hud_icon filename="Thank_you_Melondove.png" /></rank>
 	<rank xp="810.833" name="Lappland"><hud_icon filename="Thank_you_Lappland.png" /></rank>
 	<rank xp="860.833" name="HuiR"><hud_icon filename="Thank_you_HuiR.png" /></rank>
 	<rank xp="910.833" name="ALIEN"><hud_icon filename="Thank_you_ALIEN.png" /></rank>
@@ -193,10 +192,11 @@
 	<rank xp="4060.833" name="jojo"><hud_icon filename="Thank_you_jojo.png" /> </rank>
 	<rank xp="4110.833" name="Vanilla_1s"><hud_icon filename="Thank_you_Vanilla_1s.png" /> </rank>
 
-
-
+	<rank xp="4250" name="Halation"><hud_icon filename="Thank_you_Halation.png" /></rank>
 	<rank xp="4500" name="Narcissus"><hud_icon filename="commander_narcissus.png" /></rank>
-	<rank xp="5000" name="commander"><hud_icon filename="commander_kudan.png" /></rank>	
+	<rank xp="4750" name="commander"><hud_icon filename="commander_kudan.png" /></rank>	
+	<rank xp="5000" name="Melondove"><hud_icon filename="Thank_you_Melondove.png" /></rank>	
+	<rank xp="5250" name="Halation"><hud_icon filename="Thank_you_Melondove.png" /></rank>	
 	<rank xp="5500" name="sakura"><hud_icon filename="commander_sakura.png" /></rank>	
 	<rank xp="11000" name="I~D~W~DA~NAY!"><hud_icon filename="IDW_011000.png" /></rank>
 	<rank xp="11451.4" name="NetherCrow"><hud_icon filename="Thank_you_Nether_Crow.png" /></rank>
@@ -269,7 +269,7 @@
 		<resources file="gk_call.resources" clear_calls="1" />
 		<item_class_existence_config>
 			<!-- secondaries -->
-			<item_class_existence class="weapon" slot="1" probability="1.0" />
+			<item_class_existence class="weapon" slot="1" probability="0.3" />
 			<!-- wearables -->
 			<item_class_existence class="carry_item" slot="1" probability="1.0" />
 			<!-- backpack -->
@@ -283,19 +283,19 @@
 		</attribute_config>
 	</soldier>
 	<soldier name="default_hg" spawn_score="1.6" squad_size_xp_cap="0.5" copy_from="default_spawn_ai">
-		<ai filename="elite.ai" />
+		<ai filename="gk_dolls.ai" />
 		<resources file="gk_hg.resources" clear_carry_items="1" clear_calls="1">
 			<carry_item key="exo_ai_only_2" />
 		</resources>
 	</soldier>
 	<soldier name="default_smg" spawn_score="1.6" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
-		<ai filename="elite.ai" />
+		<ai filename="gk_dolls.ai" />
 		<resources file="gk_smg.resources" clear_carry_items="1" clear_calls="1">
 			<carry_item key="exo_ai_only_2" />
 		</resources>	
 	</soldier>
 	<soldier name="default_ar" spawn_score="1.6" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
-		<ai filename="elite.ai" />
+		<ai filename="gk_dolls.ai" />		
 		<resources file="gk_ar.resources" clear_carry_items="1" clear_calls="1">
 			<carry_item key="exo_ai_only_1" />
 		</resources>	
@@ -306,7 +306,7 @@
 			<carry_item key="exo_ai_only_3" />
 		</resources>	
 	</soldier>
-	<soldier name="default_fuck_panzer" spawn_score="0.1" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
+	<soldier name="default_fuck_panzer" spawn_score="0.02" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<ai filename="sniper.ai" />
 		<resources file="gk_atrf.resources" clear_carry_items="1" clear_calls="1">
 			<carry_item key="exo_ai_only.carry_item" />
@@ -342,7 +342,7 @@
 	</soldier>
 	<soldier name="special_forces_404" spawn_score="0.1" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<ai filename="elite.ai" />
-		<resources file="gk.resources" clear_weapons="1" clear_carry_items="1">
+		<resources file="gk.resources" clear_weapons="1" clear_carry_items="1" clear_calls="1">
 		    <weapon key="gkw_404_g11mod3.weapon" />
 			<weapon key="gkw_404_hk416mod3.weapon" />
 			<weapon key="gkw_404_ump45mod3.weapon" />
@@ -948,6 +948,7 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_g11.weapon" />
+			<weapon key="gkw_g11mod3.weapon" />
 			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
@@ -1241,7 +1242,7 @@
 			<sound key="throw" fileref="DesertEagle_SKILL3_JP.wav" pitch_variety="0.01" volume="0.8" />
 		</character>
 		<resources file="gk_elite.resources">
-			<weapon key="gkw_desert_eagle_s.weapon" />
+			<weapon key="gkw_desert_eagle.weapon" />
 			<carry_item key="exo_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
@@ -1305,7 +1306,7 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="GK_target" spawn_score="0.0000001" copy_from="default">
+	<soldier name="GK_target" spawn_score="0" copy_from="default">
 		<ai filename="hydra.ai" />
 		<models>
 			<model filename="gkd_Mocking_target_SAIWA.xml" />
@@ -1366,7 +1367,7 @@
 		</character>
 		<model filename="sfd_agent.xml" />
 		<ai filename="hydra.ai" />
-		<resources clear_vehicles="1" clear_weapons="1" clear_grenades="1" clear_carry_items="1">
+		<resources clear_vehicles="1" clear_weapons="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="ff_agent.weapon" />
 			<carry_item key="bp_t5_16lab.carry_item" />
 		</resources>
@@ -1386,9 +1387,29 @@
 		</character>
 		<model filename="sfd_scarecrow.xml" />
 		<ai filename="dummy_scarecrow.ai" />
-		<resources clear_vehicles="1" clear_weapons="1" clear_grenades="1" clear_carry_items="1">
+		<resources clear_vehicles="1" clear_weapons="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="ff_scarecrow_dummy.weapon" />
 			<carry_item key="exo_t5_16lab.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="0.3" min="0" max="0.1" />
+		</attribute_config>
+		<item_class_existence_config>
+			<!-- wearables -->
+			<item_class_existence class="carry_item" slot="1" probability="1.0" />
+			<!-- backpack -->
+			<item_class_existence class="carry_item" slot="0" probability="0" />
+		</item_class_existence_config>
+	</soldier>
+
+	<soldier name="Dummy_64type" spawn_score="0" >
+		<character filename="default_gk_pmc.text_lines">
+		</character>
+		<model filename="gkd_smg_type64mod3.xml" />
+		<ai filename="dummy_scarecrow.ai" />
+		<resources clear_vehicles="1" clear_weapons="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="gkw_64typemod3_dummy.weapon" />
+			<carry_item key="exo_dummy_64type.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="0.3" min="0" max="0.1" />
@@ -1482,40 +1503,6 @@
 			<attribute weight="1.0" min="10" max="20.833" />
 		</attribute_config>
 	</soldier>
-	<!-- <soldier name="defy_ak15_ar" spawn_score="0.05" copy_from="task_forces_defy">
-	    <ai filename="defy_ak15.ai" />
-		<character filename="default_gk_pmc.text_lines">
-			<sound key="death" fileref="AK15_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
-			<sound key="throw" fileref="AK15_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
-			<sound key="throw" fileref="AK15_SKILL3_JP.wav" pitch_variety="0.01" volume="0.8" />
-		</character>
-		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
-			<weapon key="gkw_ak15_defyAI.weapon" />
-			<weapon key="gkw_defy_rocker.weapon" />
-			<projectile key="hand_88grenade.projectile" />
-			<carry_item key="exo_defy.carry_item" />
-		</resources>
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="100.100" max="102.833" />
-		</attribute_config>
-	</soldier>
-	<soldier name="defy_rpk16_mg" spawn_score="0.05" copy_from="task_forces_defy">
-	    <ai filename="defy_rpk16.ai" />
-		<character filename="default_gk_pmc.text_lines">
-			<sound key="death" fileref="RPK16_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
-			<sound key="throw" fileref="RPK16_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
-			<sound key="throw" fileref="RPK16_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
-		</character>
-		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
-			<weapon key="gkw_rpk16_defyAI.weapon" />
-			<weapon key="gkw_defy_rocker.weapon" />
-			<projectile key="hand_88grenade.projectile" />
-			<carry_item key="exo_defy.carry_item" />
-		</resources>
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="100.100" max="102.833" />
-		</attribute_config>
-	</soldier> -->
 	<!-- 第三方 -->
 	<soldier name="kcco_f_aegis" spawn_score="0.0" copy_from="default">
 		<character filename="default_kcco_human.character"/>
@@ -1547,21 +1534,6 @@
 			<attribute weight="1.0" min="7000.0" max="15000.0" />
 		</attribute_config>
 	</soldier>
-	<!-- <soldier name="defy_cyclops_sghe" spawn_score="0.0" copy_from="task_forces_defy">
-		<ai filename="eod.ai" />
-		<resources clear_calls="1" clear_grenades="1" clear_carry_items="1" clear_weapons="1" clear_vehicles="1">
-			<weapon key="gkw_sg_he.weapon"/>
-			<weapon key="gkw_defy_rocker.weapon" />
-			<projectile key="hand_88grenade.projectile" />
-			<carry_item key="bp_t4.carry_item"/>
-		</resources>
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="50.100" max="52.833" />
-		</attribute_config>
-		<attribute_config class="rp">
-			<attribute weight="1.0" min="7000.0" max="15000.0" />
-		</attribute_config>
-	</soldier> -->
 	<!-- icecream group -->
 	<soldier name="icecream" spawn_score="0.0">
 		<resources file="icecream.resources" />
@@ -1575,4 +1547,10 @@
 			<attribute weight="1.0" min="0.0" max="0.05" />
 		</attribute_config>
 	</soldier>
+	<soldier name="amos" spawn_score="0.0">
+		<resources file="amos.resources" />
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.0" max="0.05" />
+		</attribute_config>
+	</soldier>	
 </faction>
