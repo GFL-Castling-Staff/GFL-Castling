@@ -3449,10 +3449,10 @@ class CommandSkill : Tracker {
                     else{
                         CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"firenade_uzimod3.projectile",characterId,factionid,26.0,4.0);
                     }
+                    addCooldown("FIRENADE",15,characterId,modifer);
                 }
             }
         }
-        addCooldown("FIRENADE",15,characterId,modifer);
     }
     void excuteF1skill(int characterId,int playerId,SkillModifer@ modifer){
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"F1")) return;
