@@ -3673,7 +3673,7 @@ class CommandSkill : Tracker {
         }
     }
     void excuteC96MODSkill(int characterId,int playerId,SkillModifer@ modifer){
-        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"C96")) return;
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"C96",true)) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);

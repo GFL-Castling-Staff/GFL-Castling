@@ -1233,7 +1233,7 @@ class GFLskill : Tracker {
 						}
 						int luckyoneid = affectedCharacter[luckyone].getIntAttribute("id");
 						const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
-						if (luckyoneC !is null && luckyoneid!= -1){
+						if (luckyoneC !is null){
 							string luckyonepos = luckyoneC.getStringAttribute("position");
 							Vector3 luckyoneposV = stringToVector3(luckyonepos);
 							Vector3 height = Vector3(0,0.5,0);
@@ -1265,7 +1265,7 @@ class GFLskill : Tracker {
 						for(uint b=0;b<HK416_track[a].m_affected.length();b++){
 							int luckyoneid = HK416_track[a].m_affected[b].getIntAttribute("id");
 							const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
-							if (luckyoneC.getIntAttribute("id")!=-1 && luckyoneC !is null ){
+							if (luckyoneC !is null ){
 								string luckyonepos = luckyoneC.getStringAttribute("position");
 								Vector3 luckyoneposV = stringToVector3(luckyonepos);
 								Vector3 height = Vector3(0,0.5,0);
@@ -1330,7 +1330,7 @@ class GFLskill : Tracker {
 						for(uint b=0;b<UZI_track[a].m_affected.length();b++){
 							int luckyoneid = UZI_track[a].m_affected[b].getIntAttribute("id");
 							const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
-							if (luckyoneC.getIntAttribute("id")!=-1 && luckyoneC !is null ){
+							if (luckyoneC !is null ){
 								string luckyonepos = luckyoneC.getStringAttribute("position");
 								Vector3 luckyoneposV = stringToVector3(luckyonepos);
 								Vector3 height = Vector3(0,0.5,0);

@@ -238,7 +238,6 @@
 
 	array<Resource@> GKcallList={
 		Resource("gk_airstrike_fairy.call", "call"),
-		Resource("gk_rocket_fairy.call", "call"),
 		Resource("gk_warrior_fairy.call", "call"),
 		Resource("gk_rampage_fairy_ac130.call", "call"),
 		Resource("gk_snipe_fairy.call", "call"),
@@ -254,7 +253,6 @@
 		Resource("gk_rescue_fairy.call", "call"),
         Resource("gk_bombardment_fairy.call", "call"),
 		Resource("gk_airstrike_fairy.call", "call"),
-		Resource("gk_rocket_fairy.call", "call"),
 		Resource("gk_warrior_fairy.call", "call"),
 		Resource("gk_rampage_fairy_ac130.call", "call"),
 		Resource("gk_snipe_fairy.call", "call"),

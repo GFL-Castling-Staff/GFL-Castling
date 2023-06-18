@@ -143,8 +143,7 @@
 	<animation state_key="crouch_moving" animation_key="walking" />
 	<animation state_key="crouch_moving_backwards" animation_key="walking backwards" />
 	<animation state_key="crouch still" animation_key="still" /> -->
-
-	
+	<animation key="recoil" animation_key="recoil1, big"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>

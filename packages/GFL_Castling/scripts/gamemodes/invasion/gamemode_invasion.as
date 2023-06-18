@@ -387,7 +387,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 			CallMarkerConfig("manticore.call", "call_marker_drop", 8, 0.5),			
 			CallMarkerConfig("manticore2.call", "call_marker_drop", 8, 0.5),			
 
-			CallMarkerConfig("gk_repair_fairy.call", "call_marker_drop", 12, 0.5),
+			// CallMarkerConfig("gk_repair_fairy.call", "call_marker_drop", 12, 0.5),
 			CallMarkerConfig("gk_medic_agl.call", "call_marker", 7, 0.5, 5.0),
 			CallMarkerConfig("target.call", "call_marker_drop", 7, 0.5, 5.0),
 			CallMarkerConfig("gk_rescue_fairy.call", "call_marker", 7, 0.5, 5.0),

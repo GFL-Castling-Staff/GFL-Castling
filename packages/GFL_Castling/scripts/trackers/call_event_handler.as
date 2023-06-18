@@ -247,7 +247,7 @@ class call_event : Tracker {
                     }    
                     case 7:{
                         if(findCooldown(playerName,"barrier")){
-                            returnCooldown("barrier", 500, characterId, playerName, playerId, "barriercooldown");
+                            returnCooldown("barrier", 300, characterId, playerName, playerId, "barriercooldown");
                             break;
                         }
                         else {
@@ -258,10 +258,11 @@ class call_event : Tracker {
                             int flagId = m_DummyCallID + 15000;
                             ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,call_pos,"foobar");
                             FairyRequest.setIconTypeKey("call_marker_drop");
-                            FairyRequest.setIndex(8);
+                            FairyRequest.setIndex(12);
                             FairyRequest.setSize(0.5);
                             FairyRequest.setDummyId(flagId);
-                            addCastlingMarker(FairyRequest);
+                            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                            tasker.add(TimerMarker(m_metagame,3,FairyRequest));
                             m_DummyCallID++;
                             CreateDirectProjectile(m_metagame,call_pos.add(v_offset),call_pos,"repair_fairy.projectile",characterId,factionId,50);
                         }
