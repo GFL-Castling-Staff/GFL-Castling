@@ -129,6 +129,8 @@ class kill_event : Tracker {
         {"gkw_uzi.weapon",3},
         {"gkw_uzimod3.weapon",3},
         {"gkw_uzimod3_skill.weapon",3},
+        {"gkw_uzimod3_7907.weapon",3},
+        {"gkw_uzimod3_7907_skill.weapon",3},
         {"gkw_vz61.weapon",3},
         {"gkw_vz61_only.weapon",3},
         {"gkw_pp19.weapon",3},
