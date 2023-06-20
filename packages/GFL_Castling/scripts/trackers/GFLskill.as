@@ -627,6 +627,7 @@ class GFLskill : Tracker {
 						uint luckyGuyindex = rand(0,affectedCharacter.length()-1);
 						uint luckyGuyid = affectedCharacter[luckyGuyindex].getIntAttribute("id");
 						const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+						if(luckyGuy is null) return;
 						Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
 						const XmlElement@ LiveGuy = getCharacterInfo(m_metagame, characterId);
 						if(LiveGuy !is null){
