@@ -78,7 +78,8 @@
 		retrigger_time="-1" 
 		last_burst_retrigger_time="3.5" 
 		suppressed="0" 
-		projectiles_per_shot="5" 
+		burst_shots="1"
+		projectiles_per_shot="8" 
 		carry_in_two_hands="0" 
 		can_shoot_standing="1" 
 		can_shoot_crouching="1" 
@@ -117,11 +118,11 @@
 		<projectile file="Doppelsoldner_rocket.projectile">
 			<result class="blast" damage="8" radius="4.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 		</projectile>
-	    <stance state_key="running" accuracy="0.5" />
-        <stance state_key="walking" accuracy="0.65" />
+	    <stance state_key="running" accuracy="0.25" />
+        <stance state_key="walking" accuracy="0.45" />
         <stance state_key="crouch_moving" accuracy="0.75" />
         <stance state_key="prone_moving" accuracy="0.75" />
-        <stance state_key="standing" accuracy="0.8"/>
+        <stance state_key="standing" accuracy="0.65"/>
         <stance state_key="crouching" accuracy="0.95" />
         <stance state_key="prone" accuracy="1" />
         <stance state_key="over_wall" accuracy="1" />  
