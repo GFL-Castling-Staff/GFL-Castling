@@ -172,6 +172,7 @@ dictionary commandSkillIndex = {
         {"gkw_ump9.weapon",27},
         {"gkw_ump9_409.weapon",27},
         {"gkw_ump9_536.weapon",27},
+        {"gkw_ump9_3404.weapon",27},
         {"gkw_ump9_6704.weapon",27},
         {"gkw_ump9_6704_skill.weapon",27},
 
@@ -185,6 +186,7 @@ dictionary commandSkillIndex = {
         {"gkw_ump9mod3.weapon",28},
         {"gkw_ump9mod3_6704.weapon",28},
         {"gkw_ump9mod3_6704_skill.weapon",28},
+        {"gkw_ump9mod3_3404.weapon",28},
 
         {"gkw_mab38mod3.weapon",29},
         {"gkw_mab38mod3_oc.weapon",29},

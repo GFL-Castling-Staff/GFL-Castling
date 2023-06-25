@@ -10,7 +10,6 @@ array<string> getCallSorting() {
 		"gk_warrior_fairy.call",
 		"gk_snipe_fairy.call",
 		"target.call",
-		"gk_rocket_fairy.call",
 		"gk_rampage_fairy_ac130.call"
  	};
 
