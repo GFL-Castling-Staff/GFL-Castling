@@ -148,7 +148,7 @@ class call_event : Tracker {
                                 }
                             }
                             else {
-                                m_cooldown.insertLast(Call_Cooldown(playerName,playerId,30.0,"sniper_call"));
+                                CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,30.0,"sniper_call"));
                                 sendFactionMessageKey(m_metagame,factionId,"snipecallstarthint");
                                 int flagId = m_DummyCallID + 15000;
                                 ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
