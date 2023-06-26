@@ -17,7 +17,7 @@
         burst_shots="1"
         last_burst_retrigger_time="0.125"
         reload_one_at_a_time="0"
-        sight_range_modifier="1.5"
+        sight_range_modifier="2.0"
         projectile_speed="200"
         barrel_offset="0.6"
         stance_accuracy_rate="1.5"
@@ -87,7 +87,7 @@
         class="0"
         burst_shots="1"
         reload_one_at_a_time="0"
-        sight_range_modifier="1.5"
+        sight_range_modifier="2.0"
         last_burst_retrigger_time="-1"
         stance_accuracy_rate="2.0"
         projectile_speed="200"
@@ -137,5 +137,11 @@
         <stance state_key="over_wall" accuracy="1.0" />
         <modifier class="speed" value="0.15"/>
         <modifier class="detectability" value="-0.1"/>
+        <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+        <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+        <target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+        <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+        <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+        <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
     </weapon>
 </weapons>

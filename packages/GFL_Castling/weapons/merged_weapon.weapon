@@ -3790,7 +3790,7 @@
 </weapon>
 
 <weapon key="gkw_vsk94.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.8" magazine_size="20" spread_range="0.28" can_shoot_standing="1" suppressed="1" name="VSK-94" class="4" burst_shots="1" last_burst_retrigger_time="0.083" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="145" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.8" magazine_size="20" spread_range="0.28" can_shoot_standing="1" suppressed="1" name="VSK-94" class="4" burst_shots="2" last_burst_retrigger_time="0.083" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="145" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<inventory encumbrance="35.0" buy_price="94.0" sell_price="94.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
@@ -3838,7 +3838,7 @@
 </weapon>
 
 <weapon key="gkw_vsk94_5301.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.8" magazine_size="20" spread_range="0.28" can_shoot_standing="1" suppressed="1" name="VSK-94-[Christmas Eve Detective]" class="4" burst_shots="1" last_burst_retrigger_time="0.083" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="145" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.8" magazine_size="20" spread_range="0.28" can_shoot_standing="1" suppressed="1" name="VSK-94-[Christmas Eve Detective]" class="4" burst_shots="2" last_burst_retrigger_time="0.083" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="145" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<inventory encumbrance="35.0" buy_price="94.0" sell_price="94.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
@@ -26656,7 +26656,7 @@
 <weapon key="gkw_m14mod3_303.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="elite"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.35" sustained_fire_diminish_rate="1.75" magazine_size="20" spread_range="0.3" can_shoot_standing="1" suppressed="0" name="M14(MOD3)-[Xmas Parade]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="1.5" projectile_speed="200" barrel_offset="0.6" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.35" sustained_fire_diminish_rate="1.75" magazine_size="20" spread_range="0.3" can_shoot_standing="1" suppressed="0" name="M14(MOD3)-[Xmas Parade]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="200" barrel_offset="0.6" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="100.0" sell_price="100.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -26706,7 +26706,7 @@
 <weapon key="gkw_m14mod3_303_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="autorifle"/>
 	<tag name="elite"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.85" sustained_fire_diminish_rate="1.25" magazine_size="20" can_shoot_standing="1" suppressed="0" spread_range="0.3" name="M14(MOD3)--[Xmas Parade]-[Clear Fighting Spirit]" class="0" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="1.5" last_burst_retrigger_time="-1" stance_accuracy_rate="2.0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.85" sustained_fire_diminish_rate="1.25" magazine_size="20" can_shoot_standing="1" suppressed="0" spread_range="0.3" name="M14(MOD3)--[Xmas Parade]-[Clear Fighting Spirit]" class="0" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.0" last_burst_retrigger_time="-1" stance_accuracy_rate="2.0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="100.0" sell_price="100.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -26748,6 +26748,12 @@
 	<stance state_key="over_wall" accuracy="1.0"/>
 	<modifier class="speed" value="0.15"/>
 	<modifier class="detectability" value="-0.1"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
 </weapon>
 
 <weapon key="gkw_tmp_2807.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -29324,7 +29330,7 @@
 
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_zb26.weapon">
 	<tag name="machine gun"/>
-	<specification barrel_offset="0.6" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.7" sustained_fire_diminish_rate="4.2" spread_range="0.15" magazine_size="20" stance_accuracy_rate="1.1" suppressed="0" name="ZB vz.26" class="1" projectile_speed="220" sight_range_modifier="1.5" slot="0" reload_one_at_a_time="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<specification barrel_offset="0.6" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.7" sustained_fire_diminish_rate="4.2" spread_range="0.15" magazine_size="20" stance_accuracy_rate="1.5" suppressed="0" name="ZB vz.26" class="1" projectile_speed="220" sight_range_modifier="1.5" slot="0" reload_one_at_a_time="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
 	<animation state_key="recoil" animation_key="recoil_unlimit"/>
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil_unlimit"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil_prone_unlimit"/>
@@ -29352,7 +29358,7 @@
 	<model filename="gkw_mg_zb26.xml"/>
 	<hud_icon filename="gkw_zb26.png"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="2.432" kill_decay_end_time="4.054"/>
+	<result class="hit" kill_probability="4" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="2.432" kill_decay_end_time="4.054"/>
 	<trail probability="1.0" key="BulletMgTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
@@ -29370,7 +29376,7 @@
 
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_zb26_5603.weapon">
 	<tag name="machine gun"/>
-	<specification barrel_offset="0.6" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.7" sustained_fire_diminish_rate="4.2" spread_range="0.15" magazine_size="20" stance_accuracy_rate="1.1" suppressed="0" name="ZB vz.26-[The 1000th Paper Crane]" class="1" projectile_speed="220" sight_range_modifier="1.5" slot="0" reload_one_at_a_time="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<specification barrel_offset="0.6" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.7" sustained_fire_diminish_rate="4.2" spread_range="0.15" magazine_size="20" stance_accuracy_rate="1.5" suppressed="0" name="ZB vz.26-[The 1000th Paper Crane]" class="1" projectile_speed="220" sight_range_modifier="1.5" slot="0" reload_one_at_a_time="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
 	<animation state_key="recoil" animation_key="recoil_unlimit"/>
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil_unlimit"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil_prone_unlimit"/>
@@ -29398,7 +29404,7 @@
 	<model filename="gkw_mg_zb26_5603.xml"/>
 	<hud_icon filename="gkw_zb26_5603.png"/>
 	<projectile file="bullet.projectile">
-	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="2.432" kill_decay_end_time="4.054"/>
+	<result class="hit" kill_probability="4" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="2.432" kill_decay_end_time="4.054"/>
 	<trail probability="1.0" key="BulletMgTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
@@ -34661,7 +34667,7 @@
 <weapon key="gkw_m14mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="elite"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.35" sustained_fire_diminish_rate="1.75" magazine_size="20" spread_range="0.3" can_shoot_standing="1" suppressed="0" name="M14(MOD3)" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="1.5" projectile_speed="200" barrel_offset="0.6" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.35" sustained_fire_diminish_rate="1.75" magazine_size="20" spread_range="0.3" can_shoot_standing="1" suppressed="0" name="M14(MOD3)" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="200" barrel_offset="0.6" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="100.0" sell_price="100.0"/>
 	<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -34711,7 +34717,7 @@
 <weapon key="gkw_m14mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="autorifle"/>
 	<tag name="elite"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.85" sustained_fire_diminish_rate="1.25" magazine_size="20" can_shoot_standing="1" suppressed="0" spread_range="0.3" name="M14(MOD3)-[Clear Fighting Spirit]" class="0" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="1.5" last_burst_retrigger_time="-1" stance_accuracy_rate="2.0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.85" sustained_fire_diminish_rate="1.25" magazine_size="20" can_shoot_standing="1" suppressed="0" spread_range="0.3" name="M14(MOD3)-[Clear Fighting Spirit]" class="1" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.0" last_burst_retrigger_time="-1" stance_accuracy_rate="2.0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="100.0" sell_price="100.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
