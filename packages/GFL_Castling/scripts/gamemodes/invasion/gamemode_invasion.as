@@ -415,7 +415,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 			if (faction.isNeutral()) continue;
 			
 			// interpolate players 1 -> 32, spawn time 3.0 -> 1.0
-			addTracker(SpawnTimeHandler(this, i, 1, 10, 2.5, 0.5));
+			addTracker(SpawnTimeHandler(this, i, 1, 18, 2.25, 0.5));
 		}
 	}
 	
