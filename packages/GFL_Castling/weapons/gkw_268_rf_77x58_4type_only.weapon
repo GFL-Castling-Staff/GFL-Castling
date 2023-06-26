@@ -131,12 +131,12 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
+	<animation state_key="stabbing"	animation_key="melee, bayonet_6hp" />
     <!-- <animation state_key="running" animation_key="running, line infantry" />
     <animation state_key="walking" animation_key="walking, line infantry" />
     <animation state_key="walking_backwards" animation_key="walking, line infantry" />
 	<animation state_key="hold_on_wall" animation_key="hold_casual, line infantry" />
 	<animation state_key="hold" animation_key="hold_casual, line infantry" />
-	<animation state_key="stabbing"	animation_key="melee, bayonet_6hp" />
 	
 	<animation key="recoil" animation_key="delayshot"/>
 	<animation state_key="crouching" animation_key="delayshot" />
