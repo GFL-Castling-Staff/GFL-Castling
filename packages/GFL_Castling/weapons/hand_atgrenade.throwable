@@ -60,7 +60,6 @@
         
         <tag name="grenade" />
         <result class="blast" radius="6.0" damage="40.0" push="1.5" decal="1" character_state="wound" faction_compare="not_equal" />
-        <collision class="sticky" />
         <trigger class="impact">
             <collider class="terrain" enabled="0" />
             <collider class="static_object" enabled="0" />

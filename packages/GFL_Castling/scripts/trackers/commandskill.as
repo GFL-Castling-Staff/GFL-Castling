@@ -109,7 +109,7 @@ class SpamAvoider{
     }
 }
 
-
+ 
 
 class CommandSkill : Tracker {
     protected GameMode@ m_metagame;
@@ -156,28 +156,33 @@ class CommandSkill : Tracker {
             if(c_armorType == default_string)_log("WARN: commandskill.as: handleChatEvent(): player weapon is nan.");
 
             SkillModifer@ m_modifer=SkillModifer(senderId,pname);
+
+            // 不受任何减少时间效果影响的技能
+            if (Weapon_free_of_other_cooldown.find(c_weaponType)== -1){
+
+                if (startsWith(c_armorType,'chip_b_t6')){
+                    m_modifer.setCooldownMinus(5.0);
+                }
+
+                if (startsWith(c_armorType,'chip_a_t6')){
+                    m_modifer.setCooldownReduction(0.8);
+                }
+
+                if (startsWith(c_armorType,'gk_persica')){
+                    m_modifer.setCooldownReduction(0.8);
+                }
+
+                if (startsWith(c_armorType,'god_vest.carry_item')){
+                    m_modifer.setCooldownReduction(0.1);
+                    m_modifer.setCooldownMinus(30.0);
+                }
+            }
             
-            if (startsWith(c_armorType,'chip_b_t6')){
-                m_modifer.setCooldownMinus(5.0);
-            }
-
-            if (startsWith(c_armorType,'chip_a_t6')){
-                m_modifer.setCooldownReduction(0.8);
-            }
-
-            if (startsWith(c_armorType,'gk_persica')){
-                m_modifer.setCooldownReduction(0.8);
-            }
-
-            if (startsWith(c_armorType,'god_vest.carry_item')){
-                m_modifer.setCooldownReduction(0.1);
-                m_modifer.setCooldownMinus(30.0);
-            }
-
             if (AR_grenade_AntiArmor.find(c_weaponType)> -1){
                 excuteAntiArmorskill(cId,senderId,m_modifer,c_weaponType);
                 return;
             }
+
             if (AR_grenade_AntiPersonal.find(c_weaponType)> -1){
                 excuteAntiPersonalskill(cId,senderId,m_modifer,c_weaponType);
                 return;
@@ -262,7 +267,7 @@ class CommandSkill : Tracker {
             }
         }
 
-        if (checkCommand(message,"redeploy") || message=="/re"){
+        if (checkCommand(message,"redeploy") || message=="/re" || message=="/RE"){
             for(uint a=0;a<DontSpamingYourFuckingSkillWhileCoolDownBro.length();a++){
                 if(DontSpamingYourFuckingSkillWhileCoolDownBro[a].m_playerid==senderId) return;
             }
@@ -690,7 +695,7 @@ class CommandSkill : Tracker {
     }
     void excuteMP5skill(int characterId,int playerId,SkillModifer@ modifer){
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"MP5")) return;
-        addCooldown("MP5",29,characterId,modifer);
+        addCooldown("MP5",25,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         string vestkey="exo_t5_16lab.carry_item";
         if (character !is null) {
@@ -724,7 +729,7 @@ class CommandSkill : Tracker {
     }
     void excuteMP5MOD3skill(int characterId,int playerId,SkillModifer@ modifer){
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"MP5MOD3")) return;
-        addCooldown("MP5MOD3",40,characterId,modifer);
+        addCooldown("MP5MOD3",20,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         string vestkey="exo_t5_16lab.carry_item";
         if (character !is null) {
@@ -946,9 +951,11 @@ class CommandSkill : Tracker {
                     Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
                     Vector3 s_pos = stringToVector3(target);
                     s_pos = s_pos.add(Vector3(0,2,0));
+                    c_pos = c_pos.add(Vector3(0,2,0));
+                    c_pos = c_pos.add((getAimUnitVector(2,c_pos,s_pos)));
                     int factionid = characterinfo.getIntAttribute("faction_id");
 
-                    CreateDirectProjectile_T(m_metagame,c_pos,s_pos,'baibaozi_skill.projectile',characterId,factionid,1.0);
+                    CreateDirectProjectile_T(m_metagame,c_pos,s_pos,'baibaozi_skill.projectile',characterId,factionid,0.4); 
                     // array<string> Voice={
                     // "Excutioner_buhuo_SKILL02_JP.wav",
                     // "Excutioner_buhuo_SKILL03_JP.wav",
@@ -970,6 +977,7 @@ class CommandSkill : Tracker {
                 if (player.hasAttribute("aim_target")) {
                     string target = player.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    Vector3 s_pos = stringToVector3(target);
                     int factionid = character.getIntAttribute("faction_id");
                     array<string> Voice={
                         "XM8_SKILL2_JP.wav"                     
@@ -977,11 +985,12 @@ class CommandSkill : Tracker {
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playAnimationKey(m_metagame,characterId,"recoil1, big",true,false);
                     c_pos=c_pos.add(Vector3(0,1,0));
-                    if (checkFlatRange(c_pos,stringToVector3(target),15)){
-                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_xm8mod3_skill.projectile",characterId,factionid,60);
+                    c_pos = c_pos.add((getAimUnitVector(1,c_pos,s_pos)));
+                    if (checkFlatRange(c_pos,s_pos,15)){
+                        CreateDirectProjectile(m_metagame,c_pos,s_pos,"40mm_xm8mod3_skill.projectile",characterId,factionid,60);
                     }
                     else{
-                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"40mm_xm8mod3_skill.projectile",characterId,factionid,45.0,6.0);
+                        CreateProjectile_H(m_metagame,c_pos,s_pos,"40mm_xm8mod3_skill.projectile",characterId,factionid,45.0,6.0);
                     }
                     addCooldown("xm8mod3",15,characterId,modifer);
                 }
@@ -998,6 +1007,7 @@ class CommandSkill : Tracker {
                 if (player.hasAttribute("aim_target")) {
                     string target = player.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    Vector3 s_pos = stringToVector3(target);
                     int factionid = character.getIntAttribute("faction_id");
                     array<string> Voice={
                         "STG44Mod_SKILL1_JP.wav",
@@ -1007,6 +1017,7 @@ class CommandSkill : Tracker {
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.3);
                     playAnimationKey(m_metagame,characterId,"recoil1, big",true,false);
                     c_pos=c_pos.add(Vector3(0,1,0));
+                    c_pos = c_pos.add((getAimUnitVector(1,c_pos,s_pos)));
                     if (checkFlatRange(c_pos,stringToVector3(target),15)){
                         CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"40mm_stg44mod3.projectile",characterId,factionid,45);
                     }
@@ -1048,9 +1059,11 @@ class CommandSkill : Tracker {
                 if (player.hasAttribute("aim_target")) {
                     string target = player.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    Vector3 s_pos = stringToVector3(target);
                     int factionid = character.getIntAttribute("faction_id");
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                     c_pos=c_pos.add(Vector3(0,1,0));
+                    c_pos = c_pos.add((getAimUnitVector(1,c_pos,s_pos)));
                     if(mod3){
                         if(!ExistQueue){
                             array<string> Voice={
@@ -1145,7 +1158,9 @@ class CommandSkill : Tracker {
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
                     }                    
                     playAnimationKey(m_metagame,characterId,"recoil1, big",true,false);
+                    Vector3 s_pos = stringToVector3(target);
                     c_pos=c_pos.add(Vector3(0,1,0));
+                    c_pos = c_pos.add((getAimUnitVector(1,c_pos,s_pos)));
                     if (checkFlatRange(c_pos,stringToVector3(target),15)){
                         CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"std_aa_grenade.projectile",characterId,factionid,60);
                     }
@@ -1205,7 +1220,9 @@ class CommandSkill : Tracker {
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
                     }                    
                     playAnimationKey(m_metagame,characterId,"recoil1, big",true,false);
+                    Vector3 s_pos = stringToVector3(target);
                     c_pos=c_pos.add(Vector3(0,1,0));
+                    c_pos = c_pos.add((getAimUnitVector(1,c_pos,s_pos)));
                     if (checkFlatRange(c_pos,stringToVector3(target),15)){
                         CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"std_ap_grenade.projectile",characterId,factionid,60);
                     }

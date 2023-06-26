@@ -261,13 +261,13 @@ class GFLskill : Tracker {
 						string vestkey = getPlayerEquipmentKey(m_metagame,luckyGuyid,4);
 
 						if (
-						startsWith(vestkey,'cc_t4') 
-						|| startsWith(vestkey,'cc_t5_16lab') 
-						|| startsWith(vestkey,'woshieoe')
-						|| startsWith(vestkey,'cc_t6') 
-						|| startsWith(vestkey,'lcc_t6')
-						|| startsWith(vestkey,'exo_x_t4')
-						|| startsWith(vestkey,'exo_x_t6')
+							startsWith(vestkey,'cc_t4') 
+							|| startsWith(vestkey,'cc_t5_16lab') 
+							|| startsWith(vestkey,'woshieoe')
+							|| startsWith(vestkey,'cc_t6') 
+							|| startsWith(vestkey,'lcc_t6')
+							|| startsWith(vestkey,'exo_x_t4')
+							|| startsWith(vestkey,'exo_x_t6')
 						){
 							CreateProjectile(m_metagame,pos_smartgrenade,luckyGuyPos,"kcco_smartgrenade_3_1.projectile",characterId,factionid,120,0.01);
 						}
@@ -701,7 +701,7 @@ class GFLskill : Tracker {
 				break;
 			}
 
-			case 24:{
+			case 24:{ //防卫妖精1
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 				if (character !is null) {
@@ -722,7 +722,7 @@ class GFLskill : Tracker {
 				break;
 			}
 
-			case 25:{
+			case 25:{ //防卫妖精2
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 				if (character !is null) {
@@ -744,7 +744,7 @@ class GFLskill : Tracker {
 			}	
 
 			// 15:33:08: SCRIPT:  received: TagName=result_event character_id=851 direction=-0.871521 0.020148 -0.489943 key=moth_destroy position=289.461 10.8204 551.587 
-			case 26:{
+			case 26:{ //(已失效)趋光者概率生成残骸
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 				if (character !is null) {
@@ -767,7 +767,7 @@ class GFLskill : Tracker {
 				}
 			}
 
-			case 27: {
+			case 27: { //g41智能手雷
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 				if (character !is null) {

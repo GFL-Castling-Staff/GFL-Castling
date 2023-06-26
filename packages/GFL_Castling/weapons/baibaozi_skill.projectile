@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectiles>
-<projectile class="grenade" name="" slot="1" pulldown_in_air="2.0" key="baibaozi_skill.projectile">
+<projectile class="grenade" name="" slot="1" pulldown_in_air="2.0" key="baibaozi_skill.projectile" radius="0.05">
     <tag name="grenade"/>
-    <result class="spawn" instance_class="projectile" instance_key="baibaozi_skill_sub.projectile" min_amount="4" max_amount="4" offset="0 1.5 0" position_spread="0.32 0.32" direction_spread="0.0 0.0" />
-    <trigger class="time" time_to_live="1.0"/>
+    <result class="spawn" instance_class="projectile" instance_key="baibaozi_skill_sub.projectile" min_amount="5" max_amount="5" offset="0 -0.5 0" position_spread="3 0" direction_spread="0.0 0.0" />
+    <trigger class="time" time_to_live="0.4"/>
     <rotation class="none" />
     <model mesh_filename="baibaozi_skill_shell.xml" />
-
+ 
     <commonness value="0.0" />
 
     <sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2" />
@@ -46,8 +46,8 @@
     <!-- <effect class="activated" ref="Propulsion_gl" /> -->
 </projectile>
 <projectile class="grenade" name="30mm" key="baibaozi_skill_sub.projectile" slot="0" radius="0.15">
-	<result class="blast" radius="6.4" damage="6" push="0.3" decal="1" character_state="death" faction_compare="not_equal" />
-	<trigger class="time" time_to_live="0.0"/>
+	<result class="blast" radius="6" damage="6" push="0.3" decal="1" character_state="death" faction_compare="not_equal" />
+	<trigger class="time" time_to_live="0.001"/>
 	<rotation class="random" />
 	<model mesh_filename="" />
 	<hud_icon filename="88r.png" />

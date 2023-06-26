@@ -411,3 +411,18 @@ dictionary commandSkillIndex = {
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
+
+// 技能无法用其他效果冷却的枪
+array<string> Weapon_free_of_other_cooldown = {
+    "gkw_mp5.weapon",
+    "gkw_mp5_3.weapon",
+    "gkw_mp5_1205.weapon",
+    "gkw_mp5_1903.weapon",
+    "gkw_mp5_3006.weapon",
+
+    "gkw_mp5mod3.weapon",
+    "gkw_mp5mod3_3.weapon",
+    "gkw_mp5mod3_1205.weapon",
+    "gkw_mp5mod3_1903.weapon",
+    "gkw_mp5mod3_3006.weapon"
+};
