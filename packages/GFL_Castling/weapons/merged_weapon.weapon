@@ -6312,11 +6312,11 @@
 	</projectile>
 	<effect class="muzzle" ref="ejection_50BMG"/>
 	<effect class="muzzle" ref="muzzle_big_yellow"/>
-	<stance state_key="running" accuracy="0.3"/>
-	<stance state_key="walking" accuracy="0.3"/>
-	<stance state_key="crouch_moving" accuracy="0.95"/>
-	<stance state_key="prone_moving" accuracy="0.95"/>
-	<stance state_key="standing" accuracy="0.45"/>
+	<stance state_key="running" accuracy="0.35"/>
+	<stance state_key="walking" accuracy="0.35"/>
+	<stance state_key="crouch_moving" accuracy="0.35"/>
+	<stance state_key="prone_moving" accuracy="0.35"/>
+	<stance state_key="standing" accuracy="0.95"/>
 	<stance state_key="crouching" accuracy="0.8"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="over_wall" accuracy="1.2"/>
@@ -6532,7 +6532,7 @@
 
 <weapon key="gkw_mg42_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
-	<specification retrigger_time="0.04" accuracy_factor="0.5" barrel_offset="0.8" sustained_fire_grow_step="0.002" sustained_fire_diminish_rate="0.006" cooldown_start="0.7" cooldown_end="0.625" magazine_size="250" suppressed="0" spread_range="0.45" projectiles_per_shot="1" name="MG42-[Damage Focus MG]" class="0" projectile_speed="215" carry_in_two_hands="1" sight_range_modifier="1.75" can_shoot_standing="0" can_shoot_crouching="0" leave_prone_accuracy_penalty="0.1"/>
+	<specification retrigger_time="0.04" accuracy_factor="1.0" barrel_offset="0.8" sustained_fire_grow_step="0.25" sustained_fire_diminish_rate="1.95" stance_accuracy_rate="1.0" magazine_size="250" suppressed="0" spread_range="0.45" projectiles_per_shot="1" name="MG42-[Damage Focus MG]" class="0" projectile_speed="215" carry_in_two_hands="1" sight_range_modifier="1.75" can_shoot_standing="0" can_shoot_crouching="0"/>
 	<inventory encumbrance="50.0" buy_price="42.0" sell_price="42.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_mg42.weapon" share_ammo="0"/>
@@ -6567,12 +6567,12 @@
 	<trail probability="1.0" key="BulletMgTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
-	<stance state_key="running" accuracy="1"/>
-	<stance state_key="crouch_moving" accuracy="1.4"/>
-	<stance state_key="prone_moving" accuracy="1.4"/>
-	<stance state_key="standing" accuracy="1.75"/>
-	<stance state_key="walking" accuracy="1.65"/>
-	<stance state_key="crouching" accuracy="1.9"/>
+	<stance state_key="running" accuracy="0.2"/>
+	<stance state_key="walking" accuracy="0.2"/>
+	<stance state_key="crouch_moving" accuracy="0.3"/>
+	<stance state_key="prone_moving" accuracy="0.3"/>
+	<stance state_key="standing" accuracy="1.15"/>
+	<stance state_key="crouching" accuracy="0.5"/>
 	<stance state_key="prone" accuracy="1.9"/>
 	<stance state_key="over_wall" accuracy="1.9"/>
 	<modifier class="speed" value="-0.4"/>
@@ -6626,7 +6626,7 @@
 
 <weapon key="gkw_mg42_7606_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
-	<specification retrigger_time="0.04" accuracy_factor="0.5" barrel_offset="0.8" sustained_fire_grow_step="0.002" sustained_fire_diminish_rate="0.006" cooldown_start="0.7" cooldown_end="0.625" magazine_size="250" suppressed="0" spread_range="0.45" projectiles_per_shot="1" name="MG42-[Witch in Apprenticeship]-[Damage Focus MG]" class="0" projectile_speed="215" carry_in_two_hands="1" sight_range_modifier="1.75" can_shoot_standing="0" can_shoot_crouching="0" stab_enabled="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" leave_prone_accuracy_penalty="0.1"/>
+	<specification retrigger_time="0.04" accuracy_factor="1.0" barrel_offset="0.8" sustained_fire_grow_step="0.25" sustained_fire_diminish_rate="1.95" stance_accuracy_rate="1.0" magazine_size="250" suppressed="0" spread_range="0.45" projectiles_per_shot="1" name="MG42-[Witch in Apprenticeship]-[Damage Focus MG]" class="0" projectile_speed="215" carry_in_two_hands="1" sight_range_modifier="1.75" can_shoot_standing="0" can_shoot_crouching="0" stab_enabled="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1"/>
 	<inventory encumbrance="50.0" buy_price="42.0" sell_price="42.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_mg42_7606.weapon" share_ammo="0"/>
@@ -6661,12 +6661,12 @@
 	<trail probability="1.0" key="BulletMgTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
-	<stance state_key="running" accuracy="1"/>
-	<stance state_key="crouch_moving" accuracy="1.4"/>
-	<stance state_key="prone_moving" accuracy="1.4"/>
-	<stance state_key="standing" accuracy="1.75"/>
-	<stance state_key="walking" accuracy="1.65"/>
-	<stance state_key="crouching" accuracy="1.9"/>
+	<stance state_key="running" accuracy="0.2"/>
+	<stance state_key="walking" accuracy="0.2"/>
+	<stance state_key="crouch_moving" accuracy="0.3"/>
+	<stance state_key="prone_moving" accuracy="0.3"/>
+	<stance state_key="standing" accuracy="1.15"/>
+	<stance state_key="crouching" accuracy="0.5"/>
 	<stance state_key="prone" accuracy="1.9"/>
 	<stance state_key="over_wall" accuracy="1.9"/>
 	<modifier class="speed" value="-0.4"/>
@@ -22809,7 +22809,7 @@
 <weapon key="gkw_m1919a4mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
 	<tag name="elite"/>
-	<specification barrel_offset="0.6" retrigger_time="0.046" accuracy_factor="1.0" sustained_fire_grow_step="-0.08" sustained_fire_diminish_rate="-1.0" spread_range="0.5" magazine_size="100" suppressed="0" name="Browning M1919A4(MOD3)" class="0" projectile_speed="225" sight_range_modifier="1.5" stab_enabled="1" stance_accuracy_rate="0.85" carry_in_two_hands="1" burst_shots="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0" leave_crouch_accuracy_penalty="0.25"/>
+	<specification barrel_offset="0.6" retrigger_time="0.046" accuracy_factor="0.95" sustained_fire_grow_step="-0.05" sustained_fire_diminish_rate="-1.0" spread_range="0.5" magazine_size="100" suppressed="0" name="Browning M1919A4(MOD3)" class="0" projectile_speed="225" sight_range_modifier="1.5" stab_enabled="1" stance_accuracy_rate="0.85" carry_in_two_hands="1" burst_shots="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0" leave_crouch_accuracy_penalty="0.25"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="50.0" buy_price="300.0" sell_price="300.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -24500,7 +24500,7 @@
 <weapon key="gkw_type80mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
 	<tag name="elite"/>
-	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="0.65" sustained_fire_grow_step="0.00125" sustained_fire_diminish_rate="0.002" cooldown_start="0.4" cooldown_end="0.325" spread_range="0.45" magazine_size="-1" suppressed="0" stance_accuracy_rate="0.8" leave_crouch_accuracy_penalty="0.35" name="Type 80 GPMG(MOD3)" class="0" projectile_speed="206" sight_range_modifier="1.75" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="0.75" sustained_fire_grow_step="0.00125" sustained_fire_diminish_rate="0.002" cooldown_start="0.4" cooldown_end="0.325" spread_range="0.45" magazine_size="-1" suppressed="0" stance_accuracy_rate="0.8" leave_crouch_accuracy_penalty="0.35" name="Type 80 GPMG(MOD3)" class="0" projectile_speed="206" sight_range_modifier="1.75" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
 	<inventory encumbrance="50.0" buy_price="375.0" sell_price="275.0"/>
 	<commonness value="0.00001" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_type80mod3_skill.weapon" share_ammo="1"/>
@@ -24549,7 +24549,7 @@
 <weapon key="gkw_type80mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
 	<tag name="elite"/>
-	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="0.65" sustained_fire_grow_step="0.00125" sustained_fire_diminish_rate="0.002" cooldown_start="0.4" cooldown_end="0.325" spread_range="0.45" magazine_size="-1" stance_accuracy_rate="0.5" leave_crouch_accuracy_penalty="0.35" suppressed="0" name="Type 80 GPMG(MOD3)-[Position Fortification]" class="0" projectile_speed="206" sight_range_modifier="1.75" slot="0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" projectiles_per_shot="1" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="0.75" sustained_fire_grow_step="0.00125" sustained_fire_diminish_rate="0.002" cooldown_start="0.4" cooldown_end="0.325" spread_range="0.45" magazine_size="-1" stance_accuracy_rate="0.5" leave_crouch_accuracy_penalty="0.35" suppressed="0" name="Type 80 GPMG(MOD3)-[Position Fortification]" class="0" projectile_speed="206" sight_range_modifier="1.75" slot="0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" projectiles_per_shot="1" stab_enabled="1"/>
 	<inventory encumbrance="50.0" buy_price="240.0" sell_price="240.0"/>
 	<next_in_chain key="gkw_type80mod3.weapon" share_ammo="1"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
@@ -24589,7 +24589,7 @@
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.3"/>
 	<stance state_key="crouch_moving" accuracy="0.4"/>
-	<stance state_key="standing" accuracy="0.4"/>
+	<stance state_key="standing" accuracy="1.15"/>
 	<stance state_key="crouching" accuracy="0.8S"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="1.2"/>
@@ -32081,7 +32081,7 @@
 	<stance state_key="running" accuracy="0.1"/>
 	<stance state_key="walking" accuracy="0.15"/>
 	<stance state_key="crouch_moving" accuracy="0.3"/>
-	<stance state_key="standing" accuracy="0.4"/>
+	<stance state_key="standing" accuracy="0.95"/>
 	<stance state_key="crouching" accuracy="0.8"/>
 	<stance state_key="prone" accuracy="0.8"/>
 	<stance state_key="prone_moving" accuracy="0.8"/>
@@ -32098,7 +32098,7 @@
 
 <weapon key="gkw_hvy_ags30_fix.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="bazooka"/>
-	<specification accuracy_factor="0.95" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" class="0" sight_range_modifier="2.5" slot="0" magazine_size="30" name="AGS-30 Atlant" projectile_speed="120" retrigger_time="0.12" suppressed="0" barrel_offset_3d="0 0.1 1.2" sustained_fire_diminish_rate="6.0" sustained_fire_grow_step="1.0" stance_accuracy_rate="4.0" carry_in_two_hands="0" spread_range="0.2"/>
+	<specification accuracy_factor="1.0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" class="0" sight_range_modifier="2.5" slot="0" magazine_size="30" name="AGS-30 Atlant" projectile_speed="120" retrigger_time="0.12" suppressed="0" barrel_offset_3d="0 0.1 1.2" sustained_fire_diminish_rate="6.0" sustained_fire_grow_step="1.0" stance_accuracy_rate="4.0" carry_in_two_hands="0" spread_range="0.15"/>
 	<next_in_chain key="gkw_aps_pdw.weapon" share_ammo="0"/>
 	<inventory encumbrance="100.0" buy_price="450.0" sell_price="400.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -32132,7 +32132,7 @@
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.5"/>
 	<stance state_key="crouch_moving" accuracy="0.5"/>
-	<stance state_key="standing" accuracy="0.5"/>
+	<stance state_key="standing" accuracy="0.95"/>
 	<stance state_key="crouching" accuracy="0.75"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="prone_moving" accuracy="1.0"/>
@@ -32238,7 +32238,7 @@
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.3"/>
 	<stance state_key="crouch_moving" accuracy="0.3"/>
-	<stance state_key="standing" accuracy="0.5"/>
+	<stance state_key="standing" accuracy="0.85"/>
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="0.8"/>
 	<stance state_key="prone_moving" accuracy="0.3"/>
@@ -32289,7 +32289,7 @@
 	<stance state_key="walking" accuracy="0.3"/>
 	<stance state_key="crouch_moving" accuracy="0.3"/>
 	<stance state_key="prone_moving" accuracy="0.5"/>
-	<stance state_key="standing" accuracy="0.65"/>
+	<stance state_key="standing" accuracy="0.95"/>
 	<stance state_key="crouching" accuracy="0.9"/>
 	<stance state_key="prone" accuracy="0.8"/>
 	<modifier class="speed" value="-3.0"/>

@@ -6,7 +6,7 @@
         <specification 
         barrel_offset="0.5" 
         retrigger_time="0.075" 
-        accuracy_factor="0.65" 
+        accuracy_factor="0.75" 
         sustained_fire_grow_step="0.00125"
         sustained_fire_diminish_rate="0.002"
         cooldown_start="0.4"
@@ -76,7 +76,7 @@
         <specification 
         barrel_offset="0.5" 
         retrigger_time="0.075" 
-        accuracy_factor="0.65" 
+        accuracy_factor="0.75" 
         sustained_fire_grow_step="0.00125"
         sustained_fire_diminish_rate="0.002"
         cooldown_start="0.4"
@@ -136,7 +136,7 @@
         <stance state_key="running" accuracy="0.3" />
         <stance state_key="walking" accuracy="0.3" />
         <stance state_key="crouch_moving" accuracy="0.4" />
-        <stance state_key="standing" accuracy="0.4" />
+        <stance state_key="standing" accuracy="1.15" />
         <stance state_key="crouching" accuracy="0.8S" />
         <stance state_key="prone" accuracy="1.2" />
         <stance state_key="prone_moving" accuracy="1.2" />
