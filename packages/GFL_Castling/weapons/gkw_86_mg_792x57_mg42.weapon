@@ -63,12 +63,11 @@
     <tag name="machine gun" />
         <specification 
         retrigger_time="0.04" 
-        accuracy_factor="0.5" 
+        accuracy_factor="1.0" 
         barrel_offset="0.8"
-        sustained_fire_grow_step="0.002" 
-        sustained_fire_diminish_rate="0.006" 
-        cooldown_start="0.7"
-        cooldown_end="0.625"
+        sustained_fire_grow_step="0.25" 
+        sustained_fire_diminish_rate="1.95" 
+        stance_accuracy_rate="1.0"
         magazine_size="250" 
         suppressed="0" 
         spread_range="0.45"
@@ -79,8 +78,7 @@
         carry_in_two_hands="1"
         sight_range_modifier="1.75"
         can_shoot_standing="0"
-        can_shoot_crouching="0"
-        leave_prone_accuracy_penalty="0.1"/>
+        can_shoot_crouching="0"/>
         <inventory encumbrance="50.0" buy_price="42.0" sell_price="42.0" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_mg42.weapon" share_ammo="0" />
@@ -115,14 +113,14 @@
             <trail probability="1.0" key="BulletMgTrail" />
         </projectile>
         <effect class="muzzle" ref="ejection_76251" />
-        <stance state_key="running" accuracy="1" />
-        <stance state_key="crouch_moving" accuracy="1.4" />
-        <stance state_key="prone_moving" accuracy="1.4" />
-        <stance state_key="standing" accuracy="1.75" />
-        <stance state_key="walking" accuracy="1.65" />
-        <stance state_key="crouching" accuracy="1.9" />
-        <stance state_key="prone" accuracy="1.9" />
-        <stance state_key="over_wall" accuracy="1.9" />
-        <modifier class="speed" value="-0.4" />
+        <stance state_key="running" accuracy="0.2"/>
+        <stance state_key="walking" accuracy="0.2"/>
+        <stance state_key="crouch_moving" accuracy="0.3"/>
+        <stance state_key="prone_moving" accuracy="0.3"/>
+        <stance state_key="standing" accuracy="1.15"/>
+        <stance state_key="crouching" accuracy="0.5"/>
+        <stance state_key="prone" accuracy="1.9"/>
+        <stance state_key="over_wall" accuracy="1.9"/>
+        <modifier class="speed" value="-0.4"/>
     </weapon>
 </weapons>
