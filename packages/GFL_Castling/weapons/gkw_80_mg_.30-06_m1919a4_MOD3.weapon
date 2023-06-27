@@ -6,8 +6,8 @@
         <specification 
         barrel_offset="0.6"
         retrigger_time="0.046"
-        accuracy_factor="1.0"
-        sustained_fire_grow_step="-0.08"
+        accuracy_factor="0.95"
+        sustained_fire_grow_step="-0.05"
         sustained_fire_diminish_rate="-1.0"
         spread_range="0.5"
         magazine_size="100"

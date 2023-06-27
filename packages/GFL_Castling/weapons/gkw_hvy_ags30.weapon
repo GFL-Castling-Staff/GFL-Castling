@@ -49,7 +49,7 @@
     <stance state_key="running" accuracy="0.1"/>
     <stance state_key="walking" accuracy="0.15"/>
     <stance state_key="crouch_moving" accuracy="0.3"/>
-    <stance state_key="standing" accuracy="0.4"/>
+    <stance state_key="standing" accuracy="0.95"/>
     <stance state_key="crouching" accuracy="0.8"/>
     <stance state_key="prone" accuracy="0.8"/>
     <stance state_key="prone_moving" accuracy="0.8"/>
@@ -66,7 +66,7 @@
 <weapon key="gkw_hvy_ags30_fix.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 <tag name="bazooka"/>
 	<specification 
-	accuracy_factor="0.95"
+	accuracy_factor="1.0"
 	can_shoot_standing="0"
 	can_shoot_crouching="1"
 	can_shoot_prone="0"
@@ -83,7 +83,7 @@
 	sustained_fire_grow_step="1.0"
 	stance_accuracy_rate="4.0"
 	carry_in_two_hands="0"
-	spread_range="0.2"/>
+	spread_range="0.15"/>
 	<next_in_chain key="gkw_aps_pdw.weapon" share_ammo="0"/>
 	<inventory encumbrance="100.0" buy_price="450.0" sell_price="400.0" />
     <commonness value="0" in_stock="0" can_respawn_with="1" />
@@ -117,7 +117,7 @@
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.5"/>
 	<stance state_key="crouch_moving" accuracy="0.5"/>
-	<stance state_key="standing" accuracy="0.5"/>
+	<stance state_key="standing" accuracy="0.95"/>
 	<stance state_key="crouching" accuracy="0.75"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="prone_moving" accuracy="1.0"/>
