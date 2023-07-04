@@ -2571,7 +2571,7 @@ class CommandSkill : Tracker {
 
     void excuteM200skill(int characterId,int playerId,SkillModifer@ modifer){
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"M200",true)) return;
-        addCooldown("M200",25,characterId,modifer);
+        addCooldown("M200",45,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character is null) return;
         const XmlElement@ player = getPlayerInfo(m_metagame, playerId);

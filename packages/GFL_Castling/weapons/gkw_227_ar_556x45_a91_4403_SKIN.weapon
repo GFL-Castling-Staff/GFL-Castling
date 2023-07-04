@@ -81,17 +81,21 @@
     <animation state_key="recoil" animation_key="recoil, pistol" />
     <animation state_key="hold" animation_key="still, brute" />
     <animation state_key="hold_on_wall" animation_key="still, brute" />
-    <animation state_key="reload" animation_key="still, brute" />
+    <animation state_key="reload" animation_key="reloading, ninjato" />
     <animation state_key="still_against_wall" animation_key="still, brute" />
     <animation state_key="walking_backwards" animation_key="walking backwards, brute" />
     <animation state_key="crouching" animation_key="crouch still, brute" />
     <animation state_key="running" animation_key="running2, ninja" />
     <animation state_key="walking" animation_key="walking, brute" />
     <animation state_key="stabbing" animation_key="a91, quick knife" />
-    <sound key="fire" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0" volume="0.8" />
+    <sound key="fire" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0" volume="0.6" />
     <sound key="effect" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.8" />
     <sound key="effect" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.8" />
     <sound key="effect" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.8" />
+    <sound key="stab" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="2.0" />
     <sound key="stab_hit_any" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
 	<sound key="stab_hit_any" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
 	<sound key="stab_hit_any" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.0" />

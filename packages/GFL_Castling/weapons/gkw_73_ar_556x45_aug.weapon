@@ -70,11 +70,11 @@
     <hud_icon filename="gkw_aug.png" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.1" kill_decay_end_time="0.25" />
+        <result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="0.1" kill_decay_end_time="0.25" />
     </projectile>
     <effect class="muzzle" ref="ejection_556" />
-    <stance state_key="running" accuracy="0.5" />
-    <stance state_key="walking" accuracy="0.5" />
+    <stance state_key="running" accuracy="0.35" />
+    <stance state_key="walking" accuracy="0.35" />
     <stance state_key="crouch_moving" accuracy="0.5" />
     <stance state_key="prone_moving" accuracy="0.5" />
     <stance state_key="standing" accuracy="0.5" />

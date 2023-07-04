@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon key="gkw_pp19.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification 
-  accuracy_factor="0.85"
+  accuracy_factor="0.88"
   barrel_offset="0.32"
   class="0"
   magazine_size="64"
@@ -32,14 +32,14 @@
 		<result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.25" kill_decay_end_time="0.5"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm"/>
-	<stance state_key="running" accuracy="0.65" />
-	<stance state_key="walking" accuracy="0.65" />
-	<stance state_key="standing" accuracy="0.65" />
-	<stance state_key="crouching" accuracy="0.75" />
-	<stance state_key="crouch_moving" accuracy="0.5" />
-	<stance state_key="prone" accuracy="0.75" />
-	<stance state_key="prone_moving" accuracy="0.5" />
-	<stance state_key="over_wall" accuracy="0.85" />
+    <stance state_key="running" accuracy="0.85" />
+    <stance state_key="walking" accuracy="0.85" />
+    <stance state_key="standing" accuracy="0.85" />
+    <stance state_key="crouching" accuracy="0.85" />
+    <stance state_key="crouch_moving" accuracy="0.85" />
+    <stance state_key="prone" accuracy="0.85" />
+    <stance state_key="prone_moving" accuracy="0.85" />
+    <stance state_key="over_wall" accuracy="0.85" />
 	<modifier class="speed" value="0.2" />
     <modifier class="hit_success_probability" value="-0.3" />
 	<tag name="smg"/>

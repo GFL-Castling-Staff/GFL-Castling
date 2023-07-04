@@ -20,8 +20,8 @@
     <effect class="result" key="other" copy="terrain" />
     <trail probability="1.0" key="BulletApTrail_ct" />
 
-    <effect class="activated" ref="general_weapon_activated_bullet_light" lighting="0"/>
-    <effect class="activated" ref="general_weapon_activated_bullet_centerlight" lighting="0"/> 
+    <!-- <effect class="activated" ref="general_weapon_activated_bullet_light" lighting="0"/>
+    <effect class="activated" ref="general_weapon_activated_bullet_centerlight" lighting="0"/> --> 
 
     <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
     <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />

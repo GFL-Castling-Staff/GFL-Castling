@@ -52,7 +52,7 @@ array<string> vehicle_drop_call = {
 // 11:25:26: SCRIPT:  received: TagName=call_event call_key=kcco_Hephaestus.call character_id=298 faction_id=0 id=0 phase=queue player_id=0 target_position=944.656 17.7529 563.095 
 // 11:26:10: SCRIPT:  received: TagName=call_event call_key=kcco_Hephaestus.call character_id=298 faction_id=0 id=0 phase=launch player_id=0 target_position=944.656 17.7529 563.095 
 // 11:26:54: SCRIPT:  received: TagName=call_event call_key=kcco_Hephaestus.call character_id=298 faction_id=0 id=0 phase=end player_id=0 target_position=944.656 17.7529 563.095
-array<Call_Cooldown@> m_cooldown;
+array<Call_Cooldown@> CallEvent_cooldown;
 
 class call_event : Tracker {
 	protected Metagame@ m_metagame;
@@ -106,7 +106,7 @@ class call_event : Tracker {
                                 }
                             }
                             else {
-                                m_cooldown.insertLast(Call_Cooldown(playerName,playerId,300.0,"ac130"));
+                                CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,300.0,"ac130"));
                                 sendFactionMessageKey(m_metagame,factionId,"ac130callstarthint");
                                 int flagId = m_DummyCallID + 15000;
                                 ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
@@ -148,7 +148,7 @@ class call_event : Tracker {
                                 }
                             }
                             else {
-                                m_cooldown.insertLast(Call_Cooldown(playerName,playerId,30.0,"sniper_call"));
+                                CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,30.0,"sniper_call"));
                                 sendFactionMessageKey(m_metagame,factionId,"snipecallstarthint");
                                 int flagId = m_DummyCallID + 15000;
                                 ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
@@ -177,7 +177,7 @@ class call_event : Tracker {
                             }
                         }
                         else {
-                            m_cooldown.insertLast(Call_Cooldown(playerName,playerId,120.0,"yaoren_8"));
+                            CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,120.0,"yaoren_8"));
                             int flagId = m_DummyCallID + 15000;
                             ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
                             FairyRequest.setIconTypeKey("call_marker_drop");
@@ -202,7 +202,7 @@ class call_event : Tracker {
                             }
                         }
                         else {
-                            m_cooldown.insertLast(Call_Cooldown(playerName,playerId,300.0,"TU160"));
+                            CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,300.0,"TU160"));
                             sendFactionMessageKey(m_metagame,factionId,"rocketcallstarthint");
                             const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
                             Vector3 player_pos = stringToVector3(characterinfo.getStringAttribute("position"));
@@ -221,7 +221,7 @@ class call_event : Tracker {
                             }
                         }
                         else{           
-                            m_cooldown.insertLast(Call_Cooldown(playerName,playerId,120.0,"warrior"));
+                            CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,120.0,"warrior"));
                             sendFactionMessageKey(m_metagame,factionId,"warriorcallstarthint");
                             int flagId = m_DummyCallID + 15000;
                             ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
@@ -241,7 +241,7 @@ class call_event : Tracker {
                             break;
                         }                        
                         else {
-                            m_cooldown.insertLast(Call_Cooldown(playerName,playerId,90.0,"bombardment"));
+                            CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,90.0,"bombardment"));
                             playSoundAtLocation(m_metagame,"kcco_dn_1.wav",factionId,position,1.5);
                             sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
                             int flagId = m_DummyCallID + 15000;
@@ -265,7 +265,7 @@ class call_event : Tracker {
                         else {
                             Vector3 call_pos = stringToVector3(position);
                             Vector3 v_offset = Vector3(0,40,0);
-                            m_cooldown.insertLast(Call_Cooldown(playerName,playerId,90.0,"barrier"));
+                            CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,90.0,"barrier"));
                             sendFactionMessageKey(m_metagame,factionId,"barrierfight");
                             int flagId = m_DummyCallID + 15000;
                             ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,call_pos,"foobar");
@@ -289,7 +289,7 @@ class call_event : Tracker {
                             Vector3 call_pos = stringToVector3(position);
                             Vector3 v_offset = Vector3(0,50,0);
                             call_pos = call_pos.add(v_offset);
-                            m_cooldown.insertLast(Call_Cooldown(playerName,playerId,600.0,"vehicle"));
+                            CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,600.0,"vehicle"));
                             int flagId = m_DummyCallID + 15000;
                             ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,call_pos,"foobar");
                             FairyRequest.setIconTypeKey("call_marker_drop");
@@ -313,7 +313,7 @@ class call_event : Tracker {
                             Vector3 call_pos = stringToVector3(position);
                             Vector3 v_offset = Vector3(0,50,0);
                             call_pos = call_pos.add(v_offset);
-                            m_cooldown.insertLast(Call_Cooldown(playerName,playerId,300.0,"vehicle"));
+                            CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,300.0,"vehicle"));
                             int flagId = m_DummyCallID + 15000;
                             ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,call_pos,"foobar");
                             FairyRequest.setIconTypeKey("call_marker_drop");
@@ -337,7 +337,7 @@ class call_event : Tracker {
                             Vector3 call_pos = stringToVector3(position);
                             Vector3 v_offset = Vector3(0,50,0);
                             call_pos = call_pos.add(v_offset);
-                            m_cooldown.insertLast(Call_Cooldown(playerName,playerId,120.0,"vehicle"));
+                            CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,120.0,"vehicle"));
                             int flagId = m_DummyCallID + 15000;
                             ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,call_pos,"foobar");
                             FairyRequest.setIconTypeKey("call_marker_drop");
@@ -403,11 +403,11 @@ class call_event : Tracker {
 	}
 
     void update(float time) {
-        if(m_cooldown.length()>0){
-            for(uint a=0;a<m_cooldown.length();a++){
-                m_cooldown[a].m_time-=time;
-                if(m_cooldown[a].m_time<0){
-                    m_cooldown.removeAt(a);
+        if(CallEvent_cooldown.length()>0){
+            for(uint a=0;a<CallEvent_cooldown.length();a++){
+                CallEvent_cooldown[a].m_time-=time;
+                if(CallEvent_cooldown[a].m_time<0){
+                    CallEvent_cooldown.removeAt(a);
                 }
             }
         }
@@ -429,8 +429,8 @@ class Call_Cooldown{
 }
 
 bool findCooldown(string pName,string type){
-    for(uint i=0;i<m_cooldown.size();i++){
-        if(m_cooldown[i].m_playerName==pName && m_cooldown[i].m_type==type){
+    for(uint i=0;i<CallEvent_cooldown.size();i++){
+        if(CallEvent_cooldown[i].m_playerName==pName && CallEvent_cooldown[i].m_type==type){
             return true;
         }
     }
@@ -438,9 +438,9 @@ bool findCooldown(string pName,string type){
 }
 
 float getCooldown(string pName,string type){
-    for(uint i=0;i<m_cooldown.size();i++){
-        if(m_cooldown[i].m_playerName==pName && m_cooldown[i].m_type==type){
-            return m_cooldown[i].m_time;
+    for(uint i=0;i<CallEvent_cooldown.size();i++){
+        if(CallEvent_cooldown[i].m_playerName==pName && CallEvent_cooldown[i].m_type==type){
+            return CallEvent_cooldown[i].m_time;
         }
     }
     return 0;

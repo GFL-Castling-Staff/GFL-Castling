@@ -19,8 +19,8 @@
     <effect class="result" key="character" copy="terrain" />
     <effect class="result" key="other" copy="terrain" />
 
-    <effect class="activated" ref="general_weapon_activated_bullet_light" lighting="0"/>
-    <effect class="activated" ref="general_weapon_activated_bullet_centerlight" lighting="0"/> 
+    <!-- <effect class="activated" ref="general_weapon_activated_bullet_light" lighting="0"/>
+    <effect class="activated" ref="general_weapon_activated_bullet_centerlight" lighting="0"/> --> 
 
     <trail probability="1.0" key="bullet_hmg"/>
 

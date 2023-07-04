@@ -61,7 +61,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	protected void setupGlobalConfigs() {
 		const UserSettings@ settings = m_metagame.getUserSettings();
 		// m_playerAiCompensation_offset += (settings.m_GlobalDifficulty);
-		m_playerAiCompensation_offset = 1;
+		m_playerAiCompensation_offset = 0;
 	}
 
 	protected void setupFactionConfigs() {

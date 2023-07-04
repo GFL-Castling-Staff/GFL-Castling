@@ -171,7 +171,7 @@ class GFL_event{
 }
 
 void excuteSniperFairy(GameMode@ metagame,GFL_event@ eventinfo){
-    eventinfo.m_time=1.5;
+    eventinfo.m_time=2.0;
     int luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,eventinfo.m_pos,40.0f);
     if(luckyGuyid!=-1){
         const XmlElement@ luckyGuy = getCharacterInfo(metagame, luckyGuyid);

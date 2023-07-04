@@ -92,7 +92,7 @@
 		<sound class="launch" fileref="emp_explosion1.wav" volume="0.8" />
 		<sound class="spawn" fileref="woosh1.wav" volume="1.0" />
 	</round>
-	<round instances="60" instance_class="grenade" instance_key="artillery_emp_155.projectile" instance_spread="28 28 28" common_spread="5 0 5" launch_time="8.0" spawn_time="20.0">
+	<round instances="60" instance_class="grenade" instance_key="artillery_emp_155.projectile" instance_spread="28 28 28" common_spread="5 0 5" launch_time="8.0" spawn_time="15.0">
 		<sound class="spawn" fileref="woosh1.wav" volume="1.0" />
 	</round>
 	<hud_icon filename="call_kcco_carina.png" />
