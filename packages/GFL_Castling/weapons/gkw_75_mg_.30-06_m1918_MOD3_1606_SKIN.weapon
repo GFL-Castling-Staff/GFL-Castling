@@ -71,6 +71,7 @@
         stance_accuracy_rate="2.0"
         projectile_speed="225"
         sight_range_modifier="2.0"/>
+        <animation key="reload" animation_key="reloading, Machine gun 0.6" />
         <inventory encumbrance="50.0" buy_price="191.8" sell_price="191.8" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_m1918mod3_1606.weapon" share_ammo="1" />
