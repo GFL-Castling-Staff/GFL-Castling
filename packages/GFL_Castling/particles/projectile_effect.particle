@@ -95,6 +95,12 @@ particle_system at_bullet_smoke_trail
 	}
 }
 
+particle_system at_bullet_smoke_trail_short : at_bullet_smoke_trail
+{
+	particle_width 2.0
+	particle_height 50
+}
+
 particle_system at_bullet_aiming_trail
 {
 	quota 100
