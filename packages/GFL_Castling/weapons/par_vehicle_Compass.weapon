@@ -15,7 +15,8 @@
     can_shoot_crouching="0" 
     suppressed="1" 
     name="Compass MG" 
-    class="0" 
+    class="0"     
+    sight_height_offset="2.0"
     projectile_speed="0.0" />
     
     <animation key="recoil" animation_key="recoil1" />
@@ -57,6 +58,7 @@
     name="Compass MG" 
     class="0" 
     projectile_speed="100.0"
+    sight_height_offset="2.0"
     cooldown_start="0.8"
     cooldown_end="0"/>
     <sound key="fire" fileref="minigun_From_payday2.wav" pitch_variety="0.05" volume="0.1" />
@@ -72,7 +74,7 @@
 
     <weak_hand_hold offset="0.4" />
     <projectile file="bullet_paradeus.projectile">
-        <result class="hit"  kill_probability="2.1" kill_decay_start_time="1.933" kill_decay_end_time="3.222" />
+        <result class="hit"  kill_probability="2.1" kill_decay_start_time="0.5" kill_decay_end_time="1.0" />
     </projectile>
 </weapon>
 
