@@ -62,7 +62,8 @@
     slot="2" 
     barrel_offset="1.7" 
     projectiles_per_shot="1"
-    sight_height_offset="2.0" />
+    sight_height_offset="4.0"
+     />
     <model mesh_filename="" />
     <hud_icon filename="hud_tow.png" />
     <commonness value="0.0" />
@@ -83,7 +84,7 @@
     <effect class="muzzle" ref="CannonSmokeBig" />
     <effect class="muzzle" ref="CannonSmokeBigSphere" />
 
-    <sound class="operation" key="fire" fileref="ataka_fire01_fromWT.wav" volume="0.9" />
+    <sound class="operation" key="fire" fileref="ataka_fire01_fromWT.wav" volume="0.75" />
 </weapon> 
 <weapon key="kuergants_missile_2.weapon">
     <specification 
@@ -105,7 +106,8 @@
     slot="2" 
     barrel_offset="1.7" 
     projectiles_per_shot="1"
-    sight_height_offset="2.0" />
+    sight_height_offset="4.0"
+     />
     <model mesh_filename="" />
     <hud_icon filename="hud_tow.png" />
     <commonness value="0.0" />
@@ -126,6 +128,6 @@
     <effect class="muzzle" ref="CannonSmokeBig" />
     <effect class="muzzle" ref="CannonSmokeBigSphere" />
 
-    <sound class="operation" key="fire" fileref="ataka_fire01_fromWT.wav" volume="0.9" />
+    <sound class="operation" key="fire" fileref="ataka_fire01_fromWT.wav" volume="0.75" />
 </weapon>
 </weapons>
