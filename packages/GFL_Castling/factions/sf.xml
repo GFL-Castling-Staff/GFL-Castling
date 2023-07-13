@@ -832,7 +832,6 @@
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
-			<call key="sf_assualt.call" />
 			<weapon key="sfw_dreamer.weapon" enabled="1"/>
 			<carry_item key="vest_40hp.carry_item" enabled="1" />
 		</resources>
@@ -841,7 +840,7 @@
 		</attribute_config>
 
 		<attribute_config class="rp">
-			<attribute weight="1.0" min="800.0" max="1000.0" />
+			<attribute weight="1.0" min="4000.0" max="4000.0" />
 		</attribute_config>
 	</soldier>
 
