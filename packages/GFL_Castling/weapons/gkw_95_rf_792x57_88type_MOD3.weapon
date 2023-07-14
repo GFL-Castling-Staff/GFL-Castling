@@ -15,9 +15,9 @@
         suppressed="0" 
         name="Hanyang-made Type88(MOD3)"
         class="2" 
-        reload_one_at_a_time="1" 
+        reload_one_at_a_time="0" 
         sight_range_modifier="2.0" 
-        projectile_speed="150" 
+        projectile_speed="205" 
         barrel_offset="0.8" 
         projectiles_per_shot="1" 
         use_basic_muzzle_smoke_effect="0"
@@ -34,7 +34,7 @@
         <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
         <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
         <animation key="cycle" animation_key="Brifle1.1" />
-        <animation key="reload" animation_key="reloading, oaat" />
+        <animation key="reload" animation_key="reloading, magazine rifle 0.9" />
         <animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
         <animation state_key="hold" animation_key="still, 88typemod3" />
         <animation state_key="hold_on_wall" animation_key="still, 88typemod3" />
@@ -48,6 +48,14 @@
         <animation state_key="prone_still" animation_key="still, 88typemod3" />
         <animation state_key="prone_moving" animation_key="walking, 88typemod3" />
         <animation state_key="walking_backwards" animation_key="walking, 88typemod3" />
+        <sound key="fire" fileref="type88mod3_fire_FromKF2.wav" pitch_variety="0.05" volume="1.5" />
+        <sound key="fire" fileref="88typeMod_ATTACK_1.wav" pitch_variety="0.05" volume="1.5" />
+        <sound key="fire" fileref="type88mod3_fire_FromKF2.wav" pitch_variety="0.05" volume="1.5" />
+        <sound key="fire" fileref="88typeMod_ATTACK_2.wav" pitch_variety="0.05" volume="1.5" />
+        <sound key="fire" fileref="type88mod3_fire_FromKF2.wav" pitch_variety="0.05" volume="1.5" />
+        <sound key="fire" fileref="88typeMod_ATTACK_3.wav" pitch_variety="0.05" volume="1.5" />
+        <sound key="fire" fileref="type88mod3_fire_FromKF2.wav" pitch_variety="0.05" volume="1.5" />
+        <sound key="fire" fileref="88typeMod_ATTACK_4.wav" pitch_variety="0.05" volume="1.5" />
         <sound key="fire" fileref="type88mod3_fire_FromKF2.wav" pitch_variety="0.05" volume="1.5" />
         <sound key="cycle" fileref="type88_cycle_FromBF1.wav" volume="0.6"/>
         <sound key="reload_one" fileref="m1903_reload_FromCOD16.wav" volume="0.4" />
@@ -65,20 +73,20 @@
         <hud_icon filename="gkw_88typemod3.png" />
         <weak_hand_hold offset="0.3" />
         <projectile file="88type_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7">
-            <result class="spawn" instance_class="projectile" instance_key="88type_mrr.projectile" min_amount="4" max_amount="4" offset="0 0.5 0" position_spread="0.5 0" direction_spread="0 0" />
-            <trigger class="impact" time_to_live="0.2"  />
+            <result class="spawn" instance_class="projectile" instance_key="88type_mrr.projectile" min_amount="4" max_amount="4" offset="0 0 0" position_spread="2 1" direction_spread="0 0" />
+            <trigger class="impact" time_to_live="0"  />
             <trail probability="1.0" key="laser_hyz_s" />
             <rotation class="motion" />
             <collision class="sticky" />
         </projectile>
         <effect class="muzzle" ref="hyz_laser_circle_1" lighting="0"/>
         <effect class="muzzle" ref="hyz_laser_circle_2" lighting="0"/>
-        <stance state_key="running" accuracy="0.4" />
-        <stance state_key="walking" accuracy="0.4" />
-        <stance state_key="crouch_moving" accuracy="0.65" />
-        <stance state_key="prone_moving" accuracy="0.65" />
-        <stance state_key="standing" accuracy="0.85" />
-        <stance state_key="crouching" accuracy="0.98" />
+        <stance state_key="running" accuracy="0.95" />
+        <stance state_key="walking" accuracy="0.95" />
+        <stance state_key="crouch_moving" accuracy="0.95" />
+        <stance state_key="prone_moving" accuracy="0.95" />
+        <stance state_key="standing" accuracy="0.95" />
+        <stance state_key="crouching" accuracy="0.95" />
         <stance state_key="prone" accuracy="1.0" />
         <stance state_key="over_wall" accuracy="1.0" />
         <modifier class="speed" value="0.4" />

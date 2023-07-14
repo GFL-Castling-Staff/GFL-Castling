@@ -19,7 +19,8 @@
         slot="0"
         reload_one_at_a_time="0" 
         sight_range_modifier="2.25"  
-        projectile_speed="215.75" 
+        projectile_speed="205.75" 
+        stance_accuracy_rate="0.8"
         barrel_offset="0.6" 
         projectiles_per_shot="1"
         stab_enabled="1"
@@ -73,21 +74,21 @@
     <capacity value="1" source="rank" source_value="0.0" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
-    <projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7">
-        <result class="spawn" instance_class="projectile" instance_key="ntw20_ap.projectile" min_amount="10" max_amount="10" offset="0 0.5 0" position_spread="0.5 0" direction_spread="0 0" />
-        <trigger class="impact" time_to_live="0.2"  />
+    <projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.6">
+        <result class="spawn" instance_class="projectile" instance_key="ntw20_ap.projectile" min_amount="10" max_amount="10" offset="0 0 0" position_spread="2 1" direction_spread="0 0" />
+        <trigger class="impact" time_to_live="1.22"  />
         <rotation class="motion" />
         <collision class="sticky" />
     </projectile>
     <effect class="muzzle" ref="at_bullet_smoke_trail" lighting="0"/>
     <trail probability="1" key="BulletApTrail_rf"/>
     <!--Accuracy, Movement speed-->
-    <stance state_key="running" accuracy="0.5" />
-    <stance state_key="walking" accuracy="0.7" />
-    <stance state_key="crouch_moving" accuracy="0.7" />
-    <stance state_key="prone_moving" accuracy="0.7" />
-    <stance state_key="standing" accuracy="0.85"/>
-    <stance state_key="crouching" accuracy="0.85" />
+    <stance state_key="running" accuracy="0.1" />
+    <stance state_key="walking" accuracy="0.1" />
+    <stance state_key="crouch_moving" accuracy="0.25" />
+    <stance state_key="prone_moving" accuracy="0.25" />
+    <stance state_key="standing" accuracy="0.95"/>
+    <stance state_key="crouching" accuracy="0.95" />
     <stance state_key="prone" accuracy="1.1" />
     <stance state_key="over_wall" accuracy="1.1" />
     <modifier class="speed" value="-0.15" />
