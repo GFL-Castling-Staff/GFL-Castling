@@ -13,7 +13,7 @@
 class RepairCrane : Tracker {
 	protected Metagame@ m_metagame;
 
-	array<string> m_vehicle_norepair = {"is2_m1895.vehicle"};
+	array<string> m_vehicle_norepair = {};
 	array<string> m_vehicle_nerf = {"armored_truck.vehicle"};
 
 	// --------------------------------------------

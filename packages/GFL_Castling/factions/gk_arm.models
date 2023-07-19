@@ -7,9 +7,21 @@
     <model score="1500" filename="gkd_light.xml"><requirement class="carry_item" slot="0" key="light_6"/><requirement class="rank" range="0 1000000" /></model>
     <model score="1500" filename="gkd_light.xml"><requirement class="carry_item" slot="0" key="light_5"/><requirement class="rank" range="0 1000000" /></model>
     <model score="1500" filename="gkd_light.xml"><requirement class="carry_item" slot="0" key="light_4"/><requirement class="rank" range="0 1000000" /></model>
-    <model score="1500" filename="gkd_light_hurt.xml"><requirement class="carry_item" slot="0" key="light_3"/><requirement class="rank" range="0 1000000" /></model>
-    <model score="1500" filename="gkd_light_hurt.xml"><requirement class="carry_item" slot="0" key="light_2"/><requirement class="rank" range="0 1000000" /></model>
-    <model score="1500" filename="gkd_light_hurt.xml"><requirement class="carry_item" slot="0" key="light_1"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_light.xml"><requirement class="carry_item" slot="0" key="light_3"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_light.xml"><requirement class="carry_item" slot="0" key="light_2"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_light.xml"><requirement class="carry_item" slot="0" key="light_1"/><requirement class="rank" range="0 1000000" /></model>
+
+    <model score="3000" filename="gkd_light_hurt.xml"><requirement class="carry_item" slot="0" key="light.carry_item"/><requirement class="weapon" key="gkw_hk512.weapon" slot="0" /></model>
+    <model score="3000" filename="gkd_light_hurt.xml"><requirement class="carry_item" slot="0" key="light_9"/><requirement class="weapon" key="gkw_hk512.weapon" slot="0" /></model>
+    <model score="3000" filename="gkd_light_hurt.xml"><requirement class="carry_item" slot="0" key="light_8"/><requirement class="weapon" key="gkw_hk512.weapon" slot="0" /></model>
+    <model score="3000" filename="gkd_light_hurt.xml"><requirement class="carry_item" slot="0" key="light_7"/><requirement class="weapon" key="gkw_hk512.weapon" slot="0" /></model>
+    <model score="3000" filename="gkd_light_hurt.xml"><requirement class="carry_item" slot="0" key="light_6"/><requirement class="weapon" key="gkw_hk512.weapon" slot="0" /></model>
+    <model score="3000" filename="gkd_light_hurt.xml"><requirement class="carry_item" slot="0" key="light_5"/><requirement class="weapon" key="gkw_hk512.weapon" slot="0" /></model>
+    <model score="3000" filename="gkd_light_hurt.xml"><requirement class="carry_item" slot="0" key="light_4"/><requirement class="weapon" key="gkw_hk512.weapon" slot="0" /></model>
+    <model score="3000" filename="gkd_light_hurt.xml"><requirement class="carry_item" slot="0" key="light_3"/><requirement class="weapon" key="gkw_hk512.weapon" slot="0" /></model>
+    <model score="3000" filename="gkd_light_hurt.xml"><requirement class="carry_item" slot="0" key="light_2"/><requirement class="weapon" key="gkw_hk512.weapon" slot="0" /></model>
+    <model score="3000" filename="gkd_light_hurt.xml"><requirement class="carry_item" slot="0" key="light_1"/><requirement class="weapon" key="gkw_hk512.weapon" slot="0" /></model>    
+
     <model score="1500" filename="thank_you_nz75_From_melondove.xml"><requirement class="carry_item" slot="0" key="NZ75.carry_item"/><requirement class="rank" range="0 1000000" /></model>
     <model score="1500" filename="thank_you_nz75_From_melondove.xml"><requirement class="carry_item" slot="0" key="NZ75_9"/><requirement class="rank" range="0 1000000" /></model>
     <model score="1500" filename="thank_you_nz75_From_melondove.xml"><requirement class="carry_item" slot="0" key="NZ75_8"/><requirement class="rank" range="0 1000000" /></model>
