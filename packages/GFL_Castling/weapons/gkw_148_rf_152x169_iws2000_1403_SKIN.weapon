@@ -66,25 +66,24 @@
     <weapon key="gkw_iws2000_1403_skill.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" player_death_drop_owner_lock_time="0">
         <tag name="melee" />
         <specification 
-        retrigger_time="0.6"
-        magazine_size="30"
         can_shoot_standing="1" 
         can_shoot_crouching="0" 
         can_shoot_prone="0" 
+        magazine_size="-1" 
         carry_in_two_hands="0" 
-        burst_shots="1"
+        character_state="death" 
+        consume="0"     
         name="IWS 2000-[The Seventh Banisher]-[Reaper]" 
-        class="0"
-        supperessed="1"
-        projectile_speed="100"
+        class="5"
         use_basic_muzzle_smoke_effect="0"
         stab_enabled="1"
-        stab_range="5.5"
-        sustained_fire_grow_step="0"
+        stab_range="5"
+        range="5"
+        success_probability="7.0"    
         />
         <next_in_chain key="gkw_iws2000_1403.weapon" share_ammo="0" />
-        <animation state_key="recoil"   animation_key="stabbing1, 88typemod3_melee" />
-        <animation state_key="stabbing" animation_key="stabbing1, 88typemod3_melee" />
+        <animation state_key="recoil"   animation_key="melee, iws2000 slash" />
+        <animation state_key="stabbing" animation_key="melee, iws2000 slash stab" />
         <animation state_key="hold" animation_key="walking, 88typemod3_melee" />
         <animation state_key="hold_on_wall" animation_key="still overwall, 88typemod3_melee" />
         <animation state_key="reload"   animation_key="reload, 88typemod3_melee" />
@@ -100,9 +99,21 @@
         <animation state_key="crouch_moving_backwards"  animation_key="walking backwards, 88typemod3_melee" />
         <model filename="gkw_rf_iws2000_1403.xml" />
         <inventory encumbrance="35.0" buy_price="340.0" sell_price="240.0" />
-        <projectile file="teal.projectile">
-            <result class="blast" radius="5.5" damage="3" decal="0" push="0.0" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
-        </projectile>
+        <sound key="fire" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.5"/>
+        <sound key="stab" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+        <sound key="stab" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+        <sound key="stab" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+        <sound key="stab" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+        <sound key="effect" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+        <sound key="effect" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+        <sound key="effect" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+        <sound key="effect" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+        <sound key="stab_hit" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+        <sound key="stab_hit" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+        <sound key="stab_hit" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+        <sound key="stab_hit_any" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
+        <sound key="stab_hit_any" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
+        <sound key="stab_hit_any" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.6" />        
         <stance state_key="running" accuracy="1" />
         <stance state_key="walking" accuracy="1" />
         <stance state_key="crouch_moving" accuracy="1" />
@@ -112,9 +123,8 @@
         <stance state_key="prone_moving" accuracy="1" />
         <stance state_key="over_wall" accuracy="1" />
         <hud_icon filename="gkw_iws2000_1403.png" />
-        <effect class="muzzle" ref="sawsnone" />
         <commonness value="0.0" can_respawn_with="1" in_stock="0" />
-        <modifier class="speed" value="0.6" />
+        <modifier class="speed" value="0.4" />
         <modifier class="hit_success_probability" value="-0.15" />
         <modifier class="detectability" value="0.45" />
     </weapon>
