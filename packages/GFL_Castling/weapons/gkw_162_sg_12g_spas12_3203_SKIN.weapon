@@ -44,7 +44,7 @@
 		<animation state_key="hold" animation_key="still, riot shield,aegissergeantGA" />
 		<animation state_key="hold_casual"  animation_key="crouching still, riot shield,aegissergeantGA" />
 		<animation state_key="hold_on_wall" animation_key="crouching still, riot shield,aegissergeantGA" />
-		<animation key="reload" animation_key="reloading, magazine rifle 1.8" />
+		<animation key="reload" animation_key="reloading, magazine rifle 1.2" />
 		<!-- Sounds -->
 		<sound key="fire" fileref="spas12_fire_FromWF.wav" pitch_variety="0.05" volume="1.5" />
 		<sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
@@ -141,19 +141,7 @@
 		<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 		<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 		<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
-		<animation key="recoil" animation_key="recoil1"/>
-		<animation key="recoil" animation_key="recoil2"/>
-		<animation key="recoil" animation_key="recoil3"/>
-		<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-		<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-		<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 		<effect class="muzzle" ref="muzzle_sg"/>
-		<animation state_key="hold_on_wall" animation_key="still"/>
-		<animation state_key="running" animation_key="running, bayonet"/>
-		<animation state_key="walking" animation_key="walking, hip fire"/>
-		<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
-		<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
-		<animation state_key="stabbing" animation_key="melee, bayonet"/>
 		<modifier class="hit_success_probability" value="-0.2"/>
 	</weapon>
 	<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_spas12_3203_skill.weapon">
@@ -201,7 +189,7 @@
 		<animation state_key="hold" animation_key="still, riot shield,aegissergeantGA" />
 		<animation state_key="hold_casual"  animation_key="crouching still, riot shield,aegissergeantGA" />
 		<animation state_key="hold_on_wall" animation_key="crouching still, riot shield,aegissergeantGA" />
-		<animation key="reload" animation_key="reloading, magazine rifle 1.8" />
+		<animation key="reload" animation_key="reloading, magazine rifle 1.2" />
 		<!-- Sounds -->
 		<sound key="fire" fileref="spas12skill_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.5" />
 		<sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
@@ -287,19 +275,7 @@
 		<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 		<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 		<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
-		<animation key="recoil" animation_key="recoil1"/>
-		<animation key="recoil" animation_key="recoil2"/>
-		<animation key="recoil" animation_key="recoil3"/>
-		<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-		<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-		<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 		<effect class="muzzle" ref="muzzle_sg"/>
-		<animation state_key="hold_on_wall" animation_key="still"/>
-		<animation state_key="running" animation_key="running, bayonet"/>
-		<animation state_key="walking" animation_key="walking, hip fire"/>
-		<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
-		<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
-		<animation state_key="stabbing" animation_key="melee, bayonet"/>
 		<modifier class="hit_success_probability" value="-0.2"/>
 	</weapon>
 </weapons>
