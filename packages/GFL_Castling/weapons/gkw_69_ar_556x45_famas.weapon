@@ -33,7 +33,14 @@
     <sound key="magazine_in" fileref="famas_mgz_in_FromCOD6R.wav" volume="0.9" />
     <sound key="cycle" fileref="famas_cycle_FromCOD6R.wav" volume="0.9" />
     <sound class="impact" fileref="rifle_drop.wav" />
-
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+    
     <model filename="gkw_ar_famas.xml" />
     <hud_icon filename="gkw_famas.png" />
     <weak_hand_hold offset="0.2" />
