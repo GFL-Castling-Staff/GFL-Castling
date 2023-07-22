@@ -25,6 +25,7 @@
 	<text key="Echelon enter the battlefield" text="场地清空，开始投放" />
 	<text key="Tactical Doll repair kit" text="人形修复工具包" />
 	<text key="Battlefield armor repair kit" text="战地修复组件" />
+	<text key="CZ75 AXE" text="CZ-75的战术飞斧" />	
 	<text key="88type Cluster grenade" text="88式重型手榴弹" />
 	<text key="RGD-5 Offensive grenade" text="RGD-5进攻型手榴弹" />
 	<text key="M67 fragmentation grenade" text="M67破片式手榴弹" />
@@ -85,12 +86,14 @@
 	<text key="Request IOP Supply" text="投放IOP安全贮藏箱"/>
 	<text key="IOP Stash Chest" text="IOP安全箱"/>
 	<text key="IOP Supply Chest" text="IOP补给箱"/>
+	<text key="IOP Supply-HVY T-Doll" text="IOP重装人形补给箱"/>
+	<text key="T6 Equipment Shop" text="Tier 6 装备商店"/>	
 	<text key="IOP Supply Deploy" text="IOP补给箱部署包"/>
 	<text key="Tough Battle Supply Box" text="绝境歼殛物资箱"/>
 	<text key="Enjoy Time Supply Box" text="欢乐时光物资箱"/>
 	<text key="Special Equipment Contract" text="特制装备订单"/>
 	<text key="Imprint Equipment Contract" text="烙印装备订单"/>
-	<text key="M24 Anti-Tank grenade" text="M24 反坦克手榴弹"/>
+	<text key="M24 Anti-Tank grenade" text="M24反坦克手榴弹"/>
 	<text key="Anti-Tank mine" text="反坦克地雷"/>
 	<text key="S.F. Impact Grenade" text="S.F. 碰炸球形手雷"/>
 	<text key="Med Bandage" text="绷带包"/>
@@ -132,8 +135,10 @@
 	
 	
 
-
+	<text key="AEK999 spawn" text="AEK-999的摩托"/>
+	<text key="Wheelchair spawn" text="双人协同型高机动作战轮椅"/>
 	<text key="Black Fancy Motorbike" text="黑色高级摩托车"/>
+	<text key="Wheel Chair" text="双人协同型高机动作战轮椅"/>
 
 	<!-- 空投支援 -->
 
@@ -173,6 +178,8 @@
 
 	<text key="Provocation Fairy" text="嘲讽妖精" />
 	<text key="Deploy Target Drone" text="嘲讽靶机" />
+	<text key="Unlock" text="解锁投送中" />
+	<text key="Targetdrone,Unlock!" text="已投送嘲讽靶机！" />
 
 	<text key="droping in" text="投放中"/>
 
@@ -181,7 +188,10 @@
 	<text key="Defence Fairy - Sandbag Cover" text="防御妖精 - 沙袋掩体"/>	
 	<text key="Fairy Command:Defence Fairy - Hesco Bastion" text="妖精指令:防御妖精 - Hesco防爆墙"/>
 	<text key="Fairy Command:Defence Fairy - Sandbag Cover" text="妖精指令:防御妖精 - 沙袋掩体"/>
-	<text key="Amos" text="Amos 艾莫号"/>	
+	<text key="Ogas Pulse Generator" text="OGAS脉冲发生器"/>
+	<text key="shelter" text="掩体"/>
+	<text key="Bunker" text="碉堡"/>	
+	<text key="ELMO" text="ELMO 艾莫号"/>	
 	<text key="Mortar Truck - The Guer" text="迫击炮卡车 - 古尔号"/>
 	
 	<text key="Degeyter I" text="Degeyter I 狄盖特 - 武装气垫船"/>
@@ -193,9 +203,6 @@
 	<text key="Parachute Fairy-[Chiara IV]" text="空降妖精-[Chiara IV 切尔拉 - 巡回式机枪车]"/>
 	<text key="Parachute Fairy-[Martina V]" text="空降妖精-[Martina V 玛蒂娜 - 廉价运输悍马]"/>
 
-	<text key="GK-Scarecrow" text="Scarecrow “稻草人”"/>
-	<text key="GK-Scarecrow-[Battlefield Purge]" text="Scarecrow “稻草人”-[战场清洗]"/>
-	<text key="GK-Scarecrow-[Shadow Predation]" text="Scarecrow “稻草人”-[暗影捕食]"/>
 
 	<!-- 敌人单位翻译 -->
 	<text key="SF-Manticore" text="强 无敌“蝎甲兽”机甲"/>
@@ -309,7 +316,7 @@
 	<!-- 帕拉蒂斯普通单位命名多以历史兵种为主 -->
 	<!-- 帕拉蒂斯使用物品多以宗教相关 -->
 
-	<text key="E.L.I.D. Armed Infected" text="E.L.I.D. 武装感染者 "/>
+	<text key="E.L.I.D. Armed Infected" text="E.L.I.D. 武装感染者"/>
 	<text key="E.L.I.D. Infected" text="E.L.I.D. 感染者 "/>
 	<text key="E.L.I.D. Spitter" text="E.L.I.D. 喷吐者"/>
 	<text key="E.L.I.D. Rapid" text="E.L.I.D. 急速感染者"/>
@@ -330,6 +337,24 @@
 	<text key="Request Destroyer Waypoint Strike" text="请求破坏者航点打击"/>
 	<text key="Confirm,Contacting to Dreamer" text="确认,正在联系梦想家"/>
 	<text key="Waypoint Strike On going!" text="航点打击已到达!"/>
+
+	<text key="dinergate" text="兵蚁"/>
+	<text key="dinergate!" text="兵蚁已送达"/>
+
+	<text key="It's time" text="是时候了!"/>
+
+	<text key="Assualt Infanry" text="突击部队"/>
+	<text key="Request S.F. Assault Infanry" text="请求铁血工造突击单位支援"/>
+
+	<text key="Mecha Armour" text="机甲单位"/>
+	<text key="Request S.F. Automation Armour" text="请求铁血工造自律机甲单位支援"/>
+	
+	<text key="Mecha Infanry" text="机械部队"/>
+	<text key="Request S.F. Automation Infanry" text="请求铁血工造自律单位支援"/>
+
+	<text key="Reinforcements - Paratrooper Squad" text="增援部队 - 伞降小队"/>
+	<text key="Requesting 20 paratroopers" text="请求伞降部署20单位支援"/>
+
 
 	<!-- KCCO 支援台词 -->
 	<text key="Argo-Vela" text="阿尔戈-船帆座"/>
@@ -377,7 +402,7 @@
 	<text key="pard_nyto_zombiecall" text="于此将父亲大人的旨意传递"/>
 	<text key="pard_nyto_zombiecall" text="祂允我们将福音带给你们，旧世界的灵魂"/>
 
-	<text key="Trash is trash. Take more here." text="废物就是废物，把下一批废物叫来。"/>
+	<text key="Trash is trash. Take more here." text="废物就是废物，把下一批废物叫来"/>
 	<text key="Trashs, go and prove your worth and loyalty" text="废物们，前去证明你们的价值和忠诚"/>
 
 	<text key="Request Uhlan Assaulting" text="无法突破敌方战线，请求枪骑兵突袭，虚识图景已同步"/>
@@ -489,7 +514,7 @@
 	<text key="NEGEV-[Manic Blood]" text="内格夫-[狂躁血脉]" />
 	<text key="G11(MOD3)-[Stance of the Assaulter]" text="G11(MOD3)-[突击者姿态]" />
 	<text key="UMP9 (MOD3)-[Snow Owl's Roar]" text="UMP9 (MOD3)-[白鸮轰鸣]" />
-	<text key="Zastava M21-[Howl of the Nightingale]" text="Zastava M21-[夜枭轰鸣]" />
+	<text key="Zastava M21" text="扎斯塔瓦M21突击步枪" />
 	<text key="AN-94-[Doll Trigger]" text="AN-94-[人偶扳机]" />
 	<text key="AN-94(MOD3)-[Doll Trigger]" text="AN-94(MOD3)-[人偶扳机]" />
 	<text key="KS-23-[Damage Focus]" text="KS-23-[火力专注]" />
@@ -508,7 +533,6 @@
 	<text key="QJY88-[Slothful Rage]" text="QJY88-[懒惰的怒火]" />
 	<text key="M14(MOD3)-[Clear Fighting Spirit]" text="M14(MOD3)-[明澈斗志]"/>
 	<text key="AK74U-[Repulsive Response]" text="AK74U-[排斥反应]"/>
-	<text key="StG44 (MOD3)-[Firestorm]" text="StG44 (MOD3)-[炎风暴]"/>
 	<text key="Browning M2HB" text="勃朗宁M2HB重机枪"/>
 	<text key="Browning M2HB-[Terminating Barrage]" text="勃朗宁M2HB重机枪-[连珠终结]"/>
 	<text key="MG34-[Damage Focus MG]" text="MG34-[火力专注 MG]"/>
@@ -516,13 +540,6 @@
 	<text key="AA-12-[Ketonemia]" text="AA-12-[酮血症]"/>
 	<text key="XM8 (MOD3)-[Hamper Matrix]" text="XM8 (MOD3)-[牵制矩阵]"/>
 	<text key="Mk 46-[Raid Focus MG]" text="Mk 46-[强袭专注 MG]"/>
-	<text key="GK-Architect-[Battlefield Spirit]" text="GK-Architect-[场地精神]"/>
-	<text key="GK-Adeline-[Pronounced Death]" text="GK-Adeline-[告死]"/>
-	<text key="GK-Dreamer-[Execution Time]" text="GK-Dreamer-[行刑时刻]"/>
-	<text key="GK-Dreamer-[Nirvanic Demolition]" text="GK-Dreamer-[寂灭爆破]"/>
-	<text key="GK-Hunter-[Exterminating Blood Shot]" text="GK-Hunter-[灭狱血弹]"/>
-	<text key="GK-Ouroboros-[Venomous Descent]" text="GK-Ouroboros-[热毒坠落]"/>
-	<text key="GK-Gager-[Lunar Return]" text="GK-Gager-[落月回返]"/>
 	<text key="AS Val Shaft" text="AS Val“巨浪”突击步枪"/>
 	<text key="AS Val Shaft-[Damage Focus N]" text="AS Val“巨浪”突击步枪-[火力专注N]"/>
 	<text key="AS Val Shaft(MOD3)" text="AS Val“巨浪”突击步枪(MOD3)"/>
@@ -541,6 +558,7 @@
 	<text key="QBZ97" text="97式自动步枪" />
 	<text key="QBZ97-[Prayers in the Wind]" text="97式自动步枪-[风中祝祷]" />
 	<text key="ASH-12.7-[Elimination Focus]" text="ASH-12.7-[歼灭专注]" />
+	<text key="ASH-12.7-[Elimination Focus]-(PS-12B)" text="ASH-12.7-[歼灭专注](PS-12B)" />
 	<text key="RFB-[Ammo Supremacy]" text="RFB-[至高枪弹]" />
 	<text key="ART556-[Charge Focus]" text="ART556-[冲锋专注]" />
 	<text key="T91-[Annihilation Focus N]" text="T91-[歼灭专注N]"/>
@@ -577,6 +595,7 @@
 	<text key="Dragunov SVD-[Assault Focus]" text="德拉贡诺夫SVD狙击步枪-[突击专注]"/>
 	<text key="Dragunov SVD-EX" text="德拉贡诺夫SVD狙击步枪EX"/>
 	<text key="FO-12-[Critical starburst]" text="FO-12-[临界星暴]"/>
+	<text key="Resuce Dog JACK" text="搜救犬“闪电杰克”"/>
 	<text key="C-MS(CBJ)" text="C-MS-[心情链环-普通弹]"/>
 	<text key="C-MS(CBJ-APS)" text="C-MS-[心情链环-亚音速弹]"/>
 	<text key="C-MS(CBJ-ST)" text="C-MS-[心情链环-勺尖弹]"/>
@@ -601,6 +620,8 @@
 	<text key="Bushmaster ACR-[Shadow Strangling Tune]" text="大毒蛇ACR突击步枪-[暗影绞杀曲]"/> 
 	<text key="General Liu" text="刘氏步枪"/>
 	<text key="General Liu-[Shared Hatred]" text="刘氏步枪-[同仇敌忾]"/>
+	<text key="Sturmgewehr 44" text="StG44突击步枪"/>
+	<text key="Sturmgewehr 44(MOD3)" text="StG44突击步枪(MOD3)"/>
 	<text key="SR3-MP Vikhr" text="SR3-MP“旋风”突击步枪"/>
 	<text key="SR3-MP Vikhr-[Damage Focus]" text="SR3-MP“旋风”突击步枪-[火力专注]"/>
 	<text key="SR3-MP Vikhr-[Shrine Maidens Super Lucky Draw]" text="SR3-MP“旋风”突击步枪-[神子上上签]"/>
@@ -611,6 +632,9 @@
 	<text key="Winchester Liberator" text="温彻斯特“解放者”霰弹枪"/>
 	<text key="Colt Defender" text="柯尔特“防卫者”霰弹枪"/> 
 	<text key="Walther P38" text="瓦尔特P38手枪"/>
+	<text key="Beretta M9" text="伯莱塔M9手枪"/>
+	<text key="Borchardt C93" text="博查特C93手枪"/>
+	<text key="Browning Hi-Power" text="勃朗宁“大威力”HP-35手枪"/>
 	<text key="Browning M1919A4" text="勃朗宁M1919A4机枪"/>
 	<text key="Browning M1919A4-[Hunting Impulse]" text="勃朗宁M1919A4机枪-[猎杀冲动]"/>
 	<text key="Browning M1919A4(MOD3)" text="勃朗宁M1919A4机枪(MOD3)"/>
@@ -623,6 +647,7 @@
 	<text key="Walther PPK(MOD3)-[Mach Tempest]" text="瓦尔特PPK手枪(MOD3)-[烈旋音波]"/>
 	<text key="AAC Honey Badger" text="AAC“蜜獾”式突击步枪"/>
 	<text key="XM3(MOD3)-[White Phantom]" text="XM3(MOD3)-[白色幽灵]"/>
+	<text key="LaRue OBR(MOD3)-[Blade of Frost]" text="LaRue OBR(MOD3)-[霜刃回锋]"/>
 	<text key="GM6 Lynx" text="GM6“山猫”反器材狙击步枪"/>
 	<text key="M1 Garand" text="M1加兰德半自动步枪"/>
 	<text key="M1 Garand-[Rifle Grenade]" text="M1加兰德半自动步枪-[60mm枪榴弹发射器]"/>
@@ -818,6 +843,67 @@
 	<text key="Ameli MG82" text="阿梅利MG82通用机枪" />
 	
 
+	<!-- 融合势力武器翻译 -->
+	<text key="GK-Manticore" text="强 无敌“蝎甲兽”机甲"/>
+	<text key="GK-Dinergate" text="Dinergate 兵蚁"/>
+	<text key="GK-Guardian" text="Guardian 护卫者"/>
+	<text key="GK-Jaeger" text="Jaeger 猎鸥" />
+	<text key="GK-Jaeger SWAP" text="Jaeger SWAP 强化型猎鸥" />
+	<text key="GK-Ripper" text="Ripper 切割者"/>
+	<text key="GK-Ripper SWAP" text="Ripper SWAP 强化型切割者"/>
+	<text key="GK-Striker" text="Striker 痛击者"/>
+	<text key="GK-Striker SWAP" text="Striker SWAP 强化型痛击者"/>
+	<text key="GK-Vespid" text="Vespid 胡蜂"/>
+	<text key="GK-Vespid SWAP" text="Vespid SWAP 强化型胡蜂"/>
+	
+	<text key="GK-Agent" text="Agent “代理人”"/>
+	<text key="GK-Alchemist" text="Alchemist “炼金术士”"/>
+	<text key="GK-Architect" text="Architect “建筑师”"/>
+	<text key="GK-Architect-[Battlefield Spirit]" text="Architect “建筑师”-[场地精神]"/>
+	<text key="GK-Architect:NVW" text="Architect:NVW “建筑师”NVW型"/>
+	<text key="GK-Architect:NVW-[Water Smash]" text="Architect:NVW “建筑师”NVW型-[水弹乱斗]"/>
+	<text key="GK-Destroyer" text="Destroyer “破坏者”"/>
+	<text key="GK-Dreamer" text="Dreamer “梦想家”"/>
+	<text key="GK-Dreamer-[Execution Time]" text="Dreamer “梦想家”-[行刑时刻]"/>
+	<text key="GK-Dreamer-[Nirvanic Demolition]" text="Dreamer “梦想家”-[寂灭爆破]"/>
+	<!-- <text key="Excutioner-Wind rose" text="Excutioner “刽子手-风雾玫瑰”"/>
+	<text key="Excutioner-Queen of the Moon" text="Excutioner “刽子手-霁月皇后”"/> -->
+	<text key="GK-Gager" text="Gager “计量官”"/>
+	<text key="GK-Gager-[Lunar Return]" text="Gager “计量官”-[落月回返]"/>
+	<text key="GK-Hunter" text="Hunter “猎手”"/>
+	<text key="GK-Hunter-[Exterminating Blood Shot]" text="Hunter “猎手”-[灭狱血弹]"/>
+	<text key="GK-Judge" text="Judge “法官”"/>
+	<text key="GK-Intruder" text="Intruder “干扰者”"/>
+	<text key="GK-Intruder-[IA-Machine Gun]" text="Intruder “干扰者”-[IA-机枪]"/>
+	<text key="GK-Scarecrow" text="Scarecrow “稻草人”"/>
+	<text key="GK-Scarecrow-[Battlefield Purge]" text="Scarecrow “稻草人”-[战场清洗]"/>
+	<text key="GK-Scarecrow-[Shadow Predation]" text="Scarecrow “稻草人”-[暗影捕食]"/>
+	<text key="GK-Ouroboros" text="Ouroboros “衔尾蛇”"/>
+	<text key="GK-Ouroboros-[Venomous Descent]" text="Ouroboros “衔尾蛇”-[热毒坠落]"/>
+
+	<text key="GK-Adeline" text="Adeline 黑涅托"/>
+	<text key="GK-Adeline-[Pronounced Death]" text="Adeline 黑涅托-[告死]"/>
+	<!-- <text key="Alina" text="Alina 白涅托"/> -->
+
+
+	<!-- HVY武器翻译 -->
+	<text key="AGS-30 Atlant" text="AGS-30“阿特兰”步兵自动榴弹发射器"/>
+	<text key="2B14 Podnos" text="2B14“托盘”82mm迫击炮"/>
+	<text key="Tokarev 33(2B14)" text="托卡列夫TT-33 手枪(2B14配备)"/>
+	<text key="AT4" text="AT-4 84mm反坦克火箭筒"/>
+	<text key="AT4(Incendiary)" text="AT-4单兵火箭筒(燃烧弹)"/>
+	<text key="TEC-9(at4)" text="TEC-9冲锋手枪(AT-4配备)"/>
+	<text key="M2 Mortar" text="M2 60mm迫击炮"/>
+	<text key="M1A1(m2)" text="M1A1卡宾枪(M2配备)"/>
+	<text key="SMAW MK153-[HEAA]" text="SMAW MK153 83mm多用途火箭筒-[高爆反装甲弹]"/>
+	<text key="SMAW MK153-[NE]" text="SMAW MK153 83mm多用途火箭筒-[温压弹]"/>
+	<text key="SMAW MK153-[Beretta M93R]" text="伯莱塔M93R冲锋手枪(MK153配备)"/>
+	<text key="QLZ04" text="QLZ-04式自动榴弹发射器"/>
+	<text key="QLZ04-[Straight Mode]" text="QLZ-04式自动榴弹发射器-[直射模式]"/>
+	<text key="PEAK79(qlz04)" text="PEAK79冲锋枪(QLZ-04配备)"/>
+	<text key="Kamikaze" text="“神风”"/>
+	<text key="PPSH41-Engineering Mecha" text="PPSh-41 工程维修机甲"/>
+
 	
 	<!-- 皮肤翻译 -->
 	<text key="Ameli MG82-[Gift-selling Christmas Tree]" text="阿梅利MG82通用机枪-[卖礼物的圣诞树]" />
@@ -895,8 +981,7 @@
 	<text key="AN-94-['Antiya']-[Doll Trigger]" text="AN-94-['安提娅']-[人偶扳机]" />
 	<text key="RPK-16-['Renate']" text="RPK-16-['蕾娜特']" />
 	<text key="RPK-16-['Renate']-[Wits of the Silver Fox]" text="RPK-16-['蕾娜特']-[银狐的狡黠]"/>
-	<text key="Zastava M21-[Queen of the White Pieces]" text="Zastava M21-[白棋王后]" />
-	<text key="Zastava M21-[Queen of the White Pieces]-[Howl of the Nightingale]" text="Zastava M21-[白棋王后]-[夜枭轰鸣]" />
+	<text key="Zastava M21-[Queen of the White Pieces]" text="扎斯塔瓦M21突击步枪-[白棋王后]" />
 	<text key="JS9-[Orca's Journey]" text="JS9-[逆戟之行]" />
 	<text key="SPP-1-[Blue Lotus Night]" text="SPP-1-[蓝莲夜]"/>
 	<text key="AK-74U-[Lily of the Valley]" text="AK-74U-[君影草]"/>
@@ -1002,10 +1087,10 @@
 	<text key="Type 100(MOD3)-[Treasure Buried Deep Within]-[Type Concentrate]" text="一〇〇式冲锋枪(MOD3)-[埋入心底的宝藏]-[专注模式]"/>
 	<text key="Type 100(MOD3)-[Treasure Buried Deep Within]-[Type LIN+]" text="一〇〇式冲锋枪(MOD3)-[埋入心底的宝藏]-[LIN动模式]"/>	
 	<text key="Mossberg Model 590-[Snowy Nil]" text="莫斯伯格M590霰弹枪-[雪朝颜]"/>
-	<text key="Beretta LTLX 7000-[Dancing Shrine Maiden]" text="贝瑞塔LTLX7000霰弹枪-[巫姬翩舞起]"/>
-	<text key="Beretta LTLX 7000-[Dancing Shrine Maiden]-[Opposites Repel]" text="贝瑞塔LTLX7000霰弹枪-[巫姬翩舞起]-[异类相斥]"/>
-	<text key="Beretta LTLX 7000-[Night-Tide Invitation]" text="贝瑞塔LTLX7000霰弹枪-[夜潮的邀约]"/>
-	<text key="Beretta LTLX 7000-[Night-Tide Invitation]-[Opposites Repel]" text="贝瑞塔LTLX7000霰弹枪-[夜潮的邀约]-[异类相斥]"/>	
+	<text key="Beretta LTLX 7000-[Dancing Shrine Maiden]" text="伯莱塔LTLX7000霰弹枪-[巫姬翩舞起]"/>
+	<text key="Beretta LTLX 7000-[Dancing Shrine Maiden]-[Opposites Repel]" text="伯莱塔LTLX7000霰弹枪-[巫姬翩舞起]-[异类相斥]"/>
+	<text key="Beretta LTLX 7000-[Night-Tide Invitation]" text="伯莱塔LTLX7000霰弹枪-[夜潮的邀约]"/>
+	<text key="Beretta LTLX 7000-[Night-Tide Invitation]-[Opposites Repel]" text="伯莱塔LTLX7000霰弹枪-[夜潮的邀约]-[异类相斥]"/>	
 	<text key="DSR-50-[Pantone Peony]" text="DSR-50-[红牡丹]"/>
 	<text key="DSR-50-[Highest Bidder]" text="DSR-50-[最高出价]"/>
 	<text key="Colt Defender-[Lily's Reverie]" text="柯尔特“防卫者”霰弹枪-[梦倒仙]"/> 
@@ -1017,6 +1102,7 @@
 	<text key="M1 Garand-[Letter from the Winter Cypress]" text="M1加兰德半自动步枪-[冬柏来信]"/>
 	<text key="M1 Garand-[Letter from the Winter Cypress]-[Rifle Grenade]" text="M1加兰德半自动步枪-[冬柏来信]-[60mm枪榴弹发射器]"/>	
 	<text key="MG4-[Survival Club Member]" text="MG4-[生存社员]"/>
+	<text key="MG4-[Sneaker Costume]" text="MG4-[运动服]"/>
 	<text key="AK-15-['Alvin']" text="AK-15-['艾尔文']"/>
 	<text key="IWS 2000-[Sand Castle Terminator]" text="IWS 2000-[沙堡终结者]"/>
 	<text key="IWS 2000-[Sand Castle Terminator]-[Hawk Assault]" text="IWS 2000-[沙堡终结者]-[巨鹰攻势]"/>
@@ -1099,8 +1185,8 @@
 	<text key="Remington R5 RGP-[Waltz of the End]" text="雷明顿R5 RGP突击步枪-[终幕双人舞]" />
 	<text key="FAMAE SAF-[Cozy Winter Deliverer]" text="FAMAE SAF-[暖冬速递员]" />
 	<text key="De lisle Carbine-[Weaving starlight]" text="德利尔卡宾枪-[编织星光]" />
-	<text key="Beretta Px4 Storm-[Queen of Christmas Morning]" text="贝瑞塔Px4 风暴-[圣诞晨间女王]"/>
-	<text key="Beretta Cx4 Storm-[Marvellous Poolside Christmas Encounter]" text="贝瑞塔Cx4 风暴-[泳池边的圣诞奇遇]"/>
+	<text key="Beretta Px4 Storm-[Queen of Christmas Morning]" text="伯莱塔Px4 风暴-[圣诞晨间女王]"/>
+	<text key="Beretta Cx4 Storm-[Marvellous Poolside Christmas Encounter]" text="伯莱塔Cx4 风暴-[泳池边的圣诞奇遇]"/>
 	<text key="Brenten-[Fluffy Berry Tart]" text="布伦·坦半自动手枪-[绒绒草莓挞]"/>
 	<text key="Lusa-[Winter Deer latté]" text="卢萨冲锋枪-[冬鹿拿铁]"/>	
 	<text key="PM1910-[Queen's Tower Party]" text="PM1910-[女王的高塔派对]"/>	
@@ -1229,6 +1315,7 @@
 	<text key="M950A(MOD3)-[Ace on Duty]" text="M950A(MOD3)-[王牌值日生]"/>
 	<text key="M950A(MOD3)-[The Warbler And The Rose]" text="M950A(MOD3)-[柳莺与蔷薇]"/>
 	<text key="G3(MOD3)-[Parsty Cook on Battlefield]" text="G3(MOD3)-[战地糕点师]"/>
+	<text key="G3(MOD3)-[Parsty Cook on Battlefield] - G3SG1" text="G3(MOD3)-[战地糕点师] - G3SG1"/>
 	<text key="G3(MOD3)-[Parsty Cook on Battlefield] - Semi Auto" text="G3(MOD3)-[战地糕点师] - 半自动"/>
 	<text key="MG4(MOD3)-[Survival Club Member]" text="MG4(MOD3)-[生存社员]"/>
 	<text key="MG4(MOD3)-[Survival Club Member]-[Haunted House Hammer]" text="MG4(MOD3)-[生存社员]-[鬼屋之锤]"/>
@@ -1284,7 +1371,6 @@
 	<text key="AT mine" text="反坦克地雷" />
 	<text key="Naval mine" text="水雷" />
 	<text key="stun grenade" text="震撼弹" />
-	<text key="grenade" text="榴弹" />
 	<text key="Deployed Artillery" text="炮击阵地"/>
 	<text key="Jack Daniels" text="M16的最爱" />
 	<text key="cigarettes" text="受潮的香烟" />
@@ -1368,7 +1454,7 @@
 	<text key="Dismiss" text="重新集结部队" />
 
 	<text key="Soldiers killed" text="杀敌数" />
-	<text key="Casualties" text="战术人形伤亡数" />
+	<text key="Casualties" text="伤亡数" />
 	<text key="Vehicles destroyed" text="载具摧毁数" />
 	<text key="Targets destroyed" text="重要目标摧毁数" />
 	<text key="Completed" text="目标达成" />
@@ -1433,7 +1519,7 @@
 	<text key="learning stealth" text="初试啼声" />
 
 	<text key="* stab &#37;target_count enemy soldiers, silently" text="* 悄悄刺杀 &#37;target_count 个敌方单位" />
-	<text key="* shoot &#37;target_count enemy soldiers, silently" text="* 悄悄射杀 &#37;target_count enemy 个敌方单位, " />
+	<text key="* shoot &#37;target_count enemy soldiers, silently" text="* 悄悄射杀 &#37;target_count 个敌方单位, " />
 	<text key="* locate &#37;target_count important enemy targets" text="* 定位 &#37;target_count 个重要目标" />
 	<text key="Special Forces Trainee" text="报时钟响" />
 	<text key="Spec Ops Expert" text="和平缔造者" />
@@ -1575,6 +1661,7 @@
 	<text key="Chaos End" text="混沌终局" />
 	<text key="* destroy &#37;target_count Uhlan" text="* 摧毁 &#37;target_count 辆 枪骑兵-Uhlan 巡航坦克" />
 	<text key="* destroy &#37;target_count Pyxis" text="* 摧毁 &#37;target_count 座 指南针-Pyxis 轻型碉堡" />
+	<text key="* destroy %target_count Aceso" text="* 摧毁 &#37;target_count 辆 阿克索之皿-Aceso" />
 
 	<text key="War is Firepowder" text="战争就是火力" />
 	<text key="War is Quantity" text="战争就是数量" />
@@ -1595,5 +1682,13 @@
 	<text key="Griffin Expendables" text="格里芬敢死队" />
 
 	<text key="* complete &#37;target_count Stages" text="* 获得 &#37;target_count 次关卡胜利" />
+
+	<text key="Vehicle Log" text="拆迁办事处记录" />
+
+	<text key="* destroy &#37;target_count moth" text="* 摧毁 &#37;target_count 辆 趋光者-Moth 轻型飞行器" />
+	<text key="* destroy &#37;target_count KCCO1130" text="* 摧毁 &#37;target_count 座 新苏联近防机炮系统" />
+	<text key="* destroy %target_count ATV" text="* 摧毁 &#37;target_count 辆 敌方ATV类载具" />
+	<text key="* destroy %target_count AA" text="* 摧毁 &#37;target_count 座 防空设施" />
+	<text key="* destroy %target_count turret" text="* 摧毁 &#37;target_count 座 固定炮塔" />
 
 </translation>
