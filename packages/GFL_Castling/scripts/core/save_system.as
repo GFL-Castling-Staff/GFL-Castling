@@ -1,18 +1,25 @@
+#include "tracker.as"
 #include "helpers.as"
+#include "admin_manager.as"
+#include "log.as"
+#include "query_helpers.as"
+#include "query_helpers2.as"
+#include "gamemode.as"
+#include "gamemode_invasion.as"
+#include "GFLhelpers.as"
+#include "GFLplayerlist.as"
 
-// sid = profile_hash
+// sid = sid
+// 记录玩家武器数据 使用<weapon key="武器key">形式存储在<weapons>元素下
+// 记录玩家通用数据
 
 class player_data
 {
-    array<Tdoll_Information@> m_inventory;
+    array<string> m_inventory;
 	int m_corenum;
     string m_playername;
-    string m_player_sid;
 
-	player_data(string name, string id) {
-		m_playername = name;
-		m_player_sid = id;
-	}
+	player_data() {}
 
     void setCoreNumber(int core){
         m_corenum = core;
@@ -44,48 +51,27 @@ class player_data
     }
 }
 
-class Tdoll_Information
-{
-    int m_doll_index;
-    array<int> m_skin_index;
-    array<string> m_type;
-    bool m_own;
-    Tdoll_Information(int index)
-    {
-        m_doll_index = index;
+const XmlElement@ readFile(string filename){
+    const XmlElement@ root = readXML(m_metagame,filename).getFirstChild();
+    if(root is null){
+        _log("readFile is null,create");
+        writeXML(m_metagame,filename,XmlElement(filename));
+        @root = readXML(m_metagame,filename).getFirstChild();
     }
-
-    void addSkinIndex(int skin_index)
-    {
-        for(uint i=0;i<m_skin_index.size();i++){
-            if (m_skin_index[i] == skin_index){
-                return;
-            }
-        }
-        m_skin_index.insertLast(skin_index);
-    }
-
-    void addType(string type)
-    {
-        for(uint i=0;i<m_type.size();i++){
-            if (m_type[i] == type){
-                return;
-            }
-        }
-        m_type.insertLast(type);
-    }
-
-    void enable()
-    {
-        m_own = true;
-    }
-
-    void disable()
-    {
-        m_own = false;
-    }
+    return root;
 }
 
+void writeXML(const Metagame@ metagame, string filename, XmlElement@ xml, string location = "" ){
+	XmlElement command("command");
+		command.setStringAttribute("class", "save_data");
+		command.setStringAttribute("filename", filename);
+        if(location != "")
+        {
+            command.setStringAttribute("location", location);
+        }
+		command.appendChild(xml);
+	metagame.getComms().send(command);
+}
 
 
 void PlayerProfileSave(Metagame@ m_metagame,player_data@ player_info) {
@@ -130,4 +116,33 @@ void PlayerProfileSave(Metagame@ m_metagame,player_data@ player_info) {
 
 	m_metagame.getComms().send(command);
 
+}
+
+
+class Save_System : Tracker {
+    protected Metagame@ m_metagame;
+    Save_System(Metagame@ metagame)
+    {
+        @m_metagame = @metagame;
+    }
+
+	bool hasEnded() const {
+		// always on
+		return false;
+	}
+	// --------------------------------------------
+	bool hasStarted() const {
+		// always on
+		return true;
+	}
+
+    protected void handleChatEvent(const XmlElement@ event){
+		string message = event.getStringAttribute("message");
+		string p_name = event.getStringAttribute("player_name");
+        GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
+        if (playerInfo.m_name == default_string ) return;
+
+        string profile_hash = playerInfo.m_hash;
+
+	}
 }

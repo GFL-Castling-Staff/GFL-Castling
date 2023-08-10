@@ -74,8 +74,8 @@ class GFL_playerInfo{
     int m_characterid; //角色id
     string m_name;
     GFL_equipment@ m_equipment; //玩家装备（包括武器啊副武器啊投掷物这些,主要可能后面存档会添加额外装备）
-	string m_ip;
-	string m_sid;   
+	string m_hash;
+	string m_sid;
     float m_xp = 0;
     int m_rp = 0;
     
@@ -104,7 +104,14 @@ class GFL_playerInfo{
     void setRp(int rp){
         m_rp = rp;
     }
-    
+
+    void setHash(string hash){
+        m_hash = hash;
+    }
+    void setSid(int sid){
+        m_sid = sid;
+    }
+
     float getXp(){return m_xp;}
     int getRp(){return m_rp;}
 
@@ -305,6 +312,9 @@ GFL_playerInfo@ getPlayerListInfoFromXML(Metagame@ m_metagame, const XmlElement@
     string armorkey = item[4].getStringAttribute("key"); 
     playerequipment.setWeapon(weapon1key,weapon2key,grenadekey,armorkey);
     playerinfo.setPlayerEquipment(playerequipment);
+
+    string profile_hash = playerinfo.getStringAttribute("profile_hash"); 
+    playerinfo.setHash(profile_hash);
     return playerinfo;
 }
 

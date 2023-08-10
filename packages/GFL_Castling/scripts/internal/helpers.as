@@ -8,6 +8,10 @@ class XmlElement {
 		// COPY
 		m_data = data;
 	}
+	// --------------------------------------------
+    XmlElement(const XmlElement@ original) {
+		m_data = original.m_data;
+    }
 
 	// --------------------------------------------
 	XmlElement(string name) {
@@ -20,6 +24,7 @@ class XmlElement {
 	const dictionary@ toDictionary() const {
 		return m_data;
 	}
+
 
 	// --------------------------------------------
 	bool empty() const {
@@ -131,6 +136,7 @@ class XmlElement {
 		array<dictionary>@ childrenData = null;
 		if (m_data.exists("Children") && m_data.get("Children", @childrenData)) {
 			for (uint i = 0; i < childrenData.size(); ++i) {
+				if(childrenData[i] is null){continue;}
 				const XmlElement child(childrenData[i]);
 				if (child.getName() == name) {
 					elements.push_back(child);
@@ -140,7 +146,7 @@ class XmlElement {
 
 		return elements;
 	}
-
+	
 	// --------------------------------------------
 	const XmlElement@ getFirstChild() const {
 		const XmlElement@ element = null;
@@ -164,18 +170,69 @@ class XmlElement {
 
 		if (childrenData !is null) {
 			childrenData.insertLast(child.toDictionary());
+		}else{
+			@childrenData = array<dictionary>();
+			m_data.set("Children", @childrenData);
+		}
+	}
+
+	void appendChilds(array<const XmlElement@> childs) {
+		for(uint i=0;i<childs.size();++i){
+			const XmlElement@ child = childs[i];
+			array<dictionary>@ childrenData;
+			if (!m_data.exists("Children")) {
+				@childrenData = array<dictionary>();
+				m_data.set("Children", @childrenData);
+			} else {
+				m_data.get("Children", @childrenData);
+			}
+
+			if (childrenData !is null) {
+				childrenData.insertLast(child.toDictionary());
+			}
 		}
 	}
 
 	// --------------------------------------------
+	void removeKey(string key){
+		m_data.delete(key);
+	}
+	// --------------------------------------------
 	void removeChild(string tagName, int index = 0) {
+		if(index < 0){return;}
 		array<dictionary>@ childrenData = null;
 		if (m_data.exists("Children") && m_data.get("Children", @childrenData)) {
-			childrenData.removeAt(index);
-			if (childrenData.empty()) {
-				m_data.delete("Children");
-			}			
+			if(index >= int(childrenData.size()) || childrenData is null){return;}
+			const XmlElement child(childrenData[index]);
+			if(tagName == child.getName()){
+				childrenData.removeAt(index);	
+			}	
 		}
+	}
+	// --------------------------------------------
+	void removeAllChild() {
+		array<dictionary> childrenData;
+		m_data.set("Children",childrenData);
+
+	}
+	// --------------------------------------------
+	array<const XmlElement@> getLowerChilds(string tagName,int index) {
+		array<const XmlElement@> elements;
+		array<dictionary>@ childrenData = null;
+		if (m_data.exists("Children") && m_data.get("Children", @childrenData)) {
+			if(index >= int(childrenData.size()) || index < 0 || childrenData is null){return elements;}
+			dictionary child_dic = childrenData[index];
+			const XmlElement child(child_dic);
+			if(tagName == child.getName()){
+				if (child_dic.exists("Children") && child_dic.get("Children", @childrenData)) {
+					for(uint i=0;i<childrenData.size();++i){
+						const XmlElement child_sub(childrenData[i]);
+						elements.insertLast(child_sub);
+					}
+				}
+			}	
+		}
+		return elements;
 	}
 
 	// --------------------------------------------
