@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <character filename="default_base.character">
 	<tag name="metal_man" />
-	<parameter class="throwing_self_over_initial_bounce" value="0.10" />
+	<parameter class="throwing_self_over_initial_bounce" value="0.20" />
 	<parameter class="throwing_self_over_steer_amount" value="0.30" />
-	<parameter class="throwing_self_over_lift_up" value="0.10" />
+	<parameter class="throwing_self_over_lift_up" value="0.20" />
     <parameter class="lifting_up_initial_bounce" value="0.15"/>
     <parameter class="jumping_up_bounce" value="0.15"/>
 	<parameter class="use_walk_animation_instead_of_run_speed_threshold" value="0.6" />
