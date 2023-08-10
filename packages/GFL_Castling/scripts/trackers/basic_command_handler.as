@@ -8,7 +8,6 @@
 #include "task_sequencer.as"
 #include "GFLhelpers.as"
 #include "event_system.as"
-#include "save_system.as"
 
 // 目前正在播放的点歌机中的歌曲剩余时间
 
@@ -903,8 +902,6 @@ class BasicCommandHandler : Tracker {
 			int cid = playerInfo.getIntAttribute("character_id");
 			string sid = playerInfo.getStringAttribute("profile_hash");
 			string name = playerInfo.getStringAttribute("name");
-			player_data@ meplayer = player_data(name,sid);
-
 		} else if (checkCommand(message,"1919test")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			addMutilItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"carry_item","complete_box.carry_item",20);  			            			

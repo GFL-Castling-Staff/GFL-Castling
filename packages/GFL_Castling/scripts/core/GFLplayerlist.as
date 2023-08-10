@@ -313,7 +313,7 @@ GFL_playerInfo@ getPlayerListInfoFromXML(Metagame@ m_metagame, const XmlElement@
     playerequipment.setWeapon(weapon1key,weapon2key,grenadekey,armorkey);
     playerinfo.setPlayerEquipment(playerequipment);
 
-    string profile_hash = playerinfo.getStringAttribute("profile_hash"); 
+    string profile_hash = player.getStringAttribute("profile_hash"); 
     playerinfo.setHash(profile_hash);
     return playerinfo;
 }
