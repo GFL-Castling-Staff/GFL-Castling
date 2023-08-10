@@ -365,9 +365,9 @@
 	</rank>
 	<!-- player group -->
 	<soldier name="default" spawn_score="0.00000001" firstnames_file="Paradeus_first.name" lastnames_file="Paradeus_last.name">
-		<character filename="paradeus.text_lines">
-			<parameter class="default_squad_config_index" value="0" />
-		</character>
+		<character filename="dopp.character" />
+
+		<!-- <character filename="paradeus.text_lines" /> -->
 		<ai filename="default.ai" />
 		<models file="paradeus.models" />
 		<models file="common_bonus.models" />

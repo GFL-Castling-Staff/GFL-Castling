@@ -19,4 +19,7 @@
   <parameter class="strike_frequency_time" value="30.0" />
   <parameter class="willingness_to_guard" value="1.0" />
   <parameter class="active_guarding_probability" value="1.0" />
+  <parameter class="using_cover_min_time" value="0.5" />
+  <parameter class="using_cover_max_time" value="5.0" />
+  <parameter class="leaving_cover_separation" value="5.0" />
 </ai>

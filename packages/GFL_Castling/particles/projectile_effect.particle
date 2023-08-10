@@ -51,6 +51,59 @@ particle_system Propulsion_grenade
 	}
 }
 
+particle_system Propulsion_grenade_smaller
+{
+	quota	500
+	material	Dust4
+	particle_width	0.1
+	particle_height	0.1
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Point
+	{
+		angle	180
+		colour_range_start	1 1 1 0.3
+		colour_range_end	1 1 1 0.8
+		direction	0 1 0
+		emission_rate	50
+		position	0 0 0
+		velocity	0.0
+		velocity_min	0.0
+		velocity_max	0.8
+		time_to_live_min	0.3
+		time_to_live_max	0.5
+	}
+
+	affector Scaler
+	{
+		rate	0.6
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector ColourFader
+	{
+		red	0
+		green	0
+		blue	0
+		alpha	-0.75
+	}
+
+	affector LinearForce
+	{
+		force_vector 0 1 0
+		force_application add
+	}
+}
+
 particle_system at_bullet_smoke_trail
 {
 	quota 100

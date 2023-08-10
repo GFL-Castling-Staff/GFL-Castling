@@ -5,7 +5,21 @@
     <tag name="metal_thin"/>
     <tag name="mecha"/>
 
-    <specification retrigger_time="3.0" magazine_size="1000" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" carry_in_two_hands="0" name="Gladiators" class="0" supperessed="0" use_basic_muzzle_smoke_effect="0" barrel_offset_3d="0 -0.6 0" stab_enabled="1" stab_range="3.0" barrel_offset="0.5"/>
+    <specification 
+    retrigger_time="3.0"
+    magazine_size="1000"
+    can_shoot_standing="1"
+    can_shoot_crouching="0"
+    can_shoot_prone="0"
+    carry_in_two_hands="0"
+    name="Gladiators"
+    class="0"
+    supperessed="0"
+    use_basic_muzzle_smoke_effect="0"
+    barrel_offset_3d="0 -0.6 0"
+    stab_enabled="1"
+    stab_range="3.0"
+    barrel_offset="0.5"/>
 
 	<animation state_key="stabbing" animation_key="hit ground_big_unit" />
     <animation state_key="recoil" animation_key="still, large mecha" />
@@ -22,6 +36,7 @@
     <projectile file="roarer.projectile"/>
 
     <capacity value="1" source="rank" source_value="0.0" />
+	<effect class="muzzle" ref="sawsnone"/>
 
     <stance state_key="running" accuracy="1" />
     <stance state_key="walking" accuracy="1" />
