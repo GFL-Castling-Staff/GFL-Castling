@@ -12,29 +12,65 @@
 // sid = sid
 // 记录玩家武器数据 使用<weapon key="武器key">形式存储在<weapons>元素下
 // 记录玩家通用数据
+// 每次调用时 从xml文件中转储读取生成player_data
+// 每次存储时 将player_data重新封装回新的xml中
 
 class player_data
 {
-    array<string> m_inventory;
 	int m_corenum;
     string m_playername;
+    string m_sid;
+    array<string> m_weapons;
 
 	player_data() {}
 
-    void setCoreNumber(int core){
-        m_corenum = core;
+    player_data(const string _player_name, const string _sid)
+    {
+        m_playername = _player_name;
+        m_sid = _sid;
     }
 
-    void addInfo(Tdoll_Information@ tdoll){
+    void addInfo(string tdoll){
         m_inventory.insertLast(tdoll);
     }
 
-    bool costCore(int num){
-        if((m_corenum-num) <0){
-            return false;
+    void addWeapon(const string key)
+    {
+        bool isDuplicate = false;
+        for (uint i = 0; i < m_weapons.length(); ++i)
+        {
+            if (m_weapons[i].key == key)
+            {
+                isDuplicate = true;
+                break;
+            }
+        }        
+        if (!isDuplicate)
+        {
+            m_weapons.insertLast(key);
+        }  
+    }
+
+    int GetCoreNum() const
+    {
+        return m_corenum;
+    }
+
+    void SetCoreNum(int newCoreNum)
+    {
+        m_corenum = newCoreNum;
+    }
+
+    bool FindWeapon(const string weaponToFind)
+    {
+        for (uint i = 0; i < m_weapons.length(); ++i)
+        {
+            if (m_weapons[i] == weaponToFind)
+            {
+                return true;
+            }
         }
-        m_corenum -= num;
-        return true;
+        return false;
     }
 
     bool checkTdollAvailable(int doll_index){
@@ -55,7 +91,7 @@ const XmlElement@ readFile(string filename){
     const XmlElement@ root = readXML(m_metagame,filename).getFirstChild();
     if(root is null){
         _log("readFile is null,create");
-        writeXML(m_metagame,filename,XmlElement(filename));
+        writeXML(m_metagame,filename,PlayerProfileSave(player_data));
         @root = readXML(m_metagame,filename).getFirstChild();
     }
     return root;
@@ -74,48 +110,23 @@ void writeXML(const Metagame@ metagame, string filename, XmlElement@ xml, string
 }
 
 
-void PlayerProfileSave(Metagame@ m_metagame,player_data@ player_info) {
+const XmlElement@ PlayerProfileSave(player_data@ player_info) {
 	XmlElement root("playerdata");
 	root.setStringAttribute("username", player_info.m_playername);
-	root.setStringAttribute("sid", player_info.m_player_sid);
+	root.setStringAttribute("sid", player_info.m_sid);
     root.setIntAttribute("core_num", player_info.m_corenum);
 	string FILENAME =  ("save_" + player_info.m_player_sid +".xml" );
 
-    XmlElement subroot("Tdoll_Information");
+    XmlElement subroot("weapons");
 
-    for (uint i = 0; i < player_info.m_inventory.size(); i++) {
-        Tdoll_Information@ m_information = player_info.m_inventory[i];
-        XmlElement e("Tdoll");
-        e.setIntAttribute("index", m_information.m_doll_index);
-        e.setBoolAttribute("own", m_information.m_own);
-
-        if(m_information.m_skin_index.size() <= 0){continue;}
-        for(uint i1 =0; i1<m_information.m_skin_index.size();i1++) {
-            XmlElement e1("skin");
-            e1.setIntAttribute("skin_index",m_information.m_skin_index[i1]);
-            e.appendChild(e1);
-        }
-        
-
-        if(m_information.m_type.size() <= 0){continue;}
-        for(uint i2 =0; i2<m_information.m_type.size();i2++) {
-            XmlElement e1("type");
-            e1.setStringAttribute("type_name",m_information.m_type[i2]);
-            e.appendChild(e1);
-        }
-
+    for (uint i = 0; i < player_info.m_weapons.length(); i++) {
+        XmlElement e("weapon");
+        e.setStringAttribute("key", player_info.m_weapons[i]);
         subroot.appendChild(e);
     }
 
     root.appendChild(subroot);
-
-	XmlElement command("command");
-	command.setStringAttribute("class", "save_data");
-	command.setStringAttribute("filename", FILENAME);
-	command.appendChild(root);
-
-	m_metagame.getComms().send(command);
-
+    return root;
 }
 
 

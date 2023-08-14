@@ -389,3 +389,45 @@ dictionary tdoll_index = {
 
 };
 
+class modded_key
+{
+    string key;
+    modded_key(const int index,const int skin, const string mod)
+    {
+        key = string(index) + "-skin_" + string(skin) + "-mod_" + mod;
+    }
+
+    modded_key(const int index,const int skin)
+    {
+        key = string(index) + "-skin_" + string(skin);
+    }
+
+    string toString() const
+    {
+        return key;
+    }
+}
+
+dictionary tdoll_complex_index = {
+    {modded_key(1,301).toString(),"gkw_m1873_301.weapon"},
+    {modded_key(1,2105).toString(),"gkw_m1873_2105.weapon"},
+    {modded_key(1,0,"mod3").toString(),"gkw_m1873mod3.weapon"},
+    {modded_key(1,301,"mod3").toString(),"gkw_m1873mod3_301.weapon"},
+    {modded_key(1,2105,"mod3").toString(),"gkw_m1873mod3_2105.weapon"},
+
+    {modded_key(2,4514).toString(),"gkw_m1911_4514.weapon"},
+    {modded_key(2,8406).toString(),"gkw_m1911_8406.weapon"},
+    {modded_key(2,0,"mod3").toString(),"gkw_m1911_mod3.weapon"},
+    {modded_key(2,4514,"mod3").toString(),"gkw_m1911_mod3_4514.weapon"},
+    {modded_key(2,8406,"mod3").toString(),"gkw_m1911_mod3_8406.weapon"},
+
+    {modded_key(4,6603).toString(),"gkw_python_6603.weapon"},
+
+    {modded_key(5,5309).toString(),"gkw_m1895_5309.weapon"},
+    {modded_key(5,7107).toString(),"gkw_m1895_7107.weapon"},
+    {modded_key(5,5309,"mod3").toString(),"gkw_m1895mod3.weapon"},
+    {modded_key(5,5309,"mod3").toString(),"gkw_m1895mod3_5309.weapon"},
+    {modded_key(5,7107,"mod3").toString(),"gkw_m1895mod3_7107.weapon"},
+
+    {"-1",""}
+};
