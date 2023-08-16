@@ -11752,7 +11752,8 @@ separator_depth = 0.7;</desc>
       <desc
          id="desc9346-8-2-1-66-4">name = GardenWall1; 
 color = fill; depth = 0.7; 
-height = 1.2; 
+height = 1.2;
+see_through = 0; 
 side_texture = wall_atlas1.png; 
 side_texture_atlas_cell = 0 3 8 8  0.0078125; 
 side_texture_scale = 2.0 2.0; 
@@ -11768,7 +11769,7 @@ separator_top_texture_scale = 1.0 1.0;
 separator_color = fill; 
 separator_over_height = 0.4; 
 separator_depth = 0.8; 
-penetrability = 1.0;</desc>
+penetrability = 0.7;</desc>
     </rect>
     <flowRoot
        transform="translate(-251.0483,-22.099102)"
