@@ -37,6 +37,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
         <result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.974" kill_decay_end_time="1.624"/>
+		<trail probability="1" key="BulletApTrail_rf"/>	
 	</projectile>
 	<stance state_key="running" accuracy="0.1" />
     <stance state_key="walking" accuracy="0.5" />
@@ -104,6 +105,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="bullet.projectile">
         <result class="hit" kill_probability="2.3" kill_probability_offset_on_successful_hit="3" kill_decay_start_time="0.974" kill_decay_end_time="1.624"/>
+		<trail probability="1" key="BulletApTrail_rf"/>			
 	</projectile>
 	<stance state_key="running" accuracy="0.7" />
     <stance state_key="walking" accuracy="0.7" />

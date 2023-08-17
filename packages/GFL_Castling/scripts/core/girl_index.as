@@ -394,12 +394,12 @@ class modded_key
     string key;
     modded_key(const int index,const int skin, const string mod)
     {
-        key = string(index) + "-skin_" + string(skin) + "-mod_" + mod;
+        key = formatInt(index) + "-skin_" + formatInt(skin) + "-mod_" + mod;
     }
 
     modded_key(const int index,const int skin)
     {
-        key = string(index) + "-skin_" + string(skin);
+        key = formatInt(index) + "-skin_" + formatInt(skin);
     }
 
     string toString() const
@@ -440,7 +440,7 @@ dictionary tdoll_complex_index = {
 
     {modded_key(8,0,"mod3").toString(),"gkw_makarovmod3.weapon"},
 
-    {modded_key(10,3905,).toString(),"gkw_ppk_3905.weapon"},
+    {modded_key(10,3905).toString(),"gkw_ppk_3905.weapon"},
     {modded_key(10,0,"mod3").toString(),"gkw_ppkmod3.weapon"},
     {modded_key(10,3905,"mod3").toString(),"gkw_ppkmod3_3905.weapon"},
 
