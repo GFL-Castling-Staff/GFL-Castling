@@ -17,21 +17,19 @@
 
 class player_data
 {
-	int m_corenum;
+	int m_corenum=0;
     string m_playername;
+    string m_profile_hash;
     string m_sid;
-    array<string> m_weapons;
+
+    array<string> m_weapons={};
 
 	player_data() {}
 
-    player_data(const string _player_name, const string _sid)
+    player_data(const string _player_name, const string _profile_hash)
     {
         m_playername = _player_name;
-        m_sid = _sid;
-    }
-
-    void addInfo(string tdoll){
-        m_inventory.insertLast(tdoll);
+        m_profile_hash = _profile_hash;
     }
 
     void addWeapon(const string key)
@@ -39,7 +37,7 @@ class player_data
         bool isDuplicate = false;
         for (uint i = 0; i < m_weapons.length(); ++i)
         {
-            if (m_weapons[i].key == key)
+            if (m_weapons[i] == key)
             {
                 isDuplicate = true;
                 break;
@@ -61,6 +59,16 @@ class player_data
         m_corenum = newCoreNum;
     }
 
+    string GetSid() const
+    {
+        return m_sid;
+    }
+
+    void SetSid(string sid)
+    {
+        m_sid = sid;
+    }
+
     bool FindWeapon(const string weaponToFind)
     {
         for (uint i = 0; i < m_weapons.length(); ++i)
@@ -72,29 +80,31 @@ class player_data
         }
         return false;
     }
-
-    bool checkTdollAvailable(int doll_index){
-        int check_id = -1;
-        for(uint i=0;i<m_inventory.size();i++){
-            if (m_inventory[i].m_doll_index == doll_index){
-                check_id = i;
-                break;
-            }
-        }
-        if (check_id == -1) return false;
-        if (m_inventory[check_id].m_own) return true;
-        return false;
-    }
 }
 
-const XmlElement@ readFile(string filename){
-    const XmlElement@ root = readXML(m_metagame,filename).getFirstChild();
+const XmlElement@ readFile(const Metagame@ metagame,string name, string profile_hash){
+    string filename = ("save_" + profile_hash +".xml" );
+    const XmlElement@ root = readXML(metagame,filename).getFirstChild();
     if(root is null){
         _log("readFile is null,create");
-        writeXML(m_metagame,filename,PlayerProfileSave(player_data));
-        @root = readXML(m_metagame,filename).getFirstChild();
+        XmlElement@ new_xml = PlayerProfileSave(player_data(name,profile_hash));
+        writeXML(metagame,filename,new_xml);
+        @root = readXML(metagame,filename).getFirstChild();
     }
     return root;
+}
+
+const XmlElement@ readXML(const Metagame@ metagame, string filename){
+	XmlElement@ query = XmlElement(
+		makeQuery(metagame, array<dictionary> = {
+			dictionary = { {"TagName", "data"}, {"class", "saved_data"}, {"filename", filename}}}));
+	const XmlElement@ xml = metagame.getComms().query(query);
+    if(xml !is null){
+        return xml;
+    }
+	else{
+        return null;
+    }
 }
 
 void writeXML(const Metagame@ metagame, string filename, XmlElement@ xml, string location = "" ){
@@ -109,17 +119,18 @@ void writeXML(const Metagame@ metagame, string filename, XmlElement@ xml, string
 	metagame.getComms().send(command);
 }
 
-
-const XmlElement@ PlayerProfileSave(player_data@ player_info) {
+XmlElement@ PlayerProfileSave(player_data@ player_info) {
 	XmlElement root("playerdata");
 	root.setStringAttribute("username", player_info.m_playername);
 	root.setStringAttribute("sid", player_info.m_sid);
+	root.setStringAttribute("profile_hash", player_info.m_profile_hash);
     root.setIntAttribute("core_num", player_info.m_corenum);
-	string FILENAME =  ("save_" + player_info.m_player_sid +".xml" );
+	string FILENAME =  ("save_" + player_info.m_sid +".xml" );
 
     XmlElement subroot("weapons");
 
-    for (uint i = 0; i < player_info.m_weapons.length(); i++) {
+    for (uint i = 0; i < player_info.m_weapons.length(); i++) 
+    {
         XmlElement e("weapon");
         e.setStringAttribute("key", player_info.m_weapons[i]);
         subroot.appendChild(e);
@@ -127,6 +138,27 @@ const XmlElement@ PlayerProfileSave(player_data@ player_info) {
 
     root.appendChild(subroot);
     return root;
+}
+
+player_data@ PlayerProfileLoad(const XmlElement@ player_profile){
+    string m_username = player_profile.getStringAttribute("username");
+    string m_profile_hash = player_profile.getStringAttribute("profile_hash");
+    string m_sid = player_profile.getStringAttribute("sid");
+    int m_corenum = player_profile.getIntAttribute("core_num");
+
+    player_data output = player_data(m_username,m_profile_hash);
+    output.SetSid(m_sid);
+    output.SetCoreNum(m_corenum);
+
+    array<const XmlElement@> weapon_list = player_profile.getFirstElementByTagName("weapons").getElementsByTagName("weapon");
+    for(uint i = 0; i < weapon_list.length();i++)
+    {
+        string weapon_key = weapon_list[i].getStringAttribute("key");
+        if(weapon_key =="") continue;
+        output.addWeapon(weapon_key);
+    }
+
+    return output;
 }
 
 
@@ -150,10 +182,29 @@ class Save_System : Tracker {
     protected void handleChatEvent(const XmlElement@ event){
 		string message = event.getStringAttribute("message");
 		string p_name = event.getStringAttribute("player_name");
-        GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
-        if (playerInfo.m_name == default_string ) return;
-
-        string profile_hash = playerInfo.m_hash;
-
+        if(checkCommand(message,"savetest")){
+            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
+            if (playerInfo.m_name == default_string ) return;
+            string profile_hash = playerInfo.m_hash;
+            string sid = playerInfo.m_sid;
+            int player_id = playerInfo.getPlayerPid();
+            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+            notify(m_metagame, "你有" + newdata.m_weapons.length() + "个武器", dictionary(), "misc", player_id, false, "", 1.0);
+            for(uint i = 0; i < newdata.m_weapons.length();i++)
+            {
+                string weapon_key = newdata.m_weapons[i];
+                notify(m_metagame, "比如" + weapon_key + "这把枪", dictionary(), "misc", player_id, false, "", 1.0);
+            }
+            newdata.addWeapon("gkw_negev.weapon");
+            newdata.addWeapon("gkw_m4a1.weapon");
+            newdata.addWeapon("gkw_ak47.weapon");
+            newdata.addWeapon("gkw_negev.weapon");
+            newdata.SetCoreNum(newdata.m_corenum+= 1500);
+            newdata.SetSid(sid);
+            // newdata.m_profile_hash = "test114514";
+            // string filename = ("save_" + "test114514" +".xml" );
+            string filename = ("save_" + profile_hash +".xml" );
+            writeXML(m_metagame,filename,PlayerProfileSave(newdata));
+        }
 	}
 }

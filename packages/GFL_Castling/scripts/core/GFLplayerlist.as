@@ -108,7 +108,7 @@ class GFL_playerInfo{
     void setHash(string hash){
         m_hash = hash;
     }
-    void setSid(int sid){
+    void setSid(string sid){
         m_sid = sid;
     }
 
@@ -315,6 +315,8 @@ GFL_playerInfo@ getPlayerListInfoFromXML(Metagame@ m_metagame, const XmlElement@
 
     string profile_hash = player.getStringAttribute("profile_hash"); 
     playerinfo.setHash(profile_hash);
+    string sid = player.getStringAttribute("sid"); 
+    playerinfo.setSid(sid);    
     return playerinfo;
 }
 
