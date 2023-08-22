@@ -397,7 +397,7 @@ class modded_key
         key = formatInt(index) + "-skin_" + formatInt(skin) + "-mod_" + mod;
     }
 
-    modded_key(const int index,const int skin)
+    modded_key(const int index,const int skin=0)
     {
         key = formatInt(index) + "-skin_" + formatInt(skin);
     }
@@ -409,17 +409,21 @@ class modded_key
 }
 
 dictionary tdoll_complex_index = {
+    {modded_key(1).toString(),"gkw_m1873.weapon"},
     {modded_key(1,301).toString(),"gkw_m1873_301.weapon"},
     {modded_key(1,2105).toString(),"gkw_m1873_2105.weapon"},
     {modded_key(1,0,"mod3").toString(),"gkw_m1873mod3.weapon"},
     {modded_key(1,301,"mod3").toString(),"gkw_m1873mod3_301.weapon"},
     {modded_key(1,2105,"mod3").toString(),"gkw_m1873mod3_2105.weapon"},
 
+    {modded_key(2).toString(),"gkw_m1911.weapon"},
     {modded_key(2,4514).toString(),"gkw_m1911_4514.weapon"},
     {modded_key(2,8406).toString(),"gkw_m1911_8406.weapon"},
     {modded_key(2,0,"mod3").toString(),"gkw_m1911_mod3.weapon"},
     {modded_key(2,4514,"mod3").toString(),"gkw_m1911_mod3_4514.weapon"},
     {modded_key(2,8406,"mod3").toString(),"gkw_m1911_mod3_8406.weapon"},
+
+    {modded_key(3).toString(),"gkw_m9.weapon"},
 
     {modded_key(4,6603).toString(),"gkw_python_6603.weapon"},
 
@@ -499,8 +503,8 @@ dictionary tdoll_complex_index = {
     {modded_key(39,0,"mod3").toString(),"gkw_m1891mod3.weapon"},
 
     {modded_key(43,5506).toString(),"gkw_svd_5506.weapon"},
-    {modded_key(43,0,"extra").toString(),"gkw_svdex.weapon"},
-    {modded_key(43,5506,"extra").toString(),"gkw_svdex_5506.weapon"},
+    {modded_key(43,0,"only").toString(),"gkw_svdex.weapon"},
+    {modded_key(43,5506,"only").toString(),"gkw_svdex_5506.weapon"},
 
     {modded_key(44,502).toString(),"gkw_sv98_502.weapon"},
     {modded_key(44,1906).toString(),"gkw_sv98_1906.weapon"},

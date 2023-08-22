@@ -215,7 +215,7 @@ class CommandSkill : Tracker {
                 case 22:{excuteFnFalskill(cId,senderId,m_modifer);break;}
                 case 23:{excuteM4SOPMODIIMOD3skill(cId,senderId,m_modifer);break;}
                 case 24:{excutePPSH41skill(cId,senderId,m_modifer);break;}
-                case 25:{excutePPSH41skill(cId,senderId,m_modifer,true);break;}
+                case 25:{excutePPSH41MOD3skill(cId,senderId,m_modifer);break;}
                 case 26:{excuteFO12skill(cId,senderId,m_modifer);break;}
                 case 27:{excuteFlashbangskill(cId,senderId,m_modifer,c_weaponType);break;}
                 case 28:{excuteUMP9skill(cId,senderId,m_modifer);break;}
@@ -261,6 +261,8 @@ class CommandSkill : Tracker {
                 case 68:{excuteMosinNagant(cId,senderId,m_modifer);break;}
                 case 69:{excuteKar98k(cId,senderId,m_modifer);break;}
                 case 70:{excuteGM6Lynx(cId,senderId,m_modifer);break;}
+                case 71:{excuteM1911skill(cId,senderId,m_modifer);break;}
+                case 72:{excuteM1911mod3skill(cId,senderId,m_modifer);break;}
 
                 default:
                     break;
@@ -1029,28 +1031,8 @@ class CommandSkill : Tracker {
             }
         }
     }
-    void excutePPSH41skill(int characterId,int playerId,SkillModifer@ modifer,bool mod3=false){
-        bool ExistQueue = false;
-        int j=-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="ppsh41") {
-                ExistQueue=true;
-                j=i;
-                SkillArray[j].addCharge();
-            }
-        }
-        if (ExistQueue && mod3==false){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
-            return;
-        }
-        if (ExistQueue && mod3 && SkillArray[j].m_charge>3){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
-            return;
-        }
+    void excutePPSH41skill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"ppsh41")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             if (!canCastSkill(character)) return;
@@ -1064,27 +1046,11 @@ class CommandSkill : Tracker {
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                     c_pos=c_pos.add(Vector3(0,1,0));
                     c_pos = c_pos.add((getAimUnitVector(1,c_pos,s_pos)));
-                    if(mod3){
-                        if(!ExistQueue){
-                            array<string> Voice={
-                                "PPsh41Mod_SKILL1_JP.wav",
-                                "PPsh41Mod_SKILL2_JP.wav",
-                                "PPsh41Mod_SKILL3_JP.wav",
-                                "PPsh41Mod_ATTACK_JP.wav",
-                                "PPsh41Mod_MEET_JP.wav",
-                                "PPsh41Mod_DEFENSE_JP.wav"
-                            };                        
-                            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-                            addCooldown("ppsh41",20,characterId,modifer);
-                        }
-                    }
-                    else{
-                        array<string> Voice={
-                            "PPsh41_SKILL1_JP.wav"
-                        };
-                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
-                        addCooldown("ppsh41",15,characterId,modifer);
-                    }
+                    array<string> Voice={
+                        "PPsh41_SKILL1_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
+                    addCooldown("ppsh41",15,characterId,modifer);
 
                     if (checkFlatRange(c_pos,stringToVector3(target),15)){
                         CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41.projectile",characterId,factionid,60);
@@ -1096,6 +1062,51 @@ class CommandSkill : Tracker {
             }
         }
     }
+
+    void excutePPSH41MOD3skill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"ppsh41")) return;
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            if (!canCastSkill(character)) return;
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    int index = findNodeleteDataIndex(modifer.m_playername,"ppsh41");
+                    int medal_num = 0;
+                    if (index>=0)
+                    {
+                        medal_num = No_Delete_DataArray[index].m_num;
+                    }
+                    medal_num = min(medal_num,3);
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    Vector3 s_pos = stringToVector3(target);
+                    int factionid = character.getIntAttribute("faction_id");
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    c_pos = c_pos.add((getAimUnitVector(1,c_pos,s_pos)));
+                    array<string> Voice={
+                        "PPsh41Mod_SKILL1_JP.wav",
+                        "PPsh41Mod_SKILL2_JP.wav",
+                        "PPsh41Mod_SKILL3_JP.wav",
+                        "PPsh41Mod_ATTACK_JP.wav",
+                        "PPsh41Mod_MEET_JP.wav",
+                        "PPsh41Mod_DEFENSE_JP.wav"
+                    };                        
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    addCooldown("ppsh41",15,characterId,modifer);
+
+                    if (checkFlatRange(c_pos,stringToVector3(target),15)){
+                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41.projectile",characterId,factionid,60);
+                    }
+                    else{
+                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41.projectile",characterId,factionid,50.0,5.0);
+                    }
+                }
+            }
+        }
+    }
+
     void excuteAntiArmorskill(int characterId,int playerId,SkillModifer@ modifer,string weaponname){
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"AAgrenade")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -3914,4 +3925,56 @@ class CommandSkill : Tracker {
             }
         }        
     }
+    void excuteM1911skill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"M1911")) return;
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "M1911_SKILL1_JP.wav",
+                        "M1911_SKILL2_JP.wav",
+                        "M1911_SKILL3_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"smoke_grenade.projectile",characterId,factionid,26.0,6.0);
+                    addCooldown("M1911",30,characterId,modifer);
+                }
+            }
+        }
+    }        
+    void excuteM1911mod3skill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"M1911")) return;
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    Vector3 t_pos = stringToVector3(target);
+                    t_pos = t_pos.add(Vector3(0,5,0));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "M1911Mod_SKILL1_JP.wav",
+                        "M1911Mod_SKILL2_JP.wav",
+                        "M1911Mod_SKILL3_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    CreateProjectile_H(m_metagame,c_pos,t_pos,"smoke_grenade.projectile",characterId,factionid,26.0,6.0);
+                    addCooldown("M1911",30,characterId,modifer);
+                }
+            }
+        }
+    }        
 }

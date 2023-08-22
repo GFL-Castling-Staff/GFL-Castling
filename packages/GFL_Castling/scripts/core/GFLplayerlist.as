@@ -201,16 +201,12 @@ class GFL_playerlist_system : Tracker {
                 for(uint i=0;i<CT_PlayerList.length();i++){
                     string c_weaponType = CT_PlayerList[i].getPlayerEquipment().getWeapon(0);
                     if(
-                        c_weaponType != "gkw_98kmod3.weapon" &&
-                        c_weaponType != "gkw_98kmod3_skill.weapon" &&
-                        c_weaponType != "gkw_98kmod3_4301.weapon" &&
-                        c_weaponType != "gkw_98kmod3_4301_skill.weapon")
+                        c_weaponType == "gkw_98kmod3.weapon" ||
+                        c_weaponType == "gkw_98kmod3_skill.weapon" ||
+                        c_weaponType == "gkw_98kmod3_4301.weapon" ||
+                        c_weaponType == "gkw_98kmod3_4301_skill.weapon")
                     {
-                        continue;
-                    }
-                    else
-                    {
-                        string strname= CT_PlayerList[i].getPlayerPid();
+                        string strname= CT_PlayerList[i].getPlayerName();
                         int j = findNodeleteDataIndex(strname,"kar98k");
 
                         if(j>=0){
@@ -226,7 +222,27 @@ class GFL_playerlist_system : Tracker {
                             if (characterInfo is null) return;
                             string c_pos = characterInfo.getStringAttribute("position");
                             spawnStaticProjectile(m_metagame,"particle_effect_98k_medal.projectile",c_pos,CT_PlayerList[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));                            
-                        }                        
+                        }
+                    }
+                    else if(
+                        c_weaponType == "gkw_ppsh41mod3.weapon" ||
+                        c_weaponType == "gkw_ppsh41mod3_602.weapon")
+                    {
+                        string strname= CT_PlayerList[i].getPlayerName();
+                        int j = findNodeleteDataIndex(strname,"ppsh41");
+
+                        if(j>=0){
+                            No_Delete_DataArray[j].add();
+                            const XmlElement@ characterInfo = getCharacterInfo(m_metagame, CT_PlayerList[i].getPlayerCid());
+                            if (characterInfo is null) return;
+                            string c_pos = characterInfo.getStringAttribute("position");
+                        }
+                        else{
+                            No_Delete_DataArray.insertLast(no_delete_data(strname,1,"ppsh41"));       
+                            const XmlElement@ characterInfo = getCharacterInfo(m_metagame, CT_PlayerList[i].getPlayerCid());
+                            if (characterInfo is null) return;
+                            string c_pos = characterInfo.getStringAttribute("position");
+                        }
                     }
                 }
             }
