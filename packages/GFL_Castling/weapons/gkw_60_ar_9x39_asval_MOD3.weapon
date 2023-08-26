@@ -106,15 +106,15 @@
     <capacity value="1" source="rank" source_value="0.0" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-        <result class="hit" kill_probability="4.0" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="1.0" kill_decay_end_time="1.0" />
+            <result class="hit" kill_probability="4.0" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.2" kill_decay_end_time="0.45" />
     </projectile>
     <effect class="muzzle" ref="ejection_556" />
     <stance state_key="running" accuracy="0.5" />
     <stance state_key="walking" accuracy="0.5" />
     <stance state_key="crouch_moving" accuracy="0.75" />
     <stance state_key="prone_moving" accuracy="0.75" />
-    <stance state_key="standing" accuracy="0.95" />
-    <stance state_key="crouching" accuracy="0.98" />
+    <stance state_key="standing" accuracy="0.85" />
+    <stance state_key="crouching" accuracy="0.9" />
     <stance state_key="prone" accuracy="1" />
     <stance state_key="over_wall" accuracy="1.0" />
     <modifier class="hit_success_probability" value="+0.3" />

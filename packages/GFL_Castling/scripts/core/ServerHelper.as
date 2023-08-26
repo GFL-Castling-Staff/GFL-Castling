@@ -198,7 +198,6 @@ class ServerHelper : Tracker {
                 if(s=="daoniang") spawnSoldier(m_metagame,1,1,target,"Brute");
                 if(s=="daoniang_s") spawnSoldier(m_metagame,1,1,target,"Brute_swap");
                 if(s=="njie") spawnSoldier(m_metagame,1,1,target,"Narciss");
-                if(s=="pathfinder") spawnSoldier(m_metagame,5,0,target,"kcco_pathfinder");
             }   
         }
     }
