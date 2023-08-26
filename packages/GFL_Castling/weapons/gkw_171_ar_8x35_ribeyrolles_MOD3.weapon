@@ -35,12 +35,12 @@
         </projectile>
         <effect class="muzzle" ref="muzzle_big_yellow"/>
         <effect class="muzzle" ref="ejection_76239" />
-        <stance state_key="running" accuracy="0.2" />
-        <stance state_key="walking" accuracy="0.5" />
+        <stance state_key="running" accuracy="0.35" />
+        <stance state_key="walking" accuracy="0.6" />
         <stance state_key="crouch_moving" accuracy="0.9" />
         <stance state_key="prone_moving" accuracy="0.9" />
-        <stance state_key="standing" accuracy="0.9" />
-        <stance state_key="crouching" accuracy="0.95" />
+        <stance state_key="standing" accuracy="0.95" />
+        <stance state_key="crouching" accuracy="0.99" />
         <stance state_key="prone" accuracy="1" />
         <stance state_key="over_wall" accuracy="1" /> 
     </weapon>
@@ -83,8 +83,8 @@
         <stance state_key="prone_moving" accuracy="0.85" />
         <stance state_key="standing" accuracy="0.85" />
         <stance state_key="crouching" accuracy="0.85" />
-        <stance state_key="prone" accuracy="0.85" />
-        <stance state_key="over_wall" accuracy="0.85" /> 
+        <stance state_key="prone" accuracy="1.0" />
+        <stance state_key="over_wall" accuracy="1.0" /> 
         <modifier class="speed" value="0.25" />
         <modifier class="hit_success_probability" value="-0.25" />
     </weapon>
