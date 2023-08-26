@@ -17,7 +17,8 @@
 	projectile_speed="180" 
 	sight_range_modifier="1.3"/>
     <animation state_key="hold_casual" animation_key="dancing, kazachok" />
-    <animation key="reload" animation_key="reloading, Machine gun 1.2" />
+    <animation key="reload" animation_key="reloading, pan mag" />
+    <animation key="reload" stance_key="prone" animation_key="reloading, pan mag prone" />
     <inventory encumbrance="50.0" buy_price="28.0" sell_price="28.0" />
     <next_in_chain key="gkw_dp28_skill.weapon" share_ammo="0"/>
     <commonness value="0.2" in_stock="1" can_respawn_with="1" />

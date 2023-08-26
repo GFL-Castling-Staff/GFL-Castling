@@ -18,7 +18,8 @@
     leave_crouch_accuracy_penalty="0.3"/>
     <next_in_chain key="gkw_lewis_4001_skill.weapon" share_ammo="1" />
     <commonness value="0" in_stock="0" can_respawn_with="1" />
-    <animation key="reload" animation_key="reloading, Machine gun 1.2" />
+    <animation key="reload" animation_key="reloading, pan mag" />
+    <animation key="reload" stance_key="prone" animation_key="reloading, pan mag prone" />
     <animation key="recoil" animation_key="recoil1" />
     <animation key="recoil" animation_key="recoil2" />
     <animation key="recoil" animation_key="recoil3" />
@@ -69,7 +70,8 @@
 	sight_range_modifier="2.5"/>
     <next_in_chain key="gkw_lewis_4001.weapon" share_ammo="1" />
     <commonness value="0" in_stock="0" can_respawn_with="1" />
-    <animation key="reload" animation_key="reloading, Machine gun 0.6" />
+    <animation key="reload" animation_key="reloading, pan mag fast" />
+    <animation key="reload" stance_key="prone" animation_key="reloading, pan mag prone fast" />
     <animation key="recoil" animation_key="recoil1" />
     <animation key="recoil" animation_key="recoil2" />
     <animation key="recoil" animation_key="recoil3" />
