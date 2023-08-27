@@ -425,40 +425,62 @@ dictionary tdoll_complex_index = {
 
     {modded_key(3).toString(),"gkw_m9.weapon"},
 
+    {modded_key(4).toString(),"gkw_python.weapon"},
     {modded_key(4,6603).toString(),"gkw_python_6603.weapon"},
 
+    {modded_key(5).toString(),"gkw_m1895.weapon"},
     {modded_key(5,5309).toString(),"gkw_m1895_5309.weapon"},
     {modded_key(5,7107).toString(),"gkw_m1895_7107.weapon"},
     {modded_key(5,5309,"mod3").toString(),"gkw_m1895mod3.weapon"},
     {modded_key(5,5309,"mod3").toString(),"gkw_m1895mod3_5309.weapon"},
     {modded_key(5,7107,"mod3").toString(),"gkw_m1895mod3_7107.weapon"},
 
+    {modded_key(6).toString(),"gkw_tt33.weapon"},
     {modded_key(6,601).toString(),"gkw_tt33_601.weapon"},
     {modded_key(6,3204).toString(),"gkw_tt33_3204.weapon"},
 
+    {modded_key(7).toString(),"gkw_aps.weapon"},
     {modded_key(7,4306).toString(),"gkw_aps_4306.weapon"},
     {modded_key(7,6808).toString(),"gkw_aps_6808.weapon"},
     {modded_key(7,0,"mod3").toString(),"gkw_apsmod3.weapon"},
     {modded_key(7,4306,"mod3").toString(),"gkw_apsmod3_4306.weapon"},
     {modded_key(7,6808,"mod3").toString(),"gkw_apsmod3_6808.weapon"},
 
+    {modded_key(8).toString(),"gkw_makarov.weapon"},
     {modded_key(8,0,"mod3").toString(),"gkw_makarovmod3.weapon"},
 
+    {modded_key(10).toString(),"gkw_ppk.weapon"},
     {modded_key(10,3905).toString(),"gkw_ppk_3905.weapon"},
     {modded_key(10,0,"mod3").toString(),"gkw_ppkmod3.weapon"},
     {modded_key(10,3905,"mod3").toString(),"gkw_ppkmod3_3905.weapon"},
 
+    {modded_key(12).toString(),"gkw_c96.weapon"},
     {modded_key(12,0,"mod3").toString(),"gkw_c96mod3.weapon"},
 
+    {modded_key(13).toString(),"gkw_qsz92.weapon"},
     {modded_key(13,0,"mod3").toString(),"gkw_qsz92mod3.weapon"},
 
+    {modded_key(16).toString(),"gkw_thompson.weapon"},
     {modded_key(16,5703).toString(),"gkw_thompson_5703.weapon"},
 
-    {modded_key(16,549).toString(),"gkw_vector_549.weapon"},
-    {modded_key(16,1901).toString(),"gkw_vector_1901.weapon"},
+    {modded_key(17).toString(),"gkw_m3.weapon"},
 
+    {modded_key(20).toString(),"gkw_vector.weapon"},
+    {modded_key(20,549).toString(),"gkw_vector_549.weapon"},
+    {modded_key(20,1901).toString(),"gkw_vector_1901.weapon"},
+
+    {modded_key(21).toString(),"gkw_ppsh41.weapon"},
+    {modded_key(21,602).toString(),"gkw_ppsh41_602.weapon"},
+    {modded_key(21,0,"mod3").toString(),"gkw_ppsh41mod3.weapon"},
+    {modded_key(21,602,"mod3").toString(),"gkw_ppsh41mod3_602.weapon"},
+
+    {modded_key(22).toString(),"gkw_pps43.weapon"},
+    {modded_key(23).toString(),"gkw_pp90.weapon"},
+
+    {modded_key(25).toString(),"gkw_mp40.weapon"},
     {modded_key(25,902).toString(),"gkw_mp40_902.weapon"},
 
+    {modded_key(26).toString(),"gkw_mp5.weapon"},
     {modded_key(26,3).toString(),"gkw_mp5_3.weapon"},
     {modded_key(26,1205).toString(),"gkw_mp5_1205.weapon"},
     {modded_key(26,1903).toString(),"gkw_mp5_1903.weapon"},
@@ -469,13 +491,17 @@ dictionary tdoll_complex_index = {
     {modded_key(26,1903,"mod3").toString(),"gkw_mp5mod3_1903.weapon"},
     {modded_key(26,3006,"mod3").toString(),"gkw_mp5mod3_3006.weapon"},
 
+    {modded_key(27).toString(),"gkw_vz61.weapon"},
     {modded_key(27,0,"only").toString(),"gkw_vz61_only.weapon"},
 
+    {modded_key(28).toString(),"gkw_mp7.weapon"},
     {modded_key(28,2405).toString(),"gkw_mp7_2405.weapon"},
     {modded_key(28,6806).toString(),"gkw_mp7_6806.weapon"},
 
+    {modded_key(29).toString(),"gkw_sten.weapon"},
     {modded_key(29,0,"mod3").toString(),"gkw_stenmod3.weapon"},
 
+    {modded_key(31).toString(),"gkw_mab38.weapon"},
     {modded_key(31,1).toString(),"gkw_mab38_oc.weapon"},
     {modded_key(31,0,"mod3").toString(),"gkw_mab38mod3.weapon"},
     {modded_key(31,1,"mod3").toString(),"gkw_mab38mod3_oc.weapon"},
@@ -609,20 +635,26 @@ dictionary tdoll_complex_index = {
 
 
     // 从编号150开始
+    {modded_key(152).toString(),"gkw_m1897.weapon"},
     {modded_key(152,0,"mod3").toString(),"gkw_m1897mod3.weapon"},
 
+    {modded_key(153).toString(),"gkw_m37.weapon"},
     {modded_key(153,1105).toString(),"gkw_m37_1105.weapon"},
 
+    {modded_key(154).toString(),"gkw_m500.weapon"},
     {modded_key(154,3707).toString(),"gkw_m500_3707.weapon"},
     {modded_key(154,0,"mod3").toString(),"gkw_m500mod3.weapon"},
     {modded_key(154,3707,"mod3").toString(),"gkw_m500mod3_3707.weapon"},
 
+    {modded_key(155).toString(),"gkw_m590.weapon"},
     {modded_key(155,1806).toString(),"gkw_m590_1806.weapon"},
 
+    {modded_key(159).toString(),"gkw_rmb93.weapon"},
     {modded_key(159,4309).toString(),"gkw_rmb93_4309.weapon"},
     {modded_key(159,0,"mod3").toString(),"gkw_rmb93mod3.weapon"},
     {modded_key(159,4309,"mod3").toString(),"gkw_rmb93mod3_4309.weapon"},
 
+    {modded_key(161).toString(),"gkw_hawk97.weapon"},
     {modded_key(161,5805).toString(),"gkw_hawk97_5805.weapon"},
     {modded_key(161,0,"mod3").toString(),"gkw_hawk97mod3.weapon"},
     {modded_key(161,5805,"mod3").toString(),"gkw_hawk97mod3_5805.weapon"},
@@ -682,13 +714,13 @@ dictionary tdoll_complex_index = {
     {modded_key(203,4005).toString(),"gkw_honeybadger_4005.weapon"},
 
     {modded_key(205,3303).toString(),"gkw_an94_3303.weapon"},
-    //不来梅系列在官方推出皮肤编号后可能需要重写 {modded_key(205,blm).toString(),"gkw_an94_blm.weapon"},
+    {modded_key(205,8606).toString(),"gkw_an94_blm.weapon"},
     {modded_key(205,0,"mod3").toString(),"gkw_an94_mod3.weapon"},
     {modded_key(205,3303,"mod3").toString(),"gkw_an94mod3_3303.weapon"},
-    //{modded_key(205,blm,"mod3").toString(),"gkw_an94mod3_blm.weapon"},
+    {modded_key(205,8606,"mod3").toString(),"gkw_an94mod3_blm.weapon"},
 
     {modded_key(206,2402).toString(),"gkw_ak12_2402.weapon"},
-    //{modded_key(206,blm).toString(),"gkw_ak12_blm.weapon"},
+    {modded_key(206,8605).toString(),"gkw_ak12_blm.weapon"},
 
     {modded_key(208,4402).toString(),"gkw_hk21_4002.weapon"},
 
@@ -714,3 +746,15 @@ dictionary tdoll_complex_index = {
     {modded_key(225,6606).toString(),"gkw_cx4_6606.weapon"},
     {"-1",""}
 };
+
+bool checkValueExist(const string &searchValue)
+{
+    for (uint i = 0; i < dict.getSize(); i++)
+    {
+        if (dict[i] == searchValue)
+        {
+            return true;
+        }
+    }
+    return false;
+}
