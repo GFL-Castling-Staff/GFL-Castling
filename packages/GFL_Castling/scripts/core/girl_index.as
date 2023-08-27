@@ -746,15 +746,3 @@ dictionary tdoll_complex_index = {
     {modded_key(225,6606).toString(),"gkw_cx4_6606.weapon"},
     {"-1",""}
 };
-
-bool checkValueExist(const string &searchValue)
-{
-    for (uint i = 0; i < dict.getSize(); i++)
-    {
-        if (dict[i] == searchValue)
-        {
-            return true;
-        }
-    }
-    return false;
-}
