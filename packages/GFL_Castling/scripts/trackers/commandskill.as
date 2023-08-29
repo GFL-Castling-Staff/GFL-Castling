@@ -1078,11 +1078,26 @@ class CommandSkill : Tracker {
                         medal_num = No_Delete_DataArray[index].m_num;
                     }
                     medal_num = min(medal_num,3);
+                    // _log("现在有" + medal_num + "枚永久勋章");
+                    int index_1 = findKillCountIndex(characterId,"ppsh41");
+                    if (index_1 >=0)
+                    {
+                        int temp_medal_num=KillCountArray[index_1].m_killnum;
+                        medal_num += temp_medal_num;
+                    }                    
+                    // _log("现在有" + medal_num + "枚勋章");
                     string target = player.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     Vector3 s_pos = stringToVector3(target);
                     int factionid = character.getIntAttribute("faction_id");
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    int j = findKillCountIndex(characterId,"ppsh41");
+                    if(j>=0){
+                        KillCountArray[j].add();
+                    }
+                    else{
+                        KillCountArray.insertLast(kill_count(characterId,1,"ppsh41"));
+                    }
                     c_pos=c_pos.add(Vector3(0,1,0));
                     c_pos = c_pos.add((getAimUnitVector(1,c_pos,s_pos)));
                     array<string> Voice={
@@ -1094,13 +1109,73 @@ class CommandSkill : Tracker {
                         "PPsh41Mod_DEFENSE_JP.wav"
                     };                        
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-                    addCooldown("ppsh41",15,characterId,modifer);
 
-                    if (checkFlatRange(c_pos,stringToVector3(target),15)){
-                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41.projectile",characterId,factionid,60);
+                    if(medal_num <= 2)
+                    {
+                        addCooldown("ppsh41",15,characterId,modifer);
+                        if (checkFlatRange(c_pos,stringToVector3(target),15)){
+                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41.projectile",characterId,factionid,60);
+                        }
+                        else{
+                            CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41.projectile",characterId,factionid,50.0,5.0);
+                        }                        
                     }
-                    else{
-                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41.projectile",characterId,factionid,50.0,5.0);
+                    else if(medal_num <= 3)
+                    {
+                        addCooldown("ppsh41",15,characterId,modifer);
+                        healCharacter(m_metagame,characterId,1);
+                        if (checkFlatRange(c_pos,stringToVector3(target),15)){
+                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41.projectile",characterId,factionid,60);
+                        }
+                        else{
+                            CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41.projectile",characterId,factionid,50.0,5.0);
+                        }                        
+                    }
+                    else if(medal_num <= 4)
+                    {
+                        addCooldown("ppsh41",15,characterId,modifer);
+                        healCharacter(m_metagame,characterId,1);
+                        if (checkFlatRange(c_pos,stringToVector3(target),15)){
+                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41_dmgup.projectile",characterId,factionid,60);
+                        }
+                        else{
+                            CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41_dmgup.projectile",characterId,factionid,50.0,5.0);
+                        }                        
+                    }
+                    else if(medal_num <= 5)
+                    {
+                        addCooldown("ppsh41",12,characterId,modifer);
+                        healCharacter(m_metagame,characterId,2);
+                        if (checkFlatRange(c_pos,stringToVector3(target),15)){
+                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41_dmgup.projectile",characterId,factionid,60);
+                        }
+                        else{
+                            CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41_dmgup.projectile",characterId,factionid,50.0,5.0);
+                        }                        
+                    }
+                    else if(medal_num > 5)
+                    {
+                        medal_num = min(10,medal_num);
+                        addCooldown("ppsh41",12,characterId,modifer);
+                        healCharacter(m_metagame,characterId,2);
+                        if(rand(0.0f,1.0f) <= ((medal_num-5)*0.2))
+                        {
+                            if (checkFlatRange(c_pos,stringToVector3(target),15)){
+                                CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41_rangeup.projectile",characterId,factionid,60);
+                            }
+                            else{
+                                CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41_rangeup.projectile",characterId,factionid,50.0,5.0);
+                            }                        
+                        }
+                        else
+                        {
+                            if (checkFlatRange(c_pos,stringToVector3(target),15)){
+                                CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41_dmgup.projectile",characterId,factionid,60);
+                            }
+                            else{
+                                CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41_dmgup.projectile",characterId,factionid,50.0,5.0);
+                            }                                
+                        }
                     }
                 }
             }

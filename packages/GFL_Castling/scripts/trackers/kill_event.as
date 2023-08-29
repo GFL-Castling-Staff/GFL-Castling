@@ -448,7 +448,7 @@ class kill_event : Tracker {
                     else{
                         KillCountArray.insertLast(kill_count(characterId,1,"ppk"));
                     }
-                }    
+                }
             }
 
             if(KillerWeaponKey=="gkw_carcano1938.weapon" && killway=="hit"){
