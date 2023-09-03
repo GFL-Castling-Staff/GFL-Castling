@@ -61,7 +61,7 @@
     <stance state_key="prone" accuracy="0.9"/>
     <stance state_key="prone_moving" accuracy="0.85"/>
     <stance state_key="over_wall" accuracy="0.9"/>
-    <modifier class="speed" value="1.0"/>
+    <modifier class="speed" value="0.725"/>
     <tag name="pistol"/>
     <commonness value="0.0" in_stock="0" can_respawn_with="1"/>
     <capacity value="1" source="rank" source_value="0.0"/>
