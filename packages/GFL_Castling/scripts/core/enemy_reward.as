@@ -67,6 +67,7 @@ dictionary RP_enemy_index = {
     {"sfw_Weaver",300},
     {"sfw_Justice",300},
     {"sfw_Scarecrow",300},
+    {"sf_cerberus",1000},
 
     {"",0}
 };
@@ -135,6 +136,7 @@ dictionary XP_enemy_index = {
     {"sfw_Weaver",0.02},
     {"sfw_Justice",0.02},
     {"sfw_Scarecrow",0.02},
+    {"sf_cerberus",0.05},
 
     {"",0}
 };
@@ -169,6 +171,7 @@ dictionary reward_pool_list= {
     {"Narciss","boss"},
     {"kcco_quartz_ranger","boss"},
     {"kcco_zircon_squadleader","boss"},
+    {"sf_cerberus","boss"},
 
     {"alina","elite"},
     {"vanguard","elite"},
@@ -378,5 +381,24 @@ array<string> SFbossList ={
     "sfw_Destroyer",
     "sfw_Weaver",
     "sfw_Justice",
-    "sfw_Scarecrow"
+    "sfw_Scarecrow",
+    "sf_cerberus"
+};
+
+array<string> boss_list ={
+    "sfw_hunter",
+    "sfw_architect",
+    "sfw_Intruder",
+    "sfw_Dreamer",
+    "sfw_Alchemist",
+    "sfw_Gager",
+    "sfw_Excutioner-Wind_rose",
+    "sfw_Excutioner-Queen_of_the_Moon",
+    "sfw_M16A1",
+    "sfw_Agent",
+    "sfw_Destroyer",
+    "sfw_Weaver",
+    "sfw_Justice",
+    "sfw_Scarecrow",
+    "sf_cerberus"
 };

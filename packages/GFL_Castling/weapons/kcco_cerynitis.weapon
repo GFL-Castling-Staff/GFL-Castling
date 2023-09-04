@@ -4,7 +4,7 @@
 drop_count_factor_on_death="0" 
 drop_count_factor_on_player_death="0"
 time_to_live_out_in_the_open="0"  
-key="kccow_cerynitis.weapon">
+key="kcco_cerynitis.weapon">
 
     <tag name="machine gun" />
 	<tag name="mecha" />
@@ -49,7 +49,7 @@ key="kccow_cerynitis.weapon">
     <sound key="cycle" fileref="m1911_cycle_FromINS.wav" volume="0.8" />
     <!--Model, Icon, Cost-->
     <model filename="" />
-    <hud_icon filename="kccow_cerynitis.png" />
+    <hud_icon filename="kcco_cerynitis.png" />
 
     <!--Ballistics-->
     
@@ -83,7 +83,7 @@ key="kccow_cerynitis.weapon">
 drop_count_factor_on_death="0" 
 drop_count_factor_on_player_death="0"
 time_to_live_out_in_the_open="0"  
-key="kccow_cerynitis_swap.weapon">
+key="kcco_cerynitis_swap.weapon">
 
     <tag name="machine gun" />
 	<tag name="mecha" />
@@ -128,7 +128,7 @@ key="kccow_cerynitis_swap.weapon">
     <sound key="cycle" fileref="m1911_cycle_FromINS.wav" volume="0.8" />
     <!--Model, Icon, Cost-->
     <model filename="" />
-    <hud_icon filename="kccow_cerynitis.png" />
+    <hud_icon filename="kcco_cerynitis.png" />
 
     <!--Ballistics-->
     

@@ -645,7 +645,7 @@
 		<character filename="kcco_mecha.character" />
 		<ai filename="kcco_cet_swap.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
-			<weapon key="kccow_cerynitis.weapon" enabled="1" />
+			<weapon key="kcco_cerynitis.weapon" enabled="1" />
 			<carry_item key="vest_cet_15" />
 		</resources>
 		<attribute_config class="xp">
@@ -658,7 +658,7 @@
 		<ai filename="kcco_cet_swap.ai" />
 		<character filename="kcco_mecha.character" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
-			<weapon key="kccow_cerynitis_swap.weapon" enabled="1" />
+			<weapon key="kcco_cerynitis_swap.weapon" enabled="1" />
 			<carry_item key="vest_cet_10" />
 		</resources>
 		<attribute_config class="xp">
@@ -716,7 +716,7 @@
 		<model filename="kccod_dactyl.xml" />
 		<ai filename="hydra.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
-			<weapon key="kccow_dactyl.weapon" enabled="1" />
+			<weapon key="kcco_dactyl.weapon" enabled="1" />
 			<carry_item key="kcco_sg.carry_item" />
 		</resources>
 		<attribute_config class="xp">
@@ -744,9 +744,9 @@
 		<character filename="qwd.character" />
 		<ai filename="kcco_hydra.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
-			<weapon key="kccow_hydra.weapon" enabled="1" />
-			<weapon key="kccow_hydra_at.weapon" enabled="1" />
-			<carry_item key="vest_80hp_5" />
+			<weapon key="kcco_hydra.weapon" enabled="1" />
+			<weapon key="kcco_hydra_at.weapon" enabled="1" />
+			<carry_item key="vest_100hp_mecha_100" />
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="weapon" slot="1" probability="1.0" />
@@ -769,7 +769,7 @@
 		<ai filename="teslatrooper.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="kcco_teslatrooper.weapon" enabled="1" />
-			<carry_item key="vest_80hp.carry_item" />
+			<carry_item key="vest_100hp_mecha_100" />
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="carry_item" slot="1" probability="1" />

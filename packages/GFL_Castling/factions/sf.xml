@@ -1125,7 +1125,7 @@
 		<ai filename="manticore.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
 			<weapon key="sfw_manticore.weapon"/>
-			<carry_item key="vest_80hp_20" />
+			<carry_item key="vest_100hp_mecha_80" />
 		</resources>
 
 		<attribute_config class="xp">
@@ -1169,6 +1169,21 @@
 			<attribute weight="0.3" min="0.0" max="1.0" />
 		</attribute_config>
 	</soldier>
+
+	<soldier name="sf_cerberus" spawn_score="0.01">
+		<models filename="sfd_boss_cerberus_gua.models" />
+		<character filename="sf_cerberus.character" />
+		<ai filename="sf_cerberus.ai" />
+
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
+			<weapon key="sfw_cerberus.weapon"/>
+			<carry_item key="sf_dinergate.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="0.3" min="0.0" max="1.0" />
+		</attribute_config>
+	</soldier>
+	
 
 	<!-- scouts侦查者 -->
 	<soldier name="sf_scouts" spawn_score="2.0">

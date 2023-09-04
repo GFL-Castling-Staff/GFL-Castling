@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="KCCO.base_weapon" key="kccow_dactyl.weapon">
+<weapon file="KCCO.base_weapon" key="kcco_dactyl.weapon">
 	<tag name="mecha" />
 	<tag name="engineer" />
 
@@ -37,6 +37,6 @@
 	<sound class="impact" fileref="sandbag_drop.wav" />
 
 	<model filename="" />
-	<hud_icon filename="kccow_dactyl.png" />
+	<hud_icon filename="kcco_dactyl.png" />
 	<modifier class="speed" value="1.0" />
 </weapon>
