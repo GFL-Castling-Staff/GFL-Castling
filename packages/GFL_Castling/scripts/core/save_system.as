@@ -198,6 +198,8 @@ class Save_System : Tracker {
             newdata.addWeapon("gkw_negev.weapon");
             newdata.addWeapon("gkw_m4a1.weapon");
             newdata.addWeapon("gkw_ak47.weapon");
+            newdata.addWeapon("gkw_m3.weapon");
+            newdata.addWeapon("gkw_vz61.weapon");
             newdata.addWeapon("gkw_negev.weapon");
             newdata.SetCoreNum(newdata.m_corenum+= 1500);
             newdata.SetSid(sid);
@@ -206,5 +208,37 @@ class Save_System : Tracker {
             string filename = ("save_" + profile_hash +".xml" );
             writeXML(m_metagame,filename,PlayerProfileSave(newdata));
         }
+        if(checkCommand(message,"gfl_load")){
+            string girl_index = message.substr(message.findFirst(" ")+1);
+            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
+            if (playerInfo.m_name == default_string ) return;
+            string profile_hash = playerInfo.m_hash;
+            string sid = playerInfo.m_sid;
+            int player_id = playerInfo.getPlayerPid();
+            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+
+            string weapon_key = getKeyfromIndex(girl_index);
+            if(weapon_key=="") 
+            {
+                _log("未找到武器key");  
+                return;
+            }                
+
+            if(newdata.FindWeapon(weapon_key))
+            {
+                const XmlElement@ player = getPlayerInfo(m_metagame,player_id);
+                if (player is null) return;
+                int cId = player.getIntAttribute("character_id");
+                addItemInBackpack(m_metagame,cId,"weapon",weapon_key);
+                dictionary a;
+                a["%doll_name"] = getResourceName(m_metagame, weapon_key, "weapon");                    
+                sendPrivateMessageKey(m_metagame, player_id, "truemask_success",a);
+                playPrivateSound(m_metagame,"sfx_big.wav",player_id);                   
+            }
+            else
+            {
+                _log("你没有这个武器：" + weapon_key);  
+            }
+        }        
 	}
 }

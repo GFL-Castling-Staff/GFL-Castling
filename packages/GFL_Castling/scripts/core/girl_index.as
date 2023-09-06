@@ -392,14 +392,9 @@ dictionary tdoll_index = {
 class modded_key
 {
     string key;
-    modded_key(const int index,const int skin, const string mod)
+    modded_key(const int index,const int skin=0, const string mod="none")
     {
         key = formatInt(index) + "-skin_" + formatInt(skin) + "-mod_" + mod;
-    }
-
-    modded_key(const int index,const int skin=0)
-    {
-        key = formatInt(index) + "-skin_" + formatInt(skin);
     }
 
     string toString() const
@@ -586,6 +581,7 @@ dictionary tdoll_complex_index = {
     {modded_key(57,532,"mod3").toString(),"gkw_ar15mod3_532.weapon"},
     {modded_key(57,30001,"mod3").toString(),"gkw_ar15mod3_30001.weapon"},
 
+    {modded_key(58).toString(),"gkw_ak47.weapon"},
     {modded_key(58,501).toString(),"gkw_ak47_501.weapon"},
     {modded_key(58,0,"only").toString(),"gkw_ak47_60r.weapon"},
     {modded_key(58,501,"only").toString(),"gkw_ak47_60r_501.weapon"},
@@ -746,3 +742,31 @@ dictionary tdoll_complex_index = {
     {modded_key(225,6606).toString(),"gkw_cx4_6606.weapon"},
     {"-1",""}
 };
+
+dictionary reverse_tdoll_complex_index = {};
+
+string getKeyfromIndex(string girl_index, string skin_index = "0", string mode="none") {
+    string key = girl_index + "-skin_" + skin_index + "-mod_" + mode;
+    if (key!=""){
+        string output_key = string(tdoll_complex_index[key]);
+        if(output_key!=""){
+            return output_key;
+        }
+        return "";
+    } 
+    return "";
+}
+
+void reverse_tdoll_index_dict_init()
+{
+    array<string> all_key = tdoll_complex_index.getKeys();
+    for (uint i=0;i < all_key.length();i++)
+    {
+        string value = all_key[i];
+        string key = string(tdoll_complex_index[value]);
+        reverse_tdoll_complex_index.set(key,value);
+    }
+    _log("初始化图鉴词典成功");
+    _log("词典正向有" + tdoll_complex_index.getSize() + "个键值对" );
+    _log("词典反向有" + reverse_tdoll_complex_index.getSize() + "个键值对" );
+}
