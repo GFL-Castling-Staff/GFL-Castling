@@ -299,6 +299,16 @@ GFL_playerInfo@ getPlayerInfoFromList(string player_name) {
         }
     }
     return default_playerInfo;
+}
+
+// 慎用 查 - 得到单个玩家信息
+GFL_playerInfo@ getPlayerInfoFromListbyPid(int pid) {
+    if(CT_PlayerList.length()>0){
+        for(uint i=0;i<CT_PlayerList.length();i++){
+            if(CT_PlayerList[i].m_playerid == pid) return CT_PlayerList[i];
+        }
+    }
+    return default_playerInfo;
 }    
 
 // 根据xml制作player_info

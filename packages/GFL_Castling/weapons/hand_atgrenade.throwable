@@ -13,7 +13,8 @@
         <model mesh_filename="assualt_at_grenade.mesh" texture_filename="assualt_at_grenade.png" />
         <hud_icon filename="hud_at_grenade.png" />
         <!-- HUD provived by Bad Goose  -->
-        <throwable curve_height="8.0" near_far_distance="8.0" speed_estimation_near="45.0" speed_estimation_far="75.0" max_speed="150.0" randomness="0.4" tweak_factor="1.5"/>
+        <throwable curve_height="7.0" near_far_distance="8.0" speed_estimation_near="6.0" speed_estimation_far="30.0" max_speed="50.0" randomness="0.07" tweak_factor="1.5"/>
+
         <commonness value="0.2" />
         <inventory encumbrance="20.0" buy_price="25.0" sell_price="0.0" />
         <capacity value="2" source="rank" source_value="0.0" />

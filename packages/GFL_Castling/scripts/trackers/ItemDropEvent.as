@@ -49,9 +49,35 @@ class ItemDropEvent : Tracker {
         }
         if (type_id == 1){
             string itemKey = event.getStringAttribute("item_key");
+            int itemClass = event.getIntAttribute("item_class");
             int cId = event.getIntAttribute("character_id");
             int pId = event.getIntAttribute("player_id");     
             int jud_num =  int(itemDropFileIndex[itemKey]);
+            string secondary_key = getPlayerWeaponFromListByPID(pId,1);
+            // _log("副手武器是" + secondary_key);
+
+            if(secondary_key == "gkw_doll_logger.weapon" && itemClass == 0 )
+            {
+                if (!reverse_tdoll_complex_index.exists(itemKey)) 
+                {
+                    notify(m_metagame, "This weapon cant be logged,pls change mode and retry,DM OP to report any bugs", dictionary(), "misc", pId, false, "", 1.0);
+                    return;
+                }
+                GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(pId);
+                if (playerInfo.m_name == default_string) return;
+                string profile_hash = playerInfo.m_hash;
+                string p_name = playerInfo.m_name;
+                int player_id = playerInfo.getPlayerPid();
+                player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+                newdata.addWeapon(itemKey);
+                string format_string = string(reverse_tdoll_complex_index[itemKey]);
+                dictionary a;       
+                a["%doll_num"] = newdata.getAllNum();
+                notify(m_metagame, "Doll logged success", a, "misc", pId, false, "", 1.0);
+                string filename = ("save_" + profile_hash +".xml" );
+                writeXML(m_metagame,filename,PlayerProfileSave(newdata));
+                return;
+            }
 
             switch(jud_num)
             {
@@ -347,6 +373,8 @@ class ItemDropEvent : Tracker {
                     }
                 }
             }
+
+
         }  
     }
 

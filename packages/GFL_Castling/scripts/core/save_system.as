@@ -69,6 +69,11 @@ class player_data
         m_sid = sid;
     }
 
+    int getAllNum() const
+    {
+        return m_weapons.length();
+    }
+
     bool FindWeapon(const string weaponToFind)
     {
         for (uint i = 0; i < m_weapons.length(); ++i)

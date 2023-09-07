@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" key="gkw_doll_logger.weapon">
+    <specification
+	magazine_size="-1" 
+    can_shoot_prone="0" 
+    can_shoot_crouching="0" 
+    carry_in_two_hands="1" 
+    name="I.O.P. Doll Logger [Equip for manual]" 
+    class="5" 
+    character_state="none" 
+    consume="0" 
+    affect_characters="0"
+    affect_vehicles="0"
+    sight_range_modifier="1" 
+    slot="1" 
+    range="0"
+    stab_enabled="0"
+	/>
+    <inventory encumbrance="10.0" buy_price="100.0" sell_price="0" />
+    <capacity value="1" source="rank" source_value="0.0" />
+    <commonness value="0" in_stock="1" can_respawn_with="0" />
+
+    <animation state_key="recoil" 		animation_key="still" />
+    <animation state_key="reload"   animation_key="still" />
+
+
+    <sound key="fire" fileref="" volume="0"/>
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename="" />
+    <hud_icon filename="exchange_box_logger.png" />
+    
+	<stance state_key="running" accuracy="1.0" />
+	<stance state_key="walking" accuracy="1.0" />
+	<stance state_key="crouch_moving" accuracy="1.0" />
+	<stance state_key="prone_moving" accuracy="1.0" />
+	<stance state_key="standing" accuracy="1.0" />
+	<stance state_key="crouching" accuracy="1.0" />
+	<stance state_key="prone" accuracy="1.0" />
+	
+    <modifier class="speed" value="0" />
+</weapon>
