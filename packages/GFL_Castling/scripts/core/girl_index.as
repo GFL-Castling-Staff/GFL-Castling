@@ -615,10 +615,10 @@ dictionary tdoll_complex_index = {
     {modded_key(65,3401).toString(),"gkw_hk416_3401.weapon"},
     {modded_key(65,6505).toString(),"gkw_hk416_6505.weapon"},
     {modded_key(65,0,"mod3").toString(),"gkw_hk416mod3.weapon"},
-    {modded_key(65,537,"mod3").toString(),"gkw_hk416mod3_537.weapon"},
-    {modded_key(65,805,"mod3").toString(),"gkw_hk416mod3_805.weapon"},
-    {modded_key(65,3401,"mod3").toString(),"gkw_hk416mod3_3401.weapon"},
-    {modded_key(65,6505,"mod3").toString(),"gkw_hk416mod3_6505.weapon"},
+    {modded_key(65,537,"mod3").toString(),"gkw_hk416_537_mod3.weapon"},
+    {modded_key(65,805,"mod3").toString(),"gkw_hk416_805_mod3.weapon"},
+    {modded_key(65,3401,"mod3").toString(),"gkw_hk416_3401_mod3.weapon"},
+    {modded_key(65,6505,"mod3").toString(),"gkw_hk416_6505_mod3.weapon"},
 
     {modded_key(66,0,"mod3").toString(),"gkw_56-1typemod3.weapon"},
 
@@ -744,6 +744,8 @@ dictionary tdoll_complex_index = {
 };
 
 dictionary reverse_tdoll_complex_index = {};
+dictionary tdoll_name_dict = {};
+array<girls_information@> all_girls_information = {};
 
 string getKeyfromIndex(string girl_index, string skin_index = "0", string mode="none") {
     string key = girl_index + "-skin_" + skin_index + "-mod_" + mode;
@@ -769,4 +771,118 @@ void reverse_tdoll_index_dict_init()
     _log("初始化图鉴词典成功");
     _log("词典正向有" + tdoll_complex_index.getSize() + "个键值对" );
     _log("词典反向有" + reverse_tdoll_complex_index.getSize() + "个键值对" );
+}
+
+class girls_information
+{
+    int girl_index = 0;
+    int skin_index = -1;
+    string mode = "";
+    string name = "";
+    string weapon_key = "";
+
+    girls_information(int _girl_index,int _skin_index,string _mode,string _name,string _weapon_key )
+    {
+        girl_index = _girl_index;
+        skin_index = _skin_index;
+        mode = _mode;
+        name = _name;
+        weapon_key = _weapon_key;        
+    }
+
+    girls_information(){}
+
+    void SetGirlIndex(int _girl_index)
+    {
+        girl_index = _girl_index;
+    }
+
+    void SetSkinIndex(int _skin_index)
+    {
+        skin_index = _skin_index;
+    }
+
+    void SetMode(const string _mode)
+    {
+        mode = _mode;
+    }
+
+    void SetName(const string _name)
+    {
+        name = _name;
+    }
+
+    void SetWeaponKey(const string _weapon_key)
+    {
+        weapon_key = _weapon_key;
+    }    
+
+    bool isAllowed()
+    {
+        if(girl_index <=0) return false;
+        if(skin_index < 0) return false;
+        if(mode == "") return false;
+        if(name == "") return false;
+        if(weapon_key == "") return false;
+        return true;
+    }
+}
+
+
+girls_information ParseGFLString(const string input,const string key,const string name)
+{
+    
+    int firstNumber = 0;
+    int secondNumber = -1;
+    string modString = "";
+    int firstDash = -1;
+    int secondDash = -1;
+
+    // 查找第一个 "-"
+    firstDash = input.findFirst("-");
+
+    if (firstDash != -1)
+    {
+        // 提取第一个数字
+        string firstPart = input.substr(0, firstDash);
+        firstNumber = parseInt(firstPart); // 使用parseInt
+
+        // 剩余部分
+        string remaining = input.substr(firstDash + 1);
+
+        // 查找第二个 "-"
+        secondDash = remaining.findFirst("-");
+        if (secondDash != -1)
+        {
+            // 提取第二个数字
+            string secondPart = remaining.substr(0, secondDash);
+            secondPart = secondPart.substr(5);
+            _log("第二部分: " + secondPart);
+            secondNumber = parseInt(secondPart); // 使用parseInt
+
+            // 提取mod字符串
+            modString = remaining.substr(secondDash + 5);
+        }
+    }
+
+    // 打印提取的结果
+    _log("第一个数字: " + firstNumber);
+    _log("第二个数字: " + secondNumber);
+    _log("mod字符串: " + modString);
+
+    girls_information info = girls_information(firstNumber,secondNumber,modString,name,key);
+    return info;
+}
+
+array<girls_information@> findGFLIndex(int index)
+{
+    array<girls_information@> resultArray;
+    for (uint i = 0; i < all_girls_information.length(); i++)
+    {
+        if (all_girls_information[i].girl_index == index)
+        {
+            resultArray.insertLast(all_girls_information[i]);
+        }
+    }
+    return resultArray;
 }

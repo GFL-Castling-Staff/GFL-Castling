@@ -47,6 +47,15 @@ class ItemDropEvent : Tracker {
             string key = event.getStringAttribute("item_key");
             dealwithillegalitem(key,cId);
         }
+        if (type_id == 2){
+            int cId = event.getIntAttribute("character_id");
+            string key = event.getStringAttribute("item_key");
+            if(key == "gkw_doll_logger.weapon")
+            {
+                int pId = event.getIntAttribute("player_id");     
+                notify(m_metagame, "Help - logger system", dictionary(), "misc", pId, true, "", 1.0);
+            }
+        }        
         if (type_id == 1){
             string itemKey = event.getStringAttribute("item_key");
             int itemClass = event.getIntAttribute("item_class");
@@ -60,7 +69,9 @@ class ItemDropEvent : Tracker {
             {
                 if (!reverse_tdoll_complex_index.exists(itemKey)) 
                 {
-                    notify(m_metagame, "This weapon cant be logged,pls change mode and retry,DM OP to report any bugs", dictionary(), "misc", pId, false, "", 1.0);
+                    dictionary a;
+                    a["%doll_key"] = "" + itemKey;
+                    notify(m_metagame, "Doll logged failed", a, "misc", pId, false, "", 1.0);
                     return;
                 }
                 GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(pId);
@@ -69,10 +80,18 @@ class ItemDropEvent : Tracker {
                 string p_name = playerInfo.m_name;
                 int player_id = playerInfo.getPlayerPid();
                 player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+                if(newdata.FindWeapon(itemKey))
+                {
+                    dictionary a;
+                    a["%doll_key"] = "" + itemKey;                    
+                    notify(m_metagame, "Doll logged already", a, "misc", pId, false, "", 1.0);
+                    return;
+                }
                 newdata.addWeapon(itemKey);
                 string format_string = string(reverse_tdoll_complex_index[itemKey]);
-                dictionary a;       
-                a["%doll_num"] = newdata.getAllNum();
+                dictionary a;
+                a["%doll_key"] = "" + itemKey;
+                a["%doll_num"] = "" + newdata.getAllNum();
                 notify(m_metagame, "Doll logged success", a, "misc", pId, false, "", 1.0);
                 string filename = ("save_" + profile_hash +".xml" );
                 writeXML(m_metagame,filename,PlayerProfileSave(newdata));

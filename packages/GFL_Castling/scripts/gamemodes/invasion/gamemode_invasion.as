@@ -55,6 +55,7 @@
 #include "call_event_handler.as"
 #include "GFLplayerlist.as"
 #include "save_system.as"
+#include "girl_index.as"
 
 // --------------------------------------------
 class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
@@ -224,6 +225,8 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		// query for basic match data -- we mostly need the savegame location
 		updateGeneralInfo();
 		save();
+		tdoll_name_dict_init();
+		tdoll_information_init();
 
 		// add tracker for time, unlock manager will drop unlocks some time after their activation
 		if (m_unlockManager !is null) {
@@ -458,6 +461,45 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 
 		_log("loot reward pool inited");
 	}
+
+	protected void tdoll_name_dict_init(){
+		tdoll_name_dict.deleteAll();
+		if(getFactionConfigs()[0].m_name !="GK") return;
+		array<const XmlElement@> resource_info = getFactionResources(this,0,"weapon","weapons","default");
+		for (uint j = 0; j < resource_info.size(); ++j) {
+			const XmlElement@ resource_node = resource_info[j];
+			string key = resource_node.getStringAttribute("key");
+			string name = resource_node.getStringAttribute("name");
+			if(key=="" || name=="") continue;
+			tdoll_name_dict.set(key,name);
+		}
+		_log("初始化了" + tdoll_name_dict.getSize() + "个翻译");
+	}
+
+	protected void tdoll_information_init(){
+		all_girls_information.resize(0);
+		if(tdoll_name_dict.getSize() <= 0)
+		{
+			_log("词典初始化失败，不生成人形信息");
+			return;
+		}
+		array<string> all_key = tdoll_complex_index.getKeys();
+		for (uint i=0;i < all_key.length();i++)
+		{
+			string _string = all_key[i];
+			string _key = string(tdoll_complex_index[_string]);
+			string _name = string(tdoll_name_dict[_key]);
+			girls_information info = ParseGFLString(_string,_key,_name);
+			if(!info.isAllowed())
+			{
+				_log("出现问题 信息是" + _string + " key是" + _key + " name是" + _name);
+				continue;
+			} 
+			all_girls_information.insertLast(info);
+			_log("这是第几个 " + (all_girls_information.length()));
+		}		
+	}
+
 	// --------------------------------------------
 	// map rotator is the one that actually defines which factions are in the game and which default values are used,
 	// it will feed us the faction data

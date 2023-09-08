@@ -85,6 +85,8 @@ class player_data
         }
         return false;
     }
+
+    
 }
 
 const XmlElement@ readFile(const Metagame@ metagame,string name, string profile_hash){
@@ -244,6 +246,49 @@ class Save_System : Tracker {
             {
                 _log("你没有这个武器：" + weapon_key);  
             }
+        }
+        if(checkCommand(message,"craft")){
+            string girl_index = message.substr(message.findFirst(" ")+1);
+            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);            
+            if (playerInfo.m_name == default_string ) return;
+            string profile_hash = playerInfo.m_hash;
+            string sid = playerInfo.m_sid;
+            int player_id = playerInfo.getPlayerPid();
+            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash)); 
+
+            int girl_index_i = parseInt(girl_index);
+            _log("图鉴里有" +newdata.getAllNum() +"个武器");
+            _log("图鉴index是" + girl_index_i);
+
+            array<girls_information@> doll_array = findGFLIndex(girl_index_i);
+            if(doll_array.length() <= 0 ) 
+            {
+                notify(m_metagame, "Doll query failed", dictionary(), "misc", player_id, false, "", 1.0);
+                return;
+            }
+
+            string notify_script;
+            int count=0;
+
+            for(uint i=0;i<doll_array.length();i++)
+            {
+                _log("正在检测" + doll_array[i].weapon_key);
+                if(newdata.FindWeapon(doll_array[i].weapon_key))
+                {
+                    count++;
+                    dictionary a;
+                    a["%skin_index"] = "" +doll_array[i].skin_index;
+                    a["%name"]= doll_array[i].name;
+                    a["%mode"]= doll_array[i].mode;
+                    notify(m_metagame, "Logger Query Result", a, "misc", player_id, false, "", 1.0);
+                }
+            }
+
+            if(count <= 0)
+            {
+                notify(m_metagame, "Logger Query nothing", dictionary(), "misc", player_id, false, "", 1.0);
+            }
+
         }        
 	}
 }

@@ -1691,5 +1691,14 @@
 	<text key="* destroy %target_count turret" text="* 摧毁 &#37;target_count 座 固定炮塔" />
 
 	<text key="I.O.P. Doll Logger [Equip for manual]" text="I.O.P. 人形录入证 [装备以查看教程]"/>
-	<text key="Doll logged success" text="战术人形录入成功 现在您的图鉴里有&#37;doll_num 位战术人形" />
+	<text key="Doll logged success" text="&#37;doll_key 录入成功 现在您的图鉴里有&#37;doll_num 位战术人形" />
+	<text key="Doll logged failed" text="&#37;doll_key 录入失败,请尝试切换模式并重试,如仍无法解决请截图并报告给管理员"/> 	
+	<text key="Doll logged already" text="&#37;doll_key 录入失败,您已经在图鉴中烙印了这位人形"/> 	
+	<text key="Help - logger system" text="[图鉴录入机制] 装备人形录入证后，于军械库卖出你想录入的人形，如果有副模式请切换为主模式再进行录入操作，随后该人形将永久与存档绑定。"/>>
+
+	<text key="Doll query failed" text="您输入的编号有误，请重试"/> 	
+	<text key="Logger Query Result" text= "皮肤编号:&#37;skin_index 名字:&#37;name 种类:&#37;mode"/> 
+	<text key="Logger Query nothing" text="在您的图鉴中未能查询到相关人形"/> 
+
+
 </translation>
