@@ -22,7 +22,7 @@
         <animation state_key="next_in_chain_out" animation_key="open tripod"/>
         <inventory encumbrance="50.0" buy_price="300.0" sell_price="300.0" />
         <next_in_chain key="gkw_mg3mod3_skill.weapon" share_ammo="1" />
-        <commonness value="0.2" in_stock="0" can_respawn_with="1" />
+        <commonness value="0.0001" in_stock="0" can_respawn_with="1" />
         <sound key="fire" fileref="mg3_fire_FormWF.wav" pitch_variety="0.05" volume="1" />
         <sound key="magazine_out" fileref="mg3_mgz_out_FormSQUAD.wav" volume="1.0" />
         <sound key="magazine_in" fileref="mg3_mgz_in_FormSQUAD.wav" volume="1.0" />
