@@ -4,22 +4,41 @@
 <weapon file="heavy_mg_standing.animation_base" key="gkw_mg4_oc.weapon">
     <specification 
     barrel_offset="0.5" 
-    retrigger_time="0.08" 
-    accuracy_factor="0.85" 
-    sustained_fire_diminish_rate="1.8" 
-    sustained_fire_grow_step="0.3"
-    spread_range="0.3" 
+    retrigger_time="0.07742" 
+    accuracy_factor="1.0" 
+    sustained_fire_diminish_rate="2.0" 
+    sustained_fire_grow_step="0.25"
+    spread_range="0.7" 
     magazine_size="200" 
-    stance_accuracy_rate="2.0"
-    leave_crouch_accuracy_penalty="0.4"
+    stance_accuracy_rate="0.6"
+    can_shoot_standing="1" 
+	can_shoot_crouching="1"
+	can_shoot_prone="1"
     suppressed="0" 
     name="MG4-[Sneaker Costume]" 
     class="0" 
     projectile_speed="200" 
     sight_range_modifier="1.5"/>
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
+	<inventory encumbrance="50.0" buy_price="50.0" sell_price="25.0"/>
+	<capacity value="1" source="rank" source_value="0.0" />
+    <animation state_key="recoil" animation_key="recoil, hip fire" />
+	<animation state_key="recoil" animation_key="recoil2, hip fire" />
+	<animation state_key="recoil" animation_key="recoil3, hip fire" />
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil1" />
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil2" />
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil3" />
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+	<animation state_key="hold" animation_key="hold, lmg" />
+    <animation state_key="running" animation_key="running, line infantry" />
+	<animation state_key="walking" animation_key="walking, hip fire" />
+    <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
+    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+	<animation state_key="stabbing" animation_key="melee, quick knife" />
+	<animation state_key="stabbing" animation_key="pistol whip 3" />
     <animation key="reload" animation_key="reloading, Machine gun 2.8" />
-    <commonness value="0" in_stock="0" />
-    <inventory encumbrance="50.0" buy_price="43.0" sell_price="43.0" />
     <sound key="fire" fileref="mg4_fire_FromMOH2012.wav" pitch_variety="0.05" volume="1" />
     <sound key="magazine_out" fileref="mg4_mgz_out_FromBF2PR.wav" volume="0.8" />
     <sound key="magazine_in" fileref="mg4_mgz_in_FromBF2PR.wav" volume="0.8" />
@@ -32,12 +51,12 @@
         <trail probability="1.0" key="bullet_new_deep"/>
     </projectile>
     <effect class="muzzle" ref="ejection_556" />
-    <stance state_key="running" accuracy="0.2" />
-    <stance state_key="walking" accuracy="0.5" />
-    <stance state_key="crouch_moving" accuracy="0.5" />
-    <stance state_key="prone_moving" accuracy="0.5" />
-    <stance state_key="standing" accuracy="0.5" />
-    <stance state_key="crouching" accuracy="0.9" />
-    <stance state_key="prone" accuracy="1" />
-    <stance state_key="over_wall" accuracy="1" />
+    <stance state_key="running" accuracy="0"/>
+    <stance state_key="walking" accuracy="0"/>
+	<stance state_key="crouch_moving" accuracy="0.175"/>
+	<stance state_key="prone_moving" accuracy="0.175"/>
+	<stance state_key="standing" accuracy="1.2"/>
+	<stance state_key="crouching" accuracy="1.0"/>
+	<stance state_key="prone" accuracy="1.2"/>
+	<stance state_key="over_wall" accuracy="1.2"/>
 </weapon>
