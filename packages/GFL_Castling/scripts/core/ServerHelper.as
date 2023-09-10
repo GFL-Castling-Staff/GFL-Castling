@@ -172,6 +172,7 @@ class ServerHelper : Tracker {
                 if(s=="vespid") spawnSoldier(m_metagame,1,1,target,"sf_vespid");
                 if(s=="guard") spawnSoldier(m_metagame,1,1,target,"sf_guard");
                 if(s=="jaeger") spawnSoldier(m_metagame,1,1,target,"sf_jaeger");
+                if(s=="ljss") spawnSoldier(m_metagame,1,1,target,"sfw_Alchemist");
                 if(s=="gangshi") spawnSoldier(m_metagame,1,1,target,"sfw_nemeum");
                 if(s=="longqi") spawnSoldier(m_metagame,1,1,target,"sfw_dragoon");
                 if(s=="m16") spawnSoldier(m_metagame,1,1,target,"sfw_M16A1");

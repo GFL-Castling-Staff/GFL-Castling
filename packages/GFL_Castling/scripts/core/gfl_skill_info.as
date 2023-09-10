@@ -174,7 +174,13 @@ dictionary gameSkillIndex = {
 
 		{"c96_skill",45},
 
+        // 铁血boss 刽子手 技能 跳劈
+        {"sf_boss_excutioner_skill",46},
         
+        // 铁血boss 炼金术师 技能 大限
+        {"sf_boss_alchemist_skill",47},
+
+        // 
 
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}

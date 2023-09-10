@@ -859,6 +859,7 @@
 			<call key="sf_jaguar.call" />
 			<call key="sf_assualt.call" />
 			<weapon key="sfw_alchemist.weapon" enabled="1"/>
+			<projectile key="skill_sf_boss_alchemist.projectile" enabled="1" probability="1.0" />
 			<carry_item key="vest_50hp_enforcer.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
