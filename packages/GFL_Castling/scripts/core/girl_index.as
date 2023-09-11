@@ -804,7 +804,13 @@ dictionary tdoll_complex_index = {
     {modded_key(117).toString(),"gkw_psg1.weapon"},
     {modded_key(117,8404).toString(),"gkw_psg1_8404.weapon"},
 
-
+    {modded_key(118).toString(),"gkw_9a91.weapon"},
+    {modded_key(118,1302).toString(),"gkw_9a91_1302.weapon"},
+    {modded_key(118,8304).toString(),"gkw_9a91_8304.weapon"},
+    {modded_key(118,0,"only").toString(),"gkw_9a91_only.weapon"},
+    {modded_key(118,1302,"only").toString(),"gkw_9a91_1302_only.weapon"},
+    {modded_key(118,8304,"only").toString(),"gkw_9a91_8304_only.weapon"},
+    
 
     // 从编号150开始
     {modded_key(152).toString(),"gkw_m1897.weapon"},
