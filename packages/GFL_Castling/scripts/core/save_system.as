@@ -334,7 +334,8 @@ class Save_System : Tracker {
                     a["%skin_index"] = "" +doll_array[i].skin_index;
                     a["%name"]= doll_array[i].name;
                     a["%mode"]= doll_array[i].mode;
-                    notify(m_metagame, "Logger Query Result", a, "misc", player_id, false, "", 1.0);
+                    // notify(m_metagame, "Logger Query Result", a, "misc", player_id, false, "", 1.0);
+                    sendPrivateMessageKey(m_metagame, player_id, "Logger Query Result",a);
                 }
             }
 

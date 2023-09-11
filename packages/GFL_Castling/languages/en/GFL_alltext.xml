@@ -7,4 +7,18 @@
 	<text key="Doll logged failed" text="&#37;doll_key cant be logged,pls change mode and retry, DM OP to report any bugs"/> 
 	<text key="Doll logged already" text="&#37;doll_key cant be logged,you already have this doll"/> 
 
+	<text key="Help - logger system" text="After equipping the I.O.P. Doll Logger, you can sell the T-Doll you wish to register. If there is a alt-mode, please switch to the main mode before proceeding with the registration. Subsequently, the T-Doll will be permanently bound to your save."/>>
+	<text key="Help - logger system title" text="[T-Doll Logger]"/>
+
+	<text key="Doll query failed" text="The index you entered is incorrect, please try again."/> 	
+	<text key="Doll query format error" text="The parameters you entered are incorrect. Please input /craft #skin_index #type."/> 	
+
+	<text key="Logger Query Result" text= "Skin Index:&#37;skin_index Name:&#37;name Type:&#37;mode"/> 
+	<text key="Logger Query nothing" text="No relevant T-Doll found in your save."/> 
+	<text key="Logger Timeout" text="Operation timed out, please re-enter."/> 
+	<text key="craft progression start" text="Confirmed recoverable T-Doll list. Please input /craft #skin_index #type to recover T-Doll." />
+	<text key="craft success" text="Recover &#37;doll_name successfully" />
+	<text key="craft not found" text="No dolls with index:&#37;index skin index:&#37;skin_index type:&#37;mode的人形" />
+	<text key="craft not exist" text="you dont own &#37;name" />
+
 </translation>
