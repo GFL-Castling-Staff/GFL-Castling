@@ -2897,7 +2897,7 @@ class CommandSkill : Tracker {
                         tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_40.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                         addCooldown("sniper",15,characterId,modifer);
                     }
-                    else if (weapon_name == "gkw_psg1.weapon"){
+                    else if (weapon_name == "gkw_psg1.weapon" || weapon_name == "gkw_psg1_8404.weapon"){
                         playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                         tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_40.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));

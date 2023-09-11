@@ -753,6 +753,58 @@ dictionary tdoll_complex_index = {
 
     {modded_key(102).toString(),"gkw_ump40.weapon"},
 
+    {modded_key(103).toString(),"gkw_ump45.weapon"},
+    {modded_key(103,410).toString(),"gkw_ump45_410.weapon"},
+    {modded_key(103,535).toString(),"gkw_ump45_535.weapon"},
+    {modded_key(103,3404).toString(),"gkw_ump45_3403.weapon"},
+    {modded_key(103,5405).toString(),"gkw_ump45_5405.weapon"},
+    {modded_key(103,0,"mod3").toString(),"gkw_ump45mod3.weapon"},
+    {modded_key(103,410,"mod3").toString(),"gkw_ump45mod3_410.weapon"},
+    {modded_key(103,535,"mod3").toString(),"gkw_ump45mod3_535.weapon"},
+    {modded_key(103,3404,"mod3").toString(),"gkw_ump45mod3_3403.weapon"},
+    {modded_key(103,5405,"mod3").toString(),"gkw_ump45mod3_5405.weapon"},
+
+    {modded_key(104).toString(),"gkw_g36c.weapon"},
+    {modded_key(104,3103).toString(),"gkw_g36c_3103.weapon"},
+    {modded_key(104,0,"mod3").toString(),"gkw_g36cmod3.weapon"},
+    {modded_key(104,3103,"mod3").toString(),"gkw_g36cmod3_3103.weapon"},
+
+    {modded_key(105).toString(),"gkw_ots12.weapon"},
+    {modded_key(105,3605).toString(),"gkw_ots12_3605.weapon"},
+
+    {modded_key(106).toString(),"gkw_fal.weapon"},
+    {modded_key(106,308).toString(),"gkw_fal_308.weapon"},
+    {modded_key(106,2406).toString(),"gkw_fal_2406.weapon"},
+
+    {modded_key(107).toString(),"gkw_f2000.weapon"},
+
+    {modded_key(109).toString(),"gkw_mg5.weapon"},
+
+    {modded_key(110).toString(),"gkw_fg42.weapon"},
+    {modded_key(110,0,"only").toString(),"gkw_fg42_only.weapon"},
+
+    {modded_key(112).toString(),"gkw_negev.weapon"},
+    {modded_key(112,904).toString(),"gkw_negev_904.weapon"},
+    {modded_key(112,3202).toString(),"gkw_negev_3202.weapon"},
+
+    {modded_key(114).toString(),"gkw_welrod.weapon"},
+    {modded_key(114,411).toString(),"gkw_welrod_411.weapon"},
+    {modded_key(114,2103).toString(),"gkw_welrod_2103.weapon"},
+    {modded_key(114,0,"mod3").toString(),"gkw_welrodmod3.weapon"},
+    {modded_key(114,411,"mod3").toString(),"gkw_welrodmod3_411.weapon"},
+    {modded_key(114,2103,"mod3").toString(),"gkw_welrodmod3_2103.weapon"},
+
+    {modded_key(115).toString(),"gkw_kp31.weapon"},
+    {modded_key(115,310).toString(),"gkw_kp31_310.weapon"},
+    {modded_key(115,3101).toString(),"gkw_kp31_3101.weapon"},
+    {modded_key(115,0,"mod3").toString(),"gkw_kp31mod3.weapon"},
+    {modded_key(115,310,"mod3").toString(),"gkw_kp31mod3_310.weapon"},
+    {modded_key(115,3101,"mod3").toString(),"gkw_kp31mod3_3101.weapon"},
+
+    {modded_key(117).toString(),"gkw_psg1.weapon"},
+    {modded_key(117,8404).toString(),"gkw_psg1_8404.weapon"},
+
+
 
     // 从编号150开始
     {modded_key(152).toString(),"gkw_m1897.weapon"},
