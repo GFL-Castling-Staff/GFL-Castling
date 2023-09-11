@@ -171,6 +171,8 @@ player_data@ PlayerProfileLoad(const XmlElement@ player_profile){
 
 class Save_System : Tracker {
     protected Metagame@ m_metagame;
+    protected array<CraftQueue@> m_craftQueue;
+
     Save_System(Metagame@ metagame)
     {
         @m_metagame = @metagame;
@@ -248,12 +250,64 @@ class Save_System : Tracker {
             }
         }
         if(checkCommand(message,"craft")){
-            string girl_index = message.substr(message.findFirst(" ")+1);
+
             GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);            
             if (playerInfo.m_name == default_string ) return;
             string profile_hash = playerInfo.m_hash;
             string sid = playerInfo.m_sid;
             int player_id = playerInfo.getPlayerPid();
+
+            if(checkQueue(player_id,"craft_2nd"))
+            {
+                int queue_index = findQueueIndex(player_id,"craft_2nd");
+                array<string> parameters = parseParameters(message, "craft");
+                if(parameters.length() <= 1 || parameters.length() >=3)
+                {
+                    notify(m_metagame, "Doll query format error", dictionary(), "misc", player_id, false, "", 1.0);
+                    return;
+                }
+
+                string girl_index = m_craftQueue[queue_index].m_string;
+                string skin_index = parameters[0];
+                string mode_index = parameters[1];
+                string weapon_key = getKeyfromIndex(girl_index,skin_index,mode_index);
+
+
+                player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+
+                if(newdata.FindWeapon(weapon_key))
+                {
+                    const XmlElement@ player = getPlayerInfo(m_metagame,player_id);
+                    if (player is null) return;
+                    int cId = player.getIntAttribute("character_id");
+                    addItemInBackpack(m_metagame,cId,"weapon",weapon_key);
+                    GiveRP(m_metagame,cId,-3000);
+                    dictionary a;
+                    a["%doll_name"] = getNamefromDict(weapon_key);
+                    notify(m_metagame, "craft success", a, "misc", player_id, false, "", 1.0);
+                    playPrivateSound(m_metagame,"sfx_big.wav",player_id);
+                    m_craftQueue.removeAt(queue_index);
+                }
+                else if(!existKeyinDataSet(weapon_key))
+                {
+                    dictionary a;
+                    a["%index"] = girl_index;
+                    a["%skin_index"] = skin_index;
+                    a["%mode"] = mode_index;
+                    notify(m_metagame, "craft not found", a, "misc", player_id, false, "", 1.0);
+                    m_craftQueue.removeAt(queue_index);
+                }
+                else
+                {
+                    dictionary a;
+                    a["%name"] = getNamefromDict(weapon_key);
+                    notify(m_metagame, "craft not exist", a, "misc", player_id, false, "", 1.0);
+                    m_craftQueue.removeAt(queue_index);
+                }
+                return;
+            }
+
+            string girl_index = message.substr(message.findFirst(" ")+1);
             player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash)); 
 
             int girl_index_i = parseInt(girl_index);
@@ -287,8 +341,46 @@ class Save_System : Tracker {
             if(count <= 0)
             {
                 notify(m_metagame, "Logger Query nothing", dictionary(), "misc", player_id, false, "", 1.0);
+                return;
             }
 
+            startQueue(player_id,"craft_2nd",girl_index);
+            notify(m_metagame, "craft progression start", dictionary(), "misc", player_id, false, "", 1.0);
         }        
 	}
+
+    void update(float time) {
+        if(m_craftQueue.size()>0){
+            for(uint a=0;a<m_craftQueue.size();a++){
+                m_craftQueue[a].m_time-=time;
+                if(m_craftQueue[a].m_time<0){
+                    int pId=m_craftQueue[a].m_playerId;
+                    notify(m_metagame,"Logger Timeout", dictionary(), "misc", pId, false, "", 1.0);
+                    m_craftQueue.removeAt(a);
+                }
+            }
+        }
+    } 
+
+    bool checkQueue(int pId,string type){
+        for(uint i=0;i<m_craftQueue.size();i++){
+            if(m_craftQueue[i].m_playerId==pId && m_craftQueue[i].m_typekey==type){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    int findQueueIndex(int pId,string type){
+        for(uint i=0;i<m_craftQueue.size();i++){
+            if(m_craftQueue[i].m_playerId==pId && m_craftQueue[i].m_typekey==type){
+                return int(i);
+            }
+        }
+        return -1;
+    }
+
+    void startQueue(int playerId,string key,string index){
+        m_craftQueue.insertLast(CraftQueue(playerId,key,index));
+    }    
 }

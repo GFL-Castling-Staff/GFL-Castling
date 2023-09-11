@@ -426,7 +426,7 @@ dictionary tdoll_complex_index = {
     {modded_key(5).toString(),"gkw_m1895.weapon"},
     {modded_key(5,5309).toString(),"gkw_m1895_5309.weapon"},
     {modded_key(5,7107).toString(),"gkw_m1895_7107.weapon"},
-    {modded_key(5,5309,"mod3").toString(),"gkw_m1895mod3.weapon"},
+    {modded_key(5,0,"mod3").toString(),"gkw_m1895mod3.weapon"},
     {modded_key(5,5309,"mod3").toString(),"gkw_m1895mod3_5309.weapon"},
     {modded_key(5,7107,"mod3").toString(),"gkw_m1895mod3_7107.weapon"},
 
@@ -616,7 +616,7 @@ dictionary tdoll_complex_index = {
     {modded_key(65,6505).toString(),"gkw_hk416_6505.weapon"},
     {modded_key(65,0,"mod3").toString(),"gkw_hk416mod3.weapon"},
     {modded_key(65,537,"mod3").toString(),"gkw_hk416_537_mod3.weapon"},
-    {modded_key(65,805,"mod3").toString(),"gkw_hk416_805_mod3.weapon"},
+    {modded_key(65,805,"mod3").toString(),"gkw_hk416mod3_805.weapon"},
     {modded_key(65,3401,"mod3").toString(),"gkw_hk416_3401_mod3.weapon"},
     {modded_key(65,6505,"mod3").toString(),"gkw_hk416_6505_mod3.weapon"},
 
@@ -866,9 +866,9 @@ girls_information ParseGFLString(const string input,const string key,const strin
     }
 
     // 打印提取的结果
-    _log("第一个数字: " + firstNumber);
-    _log("第二个数字: " + secondNumber);
-    _log("mod字符串: " + modString);
+    // _log("第一个数字: " + firstNumber);
+    // _log("第二个数字: " + secondNumber);
+    // _log("mod字符串: " + modString);
 
     girls_information info = girls_information(firstNumber,secondNumber,modString,name,key);
     return info;
@@ -885,4 +885,22 @@ array<girls_information@> findGFLIndex(int index)
         }
     }
     return resultArray;
+}
+
+string getNamefromDict(string key)
+{
+    string output = string(tdoll_name_dict[key]);
+    return output;
+}
+
+bool existKeyinDataSet(string key)
+{
+    for (uint i = 0; i < all_girls_information.length(); i++)
+    {
+        if (all_girls_information[i].weapon_key == key)
+        {
+            return true;
+        }
+    }    
+    return false;
 }

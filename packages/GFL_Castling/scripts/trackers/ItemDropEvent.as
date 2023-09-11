@@ -22,6 +22,7 @@ class CraftQueue
     int m_playerId;
     float m_time=10.0;
     string m_typekey="";
+    string m_string = "";
     CraftQueue(int pId){
         m_playerId=pId;
     }
@@ -29,6 +30,11 @@ class CraftQueue
         m_playerId=pId;
         m_typekey=key;
     }    
+    CraftQueue(int pId,string key,string str){
+        m_playerId=pId;
+        m_typekey=key;
+        m_string = str;
+    }        
 }
 
 class ItemDropEvent : Tracker {
@@ -53,7 +59,7 @@ class ItemDropEvent : Tracker {
             if(key == "gkw_doll_logger.weapon")
             {
                 int pId = event.getIntAttribute("player_id");     
-                notify(m_metagame, "Help - logger system", dictionary(), "misc", pId, true, "", 1.0);
+                notify(m_metagame, "Help - logger system", dictionary(), "misc", pId, true, "Help - logger system title", 1.0);
             }
         }        
         if (type_id == 1){
