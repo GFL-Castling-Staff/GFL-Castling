@@ -222,6 +222,9 @@ class ItemDropEvent : Tracker {
                     else if (checkQueue(pId,"aa12") && (itemKey=="gkw_aa12_4401.weapon" || itemKey=="gkw_aa12_4401_skill.weapon")){
                         giveDigimindItem(cId, pId, "gkw_aa12_4401_only.weapon", "aa12");
                     }
+                    else if (checkQueue(pId,"aa12") && (itemKey=="gkw_aa12_2403.weapon" || itemKey=="gkw_aa12_2403_skill.weapon")){
+                        giveDigimindItem(cId, pId, "gkw_aa12_2403_only.weapon", "aa12");
+                    }                    
                     else if (checkQueue(pId,"m1garand") && (itemKey=="gkw_m1.weapon" || itemKey=="gkw_m1_skill.weapon")){
                         giveDigimindItem(cId, pId, "gkw_m1_sf.weapon", "m1garand");
                     }

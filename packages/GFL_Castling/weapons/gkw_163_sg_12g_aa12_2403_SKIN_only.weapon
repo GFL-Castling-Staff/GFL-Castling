@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-<weapon key="gkw_aa12_4401_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_aa12_2403_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification 
 	retrigger_time="0.2"
 	accuracy_factor="1.0"
@@ -9,7 +9,7 @@
 	magazine_size="20"
 	can_shoot_standing="1"
 	suppressed="0"
-	name="AA-12-[Smokeless Lollipop]-[Frag-12 HE Round]"
+	name="AA-12-[Never Rising Sun]-[Frag-12 HE Round]"
 	class="0"
 	reload_one_at_a_time="0"
 	sight_range_modifier="1.0"
@@ -24,7 +24,7 @@
 	slot="0"
 	use_basic_muzzle_smoke_effect="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
-	<next_in_chain key="gkw_aa12_4401_only_skill.weapon" share_ammo="0" />
+	<next_in_chain key="gkw_aa12_2403_only_skill.weapon" share_ammo="0" />
 	<sound key="fire" fileref="aa12_fire_FromROUGECOMPANY.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="aa12_mgz_out_FromCOD16.wav" volume="0.45" />
     <sound key="magazine_in" fileref="aa12_mgz_in_FromCOD16.wav" volume="0.35" />
@@ -32,8 +32,8 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<commonness value="0" in_stock="0"/>
 	<inventory encumbrance="12.5" buy_price="75.0" sell_price="75.0"/>
-    <model filename="gkw_sg_aa12_4401.xml" />
-	<hud_icon filename="gkw_aa12_4401.png"/>
+    <model filename="gkw_sg_aa12_2403.xml" />
+	<hud_icon filename="gkw_aa12_2403.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="aa12_only.projectile">
 		<result class="blast" radius="3.5" damage="4.1" push="0.3" decal="1" faction_compare="not_equal"/>
@@ -78,7 +78,7 @@
 	<animation state_key="stabbing" animation_key="melee, bayonet"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
 </weapon>
-<weapon key="gkw_aa12_4401_only_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_aa12_2403_only_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification 
 	retrigger_time="0.2"
 	accuracy_factor="0.8"
@@ -87,7 +87,7 @@
 	magazine_size="20"
 	can_shoot_standing="1"
 	suppressed="0"
-	name="AA-12-[Smokeless Lollipop]-[Dragon Breath Round]"
+	name="AA-12-[Never Rising Sun]-[Dragon Breath Round]"
 	class="0"
 	reload_one_at_a_time="0"
 	sight_range_modifier="1.0"
@@ -102,7 +102,7 @@
 	slot="0"
 	use_basic_muzzle_smoke_effect="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
-	<next_in_chain key="gkw_aa12_4401_only.weapon" share_ammo="0" />
+	<next_in_chain key="gkw_aa12_2403_only.weapon" share_ammo="0" />
 	<sound key="fire" fileref="aa12_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="aa12_mgz_out_FromCOD16.wav" volume="0.45" />
     <sound key="magazine_in" fileref="aa12_mgz_in_FromCOD16.wav" volume="0.35" />
@@ -110,8 +110,8 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<commonness value="0" in_stock="0"/>
 	<inventory encumbrance="12.5" buy_price="75.0" sell_price="75.0"/>
-    <model filename="gkw_sg_aa12_4401.xml" />
-	<hud_icon filename="gkw_aa12_4401.png"/>
+    <model filename="gkw_sg_aa12_2403.xml" />
+	<hud_icon filename="gkw_aa12_2403.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile file="dragons_breath2.projectile" time_to_live="0.175">
 		<result class="blast" radius="2.5" damage="1.1" push="0.1" decal="1" faction_compare="not_equal"/>
