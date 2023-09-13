@@ -444,6 +444,9 @@ dictionary tdoll_complex_index = {
     {modded_key(8).toString(),"gkw_makarov.weapon"},
     {modded_key(8,0,"mod3").toString(),"gkw_makarovmod3.weapon"},
 
+    {modded_key(9).toString(),"gkw_p38.weapon"},
+    {modded_key(9,2401).toString(),"gkw_p38_2401.weapon"},
+
     {modded_key(10).toString(),"gkw_ppk.weapon"},
     {modded_key(10,3905).toString(),"gkw_ppk_3905.weapon"},
     {modded_key(10,0,"mod3").toString(),"gkw_ppkmod3.weapon"},
@@ -454,6 +457,9 @@ dictionary tdoll_complex_index = {
 
     {modded_key(13).toString(),"gkw_qsz92.weapon"},
     {modded_key(13,0,"mod3").toString(),"gkw_qsz92mod3.weapon"},
+
+    {modded_key(14,8107).toString(),"gkw_357_8107.weapon"},
+
 
     {modded_key(16).toString(),"gkw_thompson.weapon"},
     {modded_key(16,5703).toString(),"gkw_thompson_5703.weapon"},
@@ -531,6 +537,8 @@ dictionary tdoll_complex_index = {
 
     {modded_key(39).toString(),"gkw_m1891.weapon"},
     {modded_key(39,0,"mod3").toString(),"gkw_m1891mod3.weapon"},
+
+    {modded_key(42).toString(),"gkw_ptrd.weapon"},
 
     {modded_key(43).toString(),"gkw_svd.weapon"},
     {modded_key(43,5506).toString(),"gkw_svd_5506.weapon"},
@@ -633,9 +641,11 @@ dictionary tdoll_complex_index = {
 
     {modded_key(64).toString(),"gkw_g36.weapon"},
     {modded_key(64,1507).toString(),"gkw_g36_1507.weapon"},
+    {modded_key(64,1904).toString(),"gkw_g36_1904.weapon"},
     {modded_key(64,6807).toString(),"gkw_g36_6807.weapon"},
     {modded_key(64,0,"mod3").toString(),"gkw_g36mod3.weapon"},
     {modded_key(64,1507,"mod3").toString(),"gkw_g36mod3_1507.weapon"},
+    {modded_key(64,1904,"mod3").toString(),"gkw_g36mod3_1904.weapon"},
     {modded_key(64,6807,"mod3").toString(),"gkw_g36mod3_6807.weapon"},
 
     {modded_key(65).toString(),"gkw_hk416.weapon"},
@@ -766,8 +776,8 @@ dictionary tdoll_complex_index = {
 
     {modded_key(104).toString(),"gkw_g36c.weapon"},
     {modded_key(104,3103).toString(),"gkw_g36c_3103.weapon"},
-    {modded_key(104,0,"mod3").toString(),"gkw_g36cmod3.weapon"},
-    {modded_key(104,3103,"mod3").toString(),"gkw_g36cmod3_3103.weapon"},
+    {modded_key(104,0,"mod3").toString(),"gkw_g36c_mod3.weapon"},
+    {modded_key(104,3103,"mod3").toString(),"gkw_g36c_mod3_3103.weapon"},
 
     {modded_key(105).toString(),"gkw_ots12.weapon"},
     {modded_key(105,3605).toString(),"gkw_ots12_3605.weapon"},
@@ -811,6 +821,79 @@ dictionary tdoll_complex_index = {
     {modded_key(118,1302,"only").toString(),"gkw_9a91_1302_only.weapon"},
     {modded_key(118,8304,"only").toString(),"gkw_9a91_8304_only.weapon"},
 
+    {modded_key(119).toString(),"gkw_ots14.weapon"},
+    {modded_key(119,1203).toString(),"gkw_ots14_1203.weapon"},
+    {modded_key(119,4501).toString(),"gkw_ots14_1203.weapon"},
+
+    {modded_key(120).toString(),"gkw_arx160.weapon"},
+
+    {modded_key(121).toString(),"gkw_mk48.weapon"},
+
+    {modded_key(122).toString(),"gkw_g11.weapon"},
+    {modded_key(122,9).toString(),"gkw_g11_9.weapon"},
+    {modded_key(122,538).toString(),"gkw_g11_538.weapon"},
+    {modded_key(122,4102).toString(),"gkw_g11_4102.weapon"},
+    {modded_key(122,0,"mod3").toString(),"gkw_g11mod3.weapon"},
+    {modded_key(122,9,"mod3").toString(),"gkw_g11mod3_9.weapon"},
+    {modded_key(122,538,"mod3").toString(),"gkw_g11mod3_538.weapon"},
+    {modded_key(122,4102,"mod3").toString(),"gkw_g11mod3_4102.weapon"},
+
+    {modded_key(124).toString(),"gkw_supersass.weapon"},
+    {modded_key(124,1407).toString(),"gkw_supersass_1407.weapon"},
+    {modded_key(124,0,"mod3").toString(),"gkw_supersassmod3.weapon"},
+    {modded_key(124,1407,"mod3").toString(),"gkw_supersassmod3_1407.weapon"},
+
+    {modded_key(125).toString(),"gkw_mg4.weapon"},
+    {modded_key(125,1).toString(),"gkw_mg4_oc.weapon"},
+    {modded_key(125,703).toString(),"gkw_mg4_703.weapon"},
+    {modded_key(125,0,"mod3").toString(),"gkw_mg4mod3.weapon"},
+    {modded_key(125,1,"mod3").toString(),"gkw_mg4mod3_oc.weapon"},
+    {modded_key(125,703,"mod3").toString(),"gkw_mg4mod3_703.weapon"},
+
+    {modded_key(126).toString(),"gkw_nz75.weapon"},
+    {modded_key(126,403).toString(),"gkw_nz75_403.weapon"},
+
+    {modded_key(127).toString(),"gkw_type79.weapon"},
+    {modded_key(127,1402).toString(),"gkw_type79_1402.weapon"},
+
+    {modded_key(128).toString(),"gkw_m99.weapon"},
+    {modded_key(128,404).toString(),"gkw_m99_404.weapon"},
+    {modded_key(128,1701).toString(),"gkw_m99_1701.weapon"},
+    {modded_key(128,3304).toString(),"gkw_m99_3304.weapon"},
+    
+    {modded_key(129).toString(),"gkw_QBZ95.weapon"},
+    {modded_key(129,405).toString(),"gkw_QBZ95_405.weapon"},
+    {modded_key(129,1102).toString(),"gkw_QBZ95_1102.weapon"},
+    {modded_key(129,3702).toString(),"gkw_QBZ95_3702.weapon"},
+    {modded_key(129,5604).toString(),"gkw_QBZ95_5604.weapon"},
+
+    {modded_key(130).toString(),"gkw_QBZ97.weapon"},
+    {modded_key(130).toString(),"gkw_QBZ97_6902.weapon"},
+
+    {modded_key(135).toString(),"gkw_sr3mp.weapon"},
+    {modded_key(135,4101).toString(),"gkw_sr3mp_4101.weapon"},
+
+    {modded_key(136).toString(),"gkw_pp19.weapon"},
+    {modded_key(136,0,"mod3").toString(),"gkw_pp19mod3.weapon"},
+
+    {modded_key(139).toString(),"gkw_brenten.weapon"},
+    {modded_key(139,7809).toString(),"gkw_brenten_7809.weapon"},
+
+    {modded_key(142).toString(),"gkw_fn57.weapon"},
+    {modded_key(142,1109).toString(),"gkw_fn57_1109.weapon"},
+
+    {modded_key(143).toString(),"gkw_ro635.weapon"},
+    {modded_key(143,534).toString(),"gkw_ro635_534.weapon"},
+    {modded_key(143,0,"mod3").toString(),"gkw_ro635mod3.weapon"},
+    {modded_key(143,534,"mod3").toString(),"gkw_ro635mod3_534.weapon"},
+
+    {modded_key(146).toString(),"gkw_g28.weapon"},
+
+    {modded_key(148).toString(),"gkw_iws2000.weapon"},
+    {modded_key(148,1403).toString(),"gkw_iws2000_1403.weapon"},
+    {modded_key(148,7308).toString(),"gkw_iws2000_7308.weapon"},
+
+    {modded_key(149).toString(),"gkw_aek999.weapon"},
 
     // 从编号150开始
     {modded_key(151).toString(),"gkw_m1887.weapon"},
@@ -1013,7 +1096,7 @@ dictionary tdoll_complex_index = {
     {modded_key(234).toString(),"gkw_js9.weapon"},
     {modded_key(234,4702).toString(),"gkw_js9_4702.weapon"},
 
-    {modded_key(236).toString(),"gkw_k11.weapon"},
+    {modded_key(236).toString(),"gkw_k11_ar.weapon"},
 
     {modded_key(238).toString(),"gkw_qjy88.weapon"},
 
@@ -1052,7 +1135,7 @@ dictionary tdoll_complex_index = {
 
     {modded_key(254).toString(),"gkw_ukm2000.weapon"},
 
-    {modded_key(256).toString(),"gkw_op99.weapon"},
+    // {modded_key(256).toString(),"gkw_op99.weapon"},
 
     {modded_key(257).toString(),"gkw_m200.weapon"},
     {modded_key(257,560).toString(),"gkw_m200_560.weapon"},
@@ -1075,7 +1158,7 @@ dictionary tdoll_complex_index = {
 
     {modded_key(265).toString(),"gkw_hk33.weapon"},
 
-    {modded_key(268).toString(),"gkw_tcms.weapon"},
+    // {modded_key(268).toString(),"gkw_tcms.weapon"},
 
     {modded_key(269).toString(),"gkw_p30.weapon"},
 
@@ -1088,7 +1171,7 @@ dictionary tdoll_complex_index = {
     {modded_key(274).toString(),"gkw_acr.weapon"},
 
     {modded_key(276).toString(),"gkw_kord.weapon"},
-    {modded_key(276,5102).toString(),"gkw_kord_5102_.weapon"},
+    {modded_key(276,5102).toString(),"gkw_kord_5102.weapon"},
 
     {modded_key(281).toString(),"gkw_caws.weapon"},
 
@@ -1162,9 +1245,9 @@ dictionary tdoll_complex_index = {
 
     {modded_key(322).toString(),"gkw_qsb91.weapon"},
 
-    {modded_key(323).toString(),"gkw_ltlx700.weapon"},
-    {modded_key(323,6101).toString(),"gkw_ltlx700_6101.weapon"},
-    {modded_key(323,6702).toString(),"gkw_ltlx700_6702.weapon"},
+    {modded_key(323).toString(),"gkw_ltlx7000.weapon"},
+    {modded_key(323,6101).toString(),"gkw_ltlx7000_6101.weapon"},
+    {modded_key(323,6702).toString(),"gkw_ltlx7000_6702.weapon"},
 
     {modded_key(324).toString(),"gkw_m6asw.weapon"},
 
@@ -1252,18 +1335,6 @@ dictionary tdoll_complex_index = {
     {modded_key(381).toString(),"gkw_m110.weapon"},
 
     {modded_key(387).toString(),"gkw_tps.weapon"},
-
-
-
-
-
-
-
-
-
-
-
-
 
     {"-1",""}
 };
