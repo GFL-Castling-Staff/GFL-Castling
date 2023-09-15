@@ -21,8 +21,8 @@ soldier_capacity_offset="25"
 	<tag name="truck" />    
 	<tag name="trans_truck" />    
 
-	<tire_set offset="1.5 0.0 1.5" radius="0.3" />
-	<tire_set offset="1.5 0.0 -3.5" radius="0.3" />
+	<tire_set offset="1.2 0.0 1.0" radius="0.3" />
+	<tire_set offset="1.2 0.0 -2" radius="0.3" />
 
 	<control 
 	max_speed="5.0" 
@@ -31,26 +31,24 @@ soldier_capacity_offset="25"
 	min_health_to_steer="10" 
 	max_rotation="0.8" 
 	max_water_depth="3.0" 
-	steer_smoothening="0.7" />
+	steer_smoothening="0.1" />
 
 	<physics 
 	max_health="100.0" 
     blast_damage_threshold="3.0" 
 	mass="300.0"
-    gravity="-90"
+    gravity="-80"
     broken_mass="300.0"
     remove_collision_threshold="0.5"	
-	extent="4.2 0.0 5.2" 
+	extent="4.2 3.0 5.2" 
 	offset="0 0.0 0" 
 	top_offset="0 9 0" 
-	collision_model_pos="0 0.9 0" 
+	collision_model_pos="0 1.5 0" 
 	collision_model_extent="4.2 3.0 5.0" 
-    drag_offset="-0.5" 
-    friction_offset="-0.3"
     simulated_speed_factor="1.0"
-	visual_offset="0 0 0" /> 
+	visual_offset="0 2.0 0" /> 
 
-	<visual class="chassis" mesh_filename="pathfinder_factory.mesh" texture_filename="armored_truck.png" />
+	<visual class="chassis" mesh_filename="pathfinder_factory.mesh" texture_filename="kcco_pathfinder_factory_main.png" />
 	<visual class="chassis" key="broken" mesh_filename="pathfinder_factory.mesh" texture_filename="armored_truck_broken.png" />
 	<visual class="tire" mesh_filename="" texture_filename="" />
     <modifier class="blast_damage" value="-2.0" />

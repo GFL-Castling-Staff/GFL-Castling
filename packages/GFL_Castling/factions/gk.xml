@@ -209,6 +209,7 @@
 		<character filename="default_gk_pmc.text_lines">
 			<parameter class="encumbrance" low="20.0" high="80.0" />
 			<parameter class="skydiving_gravity" value="-20.0" />
+			<animation key="dive" target_key="dive,fast" />
 		</character>
 		<ai filename="default.ai" />
 		<model file="gkd_xxv_idwmod.xml" />
