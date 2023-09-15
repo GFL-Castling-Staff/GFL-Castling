@@ -22,7 +22,7 @@ character_leave_request_mode="friendly" allow_ai_to_use="1" allow_player_to_use=
 	max_limiter_speed="6.0" 
 	tracked_visual_tire_max_rotation="1.0" 
 	tracked_visual_tire_rotation_smoothening="0.9" 
-	simulated_speed_factor="0.1" />
+	simulated_speed_factor="1.0" />
 	<physics 
 	max_health="40" 
 	mass="40.0" 

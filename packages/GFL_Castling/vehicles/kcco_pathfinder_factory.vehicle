@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicle file="vehicle_base.vehicle" 
+name="Recce Centre" 
+key="kcco_pathfinder_factory.vehicle" 
+map_view_atlas_index="-1" 
+allow_ai_to_use="1" 
+respawn_time="240" 
+owner="faction" 
+existence="one_per_faction" 
+time_to_live_unsteerable="235"
+max_character_collision_speed_on_normal="60.0" 
+max_character_collision_speed="60" 
+allow_owner_to_use_only="1"
+ai_abandon_when_unsteerable="0"
+character_leave_request_mode="friendly"
+reserves_spawn_point="1"
+soldier_capacity_offset="25"
+>
+	
+	<tag name="metal_heavy" />
+	<tag name="truck" />    
+	<tag name="trans_truck" />    
+
+	<tire_set offset="1.5 0.0 1.5" radius="0.3" />
+	<tire_set offset="1.5 0.0 -3.5" radius="0.3" />
+
+	<control 
+	max_speed="5.0" 
+	acceleration="10" 
+	max_reverse_speed="7.5" 
+	min_health_to_steer="10" 
+	max_rotation="0.8" 
+	max_water_depth="3.0" 
+	steer_smoothening="0.7" />
+
+	<physics 
+	max_health="100.0" 
+    blast_damage_threshold="3.0" 
+	mass="300.0"
+    gravity="-90"
+    broken_mass="300.0"
+    remove_collision_threshold="0.5"	
+	extent="4.2 0.0 5.2" 
+	offset="0 0.0 0" 
+	top_offset="0 9 0" 
+	collision_model_pos="0 0.9 0" 
+	collision_model_extent="4.2 3.0 5.0" 
+    drag_offset="-0.5" 
+    friction_offset="-0.3"
+    simulated_speed_factor="1.0"
+	visual_offset="0 0 0" /> 
+
+	<visual class="chassis" mesh_filename="pathfinder_factory.mesh" texture_filename="armored_truck.png" />
+	<visual class="chassis" key="broken" mesh_filename="pathfinder_factory.mesh" texture_filename="armored_truck_broken.png" />
+	<visual class="tire" mesh_filename="" texture_filename="" />
+    <modifier class="blast_damage" value="-2.0" />
+
+	<character_slot type="driver" position="0.5 0.8 1.0" rotation="0" exit_rotation="1.57" hiding="1" />
+
+	<spawn_point />
+
+	<rev_sound filename="truck_rev0.wav" low_pitch="0.95" high_pitch="1.05" low_rev="0.0" high_rev="0.2" volume="1.0" />
+	<rev_sound filename="truck_rev1.wav" low_pitch="0.8" high_pitch="1.1" low_rev="0.05" high_rev="0.7" volume="0.75" />
+	<rev_sound filename="truck_rev3.wav" low_pitch="0.8" high_pitch="1.1" low_rev="0.4" high_rev="1.0" volume="1.0" />
+
+	<sound key="slide" filename="slide_noise.wav" />
+	<sound key="squeal" filename="tire_squeal.wav" />
+	<sound key="ignition" filename="truck_ignition.wav" />
+	<sound key="horn" filename="horn_truck.wav" />   
+	<sound key="hit" filename="car_hit1.wav" />
+	<sound key="hit" filename="car_hit2.wav" />
+	<sound key="hit" filename="car_hit3.wav" />
+	<sound key="destroy" filename="vehicle_explosion_1.wav" />   
+	<sound key="cleanup" filename="vehicle_explosion_1.wav" />
+
+	<effect event_key="slide" type="splat_map" surface_tag="road" size="1.0" atlas_index="5" layer="0" />
+	<effect event_key="slide_hard" type="splat_map" surface_tag="road" size="0.5" atlas_index="2" layer="0" />
+	<effect event_key="slide" type="splat_map" surface_tag="dirt" size="1.0" atlas_index="2" layer="1" />
+	<effect event_key="slide" type="particle" key="terrain" surface_tag="dirt" ref="Burst" use_surface_color="1" />
+
+	<effect event_key="health" value="1.5" ref="SmallSmokeVehicle" offset="-0.32 1.76 4" />
+	<effect event_key="health" value="0.3" ref="SmallSmokeVehicle" offset="-0.32 1.76 4" />
+	<effect event_key="health" value="0.3" ref="BrokenSparkle" post_processing="0" offset="-0.32 1.28 4" />
+	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="-0.32 1.76 3.712" />
+	<effect event_key="destroyed" ref="SmallFireRepeat" offset="-0.32 1.44 3.712" />
+	<effect event_key="destroyed" ref="MediumSmokeVehicle" offset="0.0 2.64 2.0" />
+	
+	<effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />   
+	<effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />  
+  
+	<event key="spot_rp_reward">
+		<trigger class="spot" />
+		<result class="reward" rp="50.0" />
+	</event>
+
+	<event key="destroy_rp_reward">
+		<trigger class="destroy" />
+		<result class="reward" rp="750.0" />
+	</event>
+
+	<event>
+		<trigger class="destroy" />
+  	<result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck1.visual_item" min_amount="1" max_amount="3" offset="0 2.4 0" position_spread="1.5 1.5" direction_spread="0.1 0.2" />
+	</event>
+	<event>
+		<trigger class="destroy" />  	
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck2.visual_item" min_amount="2" max_amount="4" offset="0 2.4 0" position_spread="1.5 1.5" direction_spread="0.15 0.25" />
+	</event>
+  <event>
+		<trigger class="destroy" />		
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck3.visual_item" min_amount="1" max_amount="2" offset="0 2.4 0" position_spread="1.5 1.5" direction_spread="0.1 0.18" />
+	</event>
+  <event>
+		<trigger class="destroy" />		
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck4.visual_item" min_amount="1" max_amount="3" offset="0 2.4 0" position_spread="1.5 1.5" direction_spread="0.1 0.15" />
+	</event>
+  <event>
+		<trigger class="destroy" />		
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_truck5.visual_item" min_amount="2" max_amount="3" offset="0 2.4 0" position_spread="1.5 1.5" direction_spread="0.05 0.2" />
+	</event>   
+
+  <event>
+		<trigger class="cleanup" />		
+    <result class="spawn" instance_class="visual_item" instance_key="burning_piece_cleanup.visual_item" min_amount="20" max_amount="30" offset="0 2.0 0" position_spread="1.5 1.5" direction_spread="0.1 0.1" /> 
+  </event>    
+ 	<event>
+		<trigger class="cleanup" />
+    <result class="spawn" instance_class="projectile" instance_key="debri_stun" min_amount="1" max_amount="1" offset="0 3.0 0" position_spread="0.0 0.0" direction_spread="0.0 0.0" />
+  </event>   
+</vehicle>

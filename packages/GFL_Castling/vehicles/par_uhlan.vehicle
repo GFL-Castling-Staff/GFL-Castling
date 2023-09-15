@@ -34,7 +34,9 @@
 	max_rotation="0.0" 
 	max_water_depth="9.4" 
 	tracked="1" 
-	gears="1" />
+	gears="1"
+    simulated_speed_factor="0.5" />
+
     <physics 
 	max_health="60.0" 
 	blast_damage_threshold="3.9" 
