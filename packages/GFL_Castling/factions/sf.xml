@@ -1172,17 +1172,26 @@
 	</soldier>
 
 	<soldier name="sf_cerberus" spawn_score="0.01">
-		<models filename="sfd_boss_cerberus_gua.models" />
+		<model filename="sfd_boss_cerberus_gua.xml" />
 		<character filename="sf_cerberus.character" />
 		<ai filename="sf_cerberus.ai" />
 
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
 			<weapon key="sfw_cerberus.weapon"/>
-			<carry_item key="sf_dinergate.carry_item" />
+			<carry_item key="vest_200hp_200" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="0.3" min="0.0" max="1.0" />
 		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="0.3" min="1000.0" max="1000.0" />
+		</attribute_config>		
+		<item_class_existence_config>
+			<!-- wearables -->
+			<item_class_existence class="carry_item" slot="1" probability="1.0" />
+			<!-- backpack -->
+			<item_class_existence class="carry_item" slot="0" probability="0.001" />
+		</item_class_existence_config>		
 	</soldier>
 	
 
