@@ -2441,4 +2441,23 @@
     <model filename="gkd_sg_hk512.xml">
         <requirement class="weapon" key="gkw_hk512.weapon" slot="0" />
     </model>    
+    <model filename="gkd_ar_beowulf.xml">
+        <requirement class="weapon" key="gkw_beowulf.weapon" slot="0" />
+    </model>    
+    <model filename="gkd_ar_beowulf.xml">
+        <requirement class="weapon" key="gkw_beowulf_skill.weapon" slot="0" />
+    </model>        
+    <model filename="gkd_ar_msbs.xml">
+        <requirement class="weapon" key="gkw_msbs.weapon" slot="0" />
+    </model>       
+    <model filename="gkd_smg_owen.xml">
+        <requirement class="weapon" key="gkw_owen.weapon" slot="0" />
+    </model>         
+    <model filename="gkd_ar_cm901.xml">
+        <requirement class="weapon" key="gkw_cm901.weapon" slot="0" />
+    </model>
+    <model filename="gkd_rf_boys.xml">
+        <requirement class="weapon" key="gkw_boys.weapon" slot="0" />
+    </model>            
+    
 </models> 

@@ -468,7 +468,7 @@ class ItemDropEvent : Tracker {
             const XmlElement@ player = getPlayerInfo(m_metagame,senderId);
             if (player !is null) {
                 int cId=player.getIntAttribute("character_id");
-                string itemKey= getGFLkey(s);
+                string itemKey = getKeyfromIndex(s);
                 if (itemKey==""){
                     addItemInBackpack(m_metagame,cId,"carry_item","core_mask.carry_item");;
                     sendPrivateMessageKey(m_metagame, senderId, "truemask_failed");
@@ -493,7 +493,7 @@ class ItemDropEvent : Tracker {
             const XmlElement@ player = getPlayerInfo(m_metagame,senderId);
             if (player !is null) {
                 int cId=player.getIntAttribute("character_id");
-                string itemKey= getGFLkey(s);
+                string itemKey= getKeyfromIndex(s);
                 addItemInBackpack(m_metagame,cId,"weapon",itemKey);
                 dictionary a;
                 a["%doll_name"] = getResourceName(m_metagame, itemKey, "weapon");                    
