@@ -848,14 +848,14 @@
 			<item_class_existence class="carry_item" slot="0" probability="0.001" />
 		</item_class_existence_config>
 	</soldier>	
-	<!-- Paradeus强无敌doppelsoldner -->
-	<soldier name="Paradeus_doppelsoldner" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.3">
+	<!-- 巨剑士doppelsoldner -->
+	<soldier name="Paradeus_doppelsoldner" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.2">
 		<model filename="pard_doppelsoldner_remake.xml" />
 		<character filename="dopp.character" />
 		<ai filename="para_mg.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_doppelsoldner_rocket.weapon" enabled="1" />
-			<carry_item key="pard_roarer_15" />
+			<carry_item key="vest_100hp_mecha_80" />
 			<projectile key="selfnone_mecha.projectile" enabled="1" />
 		</resources>
 		<item_class_existence_config>
@@ -872,13 +872,14 @@
 			<attribute weight="1.0" min="30.0" max="60.0" />
 		</attribute_config>
 	</soldier>
-	<soldier name="Paradeus_roarer" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.3">
+	<!-- 角斗士 -->
+	<soldier name="Paradeus_roarer" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.2">
 		<model filename="pard_roarer_from_sv-98.xml" />
 		<character filename="roarer.character" />
 		<ai filename="roarer.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_roarer.weapon" enabled="1" />
-			<carry_item key="pard_roarer.carry_item" />
+			<carry_item key="vest_100hp_mecha_100" />
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="weapon" slot="1" probability="1" />

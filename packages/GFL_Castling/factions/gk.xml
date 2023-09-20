@@ -447,6 +447,20 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_ppsh41.weapon" />
+			<weapon key="medikit.weapon" />
+			<carry_item key="exo_t5_16lab.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.100" max="102.833" />
+		</attribute_config>
+	</soldier>
+	<soldier name="smg_21_ppsh_mod3" spawn_score="0.01" copy_from="default_smg">
+		<character filename="default_gk_pmc.text_lines">
+			<sound key="death" fileref="PPsh41_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
+			<sound key="throw" fileref="PPsh41_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
+			<sound key="throw" fileref="PPsh41_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
+		</character>
+		<resources file="gk_elite.resources">
 			<weapon key="gkw_ppsh41mod3.weapon" />
 			<weapon key="medikit.weapon" />
 			<carry_item key="exo_t5_16lab.carry_item" />

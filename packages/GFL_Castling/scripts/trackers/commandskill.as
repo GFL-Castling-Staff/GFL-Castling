@@ -1176,6 +1176,10 @@ class CommandSkill : Tracker {
                                 CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41_dmgup.projectile",characterId,factionid,50.0,5.0);
                             }                                
                         }
+                        if(medal_num > 6)
+                        {
+                            spawnSoldier(m_metagame,1,factionid,c_pos,"smg_21_ppsh_mod3");
+                        }
                     }
                 }
             }
