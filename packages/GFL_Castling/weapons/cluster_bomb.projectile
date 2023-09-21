@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="cluster bomb" slot="2" key="cluster_bomb.projectile" >
+    <trigger class="time" time_to_live="1.25"/>
+    <result class="spawn" instance_class="projectile" instance_key="cluster_bomb_sub.projectile" min_amount="20" max_amount="20" offset="0 0.0 0" position_spread="0.7 0.7" direction_spread="0.3 -0.3" />
+	
+	<model filename="f22_bomb.xml" />
+	<commonness value="0.0" />
+	
+	<rotation class="motion" />
+	
+    <effect class="result" key="other" ref="SmokeBurst" post_processing="1" />
+    <effect class="result" key="other" ref="Shine" lighting="0" />
+    <effect class="result" key="other" ref="HitTankSparks" lighting="0" />    
+    
+	<effect class="activated" ref="Propulsion_gl" />
+	
+</projectile>

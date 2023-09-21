@@ -540,17 +540,19 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="ar_54_m16a1" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_54_m16a1" spawn_score="0.01" copy_from="default_ar">
+		<ai filename="gk_elite.ai" />
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="M16A1_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="M16A1_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
 			<sound key="throw" fileref="M16A1_SKILL2_JP.wav" pitch_variety="0.01" volume="0.8" />
 		</character>
 		<resources file="gk_elite.resources">
-			<weapon key="gkw_m16a1.weapon" />
+			<weapon key="gkw_m16a1_ai.weapon" />
 			<weapon key="medikit.weapon" />
 			<weapon key="gkw_consume_at4.weapon" />
-			<carry_item key="exo_t5_16lab.carry_item" />
+			<projectile key="m16a1_flashbang.projectile" enabled="1"/>
+			<carry_item key="ultra_bp_t6.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.100" max="102.833" />
@@ -572,7 +574,8 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="ar_55_m4a1mod3" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_55_m4a1mod3" spawn_score="0.01" copy_from="default_ar">
+		<ai filename="gk_elite.ai" />
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="M4A1Mod_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="M4A1Mod_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -581,13 +584,14 @@
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_m4a1mod3.weapon" />
 			<weapon key="gkw_consume_at4.weapon" />
-			<carry_item key="exo_t5_16lab.carry_item" />
+			<carry_item key="exo_t6.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="7.622" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="ar_56_m4sop2mod3" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_56_m4sop2mod3" spawn_score="0.01" copy_from="default_ar">
+		<ai filename="gk_elite.ai" />
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="M4_SOPMOD_IIMod_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="M4_SOPMOD_IIMod_ATTACK_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -597,7 +601,7 @@
 			<weapon key="gkw_m4sopmodiimod3.weapon" />
 			<weapon key="gkw_consume_at4.weapon" />
 			<weapon key="medikit.weapon" />
-			<carry_item key="exo_t5_16lab.carry_item" />
+			<carry_item key="exo_t6.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="7.622" max="102.833" />
@@ -619,7 +623,8 @@
 			<attribute weight="1.0" min="0.100" max="3.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="ar_57_ar15mod3" spawn_score="0.05" copy_from="default_ar">
+	<soldier name="ar_57_ar15mod3" spawn_score="0.01" copy_from="default_ar">
+		<ai filename="gk_elite.ai" />
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="AR15Mod_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
 			<sound key="throw" fileref="AR15Mod_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
@@ -627,7 +632,10 @@
 		</character>
 		<resources file="gk_elite.resources">
 			<weapon key="gkw_ar15mod3.weapon" />
-			<carry_item key="exo_t5_16lab.carry_item" />
+			<weapon key="gkw_consume_at4.weapon" />
+			<weapon key="medikit.weapon" />
+			<projectile key="c4.projectile" />
+			<carry_item key="bp_t6.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="7.100" max="102.833" />

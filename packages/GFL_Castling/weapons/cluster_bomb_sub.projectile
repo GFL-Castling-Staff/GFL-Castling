@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="cluster bomb" slot="2" pulldown_in_air="60.0" key="cluster_bomb_sub.projectile" >
+    <result class="spawn" instance_class="projectile" instance_key="cluster_bomb_sub_blast.projectile" min_amount="1" max_amount="1" offset="0 1.6 0" position_spread="0 0" direction_spread="0 0" />
+    <collision class="sticky" />    
+    <trigger class="impact"/>
+    <rotation class="motion" />
+
+    <model mesh_filename="sub_round_offset.xml" />
+	
+    <trail probability="0.0" />
+
+</projectile>

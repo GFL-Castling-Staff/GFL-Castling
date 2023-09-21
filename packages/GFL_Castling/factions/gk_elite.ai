@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ai filename="elite.ai">
+    <parameter class="uses_vehicles" value="1" />
+    <parameter class="cover_status_recheck_time" value="1.0" />
+    <parameter class="dive_from_grenade_probability" value="0.5" />
+    <parameter class="willingness_to_charge" value="0.25" />
+    <parameter class="fighting_against_vehicle_move_radius" value="45.0" />
+    <parameter class="accuracy_offset" value="0.09" /> 
+    <parameter class="grenade_monitor_range" value="15.0" />
+    <parameter class="in_trenches_fade_off_timer" value="6.0" />
+    <parameter class="willingness_to_guard" value="0.0" />
+    <parameter class="active_guarding_probability" value="0" />
+    <parameter class="fire_open_min_time" value="12.0" />
+    <parameter class="fighting_melee_move_radius" value="1.0" />
+    <parameter class="fighting_regular_move_radius" value="15.0" />
+    <parameter class="reaction_time_after_choosing_target" value="-1.0" />
+    <parameter class="day_reaction_time_to_fight_min" value="0.1" />
+    <parameter class="day_reaction_time_to_fight_max" value="0.3" />
+    <parameter class="night_reaction_time_to_fight_min" value="0.2" />
+    <parameter class="night_reaction_time_to_fight_max" value="0.5" />
+    <parameter class="leaving_cover_separation" value="4.0" />
+    <parameter class="using_cover_min_time" value="1.0" />
+    <parameter class="using_cover_max_time" value="4.0" />
+    <parameter class="team_check_time" value="2.0" />
+
+</ai>
