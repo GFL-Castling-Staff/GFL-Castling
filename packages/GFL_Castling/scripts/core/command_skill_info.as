@@ -182,6 +182,7 @@ dictionary commandSkillIndex = {
         {"gkw_64type.weapon",27},
         {"gkw_m16a1.weapon",27},
         {"gkw_m16a1_533.weapon",27},
+        {"gkw_m16a1_553.weapon",27},
         {"gkw_m9.weapon",27},
 
         {"gkw_ump9mod3.weapon",28},

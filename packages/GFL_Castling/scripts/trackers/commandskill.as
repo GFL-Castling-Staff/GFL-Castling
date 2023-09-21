@@ -1963,7 +1963,7 @@ class CommandSkill : Tracker {
                         playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
                         addCooldown("Flashbang",12,characterId,modifer);
                     }
-                    if(weaponname=="gkw_m16a1.weapon" || weaponname=="gkw_m16a1_533.weapon") {
+                    if(weaponname=="gkw_m16a1.weapon" || weaponname=="gkw_m16a1_533.weapon" || weaponname=="gkw_m16a1_553.weapon") {
                         array<string> Voice={
                             "m16a1_skill1.wav",
                             "m16a1_skill2.wav",
