@@ -901,6 +901,8 @@
 		<model filename="kccod_human_3.xml" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_carry_items="1" clear_grenades="1">
 			<weapon key="kcco_fe2o3_svd.weapon" enabled="1" />
+			<weapon key="kcco_fe2o3_svk.weapon" enabled="1" />
+			<weapon key="kcco_fe2o3_svk_1.weapon" enabled="1" />
 			<weapon key="kcco_tracer_dart_accurate.weapon" enabled="1" /> 
 			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
 			<projectile key="kcco_tracer_dart_r.projectile" enabled="1.0" />
