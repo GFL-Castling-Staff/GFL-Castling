@@ -823,7 +823,7 @@ dictionary tdoll_complex_index = {
 
     {modded_key(119).toString(),"gkw_ots14.weapon"},
     {modded_key(119,1203).toString(),"gkw_ots14_1203.weapon"},
-    {modded_key(119,4501).toString(),"gkw_ots14_1203.weapon"},
+    {modded_key(119,4501).toString(),"gkw_ots14_4501.weapon"},
 
     {modded_key(120).toString(),"gkw_arx160.weapon"},
 
@@ -1335,9 +1335,9 @@ dictionary tdoll_complex_index = {
 
     {modded_key(381).toString(),"gkw_m110.weapon"},
     {modded_key(382).toString(),"gkw_msbs.weapon"},
-    {modded_key(384).toString(),"gkw_boys.weapon"},
 
     {modded_key(387).toString(),"gkw_tps.weapon"},
+    {modded_key(389).toString(),"gkw_boys.weapon"},
     {modded_key(392).toString(),"gkw_owen.weapon"},
 
     {modded_key(393).toString(),"gkw_beowulf.weapon"},
@@ -1369,6 +1369,10 @@ void reverse_tdoll_index_dict_init()
     {
         string value = all_key[i];
         string key = string(tdoll_complex_index[value]);
+        if (reverse_tdoll_complex_index.exists(key))
+        {
+            _log("写重复了" + key +" 值 " + value);
+        }
         reverse_tdoll_complex_index.set(key,value);
     }
     _log("初始化图鉴词典成功");

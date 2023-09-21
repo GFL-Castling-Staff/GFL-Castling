@@ -10,7 +10,7 @@
 #include "GFLhelpers.as"
 #include "kill_event.as"
 #include "event_system.as"
-#include "ManualCall.as"
+#include "fairy_command.as"
 #include "command_skill_info.as"
 #include "GFLplayerlist.as"
 
@@ -488,7 +488,7 @@ class CommandSkill : Tracker {
         //破坏者，法官，
     }
 
-    protected void addCastlingMarker(ManualCallTask@ info){
+    protected void addCastlingMarker(CastlingMarker@ info){
         XmlElement command("command");
             command.setStringAttribute("class", "set_marker");
             command.setIntAttribute("id", info.m_callId);
@@ -2686,7 +2686,7 @@ class CommandSkill : Tracker {
             playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),2.0);
             TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
             int flagId = m_DummyCallID + 20000;
-            ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionid,stringToVector3(target),"foobar");
+            CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionid,stringToVector3(target));
             FairyRequest.setIndex(14);
             FairyRequest.setSize(0.5);
             FairyRequest.setDummyId(flagId);
@@ -3710,9 +3710,9 @@ class CommandSkill : Tracker {
                         CreateProjectile_H(m_metagame,c_pos,aim_pos,"skill_flashbang.projectile",characterId,factionid,60.0,6.0);
                     }
                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                    array<Spawn_request@> spawn_soldier =
+                    array<soldier_spawn_request@> spawn_soldier =
                     {
-                        Spawn_request("Dummy_64type",10)
+                        soldier_spawn_request("Dummy_64type",10)
                     };    
                     tasker.add(DelaySpawnSoldier(m_metagame,2.0,factionid,spawn_soldier,aim_pos,9.5,9.5));  
                     addCooldown("64type",40,characterId,modifer);

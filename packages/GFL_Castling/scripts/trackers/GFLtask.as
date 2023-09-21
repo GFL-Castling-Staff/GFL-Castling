@@ -57,11 +57,11 @@ class VestRecoverTask : Task {
 class TimerMarker : Task {
     protected Metagame@ m_metagame;
 	protected float m_time;	
-	protected ManualCallTask@ m_info;
+	protected CastlingMarker@ m_info;
 	protected float m_timeLeft;
 	protected bool m_end=false;
 
-	TimerMarker(Metagame@ metagame, float time,ManualCallTask@ call_info)
+	TimerMarker(Metagame@ metagame, float time,CastlingMarker@ call_info)
 	{
 		@m_metagame = metagame;
 		@m_info = call_info;
@@ -518,12 +518,12 @@ class DelaySpawnSoldier : Task {
 	protected float m_time;
     protected int m_faction_id;
 	protected float m_timeLeft;
-	protected array<Spawn_request@> m_soldier;
+	protected array<soldier_spawn_request@> m_soldier;
 	protected float m_spread_x;
 	protected float m_spread_y;
 	protected Vector3 m_pos;
 
-	DelaySpawnSoldier(GameMode@ metagame, float time,int fId, array<Spawn_request@> spawn_soldier,Vector3 pos1,float spreadX = 0.0,float spreadY = 0.0) {
+	DelaySpawnSoldier(GameMode@ metagame, float time,int fId, array<soldier_spawn_request@> spawn_soldier,Vector3 pos1,float spreadX = 0.0,float spreadY = 0.0) {
 		@m_metagame = metagame;
 		m_time = time;
 		m_faction_id =fId;
@@ -542,7 +542,7 @@ class DelaySpawnSoldier : Task {
 		if (m_timeLeft < 0)
 		{
 			for(uint i=0;i<m_soldier.length();i++){
-				Spawn_request@ foo = m_soldier[i];
+				soldier_spawn_request@ foo = m_soldier[i];
 				spawnSoldier(m_metagame,foo.m_num,m_faction_id,m_pos,foo.m_type,m_spread_x,m_spread_y);
 			}
 		}

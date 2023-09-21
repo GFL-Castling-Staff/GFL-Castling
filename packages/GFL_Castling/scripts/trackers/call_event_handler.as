@@ -7,7 +7,7 @@
 #include "gamemode.as"
 #include "GFLhelpers.as"
 #include "call_marker_tracker.as"
-#include "ManualCall.as"
+#include "fairy_command.as"
 #include "event_system.as"
 
 dictionary callLaunchIndex = {
@@ -109,7 +109,7 @@ class call_event : Tracker {
                                 CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,300.0,"ac130"));
                                 sendFactionMessageKey(m_metagame,factionId,"ac130callstarthint");
                                 int flagId = m_DummyCallID + 15000;
-                                ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
+                                CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
                                 FairyRequest.setIndex(9);
                                 FairyRequest.setSize(0.5);
                                 FairyRequest.setDummyId(flagId);
@@ -151,7 +151,7 @@ class call_event : Tracker {
                                 CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,30.0,"sniper_call"));
                                 sendFactionMessageKey(m_metagame,factionId,"snipecallstarthint");
                                 int flagId = m_DummyCallID + 15000;
-                                ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
+                                CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
                                 FairyRequest.setIndex(14);
                                 FairyRequest.setSize(0.5);
                                 FairyRequest.setDummyId(flagId);
@@ -179,7 +179,7 @@ class call_event : Tracker {
                         else {
                             CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,120.0,"yaoren_8"));
                             int flagId = m_DummyCallID + 15000;
-                            ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
+                                CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
                             FairyRequest.setIconTypeKey("call_marker_drop");
                             FairyRequest.setIndex(8);
                             FairyRequest.setSize(0.5);
@@ -224,7 +224,7 @@ class call_event : Tracker {
                             CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,120.0,"warrior"));
                             sendFactionMessageKey(m_metagame,factionId,"warriorcallstarthint");
                             int flagId = m_DummyCallID + 15000;
-                            ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
+                            CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
                             FairyRequest.setIconTypeKey("call_marker_drop");
                             FairyRequest.setIndex(6);
                             FairyRequest.setSize(0.5);
@@ -239,13 +239,13 @@ class call_event : Tracker {
                         if(findCooldown(playerName,"bombardment")){
                             returnCooldown("bombardment", 500, characterId, playerName, playerId, "bombcooldown");
                             break;
-                        }                        
+                        }
                         else {
                             CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,90.0,"bombardment"));
                             playSoundAtLocation(m_metagame,"kcco_dn_1.wav",factionId,position,1.5);
                             sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
                             int flagId = m_DummyCallID + 15000;
-                            ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,stringToVector3(position),"foobar");
+                            CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
                             FairyRequest.setIndex(11);
                             FairyRequest.setSize(0.5);
                             FairyRequest.setDummyId(flagId);
@@ -268,7 +268,7 @@ class call_event : Tracker {
                             CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,90.0,"barrier"));
                             sendFactionMessageKey(m_metagame,factionId,"barrierfight");
                             int flagId = m_DummyCallID + 15000;
-                            ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,call_pos,"foobar");
+                            CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
                             FairyRequest.setIconTypeKey("call_marker_drop");
                             FairyRequest.setIndex(12);
                             FairyRequest.setSize(0.5);
@@ -291,7 +291,7 @@ class call_event : Tracker {
                             call_pos = call_pos.add(v_offset);
                             CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,600.0,"vehicle"));
                             int flagId = m_DummyCallID + 15000;
-                            ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,call_pos,"foobar");
+                            CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
                             FairyRequest.setIconTypeKey("call_marker_drop");
                             FairyRequest.setIndex(8);
                             FairyRequest.setSize(0.5);
@@ -315,7 +315,7 @@ class call_event : Tracker {
                             call_pos = call_pos.add(v_offset);
                             CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,300.0,"vehicle"));
                             int flagId = m_DummyCallID + 15000;
-                            ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,call_pos,"foobar");
+                            CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
                             FairyRequest.setIconTypeKey("call_marker_drop");
                             FairyRequest.setIndex(8);
                             FairyRequest.setSize(0.5);
@@ -339,7 +339,7 @@ class call_event : Tracker {
                             call_pos = call_pos.add(v_offset);
                             CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,120.0,"vehicle"));
                             int flagId = m_DummyCallID + 15000;
-                            ManualCallTask@ FairyRequest = ManualCallTask(characterId,"",0.0,factionId,call_pos,"foobar");
+                            CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
                             FairyRequest.setIconTypeKey("call_marker_drop");
                             FairyRequest.setIndex(8);
                             FairyRequest.setSize(0.5);
@@ -373,7 +373,7 @@ class call_event : Tracker {
         }
     }
 
-    protected void addCastlingMarker(ManualCallTask@ info){
+    protected void addCastlingMarker(CastlingMarker@ info){
         XmlElement command("command");
             command.setStringAttribute("class", "set_marker");
             command.setIntAttribute("id", info.m_callId);

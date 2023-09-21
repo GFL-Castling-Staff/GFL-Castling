@@ -333,7 +333,7 @@
 		</attribute_config>
 	</soldier>
 	<soldier name="default_hvy" spawn_score="0.1" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
-		<ai filename="eod.ai" />
+		<ai filename="gk_sentry.ai" />
 		<resources file="gk_hvy_ai.resources" />
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="19.754" max="102.833" />
@@ -357,20 +357,6 @@
 			<attribute weight="1.0" min="7000.0" max="15000.0" />
 		</attribute_config>
 	</soldier>
-	<!-- <soldier name="task_forces_defy" spawn_score="0.01" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
-		<resources file="gk.resources" clear_weapons="1" clear_carry_items="1">
-		    <weapon key="gkw_ak12_defyAI.weapon" />
-			<weapon key="gkw_ak15_defyAI.weapon" />
-			<weapon key="gkw_rpk16_defyAI.weapon" />
-			<carry_item key="exo_defy.carry_item" />
-		</resources>
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="20" max="20.833" />
-		</attribute_config>
-		<attribute_config class="rp">
-			<attribute weight="1.0" min="7000.0" max="15000.0" />
-		</attribute_config>
-	</soldier> -->
 	<!-- 商店 -->
 	<soldier name="player_hvy" spawn_score="0" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<resources file="gk_hvy.resources" />
@@ -387,6 +373,7 @@
 	</soldier>
 
 	<soldier name="Task_MG" spawn_score="0.05" copy_from="default_spawn_ai">
+		<ai filename="gk_sentry.ai" />
 		<resources file="gk_sg.resources" clear_weapons="0" clear_carry_items="1">
 			<carry_item key="bp_t5_16lab.carry_item" />
 		</resources>
@@ -396,9 +383,9 @@
 	</soldier>
 
 	<soldier name="Task_SG" spawn_score="0.05" copy_from="default_spawn_ai">
+		<ai filename="gk_sentry.ai" />
 		<resources file="gk_mg.resources" clear_weapons="0" clear_carry_items="1">
 			<carry_item key="bp_t5_16lab.carry_item" />
-			<weapon key="medikit.weapon" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="7.100" max="10.1" />

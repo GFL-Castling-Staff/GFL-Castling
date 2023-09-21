@@ -167,9 +167,6 @@ dictionary gameSkillIndex = {
         // 敌方干扰者技能
 		{"sf_boss_intruder_skill",42},
 
-        // 地雷妖精
-		{"fc_mine",43},
-
 		{"sfw_aegis_selfheal",44},
 
 		{"c96_skill",45},

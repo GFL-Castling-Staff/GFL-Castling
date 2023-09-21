@@ -8,7 +8,7 @@
 #include "call_marker_tracker.as"
 //Author: NetherCrow
 
-class ManualCallTask{
+class CastlingMarker{
     int m_characterId;
 	float m_time;
     string Callkey;
@@ -21,7 +21,7 @@ class ManualCallTask{
 	float m_range=1.0;
     string m_typeKey;
 
-    ManualCallTask(int characterId,string command,float time,int faction,Vector3 position,string callType)
+    CastlingMarker(int characterId,string command,float time,int faction,Vector3 position,string callType)
 	{
 		m_characterId = characterId;
 		m_time = time;
@@ -56,7 +56,7 @@ class ManualCall : Tracker {
 		@m_metagame = @metagame;
 	}
 
-    protected array<ManualCallTask@> CallTaskArray;
+    protected array<CastlingMarker@> CallTaskArray;
 
     //Author: NetherCrow
     //妖精指令
@@ -70,7 +70,7 @@ class ManualCall : Tracker {
                 const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
                 if(player !is null){
                     if (CallTaskArray.length()>= 3){
-                        sendPrivateMessageKey(m_metagame,playerId,"Fairy Command System is overload, please try again later.");
+                        notify(m_metagame, "fairycommand_overload",dictionary(), "misc", playerId, false, "", 1.0);
                         addItemInBackpack(m_metagame,characterId,"weapon","reinforcement_fairy_medic.weapon");
                         return;
                     }
@@ -87,7 +87,7 @@ class ManualCall : Tracker {
                         " instance_key='osprey_enter' " +
                         " character_id='" + characterId +"'" +
                         " position='" + target.toString() + "' />";
-                        ManualCallTask@ FairyRequest = ManualCallTask(characterId,c,8.0,Faction,target,"medic_call");
+                        CastlingMarker@ FairyRequest = CastlingMarker(characterId,c,8.0,Faction,target,"medic_call");
                         FairyRequest.setIconTypeKey("call_marker_drop");
                         FairyRequest.setIndex(4);
                         FairyRequest.setSize(0.5);
@@ -127,7 +127,7 @@ class ManualCall : Tracker {
                         " instance_key='osprey_enter' " +
                         " character_id='" + characterId +"'" +
                         " position='" + target.toString() + "' />";
-                        ManualCallTask@ FairyRequest = ManualCallTask(characterId,c,8.0,Faction,target,"mgsg_call");
+                        CastlingMarker@ FairyRequest = CastlingMarker(characterId,c,8.0,Faction,target,"mgsg_call");
                         FairyRequest.setIconTypeKey("call_marker_drop");
                         FairyRequest.setIndex(8);
                         FairyRequest.setSize(0.5);
@@ -167,7 +167,7 @@ class ManualCall : Tracker {
                         " instance_key='osprey_enter' " +
                         " character_id='" + characterId +"'" +
                         " position='" + target.toString() + "' />";
-                        ManualCallTask@ FairyRequest = ManualCallTask(characterId,c,8.0,Faction,target,"hvy_call");
+                        CastlingMarker@ FairyRequest = CastlingMarker(characterId,c,8.0,Faction,target,"hvy_call");
                         FairyRequest.setIconTypeKey("call_marker_drop");
                         FairyRequest.setIndex(8);
                         FairyRequest.setSize(0.5);
@@ -207,7 +207,7 @@ class ManualCall : Tracker {
                         " instance_key='repair_fairy.projectile'" +
                         " character_id='" + characterId +"'" +
                         " position='" + target.toString() + "' />";
-                        ManualCallTask@ FairyRequest = ManualCallTask(characterId,c,3.0,Faction,target,"repair_call");
+                        CastlingMarker@ FairyRequest = CastlingMarker(characterId,c,3.0,Faction,target,"repair_call");
                         FairyRequest.setIconTypeKey("call_marker_drop");
                         FairyRequest.setIndex(12);
                         FairyRequest.setSize(0.5);
@@ -247,7 +247,7 @@ class ManualCall : Tracker {
                         " instance_key='medical_agl_call.projectile' " +
                         " character_id='" + characterId +"'" +
                         " position='" + target.toString() + "' />";
-                        ManualCallTask@ FairyRequest = ManualCallTask(characterId,c,3.0,Faction,target,"rescue_call");
+                        CastlingMarker@ FairyRequest = CastlingMarker(characterId,c,3.0,Faction,target,"rescue_call");
                         FairyRequest.setIconTypeKey("call_marker_drop");
                         FairyRequest.setIndex(7);
                         FairyRequest.setSize(0.5);
@@ -287,7 +287,7 @@ class ManualCall : Tracker {
                         " instance_key='GK_target' " +
                         " character_id='" + characterId +"'" +
                         " position='" + target.toString() + "' />";
-                        ManualCallTask@ FairyRequest = ManualCallTask(characterId,c,5.0,Faction,target,"target_call");
+                        CastlingMarker@ FairyRequest = CastlingMarker(characterId,c,5.0,Faction,target,"target_call");
                         FairyRequest.setIconTypeKey("call_marker_drop");
                         FairyRequest.setIndex(8);
                         FairyRequest.setSize(0.5);
@@ -331,7 +331,7 @@ class ManualCall : Tracker {
                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                     array<Spawn_request@> spawn_soldier =
                     {
-                        Spawn_request("Task_MG",3),
+                        Spawn_request("Task_MG",4),
                         Spawn_request("Task_SG",2)
                     };
                     tasker.add(DelaySpawnSoldier(m_metagame,6.0,CallTaskArray[0].m_factions,spawn_soldier,CallTaskArray[0].m_pos.add(Vector3(0,-50,0)),3.0,3.0));
@@ -379,7 +379,7 @@ class ManualCall : Tracker {
 		return true;
 	}
 
-    protected void addCastlingMarker(ManualCallTask@ info){
+    protected void addCastlingMarker(CastlingMarker@ info){
         int flagId = info.m_callId + 114514;
         XmlElement command("command");
             command.setStringAttribute("class", "set_marker");
@@ -398,7 +398,7 @@ class ManualCall : Tracker {
         m_metagame.getComms().send(command);
     }
 
-    protected void removeCastlingMarker(ManualCallTask@ info){
+    protected void removeCastlingMarker(CastlingMarker@ info){
         int flagId = info.m_callId + 114514;
         XmlElement command("command");
             command.setStringAttribute("class", "set_marker");

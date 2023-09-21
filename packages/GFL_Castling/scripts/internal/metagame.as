@@ -15,6 +15,8 @@ class Metagame {
 	protected Comms@ m_comms;
 	// basic task sequencer meant for sequencing major events and major commander dialogue, map rotation and extraction, etc
 	protected TaskSequencer@ m_taskSequencer;
+	protected TaskSequencer@ m_callSequencer;
+
 	// manager for temporary parallel task sequencers, used for e.g. handling gift item delivery timing so that several can be ongoing simultaneously
 	protected TaskManager@ m_taskManager;
 	protected MapInfo m_mapInfo;
@@ -55,7 +57,9 @@ class Metagame {
 		clearTrackers();
 
 		@m_taskSequencer = TaskSequencer();
+		@m_callSequencer = TaskSequencer();
 		@m_taskManager = TaskManager();
+		
 		resetTimer();
 	}
 
@@ -67,6 +71,10 @@ class Metagame {
 	// --------------------------------------------
 	TaskSequencer@ getTaskSequencer() const {
 		return m_taskSequencer;
+	}
+
+	TaskSequencer@ getCallSequencer() const {
+		return m_callSequencer;
 	}
 
 	// --------------------------------------------
@@ -144,6 +152,7 @@ class Metagame {
 	// --------------------------------------------
 	void preBeginMatch() {		
 		m_taskSequencer.clear();
+		m_callSequencer.clear();
 		m_taskManager.clear();
 		clearTrackers();
 		m_gamePaused = false;
@@ -200,6 +209,7 @@ class Metagame {
 	// --------------------------------------------
 	protected void update(float time) {
 		m_taskSequencer.update(time);
+		m_callSequencer.update(time);
 		m_taskManager.update(time);
 
 		// maintain trackers

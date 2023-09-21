@@ -43,7 +43,7 @@
 // GFL castling trackers
 #include "GFLskill.as"
 #include "kill_event.as"
-#include "ManualCall.as"
+#include "fairy_command.as"
 #include "ServerHelper.as"
 #include "commandskill.as"
 #include "ItemDropEvent.as"
@@ -285,7 +285,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		addTracker(RangeFinder(this)); 
 		addTracker(GFLskill(this));
 		addTracker(kill_event(this,getUserSettings()));
-		addTracker(ManualCall(this));
+		addTracker(fairyCommand(this));
 		addTracker(ServerHelper(this));
 		addTracker(CommandSkill(this));
 		addTracker(ItemDropEvent(this));

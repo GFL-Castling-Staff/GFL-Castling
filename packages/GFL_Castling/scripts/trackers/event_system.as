@@ -233,10 +233,10 @@ void excuteYaoren(GameMode@ metagame,GFL_event@ eventinfo){
         " position='" + (eventinfo.m_pos.add(Vector3(0,50,0))).toString() + "' />";
         metagame.getComms().send(c);
         TaskSequencer@ tasker = metagame.getTaskManager().newTaskSequencer();
-        array<Spawn_request@> spawn_soldier =
+        array<soldier_spawn_request@> spawn_soldier =
         {
-            Spawn_request("Task_MG",5),
-            Spawn_request("Task_SG",3)
+            soldier_spawn_request("Task_MG",5),
+            soldier_spawn_request("Task_SG",3)
         };        
         tasker.add(DelaySpawnSoldier(metagame,6.0,eventinfo.m_factionid,spawn_soldier,eventinfo.m_pos,3.0,3.0));        
     }

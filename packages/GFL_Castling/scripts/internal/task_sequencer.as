@@ -51,6 +51,10 @@ class TaskSequencer {
 	bool isEmpty() const {
 		return m_tasks.size() <= 0;
 	}
+
+	int getSize() const {
+		return m_tasks.size();
+	}
 };
 
 // --------------------------------------------
