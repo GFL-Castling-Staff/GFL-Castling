@@ -66,6 +66,7 @@ class kill_event : Tracker {
         {"gkw_ak15mod3_blm_skill.weapon",3},
         {"gkw_ar15mod3_skill.weapon",3},
         {"gkw_ar15mod3_532_skill.weapon",3},
+        {"gkw_ar15mod3_552_skill.weapon",3},
         {"gkw_ar15mod3_30001_skill.weapon",3},
         {"gkw_hk416_agent_hv.weapon",3},
         {"gkw_hk416_agent_fmj.weapon",3},

@@ -81,6 +81,15 @@
     <model filename="gkd_ar_ar15_532.xml">
         <requirement class="weapon" key="gkw_ar15_532.weapon" slot="0" />
     </model>
+    <model filename="gkd_ar_ar15_552.xml">
+        <requirement class="weapon" key="gkw_ar15_552.weapon" slot="0" />
+    </model>
+    <model filename="gkd_ar_ar15_552.xml">
+        <requirement class="weapon" key="gkw_ar15mod3_552.weapon" slot="0" />
+    </model>
+    <model filename="gkd_ar_ar15_552_skill.xml">
+        <requirement class="weapon" key="gkw_ar15mod3_552_skill.weapon" slot="0" />
+    </model>                    
     <model filename="gkd_ar_art556.xml">
         <requirement class="weapon" key="gkw_art556.weapon" slot="0" />
     </model>
@@ -252,6 +261,9 @@
     <model filename="gkd_ar_m16a1_533.xml">
         <requirement class="weapon" key="gkw_m16a1_533.weapon" slot="0" />
     </model>
+    <model filename="gkd_ar_m16a1_553.xml">
+        <requirement class="weapon" key="gkw_m16a1_553.weapon" slot="0" />
+    </model>    
     <model filename="gkd_ar_m4a1.xml">
         <requirement class="weapon" key="gkw_m4a1.weapon" slot="0" />
     </model>
