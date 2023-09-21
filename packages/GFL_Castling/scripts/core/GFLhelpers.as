@@ -970,3 +970,8 @@ int getNumberedVehicle(Metagame@ metagame, uint ownerid, string key) {
 	}
 	return number;	
 }
+
+int getRandomIndex(int size)
+{
+	return rand(0,size-1);
+}

@@ -4058,6 +4058,9 @@ class CommandSkill : Tracker {
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                     c_pos=c_pos.add(Vector3(0,1,0));
                     CreateProjectile_H(m_metagame,c_pos,t_pos,"smoke_grenade.projectile",characterId,factionid,26.0,6.0);
+                    Skill_m1911mod3@ shot = Skill_m1911mod3(m_metagame,1.5,characterId,factionid,t_pos);
+                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    tasker.add(shot);
                     addCooldown("M1911",30,characterId,modifer);
                 }
             }

@@ -711,3 +711,98 @@ class Ju87_Assault :Task{
 		return false;
 	}
 }
+
+abstract class DelaySkill :Task{
+	protected GameMode@ m_metagame;
+	protected float m_time; //延迟
+	protected float m_timeLeft; //延迟实例
+	protected float m_time_internal; //间隔
+	protected float m_timeLeft_internal; //间隔实例
+    protected int m_character_id;
+    protected int m_faction_id;
+    protected string m_key;
+	protected Vector3 c_pos; //初始角色坐标
+	protected Vector3 t_pos; //初始目标坐标
+	protected int m_excute_time=0; //执行次数
+	protected int m_excute_Limit; //执行次数上限
+	protected bool m_end=false;
+
+	DelaySkill(GameMode@ metagame, float time, int cId,int fId) {
+		@m_metagame = metagame;
+		m_time = time;
+		m_character_id = cId;
+		m_faction_id =fId;
+	}
+
+	void start() {}
+	void update(float time) {}
+    bool hasEnded() const {
+		if (m_end) {
+			return true;
+		}
+		return false;
+	}
+
+	void setKey(string key){
+		m_key= key;
+	}
+
+	void setCharacterPos(Vector3 pos){
+		c_pos=pos;
+	}
+	void setTargetPos(Vector3 pos){
+		t_pos=pos;
+	}	
+	void setExcuteLimit(int a){
+		m_excute_Limit=a;
+	}
+	void setInternal(float inter){
+		m_time_internal=inter;
+	}
+}
+
+class Skill_m1911mod3 : DelaySkill {
+	protected array<const XmlElement@> affectedCharacter;
+
+	Skill_m1911mod3(GameMode@ metagame, float time, int cId,int fId,Vector3 pos){
+		super(metagame,time,cId,fId);
+		t_pos = pos;
+	}
+
+	void start(){
+		m_timeLeft=m_time;
+		m_timeLeft_internal = 0;
+		uint m_fnum = m_metagame.getFactionCount();
+		this.setExcuteLimit(7);
+		this.setInternal(0.25);
+		for(uint i=0;i<m_fnum;i++) {
+			if(i!=m_faction_id) {
+				array<const XmlElement@> affectedCharacter2;
+				affectedCharacter2 = getCharactersNearPosition(m_metagame,t_pos,i,20.0f);
+				if (affectedCharacter2 !is null){
+					for(uint x=0;x<affectedCharacter2.length();x++){
+						affectedCharacter.insertLast(affectedCharacter2[x]);
+					}
+				}
+			}
+		}		
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time;return;}
+		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
+		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
+		if (affectedCharacter.length()<= 0){m_end = true;return;}
+		m_excute_time++;
+		m_timeLeft_internal = m_time_internal;
+		int luckyoneid = affectedCharacter[getRandomIndex(affectedCharacter.length())].getIntAttribute("id");
+		const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+		Vector3 e_pos = stringToVector3(luckyoneC.getStringAttribute("position"));
+		if(m_excute_time < 7){
+			CreateDirectProjectile(m_metagame,e_pos.add(Vector3(0,20,0)),e_pos,"snipe_m1911.projectile",m_character_id,m_faction_id,300);
+		}
+		else{
+			CreateDirectProjectile(m_metagame,e_pos.add(Vector3(0,20,0)),e_pos,"snipe_m1911_big.projectile",m_character_id,m_faction_id,300);
+		}
+	}
+}
