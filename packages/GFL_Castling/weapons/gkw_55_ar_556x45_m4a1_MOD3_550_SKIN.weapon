@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+    <weapon file="two_hands_ar.animation_base" key="gkw_m4a1mod3_550.weapon">
+        <specification
+        accuracy_factor="1.0"
+            barrel_offset="0.4"
+            class="0"
+            slot="0"
+            magazine_size="30"
+            name="M4A1(MOD3)-[Sunshine through the Pines]"
+            spread_range="0.35"
+            projectile_speed="240" 
+            retrigger_time="0.086"
+            suppressed="1"
+            sight_range_modifier="1.6"
+            stance_accuracy_rate="2.5"
+            sustained_fire_diminish_rate="1.6"
+            sustained_fire_grow_step="0.35"/>
+        <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
+        <next_in_chain key="gkw_m4a1mod3_550_skill.weapon" share_ammo="0" />
+        <inventory  encumbrance="35.0" buy_price="270.0" sell_price="270.0" />
+        <commonness in_stock="0" value="0"/>
+        <sound key="fire" fileref="m4a1_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
+        <sound key="magazine_out" fileref="m4a1_mgz_out_FromCOD16.wav" volume="0.5" />
+        <sound key="magazine_in" fileref="m4a1_mgz_in_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="M4A1Mod_PHRASE_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="M4A1Mod_LOADING_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="M4A1Mod_FORMATION_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="M4A1Mod_BLACKACTION_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="M4A1Mod_GOATTACK_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="M4A1Mod_MEET_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="M4A1Mod_ATTACK_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="M4A1Mod_DEFENSE_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <model filename="gkw_ar_m4a1.xml" />
+        <hud_icon filename="gkw_m4a1_550.png" />
+        <weak_hand_hold offset="0.3" />
+        <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
+            <result class="hit" kill_probability="4.65" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
+        </projectile>
+        <effect class="muzzle" ref="ejection_556" />
+        <stance state_key="running" accuracy="0.35" />
+        <stance state_key="walking" accuracy="0.6" />
+        <stance state_key="crouch_moving" accuracy="0.9" />
+        <stance state_key="prone_moving" accuracy="0.9" />
+        <stance state_key="standing" accuracy="0.93" />
+        <stance state_key="crouching" accuracy="0.98" />
+        <stance state_key="prone" accuracy="1" />
+        <stance state_key="over_wall" accuracy="1" />
+        <modifier class="speed" value="0.1" />
+        <modifier class="detectability" value="-0.1" />
+        <modifier class="hit_success_probability" value="-0.05" />
+    </weapon>
+    <weapon file="two_hands_ar.animation_base" key="gkw_m4a1mod3_550_skill.weapon">
+        <specification
+    		accuracy_factor="1" 
+		    barrel_offset="0.4" 
+		    can_shoot_standing="1"
+            can_shoot_crouching="1" 
+            can_shoot_prone="0"
+            spread_range="0.2"
+	     	class="4"
+            slot="0" 
+            carry_in_two_hands="0" 
+            burst_shots="1"
+		    magazine_size="6" 
+            name="M4A1(MOD3)-[Sunshine through the Pines]-[Mark of the avenger]"
+		    projectile_speed="2000.0" 
+            sight_range_modifier="1.6"
+            retrigger_time="1.0" 
+            suppressed="0" 
+            stance_accuracy_rate="4.0"
+            sustained_fire_diminish_rate="3.0" 
+            sustained_fire_grow_step="3.0"
+            projectiles_per_shot="1"/>
+        <next_in_chain key="gkw_m4a1mod3_550.weapon" share_ammo="0" />
+        <animation state_key="recoil" animation_key="recoil, pistol dual 1" />
+        <animation state_key="recoil" animation_key="recoil, pistol dual 2" />
+        <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall dual" />
+        <animation state_key="reload" animation_key="reloading m4s" />
+        <animation state_key="hold" animation_key="still, pistol dual" />
+        <animation state_key="hold_casual" animation_key="hold_casual, pistol dual" />
+        <animation state_key="hold_on_wall" animation_key="hold, overwall dual" />
+        <animation state_key="still_against_wall" animation_key="hold_casual, pistol dual" />
+        <animation state_key="crouching" animation_key="crouch, pistol dual" />
+        <animation state_key="crouch_moving" animation_key="crouching, pistol 2" />
+        <animation state_key="crouch_moving_backwards" animation_key="crouching backwards, pistol 2" />
+        <animation state_key="running" animation_key="walking, pistol dual" />
+        <animation state_key="walking" animation_key="walking, pistol dual" />
+        <animation state_key="walking_backwards" animation_key="walking backwards, pistol dual" />
+        <animation state_key="next_in_chain_in" animation_key="change weapon in m4s" />
+        <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
+        <animation state_key="stabbing" animation_key="pistol whip" />
+        <animation state_key="stabbing" animation_key="pistol whip 2" />
+        <animation state_key="stabbing" animation_key="pistol whip 3" />
+        <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+        <sound key="fire" fileref="m4mod_fire_FromBF5.wav" pitch_variety="0.05" volume="2" />
+        <sound key="magazine_out" fileref="m4mod_mgz_out_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="magazine_in" fileref="m4mod_mgz_in_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="M4A1Mod_ATTACK_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="M4A1Mod_LOADING_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="M4A1Mod_SKILL1_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="M4A1Mod_SKILL2_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="M4A1Mod_SKILL3_JP.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <model filename="none.xml" />
+        <hud_icon filename="gkw_m4a1_550.png" />
+        <commonness value="0" in_stock="0" can_respawn_with="1" />
+        <inventory encumbrance="35.0" buy_price="270.0" sell_price="270.0"  />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <ballistics
+        near_far_distance="0"
+        speed_estimation_near="75.0"
+        speed_estimation_far="75.0"
+        max_speed="200"
+        randomness="0.0"
+        curve_height="6"
+        tweak_factor="2.5"
+        />
+        <weak_hand_hold offset="0.2" />
+        <projectile file="m4a1mod3_skill.projectile" can_be_detected_by_footmen="0"/>
+        <stance state_key="running" accuracy="0.5" />
+        <stance state_key="walking" accuracy="0.5" />
+        <stance state_key="crouch_moving" accuracy="0.5" />
+        <stance state_key="prone_moving" accuracy="0.5" />
+        <stance state_key="standing" accuracy="0.5" />
+        <stance state_key="crouching" accuracy="1.0" />
+        <stance state_key="prone" accuracy="1.0" />
+        <modifier class="speed" value="-0.5" />
+        <modifier class="detectability" value="0.0" />
+    </weapon>
+</weapons>

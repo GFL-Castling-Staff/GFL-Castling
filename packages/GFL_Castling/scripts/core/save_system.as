@@ -191,64 +191,7 @@ class Save_System : Tracker {
     protected void handleChatEvent(const XmlElement@ event){
 		string message = event.getStringAttribute("message");
 		string p_name = event.getStringAttribute("player_name");
-        if(checkCommand(message,"savetest")){
-            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
-            if (playerInfo.m_name == default_string ) return;
-            string profile_hash = playerInfo.m_hash;
-            string sid = playerInfo.m_sid;
-            int player_id = playerInfo.getPlayerPid();
-            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
-            notify(m_metagame, "你有" + newdata.m_weapons.length() + "个武器", dictionary(), "misc", player_id, false, "", 1.0);
-            for(uint i = 0; i < newdata.m_weapons.length();i++)
-            {
-                string weapon_key = newdata.m_weapons[i];
-                notify(m_metagame, "比如" + weapon_key + "这把枪", dictionary(), "misc", player_id, false, "", 1.0);
-            }
-            newdata.addWeapon("gkw_negev.weapon");
-            newdata.addWeapon("gkw_m4a1.weapon");
-            newdata.addWeapon("gkw_ak47.weapon");
-            newdata.addWeapon("gkw_m3.weapon");
-            newdata.addWeapon("gkw_vz61.weapon");
-            newdata.addWeapon("gkw_negev.weapon");
-            newdata.SetCoreNum(newdata.m_corenum+= 1500);
-            newdata.SetSid(sid);
-            // newdata.m_profile_hash = "test114514";
-            // string filename = ("save_" + "test114514" +".xml" );
-            string filename = ("save_" + profile_hash +".xml" );
-            writeXML(m_metagame,filename,PlayerProfileSave(newdata));
-        }
-        if(checkCommand(message,"gfl_load")){
-            string girl_index = message.substr(message.findFirst(" ")+1);
-            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
-            if (playerInfo.m_name == default_string ) return;
-            string profile_hash = playerInfo.m_hash;
-            string sid = playerInfo.m_sid;
-            int player_id = playerInfo.getPlayerPid();
-            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
-
-            string weapon_key = getKeyfromIndex(girl_index);
-            if(weapon_key=="") 
-            {
-                _log("未找到武器key");  
-                return;
-            }                
-
-            if(newdata.FindWeapon(weapon_key))
-            {
-                const XmlElement@ player = getPlayerInfo(m_metagame,player_id);
-                if (player is null) return;
-                int cId = player.getIntAttribute("character_id");
-                addItemInBackpack(m_metagame,cId,"weapon",weapon_key);
-                dictionary a;
-                a["%doll_name"] = getResourceName(m_metagame, weapon_key, "weapon");                    
-                sendPrivateMessageKey(m_metagame, player_id, "truemask_success",a);
-                playPrivateSound(m_metagame,"sfx_big.wav",player_id);                   
-            }
-            else
-            {
-                _log("你没有这个武器：" + weapon_key);  
-            }
-        }
+		int senderId = event.getIntAttribute("player_id");
         if(checkCommand(message,"craft")){
 
             GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);            
@@ -347,6 +290,69 @@ class Save_System : Tracker {
 
             startQueue(player_id,"craft_2nd",girl_index);
             notify(m_metagame, "craft progression start", dictionary(), "misc", player_id, false, "", 1.0);
+        }        
+
+		if (!m_metagame.getAdminManager().isAdmin(p_name, senderId) && !m_metagame.getModeratorManager().isModerator(p_name, senderId)) {
+			return;
+		}
+
+        if(checkCommand(message,"savetest")){
+            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
+            if (playerInfo.m_name == default_string ) return;
+            string profile_hash = playerInfo.m_hash;
+            string sid = playerInfo.m_sid;
+            int player_id = playerInfo.getPlayerPid();
+            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+            notify(m_metagame, "你有" + newdata.m_weapons.length() + "个武器", dictionary(), "misc", player_id, false, "", 1.0);
+            for(uint i = 0; i < newdata.m_weapons.length();i++)
+            {
+                string weapon_key = newdata.m_weapons[i];
+                notify(m_metagame, "比如" + weapon_key + "这把枪", dictionary(), "misc", player_id, false, "", 1.0);
+            }
+            newdata.addWeapon("gkw_negev.weapon");
+            newdata.addWeapon("gkw_m4a1.weapon");
+            newdata.addWeapon("gkw_ak47.weapon");
+            newdata.addWeapon("gkw_m3.weapon");
+            newdata.addWeapon("gkw_vz61.weapon");
+            newdata.addWeapon("gkw_negev.weapon");
+            newdata.SetCoreNum(newdata.m_corenum+= 1500);
+            newdata.SetSid(sid);
+            // newdata.m_profile_hash = "test114514";
+            // string filename = ("save_" + "test114514" +".xml" );
+            string filename = ("save_" + profile_hash +".xml" );
+            writeXML(m_metagame,filename,PlayerProfileSave(newdata));
+        }
+        if(checkCommand(message,"gfl_load")){
+            string girl_index = message.substr(message.findFirst(" ")+1);
+            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
+            if (playerInfo.m_name == default_string ) return;
+            string profile_hash = playerInfo.m_hash;
+            string sid = playerInfo.m_sid;
+            int player_id = playerInfo.getPlayerPid();
+            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+
+            string weapon_key = getKeyfromIndex(girl_index);
+            if(weapon_key=="") 
+            {
+                _log("未找到武器key");  
+                return;
+            }                
+
+            if(newdata.FindWeapon(weapon_key))
+            {
+                const XmlElement@ player = getPlayerInfo(m_metagame,player_id);
+                if (player is null) return;
+                int cId = player.getIntAttribute("character_id");
+                addItemInBackpack(m_metagame,cId,"weapon",weapon_key);
+                dictionary a;
+                a["%doll_name"] = getResourceName(m_metagame, weapon_key, "weapon");                    
+                sendPrivateMessageKey(m_metagame, player_id, "truemask_success",a);
+                playPrivateSound(m_metagame,"sfx_big.wav",player_id);                   
+            }
+            else
+            {
+                _log("你没有这个武器：" + weapon_key);  
+            }
         }        
 	}
 

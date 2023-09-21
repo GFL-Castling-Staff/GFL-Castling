@@ -14,6 +14,7 @@
 	class="4"
     slot="0"
 	reload_one_at_a_time="0"
+    suppressed="1"
 	sight_range_modifier="1.2"
 	projectile_speed="110"
 	projectiles_per_shot="1"
@@ -50,9 +51,8 @@
 	<sound key="magazine_in" fileref="pm_mgz_in_FromCOD16.wav" volume="0.9"/>
 	<sound key="cycle" fileref="pm_cycle_FromCOD7.wav" volume="0.9"/>
     <!--Model, Icon, Cost-->
-    <model filename="gkw_hg_makarov.xml" />
+    <model filename="gkw_hg_pb.xml" />
     <hud_icon filename="gkw_makarovmod3.png" />
-    <effect class="muzzle" ref="ejection_9mm"/>
     <!--Ballistics-->
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet.projectile">

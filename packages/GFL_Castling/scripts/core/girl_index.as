@@ -592,8 +592,10 @@ dictionary tdoll_complex_index = {
 
     {modded_key(55).toString(),"gkw_m4a1.weapon"},
     {modded_key(55,530).toString(),"gkw_m4a1_530.weapon"},
+    {modded_key(55,550).toString(),"gkw_m4a1_550.weapon"},
     {modded_key(55,0,"mod3").toString(),"gkw_m4a1mod3.weapon"},
     {modded_key(55,530,"mod3").toString(),"gkw_m4a1mod3_530.weapon"},
+    {modded_key(55,550,"mod3").toString(),"gkw_m4a1mod3_550.weapon"},
 
     {modded_key(56).toString(),"gkw_m4sopmodii.weapon"},
     {modded_key(56,531).toString(),"gkw_m4sopmodii_531.weapon"},
