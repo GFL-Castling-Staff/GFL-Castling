@@ -2474,5 +2474,10 @@
     <model filename="gkd_rf_boys.xml">
         <requirement class="weapon" key="gkw_boys.weapon" slot="0" />
     </model>            
-    
+    <model filename="gkd_ar_6p62.xml">
+        <requirement class="weapon" key="gkw_6p62.weapon" slot="0" />
+    </model>    
+    <model filename="gkd_ar_6p62_8610.xml">
+        <requirement class="weapon" key="gkw_6p62_8610.weapon" slot="0" />
+    </model>
 </models> 

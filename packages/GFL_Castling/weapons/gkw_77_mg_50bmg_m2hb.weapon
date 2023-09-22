@@ -121,7 +121,7 @@
         <sound class="impact" fileref="rifle_drop.wav"/>
         <model filename="gkw_mg_m2hb.xml"/>
         <hud_icon filename="gkw_m2hb_skill.png"/>
-        <projectile file="bullet_he.projectile">
+        <projectile file="bullet_50bmg.projectile">
             <result class="blast" damage="4.1" radius="3.5" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
             <trail probability="1.0" key="BulletApTrail_ct"/>
         </projectile>
