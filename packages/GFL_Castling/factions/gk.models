@@ -1646,6 +1646,12 @@
     <model filename="gkd_smg_vp1915.xml">
         <requirement class="weapon" key="gkw_vp1915.weapon" slot="0" />
     </model>
+    <model filename="gkd_smg_vp1915_8503.xml">
+        <requirement class="weapon" key="gkw_vp1915_8503.weapon" slot="0" />
+    </model>    
+    <model filename="gkd_smg_vp1915_6604.xml">
+        <requirement class="weapon" slot="0" key="gkw_vp1915_6604.weapon"/>
+    </model>
     <model filename="gkd_sg_fo-12.xml">
         <requirement class="weapon" key="gkw_fo12.weapon" slot="0" />
     </model>
