@@ -105,6 +105,12 @@
 	<sound key="stab" fileref="meleeHitNothing.wav" volume="0.5" />
 	<sound key="stab_receive" fileref="meleeHitUMP45.wav" volume="0.7" />
 
+	<animation key="crouch still" target_key="crouch still alt 1" add="1"/>
+	<animation key="crouch still" target_key="crouch still alt 2" add="1"/>
+	<animation key="crouch still" target_key="crouch still alt 3" add="1"/>
+
+
+	crouch still alt 1
 	<animation key="celebrating" target_key="celebrating" />
 	<animation key="celebrating" target_key="celebrating2" add="1" />
 	<animation key="celebrating, shooting" target_key="celebrating, shooting" />
