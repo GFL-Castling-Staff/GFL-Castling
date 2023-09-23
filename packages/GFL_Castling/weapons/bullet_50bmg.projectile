@@ -9,8 +9,8 @@
     <sound class="result" key="vehicle" copy="other" />
     <sound class="result" key="static_object" copy="other" />             
     
-    <effect class="result" key="terrain" ref="result_cannon_blast_AmbientLight" lighting="0"/>
-    <effect class="result" key="terrain" ref="result_cannon_blast_smoke" lighting="0"/>    
+    <effect class="result" key="terrain" ref="result_cannon_blast_AmbientLight_small" lighting="0"/>
+    <effect class="result" key="terrain" ref="result_cannon_blast_smoke_small" lighting="0"/>    
     <effect class="result" key="terrain" ref="hitGround_20mm" use_surface_color="1" />
     <effect class="result" key="terrain" ref="BulletImpactDust4" />
     <effect class="result" key="terrain" ref="BulletImpactDust5" />

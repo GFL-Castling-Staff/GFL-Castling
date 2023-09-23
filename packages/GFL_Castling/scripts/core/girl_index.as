@@ -609,11 +609,11 @@ dictionary tdoll_complex_index = {
 
     {modded_key(57).toString(),"gkw_ar15.weapon"},
     {modded_key(57,532).toString(),"gkw_ar15_532.weapon"},
-    {modded_key(57,552).toString(),"gkw_ar15_532.weapon"},
+    {modded_key(57,552).toString(),"gkw_ar15_552.weapon"},
     {modded_key(57,30001).toString(),"gkw_ar15_30001.weapon"},
     {modded_key(57,0,"mod3").toString(),"gkw_ar15mod3.weapon"},
     {modded_key(57,532,"mod3").toString(),"gkw_ar15mod3_532.weapon"},
-    {modded_key(57,552,"mod3").toString(),"gkw_ar15mod3_532.weapon"},
+    {modded_key(57,552,"mod3").toString(),"gkw_ar15mod3_552.weapon"},
     {modded_key(57,30001,"mod3").toString(),"gkw_ar15mod3_30001.weapon"},
 
     {modded_key(58).toString(),"gkw_ak47.weapon"},
