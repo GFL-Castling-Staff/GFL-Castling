@@ -1158,6 +1158,9 @@
     <model filename="gkd_smg_p90_2802.xml">
         <requirement class="weapon" key="gkw_p90_2802.weapon" slot="0" />
     </model>
+    <model filename="gkd_smg_p90_5701.xml">
+        <requirement class="weapon" key="gkw_p90_5701.weapon" slot="0" />
+    </model>    
     <model filename="gkd_smg_pdw.xml">
         <requirement class="weapon" key="gkw_honeybadger.weapon" slot="0" />
     </model>
@@ -1451,9 +1454,6 @@
     </model>
     <model filename="gkd_smg_ar57.xml">
         <requirement class="weapon" key="gkw_ar57_skill.weapon" slot="0" />
-    </model>
-    <model filename="gkd_smg_p90_2802.xml">
-        <requirement class="weapon" key="gkw_p90_2802.weapon" slot="0" />
     </model>
     <model filename="gkd_rf_hs50.xml">
         <requirement class="weapon" key="gkw_hs50.weapon" slot="0" />
