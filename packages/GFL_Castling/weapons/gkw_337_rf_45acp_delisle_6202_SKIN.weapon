@@ -20,6 +20,7 @@
 	projectile_speed="130" 
 	barrel_offset="0.4" 
 	projectiles_per_shot="1"
+    stance_accuracy_rate="1.0"
     stab_enabled="1" />
     <commonness value="0" in_stock="0" can_respawn_with="1" />
     <inventory encumbrance="35.0" buy_price="45.0" sell_price="45.0"/>
@@ -56,7 +57,7 @@
         <trail probability="1" key="BulletApTrail_rf"/>
     </projectile>
     <!--Accuracy, Movement speed-->
-    <stance state_key="running" accuracy="0.5" />
+    <stance state_key="running" accuracy="0.2" />
     <stance state_key="walking" accuracy="0.55" />
     <stance state_key="crouch_moving" accuracy="0.95" />
     <stance state_key="standing" accuracy="0.95" />
