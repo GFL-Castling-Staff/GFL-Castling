@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon key="gkw_lusa_7802.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_lusa_8501.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
     <tag name="smg" />
     <specification 
     accuracy_factor="0.99" 
@@ -8,7 +8,7 @@
     class="0"
     slot="0"
     magazine_size="30" 
-    name="Lusa-[Winter Deer latté]" 
+    name="Lusa-[Coastal Vanguard]" 
     projectile_speed="125" 
     suppressed="1" 
     carry_in_two_hands="0"
@@ -47,8 +47,8 @@
     <sound key="magazine_in" fileref="lusa_mgz_in_FromCOD17.wav" volume="0.5" />
     <sound key="cycle" fileref="lusa_cycle_FromCOD17.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="gkw_smg_lusa_7802.xml"/>
-    <hud_icon filename="gkw_lusa_7802.png"/>
+    <model filename="gkw_smg_lusa.xml"/>
+    <hud_icon filename="gkw_lusa_8501.png"/>
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
         <result class="hit"  kill_probability="1.6" kill_probability_offset_on_successful_hit="5.5" kill_decay_start_time="0.25" kill_decay_end_time="0.5" />
