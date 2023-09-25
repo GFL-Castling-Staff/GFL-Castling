@@ -86,7 +86,13 @@ class player_data
         return false;
     }
 
-    
+    string getRandomWeapon() const
+    {
+        if(m_weapons.length() <= 0 ) return "";
+        uint index = rand(0,m_weapons.length());
+        return m_weapons[index];
+    }
+
 }
 
 const XmlElement@ readFile(const Metagame@ metagame,string name, string profile_hash){
@@ -291,11 +297,29 @@ class Save_System : Tracker {
             startQueue(player_id,"craft_2nd",girl_index);
             notify(m_metagame, "craft progression start", dictionary(), "misc", player_id, false, "", 1.0);
         }        
-
+        if(checkCommand(message,"random")){
+            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);            
+            if (playerInfo.m_name == default_string ) return;
+            string profile_hash = playerInfo.m_hash;
+            string sid = playerInfo.m_sid;
+            int player_id = playerInfo.getPlayerPid();
+            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash)); 
+            string weapon_key = newdata.getRandomWeapon();
+            const XmlElement@ player = getPlayerInfo(m_metagame,player_id);
+            if (player is null) return;
+            if (weapon_key == "") return;
+            int cId = player.getIntAttribute("character_id");
+            addItemInBackpack(m_metagame,cId,"weapon",weapon_key);
+            GiveRP(m_metagame,cId,-3000);
+            dictionary a;
+            a["%doll_name"] = getNamefromDict(weapon_key);
+            notify(m_metagame, "craft success", a, "misc", player_id, false, "", 1.0);
+            playPrivateSound(m_metagame,"sfx_big.wav",player_id);
+        }
 		if (!m_metagame.getAdminManager().isAdmin(p_name, senderId) && !m_metagame.getModeratorManager().isModerator(p_name, senderId)) {
 			return;
 		}
-
+ 
         if(checkCommand(message,"savetest")){
             GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
             if (playerInfo.m_name == default_string ) return;

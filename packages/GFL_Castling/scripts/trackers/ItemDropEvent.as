@@ -296,7 +296,10 @@ class ItemDropEvent : Tracker {
                     }
                     else if (checkQueue(pId,"stg44") && (itemKey=="gkw_g43.weapon")){
                         giveDigimindItem(cId, pId, "gkw_g43_kurz.weapon", "stg44");
-                    }                    
+                    }                   
+                    else if (checkQueue(pId,"stg44") && (itemKey=="gkw_g43_7607.weapon")){
+                        giveDigimindItem(cId, pId, "gkw_g43_7607_kurz.weapon", "stg44");
+                    }                                
                     else if (checkQueue(pId,"wa2000") && (itemKey=="gkw_wa2000.weapon")){
                         giveDigimindItem(cId, pId, "gkw_wa2000_only.weapon", "wa2000");
                     }
