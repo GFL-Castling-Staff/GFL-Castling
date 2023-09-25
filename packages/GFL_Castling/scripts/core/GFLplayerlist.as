@@ -204,7 +204,10 @@ class GFL_playerlist_system : Tracker {
                         c_weaponType == "gkw_98kmod3.weapon" ||
                         c_weaponType == "gkw_98kmod3_skill.weapon" ||
                         c_weaponType == "gkw_98kmod3_4301.weapon" ||
-                        c_weaponType == "gkw_98kmod3_4301_skill.weapon")
+                        c_weaponType == "gkw_98kmod3_4301_skill.weapon" ||
+                        c_weaponType == "gkw_98kmod3_8301.weapon" ||
+                        c_weaponType == "gkw_98kmod3_8301_skill.weapon"                     
+                        )
                     {
                         string strname= CT_PlayerList[i].getPlayerName();
                         int j = findNodeleteDataIndex(strname,"kar98k");
