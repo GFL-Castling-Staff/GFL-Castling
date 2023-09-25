@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon file="designated_marksman_rifle.animation_base" key="gkw_wa2000_306.weapon">
+<weapon file="designated_marksman_rifle.animation_base" key="gkw_wa2000_1108.weapon">
     <!--Weapon specifications-->
     <specification 
 	retrigger_time="-1.0" 
@@ -10,7 +10,7 @@
 	magazine_size="6" 
 	can_shoot_standing="1" 
 	suppressed="0" 
-	name="Walther WA2000-[Date in the Snow]" 
+	name="Walther WA2000-[Op. Manta Ray]" 
 	class="4" 
 	burst_shots="1"
 	last_burst_retrigger_time="0.333"
@@ -34,7 +34,7 @@
 
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_wa2000.xml" />
-    <hud_icon filename="gkw_wa2000_306.png" />
+    <hud_icon filename="gkw_wa2000_1108.png" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">

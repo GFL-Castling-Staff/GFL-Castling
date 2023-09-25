@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-<weapon file="designated_marksman_rifle.animation_base" key="gkw_wa2000_only.weapon">
+<weapon file="designated_marksman_rifle.animation_base" key="gkw_wa2000_1108_only.weapon">
     <!--Weapon specifications-->
     <specification 
 	retrigger_time="-1.0" 
@@ -11,7 +11,7 @@
 	magazine_size="15" 
 	can_shoot_standing="1" 
 	suppressed="0" 
-	name="Walther WA2000-[SB 2.5-10x56]" 
+	name="Walther WA2000-[SB 2.5-10x56]-[Op. Manta Ray]" 
 	class="4" 
 	burst_shots="1"
 	last_burst_retrigger_time="0.33"
@@ -24,7 +24,7 @@
     <!--Animations-->
     <inventory encumbrance="35.0" buy_price="200.0" sell_price="200.0" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-    <next_in_chain key="gkw_wa2000_only_skill.weapon" share_ammo="1"/>
+    <next_in_chain key="gkw_wa2000_1108_only_skill.weapon" share_ammo="1"/>
     <!--Sounds-->
     <commonness value="0" in_stock="0" can_respawn_with="1"/>
     <sound key="fire" fileref="wa2000_fire_FromCOD17.wav" volume="1.4" />
@@ -35,7 +35,7 @@
     <sound class="impact" fileref="rifle_drop.wav" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_wa2000.xml" />
-    <hud_icon filename="gkw_wa2000_only.png" />
+    <hud_icon filename="gkw_wa2000_1108.png" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
@@ -59,7 +59,7 @@
     <modifier class="detectability" value="-0.1" />
     <modifier class="speed" value="0" />
 </weapon>
-<weapon file="designated_marksman_rifle.animation_base" key="gkw_wa2000_only_skill.weapon">
+<weapon file="designated_marksman_rifle.animation_base" key="gkw_wa2000_1108_only_skill.weapon">
     <!--Weapon specifications-->
     <specification 
 	retrigger_time="-1.0" 
@@ -70,7 +70,7 @@
 	magazine_size="15" 
 	can_shoot_standing="1" 
 	suppressed="0" 
-	name="Walther WA2000-[SB 2.5-10x56]-[Assault Focus]" 
+	name="Walther WA2000-[SB 2.5-10x56]-[Op. Manta Ray]-[Assault Focus]" 
 	class="1" 
 	burst_shots="1"
 	last_burst_retrigger_time="-1"
@@ -83,7 +83,7 @@
     <!--Animations-->
     <inventory encumbrance="35.0" buy_price="200.0" sell_price="200.0" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-    <next_in_chain key="gkw_wa2000_only.weapon" share_ammo="1"/>
+    <next_in_chain key="gkw_wa2000_1108_only.weapon" share_ammo="1"/>
     <!--Sounds-->
     <commonness value="0" in_stock="0" can_respawn_with="1"/>
     <sound key="fire" fileref="wa2000_fire_FromCSOL.wav" volume="0.7" />
@@ -94,7 +94,7 @@
     <sound class="impact" fileref="rifle_drop.wav" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_wa2000.xml" />
-    <hud_icon filename="gkw_wa2000_only.png" />
+    <hud_icon filename="gkw_wa2000_1108.png" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
