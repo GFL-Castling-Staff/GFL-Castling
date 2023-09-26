@@ -260,7 +260,13 @@ class ItemDropEvent : Tracker {
                     }
                     else if (checkQueue(pId,"m1903_2") && (itemKey=="gkw_m1903_302.weapon")){
                         giveDigimindItem(cId, pId, "gkw_m1903_302_exp.weapon", "m1903_2");
-                    }                    
+                    }
+                    else if (checkQueue(pId,"m1903_1") && (itemKey=="gkw_m1903_1107.weapon")){
+                        giveDigimindItem(cId, pId, "gkw_m1903_1107_only.weapon", "m1903_1");
+                    }
+                    else if (checkQueue(pId,"m1903_2") && (itemKey=="gkw_m1903_1107.weapon")){
+                        giveDigimindItem(cId, pId, "gkw_m1903_1107_exp.weapon", "m1903_2");
+                    }
                     else if (checkQueue(pId,"fn49") && (itemKey=="gkw_fn49.weapon")){
                         giveDigimindItem(cId, pId, "gkw_fn49mod3.weapon", "fn49");
                     }                                        

@@ -240,6 +240,7 @@ class kill_event : Tracker {
 
         {"gkw_m1903_exp.weapon",4},
         {"gkw_m1903_302_exp.weapon",4},
+        {"gkw_m1903_1107_exp.weapon",4},
         {"gkw_type80mod3.weapon",5},
         {"gkw_type80mod3_skill.weapon",5},
 
