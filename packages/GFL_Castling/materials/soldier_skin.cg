@@ -236,7 +236,7 @@ void soldier_skin_outline_fp(
     out float4 oColor : COLOR)
 {
     float4 f = fog(fogColor, length(cameraPositionInObjectSpace), fogParams);
-    f.a *= 0.1;
+    f.a *= 0.15;
     oColor = blend_fog(f, color);
     
     //oColor = color;

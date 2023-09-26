@@ -1,0 +1,194 @@
+提丰的瞄准地面特效
+Modifiered from helldiver mod
+原作者: RST
+禁止无断转载和二次修改
+
+particle_system typhon_aim_mark_1 	//瞄准地面框选特效
+{
+	quota 50
+	material quan_fangde_anim
+	particle_width 8
+	particle_height 8
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0.01
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 10
+		position 0 -20 0
+		velocity 0.0001
+		time_to_live 0.5
+		duration 0.1
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.36 0.56 0.92 1
+		time1 1
+		colour1 0.36 0.56 0.92 1
+	}
+}
+particle_system typhon_aim_mark_1B : typhon_aim_mark_1	//瞄准地面框选特效 曲线
+{
+	emitter Point
+	{
+		position 0 0 0
+		time_to_live 4
+	}
+}
+particle_system typhon_aim_mark_1_long : typhon_aim_mark_1 	//瞄准地面框选特效
+{
+	emitter Point
+	{
+		time_to_live 3
+		position 0 0 0
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 0.3 0 1
+		time1 0.7
+		colour1 1 0.3 0 1
+		time1 2
+		colour2 0 0 0 0
+	}
+}
+particle_system typhon_aim_mark_2  //瞄准的空对地指示特效
+{
+	quota 50
+	material warning_sign_anim
+	particle_width 1.2
+	particle_height 2.4
+	renderer billboard
+	billboard_type oriented_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0.01
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 10
+		position 0 -18.5 0
+		velocity 0.0001
+		time_to_live 0.5
+		duration 0.1
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	180
+		rotation_range_end	180
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 1
+		time1 1
+		colour1 1 1 1 1
+	}
+}
+particle_system typhon_aim_mark_2B : typhon_aim_mark_2  //瞄准的空对地指示特效
+{
+	emitter Point
+	{
+		position 0 3 0
+		time_to_live 4
+	}
+}
+particle_system typhon_aim_mark_2_long : typhon_aim_mark_2  //瞄准的空对地指示特效
+{
+	emitter Point
+	{
+		time_to_live 3
+		position 0 0 0
+	}
+	affector Rotator
+	{}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 0.3 0 1
+		time1 0.7
+		colour1 1 0.3 0 1
+		time1 2
+		colour2 0 0 0 0
+	}
+}
+
+
+material quan_7_14_add_anim : add_base
+{   
+    technique{
+    pass{
+		depth_func always_pass
+        texture_unit{
+            texture quan_7_14_add.png 	
+			wave_xform scale_x sine 0.25 2 0 0.2
+			wave_xform scale_y sine 0.25 2 0 0.2
+			tex_address_mode border
+			tex_border_colour 0 0 0 0
+}}}}
+
+material quan_fangde_anim : add_base
+{   
+    technique{
+    pass{
+		depth_func always_pass
+        texture_unit{
+            texture quan_fangde_add.png 	
+			wave_xform scale_x sine 0.25 2 0 0.1
+			wave_xform scale_y sine 0.25 2 0 0.1
+			tex_address_mode border
+			tex_border_colour 0 0 0 0
+}}}}
+
+material aim_arrow_anim : add_base
+{   
+    technique{
+    pass{
+		depth_func always_pass
+        texture_unit{
+            texture aim_arrow.png 
+			wave_xform scroll_y sine 0 2 0 -0.2
+			tex_address_mode border
+			tex_border_colour 0 0 0 0
+}}}}
+
+material warning_sign_anim : add_base
+{   
+    technique{
+    pass{
+		depth_func always_pass
+        texture_unit{
+            texture warning_sign_add.png 
+			wave_xform scroll_y sine 0 2 0 -0.2
+			tex_address_mode border
+			tex_border_colour 0 0 0 0
+}}}}
+
+
+material add_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+		}
+	}
+}

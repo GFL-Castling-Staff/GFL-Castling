@@ -392,6 +392,7 @@ class DelayFairyCommand : Task {
                 spawnStaticProjectile(m_metagame,"cluster_bomb.projectile",m_pos.add(Vector3(0,-20,0)),m_characterId,m_factionId);
                 sendFactionMessageKey(m_metagame,m_factionId,"Echelon enter the battlefield");
                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+				tasker.add(DelayProjectileSet(m_metagame,3.0,m_characterId,m_factionId,"cluster_bomb.projectile",m_pos.add(Vector3(0,-20,0))));
                 array<soldier_spawn_request@> spawn_soldier =   
                 {
                     soldier_spawn_request("ar_57_ar15mod3",1),
@@ -399,7 +400,7 @@ class DelayFairyCommand : Task {
                     soldier_spawn_request("ar_55_m4a1mod3",1),
                     soldier_spawn_request("ar_54_m16a1",1)
                 };
-                tasker.add(DelaySpawnSoldier(m_metagame,6.0,m_factionId,spawn_soldier,m_pos.add(Vector3(0,-50,0)),3.0,3.0));
+                tasker.add(DelaySpawnSoldier(m_metagame,4.0,m_factionId,spawn_soldier,m_pos.add(Vector3(0,-50,0)),3.0,3.0));
             }            
 		}
 

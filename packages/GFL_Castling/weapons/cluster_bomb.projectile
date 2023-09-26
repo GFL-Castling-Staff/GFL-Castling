@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="cluster bomb" slot="2" key="cluster_bomb.projectile" >
     <trigger class="time" time_to_live="1.25"/>
-    <result class="spawn" instance_class="projectile" instance_key="cluster_bomb_sub.projectile" min_amount="32" max_amount="32" offset="0 0.0 0" position_spread="0.7 0.7" direction_spread="0.2 -0.2" />
+    <result class="spawn" instance_class="projectile" instance_key="cluster_bomb_sub.projectile" min_amount="28" max_amount="28" offset="0 0.0 0" position_spread="0.9 0.9" direction_spread="0.2 -0.2" />
 	
 	<model filename="f22_bomb.xml" />
 	<commonness value="0.0" />
