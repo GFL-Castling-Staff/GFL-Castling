@@ -368,11 +368,11 @@ class kill_event : Tracker {
                 kill_to_heal_scale = 5;
             }
 
-            if(c_weaponType=="gkw_ppkmod3.weapon" || c_weaponType =="gkw_ppkmod3_3905.weapon"){
+            if(c_weaponType=="gkw_ppkmod3.weapon" || c_weaponType =="gkw_ppkmod3_3905.weapon" || c_weaponType =="gkw_ppkmod3_6109.weapon"){
                 int i = findSkillIndex(characterId,"PPKMOD3");
                 if(i >=0){
                     SkillArray[i].m_time-=1.0;
-                    if(KillerWeaponKey=="gkw_ppkmod3.weapon" || KillerWeaponKey=="gkw_ppkmod3_3905.weapon"){
+                    if(KillerWeaponKey=="gkw_ppkmod3.weapon" || KillerWeaponKey=="gkw_ppkmod3_3905.weapon" || KillerWeaponKey=="gkw_ppkmod3_6109.weapon"){
                         SkillArray[i].m_time-=1.0;
                     }
                 }
@@ -437,7 +437,7 @@ class kill_event : Tracker {
 
             updateHealByKillEvent(characterId,factionId,int(healOnKillWeaponList[c_weaponType]),15,"weapon",kill_to_heal_scale);
 
-            if(KillerWeaponKey=="gkw_ppkmod3.weapon" || KillerWeaponKey=="gkw_ppkmod3_3905.weapon"){
+            if(KillerWeaponKey=="gkw_ppkmod3.weapon" || KillerWeaponKey=="gkw_ppkmod3_3905.weapon" || KillerWeaponKey=="gkw_ppkmod3_6109.weapon"){
                 // 乌鸦是猪，望周知
                 if (killway=="hit"){
                     int j = findKillCountIndex(characterId,"ppk");

@@ -198,6 +198,7 @@ dictionary commandSkillIndex = {
 
         {"gkw_ppkmod3.weapon",31},
         {"gkw_ppkmod3_3905.weapon",31},
+        {"gkw_ppkmod3_6109.weapon",31},
 
         //利贝罗勒
         {"gkw_ribeyrollesmod3.weapon",32},
