@@ -87,7 +87,7 @@ void soldier_skin_fp(
     out float4 result          : COLOR)
 {
 	// apply some internal shading, just a bit, too much causes ants
-	float factor = 0.45;
+	float factor = 0.55;
     color *= step(0.5, 1.0 - uv.y) * (1.0 - factor) + factor;
 	
 	// apply some diffuse light

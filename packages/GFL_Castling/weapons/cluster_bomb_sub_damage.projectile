@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="cluster bomb" slot="2" pulldown_in_air="60.0" key="cluster_bomb_sub_blast.projectile">
-    <result class="blast" radius="3.5" damage="3.1" push="0.05" decal="1" character_state="death" faction_compare="not_equal" />
+    <result class="blast" radius="3.5" damage="5.1" push="0.05" decal="1" character_state="death" faction_compare="not_equal" />
     <collision class="sticky" />
     <trigger class="time" time_to_live="0.0" />
     <rotation class="motion" />

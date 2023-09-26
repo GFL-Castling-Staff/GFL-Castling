@@ -2,7 +2,7 @@
 <character filename="paradeus.text_lines">
     <parameter class="being_stunned_steer_amount" value="-0.8" />
 	<animation key="stunned" target_key="rush jump" />
-    <parameter class="can_use_vehicles" value="0" /> 
+    <parameter class="can_use_vehicles" value="1" /> 
 	<parameter class="walking_steer_amount" value="0.5" />
 	<parameter class="running_steer_amount" value="0.63" />
     <animation key="throwing, upside" target_key="hold, dreamer" />
