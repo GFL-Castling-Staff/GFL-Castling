@@ -643,7 +643,7 @@
 	<soldier name="kcco_cerynitis" spawn_score="0.5" squad_size_xp_cap="0.0" copy_from="default_bot">
 		<model filename="kccod_cerynitis.xml" />
 		<character filename="kcco_mecha.character" />
-		<ai filename="kcco_cet_swap.ai" />
+		<ai filename="kcco_cet.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="kcco_cerynitis.weapon" enabled="1" />
 			<carry_item key="vest_cet_15" />

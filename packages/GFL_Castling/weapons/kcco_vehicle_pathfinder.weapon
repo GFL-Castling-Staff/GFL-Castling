@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon key="kcco_pathfinder_spawner">
+ <specification 
+    slot="2" 
+    retrigger_time="60"
+	accuracy_factor="1.0" 
+	sustained_fire_grow_step="0" 
+	sustained_fire_diminish_rate="1.0" 
+	sight_range_modifier="2.0"
+    ai_sight_range_modifier="2.0"
+    sight_height_offset="15.0"
+    magazine_size="9999" 
+    suppressed="0" 
+    name="" 
+    class="0" 
+    use_basic_muzzle_smoke_effect="0"
+    projectile_speed="10" />
+	
+    <model filename="" />
+
+    <hud_icon filename="testing.png" />
+    <commonness value="0.0" />
+
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+    <effect class="muzzle" ref="sawsnone" />
+
+    <projectile file="spawn_pathfinder.projectile">
+    </projectile>
+</weapon>

@@ -45,6 +45,14 @@
 			<level value="100" />
 			<level value="1145141919"/>
 		</criteria>
+		<criteria class="vehicle_destroy" owner="any" description="* destroy %target_count Recce Centre">
+			<vehicle key="kcco_pathfinder_spawner.vehicle" />
+			<level value="5" />
+			<level value="10" />
+			<level value="50" />
+			<level value="100" />
+			<level value="1145141919"/>
+		</criteria>		
 	</achievement>
 
     <achievement name="SF_Hatred" no_level_title="Operation Cube" include_in_alltime_stats="0">

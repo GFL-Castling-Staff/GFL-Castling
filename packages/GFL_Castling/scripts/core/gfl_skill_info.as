@@ -177,7 +177,8 @@ dictionary gameSkillIndex = {
         // 铁血boss 炼金术师 技能 大限
         {"sf_boss_alchemist_skill",47},
 
-        // 
+        // 侦察中枢
+        {"spawn_pathfinder",48},
 
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}

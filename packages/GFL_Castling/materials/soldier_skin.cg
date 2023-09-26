@@ -1,0 +1,243 @@
+#include "tools.cg"
+
+/*
+// integrated outline
+void soldier_skin_vp(
+		     uniform float4x4 matrices[17],
+		     uniform float4x4 viewProj,
+             uniform float pointSize,
+//		     uniform float4 fogColor,
+// 		     uniform float4 fogParams,
+
+			
+ 		     float4 position : POSITION,
+ 		     float4 color    : COLOR,
+		     float  u	     : TEXCOORD0,
+				
+		     out float4 outPosition : POSITION,
+		     out float4 outColor	: COLOR,
+// for some reason, nvidia seems to have all texcoord* as texture coordinates
+// for the point sprite in fragment shader, it's no use passing anything
+// here
+//    		 out float4 outFogColor : TEXCOORD1,
+             out float  outSize     : PSIZE)
+{
+
+	float4x4 result = matrices[u];
+    result = mul(viewProj, result);
+	outPosition = mul(result, position);
+
+    // color.a carries info about outline mesh
+    // 0 means outline, 1 means colors
+    float outlineFactor = 1.0 - color.a;
+
+	outColor.rgb = color.rgb * color.a;
+	outColor.a = 1.0;
+
+    outSize = pointSize * (1.0 + outlineFactor);	
+
+    //outFogColor = fog(fogColor, oPosition.z, fogParams);
+
+    outPosition.z = outPosition.z + 0.005 * outlineFactor;
+}
+*/
+
+
+void soldier_skin_vp(
+		    uniform float4x4 matrices[17],
+		    uniform float4x4 viewProj,
+//		    uniform float4 fogColor,
+// 		    uniform float4 fogParams,
+
+ 		    float4 position : POSITION,
+ 		    float4 color    : COLOR,
+		    float  u	     : TEXCOORD0,
+				
+		    out float4 outPosition : POSITION,
+		    out float4 outColor	: COLOR)
+// for some reason, nvidia seems to have all texcoord* as texture coordinates
+// for the point sprite in fragment shader, it's no use passing anything
+// here
+//    		 out float4 outFogColor : TEXCOORD1,
+{
+
+	float4x4 result = matrices[u];
+    result = mul(viewProj, result);
+	outPosition = mul(result, position);
+
+	outColor.rgb = color.rgb;
+	outColor.a = 1.0;
+
+    //outFogColor = fog(fogColor, oPosition.z, fogParams);
+}
+
+
+void soldier_skin_fp(
+    float4 color               : COLOR,
+    float4 uv                  : TEXCOORD0,
+
+// see above
+//    float4 fogColor            : TEXCOORD1,
+
+    uniform float4 fogColor,
+    uniform float4 fogParams,
+    uniform float4 cameraPositionInObjectSpace,
+	uniform float4 diffuseLightColor,
+
+    out float4 result          : COLOR)
+{
+	// apply some internal shading, just a bit, too much causes ants
+	float factor = 0.45;
+    color *= step(0.5, 1.0 - uv.y) * (1.0 - factor) + factor;
+	
+	// apply some diffuse light
+	color = (color * 0.75 + diffuseLightColor * color * 0.95);	
+
+    float4 f = fog(fogColor, length(cameraPositionInObjectSpace), fogParams);
+    f.a *= 0.25;
+    result = blend_fog(f, color);
+
+    //result = blend_fog(float4(fogColor.rgb, 0.2), color);
+    //result = color;
+}
+
+
+void soldier_skin_ghost_vp(
+		     uniform float4x4 matrices[17],
+		     uniform float4 teamColor,
+			
+		     uniform float4x4 viewProj,
+		     uniform float4 ambient,
+
+		     float4 position : POSITION,
+		     float4 color : COLOR,
+		     float u : TEXCOORD0,
+
+		     out float4 oPosition : POSITION,
+                     out float4 oColor : COLOR)
+{
+	float4x4 result = matrices[u];
+	result = mul(viewProj, result);
+	oPosition = mul(result, position);
+
+	float weight = 0.5;
+	oColor.rgb = weight * ambient.rgb + (1.0 - weight) * teamColor.rgb * 1.2;
+	oColor.a = 1.0;
+}
+
+
+void soldier_skin_ghost_fp(
+	float4 color              : COLOR,
+	out float4 result         : COLOR)
+{
+	result = color;
+}
+
+
+void soldier_skin_shadow_vp(
+		     uniform float4x4 matrices[17],
+		     uniform float4x4 viewProj,
+		     uniform float4 texelOffsets,
+
+ 		     float4 position : POSITION,
+		     float  u	     : TEXCOORD0,
+				
+		     out float4 oPosition : POSITION,
+		     out float2 outDepth        : TEXCOORD0)
+{
+
+        int index = u;
+
+	float4x4 result = matrices[u];
+        result = mul(viewProj, result);
+	oPosition = mul(result, position);
+
+	// fix pixel / texel alignment
+	oPosition.xy += texelOffsets.zw * oPosition.w;
+	outDepth.x = oPosition.z;
+	outDepth.y = oPosition.w;
+}
+
+
+
+void soldier_skin_normal_and_depth_vp(
+		    uniform float4x4 matrices[17],
+		    uniform float4x4 viewProj,
+
+ 		    float4 position : POSITION,
+		    float  u	     : TEXCOORD0,
+
+			uniform float nearDepth,
+			uniform float farDepth,
+				
+		    out float4 oPosition : POSITION,
+		    out float4 oNormalDepth : COLOR) 
+{
+
+        int index = u;
+
+	float4x4 result = matrices[u];
+    result = mul(viewProj, result);
+	oPosition = mul(result, position);
+
+	oNormalDepth.r = 0.5;
+	oNormalDepth.g = 0.5;
+	oNormalDepth.b = 0.0;
+
+	//oPosition.z -= 0.0;
+	
+    oNormalDepth.a = saturate((oPosition.z - nearDepth) / (farDepth - nearDepth));
+}
+
+void soldier_skin_normal_and_depth_fp(
+    float4 color : COLOR,
+    out float4 oColor : COLOR)
+{
+    oColor = color;
+}
+
+
+
+void soldier_skin_outline_vp(
+		     uniform float4x4 matrices[17],
+		     uniform float4x4 viewProj,
+
+ 		     float4 position : POSITION,
+ 		     float4 color    : COLOR,
+		     float  u	     : TEXCOORD0,
+				
+		     out float4 oPosition : POSITION,
+		     out float4 oColour	 : COLOR) 
+{
+
+	float4x4 result = matrices[u];
+        result = mul(viewProj, result);
+	oPosition = mul(result, position);
+	//oPosition.z = oPosition.z + 0.01;
+	oPosition.z = oPosition.z + 0.005;
+
+	oColour.r = 0.0;
+	oColour.g = 0.0;
+	oColour.b = 0.0;
+	oColour.a = 1.0;
+}
+
+
+
+
+
+void soldier_skin_outline_fp(
+    float4 color : COLOR,
+
+    uniform float4 fogColor,
+    uniform float4 fogParams,
+    uniform float4 cameraPositionInObjectSpace,
+
+    out float4 oColor : COLOR)
+{
+    float4 f = fog(fogColor, length(cameraPositionInObjectSpace), fogParams);
+    f.a *= 0.1;
+    oColor = blend_fog(f, color);
+    
+    //oColor = color;
+}
