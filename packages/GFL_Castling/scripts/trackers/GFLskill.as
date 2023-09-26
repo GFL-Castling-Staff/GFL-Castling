@@ -1184,12 +1184,91 @@ class GFLskill : Tracker {
 				break;
 			}
 
+			case 46:{
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					int factionid = character.getIntAttribute("faction_id");
+					Vector3 character_pos = stringToVector3(event.getStringAttribute("position"));
+					Vector3 target_pos = Vector3(0,0,0);
+
+					//获取技能影响的敌人数量
+					m_fnum = m_metagame.getFactionCount();
+					array<const XmlElement@> affectedCharacter;
+
+					uint num_jud = 0;
+					uint num_max_character = 16; //最多锁定目标数
+
+					healCharacter(m_metagame,characterId,10);
+
+					affectedCharacter.insertLast(character);
+
+					if(m_fnum==0)break;
+
+					affectedCharacter = getEnemyCharactersNearPosition(m_metagame,character_pos,factionid,45.0f,num_max_character);
+					int target_num = affectedCharacter.length();
+					if(target_num==0)break;
+
+					for (int i1=0;i1<target_num;i1++)	{
+						int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
+						const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+						if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
+							Vector3 luckyonepos = stringToVector3(luckyoneC.getStringAttribute("position"));
+							target_pos = target_pos.add(luckyonepos);
+						}				
+					}
+
+					_log("target_pos = "+target_pos.toString());
+
+					target_pos = getMultiplicationVector(target_pos,1/float(target_num));
+					Vector3 c_pos = character_pos;
+					Vector3 s_pos = target_pos;
+					
+					int senderId = event.getIntAttribute("player_id");
+					string messade = "c_pos = "+c_pos.toString()+";  s_pos = "+s_pos.toString();
+					sendPrivateMessageKey(m_metagame, senderId, messade, dictionary());
+					_log(messade);
+
+					c_pos=c_pos.add(Vector3(0,1,0));
+
+					float dx = s_pos.m_values[0]-c_pos.m_values[0];
+					float dy = s_pos.m_values[2]-c_pos.m_values[2];
+					float ds = sqrt(dx*dx+dy*dy);
+					if(ds<=0.000001f) ds=0.000001f;
+					dx = dx/ds; dy=dy/ds;
+					float dd = 1.2; //同一列相邻弹头的距离
+					float tt = 3;   //同一行相邻弹头位置偏移比值
+				
+					array<string> Voice={
+					"Excutioner_buhuo_SKILL02_JP.wav",
+					"Excutioner_buhuo_SKILL03_JP.wav",
+					};
+					playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+					// playAnimationKey(m_metagame,characterId,"excution_skill",false,false);
+
+					int ix = 5;
+					CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*3-dy*dd*3/tt,0,dy*dd*3+dx*dd*3/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),"excutioner_skill_1.projectile",characterId,factionid,60,1,Orientation(0,1,3,2.14));
+					CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*4           ,0,dy*dd*4           )),c_pos.add(Vector3(dx*dd*(ix*2)                    ,0,dy*dd*(ix*2)                    )),"excutioner_skill_1.projectile",characterId,factionid,60,1,Orientation(0,1,3,2.14));
+					CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*3+dy*dd*3/tt,0,dy*dd*3-dx*dd*3/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"excutioner_skill_1.projectile",characterId,factionid,60,1,Orientation(0,1,3,2.14));
+
+					for(ix=2;ix<=7;ix++)
+					{
+						CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,1,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),"excutioner_skill.projectile",characterId,factionid,100,0.001);
+						CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2)                    ,1,dy*dd*(ix*2)                    )),c_pos.add(Vector3(dx*dd*(ix*2)                    ,0,dy*dd*(ix*2)                    )),"excutioner_skill.projectile",characterId,factionid,100,0.001);
+						CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,1,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"excutioner_skill.projectile",characterId,factionid,100,0.001);
+					}
+				}			
+				break;	
+			}
+
+
+
 			case 47: {// 敌方炼金术师脚本榴弹
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 				if (character !is null) {
-					uint factionid = character.getIntAttribute("faction_id");
-					Vector3 pos_smartbullet = stringToVector3(event.getStringAttribute("position"));
+					int factionid = character.getIntAttribute("faction_id");
+					Vector3 character_pos = stringToVector3(event.getStringAttribute("position"));
 					//获取技能影响的敌人数量
 					m_fnum = m_metagame.getFactionCount();
 					array<const XmlElement@> affectedCharacter;
@@ -1200,21 +1279,11 @@ class GFLskill : Tracker {
 
 					affectedCharacter.insertLast(character);
 
+					healCharacter(m_metagame,characterId,10);
+
 					if(m_fnum==0)break;
 
-					for(uint i=0;i<m_fnum;i++) {
-						if(i!=factionid) {
-							array<const XmlElement@> affectedCharacter2;
-							affectedCharacter2 = getCharactersNearPosition(m_metagame,pos_smartbullet,i,25.0f);
-							if (affectedCharacter2 !is null){
-								for(uint x=0;x<affectedCharacter2.length();x++){
-									affectedCharacter.insertLast(affectedCharacter2[x]);
-									num_jud += 1;
-									if(num_jud>num_max_character)break;
-								}
-							}
-						}
-					}
+					affectedCharacter = getEnemyCharactersNearPosition(m_metagame,character_pos,factionid,25.0f,num_max_character);
 
 					for (uint i0=1;i0<=num_max_kill;){
 						for (uint i1=0;i1<affectedCharacter.length();i1++)	{
@@ -1257,6 +1326,7 @@ class GFLskill : Tracker {
 				}
 				break;			
 			}
+
             default:
                 break;
 		}

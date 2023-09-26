@@ -328,6 +328,13 @@ Vector3 getMultiplicationVector(Vector3 s_pos, Vector3 scale) {
 	return Vector3(x,y,z);
 }
 
+Vector3 getMultiplicationVector(Vector3 s_pos, float scale) {
+	float x = s_pos.m_values[0]*scale;
+	float y = s_pos.m_values[1]*scale;
+	float z = s_pos.m_values[2]*scale;
+	return Vector3(x,y,z);
+}
+
 float getAimUnitDistance(float scale, Vector3 s_pos, Vector3 e_pos) {
 	float dx = e_pos.m_values[0]-s_pos.m_values[0];
 	float dy = e_pos.m_values[2]-s_pos.m_values[2];
@@ -928,6 +935,34 @@ void GrenadeSupply(Metagame@ metagame,int cid,uint num,string m_key,string m_typ
 	addItemToGrenadeSlot(metagame,cid,num,m_key,m_type);
 }
 
+array<const XmlElement@>@ getEnemyCharactersNearPosition(GameMode@ metagame, const Vector3@ position, int factionId, float range = 80.0f, int num = 1) {
+	//获取技能影响的敌人数量
+	uint m_fnum = metagame.getFactionCount();
+	array<const XmlElement@> affectedCharacter;
+	Vector3 max_character_pos =  Vector3(0,0,0);
+
+	uint num_jud = 0;
+	uint num_max_character = num; //最多锁定目标数
+
+	if(m_fnum==0)return affectedCharacter;
+
+	for(uint i=0;i<m_fnum;i++) {
+		if(i==factionId) continue;
+		array<const XmlElement@> affectedCharacter2;
+		affectedCharacter2 = getCharactersNearPosition(metagame,position,i,range);
+		if (affectedCharacter2 is null) continue;
+		for(uint x=0;x<affectedCharacter2.length();x++){
+			affectedCharacter.insertLast(affectedCharacter2[x]);
+			num_jud += 1;
+			if(num_jud>num_max_character)break;
+		}
+		if(num_jud>num_max_character)break;
+	}
+	return affectedCharacter;
+}
+
+
+
 void GrenadeSupplyGroup(Metagame@ metagame,array<const XmlElement@>@ characters,uint num,string m_type="projectile")
 {
 	for (uint i = 0; i < characters.length(); i++) {
@@ -975,3 +1010,4 @@ int getRandomIndex(int size)
 {
 	return rand(0,size-1);
 }
+

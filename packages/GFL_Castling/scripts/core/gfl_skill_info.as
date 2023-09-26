@@ -180,6 +180,9 @@ dictionary gameSkillIndex = {
         // 侦察中枢
         {"spawn_pathfinder",48},
 
+        // 铁血boss 破坏者 技能 大限
+        {"sf_boss_destroyer_skill",49},
+
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
 };
