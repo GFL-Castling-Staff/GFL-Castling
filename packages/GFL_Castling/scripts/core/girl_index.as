@@ -660,10 +660,12 @@ dictionary tdoll_complex_index = {
     {modded_key(64,1507).toString(),"gkw_g36_1507.weapon"},
     {modded_key(64,1904).toString(),"gkw_g36_1904.weapon"},
     {modded_key(64,6807).toString(),"gkw_g36_6807.weapon"},
+    {modded_key(64,8609).toString(),"gkw_g36_8609.weapon"},
     {modded_key(64,0,"mod3").toString(),"gkw_g36mod3.weapon"},
     {modded_key(64,1507,"mod3").toString(),"gkw_g36mod3_1507.weapon"},
     {modded_key(64,1904,"mod3").toString(),"gkw_g36mod3_1904.weapon"},
     {modded_key(64,6807,"mod3").toString(),"gkw_g36mod3_6807.weapon"},
+    {modded_key(64,8609,"mod3").toString(),"gkw_g36mod3_8609.weapon"},
 
     {modded_key(65).toString(),"gkw_hk416.weapon"},
     {modded_key(65,537).toString(),"gkw_hk416_537.weapon"},
