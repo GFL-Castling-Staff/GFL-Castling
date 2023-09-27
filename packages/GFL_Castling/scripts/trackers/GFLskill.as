@@ -1270,20 +1270,31 @@ class GFLskill : Tracker {
 					int factionid = character.getIntAttribute("faction_id");
 					Vector3 character_pos = stringToVector3(event.getStringAttribute("position"));
 					//获取技能影响的敌人数量
-					m_fnum = m_metagame.getFactionCount();
 					array<const XmlElement@> affectedCharacter;
 
 					uint num_jud = 0;
 					uint num_max_character = 10; //最多锁定目标数
 					uint num_max_kill = 20;	//最多斩击次数，目标数不为0则对剩余目标继续用完斩杀次数
 
+					healCharacter(m_metagame,characterId,20);
+					int m_fnum =0;
+					m_fnum = m_metagame.getFactionCount();
+					if(m_fnum==0) break;
+
 					affectedCharacter.insertLast(character);
 
-					healCharacter(m_metagame,characterId,10);
-
-					if(m_fnum==0)break;
-
-					affectedCharacter = getEnemyCharactersNearPosition(m_metagame,character_pos,factionid,25.0f,num_max_character);
+					for(int i=0;i<m_fnum;i++) {
+						if(i==factionid) continue;
+						array<const XmlElement@> affectedCharacter2;
+						affectedCharacter2 = getCharactersNearPosition(m_metagame,character_pos,i,20);
+						if (affectedCharacter2 is null) continue;
+						for(uint x=0;x<affectedCharacter2.length();x++){
+							affectedCharacter.insertLast(affectedCharacter2[x]);
+							num_jud += 1;
+							if(num_jud>num_max_character)break;
+						}
+						if(num_jud>num_max_character)break;
+					}
 
 					for (uint i0=1;i0<=num_max_kill;){
 						for (uint i1=0;i1<affectedCharacter.length();i1++)	{

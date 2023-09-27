@@ -27,14 +27,14 @@
 
     <rotation class="random" />
 
-    <!-- <model mesh_filename="kcco_grenade_1.xml" />  -->
+    <model mesh_filename="" /> 
     <hud_icon filename="88r.png" />
 
     <hud_icon filename="testing.png" />
     <throwable near_far_distance="10.0" speed_estimation_near="10.0" speed_estimation_far="10.0" max_speed="10.0" randomness="0.0" />
     <commonness value="10.0" />
     <capacity value="1000" source="rank" source_value="0.0" />
-    <inventory encumbrance="1.0" buy_price="1.0" sell_price="0.0" />
+    <inventory encumbrance="1.0" buy_price="0" sell_price="0.0" />
 
     <sound class="result" key="terrain" copy="other" />
     <sound class="result" key="static_object" copy="other" />
