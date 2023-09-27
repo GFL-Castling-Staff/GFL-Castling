@@ -215,6 +215,8 @@ dictionary commandSkillIndex = {
         //Liu RF
         {"gkw_liu.weapon",34},
         {"gkw_liu_skill.weapon",34},
+        {"gkw_liu_563.weapon",34},
+        {"gkw_liu_563_skill.weapon",34},
         {"gkw_liu_5101.weapon",34},
         {"gkw_liu_5101_skill.weapon",34},
 
