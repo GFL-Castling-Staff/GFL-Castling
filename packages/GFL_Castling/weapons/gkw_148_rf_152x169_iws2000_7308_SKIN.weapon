@@ -23,6 +23,7 @@
         last_burst_retrigger_time="1"
         burst_shots="1" />
         <next_in_chain key="gkw_iws2000_7308_skill.weapon" share_ammo="1" />
+        <commonness value="0.0" can_respawn_with="1" in_stock="0" />
         <!--Animations-->
         <inventory encumbrance="35.0" buy_price="320.0" sell_price="220.0" />
         <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
@@ -86,6 +87,7 @@
         last_burst_retrigger_time="3"
         burst_shots="1" />
         <next_in_chain key="gkw_iws2000_7308.weapon" share_ammo="1" />
+        <commonness value="0.0" can_respawn_with="1" in_stock="0" />
         <!--Animations-->
         <inventory encumbrance="35.0" buy_price="320.0" sell_price="220.0" />
         <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
