@@ -96,7 +96,7 @@
     <model filename="gkd_ar_ar15_4508.xml">
         <requirement class="weapon" key="gkw_ar15mod3_4508.weapon" slot="0" />
     </model>
-    <model filename="gkd_ar_ar15_4508_skill.xml">
+    <model filename="gkd_ar_ar15_4508_s.xml">
         <requirement class="weapon" key="gkw_ar15mod3_4508_skill.weapon" slot="0" />
     </model>
     <model filename="gkd_ar_art556.xml">
@@ -213,6 +213,12 @@
     <model filename="gkd_ar_g36_1904.xml">
         <requirement class="weapon" key="gkw_g36mod3_1904.weapon" slot="0" />
     </model>
+    <model filename="gkd_ar_g36_565.xml">
+        <requirement class="weapon" key="gkw_g36_565.weapon" slot="0" />
+    </model>
+    <model filename="gkd_ar_g36_565.xml">
+        <requirement class="weapon" key="gkw_g36mod3_565.weapon" slot="0" />
+    </model>    
     <model filename="gkd_ar_g36_8609.xml">
         <requirement class="weapon" key="gkw_g36_8609.weapon" slot="0" />
     </model>
@@ -327,6 +333,9 @@
     <model filename="gkd_ar_vhs.xml">
         <requirement class="weapon" key="gkw_vhs.weapon" slot="0" />
     </model>
+    <model filename="gkd_ar_vhs_562.xml">
+        <requirement class="weapon" key="gkw_vhs_562.weapon" slot="0" />
+    </model>    
     <model filename="gkd_ar_xm8.xml">
         <requirement class="weapon" key="gkw_xm8.weapon" slot="0" />
     </model>
@@ -1071,6 +1080,9 @@
     <model filename="gkd_rf_sl8.xml">
         <requirement class="weapon" key="gkw_sl8.weapon" slot="0" />
     </model>
+    <model filename="gkd_rf_sl8_576.xml">
+        <requirement class="weapon" key="gkw_sl8_576.weapon" slot="0" />
+    </model>    
     <model filename="gkd_rf_supersass.xml">
         <requirement class="weapon" key="gkw_supersass.weapon" slot="0" />
     </model>
@@ -1527,6 +1539,12 @@
     <model filename="gkd_smg_ar57.xml">
         <requirement class="weapon" key="gkw_ar57_skill.weapon" slot="0" />
     </model>
+    <model filename="gkd_smg_ar57_6705.xml">
+        <requirement class="weapon" key="gkw_ar57_6705.weapon" slot="0" />
+    </model>
+    <model filename="gkd_smg_ar57_6705.xml">
+        <requirement class="weapon" key="gkw_ar57_6705_skill.weapon" slot="0" />
+    </model>    
     <model filename="gkd_rf_hs50.xml">
         <requirement class="weapon" key="gkw_hs50.weapon" slot="0" />
     </model>
@@ -2150,6 +2168,12 @@
     <model filename="gkd_rf_generalliu_5101.xml">
         <requirement class="weapon" key="gkw_liu_5101_skill.weapon" slot="0" />
     </model>
+    <model filename="gkd_rf_generalliu_563.xml">
+        <requirement class="weapon" key="gkw_liu_563.weapon" slot="0" />
+    </model>
+    <model filename="gkd_rf_generalliu_563.xml">
+        <requirement class="weapon" key="gkw_liu_563_skill.weapon" slot="0" />
+    </model>    
     <model filename="gkd_smg_erma.xml">
         <requirement class="weapon" key="gkw_emp35.weapon" slot="0" />
     </model>

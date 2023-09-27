@@ -663,11 +663,13 @@ dictionary tdoll_complex_index = {
     {modded_key(63,1303,"mod3").toString(),"gkw_g3mod3_1303.weapon"},
 
     {modded_key(64).toString(),"gkw_g36.weapon"},
+    {modded_key(64,565).toString(),"gkw_g36_565.weapon"},
     {modded_key(64,1507).toString(),"gkw_g36_1507.weapon"},
     {modded_key(64,1904).toString(),"gkw_g36_1904.weapon"},
     {modded_key(64,6807).toString(),"gkw_g36_6807.weapon"},
     {modded_key(64,8609).toString(),"gkw_g36_8609.weapon"},
     {modded_key(64,0,"mod3").toString(),"gkw_g36mod3.weapon"},
+    {modded_key(64,565,"mod3").toString(),"gkw_g36mod3_565.weapon"},
     {modded_key(64,1507,"mod3").toString(),"gkw_g36mod3_1507.weapon"},
     {modded_key(64,1904,"mod3").toString(),"gkw_g36mod3_1904.weapon"},
     {modded_key(64,6807,"mod3").toString(),"gkw_g36mod3_6807.weapon"},
@@ -1241,6 +1243,7 @@ dictionary tdoll_complex_index = {
     {modded_key(294,5601).toString(),"gkw_webley_5601.weapon"},
 
     {modded_key(296).toString(),"gkw_sl8.weapon"},
+    {modded_key(296,576).toString(),"gkw_sl8_576.weapon"},
 
     {modded_key(302).toString(),"gkw_defender.weapon"},
     {modded_key(302,5505).toString(),"gkw_defender_5505.weapon"},
@@ -1272,11 +1275,13 @@ dictionary tdoll_complex_index = {
     {modded_key(315,5503).toString(),"gkw_augpara_5503.weapon"},
 
     {modded_key(316).toString(),"gkw_liu.weapon"},
+    {modded_key(316,563).toString(),"gkw_liu_563.weapon"},
     {modded_key(316,5101).toString(),"gkw_liu_5101.weapon"},
 
     {modded_key(317).toString(),"gkw_m1908.weapon"},
 
     {modded_key(318).toString(),"gkw_vhs.weapon"},
+    {modded_key(318,562).toString(),"gkw_vhs_562.weapon"},
 
     {modded_key(319).toString(),"gkw_pm1910.weapon"},
     {modded_key(310,5307).toString(),"gkw_pm1910_5307.weapon"},

@@ -161,6 +161,7 @@ class kill_event : Tracker {
         {"gkw_tmp.weapon",3},
         {"gkw_tmp_2807.weapon",3},
         {"gkw_ar57_skill.weapon",3},
+        {"gkw_ar57_6705_skill.weapon",3},
         {"gkw_sten.weapon",3},
         {"gkw_stenmod3.weapon",3},
         {"gkw_saf.weapon",3},
@@ -243,6 +244,7 @@ class kill_event : Tracker {
         {"gkw_g36c_mod3_3103_skill.weapon",5},
         {"gkw_x95.weapon",4},
         {"gkw_ar57.weapon",4},
+        {"gkw_ar57_6705.weapon",4},
 
         //SG 5kill
         {"gkw_hawk97mod3.weapon",5},

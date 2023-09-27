@@ -946,7 +946,7 @@ array<const XmlElement@>@ getEnemyCharactersNearPosition(GameMode@ metagame, con
 
 	if(m_fnum==0)return affectedCharacter;
 
-	for(uint i=0;i<m_fnum;i++) {
+	for(int i=0;i<m_fnum;i++) {
 		if(i==factionId) continue;
 		array<const XmlElement@> affectedCharacter2;
 		affectedCharacter2 = getCharactersNearPosition(metagame,position,i,range);
