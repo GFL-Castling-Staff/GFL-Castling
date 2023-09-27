@@ -1184,7 +1184,7 @@ class GFLskill : Tracker {
 				break;
 			}
 
-			case 46:{
+			case 46:{ // 敌方刽子手脚本榴弹
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 				if (character !is null) {
@@ -1312,7 +1312,7 @@ class GFLskill : Tracker {
 				}			
 				break;
 			}
-
+			
 			case 48: {// 侦察中枢刷人
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -1337,6 +1337,99 @@ class GFLskill : Tracker {
 				}
 				break;			
 			}
+
+			case 49: {// 敌方破坏者脚本榴弹
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					int factionid = character.getIntAttribute("faction_id");
+					Vector3 character_pos = stringToVector3(event.getStringAttribute("position"));
+					Vector3 target_pos = Vector3(0,0,0);
+
+					//获取技能影响的敌人数量
+					m_fnum = m_metagame.getFactionCount();
+					array<const XmlElement@> affectedCharacter;
+
+					uint num_jud = 0;
+					uint num_max_character = 16; //最多锁定目标数
+
+					healCharacter(m_metagame,characterId,10);
+
+					affectedCharacter.insertLast(character);
+
+					if(m_fnum==0)break;
+
+					affectedCharacter = getEnemyCharactersNearPosition(m_metagame,character_pos,factionid,35.0f,num_max_character);
+					int target_num = affectedCharacter.length();
+					if(target_num==0)break;
+
+					for (int i1=0;i1<target_num;i1++)	{
+						int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
+						const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+						if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
+							Vector3 luckyonepos = stringToVector3(luckyoneC.getStringAttribute("position"));
+							target_pos = target_pos.add(luckyonepos);
+						}				
+					}
+					target_pos = getMultiplicationVector(target_pos,1/float(target_num));
+
+					Vector3 c_pos = character_pos;
+					Vector3 s_pos = target_pos;
+					c_pos=c_pos.add(Vector3(0,25.0,0));
+					int ix = 0; float dd = 2.0;
+					for(ix=1;ix<=6;ix++) {
+						CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(dd*(ix*2-7),0,0)),"skill_sf_boss_destroyer_mine.projectile",characterId,factionid,100,0.001);
+					}           
+					for(ix=1;ix<=6;ix++) {
+						CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,dd*(ix*2-7))),"skill_sf_boss_destroyer_mine.projectile",characterId,factionid,100,0.001);
+					}             
+					array<string> Voice={
+					"Destroyer_buhuo_SKILL02_JP.wav",
+					"Destroyer_buhuo_SKILL01_JP.wav",
+					"Destroyer_buhuo_MEET_JP.wav"
+					};
+					playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+				}			
+				break;
+			}
+
+			case 50: {// 敌方梦想家激光扫射
+				// int characterId = event.getIntAttribute("character_id");
+				// const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				// if (character !is null) {
+				// 	int factionid = character.getIntAttribute("faction_id");
+				// 	Vector3 character_pos = stringToVector3(event.getStringAttribute("position"));
+				// 	//获取技能影响的敌人数量
+				// 	m_fnum = m_metagame.getFactionCount();
+				// 	array<const XmlElement@> affectedCharacter;
+
+				// 	affectedCharacter.insertLast(character);
+
+				// 	healCharacter(m_metagame,characterId,10);
+
+				// 	if(m_fnum==0)break;
+
+				// 	affectedCharacter = getEnemyCharactersNearPosition(m_metagame,character_pos,factionid,20.0f);
+
+				// 	while
+
+				// 	for (uint i0=1;i0<=num_max_kill;){
+				// 		for (uint i1=0;i1<affectedCharacter.length();i1++)	{
+				// 			i0+=1;
+				// 			int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
+				// 			const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+				// 			if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
+				// 				string luckyonepos = luckyoneC.getStringAttribute("position");
+				// 				Vector3 luckyoneposV = stringToVector3(luckyonepos);
+				// 				CreateDirectProjectile(m_metagame,luckyoneposV.add(Vector3(0,1,0)),luckyoneposV,"sfw_boss_alchemist_skill_kill.projectile",characterId,factionid,60);	
+				// 				playSoundAtLocation(m_metagame,"alchemist_fire_FromHALOINFINTE.wav",factionid,luckyonepos,1.0);								
+				// 			}				
+				// 		}
+				// 	}
+				// }			
+				break;
+			}
+
 
             default:
                 break;

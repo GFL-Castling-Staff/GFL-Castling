@@ -809,7 +809,7 @@
 			<call key="sf_jupiter.call" />
 			<call key="sf_assualt.call" />
 			<weapon key="sfw_Intruder.weapon" enabled="1"/>
-			<projectile key="skill_sf_boss_intruder.projectile" enabled="1"/>
+			<projectile key="skill_sf_boss_intruder_spawn.projectile" enabled="1"/>
 			<carry_item key="vest_40hp.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
@@ -859,7 +859,7 @@
 			<call key="sf_jaguar.call" />
 			<call key="sf_assualt.call" />
 			<weapon key="sfw_alchemist.weapon" enabled="1"/>
-			<projectile key="skill_sf_boss_alchemist.projectile" enabled="1" probability="1.0" />
+			<projectile key="skill_sf_boss_alchemist_scan.projectile" enabled="1" probability="1.0" />
 			<carry_item key="vest_50hp_enforcer.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
@@ -939,7 +939,7 @@
 			<call key="sf_assualt.call" />
 			<call key="sf_trooper.call" />
 			<weapon key="sfw_excutioner_2.weapon" enabled="1"/>
-			<projectile key="skill_sf_boss_excutioner.projectile" enabled="1" probability="1.0" />
+			<projectile key="skill_sf_boss_excutioner_scan.projectile" enabled="1" probability="1.0" />
 			<carry_item key="vest_50hp_enforcer.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
