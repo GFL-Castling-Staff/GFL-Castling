@@ -772,10 +772,10 @@ class Skill_m1911mod3 : DelaySkill {
 	void start(){
 		m_timeLeft=m_time;
 		m_timeLeft_internal = 0;
-		uint m_fnum = m_metagame.getFactionCount();
+		int m_fnum = m_metagame.getFactionCount();
 		this.setExcuteLimit(7);
 		this.setInternal(0.25);
-		for(uint i=0;i<m_fnum;i++) {
+		for(int i=0;i<m_fnum;i++) {
 			if(i!=m_faction_id) {
 				array<const XmlElement@> affectedCharacter2;
 				affectedCharacter2 = getCharactersNearPosition(m_metagame,t_pos,i,20.0f);

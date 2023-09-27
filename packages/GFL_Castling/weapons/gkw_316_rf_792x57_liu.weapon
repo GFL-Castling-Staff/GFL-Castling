@@ -177,8 +177,8 @@
         projectile_speed="200" 
         barrel_offset="0.4" 
         projectiles_per_shot="1" />
-        <commonness value="0" in_stock="0" can_respawn_with="1" />
-        <inventory encumbrance="35.0" buy_price="250.0" sell_price="250.0"/>
+        <commonness value="1" in_stock="0" can_respawn_with="1" />
+        <inventory encumbrance="35.0" buy_price="0.0" sell_price="0.0"/>
         <capacity value="1" source="rank" source_value="0.0" />
         <!--Animations-->
         <animation key="recoil"  animation_key="recoil1" />

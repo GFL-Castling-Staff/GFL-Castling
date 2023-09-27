@@ -84,7 +84,6 @@ class ItemDropEvent : Tracker {
                 if (playerInfo.m_name == default_string) return;
                 string profile_hash = playerInfo.m_hash;
                 string p_name = playerInfo.m_name;
-                int player_id = playerInfo.getPlayerPid();
                 player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
                 if(newdata.FindWeapon(itemKey))
                 {
@@ -208,6 +207,33 @@ class ItemDropEvent : Tracker {
                             a["%doll_name"] = getResourceName(m_metagame, itemKey, "weapon");
                             sendPrivateMessageKey(m_metagame, pId, "digimindupdatesuccess",a);
                             playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                            //下面是自动录入功能
+                            GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(pId);
+                            if (playerInfo.m_name == default_string) return;
+                            string profile_hash = playerInfo.m_hash;
+                            string p_name = playerInfo.m_name;
+                            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+                            if(newdata.FindWeapon(outputItem))
+                            {
+                                return;
+                            }
+                            else if(newdata.FindWeapon(itemKey))
+                            {
+                                newdata.addWeapon(outputItem);
+                                notify(m_metagame, "Logger Mask Auto", dictionary(), "misc", pId, false, "", 1.0);
+                                string filename = ("save_" + profile_hash +".xml" );
+                                writeXML(m_metagame,filename,PlayerProfileSave(newdata));  
+                                return;
+                            }
+                            else
+                            {
+                                newdata.addWeapon(itemKey);
+                                newdata.addWeapon(outputItem);
+                                notify(m_metagame, "Logger Mask Auto", dictionary(), "misc", pId, false, "", 1.0);
+                                string filename = ("save_" + profile_hash +".xml" );
+                                writeXML(m_metagame,filename,PlayerProfileSave(newdata));  
+                                return;
+                            }
                         }
                         else{
                             addItemInBackpack(m_metagame,cId,"carry_item","firecontrol.carry_item");;
@@ -432,9 +458,27 @@ class ItemDropEvent : Tracker {
     }
 
     protected void giveDigimindItem(int cId, int pId, string weapon_xml_name,string weapon_name){
-         addItemInBackpack(m_metagame,cId,"weapon",weapon_xml_name);
-         m_craftQueue.removeAt(findQueueIndex(pId,weapon_name));
-         playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+        addItemInBackpack(m_metagame,cId,"weapon",weapon_xml_name);
+        m_craftQueue.removeAt(findQueueIndex(pId,weapon_name));
+        playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+        //下面是自动录入功能
+        GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(pId);
+        if (playerInfo.m_name == default_string) return;
+        string profile_hash = playerInfo.m_hash;
+        string p_name = playerInfo.m_name;
+        player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+        if(newdata.FindWeapon(weapon_xml_name))
+        {
+            return;
+        }
+        else
+        {
+            newdata.addWeapon(weapon_xml_name);
+            notify(m_metagame, "Logger Mask Auto", dictionary(), "misc", pId, false, "", 1.0);
+            string filename = ("save_" + profile_hash +".xml" );
+            writeXML(m_metagame,filename,PlayerProfileSave(newdata));  
+            return;
+        }        
     }
 
     protected void failedUpgrade(int cId, int pId, string weapon_xml_name){
@@ -488,20 +532,33 @@ class ItemDropEvent : Tracker {
             m_craftQueue.removeAt(findQueueIndex(senderId,"truecore"));
             string s = message.substr(message.findFirst(" ")+1);
             const XmlElement@ player = getPlayerInfo(m_metagame,senderId);
-            if (player !is null) {
-                int cId=player.getIntAttribute("character_id");
-                string itemKey = getKeyfromIndex(s);
-                if (itemKey==""){
-                    addItemInBackpack(m_metagame,cId,"carry_item","core_mask.carry_item");;
-                    sendPrivateMessageKey(m_metagame, senderId, "truemask_failed");
-                    playPrivateSound(m_metagame,"sfx_failed.wav",senderId);                    
+            if (player is null) return;
+            int cId=player.getIntAttribute("character_id");
+            string profile_hash = player.getStringAttribute("profile_hash");
+            string itemKey = getKeyfromIndex(s);
+            if (itemKey==""){
+                addItemInBackpack(m_metagame,cId,"carry_item","core_mask.carry_item");;
+                sendPrivateMessageKey(m_metagame, senderId, "truemask_failed");
+                playPrivateSound(m_metagame,"sfx_failed.wav",senderId);                    
+            }
+            else{
+                addItemInBackpack(m_metagame,cId,"weapon",itemKey);
+                dictionary a;
+                a["%doll_name"] = getResourceName(m_metagame, itemKey, "weapon");                    
+                sendPrivateMessageKey(m_metagame, senderId, "truemask_success",a);
+                playPrivateSound(m_metagame,"sfx_big.wav",senderId);
+                player_data newdata = PlayerProfileLoad(readFile(m_metagame,sender,profile_hash)); 
+                if(newdata.FindWeapon(itemKey)) 
+                {
+                    return;
                 }
-                else{
-                    addItemInBackpack(m_metagame,cId,"weapon",itemKey);
-                    dictionary a;
-                    a["%doll_name"] = getResourceName(m_metagame, itemKey, "weapon");                    
-                    sendPrivateMessageKey(m_metagame, senderId, "truemask_success",a);
-                    playPrivateSound(m_metagame,"sfx_big.wav",senderId);                           
+                else
+                {
+                    newdata.addWeapon(itemKey);
+                    notify(m_metagame, "Logger Mask Auto", dictionary(), "misc", senderId, false, "", 1.0);
+                    string filename = ("save_" + profile_hash +".xml" );
+                    writeXML(m_metagame,filename,PlayerProfileSave(newdata));  
+                    return;                  
                 }
             }
         }

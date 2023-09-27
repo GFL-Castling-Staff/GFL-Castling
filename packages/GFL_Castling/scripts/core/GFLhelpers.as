@@ -937,7 +937,7 @@ void GrenadeSupply(Metagame@ metagame,int cid,uint num,string m_key,string m_typ
 
 array<const XmlElement@>@ getEnemyCharactersNearPosition(GameMode@ metagame, const Vector3@ position, int factionId, float range = 80.0f, int num = 1) {
 	//获取技能影响的敌人数量
-	uint m_fnum = metagame.getFactionCount();
+	int m_fnum = metagame.getFactionCount();
 	array<const XmlElement@> affectedCharacter;
 	Vector3 max_character_pos =  Vector3(0,0,0);
 
