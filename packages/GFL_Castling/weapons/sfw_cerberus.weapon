@@ -63,7 +63,10 @@
 
     <weak_hand_hold offset="0.2" />
 
-    <projectile file="sf_jaguar_shell.projectile"/>
+    <projectile file="sf_jaguar_shell.projectile">
+        <result class="blast" damage="3.0" radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal"/>
+        <trail probability="0" key="" />
+    </projectile>
 
 	<stance state_key="running" accuracy="1.0" />
 	<stance state_key="walking" accuracy="1.0" />
