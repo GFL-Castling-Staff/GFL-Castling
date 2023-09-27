@@ -211,6 +211,8 @@ class kill_event : Tracker {
         {"gkw_ro635mod3.weapon",3},
         {"gkw_ro635_534.weapon",3},
         {"gkw_ro635mod3_534.weapon",3},
+        {"gkw_ro635_554.weapon",3},
+        {"gkw_ro635mod3_554.weapon",3},        
         {"gkw_owen.weapon",3},
         {"gkw_type82.weapon",3},
 
