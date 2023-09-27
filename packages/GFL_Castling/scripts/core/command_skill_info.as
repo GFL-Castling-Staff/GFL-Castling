@@ -11,6 +11,7 @@ array<string> AR_grenade_AntiArmor = {
     "gkw_m4sopmodii_4507.weapon",
     "gkw_m4sopmodii.weapon",
     "gkw_vhs.weapon",
+    "gkw_vhs_562.weapon",
     "gkw_hk416.weapon",
     "gkw_hk416_6505.weapon",
     "gkw_hk416_537.weapon",
