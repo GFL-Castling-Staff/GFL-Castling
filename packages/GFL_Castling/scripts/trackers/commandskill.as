@@ -1200,14 +1200,15 @@ class CommandSkill : Tracker {
                     
                     if(weaponname=="gkw_arx160.weapon") {
                         array<string> Voice={
-                            ""
                         };
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                         playSoundAtLocation(m_metagame,"416mod3skill_Fire_FromL4D2.wav",factionid,c_pos,1.0);                      
                     }
-                    if(weaponname=="gkw_vhs.weapon") {
+                    if(weaponname=="gkw_vhs.weapon" || weaponname="gkw_vhs_562.weapon") {
                         array<string> Voice={
-                            ""
+                            "VHS_SKILL1_JP.wav",
+                            "VHS_SKILL2_JP.wav",
+                            "VHS_SKILL3_JP.wav"
                         };
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                         playSoundAtLocation(m_metagame,"416mod3skill_Fire_FromL4D2.wav",factionid,c_pos,1.0);                      
