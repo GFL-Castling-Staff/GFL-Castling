@@ -7,7 +7,7 @@
 		barrel_offset="0.4" 
 		class="0"
 		magazine_size="50" 
-		name="AR57" 
+		name="AR57-[With the Three Friends of Winter]" 
 		projectile_speed="180" 
 		retrigger_time="0.12" 
 		suppressed="1" 
@@ -48,14 +48,14 @@
 
     <sound class="impact" fileref="rifle_drop.wav"/>
     <model filename="gkw_smg_ar57.xml"/>
-    <hud_icon filename="gkw_ar57.png"/>
+    <hud_icon filename="gkw_ar57_6705.png"/>
     <weak_hand_hold offset="0.2"/>
     <projectile file="bullet.projectile">
       <result class="hit" kill_probability="3.8" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="2.0" kill_decay_end_time="2.0"/>
     </projectile>
     <effect class="muzzle" ref="ejection_556"/>
     <tag name="autorifle"/>
-    <commonness value="0.2" in_stock="0" can_respawn_with="1"/>
+    <commonness value="0" in_stock="0" can_respawn_with="1"/>
     <animation key="recoil" animation_key="recoil1"/>
     <animation key="recoil" animation_key="recoil2"/>
     <animation key="recoil" animation_key="recoil3"/>
@@ -87,7 +87,7 @@
 		barrel_offset="0.4" 
 		class="0"
 		magazine_size="50" 
-		name="AR57-[Complex Modification]" 
+		name="AR57-[With the Three Friends of Winter]-[Complex Modification]" 
 		projectile_speed="150" 
 		retrigger_time="0.075" 
 		suppressed="1" 
@@ -127,7 +127,7 @@
     <sound key="cycle" fileref="AR57_SKILL3_JP.wav" volume="1.0" pitch_variety="0"/>
     <sound class="impact" fileref="rifle_drop.wav"/>
     <model filename="gkw_smg_ar57.xml"/>
-    <hud_icon filename="gkw_ar57_skill.png"/>
+    <hud_icon filename="gkw_ar57_6705.png"/>
     <weak_hand_hold offset="0.2"/>
     <projectile file="bullet.projectile">
       <result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="5.5" kill_decay_start_time="0.45" kill_decay_end_time="0.45 "/>
