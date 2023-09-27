@@ -424,7 +424,7 @@ class kill_event : Tracker {
                     updateHealByKillEvent(characterId,factionId,4,30,"vest",kill_to_heal_scale);
                 }
             }
-            if(c_weaponType=="gkw_m1911_mod3.weapon"){
+            if(c_weaponType=="gkw_m1911_mod3.weapon" || c_weaponType=="gkw_m1911mod3_4514.weapon"){
                 if ((startsWith(c_armorType,"bp_")))
                 {
                     updateHealByKillEvent(characterId,factionId,4,15,"weapon",kill_to_heal_scale*2);
