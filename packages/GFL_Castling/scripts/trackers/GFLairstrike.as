@@ -89,6 +89,11 @@ dictionary airstrikeIndex = {
 
         {"ju87_assault",20},
 
+
+        // 梦想家激光射线
+        {"ioncannon_strafe_dreamer",21},
+
+
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
 };
@@ -574,6 +579,31 @@ class GFLairstrike : Tracker {
                     Airstrike_strafe.removeAt(a);
                     break;
                 }                   
+                case 21:{//梦想家离子炮 单次 锁人扫射
+                    //扫射位置偏移单位向量 与 扫射位置偏移单位距离
+                    Vector3 strike_vector = getAimUnitVector(1,start_pos,end_pos); 
+                    float strike_didis = 1.0;
+                    //扫射起点 从弹头终点指向弹头起点的位置 
+                    Vector3 pos_offset = Vector3(0,60,0);
+                    //扫射终点的起点与终点（就生成弹头的终点的起始位置与终止位置）
+                    Vector3 c_pos = start_pos;
+                    Vector3 s_pos = end_pos;
+                    //依据扫射位置偏移单位距离而设置的扫射次数
+                    int strike_time = 20;
+                    //弹头起始扫射位置与终止扫射位置
+                    Vector3 startPos = c_pos.add(pos_offset);
+                    Vector3 endPos = c_pos;
+
+                    for(int i=0;i<=strike_time;i++){
+                        //水平偏移
+                        startPos = startPos.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
+                        endPos = endPos.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
+                        //每单轮扫射生成1次对点扫射
+                        CreateDirectProjectile(m_metagame,startPos,endPos,"skill_sf_boss_dreamer_ioncannon.projectile",cid,fid,280);           
+                    }                               
+                    Airstrike_strafe.removeAt(a);
+                    break;
+                }
                 default:
                     break;
             }
