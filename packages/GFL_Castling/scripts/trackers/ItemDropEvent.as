@@ -194,6 +194,10 @@ class ItemDropEvent : Tracker {
                     upgrade(cId, pId, "type4", "upgrade_type4.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
                 }
+                case 23:{
+                    upgrade(cId, pId, "sr3mp", "upgrade_sr3mp.carry_item", "upgrade_common", "sfx_equip.wav");
+                    break;
+                }                
                 default:{
                     if (checkQueue(pId,"mod3")){
                         string outputItem = string(MOD3craftList[itemKey]);
@@ -341,7 +345,13 @@ class ItemDropEvent : Tracker {
                     }     
                     else if (checkQueue(pId,"type4") && (itemKey=="gkw_4type.weapon")){
                         giveDigimindItem(cId, pId, "gkw_4type_only.weapon", "type4");
-                    }                                    
+                    }
+                    else if (checkQueue(pId,"sr3mp") && (itemKey=="gkw_sr3mp.weapon" || itemKey=="gkw_sr3mp_skill.weapon")){
+                        giveDigimindItem(cId, pId, "gkw_sr3mp_only.weapon", "sr3mp");
+                    }
+                    else if (checkQueue(pId,"sr3mp") && (itemKey=="gkw_sr3mp_4101.weapon" || itemKey=="gkw_sr3mp_4101_skill.weapon")){
+                        giveDigimindItem(cId, pId, "gkw_sr3mp_4101_only.weapon", "sr3mp");
+                    }                                         
                     break;
                 }
             }
@@ -624,7 +634,11 @@ class ItemDropEvent : Tracker {
                             case 22:{
                                 upgradeTimeout(cId, pId, "upgrade_type4.carry_item");
                                 break;
-                            }                                                                                                              
+                            }                        
+                            case 23:{
+                                upgradeTimeout(cId, pId, "upgrade_sr3mp.carry_item");
+                                break;
+                            }                                                                                                                          
                             default:
                                 break;
                         }                                      

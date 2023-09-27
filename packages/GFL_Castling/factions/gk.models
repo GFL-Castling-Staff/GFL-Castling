@@ -1763,6 +1763,12 @@
     <model filename="gkd_smg_sr-3mp.xml">
         <requirement class="weapon" key="gkw_sr3mp_skill.weapon" slot="0" />
     </model>
+    <model filename="gkd_smg_sr-3mp.xml">
+        <requirement class="weapon" key="gkw_sr3mp_only.weapon" slot="0" />
+    </model>
+    <model filename="gkd_smg_sr-3mp.xml">
+        <requirement class="weapon" key="gkw_sr3mp_only_skill.weapon" slot="0" />
+    </model>    
     <model filename="gkd_hg_m950a_mod3_from_gua.xml">
         <requirement class="weapon" key="gkw_m950amod3.weapon" slot="0" />
     </model>
@@ -2105,6 +2111,12 @@
     <model filename="gkd_smg_sr3mp_4101.xml">
         <requirement class="weapon" key="gkw_sr3mp_4101_skill.weapon" slot="0" />
     </model>
+    <model filename="gkd_smg_sr3mp_4101.xml">
+        <requirement class="weapon" key="gkw_sr3mp_4101_only.weapon" slot="0" />
+    </model>
+    <model filename="gkd_smg_sr3mp_4101.xml">
+        <requirement class="weapon" key="gkw_sr3mp_4101_only_skill.weapon" slot="0" />
+    </model>    
     <model filename="gkd_mg_pkp_4203.xml">
         <requirement class="weapon" key="gkw_pkp_4203.weapon" slot="0" />
     </model>
