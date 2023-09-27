@@ -79,12 +79,13 @@
         slot="0"
         stab_enabled="1"/>
         <next_in_chain key="gkw_ar15mod3.weapon" share_ammo="0"/>
+        <commonness value="0" in_stock="0" />
         <animation state_key="recoil" animation_key="recoil, pistol dual 1"/>
         <animation state_key="recoil" animation_key="recoil, pistol dual 2"/>
         <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall dual"/>
         <animation state_key="reload" animation_key="reloading ar15"/>
         <animation state_key="hold" animation_key="still, pistol dual"/>
-        <animation state_key="hold_casual" animation_key="casual, blowgun"/>
+        <animation state_key="hold_casual" animation_key="hold_casual, pistol dual"/>
         <animation state_key="hold_on_wall" animation_key="hold, overwall dual"/>
         <animation state_key="still_against_wall" animation_key="hold_casual, pistol dual"/>
         <animation state_key="crouching" animation_key="crouch, pistol dual"/>
@@ -108,7 +109,6 @@
         <sound key="cycle" fileref="AR15Mod_SKILL1_JP.wav" volume="0.7" pitch_variety="0"/>
         <sound key="cycle" fileref="AR15Mod_SKILL2_JP.wav" volume="0.7" pitch_variety="0"/>
         <sound key="cycle" fileref="AR15Mod_SKILL3_JP.wav" volume="0.7" pitch_variety="0"/>
-        <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <capacity value="1" source="rank" source_value="0.0"/>
         <model filename="none.xml"/>
         <hud_icon filename="gkw_ar15mod3_skill.png"/>

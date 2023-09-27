@@ -79,25 +79,25 @@
         stab_enabled="1"/>
         <next_in_chain key="gkw_ar15mod3_552.weapon" share_ammo="0" />
         <commonness value="0" in_stock="0" />
-        <animation state_key="recoil" animation_key="recoil, pistol dual 1" />
-        <animation state_key="recoil" animation_key="recoil, pistol dual 2" />
-        <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall dual" />
-        <animation state_key="reload" animation_key="reloading ar15" />
-        <animation state_key="hold" animation_key="still, pistol dual" />
-        <animation state_key="hold_casual" animation_key="hold_casual, pistol dual" />
-        <animation state_key="hold_on_wall" animation_key="hold, overwall dual" />
-        <animation state_key="still_against_wall" animation_key="hold_casual, pistol dual" />
-        <animation state_key="crouching" animation_key="crouch, pistol dual" />
-        <animation state_key="crouch_moving" animation_key="crouching, pistol 2" />
-        <animation state_key="crouch_moving_backwards" animation_key="crouching backwards, pistol 2" />
-        <animation state_key="running" animation_key="running, no weapon, 60" />
-        <animation state_key="walking" animation_key="walking, pistol dual" />
-        <animation state_key="walking_backwards" animation_key="walking backwards, pistol dual" />
-        <animation state_key="next_in_chain_in" animation_key="change weapon in ar15" />
-        <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
-        <animation state_key="stabbing" animation_key="pistol whip" />
-        <animation state_key="stabbing" animation_key="pistol whip 2" />
-        <animation state_key="stabbing" animation_key="pistol whip 3" />
+        <animation state_key="recoil" animation_key="recoil, pistol dual 1"/>
+        <animation state_key="recoil" animation_key="recoil, pistol dual 2"/>
+        <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall dual"/>
+        <animation state_key="reload" animation_key="reloading ar15"/>
+        <animation state_key="hold" animation_key="still, pistol dual"/>
+        <animation state_key="hold_casual" animation_key="hold_casual, pistol dual"/>
+        <animation state_key="hold_on_wall" animation_key="hold, overwall dual"/>
+        <animation state_key="still_against_wall" animation_key="hold_casual, pistol dual"/>
+        <animation state_key="crouching" animation_key="crouch, pistol dual"/>
+        <animation state_key="crouch_moving" animation_key="crouching, pistol 2"/>
+        <animation state_key="crouch_moving_backwards" animation_key="crouching backwards, pistol 2"/>
+        <animation state_key="running" animation_key="running, no weapon, 60"/>
+        <animation state_key="walking" animation_key="walking, pistol dual"/>
+        <animation state_key="walking_backwards" animation_key="walking backwards, pistol dual"/>
+        <animation state_key="next_in_chain_in" animation_key="change weapon in ar15"/>
+        <animation state_key="prone_still" animation_key="prone_still, pistol dual"/>
+        <animation state_key="stabbing" animation_key="pistol whip"/>
+        <animation state_key="stabbing" animation_key="pistol whip 2"/>
+        <animation state_key="stabbing" animation_key="pistol whip 3"/>
         <effect class="muzzle" ref="muzzle_pink"/>
         <sound key="fire" fileref="ar15mod3skill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
         <sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.6" />
