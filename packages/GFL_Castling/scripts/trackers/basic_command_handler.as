@@ -893,7 +893,7 @@ class BasicCommandHandler : Tracker {
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_m1911_4514.weapon");
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_ar15_4508.weapon");
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_mg36_8305.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_kord_8201.weapon");
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_g36_565.weapon");
 		} else if (checkCommand(message,"gsft")){		
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","skill_sf_boss_alchemist.projectile");			
