@@ -1068,9 +1068,11 @@ dictionary tdoll_complex_index = {
     {modded_key(204).toString(),"gkw_ballista.weapon"},
 
     {modded_key(205).toString(),"gkw_an94.weapon"},
+    {modded_key(205,2404).toString(),"gkw_an94_2404.weapon"},
     {modded_key(205,3303).toString(),"gkw_an94_3303.weapon"},
     {modded_key(205,8606).toString(),"gkw_an94_blm.weapon"},
     {modded_key(205,0,"mod3").toString(),"gkw_an94_mod3.weapon"},
+    {modded_key(205,2404,"mod3").toString(),"gkw_an94mod3_2404.weapon"},
     {modded_key(205,3303,"mod3").toString(),"gkw_an94mod3_3303.weapon"},
     {modded_key(205,8606,"mod3").toString(),"gkw_an94mod3_blm.weapon"},
 

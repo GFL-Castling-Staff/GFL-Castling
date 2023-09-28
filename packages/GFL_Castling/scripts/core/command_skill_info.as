@@ -39,6 +39,8 @@ dictionary commandSkillIndex = {
         // AN94MOD3
         {"gkw_an94_mod3.weapon",1},
         {"gkw_an94_mod3_skill.weapon",1},
+        {"gkw_an94mod3_2404.weapon",1},
+        {"gkw_an94mod3_2404_skill.weapon",1},        
         {"gkw_an94mod3_3303.weapon",1},
         {"gkw_an94mod3_3303_skill.weapon",1},
         {"gkw_an94mod3_blm.weapon",1},

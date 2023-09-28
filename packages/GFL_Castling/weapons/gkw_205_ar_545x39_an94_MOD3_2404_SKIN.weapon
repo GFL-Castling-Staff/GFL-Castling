@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-<weapon key="gkw_an94_mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_an94mod3_2404.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 <tag name="autorifle"/>
 <tag name="stealth"/>
 <tag name="elite"/>
     <specification 
-    accuracy_factor="1" 
+	accuracy_factor="1" 
     barrel_offset="0.5" 
-    class="0"
+	class="0"
     slot="0" 
-    magazine_size="30" 
-    name="AN-94(MOD3)" 
+	magazine_size="30" 
+	name="AN-94(MOD3)-[The Diving Bell and the Doll]" 
     projectile_speed="205" 
-    retrigger_time="0.1" 
+	retrigger_time="0.1" 
     suppressed="1" 
     stance_accuracy_rate="2.5"
     spread_range="0.275"
     sight_range_modifier="1.5"
     sustained_fire_diminish_rate="1.5" 
-    sustained_fire_grow_step="0.35"/>
-    <next_in_chain key="gkw_an94_mod3_skill.weapon" share_ammo="1" />
-    <commonness value="0.0001" in_stock="0" can_respawn_with="1" />
+	sustained_fire_grow_step="0.35"/>
+    <next_in_chain key="gkw_an94mod3_2404_skill.weapon" share_ammo="1" />
     <inventory encumbrance="35.0" buy_price="400.0" sell_price="400.0" />
     <capacity value="1" source="rank" source_value="0.0" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
     <animation key="recoil" animation_key="recoil1" />
     <animation key="recoil" animation_key="recoil2" />
     <animation key="recoil" animation_key="recoil3" />
@@ -67,11 +67,11 @@
     <sound key="cycle" fileref="an94_cycle_FromCOD16.wav" volume="0.6" />
     <sound key="cycle" fileref="AN94_WIN_JP.wav" volume="1.0" pitch_variety="0"/>
     <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="gkw_ar_an94_mod3_from_melondove.xml" />
-    <hud_icon filename="gkw_an94mod3.png" />
+    <model filename="gkw_ar_an94.xml" />
+    <hud_icon filename="gkw_an94_2404.png" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="4.3" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="0.8" kill_decay_end_time="1.333" />
+        <result class="hit" kill_probability="4.3" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.8" kill_decay_end_time="1.333" />
     </projectile>
     <effect class="muzzle" ref="ejection_556" />
     <stance state_key="running" accuracy="0.3" />
@@ -85,17 +85,17 @@
     <modifier class="speed" value="0.15" />
     <modifier class="detectability" value="-0.1" />
 </weapon>
-<weapon key="gkw_an94_mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_an94mod3_2404_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 <tag name="autorifle"/>
 <tag name="stealth"/>
 <tag name="elite"/>
     <specification 
-    accuracy_factor="1" 
-    barrel_offset="0.4" 
-    class="4"
+	accuracy_factor="1" 
+	barrel_offset="0.4" 
+	class="4"
     slot="0" 
-    magazine_size="30" 
-    name="AN-94(MOD3)-[Doll Trigger]" 
+	magazine_size="30" 
+	name="AN-94(MOD3)-[The Diving Bell and the Doll]-[Doll Trigger]" 
     projectile_speed="205" 
     retrigger_time="0.06" 
     last_burst_retrigger_time="0.1"
@@ -106,8 +106,8 @@
     burst_shots="2"
     sight_range_modifier="2.0"
     sustained_fire_diminish_rate="2.4" 
-    sustained_fire_grow_step="0.35"/>
-    <next_in_chain key="gkw_an94_mod3.weapon" share_ammo="1" />
+	sustained_fire_grow_step="0.35"/>
+    <next_in_chain key="gkw_an94mod3_2404.weapon" share_ammo="1" />
     <commonness value="0" in_stock="0" can_respawn_with="1" />
     <inventory encumbrance="35.0" buy_price="400.0" sell_price="400.0" />
     <capacity value="1" source="rank" source_value="0.0" />
@@ -138,8 +138,8 @@
     <sound key="cycle" fileref="AN94_SKILL2_JP.wav" volume="1.0" pitch_variety="0"/>
     <sound key="cycle" fileref="AN94_SKILL3_JP.wav" volume="1.0" pitch_variety="0"/>
     <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="gkw_ar_an94_mod3_from_melondove.xml" />
-    <hud_icon filename="gkw_an94mod3_skill.png" />
+    <model filename="gkw_ar_an94.xml" />
+    <hud_icon filename="gkw_an94_2404.png" />
     <effect class="muzzle" ref="muzzle_blue"/>
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
