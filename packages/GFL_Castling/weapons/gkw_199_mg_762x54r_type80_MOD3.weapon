@@ -6,16 +6,14 @@
         <specification 
         barrel_offset="0.5" 
         retrigger_time="0.075" 
-        accuracy_factor="0.75" 
-        sustained_fire_grow_step="0.00125"
-        sustained_fire_diminish_rate="0.002"
-        cooldown_start="0.4"
-        cooldown_end="0.325" 
-        spread_range="0.45"
-        magazine_size="-1" 
+        accuracy_factor="1.0" 
+        sustained_fire_grow_step="0.525"
+        sustained_fire_diminish_rate="5.3275"
+        spread_range="0.65"
+        magazine_size="100" 
         suppressed="0" 
-        stance_accuracy_rate="0.8"
-        leave_crouch_accuracy_penalty="0.35"
+        stance_accuracy_rate="0.7"
+        leave_crouch_accuracy_penalty="0.3"
         name="Type 80 GPMG(MOD3)" 
         class="0" 
         projectile_speed="206" 
@@ -63,11 +61,11 @@
         <effect class="muzzle" ref="ejection_76251" />
         <stance state_key="running" accuracy="0.3" />
         <stance state_key="walking" accuracy="0.3" />
-        <stance state_key="crouch_moving" accuracy="0.5" />
-        <stance state_key="prone_moving" accuracy="0.5" />
-        <stance state_key="standing" accuracy="0.65" />
+        <stance state_key="standing" accuracy="1.2" />
         <stance state_key="crouching" accuracy="0.85" />
+        <stance state_key="crouch_moving" accuracy="0.65" />
         <stance state_key="prone" accuracy="1.2" />
+        <stance state_key="prone_moving" accuracy="0.5" />
         <stance state_key="over_wall" accuracy="1.2" />
     </weapon>
     <weapon key="gkw_type80mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -76,15 +74,13 @@
         <specification 
         barrel_offset="0.5" 
         retrigger_time="0.075" 
-        accuracy_factor="0.75" 
-        sustained_fire_grow_step="0.00125"
-        sustained_fire_diminish_rate="0.002"
-        cooldown_start="0.4"
-        cooldown_end="0.325" 
-        spread_range="0.45"
-        magazine_size="-1" 
-        stance_accuracy_rate="0.5"
-        leave_crouch_accuracy_penalty="0.35"
+        accuracy_factor="1.0" 
+        sustained_fire_grow_step="0.525"
+        sustained_fire_diminish_rate="5.3275"
+        spread_range="0.65"
+        magazine_size="100" 
+        stance_accuracy_rate="0.7"
+        leave_crouch_accuracy_penalty="0.3"
         suppressed="0" 
         name="Type 80 GPMG(MOD3)-[Position Fortification]" 
         class="0" 
@@ -135,12 +131,11 @@
         <effect class="muzzle" ref="muzzle_red_light" />
         <stance state_key="running" accuracy="0.3" />
         <stance state_key="walking" accuracy="0.3" />
-        <stance state_key="crouch_moving" accuracy="0.4" />
-        <stance state_key="standing" accuracy="1.15" />
-        <stance state_key="crouching" accuracy="0.8S" />
+        <stance state_key="standing" accuracy="1.2" />
+        <stance state_key="crouching" accuracy="0.85" />
+        <stance state_key="crouch_moving" accuracy="0.65" />
         <stance state_key="prone" accuracy="1.2" />
-        <stance state_key="prone_moving" accuracy="1.2" />
+        <stance state_key="prone_moving" accuracy="0.5" />
         <stance state_key="over_wall" accuracy="1.2" />
-        <modifier class="speed" value="-0.3" />
     </weapon>
 </weapons>

@@ -6,9 +6,9 @@
         barrel_offset="0.6"
         retrigger_time="0.1"
         accuracy_factor="0.95"
-        sustained_fire_grow_step="-0.275"
-        sustained_fire_diminish_rate="-1.0"
-        spread_range="0.5"
+        sustained_fire_grow_step="0.5"
+        sustained_fire_diminish_rate="4.5"
+        spread_range="0.65"
         magazine_size="250"
         suppressed="0"
         name="Browning M1919A4"
@@ -16,10 +16,10 @@
         projectile_speed="190"
         sight_range_modifier="1.3"
         stab_enabled="1"
-        stance_accuracy_rate="1.0"
+        stance_accuracy_rate="0.35"
         carry_in_two_hands="1"
         burst_shots="1"
-        can_shoot_standing="1"
+        can_shoot_standing="0"
         can_shoot_crouching="1"
         can_shoot_prone="1"
         slot="0"/>
@@ -55,16 +55,16 @@
         <model filename="gkw_mg_m1919a4lmg_n.xml"/>
         <hud_icon filename="gkw_m1919a4.png"/>
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="3.25" kill_decay_start_time="1.147" kill_decay_end_time="1.912" />
+            <result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="4.25" kill_decay_start_time="1.147" kill_decay_end_time="1.912" />
             <trail probability="1.0" key="BulletMgTrail"/>
         </projectile>
         <effect class="muzzle" ref="ejection_76251"/>
         <stance state_key="running" accuracy="0.3"/>
         <stance state_key="walking" accuracy="0.35"/>
-        <stance state_key="crouch_moving" accuracy="0.5"/>
-        <stance state_key="prone_moving" accuracy="0.5"/>
-        <stance state_key="standing" accuracy="0.5"/>
-        <stance state_key="crouching" accuracy="0.7"/>
+        <stance state_key="crouch_moving" accuracy="0.45"/>
+        <stance state_key="standing" accuracy="1.2"/>
+        <stance state_key="crouching" accuracy="0.925"/>
+        <stance state_key="prone_moving" accuracy="0.75"/>
         <stance state_key="prone" accuracy="1.2"/>
         <stance state_key="over_wall" accuracy="1.2"/>
         <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
@@ -79,15 +79,15 @@
         barrel_offset="0.6"
         retrigger_time="0.1"
         accuracy_factor="0.95"
-        sustained_fire_grow_step="-0.275"
-        sustained_fire_diminish_rate="-1.0"
+        sustained_fire_grow_step="0.5"
+        sustained_fire_diminish_rate="4.0"
         magazine_size="250"
         suppressed="0"
         name="Browning M1919A4-[Hunting Impulse]"
         class="0"
         projectile_speed="190"
         spread_range="0.5"
-        stance_accuracy_rate="1.0"
+        stance_accuracy_rate="0.35"
         sight_range_modifier="1.5"
         stab_enabled="1"
         carry_in_two_hands="1"
@@ -131,12 +131,11 @@
         <effect class="muzzle" ref="muzzle_big_yellow"/>
         <stance state_key="running" accuracy="0.3"/>
         <stance state_key="walking" accuracy="0.35"/>
-        <stance state_key="crouch_moving" accuracy="0.5"/>
-        <stance state_key="prone_moving" accuracy="0.5"/>
-        <stance state_key="standing" accuracy="0.65"/>
-        <stance state_key="crouching" accuracy="0.85"/>
-        <stance state_key="prone" accuracy="1.25"/>
-        <stance state_key="over_wall" accuracy="1.25"/>
-        <modifier class="speed" value="-0.25"/>
+        <stance state_key="crouch_moving" accuracy="0.45"/>
+        <stance state_key="standing" accuracy="1.2"/>
+        <stance state_key="crouching" accuracy="0.925"/>
+        <stance state_key="prone_moving" accuracy="0.75"/>
+        <stance state_key="prone" accuracy="1.2"/>
+        <stance state_key="over_wall" accuracy="1.2"/>
     </weapon>
 </weapons>
