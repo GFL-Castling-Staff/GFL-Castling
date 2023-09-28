@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map_config min_factions="3" max_factions="3" add_neutral_last="1">
+	<include_layer name="layer1.default" />
+	<include_layer name="bases.default" /> 
+
+	<faction file="green.xml" />
+	<faction file="grey.xml" />
+	<faction file="brown.xml" />
+	<faction file="neutral.xml" />    
+	<weapon file="all_weapons.xml" />
+	<projectile file="all_throwables.xml" />
+	<call file="all_calls.xml" />
+	<vehicle file="all_vehicles.xml" />
+  <carry_item file="all_carry_items.xml" />
+	<include_layer name="layer1.default" />  
+</map_config>

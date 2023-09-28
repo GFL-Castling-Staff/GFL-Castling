@@ -188,9 +188,11 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage1_rust());     // map2_c by diling
 		// addStage(setupStageRace());          // DEJAHU
 		addStage(setupStage10());         // map10
+		addStage(setupStage22());         // map21
 		addStage(setupStageXmas()); 
 		addStage(setupStage21());
-		addStage(setupStage7());          // map6c by diling
+		addStage(setupStage14());         // map6_2
+		// addStage(setupStage7());          // map6c by diling
 		addStage(setupStage8());          // map8
 		addStage(setupStage19());		  // map18    
 		addStage(setupStage6());          // map5
@@ -204,6 +206,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage109());		  // chapter2 by diling
 		addStage(setupStage12());         // map14
 		addStage(setupStage106());		  // map106 E30 Route by diling
+		addStage(setupStage110());		  // map110 Rising Sand by diling
 		addStage(setupStage17());         // map17
 		addStage(setupStage15());         // map1_2
 		addStage(setupFinalStage1());     // map11
@@ -981,6 +984,77 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		setDefaultAttackBreakTimes(stage);
 		// setReduceDefenseForFinalAttack(stage, 0.1); // use this for final attack boost if needed for friendlies
+		
+		return stage;
+	}
+
+	protected Stage@ setupStage110() {
+		Stage@ stage = createStage();
+		stage.m_mapInfo.m_name = "Rising Sand";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map110";
+		stage.m_mapInfo.m_id = "map110";
+
+		stage.addTracker(PeacefulLastBase(m_metagame, 0));
+		stage.addTracker(CommsCapacityHandler(m_metagame));
+		stage.m_maxSoldiers = 180;                                             // was 12*7 in 1.65, 1 base added
+
+		stage.m_soldierCapacityVariance = 0.6;
+		stage.m_playerAiCompensation = 2 + m_playerAiCompensation_offset;                                         // was 4 (1.82)
+        stage.m_playerAiReduction = 0;                                          // was 2 (test3)    
+
+		stage.m_minRandomCrates = 1; 
+		stage.m_maxRandomCrates = 3;
+
+		array<int> FactionIndex = getRandomEnemyList();
+
+		{
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0));                                                  
+			f.m_capacityOffset = 0; 
+			f.m_capacityMultiplier = 1.0;
+			stage.m_factions.insertLast(f);
+		}
+		{
+			Faction f(getFactionConfigs()[FactionIndex[0]], createCommanderAiCommand(1,0.3,0.1));
+			f.m_overCapacity = 30;                                               
+			f.m_capacityOffset = 15;
+			f.m_capacityMultiplier = 1.0;                                                 
+			stage.m_factions.insertLast(f);                                         
+		}
+		{
+			Faction f(getFactionConfigs()[FactionIndex[1]], createCommanderAiCommand(2,0.4,0.3));
+			f.m_capacityOffset = 30;
+			f.m_capacityOffset = 15;
+			f.m_capacityMultiplier = 1.0;                                                
+			stage.m_factions.insertLast(f);                                         
+		}
+		{
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_assault.call", "sf_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_mecha.call", "sf_mecha_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_mecha_inf.call", "sf_mecha_inf_sub.call", array<string> = {""}, false,false,false,"infantry"));
+
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_assault.call", "kcco_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_zircon.call", "kcco_zircon_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_zircon1.call", "kcco_zircon1_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_dog.call", "kcco_dog_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_quartz.call", "kcco_quartz_sub.call", array<string> = {""}, false,false,false,"infantry"));		
+			
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+
+		}
+
+		{
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));					
+		}
+		// metadata
+		stage.m_primaryObjective = "capture";
+
+		setDefaultAttackBreakTimes(stage);
 		
 		return stage;
 	}
@@ -2004,8 +2078,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 	// ------------------------------------------------------------------------------------------------
 	protected Stage@ setupStage14() {
 		Stage@ stage = createStage();
-		stage.m_mapInfo.m_name = "Rattlesnake Crescent (alt)";
-		stage.m_mapInfo.m_path = "media/packages/vanilla.desert/maps/map6";
+		stage.m_mapInfo.m_name = "Rattlesnake Crescent";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map6";
 		stage.m_mapInfo.m_id = "map6_2";
 
 		// we want to exclude some layers here, as the default ones are already used for the other map6
@@ -2023,7 +2097,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_includeLayers.insertLast("bases_2.default"); 
 
 		stage.m_maxSoldiers = 15 * 9;                                             
-		stage.m_playerAiCompensation = 3 + m_playerAiCompensation_offset;                                       // was 7 (test4) 
+		stage.m_playerAiCompensation = 2 + m_playerAiCompensation_offset;                                       // was 7 (test4) 
         stage.m_playerAiReduction = 1;                                          // was 1.5 (test3)    
 
 		stage.addTracker(PeacefulLastBase(m_metagame, 0));
@@ -2046,19 +2120,33 @@ class StageConfiguratorInvasion : StageConfigurator {
 			f.m_capacityOffset = 15;                                            // was 0 (test2)                           
 			stage.m_factions.insertLast(f);
 		}
+		{
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_assault.call", "sf_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_mecha.call", "sf_mecha_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_mecha_inf.call", "sf_mecha_inf_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_assault.call", "kcco_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_zircon.call", "kcco_zircon_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_zircon1.call", "kcco_zircon1_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_dog.call", "kcco_dog_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_quartz.call", "kcco_quartz_sub.call", array<string> = {""}, false,false,false,"infantry"));		
+			
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+
+		}
+
+		{
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+		}
 		// metadata
 		stage.m_primaryObjective = "capture";
 		stage.m_radioObjectivePresent = false;
-
-		{
-			XmlElement command("command");
-			command.setStringAttribute("class", "faction_resources");
-			command.setIntAttribute("faction_id", 0);
-			addFactionResourceElements(command, "vehicle", array<string> = {"radar_tank2.vehicle"}, false);
-
-			stage.m_extraCommands.insertLast(command);
-		} 
 
 		setDefaultAttackBreakTimes(stage);
 		
@@ -2621,6 +2709,79 @@ class StageConfiguratorInvasion : StageConfigurator {
 		setDefaultAttackBreakTimes(stage);
 		return stage;
 	} 	
+
+	protected Stage@ setupStage22() {
+		Stage@ stage = createStage();
+		stage.m_mapInfo.m_name = "Hell's High Way";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map21";
+		stage.m_mapInfo.m_id = "map21";
+		stage.m_mapInfo.m_size = 1536.0;
+		
+		stage.m_includeLayers.insertLast("layer1.invasion");		
+
+		stage.m_fogOffset = 24.0;    
+		stage.m_fogRange = 50.0; 
+
+		stage.m_maxSoldiers = 17 * 15;  // 16*15
+		stage.m_playerAiCompensation = 3;                                       
+		stage.m_playerAiReduction = 2;                                            
+
+		stage.m_soldierCapacityVariance = 0.6;   
+
+		stage.addTracker(PeacefulLastBase(m_metagame, 0));    
+		stage.addTracker(CommsCapacityHandler(m_metagame));
+
+		stage.m_minRandomCrates = 1; 
+		stage.m_maxRandomCrates = 4;  
+
+		{ 				
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.40, 0.1));   // 0.42 0.1
+			f.m_overCapacity = 0;
+			f.m_capacityOffset = 15;                                             
+			f.m_capacityMultiplier = 1;                                               
+			f.m_bases = 1;
+			stage.m_factions.insertLast(f);
+		}
+		{
+			Faction f(getFactionConfigs()[1], createCommanderAiCommand(1, 0.65, 0.15));  // 0.62 0.15
+			f.m_overCapacity = 120;                                          
+			f.m_capacityOffset = 10;      // was 0
+			stage.m_factions.insertLast(f);
+		}
+
+		{
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_assault.call", "sf_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_mecha.call", "sf_mecha_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_mecha_inf.call", "sf_mecha_inf_sub.call", array<string> = {""}, false,false,false,"infantry"));
+
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_assault.call", "kcco_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_zircon.call", "kcco_zircon_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_zircon1.call", "kcco_zircon1_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_dog.call", "kcco_dog_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_quartz.call", "kcco_quartz_sub.call", array<string> = {""}, false,false,false,"infantry"));		
+			
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+
+		}
+
+		{
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));	
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+            stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));			
+		}
+
+		// metadata
+		stage.m_primaryObjective = "capture";
+		stage.m_radioObjectivePresent = false;
+
+		setDefaultAttackBreakTimes(stage);
+		return stage;
+	}
+	
 	// ------------------------------------------------------------------------------------------------
 	// ------------------------------------------------------------------------------------------------
 	// FINAL STAGES

@@ -18,6 +18,7 @@
 	visual_offset="0 0.1 0" 
 	collision_response_factor="0.2" 
 	blast_push_threshold="10.0" 
+	blast_damage_threshold="3.0"
 	vehicle_collision_damage_factor="3.0" />
 	<turret offset="0 1.2 0.16" weapon_key="vehicle_hornet.weapon" weapon_offset="0.0 0.3 0.0" weapon_recoil="0.05"  max_rotation_step="0.00008" rotation="0" rotation_range="1.92" />
 	<visual class="chassis" mesh_filename="tow_tripod.mesh" texture_filename="tow.png" />
