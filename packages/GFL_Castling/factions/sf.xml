@@ -834,6 +834,7 @@
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
 			<weapon key="sfw_dreamer.weapon" enabled="1"/>
+			<projectile key="skill_sf_boss_dreamer_scan.projectile" enabled="1" probability="1.0" />
 			<carry_item key="vest_40hp.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
@@ -1017,6 +1018,7 @@
 		<ai filename="destroyer.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_destroyer.weapon" enabled="1"/>
+			<projectile key="skill_sf_boss_destroyer_scan.projectile" enabled="1" probability="1.0" />
 			<carry_item key="vest_40hp.carry_item" enabled="1" />
 			<call key="sf_assualt.call" />
 			<call key="sf_jaguar.call" />

@@ -1294,6 +1294,12 @@ class GFLskill : Tracker {
 						if(num_jud>num_max_character)break;
 					}
 
+					array<string> Voice={
+						"Alchemist_buhuo_SKILL01_JP.wav",
+						"Alchemist_buhuo_SKILL02_JP.wav"
+					};
+					playRandomSoundArray(m_metagame,Voice,factionid,character_pos.toString(),1);
+
 					for (uint i0=1;i0<=num_max_kill;){
 						for (uint i1=0;i1<affectedCharacter.length();i1++)	{
 							i0+=1;

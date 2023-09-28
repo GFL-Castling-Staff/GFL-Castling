@@ -3,8 +3,8 @@
 <projectile class="grenade" name="SF Boss Intruder Skill" key="skill_sf_boss_intruder_spawn.projectile" slot="0"  pulldown_in_air="0"  radius="0.1" drop_count_factor_on_death="0.25" drop_count_factor_on_player_death="0"  time_to_live_out_in_the_open="0">
 
     <result class="notify_script" key="sf_boss_intruder_skill" />
-    <trigger class="time" time_to_live="0.5"/>
-
+    <trigger class="time" time_to_live="2"/>
+    <throwable near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="0.0" max_speed="0.0" randomness="0.0" />
     <rotation class="random" />
 
     <!-- <model mesh_filename="kcco_grenade_1.xml" />  -->
@@ -19,11 +19,13 @@
     <sound class="result" key="vehicle" copy="other" />
     <sound class="result" key="character" copy="other" />
     <effect class="activated" ref="TracerFlash" lighting="0" />
+    <effect class="activated" ref="TracerFlash" lighting="0" />
+    <effect class="activated" ref="alert_grenade_boss_skill" lighting="0" />
 </projectile>
 <projectile class="grenade" name="SF Boss Alchemist Skill" key="skill_sf_boss_alchemist_scan.projectile" slot="0"  pulldown_in_air="0"  radius="0.1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="1"  time_to_live_out_in_the_open="10">
 
     <result class="notify_script" key="sf_boss_alchemist_skill" />
-    <trigger class="time" time_to_live="0.01"/>
+    <trigger class="time" time_to_live="2"/>
 
     <rotation class="random" />
 
@@ -31,7 +33,7 @@
     <hud_icon filename="88r.png" />
 
     <hud_icon filename="testing.png" />
-    <throwable near_far_distance="10.0" speed_estimation_near="10.0" speed_estimation_far="10.0" max_speed="10.0" randomness="0.0" />
+    <throwable near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="0.0" max_speed="0.0" randomness="0.0" />
     <commonness value="10.0" />
     <capacity value="1000" source="rank" source_value="0.0" />
     <inventory encumbrance="1.0" buy_price="0" sell_price="0.0" />
@@ -42,12 +44,12 @@
     <sound class="result" key="character" copy="other" />
     <effect class="activated" ref="TracerFlash" lighting="0" />
     <effect class="activated" ref="TracerFlash" lighting="0" />
-    <effect class="activated" ref="TracerFlash" lighting="0" />
+    <effect class="activated" ref="alert_grenade_boss_skill" lighting="0" />
 </projectile>
 <projectile class="grenade" name="SF Boss Excutioner Skill" key="skill_sf_boss_excutioner_scan.projectile" slot="0"  pulldown_in_air="0"  radius="0.1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="1"  time_to_live_out_in_the_open="10">
 
     <result class="notify_script" key="sf_boss_excutioner_skill" />
-    <trigger class="time" time_to_live="0.01"/>
+    <trigger class="time" time_to_live="2"/>
 
     <rotation class="random" />
 
@@ -55,7 +57,7 @@
     <hud_icon filename="88r.png" />
 
     <hud_icon filename="testing.png" />
-    <throwable near_far_distance="10.0" speed_estimation_near="10.0" speed_estimation_far="10.0" max_speed="10.0" randomness="0.0" />
+    <throwable near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="0.0" max_speed="0.0" randomness="0.0" />
     <commonness value="10.0" />
     <capacity value="1000" source="rank" source_value="0.0" />
     <inventory encumbrance="1.0" buy_price="1.0" sell_price="0.0" />
@@ -66,12 +68,12 @@
     <sound class="result" key="character" copy="other" />
     <effect class="activated" ref="TracerFlash" lighting="0" />
     <effect class="activated" ref="TracerFlash" lighting="0" />
-    <effect class="activated" ref="TracerFlash" lighting="0" />
+    <effect class="activated" ref="alert_grenade_boss_skill" lighting="0" />
 </projectile>
 <projectile class="grenade" name="SF Boss Destroyer Skill" key="skill_sf_boss_destroyer_scan.projectile" slot="0"  pulldown_in_air="0"  radius="0.1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="1"  time_to_live_out_in_the_open="10">
 
     <result class="notify_script" key="sf_boss_destroyer_skill" />
-    <trigger class="time" time_to_live="0.01"/>
+    <trigger class="time" time_to_live="2"/>
 
     <rotation class="random" />
 
@@ -79,7 +81,7 @@
     <hud_icon filename="88r.png" />
 
     <hud_icon filename="testing.png" />
-    <throwable near_far_distance="10.0" speed_estimation_near="10.0" speed_estimation_far="10.0" max_speed="10.0" randomness="0.0" />
+    <throwable near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="0.0" max_speed="0.0" randomness="0.0" />
     <commonness value="10.0" />
     <capacity value="1000" source="rank" source_value="0.0" />
     <inventory encumbrance="1.0" buy_price="1.0" sell_price="0.0" />
@@ -90,7 +92,7 @@
     <sound class="result" key="character" copy="other" />
     <effect class="activated" ref="TracerFlash" lighting="0" />
     <effect class="activated" ref="TracerFlash" lighting="0" />
-    <effect class="activated" ref="TracerFlash" lighting="0" />
+    <effect class="activated" ref="alert_grenade_boss_skill" lighting="0" />
 </projectile>
 <projectile class="grenade" name="30mm" slot="1" pulldown_in_air="8.0" key="skill_sf_boss_destroyer_mine.projectile">
     <tag name="grenade"/>
@@ -153,7 +155,7 @@
 <projectile class="grenade" name="SF Boss Dreamer Skill" key="skill_sf_boss_dreamer_scan.projectile" slot="0"  pulldown_in_air="0"  radius="1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="1"  time_to_live_out_in_the_open="10">
 
     <result class="notify_script" key="sf_boss_dreamer_skill" />
-    <trigger class="time" time_to_live="0.01"/>
+    <trigger class="time" time_to_live="2"/>
 
     <rotation class="random" />
 
@@ -161,7 +163,7 @@
     <hud_icon filename="88r.png" />
 
     <hud_icon filename="testing.png" />
-    <throwable near_far_distance="10.0" speed_estimation_near="10.0" speed_estimation_far="10.0" max_speed="10.0" randomness="0.0" />
+    <throwable near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="0.0" max_speed="0.0" randomness="0.0" />
     <commonness value="10.0" />
     <capacity value="1000" source="rank" source_value="0.0" />
     <inventory encumbrance="1.0" buy_price="1.0" sell_price="0.0" />
@@ -172,7 +174,7 @@
     <sound class="result" key="character" copy="other" />
     <effect class="activated" ref="TracerFlash" lighting="0" />
     <effect class="activated" ref="TracerFlash" lighting="0" />
-    <effect class="activated" ref="TracerFlash" lighting="0" />
+    <effect class="activated" ref="alert_grenade_boss_skill" lighting="0" />
 </projectile>
 <projectile class="grenade" name="laser" slot="2" key="skill_sf_boss_dreamer_ioncannon.projectile" >
     <result class="blast" radius="5.0" damage="2.0" push="0.05" decal="1" faction_compare="not_equal"/>

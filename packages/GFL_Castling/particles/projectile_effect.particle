@@ -378,6 +378,61 @@ particle_system alert_grenade_sf
 	}
 }
 
+particle_system alert_grenade_boss_skill
+{
+	quota 100
+	material grenade_alert_boss
+	particle_width 1.5
+	particle_height 1.5
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 0.7
+		direction 0 1 0
+		emission_rate 15
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 0.1
+		duration 0
+	}
+
+	affector Scaler
+	{
+		rate 15
+	}
+
+	affector ColourFader2
+	{
+		red1 	0
+		green1 	0
+		blue1 	0
+		alpha1 	0
+		red2 	-0
+		green2	-0
+		blue2	-0
+		alpha2	-20
+		state_change 0.05
+	}
+}
+
+material grenade_alert_boss : add_base
+{   
+    technique{
+    pass{
+		depth_func always_pass
+        texture_unit{
+            texture sf_boss_skill_warning.jpg 	
+}}}}
+
+
 material grenade_alert : add_base
 {   
     technique{

@@ -832,10 +832,11 @@ class Skill_Sf_Boss_Dreamer : DelaySkill {
 			const XmlElement@ LiveGuy = getCharacterInfo(m_metagame, m_character_id);
 			if(LiveGuy is null){m_end = true;return;}
 			affectedCharacter = getEnemyCharactersNearPosition(m_metagame,t_pos,m_faction_id,15.0f);
-			if (affectedCharacter.length()<= 0)affectedCharacter = getEnemyCharactersNearPosition(m_metagame,t_pos,m_faction_id,45.0f);
+			if (affectedCharacter.length()<= 0)affectedCharacter = getEnemyCharactersNearPosition(m_metagame,c_pos,m_faction_id,40.0f);
 			if (affectedCharacter.length()<= 0){m_end = true;return;}
 			int luckyoneid = affectedCharacter[0].getIntAttribute("id");
-			const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);			
+			const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);		
+			if(luckyoneC is null){m_end = true;return;}	
 			t_pos = stringToVector3(luckyoneC.getStringAttribute("position"));
 		}		
 
