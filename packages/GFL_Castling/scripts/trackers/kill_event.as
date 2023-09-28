@@ -218,6 +218,7 @@ class kill_event : Tracker {
         {"gkw_ro635mod3_554.weapon",3},        
         {"gkw_owen.weapon",3},
         {"gkw_type82.weapon",3},
+        {"gkw_mac10.weapon",3},
 
         //短突
         {"gkw_ak74u.weapon",5},
