@@ -226,6 +226,8 @@ class kill_event : Tracker {
         {"gkw_ak74u_skill.weapon",4},
         {"gkw_ak74u_3002_skill.weapon",4},
 
+        {"gkw_kacpdw.weapon",4},
+
         {"gkw_sr3mp.weapon",3},
         {"gkw_sr3mp_skill.weapon",4},
         {"gkw_sr3mp_4101.weapon",3},
