@@ -2639,4 +2639,10 @@
     <model filename="gkd_rf_bm59.xml">
         <requirement class="weapon" key="gkw_bm59.weapon" slot="0" />
     </model>     
+    <model filename="gkd_ar_beowulf.xml">
+        <requirement class="weapon" key="gkw_beowulf.weapon" slot="0" />
+    </model>  
+    <model filename="gkd_ar_beowulf.xml">
+        <requirement class="weapon" key="gkw_beowulf_skill.weapon" slot="0" />
+    </model>  
 </models> 
