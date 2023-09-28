@@ -1223,6 +1223,7 @@ dictionary tdoll_complex_index = {
     {modded_key(283).toString(),"gkw_liberator.weapon"},
 
     {modded_key(285).toString(),"gkw_c93.weapon"},
+    {modded_key(286).toString(),"gkw_kacpdw.weapon"},
 
     {modded_key(287).toString(),"gkw_sig556.weapon"},
 
