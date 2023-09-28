@@ -1794,6 +1794,12 @@
 	<text key="Doll logged already" text="&#37;doll_key 录入失败,您已经在图鉴中烙印了这位人形"/> 	
 	<text key="Help - logger system" text="装备人形录入证后，于军械库卖出你想录入的人形，如果有副模式请切换为主模式再进行录入操作，随后该人形将永久与存档绑定。"/>>
 	<text key="Help - logger system title" text="[图鉴录入机制]"/>
+	<text key="Help - command" text="/craft 从图鉴恢复指定编号人形 &#37;PS
+/random 从图鉴随机选择一个人形恢复 &#37;PS
+/info 查询图鉴内人形数量和收集率 &#37;PS
+/dance+数字 跳舞 &#37;PS
+/re 重新部署(120s冷却)"/>
+	<text key="Help - command title" text="[所有指令]"/>
 
 	<text key="Doll query failed" text="您输入的编号有误，请重试"/> 	
 	<text key="Doll query format error" text="您输入的参数有误，需要输入/craft 皮肤编号 模式"/> 	
@@ -1802,6 +1808,10 @@
 	<text key="Logger Query nothing" text="在您的图鉴中未能查询到相关人形"/> 
 	<text key="Logger Timeout" text="操作超时，请重新输入相关指令"/> 
 	<text key="Logger Mask Auto" text="您的图鉴中没有该人形，已自动帮您录入图鉴"/>
+	<text key="Logger info query" text="已收集战术人形：&#37;doll_number/&#37;all_dollnum位&#37;PS
+您的战术人形收集率为&#37;doll_collect%"/>
+
+	
 	<text key="craft progression start" text="已确认可恢复的人形列表，请输入/craft 皮肤编号 模式 来恢复人形" />
 	<text key="craft success" text="已从图鉴中将人形&#37;doll_name恢复成功" />
 	<text key="craft not found" text="没有编号为&#37;index 皮肤编号为&#37;skin_index 模式为&#37;mode的人形" />

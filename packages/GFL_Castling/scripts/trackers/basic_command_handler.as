@@ -434,6 +434,10 @@ class BasicCommandHandler : Tracker {
 			int characterId= playerInfo.getIntAttribute("character_id");			
 			playAnimationKey(m_metagame,characterId,"celebrating2",true,true);
 		}
+		
+		if (checkCommand(message, "help")) {
+			notify(m_metagame, "Help - command", dictionary(), "misc", senderId, true, "Help - command title", 1.0);
+		}
 
 		// admin and moderator only from here on
 		if (!m_metagame.getAdminManager().isAdmin(sender, senderId) && !m_metagame.getModeratorManager().isModerator(sender, senderId)) {

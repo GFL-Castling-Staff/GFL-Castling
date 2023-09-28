@@ -316,6 +316,26 @@ class Save_System : Tracker {
             notify(m_metagame, "craft success", a, "misc", player_id, false, "", 1.0);
             playPrivateSound(m_metagame,"sfx_big.wav",player_id);
         }
+        if(checkCommand(message,"info")){
+            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);            
+            if (playerInfo.m_name == default_string ) return;
+            string profile_hash = playerInfo.m_hash;
+            string sid = playerInfo.m_sid;
+            int player_id = playerInfo.getPlayerPid();
+            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash)); 
+            const XmlElement@ player = getPlayerInfo(m_metagame,player_id);
+            if (player is null) return;
+            int cId = player.getIntAttribute("character_id");
+            dictionary a;
+            a["%doll_number"] = "" + newdata.getAllNum();
+            a["%all_dollnum"] = "" + (tdoll_complex_index.getSize() -1);
+            string collect = formatFloat( (newdata.getAllNum() / (tdoll_complex_index.getSize() -1)) , '',0,2);
+            a["%doll_collect"] = "" + collect;
+            notify(m_metagame, "Logger info query", a, "misc", player_id, false, "", 1.0);
+        }
+
+
+
 		if (!m_metagame.getAdminManager().isAdmin(p_name, senderId) && !m_metagame.getModeratorManager().isModerator(p_name, senderId)) {
 			return;
 		}
