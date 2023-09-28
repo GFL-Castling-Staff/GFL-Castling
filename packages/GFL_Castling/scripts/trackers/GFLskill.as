@@ -1201,8 +1201,6 @@ class GFLskill : Tracker {
 
 					healCharacter(m_metagame,characterId,10);
 
-					affectedCharacter.insertLast(character);
-
 					if(m_fnum==0)break;
 
 					affectedCharacter = getEnemyCharactersNearPosition(m_metagame,character_pos,factionid,45.0f,num_max_character);
@@ -1355,8 +1353,6 @@ class GFLskill : Tracker {
 
 					healCharacter(m_metagame,characterId,10);
 
-					affectedCharacter.insertLast(character);
-
 					if(m_fnum==0)break;
 
 					affectedCharacter = getEnemyCharactersNearPosition(m_metagame,character_pos,factionid,35.0f,num_max_character);
@@ -1394,39 +1390,18 @@ class GFLskill : Tracker {
 			}
 
 			case 50: {// 敌方梦想家激光扫射
-				// int characterId = event.getIntAttribute("character_id");
-				// const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-				// if (character !is null) {
-				// 	int factionid = character.getIntAttribute("faction_id");
-				// 	Vector3 character_pos = stringToVector3(event.getStringAttribute("position"));
-				// 	//获取技能影响的敌人数量
-				// 	m_fnum = m_metagame.getFactionCount();
-				// 	array<const XmlElement@> affectedCharacter;
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					int factionid = character.getIntAttribute("faction_id");
+					Vector3 character_pos = stringToVector3(event.getStringAttribute("position"));
+					//获取技能影响的敌人数量
 
-				// 	affectedCharacter.insertLast(character);
-
-				// 	healCharacter(m_metagame,characterId,10);
-
-				// 	if(m_fnum==0)break;
-
-				// 	affectedCharacter = getEnemyCharactersNearPosition(m_metagame,character_pos,factionid,20.0f);
-
-				// 	while
-
-				// 	for (uint i0=1;i0<=num_max_kill;){
-				// 		for (uint i1=0;i1<affectedCharacter.length();i1++)	{
-				// 			i0+=1;
-				// 			int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
-				// 			const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
-				// 			if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
-				// 				string luckyonepos = luckyoneC.getStringAttribute("position");
-				// 				Vector3 luckyoneposV = stringToVector3(luckyonepos);
-				// 				CreateDirectProjectile(m_metagame,luckyoneposV.add(Vector3(0,1,0)),luckyoneposV,"sfw_boss_alchemist_skill_kill.projectile",characterId,factionid,60);	
-				// 				playSoundAtLocation(m_metagame,"alchemist_fire_FromHALOINFINTE.wav",factionid,luckyonepos,1.0);								
-				// 			}				
-				// 		}
-				// 	}
-				// }			
+					healCharacter(m_metagame,characterId,10);
+					Skill_Sf_Boss_Dreamer@ shot = Skill_Sf_Boss_Dreamer(m_metagame,1.5,characterId,factionid,character_pos);
+					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+					tasker.add(shot);
+				}
 				break;
 			}
 

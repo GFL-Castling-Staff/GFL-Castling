@@ -92,7 +92,7 @@ particle_system dreamer_laser_strike_result_center
 	quota 75
 	material explosion_smoke_04_bw_laser
 	particle_width 7.5
-	particle_height 7.5
+	particle_height 7
 	renderer billboard
 	billboard_type perpendicular_common
 	billboard_origin center
@@ -179,7 +179,7 @@ particle_system dreamer_laser_strike_result_smoke
 	quota 1000
 	material wand_smoke
 	particle_width 5
-	particle_height 5
+	particle_height 3
 	renderer billboard
 	billboard_type point
 	billboard_origin center

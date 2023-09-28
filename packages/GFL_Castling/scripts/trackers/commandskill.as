@@ -2419,9 +2419,8 @@ class CommandSkill : Tracker {
                     // tasker.add(DelayAirstrikeRequest(m_metagame,2.0,characterId,factionid,stringToVector3(target),"a10_rocket_strafe",true));
                     // tasker.add(DelayAirstrikeRequest(m_metagame,3.0,characterId,factionid,stringToVector3(target),"a10_strafe"));
 
-                    tasker.add(strafe_task_30mm(m_metagame,3.0,characterId,factionid,c_pos,stringToVector3(target)));
-                    tasker.add(DelayAirstrikeRequest(m_metagame,3.0,characterId,factionid,stringToVector3(target),"a10_rocket_strafe",true));
-                    tasker.add(strafe_task_30mm(m_metagame,3.0,characterId,factionid,c_pos,stringToVector3(target)));
+                    //tasker.add(strafe_task_30mm(m_metagame,3.0,characterId,factionid,c_pos,stringToVector3(target)));
+                    tasker.add(DelayAirstrikeRequest(m_metagame,1.0,characterId,factionid,stringToVector3(target),"a10_rocket_strafe",true));
                     addCooldown("MG4MOD3",90,characterId,modifer);
                 }
             }

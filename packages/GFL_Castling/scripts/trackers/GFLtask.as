@@ -806,3 +806,49 @@ class Skill_m1911mod3 : DelaySkill {
 		}
 	}
 }
+
+class Skill_Sf_Boss_Dreamer : DelaySkill {
+	protected array<const XmlElement@> affectedCharacter;
+
+	Skill_Sf_Boss_Dreamer(GameMode@ metagame, float time, int cId,int fId,Vector3 pos){
+		super(metagame,time,cId,fId);
+		c_pos = pos;//目前点位
+		t_pos = pos;//目标点位
+	}
+
+	void start(){
+		m_timeLeft=m_time;
+		m_timeLeft_internal = 0;
+		uint m_fnum = m_metagame.getFactionCount();
+		this.setExcuteLimit(200);
+		this.setInternal(0.3);
+		TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+		affectedCharacter = getEnemyCharactersNearPosition(m_metagame,t_pos,m_faction_id,30.0f);
+	}
+
+	void update(float time) {
+
+		if(m_excute_time%10==0){
+			const XmlElement@ LiveGuy = getCharacterInfo(m_metagame, m_character_id);
+			if(LiveGuy is null){m_end = true;return;}
+			affectedCharacter = getEnemyCharactersNearPosition(m_metagame,t_pos,m_faction_id,15.0f);
+			if (affectedCharacter.length()<= 0)affectedCharacter = getEnemyCharactersNearPosition(m_metagame,t_pos,m_faction_id,45.0f);
+			if (affectedCharacter.length()<= 0){m_end = true;return;}
+			int luckyoneid = affectedCharacter[0].getIntAttribute("id");
+			const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);			
+			t_pos = stringToVector3(luckyoneC.getStringAttribute("position"));
+		}		
+
+		if(m_timeLeft >= 0){m_timeLeft -= time;return;}
+		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
+		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
+
+		m_timeLeft_internal = m_time_internal;
+		// 细细切做臊子.jpg
+		//insertCommonStrike(m_character_id,m_faction_id,"ioncannon_strafe_dreamer",c_pos,c_pos.add(getAimUnitVector(0.8,c_pos,t_pos)));
+		CreateDirectProjectile(m_metagame,c_pos.add(Vector3(0,60,0)),c_pos,"skill_sf_boss_dreamer_ioncannon.projectile",m_character_id,m_faction_id,180);  
+		c_pos = c_pos.add(getAimUnitVector(1.5,c_pos,t_pos));
+
+		m_excute_time++;
+	}
+}
