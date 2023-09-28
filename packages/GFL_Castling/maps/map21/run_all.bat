@@ -1,0 +1,3 @@
+call process_edel4_big.bat
+call process_post_edel4_big.bat
+call process_map_view_edel4_big.bat
