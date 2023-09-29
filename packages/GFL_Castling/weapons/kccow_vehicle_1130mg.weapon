@@ -20,5 +20,9 @@
 	<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
     <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
     <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
-
+	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
+	<effect class="result" key="terrain" ref="Shine" lighting="0"/>
+	<effect class="result" key="static_object" copy="terrain"/>
+	<effect class="result" key="vehicle" copy="terrain"/>
+	<effect class="result" key="character" copy="terrain"/>
 </weapon>
