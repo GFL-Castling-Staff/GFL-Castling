@@ -310,7 +310,7 @@ class Save_System : Tracker {
             if (weapon_key == "") return;
             int cId = player.getIntAttribute("character_id");
             addItemInBackpack(m_metagame,cId,"weapon",weapon_key);
-            GiveRP(m_metagame,cId,-3000);
+            GiveRP(m_metagame,cId,-1000);
             dictionary a;
             a["%doll_name"] = getNamefromDict(weapon_key);
             notify(m_metagame, "craft success", a, "misc", player_id, false, "", 1.0);

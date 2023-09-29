@@ -814,7 +814,8 @@
 		<character filename="default_kcco_human.character" >
 			<animation key="stunned" target_key="stunned_sit 1.0" />
 			<parameter class="walking_steer_amount" value="0.55" />
-			<parameter class="running_steer_amount" value="0.63" />			
+			<parameter class="running_steer_amount" value="0.63" />
+			<sound key="death" fileref="kill_headshot.wav" volume="0.4" pitch_variety="0.025" />			
 		</character>
 		<model filename="kccod_human_sio2.xml" />
 		<ai filename="kcco_human_smg.ai" />
@@ -863,6 +864,7 @@
 			<parameter class="diving_steer_amount_jump" value="0.05" />
 			<parameter class="prone_moving_steer_amount" value="0" />
 			<parameter class="prone_moving_max_dot_to_move" value="0.1" />
+			<sound key="death" fileref="kill_headshot.wav" volume="0.4" pitch_variety="0.025" />
 		</character>
 		<model filename="kccod_human_zrsio4.xml" />
 		<ai filename="kcco_human_mg.ai" />
