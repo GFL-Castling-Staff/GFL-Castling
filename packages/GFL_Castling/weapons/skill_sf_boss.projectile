@@ -177,7 +177,7 @@
     <effect class="activated" ref="alert_grenade_boss_skill" lighting="0" />
 </projectile>
 <projectile class="grenade" name="laser" slot="2" key="skill_sf_boss_dreamer_ioncannon.projectile" >
-    <result class="blast" radius="5.0" damage="2.0" push="0.05" decal="1" faction_compare="not_equal"/>
+    <result class="blast" radius="5.0" damage="3.0" push="0.1" decal="1" faction_compare="not_equal"/>
     <trigger class="impact" />
     <rotation class="none" />
     <model mesh_filename="" />

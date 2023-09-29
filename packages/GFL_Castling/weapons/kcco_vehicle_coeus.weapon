@@ -36,14 +36,15 @@
     <effect class="muzzle" ref="coeus" />
     <effect class="muzzle" ref="coeusphere" />
     <effect class="muzzle" ref="coeusmuzzle" lighting="0" />
-    <effect class="result" key="terrain" ref="missile_result_cannon_blast_fire" lighting="0"/>
-    <effect class="result" key="terrain" ref="missile_result_cannon_blast_AmbientLight" lighting="0"/>
-    <effect class="result" key="terrain" ref="missile_result_expanding_fire" lighting="0" post_processing="1"/>
-    <effect class="result" key="other" copy="terrain"/>
-    <effect class="result" key="static_object" copy="terrain" />
-    <effect class="result" key="character" copy="terrain" />
-    <effect class="result" key="shield" copy="terrain" />			
-    <effect class="result" key="vehicle" copy="terrain" />
     <weak_hand_hold offset="0.4" />
-    <projectile file="kcco_coeus.projectile" />
+    <projectile file="kcco_coeus.projectile">
+        <effect class="result" key="terrain" ref="missile_result_cannon_blast_fire" lighting="0"/>
+        <effect class="result" key="terrain" ref="missile_result_cannon_blast_AmbientLight" lighting="0"/>
+        <effect class="result" key="terrain" ref="missile_result_expanding_fire" lighting="0" post_processing="1"/>
+        <effect class="result" key="other" copy="terrain"/>
+        <effect class="result" key="static_object" copy="terrain" />
+        <effect class="result" key="character" copy="terrain" />
+        <effect class="result" key="shield" copy="terrain" />			
+        <effect class="result" key="vehicle" copy="terrain" />
+    </projectile>
 </weapon>

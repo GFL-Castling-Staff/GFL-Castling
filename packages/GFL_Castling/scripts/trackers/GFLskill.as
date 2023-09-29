@@ -1404,9 +1404,18 @@ class GFLskill : Tracker {
 					//获取技能影响的敌人数量
 
 					healCharacter(m_metagame,characterId,10);
-					Skill_Sf_Boss_Dreamer@ shot = Skill_Sf_Boss_Dreamer(m_metagame,1.5,characterId,factionid,character_pos);
-					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-					tasker.add(shot);
+
+					array<const XmlElement@> affectedCharacter = getEnemyCharactersNearPosition(m_metagame,character_pos,factionid,35.0f);
+					int target_num = affectedCharacter.length();
+					if(target_num==0)break;
+					int luckyoneid = affectedCharacter[0].getIntAttribute("id");
+					const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+					if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
+						Vector3 luckyonepos = stringToVector3(luckyoneC.getStringAttribute("position"));
+						Skill_Sf_Boss_Dreamer@ shot = Skill_Sf_Boss_Dreamer(m_metagame,1.5,characterId,factionid,luckyonepos);
+						TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+						tasker.add(shot);
+					}
 				}
 				break;
 			}
