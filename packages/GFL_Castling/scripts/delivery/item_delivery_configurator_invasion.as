@@ -23,7 +23,6 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		setupDollCrafting_RF();
 		setupDollCrafting_MG();
 		setupDollCrafting_HG();
-		setupBriefcaseUnlocks();
 		setupPurchase();
 		setupSvarog();
 		setupImpulse();
