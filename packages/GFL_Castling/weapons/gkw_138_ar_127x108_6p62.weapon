@@ -29,7 +29,7 @@
     <hud_icon filename="gkw_6p62.png" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet_50bmg.projectile" time_to_live="0.45">
-        <result class="hit" kill_probability="12.7" kill_decay_start_time="1.0" kill_decay_end_time="1.0" />
+        <result class="hit" kill_probability="12.7" kill_probability_offset_on_successful_hit="8.5" kill_decay_start_time="1.0" kill_decay_end_time="1.0" />
     </projectile>
     <effect class="muzzle" ref="ejection_50BMG" />
     <stance state_key="running" accuracy="0.1" />
