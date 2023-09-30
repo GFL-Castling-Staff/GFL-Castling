@@ -191,7 +191,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage22());         // map21
 		addStage(setupStageXmas()); 
 		addStage(setupStage21());
-		addStage(setupStage14());         // map6_2
+		// addStage(setupStage14());         // map6_2
 		// addStage(setupStage7());          // map6c by diling
 		addStage(setupStage8());          // map8
 		addStage(setupStage19());		  // map18    

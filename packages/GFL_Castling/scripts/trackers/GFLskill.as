@@ -1305,6 +1305,7 @@ class GFLskill : Tracker {
 							i0+=1;
 							int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
 							const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+							if (luckyoneC is null) break;
 							if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
 								string luckyonepos = luckyoneC.getStringAttribute("position");
 								Vector3 luckyoneposV = stringToVector3(luckyonepos);

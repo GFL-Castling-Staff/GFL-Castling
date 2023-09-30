@@ -175,7 +175,7 @@ dictionary gameSkillIndex = {
         {"sf_boss_excutioner_skill",46},
         
         // 铁血boss 炼金术师 技能 大限
-        {"sf_boss_alchemist_skill",47},
+        // {"sf_boss_alchemist_skill",47},
 
         // 侦察中枢
         {"spawn_pathfinder",48},
