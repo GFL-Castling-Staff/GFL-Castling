@@ -6,8 +6,9 @@
 	<specification 
 	retrigger_time="-1.0" 
 	accuracy_factor="1" 
+	last_burst_retrigger_time="0.175"
 	sustained_fire_grow_step="3.0" 
-	sustained_fire_diminish_rate="1.5" 
+	sustained_fire_diminish_rate="1.85" 
 	magazine_size="5" 
 	can_shoot_standing="0" 
 	can_shoot_crouching="1"
@@ -16,12 +17,13 @@
 	name="M99-[Rabbit Squad]" 
 	class="4" 
 	slot="0"
-	reload_one_at_a_time="0" 
+	spread_range="0.5"
+	reload_one_at_a_time="0"
+	stance_accuracy_rate="0.75" 
 	sight_range_modifier="2.25" 
 	projectile_speed="224.21" 
 	barrel_offset="0.65" 
 	projectiles_per_shot="1"
-	last_burst_retrigger_time="0.5"
 	burst_shots="1"
 	stab_enabled="1"
 	carry_in_two_hands="1"/>
@@ -51,18 +53,17 @@
 	<!--Ballistics-->
 	<weak_hand_hold offset="0.3" />
 	<projectile file="ntw.projectile">
-		<result class="blast" damage="10.0" radius="2.5" decal="1" push="0.6" character_state="death" 	faction_compare="not_equal"/>
+		<result class="blast" damage="18.5" radius="2.5" decal="1" push="0.6" character_state="death" 	faction_compare="not_equal"/>
 	</projectile>
 	<!--Accuracy, Movement speed-->
-	<modifier class="speed" value="-0.15" />
-	<stance state_key="running" accuracy="1.0" />
-	<stance state_key="walking" accuracy="1.0" />
-	<stance state_key="crouch_moving" accuracy="1.0" />
-	<stance state_key="standing" accuracy="1.0" />
-	<stance state_key="crouching" accuracy="1.0" />
-	<stance state_key="prone" accuracy="1.0" />
-	<stance state_key="prone_moving" accuracy="1.0" />
-	<stance state_key="over_wall" accuracy="1.0" />
+	<stance state_key="running" accuracy="0.3" />
+    <stance state_key="walking" accuracy="0.45" />
+    <stance state_key="crouch_moving" accuracy="0.65" />
+	<stance state_key="prone_moving" accuracy="0.75" />	
+    <stance state_key="standing" accuracy="0.925" />
+    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="prone" accuracy="1.2" /> 
+    <stance state_key="over_wall" accuracy="1.2" />
 	<modifier class="detectability" value="-0.1"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />

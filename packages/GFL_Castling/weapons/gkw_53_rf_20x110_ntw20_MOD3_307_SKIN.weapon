@@ -75,7 +75,7 @@
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.6">
-        <result class="spawn" instance_class="projectile" instance_key="ntw20_ap.projectile" min_amount="4" max_amount="4" offset="0 0 0" position_spread="2 1" direction_spread="0 0" />
+        <result class="spawn" instance_class="projectile" instance_key="ntw20_ap.projectile" min_amount="2" max_amount="2" offset="0 0 0" position_spread="2 1" direction_spread="0 0" />
         <trigger class="impact" time_to_live="1.22"  />
         <rotation class="motion" />
         <collision class="sticky" />
