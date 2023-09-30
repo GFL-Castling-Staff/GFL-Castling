@@ -797,6 +797,11 @@ class Skill_m1911mod3 : DelaySkill {
 		m_timeLeft_internal = m_time_internal;
 		int luckyoneid = affectedCharacter[getRandomIndex(affectedCharacter.length())].getIntAttribute("id");
 		const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+		if(luckyoneC is null)
+		{
+			m_timeLeft_internal = 0;
+			return;
+		}
 		Vector3 e_pos = stringToVector3(luckyoneC.getStringAttribute("position"));
 		if(m_excute_time < 7){
 			CreateDirectProjectile(m_metagame,e_pos.add(Vector3(0,20,0)),e_pos,"snipe_m1911.projectile",m_character_id,m_faction_id,300);
