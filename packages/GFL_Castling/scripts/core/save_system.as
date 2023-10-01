@@ -329,7 +329,7 @@ class Save_System : Tracker {
             dictionary a;
             a["%doll_number"] = "" + newdata.getAllNum();
             a["%all_dollnum"] = "" + (tdoll_complex_index.getSize() -1);
-            string collect = formatFloat( (newdata.getAllNum() / (tdoll_complex_index.getSize() -1)) , '',0,2);
+            string collect = formatFloat((newdata.getAllNum() / (tdoll_complex_index.getSize() -1)));
             a["%doll_collect"] = "" + collect;
             notify(m_metagame, "Logger info query", a, "misc", player_id, false, "", 1.0);
         }

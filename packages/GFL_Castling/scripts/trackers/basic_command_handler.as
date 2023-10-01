@@ -893,9 +893,10 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "para_heal_skill.projectile", "projectile", 0);			 						
 		} else if (checkCommand(message,"givetestweapon")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			addMutilItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","kcco_smartgrenade_1.projectile",255);
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","kcco_hydra_at.weapon");
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","kcco_hydra_at.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","kcco_hydra_at.weapon");
+			
 		} else if (checkCommand(message,"gsft")){		
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","skill_sf_boss_excutioner_scan.projectile");			

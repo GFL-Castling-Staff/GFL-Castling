@@ -40,7 +40,7 @@
 	<animation key="walking" target_key="walking, pathfinder" />
 	<animation key="walking backwards" target_key="walking, pathfinder" />
 	<animation key="running" target_key="running, pathfinder" />
-	<animation key="crouch still" target_key="crouch still, pathfinder" />
+	<animation key="crouch still" target_key="still, pathfinder" />
 	<animation key="crouching forwards" target_key="walking, pathfinder" />
 	<animation key="crouching backwards" target_key="walking, pathfinder" />
 	<animation key="prone" target_key="still, pathfinder" />
