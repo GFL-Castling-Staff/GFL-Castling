@@ -200,7 +200,7 @@ particle_system at_bullet_aiming_trail
 
 particle_system alert_grenade
 {
-	quota 100
+	quota 300
 	material grenade_alert
 	particle_width 1.5
 	particle_height 1.5
@@ -245,7 +245,7 @@ particle_system alert_grenade
 
 particle_system alert_grenade_gf
 {
-	quota 100
+	quota 300
 	material grenade_alert
 	particle_width 1.5
 	particle_height 1.5
@@ -290,7 +290,7 @@ particle_system alert_grenade_gf
 
 particle_system alert_grenade_kcco
 {
-	quota 100
+	quota 300
 	material grenade_alert
 	particle_width 1.5
 	particle_height 1.5
@@ -335,7 +335,7 @@ particle_system alert_grenade_kcco
 
 particle_system alert_grenade_sf
 {
-	quota 100
+	quota 300
 	material grenade_alert
 	particle_width 1.5
 	particle_height 1.5
@@ -380,7 +380,7 @@ particle_system alert_grenade_sf
 
 particle_system alert_grenade_boss_skill
 {
-	quota 100
+	quota 300
 	material grenade_alert_boss
 	particle_width 1.5
 	particle_height 1.5
