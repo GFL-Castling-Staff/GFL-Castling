@@ -20,7 +20,7 @@
 class CraftQueue
 {
     int m_playerId;
-    float m_time=10.0;
+    float m_time=20.0;
     string m_typekey="";
     string m_string = "";
     CraftQueue(int pId){

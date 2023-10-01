@@ -3,18 +3,18 @@
 	<tag name="melee" />
 	<tag name="elite" />
     <specification 
-     retrigger_time="0.35"
-     magazine_size="1000"
-     can_shoot_standing="1" 
-     can_shoot_crouching="0" 
-     can_shoot_prone="0" 
-     carry_in_two_hands="0" 
-     name="Excutioner-Queen of the Moon" 
-     class="0"
-     supperessed="0"
-     use_basic_muzzle_smoke_effect="0"
-     stab_enabled="1"
-     stab_range="5"
+    retrigger_time="0.35"
+    magazine_size="1000"
+    can_shoot_standing="1" 
+    can_shoot_crouching="0" 
+    can_shoot_prone="0" 
+    carry_in_two_hands="0" 
+    name="Excutioner-Queen of the Moon" 
+    class="0"
+    supperessed="0"
+    use_basic_muzzle_smoke_effect="0"
+    stab_enabled="1"
+    stab_range="3.5"
     />
 
     <animation state_key="recoil"   animation_key="melee, ninjato whip" />
