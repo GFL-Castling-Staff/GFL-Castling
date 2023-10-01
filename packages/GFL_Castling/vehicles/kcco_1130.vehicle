@@ -27,7 +27,6 @@
     <sound key="hit" filename="car_hit2.wav" />
     <sound key="hit" filename="car_hit1.wav" />
     <sound key="turret_rotation" filename="turret_rotation1.wav" volume="3" />
-    <sound key="turret_rotation" filename="turret_rotation2.wav" volume="3" />
     <effect event_key="health" value="24" ref="BrokenSparkle" offset="0.0 2.0 -0.0" />
     <effect event_key="health" value="16" ref="SmallSmokeVehicle" offset="0.0 1.8 -0.0" />
     <effect event_key="health" value="16" ref="BrokenSparkle" post_processing="0" offset="0.0 2.0 -0.0" />
