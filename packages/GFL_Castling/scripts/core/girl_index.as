@@ -896,7 +896,7 @@ dictionary tdoll_complex_index = {
     {modded_key(129,5604).toString(),"gkw_QBZ95_5604.weapon"},
 
     {modded_key(130).toString(),"gkw_QBZ97.weapon"},
-    {modded_key(130).toString(),"gkw_QBZ97_6902.weapon"},
+    {modded_key(130,6902).toString(),"gkw_QBZ97_6902.weapon"},
 
     {modded_key(135).toString(),"gkw_sr3mp.weapon"},
     {modded_key(135,4101).toString(),"gkw_sr3mp_4101.weapon"},
@@ -1315,6 +1315,7 @@ dictionary tdoll_complex_index = {
 
 
     {modded_key(328).toString(),"gkw_ar57.weapon"},
+    {modded_key(328,6705).toString(),"gkw_ar57_6705.weapon"},
 
     {modded_key(329).toString(),"gkw_svch.weapon"},
 
@@ -1325,7 +1326,7 @@ dictionary tdoll_complex_index = {
 
     {modded_key(333).toString(),"gkw_vp1915.weapon"},
     {modded_key(333,6604).toString(),"gkw_vp1915_6604.weapon"},
-    {modded_key(333,8505).toString(),"gkw_vp1915_8505.weapon"},
+    {modded_key(333,8503).toString(),"gkw_vp1915_8503.weapon"},
 
     {modded_key(334).toString(),"gkw_savage99.weapon"},
 

@@ -27,6 +27,9 @@
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
 	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+    <animation state_key="stabbing" animation_key="pistol whip" />
+    <animation state_key="stabbing" animation_key="pistol whip 2" />
+    <animation state_key="stabbing" animation_key="pistol whip 3" />
     <animation state_key="hold_on_wall" animation_key="still" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
     <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />

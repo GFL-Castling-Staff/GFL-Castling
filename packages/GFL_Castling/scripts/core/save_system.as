@@ -89,7 +89,7 @@ class player_data
     string getRandomWeapon() const
     {
         if(m_weapons.length() <= 0 ) return "";
-        uint index = rand(0,m_weapons.length());
+        uint index = rand(0,m_weapons.length()-1);
         return m_weapons[index];
     }
 
