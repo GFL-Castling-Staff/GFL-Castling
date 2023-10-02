@@ -137,6 +137,12 @@ class map105_Phase2 : map105_Phase {
 		map105_Phase::start();
 		_log("Phase2 starting");
 		m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "Map105HandleAll"));
+		array<const XmlElement@> players = getPlayers(m_metagame);
+		for (uint i = 0; i < players.size(); ++i) {
+			const XmlElement@ player = players[i];
+			int player_id = player.getIntAttribute("player_id");
+			notify(m_metagame, "shock_zone_entry_phase3", dictionary(), "misc", player_id, false, "", 1.0);
+		}				
 		playSoundtrack(m_metagame,"Singularity_5.wav");
 		m_metagame.getComms().send("<command class='commander_ai' faction='2' base_defense='0.0' border_defense='0.05' attack_start_spread='0' />");
 		m_metagame.getComms().send(
@@ -163,6 +169,12 @@ class map105_Phase2 : map105_Phase {
 			// kcco倒了
 			m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "Map105WIN", dictionary(),2.0, "explosion3.wav"));
 			updateMapViewPic(m_metagame,"map_ruin.png");
+			array<const XmlElement@> players = getPlayers(m_metagame);
+			for (uint i = 0; i < players.size(); ++i) {
+				const XmlElement@ player = players[i];
+				int player_id = player.getIntAttribute("player_id");
+				notify(m_metagame, "shock_zone_entry_phase4", dictionary(), "misc", player_id, false, "", 1.0);
+			}			
 		}
 	}
 };

@@ -526,19 +526,21 @@ class MapRotatorInvasion : MapRotator {
 					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 4", a));
 					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 5", a, 2.0, "objective_priority.wav"));
 				}				
-				if (stage.m_mapInfo.m_name == "Shock Zone") {
+				else if (stage.m_mapInfo.m_name == "Shock Zone") {
 					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 10.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 1", a, 2.0, "objective_priority.wav"));
 					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 2", a, 2.0, "objective_priority.wav"));
 					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 3", a, 2.0, "objective_priority.wav"));
 					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 4", a, 2.0, "objective_priority.wav"));
 					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 5", a, 2.0, "objective_priority.wav"));
-				} else {
+				} 
+				else {
 					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 2.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 1", a));
 					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 2", a));
 					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 3", a));
 					m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, stage.m_mapInfo.m_name+" start with 1 base, part 4", a, 2.0, "objective_priority.wav"));
 				}
-			} else {
+			} 
+			else {
 			}
 		}
 		// finally enable "in game commander" radio, battle and event reports
