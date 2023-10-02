@@ -45,30 +45,7 @@ class map_DeadZone_Phase : Tracker {
 
 	// --------------------------------------------
 	void start() {
-		m_started = true;
-		XmlElement command("command");
-		command.setStringAttribute("class", "change_game_settings");
-		XmlElement f1("faction");
-		f1.setIntAttribute("disable_enemy_spawnpoints_soldier_count_offset", -100);
-		command.appendChild(f1);
-		m_metagame.getComms().send(command);
-		m_metagame.getComms().send("<command class='commander_ai' faction='0' base_defense='0.6' border_defense='0.3'/>");
-		m_metagame.getComms().send("<command class='commander_ai' faction='1' base_defense='0.2' border_defense='0.1' attack_start_spread='0' attack_target_spread='0' attack_target_base_key='Crash part' />");
-		m_metagame.getComms().send("<command class='commander_ai' faction='2' base_defense='0.6' border_defense='0.4'/>");
-		m_metagame.getComms().send("<command class='commander_ai' faction='3' base_defense='0.6' border_defense='0.4'/>");
-		setSpawnScore(m_metagame,1,"eagleyes",0);
-		setSpawnScore(m_metagame,1,"teal",0);
-		setSpawnScore(m_metagame,1,"vanguard",0);
-		setSpawnScore(m_metagame,1,"wrath",0);
-		setSpawnScore(m_metagame,1,"Nimogen",0);
-		setSpawnScore(m_metagame,1,"Narciss",0);
-		setSpawnScore(m_metagame,1,"Thunder",0);
-		m_metagame.addTracker(SpawnAtNode(m_metagame, tower_resource, "deadzone_tower", 1, 3));	
-		resetFactionCallResources(m_metagame, 0, AllGKcallList, false, getCallSorting());
-		m_metagame.getComms().send(
-			"<command class='soldier_ai' faction='1'>" + 
-			"  <parameter class='willingness_to_charge' value='0.4' />" +
-			"</command>");
+
 	}
 
 	// --------------------------------------------
@@ -106,6 +83,30 @@ class map_DeadZone_Phase1 : map_DeadZone_Phase {
 		super(metagame, controller);
 	}
 	void start() {
+		m_started = true;
+		XmlElement command("command");
+		command.setStringAttribute("class", "change_game_settings");
+		XmlElement f1("faction");
+		f1.setIntAttribute("disable_enemy_spawnpoints_soldier_count_offset", -100);
+		command.appendChild(f1);
+		m_metagame.getComms().send(command);
+		m_metagame.getComms().send("<command class='commander_ai' faction='0' base_defense='0.6' border_defense='0.3'/>");
+		m_metagame.getComms().send("<command class='commander_ai' faction='1' base_defense='0.2' border_defense='0.1' attack_start_spread='0' attack_target_spread='0' attack_target_base_key='Crash part' />");
+		m_metagame.getComms().send("<command class='commander_ai' faction='2' base_defense='0.6' border_defense='0.4'/>");
+		m_metagame.getComms().send("<command class='commander_ai' faction='3' base_defense='0.6' border_defense='0.4'/>");
+		setSpawnScore(m_metagame,1,"eagleyes",0);
+		setSpawnScore(m_metagame,1,"teal",0);
+		setSpawnScore(m_metagame,1,"vanguard",0);
+		setSpawnScore(m_metagame,1,"wrath",0);
+		setSpawnScore(m_metagame,1,"Nimogen",0);
+		setSpawnScore(m_metagame,1,"Narciss",0);
+		setSpawnScore(m_metagame,1,"Thunder",0);
+		m_metagame.addTracker(SpawnAtNode(m_metagame, tower_resource, "deadzone_tower", 1, 3));	
+		resetFactionCallResources(m_metagame, 0, AllGKcallList, false, getCallSorting());
+		m_metagame.getComms().send(
+			"<command class='soldier_ai' faction='1'>" + 
+			"  <parameter class='willingness_to_charge' value='0.4' />" +
+			"</command>");		
 		map_DeadZone_Phase::start();
 		_log("Phase1 starting");
 		playSoundtrack(m_metagame,"Singularity_4.wav");
