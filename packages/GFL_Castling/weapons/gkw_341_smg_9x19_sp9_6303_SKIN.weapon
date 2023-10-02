@@ -63,7 +63,7 @@
     <hud_icon filename="gkw_sp9_6303.png" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="0.28" kill_decay_end_time="0.58" />
+        <result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="4.2" kill_decay_start_time="0.28" kill_decay_end_time="0.58" />
     </projectile>
     <effect class="muzzle" ref="ejection_9mm" />
     <stance state_key="running" accuracy="0.85" />

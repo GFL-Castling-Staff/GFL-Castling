@@ -2,7 +2,7 @@
 <weapon key="gkw_mp5_1205.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
     <tag name="smg" />
     <specification 
-        accuracy_factor="0.88" 
+        accuracy_factor="0.98" 
         retrigger_time="0.075" 
 		barrel_offset="0.32" 
 		class="0"
@@ -47,7 +47,7 @@
     <hud_icon filename="gkw_mp5_1205.png"/>
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="0.28" kill_decay_end_time="0.56" />
+        <result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.28" kill_decay_end_time="0.56" />
     </projectile>
     <effect class="muzzle" ref="ejection_9mm"/>
     <stance state_key="running" accuracy="0.85" />

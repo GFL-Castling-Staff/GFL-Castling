@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="" slot="1" time_to_live="0.10" pulldown_in_air="-60" key="cl_e.projectile">
-    <result class="blast" radius="10.0" damage="0.0" decal="0" character_state="none" />
+    <result class="blast" radius="8.0" damage="0.0" decal="0" character_state="none" />
     <trigger class="time" time_to_live="0">
      <collider class="terrain" enabled="1" />     
      <collider class="static_object" enabled="1" /> 
