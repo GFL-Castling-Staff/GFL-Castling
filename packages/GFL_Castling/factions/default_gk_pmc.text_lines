@@ -760,6 +760,13 @@
   <comment key="no more resources to unlock" text="非常感谢，不过WAVE得不到更多的数据了" />
   <comment key="aircraft coming" text="攻击无人机进场，&#37;direction点钟方向！" />
   <!-- 1.84 -->
+  
+	<animation key="crouch still" target_key="crouch still alt 1" add="1"/>
+	<animation key="crouch still" target_key="crouch still alt 2" add="1"/>
+	<animation key="crouch still" target_key="crouch still alt 3" add="1"/>
+
+
+
   <comment key="rangefinder binoculars" text="距离目标: &#37;range m." />
   <comment key="squad_equipment_kit, equip" text="我可以用这个来给附近的人形装备护甲！" />
   <comment key="squad_equipment_kit, done" text="护甲发放完毕！" />

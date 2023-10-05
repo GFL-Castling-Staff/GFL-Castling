@@ -604,7 +604,8 @@ class GFLskill : Tracker {
 				//获取技能影响的敌人数量
 				m_fnum = m_metagame.getFactionCount();
 				array<const XmlElement@> affectedCharacter;
-				for(uint i=0;i<m_fnum;i++) 
+				for(uint i=0;i<m_fnum;i++)
+				{
 					if(i!=factionid) {
 						array<const XmlElement@> affectedCharacter2;
 						affectedCharacter2 = getCharactersNearPosition(m_metagame,pos_smartbullet,i,20.0f);
@@ -614,6 +615,7 @@ class GFLskill : Tracker {
 							}
 						}
 					}
+				} 
 				//根据区域内敌人数量执行不同的脚本弹头：
 				//0~3：精准狙击
 				//4~8：精准炮击
