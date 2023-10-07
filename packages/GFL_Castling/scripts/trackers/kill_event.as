@@ -407,7 +407,7 @@ class kill_event : Tracker {
                     SkillArray[i].m_time-=2.0;
                 }
             }
-
+            // 护甲判断
             if(startsWith(c_armorType,'acbp_t6')){
                 float scale = 1.0;
                 if(reward_pool_key=="rare" || reward_pool_key=="elite")
@@ -428,10 +428,15 @@ class kill_event : Tracker {
                     }
                 }
             }
-            if(startsWith(c_armorType,"exo_x_t6")){
+            else if(startsWith(c_armorType,"exo_x_t6")){
                 updateHealByKillEvent(characterId,factionId,10,60,"vest",kill_to_heal_scale);
             }
-            if(startsWith(c_armorType,"tms_t6")){
+            else if(startsWith(c_armorType,"exo_t6")){
+                if(boss_list.find(Solider_Name)>-1){
+                    healCharacter(m_metagame,characterId,5);
+                }
+            }            
+            else if(startsWith(c_armorType,"tms_t6")){
                 if (c_weaponType=="gkw_hawk97mod3.weapon" || c_weaponType =="gkw_hawk97mod3_5805.weapon")
                 {
                     updateHealByKillEvent(characterId,factionId,4,30,"vest",kill_to_heal_scale+1);
@@ -441,6 +446,7 @@ class kill_event : Tracker {
                     updateHealByKillEvent(characterId,factionId,4,30,"vest",kill_to_heal_scale);
                 }
             }
+
             if(c_weaponType=="gkw_m1911_mod3.weapon" || c_weaponType=="gkw_m1911mod3_4514.weapon"){
                 if ((startsWith(c_armorType,"bp_")))
                 {

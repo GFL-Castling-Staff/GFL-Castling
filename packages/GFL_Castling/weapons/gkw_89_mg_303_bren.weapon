@@ -6,9 +6,10 @@
     barrel_offset="0.6" 
     retrigger_time="0.115" 
     accuracy_factor="1.0" 
-    sustained_fire_grow_step="0.55" 
+    sustained_fire_grow_step="0.8" 
     sustained_fire_diminish_rate="2.4" 
-    spread_range="0.4"
+    leave_crouch_accuracy_penalty="0.3"
+    spread_range="0.5"
     magazine_size="30" 
     suppressed="0" 
     name="Bren Mk.IV LMG"
@@ -54,10 +55,10 @@
     <effect class="muzzle" ref="ejection_76251" />
     <stance state_key="running" accuracy="0.3" />
     <stance state_key="walking" accuracy="0.5" />
-    <stance state_key="crouch_moving" accuracy="0.75" />
-    <stance state_key="prone_moving" accuracy="0.75" />
-    <stance state_key="standing" accuracy="0.75" />
-    <stance state_key="crouching" accuracy="0.9" />
-    <stance state_key="prone" accuracy="1.0" />
-    <stance state_key="over_wall" accuracy="1.0" />
+    <stance state_key="crouch_moving" accuracy="0.8" />
+    <stance state_key="prone_moving" accuracy="0.5" />
+    <stance state_key="standing" accuracy="1.0" />
+    <stance state_key="crouching" accuracy="1.05" />
+    <stance state_key="prone" accuracy="1.15" />
+    <stance state_key="over_wall" accuracy="1.15" />
 </weapon>

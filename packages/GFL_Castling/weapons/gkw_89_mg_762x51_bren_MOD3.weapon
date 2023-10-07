@@ -8,8 +8,9 @@
     barrel_offset="0.6" 
     retrigger_time="0.125" 
     accuracy_factor="0.95" 
-    sustained_fire_grow_step="0.45" 
+    sustained_fire_grow_step="0.75" 
     sustained_fire_diminish_rate="2.4" 
+    leave_crouch_accuracy_penalty="0.2"
     spread_range="0.4"
     magazine_size="30" 
     suppressed="0" 
@@ -59,10 +60,10 @@
     <stance state_key="walking" accuracy="0.65" />
     <stance state_key="crouch_moving" accuracy="0.75" />
     <stance state_key="prone_moving" accuracy="0.75" />
-    <stance state_key="standing" accuracy="0.75" />
-    <stance state_key="crouching" accuracy="0.9" />
-    <stance state_key="prone" accuracy="1.0" />
-    <stance state_key="over_wall" accuracy="1.0" />
+    <stance state_key="standing" accuracy="1.0" />
+    <stance state_key="crouching" accuracy="1.1" />
+    <stance state_key="prone" accuracy="1.2" />
+    <stance state_key="over_wall" accuracy="1.2" />
 </weapon>
 <weapon key="gkw_brenmod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 <tag name="machine gun"/>
@@ -73,13 +74,13 @@
     retrigger_time="0.125" 
     last_burst_retrigger_time="0.375"
     accuracy_factor="1.0" 
-    sustained_fire_grow_step="0.45" 
+    sustained_fire_grow_step="0.6" 
     sustained_fire_diminish_rate="2.4" 
     spread_range="0.3"
     magazine_size="30" 
     suppressed="0" 
     name="Bren L4 LMG(MOD3)-[Disparity of the Strong]"
-    leave_crouch_accuracy_penalty="0.45"
+    leave_crouch_accuracy_penalty="0.4"
     class="4" 
     burst_shots="5"
     stab_enabled="1"
@@ -119,13 +120,13 @@
         <trail probability="1.0" key="BulletMgTrail" />    
     </projectile>
     <effect class="muzzle" ref="ejection_76251" />
-    <stance state_key="running" accuracy="0.1" />
-    <stance state_key="walking" accuracy="0.3" />
+    <stance state_key="running" accuracy="0.55" />
+    <stance state_key="walking" accuracy="0.65" />
     <stance state_key="crouch_moving" accuracy="0.75" />
     <stance state_key="prone_moving" accuracy="0.75" />
-    <stance state_key="standing" accuracy="0.85" />
-    <stance state_key="crouching" accuracy="0.95" />
-    <stance state_key="prone" accuracy="1.15" />
-    <stance state_key="over_wall" accuracy="1.15" />
+    <stance state_key="standing" accuracy="1.0" />
+    <stance state_key="crouching" accuracy="1.1" />
+    <stance state_key="prone" accuracy="1.2" />
+    <stance state_key="over_wall" accuracy="1.2" />
 </weapon>
 </weapons>
