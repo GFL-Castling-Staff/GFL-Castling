@@ -228,11 +228,11 @@ void stopSoundtrack(Metagame@ m_metagame,string filename) {
 }
 
 void spawnSoldier(Metagame@ metagame, uint count, uint factionId, Vector3 position, string instanceKey) {
-	if (OutOfRange(position))
-	{
-		_log("角色出界 尝试在" + position.toString() + "生成" + instanceKey +"失败");
-		return;
-	}	
+	// if (OutOfRange(position))
+	// {
+	// 	_log("角色出界 尝试在" + position.toString() + "生成" + instanceKey +"失败");
+	// 	return;
+	// }	
 	for (uint i = 0; i < count; ++i) {
 		metagame.getComms().send(
 		"<command " +
@@ -247,11 +247,11 @@ void spawnSoldier(Metagame@ metagame, uint count, uint factionId, Vector3 positi
 }
 
 void spawnSoldier(Metagame@ metagame, uint count, uint factionId, string position, string instanceKey) {
-	if (OutOfRange(stringToVector3(position)))
-	{
-		_log("角色出界 尝试在" + position + "生成" + instanceKey +"失败");
-		return;
-	}	
+	// if (OutOfRange(stringToVector3(position)))
+	// {
+	// 	_log("角色出界 尝试在" + position + "生成" + instanceKey +"失败");
+	// 	return;
+	// }	
 	for (uint i = 0; i < count; ++i) {
 		metagame.getComms().send(
 		"<command " +
@@ -266,11 +266,11 @@ void spawnSoldier(Metagame@ metagame, uint count, uint factionId, string positio
 }
 
 void spawnSoldier(Metagame@ metagame, uint count, uint factionId, Vector3 position, string instanceKey,float spreadX,float spreadY) {
-	if (OutOfRange(position))
-	{
-		_log("角色出界 尝试在" + position.toString() + "生成" + instanceKey +"失败");
-		return;
-	}	
+	// if (OutOfRange(position))
+	// {
+	// 	_log("角色出界 尝试在" + position.toString() + "生成" + instanceKey +"失败");
+	// 	return;
+	// }	
 	for (uint i = 0; i < count; ++i) {
 		Vector3 position_dummy = getRandomOffsetVector(position,spreadX,spreadY);
 		metagame.getComms().send(
@@ -422,11 +422,11 @@ Vector3 getRandomOffsetVector(Vector3 pos,float strike_randX,float strike_randY)
 }
 
 void spawnVehicle(Metagame@ metagame, uint count, uint factionId, Vector3 position, Orientation@ dir, string instanceKey) {
-	if (OutOfRange(position))
-	{
-		_log("载具出界 尝试在" + position.toString() + "生成" + instanceKey +"失败");
-		return;
-	}
+	// if (OutOfRange(position))
+	// {
+	// 	_log("载具出界 尝试在" + position.toString() + "生成" + instanceKey +"失败");
+	// 	return;
+	// }
 	for (uint i = 0; i < count; ++i) {
 		metagame.getComms().send(
 		"<command " +
@@ -441,11 +441,11 @@ void spawnVehicle(Metagame@ metagame, uint count, uint factionId, Vector3 positi
 }
 
 void spawnVehicle(Metagame@ metagame, uint count, uint factionId, string position, Orientation@ dir, string instanceKey) {
-	if (OutOfRange(stringToVector3(position)))
-	{
-		_log("载具出界 尝试在" + position + "生成" + instanceKey +"失败");
-		return;
-	}	
+	// if (OutOfRange(stringToVector3(position)))
+	// {
+	// 	_log("载具出界 尝试在" + position + "生成" + instanceKey +"失败");
+	// 	return;
+	// }	
 	for (uint i = 0; i < count; ++i) {
 		metagame.getComms().send(
 		"<command " +

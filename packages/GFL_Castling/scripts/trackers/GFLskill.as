@@ -1423,6 +1423,38 @@ class GFLskill : Tracker {
 				break;
 			}
 
+			case 51: {// KCCO智能雷 for player
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character is null) return;
+				uint factionid = character.getIntAttribute("faction_id");
+				Vector3 pos_smartgrenade = stringToVector3(event.getStringAttribute("position"));
+				//获取技能影响的敌人数量
+				m_fnum = m_metagame.getFactionCount();
+				array<const XmlElement@> affectedCharacter;
+				for(uint i=0;i<m_fnum;i++) {
+					if(i==factionid) continue;
+					array<const XmlElement@> affectedCharacter2;
+					affectedCharacter2 = getCharactersNearPosition(m_metagame,pos_smartgrenade,i,10.0f);
+					if (affectedCharacter2 is null) continue;
+					for(uint x=0;x<affectedCharacter2.length();x++){
+						affectedCharacter.insertLast(affectedCharacter2[x]);
+					}
+				}
+
+				if (affectedCharacter.length()>0) {
+					uint luckyGuyindex = rand(0,affectedCharacter.length()-1);
+					uint luckyGuyid = affectedCharacter[luckyGuyindex].getIntAttribute("id");
+					const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+					if (luckyGuy is null) return;
+					Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+					CreateProjectile(m_metagame,pos_smartgrenade,luckyGuyPos,"kcco_smartgrenade_player_3.projectile",characterId,factionid,120,0.01);
+				}
+				else {
+					CreateProjectile(m_metagame,pos_smartgrenade,pos_smartgrenade.add(Vector3(0,-10,0)),"kcco_smartgrenade_player_3.projectile",characterId,factionid,120,0.01);
+				}									
+				break;			
+			}
 
             default:
                 break;
