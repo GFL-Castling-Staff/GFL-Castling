@@ -45,7 +45,7 @@ class map_DeadZone_Phase : Tracker {
 
 	// --------------------------------------------
 	void start() {
-
+		m_started = true;
 	}
 
 	// --------------------------------------------
@@ -83,7 +83,7 @@ class map_DeadZone_Phase1 : map_DeadZone_Phase {
 		super(metagame, controller);
 	}
 	void start() {
-		m_started = true;
+		map_DeadZone_Phase::start();
 		XmlElement command("command");
 		command.setStringAttribute("class", "change_game_settings");
 		XmlElement f1("faction");
@@ -107,7 +107,6 @@ class map_DeadZone_Phase1 : map_DeadZone_Phase {
 			"<command class='soldier_ai' faction='1'>" + 
 			"  <parameter class='willingness_to_charge' value='0.4' />" +
 			"</command>");		
-		map_DeadZone_Phase::start();
 		_log("Phase1 starting");
 		playSoundtrack(m_metagame,"Singularity_4.wav");
 	}

@@ -24,7 +24,13 @@
     <inventory encumbrance="12.5" buy_price="450.0" sell_price="450.0" />
     <!--Animations-->
     <animation key="reload" animation_key="DP12MOD3_Reload" />
+    <animation key="reload" animation_key="DP12MOD3_Reload skill" />
+    <animation key="reload" animation_key="DP12MOD3_Reload" />
+    <animation key="reload" animation_key="DP12MOD3_Reload" />
     <animation key="reload" stance_key="prone" animation_key="DP12MOD3_Reload_Prone" />
+    <animation key="reload" stance_key="prone" animation_key="DP12MOD3_Reload_Prone" />
+    <animation key="reload" stance_key="prone" animation_key="DP12MOD3_Reload_Prone" />
+    <animation key="reload" stance_key="prone" animation_key="DP12MOD3_Reload_Prone skill" />
     <!--Sounds-->
     <sound key="fire" fileref="dp12sd_fire_FromCOD16.wav" pitch_variety="0.03" volume="1" />
     <sound key="cycle" fileref="DP12_cycle_FromCOD16.wav" volume="0.8" />
@@ -52,5 +58,5 @@
     <stance state_key="crouching" accuracy="0.9" />
     <stance state_key="prone" accuracy="1.0" />
     <stance state_key="over_wall" accuracy="1.0" />
-	<modifier class="hit_success_probability" value="-0.4" />
+	<modifier class="hit_success_probability" value="-0.3" />
 </weapon>

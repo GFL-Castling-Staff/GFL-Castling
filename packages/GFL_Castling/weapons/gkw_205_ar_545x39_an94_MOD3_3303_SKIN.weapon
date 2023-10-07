@@ -154,7 +154,6 @@
     <stance state_key="crouching" accuracy="0.975" />
     <stance state_key="prone" accuracy="1.0" />
     <stance state_key="over_wall" accuracy="1.0" />
-    <modifier class="detectability" value="-0.2" />
-    <modifier class="speed" value="-0.1" />
+    <modifier class="detectability" value="-0.1" />
 </weapon>
 </weapons>

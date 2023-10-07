@@ -43,7 +43,7 @@
     <animation state_key="stabbing" animation_key="melee, quick knife" />
     <animation state_key="stabbing" animation_key="pistol whip 3" />
     <!--Sounds-->
-    <sound key="fire" fileref="savage99_fire_FromUNKNOWN.wav" pitch_variety="0.05" volume="1.3" />
+    <sound key="fire" fileref="savage99_fire_FromUNKNOWN.wav" pitch_variety="0.05" volume="1.45" />
     <sound key="cycle" fileref="savage99_cycle_FromREALLIFE.wav" volume="0.6"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
     <sound key="reload_one" fileref="savage99_reload_FromREALLIFE.wav" volume="1.0" />
@@ -62,9 +62,9 @@
     <stance state_key="walking" accuracy="0.5" />
     <stance state_key="crouch_moving" accuracy="0.8" />
     <stance state_key="prone_moving" accuracy="0.95" />
-    <stance state_key="standing" accuracy="0.6" />
-    <stance state_key="crouching" accuracy="0.85" />
-    <stance state_key="prone" accuracy="1.0" />
+    <stance state_key="standing" accuracy="0.92" />
+    <stance state_key="crouching" accuracy="1.0" />
+    <stance state_key="prone" accuracy="0.7" />
     <stance state_key="over_wall" accuracy="1.0" />
     <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
     <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />

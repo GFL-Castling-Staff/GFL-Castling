@@ -46,12 +46,12 @@
         <trail probability="1.0" key="bullet_buckshot"/>
     </projectile>
     <!--Accuracy, Movement speed-->
-    <stance state_key="running" accuracy="0.55" />
-    <stance state_key="walking" accuracy="0.65" />
-    <stance state_key="crouch_moving" accuracy="0.6" />
-    <stance state_key="prone_moving" accuracy="0.6" />
-    <stance state_key="standing" accuracy="0.85" />
-    <stance state_key="crouching" accuracy="0.9" />
+    <stance state_key="running" accuracy="0.8" />
+    <stance state_key="walking" accuracy="0.8" />
+    <stance state_key="crouch_moving" accuracy="0.8" />
+    <stance state_key="prone_moving" accuracy="0.8" />
+    <stance state_key="standing" accuracy="0.8"/>
+    <stance state_key="crouching" accuracy="1.2" />
     <stance state_key="prone" accuracy="0.9" />
-    <stance state_key="over_wall" accuracy="0.95" />
+    <stance state_key="over_wall" accuracy="0.9" />
 </weapon>
