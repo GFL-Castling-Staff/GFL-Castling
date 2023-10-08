@@ -159,7 +159,9 @@ class call_event : Tracker {
                                 FairyRequest.setIconTypeKey("call_marker_snipe");
                                 addCastlingMarker(FairyRequest);
                                 m_DummyCallID++;
-                                GFL_event_array.insertLast(GFL_event(characterId,factionId,int(GFL_Event_Index["sniper_fairy"]),stringToVector3(position),1.0,-1.0,flagId));
+                                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                tasker.add(Skill_Fairy_Snipe(m_metagame,1.0,characterId,factionId,stringToVector3(position),FairyRequest));
+                                // GFL_event_array.insertLast(GFL_event(characterId,factionId,int(GFL_Event_Index["sniper_fairy"]),stringToVector3(position),1.0,-1.0,flagId));
                             }
                         }
                         break;

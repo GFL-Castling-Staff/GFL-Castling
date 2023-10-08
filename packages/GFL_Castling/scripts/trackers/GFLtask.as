@@ -8,6 +8,7 @@
 #include "query_helpers2.as"
 #include "GFLhelpers.as"
 #include "GFLairstrike.as"
+#include "fairy_command.as"
 
 //Author: NetherCrow
 
@@ -857,4 +858,91 @@ class Skill_Sf_Boss_Dreamer : DelaySkill {
 
 		m_excute_time++;
 	}
+}
+
+class Skill_M200_Snipe : DelaySkill {
+    protected CastlingMarker@ m_info;
+
+	Skill_M200_Snipe(GameMode@ metagame, float time, int cId,int fId,Vector3 pos,CastlingMarker@ info){
+		super(metagame,time,cId,fId);
+		t_pos = pos;
+        @m_info = info;
+	}
+
+	void start(){
+		m_timeLeft=m_time;
+		m_timeLeft_internal = 0;
+		this.setExcuteLimit(7);
+		this.setInternal(1.3);
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time;return;}
+		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
+		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
+		m_excute_time++;
+		m_timeLeft_internal = m_time_internal;
+		int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,t_pos,40.0f);
+		if(luckyGuyid!=-1){
+			const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+			Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+			Vector3 startPos = getRandomOffsetVector(luckyGuyPos,70.0);
+			startPos = startPos.add(Vector3(0,60,0));
+			CreateDirectProjectile(m_metagame,startPos,luckyGuyPos,"m200_snipe.projectile",m_character_id,m_faction_id,400);
+			playSoundAtLocation(m_metagame,"m200_fire_snipe.wav",m_faction_id,luckyGuyPos,2.0);                  
+		}		
+	}
+
+    bool hasEnded() const {
+		if (m_end) {
+            removeMarker(m_metagame,m_info);
+			return true;
+		}
+		return false;
+	}	
+}
+
+class Skill_Fairy_Snipe : DelaySkill {
+    protected CastlingMarker@ m_info;
+
+	Skill_Fairy_Snipe(GameMode@ metagame, float time, int cId,int fId,Vector3 pos,CastlingMarker@ info){
+		super(metagame,time,cId,fId);
+		t_pos = pos;
+        @m_info = info;
+	}
+
+	void start(){
+		m_timeLeft=m_time;
+		m_timeLeft_internal = 0;
+		this.setExcuteLimit(10);
+		this.setInternal(2.0);
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time;return;}
+		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
+		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
+		m_excute_time++;
+		m_timeLeft_internal = m_time_internal;
+		int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,t_pos,40.0f);
+		if(luckyGuyid!=-1){
+			const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+			Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+			Vector3 startPos = getRandomOffsetVector(luckyGuyPos,70.0);
+			startPos = startPos.add(Vector3(0,60,0));
+			CreateDirectProjectile(m_metagame,startPos,luckyGuyPos,"fairy_snipe.projectile",m_character_id,m_faction_id,240);
+			playSoundAtLocation(m_metagame,"sniperfairy_fire_FromCOD15.wav",m_faction_id,luckyGuyPos,2.2);                  
+		}		
+		if(m_excute_time ==1)
+		{
+			sendFactionMessageKey(m_metagame,m_faction_id,"snipefight");
+		}
+	}
+    bool hasEnded() const {
+		if (m_end) {
+            removeMarker(m_metagame,m_info);
+			return true;
+		}
+		return false;
+	}		
 }

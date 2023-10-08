@@ -9,7 +9,7 @@
 #include "GFLairstrike.as"
 
 //Author: NetherCrow
-// 本系统用于容纳持续性请求
+// 本系统用于容纳持续性请求 已逐步废弃，请使用task替代
 dictionary GFL_Event_Index = {
 
         // Null

@@ -2691,7 +2691,8 @@ class CommandSkill : Tracker {
             FairyRequest.setRange(80.0);
             FairyRequest.setIconTypeKey("call_marker_snipe_m200");
             addCastlingMarker(FairyRequest);
-            GFL_event_array.insertLast(GFL_event(characterId,factionid,"sniper_m200",stringToVector3(target),2.0,-1.0,flagId));
+            tasker.add(Skill_M200_Snipe(m_metagame,1.0,characterId,factionid,stringToVector3(target),FairyRequest));
+            // GFL_event_array.insertLast(GFL_event(characterId,factionid,"sniper_m200",stringToVector3(target),2.0,-1.0,flagId));
             m_DummyCallID++;
         }        
     }
