@@ -264,6 +264,9 @@
 		<character filename="default_gk_pmc.text_lines">
 			<parameter class="default_squad_config_index" value="0" />
 			<parameter class="skydiving_gravity" value="-30.0" />
+			<animation key="crouch still" target_key="crouch still alt 1" add="1"/>
+			<animation key="crouch still" target_key="crouch still alt 2" add="1"/>
+			<animation key="crouch still" target_key="crouch still alt 3" add="1"/>
 		</character>
 		<ai filename="default.ai" />
 		<model file="gkd_xxv_idwmod.xml" />

@@ -1,9 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <character filename="default_base.character">
-
-  <animation key="crouch still" target_key="crouch still alt 1" add="1"/>
-	<animation key="crouch still" target_key="crouch still alt 2" add="1"/>
-	<animation key="crouch still" target_key="crouch still alt 3" add="1"/> 
 	<tag name="meat_man" />
   <parameter class="walking_steer_amount" value="0.45" />
 	<parameter class="running_steer_amount" value="0.63" />
