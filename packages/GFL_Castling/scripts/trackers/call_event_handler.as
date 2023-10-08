@@ -55,10 +55,10 @@ array<string> vehicle_drop_call = {
 array<Call_Cooldown@> CallEvent_cooldown;
 
 class call_event : Tracker {
-	protected Metagame@ m_metagame;
+	protected GameMode@ m_metagame;
     protected int m_DummyCallID=0;
 
-	call_event(Metagame@ metagame) {
+	call_event(GameMode@ metagame) {
 		@m_metagame = @metagame;
 	}
 

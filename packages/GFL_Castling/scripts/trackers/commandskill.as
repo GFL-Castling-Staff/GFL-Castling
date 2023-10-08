@@ -1178,6 +1178,8 @@ class CommandSkill : Tracker {
                         }
                         if(medal_num > 6)
                         {
+                            if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"ppsh41_summon")) return;
+                            addCooldown("ppsh41_summon",60,characterId,modifer);
                             spawnSoldier(m_metagame,1,factionid,c_pos,"smg_21_ppsh_mod3");
                         }
                     }
