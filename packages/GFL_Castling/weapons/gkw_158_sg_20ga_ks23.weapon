@@ -210,7 +210,7 @@
     <weak_hand_hold offset="0.3" />
     <effect class="muzzle" ref="LawMuzzle" />
 	<effect class="muzzle" ref="UpDust" />
-    <projectile file="m1_grenade.projectile"/>
+    <projectile file="ks23_grenade.projectile"/>
 	<ballistics curve_height="6.0" near_far_distance="0.0" speed_estimation_near="9.0" speed_estimation_far="17.0" max_speed="30.0" randomness="0.0" tweak_factor="1.1"/> 
     <!--Accuracy, Movement speed-->
     <stance state_key="running" accuracy="0.6" />

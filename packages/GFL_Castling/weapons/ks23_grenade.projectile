@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="60mm" slot="1" pulldown_in_air="20.0" key="ks23_grenade.projectile">
+<projectile class="grenade" name="Cheremukha HE" slot="1" pulldown_in_air="20.0" key="ks23_grenade.projectile">
     <tag name="grenade"/>
     <result class="blast" radius="7.5" damage="20" push="0.5" decal="1" damage_origin_vehicle="0" faction_compare="not_equal"/>
     <trigger class="impact" />
