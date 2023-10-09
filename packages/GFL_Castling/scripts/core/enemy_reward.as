@@ -400,5 +400,12 @@ array<string> boss_list ={
     "sfw_Weaver",
     "sfw_Justice",
     "sfw_Scarecrow",
-    "sf_cerberus"
+    "sf_cerberus",
+    "alina",
+    "Adeline",
+    "Narciss",
+    "Nimogen",
+    "teal",
+    "kcco_quartz_ranger",
+    "kcco_zircon_squadleader"
 };
