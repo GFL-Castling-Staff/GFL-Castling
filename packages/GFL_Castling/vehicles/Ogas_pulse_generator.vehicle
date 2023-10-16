@@ -5,7 +5,7 @@
 	<tire_set offset="1.0 0.0 -1.0" radius="0.65" />
 	<modifier class="blast_range" value="-2.0" />
 	<control max_speed="20.0" acceleration="6.7" max_reverse_speed="6.0" max_rotation="0.8" max_water_depth="1.9" />
-	<physics max_health="20.0" mass="250.0" extent="4.0 0.0 4.0" offset="0 0.0 0" top_offset="0 1 0" collision_model_pos="0 1.0 0" collision_model_extent="1.2 1.8 1.7" visual_offset="0 0.4 0.0" />
+	<physics max_health="20.0" mass="2500.0" extent="4.0 0.0 4.0" offset="0 0.0 0" top_offset="0 1 0" collision_model_pos="0 1.0 0" collision_model_extent="1.2 1.8 1.7" visual_offset="0 0.4 0.0" />
 	<visual class="chassis" mesh_filename="jammer.mesh" texture_filename="none.png" />
 	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.0 1.8 0.0" />
 	<event key="destroy_xp_reward">

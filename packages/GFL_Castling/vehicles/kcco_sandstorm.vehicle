@@ -25,8 +25,8 @@ character_leave_request_mode="friendly" allow_ai_to_use="1" allow_player_to_use=
 	simulated_speed_factor="1.0" />
 	<physics 
 	max_health="40" 
-	mass="40.0" 
-	broken_mass="20" 
+	mass="300.0" 
+	broken_mass="300" 
 	gravity="-40" 
 	remove_collision_threshold="50.0" 
 	extent="2.6 2.0 6.0" 
