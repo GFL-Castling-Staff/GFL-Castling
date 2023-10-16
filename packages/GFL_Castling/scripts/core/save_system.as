@@ -113,7 +113,7 @@ const XmlElement@ readXML(const Metagame@ metagame, string filename){
 		makeQuery(metagame, array<dictionary> = {
 			dictionary = { {"TagName", "data"}, {"class", "saved_data"}, {"filename", filename}}}));
 	const XmlElement@ xml = metagame.getComms().query(query);
-    if(xml !is null){
+    if(xml is null){
         writeXML(metagame,filename,XmlElement(filename));
         @xml = readXML(metagame,filename);
     }
