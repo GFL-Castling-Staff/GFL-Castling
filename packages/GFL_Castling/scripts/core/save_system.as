@@ -97,13 +97,14 @@ class player_data
 
 const XmlElement@ readFile(const Metagame@ metagame,string name, string profile_hash){
     string filename = ("save_" + profile_hash +".xml" );
-    const XmlElement@ root = readXML(metagame,filename).getFirstChild();
-    if(root is null){
+    const XmlElement@ root_base = readXML(metagame,filename);
+    if(root_base is null){
         _log("readFile is null,create");
         XmlElement@ new_xml = PlayerProfileSave(player_data(name,profile_hash));
         writeXML(metagame,filename,new_xml);
-        @root = readXML(metagame,filename).getFirstChild();
+        @root_base = readXML(metagame,filename);
     }
+    const XmlElement@ root = root_base.getFirstChild();
     return root;
 }
 
@@ -113,21 +114,18 @@ const XmlElement@ readXML(const Metagame@ metagame, string filename){
 			dictionary = { {"TagName", "data"}, {"class", "saved_data"}, {"filename", filename}}}));
 	const XmlElement@ xml = metagame.getComms().query(query);
     if(xml !is null){
-        return xml;
+        _log("readXml is null,create and reRead for filename="+filename+",in location="+location);
+        writeXML(metagame,filename,XmlElement(filename),location);
+        @xml = readXML(metagame,filename,location);
     }
-	else{
-        return null;
-    }
+	return xml;
 }
 
-void writeXML(const Metagame@ metagame, string filename, XmlElement@ xml, string location = "" ){
+void writeXML(const Metagame@ metagame, string filename, XmlElement@ xml, string location = "savegame" ){
 	XmlElement command("command");
 		command.setStringAttribute("class", "save_data");
 		command.setStringAttribute("filename", filename);
-        if(location != "")
-        {
-            command.setStringAttribute("location", location);
-        }
+		command.setStringAttribute("location", location);
 		command.appendChild(xml);
 	metagame.getComms().send(command);
 }
