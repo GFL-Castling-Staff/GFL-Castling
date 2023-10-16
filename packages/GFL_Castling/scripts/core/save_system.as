@@ -69,6 +69,23 @@ class player_data
         m_sid = sid;
     }
 
+    void formatWeaponList()
+    {
+        array<string> new_weapons = {};
+        for (uint i = 0; i < m_weapons.length(); ++i)
+        {
+            if (existKeyinList(m_weapons[i]))
+            {
+                new_weapons.insertLast(m_weapons[i]);
+            }
+            else
+            {
+                _log("风险! 移除未注册武器"+ m_weapons[i] +" 玩家为"+ m_playername);
+            }
+        }
+        m_weapons = new_weapons; 
+    }
+
     int getAllNum() const
     {
         return m_weapons.length();
@@ -97,14 +114,13 @@ class player_data
 
 const XmlElement@ readFile(const Metagame@ metagame,string name, string profile_hash){
     string filename = ("save_" + profile_hash +".xml" );
-    const XmlElement@ root_base = readXML(metagame,filename);
-    if(root_base is null){
+    const XmlElement@ root = readXML(metagame,filename).getFirstChild();
+    if(root is null){
         _log("readFile is null,create");
         XmlElement@ new_xml = PlayerProfileSave(player_data(name,profile_hash));
         writeXML(metagame,filename,new_xml);
-        @root_base = readXML(metagame,filename);
+        @root = readXML(metagame,filename).getFirstChild();
     }
-    const XmlElement@ root = root_base.getFirstChild();
     return root;
 }
 
@@ -120,11 +136,14 @@ const XmlElement@ readXML(const Metagame@ metagame, string filename){
 	return xml;
 }
 
-void writeXML(const Metagame@ metagame, string filename, XmlElement@ xml, string location = "savegame" ){
+void writeXML(const Metagame@ metagame, string filename, XmlElement@ xml, string location = "" ){
 	XmlElement command("command");
 		command.setStringAttribute("class", "save_data");
 		command.setStringAttribute("filename", filename);
-		command.setStringAttribute("location", location);
+        if(location != "")
+        {
+            command.setStringAttribute("location", location);
+        }
 		command.appendChild(xml);
 	metagame.getComms().send(command);
 }
@@ -167,7 +186,7 @@ player_data@ PlayerProfileLoad(const XmlElement@ player_profile){
         if(weapon_key =="") continue;
         output.addWeapon(weapon_key);
     }
-
+    output.formatWeaponList();
     return output;
 }
 

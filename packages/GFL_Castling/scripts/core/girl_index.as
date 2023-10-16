@@ -1419,7 +1419,6 @@ dictionary tdoll_complex_index = {
 dictionary reverse_tdoll_complex_index = {};
 dictionary tdoll_name_dict = {};
 array<girls_information@> all_girls_information = {};
-
 string getKeyfromIndex(string girl_index, string skin_index = "0", string mode="none") {
     string key = girl_index + "-skin_" + skin_index + "-mod_" + mode;
     if (key!=""){
@@ -1448,6 +1447,7 @@ void reverse_tdoll_index_dict_init()
     _log("初始化图鉴词典成功");
     _log("词典正向有" + tdoll_complex_index.getSize() + "个键值对" );
     _log("词典反向有" + reverse_tdoll_complex_index.getSize() + "个键值对" );
+    
 }
 
 class girls_information
@@ -1580,4 +1580,10 @@ bool existKeyinDataSet(string key)
         }
     }    
     return false;
+}
+
+bool existKeyinList(string key)
+{
+    if (reverse_tdoll_complex_index.exists(key)) return true;
+    else return false;
 }
