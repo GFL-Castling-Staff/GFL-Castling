@@ -39,10 +39,10 @@
     <animation state_key="stabbing" 			animation_key="pistol whip 2" />
     <animation state_key="reload"	animation_key="reloading, A OHG 0.75" />
     <animation state_key="reload"	animation_key="reloading2, A OHG 0.75" />
-    <sound key="fire" fileref="pm06_fire_FromWW3.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="pm06_mgz_out_FromWF.wav" volume="0.7" />
-    <sound key="magazine_in" fileref="pm06_mgz_in_FromWF.wav" volume="0.7"/>
-    <sound key="cycle" fileref="pm06_cycle_FromWF.wav" volume="0.7" />
+    <sound key="fire" fileref="pm06_fire_FromCOD10.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="pm06_mgz_out_FromCOD17.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="pm06_mgz_in_FromCOD17.wav" volume="0.8" />
+    <sound key="cycle" fileref="pm06_cycle_FromWF.wav" volume="0.9" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_smg_pm06.xml" />
     <hud_icon filename="gkw_pm06.png" />

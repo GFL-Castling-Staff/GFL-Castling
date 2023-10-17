@@ -29,8 +29,8 @@
     <animation key="cycle" stance_key="prone" animation_key="Brifle1.8p" />
     <animation key="cycle" stance_key="over_wall" animation_key="Brifle1.5" />
     <!--Sounds-->
-    <sound key="fire" fileref="boys_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="cycle" fileref="boys_cycle_FromPOSTSCRIPTUM.wav" />
+    <sound key="fire" fileref="boys_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.4" />
+    <sound key="cycle" fileref="boys_cycle_FromPOSTSCRIPTUM.wav" volume="0.6" />
     <sound key="magazine_out" fileref="boys_mgz_out_FromPOSTSCRIPTUM.wav" />
     <sound key="magazine_in" fileref="boys_mgz_in_FromPOSTSCRIPTUM.wav" />
     <sound key="cycle_out" fileref="boys_cycle_out_FromPOSTSCRIPTUM.wav" volume="0.6" />
