@@ -3730,8 +3730,8 @@
 		<particle bodyAreaHint="1" id="21" invMass="15.000000" name="leftknee" x="5.5" y="14.5" z="2.5" />
 		<particle bodyAreaHint="1" id="12285680" invMass="20.000000" name="rightfoot" x="-4.5" y="1.5" z="2.5" />
 		<particle bodyAreaHint="1" id="22" invMass="20.000000" name="leftfoot" x="5.5" y="1.5" z="2.5" />
-		<stick a="12285680" b="12285328" />
-		<stick a="12285328" b="10" />
+		<stick a="12285328" b="12285680" />
+		<stick a="10" b="12285328" />
 		<stick a="10" b="20" />
 		<stick a="20" b="21" />
 		<stick a="21" b="22" />

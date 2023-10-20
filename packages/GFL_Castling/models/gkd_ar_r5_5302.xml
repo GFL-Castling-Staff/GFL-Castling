@@ -1995,8 +1995,8 @@
 		<particle bodyAreaHint="1" id="21" invMass="15.000000" name="leftknee" x="5.500000" y="13.500000" z="0.500000" />O
 		<particle bodyAreaHint="1" id="12285680" invMass="20.000000" name="rightfoot" x="-4.500000" y="0.500000" z="0.500000" />N
 		<particle bodyAreaHint="1" id="22" invMass="20.000000" name="leftfoot" x="5.500000" y="0.500000" z="0.500000" />L
-		<stick a="12285680" b="12285328" />Y
-		<stick a="12285328" b="10" />G
+		<stick a="12285328" b="12285680" />Y
+		<stick a="10" b="12285328" />G
 		<stick a="10" b="20" />F
 		<stick a="20" b="21" />:
 		<stick a="21" b="22" />C

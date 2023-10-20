@@ -2045,8 +2045,8 @@
         <particle x="5.500000" y="10.500000" z="4.500000" invMass="15.000000" id="21" name="leftknee" bodyAreaHint="1" />
         <particle x="-4.500000" y="-1.500000" z="4.500000" invMass="20.000000" id="12285680" name="rightfoot" bodyAreaHint="1" />
         <particle x="5.500000" y="-1.500000" z="4.500000" invMass="20.000000" id="22" name="leftfoot" bodyAreaHint="1" />
-        <stick a="12285680" b="12285328" />
-        <stick a="12285328" b="10" />
+        <stick a="12285328" b="12285680" />
+        <stick a="10" b="12285328" />
         <stick a="10" b="20" />
         <stick a="20" b="21" />
         <stick a="21" b="22" />
