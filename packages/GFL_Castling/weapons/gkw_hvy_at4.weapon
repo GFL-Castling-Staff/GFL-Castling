@@ -127,10 +127,10 @@
 	<inventory encumbrance="100.0" buy_price="100.0" sell_price="10.0" />
 	<commonness in_stock="0" can_respawn_with="1" />
 	<!--Sounds-->
-    <sound key="fire" fileref="tec9_fire_FromCONTAGION.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="magazine_out" fileref="tec9_mgz_out_FromCOD17.wav" volume="0.6" />
-    <sound key="magazine_in" fileref="tec9_mgz_in_FromCOD17.wav" volume="0.6"/>    
-    <sound key="cycle" fileref="tec9_cycle_FromCOD17.wav" volume="0.6" />
+    <sound key="fire" fileref="tec9_fire_FromCOD19.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="tec9_mgz_out_FromCOD19.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="tec9_mgz_in_FromCOD19.wav" volume="0.6"/>    
+    <sound key="cycle" fileref="tec9_cycle_FromCOD19.wav" volume="0.6" />
 	<!--Model, Icon, Cost-->
     <model filename="gkw_hg_tec9.xml" />
     <hud_icon filename="gkw_tec9.png" />
