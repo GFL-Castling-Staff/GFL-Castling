@@ -11,11 +11,11 @@
 	<parameter class="climbing_down_ladder" value="0.5" />
 	
 	<!-- 背包物品使用开关 -->
-  	<parameter class="can_use_inventory" value="1" />  
+  	<parameter class="can_use_inventory" value="0" />  
 	<!-- 载具开关 -->
 	<parameter class="can_use_vehicles" value="0" /> 
 	<!-- 不详，但是官方狗里有 -->
-	<parameter class="player_aim_to_crosshair" value="0" /> 
+	<!-- <parameter class="player_aim_to_crosshair" value="0" />  -->
 	
 	<!-- 初始速度 -->
 	<parameter class="speed" value="1.0" />
@@ -69,7 +69,7 @@
 	<animation key="change weapon in, reversed" target_key="still, pathfinder" />
 	<animation key="change weapon in, single hand carry" target_key="still, pathfinder" />
 	
-	<animation key="swimming still" target_key="swim still, pathfinder" />
+	<animation key="swimming still" target_key="swimming, pathfinder" />
 	<animation key="swimming forwards" target_key="swimming, pathfinder" />
 	
 	<animation key="reloading" target_key="still, pathfinder" />
