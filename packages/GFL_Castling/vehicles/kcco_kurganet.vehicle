@@ -105,6 +105,15 @@
     <character_slot type="passenger" position="1.5 0.5 -2.8" rotation="3.14" exit_rotation="3.14" hiding="1" animation_key="passenger, boat" marker_offset="0 0.0 0" rotation_range="6.40" />
     <character_slot type="passenger" position="2.5 0.5 -2.8" rotation="3.14" exit_rotation="3.14" hiding="1" animation_key="passenger, boat" marker_offset="0 0.0 0" rotation_range="6.40" />
     <character_slot type="passenger" position="-2.5 0.5 -2.8" rotation="3.14" exit_rotation="3.14" hiding="1" animation_key="passenger, boat" marker_offset="0 0.0 0" rotation_range="6.40" />
+    
+    <event key="spot_rp_reward">
+        <trigger class="spot" />
+        <result class="reward" rp="100.0" />
+    </event>
+    <event key="destroy_rp_reward">
+        <trigger class="destroy" />
+        <result class="reward" rp="500.0" />
+    </event>
 
     <!-- sound handling -->
     <rev_sound filename="tank_rev0.wav" low_pitch="0.5" high_pitch="0.7" low_rev="0.0" high_rev="1.0" volume="0.7" />

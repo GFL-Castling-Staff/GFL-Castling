@@ -52,7 +52,8 @@
 	collision_model_pos="0 3.0 0" 
 	collision_model_extent="2.5 2.0 4.8" 
 	visual_offset="0 0.5 0.0"     
-    drag_offset="-0.1" friction_offset="-0.1"/>
+    drag_offset="-0.1" 
+    friction_offset="-0.1"/>
 
     <turret offset="0 3.0 0" weapon_key="cherub_weapon_1" weapon_offset="0.0 -0.19 2.8" weapon_recoil="0.0" physics_recoil="0.0" rotation_range="0.5" max_rotation_step="0.0009" />
     <turret offset="0 3.0 0" weapon_key="cherub_weapon_2" weapon_offset="0.0 -0.19 2.8" weapon_recoil="0.0" physics_recoil="0.0" rotation_range="0.5" max_rotation_step="0.0009" />

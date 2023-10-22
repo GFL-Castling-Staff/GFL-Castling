@@ -13,7 +13,7 @@
     name="Type 25 disposable rocket launcher" 
     class="3" 
     consume="1"
-    reload_one_at_a_time="1" 
+    reload_one_at_a_time="0" 
     sight_range_modifier="2.5" 
     projectile_speed="120.0" 
     slot="1" 
@@ -41,7 +41,7 @@
     <model filename="88rocket.xml" />
     <ballistics near_far_distance="1000.0" speed_estimation_near="120.0" speed_estimation_far="120.0" max_speed="125.0" randomness="0.0" />
     <projectile file="88_HEAT.projectile" radius="0.3" >
-        <result class="blast"  damage="10.0" radius="8" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+        <result class="blast" damage="20.0" radius="8" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
     </projectile>
     <weak_hand_hold offset="0.3" />
     <hud_icon filename="88rocket.png" />
