@@ -25,7 +25,7 @@
 	<!-- 水里的 -->
 	<parameter class="swimming_gravity" value="5.0" />
 	<!-- 游泳平滑度 -->
-	<parameter class="swimming_steer_amount" value="1.00" />
+	<parameter class="swimming_steer_amount" value="0.1" />
 
 	<parameter class="climbing_end_height_offset" value="0.25" />
 	<parameter class="climbing_with_jump_end_height_offset" value="0.25" />

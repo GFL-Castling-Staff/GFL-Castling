@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="rocket" slot="2" pulldown_in_air="0.5" radius="0.4">
+<projectile key="at4_incendiary.projectile" class="grenade" name="rocket" slot="2" pulldown_in_air="0.5" radius="0.4">
     <tag name="rocket"/>
 	
-    <result class="blast"  damage="30" radius="4.5" decal="1" push="0" character_state="death"  faction_compare="not_equal" damage_origin_vehicle="0"/>
+    <result class="spawn" instance_class="grenade" instance_key="hd_grenade_molotov_damage.projectile" 
+    min_amount="120" max_amount="120" offset="0 4.0 0" position_spread="3 -8" direction_spread="0.0 0.0" />   
     <trigger class="impact" />
     <rotation class="motion" />
     <model mesh_filename="mk153HEAT.xml" />
@@ -37,5 +38,9 @@
     <effect class="result" key="other" copy="terrain" />
 
     <effect class="activated" ref="Propulsion" />
+    
+    <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="6.5" atlas_index="4" layer="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="8.0" atlas_index="0" layer="2" additive="0" />
 
 </projectile>

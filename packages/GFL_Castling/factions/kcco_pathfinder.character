@@ -4,7 +4,7 @@
 
 	<parameter class="swimming_character_y_position_at_water_height" value="1.1" />
 	<!-- 水里浮起来的速度 -->
-	<parameter class="swimming_y_handling_factor" value="0.0001" />
+	<parameter class="swimming_y_handling_factor" value="0.01" />
 	
 	<!-- 上下梯子 -->
 	<parameter class="climbing_up_ladder" value="0.5" />
@@ -22,9 +22,9 @@
 	<!-- 重量，或者引力就像cs月球重力那个 -->
 	<parameter class="gravity" value="-15.0" />
 	<!-- 水里的 -->
-	<parameter class="swimming_gravity" value="5.0" />
+	<parameter class="swimming_gravity" value="8.0" />
 	<!-- 游泳平滑度 -->
-	<parameter class="swimming_steer_amount" value="1.00" />
+	<parameter class="swimming_steer_amount" value="0.05" />
 
 	<parameter class="climbing_end_height_offset" value="0.15" />
 	<parameter class="climbing_with_jump_end_height_offset" value="0.25" />

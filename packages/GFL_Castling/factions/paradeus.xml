@@ -472,7 +472,7 @@
 			<attribute weight="0.5" min="300.0" max="300.0" />
 		</attribute_config>
 	</soldier>
-	<soldier name="parw_commander" spawn_score="0.3" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="parw_commander" spawn_score="0.5" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="commander.ai" />
 		<character filename="paradeus.text_lines">
 			<sound key="death" fileref="kill_sound_kcco_bot01.wav" volume="0.4" pitch_variety="0.025"/>
@@ -549,7 +549,7 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="parw_thrower" spawn_score="3.0" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="parw_thrower" spawn_score="1.0" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="pard_thrower.ai" />
 		<character filename="paradeus.text_lines">
 			<sound key="death" fileref="kill_sound_kcco_bot01.wav" volume="0.4" pitch_variety="0.025"/>
@@ -560,7 +560,7 @@
 			<weapon key="parw_thrower.weapon" enabled="1" probability="1.0" />
 			<projectile key="parw_grenade.projectile" enabled="1" probability="1.0" />
 			<weapon key="parw_rocket.weapon" enabled="1" probability="1.0" />
-			<carry_item key="pard_ar.carry_item" />
+			<carry_item key="vest_15hp_elite.carry_item" />
 			<attribute_config class="xp">
 				<attribute weight="1.0" min="1.0" max="2.0" />
 				<attribute weight="0.75" min="3.0" max="4.0" />
@@ -573,7 +573,7 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="parw_grenadier" spawn_score="0.75" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="parw_grenadier" spawn_score="0.25" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<model filename="pard_thrower_swap.xml" />
 		<ai filename="pard_thrower.ai" >
 			<parameter class="burst_time" value="1.0" />

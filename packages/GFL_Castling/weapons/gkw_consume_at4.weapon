@@ -11,7 +11,7 @@
     can_shoot_crouching="1" 
     can_shoot_prone="0"
     suppressed="0" 
-    name="AT4-[84mm HP]" 
+    name="AT-4-[84mm HP]" 
 	class="3" 
     consume="1"
     reload_one_at_a_time="0" 
@@ -29,7 +29,7 @@
 
     <commonness value="0.1" in_stock="1" can_respawn_with="1" />
     <animation key="recoil" animation_key="recoil, law" />
-    <animation key="reload" animation_key="AT4Reload" />
+    <animation key="reload" animation_key="still, with law" />
     <animation key="hold" animation_key="still, with law" />
     <animation key="hold_on_wall" animation_key="still, with law" />
     <animation state_key="changing_weapon_in" 	animation_key="AT4Reload" />
