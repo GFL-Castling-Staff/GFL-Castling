@@ -51,7 +51,7 @@
     <hud_icon filename="gkw_delisle.png" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
-    <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
+    <projectile file="bullet_rf.projectile" can_be_detected_by_footmen="0">
         <result class="hit" kill_probability="10" kill_decay_start_time="0.75" kill_decay_end_time="0.75" />
         <trail probability="1" key="BulletApTrail_rf"/>
     </projectile>

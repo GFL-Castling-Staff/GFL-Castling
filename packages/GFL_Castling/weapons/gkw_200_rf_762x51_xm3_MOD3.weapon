@@ -20,6 +20,7 @@
         carry_in_two_hands="1"
         burst_shots="1"
         last_burst_retrigger_time="-1"
+        stance_accuracy_rate="2.0"
         slot="0"/>
         <inventory encumbrance="35.0" buy_price="150.0" sell_price="150.0"/>
         <next_in_chain key="gkw_xm3mod3_skill.weapon" share_ammo="1"/>
@@ -36,7 +37,7 @@
         <model filename="gkw_rf_carcano1938.xml"/>
         <hud_icon filename="gkw_xm3mod3.png"/>
         <weak_hand_hold offset="0.3"/>
-        <projectile file="bullet.projectile">
+        <projectile file="bullet_rf.projectile">
             <result class="hit" kill_probability="4.5" kill_probability_offset_on_successful_hit="1.1" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
             <trail probability="1" key="BulletApTrail_rf"/>	
         </projectile>
@@ -110,7 +111,7 @@
         <hud_icon filename="gkw_xm3mod3_skill.png"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <weak_hand_hold offset="0.3"/>
-        <projectile file="bullet.projectile">
+        <projectile file="bullet_rf.projectile">
             <result class="hit" kill_probability="10" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
             <trail probability="1" key="BulletApTrail_rf"/>	
         </projectile>

@@ -6,7 +6,7 @@
         retrigger_time="0.08"
         accuracy_factor="1"
         sustained_fire_grow_step="0.8"
-        sustained_fire_diminish_rate="1.6"
+        sustained_fire_diminish_rate="3.2"
         spread_range="0.5"
         magazine_size="20"
         can_shoot_standing="1"
@@ -19,7 +19,7 @@
         projectile_speed="200"
         barrel_offset="0.6"
         projectiles_per_shot="1"
-        stance_accuracy_rate="1.5"
+        stance_accuracy_rate="2.0"
         stab_enabled="1"
         carry_in_two_hands="1"
         slot="0"/>
@@ -44,7 +44,7 @@
         <model filename="gkw_rf_bm59.xml"/>
         <hud_icon filename="gkw_bm59.png"/>
         <weak_hand_hold offset="0.3"/>
-        <projectile file="bullet.projectile">
+        <projectile file="bullet_rf.projectile">
             <result class="hit" kill_probability="2.6" kill_probability_offset_on_successful_hit="6.75" kill_decay_start_time="0.974" kill_decay_end_time="1.624"/>
             <trail probability="1" key="BulletApTrail_rf"/>
         </projectile>
