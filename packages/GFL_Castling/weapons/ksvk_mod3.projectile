@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4">
-    <result class="blast" radius="2.5" damage="12" push="0.6" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
     <trigger class="impact" />
     <rotation class="motion" />
 
@@ -67,6 +66,6 @@
     <effect class="result" type="splat_map" surface_tag="" size="3.5" atlas_index="0" layer="2" additive="0" />
     <effect class="result" key="character" ref="common_hit_effect_1" lighting="0"/>
     <effect class="result" key="character" ref="common_hit_effect_2" lighting="0" />
-    <trail probability="1.0" key="bullet_new"/>
+    <trail probability="1.0" key="bullet_atrf"/>
 
 </projectile>

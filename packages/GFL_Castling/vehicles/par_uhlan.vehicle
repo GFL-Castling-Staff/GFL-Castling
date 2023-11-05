@@ -38,7 +38,7 @@
     simulated_speed_factor="0.5" />
 
     <physics 
-	max_health="60.0" 
+	max_health="80.0" 
 	blast_damage_threshold="3.9" 
 	mass="500.0" 
 	broken_mass="300"
@@ -49,7 +49,7 @@
 	collision_model_pos="0 0.6 0.1" 
 	collision_model_extent="4.0 3.2 6.5" 
 	visual_offset="0 0.2 0.0" />
-    <modifier class="blast_damage" value="-3.0" />
+    <modifier class="blast_damage" value="-4.0" />
     <!-- one weapon per turret so that only one soldier controls the turret orientation -->
     <!-- similarly, a controllable turret can only exist if it has a weapon -->
     <!-- turrets may have sub-turrets, which may have more weapons, in the future -->

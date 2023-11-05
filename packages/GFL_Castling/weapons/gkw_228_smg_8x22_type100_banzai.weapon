@@ -17,7 +17,8 @@
      projectile_speed="800.0"  
      barrel_offset="0.01"  
 	 projectiles_per_shot="1"
-     spread_range="0.0005"
+     spread_range="3"
+     stab_enabled="1"
 	/>
     <next_in_chain key="gkw_type100_1.weapon" share_ammo="0" />
     <commonness value="0" in_stock="1" can_respawn_with="1" />
@@ -28,13 +29,12 @@
     <animation state_key="crouching" animation_key="crouch, hold, hip fire" />
     <animation state_key="crouch_moving" animation_key="crouching forwards, hip fire" />
     <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />
-    <animation state_key="reload" animation_key="reloading, microgun" volume="0.7" />
+    <animation state_key="reload" animation_key="melee, bayonet"/>
     <animation state_key="hold_on_wall" animation_key="hold, hip fire" />
     <animation state_key="still_against_wall" 	animation_key="hold, hip fire" />
     <animation state_key="walking" animation_key="walking, hip fire" />
     <animation state_key="running" animation_key="running, bayonet" />
     <animation state_key="stabbing"	animation_key="melee, bayonet" />
-    <!-- <sound key="fire" fileref="fireworks_woosh.wav" pitch_variety="0.05" volume="1.0"/> -->
     <sound key="fire" fileref="explosion_FromBF1.wav" pitch_variety="0.1" volume="1.3" />
     <sound key="magazine_out" fileref="portable_mortar_reload.wav" volume="0.7" />
     <sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
