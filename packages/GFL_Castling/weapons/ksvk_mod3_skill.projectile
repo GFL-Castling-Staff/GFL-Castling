@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="bullet" name="AP bullet" key="ksvk_mod3_skill.projectile" slot="1" pulldown_in_air="4">
-    <result class="spawn" instance_class="grenade" instance_key="blast_shard_ksvk_skill.projectile" min_amount="15" max_amount="15" offset="0 1 0" position_spread="0.4 -1" direction_spread="0.3 0.3" />
+    <result class="spawn" instance_class="grenade" instance_key="blast_shard_ksvk_skill.projectile" min_amount="30" max_amount="30" offset="0 1.5 0" position_spread="3 0.5" direction_spread="0 0" />
     <trigger class="impact" />
     <rotation class="motion" />
 

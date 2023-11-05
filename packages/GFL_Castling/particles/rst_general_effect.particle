@@ -1479,6 +1479,67 @@ particle_system alert_center_redlight
 	}
 }
 
+particle_system general_weapon_muzzle_crossfire
+{
+	quota 200
+	material general_muzzle_01
+	particle_width 4.5
+	particle_height 4.5
+	renderer billboard
+	billboard_type oriented_self
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 200
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 0.06
+		duration 0.01
+	}
+	affector Scaler
+	{
+		rate 100
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 0.2
+		time1 0.5
+		colour1 1 1 1 0.15
+		time2 1
+		colour2 0 0 0 0
+	}
+}
+
+particle_system general_weapon_muzzle_crossfire_smoke : general_weapon_muzzle_crossfire
+{
+	material general_muzzle_02
+	emitter Point
+	{
+		angle 15
+		colour 1 1 1 1
+		direction 0 1 0
+		position 0 0 0
+		velocity 1
+		time_to_live 0.4
+	}
+	affector Scaler
+	{
+		rate 10
+	}
+	affector ColourInterpolator
+	{
+	}
+}
+
 
 --------------------------------------material-----------------------------------
 material alpha_blend_base{
@@ -1667,4 +1728,18 @@ material qiliu_circle : add_base
     pass{
         texture_unit{
             texture qiliu_circle.png 	
+}}}}
+material general_muzzle_01 : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture general_muzzle_01.png 	
+}}}}
+material general_muzzle_02 : alpha_blend_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture general_muzzle_02.png 	
 }}}}

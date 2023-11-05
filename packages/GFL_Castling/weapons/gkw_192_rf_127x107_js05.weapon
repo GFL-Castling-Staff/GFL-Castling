@@ -4,8 +4,8 @@
     <specification 
 	retrigger_time="-1" 
 	accuracy_factor="1" 
-	sustained_fire_grow_step="3.5" 
-	sustained_fire_diminish_rate="0.7" 
+	sustained_fire_grow_step="3.0" 
+	sustained_fire_diminish_rate="1.5" 
 	magazine_size="3" 
 	can_shoot_standing="0" 
 	can_shoot_crouching="1"
@@ -16,14 +16,17 @@
 	burst_shot="1" 
 	reload_one_at_a_time="0" 
 	sight_range_modifier="2.25" 
-	projectile_speed="230.21" 
+	projectile_speed="240" 
 	barrel_offset="0.4" 
-	projectiles_per_shot="4" />
-    <inventory encumbrance="35.0" buy_price="300.0" sell_price="200.0" />
+	projectiles_per_shot="1" />
+    <inventory encumbrance="35.0" buy_price="300.0" sell_price="300.0" />
     <!--Animations-->
-    <animation key="cycle" animation_key="Brifle1.8" />
-    <animation key="cycle" stance_key="prone" animation_key="Brifle1.8p" />
-    <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
+    <animation key="cycle" animation_key="Brifle1.5" />
+    <animation key="cycle" stance_key="over_wall" animation_key="Brifle1.3" />
+    <animation key="cycle" stance_key="prone" animation_key="Brifle1.3p" />
+    <animation key="reload" stance_key="prone" animation_key="reloading, magazine rifle 1.2" />
+    <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
+
     <!--Sounds-->
     <sound key="fire" fileref="js05_fire_FromCOD14.wav" pitch_variety="0.05" volume="1.7" />
     <sound key="cycle" fileref="js05_cycle_FromCOD17.wav" volume="0.6" />
@@ -35,20 +38,22 @@
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_js05.xml" />
     <hud_icon filename="gkw_js05.png" />
-    <!-- <inventory encumbrance="10.0" price="4.0" /> -->
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
-    <projectile file="ntw.projectile" >
-        <result class="blast" damage="10.0" radius="2.5" decal="1" push="0.6" character_state="death" faction_compare="not_equal" />
+    <projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.5">
+        <result class="spawn" instance_class="projectile" instance_key="sub_damage_js05.projectile" min_amount="7" max_amount="7" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0" />
+        <trigger class="impact" />
+        <rotation class="motion" />
+        <collision class="sticky" />
     </projectile>
     <!--Accuracy, Movement speed-->
-    <stance state_key="running" accuracy="0.9" />
-    <stance state_key="walking" accuracy="0.9" />
-    <stance state_key="crouch_moving" accuracy="1.1" />
-    <stance state_key="prone_moving" accuracy="1.1" />
-    <stance state_key="standing" accuracy="1.1"/>
-    <stance state_key="crouching" accuracy="1.1" />
-    <stance state_key="prone" accuracy="1.1" />
-    <stance state_key="over_wall" accuracy="1.1" />
+    <stance state_key="running" accuracy="0.1" />
+    <stance state_key="walking" accuracy="0.5" />
+    <stance state_key="crouch_moving" accuracy="0.5" />
+    <stance state_key="prone_moving" accuracy="0.8" />
+    <stance state_key="standing" accuracy="1.0"/>
+    <stance state_key="crouching" accuracy="1.0" />
+    <stance state_key="prone" accuracy="1.3" />
+    <stance state_key="over_wall" accuracy="1.3" />
     <modifier class="speed" value="-0.15" />
 </weapon>

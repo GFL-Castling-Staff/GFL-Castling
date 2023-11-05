@@ -1,171 +1,238 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 体素模型由Hosiaya提供 -->
 <weapons>
-<weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_ksvkmod3_3805.weapon">
+    <weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_ksvkmod3_3805.weapon">
 
 
-    <!--Weapon specifications-->
+        <!--Weapon specifications-->
+        
+        <specification 
+        retrigger_time="-1" 
+        accuracy_factor="1" 
+        sustained_fire_grow_step="3.0" 
+        sustained_fire_diminish_rate="2.0" 
+        magazine_size="5" 
+        can_shoot_standing="0" 
+        can_shoot_crouching="1"
+        suppressed="0" 
+        name="KSVK(MOD3)-[Darkside Moonwalk]" 
+        class="2"
+        reload_one_at_a_time="0" 
+        sight_range_modifier="2.25" 
+        projectile_speed="255" 
+        barrel_offset="0.6" 
+        projectiles_per_shot="1"
+        stance_accuracy_rate="2.5"
+        spread_range="0.4"
+        />
+        <inventory encumbrance="35.0" buy_price="450.0" sell_price="300.0" />	
+        <next_in_chain key="gkw_ksvkmod3_3805_skill.weapon" share_ammo="0" />
+        <!--Animations-->
+        <animation state_key="hold_casual" animation_key="dancing, kazachok" />
+        <animation key="cycle" animation_key="Brifle1.5" />
+        <animation key="cycle" stance_key="over_wall" animation_key="Brifle1.3" />	
+        <animation key="cycle" stance_key="prone" animation_key="Brifle1.3p" />	
+        <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
+        <!--Sounds-->
+        <sound key="fire" fileref="ksvk_fire_FromSURVARIUM.wav" volume="1.5" />    
+        <sound key="magazine_out" fileref="ksvk_mgz_out_FromSURVARIUM.wav" volume="0.8"/>
+        <sound key="magazine_in" fileref="ksvk_mgz_in_FromSURVARIUM.wav" volume="0.8"/>
+        <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
+        <sound key="cycle_in" fileref="ksvk_cycle_in_FromSURVARIUM.wav" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM.wav" volume="0.8"/>
+        <!--语音，以及降低频率用正常音效-->
+        <sound key="cycle_out" fileref="KSVK_PHRASE_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_TIP_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_BUILDOVER_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_FEED_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_FORMATION_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_OPERATIONBEGIN_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_BLACKACTION_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_BREAK_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_RETREAT_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_SKILL1_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_SKILL2_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_SKILL3_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_LOWMOOD_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        
+        <sound class="impact" fileref="rifle_drop.wav" />
     
-    <specification 
-	retrigger_time="2.0" 
-	accuracy_factor="1" 
-	sustained_fire_grow_step="3.0" 
-	sustained_fire_diminish_rate="2.0" 
-	magazine_size="5" 
-	can_shoot_standing="0" 
-	can_shoot_crouching="1"
-	suppressed="0" 
-	name="KSVK(MOD3)-[Darkside Moonwalk]" 
-	class="2"
-	reload_one_at_a_time="0" 
-	sight_range_modifier="2.25" 
-	projectile_speed="255" 
-	barrel_offset="0.6" 
-	projectiles_per_shot="4" />
-    <inventory encumbrance="35.0" buy_price="450.0" sell_price="300.0" />	
-    <next_in_chain key="gkw_ksvkmod3_3805_skill.weapon" share_ammo="0" />
-	<!--Animations-->
-	
 
-  	<animation state_key="hold_casual"			animation_key="dancing, kazachok" />
-    <animation key="cycle" animation_key="Brifle1.8" />
-	<animation key="cycle" stance_key="prone" animation_key="Brifle1.8p" />	
-    <animation key="reload" animation_key="reloading, magazine rifle 2.1" />	
-	
-	<!--Sounds-->
-	
-    <sound key="fire" fileref="ksvk_fire_FromSURVARIUM.wav" volume="1.4" />
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.6"/>
-    <sound key="magazine_out" fileref="ksvk_mgz_out_FromSURVARIUM.wav" volume="0.5"/>
-    <sound key="magazine_in" fileref="ksvk_mgz_in_FromSURVARIUM.wav" volume="0.5"/>
-    <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM.wav" volume="0.1"/>
-    <sound key="cycle_in" fileref="ksvk_cycle_in_FromSURVARIUM.wav" volume="0.5"/>
-    <sound class="impact" fileref="rifle_drop.wav" />
-   
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="KSVKMod_BUILDOVER_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="KSVKMod_FEED_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="KSVKMod_FORMATION_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="KSVKMod_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="KSVKMod_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="KSVKMod_SKILL1_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="KSVKMod_SKILL2_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="KSVKMod_SKILL3_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="KSVKMod_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="KSVKMod_MEET_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="KSVKMod_WIN_JP.wav" volume="0.8" pitch_variety="0"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
-	<!--Model, Icon, Cost-->
-   
-    <model filename="gkw_rf_ksvk_3805.xml" />
-    <hud_icon filename="gkw_ksvk_3805.png" />
-    <capacity value="1" source="rank" source_value="0.0" />
-    <commonness value="0" in_stock="0" />
-	
-	<!--Ballistics-->
-	
-
-    <weak_hand_hold offset="0.3" />
-    <projectile file="ksvk_mod3.projectile" />
-    <!--Accuracy, Movement speed-->
- 	<stance state_key="running" accuracy="1.0" />   
-	<stance state_key="walking" accuracy="1.0" />
-    <stance state_key="crouch_moving" accuracy="1.0" />
-    <stance state_key="prone_moving" accuracy="1.0" />
-    <stance state_key="standing" accuracy="1.0"/>
-    <stance state_key="crouching" accuracy="1.0" />
-    <stance state_key="prone" accuracy="1.0" />
-    <stance state_key="over_wall" accuracy="1.0" />  
-    <capacity value="1" source="rank" source_value="0.0" />
+        <!--Model, Icon, Cost-->
     
-</weapon>
-<weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_ksvkmod3_3805_skill.weapon">
+        <model filename="gkw_rf_ksvk_3805.xml" />
+        <hud_icon filename="gkw_ksvk_3805.png" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <commonness value="0" in_stock="0" />
+        
+        <!--Ballistics-->
+        <weak_hand_hold offset="0.3" />
+        <projectile file="ksvk_mod3.projectile">
+            <result class="spawn" instance_class="projectile" instance_key="sub_damage_ksvkmod3.projectile" min_amount="10" max_amount="10" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0" />
+            <trigger class="impact"/>
+            <rotation class="motion" />
+            <collision class="sticky" />
+        </projectile>
+        <effect class="muzzle" ref="at_bullet_smoke_trail" lighting="0"/> 
+        <effect class="muzzle" ref="general_weapon_muzzle_crossfire" lighting="0"/> 
+        <effect class="muzzle" ref="general_weapon_muzzle_crossfire_smoke" lighting="0"/> 
+        <effect class="muzzle" ref="ejection_50BMG" />
+        <!--Accuracy, Movement speed-->
+        <stance state_key="running" accuracy="0.15" />
+        <stance state_key="walking" accuracy="0.7" />
+        <stance state_key="crouch_moving" accuracy="0.6" />
+        <stance state_key="prone_moving" accuracy="0.8" />
+        <stance state_key="standing" accuracy="1.05"/>
+        <stance state_key="crouching" accuracy="1.1" />
+        <stance state_key="prone" accuracy="0.98" />
+        <stance state_key="over_wall" accuracy="1.2" />
+        <modifier class="speed" value="-0.1" />
+    </weapon>
+    <weapon file="heavy_anti_materiel_rifle.animation_base" key="gkw_ksvkmod3_3805_skill.weapon">
 
 
-    <!--Weapon specifications-->
+        <!--Weapon specifications-->
+        <specification 
+        retrigger_time="-1"  
+        accuracy_factor="1" 
+        sustained_fire_grow_step="3.0" 
+        sustained_fire_diminish_rate="2.0" 
+        magazine_size="5" 
+        can_shoot_standing="0" 
+        can_shoot_crouching="1"
+        suppressed="0" 
+        name="KSVK(MOD3)-[Darkside Moonwalk]-[Concussive Blast]" 
+        class="2"
+        sight_range_modifier="2.25" 
+        reload_one_at_a_time="0" 
+        projectile_speed="200" 
+        barrel_offset="0.6" 
+        projectiles_per_shot="1"
+        stance_accuracy_rate="2.0"
+        spread_range="0.4"        
+        />
+        <inventory encumbrance="35.0" buy_price="450.0" sell_price="300.0" />	
+        <next_in_chain key="gkw_ksvkmod3_3805.weapon" share_ammo="0" />
+        <!--Animations-->
+        <animation key="cycle" animation_key="Brifle1.8" />
+        <animation key="cycle" stance_key="prone" animation_key="Brifle1.8p" />	
+        <animation state_key="hold_casual" animation_key="dancing, kazachok" />
+        <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
+        <!--Sounds-->
+        <sound key="fire" fileref="ksvkmod3skill_fire_FromAPEX.wav" volume="1.3" />
+        <sound key="magazine_out" fileref="ksvk_mgz_out_FromSURVARIUM.wav" volume="0.8"/>
+        <sound key="magazine_in" fileref="ksvk_mgz_in_FromSURVARIUM.wav" volume="0.8"/>
+        <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
+        <sound key="cycle_in" fileref="ksvk_cycle_in_FromSURVARIUM.wav" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM.wav" volume="0.8"/>
+        <!--语音，以及降低频率用正常音效-->
+        <sound key="cycle_out" fileref="KSVK_PHRASE_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_TIP_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_BUILDOVER_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_FEED_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_FORMATION_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_OPERATIONBEGIN_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_BLACKACTION_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_GOATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_BREAK_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_RETREAT_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_SKILL1_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_SKILL2_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_SKILL3_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="KSVK_LOWMOOD_JP.wav" volume="0.8" pitch_variety="0"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
+        <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM" volume="0.8"/>
     
-    <specification 
-	retrigger_time="-1"  
-	accuracy_factor="1" 
-	sustained_fire_grow_step="3.0" 
-	sustained_fire_diminish_rate="2.0" 
-	magazine_size="5" 
-	can_shoot_standing="0" 
-	can_shoot_crouching="1"
-	suppressed="0" 
-	name="KSVK(MOD3)-[Darkside Moonwalk]-[Concussive Blast]" 
-	class="2"
-	sight_range_modifier="2.5" 
-	reload_one_at_a_time="0" 
-	projectile_speed="200" 
-	barrel_offset="0.6" 
-	projectiles_per_shot="1" />
-    <inventory encumbrance="35.0" buy_price="450.0" sell_price="300.0" />	
-    <next_in_chain key="gkw_ksvkmod3_3805.weapon" share_ammo="0" />
-	<!--Animations-->
-	
-    <animation key="cycle" animation_key="Brifle1.8" />
-	<animation key="cycle" stance_key="prone" animation_key="Brifle1.8p" />	
-  	<animation state_key="hold_casual" animation_key="dancing, kazachok" />
-    <animation key="reload" animation_key="reloading, magazine rifle 2.1" />
-	
-	
-	<!--Sounds-->
-	
-     <sound key="fire" fileref="ksvkmod3skill_fire_FromAPEX.wav" volume="1.3" />
-    <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.6"/>
-    <sound key="magazine_out" fileref="ksvk_mgz_out_FromSURVARIUM.wav" volume="0.5"/>
-    <sound key="magazine_in" fileref="ksvk_mgz_in_FromSURVARIUM.wav" volume="0.5"/>
-    <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM.wav" volume="0.1"/>
-    <sound key="cycle_in" fileref="ksvk_cycle_in_FromSURVARIUM.wav" volume="0.5"/>
-    <sound class="impact" fileref="rifle_drop.wav" />
-   
-	<!--Model, Icon, Cost-->
-   
-    <model filename="gkw_rf_ksvk_3805.xml" />
-    <hud_icon filename="gkw_ksvk_3805.png" />
-    <capacity value="1" source="rank" source_value="0.0" />
-    <commonness value="0" in_stock="0" />
-	<!--Ballistics-->
-	
-
-    <weak_hand_hold offset="0.3" />
-    <projectile file="ksvk_mod3_skill.projectile" />
-
-
-    <!--Accuracy, Movement speed-->
- 	<stance state_key="running" accuracy="1.0" />   
-	<stance state_key="walking" accuracy="1.0" />
-    <stance state_key="crouch_moving" accuracy="1.0" />
-    <stance state_key="prone_moving" accuracy="1.0" />
-    <stance state_key="standing" accuracy="1.0"/>
-    <stance state_key="crouching" accuracy="1.0" />
-    <stance state_key="prone" accuracy="1.0" />
-    <stance state_key="over_wall" accuracy="1.0" />  
-    <capacity value="1" source="rank" source_value="0.0" />
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <!--Model, Icon, Cost-->
     
-    <modifier class="speed" value="-0.2" /> 
-</weapon>
+        <model filename="gkw_rf_ksvk_3805.xml" />
+        <hud_icon filename="gkw_ksvk_3805.png" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <commonness value="0" in_stock="0" />
+        <!--Ballistics-->
+        <weak_hand_hold offset="0.3" />
+        <projectile file="ksvk_mod3_skill.projectile" />
+        <effect class="muzzle" ref="at_bullet_smoke_trail" lighting="0"/> 
+        <effect class="muzzle" ref="general_weapon_muzzle_crossfire" lighting="0"/> 
+        <effect class="muzzle" ref="general_weapon_muzzle_crossfire_smoke" lighting="0"/> 
+        <effect class="muzzle" ref="ejection_50BMG" />
+        <!--Accuracy, Movement speed-->
+        <stance state_key="running" accuracy="0.1" />
+        <stance state_key="walking" accuracy="0.7" />
+        <stance state_key="crouch_moving" accuracy="0.6" />
+        <stance state_key="prone_moving" accuracy="0.8" />
+        <stance state_key="standing" accuracy="1.05"/>
+        <stance state_key="crouching" accuracy="1.1" />
+        <stance state_key="prone" accuracy="0.98" />
+        <stance state_key="over_wall" accuracy="1.2" />
+        <modifier class="speed" value="-0.15" />
+    </weapon>
 </weapons>

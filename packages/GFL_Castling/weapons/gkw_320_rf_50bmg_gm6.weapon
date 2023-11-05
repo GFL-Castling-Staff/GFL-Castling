@@ -18,6 +18,8 @@
 	projectile_speed="240" 
 	barrel_offset="0.4" 	
 	projectiles_per_shot="1"
+	stance_accuracy_rate="2.0"
+	spread_range="0.5"
 	burst_shots="1"/>
 	<!--Animations-->
 	<inventory encumbrance="35.0" buy_price="300.0" sell_price="200.0" />
@@ -33,18 +35,21 @@
 	<hud_icon filename="gkw_gm6lynx.png" />
 	<!--Ballistics-->
 	<weak_hand_hold offset="0.3" />
-	<projectile file="ntw.projectile">
-		<result class="blast" damage="8" radius="2.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
-	</projectile>
+    <projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="0" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.5">
+        <result class="spawn" instance_class="projectile" instance_key="sub_damage_gm6.projectile" min_amount="9" max_amount="9" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0" />
+        <trigger class="impact" />
+        <rotation class="motion" />
+        <collision class="sticky" />
+    </projectile>
 	<effect class="muzzle" ref="ejection_50BMG" />
 	<!--Accuracy, Movement speed-->
-    <stance state_key="running" accuracy="0.5" />
-    <stance state_key="walking" accuracy="0.55" />
-    <stance state_key="crouch_moving" accuracy="0.55" />
-    <stance state_key="standing" accuracy="0.95" />
-    <stance state_key="crouching" accuracy="0.98" />
-    <stance state_key="prone" accuracy="1.0" /> 
-    <stance state_key="prone_moving" accuracy="0.5" />
-    <stance state_key="over_wall" accuracy="1" />
+    <stance state_key="running" accuracy="0.15" />
+    <stance state_key="walking" accuracy="0.65" />
+    <stance state_key="crouch_moving" accuracy="0.5" />
+    <stance state_key="prone_moving" accuracy="0.8" />
+    <stance state_key="standing" accuracy="1.0"/>
+    <stance state_key="crouching" accuracy="1.1" />
+    <stance state_key="prone" accuracy="0.95" />
+    <stance state_key="over_wall" accuracy="1.1" />
 	<modifier class="speed" value="-0.15" />
 </weapon>

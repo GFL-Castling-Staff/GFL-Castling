@@ -253,3 +253,11 @@ material wand_smoke : alpha_blend_base
 		}
 	}
 }
+
+material rx1_trail : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture rx1_trail.png 	
+}}}}

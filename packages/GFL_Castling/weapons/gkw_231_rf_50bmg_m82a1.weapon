@@ -1,134 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
 	<weapon key="gkw_m82a1.weapon" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<tag name="rifle" />
-	<tag name="antiarmor" />
-	<!--Weapon specifications-->
-	<specification 
-	retrigger_time="-1.0" 
-	last_burst_retrigger_time="0.2"
-	accuracy_factor="1.0" 
-	sustained_fire_grow_step="3.0" 
-	sustained_fire_diminish_rate="1.5" 
-	magazine_size="10" 
-	can_shoot_standing="0" 
-	can_shoot_crouching="1"
-	can_shoot_prone="1"
-	suppressed="0" 
-	name="Barrett M82A1" 
-	class="4" 
-	stance_accuracy_rate="0.85"
-	reload_one_at_a_time="0" 
-	sight_range_modifier="2.25" 
-	projectile_speed="210" 
-	barrel_offset="0.6" 
-	projectiles_per_shot="1"
-	spread_range="0.5"
-	burst_shots="1"/>
-	<commonness value="0.02" in_stock="0" can_respawn_with="1" />
-    <inventory encumbrance="35.0" buy_price="300.0" sell_price="200.0"/>
-	<capacity value="1" source="rank" source_value="0.1" />
-	<!--Animations-->
-	<next_in_chain key="gkw_m82a1_skill.weapon" share_ammo="1" />
-	<animation state_key="recoil" animation_key="recoil1, big" />
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone" />
-	<animation key="hold" animation_key="still, heavy weapon" />
-	<animation state_key="hold_casual"	animation_key="still, carrying load" />
-    <animation state_key="running" animation_key="running, line infantry" />
-    <animation state_key="walking" animation_key="walking, line infantry" />
-    <animation state_key="walking_backwards" animation_key="walking, line infantry" />
-    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
-	<animation state_key="stabbing" animation_key="stabbing, bat" />
-	<animation key="reload" animation_key="reloading, magazine rifle 2.1" />
-	<!--Sounds-->
-	<sound key="fire" fileref="m82a1_fire_FromSAM4.wav" pitch_variety="0.05" volume="1.2" />
-	<sound key="cycle" fileref="m82a1_cycle_FromCOD16.wav" volume="0.4"/>
-	<sound key="magazine_out" fileref="m82a1_mgz_out_FromCOD16.wav" volume="0.4"/>
-	<sound key="magazine_in" fileref="m82a1_mgz_in_FromCOD16.wav" volume="0.4"/>
-	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-	<!--Model, Icon, Cost-->
-	<model filename="gkw_rf_m82a1.xml" />
-	<hud_icon filename="gkw_m82a1.png" />
-	<!--Ballistics-->
-	<weak_hand_hold offset="0.3" />
-	<projectile file="ntw.projectile">
-		<result class="blast" damage="17.5" radius="3.5" decal="1" push="0.25" character_state="death" faction_compare="not_equal"/>
-	</projectile>
-	<!--Accuracy, Movement speed-->
-	<stance state_key="running" accuracy="0.3" />
-    <stance state_key="walking" accuracy="0.5" />
-    <stance state_key="crouch_moving" accuracy="0.5" />
-	<stance state_key="prone_moving" accuracy="0.5" />	
-    <stance state_key="standing" accuracy="1.0" />
-    <stance state_key="crouching" accuracy="0.95" />
-    <stance state_key="prone" accuracy="1.1" /> 
-    <stance state_key="over_wall" accuracy="1" />
+		<tag name="rifle" />
+		<tag name="antiarmor" />
+		<!--Weapon specifications-->
+		<specification 
+		retrigger_time="-1.0" 
+		last_burst_retrigger_time="0.2"
+		accuracy_factor="1.0" 
+		sustained_fire_grow_step="3.0" 
+		sustained_fire_diminish_rate="1.5" 
+		magazine_size="10" 
+		can_shoot_standing="0" 
+		can_shoot_crouching="1"
+		can_shoot_prone="1"
+		suppressed="0" 
+		name="Barrett M82A1" 
+		class="4" 
+		reload_one_at_a_time="0" 
+		sight_range_modifier="2.25" 
+		projectile_speed="210" 
+		barrel_offset="0.6" 
+		projectiles_per_shot="1"
+		spread_range="0.5"
+		stance_accuracy_rate="1.5"
+		burst_shots="1"/>
+		<commonness value="0.2" in_stock="0" can_respawn_with="1" />
+		<inventory encumbrance="35.0" buy_price="300.0" sell_price="300.0"/>
+		<capacity value="1" source="rank" source_value="0.1" />
+		<!--Animations-->
+		<next_in_chain key="gkw_m82a1_skill.weapon" share_ammo="1" />
+		<animation state_key="recoil" animation_key="recoil1, big" />
+		<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone" />
+		<animation key="hold" animation_key="still, heavy weapon" />
+		<animation state_key="hold_casual"	animation_key="still, carrying load" />
+		<animation state_key="running" animation_key="running, line infantry" />
+		<animation state_key="walking" animation_key="walking, line infantry" />
+		<animation state_key="walking_backwards" animation_key="walking, line infantry" />
+		<animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+		<animation state_key="stabbing" animation_key="stabbing, bat" />
+		<animation key="reload" animation_key="reloading, magazine rifle 2.1" />
+		<!--Sounds-->
+		<sound key="fire" fileref="m82a1_fire_FromSAM4.wav" pitch_variety="0.05" volume="1.2" />
+		<sound key="cycle" fileref="m82a1_cycle_FromCOD16.wav" volume="0.4"/>
+		<sound key="magazine_out" fileref="m82a1_mgz_out_FromCOD16.wav" volume="0.4"/>
+		<sound key="magazine_in" fileref="m82a1_mgz_in_FromCOD16.wav" volume="0.4"/>
+		<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+		<!--Model, Icon, Cost-->
+		<model filename="gkw_rf_m82a1.xml" />
+		<hud_icon filename="gkw_m82a1.png" />
+		<!--Ballistics-->
+		<weak_hand_hold offset="0.3" />
+		<projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.5">
+			<result class="spawn" instance_class="projectile" instance_key="sub_damage_m82a1.projectile" min_amount="9" max_amount="9" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0" />
+			<trigger class="impact" />
+			<rotation class="motion" />
+			<collision class="sticky" />
+		</projectile>
+		<effect class="muzzle" ref="at_bullet_smoke_trail" lighting="0"/> 
+		<effect class="muzzle" ref="general_weapon_muzzle_crossfire" lighting="0"/> 
+		<effect class="muzzle" ref="general_weapon_muzzle_crossfire_smoke" lighting="0"/> 
+		<effect class="muzzle" ref="ejection_50BMG" />
+		<!--Accuracy, Movement speed-->
+		<stance state_key="running" accuracy="0.15" />
+		<stance state_key="walking" accuracy="0.65" />
+		<stance state_key="crouch_moving" accuracy="0.5" />
+		<stance state_key="prone_moving" accuracy="0.8" />
+		<stance state_key="standing" accuracy="1.0"/>
+		<stance state_key="crouching" accuracy="0.95" />
+		<stance state_key="prone" accuracy="1.2" />
+		<stance state_key="over_wall" accuracy="1.2" />
 	</weapon>
+
 	<weapon key="gkw_m82a1_skill.weapon" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<tag name="rifle" />
-	<tag name="antiarmor" />
-	<!--Weapon specifications-->
-	<specification 
-	retrigger_time="-1.0" 
-	last_burst_retrigger_time="0.2"
-	accuracy_factor="1" 
-	sustained_fire_grow_step="3.0" 
-	sustained_fire_diminish_rate="1.2" 
-	magazine_size="10" 
-	stance_accuracy_rate="0.85"
-	can_shoot_standing="0" 
-	can_shoot_crouching="1"
-	can_shoot_prone="1"
-	suppressed="1" 
-	name="Barrett M82A1" 
-	class="4" 
-	reload_one_at_a_time="0" 
-	sight_range_modifier="2.25" 
-	projectile_speed="200" 
-	barrel_offset="0.6" 
-	projectiles_per_shot="1"
-	spread_range="0.5"
-	burst_shots="1"/>
-	<commonness value="0.02" in_stock="0" can_respawn_with="1" />
-    <inventory encumbrance="35.0" buy_price="300.0" sell_price="200.0"/>
-    <capacity value="1" source="rank" source_value="0.1" />
-	<!--Animations-->
-	<next_in_chain key="gkw_m82a1.weapon" share_ammo="1" />
-	<animation state_key="recoil" animation_key="recoil1, big" />
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone" />
-	<animation key="hold" animation_key="still, heavy weapon" />
-	<animation state_key="hold_casual"	animation_key="still, carrying load" />
-    <animation state_key="running" animation_key="running, line infantry" />
-    <animation state_key="walking" animation_key="walking, line infantry" />
-    <animation state_key="walking_backwards" animation_key="walking, line infantry" />
-    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
-	<animation state_key="stabbing" animation_key="stabbing, bat" />
-	<animation key="reload" animation_key="reloading, magazine rifle 2.1" />
-	<!--Sounds-->
-	<sound key="fire" fileref="m82a1_fire_FromSAM4.wav" pitch_variety="0.05" volume="1.2" />
-	<sound key="cycle" fileref="m82a1_cycle_FromCOD16.wav" volume="0.4"/>
-	<sound key="magazine_out" fileref="m82a1_mgz_out_FromCOD16.wav" volume="0.4"/>
-	<sound key="magazine_in" fileref="m82a1_mgz_in_FromCOD16.wav" volume="0.4"/>
-	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-	<!--Model, Icon, Cost-->
-	<model filename="gkw_rf_m82a1.xml" />
-	<hud_icon filename="gkw_m82a1.png" />
-	<commonness value="0" in_stock="0" can_respawn_with="1" />
-	<!--Ballistics-->
-	<weak_hand_hold offset="0.3" />
-	<projectile file="ntw.projectile">
-		<result class="blast" damage="12.5" radius="3.0" decal="1" push="0.25" character_state="death" faction_compare="not_equal"/>
-	</projectile>
-	<!--Accuracy, Movement speed-->
-	<stance state_key="running" accuracy="0.3" />
-    <stance state_key="walking" accuracy="0.5" />
-    <stance state_key="crouch_moving" accuracy="0.5" />
-	<stance state_key="prone_moving" accuracy="0.5" />	
-    <stance state_key="standing" accuracy="1.0" />
-    <stance state_key="crouching" accuracy="0.95" />
-    <stance state_key="prone" accuracy="1.1" /> 
-    <stance state_key="over_wall" accuracy="1" />
-	<modifier class="speed" value="-0.25" />
-	<modifier class="detectability" value="-0.1" />
+		<tag name="rifle" />
+		<tag name="antiarmor" />
+		<!--Weapon specifications-->
+		<specification 
+		retrigger_time="-1.0" 
+		last_burst_retrigger_time="0.2"
+		accuracy_factor="1" 
+		sustained_fire_grow_step="3.0" 
+		sustained_fire_diminish_rate="1.5" 
+		magazine_size="10" 
+		can_shoot_standing="0" 
+		can_shoot_crouching="1"
+		can_shoot_prone="1"
+		suppressed="1" 
+		name="Barrett M82A1" 
+		class="4" 
+		reload_one_at_a_time="0" 
+		sight_range_modifier="2.25" 
+		projectile_speed="200" 
+		barrel_offset="0.6" 
+		projectiles_per_shot="1"
+		spread_range="0.5"
+		stance_accuracy_rate="1.5"
+		burst_shots="1"/>
+		<commonness value="0.02" in_stock="0" can_respawn_with="1" />
+		<inventory encumbrance="35.0" buy_price="300.0" sell_price="200.0"/>
+		<capacity value="1" source="rank" source_value="0.1" />
+		<!--Animations-->
+		<next_in_chain key="gkw_m82a1.weapon" share_ammo="1" />
+		<animation state_key="recoil" animation_key="recoil1, big" />
+		<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone" />
+		<animation key="hold" animation_key="still, heavy weapon" />
+		<animation state_key="hold_casual"	animation_key="still, carrying load" />
+		<animation state_key="running" animation_key="running, line infantry" />
+		<animation state_key="walking" animation_key="walking, line infantry" />
+		<animation state_key="walking_backwards" animation_key="walking, line infantry" />
+		<animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+		<animation state_key="stabbing" animation_key="stabbing, bat" />
+		<animation key="reload" animation_key="reloading, magazine rifle 2.1" />
+		<!--Sounds-->
+		<sound key="fire" fileref="m82a1_fire_FromSAM4.wav" pitch_variety="0.05" volume="1.2" />
+		<sound key="cycle" fileref="m82a1_cycle_FromCOD16.wav" volume="0.4"/>
+		<sound key="magazine_out" fileref="m82a1_mgz_out_FromCOD16.wav" volume="0.4"/>
+		<sound key="magazine_in" fileref="m82a1_mgz_in_FromCOD16.wav" volume="0.4"/>
+		<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+		<!--Model, Icon, Cost-->
+		<model filename="gkw_rf_m82a1.xml" />
+		<hud_icon filename="gkw_m82a1.png" />
+		<commonness value="0" in_stock="0" can_respawn_with="1" />
+		<!--Ballistics-->
+		<weak_hand_hold offset="0.3" />
+		<projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="0" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.5">
+			<result class="spawn" instance_class="projectile" instance_key="sub_damage_gm6.projectile" min_amount="9" max_amount="9" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0" />
+			<trigger class="impact" />
+			<rotation class="motion" />
+			<collision class="sticky" />
+		</projectile>
+		<!--Accuracy, Movement speed-->
+		<stance state_key="running" accuracy="0.15" />
+		<stance state_key="walking" accuracy="0.65" />
+		<stance state_key="crouch_moving" accuracy="0.5" />
+		<stance state_key="prone_moving" accuracy="0.8" />
+		<stance state_key="standing" accuracy="1.0"/>
+		<stance state_key="crouching" accuracy="0.95" />
+		<stance state_key="prone" accuracy="1.2" />
+		<stance state_key="over_wall" accuracy="1.2" />
+		<modifier class="speed" value="-0.25" />
+		<modifier class="detectability" value="-0.1" />
 	</weapon>
 </weapons>
