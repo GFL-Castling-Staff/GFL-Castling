@@ -38,10 +38,10 @@
     <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
     <animation state_key="stabbing" animation_key="melee, quick knife" />
     <animation state_key="stabbing" animation_key="pistol whip 3" />
-    <sound key="fire" fileref="pp90_fire_FromBFH.wav" pitch_variety="0.05" volume="1" />
-    <sound key="magazine_out" fileref="pp90_mgz_out_FromBFH.wav" volume="0.6" />
-    <sound key="magazine_in" fileref="pp90_mgz_in_FromBFH.wav" volume="0.6" />
-    <sound key="cycle" fileref="pp90_cycle_FromBFH.wav" volume="0.6" />
+    <sound key="fire" fileref="type82_fire_FromCOD16.wav" pitch_variety="0.05" volume="1" />
+    <sound key="magazine_out" fileref="pm06_mgz_out_FromCOD17.wav" volume="0.8" />
+    <sound key="magazine_in" fileref="pm06_mgz_in_FromCOD17.wav" volume="0.8" />
+    <sound key="cycle" fileref="type84_cycle_FromCOD17.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
     <model filename="gkw_smg_type82.xml" />
     <hud_icon filename="gkw_type82.png" />

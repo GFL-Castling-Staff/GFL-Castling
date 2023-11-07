@@ -43,12 +43,12 @@
     <animation key="reload" animation_key="HS50RTemp" />
     <animation key="reload" stance_key="prone" animation_key="HS50RpTemp" />
     <!--Sounds-->
-    <sound key="fire" fileref="gepardm1_fire_FromBF1.wav" pitch_variety="0.05" volume="1.6" />
-    <sound key="cycle" fileref="gepardm1_cycle_FromBF5.wav" />
+    <sound key="fire" fileref="gepardm1_fire_FromBF1.wav" pitch_variety="0.05" volume="1.85" />
+    <sound key="cycle" fileref="gepardm1_cycle_FromBF5.wav" volume="0.5" />
     <sound key="magazine_out" fileref="" />
-    <sound key="magazine_in" fileref="gepardm1_mgz_in_FromBF5.wav" volume="0.5"  />
-    <sound key="cycle_out" fileref="gepardm1_cycle_out_FromBF5.wav" volume="0.6" />
-    <sound key="cycle_in" fileref="gepardm1_cycle_in_FromBF5.wav" volume="0.6" />
+    <sound key="magazine_in" fileref="gepardm1_mgz_in_FromBF5.wav" volume="0.6"  />
+    <sound key="cycle_out" fileref="gepardm1_cycle_out_FromBF5.wav" volume="0.5" />
+    <sound key="cycle_in" fileref="gepardm1_cycle_in_FromBF5.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_gepardm1.xml" />

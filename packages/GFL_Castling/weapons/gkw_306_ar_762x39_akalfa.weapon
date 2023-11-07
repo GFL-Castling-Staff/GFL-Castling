@@ -22,10 +22,10 @@
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <inventory encumbrance="35.0" buy_price="8.0" sell_price="8.0" />
-        <sound key="fire" fileref="akalfa_fire_FromINS.wav" pitch_variety="0.05" volume="1.1" />
-        <sound key="magazine_out" fileref="akalfa_mgz_out_FromWF.wav" volume="0.6" />
-        <sound key="magazine_in" fileref="akalfa_mgz_in_FromWF.wav" volume="0.6" />
-        <sound key="cycle" fileref="akalfa_cycle_FromWF.wav" volume="0.6" />
+        <sound key="fire" fileref="akalpha_fire_FromCOD19.wav" pitch_variety="0.05" volume="1.1" />
+        <sound key="magazine_out" fileref="akalpha_mgz_out_FromCOD19.wav" volume="0.75" />
+        <sound key="magazine_in" fileref="akalpha_mgz_in_FromCOD19.wav" volume="0.75" />
+        <sound key="cycle" fileref="akalpha_cycle_FromCOD19.wav" volume="0.75" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_akalfa_melondove.xml" />
         <hud_icon filename="gkw_akalfa.png" />
@@ -65,10 +65,10 @@
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <inventory encumbrance="35.0" buy_price="8.0" sell_price="8.0"/>
-        <sound key="fire" fileref="akalfa_fire_FromWF.wav" pitch_variety="0.05" volume="1.1" />
-        <sound key="magazine_out" fileref="akalfa_mgz_out_FromWF.wav" volume="0.6" />
-        <sound key="magazine_in" fileref="akalfa_mgz_in_FromWF.wav" volume="0.6" />
-        <sound key="cycle" fileref="akalfa_cycle_FromWF.wav" volume="0.6" />
+        <sound key="fire" fileref="akalpha_fire_FromCOD19.wav" pitch_variety="0.05" volume="1.1" />
+        <sound key="magazine_out" fileref="akalpha_mgz_out_FromCOD19.wav" volume="0.6" />
+        <sound key="magazine_in" fileref="akalpha_mgz_in_FromCOD19.wav" volume="0.6" />
+        <sound key="cycle" fileref="akalpha_cycle_FromCOD19.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_akalfa_melondove.xml" />
         <hud_icon filename="gkw_akalfa_skill.png" />

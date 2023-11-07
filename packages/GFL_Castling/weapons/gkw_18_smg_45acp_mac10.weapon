@@ -39,10 +39,10 @@
 	<animation state_key="stabbing" 			animation_key="pistol whip 2" />
 	<animation state_key="reload"	animation_key="reloading, A OHG 0.75" />
 	<animation state_key="reload"	animation_key="reloading2, A OHG 0.75" />
-	<sound key="fire" fileref="mac10_fire_FromCOD17.wav" pitch_variety="0.05" volume="1" />
-	<sound key="magazine_out" fileref="mac10_mgz_out_FromCOD17.wav" volume="0.35" />
-	<sound key="magazine_in" fileref="mac10_mgz_in_FromCOD17.wav" volume="0.35" />
-	<sound key="cycle" fileref="mac10_cycle_FromCOD17.wav" volume="0.4" />
+	<sound key="fire" fileref="mac10_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.3" />
+	<sound key="magazine_out" fileref="mac10_mgz_out_FromCOD17.wav" volume="0.55" />
+	<sound key="magazine_in" fileref="mac10_mgz_in_FromCOD17.wav" volume="0.55" />
+	<sound key="cycle" fileref="mac10_cycle_FromCOD17.wav" volume="0.55" />
 	<sound class="impact" fileref="rifle_drop.wav" />
 	<model filename="gkw_smg_mac10.xml" />
 	<hud_icon filename="gkw_mac10.png" />

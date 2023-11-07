@@ -37,10 +37,10 @@
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
     <animation state_key="stabbing" animation_key="melee, quick knife" />
     <animation state_key="stabbing" animation_key="pistol whip 3" />
-    <sound key="fire" fileref="pm1910_fire_FromRO2.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="magazine_out" fileref="pm1910_mgz_out_FromBF1.wav" volume="0.6" />
-    <sound key="magazine_in" fileref="pm1910_mgz_in_FromBF1.wav" volume="0.6" />
-    <sound key="cycle_out" fileref="pm1910_cycle_FromBF1.wav" volume="0.6" />
+    <sound key="fire" fileref="pm1910_fire_FromRO2.wav" pitch_variety="0.05" volume="1.4" />
+    <sound key="magazine_out" fileref="pm1910_mgz_out_FromBF1.wav" volume="0.5" />
+    <sound key="magazine_in" fileref="pm1910_mgz_in_FromBF1.wav" volume="0.5" />
+    <sound key="cycle_out" fileref="pm1910_cycle_FromBF1.wav" volume="0.4" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_mg_pm1910.xml" />
     <hud_icon filename="gkw_pm1910.png" />

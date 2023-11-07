@@ -31,10 +31,10 @@
 	
 	<sound key="fire" fileref="ssg3000_fire_FromCOD19.wav" volume="1.3" />  
 	<sound key="cycle" fileref="ssg3000_cycle_FromCOD19.wav" volume="0.6" /> 
-    <sound key="magazine_out" fileref="ssg3000_mgz_out_FromCOD19.wav" volume="0.8"/>
-    <sound key="magazine_in" fileref="ssg3000_mgz_in_FromCOD19.wav" volume="0.8"/>    
-	<sound key="cycle_out" fileref="ssg3000_cycle_out_FromCOD19.wav" volume="0.8" />  
-	<sound key="cycle_in" fileref="ssg3000_cycle_in_FromCOD19.wav" volume="0.8" />  
+    <sound key="magazine_out" fileref="ssg3000_mgz_out_FromCOD19.wav" volume="0.65"/>
+    <sound key="magazine_in" fileref="ssg3000_mgz_in_FromCOD19.wav" volume="0.65"/>    
+	<sound key="cycle_out" fileref="ssg3000_cycle_out_FromCOD19.wav" volume="0.65" />  
+	<sound key="cycle_in" fileref="ssg3000_cycle_in_FromCOD19.wav" volume="0.65" />  
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_rf_ssg3000.xml" />
 
