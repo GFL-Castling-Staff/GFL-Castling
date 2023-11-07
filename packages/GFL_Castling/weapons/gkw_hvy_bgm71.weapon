@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+	<weapon key="gkw_hvy_bgm71.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+		<specification 
+		accuracy_factor="1" 
+		barrel_offset="1.8" 
+		can_shoot_standing="1" 
+		can_shoot_crouching="1" 
+		can_shoot_prone="0" 
+		class="4" 
+		sight_range_modifier="2.5" 
+		slot="0" 
+		magazine_size="1" 
+		name="BGM-71 TOW" 
+		projectile_speed="200" 
+		retrigger_time="5.0" 
+		suppressed="0" 
+		sustained_fire_diminish_rate="0.5"  
+		sustained_fire_grow_step="7.0" 
+		carry_in_two_hands="0" 
+		spread_range="0.2" 
+		burst_shots="1" 
+        stab_enabled="1"
+		last_burst_retrigger_time="5"/>
+		<next_in_chain key="gkw_hvy_bgm71_m4.weapon" share_ammo="0"/>
+		<inventory encumbrance="100.0" buy_price="710.0" sell_price="710.0"/>
+		<animation key="reload" animation_key="reloading, bgm71"/>
+        <animation state_key="hold_casual" animation_key="still, pistol dual"/>
+		<animation state_key="recoil" animation_key="still, pistol dual"/>
+        <animation state_key="hold" animation_key="still, pistol dual"/>
+        <animation state_key="hold_on_wall" animation_key="still, pistol dual"/>
+		<animation state_key="running" animation_key="still, pistol dual"/>
+		<animation state_key="walking" animation_key="still, pistol dual"/>
+		<animation state_key="walking_backwards" animation_key="still, pistol dual"/>
+		<animation state_key="crouching" animation_key="still, pistol dual"/>
+		<animation state_key="crouch_moving" animation_key="still, pistol dual"/>
+		<animation state_key="crouch_moving_backwards" animation_key="still, pistol dual"/>
+		<animation state_key="prone" animation_key="still, pistol dual"/>
+		<animation state_key="prone, moving forwards" animation_key="still, pistol dual"/>
+		<animation state_key="stabbing" animation_key="still, pistol dual"/>
+		<sound key="fire" fileref="bgm71_fire01_fromWT.wav" pitch_variety="0.05" volume="1.0"/>
+		<sound key="fire" fileref="bgm71_fire02_fromWT.wav" pitch_variety="0.05" volume="1.0"/>
+		<sound key="fire" fileref="bgm71_fire03_fromWT.wav" pitch_variety="0.05" volume="1.0"/>
+		<sound key="magazine_out" fileref="ags30_mgz_out_FromBF1.wav" volume="1.1"/>
+		<sound key="magazine_in" fileref="ags30_mgz_in_FromBF1.wav" volume="1.1"/>
+		<sound key="cycle" fileref="ags30_cycle_FromCOD6R.wav" volume="1.1"/>
+		<sound class="impact" fileref="rifle_drop.wav"/>
+		<commonness value="0.01" in_stock="1" can_respawn_with="1"/>
+		<model filename="gkw_hvy_bgm71_big.xml"/>
+		<hud_icon filename="gkw_bgm71.png"/>
+		<capacity value="0" source="rank" source_value="0.0"/>
+		<capacity value="1" source="rank" source_value="10.0"/>
+		<weak_hand_hold offset="-0.3"/>
+        <projectile file="bgm71_missile.projectile">
+        </projectile>
+        <ballistics curve_height="1.6" near_far_distance="0.0" speed_estimation_near="100.0" speed_estimation_far="100.0" max_speed="150.0" randomness="0.0" tweak_factor="2.0"/>
+		<modifier class="speed" value="-4.0"/>
+		<modifier class="detectability" value="0.2"/>
+		<tag name="bazooka"/>
+        <stance state_key="running" accuracy="0.1"/>
+        <stance state_key="walking" accuracy="0.4"/>
+        <stance state_key="crouch_moving" accuracy="1.0"/>
+        <stance state_key="standing" accuracy="1.0"/>
+        <stance state_key="crouching" accuracy="1.0"/>
+        <stance state_key="prone" accuracy="1.0"/>
+        <stance state_key="prone_moving" accuracy="1.0"/>
+        <stance state_key="over_wall" accuracy="1.0"/>
+		<modifier class="detectability" value="0.3" />
+		<modifier class="hit_success_probability" value="0.2" />
+		<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+		<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
+		<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
+		<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
+		<target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	</weapon>
+    <weapon file="two_hands_ar.animation_base" key="gkw_hvy_bgm71_m4.weapon">
+        <specification
+            accuracy_factor="1"
+            barrel_offset="0.6"
+            class="0"
+            burst_shots="1"
+            slot="0"
+            magazine_size="30"
+            name="M4A1 Carbine(BGM-71)"
+            projectile_speed="200"
+            retrigger_time="0.086"
+            stance_accuracy_rate="2.3"
+            suppressed="1"
+            spread_range="0.3"
+            sustained_fire_diminish_rate="1.6"
+            sustained_fire_grow_step="0.35"
+            sight_range_modifier="1.5"
+            />
+        <next_in_chain key="gkw_hvy_bgm71.weapon" share_ammo="0"/>
+        <inventory encumbrance="35.0" buy_price="710.0" sell_price="710.0" />
+        <commonness value="0" in_stock="0" can_respawn_with="1" />
+        <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
+        <sound key="fire" fileref="m4a1_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
+        <sound key="magazine_out" fileref="m4a1_mgz_out_FromCOD16.wav" volume="0.5" />
+        <sound key="magazine_in" fileref="m4a1_mgz_in_FromCOD16.wav" volume="0.5" />
+        <sound key="cycle" fileref="m4a1_cycle_FromCOD16.wav" volume="0.5" />
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <model filename="gkw_ar_ar15.xml" />
+        <hud_icon filename="gkw_bgm71_skill.png" />
+        <weak_hand_hold offset="0.2" />
+        <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
+            <result class="hit" kill_probability="3.9" kill_decay_start_time="1.292" kill_decay_end_time="2.154" />
+        </projectile>
+        <effect class="muzzle" ref="ejection_556" />
+        <stance state_key="running" accuracy="0.5" />
+        <stance state_key="walking" accuracy="0.5" />
+        <stance state_key="crouch_moving" accuracy="0.55" />
+        <stance state_key="standing" accuracy="0.9" />
+        <stance state_key="crouching" accuracy="0.98" />
+        <stance state_key="prone" accuracy="1.1" /> 
+        <stance state_key="prone_moving" accuracy="0.5" />
+        <stance state_key="over_wall" accuracy="1" />
+        <modifier class="detectability" value="-0.1"/>
+        <modifier class="speed" value="0" />
+    </weapon>    
+</weapons>
