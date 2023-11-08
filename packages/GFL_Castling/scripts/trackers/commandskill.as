@@ -731,7 +731,7 @@ class CommandSkill : Tracker {
     }
     void excuteMP5MOD3skill(int characterId,int playerId,SkillModifer@ modifer){
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"MP5MOD3")) return;
-        addCooldown("MP5MOD3",20,characterId,modifer);
+        addCooldown("MP5MOD3",25,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         string vestkey="exo_t5_16lab.carry_item";
         if (character !is null) {

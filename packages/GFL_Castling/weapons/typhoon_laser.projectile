@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="" slot="1" pulldown_in_air="0.5" time_to_live="1.00" key="flamethrower_flame_tank.projectile">
+<projectile class="grenade" name="" slot="1" pulldown_in_air="0.5" key="typhoon_laser.projectile">
 	<tag name="tank_cannon"/>
 
 	<result class="blast" damage="50.0" radius="7.5" decal="1" push="1.5" character_state="death" damage_origin_vehicle="0" faction_compare="not_equal"/>
-    <trigger class="time" time_to_live="0.15"/>
 	<rotation class="motion" />
-	
+	<trigger class="impact" />
+
 	<commonness value="0.0" />
 
     <sound class="result" key="other" fileref="burn.wav" />
@@ -37,7 +37,4 @@
 	<effect class="result" key="other" copy="terrain" />
 
 	<effect class="result" type="splat_map" surface_tag="" size="2.0" atlas_index="4" layer="0" />
-
-	<trail probability="1.0" key="laser_tifeng_min" />
-
 </projectile>
