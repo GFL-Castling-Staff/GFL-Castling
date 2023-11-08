@@ -261,3 +261,11 @@ material rx1_trail : add_base
         texture_unit{
             texture rx1_trail.png 	
 }}}}
+
+material rx1_trail_blue : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture rx1_trail_blue.png 	
+}}}}

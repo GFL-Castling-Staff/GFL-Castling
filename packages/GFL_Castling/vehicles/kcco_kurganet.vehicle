@@ -2,7 +2,7 @@
 <vehicle 
     name="Kurganets-2053 IFV" 
     key="neosu_kuergants.vehicle" 
-    respawn_time="100" 
+    respawn_time="150" 
     designated_squad_as_driver_only="0"
     time_to_live_unsteerable="95" 
     map_view_atlas_index="1" 
@@ -44,7 +44,7 @@
 
     <physics 
     max_health="80.0" 
-    blast_damage_threshold="3.0" 
+    blast_damage_threshold="4.0" 
     mass="450.0" 
     broken_mass="300"
     gravity="-90"
@@ -57,7 +57,7 @@
     visual_offset="0 2.2 0.0" 
     drag_offset="-0.1" friction_offset="-0.1"/>
 
-    <modifier class="blast_damage" value="-2.0" />
+    <modifier class="blast_damage" value="-4.0" />
     <turret offset="0 2.3 -1.4" weapon_key="vehicle_none_kurgant" weapon_offset="0 0 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.0004"  rotation_range="6.28" />
     <turret parent_turret_index="0" offset="0 0 0" weapon_key="kcco_2A42_30mm_hei" weapon_offset="0.13 1.4 -0.1" weapon_recoil="0.09" physics_recoil="0.0" max_rotation_step="0.0005" rotation_range="0.001" />
     <turret parent_turret_index="0" offset="0 0 0" weapon_key="kcco_2A42_30mm_apds" weapon_offset="-0.13 1.4 -0.1" weapon_recoil="0.09" physics_recoil="0.0" max_rotation_step="0.0005" rotation_range="0.001" />

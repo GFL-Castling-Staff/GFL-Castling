@@ -3,7 +3,7 @@
 	<weapon key="gkw_hvy_bgm71.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 		<specification 
 		accuracy_factor="1" 
-		barrel_offset="1.8" 
+        barrel_offset_3d="0 0.2 2.1"
 		can_shoot_standing="1" 
 		can_shoot_crouching="1" 
 		can_shoot_prone="0" 
@@ -50,7 +50,7 @@
 		<hud_icon filename="gkw_bgm71.png"/>
 		<capacity value="0" source="rank" source_value="0.0"/>
 		<capacity value="1" source="rank" source_value="10.0"/>
-		<weak_hand_hold offset="-0.3"/>
+		<weak_hand_hold offset="-0.6"/>
         <projectile file="bgm71_missile.projectile">
         </projectile>
         <effect class="muzzle" ref="big_muzzle_fire_smoke" post_processing="1"/>

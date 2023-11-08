@@ -50,8 +50,7 @@ ai_stop_to_fight="1"
     <sound key="ignition" filename="jeep2_ignition.wav" />
     <sound key="hit" filename="car_hit2.wav" />
     <sound key="hit" filename="car_hit1.wav" />
-    <sound key="turret_rotation" filename="turret_rotation1.wav" volume="0.8" />
-    <sound key="turret_rotation" filename="turret_rotation2.wav" volume="0.8" />
+    <sound key="turret_rotation" filename="tank_turret_spin.wav" volume="0.8" />
     <effect event_key="health" value="40" ref="SmallSmokeVehicle" offset="0.0 1.8 -2.0" />
     <effect event_key="health" value="20" ref="SmallSmokeVehicle" offset="0.0 1.8 -2.0" />
     <effect event_key="health" value="20" ref="BrokenSparkle" post_processing="0" offset="0.0 2.0 -2.0" />

@@ -35,11 +35,9 @@
         <target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0" />
         <target_factors tag="defensive_at" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5" />
         <target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0" />
-        <!-- important non combat player-only vehicles -->
         <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.5" />
         <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
         <effect class="muzzle" ref="muzzle_uhlan" />
-        <!-- <effect class="muzzle" ref="BigMuzzle" /> -->
         <sound class="operation" key="fire" fileref="uhlan_fire_FromSAM4.wav" volume="1.2"/>
     </weapon>
     <weapon key="uhlan_main_cannon_2">
@@ -111,6 +109,7 @@
             damage_origin_vehicle="0"
             faction_compare="not_equal"
             />
+            <trail probability="1" key="atgm_trail_uhlan"/>	
         </projectile>
         <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
         <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
