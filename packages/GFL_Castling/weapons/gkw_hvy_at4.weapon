@@ -76,6 +76,7 @@
             <effect class="result" key="vehicle" copy="terrain"/>
             <effect class="result" key="character" copy="terrain"/>
             <effect class="activated" ref="Propulsion"/>
+            <trail probability="1" key="atgm_trail"/>	
         </projectile>
         <weak_hand_hold offset="0.3"/>
         <commonness value="0.2" in_stock="1" can_respawn_with="1"/>

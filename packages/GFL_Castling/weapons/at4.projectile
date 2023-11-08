@@ -37,5 +37,6 @@
     <effect class="result" key="other" copy="terrain" />
 
     <effect class="activated" ref="Propulsion" />
+    <trail probability="1" key="atgm_trail"/>	
 
 </projectile>
