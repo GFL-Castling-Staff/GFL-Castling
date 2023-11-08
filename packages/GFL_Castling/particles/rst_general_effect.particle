@@ -1540,7 +1540,570 @@ particle_system general_weapon_muzzle_crossfire_smoke : general_weapon_muzzle_cr
 	}
 }
 
+particle_system big_muzzle_fire_smoke
+{
+	quota 100
+	material muzzle_smoke_1
+	particle_width 4.5
+	particle_height 4.5
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 60
+		colour 0.8 0.8 0.72 0.75
+		direction 0 1 0
+		emission_rate 80
+		position 0 0.3 0
+		velocity_min 2.5
+		velocity_max 3.5
+		time_to_live_min 0.5
+		time_to_live_max 0.9
+		duration 0.2
+	}
+	affector Scaler
+	{
+		rate 0
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	90
+		rotation_speed_range_end	0
+		rotation_range_start	0
+		rotation_range_end	180
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.8 0.8 0.72 0.75
+		time1 0.2
+		colour1 0.8 0.8 0.72 0.75
+		time2 0.7
+		colour2 0.65 0.65 0.65 0.2
+		time3 1
+		colour3 0 0 0 0
 
+	}
+	affector LinearForce{
+		force_vector 0 16 0
+		force_application add
+	}
+	affector DirectionRandomiser 
+	{
+		randomness 0
+		scope 0
+		keep_velocity false
+	}
+}
+particle_system big_muzzle_fire_smoke_2 //forward
+{
+	quota 100
+	material muzzle_smoke_2
+	particle_width 3.5
+	particle_height 3.5
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0.01
+	
+	emitter Ring
+	{
+		angle 5
+		colour 0.7 0.7 0.7 0.85
+		direction 0 1 0
+		emission_rate 250
+		position 0 0 0
+		velocity_min 6.5
+		velocity_max 15.5
+		time_to_live_min 0.5
+		time_to_live_max 0.9
+		duration 0.2
+		width 0.1
+		height 0.1
+		depth 3
+		inner_width 0.1
+		inner_height 0.1
+	}
+	affector Scaler
+	{
+		rate 2
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	90
+		rotation_speed_range_end	0
+		rotation_range_start	0
+		rotation_range_end	180
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.7 0.7 0.7 0.85
+		time1 0.6
+		colour1 0.8 0.8 0.72 0.75
+		time2 0.8
+		colour2 0.35 0.35 0.35 0.4
+		time3 1
+		colour3 0.25 0.25 0.25 0
+
+	}
+	affector LinearForce{
+		force_vector 0 2 0
+		force_application add
+	}
+	affector DirectionRandomiser 
+	{
+		randomness 0
+		scope 0
+		keep_velocity false
+	}
+}
+particle_system big_muzzle_fireball
+{
+	quota 50
+	material firesmoke_anim
+	particle_width 4
+	particle_height 1
+	renderer billboard
+	billboard_type oriented_self
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0.01
+	accurate_facing on
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 20
+		position 0 0 0
+		velocity 10
+		time_to_live 0.15
+		duration 0.1
+
+	}
+	affector Scaler
+	{
+		rate 80
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	-25
+		rotation_range_end	25
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 1
+		time1 0.2
+		colour1 1 1 1 1
+		time2 0.8
+		colour2 0 0 0 0		
+		time3 1
+		colour3 0 0 0 0
+	}
+	affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+	affector DirectionRandomiser 
+	{
+		randomness 0
+		scope 0
+		keep_velocity false
+	}
+}
+particle_system big_muzzle_fireball_side
+{
+	quota 50
+	material firestreak1_pass
+	particle_width 0.2
+	particle_height 5
+	renderer billboard
+	billboard_type oriented_self
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	accurate_facing on
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 0 0
+		emission_rate 10
+		position 0 0 0
+		velocity 0.01
+		time_to_live 0.18
+		duration 0.1
+
+	}
+	affector Scaler
+	{
+		rate 120
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	90
+		rotation_range_end	90
+	}
+
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 1
+		time1 0.6
+		colour1 1 1 1 1
+		time2 0.8
+		colour2 0 0 0 0		
+		time3 1
+		colour3 0 0 0 0
+	}
+}
+particle_system big_muzzle_fireball_side_2 : big_muzzle_fireball_side //枪口侧分离火焰
+{
+	material muzzle_side_fire
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 0 0
+		emission_rate 10
+		position 0 0 0
+		velocity 0.01
+		time_to_live 0.18
+		duration 0.1
+
+	}
+	affector Scaler
+	{
+		rate 120
+	}
+
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 1
+		time1 0.6
+		colour1 1 1 1 1
+		time2 0.8
+		colour2 0 0 0 0		
+		time3 1
+		colour3 0 0 0 0
+	}
+}
+particle_system big_muzzle_fireball_side_3 : big_muzzle_fireball_side // 枪口侧分离烟雾
+{
+	particle_width 8
+	particle_height 3
+	material muzzle_side_smoke_pass
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 0 0
+		emission_rate 30
+		position 0 0 0
+		velocity 0.01
+		time_to_live 0.9
+		duration 0.1
+
+	}
+	affector Scaler
+	{
+		rate 10
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.8 0.8 0.72 0.75
+		time1 0.2
+		colour1 0.8 0.8 0.72 0.75
+		time2 0.7
+		colour2 0.65 0.65 0.65 0.2
+		time3 1
+		colour3 0 0 0 0
+	}
+}
+particle_system big_muzzle_ambient
+{
+	quota 50
+	material point_soft_edge_100
+	particle_width 18
+	particle_height 18
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 0
+		colour 0.5 0.25 0.15 1
+		direction 0 1 0
+		emission_rate 10
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 0.2
+		duration 0.1
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.5 0.25 0.15 1
+		time1 0.7
+		colour1 0.5 0.25 0.15 1
+		time2 1
+		colour2 0 0 0 0
+	}
+}
+particle_system big_muzzle_ambient_ground
+{
+	quota 50
+	material point_soft_edge_100_pass
+	particle_width 30
+	particle_height 30
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 0
+		colour 0.5 0.25 0.15 1
+		direction 0 1 0
+		emission_rate 10
+		position 0 -1 0
+		velocity 0.0001
+		time_to_live 0.1
+		duration 0.1
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.5 0.35 0.25 1
+		time1 0.7
+		colour1 0.5 0.35 0.25 1
+		time2 1
+		colour2 0 0 0 0
+	}
+}
+particle_system big_muzzle_spark
+{
+	quota 50
+	material point_soft_edge_100
+	particle_width 0.3
+	particle_height 0.8
+	renderer billboard
+	billboard_type oriented_self
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 90
+		colour 1 0.3 0 1
+		direction 0 1 0
+		emission_rate 250
+		position 0 0 0
+		velocity_min 10
+		velocity_max 25
+		time_to_live_min 0.2
+		time_to_live_max 0.6
+		duration 0.1
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 0.3 0 1
+		time1 0.7
+		colour1 1 0.3 0 1
+		time2 1
+		colour2 0 0 0 0
+	}
+}
+
+
+particle_system cannon_result_smoke
+{
+	quota 100
+	material wand_smoke
+	particle_width 12
+	particle_height 12
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	accurate_facing off
+	emitter Ring
+	{
+		angle 0
+		colour 0.9 0.9 1 0.03
+		direction 0 1 0
+		emission_rate 300
+		position 0 2 0
+		velocity_min 0.001
+		velocity_max 0.001
+		time_to_live_min 1
+		time_to_live_max 2
+		duration 0.1
+		width 30
+		height 30
+		depth 4
+		inner_width 0.2
+		inner_height 0.2
+	}
+	affector Scaler
+	{
+		rate 1
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	90
+		rotation_speed_range_end	0
+		rotation_range_start	0
+		rotation_range_end	0
+	}
+
+	affector ColourFader2
+	{
+		red1 	0.0
+		green1 	0.0
+		blue1 	0.0
+		alpha1 	0
+		red2 	-0
+		green2	-0
+		blue2	-0
+		alpha2	-0.08
+		state_change 1
+	}
+}
+particle_system cannon_result_smoke_thick_expanding
+{
+	quota 200
+	emit_emitter_quota 50
+	material ct_thick_smoke
+	particle_width 10
+	particle_height 10
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	emitter Ring
+	{
+		name tag1
+		angle 180
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 120
+		position 0 2 0
+		velocity_min 0.1
+		velocity_max 3
+		time_to_live_min 0.5
+		time_to_live_max 1.0
+		duration 0.3
+		width 3
+		height 3
+		depth 3
+		inner_width 0.1
+		inner_height 0.1
+	}
+	affector Scaler
+	{
+		rate 10
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start	45
+		rotation_speed_range_end	-45
+		rotation_range_start	0
+		rotation_range_end	180
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.4 0.4 0.4 0.4
+		time1 0.5
+		colour1 0.25 0.25 0.25 0.3
+		time2 1
+		colour2 0.15 0.15 0.15 0
+	}
+}
+particle_system cannon_result_smoke_ground
+{
+	quota 50
+	material ct_ground_smoke
+	particle_width 10
+	particle_height 10
+	renderer billboard
+	billboard_type oriented_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 -0.3
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Box
+	{
+		angle 0
+		colour 0.4 0.4 0.4 0.5
+		direction 0 1 0
+		emission_rate 120
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 1
+		duration 0.1
+		width 10
+		height 10
+		depth 1
+	}
+	affector Scaler
+	{
+		rate 6
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.4 0.4 0.4 0.4
+		time1 0.5
+		colour1 0.25 0.25 0.25 0.3
+		time2 1
+		colour2 0.15 0.15 0.15 0
+	}
+}
 --------------------------------------material-----------------------------------
 material alpha_blend_base{
 	receive_shadows off
@@ -1742,4 +2305,64 @@ material general_muzzle_02 : alpha_blend_base
     pass{
         texture_unit{
             texture general_muzzle_02.png 	
+}}}}
+material muzzle_smoke_1 : alpha_blend_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture ct_common_smoke4.png 	
+}}}}
+material muzzle_smoke_2 : alpha_blend_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture ct_common_smoke.png 	
+}}}}
+material firesmoke_anim : alpha_blend_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            anim_texture smokefireball.png 12 0.3
+}}}}
+material muzzle_side_fire : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            anim_texture muzzle_side_fire.png 9 0.2
+}}}}
+material firestreak1_pass : add_base
+{   
+    technique{
+    pass{
+		depth_func always_pass
+        texture_unit{
+            texture firestreak1.png 	
+}}}}
+material muzzle_side_smoke_pass : alpha_blend_base
+{   
+    technique{
+    pass{
+		depth_func always_pass
+        texture_unit{
+            texture muzzle_side_smoke.png 	
+}}}}
+material ct_thick_smoke : alpha_blend_base
+{   
+    technique{
+    pass{
+		depth_func always_pass
+        texture_unit{
+            texture ct_thick_smoke.png 	
+}}}}
+material ct_ground_smoke : alpha_blend_base
+{   
+    technique{
+    pass{
+		depth_func always_pass
+        texture_unit{
+            texture ct_common_smoke4.png 	
 }}}}

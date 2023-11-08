@@ -7,8 +7,7 @@
 
     <commonness value="0.0" />
 
-    <sound class="result" key="other" fileref="explosion1.wav" />
-    <sound class="result" key="other" fileref="explosion2.wav" />
+    <sound class="result" key="other" fileref="tow_explosion.wav" volume="1.25" />
 
     <sound class="result" key="vehicle" copy="other" />    
     <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.8" />
@@ -46,6 +45,7 @@
     <effect class="result" key="vehicle" copy="terrain" />     
     <effect class="result" key="character" copy="terrain" />
 
-    <effect class="activated" ref="Propulsion" />
+    <effect class="activated" ref="general_activated_at_smoke_trail"/>
+    <trail probability="1" key="atgm_trail_light"/>	
 
 </projectile>

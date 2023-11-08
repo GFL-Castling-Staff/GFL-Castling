@@ -4,11 +4,10 @@
     <result class="blast" damage="90.0" radius="6.0" decal="1" push="1.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
     <trigger class="time" time_to_live="0.7"/>
     <rotation class="motion" />
-    <model mesh_filename="mk153HEAT.xml" />
+    <model mesh_filename="tow_missile.xml"/>
     <commonness value="0.0" />
     <collision class="sticky" />    
-    <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_1.wav" volume="1.5" />
-    <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_2.wav" volume="1.5" />
+    <sound class="result" key="other" fileref="tow_explosion.wav" volume="1.25" />
     <sound class="result" key="vehicle" copy="other" />
     <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.8" />
     <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_02.wav" pitch_variety="0.2" volume="0.8" />
@@ -23,8 +22,10 @@
     <effect class="result" key="terrain" ref="missile_result_cannon_blast_fire" lighting="0"/>
     <effect class="result" key="terrain" ref="missile_result_cannon_blast_AmbientLight" lighting="0"/>
     <effect class="result" key="terrain" ref="missile_result_expanding_fire" lighting="0" post_processing="1"/>
-
-    <effect class="activated" ref="missile_activated_cannon_flysmoke" lighting="0"/>
+    <effect class="result" key="terrain" ref="cannon_result_smoke" lighting="0" post_processing="1"/> 
+    <effect class="result" key="terrain" ref="cannon_result_smoke_thick_expanding" lighting="0" post_processing="1"/>
+    <effect class="result" key="terrain" ref="cannon_result_smoke_ground" lighting="0" post_processing="1"/> 
+    
     <effect class="activated" ref="general_activated_at_smoke_trail"/>
 
     <effect class="result" key="other" copy="terrain"/>

@@ -41,9 +41,9 @@
 		<sound key="fire" fileref="bgm71_fire01_fromWT.wav" pitch_variety="0.05" volume="1.0"/>
 		<sound key="fire" fileref="bgm71_fire02_fromWT.wav" pitch_variety="0.05" volume="1.0"/>
 		<sound key="fire" fileref="bgm71_fire03_fromWT.wav" pitch_variety="0.05" volume="1.0"/>
-		<sound key="magazine_out" fileref="ags30_mgz_out_FromBF1.wav" volume="1.1"/>
-		<sound key="magazine_in" fileref="ags30_mgz_in_FromBF1.wav" volume="1.1"/>
-		<sound key="cycle" fileref="ags30_cycle_FromCOD6R.wav" volume="1.1"/>
+		<sound key="magazine_out" fileref="bgm71_mgz_out_FromSQUAD.wav" volume="1.1"/>
+		<sound key="magazine_in" fileref="bgm71_mgz_in_FromSQUAD.wav" volume="1.1"/>
+		<sound key="cycle" fileref="bgm71_cycle_FromSQUAD.wav" volume="1.1"/>
 		<sound class="impact" fileref="rifle_drop.wav"/>
 		<commonness value="0.01" in_stock="1" can_respawn_with="1"/>
 		<model filename="gkw_hvy_bgm71_big.xml"/>
@@ -53,6 +53,15 @@
 		<weak_hand_hold offset="-0.3"/>
         <projectile file="bgm71_missile.projectile">
         </projectile>
+        <effect class="muzzle" ref="big_muzzle_fire_smoke" post_processing="1"/>
+        <effect class="muzzle" ref="big_muzzle_fire_smoke_2" post_processing="1"/>
+        <effect class="muzzle" ref="big_muzzle_fireball" post_processing="1"/>
+        <effect class="muzzle" ref="big_muzzle_fireball_side" />
+        <effect class="muzzle" ref="big_muzzle_fireball_side_2" />
+        <effect class="muzzle" ref="big_muzzle_fireball_side_3" post_processing="1"/>
+        <effect class="muzzle" ref="big_muzzle_ambient"/>
+        <effect class="muzzle" ref="big_muzzle_ambient_ground"/>
+        <effect class="muzzle" ref="big_muzzle_spark"/>
         <ballistics curve_height="1.5" near_far_distance="0.0" speed_estimation_near="100.0" speed_estimation_far="100.0" max_speed="150.0" randomness="0.0" tweak_factor="2.0"/>
 		<modifier class="speed" value="-4.0"/>
 		<modifier class="detectability" value="0.2"/>

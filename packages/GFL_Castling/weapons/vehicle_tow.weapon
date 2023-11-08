@@ -34,9 +34,15 @@
     <!-- important non combat player-only vehicles -->
     <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
 
-    <effect class="muzzle" ref="BiggerMuzzle" />
-    <effect class="muzzle" ref="CannonSmokeBig" />
-    <effect class="muzzle" ref="CannonSmokeBigSphere" />
+    <effect class="muzzle" ref="big_muzzle_fire_smoke" post_processing="1"/>
+    <effect class="muzzle" ref="big_muzzle_fire_smoke_2" post_processing="1"/>
+    <effect class="muzzle" ref="big_muzzle_fireball" post_processing="1"/>
+    <effect class="muzzle" ref="big_muzzle_fireball_side" />
+    <effect class="muzzle" ref="big_muzzle_fireball_side_2" />
+    <effect class="muzzle" ref="big_muzzle_fireball_side_3" post_processing="1"/>
+    <effect class="muzzle" ref="big_muzzle_ambient"/>
+    <effect class="muzzle" ref="big_muzzle_ambient_ground"/>
+    <effect class="muzzle" ref="big_muzzle_spark"/>
 
     <sound class="operation" key="fire" fileref="tow_fire_FromCOD17.wav" volume="1.2" />
     <!-- front plate-mid -->

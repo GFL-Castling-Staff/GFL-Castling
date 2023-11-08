@@ -45,4 +45,5 @@
     <effect class="result" key="character" copy="terrain" />
     <effect class="result" key="shield" copy="terrain" />			
     <effect class="result" key="vehicle" copy="terrain" />
+    <trail probability="1" key="atgm_trail_heat"/>	
 </projectile>

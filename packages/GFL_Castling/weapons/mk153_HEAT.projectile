@@ -23,7 +23,10 @@
     <effect class="result" key="terrain" ref="missile_result_cannon_blast_fire" lighting="0"/>
     <effect class="result" key="terrain" ref="missile_result_cannon_blast_AmbientLight" lighting="0"/>
     <effect class="result" key="terrain" ref="missile_result_expanding_fire" lighting="0" post_processing="1"/>
-
+    <effect class="result" key="terrain" ref="cannon_result_smoke" lighting="0" post_processing="1"/> 
+    <effect class="result" key="terrain" ref="cannon_result_smoke_thick_expanding" lighting="0" post_processing="1"/>
+    <effect class="result" key="terrain" ref="cannon_result_smoke_ground" lighting="0" post_processing="1"/> 
+    
     <effect class="activated" ref="missile_activated_cannon_flysmoke" lighting="0"/>
 
     <effect class="result" key="other" copy="terrain"/>
