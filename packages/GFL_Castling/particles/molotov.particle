@@ -18,7 +18,7 @@ abstract emitter molotov_base		//自定义燃烧持续时长 单位/秒
 
 particle_system molotov_fire_01 
 {
-	quota 50
+	quota 200
 	material fire_01
 	particle_width 1
 	particle_height 1
@@ -104,7 +104,7 @@ particle_system molotov_fire_02  : particle_system molotov_fire_01
 }
 particle_system molotov_smoke 
 {
-	quota 100
+	quota 200
 	renderer billboard	
 	billboard_rotation_type vertex
 	material pump_smoke_01
