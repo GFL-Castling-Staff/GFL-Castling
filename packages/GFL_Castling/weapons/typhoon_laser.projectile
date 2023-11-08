@@ -4,7 +4,8 @@
 
 	<result class="blast" damage="50.0" radius="7.5" decal="1" push="1.5" character_state="death" damage_origin_vehicle="0" faction_compare="not_equal"/>
 	<rotation class="motion" />
-	<trigger class="impact" />
+	<!-- <trigger class="impact" /> -->
+    <trigger class="time" time_to_live="0.2"/>
 
 	<commonness value="0.0" />
 

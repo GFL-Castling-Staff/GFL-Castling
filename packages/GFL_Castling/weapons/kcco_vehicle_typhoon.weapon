@@ -106,7 +106,7 @@
         class="0" 
         projectile_speed="220.0" 
         slot="2" 
-        barrel_offset_3d="-20.0 0.7 3.5"
+        barrel_offset_3d="-20 0 7.55"
         projectiles_per_shot="1" 
         spread_range="0.0"
         use_basic_muzzle_smoke_effect="0"/>
@@ -116,6 +116,7 @@
         <sound key="fire" fileref="typhon_fire_FromBF2042.wav" pitch_variety="0.05" volume="3.5" />
         <projectile file="typhoon_laser.projectile" pulldown_in_air="0.5" >
         </projectile>
+        <ballistics curve_height="1.75" near_far_distance="0.0" speed_estimation_near="400.0" speed_estimation_far="400.0" max_speed="800.0" randomness="0.0" tweak_factor="8.8"/>
         <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
         <target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0" />
         <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0" />
@@ -125,5 +126,7 @@
         <target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.5" />
         <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />  
         <effect class="muzzle" ref="sawsnone" />
+        <!-- <effect class="muzzle" ref="big_muzzle_fireball_side_2" />
+        <effect class="muzzle" ref="big_muzzle_fireball_side_3" post_processing="1"/> -->
     </weapon>
 </weapons>
