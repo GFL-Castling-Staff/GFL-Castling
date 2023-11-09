@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectiles>
-<projectile key="at4_incendiary.projectile" class="grenade" name="rocket" slot="2" pulldown_in_air="0.5" radius="0.4">
+<projectile key="at4_incendiary.projectile" class="grenade" name="rocket" slot="2" pulldown_in_air="1" radius="0.3">
     <tag name="rocket"/>
 	
 	<result class="spawn" instance_class="grenade" instance_key="hd_grenade_molotov_damage.projectile" min_amount="45" max_amount="45" offset="0 -1 0" position_spread="8 16" direction_spread="0.0 0.0"/>
