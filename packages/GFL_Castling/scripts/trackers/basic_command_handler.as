@@ -453,7 +453,7 @@ class BasicCommandHandler : Tracker {
 			playAnimationKey(m_metagame,characterId,"infinite_rotation",true,true);
 		}
 
-		if (checkCommand(message, "help")) {
+		else if (checkCommand(message, "help")) {
 			notify(m_metagame, "Help - command", dictionary(), "misc", senderId, true, "Help - command title", 1.0);
 		}
 
@@ -466,54 +466,53 @@ class BasicCommandHandler : Tracker {
 			dictionary dict = {{"TagName", "command"},{"class", "chat"},{"text", "mod or admin"}};
 			m_metagame.getComms().send(XmlElement(dict));
 		}
-		else if (checkCommand(message, "sing")) {
+		// else if (checkCommand(message, "sing")) {
+		// 	_log('pre_sing 0.');
+		// 	// 获取玩家阵营，位置信息
+		// 	const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+		// 	int playerId = playerInfo.getIntAttribute("player_id");
+		// 	if (playerInfo is null) return;
+		// 	int characterId= playerInfo.getIntAttribute("character_id");
+		// 	const XmlElement@ characterInfo = getCharacterInfo(m_metagame, characterId);
+		// 	if (characterInfo is null) return;
+		// 	string c_pos = characterInfo.getStringAttribute("position");
+		// 	int fId = characterInfo.getIntAttribute("faction_id");
 
-			_log('pre_sing 0.');
-			// 获取玩家阵营，位置信息
-			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
-			int playerId = playerInfo.getIntAttribute("player_id");
-			if (playerInfo is null) return;
-			int characterId= playerInfo.getIntAttribute("character_id");
-			const XmlElement@ characterInfo = getCharacterInfo(m_metagame, characterId);
-			if (characterInfo is null) return;
-			string c_pos = characterInfo.getStringAttribute("position");
-			int fId = characterInfo.getIntAttribute("faction_id");
+		// 	// 获取玩家装备，注意这里用的是getCharacterInfo2，和上面getCharacterInfo不同
+		// 	const XmlElement@ targetCharacter = getCharacterInfo2(m_metagame,characterId);
+		// 	if (targetCharacter is null) return;
+		// 	array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
+		// 	if (equipment.size() == 0) return;
+		// 	if (equipment[0].getIntAttribute("amount") == 0) return;
+		// 	string c_weaponType = equipment[0].getStringAttribute("key");
+		// 	string c_armorType = equipment[4].getStringAttribute("key");
 
-			// 获取玩家装备，注意这里用的是getCharacterInfo2，和上面getCharacterInfo不同
-			const XmlElement@ targetCharacter = getCharacterInfo2(m_metagame,characterId);
-			if (targetCharacter is null) return;
-			array<const XmlElement@>@ equipment = targetCharacter.getElementsByTagName("item");
-			if (equipment.size() == 0) return;
-			if (equipment[0].getIntAttribute("amount") == 0) return;
-			string c_weaponType = equipment[0].getStringAttribute("key");
-			string c_armorType = equipment[4].getStringAttribute("key");
+		// 	if(singLastTime>0){
+		// 		dictionary a;
+        //         a["%time"] = ""+singLastTime;  
+		// 		sendPrivateMessageKey(m_metagame,playerId,"VODcooldown",a);
+		// 		return;
+		// 	}
 
-			if(singLastTime>0){
-				dictionary a;
-                a["%time"] = ""+singLastTime;  
-				sendPrivateMessageKey(m_metagame,playerId,"VODcooldown",a);
-				return;
-			}
-
-			_log("Sing last time is: "+singLastTime);
-			if(message=="/sing"){
-				sendPrivateMessageKey(m_metagame,playerId,"VODvoid");
-			}
-			else{
-				uint jud_num = uint(message.toLowerCase()[5]) - 48;
-				string jud_sing_file = c_weaponType + '' + jud_num + '.wav';
-				if(songIndex.exists(jud_sing_file)){
-					_log("Sing file is: "+jud_sing_file);
-					int songId = int(songIndex[jud_sing_file]);
-					_log("Add up time: " + float(songInfo[songId][1]));
-					singLastTime += float(songInfo[songId][1]);
-					playSoundAtLocation(m_metagame,jud_sing_file,fId,c_pos,float(songInfo[songId][0]));
-				}				
-				else{
-					sendPrivateMessageKey(m_metagame,playerId,"VODerror");
-				}
-			}
-		}			
+		// 	_log("Sing last time is: "+singLastTime);
+		// 	if(message=="/sing"){
+		// 		sendPrivateMessageKey(m_metagame,playerId,"VODvoid");
+		// 	}
+		// 	else{
+		// 		uint jud_num = uint(message.toLowerCase()[5]) - 48;
+		// 		string jud_sing_file = c_weaponType + '' + jud_num + '.wav';
+		// 		if(songIndex.exists(jud_sing_file)){
+		// 			_log("Sing file is: "+jud_sing_file);
+		// 			int songId = int(songIndex[jud_sing_file]);
+		// 			_log("Add up time: " + float(songInfo[songId][1]));
+		// 			singLastTime += float(songInfo[songId][1]);
+		// 			playSoundAtLocation(m_metagame,jud_sing_file,fId,c_pos,float(songInfo[songId][0]));
+		// 		}				
+		// 		else{
+		// 			sendPrivateMessageKey(m_metagame,playerId,"VODerror");
+		// 		}
+		// 	}
+		// }			
 		else if (checkCommand(message, "sidinfo")) {
 			handleSidInfo(message,senderId);
 		} else if (checkCommand(message, "kick_id")) {

@@ -5,17 +5,17 @@
         <specification 
         barrel_offset="0.5" 
         retrigger_time="0.0923" 
-        accuracy_factor="0.8" 
+        accuracy_factor="1.0" 
         sustained_fire_grow_step="0.8" 
-        sustained_fire_diminish_rate="1.2"
-        spread_range="0.45"
+        sustained_fire_diminish_rate="2.6"
+        spread_range="0.7"
         magazine_size="100" 
         suppressed="0" 
         stance_accuracy_rate="1.0"
         name="PK" 
         class="0" 
         projectile_speed="200" 
-        sight_range_modifier="1.3"
+        sight_range_modifier="1.5"
         leave_crouch_accuracy_penalty="0.35"
         slot="0"
         can_shoot_standing="1" 
@@ -25,7 +25,7 @@
         stab_enabled="1"
         />
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
-        <animation key="reload" animation_key="reloading, Machine gun 1.6" />
+        <animation key="reload" animation_key="reloading, Machine gun 2.0" />
         <inventory encumbrance="50.0" buy_price="45.0" sell_price="45.0" />
         <next_in_chain key="gkw_pk_skill.weapon" share_ammo="0" />
         <sound key="fire" fileref="qjy80_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
@@ -38,17 +38,17 @@
         <hud_icon filename="gkw_pk.png" />
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="3.3" kill_probability_offset_on_successful_hit="3.2" kill_decay_start_time="1.5" kill_decay_end_time="1.6" />
-            <trail probability="1.0" key="bullet_new_deep"/>
+            <trail probability="1.0" key="BulletApTrail_ct" />
         </projectile>
         <effect class="muzzle" ref="ejection_76251" />
-        <stance state_key="running" accuracy="0.5" />
-        <stance state_key="walking" accuracy="0.55" />
-        <stance state_key="crouch_moving" accuracy="0.65" />
-        <stance state_key="standing" accuracy="0.5" />
-        <stance state_key="crouching" accuracy="0.85" />
-        <stance state_key="prone" accuracy="1.2" />
-        <stance state_key="prone_moving" accuracy="0.5" />
-        <stance state_key="over_wall" accuracy="1.2" />
+        <stance state_key="running" accuracy="0.2"/>
+        <stance state_key="walking" accuracy="0.45"/>
+        <stance state_key="standing" accuracy="1.0"/>
+        <stance state_key="crouching" accuracy="0.98"/>
+        <stance state_key="crouch_moving" accuracy="0.475"/>
+        <stance state_key="prone" accuracy="1.2"/>
+        <stance state_key="prone_moving" accuracy="0.675"/>
+        <stance state_key="over_wall" accuracy="1.28"/>
     </weapon>
     <weapon key="gkw_pk_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
         <tag name="machine gun" />
@@ -58,14 +58,14 @@
         accuracy_factor="1.0" 
         spread_range="0.35"
         sustained_fire_grow_step="0.8" 
-        sustained_fire_diminish_rate="1.0"
+        sustained_fire_diminish_rate="4.0"
         magazine_size="250" 
         stance_accuracy_rate="1.0"
         suppressed="0" 
         name="PK-[Terminating Barrage]" 
         class="0" 
         projectile_speed="190" 
-        sight_range_modifier="1.75"
+        sight_range_modifier="2.0"
         slot="0"
         can_shoot_standing="0" 
         can_shoot_crouching="1"
@@ -100,7 +100,7 @@
         <capacity value="1" source="rank" source_value="0.0" />
         <hud_icon filename="gkw_pk_skill.png" />
         <projectile file="bullet_he.projectile">
-            <result class="blast" damage="2.1" radius="2.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+            <result class="blast" damage="3.1" radius="2.3" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
             <trail probability="1.0" key="BulletApTrail_ct" />
         </projectile>
         <effect class="muzzle" ref="ejection_76251" />
@@ -112,13 +112,13 @@
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <stance state_key="running" accuracy="1.0" />
-        <stance state_key="walking" accuracy="1.0" />
-        <stance state_key="crouch_moving" accuracy="1.0" />
-        <stance state_key="standing" accuracy="1.0" />
-        <stance state_key="crouching" accuracy="1.0" />
+        <stance state_key="running" accuracy="1.2" />
+        <stance state_key="walking" accuracy="1.2" />
+        <stance state_key="crouch_moving" accuracy="1.2" />
+        <stance state_key="standing" accuracy="1.2" />
+        <stance state_key="crouching" accuracy="1.2" />
         <stance state_key="prone" accuracy="1.2" />
-        <stance state_key="prone_moving" accuracy="1.0" />
+        <stance state_key="prone_moving" accuracy="1.2" />
         <stance state_key="over_wall" accuracy="1.2" />
         <modifier class="speed" value="-6.0" />
         <modifier class="hit_success_probability" value="-0.4" />

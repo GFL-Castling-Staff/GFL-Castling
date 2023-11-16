@@ -7,11 +7,10 @@
     <model mesh_filename="tow_missile.xml"/>
     <commonness value="0.0" />
     <collision class="sticky" />    
-    <sound class="result" key="other" fileref="tow_explosion.wav" volume="1.25" />
+
+    <sound class="result" key="other" file="tow_explosion.wav" volume="3.5" />
+
     <sound class="result" key="vehicle" copy="other" />
-    <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.8" />
-    <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_02.wav" pitch_variety="0.2" volume="0.8" />
-    <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_03.wav" pitch_variety="0.2" volume="0.8" />
     <sound class="result" key="terrain" copy="other" />
     <sound class="result" key="static_object" copy="other" />
     <sound class="result" key="character" copy="other" />

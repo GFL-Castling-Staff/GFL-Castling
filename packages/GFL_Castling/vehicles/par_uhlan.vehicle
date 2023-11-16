@@ -3,8 +3,8 @@
 	file="vehicle_base.vehicle" 
 	name="Uhlan" 
 	key="paradeus_uhlan.vehicle" 
-	respawn_time="145" 
-	time_to_live_unsteerable="140" 
+	respawn_time="175" 
+	time_to_live_unsteerable="170" 
 	map_view_atlas_index="39" 
 	minimum_fill_requirement="1.0" 
 	max_character_collision_speed_on_normal="15.0"
@@ -77,11 +77,11 @@
         <turret index="2" />
     </character_slot>
     <!-- sound handling -->
-    <rev_sound filename="tank_rev0.wav" low_pitch="0.5" high_pitch="0.7" low_rev="0.0" high_rev="1.0" volume="0.7" />
-    <rev_sound filename="tank_rev0_b.wav" low_pitch="0.6" high_pitch="0.8" low_rev="0.0" high_rev="1.0" volume="0.6" />
-    <rev_sound filename="tank_rev1.wav" low_pitch="0.2" high_pitch="0.5" low_rev="0.4" high_rev="0.7" volume="0.6" />
-    <rev_sound filename="tank_tracks.wav" low_pitch="0.4" high_pitch="0.7" low_rev="0.1" high_rev="1.0" volume="0.7" />
-    <rev_sound filename="tank_rev2.wav" low_pitch="0.3" high_pitch="0.5" low_rev="0.9" high_rev="1.0" volume="0.7" />
+    <rev_sound filename="tank_rev0.wav" low_pitch="0.5" high_pitch="0.7" low_rev="0.0" high_rev="1.0" volume="1.15" />
+    <rev_sound filename="tank_rev0_b.wav" low_pitch="0.6" high_pitch="0.8" low_rev="0.0" high_rev="1.0" volume="1.15" />
+    <rev_sound filename="tank_rev1.wav" low_pitch="0.2" high_pitch="0.5" low_rev="0.4" high_rev="0.7" volume="1.15" />
+    <rev_sound filename="tank_tracks.wav" low_pitch="0.4" high_pitch="0.7" low_rev="0.1" high_rev="1.0" volume="1.15" />
+    <rev_sound filename="tank_rev2.wav" low_pitch="0.3" high_pitch="0.5" low_rev="0.9" high_rev="1.0" volume="1.15" />
     <sound key="squeal" filename="tire_squeal.wav" />
     <sound key="ignition" filename="jeep2_ignition.wav" />
     <sound key="hit" filename="car_hit1.wav" />

@@ -764,7 +764,7 @@ class CommandSkill : Tracker {
     }
     void excuteM1928A1skill(int characterId,int playerId,SkillModifer@ modifer){
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"M1928A1")) return;
-        addCooldown("M1928A1",25,characterId,modifer);
+        addCooldown("M1928A1",60,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         string vestkey="exo_t5_16lab.carry_item";
         if (character !is null) {
@@ -784,7 +784,7 @@ class CommandSkill : Tracker {
             }            
             m_metagame.getComms().send(c);
             deleteItemInBackpack(m_metagame,characterId,"carry_item","immunity_thompson.carry_item");
-            SkillEffectTimer@ stimer = SkillEffectTimer(characterId,4,"M1928A1");
+            SkillEffectTimer@ stimer = SkillEffectTimer(characterId,10,"M1928A1");
             stimer.setSkey(vestkey);
             TimerArray.insertLast(stimer);
             array<string> Voice={

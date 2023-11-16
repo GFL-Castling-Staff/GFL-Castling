@@ -46,6 +46,11 @@
     <capacity value="1" source="rank" source_value="3.457"/>
     <effect class="muzzle" ref="muzzle_cannon_fire_smoke" lighting="0"/>
     <effect class="muzzle" ref="muzzle_cannon_fire_light" lighting="0"/>
+    <effect class="muzzle" ref="big_muzzle_fire_smoke" post_processing="1"/>
+    <effect class="muzzle" ref="big_muzzle_fire_smoke_2" post_processing="1"/>
+    <effect class="muzzle" ref="big_muzzle_ambient"/>
+    <effect class="muzzle" ref="big_muzzle_ambient_ground"/>
+    <effect class="muzzle" ref="big_muzzle_spark"/>
 
     <stance state_key="running" accuracy="0.1"/>
     <stance state_key="walking" accuracy="0.4"/>
@@ -116,6 +121,12 @@
     <capacity value="1" source="rank" source_value="3.457"/>
     <effect class="muzzle" ref="muzzle_cannon_fire_smoke" lighting="0"/>
     <effect class="muzzle" ref="muzzle_cannon_fire_light" lighting="0"/>
+    <effect class="muzzle" ref="big_muzzle_fire_smoke" post_processing="1"/>
+    <effect class="muzzle" ref="big_muzzle_fire_smoke_2" post_processing="1"/>
+    <effect class="muzzle" ref="big_muzzle_ambient"/>
+    <effect class="muzzle" ref="big_muzzle_ambient_ground"/>
+    <effect class="muzzle" ref="big_muzzle_spark"/>
+    
     <stance state_key="running" accuracy="0.1"/>
     <stance state_key="walking" accuracy="0.4"/>
     <stance state_key="crouch_moving" accuracy="0.8"/>

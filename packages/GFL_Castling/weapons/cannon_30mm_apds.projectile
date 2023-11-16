@@ -2,7 +2,7 @@
 <projectile class="grenade" name="30mm APDS" key="30mm_apds.projectile" slot="1" pulldown_in_air="4" >
     <result class="blast" 
     radius="2.0" 
-    damage="5.0"
+    damage="8.0"
     character_state="stun" 
     push="0.1" 
     decal="0" 
@@ -27,8 +27,8 @@
     <effect class="result" type="splat_map" surface_tag="" size="2.5" atlas_index="4" layer="0" />
     <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="2" additive="0" />
 
-    <effect class="result" key="terrain" ref="result_cannon_blast_AmbientLight" lighting="0"/>
-    <effect class="result" key="terrain" ref="result_cannon_blast_smoke" lighting="0"/>    
+    <effect class="result" key="terrain" ref="result_cannon_blast_AmbientLight_small" lighting="0"/>
+    <effect class="result" key="terrain" ref="result_cannon_blast_smoke_small" lighting="0"/>  
     <effect class="result" key="terrain" ref="hitGround_20mm" use_surface_color="1" />
     <effect class="result" key="terrain" ref="BulletImpactDust4" />
     <effect class="result" key="terrain" ref="BulletImpactDust5" />
