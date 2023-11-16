@@ -434,7 +434,25 @@ class BasicCommandHandler : Tracker {
 			int characterId= playerInfo.getIntAttribute("character_id");			
 			playAnimationKey(m_metagame,characterId,"celebrating2",true,true);
 		}
-		
+		else if (checkCommand(message, "action3")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			if (playerInfo is null) return;
+			int characterId= playerInfo.getIntAttribute("character_id");			
+			playAnimationKey(m_metagame,characterId,"sunbath_crossleg",true,true);
+		}
+		else if (checkCommand(message, "action4")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			if (playerInfo is null) return;
+			int characterId= playerInfo.getIntAttribute("character_id");			
+			playAnimationKey(m_metagame,characterId,"lay on ground and shake",true,true);
+		}
+		else if (checkCommand(message, "action5")) {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			if (playerInfo is null) return;
+			int characterId= playerInfo.getIntAttribute("character_id");			
+			playAnimationKey(m_metagame,characterId,"infinite_rotation",true,true);
+		}
+
 		if (checkCommand(message, "help")) {
 			notify(m_metagame, "Help - command", dictionary(), "misc", senderId, true, "Help - command title", 1.0);
 		}
