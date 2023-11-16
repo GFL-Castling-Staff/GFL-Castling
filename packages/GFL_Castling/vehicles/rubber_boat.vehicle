@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle name="Degeyter I" 
+<vehicle 
+	name="Degeyter I" 
 	key="rubber_boat.vehicle" 
 	map_view_atlas_index="4"
 	respawn_time="90" 
-	time_to_live_unsteerable="60" 
-	character_leave_request_mode="friendly"  >
+	time_to_live_unsteerable="85" 
+	character_leave_request_mode="friendly" >
 	
 	<tag name="metal_thin" />
 	<tag name="boat" />
