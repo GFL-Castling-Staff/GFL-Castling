@@ -396,7 +396,7 @@ dictionary commandSkillIndex = {
         {"gkw_hvy_ags30_fix.weapon",62},
 
         {"gkw_hvy_qlz04.weapon",63},
-        {"gkw_hvy_qlz04_st.weapon",64},
+        {"gkw_hvy_qlz04_st.weapon",63},
 
         {"gkw_welrod.weapon",65},
         {"gkw_welrod_411.weapon",65},

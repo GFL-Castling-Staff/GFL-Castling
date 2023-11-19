@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="35mm" slot="1" pulldown_in_air="26.0" key="35mm_agl_dfr87.projectile">
+    <tag name="grenade"/>
+    <result class="spawn" instance_class="projectile" instance_key="35mm_agl_dfr87_damage.projectile" min_amount="20" max_amount="20" offset="0 -1 0" position_spread="3 16" direction_spread="0 0" />
+    <trigger class="impact" />
+    <rotation class="motion" />
+    <model mesh_filename="agl.xml" />
+
+    <commonness value="0.0" />
+
+    <sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2" />
+    <sound class="result" key="other" fileref="explosion_FromSQUAD_2.wav" volume="2" />
+    <sound class="result" key="other" fileref="explosion_FromSQUAD_3.wav" volume="2" />
+
+    <sound class="result" key="vehicle" copy="other" />    
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="character" copy="other" />
+
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_smoke" lighting="0" post_processing="1"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_smoke_expanding" lighting="0" post_processing="1"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_smaller_ring" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_smaller_ring_2" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_smaller_spray_1" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_smaller_spray_2" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_smaller_fire" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_smaller_fire_wave" lighting="0"/> 
+
+    <effect class="result" key="static_object" copy="terrain" />
+    <effect class="result" key="vehicle" copy="terrain" />     
+    <effect class="result" key="character" copy="terrain" />
+    <effect class="result" key="other" copy="terrain" />
+
+
+    <effect class="activated" ref="Propulsion_gl" />
+
+</projectile>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="" slot="2" key="35mm_agl_dfr87_damage.projectile" radius="0.15" pulldown_in_air="5">
+    <tag name="fire" />
+    <trigger class="impact"/>
+    <result class="blast" radius="3.5" damage="1.01" push="0.0" decal="1" make_vehicle_hit_sound="0" faction_compare="not_equal"/>
+    <commonness value="0.0"/>
+    <rotation class="random" />
+    <model mesh_filename="" />
+    <hud_icon filename="" />
+    <effect class="result" key="other" type="splat_map" surface_tag="" size="1.0" atlas_index="0" layer="1" />
+    <effect class="result" key="other" type="splat_map" surface_tag="" size="1.5" atlas_index="4" layer="0" />
+    <effect class="result" key="other" type="splat_map" surface_tag="" size="2.0" atlas_index="0" layer="2" additive="0" />
+
+    <effect class="result" key="terrain" ref="BurnOut" post_processing="1" />
+
+    <effect class="result" key="terrain" ref="molotov_fire_01"/>
+    <effect class="result" key="terrain" ref="molotov_fire_02"/>
+    <effect class="result" key="terrain" ref="molotov_smoke"/>
+	<effect class="result" key="other" copy="terrain"/>
+    <effect class="result" key="static_object" copy="terrain" />
+    <effect class="result" key="vehicle" copy="terrain" />
+    
+    <effect class="result" key="character" ref="molotov_fire_01"/>
+    <effect class="result" key="character" ref="molotov_fire_02"/>
+    <effect class="result" key="character" ref="molotov_smoke"/>
+</projectile>
