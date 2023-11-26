@@ -154,7 +154,7 @@ class GFLairstrike : Tracker {
                         endPos = endPos.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
                         //垂直偏移，先快后慢
                         startPos = startPos.add(Vector3(0,-20*(sqrt(float(1/strike_time)*i)),0));
-                        //每单轮扫射生成12次对点扫射
+                        //每单轮扫射生成6次对点扫射
                         for(int j=1;j<=6;j++)
                         {
                             float rand_x = rand(-strike_rand,strike_rand);
