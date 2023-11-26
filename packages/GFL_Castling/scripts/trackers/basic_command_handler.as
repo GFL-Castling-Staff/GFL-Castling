@@ -917,7 +917,6 @@ class BasicCommandHandler : Tracker {
 			addMutilItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","kcco_smartgrenade_1.projectile",240);
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","kcco_hydra_at.weapon");
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","kcco_hydra_at.weapon");
-			
 		} else if (checkCommand(message,"gsft")){		
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","skill_sf_boss_excutioner_scan.projectile");			
@@ -947,6 +946,17 @@ class BasicCommandHandler : Tracker {
 			}
 		} else if (checkCommand(message, "fill")) {
 			fillInventory(senderId);
+		} else if (checkCommand(message,"gdiics")) {		
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","gdiics.projectile");			
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","gdiics.projectile");			
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","gdiics.projectile");			
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","gdiics.projectile");			
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","gdiics.projectile");			
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","gdiics.projectile");			
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","gdiics.projectile");			
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","gdiics.projectile");			
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","gdiics.projectile");			
 		}
 	}
 

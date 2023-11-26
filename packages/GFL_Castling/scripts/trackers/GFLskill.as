@@ -1456,6 +1456,19 @@ class GFLskill : Tracker {
 				break;			
 			}
 
+			case 52: {//轨道轰炸
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				int factionId = character.getIntAttribute("faction_id");
+				if (character !is null) {
+					Vector3 pos = stringToVector3(event.getStringAttribute("position"));
+					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+					tasker.add(GDIIonCannonStrike(m_metagame,2.5,characterId,factionId,pos));
+				}
+				break;
+			}
+
+
             default:
                 break;
 		}

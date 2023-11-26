@@ -860,6 +860,62 @@ class Skill_Sf_Boss_Dreamer : DelaySkill {
 	}
 }
 
+class GDIIonCannonStrike : DelaySkill {
+	protected CastlingMarker@ m_info;
+
+	GDIIonCannonStrike(GameMode@ metagame, float time, int cId,int fId, Vector3 pos){
+		super(metagame,time,cId,fId);
+		t_pos = pos;
+	}
+
+    void start() {
+        m_timeLeft = m_time;
+        m_timeLeft_internal = 0;
+        this.setExcuteLimit(25); // 设置执行限制为5次，每0.5秒一次，总共2.5秒
+        this.setInternal(0.2); // 设置内部间隔为0.5秒
+    }
+
+    void update(float time) {
+        if (m_timeLeft >= 0) { m_timeLeft -= time; return; }
+        if (m_timeLeft_internal >= 0) { m_timeLeft_internal -= time; return; }
+        if (m_excute_time >= m_excute_Limit) { m_end = true; return; }
+
+        if (m_excute_time < 4) {
+			Vector3 strikePosition;
+			for(int i=1;i<=6;i++){
+				strikePosition = calculateStrikePosition(0,t_pos,i);
+				CreateDirectProjectile(m_metagame, strikePosition.add(Vector3(0,40,0)), strikePosition, "GDIICS_1.projectile", m_character_id, m_faction_id, 120);				
+			}
+        } else if (m_excute_time < 15) {
+			Vector3 strikePosition;
+			for(int i=1;i<=6;i++){
+				int num = m_excute_time-4;
+				strikePosition = calculateStrikePosition(num,t_pos,i+0.1*(1+num*0.1)*num);
+				CreateDirectProjectile(m_metagame, strikePosition.add(Vector3(0,40,0)), strikePosition, "GDIICS_1.projectile", m_character_id, m_faction_id, 120);				
+			}
+		} else if (m_excute_time < 24) {
+			CreateDirectProjectile(m_metagame, t_pos.add(Vector3(0,40,0)), t_pos, "GDIICS_1.projectile", m_character_id, m_faction_id, 120);				
+		}
+		 else if (m_excute_time == m_excute_Limit-1){
+            CreateDirectProjectile(m_metagame, t_pos.add(Vector3(0,20,0)), t_pos, "GDIICS_2.projectile", m_character_id, m_faction_id, 60);
+        }
+
+        m_timeLeft_internal = m_time_internal;
+        m_excute_time++;
+    }
+
+    Vector3 calculateStrikePosition(int step, Vector3 t_pos, float num) {
+        // 根据步骤计算轰击位置
+        float angle = num * 60.0; // 每次逆时针旋转120度
+        return t_pos.add(Vector3(
+            (10-step) * cos(angle * 3.1415 / 180.0),
+            0,
+            (10-step) * sin(angle * 3.1415 / 180.0)
+        ));
+    }
+}
+
+
 class Skill_M200_Snipe : DelaySkill {
     protected CastlingMarker@ m_info;
 
