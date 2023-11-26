@@ -186,7 +186,11 @@ dictionary gameSkillIndex = {
         // 铁血boss 梦想家 技能 跟踪激光打击
         {"sf_boss_dreamer_skill",50},
 
+        // 玩家用KCCO智能雷扫描阶段
         {"kcco_smartgrenade_player_scan",51},
+
+        // 轨道炮轰炸
+        {"spawn_orbital_strike",52},
 
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
