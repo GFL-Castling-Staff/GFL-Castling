@@ -37,7 +37,109 @@ dictionary callLaunchIndex = {
     {"gk_vehicle_chiara.call",9},
     {"gk_vehicle_martina.call",10},
 
+// 新支援系统（注意命名按照T1=1xxxx,T2=2xxxx,T3=3xxxx的格式来）
+// x-xxx-xx : 支援级别-支援编号-支援等级/变种
 
+// T1 ----------------------------------- //
+
+    // T1 炮击妖精-[82mm迫击炮打击]
+        // lv0
+        {"new_t1_lv0_82mm_bombardment_fairy.call",100100},
+
+    // T1 空袭妖精-[俯冲攻击]
+        //lv0
+        {"new_t1_lv0_dive_airstrike_fairy.call",100200},
+
+    // T1 空袭妖精-[精准空袭]
+        // lv0
+        {"new_t1_lv0_precise_airstrike_fairy.call",100300},
+
+    // T1 火箭妖精-[巡航导弹]
+        // lv0
+        {"new_t1_lv0_missile_rocket_fairy.call",100400},
+
+    // T1 魔女妖精 
+        // lv0
+        {"new_t1_lv0_witch_fairy.call",100500},
+        // lv1
+        {"new_t1_lv1_witch_fairy.call",100501},
+        // lv2
+        {"new_t1_lv2_witch_fairy.call",100502},
+        // lv3
+        {"new_t1_lv3_witch_fairy.call",100503},
+
+    // T1 花火妖精（春节限定）
+        // lv0
+        {"new_t1_lv0_newyear_firework_fairy.call",100600},
+
+// T2 ----------------------------------- //
+
+    // T2 空袭妖精-[高空投弹]
+        // lv0
+        {"new_t2_lv0_highal_airstrike_fairy.call",200100},
+
+    // T2 勇士妖精-[侦察直升机扫荡]
+        // lv0 
+        {"new_t2_lv0_scout_warrior_fairy.call",200200},
+
+    // T2 勇士妖精-[VTOL战机巡航]
+        // lv0
+        {"new_t2_lv0_VTOL_warrior_fairy.call",200300},
+
+    // T2 火箭妖精-[火箭弹打击]
+        // lv0
+        {"new_t2_lv0_TOS_rocket_fairy.call",200400},
+
+    // T2 耀夜姬-[轨道激光打击]
+        // lv0
+        {"new_t2_lv0_nightshine_princess.call",200500},
+
+    // T2 连击妖精
+        // lv0
+        {"new_t2_lv0_combo_fairy.call",200600},
+
+    // T2 沙舞妖精
+        // lv0
+        {"new_t2_lv0_sanddance_fairy.call",200700},
+        // lv1
+        {"new_t2_lv1_sanddance_fairy.call",200701},
+        // lv2
+        {"new_t2_lv2_sanddance_fairy.call",200702},
+        // lv3
+        {"new_t2_lv3_sanddance_fairy.call",200703},
+
+    // T2 双生妖精
+        // lv0
+        {"new_t2_lv0_twin_fairy.call",200800},
+        // lv1
+        {"new_t2_lv1_twin_fairy.call",200801},
+
+    // T2 护盾妖精
+        // lv0
+        {"new_t2_lv0_shield_fairy.call",200900},
+
+    // T2 年兽妖精
+        // lv0
+        {"new_t2_lv0_nian_fairy,call",201000},
+
+// T3 ----------------------------------- //
+
+    // T3 勇士妖精-[武装直升机扫荡]
+        // lv0
+        {"new_t3_lv0_warrior_fairy.call",300100},
+
+    // T3 暴怒妖精-[炮艇支援]
+        // lv0
+        {"new_t3_lv0_rage_fairy.call",300200},
+
+    // T3 火箭妖精-[火箭弹突袭]
+        // lv0
+        {"new_t3_lv0_raid_rocket_fairy.call",300300},
+
+    // T3 火箭妖精-[地毯式覆盖]
+        // lv0
+        {"new_t3_lv0_carpetb_rocket_fairy.call",300400},
+    
     // 空空投
     {"",0}
 };
