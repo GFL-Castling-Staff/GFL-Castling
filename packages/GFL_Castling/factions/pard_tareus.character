@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<character filename="paradeus.text_lines">
+
+	<sound key="death" fileref="kill_sound_mechabot_big_01.wav" volume="0.4" pitch_variety="0.025" />
+	<sound key="death" fileref="kill_sound_mechabot_big_02.wav" volume="0.4" pitch_variety="0.025" />
+	<sound key="death" fileref="kill_sound_mechabot_big_03.wav" volume="0.4" pitch_variety="0.025" />
+	<sound key="footstep" fileref="step_sound_mecha_medium_01.wav" volume="1.4" />
+	<sound key="footstep" fileref="step_sound_mecha_medium_02.wav" volume="1.4" />
+	<sound key="footstep" fileref="step_sound_mecha_medium_03.wav" volume="1.4" />
+	<sound key="footstep" fileref="step_sound_mecha_medium_04.wav" volume="1.4" />
+	<sound key="footstep" fileref="step_sound_mecha_medium_05.wav" volume="1.4" />
+	<sound key="footstep" fileref="step_sound_mecha_medium_06.wav" volume="1.4" />
+	
+	<parameter class="throwing_self_over_initial_bounce" value="0.10" />
+	<parameter class="throwing_self_over_steer_amount" value="0.30" />
+	<parameter class="throwing_self_over_lift_up" value="0.10" />
+    <parameter class="lifting_up_initial_bounce" value="0.15"/>
+    <parameter class="jumping_up_bounce" value="0.15"/>
+	<parameter class="use_walk_animation_instead_of_run_speed_threshold" value="0.6" />
+
+	<parameter class="can_use_vehicles" value="0" /> 
+
+	<parameter class="ending_climbing_ladder_initial_bounce" value="0.05" />
+	<parameter class="ending_climbing_up_ladder_steer_amount" value="0.15" />
+	<parameter class="climbing_end_height_offset" value="0.25" />
+	<parameter class="climbing_with_jump_end_height_offset" value="0.25" />
+
+	<parameter class="climbing_up_ladder" value="0.5" />
+	<parameter class="climbing_down_ladder" value="0.5" />
+	<parameter class="climbing_switch_steer" value="0.2" />
+
+	<animation state_key="hold"  animation_key="tareus_still" />
+	<animation state_key="hold_on_wall"  animation_key="tareus_still" />
+	<animation key="still" target_key="tareus_still" />
+	<animation state_key="hold_casual"  animation_key="tareus_still" />
+	<animation key="still against wall" target_key="tareus_still" />
+	<animation key="still, heavy weapon" target_key="tareus_still" />
+	<animation key="walking" target_key="tareus_walking" />
+	<animation key="walking backwards" target_key="tareus_walkingback" />
+	<animation key="running" target_key="tareus_running" />
+	<animation key="crouch still" target_key="tareus_crouching" />
+	<animation key="crouching forwards" target_key="tareus_walking" />
+	<animation key="crouching backwards" target_key="tareus_walking" />
+	<animation key="prone" target_key="tareus_still" />
+	<animation key="prone, moving forwards" target_key="tareus_walking" />
+	<animation key="going prone" target_key="tareus_still" />
+	<animation key="leaving prone" target_key="tareus_still" />
+	<animation key="dive" target_key="tareus_still" />
+	<animation key="jumping" target_key="tareus_overwall" />
+	<animation key="lifting up" target_key="tareus_overwall" />
+	<animation key="throwing self over" target_key="tareus_overwall" />
+	<animation key="falling" target_key="tareus_still" />
+	<animation key="arriving ground" target_key="tareus_still" />
+	<animation key="climbing ladder, still" target_key="tareus_still" />
+	<animation key="climbing ladder" target_key="tareus_running" />
+	<animation key="climbing ladder ending" target_key="tareus_still" />
+	<animation key="wounded, still, 66" target_key="tareus_still" />
+	<animation key="wounded, moving forwards, 67" target_key="tareus_still" />
+	<animation key="leaving_wounded" target_key="tareus_still" />
+	<animation key="stunned" target_key="tareus_still" />
+	<animation key="surrender" target_key="tareus_still" />
+	<animation key="stabbing" target_key="tareus_stab_1" />
+	<animation key="throwing, upside" target_key="tareus_still" />
+	<animation key="change weapon out" target_key="tareus_still" />
+	<animation key="change weapon in" target_key="tareus_still" />
+	<animation key="change weapon out, reversed" target_key="tareus_still" />
+	<animation key="change weapon in, reversed" target_key="tareus_still" />
+	<animation key="change weapon in, single hand carry" target_key="tareus_still" />
+	<animation key="celebrating" target_key="tareus_stab_2" />
+	<animation key="celebrating, shooting" target_key="tareus_stab_2" />
+	<animation key="swimming still" target_key="tareus_still" />
+	<animation key="swimming forwards" target_key="tareus_running" />
+</character>

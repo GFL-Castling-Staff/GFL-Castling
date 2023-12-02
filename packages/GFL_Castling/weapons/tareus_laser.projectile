@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="" slot="1" pulldown_in_air="0.5" key="tareus_laser.projectile">
+	<tag name="tank_cannon"/>
+
+	<result class="blast" damage="50.0" radius="3.0" decal="1" push="1.0" character_state="death" damage_origin_vehicle="0" faction_compare="not_equal"/>
+	<rotation class="motion" />
+    <trigger class="impact" />
+
+	<commonness value="0.0" />
+
+    <sound class="result" key="other" fileref="burn.wav" />
+    <sound class="result" key="vehicle" fileref="burn.wav" />
+ 
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="character" copy="other" />
+
+	<trail probability="1.0" key="laser_tifeng" />
+
+    <effect class="result" key="terrain" ref="missile_result_cannon_blast_fire" lighting="0"/>
+    <effect class="result" key="terrain" ref="missile_result_cannon_blast_AmbientLight" lighting="0"/>
+    <effect class="result" key="terrain" ref="missile_result_expanding_fire" lighting="0" post_processing="1"/>
+
+    <effect class="result" key="terrain" ref="pa15_result_lens_light" lighting="0"/> 
+    <effect class="result" key="terrain" ref="pa15_result_side_particle" lighting="0"/> 
+    <effect class="result" key="terrain" ref="pa15_result_center_spark" lighting="0"/> 
+    <effect class="result" key="terrain" ref="pa15_result_blast_shine_center_hollow" lighting="0"/> 
+    <effect class="result" key="terrain" ref="pa15_result_blast_shine_particle" lighting="0"/> 
+
+	<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
+	<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
+	<effect class="result" type="splat_map" surface_tag="" size="7.0" atlas_index="0" layer="2" additive="0" />
+
+	<effect class="result" key="static_object" copy="terrain" />
+	<effect class="result" key="vehicle" copy="terrain" />
+	<effect class="result" key="character" copy="terrain" />
+	<effect class="result" key="other" copy="terrain" />
+</projectile>

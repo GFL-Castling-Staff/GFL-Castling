@@ -203,6 +203,9 @@ class ServerHelper : Tracker {
                 if(s=="cerberus") spawnSoldier(m_metagame,1,1,target,"sf_cerberus");
                 if(s=="uhlan") spawnVehicle(m_metagame,1,0,target,Orientation(0,1,0,0.1),"paradeus_uhlan.vehicle");
                 if(s=="excute") spawnSoldier(m_metagame,1,1,target,"sfw_Excutioner-Queen_of_the_Moon");
+                if(s=="tareus") spawnSoldier(m_metagame,1,0,target,"tareus");
+
+                
             }   
         }
     }
