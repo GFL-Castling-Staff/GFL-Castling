@@ -26,6 +26,7 @@
     <animation key="reload" animation_key="reloading, pf98" />
     <animation key="hold" animation_key="still, with law" />
     <animation key="hold_on_wall" animation_key="still, with law" />
+    <animation state_key="changing_weapon_in" 	animation_key="change weapon in,pf98" />
     <sound key="fire" fileref="rpg-7_shot.wav" volume="0.8" />
     <sound key="cycle" fileref="sniper_cycle.wav" />
     <sound key="magazine_out" fileref="sniper_clip_out.wav" />
@@ -81,6 +82,7 @@
     <animation key="reload" animation_key="reloading, pf98" />
     <animation key="hold" animation_key="still, with law" />
     <animation key="hold_on_wall" animation_key="still, with law" />
+    <animation state_key="changing_weapon_in" 	animation_key="change weapon in,pf98" />
     <sound key="fire" fileref="rpg-7_shot.wav" volume="0.8" />
     <sound key="cycle" fileref="sniper_cycle.wav" />
     <sound key="magazine_out" fileref="sniper_clip_out.wav" />

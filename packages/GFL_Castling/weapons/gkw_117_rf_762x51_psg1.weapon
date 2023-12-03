@@ -38,11 +38,11 @@
         <stance state_key="running" accuracy="0.35" />
         <stance state_key="walking" accuracy="0.45" />
         <stance state_key="crouch_moving" accuracy="0.5" />
-        <stance state_key="standing" accuracy="0.92" />
-        <stance state_key="crouching" accuracy="0.98" />
-        <stance state_key="prone" accuracy="1.0" /> 
+        <stance state_key="standing" accuracy="1.0" />
+        <stance state_key="crouching" accuracy="1.05" />
+        <stance state_key="prone" accuracy="1.1" /> 
         <stance state_key="prone_moving" accuracy="0.5" />
-        <stance state_key="over_wall" accuracy="1.0" />
+        <stance state_key="over_wall" accuracy="1.1" />
         <tag name="rifle"/>
         <commonness value="0.2" in_stock="0" can_respawn_with="1"/>
         <animation key="recoil" animation_key="recoil1"/>

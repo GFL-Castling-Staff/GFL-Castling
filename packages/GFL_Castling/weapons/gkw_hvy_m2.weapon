@@ -31,6 +31,7 @@
 	<animation state_key="running" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="walking" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="walking_backwards" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="changing_weapon_out" animation_key="change weapon out,mortar"/><!--半身动作，切换武器，本武器取出-->
 	<sound key="fire" fileref="m2_mortar_fire.wav" pitch_variety="0.1" volume="1.2"/>
 	<sound key="magazine_out" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
