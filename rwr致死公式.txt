@@ -12,8 +12,10 @@ d=IF(a>0,(1-b)*(a+damage)+b*(a+1+damage),b*(1+damage))
 
 我需要你写一个excel公式，直接输出d的结果
 
-=IF(QUOTIENT(hit-1, armor)>0, (1-IF(hit-armor*QUOTIENT(hit-1, armor)-armor<0,0,hit-armor*QUOTIENT(hit-1, armor)-armor))*(QUOTIENT(hit-1, armor)+damage)+IF(hit-armor*QUOTIENT(hit-1, armor)-armor<0,0,hit-armor*QUOTIENT(hit-1, armor)-armor)*(QUOTIENT(hit-1, armor)+1+damage), 0)
+=IF(QUOTIENT((hit-1),armor)>0,(1-IF((hit-armor*QUOTIENT((hit-1),armor)-armor)<0,0,(hit-armor*QUOTIENT((hit-1),armor)-armor)))*(QUOTIENT((hit-1),armor)+damage)+IF((hit-armor*QUOTIENT((hit-1),armor)-armor)<0,0,(hit-armor*QUOTIENT((hit-1),armor)-armor))*(QUOTIENT((hit-1),armor)+1+damage),IF((hit-armor*QUOTIENT((hit-1),armor)-armor)<0,0,(hit-armor*QUOTIENT((hit-1),armor)-armor))*(1+damage))
+
 
 请将此公式复制粘贴到您的 Excel 单元格中，并替换 "hit"、"damage" 和 "armor" 分别为相应的单元格引用或数值。这个公式应该能够计算出您需要的结果。
 
 RWR致死公式by 冥府乌鸦
+

@@ -4,17 +4,17 @@
     <specification 
     barrel_offset="0.5" 
     retrigger_time="0.0923" 
-    accuracy_factor="0.875" 
-    sustained_fire_grow_step="0.45" 
-    sustained_fire_diminish_rate="2.25" 
-    stance_accuracy_rate="1.25"
+    accuracy_factor="1.0" 
+    sustained_fire_grow_step="0.8" 
+    sustained_fire_diminish_rate="2.6"
+    spread_range="0.7"
+    stance_accuracy_rate="0.7"
     magazine_size="100" 
-    spread_range="0.575"
     suppressed="1" 
     name="AEK-999 Barsuk" 
     class="0" 
-    projectile_speed="210" 
-    sight_range_modifier="1.25"
+    projectile_speed="200" 
+    sight_range_modifier="1.5"
     can_shoot_standing="1"
     can_shoot_crouching="1"
     can_shoot_prone="1"/>
@@ -29,33 +29,34 @@
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="gkw_mg_aek999.xml" />
     <hud_icon filename="gkw_aek999.png" />
-    <projectile file="bullet.projectile" can_be_detected_by_footmen="0" can_be_detected_by_driver="0">
-        <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="2.75" kill_decay_start_time="3.273" kill_decay_end_time="5.455" />
+    <projectile file="bullet.projectile" >
+        <result class="hit" kill_probability="3.3" kill_probability_offset_on_successful_hit="5" kill_decay_start_time="3.273" kill_decay_end_time="5.455" />
+        <trail probability="1.0" key="BulletApTrail_ct" />
     </projectile>
-    <stance state_key="running" accuracy="0.75"/>
-    <stance state_key="walking" accuracy="0.75"/>
-    <stance state_key="crouch_moving" accuracy="0.75"/>
-    <stance state_key="prone_moving" accuracy="0.75"/>
-    <stance state_key="standing" accuracy="0.75"/>
-    <stance state_key="crouching" accuracy="0.85"/>
+    <stance state_key="running" accuracy="0.4"/>
+    <stance state_key="walking" accuracy="0.4"/>
+    <stance state_key="standing" accuracy="1.0"/>
+    <stance state_key="crouching" accuracy="0.98"/>
+    <stance state_key="crouch_moving" accuracy="0.475"/>
     <stance state_key="prone" accuracy="1.2"/>
-    <stance state_key="over_wall" accuracy="1.2"/>
+    <stance state_key="prone_moving" accuracy="0.675"/>
+    <stance state_key="over_wall" accuracy="1.28"/>
 </weapon>
 <weapon file="heavy_mg.animation_base" key="gkw_aek999_skill.weapon">
     <specification 
     barrel_offset="0.5" 
     retrigger_time="0.0923" 
     accuracy_factor="1.0" 
-    sustained_fire_grow_step="0.5" 
-    sustained_fire_diminish_rate="3.25" 
-    stance_accuracy_rate="0.75"
+    sustained_fire_grow_step="0.8" 
+    sustained_fire_diminish_rate="2.6"
+    stance_accuracy_rate="0.5"
     magazine_size="100" 
-    spread_range="0.65"
+    spread_range="0.75"
     suppressed="1" 
     name="AEK-999 Barsuk-[Hunting Impulse N]" 
     class="0" 
-    projectile_speed="210" 
-    sight_range_modifier="2.0"
+    projectile_speed="150" 
+    sight_range_modifier="1.5"
     can_shoot_standing="0"
     can_shoot_crouching="1"
     can_shoot_prone="1"/>
@@ -72,17 +73,17 @@
     <model filename="gkw_mg_aek999.xml" />
     <hud_icon filename="gkw_aek999_skill.png" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0" can_be_detected_by_driver="0">
-        <result class="hit" kill_probability="3.75" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="3.273" kill_decay_end_time="5.455" />
+        <result class="hit" kill_probability="6.0" kill_probability_offset_on_successful_hit="1" kill_decay_start_time="3.273" kill_decay_end_time="5.455" />
         <trail probability="1.0" key="BulletApTrail_ct" />
     </projectile>
-    <stance state_key="running" accuracy="0"/>
-    <stance state_key="walking" accuracy="0"/>
-    <stance state_key="crouch_moving" accuracy="0.15"/>
-    <stance state_key="prone_moving" accuracy="0.15"/>
-    <stance state_key="standing" accuracy="1.2"/>
-    <stance state_key="crouching" accuracy="0.95"/>
+    <stance state_key="running" accuracy="0.4"/>
+    <stance state_key="walking" accuracy="0.4"/>
+    <stance state_key="standing" accuracy="1.0"/>
+    <stance state_key="crouching" accuracy="0.98"/>
+    <stance state_key="crouch_moving" accuracy="0.475"/>
     <stance state_key="prone" accuracy="1.2"/>
-    <stance state_key="over_wall" accuracy="1.2"/>
-    <modifier class="detectability" value="-0.05" />
+    <stance state_key="prone_moving" accuracy="0.675"/>
+    <stance state_key="over_wall" accuracy="1.28"/>
+    <modifier class="detectability" value="-0.1" />
 </weapon>
 </weapons>
