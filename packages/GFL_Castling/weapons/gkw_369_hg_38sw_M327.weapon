@@ -42,13 +42,10 @@
     <animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
     <animation state_key="stabbing" animation_key="pistol whip"/>
     <animation state_key="stabbing" animation_key="pistol whip 3"/>
-    <sound key="fire" fileref="webley_Fire_FromBF1.wav" volume="0.6" pitch_variety="0.05" />
-    <sound key="magazine_out" fileref="revolver_magazine_out.wav" volume="1" />
-    <sound key="magazine_in" fileref="revolver_magazine_in.wav" volume="1" />
-    <sound key="cycle_out" fileref="revolver_cycle_out.wav" volume="1" />
-    <sound key="cycle_in" fileref="revolver_cycle_in.wav" volume="1" />
-    <sound key="cycle" fileref="revolver_cycle.wav" volume="1" />
-    <sound key="reload_one" fileref="revolver_magazine_in.wav" />
+    <sound key="fire" fileref="r8_fire_FromCSGO.wav" volume="1.0" pitch_variety="0.05" />
+    <sound key="magazine_out" fileref="r8_mgz_out_FromCSGO.wav" volume="1" />
+    <sound key="magazine_in" fileref="r8_mgz_in_FromCOD17.wav" volume="1" />
+    <sound key="cycle" fileref="r8_cycle_FromCSGO.wav" volume="1" />
     <model filename="gkw_webley_From_melondove.xml" />
     <hud_icon filename="gkw_m327.png" />
     <weak_hand_hold offset="0.1" />
