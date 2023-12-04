@@ -55,7 +55,7 @@
         <hud_icon filename="gkw_mg42.png" />
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="5" kill_probability_offset_on_successful_hit="2.8" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
-            <trail probability="1.0" key="bullet_new_deep"/>
+            <trail probability="1.0" key="BulletMgTrail" />
         </projectile>
         <effect class="muzzle" ref="ejection_76251"/>
         <stance state_key="running" accuracy="0.3" />
@@ -113,7 +113,7 @@
         <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
         <animation state_key="stabbing" animation_key="stabbing, bat" />
         <animation key="reload" animation_key="reloading, Machine gun 4" />
-        <sound key="fire" fileref="mg42_skill_fire_FromBF5.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="fire" fileref="mg42_skill_fire_FromBF5.wav" pitch_variety="0.05" volume="1.35" />
         <sound key="magazine_out" fileref="mg42_mgz_out_FromHELLLETLOOSE.wav" volume="1" />
         <sound key="magazine_in" fileref="mg42_mgz_in_FromHELLLETLOOSE.wav" volume="1" />
         <sound key="cycle" fileref="mg42_cycle_FromHELLLETLOOSE.wav" volume="1" />
