@@ -18,6 +18,8 @@
 		projectiles_per_shot="15"
 		spread_range="0.28"
 		carry_in_two_hands="0"
+		stab_enabled="1"
+		stab_range="3.5"
 		/>
 		<inventory encumbrance="12.5" buy_price="76.0" sell_price="76.0"/>
 		<!-- Animations -->
@@ -44,6 +46,10 @@
 		<animation state_key="hold" animation_key="still, riot shield,aegissergeantGA" />
 		<animation state_key="hold_casual"  animation_key="crouching still, riot shield,aegissergeantGA" />
 		<animation state_key="hold_on_wall" animation_key="crouching still, riot shield,aegissergeantGA" />
+		<animation state_key="stabbing" animation_key="melee,spas12 skin" />
+		<animation state_key="stabbing" animation_key="melee,spas12 skin 1" />
+		<animation state_key="stabbing" animation_key="melee,spas12 skin 2" />
+		<animation state_key="stabbing" animation_key="melee,spas12 skin 3" />
 		<animation key="reload" animation_key="reloading, magazine rifle 1.2" />
 		<!-- Sounds -->
 		<sound key="fire" fileref="spas12_fire_FromWF.wav" pitch_variety="0.05" volume="1.5" />
@@ -109,6 +115,21 @@
 		<sound key="reload_one" fileref="spas12_reload_FromINS.wav" volume="1.0" />
 		<sound key="reload_one" fileref="spas12_reload_FromINS.wav" volume="1.0" />
 		<sound key="reload_one" fileref="spas12_reload_FromINS.wav" volume="1.0" />
+		<sound key="stab" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="stab" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="stab" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="stab" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="fire" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="fire" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="fire" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="fire" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="stab_hit" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="stab_hit" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="stab_hit" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
+	
+		<sound key="stab_hit_any" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
+		<sound key="stab_hit_any" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
+		<sound key="stab_hit_any" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
 		<sound class="impact" fileref="rifle_drop.wav" />
 		<!-- Model, Icon, Cost -->
 		<model filename="gkw_sg_spas12_3203_from_Eisen.xml" />
@@ -190,6 +211,10 @@
 		<animation state_key="hold_casual"  animation_key="crouching still, riot shield,aegissergeantGA" />
 		<animation state_key="hold_on_wall" animation_key="crouching still, riot shield,aegissergeantGA" />
 		<animation key="reload" animation_key="reloading, magazine rifle 1.2" />
+		<animation state_key="stabbing" animation_key="melee,spas12 skin" />
+		<animation state_key="stabbing" animation_key="melee,spas12 skin 1" />
+		<animation state_key="stabbing" animation_key="melee,spas12 skin 2" />
+		<animation state_key="stabbing" animation_key="melee,spas12 skin 3" />
 		<!-- Sounds -->
 		<sound key="fire" fileref="spas12skill_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.5" />
 		<sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
@@ -241,6 +266,21 @@
 		<sound key="reload_one" fileref="spas12_reload_FromINS.wav" volume="1.0" />
 		<sound key="reload_one" fileref="spas12_reload_FromINS.wav" volume="1.0" />
 		<sound key="reload_one" fileref="spas12_reload_FromINS.wav" volume="1.0" />
+		<sound key="stab" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="stab" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="stab" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="stab" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="fire" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="fire" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="fire" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="fire" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="stab_hit" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="stab_hit" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="stab_hit" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
+	
+		<sound key="stab_hit_any" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
+		<sound key="stab_hit_any" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
+		<sound key="stab_hit_any" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
 		<sound class="impact" fileref="rifle_drop.wav" />
 		<!-- Model, Icon, Cost -->
 		<model filename="gkw_sg_spas12_3203_from_Eisen.xml" />
