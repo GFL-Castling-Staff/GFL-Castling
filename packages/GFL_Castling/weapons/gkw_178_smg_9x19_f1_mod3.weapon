@@ -3,6 +3,7 @@
     <tag name="smg" />
     <tag name="elite" />
     <specification 
+        can_shoot_running="1"
 		accuracy_factor="0.93" 
 		retrigger_time="0.1" 
 		barrel_offset="0.4" 

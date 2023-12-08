@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon file="two_hands_smg.animation_base" key="gkw_vector_1901.weapon">
     <specification 
+    can_shoot_running="1"
 		accuracy_factor="1" 
 		barrel_offset="0.2" 
 		class="0"
