@@ -28,12 +28,12 @@
     <animation key="reload" animation_key="HS50RTemp" />
     <animation key="reload" stance_key="prone" animation_key="HS50RpTemp" />
     <!--Sounds-->
-    <sound key="fire" fileref="hs50_fire_FromBLACKSQUAD.wav" pitch_variety="0.05" volume="2.8" />
-    <sound key="cycle" fileref="hs50_cycle_FromINS.wav" />
+    <sound key="fire" fileref="hs50_fire_FromEDF5.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="cycle" fileref="hs50_cycle_FromCOD20.wav" />
     <sound key="magazine_out" fileref="" />
     <sound key="magazine_in" fileref="G43_reload_FromBF5.wav" volume="0.5"  />
-    <sound key="cycle_out" fileref="HS50_cycle_out_FromCOD16HDR.wav" />
-    <sound key="cycle_in" fileref="HS50_cycle_in_FromCOD16AX50.wav" />
+    <sound key="cycle_out" fileref="hs50_cycle_out_FromCOD20.wav" />
+    <sound key="cycle_in" fileref="hs50_cycle_in_FromCOD20.wav" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_hs50_6805_from_melondove.xml" />

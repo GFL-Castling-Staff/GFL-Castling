@@ -18,10 +18,10 @@
 		sustained_fire_grow_step="0.3"/>
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <inventory encumbrance="35.0" buy_price="8.0" sell_price="8.0" />
-        <sound key="fire" fileref="type97_fire_FromINSSANDSTORM.wav" pitch_variety="0.05" volume="1.1" />
-        <sound key="magazine_out" fileref="qbz97_mgz_out_FromCOD17.wav" volume="0.55" />
-        <sound key="magazine_in" fileref="qbz97_mgz_in_FromCOD17.wav" volume="0.55" />
-        <sound key="cycle" fileref="qbz97_cycle_FromCOD17.wav" volume="0.5" />
+        <sound key="fire" fileref="qbz97_fire_FromCOD20.wav" pitch_variety="0.05" volume="1.1" />
+        <sound key="magazine_out" fileref="qbz97_mgz_out_FromCOD20.wav" volume="0.7" />
+        <sound key="magazine_in" fileref="qbz97_mgz_in_FromCOD20.wav" volume="0.7" />
+        <sound key="cycle" fileref="qbz97_cycle_FromCOD20.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_ar_97type.xml" />
         <hud_icon filename="gkw_97type.png" />
