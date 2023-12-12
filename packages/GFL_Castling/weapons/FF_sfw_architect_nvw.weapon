@@ -42,7 +42,7 @@
 
 
 
-    <projectile file="bullet_sf.projectile">
+    <projectile file="bullet_sf_player.projectile">
         <result class="hit"  kill_probability="1.3" kill_decay_start_time="0.333" kill_decay_end_time="1.5" />
     </projectile>
     

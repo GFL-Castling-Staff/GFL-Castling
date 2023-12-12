@@ -116,7 +116,7 @@
 
     <weak_hand_hold offset="0.4" />
 
-    <projectile file="bullet_sf.projectile">
+    <projectile file="bullet_sf_player.projectile">
         <result class="spawn" instance_class="projectile" instance_key="ntw20_ap.projectile" min_amount="4" max_amount="4" offset="0 0 0" position_spread="2 1" direction_spread="0 0" />
 		<trail probability="1.0" key="sf_long" />
     </projectile>

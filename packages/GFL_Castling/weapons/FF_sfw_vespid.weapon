@@ -37,7 +37,7 @@
     <capacity value="1" source="rank" source_value="3.058" />
 
     <weak_hand_hold offset="0.2" />
-    <projectile file="bullet_sf.projectile">
+    <projectile file="bullet_sf_player.projectile">
         <result class="hit"  kill_probability="3.0" kill_probability_offset_on_successful_hit="2.0"  kill_decay_start_time="0.333" kill_decay_end_time="1.5" />
     </projectile>
 

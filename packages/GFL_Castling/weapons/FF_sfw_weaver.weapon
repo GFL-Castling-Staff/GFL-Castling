@@ -51,7 +51,7 @@
 		<model filename="" />
 		<hud_icon filename="sfw_weaver.png" />
 		<next_in_chain key="ff_weaver_1.weapon" share_ammo="0" />
-		<projectile file="bullet_sf.projectile">
+		<projectile file="bullet_sf_player.projectile">
 			<result class="hit" kill_probability="4.25" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.1" kill_decay_end_time="0.85" />
 		</projectile>
 		<weak_hand_hold offset="0.2" />

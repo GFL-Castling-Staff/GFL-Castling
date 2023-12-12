@@ -50,7 +50,7 @@
     <effect class="muzzle" offset="0"/>
 
     <weak_hand_hold offset="0.4" />
-    <projectile file="bullet_sf.projectile">
+    <projectile file="bullet_sf_player.projectile">
         <result class="hit"  kill_probability="1.85" kill_decay_start_time="1.5" kill_decay_end_time="0.6" />
     </projectile>
     <stance state_key="running" accuracy="0.2" />
