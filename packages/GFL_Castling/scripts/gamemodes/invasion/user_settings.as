@@ -56,6 +56,7 @@ class UserSettings {
 	float m_forgiveTeamKillTime = 900.0;
 	float m_spawnTimeAtMaxPlayers = 1.0;  // was 2.0 (1.82)
 	int m_GlobalDifficulty= 0;
+	int m_server_overload_num= 10;
 	array<string> m_overlayPaths;
 
 	// --------------------------------------------
@@ -85,6 +86,10 @@ class UserSettings {
 
 			if (settings.hasAttribute("global_difficulty")) {
 				m_GlobalDifficulty = settings.getIntAttribute("global_difficulty");
+			}
+
+			if (settings.hasAttribute("server_overload_num")) {
+				m_server_overload_num = settings.getIntAttribute("server_overload_num");
 			}
 
 			if (settings.hasAttribute("fellow_capacity")) {

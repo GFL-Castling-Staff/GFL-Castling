@@ -72,15 +72,14 @@ radius="0.5">
     <effect class="result" key="terrain" ref="BulletImpactDust4" />
     <effect class="result" key="terrain" ref="BulletImpactDust5" />
     <effect class="result" key="terrain" ref="BulletImpactDust6" />
-    <effect class="result" key="terrain" ref="Ct_Shine" lighting="0" />
-    <effect class="result" key="terrain" ref="Godray" lighting="0" />
-    <effect class="result" key="terrain" ref="LowDust"/>
+    <effect class="result" key="terrain" ref="result_cannon_blast_AmbientLight_small" lighting="0"/>
+    <effect class="result" key="terrain" ref="result_cannon_blast_smoke_small" lighting="0"/>    
 
     <effect class="result" key="vehicle" ref="Burst" use_surface_color="1" />
     <effect class="result" key="vehicle" ref="hitMetal" />
     <effect class="result" key="vehicle" ref="hitMetal_1" />
-    <effect class="result" key="vehicle" ref="Ct_Shine" lighting="0" />
-    <effect class="result" key="vehicle" ref="Godray" lighting="0" />
+    <effect class="result" key="vehicle" ref="result_cannon_blast_AmbientLight_small" lighting="0"/>
+    <effect class="result" key="vehicle" ref="result_cannon_blast_smoke_small" lighting="0"/>    
 
     <effect class="result" key="vehicle" ref="BulletImpact" />
     <effect class="result" key="terrain" ref="BulletImpact" />
@@ -93,8 +92,8 @@ radius="0.5">
 
     <effect class="result" key="shield" ref="hitMetal" />
     <effect class="result" key="shield" ref="hitMetal_1" />
-    <effect class="result" key="shield" ref="Ct_Shine" lighting="0" />
-    <effect class="result" key="shield" ref="Godray" lighting="0" />
+    <effect class="result" key="shield" ref="result_cannon_blast_AmbientLight_small" lighting="0"/>
+    <effect class="result" key="shield" ref="result_cannon_blast_smoke_small" lighting="0"/> 
 
     <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
     <effect class="result" type="splat_map" surface_tag="" size="4.5" atlas_index="4" layer="0" />

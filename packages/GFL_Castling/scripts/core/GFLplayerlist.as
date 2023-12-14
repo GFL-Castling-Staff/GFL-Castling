@@ -348,10 +348,12 @@ class GFL_playerlist_system : Tracker {
     protected float m_time = 1.0; 
     protected float m_refresh_time = 10.0; // 刷新时间
     protected float m_event_timer = 1.0; 
-    protected float m_event_time = 5.0; // 事件刷新时间    
+    protected float m_event_time = 5.0; // 事件刷新时间
+    protected int m_maxplayer_overload;
 	// --------------------------------------------
-	GFL_playerlist_system(Metagame@ metagame) {
+	GFL_playerlist_system(Metagame@ metagame,const UserSettings@ m_userSettings) {
 		@m_metagame = @metagame;
+        m_maxplayer_overload=m_userSettings.m_server_overload_num;
 	}
 
     // 更新
@@ -408,6 +410,21 @@ class GFL_playerlist_system : Tracker {
         if(startsWith(armor,"srexo_t6")) healCharacter(m_metagame,cid,2);
         info.handleRpReward(m_metagame);
         info.handleXpReward(m_metagame);
+    }
+
+    void refresh_overload()
+    {
+		array<const XmlElement@> players = getPlayers(m_metagame);
+		int currentplayers = players.length;
+        if(currentplayers > m_maxplayer_overload)
+        {
+            //开启慢速模式
+            m_refresh_time = 10.0;
+        }
+        else
+        {
+            m_refresh_time = 5.0;
+        }
     }
 
     protected void handleMatchEndEvent(const XmlElement@ event){
@@ -487,6 +504,10 @@ class GFL_playerlist_system : Tracker {
         const XmlElement@ player = event.getFirstElementByTagName("player");
         if(player is null){return;}
         updatePlayerInfo(player);
+    }
+
+    protected void handlePlayerConnectEvent(const XmlElement@ event) {
+        refresh_overload();
     }
 
     void updatePlayerInfo(const XmlElement@ player){

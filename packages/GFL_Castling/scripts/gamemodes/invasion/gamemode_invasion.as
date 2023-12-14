@@ -295,7 +295,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		addTracker(GFL_event_system(this));
 		addTracker(SharedReward(this));
 		addTracker(call_event(this));
-		addTracker(GFL_playerlist_system(this));
+		addTracker(GFL_playerlist_system(this,getUserSettings()));
 		addTracker(Save_System(this));
 
 		

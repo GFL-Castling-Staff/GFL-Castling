@@ -92,6 +92,18 @@ const XmlElement@ getPlayerInfo(const Metagame@ metagame, int playerId) {
 	return player;
 }
 
+const XmlElement@ getPlayerInfo(const Metagame@ metagame, array<const XmlElement@> players,int playerId) {
+	const XmlElement@ player = null;
+	for (uint i = 0; i < players.size(); ++i) {
+		const XmlElement@ info = players[i];
+		if (info.getIntAttribute("player_id") == playerId) {
+			@player = info;
+			break;
+		}
+	}
+	return player;
+}
+
 // --------------------------------------------
 const XmlElement@ findPlayerByName(Metagame@ metagame, string name) {
 	const XmlElement@ result = null;
