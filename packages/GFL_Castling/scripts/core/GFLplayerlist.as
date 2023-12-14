@@ -11,7 +11,7 @@
 
 // 本系统用于容纳有关玩家的请求
 
-array<GFL_playerInfo@> CT_PlayerList;
+array<GFL_playerInfo@> GFL_playerInfo_Buck;
 
 
 class GFL_equipment{
@@ -157,9 +157,9 @@ class GFL_playerlist_system : Tracker {
 	}
 
     void refresh(){
-        while(CT_PlayerList.length()>0){        
-            int index_last = CT_PlayerList.length() -1;
-            GFL_playerInfo@ player = CT_PlayerList[index_last];
+        while(GFL_playerInfo_Buck.length()>0){        
+            int index_last = GFL_playerInfo_Buck.length() -1;
+            GFL_playerInfo@ player = GFL_playerInfo_Buck[index_last];
             if(player.m_rp >0)
             {
                 GiveRP(m_metagame,player.getPlayerCid(),player.m_rp);
@@ -168,7 +168,7 @@ class GFL_playerlist_system : Tracker {
             {
                 GiveXP(m_metagame,player.getPlayerCid(),player.m_xp);
             }            
-            CT_PlayerList.removeLast();
+            GFL_playerInfo_Buck.removeLast();
         }  
 
         array<const XmlElement@> nowPlayers = getPlayers(m_metagame);
@@ -178,7 +178,7 @@ class GFL_playerlist_system : Tracker {
                 string newPlayerName = nowPlayers[i].getStringAttribute("name");
                 GFL_playerInfo@ newPlayerInfo = getPlayerListInfoFromXML(m_metagame,nowPlayers[i]);
                 manageEventOfRefresh(newPlayerInfo);
-                CT_PlayerList.insertLast(newPlayerInfo);
+                GFL_playerInfo_Buck.insertLast(newPlayerInfo);
             }
         }
     }
@@ -197,9 +197,9 @@ class GFL_playerlist_system : Tracker {
 			int factionId = winCondition.getIntAttribute("faction_id");
             if (factionId == 0) 
             {
-                if(CT_PlayerList.length() <= 0) return;
-                for(uint i=0;i<CT_PlayerList.length();i++){
-                    string c_weaponType = CT_PlayerList[i].getPlayerEquipment().getWeapon(0);
+                if(GFL_playerInfo_Buck.length() <= 0) return;
+                for(uint i=0;i<GFL_playerInfo_Buck.length();i++){
+                    string c_weaponType = GFL_playerInfo_Buck[i].getPlayerEquipment().getWeapon(0);
                     if(
                         c_weaponType == "gkw_98kmod3.weapon" ||
                         c_weaponType == "gkw_98kmod3_skill.weapon" ||
@@ -209,44 +209,44 @@ class GFL_playerlist_system : Tracker {
                         c_weaponType == "gkw_98kmod3_8301_skill.weapon"                     
                         )
                     {
-                        string strname= CT_PlayerList[i].getPlayerName();
+                        string strname= GFL_playerInfo_Buck[i].getPlayerName();
                         int j = findNodeleteDataIndex(strname,"kar98k");
 
                         if(j>=0){
                             No_Delete_DataArray[j].add();
-                            const XmlElement@ characterInfo = getCharacterInfo(m_metagame, CT_PlayerList[i].getPlayerCid());
+                            const XmlElement@ characterInfo = getCharacterInfo(m_metagame, GFL_playerInfo_Buck[i].getPlayerCid());
                             if (characterInfo is null) return;
                             string c_pos = characterInfo.getStringAttribute("position");
-                            spawnStaticProjectile(m_metagame,"particle_effect_98k_medal.projectile",c_pos,CT_PlayerList[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));
+                            spawnStaticProjectile(m_metagame,"particle_effect_98k_medal.projectile",c_pos,GFL_playerInfo_Buck[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));
                         }
                         else{
                             No_Delete_DataArray.insertLast(no_delete_data(strname,1,"kar98k"));       
-                            const XmlElement@ characterInfo = getCharacterInfo(m_metagame, CT_PlayerList[i].getPlayerCid());
+                            const XmlElement@ characterInfo = getCharacterInfo(m_metagame, GFL_playerInfo_Buck[i].getPlayerCid());
                             if (characterInfo is null) return;
                             string c_pos = characterInfo.getStringAttribute("position");
-                            spawnStaticProjectile(m_metagame,"particle_effect_98k_medal.projectile",c_pos,CT_PlayerList[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));                            
+                            spawnStaticProjectile(m_metagame,"particle_effect_98k_medal.projectile",c_pos,GFL_playerInfo_Buck[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));                            
                         }
                     }
                     else if(
                         c_weaponType == "gkw_ppsh41mod3.weapon" ||
                         c_weaponType == "gkw_ppsh41mod3_602.weapon")
                     {
-                        string strname= CT_PlayerList[i].getPlayerName();
+                        string strname= GFL_playerInfo_Buck[i].getPlayerName();
                         int j = findNodeleteDataIndex(strname,"ppsh41");
 
                         if(j>=0){
                             No_Delete_DataArray[j].add();
-                            const XmlElement@ characterInfo = getCharacterInfo(m_metagame, CT_PlayerList[i].getPlayerCid());
+                            const XmlElement@ characterInfo = getCharacterInfo(m_metagame, GFL_playerInfo_Buck[i].getPlayerCid());
                             if (characterInfo is null) return;
                             string c_pos = characterInfo.getStringAttribute("position");
-                            spawnStaticProjectile(m_metagame,"particle_effect_ppsh41_medal.projectile",c_pos,CT_PlayerList[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));
+                            spawnStaticProjectile(m_metagame,"particle_effect_ppsh41_medal.projectile",c_pos,GFL_playerInfo_Buck[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));
                         }
                         else{
                             No_Delete_DataArray.insertLast(no_delete_data(strname,1,"ppsh41"));       
-                            const XmlElement@ characterInfo = getCharacterInfo(m_metagame, CT_PlayerList[i].getPlayerCid());
+                            const XmlElement@ characterInfo = getCharacterInfo(m_metagame, GFL_playerInfo_Buck[i].getPlayerCid());
                             if (characterInfo is null) return;
                             string c_pos = characterInfo.getStringAttribute("position");
-                            spawnStaticProjectile(m_metagame,"particle_effect_ppsh41_medal.projectile",c_pos,CT_PlayerList[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));
+                            spawnStaticProjectile(m_metagame,"particle_effect_ppsh41_medal.projectile",c_pos,GFL_playerInfo_Buck[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));
                         }
                     }
                 }
@@ -258,37 +258,37 @@ class GFL_playerlist_system : Tracker {
 // 删 - 单个玩家
 void removePlayerFromList(string player_name) {
     int index = -1;
-    if(CT_PlayerList.length()>0){
-        for(uint i=0;i<CT_PlayerList.length();i++){
-            if(CT_PlayerList[i].m_name == player_name)
+    if(GFL_playerInfo_Buck.length()>0){
+        for(uint i=0;i<GFL_playerInfo_Buck.length();i++){
+            if(GFL_playerInfo_Buck[i].m_name == player_name)
             {
                 index = i;
             }
         }
     }
     if (index == -1) return;
-    CT_PlayerList.removeAt(index);
+    GFL_playerInfo_Buck.removeAt(index);
 }
 
 // 查 - 玩家数量
 int getPlayerNumFromList() {
-    return CT_PlayerList.size();
+    return GFL_playerInfo_Buck.size();
 }
 
 // 查 - 是否存在玩家
 bool existPlayerInList(string player_name) {
-    if(CT_PlayerList.length()>0){
-        for(uint i=0;i<CT_PlayerList.length();i++){
-            if(CT_PlayerList[i].m_name == player_name) return true;
+    if(GFL_playerInfo_Buck.length()>0){
+        for(uint i=0;i<GFL_playerInfo_Buck.length();i++){
+            if(GFL_playerInfo_Buck[i].m_name == player_name) return true;
         }
     }
     return false;
 }
 
 int getPlayerIndexFromList(string player_name) {
-    if(CT_PlayerList.length()>0){
-        for(uint i=0;i<CT_PlayerList.length();i++){
-            if(CT_PlayerList[i].m_name == player_name) return i;
+    if(GFL_playerInfo_Buck.length()>0){
+        for(uint i=0;i<GFL_playerInfo_Buck.length();i++){
+            if(GFL_playerInfo_Buck[i].m_name == player_name) return i;
         }
     }
     return -1;
@@ -296,9 +296,9 @@ int getPlayerIndexFromList(string player_name) {
 
 // 查 - 得到单个玩家信息
 GFL_playerInfo@ getPlayerInfoFromList(string player_name) {
-    if(CT_PlayerList.length()>0){
-        for(uint i=0;i<CT_PlayerList.length();i++){
-            if(CT_PlayerList[i].m_name == player_name) return CT_PlayerList[i];
+    if(GFL_playerInfo_Buck.length()>0){
+        for(uint i=0;i<GFL_playerInfo_Buck.length();i++){
+            if(GFL_playerInfo_Buck[i].m_name == player_name) return GFL_playerInfo_Buck[i];
         }
     }
     return default_playerInfo;
@@ -306,9 +306,9 @@ GFL_playerInfo@ getPlayerInfoFromList(string player_name) {
 
 // 慎用 查 - 得到单个玩家信息
 GFL_playerInfo@ getPlayerInfoFromListbyPid(int pid) {
-    if(CT_PlayerList.length()>0){
-        for(uint i=0;i<CT_PlayerList.length();i++){
-            if(CT_PlayerList[i].m_playerid == pid) return CT_PlayerList[i];
+    if(GFL_playerInfo_Buck.length()>0){
+        for(uint i=0;i<GFL_playerInfo_Buck.length();i++){
+            if(GFL_playerInfo_Buck[i].m_playerid == pid) return GFL_playerInfo_Buck[i];
         }
     }
     return default_playerInfo;
@@ -352,10 +352,10 @@ GFL_playerInfo@ getPlayerListInfoFromXML(Metagame@ m_metagame, const XmlElement@
 }
 
 int getPlayerCidFromList(string player_name) {
-    if(CT_PlayerList.length()>0){
-        for(uint i=0;i<CT_PlayerList.length();i++){
-            if(CT_PlayerList[i].m_name == player_name)
-                return CT_PlayerList[i].getPlayerCid();
+    if(GFL_playerInfo_Buck.length()>0){
+        for(uint i=0;i<GFL_playerInfo_Buck.length();i++){
+            if(GFL_playerInfo_Buck[i].m_name == player_name)
+                return GFL_playerInfo_Buck[i].getPlayerCid();
         }
     }
     return -1;
@@ -363,16 +363,16 @@ int getPlayerCidFromList(string player_name) {
 
 string getPlayerWeaponFromList(string player_name, int weaponnum) {
     int index = -1;
-    if(CT_PlayerList.length()>0){
-        for(uint i=0;i<CT_PlayerList.length();i++){
-            if(CT_PlayerList[i].m_name == player_name)
+    if(GFL_playerInfo_Buck.length()>0){
+        for(uint i=0;i<GFL_playerInfo_Buck.length();i++){
+            if(GFL_playerInfo_Buck[i].m_name == player_name)
             {
                 index = i;
             }
         }
     }
     if (index == -1) return default_string;
-    GFL_equipment@ equipment = CT_PlayerList[index].getPlayerEquipment();
+    GFL_equipment@ equipment = GFL_playerInfo_Buck[index].getPlayerEquipment();
     string weaponinfo = equipment.getWeapon(weaponnum);
     if(weaponinfo == default_string) _log("WARN: GFLplayerlist.as: getPlayerWeaponFromList(): player weapon is nan.");
     return weaponinfo;
@@ -380,16 +380,16 @@ string getPlayerWeaponFromList(string player_name, int weaponnum) {
 
 string getPlayerWeaponFromListByID(int cid, int weaponnum) {
     int index = -1;
-    if(CT_PlayerList.length()>0){
-        for(uint i=0;i<CT_PlayerList.length();i++){
-            if(CT_PlayerList[i].getPlayerCid() == cid)
+    if(GFL_playerInfo_Buck.length()>0){
+        for(uint i=0;i<GFL_playerInfo_Buck.length();i++){
+            if(GFL_playerInfo_Buck[i].getPlayerCid() == cid)
             {
                 index = i;
             }
         }
     }
     if (index == -1) return default_string;
-    GFL_equipment@ equipment = CT_PlayerList[index].getPlayerEquipment();
+    GFL_equipment@ equipment = GFL_playerInfo_Buck[index].getPlayerEquipment();
     string weaponinfo = equipment.getWeapon(weaponnum);
     if(weaponinfo == default_string) _log("WARN: GFLplayerlist.as: getPlayerWeaponFromList(): player weapon is nan.");
     return weaponinfo;
@@ -397,45 +397,45 @@ string getPlayerWeaponFromListByID(int cid, int weaponnum) {
 
 string getPlayerWeaponFromListByPID(int pid, int weaponnum) {
     int index = -1;
-    if(CT_PlayerList.length()>0){
-        for(uint i=0;i<CT_PlayerList.length();i++){
-            if(CT_PlayerList[i].getPlayerPid() == pid)
+    if(GFL_playerInfo_Buck.length()>0){
+        for(uint i=0;i<GFL_playerInfo_Buck.length();i++){
+            if(GFL_playerInfo_Buck[i].getPlayerPid() == pid)
             {
                 index = i;
             }
         }
     }
     if (index == -1) return default_string;
-    GFL_equipment@ equipment = CT_PlayerList[index].getPlayerEquipment();
+    GFL_equipment@ equipment = GFL_playerInfo_Buck[index].getPlayerEquipment();
     string weaponinfo = equipment.getWeapon(weaponnum);
     if(weaponinfo == default_string) _log("WARN: GFLplayerlist.as: getPlayerWeaponFromList(): player weapon is nan.");
     return weaponinfo;
 }
 
 bool checkCharacterIdisPlayerOwn(int cid) {
-    if(CT_PlayerList.length()>0){
-        for(uint i=0;i<CT_PlayerList.length();i++){
-            if(CT_PlayerList[i].getPlayerCid() == cid) return true;
+    if(GFL_playerInfo_Buck.length()>0){
+        for(uint i=0;i<GFL_playerInfo_Buck.length();i++){
+            if(GFL_playerInfo_Buck[i].getPlayerCid() == cid) return true;
         }
     }
     return false;
 }
 
 void givePlayerRPcount(int playerid,int rp_count){
-    if(CT_PlayerList.length()>0){
-        for(uint i=0;i<CT_PlayerList.length();i++){
-            if(CT_PlayerList[i].getPlayerPid() == playerid){
-                CT_PlayerList[i].m_rp +=rp_count;
+    if(GFL_playerInfo_Buck.length()>0){
+        for(uint i=0;i<GFL_playerInfo_Buck.length();i++){
+            if(GFL_playerInfo_Buck[i].getPlayerPid() == playerid){
+                GFL_playerInfo_Buck[i].m_rp +=rp_count;
             }
         }
     }    
 }
 
 void givePlayerXPcount(int playerid,float xp_count){
-    if(CT_PlayerList.length()>0){
-        for(uint i=0;i<CT_PlayerList.length();i++){
-            if(CT_PlayerList[i].getPlayerPid() == playerid){
-                CT_PlayerList[i].m_xp +=xp_count;
+    if(GFL_playerInfo_Buck.length()>0){
+        for(uint i=0;i<GFL_playerInfo_Buck.length();i++){
+            if(GFL_playerInfo_Buck[i].getPlayerPid() == playerid){
+                GFL_playerInfo_Buck[i].m_xp +=xp_count;
             }
         }
     }    
