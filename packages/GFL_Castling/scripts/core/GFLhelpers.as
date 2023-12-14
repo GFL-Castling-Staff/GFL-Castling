@@ -191,13 +191,13 @@ void addListItemInStash(Metagame@ metagame, int characterId, array<Resource@>@ r
 
 void addRangeItemInBackpack(Metagame@ metagame, int factionId, string ItemType, string ItemKey,Vector3 pos,float range){
 	array<int> player_cId;
-	if (GFL_playerInfo_Buck.length()<=0){return;}
-	for(uint i=0;i<GFL_playerInfo_Buck.length();i++){
-		player_cId.insertLast(GFL_playerInfo_Buck[i].m_characterid);
+	if (g_playerInfo_Buck.size()<=0){return;}
+	for(uint i=0;i<g_playerInfo_Buck.size();i++){
+		player_cId.insertLast(g_playerInfo_Buck.m_playerInfo[i].m_characterid);
 	}
 	array<const XmlElement@> affectedCharacter = getCharactersNearPosition(metagame,pos,factionId,range);
 	if (affectedCharacter is null){return;}
-	for(uint i=0;i<affectedCharacter.length();i++){
+	for(uint i=0;i<affectedCharacter.size();i++){
 		int cId = affectedCharacter[i].getIntAttribute("id");
 		if(player_cId.find(cId)>=0){
 			addItemInBackpack(metagame,cId,ItemType,ItemKey);

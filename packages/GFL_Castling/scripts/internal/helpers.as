@@ -502,6 +502,86 @@ void merge(array<const XmlElement@>@ a1, const array<const XmlElement@>@ a2) {
 	}
 }
 
+class rgba_color{
+	float color_r;
+	float color_g;
+	float color_b;
+	float color_a;
+
+	rgba_color()
+	{
+		color_r =1;
+		color_g =1;
+		color_b =1;
+		color_a =1;		
+	}
+
+	rgba_color(float r,float g,float b,float a)
+	{
+		color_r =r;
+		color_g =g;
+		color_b =b;
+		color_a =a;
+	}
+
+	void setRed(float new)
+	{
+		color_r = new;
+	}
+	void setGreen(float new)
+	{
+		color_g = new;
+	}
+	void setBlue(float new)
+	{
+		color_b = new;
+	}
+	void setAlpha(float new)
+	{
+		color_a = new;
+	}
+	void setRGBA(float r,float g,float b,float a)
+	{
+		color_r =r;
+		color_g =g;
+		color_b =b;
+		color_a =a;		
+	}
+	float getRed()
+	{
+		return color_r;
+	}
+	float getGreen()
+	{
+		return color_g;
+	}
+	float getBlue()
+	{
+		return color_b;
+	}
+	float getAlpha()
+	{
+		return color_a;
+	}			
+}
+
+rgba_color stringToRGBA(string s) {
+	rgba_color color;
+	array<string> strings = s.split(" ");
+	if(strings.length()!=4)
+	{
+		color.setRGBA(1,1,1,1);
+	}
+	else
+	{
+		color.setRed(parseFloat(strings[0]));
+		color.setBlue(parseFloat(strings[1]));
+		color.setGreen(parseFloat(strings[2]));
+		color.setAlpha(parseFloat(strings[3]));
+	}
+	return color;
+}
+
 
 /*
 // --------------------------------------------

@@ -69,9 +69,10 @@ class ItemDropEvent : Tracker {
             int pId = event.getIntAttribute("player_id");     
             int jud_num =  int(itemDropFileIndex[itemKey]);
             string secondary_key = getPlayerWeaponFromListByPID(pId,1);
+            int secondary_num = getPlayerWeaponAmountFromListByPID(pId,1);
             // _log("副手武器是" + secondary_key);
 
-            if(secondary_key == "gkw_doll_logger.weapon" && itemClass == 0 )
+            if(secondary_key == "gkw_doll_logger.weapon" && itemClass == 0 && secondary_num!=0)
             {
                 if (!reverse_tdoll_complex_index.exists(itemKey)) 
                 {
