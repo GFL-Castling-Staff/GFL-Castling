@@ -97,6 +97,7 @@ class map_DeadZone_Phase1 : map_DeadZone_Phase {
 		setSpawnScore(m_metagame,1,"eagleyes",0);
 		setSpawnScore(m_metagame,1,"teal",0);
 		setSpawnScore(m_metagame,1,"vanguard",0);
+		setSpawnScore(m_metagame,1,"aileron",0);
 		setSpawnScore(m_metagame,1,"wrath",0);
 		setSpawnScore(m_metagame,1,"Nimogen",0);
 		setSpawnScore(m_metagame,1,"Narciss",0);

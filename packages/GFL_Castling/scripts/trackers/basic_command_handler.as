@@ -926,8 +926,17 @@ class BasicCommandHandler : Tracker {
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","skill_sf_boss_destroyer_scan.projectile");			
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","skill_sf_boss_destroyer_scan.projectile");			
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","skill_sf_boss_dreamer_scan.projectile");			
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","skill_sf_boss_dreamer_scan.projectile");			
-		} else if (checkCommand(message,"admintest")){
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","skill_sf_boss_dreamer_scan.projectile");	
+		}  else if (checkCommand(message,"tstnto")){		
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","para_support_skill.projectile");			
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","para_support_skill.projectile");			
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","para_support_skill.projectile");			
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","para_support_skill.projectile");			
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","para_support_skill.projectile");			
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","para_support_skill.projectile");			
+		}
+		else if (checkCommand(message,"admintest")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			int cid = playerInfo.getIntAttribute("character_id");
 			string sid = playerInfo.getStringAttribute("profile_hash");

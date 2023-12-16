@@ -807,8 +807,10 @@ void healRangedCharacters(Metagame@ metagame,Vector3 pos,int faction_id,float ra
 	} else if (healcount>=characters.length) {
 		healcount = characters.length;
 	}
+	int completehealcount = 0;
 	for (uint i = 0; i < healcount; i++) {
 		int luckyhealguyid = characters[i].getIntAttribute("id");
+		bool jud = true;
 		switch(int(specialHealIndex[special_key]))
 		{
 			case 1: {
@@ -818,13 +820,29 @@ void healRangedCharacters(Metagame@ metagame,Vector3 pos,int faction_id,float ra
 				break;
 			}
 
+			case 2: {
+				const XmlElement@ luckyhealguyC = getCharacterInfo(metagame, luckyhealguyid);
+				Vector3 c_pos = stringToVector3(luckyhealguyC.getStringAttribute("position"));
+				string judname = luckyhealguyC.getStringAttribute("soldier_group_name");
+				if(nytroAllList.find(judname)== -1){jud = false;break;}
+				CreateDirectProjectile(metagame,c_pos.add(Vector3(0,0.1,0)),c_pos,"para_nytro_heal_effect_on_target.projectile",-1,faction_id,40);				
+				break;				
+			}
+
 			default: {
 				_log("No special heal requirement.");
 				break;
 			}
 		} 
-		healCharacter(metagame,characters[i].getIntAttribute("id"),healnum);
+		if(jud) {completehealcount++;healCharacter(metagame,characters[i].getIntAttribute("id"),healnum);}
 	}	
+
+	if(int(specialHealIndex[special_key])==2 && completehealcount<4){
+		_log("No enough nytro to heal. spawn new nytro.");
+		//spawn random string from "eagleyes","vanguard","wrath"
+		string nytro_name = nytroBasicList[rand(0,nytroBasicList.length()-1)];
+		spawnSoldier(metagame,2,faction_id,pos,nytro_name);
+	}
 }
 
 void updateMapViewPic(Metagame@ metagame,string pic){
