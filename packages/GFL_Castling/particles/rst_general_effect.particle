@@ -2337,8 +2337,8 @@ particle_system spawn_at_ground_smoke
 {
 	quota 800
 	material disaster_smoke
-	particle_width 5
-	particle_height 5
+	particle_width 7
+	particle_height 7
 	renderer billboard
 	billboard_type point
 	billboard_origin center
@@ -2353,7 +2353,7 @@ particle_system spawn_at_ground_smoke
 		colour 1 1 1 0.5
 		direction 0 1 0
 		emission_rate 30
-		position 0 0.6 0
+		position 0 0 0
 		velocity_min 5
 		velocity_max 5
 		time_to_live 1.5

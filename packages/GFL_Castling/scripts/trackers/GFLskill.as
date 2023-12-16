@@ -1486,6 +1486,8 @@ class GFLskill : Tracker {
 						bool jud = false;
 						const XmlElement@ luckyhealguyC = getCharacterInfo(m_metagame, luckyhealguyid);
 						Vector3 c_pos = stringToVector3(luckyhealguyC.getStringAttribute("position"));
+						int death = luckyhealguyC.getIntAttribute("dead");
+						if(death == 1) continue;
 						string judname = luckyhealguyC.getStringAttribute("soldier_group_name");
 						if(nytoAllList.find(judname) >= 0)
 						{
@@ -1505,9 +1507,9 @@ class GFLskill : Tracker {
 					}
 					if(nyto_count <= 3)
 					{
-						Vector3 random_spawn_pos_1 = getRandomOffsetVector(grenade_pos,5.0);
+						Vector3 random_spawn_pos_1 = getRandomOffsetVector(grenade_pos,10.0);
 						spawnStaticProjectile(m_metagame,"particle_spawn_smoke.projectile",random_spawn_pos_1,-1,factionid);
-						Vector3 random_spawn_pos_2 = getRandomOffsetVector(grenade_pos,5.0);
+						Vector3 random_spawn_pos_2 = getRandomOffsetVector(grenade_pos,10.0);
 						spawnStaticProjectile(m_metagame,"particle_spawn_smoke.projectile",random_spawn_pos_2,-1,factionid);						
 						//生成延时弹头，走脚本
 					}
