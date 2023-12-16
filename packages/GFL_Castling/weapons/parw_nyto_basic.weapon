@@ -219,23 +219,20 @@
     accuracy_factor="1.0"
     sustained_fire_grow_step="0.4"
     sustained_fire_diminish_rate="1.2"
-    magazine_size="1000"
+    magazine_size="100"
     suppressed="1"
-    name="Pard-Murat"
+    name="Nyto-Aileron"
     class="0"
     projectile_speed="200"
 	sight_range_modifier="1.1"
     barrel_offset="0.4"/>
-	<animation key="recoil" animation_key="recoil1"/>
-	<animation key="recoil" animation_key="recoil2"/>
-	<animation key="recoil" animation_key="recoil3"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation key="recoil" animation_key="still, heavy weapon"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
-	<animation state_key="hold_on_wall" animation_key="still"/>
-	<animation state_key="walking" animation_key="walking, hip fire"/>
-	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
+	<animation state_key="hold_on_wall" animation_key="still, heavy weapon"/>
+    <animation state_key="hold" animation_key="still, heavy weapon" />
+    <animation state_key="running" animation_key="running, no weapon?"/>
+	<animation state_key="walking" animation_key="walking, heavy weapon"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, heavy weapon"/>
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<sound key="fire" fileref="parw_shoot1.wav" pitch_variety="0" volume="1.0"/>
 	<sound key="reload_one" fileref="IDW_mgz_in_FromPD2.wav" volume="1.1"/>
@@ -247,6 +244,7 @@
 	<hud_icon filename="testing.png"/>
 	<inventory encumbrance="10.0" buy_price="0.0" sell_price="1.0"/>
     <projectile file="bullet_paradeus.projectile" radius="0.2">
+        <trail probability="0.0"/>
 		<result class="blast" damage="0.1" radius="3.0" decal="1" push="0.1" character_state="stun" faction_compare="not_equal" damage_origin_vehicle="0"/>
 		<trigger class="time" time_to_live="0.4"/>
         <effect class="result" key="terrain" ref="Ct_Shine_Para_Nytro_Support_Small" lighting="0" />
@@ -259,9 +257,6 @@
 	<commonness value="0.0001" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="0.0" price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
-	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.8"/>
 	<stance state_key="crouch_moving" accuracy="0.9"/>

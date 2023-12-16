@@ -2332,6 +2332,91 @@ particle_system cannon_result_smoke_ground
 		colour2 0.15 0.15 0.15 0
 	}
 }
+
+particle_system spawn_at_ground_smoke
+{
+	quota 800
+	material disaster_smoke
+	particle_width 5
+	particle_height 5
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 90
+		colour 1 1 1 0.5
+		direction 0 1 0
+		emission_rate 30
+		position 0 0.6 0
+		velocity_min 5
+		velocity_max 5
+		time_to_live 1.5
+		duration 1.5
+	}
+	affector Scaler
+	{
+		rate 2
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start	-90
+		rotation_speed_range_end	90
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 0.1
+		time1 0.7
+		colour1 0.6 0.6 0.6 0.1
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector LinearForce{
+		force_vector 0 -10 0
+		force_application add
+	}
+}
+particle_system spawn_at_ground_smoke_leave : spawn_at_ground_smoke
+{
+    emitter Box
+	{
+		angle 90
+		colour 1 1 1 0.5
+		direction 0 1 0
+		emission_rate 200
+		position 0 0 0
+		velocity_min 0.1
+		velocity_max 0.5
+		time_to_live 2.5
+		duration 0.1
+		width 5
+		height 5
+		depth 2
+	}
+	affector Scaler
+	{
+		rate 1
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 0.4
+		time1 0.7
+		colour1 0.6 0.6 0.6 0.1
+		time2 1
+		colour2 0 0 0 0
+	}
+}
+
+
 --------------------------------------material-----------------------------------
 material alpha_blend_base{
 	receive_shadows off
@@ -2593,4 +2678,11 @@ material ct_ground_smoke : alpha_blend_base
 		depth_func always_pass
         texture_unit{
             texture ct_common_smoke4.png 	
+}}}}
+material disaster_smoke : alpha_blend_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture disaster_smoke.png 	
 }}}}

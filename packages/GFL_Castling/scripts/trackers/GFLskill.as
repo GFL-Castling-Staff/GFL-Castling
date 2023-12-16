@@ -1469,13 +1469,48 @@ class GFLskill : Tracker {
 			}
 
 
-			case 53: {// paradeus heal skill for nytro aileron
+			case 53: {// paradeus heal skill for nyto aileron
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 				if (character !is null) {
 					Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
 					int factionid = character.getIntAttribute("faction_id");
-					healRangedCharacters(m_metagame,grenade_pos,factionid,30,5,"para_nytro_support",15);
+					array<const XmlElement@>@ characters = getCharactersNearPosition(m_metagame, grenade_pos, factionid,25);
+					int heal_count_max = 10;
+					int nyto_count = 0;
+					if (heal_count_max >= characters.length) {
+						heal_count_max = characters.length;
+					}
+					for (uint i = 0; i < heal_count_max; i++) {
+						int luckyhealguyid = characters[i].getIntAttribute("id");
+						bool jud = false;
+						const XmlElement@ luckyhealguyC = getCharacterInfo(m_metagame, luckyhealguyid);
+						Vector3 c_pos = stringToVector3(luckyhealguyC.getStringAttribute("position"));
+						string judname = luckyhealguyC.getStringAttribute("soldier_group_name");
+						if(nytoAllList.find(judname) >= 0)
+						{
+							nyto_count++;
+							jud = true;
+						}
+						if(jud)
+						{
+							spawnStaticProjectile(m_metagame,"para_nyto_heal_effect_on_target.projectile",c_pos,-1,factionid);
+							healCharacter(m_metagame,luckyhealguyid,40);
+						}
+						else
+						{
+							spawnStaticProjectile(m_metagame,"para_heal_effect_on_target.projectile",c_pos,-1,factionid);
+							healCharacter(m_metagame,luckyhealguyid,5);
+						}
+					}
+					if(nyto_count <= 3)
+					{
+						Vector3 random_spawn_pos_1 = getRandomOffsetVector(grenade_pos,5.0);
+						spawnStaticProjectile(m_metagame,"particle_spawn_smoke.projectile",random_spawn_pos_1,-1,factionid);
+						Vector3 random_spawn_pos_2 = getRandomOffsetVector(grenade_pos,5.0);
+						spawnStaticProjectile(m_metagame,"particle_spawn_smoke.projectile",random_spawn_pos_2,-1,factionid);						
+						//生成延时弹头，走脚本
+					}
 				}
 				break;			
 			}

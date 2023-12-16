@@ -816,7 +816,7 @@ void healRangedCharacters(Metagame@ metagame,Vector3 pos,int faction_id,float ra
 			case 1: {
 				const XmlElement@ luckyhealguyC = getCharacterInfo(metagame, luckyhealguyid);
 				Vector3 c_pos = stringToVector3(luckyhealguyC.getStringAttribute("position"));
-				CreateDirectProjectile(metagame,c_pos.add(Vector3(0,0.1,0)),c_pos,"para_heal_effect_on_target.projectile",-1,faction_id,10);				
+				spawnStaticProjectile(metagame,"para_heal_effect_on_target.projectile",c_pos,-1,faction_id);			
 				break;
 			}
 
@@ -824,9 +824,9 @@ void healRangedCharacters(Metagame@ metagame,Vector3 pos,int faction_id,float ra
 				const XmlElement@ luckyhealguyC = getCharacterInfo(metagame, luckyhealguyid);
 				Vector3 c_pos = stringToVector3(luckyhealguyC.getStringAttribute("position"));
 				string judname = luckyhealguyC.getStringAttribute("soldier_group_name");
-				if(nytroAllList.find(judname)== -1){jud = false;break;}
-				CreateDirectProjectile(metagame,c_pos.add(Vector3(0,0.1,0)),c_pos,"para_nytro_heal_effect_on_target.projectile",-1,faction_id,40);				
-				break;				
+				if(nytoAllList.find(judname)== -1){jud = false;break;}
+				spawnStaticProjectile(metagame,"para_nyto_heal_effect_on_target.projectile",c_pos,-1,faction_id);			
+				break;
 			}
 
 			default: {
@@ -839,7 +839,6 @@ void healRangedCharacters(Metagame@ metagame,Vector3 pos,int faction_id,float ra
 
 	if(int(specialHealIndex[special_key])==2 && completehealcount<4){
 		_log("No enough nytro to heal. spawn new nytro.");
-		//spawn random string from "eagleyes","vanguard","wrath"
 		string nytro_name = nytroBasicList[rand(0,nytroBasicList.length()-1)];
 		spawnSoldier(metagame,2,faction_id,pos,nytro_name);
 	}

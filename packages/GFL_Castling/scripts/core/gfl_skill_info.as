@@ -41,7 +41,7 @@ array<string> eliteEnemyName = {
     "kcco_quartz_ranger"
 };
 
-array<string> nytroAllList = {
+array<string> nytoAllList = {
     "alina",
     "teal",
     "eagleyes",
