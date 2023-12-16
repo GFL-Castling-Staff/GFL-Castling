@@ -105,6 +105,8 @@ class Stage {
 	int m_minRandomCrates;
 	int m_maxRandomCrates;
 
+	int m_max_vehicles;
+
 	IntelManager@ m_intelManager;
 	
 	bool m_allowChangeCapacityOnTheFly;
@@ -139,7 +141,7 @@ class Stage {
 		
 		m_minRandomCrates = 5;
 		m_maxRandomCrates = 5;
-		
+		m_max_vehicles = 2;
 		@m_intelManager = null;
 	}
 
