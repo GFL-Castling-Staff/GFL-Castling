@@ -27,6 +27,7 @@ array<string> eliteEnemyName = {
     "eagleyes",
     "vanguard",
     "wrath",
+    "aileron",
     "Nimogen",
     "Narciss",
     "Adeline",
@@ -38,6 +39,24 @@ array<string> eliteEnemyName = {
     "kcco_teslatrooper",
     "kcco_human_sniper",
     "kcco_quartz_ranger"
+};
+
+array<string> nytroAllList = {
+    "alina",
+    "teal",
+    "eagleyes",
+    "vanguard",
+    "wrath",
+    "aileron",
+    "Nimogen",
+    "Narciss",
+    "Adeline"  
+};
+
+array<string> nytroBasicList = {
+    "eagleyes",
+    "vanguard",
+    "wrath"
 };
 
 dictionary gameSkillIndex = {
@@ -158,7 +177,7 @@ dictionary gameSkillIndex = {
 		// 格里芬奶包回甲
 		{"gk_medaid_hk416",39},
 
-		// 白教回甲
+		// 白教指挥士回甲
 		{"para_heal",40},
 
         // PA15技能
@@ -191,6 +210,10 @@ dictionary gameSkillIndex = {
 
         // 轨道炮轰炸
         {"spawn_orbital_strike",52},
+
+        // 白教涅托辅翼回甲
+		{"para_nytro_support",53},
+
 
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}

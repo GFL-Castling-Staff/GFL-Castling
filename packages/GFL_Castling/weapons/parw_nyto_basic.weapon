@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="parw_eagleyes.weapon">
+    <tag name="elite" />
+	<tag name="rifle" />
+	<commonness value="0.0001" in_stock="1" can_respawn_with="1" />
+	<inventory encumbrance="0.0" price="0.0" />
+    <specification 
+	accuracy_factor="1.0" 
+	barrel_offset="0.6" 
+	can_shoot_standing="1" 
+	can_shoot_crouching="0"
+	can_shoot_prone="0"
+	class="0"
+	slot="0" 
+	magazine_size="10" 
+	name="Nyto-HawkEyes" 
+	projectile_speed="200" 
+	sight_range_modifier="1.1"
+	retrigger_time="1.5"
+	suppressed="0" 
+	sustained_fire_diminish_rate="1.0"
+	sustained_fire_grow_step="1.0" />
+	<capacity value="1" source="rank" source_value="0.0" />
+	<animation state_key="recoil" animation_key="recoil1, big" />
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone" />
+	<animation key="hold" animation_key="still, heavy weapon" />
+    <animation state_key="reload" animation_key="reloading, microgun"/>
+	<animation state_key="walking" animation_key="walking, hip fire" />
+	<animation state_key="running" animation_key="walking, hip fire" />  
+    <animation state_key="reload" animation_key="reloading, magazine rifle 1.5" />
+
+    <sound key="fire" fileref="adeline_fire_FromDOOMETRNAL.wav" pitch_variety="0.05" volume="1.3" />
+    <sound key="magazine_out" fileref="adeline_mgz_out_FromDOOMETERNAL.wav" volume="0.9" />
+    <sound key="magazine_in" fileref="" volume="0.8" />
+    <sound key="cycle" fileref="adeline_cycle_FromDOOMETERNAL.wav" volume="0.9" />
+    <sound class="impact" fileref="rifle_drop.wav" />    
+
+    <model filename="parw_nytoeagleyes.xml" />
+
+    <effect class="muzzle" ref="cygnus_blue" />
+
+    <weak_hand_hold offset="0.2" />
+    <projectile file="bullet_paradeus.projectile">
+        <result class="hit"  kill_probability="2.4" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="1.0" kill_decay_end_time="1.5" />
+        <trail key="paradeus_long" />
+    </projectile>
+    <hud_icon filename="parw_nytoblackrf.png"/>
+    <stance state_key="running" accuracy="0.5" />
+    <stance state_key="walking" accuracy="0.5" />
+    <stance state_key="crouch_moving" accuracy="0.6" />
+    <stance state_key="standing" accuracy="0.95" />
+    <stance state_key="crouching" accuracy="0.98" />
+    <stance state_key="prone" accuracy="1.1" /> 
+    <stance state_key="prone_moving" accuracy="0.5" />								
+    <stance state_key="over_wall" accuracy="1" />
+    <modifier class="speed" value="0.5" />
+	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.75" />
+	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
+	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
+</weapon>
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="parw_vanguard.weapon">
+    <tag name="elite" />
+    <tag name="smg" />
+    <commonness value="0.0001" in_stock="1" can_respawn_with="1" />
+    <inventory encumbrance="0.0" price="0.0" />
+    <capacity value="1" source="rank" source_value="0.0" />
+    <specification 
+		accuracy_factor="1.0" 
+		retrigger_time="0.048" 
+		barrel_offset="0.32" 
+		class="0"
+        slot="0"
+        spread_range="0.3"
+        carry_in_two_hands="0"
+        use_basic_muzzle_smoke_effect="0"
+		magazine_size="128" 
+		name="Nyto-Patroller" 
+		projectile_speed="90.0" 
+		suppressed="0" 
+		projectiles_per_shot="2"
+		sustained_fire_diminish_rate="1.5" 
+		sustained_fire_grow_step="0.3" 	/>
+    <animation state_key="recoil"	animation_key="recoil, pistol dual 1" />
+    <animation state_key="recoil"	animation_key="recoil, pistol dual 2" />
+    <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall dual" />
+    <animation state_key="reload"	animation_key="reloading, A DG 1.0" />
+    <animation state_key="reload"	animation_key="reloading2, A DG 1.0" />
+    <animation state_key="hold"	animation_key="still, pistol dual" />
+    <animation state_key="hold_casual"	animation_key="hold_casual, pistol 2" />
+    <animation state_key="hold_on_wall"	animation_key="hold, overwall dual" />
+    <animation state_key="still_against_wall"	animation_key="hold_casual, pistol dual" />
+    <animation state_key="running" animation_key="running, no weapon, 60" />
+    <animation state_key="walking"	animation_key="walking, pistol dual" />
+    <animation state_key="walking_backwards" animation_key="walking backwards, pistol dual" />
+    <animation state_key="crouching"	animation_key="crouch, pistol dual" />
+    <animation state_key="crouch_moving"	animation_key="crouching, pistol 2" />
+    <animation state_key="crouch_moving_backwards"	animation_key="crouching backwards, pistol 2" />
+    <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
+    <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
+    <animation state_key="stabbing" animation_key="pistol whip" />
+    <animation state_key="stabbing" animation_key="pistol whip 2" />
+    <animation state_key="stabbing" animation_key="pistol whip 3" />
+    <effect class="muzzle" ref="MuzzleDual1" />
+    <effect class="muzzle" ref="MuzzleSmokeDual1" />
+    <effect class="muzzle" ref="MuzzleDual2" />
+    <effect class="muzzle" ref="MuzzleSmokeDual2" />
+    <sound key="fire" fileref="Nytoportal_fire_FromCOD13.wav" pitch_variety="0.05" volume="0.8" />
+    <sound key="magazine_out" fileref="Nytoportal_mgz_out_FromCOD13.wav" volume="0.4" />
+    <sound key="magazine_in" fileref="Nytoportal_mgz_in_FromCOD13.wav" volume="0.4" />
+    <sound key="cycle" fileref="Nytoportal_cycle_FromCOD13.wav" volume="0.4" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model filename=""/>
+    <hud_icon filename="parw_nytoblacksmg.png"/>
+    <weak_hand_hold offset="0.2" />
+    <projectile file="bullet_paradeus.projectile" time_to_live="0.25" >
+        <result class="hit" kill_probability="1.85" kill_decay_start_time="0.25" kill_decay_end_time="0.25" />
+    </projectile>
+    <stance state_key="running" accuracy="0.6" />
+    <stance state_key="walking" accuracy="0.675" />
+    <stance state_key="crouch_moving" accuracy="0.75" />
+    <stance state_key="standing" accuracy="0.85" />
+    <stance state_key="crouching" accuracy="0.9" />
+    <stance state_key="prone" accuracy="0.95" />
+    <stance state_key="prone_moving" accuracy="0.75" />
+    <stance state_key="over_wall" accuracy="1" />
+    <modifier class="speed" value="0.3" />
+    <target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.1" />
+    <target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.75" />
+    <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />    
+</weapon>
+<weapon key="parw_wrath.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" player_death_drop_owner_lock_time="0">
+    <tag name="elite" />       
+    <tag name="melee" />
+
+    <specification 
+    retrigger_time="1.0" 
+    magazine_size="1000" 
+    can_shoot_standing="1" 
+    can_shoot_crouching="1" 
+    can_shoot_prone="0" 
+    carry_in_two_hands="0" 
+    name="Nyto-Wrath" 
+    barrel_offset_3d="0 0 0"
+    class="0" 
+    accuracy_factor="1.0" 
+    sustained_fire_grow_step="0" 
+    sustained_fire_diminish_rate="0"
+    supperessed="0" 
+	projectile_speed="15" 
+    use_basic_muzzle_smoke_effect="0" 
+    stab_enabled="1" 
+    stab_range="4" />
+
+    <animation state_key="recoil" animation_key="melee, saber" />
+    <animation state_key="recoil" animation_key="melee, saber whip" />
+    <animation state_key="recoil" animation_key="melee, saber slash" />
+
+    <animation state_key="stabbing" animation_key="melee, saber" />
+    <animation state_key="stabbing" animation_key="melee, saber whip" />
+    <animation state_key="stabbing" animation_key="melee, saber slash" />
+    
+    <animation state_key="reload"   animation_key="still, ninjato" />
+    <animation state_key="hold" animation_key="still, ninjato" />
+    <animation state_key="hold_casual"      animation_key="still, ninjato" />
+    <animation state_key="hold_on_wall"     animation_key="hold on wall, saber" />
+    <animation state_key="still_against_wall"   animation_key="still against wall, saber" />
+    <animation state_key="running"  animation_key="running, ninjato" />
+    <animation state_key="walking"  animation_key="walking, single hand carry" />
+    <animation state_key="crouching"    animation_key="crouch, knife" />
+    <animation state_key="crouch_moving"    animation_key="crouching forwards, ninjato" />
+    <animation state_key="crouch_moving_backwards"  animation_key="crouching backwards, ninjato" />
+    <animation state_key="changing_weapon_in"   animation_key="change weapon in, ninjato" />
+    <animation state_key="changing_weapon_out"  animation_key="change weapon out, ninjato" />
+    <animation state_key="prone_still" animation_key="prone still, sword" />
+    <animation state_key="prone_moving" animation_key="prone moving, ninjato" />
+    <animation state_key="walking_backwards" animation_key="walking backwards, single hand carry" />
+    <model filename="parw_wrath.xml" />
+
+    <projectile file="wrath.projectile"/>
+
+    <capacity value="1" source="rank" source_value="0.0" />
+
+    <stance state_key="running" accuracy="1" />
+    <stance state_key="walking" accuracy="1" />
+    <stance state_key="crouch_moving" accuracy="1" />
+    <stance state_key="standing" accuracy="1" />
+    <stance state_key="crouching" accuracy="1" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="prone_moving" accuracy="1" />
+    <stance state_key="over_wall" accuracy="1" />
+
+    <hud_icon filename="parw_nytoblackhammer.png" />
+    <effect class="muzzle" ref="sawsnone" />
+
+    <commonness value="0.00001" can_respawn_with="1" in_stock="1" />
+
+    <modifier class="detectability" value="0.6"/>
+    <modifier class="speed" value="0.2" />
+
+    <sound key="fire" fileref="wrath_hammer_1.wav" pitch_variety="0.03" volume="1.0" />
+    <sound key="fire" fileref="wrath_hammer_2.wav" pitch_variety="0.03" volume="1.0" />
+    <sound key="stab" fileref="wrath_hammer_1.wav" pitch_variety="0.03" volume="1.0" />
+    <sound key="stab" fileref="wrath_hammer_2.wav" pitch_variety="0.03" volume="1.0" />
+
+	<sound key="stab_hit" fileref="melee_hit_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+	<sound key="stab_hit" fileref="melee_hit_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+
+	<sound key="stab_hit_any" fileref="melee_hit_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
+	<sound key="stab_hit_any" fileref="melee_hit_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
+</weapon>
+<weapon key="parw_aileron.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" player_death_drop_owner_lock_time="0">
+	<tag name="elite"/>
+	<tag name="commander"/>
+	<specification 
+    retrigger_time="3.0"
+    accuracy_factor="1.0"
+    sustained_fire_grow_step="0.4"
+    sustained_fire_diminish_rate="1.2"
+    magazine_size="1000"
+    suppressed="1"
+    name="Pard-Murat"
+    class="0"
+    projectile_speed="200"
+	sight_range_modifier="1.1"
+    barrel_offset="0.4"/>
+	<animation key="recoil" animation_key="recoil1"/>
+	<animation key="recoil" animation_key="recoil2"/>
+	<animation key="recoil" animation_key="recoil3"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
+	<animation state_key="hold_on_wall" animation_key="still"/>
+	<animation state_key="walking" animation_key="walking, hip fire"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
+	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+	<sound key="fire" fileref="parw_shoot1.wav" pitch_variety="0" volume="1.0"/>
+	<sound key="reload_one" fileref="IDW_mgz_in_FromPD2.wav" volume="1.1"/>
+	<sound key="magazine_out" fileref="commander_mgz_out_FromCOD13.wav" volume="0.35"/>
+	<sound key="magazine_in" fileref="commander_mgz_in_FromCOD13.wav" volume="0.35"/>
+	<sound key="cycle" fileref="commander_cycle_FromCOD13.wav" volume="0.35"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename="parw_commander.xml"/>
+	<hud_icon filename="testing.png"/>
+	<inventory encumbrance="10.0" buy_price="0.0" sell_price="1.0"/>
+    <projectile file="bullet_paradeus.projectile" radius="0.2">
+		<result class="blast" damage="0.1" radius="3.0" decal="1" push="0.1" character_state="stun" faction_compare="not_equal" damage_origin_vehicle="0"/>
+		<trigger class="time" time_to_live="0.4"/>
+        <effect class="result" key="terrain" ref="Ct_Shine_Para_Nytro_Support_Small" lighting="0" />
+        <effect class="result" key="terrain" ref="Ct_Shine_Para_Nytro_Support_Small" lighting="0" />
+		<effect class="result" key="terrain" ref="para_heal_StimSmoke" lighting="0" />
+        <effect class="result" key="terrain" ref="para_heal_StimSmoke" lighting="0" />
+        <effect class="result" key="terrain" ref="para_heal_StimSmoke" lighting="0" />
+	</projectile>
+    <ballistics near_far_distance="0.0" speed_estimation_near="0.0" speed_estimation_far="200.0" max_speed="400.0" randomness="0.0" curve_height="1.5" tweak_factor="4.5"/>
+	<commonness value="0.0001" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="0.0" price="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<stance state_key="running" accuracy="0.8"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.9"/>
+	<stance state_key="standing" accuracy="0.9"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="0.95"/>
+	<stance state_key="prone_moving" accuracy="0.9"/>
+	<stance state_key="over_wall" accuracy="1"/>
+</weapon>
+</weapons>
