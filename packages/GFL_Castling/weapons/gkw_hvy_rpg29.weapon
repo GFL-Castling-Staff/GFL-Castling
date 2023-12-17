@@ -13,7 +13,7 @@
     can_shoot_standing="1"
     can_shoot_crouching="1"
     can_shoot_prone="0"
-    barrel_offset="0.6"
+    barrel_offset="0.75"
     suppressed="0"
     name="RPG-29 Vampir-[PG-29V]"
     class="4"
@@ -27,7 +27,8 @@
     <animation key="reload" animation_key="reloading, at rocket 6s"/>
     <animation key="hold" animation_key="still, with law"/>
     <animation key="hold_on_wall" animation_key="still, with law"/>
-    <animation state_key="changing_weapon_in" 	animation_key="change weapon in,jav" />
+    <animation state_key="changing_weapon_in" animation_key="change weapon in,jav" />
+    <animation state_key="next_in_chain_in" animation_key="change weapon in,jav" />
     <sound key="fire" fileref="rpg29_fire_FromCOD19.wav" volume="1.5"/>
     <sound key="cycle" fileref="rpg29_cycle_FromCOD19.wav"/>
     <sound key="magazine_out" fileref="rpg29_mgz_out_FromSQUAD.wav"/>
@@ -36,7 +37,7 @@
     <sound key="cycle_in" fileref=""/>
     <sound class="impact" fileref="rifle_drop.wav"/>
     <model filename="gkw_hvy_rpg29.xml"/>
-    <ballistics near_far_distance="1000.0" speed_estimation_near="140.0" speed_estimation_far="140.0" max_speed="160.0" randomness="0.0"/>
+    <ballistics near_far_distance="1000.0" speed_estimation_near="140.0" speed_estimation_far="140.0" max_speed="140.0" randomness="0.0"/>
     <projectile file="rpg29_pg29v.projectile">
         <result class="blast" damage="85.0" radius="4.0" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
     </projectile>
@@ -89,7 +90,7 @@
     can_shoot_crouching="1"
     can_shoot_prone="0"
     suppressed="0"
-    barrel_offset="0.6"
+    barrel_offset="0.75"
     name="RPG-29 Vampir-[TBG-29V]"
     class="4"
     projectile_speed="100"
@@ -103,6 +104,7 @@
     <animation key="hold" animation_key="still, with law"/>
     <animation key="hold_on_wall" animation_key="still, with law"/>
     <animation state_key="changing_weapon_in" animation_key="change weapon in,jav" />
+    <animation state_key="next_in_chain_in" animation_key="change weapon in,jav" />
     <sound key="fire" fileref="rpg29_fire_FromCOD19.wav" volume="1.5"/>
     <sound key="cycle" fileref="rpg29_cycle_FromCOD19.wav"/>
     <sound key="magazine_out" fileref="rpg29_mgz_out_FromSQUAD.wav"/>
@@ -111,9 +113,9 @@
     <sound key="cycle_in" fileref=""/>
     <sound class="impact" fileref="rifle_drop.wav"/>
     <model filename="gkw_hvy_rpg29.xml"/>
-    <ballistics near_far_distance="1000.0" speed_estimation_near="140.0" speed_estimation_far="140.0" max_speed="160.0" randomness="0.0"/>
+    <ballistics curve_height="1.4" near_far_distance="0.0" speed_estimation_near="100.0" speed_estimation_far="100.0" max_speed="200.0" randomness="0.0" tweak_factor="6.46"/>
     <projectile file="rpg29_tgv29.projectile">
-        <result class="spawn" instance_class="projectile" instance_key="mk153_sub.projectile" min_amount="4" max_amount="4" offset="0 2 0" position_spread="0 0" direction_spread="0 0" />
+        <result class="spawn" instance_class="projectile" instance_key="mk153_sub.projectile" min_amount="15" max_amount="15" offset="0 1 0" position_spread="5 5" direction_spread="0 0" />
     </projectile>
     <weak_hand_hold offset="0.3"/>
     <hud_icon filename="gkw_rpg29.png"/>
@@ -175,6 +177,7 @@
     <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_ex_aks74ub.xml"/>
+    <animation state_key="changing_weapon_in" animation_key="change weapon in,hvy pdw mode" />
 	<hud_icon filename="testing.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile">
