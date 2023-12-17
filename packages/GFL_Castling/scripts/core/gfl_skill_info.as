@@ -53,7 +53,7 @@ array<string> nytoAllList = {
     "Adeline"  
 };
 
-array<string> nytroBasicList = {
+array<string> nytoBasicList = {
     "eagleyes",
     "vanguard",
     "wrath"
@@ -211,9 +211,9 @@ dictionary gameSkillIndex = {
         // 轨道炮轰炸
         {"spawn_orbital_strike",52},
 
-        // 白教涅托辅翼回甲
+        // 白教涅托辅翼回甲 摇人
 		{"para_nytro_support",53},
-
+		{"nyto_spawn_trigger",54},
 
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}

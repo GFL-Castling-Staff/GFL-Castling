@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectiles>
+    <projectile class="grenade" name="" key="nyto_spawn_trigger.projectile" slot="2" pulldown_in_air="0" radius="0" can_be_detected_by_footmen="0"
+    can_be_detected_by_driver="0">
+        <result class="notify_script" key="nyto_spawn_trigger" />
+        <trigger class="time" time_to_live="2.0"/>
+        <rotation class="motion" />
+        <model mesh_filename="" />
+        <commonness value="0.0" />
+    </projectile>
+</projectiles>

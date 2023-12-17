@@ -154,6 +154,50 @@ particle_system at_bullet_smoke_trail_short : at_bullet_smoke_trail
 	particle_height 50
 }
 
+particle_system at_bullet_smoke_trail_heavy
+{
+	quota 100
+	material at_bullet_smoke_trail_heavy
+	particle_width 3.0
+	particle_height 80
+	renderer billboard
+	billboard_type oriented_self
+	billboard_origin bottom_center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 0.3
+		direction 0 1 0
+		emission_rate 10
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 0.6
+		duration 0.1
+	}
+	
+	affector Scaler
+	{
+		rate -1 
+	}
+
+	affector ColourFader2
+	{
+		red1 	0
+		green1 	0
+		blue1 	0
+		alpha1 	0
+		red2 	-0
+		green2	-0
+		blue2	-0
+		alpha2	-1
+		state_change 0.33
+	}
+}
+
 particle_system at_bullet_aiming_trail
 {
 	quota 100

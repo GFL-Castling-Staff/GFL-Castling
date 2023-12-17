@@ -60,7 +60,7 @@
     </projectile>
     <projectile class="grenade" name="" key="particle_spawn_smoke.projectile" slot="2" radius="0.05">
         <result class="blast" radius="0.1" damage="0.0" decal="0" push="0.0" character_state="none" make_vehicle_hit_sound="0" />
-        <trigger class="time" time_to_live="0.01"/>
+        <trigger class="time" time_to_live="1.0"/>
         <rotation class="none" />
         <model />
         <hud_icon filename="testing.png" />

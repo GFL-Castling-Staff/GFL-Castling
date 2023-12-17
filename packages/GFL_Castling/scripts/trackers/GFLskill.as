@@ -1508,15 +1508,41 @@ class GFLskill : Tracker {
 					if(nyto_count <= 3)
 					{
 						Vector3 random_spawn_pos_1 = getRandomOffsetVector(grenade_pos,10.0);
-						spawnStaticProjectile(m_metagame,"particle_spawn_smoke.projectile",random_spawn_pos_1,-1,factionid);
+						spawnStaticProjectile(m_metagame,"particle_spawn_smoke.projectile",random_spawn_pos_1,characterId,factionid);
+						spawnStaticProjectile(m_metagame,"nyto_spawn_trigger.projectile",random_spawn_pos_1,characterId,factionid);
 						Vector3 random_spawn_pos_2 = getRandomOffsetVector(grenade_pos,10.0);
-						spawnStaticProjectile(m_metagame,"particle_spawn_smoke.projectile",random_spawn_pos_2,-1,factionid);						
+						spawnStaticProjectile(m_metagame,"particle_spawn_smoke.projectile",random_spawn_pos_2,characterId,factionid);
+						spawnStaticProjectile(m_metagame,"nyto_spawn_trigger.projectile",random_spawn_pos_2,characterId,factionid);
 						//生成延时弹头，走脚本
 					}
 				}
 				break;			
 			}
 
+			case 54: {// 召唤随机涅托
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character is null) return;
+				Vector3 pos = stringToVector3(event.getStringAttribute("position"));
+				int factionid = character.getIntAttribute("faction_id");
+				array<const XmlElement@>@ groups = getSoldierGroups(m_metagame, factionid);
+				if (groups is null) return;
+				string soldier_name = nytoBasicList[rand(0,nytoBasicList.length()-1)];
+				bool status = false;
+				for (uint i = 0; i < groups.size(); ++i) {
+					const XmlElement@ group = groups[i];
+					if (group is null) continue;
+					string name = group.getStringAttribute("name");
+					if (name == soldier_name){
+						status = true;
+						break;
+					}
+				}
+				if (status){
+					spawnSoldier(m_metagame,1,factionid,pos,soldier_name);
+				}
+				break;
+			}
 
 
             default:

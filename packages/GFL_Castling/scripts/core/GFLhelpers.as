@@ -835,12 +835,6 @@ void healRangedCharacters(Metagame@ metagame,Vector3 pos,int faction_id,float ra
 			}
 		} 
 		if(jud) {completehealcount++;healCharacter(metagame,characters[i].getIntAttribute("id"),healnum);}
-	}	
-
-	if(int(specialHealIndex[special_key])==2 && completehealcount<4){
-		_log("No enough nytro to heal. spawn new nytro.");
-		string nytro_name = nytroBasicList[rand(0,nytroBasicList.length()-1)];
-		spawnSoldier(metagame,2,faction_id,pos,nytro_name);
 	}
 }
 

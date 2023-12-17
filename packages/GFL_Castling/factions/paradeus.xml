@@ -366,10 +366,10 @@
 	<!-- player group -->
 	<soldier name="default" spawn_score="0.00000001" firstnames_file="Paradeus_first.name" lastnames_file="Paradeus_last.name">
 
-		<!-- <character filename="pard_tareus.character"/> -->
+		<character filename="pard_tareus.character"/>
 
 
-		<character filename="paradeus.text_lines" />
+		<!-- <character filename="paradeus.text_lines" /> -->
 		<ai filename="default.ai" />
 		<models file="paradeus.models" />
 		<models file="common_bonus.models" />
