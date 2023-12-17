@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="rocket" slot="2" pulldown_in_air="0.5" key="rpg29_pg29v.projectile" >
+    <tag name="rocket"/>
+    <trigger class="impact" />
+    <rotation class="motion" />
+    <model mesh_filename="rpg29_pg29v.xml" />
+    <commonness value="0.0" />
+    <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_1.wav" volume="1.5" />
+    <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_2.wav" volume="1.5" />
+    <sound class="result" key="vehicle" copy="other" />
+    <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.8" />
+    <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_02.wav" pitch_variety="0.2" volume="0.8" />
+    <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_03.wav" pitch_variety="0.2" volume="0.8" />
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="character" copy="other" />
+
+    <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="6.5" atlas_index="4" layer="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="8.0" atlas_index="0" layer="2" additive="0" />
+    <!-- remove top snow everywhere -->
+    <effect class="result" key="terrain" ref="missile_result_cannon_blast_fire" lighting="0"/>
+    <effect class="result" key="terrain" ref="missile_result_cannon_blast_AmbientLight" lighting="0"/>
+    <effect class="result" key="terrain" ref="missile_result_expanding_fire" lighting="0" post_processing="1"/>
+    <effect class="result" key="terrain" ref="cannon_result_smoke" lighting="0" post_processing="1"/> 
+    <effect class="result" key="terrain" ref="cannon_result_smoke_thick_expanding" lighting="0" post_processing="1"/>
+    <effect class="result" key="terrain" ref="cannon_result_smoke_ground" lighting="0" post_processing="1"/> 
+    
+    <effect class="activated" ref="missile_activated_cannon_flysmoke" lighting="0"/>
+
+    <effect class="result" key="other" copy="terrain"/>
+    <effect class="result" key="static_object" copy="terrain" />
+    <effect class="result" key="character" copy="terrain" />
+    <effect class="result" key="shield" copy="terrain" />			
+    <effect class="result" key="vehicle" copy="terrain" />
+    <trail probability="1" key="atgm_trail"/>	
+</projectile>

@@ -46,6 +46,7 @@ ai_stop_to_fight="1"
     <rev_sound filename="tank_rev1.wav" low_pitch="0.2" high_pitch="0.4" low_rev="0.4" high_rev="0.7" volume="1.0" />
     <rev_sound filename="tank_tracks.wav" low_pitch="0.4" high_pitch="0.8" low_rev="0.1" high_rev="1.0" volume="0.9" />
     <rev_sound filename="tank_rev2.wav" low_pitch="0.3" high_pitch="0.5" low_rev="0.9" high_rev="1.0" volume="0.9" />
+    <sound key="destroy" filename="explosion_vehicle_02.wav" volume="1.2"/>
     <sound key="squeal" filename="tire_squeal.wav" />
     <sound key="ignition" filename="jeep2_ignition.wav" />
     <sound key="hit" filename="car_hit2.wav" />

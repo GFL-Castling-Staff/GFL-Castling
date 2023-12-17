@@ -47,7 +47,7 @@ owner="faction" >
 	<sound key="ignition" filename="on.wav" volume="0.8" />
 	<sound key="hit" filename="car_hit2.wav" />
 	<sound key="hit" filename="car_hit1.wav" />
-	<sound key="destroy" filename="gas_tank_explosion_1.wav" />
+	<sound key="destroy" filename="explosion_vehicle_02.wav" volume="1.2"/>
 	<sound key="turret_rotation" filename="turret_rotation1.wav" volume="0.8" />
 	<sound key="turret_rotation" filename="turret_rotation2.wav" volume="0.8" />
 	<effect event_key="drive" type="particle" key="terrain" ref="ct_vehicle_tire_smoke_3" use_surface_color="1" />

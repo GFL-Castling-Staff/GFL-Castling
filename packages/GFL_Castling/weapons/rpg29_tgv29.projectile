@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="rocket" slot="2" pulldown_in_air="0.5" key="mk153_NE.projectile" >
+<projectile class="grenade" name="rocket" slot="2" pulldown_in_air="0.5" key="rpg29_tgv29.projectile" >
     <tag name="rocket"/>
     <trigger class="impact" />
     <rotation class="motion" />
-    <model mesh_filename="mk153HEAT.xml" />
+    <model mesh_filename="rpg29_tbg29v.xml" />
     <commonness value="0.0" />
     <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_1.wav" volume="1.5" />
     <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_2.wav" volume="1.5" />
@@ -35,7 +35,8 @@
     <effect class="result" type="splat_map" surface_tag="" size="6.5" atlas_index="4" layer="0" />
     <effect class="result" type="splat_map" surface_tag="" size="8.0" atlas_index="0" layer="2" additive="0" />
     <!-- remove top snow everywhere -->
-    
+    <effect class="activated" ref="missile_activated_cannon_flysmoke" lighting="0"/>
+
     <effect class="result" key="other" copy="terrain" />
     <effect class="result" key="static_object" copy="terrain" />
     <effect class="result" key="vehicle" copy="terrain" />
