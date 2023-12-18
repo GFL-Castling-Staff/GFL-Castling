@@ -4,7 +4,7 @@
 <tag name="elite" />
     <specification
     can_shoot_running="1"
-    retrigger_time="0.1"
+    retrigger_time="0.042"
     accuracy_factor="1.0" 
     sustained_fire_grow_step="0.18" 
     sustained_fire_diminish_rate="1.4" 
@@ -15,7 +15,7 @@
     name="IDW(MOD3)"
     class="0"
     slot="0"
-    spread_range="0.15"
+    spread_range="0.2"
     projectile_speed="125"
     sight_range_modifier="1.3"
     burst_shots="1"
