@@ -750,7 +750,7 @@ class CommandSkill : Tracker {
                 c.appendChild(k);
             }            
             m_metagame.getComms().send(c);
-            SkillEffectTimer@ stimer = SkillEffectTimer(characterId,10,"MP5MOD3");
+            SkillEffectTimer@ stimer = SkillEffectTimer(characterId,5,"MP5MOD3");
             stimer.setSkey(vestkey);
             TimerArray.insertLast(stimer);
             array<string> Voice={
@@ -764,7 +764,7 @@ class CommandSkill : Tracker {
     }
     void excuteM1928A1skill(int characterId,int playerId,SkillModifer@ modifer){
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"M1928A1")) return;
-        addCooldown("M1928A1",60,characterId,modifer);
+        addCooldown("M1928A1",45,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         string vestkey="exo_t5_16lab.carry_item";
         if (character !is null) {

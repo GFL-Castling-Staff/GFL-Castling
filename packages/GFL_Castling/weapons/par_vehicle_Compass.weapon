@@ -75,6 +75,7 @@
     <weak_hand_hold offset="0.4" />
     <projectile file="bullet_paradeus.projectile">
         <result class="hit"  kill_probability="2.1" kill_decay_start_time="0.5" kill_decay_end_time="1.0" />
+        <trail probability="1.0" key="blue_old"/>>
     </projectile>
 </weapon>
 
