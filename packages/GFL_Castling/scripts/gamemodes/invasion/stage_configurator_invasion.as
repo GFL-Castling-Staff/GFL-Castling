@@ -378,6 +378,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -655,6 +656,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -715,6 +717,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -781,6 +784,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -897,6 +901,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -945,6 +950,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -1040,6 +1046,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -1091,6 +1098,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -1169,6 +1177,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -1230,6 +1239,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -1306,6 +1316,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -1400,6 +1411,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -1559,6 +1571,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -1608,6 +1621,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -1698,6 +1712,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -1764,6 +1779,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -1831,6 +1847,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -1963,6 +1980,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -2047,6 +2065,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -2133,6 +2152,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -2204,6 +2224,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -2302,6 +2323,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -2375,6 +2397,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -2459,6 +2482,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -2523,6 +2547,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -2603,6 +2628,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -2685,6 +2711,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
@@ -2762,6 +2789,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 		}
 
