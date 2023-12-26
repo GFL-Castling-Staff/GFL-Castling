@@ -194,7 +194,7 @@ dictionary gameSkillIndex = {
         {"sf_boss_excutioner_skill",46},
         
         // 铁血boss 炼金术师 技能 大限
-        // {"sf_boss_alchemist_skill",47},
+        {"sf_boss_alchemist_skill",47},
 
         // 侦察中枢
         {"spawn_pathfinder",48},
@@ -214,6 +214,9 @@ dictionary gameSkillIndex = {
         // 白教涅托辅翼回甲 摇人
 		{"para_nytro_support",53},
 		{"nyto_spawn_trigger",54},
+
+        // 铁血boss 猎手 技能 困兽狙击
+        {"sf_boss_hunter_skill",55},
 
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}

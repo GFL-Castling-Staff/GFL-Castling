@@ -759,7 +759,7 @@
 			<call key="sf_jaguar.call" />
 			<call key="sf_assualt.call" />
 			<call key="sf_trooper.call" />
-			<projectile key="sf_emp_mine.projectile"/>
+			<projectile key="skill_sf_boss_hunter_scan.projectile" enabled="1"/>
 			<carry_item key="vest_50hp_enforcer.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">

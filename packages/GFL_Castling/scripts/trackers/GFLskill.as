@@ -1270,31 +1270,16 @@ class GFLskill : Tracker {
 					int factionid = character.getIntAttribute("faction_id");
 					Vector3 character_pos = stringToVector3(event.getStringAttribute("position"));
 					//获取技能影响的敌人数量
-					array<const XmlElement@> affectedCharacter;
+					array<const XmlElement@> affectedCharacter = getEnemyCharactersNearPosition(m_metagame,character_pos,factionid,25.0f,10);
 
 					uint num_jud = 0;
 					uint num_max_character = 10; //最多锁定目标数
 					uint num_max_kill = 20;	//最多斩击次数，目标数不为0则对剩余目标继续用完斩杀次数
 
 					healCharacter(m_metagame,characterId,20);
-					int m_fnum =0;
+					int m_fnum = 0;
 					m_fnum = m_metagame.getFactionCount();
 					if(m_fnum==0) break;
-
-					affectedCharacter.insertLast(character);
-
-					for(int i=0;i<m_fnum;i++) {
-						if(i==factionid) continue;
-						array<const XmlElement@> affectedCharacter2;
-						affectedCharacter2 = getCharactersNearPosition(m_metagame,character_pos,i,20);
-						if (affectedCharacter2 is null) continue;
-						for(uint x=0;x<affectedCharacter2.length();x++){
-							affectedCharacter.insertLast(affectedCharacter2[x]);
-							num_jud += 1;
-							if(num_jud>num_max_character)break;
-						}
-						if(num_jud>num_max_character)break;
-					}
 
 					array<string> Voice={
 						"Alchemist_buhuo_SKILL01_JP.wav",
@@ -1544,6 +1529,39 @@ class GFLskill : Tracker {
 				break;
 			}
 
+			case 55: {// 猎手 boss 技能 困兽狙击
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				int factionId = character.getIntAttribute("faction_id");
+				if (character !is null) {
+					Vector3 character_pos = stringToVector3(event.getStringAttribute("position"));
+					healCharacter(m_metagame,characterId,10);
+
+					array<string> Voice={
+						"Hunter_buhuo_SKILL01_JP.wav",
+						"Hunter_buhuo_SKILL03_JP.wav"
+					};
+					playRandomSoundArray(m_metagame,Voice,factionId,character_pos.toString(),1);
+
+					array<const XmlElement@> affectedCharacter = getEnemyCharactersNearPosition(m_metagame,character_pos,factionId,25.0f);
+					int num_max_kill = 6;
+					for (uint i0=1;i0<=num_max_kill;){
+						for (uint i1=0;i1<affectedCharacter.length();i1++)	{
+							i0+=1;
+							int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
+							const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+							if (luckyoneC is null) break;
+							if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
+								string luckyonepos = luckyoneC.getStringAttribute("position");
+								Vector3 luckyoneposV = stringToVector3(luckyonepos);
+								CreateDirectProjectile(m_metagame,character_pos,luckyoneposV,"sf_emp_mine.projectile",characterId,factionId,120);								
+							}				
+						}
+					}
+
+				}
+				break;
+			}
 
             default:
                 break;
