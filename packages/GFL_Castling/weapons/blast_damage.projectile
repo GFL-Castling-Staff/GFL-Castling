@@ -180,6 +180,38 @@
         <inventory encumbrance="1.0" price="5.0" />
         <capacity value="1" source="rank" source_value="0.0" />
     </projectile>
+    <projectile class="grenade" name="" key="blast_snipe_ff_hunter.projectile" slot="2" radius="0.01">
+        <result class="blast" radius="4" damage="1.01" push="0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+        <trigger class="time" time_to_live="0.0"/>
+        <rotation class="random" />
+        <model mesh_filename="" />
+        <hud_icon filename="88r.png" />
+        <commonness value="0" />
+        <inventory encumbrance="1.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+        <effect class="result" key="shield" ref="Laser_ImpactShine_Red"/>
+        <effect class="result" key="vehicle" ref="Laser_ImpactShine_Red"/>
+        <effect class="result" key="other" copy="vehicle"/>
+        <effect class="result" key="shield" ref="Laser_ImpactBeam_Red"/>
+        <effect class="result" key="vehicle" ref="Laser_ImpactBeam_Red"/>
+        <effect class="result" key="terrain" ref="Laser_Burnout"/>
+        <effect class="result" key="static_object" ref="Laser_Burnout_on_staticobject"/>
+        <effect class="result" key="terrain" ref="Laser_ImpackSmoke"/>
+        <effect class="result" key="static_object" ref="Laser_ImpackSmoke"/>
+        <effect class="result" key="terrain" ref="Laser_ImpactShine_Red"/>
+        <effect class="result" key="static_object" ref="Laser_ImpactShine_Red"/>
+        <effect class="result" key="other" ref="LaserImpact_Red"/>
+        <effect class="result" key="terrain" ref="LaserImpact_Red"/>
+        <effect class="result" key="character" ref="LaserImpact_Red"/>
+        <effect class="result" key="static_object" ref="LaserImpact_Red"/>
+	    <effect class="result" key="terrain" ref="hitGround" use_surface_color="1"/>
+        <effect class="result" key="terrain" ref="Bullet_Burnout"/>
+        <effect class="result" key="static_object" copy="terrain"/>
+        <effect class="result" key="shield" ref="hitMetal"/>
+        <effect class="result" key="shield" ref="hitMetal_1"/>
+        <effect class="result" key="character" ref="common_hit_effect_1" lighting="0"/>
+        <effect class="result" key="character" ref="common_hit_effect_2" lighting="0"/>
+    </projectile>
     <projectile class="grenade" name="" key="blast_snipe_mosin.projectile" slot="2" radius="0.01">
         <result class="blast" radius="2.5" damage="1.01" push="0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.0"/>

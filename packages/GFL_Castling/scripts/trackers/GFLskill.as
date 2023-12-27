@@ -1544,7 +1544,7 @@ class GFLskill : Tracker {
 					playRandomSoundArray(m_metagame,Voice,factionId,character_pos.toString(),1);
 
 					array<const XmlElement@> affectedCharacter = getEnemyCharactersNearPosition(m_metagame,character_pos,factionId,25.0f);
-					int num_max_kill = 6;
+					int num_max_kill = 3;
 					if(affectedCharacter.length()==0)break;
 					for (uint i0=0;i0<=num_max_kill;i0++){
 						for (uint i1=0;i1<affectedCharacter.length();i1++)	{
@@ -1555,7 +1555,7 @@ class GFLskill : Tracker {
 							if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
 								string luckyonepos = luckyoneC.getStringAttribute("position");
 								Vector3 luckyoneposV = stringToVector3(luckyonepos);
-								CreateDirectProjectile(m_metagame,character_pos,luckyoneposV,"sf_emp_mine.projectile",characterId,factionId,120);								
+								CreateProjectile_H(m_metagame,character_pos.add(Vector3(0,2,0)),luckyoneposV,"sf_emp_mine.projectile",characterId,factionId,90,2);
 							}				
 						}
 					}

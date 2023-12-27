@@ -18,7 +18,7 @@ array<string> AR_grenade_AntiArmor = {
     "gkw_hk416_805.weapon",
     "gkw_hk416_3401.weapon"
 };
-
+ 
 // 反人员榴弹AR，杀伤小范围大
 array<string> AR_grenade_AntiPersonal = {
     "gkw_stg44.weapon",
@@ -435,6 +435,13 @@ dictionary commandSkillIndex = {
         {"gkw_m1911_mod3.weapon",72},
         {"gkw_m1911mod3_4514.weapon",72},
         {"gkw_m1911mod3_8406.weapon",72},
+
+        {"gkw_m1911_mod3.weapon",72},
+        {"gkw_m1911mod3_4514.weapon",72},
+        {"gkw_m1911mod3_8406.weapon",72},
+
+        {"ff_hunter.weapon",73},
+        {"ff_hunter_skill.weapon",73},
 
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
