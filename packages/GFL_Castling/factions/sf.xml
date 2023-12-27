@@ -759,7 +759,7 @@
 			<call key="sf_jaguar.call" />
 			<call key="sf_assualt.call" />
 			<call key="sf_trooper.call" />
-			<projectile key="skill_sf_boss_hunter_scan.projectile" enabled="1"/>
+			<projectile key="skill_sf_boss_hunter_scan.projectile" enabled="1" probability="1.0"/>
 			<carry_item key="vest_50hp_enforcer.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
@@ -1044,9 +1044,10 @@
 			<sound key="throw" fileref="Weaver_buhuo_WIN_JP.wav" pitch_variety="0.001" volume="0.8" />
 		</character>
 		<model filename="sfd_ouroboros.xml" />
-		<ai filename="sniper.ai" />
+		<ai filename="sf_weaver.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_weaver.weapon" enabled="1"/>
+			<projectile key="skill_sf_boss_oroborus_scan.projectile" enabled="1" probability="1.0" />
 			<carry_item key="vest_40hp.carry_item" enabled="1" />
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />

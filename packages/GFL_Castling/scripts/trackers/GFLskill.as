@@ -1287,7 +1287,7 @@ class GFLskill : Tracker {
 					};
 					playRandomSoundArray(m_metagame,Voice,factionid,character_pos.toString(),1);
 
-					for (uint i0=1;i0<=num_max_kill;){
+					for (uint i0=0;i0<=num_max_kill;i0++){
 						for (uint i1=0;i1<affectedCharacter.length();i1++)	{
 							i0+=1;
 							int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
@@ -1545,7 +1545,8 @@ class GFLskill : Tracker {
 
 					array<const XmlElement@> affectedCharacter = getEnemyCharactersNearPosition(m_metagame,character_pos,factionId,25.0f);
 					int num_max_kill = 6;
-					for (uint i0=1;i0<=num_max_kill;){
+					if(affectedCharacter.length()==0)break;
+					for (uint i0=0;i0<=num_max_kill;i0++){
 						for (uint i1=0;i1<affectedCharacter.length();i1++)	{
 							i0+=1;
 							int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
@@ -1555,6 +1556,41 @@ class GFLskill : Tracker {
 								string luckyonepos = luckyoneC.getStringAttribute("position");
 								Vector3 luckyoneposV = stringToVector3(luckyonepos);
 								CreateDirectProjectile(m_metagame,character_pos,luckyoneposV,"sf_emp_mine.projectile",characterId,factionId,120);								
+							}				
+						}
+					}
+
+				}
+				break;
+			}
+
+			case 56: {// 衔尾蛇 boss 技能 热毒坠落
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				int factionId = character.getIntAttribute("faction_id");
+				if (character !is null) {
+					Vector3 character_pos = stringToVector3(event.getStringAttribute("position"));
+					healCharacter(m_metagame,characterId,10);
+
+					array<string> Voice={
+						"Hunter_buhuo_SKILL01_JP.wav",
+						"Hunter_buhuo_SKILL03_JP.wav"
+					};
+					playRandomSoundArray(m_metagame,Voice,factionId,character_pos.toString(),1);
+
+					array<const XmlElement@> affectedCharacter = getEnemyCharactersNearPosition(m_metagame,character_pos,factionId,45.0f,8);
+					int num_max_kill = 8;
+					if(affectedCharacter.length()==0)break;
+					for (uint i0=0;i0<=num_max_kill;i0++){
+						for (uint i1=0;i1<affectedCharacter.length();i1++)	{
+							i0+=1;
+							int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
+							const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+							if (luckyoneC is null) break;
+							if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
+								string luckyonepos = luckyoneC.getStringAttribute("position");
+								Vector3 luckyoneposV = stringToVector3(luckyonepos);
+								CreateDirectProjectile(m_metagame,luckyoneposV.add(Vector3(0,1,0)),luckyoneposV,"skill_sf_boss_oroborus_warn.projectile",characterId,factionId,1);								
 							}				
 						}
 					}

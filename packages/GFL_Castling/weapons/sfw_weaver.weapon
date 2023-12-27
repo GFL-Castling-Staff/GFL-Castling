@@ -8,6 +8,7 @@
   barrel_offset="0.5" 
   class="4"
   slot="0" 
+  ai_sight_range_modifier="1.8"
   magazine_size="20" 
   name="SF-Ouroboros" 
   projectile_speed="85" 
@@ -18,7 +19,7 @@
   can_shoot_crouching="0"
   can_shoot_prone="0"
   sustained_fire_diminish_rate="1.0"
-  sustained_fire_grow_step="0.5" />
+  sustained_fire_grow_step="0.3" />
   
   
   <animation state_key="recoil"	animation_key="recoil,ouroboros" />

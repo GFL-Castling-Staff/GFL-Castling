@@ -192,3 +192,77 @@ material add_base{
 		}
 	}
 }
+
+particle_system weaver_aim_mark_1 	//瞄准地面框选特效
+{
+	quota 50
+	material quan_fangde_anim
+	particle_width 8
+	particle_height 8
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0.01
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 10
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 2
+		duration 0.1
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.36 0.56 0.92 1
+		time1 1
+		colour1 0.36 0.56 0.92 1
+	}
+}
+particle_system weaver_aim_mark_2  //瞄准的空对地指示特效
+{
+	quota 50
+	material warning_sign_anim
+	particle_width 1.2
+	particle_height 2.4
+	renderer billboard
+	billboard_type oriented_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0.01
+	
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 10
+		position 0 1.5 0
+		velocity 0.0001
+		time_to_live 2
+		duration 0.1
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	180
+		rotation_range_end	180
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 1 1
+		time1 1
+		colour1 1 1 1 1
+	}
+}
