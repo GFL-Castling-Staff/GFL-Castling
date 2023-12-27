@@ -264,6 +264,7 @@ class CommandSkill : Tracker {
                 case 71:{excuteM1911skill(cId,senderId,m_modifer);break;}
                 case 72:{excuteM1911mod3skill(cId,senderId,m_modifer);break;}
                 case 73:{excuteHunterskill(cId,senderId,m_modifer);break;}
+                case 74:{excuteDreamerskill(cId,senderId,m_modifer);break;}
 
                 default:
                     break;
@@ -4092,9 +4093,36 @@ class CommandSkill : Tracker {
                     Skill_ff_hunter@ shot = Skill_ff_hunter(m_metagame,1,characterId,factionid,t_pos);
                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                     tasker.add(shot);
-                    addCooldown("FF_Hunter",30,characterId,modifer);
+                    addCooldown("FF_Hunter",20,characterId,modifer);
                 }
             }
         }
     }        
+    void excuteDreamerskill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"FF_Dreamer")) return;
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    Vector3 t_pos = stringToVector3(target);
+                    int factionid = character.getIntAttribute("faction_id");
+					array<string> Voice={
+						"Dreamer_buhuo_SKILL01_JP.wav",
+						"Dreamer_buhuo_SKILL03_JP.wav"
+					};
+					playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"air thrust",true,true);
+                    c_pos=c_pos.add(Vector3(0,2,0));
+                    Skill_ff_dreamer@ shot = Skill_ff_dreamer(m_metagame,1,characterId,factionid,c_pos,t_pos);
+                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    tasker.add(shot);
+                    addCooldown("FF_Dreamer",30,characterId,modifer);
+                }
+            }
+        }
+    }        
+    
 }

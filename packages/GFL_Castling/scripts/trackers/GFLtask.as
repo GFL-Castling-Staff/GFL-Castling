@@ -1049,3 +1049,50 @@ class Skill_ff_hunter : DelaySkill {
 		CreateDirectProjectile(m_metagame,e_pos.add(Vector3(0,20,0)),e_pos,"snipe_ff_hunter.projectile",m_character_id,m_faction_id,300);
 	}
 }
+
+class Skill_ff_dreamer : DelaySkill {
+
+	Skill_ff_dreamer(GameMode@ metagame, float time, int cId, int fId, Vector3 spos, Vector3 epos){
+		super(metagame,time,cId,fId);
+		c_pos = spos;
+		t_pos = epos;
+	}
+
+	void start(){
+		m_timeLeft=m_time;
+		m_timeLeft_internal = 0;
+		int m_fnum = m_metagame.getFactionCount();
+		this.setExcuteLimit(1);
+		this.setInternal(0.2);		
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time;return;}
+		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
+		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
+		m_excute_time++;
+		m_timeLeft_internal = m_time_internal;
+
+		//扫射位置偏移单位向量 与 扫射位置偏移单位距离
+		Vector3 strike_vector = getAimUnitVector(1,c_pos,t_pos); 
+		float strike_didis = 1.0;
+		//扫射起点 从弹头终点指向弹头起点的位置 
+		Vector3 pos_offset = Vector3(0,60,0);
+		//扫射终点的起点与终点（就生成弹头的终点的起始位置与终止位置）
+		c_pos = t_pos.add(getMultiplicationVector(strike_vector,Vector3(-12,0,-12)));
+		t_pos = t_pos.add(getMultiplicationVector(strike_vector,Vector3(12,0,12)));
+		//依据扫射位置偏移单位距离而设置的扫射次数
+		int strike_time = int(getAimUnitDistance(1,c_pos,t_pos)/strike_didis);
+		//弹头起始扫射位置与终止扫射位置
+		Vector3 startPos = c_pos.add(pos_offset);
+		Vector3 endPos = c_pos;
+
+		for(int i=0;i<=strike_time;i++){
+			//水平偏移
+			startPos = startPos.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
+			endPos = endPos.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
+			//每单轮扫射生成1次对点扫射
+			CreateDirectProjectile(m_metagame,startPos,endPos,"skill_ff_dreamer_ioncannon.projectile",m_character_id,m_faction_id,280);           
+		}                               
+	}
+}

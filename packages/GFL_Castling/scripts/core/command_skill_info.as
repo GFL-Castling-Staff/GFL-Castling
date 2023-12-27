@@ -443,6 +443,10 @@ dictionary commandSkillIndex = {
         {"ff_hunter.weapon",73},
         {"ff_hunter_skill.weapon",73},
 
+        {"ff_dreamer.weapon",74},
+        {"ff_dreamer_skill.weapon",74},
+        {"ff_dreamer_skill_1.weapon",74},
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };
