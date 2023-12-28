@@ -51,6 +51,7 @@
     <sound key="magazine_out" fileref="vz61_mgz_out_FromSQUAD.wav" volume="0.5" />
     <sound key="magazine_in" fileref="vz61_mgz_in_FromSQUAD.wav" volume="0.5" />
     <sound key="cycle" fileref="vz61_cycle_FromSQUAD.wav" volume="0.5" />
+    <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.0" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <effect class="muzzle" ref="MuzzleDual1" />
     <effect class="muzzle" ref="MuzzleSmokeDual1" />

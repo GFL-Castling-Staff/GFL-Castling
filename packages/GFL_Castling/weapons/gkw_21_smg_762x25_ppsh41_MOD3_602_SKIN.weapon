@@ -46,6 +46,8 @@
     <sound key="magazine_out" fileref="PPSH_mgz_out_FromCOD17.wav" volume="0.9" />
     <sound key="magazine_in" fileref="PPSH_mgz_in_FromCOD17.wav" volume="0.9" />
     <sound key="cycle" fileref="PPSH_cycle_FromCOD17.wav" volume="0.9" />
+    <sound key="dry_fire" fileref="dryfire_9mmhg_1.wav" pitch_variety="0.05" volume="1.0" />
+
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
     <model filename="gkw_smg_ppsh41.xml" />
     <hud_icon filename="gkw_ppsh41_602.png" />

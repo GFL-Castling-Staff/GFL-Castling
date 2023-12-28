@@ -54,6 +54,7 @@
     <sound key="magazine_out" fileref="m1911_mgz_out_FromFC5.wav" volume="0.4" />
     <sound key="magazine_in" fileref="m1911_mgz_in_FromFC5.wav" volume="0.4"/>    
     <sound key="cycle" fileref="m1911_cycle_FromFC5.wav" volume="0.4" />
+    <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.0" />
 
 	<effect class="muzzle" ref="MuzzleDual1" />
 	<effect class="muzzle" ref="MuzzleSmokeDual1" />

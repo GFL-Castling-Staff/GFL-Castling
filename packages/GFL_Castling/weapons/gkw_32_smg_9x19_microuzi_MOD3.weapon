@@ -52,6 +52,7 @@
         <sound key="magazine_out" fileref="uzi_mgz_out_FromCOD16.wav" volume="0.35" />
         <sound key="magazine_in" fileref="uzi_mgz_in_FromCOD16.wav" volume="0.35" />
         <sound key="cycle" fileref="uzi_cycle_FromCOD16.wav" volume="0.35" />
+        <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.0" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename=""/>
         <hud_icon filename="gkw_microuzimod3.png"/>
@@ -131,6 +132,7 @@
         <sound key="magazine_out" fileref="uzi_mgz_out_FromCOD16.wav" volume="0.35" />
         <sound key="magazine_in" fileref="uzi_mgz_in_FromCOD16.wav" volume="0.35" />
         <sound key="cycle" fileref="uzi_cycle_FromCOD16.wav" volume="0.35" />
+        <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.0" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <model filename="gkw_smg_uzimod3.xml"/>
         <hud_icon filename="gkw_microuzimod3_skill.png"/>

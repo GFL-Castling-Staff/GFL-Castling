@@ -49,6 +49,7 @@
     <sound key="magazine_out" fileref="c96_mgz_out_FromBF1.wav" volume="0.6" />
     <sound key="magazine_in" fileref="c96_mgz_in_FromBF1.wav" volume="0.6"/>
     <sound key="cycle" fileref="c96_cycle_FromBF1.wav" volume="0.6" />
+    <sound key="dry_fire" fileref="dryfire_9mmhg_1.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_hg_c96mod3.xml" />
     <hud_icon filename="gkw_c96mod3.png" />

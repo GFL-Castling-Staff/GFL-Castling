@@ -44,6 +44,7 @@
   <sound key="magazine_in" fileref="M3_mgz_in_FromBF5.wav" volume="0.7"/>
   <sound key="cycle" fileref="M3_cycle_FromBF5.wav" volume="0.7" />
   <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+  <sound key="dry_fire" fileref="dryfire_45acp.wav" pitch_variety="0.05" volume="1.0" />
   <model filename="gkw_smg_m3.xml" />
   <hud_icon filename="gkw_m3.png" />
   <weak_hand_hold offset="0.2" />

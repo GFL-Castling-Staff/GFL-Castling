@@ -44,6 +44,7 @@
     <sound key="magazine_in" fileref="pp90_mgz_in_FromBFH.wav" volume="0.6" />
     <sound key="cycle" fileref="pp90_cycle_FromBFH.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+    <sound key="dry_fire" fileref="dryfire_9mmhg_1.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_pp90_From_nz75.xml" />
     <hud_icon filename="gkw_pp90.png" />
     <weak_hand_hold offset="0.2" />

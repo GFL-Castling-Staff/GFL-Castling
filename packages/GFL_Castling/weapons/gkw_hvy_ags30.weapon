@@ -180,6 +180,8 @@
     <sound key="magazine_out" fileref="aps_mgz_out_FromSQUAD.wav" volume="0.6" />
     <sound key="magazine_in" fileref="aps_mgz_in_FromSQUAD.wav" volume="0.6"/>
     <sound key="cycle" fileref="aps_cycle_FromSQUAD.wav" volume="0.6" />
+    <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.0" />
+
     <!--Model, Icon, Cost-->
     <model filename="gkw_hg_aps_wood.xml" />
     <hud_icon filename="gkw_aps.png" />

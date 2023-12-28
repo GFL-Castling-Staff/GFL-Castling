@@ -45,6 +45,7 @@
 	<sound key="magazine_in" fileref="pps43_mgz_in_FromRO2.wav" volume="1.9" />
 	<sound key="cycle" fileref="pps43_cycle_FromRO2.wav" volume="1.9" />
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+	<sound key="dry_fire" fileref="dryfire_9mmhg_1.wav" pitch_variety="0.05" volume="1.0" />
 	<model filename="gkw_smg_pps43.xml" />
 	<hud_icon filename="gkw_pps43.png" />
 	<weak_hand_hold offset="0.2" />

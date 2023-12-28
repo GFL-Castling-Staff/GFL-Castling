@@ -44,6 +44,7 @@
     <sound key="magazine_in" fileref="sten_mgz_in_FromCOD18.wav" volume="0.45" />
     <sound key="cycle" fileref="sten_cycle_FromCOD18.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
+    <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_smg_sten.xml"/>
     <commonness value="0.2" in_stock="1" can_respawn_with="1" />
     <hud_icon filename="gkw_stenmk2.png"/>

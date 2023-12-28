@@ -22,6 +22,7 @@
     <sound key="magazine_in" fileref="vector_mgz_in_FromCOD6R.wav" volume="0.6" />
     <sound key="cycle" fileref="vector_cycle_FromCOD9.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
+    <sound key="dry_fire" fileref="dryfire_9mmhg_1.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_smg_vector_1901.xml" />
     <hud_icon filename="gkw_vector_1901.png" />
     <weak_hand_hold offset="0.2" />

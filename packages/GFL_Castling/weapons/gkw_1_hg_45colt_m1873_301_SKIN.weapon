@@ -50,6 +50,7 @@
     <sound key="cycle_in" fileref="revolver_cycle_in.wav" volume="1"/>
     <sound key="cycle" fileref="python_cycle_FromCOD6R.wav" volume="1.5"/>
     <sound key="reload_one" fileref="m1873_reload_FromCOD17.wav"/>
+    <sound key="dry_fire" fileref="dryfire_revolver.wav" pitch_variety="0.05" volume="1.0" />
     <effect class="muzzle" ref="ejection_556"/>
     <model filename="gkw_hg_m1873.xml"/>
     <hud_icon filename="gkw_m1873_301.png"/>

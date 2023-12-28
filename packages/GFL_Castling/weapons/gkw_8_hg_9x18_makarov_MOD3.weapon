@@ -49,6 +49,7 @@
 	<sound key="magazine_out" fileref="pm_mgz_out_FromCOD16.wav" volume="0.9"/>
 	<sound key="magazine_in" fileref="pm_mgz_in_FromCOD16.wav" volume="0.9"/>
 	<sound key="cycle" fileref="pm_cycle_FromCOD7.wav" volume="0.9"/>
+    <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_hg_pb.xml" />
     <hud_icon filename="gkw_makarovmod3.png" />

@@ -79,6 +79,7 @@
 		<sound key="cycle" fileref="RogueAgentEliminated.wav" pitch_variety="0.05" volume="1" />
 		<sound key="cycle" fileref="vector_agent_cycle_FromINS.wav" volume="0.7" />
 		<sound class="impact" fileref="rifle_drop.wav" />
+		<sound key="dry_fire" fileref="dryfire_9mmhg_1.wav" pitch_variety="0.05" volume="1.0" />
 		<model filename="gkw_smg_vector.xml" />
 		<hud_icon filename="gkw_vector_549.png" />
 		<weak_hand_hold offset="0.2" />

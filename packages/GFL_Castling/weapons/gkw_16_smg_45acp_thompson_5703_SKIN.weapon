@@ -41,6 +41,7 @@
     <sound key="magazine_in" fileref="thompson_mgz_in_FromBF5.wav" volume="0.6" />
     <sound key="cycle" fileref="thompson_cycle_FromBF5.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+    <sound key="dry_fire" fileref="dryfire_45acp.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_smg_thompson.xml" />
     <hud_icon filename="gkw_m1928a1_5703.png" />
     <weak_hand_hold offset="0.2" />
@@ -106,6 +107,7 @@
     <sound key="magazine_in" fileref="m1928skill_mgz_in_FromRS2V.wav" volume="1" />
     <sound key="cycle" fileref="thompson_cycle_FromBF5.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+    <sound key="dry_fire" fileref="dryfire_45acp.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_smg_thompson.xml" />
     <hud_icon filename="gkw_m1928a1_5703.png" />
     <weak_hand_hold offset="0.2" />
