@@ -99,6 +99,7 @@ class GFL_playerInfo{
     int m_rp_reward = 0; // rp奖励
     rgba_color@ m_color;
     bool m_available; //用途判定是否掉线，是否该info无效，在函数应用部分判断作错误处理
+    int m_inactive_time = 0;
     
     // 玩家物品栏
     GFL_playerInfo(string name,int pid, int cid,int fid, string hash,string sid,GFL_equipment@ equipment,rgba_color@ color){
@@ -185,6 +186,18 @@ class GFL_playerInfo{
     {
         m_available = false;
     }
+    void ForceEnable()
+    {
+        m_available = true;
+    }    
+    void Inactive_Retry()
+    {
+        m_inactive_time++;
+    }
+    int getInactiveStatus()
+    {
+        return m_inactive_time;
+    }
 }
 
 class GFL_playerInfo_Buck
@@ -196,6 +209,23 @@ class GFL_playerInfo_Buck
 	}    
 
 	uint size(){return m_playerInfo.size();}
+
+    void addNewInfo(GFL_playerInfo@ newinfo)
+    {
+        bool exist = false;
+        string name = newinfo.getPlayerName();
+        for(uint i=0; i<size();++i){
+			if(name == m_playerInfo[i].getPlayerName()){
+                exist = true;
+				@m_playerInfo[i] = newinfo;
+			}
+		
+        }
+        if(!exist)
+        {
+            m_playerInfo.insertLast(newinfo);
+        }
+    }
 
     void addNewInfo(string name,int pid, int cid,int fid, string hash,string sid,GFL_equipment@ equipment,rgba_color@ color){
         m_playerInfo.insertLast(GFL_playerInfo(name,pid,cid,fid,hash,sid,equipment,color));    
@@ -374,9 +404,13 @@ class GFL_playerlist_system : Tracker {
             {
                 if(g_playerInfo_Buck.m_playerInfo[i].check_Available() == false)
                 {
-                    //在处理完所有新增的players后，把被标记为不可用的info删除
-                    g_playerInfo_Buck.removeByIndex(i);
-                    --i;
+                    g_playerInfo_Buck.m_playerInfo[i].Inactive_Retry();
+                    //在处理完所有新增的players后，把30次标记为不可用的info删除
+                    if(g_playerInfo_Buck.m_playerInfo[i].getInactiveStatus() >= 30)
+                    {
+                        g_playerInfo_Buck.removeByIndex(i);
+                        --i;
+                    }
                 }
             }
         }
@@ -386,6 +420,8 @@ class GFL_playerlist_system : Tracker {
             for (uint j = 0; j < g_playerInfo_Buck.size(); ++j) {
                 GFL_playerInfo@ player = g_playerInfo_Buck.m_playerInfo[j];
                 if(player is null){return;}
+                if(player.check_Available() != true){return;}
+                //如果处于不活跃状态，直接跳过event的处理；
                 manageEventOfRefresh(player);
             }
         }
@@ -546,6 +582,10 @@ class GFL_playerlist_system : Tracker {
             //已有玩家信息
             int index = getPlayerIndexFromList(player_username);
             if(index < 0) return;
+            if(g_playerInfo_Buck.m_playerInfo[index].check_Available() != true) //如果发现玩家连回来了
+            {
+                g_playerInfo_Buck.m_playerInfo[index].ForceEnable();
+            }
             g_playerInfo_Buck.update(player_username,player_playerid,player_characterid,player_factionid,player_profile_hash,player_sid,player_equipment,player_color);
         }
         else{
