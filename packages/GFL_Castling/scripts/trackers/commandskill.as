@@ -2903,10 +2903,10 @@ class CommandSkill : Tracker {
                         addCooldown("sniper",20,characterId,modifer);
                     }
                     else if (weapon_name == "gkw_m1903.weapon" || weapon_name=="gkw_m1903_exp.weapon" || weapon_name=="gkw_m1903_exp_skill.weapon" || weapon_name=="gkw_m1903_only.weapon"){
-                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
+                        playAnimationKey(m_metagame,characterId,"recoil1, big",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_60.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
-                        addCooldown("sniper",20,characterId,modifer);
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipe_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        addCooldown("sniper",10,characterId,modifer);
                     }
                     else if (weapon_name == "gkw_m1903_302.weapon" || weapon_name=="gkw_m1903_302_exp.weapon" || weapon_name=="gkw_m1903_302_exp_skill.weapon" || weapon_name=="gkw_m1903_302_only.weapon"){
                         playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
@@ -4140,7 +4140,6 @@ class CommandSkill : Tracker {
                     Vector3 s_pos = stringToVector3(target);
                     int factionid = character.getIntAttribute("faction_id");
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
-                    int j = findKillCountIndex(characterId,"StenSterling");
                     c_pos = c_pos.add(Vector3(0,1,0));
                     c_pos = c_pos.add((getAimUnitVector(1,c_pos,s_pos)));
 
