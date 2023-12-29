@@ -44,6 +44,7 @@
     <sound key="magazine_in" fileref="sv98_mgz_in_FromWF.wav" volume="0.7"/>
     <sound key="cycle_out" fileref="sv98_cycle_out_FromEFT.wav"  volume="0.8"/>
     <sound key="cycle_in" fileref="sv98_cycle_in_FromEFT.wav"  volume="0.8"/>
+    <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_sv98.xml" />

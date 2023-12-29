@@ -41,6 +41,7 @@
         <sound key="magazine_in" fileref="bm59_mgz_in_FromCOD16.wav" volume="0.6"/>
         <sound key="cycle" fileref="bm59_cycle_FromCOD16.wav" volume="0.6"/>
         <sound class="impact" fileref="rifle_drop.wav"/>
+        <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_rf_bm59.xml"/>
         <hud_icon filename="gkw_bm59.png"/>
         <weak_hand_hold offset="0.3"/>

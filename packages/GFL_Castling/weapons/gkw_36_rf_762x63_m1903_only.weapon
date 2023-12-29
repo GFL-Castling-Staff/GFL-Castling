@@ -32,6 +32,7 @@
 	<sound key="reload_one" fileref="m1903_reload_FromPOSTSCRIPTUM.wav" volume="0.9"/>
 	<sound key="cycle_out" fileref="m1903_cycle_out_FromPOSTSCRIPTUM.wav" volume="0.6"/>
 	<sound key="cycle_in" fileref="m1903_cycle_in_FromPOSTSCRIPTUM.wav" volume="0.6"/>
+    <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<model filename="gkw_rf_m1903_iris.xml"/>

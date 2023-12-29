@@ -29,6 +29,7 @@
     <sound key="magazine_out" fileref="g43_mgz_out_FromBF5.wav" volume="0.6" />
     <sound key="magazine_in" fileref="g43_mgz_in_FromBF5.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" />
+    <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />    
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_g43.xml" />
     <hud_icon filename="gkw_g43_7607.png" />

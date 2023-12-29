@@ -35,6 +35,7 @@
         <sound key="magazine_out" fileref="ksvk_mgz_out_FromSURVARIUM.wav" volume="0.8"/>
         <sound key="magazine_in" fileref="ksvk_mgz_in_FromSURVARIUM.wav" volume="0.8"/>
         <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
+        <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
         <sound key="cycle_in" fileref="ksvk_cycle_in_FromSURVARIUM.wav" volume="0.8"/>
         <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM.wav" volume="0.8"/>
         <!--语音，以及降低频率用正常音效-->
@@ -150,6 +151,7 @@
         <sound key="magazine_out" fileref="ksvk_mgz_out_FromSURVARIUM.wav" volume="0.8"/>
         <sound key="magazine_in" fileref="ksvk_mgz_in_FromSURVARIUM.wav" volume="0.8"/>
         <sound key="cycle" fileref="ksvk_cycle_FromSURVARIUM.wav" volume="0.8"/>
+        <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
         <sound key="cycle_in" fileref="ksvk_cycle_in_FromSURVARIUM.wav" volume="0.8"/>
         <sound key="cycle_out" fileref="ksvk_cycle_out_FromSURVARIUM.wav" volume="0.8"/>
         <!--语音，以及降低频率用正常音效-->

@@ -35,6 +35,7 @@
     <sound key="magazine_in" fileref="ptrd_mgz_in_FromBF1.wav" volume="0.65"  />
     <sound key="cycle_out" fileref="ptrd_cycle_out_FromREALLIFE.wav" volume="0.5" />
     <sound key="cycle_in" fileref="ptrd_cycle_in_FromREALLIFE.wav" volume="0.5" />
+    <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_ptrd_from_Eisen.xml" />

@@ -29,6 +29,7 @@
 	<sound key="fire" fileref="type56r_fire_FromCOD16.wav" pitch_variety="0.03" volume="1.1"/>
 	<sound key="reload_one" fileref="type56r_reload_FromSQUAD.wav" volume="0.75"/>
 	<sound key="cycle" fileref="type56r_cycle_FromCOD16.wav" volume="1.0"/>
+    <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_rf_56typermod3.xml"/>
 	<hud_icon filename="gkw_56typermod3.png"/>
@@ -95,6 +96,7 @@
 	<sound key="fire" fileref="type56r_fire_FromCOD16.wav" pitch_variety="0.03" volume="1.1"/>
 	<sound key="reload_one" fileref="type56r_reload_FromSQUAD.wav" volume="0.75"/>
 	<sound key="cycle" fileref="type56r_cycle_FromCOD16.wav" volume="1.0"/>
+    <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_rf_56typermod3_skill.xml"/>
 	<hud_icon filename="gkw_56typermod3_skill.png"/>

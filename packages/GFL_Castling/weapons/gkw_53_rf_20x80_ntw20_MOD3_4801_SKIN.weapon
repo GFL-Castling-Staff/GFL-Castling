@@ -68,6 +68,7 @@
     <sound key="cycle_in" fileref="NTW20_MEET_JP.wav" volume="0.8" pitch_variety="0"/>
     <sound key="cycle_in" fileref="NTW20_ATTACK_JP.wav" volume="0.8" pitch_variety="0"/>
     <sound key="cycle_in" fileref="NTW20_DEFENSE_JP.wav" volume="0.8" pitch_variety="0"/>
+    <sound key="dry_fire" fileref="dryfire_atrf.wav" pitch_variety="0.05" volume="1.0" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_ntw20_4801fromIAQS.xml" />

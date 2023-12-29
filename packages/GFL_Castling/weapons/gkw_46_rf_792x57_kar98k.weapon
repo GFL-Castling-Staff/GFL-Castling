@@ -42,6 +42,7 @@
         <sound key="reload_one" fileref="Kar98K_reload_FromCOD16.wav" volume="0.6" />
         <sound key="cycle_out" fileref="kar98k_cycle_out_FromPOSTSCRIPTUM.wav" volume="0.6"/>
         <sound key="cycle_in" fileref="kar98k_cycle_in_FromPOSTSCRIPTUM.wav" volume="0.6"/>
+        <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
         <sound class="impact" fileref="rifle_drop.wav"/>
         <model filename="gkw_rf_98k.xml"/>
         <hud_icon filename="gkw_98k.png"/>
@@ -117,6 +118,7 @@
         <sound key="reload_one" fileref="rifle_clip_in.wav" volume="0.9"/>
         <sound key="cycle_out" fileref="kar98k_cycle_out_FromPOSTSCRIPTUM.wav" volume="0.7"/>
         <sound key="cycle_in" fileref="kar98k_cycle_in_FromPOSTSCRIPTUM.wav" volume="0.7"/>
+        <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
         <sound class="impact" fileref="rifle_drop.wav"/>
         <model filename="gkw_rf_98k_b.xml"/>
         <hud_icon filename="gkw_98k_b.png"/>

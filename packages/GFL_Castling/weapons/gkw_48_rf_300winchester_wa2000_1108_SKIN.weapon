@@ -29,6 +29,7 @@
     <sound key="cycle_in" fileref="wa2000_cycle_FromCOD6R.wav" volume="0.6"/>
     <sound key="magazine_out" fileref="wa2000_mgz_out_FromCOD19.wav" volume="0.6" />
     <sound key="magazine_in" fileref="wa2000_mgz_in_FromCOD19.wav" volume="0.6"/>
+    <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <commonness value="0" in_stock="0" can_respawn_with="1"/>
 

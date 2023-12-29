@@ -38,6 +38,7 @@
 	<sound key="magazine_out" fileref="m14_mgz_out_FromCOD15.wav" volume="0.75"/>
 	<sound key="magazine_in" fileref="m14_mgz_in_FromCOD15.wav" volume="0.75"/>
 	<sound key="cycle" fileref="m14_cycle_FromCOD15.wav" volume="0.75"/>
+	<sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_rf_m14.xml"/>
 	<hud_icon filename="gkw_m14_303.png"/>
