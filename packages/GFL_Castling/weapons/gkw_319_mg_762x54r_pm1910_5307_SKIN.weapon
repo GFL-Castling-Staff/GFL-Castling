@@ -42,6 +42,7 @@
     <sound key="magazine_in" fileref="pm1910_mgz_in_FromBF1.wav" volume="0.5" />
     <sound key="cycle_out" fileref="pm1910_cycle_FromBF1.wav" volume="0.4" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_mg_pm1910.xml" />
     <hud_icon filename="gkw_pm1910_5307.png" />
     <projectile file="bullet.projectile">

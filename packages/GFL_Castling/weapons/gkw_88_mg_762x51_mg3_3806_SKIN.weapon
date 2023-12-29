@@ -26,6 +26,7 @@
         <sound key="magazine_in" fileref="mg3_mgz_in_FormSQUAD.wav" volume="1.0" />
         <sound key="cycle" fileref="mg3_cycle_FormSQUAD.wav" volume="1.0" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_mg_mg3_n.xml" />
         <hud_icon filename="gkw_mg3_3806.png" />
         <projectile file="bullet.projectile">
@@ -70,6 +71,7 @@
         <sound key="magazine_in" fileref="mg3_mgz_in_FormSQUAD.wav" volume="1.0" />
         <sound key="cycle" fileref="mg3_cycle_FormSQUAD.wav" volume="1.0" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_mg_mg3.xml" />
         <hud_icon filename="gkw_mg3_3806.png" />
         <projectile file="bullet.projectile">

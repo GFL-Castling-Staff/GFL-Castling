@@ -22,6 +22,9 @@
         <sound key="magazine_in" fileref="qbz97_mgz_in_FromCOD20.wav" volume="0.7" />
         <sound key="cycle" fileref="qbz97_cycle_FromCOD20.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_ar_97type_6902.xml" />
         <hud_icon filename="gkw_97type_6902.png" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />

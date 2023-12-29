@@ -41,6 +41,7 @@
         <sound key="magazine_in" fileref="mg36_mgz_in_FromCOD16.wav" volume="0.5" />
         <sound key="cycle" fileref="mg36_cycle_FromCOD16.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_mg_mg36.xml" />
         <hud_icon filename="gkw_mg36_4903.png" />
         <weak_hand_hold offset="0.2" />
@@ -115,6 +116,7 @@
         <animation state_key="next_in_chain_in" animation_key="change weapon in, sword"/>
 
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
 
         <model filename="mg36_katana.xml" />
         <hud_icon filename="gkw_mg36_4903.png" />

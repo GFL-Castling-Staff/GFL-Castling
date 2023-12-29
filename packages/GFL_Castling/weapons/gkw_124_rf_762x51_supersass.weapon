@@ -29,6 +29,7 @@
     <sound key="magazine_in" fileref="sass_mgz_in_FromSQUAD.wav"  volume="0.55" />
     <sound key="cycle" fileref="sass_cycle_FromCOD13.wav"  volume="0.4" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_supersass.xml" />
     <hud_icon filename="gkw_supersass.png" />

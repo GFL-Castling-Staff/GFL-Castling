@@ -36,6 +36,7 @@
     <sound key="cycle_out" fileref="gepardm1_cycle_out_FromBF5.wav" volume="0.5" />
     <sound key="cycle_in" fileref="gepardm1_cycle_in_FromBF5.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
+    <sound key="dry_fire" fileref="dryfire_atrf.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_gepardm1.xml" />
     <hud_icon filename="gkw_gepardm1.png" />

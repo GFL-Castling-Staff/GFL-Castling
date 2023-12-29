@@ -51,6 +51,7 @@
         <sound key="magazine_in" fileref="mg42_mgz_in_FromHELLLETLOOSE.wav" volume="1" />
         <sound key="cycle" fileref="mg42_cycle_FromHELLLETLOOSE.wav" volume="1" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_mg_mg42.xml" />
         <hud_icon filename="gkw_mg42.png" />
         <projectile file="bullet.projectile">
@@ -118,6 +119,7 @@
         <sound key="magazine_in" fileref="mg42_mgz_in_FromHELLLETLOOSE.wav" volume="1" />
         <sound key="cycle" fileref="mg42_cycle_FromHELLLETLOOSE.wav" volume="1" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_mg_mg42.xml" />
         <hud_icon filename="gkw_mg42_skill.png" />
         <effect class="muzzle" ref="muzzle_yellow"/>

@@ -23,6 +23,9 @@
     <sound key="magazine_in" fileref="ak74_mgz_in_FromCOD16.wav" volume="0.5" />
     <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_ak74m_From_melondove.xml" />
     <hud_icon filename="gkw_ak74m.png" />
     <weak_hand_hold offset="0.2" />

@@ -35,6 +35,9 @@
 	<sound key="magazine_in" fileref="r5_mgz_in_FromFC5.wav" volume="0.6" />
 	<sound key="cycle" fileref="r5_cycle_FromFC6.wav" volume="0.6" />
 	<sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.0" />
 	<!-- Model, Icon, Cost -->
 	<model filename="gkw_ar_r5.xml" />
 	<hud_icon filename="gkw_r5_5302.png" />
@@ -90,6 +93,9 @@
     <sound key="reload_one" fileref="sg3_reload_FromREALLIFE.wav" volume="0.5" />
     <sound key="reload_one" fileref="sg4_reload_FromREALLIFE.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="kccow_sg.xml" />
     <hud_icon filename="gkw_r5_5302.png" />
     <weak_hand_hold offset="0.2" />

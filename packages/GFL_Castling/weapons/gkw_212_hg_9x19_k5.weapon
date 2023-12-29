@@ -46,6 +46,7 @@
 	<animation state_key="stabbing" 			animation_key="pistol whip" />
 	<animation state_key="stabbing" 			animation_key="pistol whip 3" />
 	<!--Sounds-->
+<sound key="dry_fire" fileref="dryfire_pistol.wav" pitch_variety="0.05" volume="1.0" />
 	<sound key="fire" fileref="k5_fire_FromWF.wav" pitch_variety="0.05" volume="1.2" />
 	<sound key="magazine_out" fileref="k5_mgz_out_FromCOD16.wav" volume="0.6" />
 	<sound key="magazine_in" fileref="k5_mgz_in_FromCOD16.wav" volume="0.6"/>

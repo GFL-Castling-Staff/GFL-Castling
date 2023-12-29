@@ -32,6 +32,7 @@
     <sound key="cycle_out" fileref="m200_cycle_out_FromCOD19.wav" volume="0.9" />
     <sound key="cycle_in" fileref="m200_cycle_in_FromCOD19.wav" volume="0.9" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_m200.xml" />
     <hud_icon filename="gkw_m200.png" />

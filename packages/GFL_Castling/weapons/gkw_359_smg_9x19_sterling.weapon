@@ -43,6 +43,7 @@
     <sound key="magazine_in" fileref="Sterlin_mgz_in_FromINS.wav" volume="0.7" />
     <sound key="cycle" fileref="Sterlin_cycle_FromINS.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_smg_sterling.xml"/>
     <commonness value="0.2" in_stock="0" can_respawn_with="1" />
     <hud_icon filename="gkw_sterling.png"/>

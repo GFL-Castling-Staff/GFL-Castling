@@ -47,6 +47,7 @@
 	<sound key="magazine_out" fileref="m99_mgz_out_FromINSSANDSTORM.wav" volume="0.7"/>
 	<sound key="magazine_in" fileref="m99_mgz_in_FromINSSANDSTORM.wav" volume="0.7"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+	<sound key="dry_fire" fileref="dryfire_atrf.wav" pitch_variety="0.05" volume="1.0" />
 	<!--Model, Icon, Cost-->
 	<model filename="gkw_rf_m99_404.xml" />
 	<hud_icon filename="gkw_m99_404.png" />

@@ -39,6 +39,7 @@
     <sound key="magazine_in" fileref="vp1915_mgz_in_FromBF1.wav" volume="0.6" />
     <sound key="cycle" fileref="vp1915_cycle_FromBF1.wav" volume="0.6" />
   <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.0" />
   <model filename="gkw_vp1915_6604_From_melondove.xml" />
   <hud_icon filename="gkw_vp1915_6604.png" />
   <weak_hand_hold offset="0.2" />

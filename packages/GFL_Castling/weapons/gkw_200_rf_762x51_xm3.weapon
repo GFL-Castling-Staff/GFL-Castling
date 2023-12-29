@@ -34,6 +34,7 @@
         <sound key="cycle_out" fileref="xm3_cycle_out_FromCOD4R.wav" volume="0.4"/>
         <sound key="cycle_in" fileref="xm3_cycle_in_FromCOD4R.wav" volume="0.4"/>
         <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+<sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_rf_carcano1938.xml"/>
         <hud_icon filename="gkw_xm3.png"/>
         <weak_hand_hold offset="0.3"/>
@@ -107,6 +108,7 @@
         <sound key="cycle_out" fileref="xm3_cycle_out_FromCOD4R.wav" volume="0.4"/>
         <sound key="cycle_in" fileref="xm3_cycle_in_FromCOD4R.wav" volume="0.4"/>
         <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+<sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_rf_carcano1938.xml"/>
         <hud_icon filename="gkw_xm3_skill.png"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>

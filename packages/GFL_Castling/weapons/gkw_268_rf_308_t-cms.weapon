@@ -30,6 +30,7 @@
     <sound key="cycle_out" fileref="tcms_cycle_out_FromWF.wav"  volume="0.7"/>
     <sound key="cycle_in" fileref="tcms_cycle_in_FromWF.wav"  volume="0.7"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+<sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_t-cms.xml" />
     <hud_icon filename="gkw_t-cms.png" />

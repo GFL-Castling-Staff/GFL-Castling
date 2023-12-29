@@ -46,6 +46,7 @@
     <sound key="magazine_in" fileref="bren_mgz_in_FromREALLIFE.wav" volume="0.6" />
     <sound key="cycle" fileref="bren_cycle_FromPOSTSCRIPTUM.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_mg_m1918.xml" />
     <hud_icon filename="gkw_brenmk.png" />
     <projectile file="bullet.projectile">

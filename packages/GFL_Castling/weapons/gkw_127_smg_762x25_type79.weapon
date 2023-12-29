@@ -20,6 +20,7 @@
 	<sound key="magazine_in" fileref="type79_mgz_in_FromBF2.wav" volume="0.8" />
 	<sound key="cycle" fileref="type79_cycle_FromBF2.wav" volume="0.8" />
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+	<sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.0" />
 	<model filename="gkw_smg_79type.xml" />
 	<hud_icon filename="gkw_79type.png" />
 	<weak_hand_hold offset="0.2" />

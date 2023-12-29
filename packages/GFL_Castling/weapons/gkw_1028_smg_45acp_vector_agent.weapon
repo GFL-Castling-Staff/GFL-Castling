@@ -47,6 +47,7 @@
     <sound key="magazine_in" fileref="vector_agent_mgz_in_FromINS.wav" volume="0.6" />
     <sound key="cycle" fileref="vector_agent_cycle_FromINS.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.0" />
 
     <model filename="gkw_smg_vector_agent.xml" />
     <hud_icon filename="gkw_vector_agent_547.png" />
@@ -118,6 +119,7 @@
     <sound key="magazine_in" fileref="vector_agent_mgz_in_FromINS.wav" volume="0.6" />
     <sound key="cycle" fileref="vector_agent_cycle_FromINS.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.0" />
 
     <model filename="gkw_smg_vector_agent.xml" />
     <hud_icon filename="gkw_vector_agent_547.png" />
@@ -199,6 +201,7 @@
     <sound key="magazine_in" fileref="js05_mgz_in_FromCOD17.wav" volume="0.7" />
 	<sound key="cycle" fileref="vector_agent_cycle_FromINS.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.0" />
 
     <model filename="gk_agent_sticky_bomb_launcher.xml" />
     <hud_icon filename="gkw_vector_agent_547.png" />

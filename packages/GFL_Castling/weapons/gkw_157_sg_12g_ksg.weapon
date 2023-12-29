@@ -30,6 +30,7 @@
         <sound key="reload_one" fileref="ksg_reload_FromCOD8.wav" volume="1" />
         <sound key="cycle" fileref="ksg_cycle_FromDAYSGONE.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <!--Model, Icon, Cost-->
         <model filename="gkw_sg_ksg.xml" />
         <hud_icon filename="gkw_ksg.png" />
@@ -84,6 +85,7 @@
         <sound key="reload_one" fileref="ksg_reload_FromCOD8.wav" volume="1" />
         <sound key="cycle" fileref="ksg_cycle_FromDAYSGONE.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <!--Model, Icon, Cost-->
         <model filename="gkw_sg_ksg.xml" />
         <hud_icon filename="gkw_ksg_skill.png" />

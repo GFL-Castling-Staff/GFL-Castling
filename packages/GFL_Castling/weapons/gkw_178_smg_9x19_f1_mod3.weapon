@@ -44,6 +44,7 @@
     <sound key="magazine_in" fileref="f1_mgz_in_FromRS2V.wav" volume="0.8" />
     <sound key="cycle" fileref="f1_cycle_FromRS2V.wav" volume="1.0" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_smg_f1_mod3_b.xml"/>
     <commonness value="0.0001" in_stock="0" can_respawn_with="1" />
     <hud_icon filename="gkw_f1mod3.png"/>

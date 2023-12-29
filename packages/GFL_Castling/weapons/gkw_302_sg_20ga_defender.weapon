@@ -30,6 +30,7 @@
     <sound key="cycle" fileref="" />
     <sound key="reload_one" fileref="Liberator_reload_FromCODOLRanger.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_sg_coltdefender.xml" />
     <hud_icon filename="gkw_coltdefender.png" />
@@ -83,6 +84,7 @@
     <sound key="cycle" fileref="" />
     <sound key="reload_one" fileref="Liberator_reload_FromCODOLRanger.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_sg_coltdefender.xml" />
     <hud_icon filename="gkw_coltdefender_skill.png" />

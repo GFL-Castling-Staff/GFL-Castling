@@ -30,6 +30,7 @@
     <sound key="cycle_out" fileref="srs_cycle_out_FromFC5.wav"  volume="0.7"/>
     <sound key="cycle_in" fileref="srs_cycle_in_FromFC5.wav"  volume="0.7"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+<sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_srs.xml" />
     <hud_icon filename="gkw_srs.png" />

@@ -39,7 +39,8 @@
         <sound key="magazine_out" fileref="sr3mp_mgz_out_FromCOD16.wav" volume="0.45" />
         <sound key="magazine_in" fileref="sr3mp_mgz_in_FromCOD16.wav" volume="0.45" />
         <sound key="cycle" fileref="sr3mp_cycle_FromCOD16.wav" volume="0.45" />
-        <sound class="impact" fileref="rifle_drop.wav" />  
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.0" />  
         <model filename="gkw_smg_sr3mp.xml" />
         <hud_icon filename="gkw_sr3mp_4101.png" />
         <weak_hand_hold offset="0.2" />
@@ -89,6 +90,7 @@
         <sound key="magazine_in" fileref="sr3mp_mgz_in_FromCOD16.wav" volume="0.45" />
         <sound key="cycle" fileref="sr3mp_cycle_FromCOD16.wav" volume="0.45" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_smg_sr3mp.xml" />
         <hud_icon filename="gkw_sr3mp_4101.png" />
         <weak_hand_hold offset="0.2" />

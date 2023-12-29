@@ -28,6 +28,9 @@
         <sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.6" />
         <sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_ar_ar15.xml" />
         <hud_icon filename="gkw_ar15.png" />
         <weak_hand_hold offset="0.2" />

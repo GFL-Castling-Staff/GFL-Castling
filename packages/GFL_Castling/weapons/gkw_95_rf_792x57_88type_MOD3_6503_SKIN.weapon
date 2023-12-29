@@ -56,6 +56,7 @@
     <sound key="cycle_out" fileref="type88robot_cycle_out_FromCOD13.wav" volume="0.4"/>
     <sound key="cycle_in" fileref="type88robot_cycle_in_FromCOD13.wav" volume="0.4"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+    <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_88type_gudan_gun.xml" />
     <hud_icon filename="gkw_88type_6503_mod3.png" />
     <weak_hand_hold offset="0.3" />

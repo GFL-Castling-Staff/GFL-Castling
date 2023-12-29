@@ -48,6 +48,7 @@
     <sound key="magazine_in" fileref="ameli_mgz_in_FromCF.wav" volume="0.6" />
     <sound key="cycle" fileref="ameli_cycle_FromCF.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_mg_ameli_2409.xml" />
     <hud_icon filename="gkw_ameli_2409.png" />
     <projectile file="bullet.projectile">

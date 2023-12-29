@@ -29,6 +29,7 @@
     <sound key="magazine_in" fileref="sr3mp_mgz_in_FromBFBC1.wav" volume="0.7" />
     <sound key="cycle" fileref="sr3mp_cycle_FromBFBC1.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_vsk94.xml" />
     <hud_icon filename="gkw_vsk94.png" />

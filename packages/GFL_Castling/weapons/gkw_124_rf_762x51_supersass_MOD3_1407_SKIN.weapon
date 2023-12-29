@@ -51,6 +51,7 @@
     <sound key="cycle" fileref="sass_cycle_FromCOD13.wav"  volume="0.4" />
     <sound key="cycle" fileref="SuperSASSMod_OPERATIONBEGIN_JP.wav" volume="1.0" pitch_variety="0"/>
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_supersass.xml" />
     <hud_icon filename="gkw_supersass_1407.png" />

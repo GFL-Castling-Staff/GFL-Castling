@@ -33,6 +33,7 @@
         <sound key="magazine_in" fileref="lwmmg_mgz_in_FromCOD16.wav" volume="0.6" />
         <sound key="cycle_out" fileref="lwmmg_cycle_FromCOD16.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_mg_lwmmg_mod3_from_melondove.xml" />
         <hud_icon filename="gkw_lwmmgmod3.png" />
         <projectile file="bullet.projectile">
@@ -113,6 +114,7 @@
         <sound key="magazine_in" fileref="lwmmg_mgz_in_FromCOD16.wav" volume="0.6" />
         <sound key="cycle_out" fileref="lwmmg_cycle_FromCOD16.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_mg_lwmmg_mod3_from_melondove.xml" />
         <hud_icon filename="gkw_lwmmgmod3_skill.png" />
         <projectile file="bullet_he.projectile">

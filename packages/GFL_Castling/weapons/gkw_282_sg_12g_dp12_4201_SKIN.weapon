@@ -32,6 +32,7 @@
     <sound key="cycle" fileref="DP12_cycle_FromCOD16.wav" volume="0.8" />
     <sound key="reload_one" fileref="DP12_reload_FromCOD16.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_sg_dp12.xml" />
     <hud_icon filename="gkw_dp12_4201.png" />

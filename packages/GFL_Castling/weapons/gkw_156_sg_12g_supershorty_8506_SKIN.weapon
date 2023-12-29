@@ -50,6 +50,7 @@
 	<sound key="reload_one" fileref="sg3_reload_FromREALLIFE.wav" volume="0.5"/>
 	<sound key="reload_one" fileref="sg4_reload_FromREALLIFE.wav" volume="0.5"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
+	<sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
 	<model filename="gkw_sg_supershorty.xml"/>
 	<hud_icon filename="gkw_supershorty_8506.png"/>
 	<weak_hand_hold offset="0.3"/>

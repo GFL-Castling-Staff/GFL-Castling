@@ -30,6 +30,7 @@
     <sound key="reload_one" fileref="m1887_reload2_FromCOD6R.wav" volume="0.8"/>
     <sound key="reload_one" fileref="m1887_reload3_FromCOD6R.wav" volume="0.8"/>
     <sound class="impact" fileref="rifle_drop.wav"/>
+    <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_sg_m1887.xml"/>
     <hud_icon filename="gkw_m1887.png"/>
     <weak_hand_hold offset="0.3"/>

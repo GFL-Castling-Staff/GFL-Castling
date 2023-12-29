@@ -40,6 +40,7 @@
         <sound key="magazine_in" fileref="rpk16_mgz_in_FromCOD16.wav" volume="0.5" />
         <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.5" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_mg_rpk16.xml" />
         <hud_icon filename="gkw_rpk16_blm.png" />
         <weak_hand_hold offset="0.2" />
@@ -105,6 +106,7 @@
         <sound key="magazine_in" fileref="rpk16_mgz_in_FromCOD16.wav" volume="0.5" />
         <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.5" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_mg_rpk16.xml" />
         <hud_icon filename="gkw_rpk16_blm.png" />
         <weak_hand_hold offset="0.2" />

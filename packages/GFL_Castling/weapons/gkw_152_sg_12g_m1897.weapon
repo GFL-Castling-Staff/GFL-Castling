@@ -31,6 +31,7 @@
         <sound key="cycle" fileref="m1897_cycle_FromCOD5.wav" volume="0.7" />
         <sound key="reload_one" fileref="m1897_reload_FromCOD14.wav" volume="0.9" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <!--Model, Icon, Cost-->
         <model filename="gkw_sg_m1897_mod3.xml" />
         <hud_icon filename="gkw_m1897.png" />
@@ -88,6 +89,7 @@
         <sound key="cycle" fileref="m1897_cycle_FromCOD5.wav" volume="0.7" />
         <sound key="reload_one" fileref="m1897_reload_FromCOD14.wav" volume="0.9" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <!--Model, Icon, Cost-->
         <model filename="gkw_sg_m870.xml" />
         <hud_icon filename="gkw_m1897_skill.png" />

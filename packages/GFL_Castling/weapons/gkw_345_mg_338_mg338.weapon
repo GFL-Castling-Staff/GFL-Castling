@@ -26,6 +26,7 @@
     <sound key="magazine_in" fileref="mg338_mgz_in_FromCOD16.wav" volume="0.65" />
     <sound key="cycle" fileref="mg338_cycle_FromCOD16.wav" volume="0.65" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_mg_mg338.xml" />
     <hud_icon filename="gkw_mg338.png" />
     <effect class="muzzle" ref="muzzle_yellow" />
@@ -70,6 +71,7 @@
     <sound key="magazine_in" fileref="mg338_mgz_in_FromCOD16.wav" volume="0.45" />
     <sound key="cycle" fileref="mg338_cycle_FromCOD16.wav" volume="0.45" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_mg_mg338.xml" />
     <hud_icon filename="gkw_mg338_skill.png" />
     <effect class="muzzle" ref="muzzle_big_yellow"/>

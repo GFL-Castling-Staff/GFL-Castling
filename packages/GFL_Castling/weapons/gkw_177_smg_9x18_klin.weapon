@@ -51,7 +51,8 @@
     <sound key="magazine_out" fileref="klin_mgz_out_FromEFT.wav" volume="0.7" />
     <sound key="magazine_in" fileref="klin_mgz_in_FromEFT.wav" volume="0.7" />
     <sound key="cycle" fileref="klin_cycle_FromEFT.wav" volume="0.7" />
-    <sound class="impact" fileref="rifle_drop.wav" />    
+    <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.0" />    
 	
     <model filename=""/>
     <hud_icon filename="gkw_klin.png"/>

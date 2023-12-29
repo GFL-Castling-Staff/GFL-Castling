@@ -47,6 +47,7 @@
     <sound key="magazine_in" fileref="zb26_mgz_in_FromPOSTSCRIPTUM.wav" volume="0.6" />
     <sound key="cycle_out" fileref="zb26_cycle_FromPOSTSCRIPTUM.wav" volume="0.6" />
 	<sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
 	<model filename="gkw_mg_zb26_5603.xml" />
 	<hud_icon filename="gkw_zb26_5603.png" />
 	<projectile file="bullet.projectile">

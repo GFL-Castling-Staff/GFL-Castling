@@ -46,6 +46,7 @@
 		<sound key="magazine_out" fileref="m82a1_mgz_out_FromCOD16.wav" volume="0.4"/>
 		<sound key="magazine_in" fileref="m82a1_mgz_in_FromCOD16.wav" volume="0.4"/>
 		<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+		<sound key="dry_fire" fileref="dryfire_atrf.wav" pitch_variety="0.05" volume="1.0" />
 		<!--Model, Icon, Cost-->
 		<model filename="gkw_rf_m82a1.xml" />
 		<hud_icon filename="gkw_m82a1.png" />
@@ -118,6 +119,7 @@
 		<sound key="magazine_out" fileref="m82a1_mgz_out_FromCOD16.wav" volume="0.4"/>
 		<sound key="magazine_in" fileref="m82a1_mgz_in_FromCOD16.wav" volume="0.4"/>
 		<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+		<sound key="dry_fire" fileref="dryfire_atrf.wav" pitch_variety="0.05" volume="1.0" />
 		<!--Model, Icon, Cost-->
 		<model filename="gkw_rf_m82a1.xml" />
 		<hud_icon filename="gkw_m82a1.png" />

@@ -33,6 +33,7 @@
         <sound fileref="cbjms_mgz_in_FromBF4.wav" key="magazine_in" volume="0.8" />
         <sound fileref="cbjms_cycle_FromBF4.wav" key="cycle" volume="0.8" />
         <sound class="impact" fileref="rifle_drop.wav" volume="1" />
+        <sound key="dry_fire" fileref="dryfire_pistol.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_smg_cms_6403.xml" />
         <hud_icon filename="gkw_cms_6403.png" />
         <weak_hand_hold offset="0.2" />
@@ -88,6 +89,7 @@
         <sound fileref="cbjms_mgz_in_FromBF4.wav" key="magazine_in" volume="0.8" />
         <sound fileref="cbjms_cycle_FromBF4.wav" key="cycle" volume="0.8" />
         <sound class="impact" fileref="rifle_drop.wav" volume="1" />
+        <sound key="dry_fire" fileref="dryfire_pistol.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_smg_cms_6403.xml" />
         <hud_icon filename="gkw_cms_6403.png" />
         <weak_hand_hold offset="0.2" />
@@ -144,6 +146,7 @@
         <sound fileref="cbjms_mgz_in_FromBF4.wav" key="magazine_in" volume="0.8" />
         <sound fileref="cbjms_cycle_FromBF4.wav" key="cycle" volume="0.8" />
         <sound class="impact" fileref="rifle_drop.wav" volume="1" />
+        <sound key="dry_fire" fileref="dryfire_pistol.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_smg_cms_6403.xml" />
         <hud_icon filename="gkw_cms_6403.png" />
         <weak_hand_hold offset="0.2" />

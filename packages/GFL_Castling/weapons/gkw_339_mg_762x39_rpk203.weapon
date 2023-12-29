@@ -24,6 +24,7 @@
     <sound key="magazine_in" fileref="rpk203_mgz_in_FromBF4.wav" volume="1.6" />
     <sound key="cycle" fileref="rpk203_cycle_FromBF4.wav" volume="2.3" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_rpk203_melondove.xml" />
     <hud_icon filename="gkw_rpk203.png" />
     <weak_hand_hold offset="0.3" />

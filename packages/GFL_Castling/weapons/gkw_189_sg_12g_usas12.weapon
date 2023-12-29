@@ -30,6 +30,7 @@
         <sound key="magazine_out" fileref="usas12_mgz_out_FromCOD8.wav" volume="0.5"/>
         <sound key="magazine_in" fileref="usas12_mgz_in_FromCOD8.wav" volume="0.5"/>
         <sound key="cycle" fileref="usas12_cycle_FromCOD8.wav" volume="0.5"/>
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <sound class="impact" fileref="rifle_drop.wav"/>
         <model filename="gkw_sg_usas12.xml"/>
         <hud_icon filename="gkw_usas12.png"/>

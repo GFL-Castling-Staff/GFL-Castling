@@ -24,6 +24,9 @@
         <sound key="magazine_in" fileref="g11_mgz_in_FromCOD7.wav" volume="0.8" />
         <sound key="cycle" fileref="g11_cycle_FromCOD7.wav" volume="0.8" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_ar_g11_9.xml" />
         <hud_icon filename="gkw_g11_9.png" />
         <capacity value="1" source="rank" source_value="0.0" />
@@ -70,6 +73,9 @@
         <sound key="magazine_in" fileref="g11_mgz_in_FromCOD7.wav" volume="0.8" />
         <sound key="cycle" fileref="g11_cycle_FromCOD7.wav" volume="0.8" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_ar_g11_9.xml" />
         <hud_icon filename="gkw_g11_9.png" />
         <capacity value="1" source="rank" source_value="0.0" />

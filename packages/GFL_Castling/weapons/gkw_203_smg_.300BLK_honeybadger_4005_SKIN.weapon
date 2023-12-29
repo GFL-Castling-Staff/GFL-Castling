@@ -37,6 +37,7 @@
     <sound key="magazine_in" fileref="pdw_mgz_in_FromDAYSGONE.wav" volume="0.5" />
     <sound key="cycle" fileref="pdw_cycle_FromDAYSGONE.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_smg_pdw_4005.xml" />
     <hud_icon filename="gkw_pdw_4005.png" />
     <weak_hand_hold offset="0.2" />

@@ -23,6 +23,9 @@
         <sound fileref="mdr_mgz_in_FromDIVISION2.wav" key="magazine_in" volume="0.9" />
         <sound fileref="mdr_cycle_FromDIVISION2.wav" key="cycle" volume="0.9" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_ar_mdr.xml" />
         <hud_icon filename="gkw_mdr_2603.png" />
         <weak_hand_hold offset="0.2" />

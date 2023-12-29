@@ -27,6 +27,7 @@
     <sound key="magazine_in" fileref="dp28_mgz_in_FromRS2V.wav" volume="0.8" />
     <sound key="cycle" fileref="dp28_cycle_FromCOD18.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_mg_dp28.xml" />
     <hud_icon filename="gkw_dp28_8008.png" />
     <projectile file="bullet.projectile">

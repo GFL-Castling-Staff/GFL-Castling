@@ -22,6 +22,9 @@
         <sound key="magazine_in" fileref="acr_mgz_in_FromCOD6R.wav" volume="0.6" />
         <sound key="cycle" fileref="acr_cycle_FromCOD6.wav" volume="0.35" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_ar_acr.xml" />
         <hud_icon filename="gkw_acr.png" />
         <weak_hand_hold offset="0.2" />

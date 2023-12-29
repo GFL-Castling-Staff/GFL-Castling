@@ -26,6 +26,7 @@
         <sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6" />
         <sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_mg_m1918.xml" />
         <hud_icon filename="gkw_m1918_806.png" />
         <projectile file="bullet.projectile">
@@ -78,6 +79,7 @@
         <sound key="magazine_in" fileref="m1918_mgz_in_FromRS2V.wav" volume="0.6" />
         <sound key="cycle" fileref="m1918_cycle_FromRS2V.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_mg_m1918.xml" />
         <hud_icon filename="gkw_m1918_806.png" />
         <projectile file="bullet.projectile">

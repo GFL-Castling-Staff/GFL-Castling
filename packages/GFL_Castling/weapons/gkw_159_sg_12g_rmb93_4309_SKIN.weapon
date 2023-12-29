@@ -47,6 +47,7 @@
 	<sound key="reload_one" fileref="sg3_reload_FromREALLIFE.wav" volume="0.5"/>
 	<sound key="reload_one" fileref="sg4_reload_FromREALLIFE.wav" volume="0.5"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
+	<sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
 	<model filename="gkw_sg_rmb93.xml"/>
 	<hud_icon filename="gkw_rmb93_4309.png"/>
 	<weak_hand_hold offset="0.3"/>

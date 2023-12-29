@@ -48,6 +48,7 @@
     <sound key="magazine_in" fileref="P90_mgz_in_FromCOD16.wav" volume="0.4" />
     <sound key="cycle" fileref="P90_cycle_FromCOD16.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_smg_p90.xml" />
     <hud_icon filename="gkw_p90.png" />
     <weak_hand_hold offset="0.2" />

@@ -28,6 +28,7 @@
         <sound key="magazine_in" fileref="aa12_mgz_in_FromCOD16.wav" volume="0.35" />
         <sound key="cycle" fileref="aa12_cycle_FromCOD16.wav" volume="0.35" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <!--Model, Icon, Cost-->
         <model filename="gkw_sg_aa12.xml" />
         <hud_icon filename="gkw_aa12.png" />
@@ -76,6 +77,7 @@
         <sound key="magazine_in" fileref="aa12_mgz_in_FromCOD16.wav" volume="0.35" />
         <sound key="cycle" fileref="aa12_cycle_FromCOD16.wav" volume="0.35" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <!--Model, Icon, Cost-->
         <commonness value="0" in_stock="0" />
         <model filename="gkw_sg_aa12.xml" />

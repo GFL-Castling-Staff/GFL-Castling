@@ -30,6 +30,7 @@
     <sound key="cycle_out" fileref="k31_cycle_out_FromBF5.wav"  volume="0.4"/>
     <sound key="cycle_in" fileref="k31_cycle_in_FromBF5.wav"  volume="0.4"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+<sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_k31.xml" />
     <hud_icon filename="gkw_k31.png" />
@@ -83,6 +84,7 @@
     <sound key="magazine_out" fileref="k31_mgz_out_FromBF5.wav"  volume="0.4" />
     <sound key="magazine_in" fileref="k31_mgz_in_FromBF5.wav"  volume="0.4" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+<sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_k31.xml" />
     <hud_icon filename="gkw_k31_skill.png" />

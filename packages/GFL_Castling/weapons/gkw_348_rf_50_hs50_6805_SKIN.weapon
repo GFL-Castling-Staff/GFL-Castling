@@ -35,6 +35,7 @@
     <sound key="cycle_out" fileref="hs50_cycle_out_FromCOD20.wav" />
     <sound key="cycle_in" fileref="hs50_cycle_in_FromCOD20.wav" />
     <sound class="impact" fileref="rifle_drop.wav" />
+	<sound key="dry_fire" fileref="dryfire_atrf.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_hs50_6805_from_melondove.xml" />
     <hud_icon filename="gkw_hs50_6805.png" />

@@ -48,6 +48,7 @@
     <sound key="magazine_in" fileref="lusa_mgz_in_FromCOD17.wav" volume="0.5" />
     <sound key="cycle" fileref="lusa_cycle_FromCOD17.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_smg_lusa.xml"/>
     <hud_icon filename="gkw_lusa_8501.png"/>
     <weak_hand_hold offset="0.2" />

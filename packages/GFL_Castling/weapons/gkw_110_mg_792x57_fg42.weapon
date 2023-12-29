@@ -95,6 +95,7 @@
 		<sound key="magazine_in" fileref="fg42_mgz_in_FromPOSTSCRIPTUM.wav" volume="0.65" />
 		<sound key="cycle" fileref="fg42_cycle_FromPOSTSCRIPTUM.wav" volume="0.65" />
 		<sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
 		<model filename="gkw_mg_fg42.xml" />
 		<hud_icon filename="gkw_fg42_skill.png" />
 		<projectile file="bullet.projectile">

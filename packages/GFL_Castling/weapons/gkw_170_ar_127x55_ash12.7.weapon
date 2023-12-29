@@ -25,6 +25,9 @@
         <sound key="magazine_in" fileref="ash12_mgz_in_FromCOD16.wav" volume="0.4" />
         <sound key="cycle" fileref="ash12_cycle_FromCOD16.wav" volume="0.4" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_ar_ash127_sd.xml" />
         <hud_icon filename="gkw_ash127.png" />
         <weak_hand_hold offset="0.2" />
@@ -66,6 +69,9 @@
         <sound key="magazine_in" fileref="ash12_mgz_in_FromCOD16.wav" volume="0.4" />
         <sound key="cycle" fileref="ash12_cycle_FromCOD16.wav" volume="0.4" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_ar_ash127.xml" />
         <hud_icon filename="gkw_ash127_skill.png" />
         <weak_hand_hold offset="0.2" />

@@ -31,6 +31,7 @@
         <sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.6" />
         <sound key="cycle" fileref="qjy80_cycle_FromCOD16.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_mg_type80.xml" />
         <commonness value="0.2" in_stock="0" can_respawn_with="1" />
         <hud_icon filename="gkw_80type.png" />
@@ -79,6 +80,7 @@
         <sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.6" />
         <sound key="cycle" fileref="qjy80_cycle_FromCOD16.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_mg_type80_n.xml" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <hud_icon filename="gkw_80type_skill.png" />

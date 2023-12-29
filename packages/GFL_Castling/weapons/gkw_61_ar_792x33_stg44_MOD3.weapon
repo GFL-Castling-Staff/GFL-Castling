@@ -23,6 +23,9 @@
     <sound key="magazine_in" fileref="stg44_mgz_in_FromPOSTSCRIPTUM.wav" volume="0.7" />
     <sound key="cycle" fileref="stg44_cycle_FromPOSTSCRIPTUM.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_ar_stg44.xml" />
     <hud_icon filename="gkw_stg44mod3.png" />
     <capacity value="1" source="rank" source_value="0.0" />

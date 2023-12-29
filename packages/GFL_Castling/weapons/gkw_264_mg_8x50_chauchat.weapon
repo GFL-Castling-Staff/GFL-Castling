@@ -56,6 +56,7 @@
     <sound key="magazine_in" fileref="chauchat_mgz_in_FromPOSTSCRIPTUM.wav" volume="0.6" />
     <sound key="cycle_out" fileref="chauchat_cycle_FromBF5.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_mg_chauchatm1915.xml" />
     <hud_icon filename="gkw_chauchatm1915.png" />
     <projectile file="bullet.projectile">

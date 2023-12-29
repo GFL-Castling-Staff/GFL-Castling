@@ -32,6 +32,7 @@
     <sound key="cycle_out" fileref="c14_cycle_out_FromSQUAD.wav" volume="0.5" />
     <sound key="cycle_in" fileref="c14_cycle_in_FromSQUAD.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_c14.xml" />
     <hud_icon filename="gkw_c14.png" />

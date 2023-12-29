@@ -35,6 +35,7 @@
     <sound key="magazine_in" fileref="lewis_mgz_in_FromBF1.wav" volume="0.7" />
     <sound key="cycle" fileref="lewis_cycle_FromBF5.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_lewis_4001_From_melondove.xml" />
     <hud_icon filename="gkw_lewis_4001.png" />
     <effect class="muzzle" ref="ejection_76251" />
@@ -92,6 +93,7 @@
     <sound key="magazine_in" fileref="lewis_mgz_in_FromBF1.wav" volume="0.7" />
     <sound key="cycle" fileref="lewis_cycle_FromBF5.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_lewis_4001_From_melondove.xml" />
     <hud_icon filename="gkw_lewis_4001.png" />
     <effect class="muzzle" ref="ejection_76251" />

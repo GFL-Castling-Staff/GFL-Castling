@@ -26,6 +26,9 @@
         <sound key="magazine_in" fileref="sr3mp_mgz_in_FromBFBC1.wav" volume="0.7" />
         <sound key="cycle" fileref="sr3mp_cycle_FromBFBC1.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_ar_9a91_only.xml" />
         <hud_icon filename="gkw_9a91_only.png" />
         <weak_hand_hold offset="0.2" />
@@ -69,6 +72,9 @@
         <sound key="magazine_in" fileref="sr3mp_mgz_in_FromBFBC1.wav" volume="0.7" />
         <sound key="cycle" fileref="sr3mp_cycle_FromBFBC1.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_ar_9a91_only.xml" />
         <hud_icon filename="gkw_9a91_only_skill.png" />
         <weak_hand_hold offset="0.2" />

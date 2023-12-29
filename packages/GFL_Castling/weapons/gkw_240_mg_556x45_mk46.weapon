@@ -27,6 +27,7 @@
         <sound key="magazine_in" fileref="mk48_mgz_in_FromCOD9.wav" volume="0.8" />
         <sound key="cycle" fileref="mk48_cycle_FromCOD9.wav" volume="0.8" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_mg_mk46.xml" />
         <hud_icon filename="gkw_mk46.png" />
         <projectile file="bullet.projectile">
@@ -67,6 +68,7 @@
         <sound key="magazine_in" fileref="mk48_mgz_in_FromCOD9.wav" volume="0.8" />
         <sound key="cycle" fileref="mk48_mgz_out_FromCOD9.wav" volume="0.8" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_mg_mk46.xml" />
         <hud_icon filename="gkw_mk46_skill.png" />
         <projectile file="bullet.projectile">

@@ -32,6 +32,7 @@
     <sound key="magazine_in" fileref="qbu88_mgz_in_FromBF4.wav" volume="0.8"/>
     <sound key="cycle" fileref="qbu88_cycle_FromBF4.wav" volume="0.8"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+<sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_qbu88.xml" />
     <hud_icon filename="gkw_qbu88.png" />
@@ -89,6 +90,7 @@
     <sound key="magazine_in" fileref="qbu88_mgz_in_FromBF4.wav" volume="0.8"/>
     <sound key="cycle" fileref="qbu88_cycle_FromBF4.wav" volume="0.8"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+<sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_qbu88.xml" />
     <hud_icon filename="gkw_qbu88_skill.png" />

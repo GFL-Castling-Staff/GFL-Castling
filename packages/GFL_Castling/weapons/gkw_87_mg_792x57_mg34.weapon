@@ -24,6 +24,7 @@
         <sound key="magazine_in" fileref="mg34_mgz_in_FromBF5.wav" volume="0.7" />
         <sound key="cycle" fileref="mg34_cycle_FromBF5.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_mg_mg34.xml" />
         <hud_icon filename="gkw_mg34.png" />
         <projectile file="bullet.projectile">

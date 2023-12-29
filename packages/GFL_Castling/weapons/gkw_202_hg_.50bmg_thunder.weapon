@@ -29,6 +29,7 @@
 	<animation state_key="cycle" animation_key="cycle, revolver" />
 
 	<model filename="gkw_hg_thunder50_from_melondove.xml" />
+    <sound key="dry_fire" fileref="dryfire_pistol.wav" pitch_variety="0.05" volume="1.0" />
 
 
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />

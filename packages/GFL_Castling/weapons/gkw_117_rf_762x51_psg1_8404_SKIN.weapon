@@ -29,6 +29,7 @@
         <sound key="magazine_in" fileref="g3_mgz_in_FromCOD17.wav" volume="0.4"/>
         <sound key="cycle" fileref="g3_cycle_FromCOD17.wav" volume="0.4"/>
         <sound class="impact" fileref="rifle_drop.wav"/>
+        <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_rf_psg1.xml"/>
         <hud_icon filename="gkw_psg1_8404.png"/>
         <weak_hand_hold offset="0.3"/>

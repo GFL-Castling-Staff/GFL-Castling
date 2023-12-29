@@ -35,6 +35,7 @@
         <sound key="cycle_out" fileref="iws2000_cycle_out_FromDIVISION2.wav" volume="0.7" />
         <sound key="cycle_in" fileref="iws2000_cycle_in_FromDIVISION2.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_atrf.wav" pitch_variety="0.05" volume="1.0" />
         <!--Model, Icon, Cost-->
         <model filename="gkw_rf_iws2000.xml" />
         <hud_icon filename="gkw_iws2000.png" />
@@ -96,6 +97,7 @@
         <sound key="cycle_out" fileref="iws2000_cycle_out_FromDIVISION2.wav" volume="0.7" />
         <sound key="cycle_in" fileref="iws2000_cycle_in_FromDIVISION2.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
         <!--Model, Icon, Cost-->
         <model filename="gkw_rf_iws2000.xml" />
         <hud_icon filename="gkw_iws2000_skill.png" />

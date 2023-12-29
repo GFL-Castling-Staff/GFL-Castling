@@ -42,6 +42,7 @@
     <sound key="cycle_out" fileref="carcano_cycle_out_FromBF5.wav"  volume="0.6"/>
     <sound key="cycle_in" fileref="carcano_cycle_in_FromBF5.wav"  volume="0.6"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+<sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_carcano1891.xml" />
     <hud_icon filename="gkw_carcano1891.png" />

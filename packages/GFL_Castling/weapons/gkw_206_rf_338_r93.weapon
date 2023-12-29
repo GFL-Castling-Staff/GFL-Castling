@@ -29,6 +29,7 @@
     <sound key="cycle_out" fileref="r93_cycle_out_FromCF.wav"  volume="0.8"/>
     <sound key="cycle_in" fileref="r93_cycle_in_FromCF.wav"  volume="0.8"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+<sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_r93.xml" />
     <hud_icon filename="gkw_r93.png" />
