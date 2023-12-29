@@ -44,7 +44,7 @@
     <sound key="magazine_in" fileref="erma_emp35_mgz_in_fromEnlisted.wav" volume="0.7" />
     <sound key="cycle" fileref="erma_emp35_cycle_fromEnlisted.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.0" />
+        <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.3" />
     <model filename="gkw_smg_erma.xml"/>
     <effect class="muzzle" ref="ejection_9mm"/>
     <hud_icon filename="gkw_emp35.png"/>

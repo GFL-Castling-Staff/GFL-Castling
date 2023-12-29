@@ -38,9 +38,9 @@
     <sound key="magazine_in" fileref="hk33_mgz_in_FromCOD19.wav" volume="0.4" />
     <sound key="cycle" fileref="hk33_cycle_FromCOD19.wav" volume="0.4" />
     <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.0" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
     <model filename="gkw_ar_hk33.xml" />
     <hud_icon filename="gkw_hk33.png" />
     <weak_hand_hold offset="0.2" />

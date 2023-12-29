@@ -56,9 +56,9 @@
         <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
         <sound key="cycle" fileref="AK15_WIN_JP.wav" volume="1.4" pitch_variety="0"/>
         <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.0" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
         <model filename="gkw_ar_ak15_mod3_from_melondove.xml" />
         <hud_icon filename="gkw_ak15mod3.png" />
         <weak_hand_hold offset="0.2" />
@@ -130,9 +130,9 @@
         <sound key="cycle" fileref="AK15_SKILL2_JP.wav" volume="1.4" pitch_variety="0"/>
         <sound key="cycle" fileref="AK15_SKILL3_JP.wav" volume="1.4" pitch_variety="0"/>
         <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.0" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
         <model filename="gkw_ar_ak15_mod3_from_melondove.xml" />
         <hud_icon filename="gkw_ak15mod3_skill.png" />
         <effect class="muzzle" ref="muzzle_yellow" />

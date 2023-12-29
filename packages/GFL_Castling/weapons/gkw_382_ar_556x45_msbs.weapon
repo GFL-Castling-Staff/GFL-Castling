@@ -22,9 +22,9 @@
         <sound key="magazine_in" fileref="msbs_mgz_in_FromWF.wav" volume="1" />
         <sound key="cycle" fileref="msbs_cycle_FromWF.wav" volume="1" />
         <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.0" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
         <model filename="gkw_ar_msbs.xml" />
         <hud_icon filename="gkw_msbs.png" />
         <weak_hand_hold offset="0.2" />

@@ -23,9 +23,9 @@
     <sound key="magazine_in" fileref="ar18_mgz_in_FromCOD19.wav" volume="0.7" />
     <sound key="cycle" fileref="ar18_cycle_FromCOD19.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.0" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
     <model filename="gkw_ar_ar18.xml" />
     <hud_icon filename="gkw_ar18_8504.png" />
     <weak_hand_hold offset="0.2" />

@@ -25,9 +25,9 @@
     <sound key="magazine_in" fileref="hk416_mgz_in_FromEFT.wav" volume="0.7" />
     <sound key="cycle" fileref="hk416_cycle_FromEFT.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.0" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_ar_hk416.xml" />
     <hud_icon filename="gkw_hk416.png" />

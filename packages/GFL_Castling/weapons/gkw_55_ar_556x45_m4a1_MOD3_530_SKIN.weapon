@@ -48,9 +48,9 @@
         <sound key="cycle" fileref="m4a1_cycle_FromCOD16.wav" volume="0.5" />
         <sound key="cycle" fileref="M4A1Mod_DEFENSE_JP.wav" volume="0.8" pitch_variety="0" />
         <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.0" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
         <model filename="gkw_ar_m4a1_530.xml" />
         <hud_icon filename="gkw_m4a1_530.png" />
         <weak_hand_hold offset="0.3" />
@@ -135,9 +135,9 @@
         <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
         <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
         <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.0" />
-    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.0" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
         <model filename="none.xml" />
         <hud_icon filename="gkw_m4a1_530.png" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
