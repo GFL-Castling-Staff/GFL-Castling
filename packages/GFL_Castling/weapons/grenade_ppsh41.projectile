@@ -89,6 +89,7 @@
     <effect class="result" key="vehicle" copy="terrain" /> 
     <effect class="activated" ref="SatchelSparkle" />
     <effect class="activated" ref="SatchelFlash" />
+    <effect class="activated" ref="TracerFlash" />
 </projectile>
 <projectile class="grenade" name="RGD-33 Grenade" key="grenade_ppsh41_rangeup.projectile" slot="0" radius="0.25" pulldown_in_air="50">
     <tag name="grenade" />

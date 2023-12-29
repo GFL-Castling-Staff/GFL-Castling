@@ -237,9 +237,6 @@ dictionary commandSkillIndex = {
 
         // SMG 手雷
         {"gkw_m3.weapon",38},
-        {"gkw_sten.weapon",38},
-        {"gkw_stenmod3.weapon",38},
-        {"gkw_sterling.weapon",38},
         {"gkw_saf.weapon",38},
         {"gkw_saf_6607.weapon",38},
 
@@ -446,6 +443,11 @@ dictionary commandSkillIndex = {
         {"ff_dreamer.weapon",74},
         {"ff_dreamer_skill.weapon",74},
         {"ff_dreamer_skill_1.weapon",74},
+
+        // 司登+斯特林专属
+        {"gkw_sten.weapon",75},
+        {"gkw_stenmod3.weapon",75},
+        {"gkw_sterling.weapon",75},
 
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}

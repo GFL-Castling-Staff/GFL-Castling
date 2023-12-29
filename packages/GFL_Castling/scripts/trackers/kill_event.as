@@ -714,10 +714,12 @@ array<int> findAllKillCountIndexes(int cId) {
 
 class no_delete_data{
     string m_playername;
+    int m_playerid;
     int m_num=0;
     string m_data_key;
-    no_delete_data(string a,int b,string c){
+    no_delete_data(string a,int t,int b,string c){
         m_playername=a;
+        m_playerid=t;
         m_num=b;
         m_data_key = c;
     }
@@ -730,6 +732,14 @@ class no_delete_data{
 int findNodeleteDataIndex(string name,string type){
     for (uint i=0;i<No_Delete_DataArray.length();i++){
         if (No_Delete_DataArray[i].m_playername==name && No_Delete_DataArray[i].m_data_key == type ) {
+            return i;
+        }
+    }
+    return -1;
+}
+int findNodeleteDataIndex(int pid,string type){
+    for (uint i=0;i<No_Delete_DataArray.length();i++){
+        if (No_Delete_DataArray[i].m_playerid==pid && No_Delete_DataArray[i].m_data_key == type ) {
             return i;
         }
     }
