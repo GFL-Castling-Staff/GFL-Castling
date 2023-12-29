@@ -3,7 +3,6 @@
     <tag name="rocket"/>
     <trigger class="impact" />
     <rotation class="motion" />
-    <trigger class="time" time_to_live="0.3"/>
     <model mesh_filename="rpg29_tbg29v.xml" />
     <commonness value="0.0" />
     <sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_1.wav" volume="1.5" />
