@@ -93,6 +93,8 @@ class GFL_playerInfo{
     int m_characterid; //角色id
     int m_factionid; //阵营id
     GFL_equipment@ m_equipment; //玩家装备
+    GFL_battleInfo@ m_battleinfo; //战斗信息
+    array<kill_count@> m_killInfo; //技能的击杀信息
 	string m_hash;
 	string m_sid;
     float m_xp_reward = 0; // xp奖励
@@ -111,6 +113,7 @@ class GFL_playerInfo{
         m_sid = sid;
         @m_equipment = @equipment;
         @m_color = color;
+        @m_battleinfo = GFL_battleInfo(name);
         m_available= true;
     }
 
@@ -159,9 +162,15 @@ class GFL_playerInfo{
     void setPlayerEquipment(GFL_equipment@ equipment){
         @m_equipment = @equipment;
     }
+    void setBattleInfo(GFL_battleInfo@ info){
+        @m_battleinfo = @info;
+    }    
     GFL_equipment@ getPlayerEquipment(){
         return m_equipment;
     }
+    GFL_battleInfo@ getBattleInfo(){
+        return m_battleinfo;
+    }    
     void handleRpReward(Metagame@ m_metagame)
     {
         if(m_rp_reward > 0)
@@ -198,6 +207,57 @@ class GFL_playerInfo{
     {
         return m_inactive_time;
     }
+    int getKillSkillCount(string skill_name)
+    {
+        for (uint i=0;i<m_killInfo.length();i++){
+            if (m_killInfo[i].m_kill_count_type==skill_name) {
+                return m_killInfo[i].m_killnum;
+            }
+        }
+        return 0;
+    }
+    void addKillSkillCount(string skill_name)
+    {
+        bool exist = false;
+        for (uint i=0;i<m_killInfo.length();i++){
+            if (m_killInfo[i].m_kill_count_type==skill_name) {
+                m_killInfo[i].add();
+                exist = true;
+            }
+        }
+        if(!exist)
+        {
+            m_killInfo.insertLast(kill_count(1,skill_name));
+        }
+    }
+    void addKillSkillCount(string skill_name,int num)
+    {
+        bool exist = false;
+        for (uint i=0;i<m_killInfo.length();i++){
+            if (m_killInfo[i].m_kill_count_type==skill_name) {
+                m_killInfo[i].add(num);
+                exist = true;
+            }
+        }
+        if(!exist)
+        {
+            m_killInfo.insertLast(kill_count(num,skill_name));            
+        }
+    }
+    void cleanKillSkillInfo()
+    {
+        m_killInfo.resize(0);
+    }
+
+    void addKill()
+    {
+        m_battleinfo.addKill();
+    }
+
+    void addDead()
+    {
+        m_battleinfo.addDead();
+    }    
 }
 
 class GFL_playerInfo_Buck
@@ -369,6 +429,183 @@ class GFL_playerInfo_Buck
             }
         }
     }    
+
+    void addKillbyName(string name)
+    {
+        for(uint i=0;i<size();++i){
+            if(m_playerInfo[i].getPlayerName() == name){
+                m_playerInfo[i].addKill();
+            }
+        }
+    }
+
+    void addKillbyPid(int pid)
+    {
+        for(uint i=0;i<size();++i){
+            if(m_playerInfo[i].getPlayerPid() == pid){
+                m_playerInfo[i].addKill();
+            }
+        }
+    }
+
+    void addDeadbyName(string name)
+    {
+        for(uint i=0;i<size();++i){
+            if(m_playerInfo[i].getPlayerName() == name){
+                m_playerInfo[i].addDead();
+            }
+        }
+    }    
+
+    int getKillSkillCountbyName(string name,string skill_name)
+    {
+        for(uint i=0;i<size();++i){
+            if(m_playerInfo[i].getPlayerName() == name){
+                return m_playerInfo[i].getKillSkillCount(skill_name);
+            }
+        }
+        return 0;
+    }
+
+    void addKillSkillCountbyName(string name,string skill_name)
+    {
+        for(uint i=0;i<size();++i){
+            if(m_playerInfo[i].getPlayerName() == name){
+                m_playerInfo[i].addKillSkillCount(skill_name);
+            }
+        }
+    }
+
+    void addKillSkillCountbyName(string name,string skill_name,int num)
+    {
+        for(uint i=0;i<size();++i){
+            if(m_playerInfo[i].getPlayerName() == name){
+                m_playerInfo[i].addKillSkillCount(skill_name,num);
+            }
+        }        
+    }
+
+    int getKillSkillCountbyPid(int pid,string skill_name)
+    {
+        for(uint i=0;i<size();++i){
+            if(m_playerInfo[i].getPlayerPid() == pid){
+                return m_playerInfo[i].getKillSkillCount(skill_name);
+            }
+        }
+        return 0;
+    }
+
+    void addKillSkillCountbyPid(int pid,string skill_name)
+    {
+        for(uint i=0;i<size();++i){
+            if(m_playerInfo[i].getPlayerPid() == pid){
+                m_playerInfo[i].addKillSkillCount(skill_name);
+            }
+        }
+    }
+
+    void addKillSkillCountbyPid(int pid,string skill_name,int num)
+    {
+        for(uint i=0;i<size();++i){
+            if(m_playerInfo[i].getPlayerPid() == pid){
+                m_playerInfo[i].addKillSkillCount(skill_name,num);
+            }
+        }        
+    }    
+}
+
+class GFL_battleInfo{
+    protected string m_name;
+	protected uint m_killCount; //击杀数
+	protected uint m_oneLifekillCount; //最高连杀
+	protected uint m_counter; //当前连杀
+	protected uint m_deadCount; //死亡数
+    protected uint m_playingTime; // 游玩分钟
+    protected uint m_tactic_point; // 战术点
+
+    GFL_battleInfo(string name) {
+        m_name = name;
+        m_killCount = 0;
+        m_oneLifekillCount = 0;
+        m_counter = 0;
+        m_deadCount = 0;
+        m_playingTime = 0;
+        m_tactic_point = 0;
+    }
+
+    string getName() const {
+        return m_name;
+    }
+
+    uint getKillCount() const {
+        return m_killCount;
+    }
+
+    uint getOneLifeKillCount() const {
+        return m_oneLifekillCount;
+    }
+
+    uint getCounter() const {
+        return m_counter;
+    }
+
+    uint getDeadCount() const {
+        return m_deadCount;
+    }
+
+    uint getPlayingTime() const {
+        return m_playingTime;
+    }
+
+    uint getTacticPoint() const {
+        return m_tactic_point;
+    }
+
+    void setName(string name) {
+        m_name = name;
+    }
+
+    void setKillCount(uint killCount) {
+        m_killCount = killCount;
+    }
+
+    void setOneLifeKillCount(uint oneLifeKillCount) {
+        m_oneLifekillCount = oneLifeKillCount;
+    }
+
+    void setCounter(uint counter) {
+        m_counter = counter;
+    }
+
+    void setDeadCount(uint deadCount) {
+        m_deadCount = deadCount;
+    }
+
+    void setPlayingTime(uint playingTime) {
+        m_playingTime = playingTime;
+    }    
+
+    void setTacticPoint(uint point) {
+        m_tactic_point = point;
+    }       
+
+    void tickMinute()
+    {
+        m_playingTime++;
+    }
+
+	void addKill(){
+        m_killCount++;
+        m_counter++;
+        if(m_counter > m_oneLifekillCount){
+            m_oneLifekillCount = m_counter;
+        }
+	}
+
+	void addDead(){
+        m_deadCount++;
+        m_counter = 0;
+	}
 }
 
 GFL_playerInfo@ default_playerInfo = GFL_playerInfo(default_string,default_int,default_int,default_int,default_string,default_string,default_equipment,rgba_color());
@@ -379,10 +616,13 @@ class GFL_playerlist_system : Tracker {
     protected float m_refresh_time = 10.0; // 刷新时间
     protected float m_event_timer = 1.0; 
     protected float m_event_time = 5.0; // 事件刷新时间
+    protected float m_minute_timer = 1.0; 
+    protected float m_minute_time = 60.0; // 事件刷新时间    
     protected int m_maxplayer_overload;
 	// --------------------------------------------
 	GFL_playerlist_system(Metagame@ metagame,const UserSettings@ m_userSettings) {
 		@m_metagame = @metagame;
+        @g_playerInfo_Buck = GFL_playerInfo_Buck();
         m_maxplayer_overload=m_userSettings.m_server_overload_num;
 	}
 
@@ -390,6 +630,7 @@ class GFL_playerlist_system : Tracker {
     void update(float time) {
         m_time -= time;
         m_event_timer-= time;
+        m_minute_timer-= time;
         if(m_time <= 0.0)
         {
             m_time = m_refresh_time;
@@ -397,7 +638,7 @@ class GFL_playerlist_system : Tracker {
             if(m_players is null){return;}
             for (uint j = 0; j < m_players.size(); ++j) {
                 const XmlElement@ player = m_players[j];
-                if(player is null){return;}
+                if(player is null){continue;}
                 updatePlayerInfo(player);
             }
             for (uint i = 0; i < g_playerInfo_Buck.size();++i)
@@ -419,12 +660,23 @@ class GFL_playerlist_system : Tracker {
             m_event_timer = m_event_time;
             for (uint j = 0; j < g_playerInfo_Buck.size(); ++j) {
                 GFL_playerInfo@ player = g_playerInfo_Buck.m_playerInfo[j];
-                if(player is null){return;}
-                if(player.check_Available() != true){return;}
+                if(player is null){continue;}
+                if(player.check_Available() != true){continue;}
                 //如果处于不活跃状态，直接跳过event的处理；
                 manageEventOfRefresh(player);
             }
         }
+        if(m_minute_timer<=0.0)
+        {
+            m_minute_timer = m_minute_time;
+            for (uint j = 0; j < g_playerInfo_Buck.size(); ++j) {
+                GFL_playerInfo@ player = g_playerInfo_Buck.m_playerInfo[j];
+                if(player is null){continue;}
+                if(player.check_Available() != true){continue;}
+                //如果处于不活跃状态，直接跳过event的处理；
+                g_playerInfo_Buck.m_playerInfo[j].m_battleinfo.tickMinute();
+            }
+        }        
     }
 
 	bool hasEnded() const {
@@ -700,4 +952,19 @@ void givePlayerRPcount(int playerid,int rp_count){
 
 void givePlayerXPcount(int playerid,float xp_count){
     g_playerInfo_Buck.addxpReward(playerid,xp_count);
+}
+
+void handleKillEventToPlayerInfo(string name)
+{
+    g_playerInfo_Buck.addKillbyName(name);
+}
+
+void handleKillEventToPlayerInfo(int id)
+{
+    g_playerInfo_Buck.addKillbyPid(id);
+}
+
+void handleDeadEventToPlayerInfo(string name)
+{
+    g_playerInfo_Buck.addDeadbyName(name);
 }

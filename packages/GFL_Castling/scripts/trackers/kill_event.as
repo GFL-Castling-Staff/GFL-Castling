@@ -366,8 +366,7 @@ class kill_event : Tracker {
             }
             
             int playerId = killer.getIntAttribute("player_id");
-            string killername = killer.getStringAttribute("player_name");
-            if (playerId == -1) return;
+            if (playerId == -1) return; //下面的代码不计算AI击杀
             
             
             //只查询我方杀敌
@@ -375,6 +374,7 @@ class kill_event : Tracker {
 
             string c_weaponType = getPlayerWeaponFromListByID(characterId,0);
             string c_armorType = getPlayerWeaponFromListByID(characterId,3);
+            handleKillEventToPlayerInfo(playerId);
             int kill_to_heal_scale = 1;
             if(reward_pool_key=="rare" || reward_pool_key=="elite")
             {
@@ -463,72 +463,49 @@ class kill_event : Tracker {
             if(KillerWeaponKey=="gkw_ppkmod3.weapon" || KillerWeaponKey=="gkw_ppkmod3_3905.weapon" || KillerWeaponKey=="gkw_ppkmod3_6109.weapon"){
                 // 乌鸦是猪，望周知
                 if (killway=="hit"){
-                    int j = findKillCountIndex(characterId,"ppk");
-                    if(j>=0){
-                        KillCountArray[j].add();
-                        int kill_num = KillCountArray[j].m_killnum;
-                        switch(kill_num)
-                        {
-                            case 7:{sendPrivateMessageKey(m_metagame,playerId,"ppkmod3killstage1");break;}
-                            case 15:{sendPrivateMessageKey(m_metagame,playerId,"ppkmod3killstage2");break;}
-                            case 30:{sendPrivateMessageKey(m_metagame,playerId,"ppkmod3killstage3");break;}
-                            default:    break;
-                        }
-                    }
-                    else{
-                        KillCountArray.insertLast(kill_count(characterId,1,"ppk"));
+                    g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"ppk");
+                    int kill_num = g_playerInfo_Buck.getKillSkillCountbyPid(playerId,"ppk");
+                    switch(kill_num)
+                    {
+                        case 7:{sendPrivateMessageKey(m_metagame,playerId,"ppkmod3killstage1");break;}
+                        case 15:{sendPrivateMessageKey(m_metagame,playerId,"ppkmod3killstage2");break;}
+                        case 30:{sendPrivateMessageKey(m_metagame,playerId,"ppkmod3killstage3");break;}
+                        default:break;
                     }
                 }
             }
 
             if(KillerWeaponKey=="gkw_carcano1938.weapon" && killway=="hit"){
-                int j = findKillCountIndex(characterId,"carcano");
-                if(j>=0){
-                    KillCountArray[j].add();
-                    string c_pos = getStringPosFromCharacterId(m_metagame,characterId);
-                    if(c_pos != "")
-                    {
-                        spawnStaticProjectile(m_metagame,"particle_carcano_killstreak.projectile",c_pos,characterId,factionId);
-                    }
-                }
-                else{
-                    KillCountArray.insertLast(kill_count(characterId,1,"carcano"));
-                    string c_pos = getStringPosFromCharacterId(m_metagame,characterId);
-                    if(c_pos != "")
-                    {
-                        spawnStaticProjectile(m_metagame,"particle_carcano_killstreak.projectile",c_pos,characterId,factionId);
-                    }                    
+                g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"carcano");
+                string c_pos = getStringPosFromCharacterId(m_metagame,characterId);
+                if(c_pos != "")
+                {
+                    spawnStaticProjectile(m_metagame,"particle_carcano_killstreak.projectile",c_pos,characterId,factionId);
                 }
             }
 
             if(KillerWeaponKey=="blast_snipe_mosin.projectile" && killway=="blast")
             {
-                int j = findKillCountIndex(characterId,"mosinnagant");
-                if(j>=0){
-                    KillCountArray[j].add();
-                    int kill_num = KillCountArray[j].m_killnum;
-                    // _log("成功积累"+ kill_num);
-                    switch(kill_num)
+                g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"mosin");
+                int kill_num = g_playerInfo_Buck.getKillSkillCountbyPid(playerId,"mosin");
+                // _log("成功积累"+ kill_num);
+                switch(kill_num)
+                {
+                    case 10:{notify(m_metagame, "Skill - Mosin Nagant LV1", dictionary(), "misc", playerId, false, "", 1.0);break;}
+                    case 20:{notify(m_metagame, "Skill - Mosin Nagant LV2", dictionary(), "misc", playerId, false, "", 1.0);break;}
+                    case 30:{notify(m_metagame, "Skill - Mosin Nagant LV3", dictionary(), "misc", playerId, false, "", 1.0);break;}
+                    case 40:{notify(m_metagame, "Skill - Mosin Nagant LV4", dictionary(), "misc", playerId, false, "", 1.0);break;}
+                    case 505:
                     {
-                        case 10:{notify(m_metagame, "Skill - Mosin Nagant LV1", dictionary(), "misc", playerId, false, "", 1.0);break;}
-                        case 20:{notify(m_metagame, "Skill - Mosin Nagant LV2", dictionary(), "misc", playerId, false, "", 1.0);break;}
-                        case 30:{notify(m_metagame, "Skill - Mosin Nagant LV3", dictionary(), "misc", playerId, false, "", 1.0);break;}
-                        case 40:{notify(m_metagame, "Skill - Mosin Nagant LV4", dictionary(), "misc", playerId, false, "", 1.0);break;}
-                        case 505:
-                        {
-                            notify(m_metagame, "Skill - Mosin Nagant LV5", dictionary(), "misc", playerId, false, "", 1.0);
-                            addItemInBackpack(m_metagame,characterId,"carry_item","hayha_chip.carry_item");
-                            break;
-                        }                        
-                        default: break;
-                    }
-                    if (kill_num >= 30)
-                    {
-                        healCharacter(m_metagame,characterId,1);
-                    }
+                        notify(m_metagame, "Skill - Mosin Nagant LV5", dictionary(), "misc", playerId, false, "", 1.0);
+                        addItemInBackpack(m_metagame,characterId,"carry_item","hayha_chip.carry_item");
+                        break;
+                    }                        
+                    default: break;
                 }
-                else{
-                    KillCountArray.insertLast(kill_count(characterId,1,"mosinnagant"));
+                if (kill_num >= 30)
+                {
+                    healCharacter(m_metagame,characterId,1);
                 }
             }
 
@@ -564,16 +541,12 @@ class kill_event : Tracker {
         }
 	}
     protected void handlePlayerDieEvent(const XmlElement@ event){
-        if(KillCountArray.size()<=0) return;
         const XmlElement@ player = event.getFirstElementByTagName("target");
         if(player is null) return;
-        int cId= player.getIntAttribute("character_id");
+        int cId = player.getIntAttribute("character_id");
+        string name = player.getStringAttribute("name");
         if(cId==-1) return;
-        array<int> indexes = findAllKillCountIndexes(cId);
-        if (indexes.length() == 0) return;
-        for (int i = indexes.length() - 1; i >= 0; i--) {
-            KillCountArray.removeAt(indexes[i]);
-        }
+        handleDeadEventToPlayerInfo(name);
     }
     void update(float time){
         if(HealOnKill_track.length()>0){
@@ -639,11 +612,9 @@ class HealOnKill_tracker{
 }
 
 class kill_count{
-    int m_characterId;
     int m_killnum=0;
     string m_kill_count_type;
-    kill_count(int a,int b,string c){
-        m_characterId=a;
+    kill_count(int b,string c){
         m_killnum=b;
         m_kill_count_type = c;
     }
@@ -682,34 +653,6 @@ int findSkillIndex_reserve(int cId,string key){
         }
     }
     return -1;
-}
-
-int findKillCountIndex(int cId,string type){
-    for (uint i=0;i<KillCountArray.length();i++){
-        if (KillCountArray[i].m_characterId==cId && KillCountArray[i].m_kill_count_type == type ) {
-            return i;
-        }
-    }
-    return -1;
-}
-
-int findKillCountIndex(int cId){
-    for (uint i=0;i<KillCountArray.length();i++){
-        if (KillCountArray[i].m_characterId==cId) {
-            return i;
-        }
-    }
-    return -1;
-}
-
-array<int> findAllKillCountIndexes(int cId) {
-    array<int> indexes;
-    for (uint i = 0; i < KillCountArray.length(); i++) {
-        if (KillCountArray[i].m_characterId == cId) {
-            indexes.insertLast(i);
-        }
-    }
-    return indexes;
 }
 
 class no_delete_data{
