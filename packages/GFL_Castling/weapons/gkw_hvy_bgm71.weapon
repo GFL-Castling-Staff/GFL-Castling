@@ -126,5 +126,7 @@
         <stance state_key="over_wall" accuracy="1" />
         <modifier class="detectability" value="-0.1"/>
         <modifier class="speed" value="0" />
+        <animation state_key="changing_weapon_in" animation_key="change weapon in,hvy pdw mode"/>
+        <animation state_key="next_in_chain_out" animation_key="change weapon in,hvy pdw mode"/>
     </weapon>    
 </weapons>

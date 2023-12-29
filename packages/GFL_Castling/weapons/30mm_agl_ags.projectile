@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="30mm" slot="1" pulldown_in_air="26.0" key="30mm_agl_ags.projectile">
     <tag name="grenade"/>
-    <result class="spawn" instance_class="projectile" instance_key="blast_shard_rad5_hvy.projectile" min_amount="8" max_amount="8" offset="0 1.0 0" position_spread="0.7 0.3" direction_spread="0 0" />
+    <result class="spawn" instance_class="projectile" instance_key="blast_shard_rad5_hvy.projectile" min_amount="12" max_amount="15" offset="0 1.0 0" position_spread="0.7 0.3" direction_spread="0 0" />
     <trigger class="impact" />
     <rotation class="motion" />
     <model mesh_filename="ags30_30mm.xml" />
 
     <commonness value="0.0" />
 
-    <sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2" />
-    <sound class="result" key="other" fileref="explosion_FromSQUAD_2.wav" volume="2" />
-    <sound class="result" key="other" fileref="explosion_FromSQUAD_3.wav" volume="2" />
+    <sound class="result" key="other" fileref="AGL_Explosion_FromBF4.wav" volume="0.8" />
 
     <sound class="result" key="vehicle" copy="other" />    
     <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.8" />
