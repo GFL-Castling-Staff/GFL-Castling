@@ -154,10 +154,10 @@ particle_system Shotgun_Muzzle
 		direction 0 1 0
 		emission_rate 40
 		position 0 0 0
-		velocity_min 20
-		velocity_max 60
-		time_to_live_min 0.2
-		time_to_live_max 0.3
+		velocity_min 10
+		velocity_max 30
+		time_to_live_min 0.4
+		time_to_live_max 0.6
 		duration 0.1
 	}
 	affector ColourFader2
