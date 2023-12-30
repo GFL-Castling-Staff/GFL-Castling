@@ -264,7 +264,7 @@ class CommandSkill : Tracker {
                 case 73:{excuteHunterskill(cId,senderId,m_modifer);break;}
                 case 74:{excuteDreamerskill(cId,senderId,m_modifer);break;}
                 case 75:{excuteStenSterlingskill(cId,senderId,m_modifer,c_weaponType);break;}
-
+                case 77:{excuteOwenskill(cId,senderId,m_modifer);break;}
                 default:
                     break;
             }
@@ -4191,4 +4191,26 @@ class CommandSkill : Tracker {
             }
         }
     }
+
+    void excuteOwenskill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"owen")) return;
+        addCooldown("owen",60,characterId,modifer);
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+            int factionid = character.getIntAttribute("faction_id");
+            array<const XmlElement@>@ characters = getCharactersNearPosition(m_metagame, c_pos, factionid, 15.0f);
+            for (uint i = 0; i < characters.length; i++) {
+                int soldierId = characters[i].getIntAttribute("id");
+                XmlElement c ("command");
+                c.setStringAttribute("class", "update_inventory");
+                c.setIntAttribute("character_id", soldierId); 
+                c.setIntAttribute("untransform_count", 5);
+                m_metagame.getComms().send(c);
+            }
+            // array<string> Voice={
+            // };
+            // playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+        }
+    }    
 }
