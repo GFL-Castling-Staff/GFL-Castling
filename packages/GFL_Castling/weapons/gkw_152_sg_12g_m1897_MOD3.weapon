@@ -46,6 +46,7 @@
         kill_decay_end_time="0.48" />
             <trail probability="1.0" key="bullet_buckshot"/>
         </projectile>
+        <effect class="muzzle" ref="Shotgun_Muzzle"/>
         <!--Accuracy, Movement speed-->
         <stance state_key="running" accuracy="0.8" />
         <stance state_key="walking" accuracy="0.8" />
@@ -101,6 +102,7 @@
             <result class="blast" radius="1.5" damage="1.1" push="0.75" decal="1" character_state="death"  faction_compare="not_equal"/>
             <trail probability="1.0" key="bullet_buckshot"/>
         </projectile>
+        <effect class="muzzle" ref="Shotgun_Muzzle"/>
         <!--Accuracy, Movement speed-->
         <stance state_key="running" accuracy="0.55" />
         <stance state_key="walking" accuracy="0.65" />

@@ -2686,3 +2686,12 @@ material disaster_smoke : alpha_blend_base
         texture_unit{
             texture disaster_smoke.png 	
 }}}}
+material double_freedom_trail : add_base
+{
+	technique{
+		pass{
+			texture_unit{
+			texture double_freedom_trail.png
+		}
+	}
+}

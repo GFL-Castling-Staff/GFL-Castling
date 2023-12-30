@@ -137,3 +137,53 @@ particle_system muzzle_deepyellow
 		depth	0.2
 	}
 }
+
+//modifier from RST's DoubleFreedom_muzzle
+particle_system Shotgun_Muzzle
+{
+	quota 500
+	material point_hard_edge
+	particle_width 0.05
+	particle_height 0.3
+	renderer billboard	
+	billboard_origin bottom_center
+	billboard_type oriented_self
+	emitter Point{
+		angle 5
+        colour 1 0.3 0 1
+		direction 0 1 0
+		emission_rate 40
+		position 0 0 0
+		velocity_min 20
+		velocity_max 60
+		time_to_live_min 0.2
+		time_to_live_max 0.3
+		duration 0.1
+	}
+	affector ColourFader2
+	{
+		red1	10
+		green1	3
+		blue1	1
+		aplha1	50
+		red2   	-3
+		green2	-3
+		blue2	-3
+		aplha2	-4
+		state_change 0.3
+	}
+	affector DirectionRandomiser  
+	{
+		randomness 50
+		scope 75
+		keep_velocity true
+	}
+}
+
+material point_hard_edge : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture point_hard_edge.png 	
+}}}}
