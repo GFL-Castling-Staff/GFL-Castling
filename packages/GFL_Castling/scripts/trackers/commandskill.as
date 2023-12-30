@@ -18,7 +18,6 @@
 //Contributor: SAIWA K309 Lappland
 
 array<SkillTrigger@> SkillArray;
-array<kill_count@> KillCountArray;
 array<no_delete_data@> No_Delete_DataArray;
 
 class SkillTrigger{
@@ -304,10 +303,6 @@ class CommandSkill : Tracker {
     }
 	protected void handleMatchEndEvent(const XmlElement@ event) {
         m_ended=true;
-        while(KillCountArray.length()>0)   
-        {
-            KillCountArray.removeLast();
-        }
     }
     void update(float time) {
         if(DontSpamingYourFuckingSkillWhileCoolDownBro.length()>0){
@@ -1101,6 +1096,7 @@ class CommandSkill : Tracker {
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
                     int index = findNodeleteDataIndex(modifer.m_playername,"ppsh41");
+                    string player_name = player.getStringAttribute("name");
                     int medal_num = 0;
                     if (index>=0)
                     {
@@ -1108,25 +1104,20 @@ class CommandSkill : Tracker {
                     }
                     medal_num = min(medal_num,3);
                     // _log("现在有" + medal_num + "枚永久勋章");
-                    int index_1 = findKillCountIndex(characterId,"ppsh41");
-                    if (index_1 >=0)
-                    {
-                        int temp_medal_num=KillCountArray[index_1].m_killnum;
-                        medal_num += temp_medal_num;
-                    }                    
+
+                    int temp_medal_num = g_playerInfo_Buck.getKillSkillCountbyName(player_name,"ppsh41");
+                    medal_num += temp_medal_num;
+
                     // _log("现在有" + medal_num + "枚勋章");
+
+                    g_playerInfo_Buck.addKillSkillCountbyName(player_name,"ppsh41");
+
                     string target = player.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     Vector3 s_pos = stringToVector3(target);
                     int factionid = character.getIntAttribute("faction_id");
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
-                    int j = findKillCountIndex(characterId,"ppsh41");
-                    if(j>=0){
-                        KillCountArray[j].add();
-                    }
-                    else{
-                        KillCountArray.insertLast(kill_count(characterId,1,"ppsh41"));
-                    }
+
                     c_pos=c_pos.add(Vector3(0,1,0));
                     c_pos = c_pos.add((getAimUnitVector(1,c_pos,s_pos)));
                     array<string> Voice={
@@ -2181,6 +2172,7 @@ class CommandSkill : Tracker {
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
                     string target = player.getStringAttribute("aim_target");
+                    string player_name = player.getStringAttribute("name");
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
                     array<string> Voice={
@@ -2195,21 +2187,17 @@ class CommandSkill : Tracker {
                     playSoundAtLocation(m_metagame,"dart_shot.wav",factionid,c_pos,1.75);
                     c_pos=c_pos.add(Vector3(0,1,0));
                     CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ppk_tracer_dart_1.projectile",characterId,factionid,60);
-
-                    int index = findKillCountIndex(characterId,"ppk");
-                    if (index>=0){
-                        int kill_count=KillCountArray[index].m_killnum;
-                        if (kill_count>=7){
-                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ppk_tracer_dart_3.projectile",characterId,factionid,260);
-                        }
-                        if (kill_count>=15){
-                            insertLockOnStrafeAirstrike(m_metagame,"ioncannon_strafe",characterId,factionid,stringToVector3(target));
-                        }
-                        if (kill_count>=30){
-                            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                            tasker.add(DelayAirstrikeRequest(m_metagame,5.0,characterId,factionid,stringToVector3(target),"ioncannon_strafe"));
-                        }                        
+                    int kill_count = g_playerInfo_Buck.getKillSkillCountbyName(player_name,"ppk");
+                    if (kill_count>=7){
+                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ppk_tracer_dart_3.projectile",characterId,factionid,260);
                     }
+                    if (kill_count>=15){
+                        insertLockOnStrafeAirstrike(m_metagame,"ioncannon_strafe",characterId,factionid,stringToVector3(target));
+                    }
+                    if (kill_count>=30){
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        tasker.add(DelayAirstrikeRequest(m_metagame,5.0,characterId,factionid,stringToVector3(target),"ioncannon_strafe"));
+                    }                        
                     addCooldown("PPKMOD3",90,characterId,modifer);
                 }
             }
@@ -2915,10 +2903,10 @@ class CommandSkill : Tracker {
                         addCooldown("sniper",20,characterId,modifer);
                     }
                     else if (weapon_name == "gkw_m1903.weapon" || weapon_name=="gkw_m1903_exp.weapon" || weapon_name=="gkw_m1903_exp_skill.weapon" || weapon_name=="gkw_m1903_only.weapon"){
-                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
+                        playAnimationKey(m_metagame,characterId,"recoil1, big",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.0,characterId,factionid,"snipe_60.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
-                        addCooldown("sniper",20,characterId,modifer);
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipe_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        addCooldown("sniper",10,characterId,modifer);
                     }
                     else if (weapon_name == "gkw_m1903_302.weapon" || weapon_name=="gkw_m1903_302_exp.weapon" || weapon_name=="gkw_m1903_302_exp_skill.weapon" || weapon_name=="gkw_m1903_302_only.weapon"){
                         playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
@@ -3031,77 +3019,69 @@ class CommandSkill : Tracker {
         if (characterinfo is null) return;
         const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
         if (playerinfo is null) return;
-
-        int index = findKillCountIndex(characterId,"carcano");
-
-        if(index>=0){
-            int kill_count=KillCountArray[index].m_killnum;
-            if (kill_count >= 6){
-                if (playerinfo.hasAttribute("aim_target")) {
-                    string target = playerinfo.getStringAttribute("aim_target");
-                    Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
-                    Vector3 s_pos = stringToVector3(target);
-                    int factionid = characterinfo.getIntAttribute("faction_id");
-            
-                    int m_fnum = m_metagame.getFactionCount();
-                    array<const XmlElement@> affectedCharacter;
-                    for(int i=0;i<m_fnum;i++) {
-                        if(i!=factionid) {
-                            array<const XmlElement@> affectedCharacter2;
-                            affectedCharacter2 = getCharactersNearPosition(m_metagame,s_pos,i,5.0f);
-                            if (affectedCharacter2 !is null){
-                                for(uint x=0;x<affectedCharacter2.length();x++){
-                                    affectedCharacter.insertLast(affectedCharacter2[x]);
-                                }
+        string player_name = playerinfo.getStringAttribute("name");
+        int kill_count = g_playerInfo_Buck.getKillSkillCountbyName(player_name,"carcano");
+        // _log("现在有" + kill_count + "击杀数量");
+        if (kill_count >= 6){
+            if (playerinfo.hasAttribute("aim_target")) {
+                string target = playerinfo.getStringAttribute("aim_target");
+                Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
+                Vector3 s_pos = stringToVector3(target);
+                int factionid = characterinfo.getIntAttribute("faction_id");
+        
+                int m_fnum = m_metagame.getFactionCount();
+                array<const XmlElement@> affectedCharacter;
+                for(int i=0;i<m_fnum;i++) {
+                    if(i!=factionid) {
+                        array<const XmlElement@> affectedCharacter2;
+                        affectedCharacter2 = getCharactersNearPosition(m_metagame,s_pos,i,5.0f);
+                        if (affectedCharacter2 !is null){
+                            for(uint x=0;x<affectedCharacter2.length();x++){
+                                affectedCharacter.insertLast(affectedCharacter2[x]);
                             }
                         }
                     }
+                }
 
-                    if (affectedCharacter !is null && affectedCharacter.length > 0){
-                        int closestIndex = -1;
-                        float closestDistance = -1.0f;                
-                        for(uint i=0;i<affectedCharacter.length();i++){
-                            float distance = getPositionDistance(s_pos, stringToVector3(affectedCharacter[i].getStringAttribute("position")));
-                            if (distance < closestDistance || closestDistance < 0.0){
-                                closestDistance = distance;
-                                closestIndex = i;
-                            }
-                        }
-
-                        if (closestIndex >= 0){
-                            KillCountArray[index].m_killnum -= 6;
-                            int target_id = affectedCharacter[closestIndex].getIntAttribute("id");
-                            playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
-                            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                            DelayAntiPersonSnipeRequest@ snipe_quest = DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_hit_kennedy.projectile",c_pos.add(Vector3(0,0.5,0)),target_id);
-                            snipe_quest.setKey("sniper_bullet_carcano.projectile");
-                            tasker.add(snipe_quest);
-                            sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"carcano_1938_skill_fire");
-                            addCooldown("sniper",5,characterId,modifer);
-                            array<string> Voice={
-                            "Carcano1938_SKILL1_JP.wav",
-                            "Carcano1938_SKILL2_JP.wav",
-                            "Carcano1938_SKILL3_JP.wav"
-                            };
-                            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.0);                            
+                if (affectedCharacter !is null && affectedCharacter.length > 0){
+                    int closestIndex = -1;
+                    float closestDistance = -1.0f;                
+                    for(uint i=0;i<affectedCharacter.length();i++){
+                        float distance = getPositionDistance(s_pos, stringToVector3(affectedCharacter[i].getStringAttribute("position")));
+                        if (distance < closestDistance || closestDistance < 0.0){
+                            closestDistance = distance;
+                            closestIndex = i;
                         }
                     }
-                    else{
-                        sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"snipe_skill_notfound");
-                        addCooldown("sniper",3,characterId,modifer,"normal",false);
-                    }  
-                } 
-            }
-            else{
-                sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"carcano_1938_not_ready");
-                addCooldown("sniper",5,characterId,modifer,"normal",false);
-            }
+
+                    if (closestIndex >= 0){
+                        g_playerInfo_Buck.addKillSkillCountbyName(player_name,"carcano",-6);
+                        int target_id = affectedCharacter[closestIndex].getIntAttribute("id");
+                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        DelayAntiPersonSnipeRequest@ snipe_quest = DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_hit_kennedy.projectile",c_pos.add(Vector3(0,0.5,0)),target_id);
+                        snipe_quest.setKey("sniper_bullet_carcano.projectile");
+                        tasker.add(snipe_quest);
+                        sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"carcano_1938_skill_fire");
+                        addCooldown("sniper",5,characterId,modifer);
+                        array<string> Voice={
+                        "Carcano1938_SKILL1_JP.wav",
+                        "Carcano1938_SKILL2_JP.wav",
+                        "Carcano1938_SKILL3_JP.wav"
+                        };
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.0);                            
+                    }
+                }
+                else{
+                    sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"snipe_skill_notfound");
+                    addCooldown("sniper",3,characterId,modifer,"normal",false);
+                }  
+            } 
         }
         else{
             sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"carcano_1938_not_ready");
             addCooldown("sniper",5,characterId,modifer,"normal",false);
         }
-
     }
 
     void excuteMosinNagant(int characterId,int playerId,SkillModifer@ modifer){
@@ -3114,6 +3094,7 @@ class CommandSkill : Tracker {
         string target = playerinfo.getStringAttribute("aim_target");
         Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
         Vector3 s_pos = stringToVector3(target);
+        string player_name = playerinfo.getStringAttribute("name");
         int factionid = characterinfo.getIntAttribute("faction_id");
 
         int m_fnum = m_metagame.getFactionCount();
@@ -3145,12 +3126,8 @@ class CommandSkill : Tracker {
                 int fire_num = 2;
                 modifer.setCooldownMinus(0);
                 modifer.setCooldownReduction(1.0);
-                int index = findKillCountIndex(characterId,"mosinnagant");
-                int mosin_level = 0;
-                if(index>=0)
-                {
-                    mosin_level = KillCountArray[index].m_killnum;
-                }
+                int mosin_level = g_playerInfo_Buck.getKillSkillCountbyName(player_name,"mosin");
+
                 fire_num = int(min(int(floor(mosin_level/10))+2,8));
                 int target_id = affectedCharacter[closestIndex].getIntAttribute("id");
                 if (mosin_level < 20)
@@ -3956,6 +3933,7 @@ class CommandSkill : Tracker {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
+                    string player_name=player.getStringAttribute("name");
                     Vector3 target_pos = stringToVector3(player.getStringAttribute("aim_target"));
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
@@ -3967,27 +3945,19 @@ class CommandSkill : Tracker {
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playAnimationKey(m_metagame,characterId,"air thrust",false,true);
                     c_pos=c_pos.add(Vector3(0,1,0));
-                    int count = 0;
-                    int index = findKillCountIndex(characterId,"m1895");
-                    if (index>=0){
-                        KillCountArray[index].add();
-                        count=KillCountArray[index].m_killnum;
-                    }
-                    else
-                    {
-                        KillCountArray.insertLast(kill_count(characterId,1,"m1895"));
-                        count = 1;
-                    }
+
+                    g_playerInfo_Buck.addKillSkillCountbyName(player_name,"m1895");
+                    int count = g_playerInfo_Buck.getKillSkillCountbyName(player_name,"m1895");
 
                     if (count <=1){
-                        healRangedCharacters(m_metagame,c_pos,factionid,12.0,10);
+                        healRangedCharacters(m_metagame,c_pos,factionid,20.0,10);
                         spawnVehicle(m_metagame,1,factionid,target_pos.add(Vector3(0,5,0)),Orientation(0,1,0,0),"para_spawn.vehicle");
                     }
                     if (count == 2){
-                        Vector3 c_pos1 = c_pos.add(Vector3(3,0,3));
-                        Vector3 c_pos2 = c_pos.add(Vector3(-3,0,-3));
-                        Vector3 c_pos3 = c_pos.add(Vector3(-3,0,3));
-                        Vector3 c_pos4 = c_pos.add(Vector3(3,0,-3));                        
+                        Vector3 c_pos1 = target_pos.add(Vector3(3,0,3));
+                        Vector3 c_pos2 = target_pos.add(Vector3(-3,0,-3));
+                        Vector3 c_pos3 = target_pos.add(Vector3(-3,0,3));
+                        Vector3 c_pos4 = target_pos.add(Vector3(3,0,-3));                        
                         spawnSoldier(m_metagame,1,factionid,c_pos1,"smg_21_ppsh");
                         spawnSoldier(m_metagame,1,factionid,c_pos2,"smg_21_ppsh");
                         spawnSoldier(m_metagame,1,factionid,c_pos3,"ar_58_ak47");
@@ -4007,11 +3977,11 @@ class CommandSkill : Tracker {
                         }
                         else
                         {
-                            healRangedCharacters(m_metagame,c_pos,factionid,12.0,10);
-                            Vector3 c_pos1 = c_pos.add(Vector3(3,0,3));
-                            Vector3 c_pos2 = c_pos.add(Vector3(-3,0,-3));
-                            Vector3 c_pos3 = c_pos.add(Vector3(-3,0,3));
-                            Vector3 c_pos4 = c_pos.add(Vector3(3,0,-3));                        
+                            healRangedCharacters(m_metagame,c_pos,factionid,20.0,10);
+                            Vector3 c_pos1 = target_pos.add(Vector3(3,0,3));
+                            Vector3 c_pos2 = target_pos.add(Vector3(-3,0,-3));
+                            Vector3 c_pos3 = target_pos.add(Vector3(-3,0,3));
+                            Vector3 c_pos4 = target_pos.add(Vector3(3,0,-3));                        
                             spawnSoldier(m_metagame,1,factionid,c_pos1,"smg_21_ppsh");
                             spawnSoldier(m_metagame,1,factionid,c_pos2,"smg_21_ppsh");
                             spawnSoldier(m_metagame,1,factionid,c_pos3,"ar_58_ak47");
@@ -4023,11 +3993,11 @@ class CommandSkill : Tracker {
                     }
                     if (count > 3)
                     {
-                        healRangedCharacters(m_metagame,c_pos,factionid,12.0,10);
-                        Vector3 c_pos1 = c_pos.add(Vector3(3,0,3));
-                        Vector3 c_pos2 = c_pos.add(Vector3(-3,0,-3));
-                        Vector3 c_pos3 = c_pos.add(Vector3(-3,0,3));
-                        Vector3 c_pos4 = c_pos.add(Vector3(3,0,-3));                        
+                        healRangedCharacters(m_metagame,c_pos,factionid,20.0,10);
+                        Vector3 c_pos1 = target_pos.add(Vector3(3,0,3));
+                        Vector3 c_pos2 = target_pos.add(Vector3(-3,0,-3));
+                        Vector3 c_pos3 = target_pos.add(Vector3(-3,0,3));
+                        Vector3 c_pos4 = target_pos.add(Vector3(3,0,-3));                        
                         spawnSoldier(m_metagame,1,factionid,c_pos1,"smg_21_ppsh");
                         spawnSoldier(m_metagame,1,factionid,c_pos2,"smg_21_ppsh");
                         spawnSoldier(m_metagame,1,factionid,c_pos3,"ar_58_ak47");
@@ -4170,7 +4140,6 @@ class CommandSkill : Tracker {
                     Vector3 s_pos = stringToVector3(target);
                     int factionid = character.getIntAttribute("faction_id");
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
-                    int j = findKillCountIndex(characterId,"StenSterling");
                     c_pos = c_pos.add(Vector3(0,1,0));
                     c_pos = c_pos.add((getAimUnitVector(1,c_pos,s_pos)));
 

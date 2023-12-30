@@ -95,33 +95,33 @@ class ServerHelper : Tracker {
             }
         }
 
-        if(checkCommand(message,"addmosin_level")){
-            const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
-            if (playerInfo is null) return;				
-            int characterId= playerInfo.getIntAttribute("character_id");
+        // if(checkCommand(message,"addmosin_level")){
+        //     const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+        //     if (playerInfo is null) return;				
+        //     int characterId= playerInfo.getIntAttribute("character_id");
 
-            int j = findKillCountIndex(characterId,"mosinnagant");
-            if(j>=0){
-                KillCountArray[j].add(9);
-            }
-            else{
-                KillCountArray.insertLast(kill_count(characterId,9,"mosinnagant"));       
-            }
-        }
+        //     int j = findKillCountIndex(characterId,"mosinnagant");
+        //     if(j>=0){
+        //         KillCountArray[j].add(9);
+        //     }
+        //     else{
+        //         KillCountArray.insertLast(kill_count(characterId,9,"mosinnagant"));       
+        //     }
+        // }
 
-        if(checkCommand(message,"addmosin_500")){
-            const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
-            if (playerInfo is null) return;				
-            int characterId= playerInfo.getIntAttribute("character_id");
+        // if(checkCommand(message,"addmosin_500")){
+        //     const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+        //     if (playerInfo is null) return;				
+        //     int characterId= playerInfo.getIntAttribute("character_id");
 
-            int j = findKillCountIndex(characterId,"mosinnagant");
-            if(j>=0){
-                KillCountArray[j].add(500);
-            }
-            else{
-                KillCountArray.insertLast(kill_count(characterId,500,"mosinnagant"));       
-            }
-        }
+        //     int j = findKillCountIndex(characterId,"mosinnagant");
+        //     if(j>=0){
+        //         KillCountArray[j].add(500);
+        //     }
+        //     else{
+        //         KillCountArray.insertLast(kill_count(characterId,500,"mosinnagant"));       
+        //     }
+        // }
 
         if(checkCommand(message,"add98klevel")){
             const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);

@@ -171,7 +171,7 @@
         <capacity value="1" source="rank" source_value="0.0" />
     </projectile>
     <projectile class="grenade" name="" key="blast_snipe.projectile" slot="2" radius="0.01">
-        <result class="blast" radius="2.5" damage="1.01" push="0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+        <result class="blast" radius="2.5" damage="1.01" push="0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" make_vehicle_hit_sound="0"/>
         <trigger class="time" time_to_live="0.0"/>
         <rotation class="random" />
         <model mesh_filename="" />
@@ -181,7 +181,7 @@
         <capacity value="1" source="rank" source_value="0.0" />
     </projectile>
     <projectile class="grenade" name="" key="blast_snipe_ff_hunter.projectile" slot="2" radius="0.01">
-        <result class="blast" radius="4" damage="1.01" push="0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+        <result class="blast" radius="4" damage="1.01" push="0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" make_vehicle_hit_sound="0"/>
         <trigger class="time" time_to_live="0.0"/>
         <rotation class="random" />
         <model mesh_filename="" />
@@ -213,7 +213,7 @@
         <effect class="result" key="character" ref="common_hit_effect_2" lighting="0"/>
     </projectile>
     <projectile class="grenade" name="" key="blast_snipe_mosin.projectile" slot="2" radius="0.01">
-        <result class="blast" radius="2.5" damage="1.01" push="0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+        <result class="blast" radius="2.5" damage="1.01" push="0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" make_vehicle_hit_sound="0"/>
         <trigger class="time" time_to_live="0.0"/>
         <rotation class="random" />
         <model mesh_filename="" />
@@ -245,7 +245,7 @@
     <projectile class="grenade" name="" key="at4_incendiary_sub.projectile" slot="2" pulldown_in_air="1.0" on_ground_up="0 1 0" use_time_to_live="1" time_to_live="15" can_be_disarmed="0" can_be_detected_by_footmen="0" can_be_detected_by_driver="0" radius="0.3" blast_damage_threshold="50" time_to_live_out_in_the_open="150" player_death_drop_owner_lock_time="120">
         <collision class="sticky" />
         <trigger class="impact" />
-        <result class="blast" radius="3.0" damage="1.01" push="0.05" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" make_vehicle_hit_sounds="0" />
+        <result class="blast" radius="3.0" damage="1.01" push="0.05" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" make_vehicle_hit_sound="0" />
             
         <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
         <effect class="result" type="splat_map" surface_tag="" size="4.0" atlas_index="4" layer="0" />
