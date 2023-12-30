@@ -461,7 +461,7 @@
 			<attribute weight="0.5" min="300.0" max="300.0" />
 		</attribute_config>
 		<item_class_existence_config>
-			<item_class_existence class="weapon" slot="1" probability="0.2" />
+			<item_class_existence class="weapon" slot="1" probability="0.1" />
 		</item_class_existence_config>			
 	</soldier>
 	<soldier name="para_rodelero" spawn_score="0.3" squad_size_xp_cap="0.5" copy_from="default_ai">
@@ -506,7 +506,7 @@
 		</resources>
 	</soldier>
 	<!-- 警备士 -->
-	<soldier name="parw_police" spawn_score="2.0" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="parw_police" spawn_score="1.0" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="shield.ai">/
 		  <parameter class="deployment_area_utilization_factor" value="0.99" />
 		  <parameter class="uses_vehicles" value="1.0" />
@@ -528,7 +528,7 @@
 		</resources>
 	</soldier>
 	<!-- 重锤 -->
-	<soldier name="parw_hammer" spawn_score="1.0" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="parw_hammer" spawn_score="0.5" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="para_hammer.ai"/>
 		<character filename="paradeus.text_lines">
 			<sound key="death" fileref="kill_sound_kcco_bot01.wav" volume="0.4" pitch_variety="0.025"/>

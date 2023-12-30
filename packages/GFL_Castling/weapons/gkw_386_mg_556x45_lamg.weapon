@@ -79,7 +79,7 @@
         <specification 
         barrel_offset="0.5"
         retrigger_time="0.096"
-        accuracy_factor="0.95"
+        accuracy_factor="1"
         sustained_fire_grow_step="0.35"
         sustained_fire_diminish_rate="2.0"
         stance_accuracy_rate="2.0"
@@ -91,6 +91,7 @@
         class="0"
         projectile_speed="200"
         sight_range_modifier="1.5"
+        can_shoot_running="1"
         can_shoot_standing="1"
         can_shoot_crouching="1"
         stab_enabled="1"
