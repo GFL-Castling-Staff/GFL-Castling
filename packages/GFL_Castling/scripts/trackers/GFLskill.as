@@ -1461,10 +1461,10 @@ class GFLskill : Tracker {
 					Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
 					int factionid = character.getIntAttribute("faction_id");
 					array<const XmlElement@>@ characters = getCharactersNearPosition(m_metagame, grenade_pos, factionid,25);
-					int heal_count_max = 10;
+					uint heal_count_max = 10;
 					int nyto_count = 0;
-					if (heal_count_max >= characters.length) {
-						heal_count_max = characters.length;
+					if (heal_count_max >= characters.length()) {
+						heal_count_max = characters.length();
 					}
 					for (uint i = 0; i < heal_count_max; i++) {
 						int luckyhealguyid = characters[i].getIntAttribute("id");
@@ -1544,7 +1544,7 @@ class GFLskill : Tracker {
 					playRandomSoundArray(m_metagame,Voice,factionId,character_pos.toString(),1);
 
 					array<const XmlElement@> affectedCharacter = getEnemyCharactersNearPosition(m_metagame,character_pos,factionId,25.0f);
-					int num_max_kill = 3;
+					uint num_max_kill = 3;
 					if(affectedCharacter.length()==0)break;
 					for (uint i0=0;i0<=num_max_kill;i0++){
 						for (uint i1=0;i1<affectedCharacter.length();i1++)	{
@@ -1579,7 +1579,7 @@ class GFLskill : Tracker {
 					playRandomSoundArray(m_metagame,Voice,factionId,character_pos.toString(),1);
 
 					array<const XmlElement@> affectedCharacter = getEnemyCharactersNearPosition(m_metagame,character_pos,factionId,45.0f,8);
-					int num_max_kill = 8;
+					uint num_max_kill = 8;
 					if(affectedCharacter.length()==0)break;
 					for (uint i0=0;i0<=num_max_kill;i0++){
 						for (uint i1=0;i1<affectedCharacter.length();i1++)	{

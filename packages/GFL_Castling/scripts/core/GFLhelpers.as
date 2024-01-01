@@ -1022,3 +1022,23 @@ int getRandomIndex(int size)
 	return rand(0,size-1);
 }
 
+string checkCallSlotInvaild(int slot,string callKey)
+{
+	switch(slot)
+	{
+		case 1:{
+			if (callKey=="") return call_slot_default_1;
+			return callKey;
+		}
+		case 2:{
+			if (callKey=="") return call_slot_default_2;
+			return callKey;
+		}		
+		case 3:{
+			if (callKey=="") return call_slot_default_3;
+			return callKey;
+		}
+		default:{return call_slot_default_1;}
+	}
+	return call_slot_default_1;
+}

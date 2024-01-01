@@ -264,3 +264,11 @@
 		Resource("gk_repair_fairy.call", "call"),
 		Resource("target.call", "call")
 	};
+
+
+    // parameters for "save_system.as":
+    const string call_slot_default_1 = "call1";
+    const string call_slot_default_2 = "call2";
+    const string call_slot_default_3 = "call3";
+
+    // 默认引用的支援key

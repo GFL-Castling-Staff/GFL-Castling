@@ -522,6 +522,7 @@ class GFL_battleInfo{
 	protected uint m_deadCount; //死亡数
     protected uint m_playingTime; // 游玩分钟
     protected uint m_tactic_point; // 战术点
+    protected uint m_killstreak_point; // 连杀积分
 
     GFL_battleInfo(string name) {
         m_name = name;
@@ -531,6 +532,7 @@ class GFL_battleInfo{
         m_deadCount = 0;
         m_playingTime = 0;
         m_tactic_point = 0;
+        m_killstreak_point = 0;
     }
 
     string getName() const {
@@ -559,6 +561,10 @@ class GFL_battleInfo{
 
     uint getTacticPoint() const {
         return m_tactic_point;
+    }
+
+    uint getKillStreakPoint() const {
+        return m_killstreak_point;
     }
 
     void setName(string name) {
@@ -594,9 +600,10 @@ class GFL_battleInfo{
         m_playingTime++;
     }
 
-	void addKill(){
+	void addKill(int killstreak_add=1){
         m_killCount++;
         m_counter++;
+        m_killstreak_point+=killstreak_add;
         if(m_counter > m_oneLifekillCount){
             m_oneLifekillCount = m_counter;
         }
@@ -605,6 +612,7 @@ class GFL_battleInfo{
 	void addDead(){
         m_deadCount++;
         m_counter = 0;
+        m_killstreak_point =0;
 	}
 }
 

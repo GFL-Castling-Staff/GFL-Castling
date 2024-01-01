@@ -8,6 +8,7 @@
 #include "gamemode_invasion.as"
 #include "GFLhelpers.as"
 #include "GFLplayerlist.as"
+#include "GFLparameters.as"
 
 // sid = sid
 // 记录玩家武器数据 使用<weapon key="武器key">形式存储在<weapons>元素下
@@ -21,8 +22,12 @@ class player_data
     string m_playername;
     string m_profile_hash;
     string m_sid;
+    string m_call_slot_1;
+    string m_call_slot_2;
+    string m_call_slot_3;
 
     array<string> m_weapons={};
+    array<string> m_unlocked_call={};
 
 	player_data() {}
 
@@ -30,6 +35,9 @@ class player_data
     {
         m_playername = _player_name;
         m_profile_hash = _profile_hash;
+        m_call_slot_1 = "";
+        m_call_slot_2 = "";
+        m_call_slot_3 = "";
     }
 
     void addWeapon(const string key)
@@ -48,6 +56,7 @@ class player_data
             m_weapons.insertLast(key);
         }  
     }
+
 
     int GetCoreNum() const
     {
@@ -110,6 +119,59 @@ class player_data
         return m_weapons[index];
     }
 
+
+    // deal with Call Slot and Unlock Call
+
+    void setCallSlot(int slot,string callKey){
+        switch(slot)
+        {
+            case 1:{m_call_slot_1=callKey;break;}
+            case 2:{m_call_slot_2=callKey;break;}
+            case 3:{m_call_slot_3=callKey;break;}
+            default:{break;}
+        }
+    }
+
+    string getCallSlot(int slot)
+    {
+        switch(slot)
+        {
+            case 1:{return m_call_slot_1;}
+            case 2:{return m_call_slot_2;}
+            case 3:{return m_call_slot_3;}
+            default:{return "";}
+        }
+        return "";
+    }
+
+    bool FindCallUnlock(const string key)
+    {
+        for (uint i = 0; i < m_unlocked_call.length(); ++i)
+        {
+            if (m_unlocked_call[i] == key)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    void addUnlockedCall(const string key)
+    {
+        bool isDuplicate = false;
+        for (uint i = 0; i < m_unlocked_call.length(); ++i)
+        {
+            if (m_unlocked_call[i] == key)
+            {
+                isDuplicate = true;
+                break;
+            }
+        }        
+        if (!isDuplicate)
+        {
+            m_unlocked_call.insertLast(key);
+        }  
+    }    
 }
 
 const XmlElement@ readFile(const Metagame@ metagame,string name, string profile_hash){
@@ -156,16 +218,39 @@ XmlElement@ PlayerProfileSave(player_data@ player_info) {
     root.setIntAttribute("core_num", player_info.m_corenum);
 	string FILENAME =  ("save_" + player_info.m_sid +".xml" );
 
-    XmlElement subroot("weapons");
-
+    XmlElement subroot_0("weapons");
     for (uint i = 0; i < player_info.m_weapons.length(); i++) 
     {
         XmlElement e("weapon");
         e.setStringAttribute("key", player_info.m_weapons[i]);
-        subroot.appendChild(e);
+        subroot_0.appendChild(e);
     }
 
-    root.appendChild(subroot);
+
+    //处理当前的支援列表
+    XmlElement subroot_1("active_call");
+    XmlElement callslot_1("callslot_1");
+    callslot_1.setStringAttribute("key", checkCallSlotInvaild(1,player_info.getCallSlot(1)));
+    subroot_1.appendChild(callslot_1); 
+    XmlElement callslot_2("callslot_2");
+    callslot_2.setStringAttribute("key", checkCallSlotInvaild(2,player_info.getCallSlot(2)));
+    subroot_1.appendChild(callslot_2);
+    XmlElement callslot_3("callslot_3");
+    callslot_3.setStringAttribute("key", checkCallSlotInvaild(3,player_info.getCallSlot(3))); 
+    subroot_1.appendChild(callslot_3);       
+
+    //处理解锁的支援列表
+    XmlElement subroot_2("unlocked_calls");
+    for (uint i = 0; i < player_info.m_unlocked_call.length(); i++) 
+    {
+        XmlElement e("unlocked_call");
+        e.setStringAttribute("key", player_info.m_unlocked_call[i]);
+        subroot_2.appendChild(e);
+    }
+
+    root.appendChild(subroot_0);
+    root.appendChild(subroot_1);
+    root.appendChild(subroot_2);
     return root;
 }
 
@@ -187,6 +272,27 @@ player_data@ PlayerProfileLoad(const XmlElement@ player_profile){
         output.addWeapon(weapon_key);
     }
     output.formatWeaponList();
+
+    array<const XmlElement@> unlocked_call_list = player_profile.getFirstElementByTagName("unlocked_calls").getElementsByTagName("unlocked_call");
+    for(uint i = 0; i < unlocked_call_list.length();i++)
+    {
+        string call_key = unlocked_call_list[i].getStringAttribute("key");
+        if(call_key =="") continue;
+        output.addUnlockedCall(call_key);
+    }
+
+    const XmlElement@ call_slot_1 = player_profile.getFirstElementByTagName("active_call").getFirstElementByTagName("callslot_1");
+    const XmlElement@ call_slot_2 = player_profile.getFirstElementByTagName("active_call").getFirstElementByTagName("callslot_2");
+    const XmlElement@ call_slot_3 = player_profile.getFirstElementByTagName("active_call").getFirstElementByTagName("callslot_3");
+
+    string call_slot_callkey_1 = call_slot_1.getStringAttribute("key");
+    string call_slot_callkey_2 = call_slot_2.getStringAttribute("key");
+    string call_slot_callkey_3 = call_slot_3.getStringAttribute("key");
+
+    output.setCallSlot(1,call_slot_callkey_1);
+    output.setCallSlot(2,call_slot_callkey_2);
+    output.setCallSlot(3,call_slot_callkey_3);
+
     return output;
 }
 

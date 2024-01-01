@@ -218,8 +218,9 @@ class ItemDropEvent : Tracker {
                             {
                                 return;
                             }
-                            else if(newdata.FindWeapon(itemKey))
+                            else if(existKeyinList(itemKey) && !newdata.FindWeapon(itemKey))
                             {
+                                newdata.addWeapon(itemKey);
                                 newdata.addWeapon(outputItem);
                                 notify(m_metagame, "Logger Mask Auto", dictionary(), "misc", pId, false, "", 1.0);
                                 string filename = ("save_" + profile_hash +".xml" );
@@ -228,12 +229,11 @@ class ItemDropEvent : Tracker {
                             }
                             else
                             {
-                                newdata.addWeapon(itemKey);
                                 newdata.addWeapon(outputItem);
                                 notify(m_metagame, "Logger Mask Auto", dictionary(), "misc", pId, false, "", 1.0);
                                 string filename = ("save_" + profile_hash +".xml" );
                                 writeXML(m_metagame,filename,PlayerProfileSave(newdata));  
-                                return;
+                                return;                                
                             }
                         }
                         else{

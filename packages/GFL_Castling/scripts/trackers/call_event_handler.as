@@ -467,6 +467,21 @@ class call_event : Tracker {
         }
     }
 
+    protected void handleChatEvent(const XmlElement@ event){
+		string message = event.getStringAttribute("message");
+		string p_name = event.getStringAttribute("player_name");
+		int senderId = event.getIntAttribute("player_id");
+        if(checkCommand(message,"point")){
+            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
+            if (playerInfo.m_name == default_string ) return;
+            int player_id = playerInfo.getPlayerPid();
+            int tactic_point = playerInfo.getBattleInfo().getTacticPoint();
+            dictionary a;
+            a["%num"] = ""+tactic_point;              
+            notify(m_metagame, "tactic point system,info", a, "misc", player_id, false, "", 1.0);
+        }
+    }
+
     protected void returnCooldown(string player_name, int rp, int characterId, string playerName, int playerId, string message) {
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {

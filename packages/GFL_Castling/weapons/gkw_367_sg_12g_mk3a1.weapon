@@ -20,6 +20,7 @@
     carry_in_two_hands="1"
     burst_shots="1"
     last_burst_retrigger_time="-1"
+    can_shoot_running="1"
     spread_range="0.25"
     slot="0"
     use_basic_muzzle_smoke_effect="0"/>
@@ -41,14 +42,14 @@
         kill_decay_start_time="0.3" 
         kill_decay_end_time="0.5" />
     </projectile>
-    <stance state_key="running" accuracy="0.3"/>
-    <stance state_key="walking" accuracy="0.5"/>
-    <stance state_key="crouch_moving" accuracy="0.65"/>
-    <stance state_key="prone_moving" accuracy="0.65"/>
-    <stance state_key="standing" accuracy="0.8"/>
-    <stance state_key="crouching" accuracy="0.9"/>
-    <stance state_key="prone" accuracy="0.9"/>
-    <stance state_key="over_wall" accuracy="1.0"/>
+	<stance state_key="running" accuracy="0.8"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.8"/>
+	<stance state_key="standing" accuracy="0.8"/>
+	<stance state_key="crouching" accuracy="0.8"/>
+	<stance state_key="prone" accuracy="0.8"/>
+	<stance state_key="over_wall" accuracy="0.9"/>
     <modifier class="detectability" value="0.45"/>
     <tag name="shotgun"/>
     <commonness value="0.2" in_stock="0" can_respawn_with="1"/>

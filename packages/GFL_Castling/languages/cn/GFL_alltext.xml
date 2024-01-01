@@ -1858,6 +1858,31 @@
 	<text key="craft not exist" text="您的图鉴中没有&#37;name" />
 
 	<text key="fairycommand_cooldown" text="[妖精指令] 妖精系统忙线中，请稍后呼叫，预计&#37;time秒后可进行部署。已返还本次呼叫所需物品"/>
-	<text key="fairycommand_overload" text="[妖精指令] 妖精系统忙线中，请等z待其他任务完成后再呼叫,已返还本次呼叫所需物品"/>
+	<text key="fairycommand_overload" text="[妖精指令] 妖精系统忙线中，请等待其他任务完成后再呼叫,已返还本次呼叫所需物品"/>
+
+	<text key="tactic point system,info" text="[战术系统] 根据您的系统权限，您目前可使用的战术点数量为&#37;num点" />
+	<text key="tactic point system,destroy target vehicle" text="[战术系统] 摧毁敌方载具&#37;name,已分配额外&#37;num点战术点供您调遣" />
+	<text key="tactic point system,destroy target defend" text="[战术系统] 摧毁敌方工事&#37;name,已分配额外&#37;num点战术点供您调遣" />
+	<text key="tactic point system,destroy target important" text="[战术系统] 摧毁敌方关键节点——&#37;name,已为所有单元分配&#37;num点战术点" />
+	<text key="tactic point system,destroy target aa" text="[战术系统] 解除敌对我方空域限制,已为所有单元分配&#37;num点战术点" />
+	<text key="tactic point system,destroy target gas" text="[战术系统] 摧毁敌方后勤设施,已为所有单元分配&#37;num点战术点" />
+	<text key="tactic point system,get call info" text="[战术系统] 截获敌方部署情报,已分配额外&#37;num点战术点供您调遣" />
+	<text key="tactic point system,stop call info" text="[战术系统] 已中止敌方部署进程,已分配额外&#37;num点战术点供您调遣" />
+
+	<text key="call event,not enough point" text="[战术妖精] 战术点不够呼叫本次支援哦~ 还缺少&#37;num点战术点" />
+	<text key="call event,cost point" text="[战术妖精] 呼叫成功~ 消耗了&#37;cost_num点战术点,您还有&#37;num点可供调遣捏~" />
+	<text key="call event,cool down" text="[战术妖精] 呼叫失败~ 该支援还没准备好，还有&#37;time秒才能部署" />
+
+	<text key="kill streak,10kill" text="[连杀奖励] 积分到达10，获取额外1战术点奖励" />
+	<text key="kill streak,20kill" text="[连杀奖励] 积分到达20，获取额外2战术点奖励" />
+	<text key="kill streak,30kill" text="[连杀奖励] 积分到达30，获取额外3战术点奖励" />
+	<text key="kill streak,40kill" text="[连杀奖励] 积分到达40，获取额外4战术点奖励" />
+	<text key="kill streak,50kill" text="[连杀奖励] 积分到达50，获取额外5战术点奖励" />
+	<text key="kill streak,more" text="[连杀奖励] 已获取10积分，获取额外5战术点奖励" />
+
+	<text key="spawn_in_base_call, alerted, kcco_deploy_coeus.call" text="我方UAV侦察到敌军在&#37;base_name部署了一辆 Typhon 提丰, 小心它的蓄力电磁炮！"/>
+	<text key="spawn_in_base_call, alerted, kcco_deploy_typhon.call" text="我方UAV侦察到敌军在&#37;base_name部署了一辆 Coeus 奎乌, 部署反坦克小组！"/>
+	<text key="spawn_in_base_call, alerted, para_deploy_uhlan.call" text="我方UAV侦察到敌军在&#37;base_name部署了一辆 Uhlan 枪骑兵, 做好冲击准备！"/>
+	<text key="spawn_in_base_call, alerted, para_deploy_uhlan_nyto.call" text="我方UAV侦察到敌军在&#37;base_name部署了一辆 Uhlan 枪骑兵, 做好冲击准备！"/>
 
 </translation>
