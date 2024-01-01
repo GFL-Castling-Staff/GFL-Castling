@@ -40,19 +40,19 @@
         <projectile file="bullet_sg.projectile">
             <result class="hit" 
             kill_probability="2.0" 
-            kill_decay_start_time="0.06" 
+            kill_decay_start_time="0.30" 
             kill_decay_end_time="0.66" />
             <trail probability="1.0" key="bullet_buckshot"/>
         </projectile>
         <!--Accuracy, Movement speed-->
-        <stance state_key="running" accuracy="0.55" />
-        <stance state_key="walking" accuracy="0.65" />
-        <stance state_key="crouch_moving" accuracy="0.6" />
-        <stance state_key="prone_moving" accuracy="0.6" />
-        <stance state_key="standing" accuracy="0.85" />
-        <stance state_key="crouching" accuracy="0.9" />
-        <stance state_key="prone" accuracy="0.9" />
-        <stance state_key="over_wall" accuracy="0.95" />
+        <stance state_key="running" accuracy="0.8" />
+        <stance state_key="walking" accuracy="0.8" />
+        <stance state_key="crouch_moving" accuracy="0.8" />
+        <stance state_key="prone_moving" accuracy="0.8" />
+        <stance state_key="standing" accuracy="0.88" />
+        <stance state_key="crouching" accuracy="1.1" />
+        <stance state_key="prone" accuracy="1.1" />
+        <stance state_key="over_wall" accuracy="1.1" />
         <modifier class="detectability" value="0.3" />
 
     </weapon>
