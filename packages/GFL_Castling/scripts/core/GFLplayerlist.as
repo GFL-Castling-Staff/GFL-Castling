@@ -169,7 +169,7 @@ class GFL_playerInfo{
         return m_equipment;
     }
     GFL_battleInfo@ getBattleInfo(){
-        return m_battleinfo;
+        return @m_battleinfo;
     }    
     void handleRpReward(Metagame@ m_metagame)
     {
@@ -249,9 +249,10 @@ class GFL_playerInfo{
         m_killInfo.resize(0);
     }
 
-    void addKill()
+    void addKill(int num)
     {
-        m_battleinfo.addKill();
+        m_battleinfo.addKill(num);
+        _log("断点，执行battlelog添加击杀");
     }
 
     void addDead()
@@ -430,20 +431,20 @@ class GFL_playerInfo_Buck
         }
     }    
 
-    void addKillbyName(string name)
+    void addKillbyName(string name,int num)
     {
         for(uint i=0;i<size();++i){
             if(m_playerInfo[i].getPlayerName() == name){
-                m_playerInfo[i].addKill();
+                m_playerInfo[i].addKill(num);
             }
         }
     }
 
-    void addKillbyPid(int pid)
+    void addKillbyPid(int pid,int num)
     {
         for(uint i=0;i<size();++i){
             if(m_playerInfo[i].getPlayerPid() == pid){
-                m_playerInfo[i].addKill();
+                m_playerInfo[i].addKill(num);
             }
         }
     }
@@ -523,6 +524,8 @@ class GFL_battleInfo{
     protected uint m_playingTime; // 游玩分钟
     protected uint m_tactic_point; // 战术点
     protected uint m_killstreak_point; // 连杀积分
+    protected uint m_killstreak_point_counter; //连杀积分计数
+    protected array<uint> m_kill_streak_gived_phase={}; //连杀积分阶段获取
 
     GFL_battleInfo(string name) {
         m_name = name;
@@ -567,6 +570,10 @@ class GFL_battleInfo{
         return m_killstreak_point;
     }
 
+    uint getKillStreakPointCounter() const {
+        return m_killstreak_point_counter;
+    }
+
     void setName(string name) {
         m_name = name;
     }
@@ -593,7 +600,21 @@ class GFL_battleInfo{
 
     void setTacticPoint(uint point) {
         m_tactic_point = point;
-    }       
+    }
+
+    void setKillStreakPointCounter(uint point) {
+        m_killstreak_point_counter = point;
+    }
+
+    bool checkKillStreakIndexUsed(int index)
+    {
+        return m_kill_streak_gived_phase.find(index)>=0;
+    }
+
+    void addKillStreakIndex(int index)
+    {
+        m_kill_streak_gived_phase.insertLast(index);
+    }
 
     void tickMinute()
     {
@@ -604,15 +625,21 @@ class GFL_battleInfo{
         m_killCount++;
         m_counter++;
         m_killstreak_point+=killstreak_add;
+        m_killstreak_point_counter+=killstreak_add;
         if(m_counter > m_oneLifekillCount){
             m_oneLifekillCount = m_counter;
         }
+        _log("断点，执行battlelog内部添加击杀");
+        _log("断点，当前m_killstreak_point为"+m_killstreak_point);
+        _log("断点，当前m_killstreak_point_counter为"+m_killstreak_point_counter);        
 	}
 
 	void addDead(){
         m_deadCount++;
         m_counter = 0;
         m_killstreak_point =0;
+        m_killstreak_point_counter=0;
+        m_kill_streak_gived_phase.resize(0);
 	}
 }
 
@@ -988,14 +1015,14 @@ void givePlayerXPcount(int playerid,float xp_count){
     g_playerInfo_Buck.addxpReward(playerid,xp_count);
 }
 
-void handleKillEventToPlayerInfo(string name)
+void handleKillEventToPlayerInfo(string name,int num)
 {
-    g_playerInfo_Buck.addKillbyName(name);
+    g_playerInfo_Buck.addKillbyName(name,num);
 }
 
-void handleKillEventToPlayerInfo(int id)
+void handleKillEventToPlayerInfo(int id,int num)
 {
-    g_playerInfo_Buck.addKillbyPid(id);
+    g_playerInfo_Buck.addKillbyPid(id,num);
 }
 
 void handleDeadEventToPlayerInfo(string name)

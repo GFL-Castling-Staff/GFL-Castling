@@ -373,18 +373,92 @@ class kill_event : Tracker {
             //只查询我方杀敌
             if (!(factionId==0) || !(characterId > 0)) return;
 
-            string c_weaponType = getPlayerWeaponFromListByID(characterId,0);
-            string c_armorType = getPlayerWeaponFromListByID(characterId,3);
-            handleKillEventToPlayerInfo(playerId);
+            _log("击杀断点，角色ID:"+playerId);
+            GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(playerId);
+            if (playerInfo.m_name == default_string ) return;
+
             int kill_to_heal_scale = 1;
-            if(reward_pool_key=="rare" || reward_pool_key=="elite")
-            {
-                kill_to_heal_scale = 2;
-            }
+
             if(reward_pool_key=="boss")
             {
+                handleKillEventToPlayerInfo(playerId,5);
                 kill_to_heal_scale = 5;
+                notify(m_metagame, "kill streak,boss reward", dictionary(), "misc", playerId, false, "", 1.0);
             }
+            else if(reward_pool_key=="rare" || reward_pool_key=="elite")
+            {
+                handleKillEventToPlayerInfo(playerId,3);
+                kill_to_heal_scale = 2;
+                notify(m_metagame, "kill streak,elite reward", dictionary(), "misc", playerId, false, "", 1.0);
+            } 
+            else
+            {
+                handleKillEventToPlayerInfo(playerId,1);                
+            }
+
+            string c_weaponType = playerInfo.getPlayerEquipment().getWeapon(0);
+            string c_armorType = playerInfo.getPlayerEquipment().getWeapon(3);
+
+            GFL_battleInfo@ battleInfo = playerInfo.getBattleInfo();
+
+            int m_killstreak_point = battleInfo.getKillStreakPoint();
+            int m_tactic_point = battleInfo.getTacticPoint();
+            int m_counter = battleInfo.getKillStreakPointCounter();
+
+            if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(1))
+            {
+                m_tactic_point+=1;
+                battleInfo.setTacticPoint(m_tactic_point);
+                m_counter-=10;
+                battleInfo.setKillStreakPointCounter(m_counter);
+                battleInfo.addKillStreakIndex(1);
+                notify(m_metagame, "kill streak,10kill", dictionary(), "misc", playerId, false, "", 1.0);
+            }
+            else if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(2))
+            {
+                m_tactic_point+=2;
+                battleInfo.setTacticPoint(m_tactic_point);
+                m_counter-=10;
+                battleInfo.setKillStreakPointCounter(m_counter);   
+                battleInfo.addKillStreakIndex(2);  
+                notify(m_metagame, "kill streak,20kill", dictionary(), "misc", playerId, false, "", 1.0);
+            }
+            else if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(3))
+            {
+                m_tactic_point+=3;
+                battleInfo.setTacticPoint(m_tactic_point);
+                m_counter-=10;
+                battleInfo.setKillStreakPointCounter(m_counter);
+                battleInfo.addKillStreakIndex(3);       
+                notify(m_metagame, "kill streak,30kill", dictionary(), "misc", playerId, false, "", 1.0);
+            }
+            else if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(4))
+            {
+                m_tactic_point+=4;
+                battleInfo.setTacticPoint(m_tactic_point);
+                m_counter-=10;
+                battleInfo.setKillStreakPointCounter(m_counter);  
+                battleInfo.addKillStreakIndex(4);
+                notify(m_metagame, "kill streak,40kill", dictionary(), "misc", playerId, false, "", 1.0);
+            }
+            else if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(5))
+            {
+                m_tactic_point+=5;
+                battleInfo.setTacticPoint(m_tactic_point);
+                m_counter-=10;
+                battleInfo.setKillStreakPointCounter(m_counter); 
+                battleInfo.addKillStreakIndex(5);
+                notify(m_metagame, "kill streak,50kill", dictionary(), "misc", playerId, false, "", 1.0);
+            }
+            else if(m_counter>=10 && m_killstreak_point>50)
+            {
+                m_tactic_point+=5;
+                battleInfo.setTacticPoint(m_tactic_point);
+                m_counter-=10;
+                battleInfo.setKillStreakPointCounter(m_counter);        
+                notify(m_metagame, "kill streak,more", dictionary(), "misc", playerId, false, "", 1.0);
+            }
+
 
             if(c_weaponType=="gkw_ppkmod3.weapon" || c_weaponType =="gkw_ppkmod3_3905.weapon" || c_weaponType =="gkw_ppkmod3_6109.weapon"){
                 int i = findSkillIndex(characterId,"PPKMOD3");
@@ -546,8 +620,10 @@ class kill_event : Tracker {
         if(player is null) return;
         int cId = player.getIntAttribute("character_id");
         string name = player.getStringAttribute("name");
+        int pId = player.getIntAttribute("player_id");
         if(cId==-1) return;
         handleDeadEventToPlayerInfo(name);
+        notify(m_metagame, "kill streak,death report", dictionary(), "misc", pId, false, "", 1.0);
     }
     void update(float time){
         if(HealOnKill_track.length()>0){
