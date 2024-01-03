@@ -37,7 +37,6 @@ dictionary callLaunchIndex = {
     {"gk_vehicle_chiara.call",9},
     {"gk_vehicle_martina.call",10},
 
-
     {"gk_call_tier1.call",1001},
     {"gk_call_tier2.call",1002},
     {"gk_call_tier3.call",1003},

@@ -35,12 +35,13 @@
     <sound key="magazine_in" fileref="lewis_mgz_in_FromBF1.wav" volume="0.7" />
     <sound key="cycle" fileref="lewis_cycle_FromBF5.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_lewis_4001_From_melondove.xml" />
     <hud_icon filename="gkw_lewis_4001.png" />
     <effect class="muzzle" ref="ejection_76251" />
     <projectile file="bullet.projectile">
         <result class="hit" kill_probability="4" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="1.714" kill_decay_end_time="2.857" />
+        <trail probability="1.0" key="BulletMgTrail" />
     </projectile>
     <stance state_key="running" accuracy="0.5" />
     <stance state_key="walking" accuracy="0.5" />
@@ -93,13 +94,14 @@
     <sound key="magazine_in" fileref="lewis_mgz_in_FromBF1.wav" volume="0.7" />
     <sound key="cycle" fileref="lewis_cycle_FromBF5.wav" volume="0.7" />
     <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_lewis_4001_From_melondove.xml" />
     <hud_icon filename="gkw_lewis_4001.png" />
     <effect class="muzzle" ref="ejection_76251" />
     <effect class="muzzle" ref="muzzle_blue" />
     <projectile file="bullet.projectile">
         <result class="hit" kill_probability="4" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="1.714" kill_decay_end_time="2.857" />
+        <trail probability="1.0" key="BulletMgTrail_rx1" />
     </projectile>
     <stance state_key="running" accuracy="0.5" />
     <stance state_key="walking" accuracy="0.5" />
