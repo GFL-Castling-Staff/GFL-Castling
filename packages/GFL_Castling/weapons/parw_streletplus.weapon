@@ -37,7 +37,7 @@
     <sound class="impact" fileref="rifle_drop.wav" />
     <model filename="parw_soldier_gun.xml" />
     <hud_icon filename="parw_streletplus.png" />
-    <projectile file="bullet_paradeus.projectile">
+    <projectile file="bullet_paradeus_thick.projectile">
         <result class="hit" kill_probability="1.75" kill_decay_start_time="0.7" kill_decay_end_time="0.7" />
     </projectile>
 	<stance state_key="running" accuracy="0.3" />
