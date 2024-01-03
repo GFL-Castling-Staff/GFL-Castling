@@ -14372,7 +14372,7 @@
 	<modifier class="detectability" value="+1.0"/>
 </carry_item>
 
-<carry_item key="god_vest.carry_item" name="godmode" slot="1" transform_on_consume="god_vest_2" time_to_live_out_in_the_open="5.0">
+<carry_item key="god_vest.carry_item" name="godmode" slot="1" transform_on_consume="god_vest_2" time_to_live_out_in_the_open="45.0">
 	<hud_icon filename="hud_vest1.png"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="0" price="0"/>
@@ -14390,7 +14390,7 @@
 	<modifier class="speed" value="+1.0"/>
 </carry_item>
 
-<carry_item key="god_vest_2" name="Vest, type I, 50%" slot="1" transform_on_consume="god_vest_3" time_to_live_out_in_the_open="5.0">
+<carry_item key="god_vest_2" name="Vest, type I, 50%" slot="1" transform_on_consume="god_vest_3" time_to_live_out_in_the_open="45.0">
 	<hud_icon filename="hud_vest1_hole1.png"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="4" price="2"/>
@@ -14407,6 +14407,7 @@
 	<commonness value="0" in_stock="0"/>
 	<capacity value="100" source="rank" source_value="0.0"/>
 	<inventory encumbrance="-0.5"/>
+	<commonness value="1.0" in_stock="0" can_respawn_with="0"/>
 </carry_item>
 
 <carry_item key="vest_40hp.carry_item" time_to_live_out_in_the_open="0" name="40HP Vest" transform_on_consume="vest_40hp_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">

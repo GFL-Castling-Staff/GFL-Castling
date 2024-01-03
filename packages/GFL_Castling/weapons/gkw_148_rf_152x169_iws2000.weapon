@@ -27,6 +27,7 @@
         <!--Animations-->
         <inventory encumbrance="35.0" buy_price="500.0" sell_price="300.0" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
+        <animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
         <!--Sounds-->
         <sound key="fire" fileref="iws2000_fire_FromSAMTSE.wav" pitch_variety="0.05" volume="1.4" />
         <sound key="cycle" fileref="iws2000_cycle_FromDIVISION2.wav" volume="0.7" />
@@ -89,6 +90,7 @@
         <!--Animations-->
         <inventory encumbrance="35.0" buy_price="500.0" sell_price="300.0" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.8" />
+        <animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
         <!--Sounds-->
         <sound key="fire" fileref="iws2000_fire_FromSAMTSE.wav" pitch_variety="0.05" volume="1.4" />
         <sound key="cycle" fileref="iws2000_cycle_FromDIVISION2.wav" volume="0.7" />

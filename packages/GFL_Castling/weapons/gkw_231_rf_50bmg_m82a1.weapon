@@ -40,6 +40,7 @@
 		<animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
 		<animation state_key="stabbing" animation_key="stabbing, bat" />
 		<animation key="reload" animation_key="reloading, magazine rifle 2.1" />
+		<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
 		<!--Sounds-->
 		<sound key="fire" fileref="m82a1_fire_FromSAM4.wav" pitch_variety="0.05" volume="1.2" />
 		<sound key="cycle" fileref="m82a1_cycle_FromCOD16.wav" volume="0.4"/>
@@ -113,6 +114,7 @@
 		<animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
 		<animation state_key="stabbing" animation_key="stabbing, bat" />
 		<animation key="reload" animation_key="reloading, magazine rifle 2.1" />
+		<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
 		<!--Sounds-->
 		<sound key="fire" fileref="m82a1_fire_FromSAM4.wav" pitch_variety="0.05" volume="1.2" />
 		<sound key="cycle" fileref="m82a1_cycle_FromCOD16.wav" volume="0.4"/>
