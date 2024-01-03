@@ -26,11 +26,11 @@ dictionary RP_enemy_index = {
     {"para_streletplus",20},
     {"parw_commander",100},
     {"alina",300},
-    {"teal",450},
-    {"eagleyes",300},
+    {"teal",500},
+    {"eagleyes",250},
     {"vanguard",250},
     {"wrath",250},
-    {"aileron",250},
+    {"aileron",350},
     {"Nimogen",300},
     {"Narciss",300},
     {"Adeline",300},
@@ -39,6 +39,8 @@ dictionary RP_enemy_index = {
     {"Paradeus_roarer",250},
     {"Thunder",300},
     {"parw_grenadier",100},
+    {"para_rodelero",80},
+    {"tareus",1500},
 
     {"sfw_nemeum",50},
     {"sfw_nemeum_swap",75},
@@ -51,8 +53,8 @@ dictionary RP_enemy_index = {
     {"sfw_dragoon",40},
     {"sfw_dragoon_swap",80},
     {"sfw_prowler_swap",40},
-    {"para_rodelero",80},
-    
+
+
 
     {"sfw_hunter",300},
     {"sfw_architect",300},
@@ -101,6 +103,7 @@ dictionary XP_enemy_index = {
     {"eagleyes",0.02},
     {"vanguard",0.02},
     {"wrath",0.02},
+    {"aileron",0.02},
     {"Nimogen",0.02},
     {"Narciss",0.02},
     {"Adeline",0.02},
@@ -109,6 +112,7 @@ dictionary XP_enemy_index = {
     {"Paradeus_roarer",0.01},
     {"Thunder",0.015},
     {"parw_grenadier",0.003},
+    {"tareus",0.05},
 
     {"sfw_nemeum",0.003},
     {"sfw_nemeum_swap",0.005},
@@ -173,6 +177,7 @@ dictionary reward_pool_list= {
     {"kcco_quartz_ranger","boss"},
     {"kcco_zircon_squadleader","boss"},
     {"sf_cerberus","boss"},
+    {"tareus","boss"},
 
     {"alina","elite"},
     {"vanguard","elite"},
@@ -189,8 +194,6 @@ dictionary reward_pool_list= {
     {"kcco_Hydra","rare"},
     {"kcco_teslatrooper","rare"},
     {"kcco_human_sniper","rare"},
-    {"kcco_ar_human_tel","rare"},
-    {"parw_grenadier","rare"},
 
     {"sfw_nemeum","uncommon"},
     {"sfw_nemeum_swap","uncommon"},
@@ -209,6 +212,8 @@ dictionary reward_pool_list= {
     {"kcco_cerynitis","uncommon"},
     {"kcco_cerynitis_swap","uncommon"},
     {"para_rodelero","uncommon"},
+    {"kcco_ar_human_tel","uncommon"},
+    {"parw_grenadier","uncommon"},
 
 
     {"","common"}
