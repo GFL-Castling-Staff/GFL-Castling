@@ -26,15 +26,6 @@
     <target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
     <target_factors tag="tank" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
 
-
-	<stance state_key="running" accuracy="1.0" />
-	<stance state_key="walking" accuracy="1.0" />
-	<stance state_key="crouch_moving" accuracy="1.0" />
-	<stance state_key="standing" accuracy="1.0" />
-	<stance state_key="crouching" accuracy="1.0" />
-	<stance state_key="prone" accuracy="1.0" />
-	<stance state_key="prone_moving" accuracy="1.0" />
-	<stance state_key="over_wall" accuracy="1" />
 	<modifier class="detectability" value="-0.1"/>
 
 	<animation state_key="recoil" animation_key="recoil1, big" />

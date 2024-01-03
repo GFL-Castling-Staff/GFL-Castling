@@ -254,9 +254,9 @@
 		Resource("gk_airdrop_supply.call", "call"),
         Resource("gk_medic_agl.call", "call"),
 		Resource("gk_rescue_fairy.call", "call"),
-        Resource("gk_bombardment_fairy.call", "call"),
-		Resource("gk_airstrike_fairy.call", "call"),
-		Resource("gk_warrior_fairy.call", "call"),
+        Resource("gk_call_tier1.call", "call"),
+		Resource("gk_call_tier2.call", "call"),
+		Resource("gk_call_tier3.call", "call"),
 		Resource("gk_rampage_fairy_ac130.call", "call"),
 		Resource("gk_snipe_fairy.call", "call"),
 		Resource("gk_yaoren_fairy.call", "call"),
@@ -267,7 +267,7 @@
 
 
     // parameters for "save_system.as":
-    const string call_slot_default_1 = "call1";
+    const string call_slot_default_1 = "t1_lv0_bombardment_fairy_82mm_mortar";
     const string call_slot_default_2 = "call2";
     const string call_slot_default_3 = "call3";
 

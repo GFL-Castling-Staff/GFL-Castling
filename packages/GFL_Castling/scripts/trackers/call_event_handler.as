@@ -37,109 +37,11 @@ dictionary callLaunchIndex = {
     {"gk_vehicle_chiara.call",9},
     {"gk_vehicle_martina.call",10},
 
-// 新支援系统（注意命名按照T1=1xxxx,T2=2xxxx,T3=3xxxx的格式来）
-// x-xxx-xx : 支援级别-支援编号-支援等级/变种
 
-// T1 ----------------------------------- //
+    {"gk_call_tier1.call",1001},
+    {"gk_call_tier2.call",1002},
+    {"gk_call_tier3.call",1003},
 
-    // T1 炮击妖精-[82mm迫击炮打击]
-        // lv0
-        {"new_t1_lv0_82mm_bombardment_fairy.call",100100},
-
-    // T1 空袭妖精-[俯冲攻击]
-        //lv0
-        {"new_t1_lv0_dive_airstrike_fairy.call",100200},
-
-    // T1 空袭妖精-[精准空袭]
-        // lv0
-        {"new_t1_lv0_precise_airstrike_fairy.call",100300},
-
-    // T1 火箭妖精-[巡航导弹]
-        // lv0
-        {"new_t1_lv0_missile_rocket_fairy.call",100400},
-
-    // T1 魔女妖精 
-        // lv0
-        {"new_t1_lv0_witch_fairy.call",100500},
-        // lv1
-        {"new_t1_lv1_witch_fairy.call",100501},
-        // lv2
-        {"new_t1_lv2_witch_fairy.call",100502},
-        // lv3
-        {"new_t1_lv3_witch_fairy.call",100503},
-
-    // T1 花火妖精（春节限定）
-        // lv0
-        {"new_t1_lv0_newyear_firework_fairy.call",100600},
-
-// T2 ----------------------------------- //
-
-    // T2 空袭妖精-[高空投弹]
-        // lv0
-        {"new_t2_lv0_highal_airstrike_fairy.call",200100},
-
-    // T2 勇士妖精-[侦察直升机扫荡]
-        // lv0 
-        {"new_t2_lv0_scout_warrior_fairy.call",200200},
-
-    // T2 勇士妖精-[VTOL战机巡航]
-        // lv0
-        {"new_t2_lv0_VTOL_warrior_fairy.call",200300},
-
-    // T2 火箭妖精-[火箭弹打击]
-        // lv0
-        {"new_t2_lv0_TOS_rocket_fairy.call",200400},
-
-    // T2 耀夜姬-[轨道激光打击]
-        // lv0
-        {"new_t2_lv0_nightshine_princess.call",200500},
-
-    // T2 连击妖精
-        // lv0
-        {"new_t2_lv0_combo_fairy.call",200600},
-
-    // T2 沙舞妖精
-        // lv0
-        {"new_t2_lv0_sanddance_fairy.call",200700},
-        // lv1
-        {"new_t2_lv1_sanddance_fairy.call",200701},
-        // lv2
-        {"new_t2_lv2_sanddance_fairy.call",200702},
-        // lv3
-        {"new_t2_lv3_sanddance_fairy.call",200703},
-
-    // T2 双生妖精
-        // lv0
-        {"new_t2_lv0_twin_fairy.call",200800},
-        // lv1
-        {"new_t2_lv1_twin_fairy.call",200801},
-
-    // T2 护盾妖精
-        // lv0
-        {"new_t2_lv0_shield_fairy.call",200900},
-
-    // T2 年兽妖精
-        // lv0
-        {"new_t2_lv0_nian_fairy,call",201000},
-
-// T3 ----------------------------------- //
-
-    // T3 勇士妖精-[武装直升机扫荡]
-        // lv0
-        {"new_t3_lv0_warrior_fairy.call",300100},
-
-    // T3 暴怒妖精-[炮艇支援]
-        // lv0
-        {"new_t3_lv0_rage_fairy.call",300200},
-
-    // T3 火箭妖精-[火箭弹突袭]
-        // lv0
-        {"new_t3_lv0_raid_rocket_fairy.call",300300},
-
-    // T3 火箭妖精-[地毯式覆盖]
-        // lv0
-        {"new_t3_lv0_carpetb_rocket_fairy.call",300400},
-    
     // 空空投
     {"",0}
 };
@@ -180,10 +82,65 @@ class call_event : Tracker {
             const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
             if (playerinfo is null) return;
             string playerName = playerinfo.getStringAttribute("name");
+            string profile_hash = playerinfo.getStringAttribute("profile_hash");
 
             if (phase == "launch") {
                 switch(int(callLaunchIndex[callKey]))
                 {
+                    case 1001:{
+                        if(findCooldown(playerName,"tier1")){
+                            returnCooldown("tier1", 0, characterId, playerName, playerId, "callcooldown");
+                            break;
+                        }
+                        else
+                        {
+                            player_data newdata = PlayerProfileLoad(readFile(m_metagame,playerName,profile_hash));
+                            string call_slot_key = newdata.getCallSlot(1);
+                            if(call_slot_key == "") break;
+                            switch(int(call_tier_index[call_slot_key]))
+                            {
+                                case 100100:
+                                {
+                                    CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,90.0,"tier1"));
+                                    playSoundAtLocation(m_metagame,"kcco_dn_1.wav",factionId,position,1.5);
+                                    sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
+                                    int flagId = m_DummyCallID + 15000;
+                                    CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
+                                    FairyRequest.setIndex(11);
+                                    FairyRequest.setSize(0.5);
+                                    FairyRequest.setDummyId(flagId);
+                                    FairyRequest.setRange(40.0);
+                                    FairyRequest.setIconTypeKey("call_marker_bomb");
+                                    addCastlingMarker(FairyRequest);
+                                    m_DummyCallID++;
+                                    GFL_event_array.insertLast(GFL_event(characterId,factionId,int(GFL_Event_Index["bomb_fairy"]),stringToVector3(position),1.0,-1.0,flagId));
+                                    addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    break;
+                                }
+                                case 100200:
+                                {
+                                    CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,90.0,"tier1"));
+                                    playSoundAtLocation(m_metagame,"kcco_dn_1.wav",factionId,position,1.5);
+                                    sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
+                                    int flagId = m_DummyCallID + 15000;
+                                    CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
+                                    FairyRequest.setIndex(11);
+                                    FairyRequest.setSize(0.5);
+                                    FairyRequest.setDummyId(flagId);
+                                    FairyRequest.setRange(40.0);
+                                    FairyRequest.setIconTypeKey("call_marker_bomb");
+                                    addCastlingMarker(FairyRequest);
+                                    m_DummyCallID++;
+                                    GFL_event_array.insertLast(GFL_event(characterId,factionId,int(GFL_Event_Index["bomb_fairy"]),stringToVector3(position),1.0,-1.0,flagId));
+                                    addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    break;
+                                }                                
+                                default:
+                                    break;                                
+                            }
+                        }
+                        break;
+                    }                    
                     case 1:{
                         bool exsist_ac130 = false;
                         for (uint i=0;i<GFL_event_array.length();i++){
@@ -344,7 +301,8 @@ class call_event : Tracker {
                             returnCooldown("bombardment", 500, characterId, playerName, playerId, "bombcooldown");
                             break;
                         }
-                        else {
+                        else 
+                        {
                             CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,90.0,"bombardment"));
                             playSoundAtLocation(m_metagame,"kcco_dn_1.wav",factionId,position,1.5);
                             sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
@@ -460,10 +418,6 @@ class call_event : Tracker {
                         break;
                 }
             }
-
-			else if(phase == "queue" && vehicle_drop_call.find(callKey) < 0){
-                addCustomStatToCharacter(m_metagame,"radio_call",event.getIntAttribute("character_id"));
-            }
         }
     }
 
@@ -488,7 +442,10 @@ class call_event : Tracker {
             dictionary a;
             a["%time"] = ""+getCooldown(playerName, player_name);
             sendPrivateMessageKey(m_metagame,playerId, message,a);
-            GiveRP(m_metagame,characterId,rp);
+            if(rp > 0)
+            {
+                GiveRP(m_metagame,characterId,rp);
+            }
         }
     }
 
@@ -564,3 +521,116 @@ float getCooldown(string pName,string type){
     }
     return 0;
 }
+
+dictionary call_tier_index = {
+
+    // 新支援系统（注意命名按照T1=1xxxx,T2=2xxxx,T3=3xxxx的格式来）
+    // x-xxx-xx : 支援级别-支援编号-支援等级/变种
+
+    // T1 ----------------------------------- //
+
+    // T1 炮击妖精-[82mm迫击炮打击]
+        // lv0
+        {"t1_lv0_bombardment_fairy_82mm_mortar",100100},
+
+    // T1 炮击妖精-[105mm榴弹扫荡]
+        // lv0
+        {"t1_lv0_bombardment_fairy_105mm_grenade_barrage",100200},
+
+    // T1 空袭妖精-[俯冲攻击]
+        //lv0
+        {"t1_lv0_dive_airstrike_fairy",100200},
+        {"t1_lv1_dive_airstrike_fairy",100201},
+
+    // T1 空袭妖精-[精准空袭]
+        // lv0
+        {"t1_lv0_precise_airstrike_fairy",100300},
+
+    // T1 火箭妖精-[巡航导弹]
+        // lv0
+        {"t1_lv0_missile_rocket_fairy",100400},
+
+    // T1 魔女妖精 
+        // lv0
+        {"t1_lv0_witch_fairy",100500},
+        // lv1
+        {"t1_lv1_witch_fairy",100501},
+        // lv2
+        {"t1_lv2_witch_fairy",100502},
+        // lv3
+        {"t1_lv3_witch_fairy",100503},
+
+    // T1 花火妖精（春节限定）
+        // lv0
+        {"t1_lv0_newyear_firework_fairy",100600},
+
+    // T2 ----------------------------------- //
+
+    // T2 空袭妖精-[高空投弹]
+        // lv0
+        {"t2_lv0_highal_airstrike_fairy",200100},
+
+    // T2 勇士妖精-[侦察直升机扫荡]
+        // lv0 
+        {"t2_lv0_scout_warrior_fairy",200200},
+
+    // T2 勇士妖精-[VTOL战机巡航]
+        // lv0
+        {"t2_lv0_VTOL_warrior_fairy",200300},
+
+    // T2 火箭妖精-[火箭弹打击]
+        // lv0
+        {"t2_lv0_TOS_rocket_fairy",200400},
+
+    // T2 耀夜姬-[轨道激光打击]
+        // lv0
+        {"t2_lv0_nightshine_princess",200500},
+
+    // T2 连击妖精
+        // lv0
+        {"t2_lv0_combo_fairy",200600},
+
+    // T2 沙舞妖精
+        // lv0
+        {"t2_lv0_sanddance_fairy",200700},
+        // lv1
+        {"t2_lv1_sanddance_fairy",200701},
+        // lv2
+        {"t2_lv2_sanddance_fairy",200702},
+        // lv3
+        {"t2_lv3_sanddance_fairy",200703},
+
+    // T2 双生妖精
+        // lv0
+        {"t2_lv0_twin_fairy",200800},
+        // lv1
+        {"t2_lv1_twin_fairy",200801},
+
+    // T2 护盾妖精
+        // lv0
+        {"t2_lv0_shield_fairy",200900},
+
+    // T2 年兽妖精
+        // lv0
+        {"t2_lv0_nian_fairy,call",201000},
+
+    // T3 ----------------------------------- //
+
+    // T3 勇士妖精-[武装直升机扫荡]
+        // lv0
+        {"t3_lv0_warrior_fairy",300100},
+
+    // T3 暴怒妖精-[炮艇支援]
+        // lv0
+        {"t3_lv0_rage_fairy",300200},
+
+    // T3 火箭妖精-[火箭弹突袭]
+        // lv0
+        {"t3_lv0_raid_rocket_fairy",300300},
+
+    // T3 火箭妖精-[地毯式覆盖]
+        // lv0
+        {"t3_lv0_carpetb_rocket_fairy",300400},
+
+    {"",0}
+};

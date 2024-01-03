@@ -151,7 +151,7 @@
         <capacity value="100" source="rank" source_value="0.0" />
         <inventory encumbrance="0.0" price="108.0" />
     </call>
-    <call name="Bombardment Fairy" key="gk_bombardment_fairy.call" initiation_comment1="Bombardment Fairy" initiation_comment2="Bombard" acknowledge_comment="Data has been confirmed" acknowledge_time="0" launch_comment="Artillery strikes in progress." notify_metagame="1">
+    <call name="Bombardment Fairy" key="gk_bombardment_fairy.call" initiation_comment1="Bombardment Fairy" initiation_comment2="Bombard" acknowledge_comment="Data has been confirmed" acknowledge_time="0" launch_comment="Tactical Fairy System Initializing, standby." notify_metagame="1">
         <round 
         instances="0"
         instance_class="projectile"
@@ -167,7 +167,7 @@
         <capacity value="0" source="rank" source_value="0.0" />
         <capacity value="100" source="rank" source_value="0.2" />
         <inventory encumbrance="0.0" price="500.0" />
-    </call>    
+    </call>
     <!-- 暴怒妖精（AC130） -->
     <call name="Fury Fairy" key="gk_rampage_fairy_ac130.call" initiation_comment1="Fury Fairy" initiation_comment2="Gunship support" acknowledge_comment="Confirm, checking gunship status" acknowledge_time="2" launch_comment="Gunship status confirmed" notify_metagame="1">
 
@@ -319,4 +319,55 @@
         <capacity value="100" source="rank" source_value="0.0" />
         <inventory encumbrance="0.0" price="0.0" />
     </call>
+    <call name="Tactic Fairy Tier 1" key="gk_call_tier1.call" initiation_comment1="Tactic Fairy Tier 1" acknowledge_comment="Data has been confirmed" acknowledge_time="0" launch_comment="Tactical Fairy System Initializing, standby." notify_metagame="1">
+        <round 
+        instances="0"
+        instance_class="projectile"
+        instance_key=""
+        launch_time="1.0"
+        spawn_time="1.0">
+        </round>
+
+        <round launch_time="1.0"
+        spawn_time="1.0">
+        </round>
+        <hud_icon filename="call_Firesupport_ShellingFairy.png" />
+        <capacity value="0" source="rank" source_value="0.0" />
+        <capacity value="100" source="rank" source_value="0" />
+        <inventory encumbrance="0.0" price="0.0" />
+    </call>
+    <call name="Tactic Fairy Tier 2" key="gk_call_tier2.call" initiation_comment1="Tactic Fairy Tier 2" acknowledge_comment="Data has been confirmed" acknowledge_time="0" launch_comment="Tactical Fairy System Initializing, standby." notify_metagame="1">
+        <round 
+        instances="0"
+        instance_class="projectile"
+        instance_key=""
+        launch_time="1.0"
+        spawn_time="1.0">
+        </round>
+
+        <round launch_time="1.0"
+        spawn_time="1.0">
+        </round>
+        <hud_icon filename="call_Firesupport_AirborneFairy.png" />
+        <capacity value="0" source="rank" source_value="0.0" />
+        <capacity value="100" source="rank" source_value="0" />
+        <inventory encumbrance="0.0" price="0.0" />
+    </call>
+    <call name="Tactic Fairy Tier 3" key="gk_call_tier3.call" initiation_comment1="Tactic Fairy Tier 3" acknowledge_comment="Data has been confirmed" acknowledge_time="0" launch_comment="Tactical Fairy System Initializing, standby." notify_metagame="1">
+        <round 
+        instances="0"
+        instance_class="projectile"
+        instance_key=""
+        launch_time="1.0"
+        spawn_time="1.0">
+        </round>
+
+        <round launch_time="1.0"
+        spawn_time="1.0">
+        </round>
+        <hud_icon filename="call_RampageFairy.png" />
+        <capacity value="0" source="rank" source_value="0.0" />
+        <capacity value="100" source="rank" source_value="0" />
+        <inventory encumbrance="0.0" price="0.0" />
+    </call>            
 </calls>

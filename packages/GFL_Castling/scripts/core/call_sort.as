@@ -5,9 +5,9 @@ array<string> getCallSorting() {
 		"gk_repair_fairy.call",
 		"gk_medic_agl.call",
 		"gk_rescue_fairy.call",        
-		"gk_bombardment_fairy.call",
-		"gk_airstrike_fairy.call",
-		"gk_warrior_fairy.call",
+		"gk_call_tier1.call",
+		"gk_call_tier2.call",
+		"gk_call_tier3.call",
 		"gk_snipe_fairy.call",
 		"target.call",
 		"gk_rampage_fairy_ac130.call"
