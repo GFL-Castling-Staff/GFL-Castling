@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <carry_items>
-    <carry_item key="god_vest.carry_item" name="godmode" slot="1" transform_on_consume="god_vest_2" time_to_live_out_in_the_open="5.0">
+    <carry_item key="god_vest.carry_item" name="godmode" slot="1" transform_on_consume="god_vest_2" time_to_live_out_in_the_open="45.0">
         <hud_icon filename="hud_vest1.png" />
         <capacity value="1" source="rank" source_value="0.0" />
         <inventory encumbrance="0" price="0" />
@@ -24,7 +24,7 @@
 
 
     
-     <carry_item key="god_vest_2" name="Vest, type I, 50%" slot="1" transform_on_consume="god_vest_3" time_to_live_out_in_the_open="5.0">
+     <carry_item key="god_vest_2" name="Vest, type I, 50%" slot="1" transform_on_consume="god_vest_3" time_to_live_out_in_the_open="45.0">
         <hud_icon filename="hud_vest1_hole1.png" />
         <capacity value="1" source="rank" source_value="0.0" />
         <inventory encumbrance="4" price="2" />
