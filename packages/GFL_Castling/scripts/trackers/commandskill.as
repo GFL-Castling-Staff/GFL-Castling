@@ -332,8 +332,12 @@ class CommandSkill : Tracker {
                         notify(m_metagame, "Hint - Skill Cooldown Done",dictionary(), "misc", SkillArray[a].m_skillInfo.m_player_id, false, "", 1.0);
                         SkillArray.removeAt(a);
                     }
+                    else if (SkillArray[a].m_charge_mode=="nohint"){
+                        SkillArray.removeAt(a);
+                    }
                     else if (SkillArray[a].m_charge_mode=="constant"){
                         sendFactionMessageKeySaidAsCharacter(m_metagame,0,SkillArray[a].m_character_id,"skillcooldowndone");
+                        notify(m_metagame, "Hint - Skill Cooldown Done",dictionary(), "misc", SkillArray[a].m_skillInfo.m_player_id, false, "", 1.0);
                         if (SkillArray[a].m_charge==0){
                             SkillArray.removeAt(a);
                         }
@@ -398,7 +402,7 @@ class CommandSkill : Tracker {
     }
 
     bool InCooldown(int cId, SkillModifer@ modifer,SkillTrigger@ queue,bool NoRemoveOnDeath=false,string charge_mode="normal",int charge_jud_num=0){
-        if(charge_mode=="normal") return existCooldown(cId,modifer,queue,NoRemoveOnDeath);
+        if(charge_mode=="normal" || charge_mode=="nohint") return existCooldown(cId,modifer,queue,NoRemoveOnDeath);
         else if(charge_mode=="constant" && queue.m_charge>=charge_jud_num){
             return existCooldown(cId,modifer,queue,NoRemoveOnDeath);
         }
@@ -4144,13 +4148,7 @@ class CommandSkill : Tracker {
                     c_pos = c_pos.add(Vector3(0,1,0));
                     c_pos = c_pos.add((getAimUnitVector(1,c_pos,s_pos)));
 
-                    if(c_weaponType=="gkw_sten.weapon"){
-                        array<string>Voice={
-                            "StenMK2_SKILL1_JP.wav",
-                            "StenMK2_SKILL3_JP.wav"
-                        };
-                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                                                
-                    }else if(c_weaponType=="gkw_stenmod3.weapon"){
+                    if(c_weaponType=="gkw_stenmod3.weapon"){
                         array<string>Voice={
                             "StenMK2Mod_SKILL1_JP.wav",
                             "StenMK2Mod_SKILL2_JP.wav"
@@ -4172,19 +4170,19 @@ class CommandSkill : Tracker {
                     {
                         refreshCooldown(characterId,modifer,"UsedStenSterling");
                         if (checkFlatRange(c_pos,stringToVector3(target),15)){
-                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41_dmgup.projectile",characterId,factionid,60);
+                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s1_dmgup.projectile",characterId,factionid,90);
                         }
                         else{
-                            CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41_dmgup.projectile",characterId,factionid,50.0,5.0);
+                            CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s1_dmgup.projectile",characterId,factionid,50.0,5.0);
                         }                        
                     }
                     else{
-                        addCooldown("UsedStenSterling",6,characterId,modifer);
+                        addCooldown("UsedStenSterling",6,characterId,modifer,"nohint");
                         if (checkFlatRange(c_pos,stringToVector3(target),15)){
-                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41.projectile",characterId,factionid,60);
+                            CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s1.projectile",characterId,factionid,90);
                         }
                         else{
-                            CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_ppsh41.projectile",characterId,factionid,50.0,5.0);
+                            CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_m67_s1.projectile",characterId,factionid,50.0,5.0);
                         }
                     }
                     
