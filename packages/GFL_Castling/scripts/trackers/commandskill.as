@@ -556,7 +556,7 @@ class CommandSkill : Tracker {
 
     void excuteAN94skill(int characterId,int playerId,SkillModifer@ modifer){
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"AN94",true)) return;
-        addCooldown("AN94",120,characterId,modifer);
+        addCooldown("AN94",30,characterId,modifer);
         const XmlElement@ info = getCharacterInfo(m_metagame, characterId);
         if(info is null) return;
         int fID = info.getIntAttribute("faction_id");
@@ -864,7 +864,7 @@ class CommandSkill : Tracker {
     }
     void excuteAgentskill(int characterId,int playerId,SkillModifer@ modifer){
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"FF_AGENT",true)) return;
-        addCooldown("FF_AGENT",90,characterId,modifer);
+        addCooldown("FF_AGENT",60,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
