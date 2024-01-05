@@ -1029,3 +1029,29 @@ void handleDeadEventToPlayerInfo(string name)
 {
     g_playerInfo_Buck.addDeadbyName(name);
 }
+
+// 查询使用指定武器的玩家数量，排除特定玩家
+int checkAllPlayerWeaponUsage(array<string>@ weaponKeys, int excludePlayerId=-1, string mode="playernotinvolved") {
+    int count = 0;
+    for (uint i = 0; i < g_playerInfo_Buck.size(); ++i) {
+        GFL_playerInfo@ player = g_playerInfo_Buck.m_playerInfo[i];
+        if (player is null) continue;
+
+        // 跳过特定玩家
+        if (mode=="playernotinvolved" && player.getPlayerPid() == excludePlayerId) continue;
+
+        GFL_equipment@ equipment = player.getPlayerEquipment();
+        if (equipment is null) continue;
+
+        // 遍历输入的武器键数组，检查每个武器槽
+        for (uint j = 0; j < weaponKeys.length(); ++j) {
+            if (equipment.m_weapon1key == weaponKeys[j] ||
+                equipment.m_weapon2key == weaponKeys[j] ||
+                equipment.m_grenadekey == weaponKeys[j]) {
+                count++;
+                break; // 找到匹配的武器后，停止检查其它武器
+            }
+        }
+    }
+    return count;
+}

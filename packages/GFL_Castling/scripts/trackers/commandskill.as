@@ -4130,11 +4130,19 @@ class CommandSkill : Tracker {
     }        
 
     void excuteStenSterlingskill(int characterId,int playerId,SkillModifer@ modifer,string c_weaponType){
+
+        array<string> weaponlist1 = {"gkw_sterling.weapon","gkw_stenmod3.weapon"};
+        int count1 = checkAllPlayerWeaponUsage(weaponlist1,playerId);
+
         int index = findNodeleteDataIndex(playerId,"StenSterling");
-        int medal_num = 1;
+        int medal_num = 0;
         if (index>=0) medal_num = No_Delete_DataArray[index].m_num;
-        medal_num = min(medal_num,4);                
+        medal_num = min(medal_num+count1,4);                
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"StenSterling",false,"constant",medal_num)) return;
+
+        dictionary a;
+        a["%count"] = ""+medal_num;
+        notify(m_metagame, "Hint - Skill charge count", a, "misc", playerId, false, "", 1.0);
 
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
