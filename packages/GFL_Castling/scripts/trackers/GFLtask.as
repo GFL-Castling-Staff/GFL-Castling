@@ -609,7 +609,55 @@ abstract class event_call_task : Task
 			return true;
 		}
 		return false;
-	}	
+	}
+}
+
+abstract class event_call_task_hasMarker : Task
+{
+	protected GameMode@ m_metagame;
+	protected float m_time; //延迟
+	protected float m_timeLeft; //延迟实例
+	protected float m_time_internal; //间隔
+	protected float m_timeLeft_internal; //间隔实例
+    protected int m_character_id;
+    protected int m_faction_id;
+	protected Vector3 s_pos; //初始发射坐标
+	protected Vector3 e_pos; //结束坐标
+	protected Vector3 m_pos1; //发射坐标
+	protected Vector3 m_pos2; //打击坐标
+	protected string m_mode; //空袭等级
+	protected string m_airstrike_key; //空袭key
+    protected int m_excute_time=0; //执行次数
+	protected int m_excute_Limit; //执行次数上限
+	protected bool m_end=false;
+	protected Vector3 strike_vector;
+	protected float strike_didis;	//偏移
+	protected int m_markerId;
+
+	event_call_task_hasMarker(GameMode@ metagame, float time, int cId,int fId,Vector3 start_pos,Vector3 target_pos,string mode="",int markid=0)
+	{
+		@m_metagame = @metagame;
+		m_time = time;
+		m_character_id = cId;
+		m_faction_id =fId;
+		s_pos=start_pos;
+		e_pos=target_pos;
+		m_mode=mode;
+		m_markerId = markid;
+	}
+
+	void start() {}
+	void update(float time) {}
+    bool hasEnded() const {
+		if (m_end) {
+			if(m_markerId != 0)
+			{
+				removeMarkerwithId(m_metagame,m_faction_id,m_markerId);
+			}
+			return true;
+		}
+		return false;
+	}
 }
 
 class strafe_task_30mm : event_call_task {
@@ -1106,5 +1154,57 @@ class Skill_ff_dreamer : DelaySkill {
 			//每单轮扫射生成1次对点扫射
 			CreateDirectProjectile(m_metagame,startPos,endPos,"skill_ff_dreamer_ioncannon.projectile",m_character_id,m_faction_id,280);           
 		}                               
+	}
+}
+
+
+class Event_call_bombardment_fairy_82mm_mortar : event_call_task_hasMarker {
+
+	string m_airstrike_key_alt="";
+
+	void start() {
+		m_timeLeft=m_time;
+		m_timeLeft_internal = 0;
+		strike_vector = getAimUnitVector(1,s_pos,e_pos);
+		strike_vector = getRotatedVector(getIntSymbol()*1.57,strike_vector);
+		strike_didis = 0;
+		m_pos1 = e_pos.add(getMultiplicationVector(strike_vector,Vector3(0,0,0)));
+		m_pos2 = m_pos1;
+		m_pos1=m_pos1.add(Vector3(0,40,0));
+		if(m_mode == "bombardment_fairy_82mm_mortar_lv0")
+		{
+			m_excute_Limit = 4;
+			m_time_internal = 1.0;
+			m_airstrike_key = "mortar_82mm_x4";
+			m_airstrike_key_alt = "mortar_82mm";
+		}
+	}
+
+	Event_call_bombardment_fairy_82mm_mortar(GameMode@ metagame, float time, int cId,int fId,Vector3 characterpos,Vector3 targetpos,string mode,int markerid)
+	{
+		super(metagame,time,cId,fId,characterpos,targetpos,mode,markerid);
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time;return;}
+		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
+		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
+		m_excute_time++;
+		
+		const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
+		if (character !is null) {
+			int dead = character.getIntAttribute("dead");
+			if(dead == 1){m_end = true;return;}
+		}
+		if(m_excute_time==1)
+		{
+			m_timeLeft_internal = 2.0;
+			insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key_alt,m_pos1,m_pos2);
+		}
+		else
+		{
+			m_timeLeft_internal = m_time_internal;
+			insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos1,m_pos2);
+		}
 	}
 }

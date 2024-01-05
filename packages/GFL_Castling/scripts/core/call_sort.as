@@ -9,8 +9,7 @@ array<string> getCallSorting() {
 		"gk_call_tier2.call",
 		"gk_call_tier3.call",
 		"gk_snipe_fairy.call",
-		"target.call",
-		"gk_rampage_fairy_ac130.call"
+		"target.call"
  	};
 
 	return sorting;

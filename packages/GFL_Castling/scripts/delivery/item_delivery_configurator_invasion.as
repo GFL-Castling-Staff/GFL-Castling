@@ -483,6 +483,10 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_sl8_576.weapon", "weapon", 1.0f),
 
 		ScoredResource("gkw_m870_3803.weapon", "weapon", 1.0f)
+			},
+			{
+		ScoredResource("black_card.carry_item", "carry_item", 1.0f),
+		ScoredResource("", "carry_item", 999.0f)
 			}
 		};
 		
@@ -685,7 +689,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		array<array<ScoredResource@>> rewardPasses = {
 			{
 		ScoredResource("equip_only_ticket.carry_item", "carry_item", 1.0f),
-
+		ScoredResource("black_card.carry_item", "carry_item", 4.0f),
 		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 5.0f,2),
 		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 25.0f),
 		ScoredResource("city_gifts.carry_item", "carry_item", 9.25f, 10),
@@ -741,6 +745,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_iws2000.weapon", "weapon", 0.5f),
 		ScoredResource("gkw_sat8.weapon", "weapon", 0.5f),
 		ScoredResource("gkw_rfb.weapon", "weapon", 0.5f),
+		ScoredResource("black_card.carry_item", "carry_item", 0.32f),
 		ScoredResource("equip_only_ticket.carry_item", "carry_item", 0.08f)
 			}
 		};
@@ -769,6 +774,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gift_box_2.carry_item", "carry_item", 15.0f,1),
 		ScoredResource("lottery.carry_item", "carry_item", 20.0f,3),
 		ScoredResource("core_mask.carry_item", "carry_item", 5.0f,1),
+		ScoredResource("black_card.carry_item", "carry_item", 2.0f),
 		ScoredResource("gift_box_1.carry_item", "carry_item", 30.0f,5)
 			}
 		};
@@ -795,6 +801,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("lottery.carry_item", "carry_item", 20.0f,2),
 		ScoredResource("core_mask.carry_item", "carry_item", 5.0f,1),
 		ScoredResource("equip_only_ticket.carry_item", "carry_item", 0.5f),
+		ScoredResource("black_card.carry_item", "carry_item", 2.0f),
 		ScoredResource("lottery.carry_item", "carry_item", 30.0f,1)
 			},
 			{
@@ -852,6 +859,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("woshieoe.carry_item", "carry_item", 0.7f),
 		ScoredResource("cc_sp_tyls.carry_item", "carry_item", 0.7f),
 		ScoredResource("bp_sp_naben.carry_item", "carry_item", 0.7f),
+		ScoredResource("black_card.carry_item", "carry_item", 0.1f),
 
 		ScoredResource("gkw_yurine.weapon","weapon",0.7f)
 			}

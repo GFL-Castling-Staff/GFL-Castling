@@ -28,7 +28,7 @@
         <animation key="recoil" animation_key="recoil, hip fire" />
         <animation key="recoil" stance_key="prone" animation_key="recoil1" />
         <animation state_key="hold" animation_key="hold, hip fire" />
-        <animation state_key="reload" animation_key="reloading_mg94"/>
+        <animation state_key="reload" animation_key="reloading, pistol"/>
         <animation state_key="crouching" animation_key="crouch, hold, hip fire" />
         <animation state_key="crouch_moving" animation_key="crouching forwards, hip fire" />
         <animation state_key="walking_backwards" animation_key="walking backwards, hip fire" />  
@@ -37,9 +37,9 @@
         <animation state_key="walking" animation_key="" />
         <animation state_key="running" animation_key="" />  
     
-        <sound key="fire" fileref="mg94_shot1.wav" pitch_variety="0.1" volume="0.8" />
-        <sound key="magazine_out" fileref="hd_mg94_mag_out.wav" />
-        <sound key="magazine_in" fileref="hd_mg94_mag_in.wav" />
+        <sound key="fire" fileref="" pitch_variety="0.1" volume="0.8" />
+        <sound key="magazine_out" fileref="" />
+        <sound key="magazine_in" fileref="" />
     
         <model filename="" /> 
         <hud_icon filename="ui_stash_open_close.png" /> 

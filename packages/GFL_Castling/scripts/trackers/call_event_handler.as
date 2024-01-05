@@ -98,9 +98,9 @@ class call_event : Tracker {
                             if(call_slot_key == "") break;
                             switch(int(call_tier_index[call_slot_key]))
                             {
-                                case 100100:
+                                case 100100: //82mm
                                 {
-                                    CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,90.0,"tier1"));
+                                    CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,60.0,"tier1"));
                                     playSoundAtLocation(m_metagame,"kcco_dn_1.wav",factionId,position,1.5);
                                     sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
                                     int flagId = m_DummyCallID + 15000;
@@ -108,15 +108,19 @@ class call_event : Tracker {
                                     FairyRequest.setIndex(11);
                                     FairyRequest.setSize(0.5);
                                     FairyRequest.setDummyId(flagId);
-                                    FairyRequest.setRange(40.0);
+                                    FairyRequest.setRange(20.0);
                                     FairyRequest.setIconTypeKey("call_marker_bomb");
                                     addCastlingMarker(FairyRequest);
                                     m_DummyCallID++;
-                                    GFL_event_array.insertLast(GFL_event(characterId,factionId,int(GFL_Event_Index["bomb_fairy"]),stringToVector3(position),1.0,-1.0,flagId));
+                                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));                                    
+                                    Event_call_bombardment_fairy_82mm_mortar@ new_task = Event_call_bombardment_fairy_82mm_mortar(m_metagame,2.0,characterId,factionId,c_pos,stringToVector3(position),"bombardment_fairy_82mm_mortar_lv0",flagId);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
                                     break;
                                 }
-                                case 100200:
+                                case 100200: //105mm
                                 {
                                     CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,90.0,"tier1"));
                                     playSoundAtLocation(m_metagame,"kcco_dn_1.wav",factionId,position,1.5);
