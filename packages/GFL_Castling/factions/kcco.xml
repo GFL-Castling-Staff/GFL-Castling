@@ -739,7 +739,7 @@
 		</attribute_config>
 	</soldier>	
 	<!-- KCCO强无敌Hydra -->
-	<soldier name="kcco_Hydra" firstnames="KCCO-LIGHT ARMORED UNIT-" lastnames_file="qwd_last.name" squad_size_xp_cap="0.0" spawn_score="0.25">
+	<soldier name="kcco_Hydra" squad_size_xp_cap="0.0" spawn_score="0.25">
 		<models file="kcco_qwd.models" />
 		<character filename="qwd.character" />
 		<ai filename="kcco_hydra.ai" />

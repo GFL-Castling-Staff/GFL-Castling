@@ -1135,7 +1135,7 @@ class Skill_ff_dreamer : DelaySkill {
 
 		//扫射位置偏移单位向量 与 扫射位置偏移单位距离
 		Vector3 strike_vector = getAimUnitVector(1,c_pos,t_pos); 
-		float strike_didis = 1.0;
+		float strike_didis = 1.2;
 		//扫射起点 从弹头终点指向弹头起点的位置 
 		Vector3 pos_offset = Vector3(0,60,0);
 		//扫射终点的起点与终点（就生成弹头的终点的起始位置与终止位置）

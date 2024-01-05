@@ -300,7 +300,7 @@ class kill_event : Tracker {
             string dead_pos = target.getStringAttribute("position");
             string reward_pool_key = getRewardPool(Solider_Name);
             string KillerWeaponKey = event.getStringAttribute("key");
-            string killway= event.getStringAttribute("method_hint");
+            string killway = event.getStringAttribute("method_hint");
 
             if(reward_pool_key != "" && factionId==0){
                 if(reward_pool_key=="common"){
@@ -597,6 +597,12 @@ class kill_event : Tracker {
                         SkillArray[i].m_time-=1.0;
                     }
                 }
+            }
+
+            if(KillerWeaponKey=="blast_snipe_ff_hunter.projectile" && killway=="blast")
+            {
+                if(eliteEnemyName.find(Solider_Name)>-1)
+                    healCharacter(m_metagame,characterId,1);
             }
 
             if (Solider_Name=="") return;
