@@ -259,7 +259,7 @@ void excuteLightningStorm(GameMode@ metagame,GFL_event@ eventinfo){
 }
 
 void excuteBombFairy(GameMode@ metagame,GFL_event@ eventinfo){
-    eventinfo.m_time=0.6;
+    eventinfo.m_time=3;
     if(eventinfo.m_phase<=1)
     {
         sendFactionMessageKey(metagame,eventinfo.m_factionid,"bombfight");
