@@ -236,6 +236,7 @@ dictionary commandSkillIndex = {
         {"gkw_hk416_3401_mod3.weapon",37},
 
         // SMG 手雷
+        {"gkw_sten.weapon",38},
         {"gkw_m3.weapon",38},
         {"gkw_saf.weapon",38},
         {"gkw_saf_6607.weapon",38},
@@ -444,8 +445,7 @@ dictionary commandSkillIndex = {
         {"ff_dreamer_skill.weapon",74},
         {"ff_dreamer_skill_1.weapon",74},
 
-        // 司登+斯特林专属
-        {"gkw_sten.weapon",75},
+        // 司登MOD3+斯特林专属
         {"gkw_stenmod3.weapon",75},
         {"gkw_sterling.weapon",75},
 
