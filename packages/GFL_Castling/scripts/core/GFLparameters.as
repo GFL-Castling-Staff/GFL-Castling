@@ -1,5 +1,54 @@
 // 在这里存放所有的参数数据，方便后面的修改与维护
 
+// parameters for "commandskill.as"
+
+    array<string> eliteEnemyName = {
+
+        // sf
+        "sfw_hunter",
+        "sfw_architect",
+        "sfw_Intruder",
+        "sfw_Dreamer",
+        "sfw_Alchemist",
+        "sfw_Gager",
+        "sfw_Excutioner-Wind_rose",
+        "sfw_Excutioner-Queen_of_the_Moon",
+        "sfw_M16A1",
+        "sfw_Agent",
+        "sfw_Destroyer",
+        "sfw_Weaver",
+        "sfw_Justice",
+        "sfw_Scarecrow",
+        "sf_manticore",
+
+        // paradeus
+        "alina",
+        "Thunder",
+        "teal",
+        "eagleyes",
+        "vanguard",
+        "wrath",
+        "aileron",
+        "Nimogen",
+        "Narciss",
+        "Adeline",
+        "Paradeus_doppelsoldner",
+        "Paradeus_roarer",
+        "parw_grenadier",
+        "parw_hammer",
+        "parw_commander",
+
+        // kcco
+        "kcco_Hydra",
+        "kcco_teslatrooper",
+        "kcco_human_sniper",
+        "kcco_quartz_ranger",
+        "kcco_zircon_squadleader",
+        "kcco_ar_human_tel",
+        "kcco_dog",
+        "kcco_ar_human_elite"
+    };
+
 // parameters for "GFLhelpers.as":
 
     array<string> unlockable_vehicles = {

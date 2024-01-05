@@ -13,6 +13,7 @@
 #include "fairy_command.as"
 #include "command_skill_info.as"
 #include "GFLplayerlist.as"
+#include "GFLparameters.as"
  
 //Interface Author: NetherCrow
 //Contributor: SAIWA K309 Lappland
@@ -266,6 +267,7 @@ class CommandSkill : Tracker {
                 case 75:{excuteStenSterlingskill(cId,senderId,m_modifer,c_weaponType);break;}
                 case 77:{excuteOwenskill(cId,senderId,m_modifer);break;}
                 case 78:{excuteM1897MOD3skill(cId,senderId,m_modifer);break;}
+                case 79:{excuteType82skill(cId,senderId,m_modifer);break;}
                 default:
                     break;
             }
@@ -4270,4 +4272,89 @@ class CommandSkill : Tracker {
             }  
         } 
     }    
+    void excuteType82skill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"Type82")) return;
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string player_name=player.getStringAttribute("name");
+                    Vector3 target_pos = stringToVector3(player.getStringAttribute("aim_target"));
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "M1895Mod_SKILL1_JP.wav",
+                        "M1895Mod_SKILL2_JP.wav",
+                        "M1895Mod_SKILL3_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+
+                    array<const XmlElement@> affectedCharacter;
+					array<const XmlElement@> characters = getEnemyCharactersNearPosition(m_metagame,c_pos,factionid,25.0f);
+                    for (uint i = 0; i < characters.length(); i++) {   
+                        int cidd = characters[i].getIntAttribute("id");
+                        const XmlElement@ possibleElitecharacter = getCharacterInfo(m_metagame,cidd);
+                        string soldier_name = possibleElitecharacter.getStringAttribute("soldier_group_name");
+                        if(eliteEnemyName.find(soldier_name)> -1){
+                            affectedCharacter.insertLast(characters[i]);
+                            _log("found elite");
+                            break;                                  
+                        }
+                    }
+
+                    int count = g_playerInfo_Buck.getKillSkillCountbyName(player_name,"Type82");
+                    int jud = (characters.length()>0)?(1+characters.length()/10):0;
+                    count += jud;
+                    jud = min(jud+1,3-count);
+                    g_playerInfo_Buck.addKillSkillCountbyName(player_name,"Type82",jud);
+
+                    dictionary a;
+                    a["%count"] = ""+count;
+                    notify(m_metagame, "Hint - Skill charge count", a, "misc", playerId, false, "", 1.0);
+                                        
+                    addCooldown("Type82",15,characterId,modifer);
+                    if (count == 0){
+                        if (checkFlatRange(c_pos,target_pos,15)){
+                            CreateDirectProjectile(m_metagame,c_pos,target_pos,"grenade_type82.projectile",characterId,factionid,90);
+                        }
+                        else{
+                            CreateProjectile_H(m_metagame,c_pos,target_pos,"grenade_type82.projectile",characterId,factionid,50.0,5.0);
+                        }
+                        return;
+                    }
+                    else if (count >= 1){
+                        if (checkFlatRange(c_pos,target_pos,15)){
+                            CreateDirectProjectile(m_metagame,c_pos,target_pos,"grenade_type82_rangeup.projectile",characterId,factionid,100);
+                        }
+                        else{
+                            CreateProjectile_H(m_metagame,c_pos,target_pos,"grenade_type82_rangeup.projectile",characterId,factionid,50.0,5.0);
+                        }
+                    }
+                    if (count >= 2){
+                        if(affectedCharacter.length()>0){
+                            int luckyoneid = affectedCharacter[0].getIntAttribute("id");
+                            const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+                            if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
+                                string luckyonepos = luckyoneC.getStringAttribute("position");
+                                Vector3 target = stringToVector3(luckyonepos);
+                                if (checkFlatRange(c_pos,target,15)){
+                                    CreateDirectProjectile(m_metagame,c_pos,target,"grenade_type82_elite.projectile",characterId,factionid,90);
+                                }
+                                else{
+                                    CreateProjectile_H(m_metagame,c_pos,target,"grenade_type82_elite.projectile",characterId,factionid,50.0,5.0);
+                                }
+                            }	
+                        }
+                    }
+                    if (count >= 3 ){
+                        healCharacter(m_metagame,characterId,3);
+                        return;
+                    }
+                }
+            }
+        }        
+    }
 }

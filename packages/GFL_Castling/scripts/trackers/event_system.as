@@ -7,6 +7,7 @@
 #include "GFLhelpers.as"
 #include "GFLtask.as"
 #include "GFLairstrike.as"
+#include "GFLparameters.as"
 
 //Author: NetherCrow
 // 本系统用于容纳持续性请求 已逐步废弃，请使用task替代

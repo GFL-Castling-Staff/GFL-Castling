@@ -1,46 +1,5 @@
 #include "helpers.as"
 
-// 敌方精英单位
-array<string> eliteEnemyName = {
-
-	// sf
-    "sfw_hunter",
-    "sfw_architect",
-    "sfw_Intruder",
-    "sfw_Dreamer",
-    "sfw_Alchemist",
-    "sfw_Gager",
-    "sfw_Excutioner-Wind_rose",
-    "sfw_Excutioner-Queen_of_the_Moon",
-    "sfw_M16A1",
-    "sfw_Agent",
-    "sfw_Destroyer",
-    "sfw_Weaver",
-    "sfw_Justice",
-    "sfw_Scarecrow",
-    "sf_manticore",
-
-	// paradeus
-    "alina",
-    "Thunder",
-    "teal",
-    "eagleyes",
-    "vanguard",
-    "wrath",
-    "aileron",
-    "Nimogen",
-    "Narciss",
-    "Adeline",
-    "Paradeus_doppelsoldner",
-    "Paradeus_roarer",
-
-	// kcco
-    "kcco_Hydra",
-    "kcco_teslatrooper",
-    "kcco_human_sniper",
-    "kcco_quartz_ranger"
-};
-
 array<string> nytoAllList = {
     "alina",
     "teal",

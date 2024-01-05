@@ -71,7 +71,7 @@ class GFLskill : Tracker {
 				}
 				break;
 			}
-
+ 
 			case 4: {// SOPMODII散射榴弹
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -88,9 +88,9 @@ class GFLskill : Tracker {
 							" position='" + Pos_40mm.toString() + "'"+
 							" character_id='" + characterId + "' />";
 						m_metagame.getComms().send(c1);
-						CreateProjectile_H(m_metagame,Pos_40mm,Pos_40mm.add(Vector3(0,0,4)),"40mm_spread.projectile",characterId,player.getIntAttribute("faction_id"),45.0,4.0);
-						CreateProjectile_H(m_metagame,Pos_40mm,Pos_40mm.add(Vector3(3,0,-3)),"40mm_spread.projectile",characterId,player.getIntAttribute("faction_id"),45.0,4.0);
-						CreateProjectile_H(m_metagame,Pos_40mm,Pos_40mm.add(Vector3(-3,0,-3)),"40mm_spread.projectile",characterId,player.getIntAttribute("faction_id"),45.0,4.0);												
+						CreateProjectile_H(m_metagame,Pos_40mm,Pos_40mm.add(Vector3(0,0,4)),"40mm_spread.projectile",characterId,player.getIntAttribute("faction_id"),45.0,2.0);
+						CreateProjectile_H(m_metagame,Pos_40mm,Pos_40mm.add(Vector3(3,0,-3)),"40mm_spread.projectile",characterId,player.getIntAttribute("faction_id"),45.0,2.0);
+						CreateProjectile_H(m_metagame,Pos_40mm,Pos_40mm.add(Vector3(-3,0,-3)),"40mm_spread.projectile",characterId,player.getIntAttribute("faction_id"),45.0,2.0);												
 					}
 				}
 				break;
