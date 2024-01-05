@@ -11,10 +11,10 @@
         slot="0" 
 		magazine_size="30" 
 		name="Type 64 SMG(MOD3)" 
-		projectile_speed="120" 
+		projectile_speed="75" 
 		retrigger_time="0.05" 
 		suppressed="1" 
-        spread_range="0.2"
+        spread_range="0.3"
 		sustained_fire_diminish_rate="2.75" 
 		sustained_fire_grow_step="0.15"
 		sight_range_modifier="1" />
@@ -26,7 +26,7 @@
     <sound key="magazine_in" fileref="type64_mgz_in_FromCOD15.wav" volume="1.0" />
     <sound key="cycle" fileref="type64_cycle_FromCOD18.wav" volume="1.0" />
     <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.3" />
+    <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.3" />
     <model filename="gkw_smg_64type.xml" />
     <hud_icon filename="gkw_64typemod3.png" />
     <weak_hand_hold offset="0.2" />
@@ -55,7 +55,7 @@
         slot="0" 
 		magazine_size="30" 
 		name="Type 64 SMG(MOD3)" 
-		projectile_speed="120" 
+		projectile_speed="75" 
 		retrigger_time="0.05" 
 		suppressed="0" 
         spread_range="0.2"
@@ -70,7 +70,7 @@
     <sound key="magazine_in" fileref="type64_mgz_in_FromCOD15.wav" volume="1.0" />
     <sound key="cycle" fileref="type64_cycle_FromCOD18.wav" volume="1.0" />
     <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.3" />
+    <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.3" />
     <model filename="gkw_smg_64type.xml" />
     <hud_icon filename="gkw_64typemod3.png" />
     <weak_hand_hold offset="0.2" />
