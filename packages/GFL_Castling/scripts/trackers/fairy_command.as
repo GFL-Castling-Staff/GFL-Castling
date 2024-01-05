@@ -313,6 +313,15 @@ void removeMarker(GameMode@ m_metagame,CastlingMarker@ info){
     m_metagame.getComms().send(command);
 }
 
+void removeMarkerwithId(GameMode@ m_metagame,int faction_id,int callId){
+    XmlElement command("command");
+        command.setStringAttribute("class", "set_marker");
+        command.setIntAttribute("id", callId);
+        command.setIntAttribute("faction_id", faction_id);
+        command.setIntAttribute("enabled", 0);
+    m_metagame.getComms().send(command);
+}
+
 class DelayFairyCommand : Task {
     protected GameMode@ m_metagame;
 	protected float m_time;

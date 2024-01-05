@@ -241,8 +241,6 @@
 
 	array<Resource@> GKcallList={
 		Resource("gk_airstrike_fairy.call", "call"),
-		Resource("gk_warrior_fairy.call", "call"),
-		Resource("gk_rampage_fairy_ac130.call", "call"),
 		Resource("gk_snipe_fairy.call", "call"),
 		Resource("gk_yaoren_fairy.call", "call"),
 		Resource("martina.call", "call"),
@@ -257,7 +255,6 @@
         Resource("gk_call_tier1.call", "call"),
 		Resource("gk_call_tier2.call", "call"),
 		Resource("gk_call_tier3.call", "call"),
-		Resource("gk_rampage_fairy_ac130.call", "call"),
 		Resource("gk_snipe_fairy.call", "call"),
 		Resource("gk_yaoren_fairy.call", "call"),
 		Resource("martina.call", "call"),

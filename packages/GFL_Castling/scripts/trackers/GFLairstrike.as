@@ -89,10 +89,13 @@ dictionary airstrikeIndex = {
 
         {"ju87_assault",20},
 
-
         // 梦想家激光射线
         {"ioncannon_strafe_dreamer",21},
 
+        // 82mm迫击炮打击
+
+        {"mortar_82mm",100},
+        {"mortar_82mm_x4",101},
 
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
@@ -604,6 +607,30 @@ class GFLairstrike : Tracker {
                     Airstrike_strafe.removeAt(a);
                     break;
                 }
+
+                case 100:{ //82mm迫击炮打击
+                    float strike_rand = 3;
+                    float rand_x = rand(-strike_rand,strike_rand);
+                    float rand_y = rand(-strike_rand,strike_rand);
+                    float rand_z = rand(-7,7);
+                    CreateDirectProjectile(m_metagame,start_pos.add(Vector3(rand_x,rand_z,rand_y)),end_pos.add(Vector3(rand_x,0,rand_y)),"artillery_shell_82.projectile",cid,fid,15);
+                    Airstrike_strafe.removeAt(a);
+                    break;                    
+                }
+
+                case 101:{ //82mm迫击炮打击x4
+                    float strike_rand = 7;
+                    for(int j=1;j<=4;j++)
+                    {
+                        float rand_x = rand(-strike_rand,strike_rand);
+                        float rand_y = rand(-strike_rand,strike_rand);
+                        float rand_z = rand(-8,8);
+                        CreateDirectProjectile(m_metagame,start_pos.add(Vector3(rand_x,rand_z,rand_y)),end_pos.add(Vector3(rand_x,0,rand_y)),"artillery_shell_82.projectile",cid,fid,15);
+                    }
+                    Airstrike_strafe.removeAt(a);
+                    break;                    
+                }
+
                 default:
                     break;
             }

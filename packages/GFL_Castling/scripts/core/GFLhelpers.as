@@ -1042,3 +1042,12 @@ string checkCallSlotInvaild(int slot,string callKey)
 	}
 	return call_slot_default_1;
 }
+
+int getIntSymbol()
+{
+	if(rand(0.0f,1.0f) <= 0.5f)
+	{
+		return 1;
+	}
+	return -1;
+}
