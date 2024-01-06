@@ -4301,7 +4301,7 @@ class CommandSkill : Tracker {
                     c_pos=c_pos.add(Vector3(0,1,0));
 
                     array<const XmlElement@> affectedCharacter;
-					array<const XmlElement@> characters = getEnemyCharactersNearPosition(m_metagame,c_pos,factionid,25.0f);
+					array<const XmlElement@> characters = getEnemyCharactersNearPosition(m_metagame,c_pos,factionid,25.0f,20);
                     for (uint i = 0; i < characters.length(); i++) {   
                         int cidd = characters[i].getIntAttribute("id");
                         const XmlElement@ possibleElitecharacter = getCharacterInfo(m_metagame,cidd);
