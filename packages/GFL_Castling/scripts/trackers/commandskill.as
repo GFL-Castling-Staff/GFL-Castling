@@ -4138,11 +4138,12 @@ class CommandSkill : Tracker {
         int medal_num = 0;
         if (index>=0) medal_num = No_Delete_DataArray[index].m_num;
         medal_num = min(medal_num+count1,4);                
+        modifer.setCooldownMinus(medal_num);
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"StenSterling",false,"constant",medal_num)) return;
 
         dictionary a;
         a["%count"] = ""+medal_num;
-        notify(m_metagame, "Hint - Skill charge count", a, "misc", playerId, false, "", 1.0);
+        notify(m_metagame, "Hint - Skill max charge count", a, "misc", playerId, false, "", 1.0);
 
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
@@ -4174,7 +4175,7 @@ class CommandSkill : Tracker {
 
                     if(!tryaddChargeCount("StenSterling",characterId,modifer,false)){
                         // _log("no new charge");
-                        addCooldown("StenSterling",15,characterId,modifer,"constant");
+                        addCooldown("StenSterling",15-medal_num,characterId,modifer,"constant");
                     }
                     if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"UsedStenSterling"))
                     {
@@ -4316,15 +4317,15 @@ class CommandSkill : Tracker {
                     int count = g_playerInfo_Buck.getKillSkillCountbyName(player_name,"Type82");
                     int jud = (characters.length()>0)?(1+characters.length()/10):0;
                     count += jud;
-                    jud = min(jud+1,3-count);
+                    jud = min(jud+1,6-count);
                     g_playerInfo_Buck.addKillSkillCountbyName(player_name,"Type82",jud);
 
                     dictionary a;
-                    a["%count"] = ""+count;
+                    a["%count"] = ""+(count/2);
                     notify(m_metagame, "Hint - Skill charge count", a, "misc", playerId, false, "", 1.0);
                                         
                     addCooldown("Type82",15,characterId,modifer);
-                    if (count == 0){
+                    if (count < 2){
                         if (checkFlatRange(c_pos,target_pos,15)){
                             CreateDirectProjectile(m_metagame,c_pos,target_pos,"grenade_type82.projectile",characterId,factionid,90);
                         }
@@ -4333,7 +4334,7 @@ class CommandSkill : Tracker {
                         }
                         return;
                     }
-                    else if (count >= 1){
+                    else if (count >= 2){
                         if (checkFlatRange(c_pos,target_pos,15)){
                             CreateDirectProjectile(m_metagame,c_pos,target_pos,"grenade_type82_rangeup.projectile",characterId,factionid,100);
                         }
@@ -4341,7 +4342,7 @@ class CommandSkill : Tracker {
                             CreateProjectile_H(m_metagame,c_pos,target_pos,"grenade_type82_rangeup.projectile",characterId,factionid,50.0,5.0);
                         }
                     }
-                    if (count >= 2){
+                    if (count >= 4){
                         if(affectedCharacter.length()>0){
                             int luckyoneid = affectedCharacter[0].getIntAttribute("id");
                             const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
@@ -4357,7 +4358,7 @@ class CommandSkill : Tracker {
                             }	
                         }
                     }
-                    if (count >= 3 ){
+                    if (count >= 6){
                         healCharacter(m_metagame,characterId,3);
                         return;
                     }
