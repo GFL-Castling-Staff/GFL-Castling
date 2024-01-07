@@ -326,7 +326,7 @@ class CommandSkill : Tracker {
                         SkillArray.removeAt(a);
                         continue;
                     }
-                    if(SkillArray[a].m_charge_mode=="normal"){
+                    if(SkillArray[a].m_charge_mode=="normal" || SkillArray[a].m_charge_mode=="charge_recover_all"){
                         if(SkillArray[a].m_alert){
                             playPrivateSound(m_metagame,"skilldone.wav",SkillArray[a].m_skillInfo.m_player_id);
                         }
@@ -337,7 +337,10 @@ class CommandSkill : Tracker {
                     else if (SkillArray[a].m_charge_mode=="nohint"){
                         SkillArray.removeAt(a);
                     }
-                    else if (SkillArray[a].m_charge_mode=="constant"){
+                    else if (SkillArray[a].m_charge_mode=="charge_recover_1"){
+                        if(SkillArray[a].m_alert){
+                            playPrivateSound(m_metagame,"skilldone.wav",SkillArray[a].m_skillInfo.m_player_id);
+                        }
                         sendFactionMessageKeySaidAsCharacter(m_metagame,0,SkillArray[a].m_character_id,"skillcooldowndone");
                         notify(m_metagame, "Hint - Skill Cooldown Done",dictionary(), "misc", SkillArray[a].m_skillInfo.m_player_id, false, "", 1.0);
                         if (SkillArray[a].m_charge==0){
@@ -405,7 +408,7 @@ class CommandSkill : Tracker {
 
     bool InCooldown(int cId, SkillModifer@ modifer,SkillTrigger@ queue,bool NoRemoveOnDeath=false,string charge_mode="normal",int charge_jud_num=0){
         if(charge_mode=="normal" || charge_mode=="nohint") return existCooldown(cId,modifer,queue,NoRemoveOnDeath);
-        else if(charge_mode=="constant" && queue.m_charge>=charge_jud_num){
+        else if((charge_mode=="charge_recover_1" || charge_mode=="charge_recover_all")&& queue.m_charge>=charge_jud_num){
             return existCooldown(cId,modifer,queue,NoRemoveOnDeath);
         }
         return false;
@@ -971,7 +974,7 @@ class CommandSkill : Tracker {
         }
     }
     void excuteBaibaoziskill(int characterId,int playerId,SkillModifer@ modifer){
-        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"FF_ALINA",true,"constant",4)) return;
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"FF_ALINA",true,"charge_recover_1",4)) return;
         const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
         if(characterinfo !is null){
             const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
@@ -979,7 +982,7 @@ class CommandSkill : Tracker {
                 if (playerinfo.hasAttribute("aim_target")) {
                     if(!tryaddChargeCount("FF_ALINA",characterId,modifer,true)){
                         // _log("no new charge");
-                        addCooldown("FF_ALINA",15,characterId,modifer,"constant");
+                        addCooldown("FF_ALINA",15,characterId,modifer,"charge_recover_1");
                     }
                     string target = playerinfo.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
@@ -1387,7 +1390,7 @@ class CommandSkill : Tracker {
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
                     if(!ExistQueue){
-                        addCooldown("UMP45",20,characterId,modifer,"constant"); 
+                        addCooldown("UMP45",20,characterId,modifer,"charge_recover_1"); 
                     }
                     string target = player.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
@@ -1431,7 +1434,7 @@ class CommandSkill : Tracker {
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
                     if(!ExistQueue){
-                        addCooldown("UMP45MOD3",20,characterId,modifer,"constant");
+                        addCooldown("UMP45MOD3",20,characterId,modifer,"charge_recover_1");
                     }
                     string target = player.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
@@ -2235,7 +2238,7 @@ class CommandSkill : Tracker {
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
                     if(!ExistQueue){
-                        addCooldown("RBLL",20,characterId,modifer,"constant");
+                        addCooldown("RBLL",20,characterId,modifer,"charge_recover_1");
                     }
                     string target = player.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
@@ -3491,19 +3494,10 @@ class CommandSkill : Tracker {
         } 
     }
     void excuteG41Onlyskill(int characterId,int playerId,SkillModifer@ modifer){
-        bool ExistQueue = false;
-        int j=-1;
-        for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="G41") {
-                ExistQueue=true;
-                j=i;
-            }
-        }
-        if (ExistQueue){
-            dictionary a;
-            a["%time"] = ""+SkillArray[j].m_time;
-            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
-            return;
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"G41",false,"charge_recover_all",1)) return;
+        if(!tryaddChargeCount("G41",characterId,modifer,false)){
+            // _log("no new charge");
+            addCooldown("G41",15,characterId,modifer,"charge_recover_all");
         }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
@@ -3511,6 +3505,7 @@ class CommandSkill : Tracker {
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
                     string target = player.getStringAttribute("aim_target");
+                    Vector3 s_pos = stringToVector3(target);
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
                     array<string> Voice={
@@ -3520,9 +3515,9 @@ class CommandSkill : Tracker {
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
-                    c_pos=c_pos.add(Vector3(0,1,0));
-                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_g41_trigger.projectile",characterId,factionid,41.0,6.0);
-                    addCooldown("G41",15,characterId,modifer);
+                    c_pos=c_pos.add(Vector3(0,2,0));
+                    s_pos=s_pos.add(Vector3(0,6,0));
+                    CreateDirectProjectile_TG(m_metagame,c_pos,s_pos,"grenade_g41_scan.projectile",characterId,factionid,1.0,10); 
                 }
             }
         }
@@ -3872,7 +3867,7 @@ class CommandSkill : Tracker {
             if (player !is null){
                 if (player.hasAttribute("aim_target")) {
                     if(!ExistQueue){
-                        addCooldown("QLZ04",20,characterId,modifer,"constant"); 
+                        addCooldown("QLZ04",20,characterId,modifer,"charge_recover_1"); 
                     }
                     string target = player.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
@@ -4139,7 +4134,7 @@ class CommandSkill : Tracker {
         if (index>=0) medal_num = No_Delete_DataArray[index].m_num;
         medal_num = min(medal_num+count1,4);                
         modifer.setCooldownMinus(medal_num);
-        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"StenSterling",false,"constant",medal_num)) return;
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"StenSterling",false,"charge_recover_1",medal_num)) return;
 
         dictionary a;
         a["%count"] = ""+medal_num;
@@ -4175,7 +4170,7 @@ class CommandSkill : Tracker {
 
                     if(!tryaddChargeCount("StenSterling",characterId,modifer,false)){
                         // _log("no new charge");
-                        addCooldown("StenSterling",15-medal_num,characterId,modifer,"constant");
+                        addCooldown("StenSterling",15-medal_num,characterId,modifer,"charge_recover_1");
                     }
                     if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"UsedStenSterling"))
                     {
@@ -4226,7 +4221,7 @@ class CommandSkill : Tracker {
 
     void excuteM1897MOD3skill(int characterId,int playerId,SkillModifer@ modifer){
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"m1897_aim")) return;
-        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"m1897",true,"constant",6)) return;     
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"m1897",true,"charge_recover_1",6)) return;     
         const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
         if (characterinfo is null) return;
         const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
@@ -4265,7 +4260,7 @@ class CommandSkill : Tracker {
 
                 if (closestIndex >= 0){
                     if(!tryaddChargeCount("m1897",characterId,modifer,true)){
-                        addCooldown("m1897",20,characterId,modifer,"constant");
+                        addCooldown("m1897",20,characterId,modifer,"charge_recover_1");
                     }
                     int target_id = affectedCharacter[closestIndex].getIntAttribute("id");
                     playAnimationKey(m_metagame,characterId,"recoil1, big",true,false);

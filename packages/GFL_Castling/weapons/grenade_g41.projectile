@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectiles>
 <projectile class="grenade" name="=w=" key="grenade_g41.projectile" slot="1" radius="0.25" pulldown_in_air="0.5">
-    <result class="blast" radius="6.0" damage="14.9" push="1.0" decal="1" character_state="death" faction_compare="not_equal" />
+    <result class="spawn" instance_class="grenade" instance_key="blast_g41_sub.projectile" min_amount="4" max_amount="4" offset="0 2.0 0" position_spread="0 0" direction_spread="0.0 0.0" />   
     <trigger class="impact">
         <collider class="character" enabled="1" faction_compare="not_equal"/>
     </trigger>
@@ -36,6 +36,7 @@
     <effect class="result" key="static_object" copy="terrain" />
     <effect class="result" key="character" copy="terrain" />
     <effect class="result" key="vehicle" copy="terrain" />
+        <trail probability="1.0" key="BulletApTrail_ct"/>
 </projectile>
 <projectile class="grenade" name="=w=" key="grenade_g41_trigger.projectile" slot="1" radius="0.15" drop_count_factor_on_death="0.25" drop_count_factor_on_player_death="1"  time_to_live_out_in_the_open="15" pulldown_in_air="41">
     <result class="spawn" instance_class="projectile" instance_key="grenade_g41_scan.projectile" min_amount="1" max_amount="1" offset="0 1 0" position_spread="0 0" direction_spread="0 0" />
@@ -52,9 +53,9 @@
     <sound class="result" key="vehicle" copy="other" />
     <sound class="result" key="character" copy="other" />
 </projectile>
-<projectile class="grenade" name="=w=" key="grenade_g41_scan.projectile" slot="1" radius="0.15" drop_count_factor_on_death="0.25" drop_count_factor_on_player_death="1"  time_to_live_out_in_the_open="15" pulldown_in_air="-22.5">
-    <result class="notify_script" key="g41_scan" />
-    <trigger class="time" time_to_live="0.75"/>
+<projectile class="grenade" name="=w=" key="grenade_g41_scan.projectile" slot="1" radius="0.15" drop_count_factor_on_death="0.25" drop_count_factor_on_player_death="1"  time_to_live_out_in_the_open="15" pulldown_in_air="10">
+    <result class="notify_script" key="g41_scan" /> 
+    <trigger class="time" time_to_live="1.0"/>
     <rotation class="random" />
     <model mesh_filename="gki_g41_deco.xml" />
     <hud_icon filename="hud_g41_upgrade.png" />
@@ -67,5 +68,6 @@
     <sound class="result" key="static_object" copy="other" />
     <sound class="result" key="vehicle" copy="other" />
     <sound class="result" key="character" copy="other" />
+        <trail probability="1.0" key="BulletApTrail_ct"/>
 </projectile>
 </projectiles>
