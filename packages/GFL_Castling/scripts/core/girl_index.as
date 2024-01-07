@@ -1587,3 +1587,16 @@ bool existKeyinList(string key)
     if (reverse_tdoll_complex_index.exists(key)) return true;
     else return false;
 }
+
+array<string> gk_weapon_rf_list = { 
+    "gkw_m1.weapon",
+    "gkw_m1_1106.weapon",
+    "gkw_m1_6907.weapon",
+    "gkw_m1_sf.weapon",
+    "gkw_m1_sf_skill.weapon",
+    "gkw_m1_sf_1106.weapon",
+    "gkw_m1_sf_1106_skill.weapon",
+    "gkw_m1_sf_6907.weapon",
+    "gkw_m1_sf_6907_skill.weapon",
+    "gkw_m1a1.weapon",
+};
