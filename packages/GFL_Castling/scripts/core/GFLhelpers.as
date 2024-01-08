@@ -47,6 +47,11 @@ void playRandomSoundArray(const Metagame@ metagame, array<string> arrays, int fa
 	playSoundAtLocation(metagame,arrays[soundrnd],factionId,position,volume);
 }
 
+void playRandomSoundArray(const Metagame@ metagame, array<string> arrays, int factionId, Vector3 position, float volume=1.0){
+	int soundrnd= rand(0,arrays.length-1);
+	playSoundAtLocation(metagame,arrays[soundrnd],factionId,position.toString(),volume);
+}
+
 void editPlayerVest(const Metagame@ metagame, int characterId, string Itemkey, uint numVests){
 	if (numVests < 1) return;
 	XmlElement c("command");

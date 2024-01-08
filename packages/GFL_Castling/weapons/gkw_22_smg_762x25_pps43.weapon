@@ -3,7 +3,7 @@
 <tag name="smg" />
 	<specification 
 		can_shoot_running="1"
-		accuracy_factor="0.9" 
+		accuracy_factor="0.98" 
 		barrel_offset="0.4" 
 		class="0"
 		slot="0"
@@ -11,7 +11,7 @@
 		magazine_size="35" 
 		name="PPS-43" 
 		projectile_speed="125" 
-		retrigger_time="0.086" 
+		retrigger_time="0.075" 
 		suppressed="0" 
 		spread_range="0.15"
 		stance_accuracy_rate="2.5"
@@ -40,7 +40,7 @@
 	<animation state_key="stabbing" animation_key="melee, quick knife" />
 	<animation state_key="stabbing" animation_key="pistol whip 3" />
 
-	<sound key="fire" fileref="pps43_fire_FromRO2.wav" pitch_variety="0.05" volume="2.1" />
+	<sound key="fire" fileref="pps43_fire_FromRO2.wav" pitch_variety="0.05" volume="2.25" />
 	<sound key="magazine_out" fileref="pps43_mgz_out_FromRO2.wav" volume="1.9" />
 	<sound key="magazine_in" fileref="pps43_mgz_in_FromRO2.wav" volume="1.9" />
 	<sound key="cycle" fileref="pps43_cycle_FromRO2.wav" volume="1.9" />

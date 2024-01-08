@@ -614,6 +614,12 @@ class GFLairstrike : Tracker {
                     float rand_y = rand(-strike_rand,strike_rand);
                     float rand_z = rand(-7,7);
                     CreateDirectProjectile(m_metagame,start_pos.add(Vector3(rand_x,rand_z,rand_y)),end_pos.add(Vector3(rand_x,0,rand_y)),"artillery_shell_82.projectile",cid,fid,15);
+                    array<string> Voice={
+                        "mortar_whistle_82mm_0_fromCTA.wav",
+                        "mortar_whistle_82mm_1_fromCTA.wav",
+                        "mortar_whistle_82mm_2_fromCTA.wav"                            
+                    };
+                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,1);
                     Airstrike_strafe.removeAt(a);
                     break;                    
                 }
@@ -627,6 +633,12 @@ class GFLairstrike : Tracker {
                         float rand_z = rand(-8,8);
                         CreateDirectProjectile(m_metagame,start_pos.add(Vector3(rand_x,rand_z,rand_y)),end_pos.add(Vector3(rand_x,0,rand_y)),"artillery_shell_82.projectile",cid,fid,15);
                     }
+                    array<string> Voice={
+                        "mortar_whistle_82mm_0_fromCTA.wav",
+                        "mortar_whistle_82mm_1_fromCTA.wav",
+                        "mortar_whistle_82mm_2_fromCTA.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,1);
                     Airstrike_strafe.removeAt(a);
                     break;                    
                 }

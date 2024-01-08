@@ -101,7 +101,6 @@ class call_event : Tracker {
                                 case 100100: //82mm
                                 {
                                     CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,60.0,"tier1"));
-                                    playSoundAtLocation(m_metagame,"kcco_dn_1.wav",factionId,position,1.5);
                                     sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
                                     int flagId = m_DummyCallID + 15000;
                                     CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
