@@ -42,4 +42,13 @@
     <model mesh_filename="deploy_boxi.mesh" texture_filename="box2.png" />
     <hud_icon filename="gkw_deploy_t6.png" />
 </weapon>
+<weapon file="deployable.base_weapon" key="deployable_callui.weapon" radius="0.25" >
+    <specification
+	name="Tactic Fairy Console"
+    spawn_instance_class="vehicle" 
+    spawn_instance_key="call_ui" 
+	/>
+    <model mesh_filename="deploy_boxi.mesh" texture_filename="box2.png" />
+    <hud_icon filename="gkw_deploy_t6.png" />
+</weapon>
 </weapons>

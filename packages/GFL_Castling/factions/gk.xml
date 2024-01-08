@@ -1570,4 +1570,10 @@
 			<attribute weight="1.0" min="0.0" max="0.05" />
 		</attribute_config>
 	</soldier>	
+	<soldier name="call_ui" spawn_score="0.0">
+		<resources file="call_ui.resources" />
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.0" max="0.05" />
+		</attribute_config>
+	</soldier>	
 </faction>

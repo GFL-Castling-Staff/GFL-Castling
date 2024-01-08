@@ -562,6 +562,10 @@ dictionary call_tier_index = {
         // lv0
         {"t1_lv0_bombardment_fairy_105mm_grenade_barrage",100200},
 
+    // T1 炮击妖精-[155mm空爆榴弹]
+
+        {"t1_lv0_bombardment_fairy_155mm_air_burst",100300},
+
     // T1 空袭妖精-[俯冲攻击]
         //lv0
         {"t1_lv0_dive_airstrike_fairy",100200},
