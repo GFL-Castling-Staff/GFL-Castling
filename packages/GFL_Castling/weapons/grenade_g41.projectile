@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectiles>
 <projectile class="grenade" name="=w=" key="grenade_g41.projectile" slot="1" radius="0.25" pulldown_in_air="0.5">
-    <result class="spawn" instance_class="grenade" instance_key="blast_g41_sub.projectile" min_amount="4" max_amount="4" offset="0 2.0 0" position_spread="0 0" direction_spread="0.0 0.0" />   
+    <result class="spawn" instance_class="grenade" instance_key="blast_g41_sub.projectile" min_amount="10" max_amount="10" offset="0 2.0 0" position_spread="0 0" direction_spread="0.0 0.0" />   
     <trigger class="impact">
         <collider class="character" enabled="1" faction_compare="not_equal"/>
     </trigger>
