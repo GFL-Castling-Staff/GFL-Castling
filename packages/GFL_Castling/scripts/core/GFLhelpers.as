@@ -624,6 +624,39 @@ void CreateDirectProjectile_T(Metagame@ m_metagame,Vector3 startPos,Vector3 endP
 	m_metagame.getComms().send(c);
 }
 
+void CreateDirectProjectile_TG(Metagame@ m_metagame, Vector3 startPos, Vector3 endPos, string key, int cId, int fId, float time = 1.0, float gravity = 0.0) {
+    // 计算方向向量
+    Vector3 direction = endPos.subtract(startPos);
+	float Vmod = sqrt(pow(direction.get_opIndex(0),2)  + pow(direction.get_opIndex(1),2) + pow(direction.get_opIndex(2),2));
+	if (Vmod< 0.00001f) direction = Vector3(0, 0, 0.001);
+    // 计算水平和垂直距离
+    float dx = direction.get_opIndex(0);
+    float dy = direction.get_opIndex(1);
+    float dz = direction.get_opIndex(2);
+
+    // 计算水平速度分量
+    float vx = dx / time/60;
+    float vz = dz / time/60;
+
+    // 计算垂直速度分量
+    float vy = (dy / time/60) + (gravity * time/60/2);
+
+    // 组合速度向量
+    Vector3 velocity = Vector3(vx, vy, vz);
+
+    // 发送创建实例的命令
+    string command = 
+        "<command class='create_instance'" +
+        " faction_id='" + fId + "'" +
+        " instance_class='grenade'" +
+        " instance_key='" + key + "'" +
+        " position='" + startPos.toString() + "'" +
+        " character_id='" + cId + "'" +
+        " offset='" + velocity.toString() + "' />";
+    m_metagame.getComms().send(command);
+}
+
+
 void CreateMutilDirectProjectile(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,string key,int cId,int fId,float initspeed,int num){
 	initspeed=initspeed/60;
 	Vector3 direction = endPos.subtract(startPos);
