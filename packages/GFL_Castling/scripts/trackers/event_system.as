@@ -260,7 +260,7 @@ void excuteLightningStorm(GameMode@ metagame,GFL_event@ eventinfo){
 }
 
 void excuteBombFairy(GameMode@ metagame,GFL_event@ eventinfo){
-    eventinfo.m_time=3;
+    eventinfo.m_time=1.0;
     if(eventinfo.m_phase<=1)
     {
         sendFactionMessageKey(metagame,eventinfo.m_factionid,"bombfight");
@@ -269,7 +269,7 @@ void excuteBombFairy(GameMode@ metagame,GFL_event@ eventinfo){
         insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,14,eventinfo.m_pos.add(Vector3(0,40,0)),eventinfo.m_pos);
     }
     if(eventinfo.m_phase==6){
-        eventinfo.m_time=1.0;
+        eventinfo.m_time=2.0;
     }    
     if(eventinfo.m_phase==7){
         insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,15,eventinfo.m_pos.add(Vector3(0,40,0)),eventinfo.m_pos);

@@ -57,10 +57,8 @@
     <model mesh_filename="shell_152mm.xml" />
     <commonness value="0.0" />
 
-    <sound class="result" key="other" fileref="explosion_FromFC5_1.wav" volume="1.8" />
-    <sound class="result" key="other" fileref="explosion_FromFC5_2.wav" volume="1.8" />
-    <sound class="result" key="other" fileref="explosion_FromFC5_3.wav" volume="1.8" />
-    <sound class="result" key="other" fileref="explosion_FromFC5_4.wav" volume="1.8" />
+    <sound class="result" key="other" fileref="explosion_Large_FromSQUAD_1.wav" volume="2.9" />
+    <sound class="result" key="other" fileref="explosion_Large_FromSQUAD_2.wav" volume="2.9" />
 
     <sound class="result" key="terrain" copy="other" />
     <sound class="result" key="static_object" copy="other" />

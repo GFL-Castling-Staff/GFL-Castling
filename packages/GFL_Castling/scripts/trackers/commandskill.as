@@ -265,6 +265,7 @@ class CommandSkill : Tracker {
                 case 73:{excuteHunterskill(cId,senderId,m_modifer);break;}
                 case 74:{excuteDreamerskill(cId,senderId,m_modifer);break;}
                 case 75:{excuteStenSterlingskill(cId,senderId,m_modifer,c_weaponType);break;}
+                case 76:{excuteMAC10skill(cId,senderId,m_modifer);break;}
                 case 77:{excuteOwenskill(cId,senderId,m_modifer);break;}
                 case 78:{excuteM1897MOD3skill(cId,senderId,m_modifer);break;}
                 case 79:{excuteType82skill(cId,senderId,m_modifer);break;}
@@ -4037,7 +4038,34 @@ class CommandSkill : Tracker {
                 }
             }
         }
-    }        
+    }
+
+    void excuteMAC10skill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"MAC10")) return;
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "MAC10_SKILL1_JP.wav",
+                        "MAC10_SKILL2_JP.wav",
+                        "MAC10_ATTACK_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"smoke_grenade.projectile",characterId,factionid,26.0,6.0);
+                    addCooldown("MAC10",30,characterId,modifer);
+                }
+            }
+        }
+    }    
+
     void excuteM1911mod3skill(int characterId,int playerId,SkillModifer@ modifer){
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"M1911")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);

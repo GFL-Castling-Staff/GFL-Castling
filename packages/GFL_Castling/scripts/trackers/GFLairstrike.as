@@ -493,13 +493,14 @@ class GFLairstrike : Tracker {
                         " instance_key='" + "artillery_bomb.projectile" + "'" +
                         " position='" + start_pos.toString() + "'" +
                         " character_id='" + cid + "' />";
-                    m_metagame.getComms().send(c);                        	
+                    m_metagame.getComms().send(c);     
+                    playSoundAtLocation(m_metagame,"woosh1.wav",fid,start_pos,1.0);
                     Airstrike_strafe.removeAt(a);
                     break;                        
                 }
                 case 15:{//炮击155
                     CreateDirectProjectile(m_metagame,start_pos,end_pos,"artillery_shell_fairies_155.projectile",cid,fid,15);	
-                    playSoundAtLocation(m_metagame,"kcco_dn_3.wav",fid,start_pos,2.0);
+                    playSoundAtLocation(m_metagame,"mortar_whistle_105mm_fromCTA.wav",fid,start_pos,1.25);
                     Airstrike_strafe.removeAt(a);
                     break;                        
                 }
@@ -619,7 +620,7 @@ class GFLairstrike : Tracker {
                         "mortar_whistle_82mm_1_fromCTA.wav",
                         "mortar_whistle_82mm_2_fromCTA.wav"                            
                     };
-                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,1);
+                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,1.3);
                     Airstrike_strafe.removeAt(a);
                     break;                    
                 }
@@ -638,7 +639,7 @@ class GFLairstrike : Tracker {
                         "mortar_whistle_82mm_1_fromCTA.wav",
                         "mortar_whistle_82mm_2_fromCTA.wav"
                     };
-                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,1);
+                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,1.3);
                     Airstrike_strafe.removeAt(a);
                     break;                    
                 }

@@ -886,8 +886,8 @@ class Skill_Sf_Boss_Dreamer : DelaySkill {
 		m_timeLeft=m_time;
 		m_timeLeft_internal = 0;
 		uint m_fnum = m_metagame.getFactionCount();
-		this.setExcuteLimit(200);
-		this.setInternal(0.3);
+		this.setExcuteLimit(100);
+		this.setInternal(0.1);
 		TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
 		affectedCharacter = getEnemyCharactersNearPosition(m_metagame,t_pos,m_faction_id,30.0f);
 	}
