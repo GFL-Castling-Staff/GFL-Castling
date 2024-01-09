@@ -146,7 +146,7 @@
     slot="0"
 	sight_range_modifier="1.0"
 	projectile_speed="100"
-    spread_range="0.3"
+    spread_range="0.25"
     carry_in_two_hands="0"
     stab_enabled="1"/>
     <!-- Animations -->
@@ -188,7 +188,7 @@
     <!--Ballistics-->
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.25" kill_decay_end_time="0.4" />
+        <result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="2.75" kill_decay_start_time="0.25" kill_decay_end_time="0.4" />
     </projectile>
     <effect class="muzzle" ref="ejection_9mm"/>
     <!--Accuracy, Movement speed-->

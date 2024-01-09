@@ -196,7 +196,7 @@
         <!--Ballistics-->
         <weak_hand_hold offset="0.1" />
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="1.75" kill_decay_start_time="0.226" kill_decay_end_time="0.443"  />
+            <result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="3.75" kill_decay_start_time="0.226" kill_decay_end_time="0.443"  />
         </projectile>
         <!--Accuracy, Movement speed-->
         <stance state_key="running" accuracy="0.75" />

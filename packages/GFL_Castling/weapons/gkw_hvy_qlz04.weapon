@@ -169,9 +169,8 @@
     <hud_icon filename="gkw_79type.png"/>
     <weak_hand_hold offset="0.2"/>
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.2" kill_decay_end_time="0.96"/>
+        <result class="hit" kill_probability="1.65" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="0.2" kill_decay_end_time="0.96"/>
     </projectile>
-    <modifier class="speed" value="0.2"/>
     <tag name="smg"/>
     <capacity value="1" source="rank" source_value="0.0"/>
     <sound class="impact" fileref="rifle_drop.wav"/>
