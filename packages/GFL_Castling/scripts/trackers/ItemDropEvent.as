@@ -34,7 +34,12 @@ class CraftQueue
         m_playerId=pId;
         m_typekey=key;
         m_string = str;
-    }        
+    }
+    CraftQueue(int pId,string key,float time){
+        m_playerId=pId;
+        m_typekey=key;
+        m_time = time;
+    }    
 }
 
 class ItemDropEvent : Tracker {
@@ -60,6 +65,33 @@ class ItemDropEvent : Tracker {
             {
                 int pId = event.getIntAttribute("player_id");     
                 notify(m_metagame, "Help - logger system", dictionary(), "misc", pId, true, "Help - logger system title", 1.0);
+            }
+            if(startsWith(key,"call_ui"))
+            {
+                deleteItemInBackpack(m_metagame,cId,"weapon",key);
+                int pId = event.getIntAttribute("player_id");
+                GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(pId);
+                if (playerInfo.m_name == default_string) return;
+                string profile_hash = playerInfo.m_hash;
+                string p_name = playerInfo.m_name;
+                if(handleCallChangeEvent(cId,pId,key))
+                {
+                    player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+                    int slot = int(callUI_Slot[key]);
+                    string call_key = getCallKeyfromPlayerData(newdata,key);
+                    if(call_key == "")
+                    {
+                        notify(m_metagame, "Hint - call - locked",dictionary(), "misc", pId, false, "", 1.0);
+                        return;
+                    }
+                    newdata.setCallSlot(slot,call_key);
+                    string filename = ("save_" + profile_hash +".xml" );
+                    writeXML(m_metagame,filename,PlayerProfileSave(newdata));
+                    dictionary a;
+                    a["%call_key"] = "Hint - call - title - " + key;
+                    a["%slot"] = "Tier " + slot;
+                    notify(m_metagame, "Hint - call - changesuccess", a, "misc", pId, false, "", 1.0);
+                }
             }
         }        
         if (type_id == 1){
@@ -483,9 +515,9 @@ class ItemDropEvent : Tracker {
     }
 
     protected void failedUpgrade(int cId, int pId, string weapon_xml_name){
-         addItemInBackpack(m_metagame,cId,"carry_item", weapon_xml_name);
-         sendPrivateMessageKey(m_metagame, pId, "onlyonequeue_common");
-         playPrivateSound(m_metagame,"sfx_failed.wav",pId);
+        addItemInBackpack(m_metagame,cId,"carry_item", weapon_xml_name);
+        sendPrivateMessageKey(m_metagame, pId, "onlyonequeue_common");
+        playPrivateSound(m_metagame,"sfx_failed.wav",pId);
     }
 
     protected void dealwithillegalitem(string foobar,int id){
@@ -720,6 +752,29 @@ class ItemDropEvent : Tracker {
         }
     }
 
+    protected bool handleCallChangeEvent(int cId, int pId, string call_key){
+        if(checkQueue(pId, call_key))
+        {
+            m_craftQueue.removeAt(findQueueIndex(pId,call_key));
+            return true;
+        }
+        else
+        {
+            if (!callUI_Slot.exists(call_key)) return false;
+            string dict_intro_key = "Hint - call - intro - " + call_key;
+            string dict_title_key = "Hint - call - title - " + call_key;
+            startQueue(pId, call_key,10.0);
+            notify(m_metagame, dict_intro_key, dictionary(), "misc", pId, true, dict_title_key, 1.0);
+            notify(m_metagame, "Hint - call - rebuytochange", dictionary(), "misc", pId, false, "", 1.0);
+        }
+        return false;
+    }
+
+    protected string getCallKeyfromPlayerData(player_data@ data,string key)
+    {
+        return data.getCallKey(key);
+    }
+
     protected void upgradeTimeout(int cId, int pId, string weapon_xml_name){
         addItemInBackpack(m_metagame,cId,"carry_item", weapon_xml_name);
         playPrivateSound(m_metagame,"sfx_returnback.wav",pId);
@@ -746,6 +801,10 @@ class ItemDropEvent : Tracker {
 
     void startQueue(int playerId,string key){
         m_craftQueue.insertLast(CraftQueue(playerId,key));
+    }
+
+    void startQueue(int playerId,string key,float time){
+        m_craftQueue.insertLast(CraftQueue(playerId,key,time));
     }
 
 }

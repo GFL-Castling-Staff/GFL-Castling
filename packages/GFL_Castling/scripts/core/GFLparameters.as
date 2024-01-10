@@ -229,6 +229,31 @@
         {"666",0}
     };
 
+    dictionary callUI_Index = {
+        // 空
+        {"",0},
+
+        {"call_ui_t1_bombardment_fairy_82mm_mortar_free",1001},
+        {"call_ui_t1_bombardment_fairy_82mm_mortar",1002}, 
+        {"call_ui_t1_bombardment_fairy_105mm_grenade_barrage",1003}, 
+        {"call_ui_t1_bombardment_fairy_155mm_air_burst",1004}, 
+        {"call_ui_t1_bombardment_fairy_170mm_cannon",1005}, 
+
+        {"666",0}
+    };
+
+    dictionary callUI_Slot = {
+        // 空
+        {"",0},
+
+        {"call_ui_t1_bombardment_fairy_82mm_mortar_free",1},
+        {"call_ui_t1_bombardment_fairy_82mm_mortar",1}, 
+        {"call_ui_t1_bombardment_fairy_105mm_grenade_barrage",1}, 
+        {"call_ui_t1_bombardment_fairy_155mm_air_burst",1}, 
+        {"call_ui_t1_bombardment_fairy_170mm_cannon",2}, 
+
+        {"666",0}
+    };
 
 // parameters for "ServerHelper.as":
 

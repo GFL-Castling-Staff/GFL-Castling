@@ -16,6 +16,20 @@
 // 每次调用时 从xml文件中转储读取生成player_data
 // 每次存储时 将player_data重新封装回新的xml中
 
+class GFL_call_info
+{
+    string m_call_ui_key;
+    int m_level=0;
+    string m_call_key;
+
+    GFL_call_info(string call_ui_key,int m_level =0)
+    {
+        m_call_ui_key = call_ui_key;
+        string call_ui_key_suffix = call_ui_key.substr(8);
+        m_call_key = call_ui_key_suffix + "_lv" + m_level;
+    }
+}
+
 class player_data
 {
 	int m_corenum=0;
@@ -27,7 +41,11 @@ class player_data
     string m_call_slot_3;
 
     array<string> m_weapons={};
-    array<string> m_unlocked_call={};
+    array<GFL_call_info@> m_unlocked_call={
+        GFL_call_info("call_ui_t1_bombardment_fairy_82mm_mortar_free",0),
+        GFL_call_info("call_ui_t1_bombardment_fairy_82mm_mortar",0),
+        GFL_call_info("call_ui_t1_bombardment_fairy_105mm_grenade_barrage",0)
+    };
 
 	player_data() {}
 
@@ -148,7 +166,7 @@ class player_data
     {
         for (uint i = 0; i < m_unlocked_call.length(); ++i)
         {
-            if (m_unlocked_call[i] == key)
+            if (m_unlocked_call[i].m_call_ui_key == key)
             {
                 return true;
             }
@@ -156,12 +174,12 @@ class player_data
         return false;
     }
 
-    void addUnlockedCall(const string key)
+    void addUnlockedCall(GFL_call_info@ call)
     {
         bool isDuplicate = false;
         for (uint i = 0; i < m_unlocked_call.length(); ++i)
         {
-            if (m_unlocked_call[i] == key)
+            if (m_unlocked_call[i].m_call_ui_key == call.m_call_ui_key)
             {
                 isDuplicate = true;
                 break;
@@ -169,9 +187,21 @@ class player_data
         }        
         if (!isDuplicate)
         {
-            m_unlocked_call.insertLast(key);
+            m_unlocked_call.insertLast(call);
         }  
-    }    
+    }
+    
+    string getCallKey(const string key)
+    {
+        for (uint i = 0; i < m_unlocked_call.length(); ++i)
+        {
+            if (m_unlocked_call[i].m_call_ui_key == key)
+            {
+                return m_unlocked_call[i].m_call_key;
+            }
+        }
+        return "";
+    }
 }
 
 const XmlElement@ readFile(const Metagame@ metagame,string name, string profile_hash){
@@ -244,7 +274,9 @@ XmlElement@ PlayerProfileSave(player_data@ player_info) {
     for (uint i = 0; i < player_info.m_unlocked_call.length(); i++) 
     {
         XmlElement e("unlocked_call");
-        e.setStringAttribute("key", player_info.m_unlocked_call[i]);
+        e.setStringAttribute("call_key", player_info.m_unlocked_call[i].m_call_ui_key);
+        e.setStringAttribute("key", player_info.m_unlocked_call[i].m_call_key);
+        e.setIntAttribute("level", player_info.m_unlocked_call[i].m_level);
         subroot_2.appendChild(e);
     }
 
@@ -276,9 +308,11 @@ player_data@ PlayerProfileLoad(const XmlElement@ player_profile){
     array<const XmlElement@> unlocked_call_list = player_profile.getFirstElementByTagName("unlocked_calls").getElementsByTagName("unlocked_call");
     for(uint i = 0; i < unlocked_call_list.length();i++)
     {
-        string call_key = unlocked_call_list[i].getStringAttribute("key");
-        if(call_key =="") continue;
-        output.addUnlockedCall(call_key);
+        string call_ui_key = unlocked_call_list[i].getStringAttribute("call_key");
+        int level = unlocked_call_list[i].getIntAttribute("level");
+        if(call_ui_key =="") continue;
+        GFL_call_info@ new_call_info = GFL_call_info(call_ui_key,level);
+        output.addUnlockedCall(new_call_info);
     }
 
     const XmlElement@ call_slot_1 = player_profile.getFirstElementByTagName("active_call").getFirstElementByTagName("callslot_1");

@@ -209,6 +209,8 @@
 	<text key="Chiara IV" text="Chiara IV 切尔拉 - 巡回式机枪车"/>
 	<text key="Martina V" text="Martina V 玛蒂娜 - 廉价运输悍马"/>
 
+	<!-- 新战术支援系统 -->
+
 	<text key="Parachute Fairy-[Pierre II]" text="空降妖精-[Pierre II 皮埃尔 - 自行榴弹平台]"/>
 	<text key="Parachute Fairy-[Chiara IV]" text="空降妖精-[Chiara IV 切尔拉 - 巡回式机枪车]"/>
 	<text key="Parachute Fairy-[Martina V]" text="空降妖精-[Martina V 玛蒂娜 - 廉价运输悍马]"/>
@@ -228,6 +230,21 @@
 	<text key="[Tier 2]Bombardment Fairy - 170mm Cannon" text="[Tier 2]炮击妖精 - 170mm加农炮"/>
 	<text key="[Tier 3]Bombardment Fairy - 600mm Karl Mortar" text="[Tier 3]炮击妖精 - 决战臼炮"/>
 
+	<text key="Hint - call - rebuytochange" text="[战术系统]再次购买同一妖精即可在该槽位装备此战术妖精" />
+	<text key="Hint - call - changesuccess" text="[战术系统]已在槽位&#37;slot装备&#37;call_key" />
+	<text key="Hint - call - locked" text="[战术系统]装备战术妖精失败，您未拥有该种类支援的呼号权限" />
+
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_82mm_mortar_free" text="重装支援 - 82mm迫击炮打击" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_82mm_mortar_free" text="冷却时间 240秒 消耗 0战术点 标定目标点，2秒后发射迫击炮
+	1 / 2 / 2 / 2 一共7颗弹头 每颗弹头 (7.5x4) 伤害 范围 7.5" />
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_82mm_mortar" text="炮击妖精 - 82mm迫击炮打击" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_82mm_mortar" text="" />
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_105mm_grenade_barrage" text="炮击妖精 - 105mm榴弹扫荡" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_105mm_grenade_barrage" text="" />
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_155mm_air_burst" text="炮击妖精 - 155mm空爆榴弹打击" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_155mm_air_burst" text="" />
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_170mm_cannon" text="炮击妖精 - 170mm加农炮" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_170mm_cannon" text="" />
 
 	<!-- 敌人单位翻译 -->
 	<text key="SF-Manticore" text="强 无敌“蝎甲兽”机甲"/>
@@ -1902,5 +1919,7 @@
 	<text key="spawn_in_base_call, alerted, kcco_deploy_typhon.call" text="我方UAV侦察到敌军在&#37;base_name部署了一辆 Coeus 奎乌, 部署反坦克小组！"/>
 	<text key="spawn_in_base_call, alerted, para_deploy_uhlan.call" text="我方UAV侦察到敌军在&#37;base_name部署了一辆 Uhlan 枪骑兵, 做好冲击准备！"/>
 	<text key="spawn_in_base_call, alerted, para_deploy_uhlan_nyto.call" text="我方UAV侦察到敌军在&#37;base_name部署了一辆 Uhlan 枪骑兵, 做好冲击准备！"/>
+
+
 
 </translation>

@@ -549,21 +549,22 @@ float getCooldown(string pName,string type){
 dictionary call_tier_index = {
 
     // 新支援系统（注意命名按照T1=1xxxx,T2=2xxxx,T3=3xxxx的格式来）
-    // x-xxx-xx : 支援级别-支援编号-支援等级/变种
+    // x-xxx-xx : 支援tier级别-支援编号-支援等级/变种
+    // key命名规范
+    // tier+种类+具体名字+lv等级
 
     // T1 ----------------------------------- //
 
-    // T1 炮击妖精-[82mm迫击炮打击]
+    // T1 001 炮击妖精-[82mm迫击炮打击]
         // lv0
-        {"t1_lv0_bombardment_fairy_82mm_mortar",100100},
+        {"t1_bombardment_fairy_82mm_mortar_lv0",100100},
 
-    // T1 炮击妖精-[105mm榴弹扫荡]
+    // T1 002 炮击妖精-[105mm榴弹扫荡]
         // lv0
-        {"t1_lv0_bombardment_fairy_105mm_grenade_barrage",100200},
+        {"t1_bombardment_fairy_105mm_grenade_barrage_lv0",100200},
 
-    // T1 炮击妖精-[155mm空爆榴弹]
-
-        {"t1_lv0_bombardment_fairy_155mm_air_burst",100300},
+    // T1 003 炮击妖精-[155mm空爆榴弹]
+        {"t1_bombardment_fairy_155mm_air_burst_lv0",100300},
 
     // T1 空袭妖精-[俯冲攻击]
         //lv0

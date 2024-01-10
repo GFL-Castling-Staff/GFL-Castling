@@ -1174,7 +1174,7 @@ class Event_call_bombardment_fairy_82mm_mortar : event_call_task_hasMarker {
 		if(m_mode == "bombardment_fairy_82mm_mortar_lv0")
 		{
 			m_excute_Limit = 4;
-			m_time_internal = 1.0;
+			m_time_internal = 1.3;
 			m_airstrike_key = "mortar_82mm_x4";
 			m_airstrike_key_alt = "mortar_82mm";
 		}
@@ -1198,7 +1198,7 @@ class Event_call_bombardment_fairy_82mm_mortar : event_call_task_hasMarker {
 		}
 		if(m_excute_time==1)
 		{
-			m_timeLeft_internal = 2.0;
+			m_timeLeft_internal = 2.5;
 			insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key_alt,m_pos1,m_pos2);
 		}
 		else
