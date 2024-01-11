@@ -566,14 +566,14 @@ dictionary call_tier_index = {
     // T1 003 炮击妖精-[155mm空爆榴弹]
         {"t1_bombardment_fairy_155mm_air_burst_lv0",100300},
 
-    // T1 空袭妖精-[俯冲攻击]
+    // T1 004/005 空袭妖精-[俯冲攻击]
         //lv0
-        {"t1_lv0_dive_airstrike_fairy",100200},
-        {"t1_lv1_dive_airstrike_fairy",100201},
+        {"t1_airstrike_fairy_cas_lv0",100400},
+        {"t1_airstrike_fairy_cas_p2p_lv0",100500},
 
     // T1 空袭妖精-[精准空袭]
         // lv0
-        {"t1_lv0_precise_airstrike_fairy",100300},
+        {"t1_airstrike_fairy_precise_lv0",100600},
 
     // T1 火箭妖精-[巡航导弹]
         // lv0
@@ -597,7 +597,7 @@ dictionary call_tier_index = {
 
     // T2 空袭妖精-[高空投弹]
         // lv0
-        {"t2_lv0_highal_airstrike_fairy",200100},
+        {"t2_airstrike_fairy_bomber_lv0",200100},
 
     // T2 勇士妖精-[侦察直升机扫荡]
         // lv0 

@@ -5,10 +5,10 @@
     <rotation class="motion" />
     <model mesh_filename="rpg29_pg29v.xml" />
     <commonness value="0.0" />
-    <sound class="result" key="other" fileref="explosion_close_01.wav" volume="2.5" />
-    <sound class="result" key="other" fileref="explosion_close_02.wav" volume="2.5" />
-    <sound class="result" key="other" fileref="explosion_close_03.wav" volume="2.5" />
-    <sound class="result" key="other" fileref="explosion_close_04.wav" volume="2.5" />
+    <sound class="result" key="other" fileref="explosion_close_01.wav" volume="2.2" />
+    <sound class="result" key="other" fileref="explosion_close_02.wav" volume="2.2" />
+    <sound class="result" key="other" fileref="explosion_close_03.wav" volume="2.2" />
+    <sound class="result" key="other" fileref="explosion_close_04.wav" volume="2.2" />
 
     <sound class="result" key="vehicle" copy="other" />
     <sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.8" />

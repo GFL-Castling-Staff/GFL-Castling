@@ -16,8 +16,25 @@
         <specification name="[Tier 1]Bombardment Fairy - 155mm Air-Burst Strike" slot="0"/>
         <hud_icon filename="hud_call_artillery_155mm.png" />
     </weapon>
-    <weapon file="call_ui.base_weapon" key="call_ui_t1_bombardment_fairy_170mm_cannon">
+    <weapon file="call_ui.base_weapon" key="call_ui_t2_bombardment_fairy_170mm_cannon">
         <specification name="[Tier 2]Bombardment Fairy - 170mm Cannon" slot="1"/>
         <hud_icon filename="hud_call_artillery_170mm.png" />
     </weapon>
+
+    <weapon file="call_ui.base_weapon" key="call_ui_t2_airstrike_fairy_bomber">
+        <specification name="[Tier 2]Airstrike Fairy - High-Altitude Bomber" slot="1"/>
+        <hud_icon filename="hud_call_airstrike_bomber.png" />
+    </weapon>
+    <weapon file="call_ui.base_weapon" key="call_ui_t1_airstrike_fairy_cas">
+        <specification name="[Tier 2]Airstrike Fairy - Close Air Support" slot="0"/>
+        <hud_icon filename="hud_call_airstrike_cas.png" />
+    </weapon>
+    <weapon file="call_ui.base_weapon" key="call_ui_t1_airstrike_fairy_cas_p2p">
+        <specification name="[Tier 2]Airstrike Fairy - Close Air Support - P2P" slot="0"/>
+        <hud_icon filename="hud_call_airstrike_cas_p2p.png" />
+    </weapon>
+    <weapon file="call_ui.base_weapon" key="call_ui_t1_airstrike_fairy_precise">
+        <specification name="[Tier 2]Airstrike Fairy - Precise Airstrike" slot="0"/>
+        <hud_icon filename="hud_call_airstrike_precise.png" />
+    </weapon>       
 </weapons>
