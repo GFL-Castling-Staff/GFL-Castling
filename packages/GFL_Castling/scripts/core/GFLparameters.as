@@ -338,8 +338,8 @@
 
 
     // parameters for "save_system.as":
-    const string call_slot_default_1 = "t1_lv0_bombardment_fairy_82mm_mortar";
-    const string call_slot_default_2 = "t1_lv0_bombardment_fairy_105mm_grenade_barrage";
+    const string call_slot_default_1 = "t1_bombardment_fairy_82mm_mortar_lv0";
+    const string call_slot_default_2 = "call2";
     const string call_slot_default_3 = "call3";
 
     // 默认引用的支援key
