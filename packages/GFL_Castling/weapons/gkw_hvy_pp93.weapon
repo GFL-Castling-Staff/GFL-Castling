@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
 <weapon key="gkw_hvy_pp93.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-<tag name="bazooka"/>
+	<tag name="bazooka"/>
 	<specification
 	retrigger_time="-1"
 	accuracy_factor="1.0"
@@ -14,7 +14,7 @@
 	can_shoot_crouching="1"
 	can_shoot_prone="0"
 	suppressed="0"
-	name="2B14 Podnos"
+	name="PP93 60mm Mortar"
 	class="0"
 	projectile_speed="100.0"
 	barrel_offset="0.6"
@@ -23,7 +23,7 @@
 	<next_in_chain key="gkw_hvy_pp93_pdw.weapon" share_ammo="0"/>
 	<animation state_key="recoil" animation_key="recoil, portable mortar"/>
 	<animation state_key="crouching" animation_key="crouch, still, portable mortar"/>
-	<animation state_key="reload" animation_key="reloading, 2b14 mortar"/>
+	<animation state_key="reload" animation_key="reloading, pp93 mortar"/>
 	<animation state_key="hold" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="hold_on_wall" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="still_against_wall" animation_key="crouch, still, portable mortar"/>
@@ -40,13 +40,13 @@
 	<inventory encumbrance="100.0" buy_price="500.0" sell_price="500.0"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<model filename="gkw_hvy_pp93.xml"/>
-	<hud_icon filename="gkw_2b14.png"/>
+	<hud_icon filename="gkw_pp93.png"/>
 
 	<capacity value="0" source="rank" source_value="0.0"/>
 	<capacity value="1" source="rank" source_value="3.28"/>
 
 	<weak_hand_hold offset="0.3"/>
-	<projectile file="mortar_82mm.projectile" can_be_detected_by_footmen="1"  can_be_detected_by_driver="1"/>
+	<projectile file="mortar_60mm.projectile" can_be_detected_by_footmen="1"  can_be_detected_by_driver="1"/>
 	<ballistics near_far_distance="1.0" speed_estimation_near="10.0" speed_estimation_far="50.0" max_speed="200.0" randomness="0.03"/>
 	<effect class="muzzle" ref="MusketMuzzle"/>
 	<effect class="muzzle" ref="UpDust"/>
@@ -74,7 +74,7 @@
 	class="0"
 	slot="0" 
 	magazine_size="30" 
-	name="Type 81-1a(PP-93)" 
+	name="Type 81-1(PP-93)" 
 	spread_range="0.38"
 	sight_range_modifier="1.10"
 	projectile_speed="200" 
@@ -86,10 +86,10 @@
 	<next_in_chain key="gkw_hvy_pp93.weapon" share_ammo="0"/>
 	<inventory encumbrance="100.0" buy_price="500.0" sell_price="500.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
-	<sound key="fire" fileref="ak47_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2" />
-	<sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6" />
-	<sound key="magazine_in" fileref="ak12_mgz_in_FromCOD16.wav" volume="0.6" />
-	<sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
+	<sound key="fire" fileref="pp93pdw_fire_FromSQUAD.wav" pitch_variety="0.05" volume="1.2" />
+	<sound key="magazine_out" fileref="pp93pdw_mgz_out_FromSQUAD.wav" volume="1.0" />
+	<sound key="magazine_in" fileref="pp93pdw_mgz_in_FromSQUAD.wav" volume="1.0" />
+	<sound key="cycle" fileref="pp93pdw_cycle_FromSQUAD.wav" volume="1" />
 	<sound class="impact" fileref="rifle_drop.wav" />
 	<sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
 	<sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
