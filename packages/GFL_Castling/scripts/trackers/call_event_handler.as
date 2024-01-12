@@ -137,23 +137,23 @@ class call_event : Tracker {
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
                                     break;
                                 }         
-                                case 100300: //空袭妖精-俯冲共计
+                                case 100300: //空袭妖精-俯冲攻击
                                 {
                                     CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,60.0,"tier1"));
                                     playSoundAtLocation(m_metagame,"kcco_dn_1.wav",factionId,position,1.5);
-                                    sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
+                                    sendFactionMessageKey(m_metagame,factionId,"airstrikecallstarthint");
                                     int flagId = m_DummyCallID + 15000;
                                     CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
                                     FairyRequest.setIndex(11);
                                     FairyRequest.setSize(0.5);
                                     FairyRequest.setDummyId(flagId);
                                     FairyRequest.setRange(20.0);
-                                    FairyRequest.setIconTypeKey("call_marker_bomb");
+                                    FairyRequest.setIconTypeKey("call_marker_air");
                                     addCastlingMarker(FairyRequest);
                                     m_DummyCallID++;
                                     const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
                                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));                                    
-                                    Event_call_bombardment_fairy_82mm_mortar@ new_task = Event_call_bombardment_fairy_82mm_mortar(m_metagame,2.0,characterId,factionId,c_pos,stringToVector3(position),"bombardment_fairy_82mm_mortar_lv0",flagId);
+                                    Event_call_airstrike_fairy_cluster_bomb@ new_task = Event_call_airstrike_fairy_cluster_bomb(m_metagame,3.0,characterId,factionId,c_pos,stringToVector3(position),"t1_airstrike_fairy_precise_lv0",flagId);
                                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                                     tasker.add(new_task);
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
