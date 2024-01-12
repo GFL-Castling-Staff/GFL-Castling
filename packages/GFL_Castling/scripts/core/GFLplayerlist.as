@@ -259,6 +259,11 @@ class GFL_playerInfo{
     {
         m_battleinfo.addDead();
     }    
+
+    void addTacticPoint(int num)
+    {
+        m_battleinfo.addTacticPoint(num);
+    }
 }
 
 class GFL_playerInfo_Buck
@@ -511,8 +516,15 @@ class GFL_playerInfo_Buck
             if(m_playerInfo[i].getPlayerPid() == pid){
                 m_playerInfo[i].addKillSkillCount(skill_name,num);
             }
-        }        
-    }    
+        }
+    }
+
+    void addTacticPointToAll(int num)
+    {
+        for(uint i=0;i<size();++i){
+            m_playerInfo[i].addTacticPoint(num);
+        }
+    }
 }
 
 class GFL_battleInfo{
@@ -600,6 +612,10 @@ class GFL_battleInfo{
 
     void setTacticPoint(uint point) {
         m_tactic_point = point;
+    }
+
+    void addTacticPoint(uint point) {
+        m_tactic_point += point;
     }
 
     void setKillStreakPointCounter(uint point) {
@@ -857,6 +873,81 @@ class GFL_playerlist_system : Tracker {
 
     protected void handlePlayerConnectEvent(const XmlElement@ event) {
         refresh_overload();
+    }
+
+    protected void handleVehicleSpotEvent(const XmlElement@ event) {
+        int characterId = event.getIntAttribute("character_id");
+        if (characterId == -1) return;
+        int factionId = event.getIntAttribute("faction_id");
+        if (factionId != 0) return;
+        int ownerId = event.getIntAttribute("owner_id");
+        if (ownerId == 0) return;
+        string vehicle_key = event.getStringAttribute("vehicle_key");
+        int reward_point = int(tactic_point_vehicle_spot_reward[vehicle_key]);
+        if(reward_point <= 0) return;
+        const XmlElement@ characterInfo = getCharacterInfo(m_metagame,characterId);
+        if(characterInfo is null) return;
+        int playerId = characterInfo.getIntAttribute("player_id");
+        GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(playerId);
+        GFL_battleInfo@ battleInfo = playerInfo.getBattleInfo();
+        int m_tactic_point = battleInfo.getTacticPoint();
+        m_tactic_point+=reward_point;
+        battleInfo.setTacticPoint(m_tactic_point);
+        dictionary a;
+        a["%num"] = ""+reward_point;   
+        a["%current_num"] = ""+m_tactic_point;         
+        notify(m_metagame, "spot reward,hint", a, "misc", playerId, false, "", 1.0);
+    }
+
+    protected void handleVehicleDestroyEvent(const XmlElement@ event) {
+        int characterId = event.getIntAttribute("character_id");
+        if (characterId == -1) return;
+        int factionId = event.getIntAttribute("faction_id");
+        if (factionId != 0) return;
+        int ownerId = event.getIntAttribute("owner_id");
+        if (ownerId == 0) return;
+        string vehicle_key = event.getStringAttribute("vehicle_key");
+        int vehicleId = event.getIntAttribute("vehicle_id");
+        const XmlElement@ vehicle = getVehicleInfo(m_metagame,vehicleId);
+        if(vehicle is null) return;
+        string vehicle_name = vehicle.getStringAttribute("name");
+        int holder_id = vehicle.getIntAttribute("owner_id");
+        if(holder_id == 0) return;
+
+        const XmlElement@ characterInfo = getCharacterInfo(m_metagame,characterId);
+        if(characterInfo is null) return;
+        int playerId = characterInfo.getIntAttribute("player_id");
+
+        int reward_point = int(tactic_point_vehicle_destroy_reward[vehicle_key]);
+        if(reward_point > 0)
+        {
+            GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(playerId);
+            string player_name = playerInfo.getPlayerName();
+            dictionary a;
+            a["%vehicle"] = ""+vehicle_name;
+            a["%num"] = ""+reward_point;   
+            a["%player_name"] = ""+player_name;
+            g_playerInfo_Buck.addTacticPointToAll(reward_point);
+            sendFactionMessageKey(m_metagame,0,"vehicle destroy reward for all",a,0.9);
+        }
+
+        //处理击杀者奖励
+
+        int reward_point_1 = int(tactic_point_vehicle_destroy_personal_reward[vehicle_key]);
+        if(reward_point_1 > 0)
+        {
+            GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(playerId);
+            GFL_battleInfo@ battleInfo = playerInfo.getBattleInfo();
+            int m_tactic_point = battleInfo.getTacticPoint();
+            m_tactic_point+=reward_point_1;
+            battleInfo.setTacticPoint(m_tactic_point);
+
+            dictionary a;
+            a["%vehicle"] = ""+vehicle_name;
+            a["%num"] = ""+reward_point_1;   
+            a["%current_num"] = ""+m_tactic_point;
+            notify(m_metagame, "vehicle destroy reward for personal", a, "misc", playerId, false, "", 1.0);
+        }
     }
 
     void updatePlayerInfo(const XmlElement@ player){

@@ -1341,7 +1341,7 @@ class CommandSkill : Tracker {
                         playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.15);
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
                     }
-                    if(weaponname=="gkw_56-1type.weapon") {
+                    if(weaponname=="gkw_56-1type.weapon" || weaponname=="gkw_56-1typemod3.weapon") {
                         array<string> Voice={
                             "56-1type_SKILL1_JP.wav",
                             "56-1type_SKILL2_JP.wav",
@@ -2839,7 +2839,9 @@ class CommandSkill : Tracker {
             }                                                 
         }
         else{
-            addCooldown("sniper",5,characterId,modifer);
+            modifer.setCooldownMinus(0);
+            modifer.setCooldownReduction(1.0);
+            addCooldown("sniper",3,characterId,modifer);
         } 
     }
 
@@ -3018,7 +3020,9 @@ class CommandSkill : Tracker {
                 }
             }
             else{
-                addCooldown("sniper",3,characterId,modifer,"normal",false);
+                addCooldown("sniper",1.5,characterId,modifer,"normal",false);
+                modifer.setCooldownMinus(0);
+                modifer.setCooldownReduction(1.0);
                 sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"snipe_skill_notfound");
             }  
         } 
@@ -3085,13 +3089,17 @@ class CommandSkill : Tracker {
                 }
                 else{
                     sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"snipe_skill_notfound");
-                    addCooldown("sniper",3,characterId,modifer,"normal",false);
+                    modifer.setCooldownMinus(0);
+                    modifer.setCooldownReduction(1.0);
+                    addCooldown("sniper",1.5,characterId,modifer,"normal",false);
                 }  
             } 
         }
         else{
             sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"carcano_1938_not_ready");
-            addCooldown("sniper",5,characterId,modifer,"normal",false);
+            modifer.setCooldownMinus(0);
+            modifer.setCooldownReduction(1.0);
+            addCooldown("sniper",3,characterId,modifer,"normal",false);
         }
     }
 
@@ -3185,7 +3193,9 @@ class CommandSkill : Tracker {
         }
         else{
             sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"snipe_skill_notfound");
-            addCooldown("mosin",3,characterId,modifer,"normal",false);
+            modifer.setCooldownMinus(0);
+            modifer.setCooldownReduction(1.0);
+            addCooldown("mosin",1.5,characterId,modifer,"normal",false);
         }  
     }
 
@@ -3369,7 +3379,9 @@ class CommandSkill : Tracker {
             }
             else{
                 sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"snipe_skill_notfound");
-                addCooldown("kar98k",3,characterId,modifer,"normal",false);
+                modifer.setCooldownMinus(0);
+                modifer.setCooldownReduction(1.0);
+                addCooldown("kar98k",1.5,characterId,modifer,"normal",false);
             }  
         } 
     }
@@ -3490,7 +3502,9 @@ class CommandSkill : Tracker {
             }
             else{
                 sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"snipe_skill_notfound");
-                addCooldown("GM6",3,characterId,modifer,"normal",false);
+                modifer.setCooldownMinus(0);
+                modifer.setCooldownReduction(1.0);
+                addCooldown("GM6",1.5,characterId,modifer,"normal",false);
             }  
         } 
     }

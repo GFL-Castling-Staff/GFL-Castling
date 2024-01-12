@@ -510,6 +510,10 @@ class kill_event : Tracker {
                 if(boss_list.find(Solider_Name)>-1){
                     healCharacter(m_metagame,characterId,5);
                 }
+                else if(reward_pool_key=="rare" || reward_pool_key=="elite")
+                {
+                    healCharacter(m_metagame,characterId,2);
+                }                
             }            
             else if(startsWith(c_armorType,"tms_t6")){
                 if (c_weaponType=="gkw_hawk97mod3.weapon" || c_weaponType =="gkw_hawk97mod3_5805.weapon")
