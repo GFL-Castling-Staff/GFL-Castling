@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle spottable="0" file="vehicle_base.vehicle" name="Jupiter Wheeled Assult Gun" key="sf_JWAG.vehicle" respawn_time="120" time_to_live_unsteerable="115" map_view_atlas_index="1" minimum_fill_requirement="1.0">
+<vehicle spottable="0" file="vehicle_base.vehicle" name="Jupiter Wheeled Assult Gun" key="sf_JWAG.vehicle" respawn_time="120" time_to_live_unsteerable="115" map_view_atlas_index="1" 
+allow_owner_to_use_only="1"
+owner="faction" 
+minimum_fill_requirement="1.0">
 	<tag name="metal_light" />
 	<tag name="tank" />
 
@@ -72,22 +75,17 @@
 	<effect event_key="destroyed" ref="SmallSmokeVehicle" offset="-0.4 3.2 0.5" />
 	<effect event_key="destroyed" ref="MediumSmokeVehicle" offset="-0.4 2.4 -3.1" />  
 	<effect event_key="destroyed" ref="SmallFireRepeat" offset="0.0 3.0 0.5" />
-        <effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />   
-        <effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />  
+	<effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />   
+	<effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />  
   
 	<event key="receive_damage_xp_reward">
 		<trigger class="receive_damage" />
 		<result class="reward" xp="0.0090" />
 	</event>
-  
-	<event key="spot_rp_reward">
-		<trigger class="spot" />
-		<result class="reward" rp="20.0" />
-	</event>
 
 	<event key="destroy_rp_reward">
 		<trigger class="destroy" />
-		<result class="reward" rp="20.0" />
+		<result class="reward" rp="500.0" />
 	</event>
   
 	<event>

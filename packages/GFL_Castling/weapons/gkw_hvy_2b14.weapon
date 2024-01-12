@@ -32,12 +32,13 @@
 	<animation state_key="walking" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="walking_backwards" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon out,mortar"/><!--半身动作，切换武器，本武器取出-->
+	<animation state_key="changing_weapon_in" 	animation_key="change weapon in,jav" />
 	<sound key="fire" fileref="GeneralPurposeMortar_fire_FromSQUAD.wav" pitch_variety="0.1" volume="1.6"/>
 	<sound key="magazine_out" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
 	<sound key="cycle" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
-	<inventory encumbrance="100.0" buy_price="500.0" sell_price="500.0"/>
+	<inventory encumbrance="100.0" buy_price="500.0" sell_price="0.0"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<model filename="gkw_hvy_2b14.xml"/>
 	<hud_icon filename="gkw_2b14.png"/>
@@ -54,7 +55,7 @@
 	<stance state_key="walking" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="1.0"/>
 	<stance state_key="prone_moving" accuracy="1.0"/>
-	<stance state_key="standing" accuracy="1.0"/>
+	<stance state_key="standing" accuracy="0.85"/>
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1"/>
@@ -87,7 +88,7 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<animation state_key="changing_weapon_in" animation_key="change weapon in,hvy pdw mode"/>
 	<next_in_chain key="gkw_hvy_2b14.weapon" share_ammo="0"/>
-	<inventory encumbrance="100.0" buy_price="500.0" sell_price="500.0"/>
+	<inventory encumbrance="100.0" buy_price="500.0" sell_price="0.0"/>
     <sound key="fire" fileref="tt33_fire_FromCOD9.wav" pitch_variety="0.05" volume="1.6"/>
 	<sound key="magazine_out" fileref="tt33_mgz_out_FromSQUAD.wav" volume="0.9"/>
 	<sound key="magazine_in" fileref="tt33_mgz_in_FromSQUAD.wav" volume="0.9"/>

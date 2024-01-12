@@ -113,7 +113,7 @@
     <model filename="gkw_hvy_mk153.xml"/>
     <ballistics near_far_distance="1000.0" speed_estimation_near="100.0" speed_estimation_far="100.0" max_speed="125.0" randomness="0.0"/>
     <projectile file="mk153_NE.projectile">
-        <result class="spawn" instance_class="projectile" instance_key="mk153_sub.projectile" min_amount="4" max_amount="4" offset="0 2 0" position_spread="0 0" direction_spread="0 0" />
+        <result class="spawn" instance_class="projectile" instance_key="mk153_sub.projectile" min_amount="8" max_amount="8" offset="0 2 0" position_spread="0 0" direction_spread="0 0" />
     </projectile>
     <weak_hand_hold offset="0.3"/>
     <hud_icon filename="gkw_mk153.png"/>

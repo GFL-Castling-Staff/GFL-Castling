@@ -143,7 +143,82 @@
     const float default_float = -0.114514;
     const string default_string = "-nan-";
     const Vector3 default_Vector3 = Vector3(1,1,1);
-    
+
+
+    dictionary tactic_point_vehicle_destroy_reward = {
+        {"aa_emplacement.vehicle",30},
+        {"sf_jupiter.vehicle",30},
+        {"par_sentrytower.vehicle",30},
+
+        {"radar_tower.vehicle",15},
+        {"radio_jammer.vehicle",15},
+        {"radio_jammer2.vehicle",15},
+        {"radio_jammer3.vehicle",15},
+
+        {"",0}
+    };
+
+    dictionary tactic_point_vehicle_destroy_personal_reward = {
+        {"typhon.vehicle",5},
+        {"coeus.vehicle",5},
+        {"neosu_kuergants.vehicle",4},
+        {"kcco_pathfinder_factory.vehicle",3},
+        {"sandstorm.vehicle",3},
+
+        {"par_uhlan.vehicle",5},
+        {"par_elenusinus.vehicle",4},
+        {"par_aceso.vehicle",3},
+        {"par_cherub.vehicle",1},
+        {"par_moth.vehicle",1},
+        {"par_compass.vehicle",1},
+
+        {"aa_emplacement.vehicle",10},
+        {"sf_jupiter.vehicle",10},
+        {"par_sentrytower.vehicle",10},
+
+        {"sf_JWAG.vehicle",3},
+        {"deployed_mortar.vehicle",3},
+        {"hornet_ct.vehicle",3},
+        {"bgm71_tow.vehicle",2},
+        {"kcco_1130.vehicle",2},
+        {"rubber_boat.vehicle",2},
+
+        {"gas_tank.vehicle",1},
+        {"water_tower.vehicle",3},
+        {"mortar_ammunition_crates.vehicle",1},
+
+        {"",0}
+    };
+
+    dictionary tactic_point_vehicle_spot_reward = {
+        {"typhon.vehicle",5},
+        {"coeus.vehicle",5},
+        {"neosu_kuergants.vehicle",4},
+        {"kcco_pathfinder_factory.vehicle",3},
+        {"sandstorm.vehicle",3},
+
+        {"par_uhlan.vehicle",5},
+        {"par_elenusinus.vehicle",4},
+        {"par_aceso.vehicle",3},
+        {"par_cherub.vehicle",2},
+        {"par_moth.vehicle",2},
+        {"par_compass.vehicle",1},
+
+        {"aa_emplacement.vehicle",10},
+        {"sf_jupiter.vehicle",10},
+        {"par_sentrytower.vehicle",10},
+        {"radar_tower.vehicle",7},
+        {"radio_jammer.vehicle",7},
+        {"radio_jammer2.vehicle",7},
+        {"radio_jammer3.vehicle",7},
+        {"deployed_mortar.vehicle",3},
+        {"bgm71_tow.vehicle",2},
+        {"kcco_1130.vehicle",2},
+        {"rubber_boat.vehicle",2},
+
+        {"",0}
+    };    
+
 // parameters for "ItemDropEvent.as":
 
     dictionary itemDropFileIndex = {

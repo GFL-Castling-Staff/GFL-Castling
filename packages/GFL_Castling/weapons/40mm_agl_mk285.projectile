@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="40x53mm MK285" slot="1" pulldown_in_air="20.0" can_be_detected_by_driver="0" can_be_disarmed="0" time_to_live_out_in_the_open="0.0" key="40mm_agl_mk285.projectile">
     <tag name="grenade"/>
-    <result class="spawn" instance_class="projectile" instance_key="blast_shard_rad5_hvy.projectile" min_amount="15" max_amount="15" offset="0 0.0 0" position_spread="1.5 0.5" direction_spread="0 0" />
+    <result class="spawn" instance_class="projectile" instance_key="blast_shard_rad5_hvy.projectile" min_amount="15" max_amount="15" offset="0 0 0" position_spread="1.5 0" direction_spread="0 0" />
     <collision class="impact" />    
     <trigger class="time" time_to_live="0.5"/>
 

@@ -3,13 +3,14 @@
 <weapon key="gkw_hvy_m2.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 <tag name="bazooka"/>
 	<specification
-	retrigger_time="-1"
+	retrigger_time="1.0"
 	accuracy_factor="1.0"
 	sight_range_modifier="4.0"
 	sight_height_offset="6.0"
-	sustained_fire_grow_step="6.0"
+	sustained_fire_grow_step="4.0"
 	sustained_fire_diminish_rate="2.0"
-	magazine_size="1"
+	spread_range="0.3"
+	magazine_size="6"
 	can_shoot_standing="0"
 	can_shoot_crouching="1"
 	can_shoot_prone="0"
@@ -19,6 +20,7 @@
 	projectile_speed="100.0"
 	barrel_offset="0.6"
 	projectiles_per_shot="1"
+	reload_one_at_a_time="1"
 	slot="0"/>
 	<next_in_chain key="gkw_m2_m1a1.weapon" share_ammo="0"/>
 	<animation state_key="recoil" animation_key="recoil, portable mortar"/>
@@ -32,12 +34,12 @@
 	<animation state_key="walking" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="walking_backwards" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon out,mortar"/><!--半身动作，切换武器，本武器取出-->
+	<animation state_key="changing_weapon_in" 	animation_key="change weapon in,jav" />
 	<sound key="fire" fileref="m2_mortar_fire.wav" pitch_variety="0.1" volume="1.2"/>
-	<sound key="magazine_out" fileref="portable_mortar_reload.wav" volume="0.7"/>
-	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
+	<sound key="reload_one" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound key="cycle" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
-	<inventory encumbrance="100.0" buy_price="420.0" sell_price="420.0"/>
+	<inventory encumbrance="100.0" buy_price="420.0" sell_price="0.0"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<model filename="gkw_hvy_m2.xml"/>
 	<hud_icon filename="gkw_m2.png"/>
@@ -54,7 +56,7 @@
 	<stance state_key="walking" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="1.0"/>
 	<stance state_key="prone_moving" accuracy="1.0"/>
-	<stance state_key="standing" accuracy="1.0"/>
+	<stance state_key="standing" accuracy="0.85"/>
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
@@ -86,7 +88,7 @@
     sustained_fire_grow_step="0.85"
     sight_range_modifier="1.25"/>
     <next_in_chain key="gkw_hvy_m2.weapon" share_ammo="0" />
-    <inventory encumbrance="100.0" buy_price="420.0" sell_price="10.0" />
+    <inventory encumbrance="100.0" buy_price="420.0" sell_price="0.0" />
     <commonness value="0" in_stock="0" can_respawn_with="1"/>
     <animation state_key="reload" animation_key="reloading, magazine rifle 1.8" />
     <sound key="fire" fileref="m1a1_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.01" volume="1.2"/>
