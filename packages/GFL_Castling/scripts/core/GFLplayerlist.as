@@ -922,6 +922,7 @@ class GFL_playerlist_system : Tracker {
         if(reward_point > 0)
         {
             GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(playerId);
+            if (playerInfo.m_name == default_string) return;
             string player_name = playerInfo.getPlayerName();
             dictionary a;
             a["%vehicle"] = ""+vehicle_name;
@@ -937,6 +938,7 @@ class GFL_playerlist_system : Tracker {
         if(reward_point_1 > 0)
         {
             GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(playerId);
+            if (playerInfo.m_name == default_string) return;
             GFL_battleInfo@ battleInfo = playerInfo.getBattleInfo();
             int m_tactic_point = battleInfo.getTacticPoint();
             m_tactic_point+=reward_point_1;
