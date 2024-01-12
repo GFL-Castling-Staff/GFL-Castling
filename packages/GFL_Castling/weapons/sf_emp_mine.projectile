@@ -76,7 +76,7 @@
         <collider class="character" enabled="1" />
     </trigger>
 	<rotation class="motion" />
-    <result class="blast" radius="10.0" damage="3" push="0.5" decal="1" character_state="wound"  faction_compare="not_equal"/>
+    <result class="blast" radius="16.0" damage="3" push="0.5" decal="1" character_state="wound"  faction_compare="not_equal"/>
     <model filename="sf_emp_mine.xml" />
     <hud_icon filename="hud_claymore.png" />
     <commonness value="1" in_stock="1" can_respawn_with="1" />

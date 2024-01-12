@@ -99,6 +99,7 @@ dictionary commandSkillIndex = {
         {"ff_destroyer_skin.weapon",10},
 
         // FF_EXCUTIONER
+        {"ff_excutioner_1.weapon",11},
         {"ff_excutioner_2.weapon",11},
 
         // FF_BAIBAOZI

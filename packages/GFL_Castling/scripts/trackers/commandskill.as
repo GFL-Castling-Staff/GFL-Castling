@@ -200,7 +200,7 @@ class CommandSkill : Tracker {
                 case 8:{excuteIntruderskill(cId,senderId,m_modifer);break;}
                 case 9:{excuteAgentskill(cId,senderId,m_modifer);break;}
                 case 10:{excuteDestroyerskill(cId,senderId,m_modifer);break;}
-                case 11:{excuteExcutionerskill(cId,senderId,m_modifer);break;}
+                case 11:{excuteExcutionerskill(cId,senderId,m_modifer,c_weaponType);break;}
                 case 12:{excuteBaibaoziskill(cId,senderId,m_modifer);break;}
                 case 13:{excuteG3mod3skill(cId,senderId,m_modifer);break;}
                 case 14:{excuteUMP45skill(cId,senderId,m_modifer);break;}
@@ -931,9 +931,10 @@ class CommandSkill : Tracker {
         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
     }
 
-    void excuteExcutionerskill(int characterId,int playerId,SkillModifer@ modifer){
-        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"FF_EXCUTIONER")) return;
-        addCooldown("FF_EXCUTIONER",25,characterId,modifer);
+    void excuteExcutionerskill(int characterId,int playerId,SkillModifer@ modifer,string weaponname){
+        if (weaponname=="ff_excutioner_1.weapon" && (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"FF_EXCUTIONER_1")))return;
+        if (weaponname=="ff_excutioner_2.weapon" && (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"FF_EXCUTIONER_2")))return;        
+
         const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
         if (characterinfo is null) return;
         const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
@@ -962,18 +963,29 @@ class CommandSkill : Tracker {
         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
         // playAnimationKey(m_metagame,characterId,"excution_skill",false,false);
 
-        int ix = 5;
-        CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*3-dy*dd*3/tt,0,dy*dd*3+dx*dd*3/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),"excutioner_skill_1.projectile",characterId,factionid,60,1,Orientation(0,1,3,2.14));
-        CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*4           ,0,dy*dd*4           )),c_pos.add(Vector3(dx*dd*(ix*2)                    ,0,dy*dd*(ix*2)                    )),"excutioner_skill_1.projectile",characterId,factionid,60,1,Orientation(0,1,3,2.14));
-        CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*3+dy*dd*3/tt,0,dy*dd*3-dx*dd*3/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"excutioner_skill_1.projectile",characterId,factionid,60,1,Orientation(0,1,3,2.14));
+        if (weaponname=="ff_excutioner_1.weapon"){
+            addCooldown("FF_EXCUTIONER_1",10,characterId,modifer);
+            Skill_ff_excutioner@ shot = Skill_ff_excutioner(m_metagame,0.4,characterId,factionid,s_pos);
+            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+            tasker.add(shot);
+        }
 
-        for(ix=2;ix<=6;ix++)
-        {
-            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,1,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),"excutioner_skill.projectile",characterId,factionid,100,0.001);
-            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2)                    ,1,dy*dd*(ix*2)                    )),c_pos.add(Vector3(dx*dd*(ix*2)                    ,0,dy*dd*(ix*2)                    )),"excutioner_skill.projectile",characterId,factionid,100,0.001);
-            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,1,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"excutioner_skill.projectile",characterId,factionid,100,0.001);
+        else if (weaponname=="ff_excutioner_2.weapon"){
+            addCooldown("FF_EXCUTIONER_2",25,characterId,modifer);
+            int ix = 5;
+            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*3-dy*dd*3/tt,0,dy*dd*3+dx*dd*3/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),"excutioner_skill_1.projectile",characterId,factionid,60,1,Orientation(0,1,3,2.14));
+            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*4           ,0,dy*dd*4           )),c_pos.add(Vector3(dx*dd*(ix*2)                    ,0,dy*dd*(ix*2)                    )),"excutioner_skill_1.projectile",characterId,factionid,60,1,Orientation(0,1,3,2.14));
+            CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*3+dy*dd*3/tt,0,dy*dd*3-dx*dd*3/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"excutioner_skill_1.projectile",characterId,factionid,60,1,Orientation(0,1,3,2.14));
+
+            for(ix=2;ix<=7;ix++) 
+            {
+                CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,1,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),"excutioner_skill.projectile",characterId,factionid,100,0.001);
+                CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2)                    ,1,dy*dd*(ix*2)                    )),c_pos.add(Vector3(dx*dd*(ix*2)                    ,0,dy*dd*(ix*2)                    )),"excutioner_skill.projectile",characterId,factionid,100,0.001);
+                CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,1,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"excutioner_skill.projectile",characterId,factionid,100,0.001);
+            }
         }
     }
+
     void excuteBaibaoziskill(int characterId,int playerId,SkillModifer@ modifer){
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"FF_ALINA",true,"charge_recover_1",4)) return;
         const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);

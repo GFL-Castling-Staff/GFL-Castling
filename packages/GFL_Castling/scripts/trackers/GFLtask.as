@@ -1063,6 +1063,51 @@ class Skill_Fairy_Snipe : DelaySkill {
 	}		
 }
 
+class Skill_ff_excutioner : DelaySkill {
+	protected array<const XmlElement@> affectedCharacter;
+
+	Skill_ff_excutioner(GameMode@ metagame, float time, int cId,int fId,Vector3 pos){
+		super(metagame,time,cId,fId);
+		t_pos = pos;
+	}
+
+	void start(){
+		m_timeLeft=m_time;
+		m_timeLeft_internal = 0;
+		int m_fnum = m_metagame.getFactionCount();
+		this.setExcuteLimit(3);
+		this.setInternal(0.2);
+		for(int i=0;i<m_fnum;i++) {
+			if(i!=m_faction_id) {
+				array<const XmlElement@> affectedCharacter2;
+				affectedCharacter2 = getCharactersNearPosition(m_metagame,t_pos,i,6.0f);
+				if (affectedCharacter2 !is null){
+					for(uint x=0;x<affectedCharacter2.length();x++){
+						affectedCharacter.insertLast(affectedCharacter2[x]);
+					}
+				}
+			}
+		}		
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time;return;}
+		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
+		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
+		if (affectedCharacter.length()<= 0){m_end = true;return;}
+		m_excute_time++;
+		m_timeLeft_internal = m_time_internal;
+		int luckyoneid = affectedCharacter[getRandomIndex(affectedCharacter.length())].getIntAttribute("id");
+		const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+		if(luckyoneC is null)
+		{
+			m_timeLeft_internal = 0;
+			return;
+		}
+		Vector3 e_pos = stringToVector3(luckyoneC.getStringAttribute("position"));
+		CreateDirectProjectile(m_metagame,e_pos.add(Vector3(0,20,0)),e_pos,"snipe_ff_excutioner.projectile",m_character_id,m_faction_id,300);
+	}
+}
 
 class Skill_ff_hunter : DelaySkill {
 	protected array<const XmlElement@> affectedCharacter;
@@ -1076,7 +1121,7 @@ class Skill_ff_hunter : DelaySkill {
 		m_timeLeft=m_time;
 		m_timeLeft_internal = 0;
 		int m_fnum = m_metagame.getFactionCount();
-		this.setExcuteLimit(6);
+		this.setExcuteLimit(8);
 		this.setInternal(0.2);
 		for(int i=0;i<m_fnum;i++) {
 			if(i!=m_faction_id) {

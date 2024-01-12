@@ -1236,8 +1236,8 @@ class GFLskill : Tracker {
 					float ds = sqrt(dx*dx+dy*dy);
 					if(ds<=0.000001f) ds=0.000001f;
 					dx = dx/ds; dy=dy/ds;
-					float dd = 1.2; //同一列相邻弹头的距离
-					float tt = 3;   //同一行相邻弹头位置偏移比值
+					float dd = 2; //同一列相邻弹头的距离
+					float tt = 4;   //同一行相邻弹头位置偏移比值
 				
 					array<string> Voice={
 					"Excutioner_buhuo_SKILL02_JP.wav",
@@ -1251,7 +1251,7 @@ class GFLskill : Tracker {
 					CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*4           ,0,dy*dd*4           )),c_pos.add(Vector3(dx*dd*(ix*2)                    ,0,dy*dd*(ix*2)                    )),"excutioner_skill_1.projectile",characterId,factionid,60,1,Orientation(0,1,3,2.14));
 					CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*3+dy*dd*3/tt,0,dy*dd*3-dx*dd*3/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"excutioner_skill_1.projectile",characterId,factionid,60,1,Orientation(0,1,3,2.14));
 
-					for(ix=2;ix<=7;ix++)
+					for(ix=2;ix<=8;ix++)
 					{
 						CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,1,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)-dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)+dx*dd*(ix*2-1)/tt)),"excutioner_skill.projectile",characterId,factionid,100,0.001);
 						CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2)                    ,1,dy*dd*(ix*2)                    )),c_pos.add(Vector3(dx*dd*(ix*2)                    ,0,dy*dd*(ix*2)                    )),"excutioner_skill.projectile",characterId,factionid,100,0.001);

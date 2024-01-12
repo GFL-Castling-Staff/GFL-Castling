@@ -197,6 +197,16 @@
         <sound class="result" key="other" fileref="deserteagle_fire_FromCOD13.wav" pitch_variety="0.05" volume="5.0" />
         <commonness value="0.0" can_respawn_with="0" in_stock="0" />
     </projectile>
+    <projectile class="grenade" name="" key="snipe_ff_excutioner.projectile" pulldown_in_air="4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.3" use_time_to_live="1" time_to_live="2">
+        <result class="spawn" instance_class="projectile" instance_key="blast_snipe_ff_excutioner.projectile" min_amount="4" max_amount="4" make_vehicle_hit_sound="0" offset="0 0.3 0" position_spread="1 1" direction_spread="0.0 0.0" />
+        <trigger class="impact"/>
+        <rotation class="motion" />
+        <collision class="sticky" />
+        <model />
+        <hud_icon filename="88r.png" />
+        <sound class="result" key="other" fileref="deserteagle_fire_FromCOD13.wav" pitch_variety="0.05" volume="5.0" />
+        <commonness value="0.0" can_respawn_with="0" in_stock="0" />
+    </projectile>
     <projectile class="grenade" name="" key="flechette_m1897.projectile" pulldown_in_air="4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.25">
         <result class="spawn" instance_class="projectile" instance_key="blast_snipe_lowdamage.projectile" min_amount="20" max_amount="20" make_vehicle_hit_sound="0" offset="0 0.3 0" position_spread="0 0" direction_spread="0.0 0.0" />
         <trigger class="time" time_to_live="0.0"/>
