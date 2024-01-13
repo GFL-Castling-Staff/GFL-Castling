@@ -296,33 +296,55 @@ player_data@ PlayerProfileLoad(const XmlElement@ player_profile){
     output.SetSid(m_sid);
     output.SetCoreNum(m_corenum);
 
-    array<const XmlElement@> weapon_list = player_profile.getFirstElementByTagName("weapons").getElementsByTagName("weapon");
-    for(uint i = 0; i < weapon_list.length();i++)
+    const XmlElement@ weapon_dump = player_profile.getFirstElementByTagName("weapons");
+    if(weapon_dump !is null)
     {
-        string weapon_key = weapon_list[i].getStringAttribute("key");
-        if(weapon_key =="") continue;
-        output.addWeapon(weapon_key);
-    }
-    output.formatWeaponList();
-
-    array<const XmlElement@> unlocked_call_list = player_profile.getFirstElementByTagName("unlocked_calls").getElementsByTagName("unlocked_call");
-    for(uint i = 0; i < unlocked_call_list.length();i++)
-    {
-        string call_ui_key = unlocked_call_list[i].getStringAttribute("call_key");
-        int level = unlocked_call_list[i].getIntAttribute("level");
-        if(call_ui_key =="") continue;
-        GFL_call_info@ new_call_info = GFL_call_info(call_ui_key,level);
-        output.addUnlockedCall(new_call_info);
+        array<const XmlElement@> weapon_list = weapon_dump.getElementsByTagName("weapon");
+        if(weapon_list !is null)
+        {
+            for(uint i = 0; i < weapon_list.length();i++)
+            {
+                string weapon_key = weapon_list[i].getStringAttribute("key");
+                if(weapon_key =="") continue;
+                output.addWeapon(weapon_key);
+            }
+            output.formatWeaponList();
+        }
     }
 
-    const XmlElement@ call_slot_1 = player_profile.getFirstElementByTagName("active_call").getFirstElementByTagName("callslot_1");
-    const XmlElement@ call_slot_2 = player_profile.getFirstElementByTagName("active_call").getFirstElementByTagName("callslot_2");
-    const XmlElement@ call_slot_3 = player_profile.getFirstElementByTagName("active_call").getFirstElementByTagName("callslot_3");
+    const XmlElement@ unlocked_call_dump = player_profile.getFirstElementByTagName("unlocked_calls");
+    if(unlocked_call_dump !is null)
+    {
+        array<const XmlElement@> unlocked_call_list = unlocked_call_dump.getElementsByTagName("unlocked_call");
+        if(unlocked_call_list !is null)
+        {
+            for(uint i = 0; i < unlocked_call_list.length();i++)
+            {
+                string call_ui_key = unlocked_call_list[i].getStringAttribute("call_key");
+                int level = unlocked_call_list[i].getIntAttribute("level");
+                if(call_ui_key =="") continue;
+                GFL_call_info@ new_call_info = GFL_call_info(call_ui_key,level);
+                output.addUnlockedCall(new_call_info);
+            }
+        }
+    }
 
-    string call_slot_callkey_1 = call_slot_1.getStringAttribute("key");
-    string call_slot_callkey_2 = call_slot_2.getStringAttribute("key");
-    string call_slot_callkey_3 = call_slot_3.getStringAttribute("key");
+    string call_slot_callkey_1 = call_slot_default_1;
+    string call_slot_callkey_2 = call_slot_default_2;
+    string call_slot_callkey_3 = call_slot_default_3;
+    
+    const XmlElement@ active_call_dump = player_profile.getFirstElementByTagName("active_call");
+    if(active_call_dump !is null)
+    {
+        const XmlElement@ call_slot_1 = active_call_dump.getFirstElementByTagName("callslot_1");
+        const XmlElement@ call_slot_2 = active_call_dump.getFirstElementByTagName("callslot_2");
+        const XmlElement@ call_slot_3 = active_call_dump.getFirstElementByTagName("callslot_3");
 
+        if(call_slot_1 !is null) call_slot_callkey_1 = call_slot_1.getStringAttribute("key");
+        if(call_slot_2 !is null) call_slot_callkey_2 = call_slot_2.getStringAttribute("key");
+        if(call_slot_3 !is null) call_slot_callkey_3 = call_slot_3.getStringAttribute("key");
+    }
+    
     output.setCallSlot(1,call_slot_callkey_1);
     output.setCallSlot(2,call_slot_callkey_2);
     output.setCallSlot(3,call_slot_callkey_3);

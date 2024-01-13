@@ -38,7 +38,7 @@
     <model filename="parw_soldier_gun.xml" />
     <hud_icon filename="parw_streletplus.png" />
     <projectile file="bullet_paradeus_thick.projectile">
-        <result class="hit" kill_probability="1.75" kill_decay_start_time="0.7" kill_decay_end_time="0.7" />
+        <result class="hit"  kill_probability="2.0" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.2" kill_decay_end_time="0.9" />
     </projectile>
 	<stance state_key="running" accuracy="0.3" />
 	<stance state_key="walking" accuracy="0.675" />

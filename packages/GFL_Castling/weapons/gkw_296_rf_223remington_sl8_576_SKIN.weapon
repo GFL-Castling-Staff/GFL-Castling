@@ -24,6 +24,7 @@
     <inventory encumbrance="35.0" buy_price="36.0" sell_price="36.0" />
     <!--Animations-->
     <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
+    <commonness value="0" in_stock="0" can_respawn_with="1" />
     <!--Sounds-->
     <sound key="fire" fileref="sl8_fire_FromWF.wav" volume="1.1" />
     <sound key="magazine_out" fileref="g36_mgz_out_FromCOD16.wav" volume="0.4" />

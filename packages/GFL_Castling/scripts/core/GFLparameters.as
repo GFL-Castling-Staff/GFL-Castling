@@ -410,3 +410,11 @@
     const string call_slot_default_3 = "call3";
 
     // 默认引用的支援key
+
+    // parameters for "kill_event.as":
+
+    array<string> point_nerfed_reward = {
+    "kcco_pathfinder",
+    "infected",
+    "sf_dinergate"
+};

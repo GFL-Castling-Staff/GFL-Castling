@@ -528,7 +528,7 @@
 		</resources>
 	</soldier>
 	<!-- 重锤 -->
-	<soldier name="parw_hammer" spawn_score="0.5" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="parw_hammer" spawn_score="0.3" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="para_hammer.ai"/>
 		<character filename="paradeus.text_lines">
 			<sound key="death" fileref="kill_sound_kcco_bot01.wav" volume="0.4" pitch_variety="0.025"/>
@@ -614,7 +614,7 @@
 			</attribute_config>
 		</resources>
 	</soldier>
-	<soldier name="parw_defender" spawn_score="1.0" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="parw_defender" spawn_score="0.4" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="pard_defender.ai" />
 		<model filename="pard_punish.xml" />
 		<character filename="paradeus.text_lines">

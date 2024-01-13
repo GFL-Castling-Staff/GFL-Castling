@@ -391,6 +391,14 @@ class kill_event : Tracker {
                 kill_to_heal_scale = 2;
                 notify(m_metagame, "kill streak,elite reward", dictionary(), "misc", playerId, false, "", 1.0);
             } 
+            else if(point_nerfed_reward.find(Solider_Name) > -1)
+            {
+                if(rand(0.0f,1.0f) <= 0.3f)
+                {
+                    handleKillEventToPlayerInfo(playerId,1);
+                    //兵蚁 僵尸 这种东西给的积分变少，30%概率给1点积分
+                }
+            }            
             else
             {
                 handleKillEventToPlayerInfo(playerId,1);                

@@ -39,7 +39,7 @@
 	<projectile file="bullet_paradeus.projectile" time_to_live="0.28">
 		<result class="hit" 
         kill_probability="2.0" 
-		kill_decay_start_time="0.12" 
+		kill_decay_start_time="0.08" 
         kill_decay_end_time="0.28" />
 	</projectile>
 	<!--Accuracy, Movement speed-->
@@ -90,7 +90,7 @@
 	<projectile file="bullet_paradeus.projectile" time_to_live="0.35">
 		<result class="hit" 
         kill_probability="2.0" 
-		kill_decay_start_time="0.15" 
+		kill_decay_start_time="0.08" 
         kill_decay_end_time="0.35" />
 	</projectile>
 	<!--Accuracy, Movement speed-->
