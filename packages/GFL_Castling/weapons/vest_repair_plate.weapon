@@ -25,7 +25,8 @@
     <animation state_key="walking_backwards"    animation_key="walking backwards, single hand carry" />
     <animation state_key="crouch_moving"    animation_key="crouching forwards, single hand carry" />
     <animation state_key="crouch_moving_backwards"  animation_key="crouching backwards, single hand carry" />
-    
+    <animation key="changing_weapon_in" animation_key="change weapon in,fast" />
+
     <sound class="impact" fileref="medikit_drop.wav" />    
 	<sound key="effect" fileref="plate_equip.wav" volume="1.2" />
 

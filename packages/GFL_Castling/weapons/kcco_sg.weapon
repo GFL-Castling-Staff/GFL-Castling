@@ -39,8 +39,8 @@
     <hud_icon filename="kccow_sg.png" />
     <capacity value="1" source="rank" source_value="0.0" />
     <weak_hand_hold offset="0.2" />
-    <projectile file="bullet_kcco.projectile">
-        <result class="hit"  kill_probability="2.0" kill_decay_start_time="0.01" kill_decay_end_time="0.9" />
+    <projectile file="bullet_kcco.projectile" time_to_live="0.45">
+        <result class="hit" kill_probability="2.0" kill_decay_start_time="0.03" kill_decay_end_time="0.9" />
     </projectile>
     <stance state_key="running" accuracy="0.7" />
     <stance state_key="walking" accuracy="0.8" />

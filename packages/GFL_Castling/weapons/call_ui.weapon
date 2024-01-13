@@ -26,15 +26,15 @@
         <hud_icon filename="hud_call_airstrike_bomber.png" />
     </weapon>
     <weapon file="call_ui.base_weapon" key="call_ui_t1_airstrike_fairy_cas">
-        <specification name="[Tier 2]Airstrike Fairy - Close Air Support" slot="0"/>
+        <specification name="[Tier 1]Airstrike Fairy - Close Air Support" slot="0"/>
         <hud_icon filename="hud_call_airstrike_cas.png" />
     </weapon>
     <weapon file="call_ui.base_weapon" key="call_ui_t1_airstrike_fairy_cas_p2p">
-        <specification name="[Tier 2]Airstrike Fairy - Close Air Support - P2P" slot="0"/>
+        <specification name="[Tier 1]Airstrike Fairy - Close Air Support - P2P" slot="0"/>
         <hud_icon filename="hud_call_airstrike_cas_p2p.png" />
     </weapon>
     <weapon file="call_ui.base_weapon" key="call_ui_t1_airstrike_fairy_precise">
-        <specification name="[Tier 2]Airstrike Fairy - Precise Airstrike" slot="0"/>
+        <specification name="[Tier 1]Airstrike Fairy - Precise Airstrike" slot="0"/>
         <hud_icon filename="hud_call_airstrike_precise.png" />
-    </weapon>       
+    </weapon>
 </weapons>

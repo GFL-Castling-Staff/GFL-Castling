@@ -66,7 +66,7 @@ class ItemDropEvent : Tracker {
                 int pId = event.getIntAttribute("player_id");     
                 notify(m_metagame, "Help - logger system", dictionary(), "misc", pId, true, "Help - logger system title", 1.0);
             }
-            if(startsWith(key,"call_ui"))
+            else if(startsWith(key,"call_ui"))
             {
                 deleteItemInBackpack(m_metagame,cId,"weapon",key);
                 int pId = event.getIntAttribute("player_id");
@@ -92,6 +92,11 @@ class ItemDropEvent : Tracker {
                     a["%slot"] = "Tier " + slot;
                     notify(m_metagame, "Hint - call - changesuccess", a, "misc", pId, false, "", 1.0);
                 }
+            }
+            else if(key == "pack_vest_repair_plate_x8")
+            {
+                deleteItemInBackpack(m_metagame,cId,"weapon",key);
+                addMutilItemInBackpack(m_metagame,cId,"weapon","vest_repair_plate.weapon",10);
             }
         }        
         if (type_id == 1){
