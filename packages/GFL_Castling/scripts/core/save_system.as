@@ -47,6 +47,8 @@ class player_data
         GFL_call_info("call_ui_t1_bombardment_fairy_105mm_grenade_barrage",0),
         GFL_call_info("call_ui_t2_airstrike_fairy_bomber",0),
         GFL_call_info("call_ui_t1_airstrike_fairy_precise",0),
+        GFL_call_info("call_ui_t2_airstrike_fairy_precise",0),
+        GFL_call_info("call_ui_t3_airstrike_fairy_precise",0),
         GFL_call_info("call_ui_t1_airstrike_fairy_cas",0),
         GFL_call_info("call_ui_t1_airstrike_fairy_cas_p2p",0),
         GFL_call_info("call_ui_t1_bombardment_fairy_105mm_grenade_barrage",0)

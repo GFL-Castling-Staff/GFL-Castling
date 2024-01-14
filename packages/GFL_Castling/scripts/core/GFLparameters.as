@@ -318,6 +318,10 @@
         {"call_ui_t1_airstrike_fairy_cas",1},
         {"call_ui_t1_airstrike_fairy_cas_p2p",1},
         {"call_ui_t1_airstrike_fairy_precise",1},
+        {"call_ui_t2_airstrike_fairy_precise",2},
+        {"call_ui_t3_airstrike_fairy_precise",3},
+
+        {"call_ui_t1_elmo_banzai_drone",1},
 
         {"666",0}
     };

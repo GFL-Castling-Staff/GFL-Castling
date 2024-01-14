@@ -231,6 +231,8 @@
 
 	<text key="[Tier 2]Airstrike Fairy - High-Altitude Bomber" text="[Tier 2]空袭妖精 - 高空投弹"/>
 	<text key="[Tier 1]Airstrike Fairy - Precise Airstrike" text="[Tier 1]空袭妖精 - 精确空袭"/>
+	<text key="[Tier 2]Airstrike Fairy - Precise Airstrike" text="[Tier 2]空袭妖精 - 精确空袭"/>
+	<text key="[Tier 3]Airstrike Fairy - Precise Airstrike" text="[Tier 3]空袭妖精 - 精确空袭"/>
 	<text key="[Tier 1]Airstrike Fairy - Close Air Support" text="[Tier 1]空袭妖精 - 近空支援"/>
 	<text key="[Tier 1]Airstrike Fairy - Close Air Support - P2P" text="[Tier 1]空袭妖精 - 近空支援·总座高见"/>
 
@@ -264,7 +266,7 @@
 -弹着点并不精准，与实际位置存在距离10的误差"/>
 
 	<text key="Hint - call - title - call_ui_t2_airstrike_fairy_bomber" text="空袭妖精 - 高空投弹" />
-	<text key="Hint - call - intro - call_ui_t2_airstrike_fairy_bomber" text="<冷却时间 90秒 消耗 50战术点>
+	<text key="Hint - call - intro - call_ui_t2_airstrike_fairy_bomber" text="<冷却时间 120秒 消耗 50战术点>
 -标定目标点，随后从垂直于（你和目标点连线）的路径召唤一架轰炸机进行投弹
 -总共投下9颗航弹，每发对范围7.5造成75的blast伤害
 -(该支援受空域禁制影响)"/>
@@ -1965,6 +1967,7 @@
 	<text key="call event,not enough point" text="[战术妖精] 战术点不够呼叫本次支援哦~ 还缺少&#37;num点战术点" />
 	<text key="call event,cost point" text="[战术妖精] 呼叫成功~ 消耗了&#37;cost_num点战术点,您还有&#37;num点可供调遣捏~" />
 	<text key="call event,cool down" text="[战术妖精] 呼叫失败~ 该支援还没准备好，还有&#37;time秒才能部署" />
+	<text key="call event,anti air" text="[战术妖精] 呼叫失败，我们的战机没有办法突破敌人的防空火力网" />
 
 	<text key="kill streak,10kill" text="[连杀奖励] 积分到达10，获取额外1战术点奖励" />
 	<text key="kill streak,20kill" text="[连杀奖励] 积分到达20，获取额外2战术点奖励" />

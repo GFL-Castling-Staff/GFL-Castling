@@ -101,6 +101,9 @@ dictionary airstrikeIndex = {
         // 精准空袭
         {"precision_airstrike",102},
 
+        // 航弹
+        {"bomber_drop_lv0",104},
+
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
 };
@@ -649,18 +652,9 @@ class GFLairstrike : Tracker {
                 }
 
                 case 102:{ //精准空袭
-                    float strike_rand = 7;
-                    for(int j=1;j<=2;j++)
-                    {
-                        float rand_x = rand(-strike_rand,strike_rand);
-                        float rand_y = rand(-strike_rand,strike_rand);
-                        float rand_z = rand(-4,4);
-                        CreateDirectProjectile(m_metagame,start_pos.add(Vector3(rand_x,rand_z,rand_y)),end_pos.add(Vector3(rand_x,0,rand_y)),"artillery_airstrike_fairies.projectile",cid,fid,75);
-                    }
+                    CreateDirectProjectile(m_metagame,start_pos,end_pos,"artillery_shell_airstrike_precise.projectile",cid,fid,40);
                     array<string> Voice={
-                        "mortar_whistle_82mm_0_fromCTA.wav",
-                        "mortar_whistle_82mm_1_fromCTA.wav",
-                        "mortar_whistle_82mm_2_fromCTA.wav"
+                        "mortar_whistle_105mm_fromCTA.wav"
                     };
                     playRandomSoundArray(m_metagame,Voice,fid,end_pos,1.3);
                     Airstrike_strafe.removeAt(a);
@@ -682,6 +676,16 @@ class GFLairstrike : Tracker {
                         "mortar_whistle_82mm_2_fromCTA.wav"
                     };
                     playRandomSoundArray(m_metagame,Voice,fid,end_pos,1.3);
+                    Airstrike_strafe.removeAt(a);
+                    break;                    
+                }
+
+                case 104:{ //单发航弹
+                    CreateDirectProjectile(m_metagame,start_pos,end_pos,"artillery_shell_airstrike_bomber.projectile",cid,fid,40);
+                    // array<string> Voice={
+                    //     "mortar_whistle_105mm_fromCTA.wav"
+                    // };
+                    // playRandomSoundArray(m_metagame,Voice,fid,end_pos,1.3);
                     Airstrike_strafe.removeAt(a);
                     break;                    
                 }
