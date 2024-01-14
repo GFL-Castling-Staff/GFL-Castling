@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vehicle name="Three Wheeler" key="tricycle.vehicle" existence="one_per_spawn_point" map_view_atlas_index="50" respawn_time="600.0" allow_ai_to_use="0" >
+	<tag name="metal_heavy" />
+	<tag name="atv" />
+
+	<tire_set offset="0.01 0 1.5" radius="0.6" />
+	<tire_set offset="0.9 0 -1.2" radius="0.6" />
+
+	<control 
+	max_speed="25.0" 
+	acceleration="20" 
+	max_reverse_speed="10.0" 
+	min_health_to_steer="1" 
+	max_rotation="0.50" 
+	max_water_depth="1.9" 
+	steer_smoothening="0.2" />
+
+	<physics 
+	max_health="30" 
+	remove_collision_threshold="1.0"
+	extent="2.5 0 4.0" 
+	offset="-0.1 0 0" 
+	top_offset="0.0 3.5 0" 
+	collision_model_pos="-0.18 0.55 0.1" 
+	collision_model_extent="2.6 0.3 3.4" 
+	visual_offset="0.1 1.0 -0.95" 
+	friction_offset="0.08" 
+	drag_offset="-1" 
+	destroy_on_top_hit="1"
+	destroy_on_top_hit_time="7"
+	collision_response_factor="1.0" 
+	vehicle_collision_damage_factor="0.1"
+	/> 
+
+	<sky_diving chute_offset="0 1.05 0.0" trigger_height="20.0" gravity="-10" mesh_filename="chute_large.mesh" texture_filename="chute.png" />
+
+	<visual class="chassis" mesh_filename="tricycle.mesh" texture_filename="bmw_r114514.jpg"/>
+ 	<visual class="front_tire" mesh_filename="tricycle_wheel.mesh" texture_filename="bmw_r114514.jpg" />
+ 	<visual class="rear_tire" mesh_filename="" texture_filename="" />
+
+	<character_slot type="driver" position="0.0 0.65 -0.12" enter_position="0.2 0.5 -0.12" rotation="0" exit_rotation="1.57" hiding="0" animation_key="driving atv" marker_offset="0 0.35 0.2" />
+	<character_slot type="passenger" position="-1.0 0.50 -0.32" enter_position="-1.2 0.5 -0.12" rotation="0" exit_rotation="-1.57" hiding="0" animation_key="passenger atv"/>
+	<character_slot type="passenger" position="0.0 1.05 -1.08" enter_position="0.0 0.5 -0.45" rotation="0" exit_rotation="-3.14" hiding="0" animation_key="passenger atv"/>
+	<!-- sound handling -->
+	<!-- <rev_sound filename="atv_rev0.wav" low_pitch="1.2" high_pitch="1.5" low_rev="0.0" high_rev="0.4" volume="0.6" /> -->
+	<!-- <rev_sound filename="atv_rev1.wav" low_pitch="0.6" high_pitch="1.0" low_rev="0.3" high_rev="0.7" volume="0.6" /> -->
+	<!-- <rev_sound filename="atv_rev2.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.6" high_rev="1.0" volume="0.8" /> -->
+	<rev_sound filename="aek_djv_from_RegingFlame.wav" low_pitch="1.0" high_pitch="1.0" low_rev="0.0" high_rev="0.0" volume="3.0" />
+
+	<sound key="slide" filename="slide_noise.wav" volume="0.5" />
+	<sound key="squeal" filename="tire_squeal.wav" volume="0.5" />
+	<sound key="ignition" filename="truck_ignition.wav" volume="0.5" />
+	<sound key="horn" filename="horn_jeep.wav" />   
+	<sound key="hit" filename="car_hit1.wav" volume="0.5" />
+	<sound key="hit" filename="car_hit2.wav" volume="0.5" />
+	<sound key="hit" filename="car_hit3.wav" volume="0.5" />
+	<sound key="destroy" filename="vehicle_explosion_1.wav" />   
+	<sound key="cleanup" filename="vehicle_explosion_1.wav" />   
+
+	<effect event_key="slide" type="splat_map" surface_tag="road" size="1.0" atlas_index="5" layer="0" />
+	<effect event_key="slide_hard" type="splat_map" surface_tag="road" size="0.5" atlas_index="2" layer="0" />
+	<effect event_key="slide" type="splat_map" surface_tag="dirt" size="1.0" atlas_index="2" layer="1" />
+	<effect event_key="drive" type="particle" key="terrain" ref="ct_vehicle_tire_smoke_2" use_surface_color="1" />
+
+    <effect event_key="slide" type="particle" key="terrain" surface_tag="road" ref="ct_vehicle_tire_smoke_2" use_surface_color="1" />
+	<effect event_key="slide_hard" type="particle" key="terrain" surface_tag="road" ref="ct_vehicle_slide_spark" use_surface_color="0" />
+    <effect event_key="slide" type="particle" key="terrain" surface_tag="dirt" ref="ct_vehicle_tire_smoke_2" use_surface_color="1" />
+	<effect event_key="slide_hard" type="particle" key="terrain" surface_tag="dirt" ref="ct_vehicle_slide_spark" use_surface_color="0" />
+
+    <effect event_key="destroyed" ref="SmallSmokeVehicle" offset="-0.0 0.9 0.18" />
+    <effect event_key="destroyed" ref="SmallSmokeVehicle" offset="-0.27 0.99 -1.17" />  
+    <effect event_key="destroyed" ref="SmallFireRepeat" offset="0.0 0.63 0.18" />
+    <effect event_key="destroy" key="other" ref="woosh" post_processing="0" shadow="0" />   
+    <effect event_key="cleanup" key="other" ref="woosh" post_processing="0" shadow="0" />     
+  
+</vehicle>
