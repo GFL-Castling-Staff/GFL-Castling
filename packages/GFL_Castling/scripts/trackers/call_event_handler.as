@@ -88,18 +88,43 @@ class call_event : Tracker {
                 {
                     case 1001:{
                         if(findCooldown(playerName,"tier1")){
-                            returnCooldown("tier1", 0, characterId, playerName, playerId, "callcooldown");
+                            returnCooldown("tier1", 0, characterId, playerName, playerId, "call event,cool down");
                             break;
                         }
                         else
                         {
+                            GFL_playerInfo@ m_playerinfo = getPlayerInfoFromListbyPid(playerId);
+                            if (m_playerinfo.m_name == default_string ) break;
+                            GFL_battleInfo@ battleInfo = m_playerinfo.getBattleInfo();
                             player_data newdata = PlayerProfileLoad(readFile(m_metagame,playerName,profile_hash));
                             string call_slot_key = newdata.getCallSlot(1);
                             if(call_slot_key == "") break;
                             switch(int(call_tier_index[call_slot_key]))
                             { 
+                                case 100000: //免费炮击
+                                {
+                                    CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,240.0,"tier1"));
+                                    sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
+                                    int flagId = m_DummyCallID + 15000;
+                                    CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
+                                    FairyRequest.setIndex(11);
+                                    FairyRequest.setSize(0.5);
+                                    FairyRequest.setDummyId(flagId);
+                                    FairyRequest.setRange(15.0);
+                                    FairyRequest.setIconTypeKey("call_marker_bomb");
+                                    addCastlingMarker(FairyRequest);
+                                    m_DummyCallID++;
+                                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));                                    
+                                    Event_call_bombardment_fairy_82mm_mortar@ new_task = Event_call_bombardment_fairy_82mm_mortar(m_metagame,2.0,characterId,factionId,c_pos,stringToVector3(position),"bombardment_fairy_82mm_mortar_free_lv0",flagId);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
+                                    addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    break;                                    
+                                }
                                 case 100100: //82mm
                                 {
+                                    if(!costTacticPoint(battleInfo,15,playerId)) break;
                                     CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,60.0,"tier1"));
                                     sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
                                     int flagId = m_DummyCallID + 15000;
@@ -121,6 +146,7 @@ class call_event : Tracker {
                                 }
                                 case 100200: //105mm
                                 {
+                                    if(!costTacticPoint(battleInfo,30,playerId)) break;
                                     CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,90.0,"tier1"));
                                     playSoundAtLocation(m_metagame,"kcco_dn_1.wav",factionId,position,1.5);
                                     sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
@@ -137,8 +163,9 @@ class call_event : Tracker {
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
                                     break;
                                 }         
-                                case 100300: //空袭妖精-俯冲攻击
+                                case 100600: //空袭妖精-精确空袭
                                 {
+                                    if(!costTacticPoint(battleInfo,30,playerId)) break;
                                     CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,60.0,"tier1"));
                                     playSoundAtLocation(m_metagame,"kcco_dn_1.wav",factionId,position,1.5);
                                     sendFactionMessageKey(m_metagame,factionId,"airstrikecallstarthint");
@@ -153,7 +180,7 @@ class call_event : Tracker {
                                     m_DummyCallID++;
                                     const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
                                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));                                    
-                                    Event_call_airstrike_fairy_cluster_bomb@ new_task = Event_call_airstrike_fairy_cluster_bomb(m_metagame,3.0,characterId,factionId,c_pos,stringToVector3(position),"t1_airstrike_fairy_precise_lv0",flagId);
+                                    Event_call_airstrike_fairy_cluster_bomb@ new_task = Event_call_airstrike_fairy_cluster_bomb(m_metagame,3.0,characterId,factionId,c_pos,stringToVector3(position),"airstrike_fairy_precise_lv0",flagId);
                                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                                     tasker.add(new_task);
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
@@ -162,6 +189,28 @@ class call_event : Tracker {
                                 default:
                                     break;                                
                             }
+                        }
+                        break;
+                    }
+                    case 1002:{
+                        if(findCooldown(playerName,"tier2")){
+                            returnCooldown("tier2", 0, characterId, playerName, playerId, "call event,cool down");
+                            break;
+                        }
+                        else
+                        {
+
+                        }
+                        break;
+                    }
+                    case 1003:{
+                        if(findCooldown(playerName,"tier3")){
+                            returnCooldown("tier3", 0, characterId, playerName, playerId, "call event,cool down");
+                            break;
+                        }
+                        else
+                        {
+
                         }
                         break;
                     }                    
@@ -460,18 +509,6 @@ class call_event : Tracker {
         }
     }
 
-    protected void returnCooldown(string player_name, int rp, int characterId, string playerName, int playerId, string message) {
-        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-        if (character !is null) {
-            dictionary a;
-            a["%time"] = ""+getCooldown(playerName, player_name);
-            sendPrivateMessageKey(m_metagame,playerId, message,a);
-            if(rp > 0)
-            {
-                GiveRP(m_metagame,characterId,rp);
-            }
-        }
-    }
 
     protected void addCastlingMarker(CastlingMarker@ info){
         XmlElement command("command");
@@ -513,6 +550,40 @@ class call_event : Tracker {
         }
     }
 
+    protected bool costTacticPoint(GFL_battleInfo@ battle_info,int num,int player_id)
+    {
+        int m_tactic_point = battle_info.getTacticPoint();
+        int m_tactic_point_cost = m_tactic_point - num;
+        if ((m_tactic_point_cost) >0)
+        {
+            battle_info.setTacticPoint(m_tactic_point_cost);
+            dictionary a;
+            a["%num"] = ""+m_tactic_point_cost;
+            a["%cost_num"] = ""+num;
+            notify(m_metagame, "call event,cost point", a, "misc", player_id, false, "", 1.0);
+            return true;
+        }
+        else
+        {
+            dictionary a;
+            a["%num"] = ""+(num-m_tactic_point);
+            notify(m_metagame, "call event,not enough point", a, "misc", player_id, false, "", 1.0);
+            return false;
+        }
+    }
+
+    protected void returnCooldown(string player_name, int rp, int characterId, string playerName, int playerId, string message) {
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            dictionary a;
+            a["%time"] = ""+getCooldown(playerName, player_name);
+            sendPrivateMessageKey(m_metagame,playerId, message,a);
+            if(rp > 0)
+            {
+                GiveRP(m_metagame,characterId,rp);
+            }
+        }
+    }
 }
 
 class Call_Cooldown{
@@ -557,6 +628,7 @@ dictionary call_tier_index = {
 
     // T1 001 炮击妖精-[82mm迫击炮打击]
         // lv0
+        {"t1_bombardment_fairy_82mm_mortar_free_lv0",100000},
         {"t1_bombardment_fairy_82mm_mortar_lv0",100100},
 
     // T1 002 炮击妖精-[105mm榴弹扫荡]
@@ -579,19 +651,6 @@ dictionary call_tier_index = {
         // lv0
         {"t1_lv0_missile_rocket_fairy",100400},
 
-    // T1 魔女妖精 
-        // lv0
-        {"t1_lv0_witch_fairy",100500},
-        // lv1
-        {"t1_lv1_witch_fairy",100501},
-        // lv2
-        {"t1_lv2_witch_fairy",100502},
-        // lv3
-        {"t1_lv3_witch_fairy",100503},
-
-    // T1 花火妖精（春节限定）
-        // lv0
-        {"t1_lv0_newyear_firework_fairy",100600},
 
     // T2 ----------------------------------- //
 

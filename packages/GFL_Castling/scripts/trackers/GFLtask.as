@@ -1223,6 +1223,13 @@ class Event_call_bombardment_fairy_82mm_mortar : event_call_task_hasMarker {
 			m_airstrike_key = "mortar_82mm_x4";
 			m_airstrike_key_alt = "mortar_82mm";
 		}
+		if(m_mode == "bombardment_fairy_82mm_mortar_free_lv0")
+		{
+			m_excute_Limit = 4;
+			m_time_internal = 1.3;
+			m_airstrike_key = "mortar_82mm_x2";
+			m_airstrike_key_alt = "mortar_82mm";
+		}		
 	}
 
 	Event_call_bombardment_fairy_82mm_mortar(GameMode@ metagame, float time, int cId,int fId,Vector3 characterpos,Vector3 targetpos,string mode,int markerid)
@@ -1267,7 +1274,7 @@ class Event_call_airstrike_fairy_cluster_bomb : event_call_task_hasMarker {
 		m_pos1 = e_pos.add(getMultiplicationVector(strike_vector,Vector3(0,0,0)));
 		m_pos2 = m_pos1;
 		m_pos1=m_pos1.add(Vector3(0,40,0));
-		if(m_mode == "t1_airstrike_fairy_precise_lv0")
+		if(m_mode == "airstrike_fairy_precise_lv0")
 		{
 			m_excute_Limit = 1;
 			m_time_internal = 0.1;

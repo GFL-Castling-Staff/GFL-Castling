@@ -37,4 +37,17 @@
         <specification name="[Tier 1]Airstrike Fairy - Precise Airstrike" slot="0"/>
         <hud_icon filename="hud_call_airstrike_precise.png" />
     </weapon>
+    <weapon file="call_ui.base_weapon" key="call_ui_t2_airstrike_fairy_precise">
+        <specification name="[Tier 2]Airstrike Fairy - Precise Airstrike" slot="1"/>
+        <hud_icon filename="hud_call_airstrike_precise_2.png" />
+    </weapon>
+    <weapon file="call_ui.base_weapon" key="call_ui_t3_airstrike_fairy_precise">
+        <specification name="[Tier 3]Airstrike Fairy - Precise Airstrike" slot="1"/>
+        <hud_icon filename="hud_call_airstrike_precise_3.png" />
+    </weapon>
+
+    <weapon file="call_ui.base_weapon" key="call_ui_t1_elmo_banzai_drone">
+        <specification name="[Tier 1]ELMO - Suicide Drone Attack" slot="0"/>
+        <hud_icon filename="hud_call_drone_banzai.png" />
+    </weapon>
 </weapons>
