@@ -39,11 +39,13 @@ class GFLskill : Tracker {
             case 0: {break;}
 
             case 1: {// 生成防空炮
+				m_metagame.setAntiAirStatus(true);
 				resetFactionCallResources(m_metagame, 0, GKcallList, false, getCallSorting());
 				break;
 			}
 
 			case 2: {// 摧毁防空炮
+				m_metagame.setAntiAirStatus(false);
 				resetFactionCallResources(m_metagame, 0, GKcallList, true, getCallSorting());
 				break;
 			}

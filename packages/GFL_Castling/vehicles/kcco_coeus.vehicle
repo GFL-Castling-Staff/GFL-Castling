@@ -13,7 +13,7 @@ max_character_collision_speed="8"
 character_leave_request_mode="friendly" 
 allow_ai_to_use="1" 
 ai_driver_turns_to_target="1" 
-ai_abandon_when_unsteerable="0" 
+ai_abandon_when_unsteerable="1" 
 ai_stop_to_fight="1"
 allow_owner_to_use_only="1"
 owner="faction" >
@@ -26,7 +26,7 @@ owner="faction" >
 	<tire_set offset="1.57 0.1 2.45" radius="0.65" />
 	<tire_set offset="1.57 0.1 0.0" radius="0.65" />
 	<tire_set offset="1.57 0.1 -2.45" radius="0.65" />
-	<control max_speed="10" acceleration="10.0" max_reverse_speed="10.0" min_health_to_steer="1.5" max_rotation="1" max_water_depth="6.0" can_steer_in_water="0.0" steer_smoothening="0.6" tracked="1" gears="0" max_limiter_speed="14" tracked_visual_tire_max_rotation="1.0" tracked_visual_tire_rotation_smoothening="0.9" simulated_speed_factor="1.0" />
+	<control max_speed="10" acceleration="10.0" max_reverse_speed="10.0" min_health_to_steer="7.5" max_rotation="1" max_water_depth="6.0" can_steer_in_water="0.0" steer_smoothening="0.6" tracked="1" gears="0" max_limiter_speed="14" tracked_visual_tire_max_rotation="1.0" tracked_visual_tire_rotation_smoothening="0.9" simulated_speed_factor="1.0" />
 	<physics max_health="100" blast_damage_threshold="5.0" mass="500.0" broken_mass="300" gravity="-40" remove_collision_threshold="50.0" extent="4.0 2.0 4.0" offset="0.0 +0.0 -0.0" top_offset="0 8.0 -1.5" collision_model_pos="0 0 0.0" collision_model_extent="4.8 1.5 5.4" visual_offset="0 0 0" drag_offset="-0.5" friction_offset="-0.1" preserve_motion_on_impact_factor="1" />
     <modifier class="blast_damage" value="-5.0" />
 

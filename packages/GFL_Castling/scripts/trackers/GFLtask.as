@@ -1223,6 +1223,13 @@ class Event_call_bombardment_fairy_82mm_mortar : event_call_task_hasMarker {
 			m_airstrike_key = "mortar_82mm_x4";
 			m_airstrike_key_alt = "mortar_82mm";
 		}
+		if(m_mode == "bombardment_fairy_82mm_mortar_free_lv0")
+		{
+			m_excute_Limit = 4;
+			m_time_internal = 1.3;
+			m_airstrike_key = "mortar_82mm_x2";
+			m_airstrike_key_alt = "mortar_82mm";
+		}		
 	}
 
 	Event_call_bombardment_fairy_82mm_mortar(GameMode@ metagame, float time, int cId,int fId,Vector3 characterpos,Vector3 targetpos,string mode,int markerid)
@@ -1254,7 +1261,7 @@ class Event_call_bombardment_fairy_82mm_mortar : event_call_task_hasMarker {
 	}
 }
 
-class Event_call_airstrike_fairy_cluster_bomb : event_call_task_hasMarker {
+class Event_call_airstrike_fairy_precise : event_call_task_hasMarker {
  
 	string m_airstrike_key_alt="";
 
@@ -1267,7 +1274,7 @@ class Event_call_airstrike_fairy_cluster_bomb : event_call_task_hasMarker {
 		m_pos1 = e_pos.add(getMultiplicationVector(strike_vector,Vector3(0,0,0)));
 		m_pos2 = m_pos1;
 		m_pos1=m_pos1.add(Vector3(0,40,0));
-		if(m_mode == "t1_airstrike_fairy_precise_lv0")
+		if(m_mode == "airstrike_fairy_precise_lv0")
 		{
 			m_excute_Limit = 1;
 			m_time_internal = 0.1;
@@ -1275,7 +1282,7 @@ class Event_call_airstrike_fairy_cluster_bomb : event_call_task_hasMarker {
 		}
 	}
 
-	Event_call_airstrike_fairy_cluster_bomb(GameMode@ metagame, float time, int cId,int fId,Vector3 characterpos,Vector3 targetpos,string mode,int markerid)
+	Event_call_airstrike_fairy_precise(GameMode@ metagame, float time, int cId,int fId,Vector3 characterpos,Vector3 targetpos,string mode,int markerid)
 	{
 		super(metagame,time,cId,fId,characterpos,targetpos,mode,markerid);
 	}
@@ -1291,10 +1298,50 @@ class Event_call_airstrike_fairy_cluster_bomb : event_call_task_hasMarker {
 			int dead = character.getIntAttribute("dead");
 			if(dead == 1){m_end = true;return;}
 		}
-		if(m_excute_time==1)
+		playSoundAtLocation(m_metagame,"airstrike_flyby.wav",m_faction_id,m_pos2,1.5);
+		insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos1,m_pos2);
+	}
+}
+
+class Event_call_airstrike_fairy_bomber : event_call_task_hasMarker {
+
+	void start() {
+		m_timeLeft=m_time;
+		m_timeLeft_internal = 0;
+		strike_vector = getAimUnitVector(1,s_pos,e_pos);
+		strike_vector = getRotatedVector(getIntSymbol()*1.57,strike_vector);
+		strike_didis = 4.5;
+		m_pos1 = e_pos.add(getMultiplicationVector(strike_vector,Vector3(-18,0,-18)));
+		m_pos2 = m_pos1;
+		m_pos1 = m_pos1.add(Vector3(0,40,0));
+		if(m_mode == "airstrike_fairy_bomber_lv0")
 		{
-			m_timeLeft_internal = 2.0;
-			insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos1,m_pos2);
+			m_excute_Limit = 9;
+			m_time_internal = 0.12;
+			m_airstrike_key = "bomber_drop_lv0";
 		}
+	}
+
+	Event_call_airstrike_fairy_bomber(GameMode@ metagame, float time, int cId,int fId,Vector3 characterpos,Vector3 targetpos,string mode,int markerid)
+	{
+		super(metagame, time, cId,fId,characterpos,targetpos,mode,markerid);
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time;return;}
+		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
+		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
+		
+		m_excute_time++;
+		m_timeLeft_internal = m_time_internal;
+
+		if(m_excute_time == 1)
+		{
+			playSoundAtLocation(m_metagame,"airstrike_flyby.wav",m_faction_id,m_pos2,1.5);
+		}
+
+		insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos1,m_pos2);
+		m_pos1 = m_pos1.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
+		m_pos2 = m_pos2.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));					
 	}
 }

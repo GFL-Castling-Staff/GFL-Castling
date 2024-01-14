@@ -69,11 +69,11 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 	
 	protected array<Faction@> m_factions;
 
+
 	// TODO: can we avoid this?
 	string m_gameMapPath = "";
 
 	protected UserSettings@ m_userSettings;
-
 	// --------------------------------------------
 	GameModeInvasion(UserSettings@ settings) {
 		super(settings.m_startServerCommand);
@@ -629,5 +629,6 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		}
 		return player;
 	}
+
 }
 

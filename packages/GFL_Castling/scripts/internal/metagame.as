@@ -29,7 +29,8 @@ class Metagame {
 	protected BanManager@ m_banManager;
 
 	protected string m_startServerCommand;
-
+	
+	protected bool m_enable_antiair_for_player = false;
 	protected bool m_gamePaused;
 
 	// --------------------------------------------
@@ -281,5 +282,14 @@ class Metagame {
 	string getRegion(const Vector3@ pos) const {
 		return ::getRegion(pos, m_mapInfo);
 	}
+
+	bool getAntiAirStatus() const{
+		return m_enable_antiair_for_player;
+	}
+
+	void setAntiAirStatus(bool status) 
+	{
+		m_enable_antiair_for_player = status;
+	}	
 }
 

@@ -209,6 +209,15 @@ class ServerHelper : Tracker {
                 if(s=="hunter") spawnSoldier(m_metagame,1,1,target,"sfw_hunter");
             }   
         }
+
+        if(checkCommand(message,"addtp50")){
+            const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+            if (playerInfo is null) return;				
+            int characterId= playerInfo.getIntAttribute("character_id");
+            string strname= playerInfo.getStringAttribute("name");
+            GFL_playerInfo@ GFLplayerInfo = getPlayerInfoFromList(strname);
+            GFLplayerInfo.addTacticPoint(50);
+        }
     }
 
     bool hasEnded() const {
