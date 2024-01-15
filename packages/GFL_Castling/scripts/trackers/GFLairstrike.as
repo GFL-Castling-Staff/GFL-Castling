@@ -143,6 +143,9 @@ class GFLairstrike : Tracker {
             Vector3 end_pos = Airstrike_strafe[a].m_s_pos;        
             int specialnum = Airstrike_strafe[a].m_specialnum;
             string specialkey = Airstrike_strafe[a].m_specialkey;
+            
+            const XmlElement@ characterInfo = getCharacterInfo(m_metagame,cid);
+            if (characterInfo is null)continue;
 
             switch(Airstrike_strafe[a].m_straferkey){
                 case 0:{//A10 单次 锁人扫射

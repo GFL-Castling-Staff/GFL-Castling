@@ -4216,8 +4216,9 @@ class CommandSkill : Tracker {
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                                       
                     }else if(c_weaponType=="gkw_sterling.weapon"){
                         array<string>Voice={
-                            "StenMK2Mod_SKILL1_JP.wav",
-                            "StenMK2Mod_SKILL1_JP.wav"
+                            "Sterling_skill1.wav",
+                            "Sterling_skill2.wav",
+                            "Sterling_skill3.wav"
                         };             
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                                            
                     }
