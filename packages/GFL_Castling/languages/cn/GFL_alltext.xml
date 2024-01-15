@@ -239,6 +239,9 @@
 	<text key="[Tier 1]Airstrike Fairy - Close Air Support" text="[Tier 1]空袭妖精 - 近空支援"/>
 	<text key="[Tier 1]Airstrike Fairy - Close Air Support - P2P" text="[Tier 1]空袭妖精 - 近空支援·总座高见"/>
 	<text key="[Tier 2]ELMO - Suicide Drone Attack" text="[Tier 2]艾莫号 - 自爆无人机攻击"/> 
+	<text key="[Tier 2]Warrior Fairy - Recon Helicopter" text="[Tier 2]勇士妖精 - 侦察直升机扫荡" />
+	<text key="[Tier 2]Warrior Fairy - VTOL Jet" text="[Tier 2]勇士妖精 - VTOL战机巡航" />
+	<text key="[Tier 3]Warrior Fairy - Attack Helicopter" text="[Tier 3]勇士妖精 - 武装直升机扫荡" />
 
 	<text key="Hint - call - rebuytochange" text="[战术系统]再次购买同一妖精即可在该槽位装备此战术妖精" />
 	<text key="Hint - call - changesuccess" text="[战术系统]已在槽位&#37;slot装备&#37;call_key" />
@@ -304,7 +307,29 @@
 -扫射结束后0.5秒，一颗航弹会投向目标位置，对范围5造成50的blast伤害
 -(该支援受空域禁制影响)"/>
 
+	<text key="Hint - call - title - call_ui_t2_warrior_fairy_recon_heli" text="勇士妖精 - 侦察直升机扫荡" />
+	<text key="Hint - call - intro - call_ui_t2_warrior_fairy_recon_heli" text="<冷却时间 180秒 消耗 60战术点>
+-标定目标点，随后从基地呼叫一架侦察直升机进行区域巡航20秒
+-每3秒对随机目标进行一次YAK-B 12.7mm航空机枪扫射，每发弹头在范围3.0造成3.1的blast伤害
+-第5秒时扫描区域，如果区域内存在敌方载具，则发射2枚9M114茧反坦克导弹，对范围4造成50的blast伤害
+-(该支援受空域禁制影响)"/>
 
+	<text key="Hint - call - title - call_ui_t2_warrior_fairy_vtol_sentry" text="勇士妖精 - VTOL战机巡航" />
+	<text key="Hint - call - intro - call_ui_t2_warrior_fairy_vtol_sentry" text="<冷却时间 150秒 消耗 60战术点>
+-标定目标点，随后从基地呼叫一架垂直起降战机，对目标点进行一次航弹轰炸
+-共投下2枚航弹，每枚航弹对范围7.5造成50的blast伤害
+-之后的30秒内切换为悬停形态，哨戒呼叫者周边区域
+-每5秒会对角色半径20内的敌人使用Gsh-30-1机炮进行扫射
+-每发弹头在范围4造成5.0的blast伤害
+-(该支援受空域禁制影响)"/>
+
+	<text key="Hint - call - title - call_ui_t3_warrior_fairy_armed_heli" text="勇士妖精 - 武装直升机扫荡" />
+	<text key="Hint - call - intro - call_ui_t3_warrior_fairy_armed_heli" text="<冷却时间 240秒 消耗 90战术点>
+-标定目标点，随后从基地呼叫一架武装直升机进行区域扫除30秒
+-每3秒对随机目标进行一次2A42 30mm机炮扫射，每发弹头在范围4.0造成10的blast伤害
+-每10秒时扫描区域，如果区域内存在敌方载具，则发射一枚9M127涡流反坦克导弹，对范围4造成100的blast伤害
+-每10秒对随机目标发射共5枚S-13火箭弹，每发火箭弹在范围5.0造成20的blast伤害
+-(该支援受空域禁制影响)"/>
 
 	<!-- 敌人单位翻译 -->
 	<text key="SF-Manticore" text="强 无敌“蝎甲兽”机甲"/>

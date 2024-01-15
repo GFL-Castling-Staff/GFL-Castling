@@ -290,6 +290,29 @@ class call_event : Tracker {
                                     break;
                                 }
 
+                                case 200300: //勇士妖精 侦察直升机
+                                {
+                                    if(checkAntiAir(playerId)) break;
+                                    if(!costTacticPoint(battleInfo,90,playerId)) break;
+                                    addCallCoolDown(playerName,playerId,180.0,"tier2",m_playerinfo);
+                                    sendFactionMessageKey(m_metagame,factionId,"warriorcallstarthint");
+                                    int flagId = m_DummyCallID + 15000;
+                                    CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
+                                    FairyRequest.setIconTypeKey("call_marker_drop");
+                                    FairyRequest.setIndex(6);
+                                    FairyRequest.setSize(0.5);
+                                    FairyRequest.setDummyId(flagId);
+                                    addCastlingMarker(FairyRequest);
+                                    m_DummyCallID++;
+                                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));                                    
+                                    Event_call_warrior_fairy_recon_heil@ new_task = Event_call_warrior_fairy_recon_heil(m_metagame,2.0,characterId,factionId,c_pos,stringToVector3(position),"airstrike_fairy_bomber_lv0",flagId);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
+                                    addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    break;
+                                }
+                                
                                 case 200600: //空袭妖精-精确空袭
                                 {
                                     if(checkAntiAir(playerId)) break;
@@ -920,11 +943,11 @@ dictionary call_tier_index = {
 
     // T2 勇士妖精-[侦察直升机扫荡]
         // lv0 
-        {"t2_lv0_scout_warrior_fairy",200200},
+        {"t2_warrior_fairy_recon_heli_lv0",200300},
 
     // T2 勇士妖精-[VTOL战机巡航]
         // lv0
-        {"t2_lv0_VTOL_warrior_fairy",200300},
+        {"t2_warrior_fairy_vtol_sentry_lv0",200400},
 
     // T2 火箭妖精-[火箭弹打击]
         // lv0
