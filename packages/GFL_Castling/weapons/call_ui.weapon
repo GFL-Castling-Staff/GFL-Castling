@@ -50,4 +50,17 @@
         <specification name="[Tier 2]ELMO - Suicide Drone Attack" slot="0"/>
         <hud_icon filename="hud_call_drone_banzai.png" />
     </weapon>
+
+    <weapon file="call_ui.base_weapon" key="call_ui_t2_warrior_fairy_recon_heli">
+        <specification name="[Tier 2]Warrior Fairy - Recon Helicopter" slot="1"/>
+        <hud_icon filename="hud_call_heli_recon.png" />
+    </weapon>
+    <weapon file="call_ui.base_weapon" key="call_ui_t2_warrior_fairy_vtol_sentry">
+        <specification name="[Tier 2]Warrior Fairy - VTOL Jet" slot="1"/>
+        <hud_icon filename="hud_call_heli_vtol.png" />
+    </weapon>
+    <weapon file="call_ui.base_weapon" key="call_ui_t3_warrior_fairy_armed_heli">
+        <specification name="[Tier 3]Warrior Fairy - Attack Helicopter" slot="1"/>
+        <hud_icon filename="hud_call_heli_armed_chopper.png" />
+    </weapon>
 </weapons>

@@ -323,6 +323,10 @@
 
         {"call_ui_t1_elmo_banzai_drone",1},
 
+        {"call_ui_t2_warrior_fairy_recon_heli",2},
+        {"call_ui_t2_warrior_fairy_vtol_sentry",2},
+        {"call_ui_t3_warrior_fairy_armed_heli",3},
+
         {"666",0}
     };
 

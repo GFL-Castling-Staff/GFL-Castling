@@ -107,6 +107,13 @@ dictionary airstrikeIndex = {
         {"airstrike_cas_23mm",105},
         {"airstrike_cas_bomb",106},
 
+        {"warrior_yakb_12.7mm",110},
+        {"warrior_2a42_30mm",111},
+        {"warrior_9M114",112},
+        {"warrior_9M127",113},
+        {"warrior_S13_rocket",114},
+
+
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
 };
@@ -136,6 +143,9 @@ class GFLairstrike : Tracker {
             Vector3 end_pos = Airstrike_strafe[a].m_s_pos;        
             int specialnum = Airstrike_strafe[a].m_specialnum;
             string specialkey = Airstrike_strafe[a].m_specialkey;
+            
+            const XmlElement@ characterInfo = getCharacterInfo(m_metagame,cid);
+            if (characterInfo is null)continue;
 
             switch(Airstrike_strafe[a].m_straferkey){
                 case 0:{//A10 单次 锁人扫射
@@ -442,12 +452,12 @@ class GFLairstrike : Tracker {
                     } 
                     Airstrike_strafe.removeAt(a);
                     break;
-                }                    
+                }
                 case 12:{//勇士妖精 标枪导弹
                     CreateDirectProjectile(m_metagame,start_pos,end_pos,"javelin_rocket_3.projectile",cid,fid,200);	
                     Airstrike_strafe.removeAt(a);
                     break;                        
-                }                    
+                }
                 case 13:{//火箭妖精 单次 航弹覆盖
                     //扫射位置偏移单位向量 与 扫射位置偏移单位距离
                     sendFactionMessageKey(m_metagame,fid,"rocketfight");
@@ -716,6 +726,80 @@ class GFLairstrike : Tracker {
                     break;                    
                 }
 
+                case 110:{//勇士妖精 侦察直升机 YAK-B 12.7mm扫射
+                    //最终弹头随机程度
+                    float strike_rand = 2.0;
+                                            
+                    //每单轮扫射6发
+                    for(int j=1;j<=6;j++)
+                    {
+                        float rand_speed = rand(120,160);
+                        float rand_x = rand(-strike_rand,strike_rand);
+                        float rand_y = rand(-strike_rand,strike_rand);                     
+                        
+                        CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"fairy_warrior_recon_heil_yakb.projectile",cid,fid,rand_speed);           
+                    } 
+                    array<string> Voice={
+                        "yakb_shot_fromWarthunder.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,2.5);
+                    Airstrike_strafe.removeAt(a);
+                    break;
+                }
+
+                case 111:{//勇士妖精 武装直升机 2A42 30mm扫射
+                    //最终弹头随机程度
+                    float strike_rand = 2.0;
+                                            
+                    //每单轮扫射6发
+                    for(int j=1;j<=4;j++)
+                    {
+                        float rand_speed = rand(70,95);
+                        float rand_x = rand(-strike_rand,strike_rand);
+                        float rand_y = rand(-strike_rand,strike_rand);                     
+                        
+                        CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"fairy_warrior_attack_heil_2a42.projectile",cid,fid,rand_speed);           
+                    } 
+                    array<string> Voice={
+                        "2a42_30mm_shot_fromWarthunder.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,2.5);                    
+                    Airstrike_strafe.removeAt(a);
+                    break;
+                }
+
+                case 112:{//勇士妖精 侦察直升机 9M114
+                    float strike_rand = 2.0;
+                    for(int j=1;j<=2;j++)
+                    {
+                        float rand_x = rand(-strike_rand,strike_rand);
+                        float rand_y = rand(-strike_rand,strike_rand);                     
+                        CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"javelin_rocket_3.projectile",cid,fid,200);	
+                    }
+                    Airstrike_strafe.removeAt(a);
+                    break;                        
+                }
+
+                case 113:{//勇士妖精 武装直升机 9M127
+                    CreateDirectProjectile(m_metagame,start_pos,end_pos,"javelin_rocket_3.projectile",cid,fid,200);	
+                    Airstrike_strafe.removeAt(a);
+                    break;                        
+                }
+
+                case 114:{//勇士妖精 武装直升机 火箭舱
+                    //最终弹头随机程度
+                    float strike_rand = 6.0;
+                                            
+                    //每单轮扫射5发
+                    for(int j=1;j<=5;j++)
+                    {
+                        float rand_x = rand(-strike_rand,strike_rand);
+                        float rand_y = rand(-strike_rand,strike_rand);
+                        CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"ASW_heli_strafe.projectile",cid,fid,90);           
+                    } 
+                    Airstrike_strafe.removeAt(a);
+                    break;
+                }
                 default:
                     break;
             }

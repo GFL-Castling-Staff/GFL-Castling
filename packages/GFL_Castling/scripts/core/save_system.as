@@ -51,7 +51,14 @@ class player_data
         GFL_call_info("call_ui_t3_airstrike_fairy_precise",0),
         GFL_call_info("call_ui_t1_airstrike_fairy_cas",0),
         GFL_call_info("call_ui_t1_airstrike_fairy_cas_p2p",0),
+
+        GFL_call_info("call_ui_t2_warrior_fairy_recon_heli",0),
+        GFL_call_info("call_ui_t2_warrior_fairy_vtol_sentry",0),
+        GFL_call_info("call_ui_t3_warrior_fairy_armed_heli",0),
+
+
         GFL_call_info("call_ui_t1_bombardment_fairy_105mm_grenade_barrage",0)
+
     };
 
 	player_data() {}
