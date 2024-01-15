@@ -379,6 +379,9 @@ class kill_event : Tracker {
 
             int kill_to_heal_scale = 1;
 
+            string c_weaponType = playerInfo.getPlayerEquipment().getWeapon(0);
+            string c_armorType = playerInfo.getPlayerEquipment().getWeapon(3);
+
             if(reward_pool_key=="boss")
             {
                 handleKillEventToPlayerInfo(playerId,5);
@@ -399,13 +402,19 @@ class kill_event : Tracker {
                     //兵蚁 僵尸 这种东西给的积分变少，30%概率给1点积分
                 }
             }            
+            else if(gk_weapon_hvy_nerfed.find(c_weaponType) > -1)
+            {
+                if(rand(0.0f,1.0f) <= 0.5f)
+                {
+                    handleKillEventToPlayerInfo(playerId,1);
+                    //榴弹发射器和迫击炮击杀小兵的收益降低50%
+                }                
+            }
             else
             {
                 handleKillEventToPlayerInfo(playerId,1);                
             }
 
-            string c_weaponType = playerInfo.getPlayerEquipment().getWeapon(0);
-            string c_armorType = playerInfo.getPlayerEquipment().getWeapon(3);
 
             GFL_battleInfo@ battleInfo = playerInfo.getBattleInfo();
 
