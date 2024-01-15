@@ -218,6 +218,15 @@ class ServerHelper : Tracker {
             GFL_playerInfo@ GFLplayerInfo = getPlayerInfoFromList(strname);
             GFLplayerInfo.addTacticPoint(50);
         }
+
+        if(checkCommand(message,"addtp1000")){
+            const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+            if (playerInfo is null) return;				
+            int characterId= playerInfo.getIntAttribute("character_id");
+            string strname= playerInfo.getStringAttribute("name");
+            GFL_playerInfo@ GFLplayerInfo = getPlayerInfoFromList(strname);
+            GFLplayerInfo.addTacticPoint(1000);
+        }        
     }
 
     bool hasEnded() const {

@@ -224,7 +224,7 @@
 </projectile>
 <projectile class="grenade" name="bomb shell" slot="1" pulldown_in_air="80" key="artillery_shell_airstrike_bomber.projectile">
     <tag name="rocket"/>
-    <result class="blast" radius="7.5" damage="75.0" push="1.0" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+    <result class="blast" radius="10" damage="75.0" push="1.0" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
     <trigger class="impact"/>
     <rotation class="motion" />
     <collision class="bounce"/>

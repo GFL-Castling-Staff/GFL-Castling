@@ -49,7 +49,7 @@
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-        <result class="hit" kill_probability="3.4" kill_probability_offset_on_successful_hit="6.75" kill_decay_start_time="0.964" kill_decay_end_time="1.607"/>
+        <result class="hit" kill_probability="3.4" kill_probability_offset_on_successful_hit="9.0" kill_decay_start_time="0.964" kill_decay_end_time="1.607"/>
         <trail probability="1" key="BulletApTrail_rf"/>
     </projectile>
     <effect class="muzzle" ref="ejection_76251" />
@@ -114,7 +114,7 @@
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-        <result class="hit" kill_probability="3.2" kill_probability_offset_on_successful_hit="5.25" kill_decay_start_time="0.964" kill_decay_end_time="1.607"/>
+        <result class="hit" kill_probability="3.4" kill_probability_offset_on_successful_hit="6.5" kill_decay_start_time="0.964" kill_decay_end_time="1.607"/>
         <trail probability="1" key="BulletApTrail_rf"/>
     </projectile>
     <effect class="muzzle" ref="ejection_76251" />
@@ -123,10 +123,10 @@
     <stance state_key="walking" accuracy="0.5" />
     <stance state_key="crouch_moving" accuracy="0.55" />
     <stance state_key="prone_moving" accuracy="0.55" />	
-    <stance state_key="standing" accuracy="0.95" />
-    <stance state_key="crouching" accuracy="0.98" />
-    <stance state_key="prone" accuracy="1.1" /> 
-    <stance state_key="over_wall" accuracy="1" /> 
+    <stance state_key="standing" accuracy="0.98" />
+    <stance state_key="crouching" accuracy="1.05" />
+    <stance state_key="prone" accuracy="1.15" /> 
+    <stance state_key="over_wall" accuracy="1.15" /> 
     <modifier class="detectability" value="-0.1"/>
 </weapon>
 <weapon key="gkw_m110_skill_2.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -179,7 +179,7 @@
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-        <result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="4.75" kill_decay_start_time="0.964" kill_decay_end_time="1.607"/>
+        <result class="hit" kill_probability="3.4" kill_probability_offset_on_successful_hit="6.5" kill_decay_start_time="0.964" kill_decay_end_time="1.607"/>
         <trail probability="1" key="BulletApTrail_rf"/>
     </projectile>
     <effect class="muzzle" ref="ejection_76251" />
@@ -188,10 +188,10 @@
     <stance state_key="walking" accuracy="0.5" />
     <stance state_key="crouch_moving" accuracy="0.55" />
     <stance state_key="prone_moving" accuracy="0.55" />	
-    <stance state_key="standing" accuracy="0.95" />
-    <stance state_key="crouching" accuracy="0.98" />
-    <stance state_key="prone" accuracy="1.1" /> 
-    <stance state_key="over_wall" accuracy="1" /> 
+    <stance state_key="standing" accuracy="0.98" />
+    <stance state_key="crouching" accuracy="1.05" />
+    <stance state_key="prone" accuracy="1.15" /> 
+    <stance state_key="over_wall" accuracy="1.15" /> 
     <modifier class="detectability" value="-0.1"/>
     <modifier class="speed" value="0" />
 </weapon>

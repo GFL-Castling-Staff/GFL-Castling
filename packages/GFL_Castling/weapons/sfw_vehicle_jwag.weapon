@@ -22,19 +22,7 @@
 	suppressed="0" 
 	sustained_fire_diminish_rate="2.0"
 	sustained_fire_grow_step="0.75" />
-	<animation state_key="recoil" animation_key="recoil2, dreamer" />
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil2, dreamer" />
-	<animation key="recoil" stance_key="crouching" animation_key="recoil2, dreamer" />
-	<animation key="reload" animation_key="reloading, dreamer1.0" />
-	<animation state_key="walking" animation_key="walking, dreamer" />
-	<animation state_key="walking_backwards" animation_key="walking backwards, dreamer" />
-	<animation state_key="running" animation_key="rush, dreamer" />
-	<animation state_key="hold" animation_key="hold, dreamer" />
-	<animation state_key="crouching"	 animation_key="hold, dreamer" />
-	<animation state_key="crouch_moving" animation_key="walking, dreamer" />
-	<animation state_key="crouch_moving_backwards" animation_key="walking backwards, dreamer" />
-	<animation state_key="hold_on_wall" animation_key="hold, dreamer" />
-	<animation state_key="still_against_wall" 	animation_key="hold, dreamer" />
+
 	<sound key="fire" fileref="dreamer_fire_FromTTF2.wav" pitch_variety="0.05" volume="2.7" />
 	<sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8" />
 	<sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8" />
@@ -46,7 +34,7 @@
 	<weak_hand_hold offset="0.4" />
 	<projectile file="mk153_HEAT.projectile" pulldown_in_air="0" radius="0.1" >
 		<trail probability="1.0" key="laser_dreamer"/>
-		<result class="blast" radius="8" damage="15.0" decal="1" push="2" character_state="death" faction_compare="not_equal"/>
+		<result class="blast" radius="5.0" damage="50.0" decal="1" push="2" character_state="death" faction_compare="not_equal"/>
         <effect class="result" key="terrain" ref="woosh1" post_processing="0" shadow="0" />  
 	</projectile>
 	<stance state_key="running" accuracy="0.9" />
