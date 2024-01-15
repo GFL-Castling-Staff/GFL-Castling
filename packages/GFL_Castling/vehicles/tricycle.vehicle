@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle name="Three Wheeler" key="tricycle.vehicle" existence="one_per_spawn_point" map_view_atlas_index="50" respawn_time="600.0" allow_ai_to_use="0" >
+<vehicle name="Sidecar Motorcycle" key="tricycle.vehicle" map_view_atlas_index="50" respawn_time="-1" allow_ai_to_use="0" >
 	<tag name="metal_heavy" />
 	<tag name="atv" />
 
@@ -16,7 +16,7 @@
 	steer_smoothening="0.2" />
 
 	<physics 
-	max_health="30" 
+	max_health="50" 
 	remove_collision_threshold="1.0"
 	extent="2.5 0 4.0" 
 	offset="-0.1 0 0" 
@@ -42,10 +42,9 @@
 	<character_slot type="passenger" position="-1.0 0.50 -0.32" enter_position="-1.2 0.5 -0.12" rotation="0" exit_rotation="-1.57" hiding="0" animation_key="passenger atv"/>
 	<character_slot type="passenger" position="0.0 1.1 -1.08" enter_position="0.0 0.5 -1.10" rotation="0" exit_rotation="-3.14" hiding="0" animation_key="passenger atv" rotation_range="6.283"/>
 	<!-- sound handling -->
-	<!-- <rev_sound filename="atv_rev0.wav" low_pitch="1.2" high_pitch="1.5" low_rev="0.0" high_rev="0.4" volume="0.6" /> -->
-	<!-- <rev_sound filename="atv_rev1.wav" low_pitch="0.6" high_pitch="1.0" low_rev="0.3" high_rev="0.7" volume="0.6" /> -->
-	<!-- <rev_sound filename="atv_rev2.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.6" high_rev="1.0" volume="0.8" /> -->
-	<rev_sound filename="aek_djv_from_RegingFlame.wav" low_pitch="1.0" high_pitch="1.0" low_rev="0.0" high_rev="0.0" volume="3.0" />
+	<rev_sound filename="atv_rev0.wav" low_pitch="1.2" high_pitch="1.5" low_rev="0.0" high_rev="0.4" volume="0.6" />
+	<rev_sound filename="atv_rev1.wav" low_pitch="0.6" high_pitch="1.0" low_rev="0.3" high_rev="0.7" volume="0.6" />
+	<rev_sound filename="atv_rev2.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.6" high_rev="1.0" volume="0.8" />
 
 	<sound key="slide" filename="slide_noise.wav" volume="0.5" />
 	<sound key="squeal" filename="tire_squeal.wav" volume="0.5" />
