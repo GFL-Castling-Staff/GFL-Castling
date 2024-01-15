@@ -416,6 +416,10 @@ class kill_event : Tracker {
             if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(1))
             {
                 m_tactic_point+=1;
+                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1)
+                {
+                    m_tactic_point+=1;
+                }
                 battleInfo.setTacticPoint(m_tactic_point);
                 m_counter-=10;
                 battleInfo.setKillStreakPointCounter(m_counter);
@@ -425,6 +429,10 @@ class kill_event : Tracker {
             else if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(2))
             {
                 m_tactic_point+=2;
+                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1)
+                {
+                    m_tactic_point+=1;
+                }                
                 battleInfo.setTacticPoint(m_tactic_point);
                 m_counter-=10;
                 battleInfo.setKillStreakPointCounter(m_counter);   
@@ -434,6 +442,10 @@ class kill_event : Tracker {
             else if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(3))
             {
                 m_tactic_point+=3;
+                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1)
+                {
+                    m_tactic_point+=1;
+                }                
                 battleInfo.setTacticPoint(m_tactic_point);
                 m_counter-=10;
                 battleInfo.setKillStreakPointCounter(m_counter);
@@ -443,6 +455,10 @@ class kill_event : Tracker {
             else if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(4))
             {
                 m_tactic_point+=4;
+                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1)
+                {
+                    m_tactic_point+=1;
+                }                
                 battleInfo.setTacticPoint(m_tactic_point);
                 m_counter-=10;
                 battleInfo.setKillStreakPointCounter(m_counter);  
@@ -452,6 +468,10 @@ class kill_event : Tracker {
             else if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(5))
             {
                 m_tactic_point+=5;
+                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1)
+                {
+                    m_tactic_point+=1;
+                }                
                 battleInfo.setTacticPoint(m_tactic_point);
                 m_counter-=10;
                 battleInfo.setKillStreakPointCounter(m_counter); 
@@ -461,6 +481,10 @@ class kill_event : Tracker {
             else if(m_counter>=10 && m_killstreak_point>50)
             {
                 m_tactic_point+=5;
+                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1)
+                {
+                    m_tactic_point+=1;
+                }                
                 battleInfo.setTacticPoint(m_tactic_point);
                 m_counter-=10;
                 battleInfo.setKillStreakPointCounter(m_counter);        

@@ -166,7 +166,63 @@ class call_event : Tracker {
                                     GFL_event_array.insertLast(GFL_event(characterId,factionId,int(GFL_Event_Index["bomb_fairy"]),stringToVector3(position),1.0,-1.0,flagId));
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
                                     break;
-                                }         
+                                }
+                                case 100400: //空袭妖精-近空支援
+                                {
+                                    if(checkAntiAir(playerId)) break;
+                                    if(!costTacticPoint(battleInfo,25,playerId)) break;
+                                    addCallCoolDown(playerName,playerId,90.0,"tier1",m_playerinfo);
+                                    sendFactionMessageKey(m_metagame,factionId,"airstrikecallstarthint");
+                                    int flagId = m_DummyCallID + 15000;
+                                    CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
+                                    FairyRequest.setIconTypeKey("call_marker_drop");
+                                    FairyRequest.setIndex(6);
+                                    FairyRequest.setSize(0.5);
+                                    FairyRequest.setDummyId(flagId);
+                                    addCastlingMarker(FairyRequest);
+                                    m_DummyCallID++;
+                                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));                                    
+                                    Event_call_airstrike_fairy_cas@ new_task = Event_call_airstrike_fairy_cas(m_metagame,2.0,characterId,factionId,c_pos,stringToVector3(position),"airstrike_fairy_cas_lv0",flagId);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
+                                    addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    break;
+                                }
+                                case 100500: //空袭妖精-近空支援 P2P
+                                {
+                                    if(checkAntiAir(playerId)) break;
+                                    if(findCooldown(playerName,"airstrike_cas_p2p")){
+                                        Call_Cooldown@ call_cooldowninfo = getCooldownInfo(playerName,"airstrike_cas_p2p");
+                                        if(call_cooldowninfo is null) break;
+                                        if(!costTacticPoint(battleInfo,25,playerId)) break;
+                                        addCallCoolDown(playerName,playerId,90.0,"tier1",m_playerinfo);
+                                        sendFactionMessageKey(m_metagame,factionId,"airstrikecallstarthint");
+                                        int flagId = m_DummyCallID + 15000;
+                                        CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
+                                        FairyRequest.setIconTypeKey("call_marker_drop");
+                                        FairyRequest.setIndex(6);
+                                        FairyRequest.setSize(0.5);
+                                        FairyRequest.setDummyId(flagId);
+                                        addCastlingMarker(FairyRequest);
+                                        m_DummyCallID++;
+                                        Vector3 start_pos = call_cooldowninfo.getPos();
+                                        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                                        Event_call_airstrike_fairy_cas_p2p@ new_task = Event_call_airstrike_fairy_cas_p2p(m_metagame,2.0,characterId,factionId,start_pos,stringToVector3(position),"airstrike_fairy_cas_lv0",flagId);
+                                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                        tasker.add(new_task);
+                                        addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    }
+                                    else
+                                    {
+                                        spawnStaticProjectile(m_metagame,"fairy_airstrike_cas_p2p_pointer.projectile",stringToVector3(position),characterId,factionId);
+                                        Call_Cooldown@ call_cooldowninfo = Call_Cooldown(playerName,playerId,5.0,"airstrike_cas_p2p");
+                                        call_cooldowninfo.setPos(stringToVector3(position));
+                                        CallEvent_cooldown.insertLast(call_cooldowninfo);
+                                    }
+
+                                    break;
+                                }                                
                                 case 100600: //空袭妖精-精确空袭
                                 {
                                     if(checkAntiAir(playerId)) break;
@@ -770,11 +826,22 @@ class Call_Cooldown{
     float m_time=0;
     int m_playerid;
     string m_type;
+    Vector3 m_pos;
     Call_Cooldown(string playerName,int pId,float time,string type){
         m_playerName=playerName;
         m_time=time;
         m_playerid=pId;
         m_type=type;
+    }
+
+    void setPos(Vector3 pos)
+    {
+        m_pos = pos;
+    }
+
+    Vector3 getPos()
+    {
+        return m_pos;
     }
 }
 
@@ -794,6 +861,16 @@ float getCooldown(string pName,string type){
         }
     }
     return 0;
+}
+
+Call_Cooldown@ getCooldownInfo(string pName,string type)
+{
+    for(uint i=0;i<CallEvent_cooldown.size();i++){
+        if(CallEvent_cooldown[i].m_playerName==pName && CallEvent_cooldown[i].m_type==type){
+            return CallEvent_cooldown[i];
+        }
+    }
+    return null;    
 }
 
 dictionary call_tier_index = {

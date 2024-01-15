@@ -104,6 +104,9 @@ dictionary airstrikeIndex = {
         // 航弹
         {"bomber_drop_lv0",104},
 
+        {"airstrike_cas_23mm",105},
+        {"airstrike_cas_bomb",106},
+
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
 };
@@ -686,6 +689,29 @@ class GFLairstrike : Tracker {
                     //     "mortar_whistle_105mm_fromCTA.wav"
                     // };
                     // playRandomSoundArray(m_metagame,Voice,fid,end_pos,1.3);
+                    Airstrike_strafe.removeAt(a);
+                    break;                    
+                }
+
+                case 105:{ // cas 23mm
+                    float strike_rand=2.0;
+                    for(int j=1;j<=6;j++)
+                    {
+                        float rand_speed = rand(130,160);
+                        float rand_x = rand(-strike_rand,strike_rand);
+                        float rand_y = rand(-strike_rand,strike_rand);
+                        CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"ASW_A10_strafe.projectile",cid,fid,rand_speed);
+                    } 
+                    Airstrike_strafe.removeAt(a);
+                    break;
+                } 
+
+                case 106:{ // cas bomb
+                    CreateDirectProjectile(m_metagame,start_pos,end_pos,"artillery_shell_airstrike_cas_bomb.projectile",cid,fid,40);
+                    array<string> Voice={
+                        "mortar_whistle_105mm_fromCTA.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,1.3);
                     Airstrike_strafe.removeAt(a);
                     break;                    
                 }

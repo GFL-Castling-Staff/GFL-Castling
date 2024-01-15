@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="Start Point" key="fairy_airstrike_cas_p2p_pointer.projectile" slot="0" on_ground_up="0 1 0" can_be_disarmed="0" can_be_detected_by_driver="0" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" drop_count_factor_on_player_death="0.0" pulldown_in_air="1.0" >
+    <result class="blast" radius="0" damage="0" push="0.0" decal="1" make_vehicle_hit_sound="0" faction_compare="not_equal"/>
+    <collision class="sticky" />
+    <trigger class="time" time_to_live="5.0"/>
+    <rotation class="motion" />
+    
+    <model mesh_filename="" />
+    <hud_icon filename="hud_grenade.png" />
+
+    <commonness value="0" can_respawn_with="1" in_stock="1" />
+    <inventory encumbrance="0.0" price="0.0" />
+
+    <capacity value="1" source="rank" source_value="0.0" />
+
+    <effect class="activated" ref="FlareSmokeCyan" lighting="0" />
+</projectile>
