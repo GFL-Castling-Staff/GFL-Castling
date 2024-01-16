@@ -107,6 +107,8 @@ dictionary airstrikeIndex = {
         {"airstrike_cas_23mm",105},
         {"airstrike_cas_bomb",106},
 
+        {"rocket_s8ko",107},
+
         {"warrior_yakb_12.7mm",110},
         {"warrior_2a42_30mm",111},
         {"warrior_9M114",112},
@@ -720,6 +722,26 @@ class GFLairstrike : Tracker {
                         "mortar_whistle_105mm_fromCTA.wav"
                     };
                     playRandomSoundArray(m_metagame,Voice,fid,end_pos,1.3);
+                    Airstrike_strafe.removeAt(a);
+                    break;                    
+                }
+
+                case 107:{ // rocket rush
+                    //最终弹头随机程度
+                    float strike_rand = 3.0;
+                                            
+                    //每单轮扫射5发
+                    for(int j=1;j<=5;j++)
+                    {
+                        float rand_speed = rand(140,160);
+                        float rand_x = rand(-strike_rand,strike_rand);
+                        float rand_y = rand(-strike_rand,strike_rand);                     
+                        CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"fairy_rocket_s8ko.projectile",cid,fid,rand_speed);           
+                    } 
+                    array<string> Voice={
+                        "rocket_s13_5round.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,4.0);
                     Airstrike_strafe.removeAt(a);
                     break;                    
                 }

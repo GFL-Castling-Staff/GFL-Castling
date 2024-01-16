@@ -1359,10 +1359,9 @@ class Event_call_airstrike_fairy_cas : event_call_task_hasMarker {
 		strike_vector = getAimUnitVector(1,s_pos,e_pos);
 		strike_vector = getRotatedVector(getIntSymbol()*1.57,strike_vector);
 		strike_didis = 3.2;
-		m_pos1 = e_pos.add(getMultiplicationVector(strike_vector,Vector3(-32,0,-32)));
+		m_pos1 = e_pos.add(getMultiplicationVector(strike_vector,Vector3(-60,0,-60)));
 		m_pos1= m_pos1.add(Vector3(0,40,0));
 		m_pos2 = e_pos.add(getMultiplicationVector(strike_vector,Vector3(-16,0,-16)));
-		m_pos1 = m_pos1.add(getMultiplicationVector(strike_vector,Vector3(-30,0,-30)));
 		m_excute_Limit = 10;
 		m_time_internal = 0.1;
 		m_airstrike_key = "airstrike_cas_23mm";
@@ -1406,10 +1405,9 @@ class Event_call_airstrike_fairy_cas_p2p : event_call_task_hasMarker {
 		m_timeLeft_internal = 0;
 		strike_vector = getAimUnitVector(1,s_pos,e_pos);
 		strike_didis = 3.2;
-		m_pos1 = e_pos.add(getMultiplicationVector(strike_vector,Vector3(-32,0,-32)));
+		m_pos1 = e_pos.add(getMultiplicationVector(strike_vector,Vector3(-60,0,-60)));
 		m_pos1= m_pos1.add(Vector3(0,40,0));
 		m_pos2 = e_pos.add(getMultiplicationVector(strike_vector,Vector3(-16,0,-16)));
-		m_pos1 = m_pos1.add(getMultiplicationVector(strike_vector,Vector3(-30,0,-30)));
 		m_excute_Limit = 10;
 		m_time_internal = 0.1;
 		m_airstrike_key = "airstrike_cas_23mm";
@@ -1633,5 +1631,40 @@ class Event_call_warrior_fairy_VTOL : event_call_task_hasMarker {
 			insertCommonStrike(m_character_id,m_faction_id,"warrior_vtol_bomb",m_pos1,m_pos2);
 		}
 		m_excute_time++;
+	}
+}
+
+class Event_call_rocket_fairy_rush : event_call_task_hasMarker {
+	void start(){
+		m_timeLeft=m_time;
+		m_timeLeft_internal = 0;
+		strike_vector = getAimUnitVector(1,s_pos,e_pos);
+		strike_vector = getRotatedVector(getIntSymbol()*1.57,strike_vector);
+		strike_didis = 7.5;
+		m_pos1 = e_pos.add(getMultiplicationVector(strike_vector,Vector3(-60,0,-60)));
+		m_pos1= m_pos1.add(Vector3(0,40,0));
+		m_pos2 = e_pos.add(getMultiplicationVector(strike_vector,Vector3(-15,0,-15)));
+		m_excute_Limit = 5;
+		m_time_internal = 0.25;
+		m_airstrike_key = "rocket_s8ko";
+	}
+
+	Event_call_rocket_fairy_rush(GameMode@ metagame, float time, int cId,int fId,Vector3 characterpos,Vector3 targetpos,string mode,int markerid){
+		super(metagame, time, cId,fId,characterpos,targetpos,mode,markerid);
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time;return;}
+		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
+		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
+		m_excute_time++;
+		insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos1,m_pos2);
+		m_pos1 = m_pos1.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
+		m_pos2 = m_pos2.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
+		m_timeLeft_internal = m_time_internal;
+		if(m_excute_time==1)
+		{
+			CreateDirectProjectile(m_metagame,m_pos1.add(getMultiplicationVector(strike_vector,Vector3(-40,0,-40))),m_pos2.add(Vector3(0,20,0)),"a10_warthog_shadow.projectile",m_character_id,m_faction_id,70);
+		}
 	}
 }
