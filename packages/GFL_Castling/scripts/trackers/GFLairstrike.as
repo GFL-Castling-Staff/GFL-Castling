@@ -376,23 +376,22 @@ class GFLairstrike : Tracker {
                         rand_x1 = rand(-strike_rand,strike_rand);
                         rand_y1 = rand(-strike_rand,strike_rand);
                         
-                        CreateDirectProjectile(m_metagame,start_pos.add(Vector3(rand_x1,0,rand_y1)),end_pos.add(Vector3(rand_x1,0,rand_y1)),"ASW_A10_strafe.projectile",cid,fid,85);           
+                        CreateDirectProjectile(m_metagame,start_pos.add(Vector3(rand_x1,0,rand_y1)),end_pos.add(Vector3(rand_x1,0,rand_y1)),"fairy_rampage_25mm.projectile",cid,fid,85);           
                     } 
 
                     Airstrike_strafe.removeAt(a);
                     break;
                 }
                 case 7:{
-                    // _log("ac130 m202 Fairy activated");
                     float strike_rand=5.0;
-                    for(int j=1;j<=4;j++)
+                    for(int j=1;j<=3;j++)
                     {
                         float rand_angle = rand(-3.14,3.14);
                         float rand_dis = rand(-strike_rand,strike_rand);
                         float rand_x = rand_dis*cos(rand_angle);
                         float rand_y = rand_dis*sin(rand_angle);
-                        CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"88heat.projectile",cid,fid,100);
-                        playSoundAtLocation(m_metagame,"thrower_fire_FromSAM4_2.wav",fid,end_pos);
+                        CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"fairy_rampage_120mm_rocket.projectile",cid,fid,100);
+                        playSoundAtLocation(m_metagame,"rocket_fire_FromSAM4.wav",fid,end_pos);
                     }
                     Airstrike_strafe.removeAt(a);
                     break;                        

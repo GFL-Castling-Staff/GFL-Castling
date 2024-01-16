@@ -338,7 +338,7 @@ class DelayCommonCallRequest :Task{
 		m_timeLeft -= time;
 		if (m_timeLeft < 0)
 		{
-            const XmlElement@ characterInfo = getCharacterInfo(m_metagame,cid);
+            const XmlElement@ characterInfo = getCharacterInfo(m_metagame,m_character_id);
             if (characterInfo is null) return;
 			int dead = characterInfo.getIntAttribute("dead");
 			if(dead !=1)
@@ -1482,12 +1482,54 @@ class Event_call_warrior_fairy_recon_heil : event_call_task_hasMarker {
 			if(lucky_vehicle_id!=-1)
 			{
 				playSoundAtLocation(m_metagame,"atgm_lockon.wav",m_faction_id,e_pos,3.0);//锁定载具成功
-				const XmlElement@ target_info = getVehicleInfo(m_metagame, lucky_vehicle_id);
-				if(target_info is null) return;
-				Vector3 vehicle_pos = stringToVector3(target_info.getStringAttribute("position"));
-				insertCommonStrike(m_character_id,m_faction_id,"warrior_9M114",m_pos1,vehicle_pos);
+				DelayedVehicleProjectileStrike@ shot = DelayedVehicleProjectileStrike(m_metagame,3.0,m_character_id,m_faction_id,"warrior_9M114",m_pos1,lucky_vehicle_id);
+				TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+				tasker.add(shot);				
 			}
 		}
 		m_excute_time++;
+	}
+}
+
+class DelayedVehicleProjectileStrike :Task{
+	protected GameMode@ m_metagame;
+	protected float m_time;
+    protected int m_character_id;
+    protected int m_faction_id;
+	protected int m_vehicle_id;
+	protected float m_timeLeft;
+	protected Vector3 m_pos_1;
+	protected string m_airstrike_key;
+
+	DelayedVehicleProjectileStrike(GameMode@ metagame, float time, int cId,int fId, string airstrike_key,Vector3 pos1,int vehicle_id) {
+		@m_metagame = metagame;
+		m_time = time;
+		m_character_id = cId;
+		m_faction_id =fId;
+		m_pos_1=pos1;
+		m_airstrike_key=airstrike_key;
+		m_vehicle_id = vehicle_id;
+	}
+
+	void start() {
+		m_timeLeft=m_time;
+	}
+
+	void update(float time) {
+		m_timeLeft -= time;
+		if (m_timeLeft < 0)
+		{
+			const XmlElement@ target_info = getVehicleInfo(m_metagame, m_vehicle_id);
+			if(target_info is null) return;
+			Vector3 target_fin_pos = stringToVector3(target_info.getStringAttribute("position"));//目标位置
+			insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos_1,target_fin_pos);
+		}
+	}
+
+    bool hasEnded() const {
+		if (m_timeLeft < 0) {
+			return true;
+		}
+		return false;
 	}
 }

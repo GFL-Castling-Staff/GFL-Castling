@@ -63,4 +63,29 @@
         <specification name="[Tier 3]Warrior Fairy - Attack Helicopter" slot="1"/>
         <hud_icon filename="hud_call_heli_armed_chopper.png" />
     </weapon>
+
+    <weapon file="call_ui.base_weapon" key="call_ui_t3_rampage_fairy_gunship">
+        <specification name="[Tier 3]Rampage Fairy - Gunship Run" slot="1"/>
+        <hud_icon filename="hud_call_rampage_gunship.png" />
+    </weapon>
+
+    <weapon file="call_ui.base_weapon" key="call_ui_t1_rocket_fairy_missile">
+        <specification name="[Tier 1]Rocket Fairy - Cruise Missile" slot="0"/>
+        <hud_icon filename="hud_call_rocket_missile.png" />
+    </weapon>
+
+    <weapon file="call_ui.base_weapon" key="call_ui_t2_rocket_fairy_bm30">
+        <specification name="[Tier 2]Rocket Fairy - Rocket Artillery" slot="1"/>
+        <hud_icon filename="hud_call_rocket_strike.png" />
+    </weapon>
+
+    <weapon file="call_ui.base_weapon" key="call_ui_t3_rocket_fairy_aircraft">
+        <specification name="[Tier 3]Rocket Fairy - Aircraft Rush" slot="1"/>
+        <hud_icon filename="hud_call_rocket_barrage.png" />
+    </weapon>
+
+    <weapon file="call_ui.base_weapon" key="call_ui_t3_rocket_fairy_cover">
+        <specification name="[Tier 3]Rocket Fairy - Saturation Attack" slot="1"/>
+        <hud_icon filename="hud_call_rocket_cover.png" />
+    </weapon>
 </weapons>

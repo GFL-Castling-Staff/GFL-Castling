@@ -327,6 +327,13 @@
         {"call_ui_t2_warrior_fairy_vtol_sentry",2},
         {"call_ui_t3_warrior_fairy_armed_heli",3},
 
+        {"call_ui_t1_rocket_fairy_missile",1},
+        {"call_ui_t2_rocket_fairy_bm30",2},
+        {"call_ui_t3_rocket_fairy_aircraft",3},
+        {"call_ui_t3_rocket_fairy_cover",3},
+
+        {"call_ui_t3_rampage_fairy_gunship",3},
+
         {"666",0}
     };
 

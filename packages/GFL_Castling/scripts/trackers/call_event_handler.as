@@ -969,7 +969,7 @@ dictionary call_tier_index = {
 
     // T3 暴怒妖精-[炮艇支援]
         // lv0
-        {"t3_lv0_rage_fairy",300200},
+        {"t3_rampage_fairy_gunship_lv0",300200},
 
     // T3 火箭妖精-[火箭弹突袭]
         // lv0
