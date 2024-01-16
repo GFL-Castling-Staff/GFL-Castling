@@ -1433,7 +1433,7 @@ class Event_call_airstrike_fairy_cas_p2p : event_call_task_hasMarker {
 		}
 		else if(m_excute_time==10)
 		{
-			Vector3 start_pos = e_pos.add(getMultiplicationVector(strike_vector,Vector3(-6,0,-6)));
+			Vector3 start_pos = e_pos.add(getMultiplicationVector(strike_vector,Vector3(-10,0,-10)));
 			start_pos = start_pos.add(Vector3(0,40,0));
 			DelayCommonCallRequest@ shot = DelayCommonCallRequest(m_metagame,0.5,m_character_id,m_faction_id,"airstrike_cas_bomb",start_pos,e_pos);
             TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
@@ -1481,11 +1481,15 @@ class Event_call_warrior_fairy_recon_heil : event_call_task_hasMarker {
 			lucky_vehicle_id = getNearByEnemyVehicle(m_metagame,m_faction_id,e_pos,30.0f);
 			if(lucky_vehicle_id!=-1)
 			{
-				playSoundAtLocation(m_metagame,"atgm_lockon.wav",m_faction_id,e_pos,3.0);//锁定载具成功
+				playSoundAtLocation(m_metagame,"atgm_lockon.wav",m_faction_id,e_pos,7.5);//锁定载具成功
 				DelayedVehicleProjectileStrike@ shot = DelayedVehicleProjectileStrike(m_metagame,3.0,m_character_id,m_faction_id,"warrior_9M114",m_pos1,lucky_vehicle_id);
 				TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
 				tasker.add(shot);				
 			}
+		}
+		if(m_excute_time % 3 == 0)
+		{
+			playSoundAtLocation(m_metagame,"mi24_heli_rotor_idle.wav",m_faction_id,e_pos,1.8);
 		}
 		m_excute_time++;
 	}
@@ -1531,5 +1535,103 @@ class DelayedVehicleProjectileStrike :Task{
 			return true;
 		}
 		return false;
+	}
+}
+
+class Event_call_warrior_fairy_attack_heil : event_call_task_hasMarker {
+	void start(){
+		m_timeLeft=m_time;
+		m_timeLeft_internal = 0;
+		m_pos1= e_pos.add(Vector3(10.0*cos(rand(0.0,3.14)),40,10.0*sin(rand(0.0,3.14))));
+		sendFactionMessageKey(m_metagame,m_faction_id,"warriorfight");
+		m_excute_Limit = 31;
+		m_time_internal = 1.0;
+	}
+
+	Event_call_warrior_fairy_attack_heil(GameMode@ metagame, float time, int cId,int fId,Vector3 characterpos,Vector3 targetpos,string mode,int markerid){
+		super(metagame, time, cId,fId,characterpos,targetpos,mode,markerid);
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time;return;}
+		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
+		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
+		m_timeLeft_internal = m_time_internal;
+		if(m_excute_time % 2 == 0)
+		{
+			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,e_pos,45.0f);
+			if(luckyGuyid!=-1){
+				const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+				Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+				insertCommonStrike(m_character_id,m_faction_id,"warrior_2a42_30mm",m_pos1,luckyGuyPos);
+			}
+		}
+		if(m_excute_time % 10 == 0 && m_excute_time!= 0)
+		{
+			int lucky_vehicle_id = getNearByEnemyVehicle(m_metagame,m_faction_id,e_pos,45.0f);
+			if(lucky_vehicle_id!=-1)
+			{
+				playSoundAtLocation(m_metagame,"atgm_lockon.wav",m_faction_id,e_pos,7.5);//锁定载具成功
+				DelayedVehicleProjectileStrike@ shot = DelayedVehicleProjectileStrike(m_metagame,3.0,m_character_id,m_faction_id,"warrior_9M127",m_pos1,lucky_vehicle_id);
+				TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+				tasker.add(shot);				
+			}
+			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,e_pos,45.0f);
+			if(luckyGuyid!=-1){
+				const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+				Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+				insertCommonStrike(m_character_id,m_faction_id,"warrior_S13_rocket",m_pos1,luckyGuyPos);
+			}			
+		}
+		if(m_excute_time % 6 == 0)
+		{
+			playSoundAtLocation(m_metagame,"ka52_heli_rotor_idle.wav",m_faction_id,e_pos,1.8);
+		}
+		m_excute_time++;
+	}
+}
+
+class Event_call_warrior_fairy_VTOL : event_call_task_hasMarker {
+	int lucky_vehicle_id = -1;
+	Vector3 m_character_pos;
+	void start(){
+		m_timeLeft=m_time;
+		m_timeLeft_internal = 0;
+		m_pos1=e_pos.add(Vector3(0,40,0));
+		m_pos2=e_pos;
+		sendFactionMessageKey(m_metagame,m_faction_id,"warriorfight");
+		m_excute_Limit = 31;
+		m_time_internal = 1.0;
+	}
+
+	Event_call_warrior_fairy_VTOL(GameMode@ metagame, float time, int cId,int fId,Vector3 characterpos,Vector3 targetpos,string mode,int markerid){
+		super(metagame, time, cId,fId,characterpos,targetpos,mode,markerid);
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time;return;}
+		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
+		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
+		m_timeLeft_internal = m_time_internal;
+		if(m_excute_time % 2 == 0 && m_excute_time!=0)
+		{
+			const XmlElement@ ItsmeInfo = getCharacterInfo(m_metagame, m_character_id);
+			if(ItsmeInfo is null) m_character_pos = e_pos;
+			m_character_pos = stringToVector3(ItsmeInfo.getStringAttribute("position"));
+			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,m_character_pos,30.0f);
+			if(luckyGuyid!=-1){
+				const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+				Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+				float strike_rand = 10.0;
+				float rand_x = rand(-strike_rand,strike_rand);
+				float rand_y = rand(-strike_rand,strike_rand);      
+				insertCommonStrike(m_character_id,m_faction_id,"warrior_vtol_strafe",m_character_pos.add(Vector3(rand_x,40,rand_y)),luckyGuyPos);
+			}
+		}
+		if(m_excute_time == 0)
+		{
+			insertCommonStrike(m_character_id,m_faction_id,"warrior_vtol_bomb",m_pos1,m_pos2);
+		}
+		m_excute_time++;
 	}
 }

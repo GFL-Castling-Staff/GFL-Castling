@@ -112,6 +112,8 @@ dictionary airstrikeIndex = {
         {"warrior_9M114",112},
         {"warrior_9M127",113},
         {"warrior_S13_rocket",114},
+        {"warrior_vtol_strafe",115},
+        {"warrior_vtol_bomb",116},
 
 
         // 下面这行是用来占位的，在这之上添加新的即可
@@ -738,7 +740,7 @@ class GFLairstrike : Tracker {
                     array<string> Voice={
                         "yakb_shot_fromWarthunder.wav"
                     };
-                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,2.5);
+                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,3.2);
                     Airstrike_strafe.removeAt(a);
                     break;
                 }
@@ -759,7 +761,7 @@ class GFLairstrike : Tracker {
                     array<string> Voice={
                         "2a42_30mm_shot_fromWarthunder.wav"
                     };
-                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,2.5);                    
+                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,3.2);                    
                     Airstrike_strafe.removeAt(a);
                     break;
                 }
@@ -772,12 +774,20 @@ class GFLairstrike : Tracker {
                         float rand_y = rand(-strike_rand,strike_rand);                     
                         CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"javelin_rocket_3.projectile",cid,fid,200);	
                     }
+                    array<string> Voice={
+                        "rocket_9m114_doubletap.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,2.5);                     
                     Airstrike_strafe.removeAt(a);
                     break;                        
                 }
 
                 case 113:{//勇士妖精 武装直升机 9M127
                     CreateDirectProjectile(m_metagame,start_pos,end_pos,"javelin_rocket_3.projectile",cid,fid,200);	
+                    array<string> Voice={
+                        "rocket_9m127.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,2.6);                        
                     Airstrike_strafe.removeAt(a);
                     break;                        
                 }
@@ -791,11 +801,50 @@ class GFLairstrike : Tracker {
                     {
                         float rand_x = rand(-strike_rand,strike_rand);
                         float rand_y = rand(-strike_rand,strike_rand);
-                        CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"ASW_heli_strafe.projectile",cid,fid,90);           
+                        CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"fairy_rocket_s13.projectile",cid,fid,90);           
                     } 
+                    array<string> Voice={
+                        "rocket_s13_5round.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,3.6);                       
                     Airstrike_strafe.removeAt(a);
                     break;
                 }
+
+                case 115:{ //VTOL
+                    //最终弹头随机程度
+                    float strike_rand = 2.5;
+                                            
+                    //每单轮扫射5发
+                    for(int j=1;j<=8;j++)
+                    {
+                        float rand_speed = rand(120,160);
+                        float rand_x = rand(-strike_rand,strike_rand);
+                        float rand_y = rand(-strike_rand,strike_rand);
+                        CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"fairy_warrior_vtol_gsh23.projectile",cid,fid,rand_speed);           
+                    } 
+                    array<string> Voice={
+                        "gsh23l_23mm_shot_fromWarthunder.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,2.9);
+                    Airstrike_strafe.removeAt(a);
+                    break;                    
+                }
+
+                case 116:{ //VTOL Bomb
+                    float strike_rand = 3.0;
+                    float rand_x = rand(-strike_rand,strike_rand);
+                    float rand_y = rand(-strike_rand,strike_rand);                
+                    CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"artillery_shell_airstrike_cas_bomb.projectile",cid,fid,40);
+                    CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"artillery_shell_airstrike_cas_bomb.projectile",cid,fid,40);
+                    array<string> Voice={
+                        "shell_whistle_02.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,1.5);
+                    Airstrike_strafe.removeAt(a);
+                    break;                    
+                }
+
                 default:
                     break;
             }

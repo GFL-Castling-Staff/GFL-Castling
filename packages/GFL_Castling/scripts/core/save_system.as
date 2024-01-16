@@ -56,6 +56,12 @@ class player_data
         GFL_call_info("call_ui_t2_warrior_fairy_vtol_sentry",0),
         GFL_call_info("call_ui_t3_warrior_fairy_armed_heli",0),
 
+        GFL_call_info("call_ui_t3_rampage_fairy_gunship",0),
+        GFL_call_info("call_ui_t1_rocket_fairy_missile",0),
+        GFL_call_info("call_ui_t2_rocket_fairy_bm30",0),
+        GFL_call_info("call_ui_t3_rocket_fairy_aircraft",0),
+        GFL_call_info("call_ui_t3_rocket_fairy_cover",0),
+
 
         GFL_call_info("call_ui_t1_bombardment_fairy_105mm_grenade_barrage",0)
 
