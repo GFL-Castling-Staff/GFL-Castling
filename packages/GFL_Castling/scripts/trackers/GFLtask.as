@@ -338,7 +338,13 @@ class DelayCommonCallRequest :Task{
 		m_timeLeft -= time;
 		if (m_timeLeft < 0)
 		{
-			insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos_1,m_pos_2);
+            const XmlElement@ characterInfo = getCharacterInfo(m_metagame,cid);
+            if (characterInfo is null) return;
+			int dead = characterInfo.getIntAttribute("dead");
+			if(dead !=1)
+			{
+				insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos_1,m_pos_2);
+			}
 		}
 	}
 
