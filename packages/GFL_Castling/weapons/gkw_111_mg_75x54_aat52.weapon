@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+    <weapon file="heavy_mg_standing.animation_base" key="gkw_aat52.weapon">
+        <specification 
+        barrel_offset="0.5" 
+        retrigger_time="0.075" 
+        accuracy_factor="1.0" 
+        sustained_fire_grow_step="0.8" 
+        sustained_fire_diminish_rate="2.4" 
+        magazine_size="200" 
+        suppressed="0" 
+        name="AAT-52" 
+        class="0" 
+        spread_range="0.8"
+        projectile_speed="245" 
+        stance_accuracy_rate="1.0"
+        sight_range_modifier="1.75"
+        can_shoot_standing="1" 
+        can_shoot_crouching="1"
+        can_shoot_prone="1"
+        carry_in_two_hands="1"
+        leave_crouch_accuracy_penalty="0.5"
+        stab_enabled="1"/>
+        <animation key="reload" animation_key="reloading, Machine gun 3" />
+        <inventory encumbrance="50.0" buy_price="52.0" sell_price="52.0" />
+        <next_in_chain key="gkw_aat52_skill.weapon" share_ammo="1" />
+        <commonness value="0.2" in_stock="1" can_respawn_with="1" />
+        <sound key="fire" fileref="mk48_fire_FromFP2.wav" pitch_variety="0.05" volume="1.1" />
+        <sound key="magazine_out" fileref="mk48_mgz_out_FromCOD9.wav" volume="0.8" />
+        <sound key="magazine_in" fileref="mk48_mgz_in_FromCOD9.wav" volume="0.8" />
+        <sound key="cycle" fileref="mk48_cycle_FromCOD9.wav" volume="0.8" />
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
+        <model filename="gkw_mg_aat52_n.xml" />
+        <hud_icon filename="gkw_aat52.png" />
+        <projectile file="bullet.projectile">
+            <result class="hit" kill_probability="3" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />
+        </projectile>
+        <effect class="muzzle" ref="ejection_76251" />
+        <stance state_key="running" accuracy="0.1"/>
+        <stance state_key="walking" accuracy="0.2"/>
+        <stance state_key="crouch_moving" accuracy="0.15"/>
+        <stance state_key="prone_moving" accuracy="0.6"/>
+        <stance state_key="standing" accuracy="1"/>
+        <stance state_key="crouching" accuracy="1"/>
+        <stance state_key="prone" accuracy="1.2"/>
+        <stance state_key="over_wall" accuracy="1.2"/>
+    </weapon>
+    <weapon file="heavy_mg.animation_base" key="gkw_aat52_skill.weapon">
+        <specification 
+        barrel_offset="0.5" 
+        retrigger_time="0.075" 
+        accuracy_factor="1.0" 
+        sustained_fire_grow_step="0.8" 
+        sustained_fire_diminish_rate="2.4" 
+        stance_accuracy_rate="0.5"
+        spread_range="0.7"
+        magazine_size="200" 
+        suppressed="0" 
+        name="AAT-52-[Damage Focus N MG]" 
+        class="0" 
+        projectile_speed="245" 
+        sight_range_modifier="1.85"
+        can_shoot_standing="0" 
+        can_shoot_crouching="1"
+        can_shoot_prone="1"
+        leave_crouch_accuracy_penalty="0.25"/>
+        <animation key="reload" animation_key="reloading, Machine gun 3" />
+        <inventory encumbrance="50.0" buy_price="52.0" sell_price="52.0" />
+        <next_in_chain key="gkw_aat52.weapon" share_ammo="1" />
+        <commonness  value="0" in_stock="0" can_respawn_with="1" />
+        <sound key="fire" fileref="mk48skill_fire_FromCOD9.wav" pitch_variety="0.05" volume="1.1" />
+        <sound key="magazine_out" fileref="mk48_cycle_FromCOD9.wav" volume="0.8" />
+        <sound key="magazine_in" fileref="mk48_mgz_in_FromCOD9.wav" volume="0.8" />
+        <sound key="cycle" fileref="mk48_mgz_out_FromCOD9.wav" volume="0.8" />
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
+        <model filename="gkw_mg_aat52.xml" />
+        <hud_icon filename="gkw_aat52_skill.png" />
+        <projectile file="bullet_he.projectile">
+            <result class="blast" damage="3.1" radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
+        </projectile>
+        <effect class="muzzle" ref="ejection_76251" />
+        <stance state_key="running" accuracy="0.1"/>
+        <stance state_key="walking" accuracy="0.2"/>
+        <stance state_key="crouch_moving" accuracy="0.15"/>
+        <stance state_key="prone_moving" accuracy="0.6"/>
+        <stance state_key="standing" accuracy="1"/>
+        <stance state_key="crouching" accuracy="1"/>
+        <stance state_key="prone" accuracy="1.2"/>
+        <stance state_key="over_wall" accuracy="1.2"/>
+    </weapon>
+</weapons>
