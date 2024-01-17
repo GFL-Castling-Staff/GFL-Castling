@@ -2726,6 +2726,12 @@
     </model>
     <model filename="gkd_smg_jatimatic.xml">
         <requirement class="weapon" key="gkw_jatimatic.weapon" slot="0" />
-    </model>    
+    </model>
+    <model filename="gkd_sg_mag7.xml">
+        <requirement class="weapon" key="gkw_mag7.weapon" slot="0" />
+    </model>
+    <model filename="gkd_mg_mg15.xml">
+        <requirement class="weapon" key="gkw_mg15.weapon" slot="0" />
+    </model>          
     
 </models> 
