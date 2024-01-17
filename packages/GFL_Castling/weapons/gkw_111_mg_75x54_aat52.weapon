@@ -76,7 +76,7 @@
         <sound class="impact" fileref="rifle_drop.wav" />
         <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_mg_aat52.xml" />
-        <hud_icon filename="gkw_aat52_skill.png" />
+        <hud_icon filename="gkw_aat52.png" />
         <projectile file="bullet_he.projectile">
             <result class="blast" damage="3.1" radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
         </projectile>
