@@ -1,0 +1,132 @@
+author: RST
+2023.3.10
+未经授权不可复用、修改使用、仅用于helldiver mod
+雷达搜索特效
+授权于castling mod使用
+
+particle_system radar_scan_main //主要扫描圈，8s
+{
+	quota 50
+	material radar_scan_mix
+	particle_width 12
+	particle_height 12
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 10
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 8
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate -2
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0 0.3 1 0
+		time1 0.7
+		colour1 0 0.3 1 0
+		time2 1
+		colour2 0 0 0 0
+	}
+}
+particle_system radar_scan_short : radar_scan_main  //扫描圈
+{
+    emitter Point
+	{
+		time_to_live 0.9
+	}
+}
+
+
+--------------------------------------material-----------------------------------
+material alpha_blend_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend alpha_blend
+		}
+	}
+}
+
+material add_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+		}
+	}
+}
+
+
+material radar_scan_mix : add_base
+{   
+    technique{
+    pass{
+		scene_blend add
+        depth_func always_pass
+        texture_unit{
+            texture radar_scan_1.png 	
+			rotate_anim 0.1 
+			tex_address_mode border
+            tex_border_colour 0 0 0 0
+            tex_border_colour 0 0 0 0
+		}
+        texture_unit{
+            texture radar_scan_2.png 	
+            colour_op add
+			rotate_anim -0.1 
+			tex_address_mode border
+            tex_border_colour 0 0 0 0
+		}
+        texture_unit{
+            texture radar_scan_3.png 	
+            colour_op add
+			rotate_anim 0.15 
+			tex_address_mode border
+            tex_border_colour 0 0 0 0
+		}
+        texture_unit{
+            texture radar_scan_4.png 	
+            colour_op add
+			rotate_anim -0.15 
+			tex_address_mode border
+            tex_border_colour 0 0 0 0
+		}
+        texture_unit{
+            texture DF39_singing_2.png 	
+            colour_op add
+			wave_xform scale_x sine 0.5 2 0 0.2
+			wave_xform scale_y sine 0.5 2 0 0.2
+            rotate_anim -0.15
+			tex_address_mode border
+            tex_border_colour 0 0 0 0
+		}
+		texture_unit{
+            texture radar_scan_main.png 
+			colour_op modulate
+			rotate_anim 2.5
+			tex_address_mode border
+            tex_border_colour 0 0 0 0
+	}
+	}
+}}

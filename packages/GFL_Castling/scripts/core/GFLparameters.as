@@ -312,7 +312,7 @@
         {"call_ui_t1_bombardment_fairy_82mm_mortar",1}, 
         {"call_ui_t1_bombardment_fairy_105mm_grenade_barrage",1}, 
         {"call_ui_t1_bombardment_fairy_155mm_air_burst",1}, 
-        {"call_ui_t1_bombardment_fairy_170mm_cannon",2}, 
+        {"call_ui_t2_bombardment_fairy_170mm_cannon",2}, 
 
         {"call_ui_t2_airstrike_fairy_bomber",2},
         {"call_ui_t1_airstrike_fairy_cas",1},
@@ -421,8 +421,8 @@
 
     // parameters for "save_system.as":
     const string call_slot_default_1 = "t1_bombardment_fairy_82mm_mortar_lv0";
-    const string call_slot_default_2 = "call2";
-    const string call_slot_default_3 = "call3";
+    const string call_slot_default_2 = "t2_airstrike_fairy_precise_lv0";
+    const string call_slot_default_3 = "t3_rocket_fairy_aircraft_lv0";
 
     // 默认引用的支援key
 

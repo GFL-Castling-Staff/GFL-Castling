@@ -273,8 +273,8 @@
 	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_155mm_air_burst" text="<冷却时间 120秒 消耗 45战术点>
 -标定目标点，3秒后发射1发空爆榴弹，在空中离地距离10处爆炸，对范围30造成(20x10)的blast伤害"/>
 
-	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_170mm_cannon" text="炮击妖精 - 170mm加农炮" />
-	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_170mm_cannon" text="<冷却时间 90秒 消耗 30战术点>
+	<text key="Hint - call - title - call_ui_t2_bombardment_fairy_170mm_cannon" text="炮击妖精 - 170mm加农炮" />
+	<text key="Hint - call - intro - call_ui_t2_bombardment_fairy_170mm_cannon" text="<冷却时间 90秒 消耗 30战术点>
 -标定目标点，5秒后开火，加农炮弹对范围15造成100的blast伤害
 -弹着点并不精准，与实际位置存在距离10的误差"/>
 
@@ -2036,6 +2036,10 @@
 	<text key="call event,cost point" text="[战术妖精] 呼叫成功~ 消耗了&#37;cost_num点战术点,您还有&#37;num点可供调遣捏~" />
 	<text key="call event,cool down" text="[战术妖精] 呼叫失败~ 该支援还没准备好，还有&#37;time秒才能部署" />
 	<text key="call event,anti air" text="[战术妖精] 呼叫失败，我们的战机没有办法突破敌人的防空火力网" />
+	<text key="call event,equiped" text="[战术妖精] 您当前的战术支援列表如下
+#Tier 1 槽位:&#37;call1
+#Tier 2 槽位:&#37;call2
+#Tier 3 槽位:&#37;call3"/>
 
 	<text key="kill streak,10kill" text="[连杀奖励] 积分到达10，获取额外1战术点奖励" />
 	<text key="kill streak,20kill" text="[连杀奖励] 积分到达20，获取额外2战术点奖励" />

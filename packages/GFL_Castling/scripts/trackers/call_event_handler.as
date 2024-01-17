@@ -39,6 +39,8 @@ dictionary callLaunchIndex = {
     {"gk_vehicle_guerche.call",11},
     {"gk_vehicle_tricycle.call",12},
 
+    {"target.call",13},
+
     {"gk_call_tier1.call",1001},
     {"gk_call_tier2.call",1002},
     {"gk_call_tier3.call",1003},
@@ -167,6 +169,28 @@ class call_event : Tracker {
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
                                     break;
                                 }
+                                case 100300: //155mm
+                                {
+                                    if(!costTacticPoint(battleInfo,45,playerId)) break;
+                                    addCallCoolDown(playerName,playerId,120.0,"tier1",m_playerinfo);
+                                    sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
+                                    int flagId = m_DummyCallID + 15000;
+                                    CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
+                                    FairyRequest.setIndex(11);
+                                    FairyRequest.setSize(0.5);
+                                    FairyRequest.setDummyId(flagId);
+                                    FairyRequest.setRange(45.0);
+                                    FairyRequest.setIconTypeKey("call_marker_bomb");
+                                    addCastlingMarker(FairyRequest);
+                                    m_DummyCallID++;
+                                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));                                    
+                                    Event_call_bombardment_fairy_155mm_airburst@ new_task = Event_call_bombardment_fairy_155mm_airburst(m_metagame,3.0,characterId,factionId,c_pos,stringToVector3(position),"",flagId);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
+                                    addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    break;
+                                }
                                 case 100400: //空袭妖精-近空支援
                                 {
                                     if(checkAntiAir(playerId)) break;
@@ -246,6 +270,28 @@ class call_event : Tracker {
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
                                     break;
                                 }
+                                case 100700: //火箭妖精 巡曳飞弹
+                                {
+                                    if(!costTacticPoint(battleInfo,30,playerId)) break;
+                                    addCallCoolDown(playerName,playerId,90.0,"tier1",m_playerinfo);
+                                    sendFactionMessageKey(m_metagame,factionId,"rocketfight");
+                                    int flagId = m_DummyCallID + 15000;
+                                    CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
+                                    FairyRequest.setIconTypeKey("call_marker_drop");
+                                    FairyRequest.setIndex(6);
+                                    FairyRequest.setSize(0.5);
+                                    FairyRequest.setDummyId(flagId);
+                                    addCastlingMarker(FairyRequest);
+                                    m_DummyCallID++;
+                                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));                                    
+                                    Event_call_rocket_fairy_missile@ new_task = Event_call_rocket_fairy_missile(m_metagame,2.5,characterId,factionId,c_pos,stringToVector3(position),"airstrike_fairy_precise_lv0",flagId);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
+                                    addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    playSoundAtLocation(m_metagame,"cruise_missile_start_fromCOD16.wav",factionId,position,1.8);
+                                    break;
+                                }                                
                                 default:
                                     break;                                
                             }
@@ -290,6 +336,28 @@ class call_event : Tracker {
                                     break;
                                 }
 
+                                case 200200: //170mm
+                                {
+                                    if(!costTacticPoint(battleInfo,30,playerId)) break;
+                                    addCallCoolDown(playerName,playerId,90.0,"tier2",m_playerinfo);
+                                    sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
+                                    int flagId = m_DummyCallID + 15000;
+                                    CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
+                                    FairyRequest.setIndex(11);
+                                    FairyRequest.setSize(0.5);
+                                    FairyRequest.setDummyId(flagId);
+                                    FairyRequest.setRange(30.0);
+                                    FairyRequest.setIconTypeKey("call_marker_bomb");
+                                    addCastlingMarker(FairyRequest);
+                                    m_DummyCallID++;
+                                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));                                    
+                                    Event_call_bombardment_fairy_170mm@ new_task = Event_call_bombardment_fairy_170mm(m_metagame,5.0,characterId,factionId,c_pos,stringToVector3(position),"",flagId);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
+                                    addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    break;
+                                }
                                 case 200300: //勇士妖精 侦察直升机
                                 {
                                     if(checkAntiAir(playerId)) break;
@@ -333,6 +401,30 @@ class call_event : Tracker {
                                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                                     tasker.add(new_task);
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    break;
+                                }
+
+                                case 200500: //BM30
+                                {
+                                    if(!costTacticPoint(battleInfo,50,playerId)) break;
+                                    addCallCoolDown(playerName,playerId,90.0,"tier2",m_playerinfo);
+                                    sendFactionMessageKey(m_metagame,factionId,"rocketcallstarthint");
+                                    int flagId = m_DummyCallID + 15000;
+                                    CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
+                                    FairyRequest.setIndex(10);
+                                    FairyRequest.setSize(0.5);
+                                    FairyRequest.setDummyId(flagId);
+                                    FairyRequest.setRange(40.0);
+                                    FairyRequest.setIconTypeKey("call_marker_rocket");
+                                    addCastlingMarker(FairyRequest);
+                                    m_DummyCallID++;
+                                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));                                    
+                                    Event_call_rocket_fairy_strike@ new_task = Event_call_rocket_fairy_strike(m_metagame,3.0,characterId,factionId,c_pos,stringToVector3(position),"airstrike_fairy_precise_lv0",flagId);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
+                                    addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    playSoundAtLocation(m_metagame,"rocket_artillery_barrage_distant.wav",factionId,position,2.25);
                                     break;
                                 }
 
@@ -441,11 +533,11 @@ class call_event : Tracker {
                                     if(checkAntiAir(playerId)) break;
                                     if(!costTacticPoint(battleInfo,50,playerId)) break;
                                     addCallCoolDown(playerName,playerId,90.0,"tier2",m_playerinfo);
-                                    sendFactionMessageKey(m_metagame,factionId,"airstrikecallstarthint");
+                                    sendFactionMessageKey(m_metagame,factionId,"rocketfight");
                                     int flagId = m_DummyCallID + 15000;
                                     CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
                                     FairyRequest.setIconTypeKey("call_marker_drop");
-                                    FairyRequest.setIndex(11);
+                                    FairyRequest.setIndex(10);
                                     FairyRequest.setSize(0.5);
                                     FairyRequest.setDummyId(flagId);
                                     FairyRequest.setRange(10.0);
@@ -458,6 +550,30 @@ class call_event : Tracker {
                                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                                     tasker.add(new_task);
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    break;
+                                }
+
+                                case 300400: //BM21
+                                {
+                                    if(!costTacticPoint(battleInfo,150,playerId)) break;
+                                    addCallCoolDown(playerName,playerId,300.0,"tier3",m_playerinfo);
+                                    sendFactionMessageKey(m_metagame,factionId,"rocketcallstarthint");
+                                    int flagId = m_DummyCallID + 15000;
+                                    CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
+                                    FairyRequest.setIndex(10);
+                                    FairyRequest.setSize(0.5);
+                                    FairyRequest.setDummyId(flagId);
+                                    FairyRequest.setRange(60.0);
+                                    FairyRequest.setIconTypeKey("call_marker_rocket");
+                                    addCastlingMarker(FairyRequest);
+                                    m_DummyCallID++;
+                                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));                                    
+                                    Event_call_rocket_fairy_cover@ new_task = Event_call_rocket_fairy_cover(m_metagame,5.0,characterId,factionId,c_pos,stringToVector3(position),"",flagId);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
+                                    addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    playSoundAtLocation(m_metagame,"Fairy_multirocket_FromCOD16.wav",factionId,position,1.0);
                                     break;
                                 }
 
@@ -557,7 +673,11 @@ class call_event : Tracker {
                                 }
                             }
                             else {
-                                CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,30.0,"sniper_call"));
+                                GFL_playerInfo@ m_playerinfo = getPlayerInfoFromListbyPid(playerId);
+                                if (m_playerinfo.m_name == default_string ) break;
+                                GFL_battleInfo@ battleInfo = m_playerinfo.getBattleInfo();                                
+                                if(!costTacticPoint(battleInfo,15,playerId)) break;
+                                CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,90.0,"sniper_call"));
                                 sendFactionMessageKey(m_metagame,factionId,"snipecallstarthint");
                                 int flagId = m_DummyCallID + 15000;
                                 CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
@@ -570,7 +690,6 @@ class call_event : Tracker {
                                 m_DummyCallID++;
                                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                                 tasker.add(Skill_Fairy_Snipe(m_metagame,1.0,characterId,factionId,stringToVector3(position),FairyRequest));
-                                // GFL_event_array.insertLast(GFL_event(characterId,factionId,int(GFL_Event_Index["sniper_fairy"]),stringToVector3(position),1.0,-1.0,flagId));
                             }
                         }
                         break;
@@ -811,7 +930,26 @@ class call_event : Tracker {
                             spawnVehicle(m_metagame,1,factionId,call_pos,Orientation(0,1,0,ori4),"tricycle.vehicle");
                         }
                         break;
-                    }                                        
+                    }
+                    case 13:{
+                        if(findCooldown(playerName,"taunt")){
+                            returnCooldown_Slot("taunt", 300, characterId, playerName, playerId, "call event,cool down");
+                            break;
+                        }
+                        else {
+                            Vector3 call_pos = stringToVector3(position);
+                            Vector3 v_offset = Vector3(0,30,0);
+                            call_pos = call_pos.add(v_offset);
+                            CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,90.0,"taunt"));
+                            array<soldier_spawn_request@> spawn_soldier =   
+                            {
+                                soldier_spawn_request("GK_target",3)
+                            };
+                            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                            tasker.add(DelaySpawnSoldier(m_metagame,3.0,factionId,spawn_soldier,call_pos,6.0,6.0));
+                        }
+                        break;
+                    }                    
                     default:
                         break;
                 }
@@ -832,6 +970,20 @@ class call_event : Tracker {
             a["%num"] = ""+tactic_point;              
             notify(m_metagame, "tactic point system,info", a, "misc", player_id, false, "", 1.0);
         }
+        if(checkCommand(message,"call")){
+            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
+            if (playerInfo.m_name == default_string ) return;
+            int player_id = playerInfo.getPlayerPid();
+            player_data newdata = PlayerProfileLoad(readFile(m_metagame,playerInfo.getPlayerName(),playerInfo.getHash()));
+            string call_slot_key1 = newdata.getCallSlot(1);
+            string call_slot_key2 = newdata.getCallSlot(2);
+            string call_slot_key3 = newdata.getCallSlot(3);
+            dictionary a;
+            a["%call1"] = ""+call_slot_key1;       
+            a["%call2"] = ""+call_slot_key2;              
+            a["%call3"] = ""+call_slot_key3;              
+            notify(m_metagame, "call event,equiped", a, "misc", player_id, false, "", 1.0);
+        }        
     }
 
 
@@ -1029,9 +1181,9 @@ dictionary call_tier_index = {
         // lv0
         {"t1_airstrike_fairy_precise_lv0",100600},
 
-    // T1 火箭妖精-[巡航导弹]
+    // T1 007 火箭妖精-[巡航导弹]
         // lv0
-        {"t1_lv0_missile_rocket_fairy",100400},
+        {"t1_rocket_fairy_missile_lv0",100700},
 
 
     // T2 ----------------------------------- //
@@ -1039,6 +1191,11 @@ dictionary call_tier_index = {
     // T2 001 空袭妖精-[高空投弹]
         // lv0
         {"t2_airstrike_fairy_bomber_lv0",200100},
+
+    // T2 002 炮击妖精-[170]
+        // lv0
+        {"t2_bombardment_fairy_170mm_cannon_lv0",200200},
+        
 
     // T2 006 空袭妖精-[精准空袭]
         // lv0
@@ -1054,11 +1211,11 @@ dictionary call_tier_index = {
 
     // T2 005 火箭妖精-[火箭弹打击]
         // lv0
-        {"t2_lv0_TOS_rocket_fairy",200500},
+        {"t2_rocket_fairy_bm30_lv0",200500},
 
     // T2 耀夜姬-[轨道激光打击]
         // lv0
-        {"t2_lv0_nightshine_princess",200500},
+        {"t2_lv0_nightshine_princess",200700},
 
     // T3 ----------------------------------- //
     // T3 001 勇士妖精-[武装直升机扫荡]
@@ -1079,7 +1236,7 @@ dictionary call_tier_index = {
 
     // T3 火箭妖精-[地毯式覆盖]
         // lv0
-        {"t3_lv0_carpetb_rocket_fairy",300400},
+        {"t3_rocket_fairy_cover_lv0",300400},
 
     {"",0}
 };

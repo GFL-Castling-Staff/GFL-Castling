@@ -45,6 +45,7 @@ class player_data
         GFL_call_info("call_ui_t1_bombardment_fairy_82mm_mortar_free",0),
         GFL_call_info("call_ui_t1_bombardment_fairy_82mm_mortar",0),
         GFL_call_info("call_ui_t1_bombardment_fairy_105mm_grenade_barrage",0),
+        GFL_call_info("call_ui_t2_bombardment_fairy_170mm_cannon",0),
         GFL_call_info("call_ui_t2_airstrike_fairy_bomber",0),
         GFL_call_info("call_ui_t1_airstrike_fairy_precise",0),
         GFL_call_info("call_ui_t2_airstrike_fairy_precise",0),
@@ -63,7 +64,7 @@ class player_data
         GFL_call_info("call_ui_t3_rocket_fairy_cover",0),
 
 
-        GFL_call_info("call_ui_t1_bombardment_fairy_105mm_grenade_barrage",0)
+        GFL_call_info("call_ui_t1_bombardment_fairy_155mm_air_burst",0)
 
     };
 

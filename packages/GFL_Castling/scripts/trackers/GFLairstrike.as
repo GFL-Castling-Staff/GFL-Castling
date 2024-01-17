@@ -109,6 +109,9 @@ dictionary airstrikeIndex = {
 
         {"rocket_s8ko",107},
 
+        {"cannon_155mm_airburst",108},
+        {"cannon_170mm",109},
+
         {"warrior_yakb_12.7mm",110},
         {"warrior_2a42_30mm",111},
         {"warrior_9M114",112},
@@ -116,6 +119,10 @@ dictionary airstrikeIndex = {
         {"warrior_S13_rocket",114},
         {"warrior_vtol_strafe",115},
         {"warrior_vtol_bomb",116},
+
+        {"rocket_missile",117},
+        {"rocket_bm30_2round",118},
+        {"rocket_bm21_24round",119},
 
 
         // 下面这行是用来占位的，在这之上添加新的即可
@@ -746,6 +753,23 @@ class GFLairstrike : Tracker {
                     break;                    
                 }
 
+                case 108:{ //155mm空爆打击
+                    CreateDirectProjectile_TG(m_metagame,start_pos,end_pos.add(Vector3(0,10,0)),"artillery_shell_fairies_155_airburst.projectile",cid,fid,1.0,30);
+                    array<string> Voice={
+                        "mortar_whistle_105mm_fromCTA.wav"                      
+                    };
+                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,1.3);
+                    Airstrike_strafe.removeAt(a);
+                    break;                    
+                }
+
+                case 109:{//170
+                    CreateDirectProjectile(m_metagame,start_pos,end_pos,"artillery_shell_fairies_170.projectile",cid,fid,15);	
+                    playSoundAtLocation(m_metagame,"mortar_whistle_105mm_fromCTA.wav",fid,start_pos,1.35);
+                    Airstrike_strafe.removeAt(a);
+                    break;                        
+                }
+
                 case 110:{//勇士妖精 侦察直升机 YAK-B 12.7mm扫射
                     //最终弹头随机程度
                     float strike_rand = 2.0;
@@ -865,6 +889,26 @@ class GFLairstrike : Tracker {
                     playRandomSoundArray(m_metagame,Voice,fid,end_pos,1.5);
                     Airstrike_strafe.removeAt(a);
                     break;                    
+                }
+
+                case 117:{              
+                    CreateDirectProjectile(m_metagame,start_pos,end_pos,"fairy_rocket_missile.projectile",cid,fid,125);
+                    Airstrike_strafe.removeAt(a);
+                    break;                              
+                }
+
+                case 118:{//BM30 300mm
+                    spawnStaticProjectile(m_metagame,"rocket_fairy_strike_2round.projectile",start_pos,cid,fid);	
+                    playSoundAtLocation(m_metagame,"bm21_woosh_byBadGoose.wav",fid,start_pos,1.5);
+                    Airstrike_strafe.removeAt(a);
+                    break;                        
+                }
+
+                case 119:{//BM21 122mm
+                    spawnStaticProjectile(m_metagame,"rocket_fairy_cover_24round.projectile",start_pos,cid,fid);	
+                    playSoundAtLocation(m_metagame,"bm21_woosh_byBadGoose.wav",fid,start_pos,1.5);
+                    Airstrike_strafe.removeAt(a);
+                    break;                        
                 }
 
                 default:
