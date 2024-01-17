@@ -975,6 +975,7 @@ dictionary tdoll_complex_index = {
 
     {modded_key(352).toString(),"gkw_nova.weapon"},
     {modded_key(353).toString(),"gkw_mag7.weapon"},
+    {modded_key(354).toString(),"gkw_zip22.weapon"},
 
     {modded_key(356).toString(),"gkw_a545.weapon"},
     {modded_key(356,6803).toString(),"gkw_a545_6803.weapon"},
@@ -1523,7 +1524,8 @@ array<string> gk_weapon_hg_list = {
     "gkw_contender_1502.weapon",
     "gkw_contender_3201.weapon",
     "gkw_webley.weapon",
-    "gkw_webley_5601.weapon"
+    "gkw_webley_5601.weapon",
+    "gkw_zip22.weapon"
 };
 
 array<string> gk_weapon_hvy_nerfed = {
