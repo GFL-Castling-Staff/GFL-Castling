@@ -278,6 +278,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_fnc_6608.weapon", "weapon", 0.15f),
 		ScoredResource("gkw_sacr_5303.weapon", "weapon", 0.15f),
 		ScoredResource("gkw_hs2000_5304.weapon", "weapon", 0.15f),
+		ScoredResource("gkw_sacr_5903.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_gsh18_523.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_m500_3707.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_m16a1_533.weapon", "weapon", 1.0f),
@@ -386,6 +387,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_ppsh41_602.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_sr3mp_4101.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_pkp_4203.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_pkp_5904.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_mg42_7606.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_liu_5101.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_pa15_3701.weapon", "weapon", 1.0f),
@@ -440,6 +442,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_m1_6907.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_grizzly_4303.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_g36c_3103.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_g36c_5201.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_mlemk1_604.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_zb26_5603.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_rmb93_4309.weapon", "weapon", 1.0f),
@@ -486,6 +489,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_c96_8405.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_88type_7106.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_m1911_8406.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_rpk203_5901.weapon", "weapon", 1.0f),
 
 		ScoredResource("gkw_m870_3803.weapon", "weapon", 1.0f)
 			},
@@ -1699,7 +1703,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_apc556.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_asval.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_famas.weapon", "weapon", 0.3f),
-				ScoredResource("gkw_fara83.weapon", "weapon", 0.3f),a
+				ScoredResource("gkw_fara83.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_fx05.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_g36.weapon", "weapon", 0.3f),
 				ScoredResource("gkw_ribeyrolles.weapon", "weapon", 0.3f),
