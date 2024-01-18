@@ -396,9 +396,11 @@ dictionary tdoll_complex_index = {
     {modded_key(100).toString(),"gkw_p7.weapon"},
 
     {modded_key(101).toString(),"gkw_ump9.weapon"},
+    {modded_key(101,556).toString(),"gkw_ump9_556.weapon"},
     {modded_key(101,3404).toString(),"gkw_ump9_3404.weapon"},
     {modded_key(101,6704).toString(),"gkw_ump9_6704.weapon"},
     {modded_key(101,0,"mod3").toString(),"gkw_ump9mod3.weapon"},
+    {modded_key(101,556,"mod3").toString(),"gkw_ump9mod3_556.weapon"},
     {modded_key(101,3404,"mod3").toString(),"gkw_ump9mod3_3404.weapon"},
     {modded_key(101,6704,"mod3").toString(),"gkw_ump9mod3_6704.weapon"},
 
@@ -408,13 +410,13 @@ dictionary tdoll_complex_index = {
     {modded_key(103,410).toString(),"gkw_ump45_410.weapon"},
     {modded_key(103,535).toString(),"gkw_ump45_535.weapon"},
     {modded_key(103,555).toString(),"gkw_ump45_555.weapon"},
-    {modded_key(103,3404).toString(),"gkw_ump45_3403.weapon"},
+    {modded_key(103,3403).toString(),"gkw_ump45_3403.weapon"},
     {modded_key(103,5405).toString(),"gkw_ump45_5405.weapon"},
     {modded_key(103,0,"mod3").toString(),"gkw_ump45mod3.weapon"},
     {modded_key(103,410,"mod3").toString(),"gkw_ump45mod3_410.weapon"},
     {modded_key(103,535,"mod3").toString(),"gkw_ump45mod3_535.weapon"},
     {modded_key(103,555,"mod3").toString(),"gkw_ump45mod3_555.weapon"},
-    {modded_key(103,3404,"mod3").toString(),"gkw_ump45mod3_3403.weapon"},
+    {modded_key(103,3403,"mod3").toString(),"gkw_ump45mod3_3403.weapon"},
     {modded_key(103,5405,"mod3").toString(),"gkw_ump45mod3_5405.weapon"},
 
     {modded_key(104).toString(),"gkw_g36c.weapon"},

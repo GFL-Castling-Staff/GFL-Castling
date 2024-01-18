@@ -82,9 +82,11 @@ class kill_event : Tracker {
         // SMG——3kills
         {"gkw_ump40.weapon",3},
         {"gkw_ump9.weapon",3},
+        {"gkw_ump9_556.weapon",3},
         {"gkw_ump9_3404.weapon",3},
         {"gkw_ump45.weapon",3},
         {"gkw_ump9mod3.weapon",3},
+        {"gkw_ump9mod3_556.weapon",3},
         {"gkw_ump9mod3_3404.weapon",3},
         {"gkw_ump45mod3.weapon",3},
         {"gkw_ump45_410.weapon",3},
