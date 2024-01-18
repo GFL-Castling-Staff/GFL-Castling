@@ -1285,7 +1285,7 @@ class CommandSkill : Tracker {
                         };
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
                     }
-                    if(weaponname=="gkw_hk416.weapon"|| weaponname=="gkw_hk416_6505.weapon"|| weaponname=="gkw_hk416_537.weapon"|| weaponname=="gkw_hk416_805.weapon") {
+                    if(weaponname=="gkw_hk416.weapon"|| weaponname=="gkw_hk416_6505.weapon"|| weaponname=="gkw_hk416_537.weapon"|| weaponname=="gkw_hk416_805.weapon"|| weaponname=="gkw_hk416_557.weapon") {
                         array<string> Voice={
                             "HK416_Skill1.wav",
                             "HK416_Skill2.wav",

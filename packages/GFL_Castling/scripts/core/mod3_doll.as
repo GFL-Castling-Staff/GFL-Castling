@@ -6,6 +6,7 @@ dictionary MOD3craftList = {
     {"gkw_hk416_3401.weapon","gkw_hk416_3401_mod3.weapon"},
     {"gkw_hk416_6505.weapon","gkw_hk416_6505_mod3.weapon"},
     {"gkw_hk416_805.weapon","gkw_hk416mod3_805.weapon"},
+    {"gkw_hk416_557.weapon","gkw_hk416mod3_557.weapon"},
 
     {"gkw_g11.weapon","gkw_g11mod3.weapon"},
     {"gkw_g11_9.weapon","gkw_g11mod3_9.weapon"},
