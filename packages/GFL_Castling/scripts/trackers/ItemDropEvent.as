@@ -388,7 +388,10 @@ class ItemDropEvent : Tracker {
                     }
                     else if (checkQueue(pId,"pkp") && (itemKey=="gkw_pkp_4203.weapon" || itemKey=="gkw_pkp_4203_skill.weapon")){
                         giveDigimindItem(cId, pId, "gkw_pkp_4203_only.weapon", "pkp");
-                    }        
+                    }
+                    else if (checkQueue(pId,"pkp") && (itemKey=="gkw_pkp_5904.weapon" || itemKey=="gkw_pkp_5904_skill.weapon")){
+                        giveDigimindItem(cId, pId, "gkw_pkp_5904_only.weapon", "pkp");
+                    }                            
                     else if (checkQueue(pId,"scarl") && (itemKey=="gkw_scarl.weapon")){
                         giveDigimindItem(cId, pId, "gkw_scarl_only.weapon", "scarl");
                     }
