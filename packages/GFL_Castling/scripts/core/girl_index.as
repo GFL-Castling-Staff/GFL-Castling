@@ -889,6 +889,7 @@ dictionary tdoll_complex_index = {
 
     {modded_key(296).toString(),"gkw_sl8.weapon"},
     {modded_key(296,576).toString(),"gkw_sl8_576.weapon"},
+    {modded_key(296,5202).toString(),"gkw_sl8_5202.weapon"},
 
     {modded_key(300).toString(),"gkw_car.weapon"},
 
@@ -1367,6 +1368,7 @@ array<string> gk_weapon_rf_list = {
     "gkw_c14_7506.weapon",
     "gkw_sl8.weapon",
     "gkw_sl8_576.weapon",
+    "gkw_sl8_5202.weapon",
     "gkw_ssg3000.weapon",
     "gkw_qbu88.weapon",
     "gkw_qbu88_5502.weapon",
