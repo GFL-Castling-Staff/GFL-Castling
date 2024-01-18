@@ -846,6 +846,8 @@ dictionary tdoll_complex_index = {
 
     {modded_key(283).toString(),"gkw_liberator.weapon"},
 
+    {modded_key(284).toString(),"gkw_zasm76.weapon"},
+
     {modded_key(285).toString(),"gkw_c93.weapon"},
     {modded_key(286).toString(),"gkw_kacpdw.weapon"},
 
@@ -1415,7 +1417,8 @@ array<string> gk_weapon_rf_list = {
     "gkw_4type_only_skill.weapon",
     "gkw_obr.weapon",
     "gkw_obrmod3.weapon",
-    "gkw_obrmod3_skill.weapon"
+    "gkw_obrmod3_skill.weapon",
+    "gkw_zasm76.weapon"
 };
 
 array<string> gk_weapon_hg_list = { 
