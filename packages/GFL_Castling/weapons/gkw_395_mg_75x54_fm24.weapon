@@ -25,8 +25,8 @@
         <sound key="cycle" fileref="fm24_cycle_FromPOSTSCRIPTUM.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
-        <model filename="gkw_mg_zb26.xml" />
-        <hud_icon filename="gkw_zb26.png" />
+        <model filename="gkw_mg_fm24.xml" />
+        <hud_icon filename="gkw_fm24.png" />
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="1.147" kill_decay_end_time="1.912" />
         </projectile>
