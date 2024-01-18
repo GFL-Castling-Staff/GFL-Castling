@@ -269,6 +269,7 @@ class CommandSkill : Tracker {
                 case 77:{excuteOwenskill(cId,senderId,m_modifer);break;}
                 case 78:{excuteM1897MOD3skill(cId,senderId,m_modifer);break;}
                 case 79:{excuteType82skill(cId,senderId,m_modifer);break;}
+                case 80:{excuteGsh18skill(cId,senderId,m_modifer);break;}
                 default:
                     break;
             }
@@ -4272,7 +4273,7 @@ class CommandSkill : Tracker {
             // };
             // playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
         }
-    }    
+    }
 
     void excuteM1897MOD3skill(int characterId,int playerId,SkillModifer@ modifer){
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"m1897_aim")) return;
@@ -4342,12 +4343,12 @@ class CommandSkill : Tracker {
                     Vector3 target_pos = stringToVector3(player.getStringAttribute("aim_target"));
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
-                    array<string> Voice={
-                        "M1895Mod_SKILL1_JP.wav",
-                        "M1895Mod_SKILL2_JP.wav",
-                        "M1895Mod_SKILL3_JP.wav"
-                    };
-                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    // array<string> Voice={
+                    //     "M1895Mod_SKILL1_JP.wav",
+                    //     "M1895Mod_SKILL2_JP.wav",
+                    //     "M1895Mod_SKILL3_JP.wav"
+                    // };
+                    // playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                     c_pos=c_pos.add(Vector3(0,1,0));
 
@@ -4416,4 +4417,23 @@ class CommandSkill : Tracker {
             }
         }        
     }
+
+    void excuteGsh18skill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"gsh18")) return;
+        addCooldown("gsh18",45,characterId,modifer);
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+            int factionid = character.getIntAttribute("faction_id");
+            array<const XmlElement@>@ characters = getCharactersNearPosition(m_metagame, c_pos, factionid, 20.0f);
+            for (uint i = 0; i < characters.length; i++) {
+                int soldierId = characters[i].getIntAttribute("id");
+                XmlElement c ("command");
+                c.setStringAttribute("class", "update_inventory");
+                c.setIntAttribute("character_id", soldierId); 
+                c.setIntAttribute("untransform_count", 3);
+                m_metagame.getComms().send(c);
+            }
+        }
+    }    
 }

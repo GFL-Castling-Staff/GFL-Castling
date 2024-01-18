@@ -381,14 +381,17 @@
     <model filename="gkd_hg_fn57_1109.xml">
         <requirement class="weapon" key="gkw_fn57_1109.weapon" slot="0" />
     </model>
-    <model filename="gkd_hg_gsh18.xml">
+    <model filename="gkd_hg_gsh18_s.xml">
         <requirement class="weapon" key="gkw_gsh18.weapon" slot="0" />
     </model>
-    <model filename="gkd_hg_gsh18mod3.xml">
+    <model filename="gkd_hg_gsh18_s.xml">
         <requirement class="weapon" key="gkw_gsh18mod3.weapon" slot="0" />
     </model>
-    <model filename="gkd_hg_gsh18mod3.xml">
+    <model filename="gkd_hg_gsh18.xml">
         <requirement class="weapon" key="gkw_medical_agl_hg.weapon" slot="0" />
+    </model>
+    <model filename="gkd_hg_gsh18_523_s.xml">
+        <requirement class="weapon" key="gkw_gsh18_523.weapon" slot="0" />
     </model>
     <model filename="gkd_hg_hs2000.xml">
         <requirement class="weapon" key="gkw_hs2000.weapon" slot="0" />
@@ -1370,9 +1373,6 @@
     </model>
     <model filename="gkd_hg_fn57_1109.xml">
         <requirement class="weapon" key="gkw_fn57_1109.weapon" slot="0" />
-    </model>
-    <model filename="gkd_hg_gsh18_523.xml">
-        <requirement class="weapon" key="gkw_gsh18_523.weapon" slot="0" />
     </model>
     <model filename="gkd_sg_sat8_1802_s.xml">
         <requirement class="weapon" key="gkw_sat8_1802.weapon" slot="0" />
