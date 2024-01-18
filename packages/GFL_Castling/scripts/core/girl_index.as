@@ -1538,6 +1538,8 @@ array<string> gk_weapon_hg_list = {
     "gkw_contender_3201.weapon",
     "gkw_webley.weapon",
     "gkw_webley_5601.weapon",
+    "gkw_tec9.weapon",
+    "gkw_tec9_5206.weapon",
     "gkw_zip22.weapon"
 };
 
