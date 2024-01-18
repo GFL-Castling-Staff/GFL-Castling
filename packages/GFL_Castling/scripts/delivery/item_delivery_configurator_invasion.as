@@ -562,6 +562,8 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("ff_dreamer.weapon", "weapon", 0.3f),
 		ScoredResource("ff_scarecrow.weapon", "weapon", 0.3f),
 
+		ScoredResource("ff_dragoon.weapon", "weapon", 15.0f),
+
 		ScoredResource("ff_ripper.weapon", "weapon", 30.0f),
 		ScoredResource("ff_ripper_swap.weapon", "weapon", 15.0f),
 

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon key="sfw_dragoon.weapon" time_to_live_out_in_the_open="0" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+<weapon key="ff_dragoon.weapon" time_to_live_out_in_the_open="0" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
 	<tag name="smg"/>
 	<specification 
 	retrigger_time="0.087"
 	barrel_offset="0.13"
 	accuracy_factor="1.0"
 	sustained_fire_diminish_rate="1.5"
-	sustained_fire_grow_step="0.3"
+	sustained_fire_grow_step="0.15"
 	magazine_size="50"
 	can_shoot_running="1"
 	can_shoot_standing="1"
 	can_shoot_crouching="0"
 	can_shoot_prone="0"
 	suppressed="0"
-	name="SF-Dragoon"
+	name="GK-Dragoon"
 	class="0"
 	sight_range_modifier="2.0"
 	projectile_speed="125.0"
@@ -41,7 +41,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet_sf_player.projectile">
-		<result class="hit" kill_probability="1.4" kill_decay_start_time="0.3" kill_decay_end_time="0.3"/>
+		<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="0.3" kill_decay_end_time="0.3"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.75"/>
 	<stance state_key="walking" accuracy="0.75"/>
@@ -57,9 +57,9 @@
 	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
 	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="12.0"/>
 	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0"/>
-	<modifier class="speed" value="0.3"/>
-	<commonness value="0.000001" in_stock="1" can_respawn_with="1"/>
-	<inventory encumbrance="0.0" buy_price="1.0" sell_price="0.0"/>
+	<modifier class="speed" value="0.5"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="0.0" buy_price="300.0" sell_price="300.0"/>
 	<capacity value="0" source="rank" source_value="0.0"/>
 	<capacity value="1" source="rank" source_value="10.0"/>
 	<stance state_key="running" accuracy="0.75"/>

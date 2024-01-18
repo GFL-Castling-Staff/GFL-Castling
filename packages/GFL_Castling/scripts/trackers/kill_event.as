@@ -222,6 +222,8 @@ class kill_event : Tracker {
         {"gkw_mac10.weapon",3},
         {"gkw_jatimatic.weapon",3},
         {"gkw_43m.weapon",3},
+        {"ff_dragoon.weapon",3},
+
 
         //短突
         {"gkw_ak74u.weapon",5},
