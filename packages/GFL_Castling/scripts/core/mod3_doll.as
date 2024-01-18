@@ -60,7 +60,8 @@ dictionary MOD3craftList = {
     {"gkw_m1918_1606_skill.weapon","gkw_m1918mod3_1606.weapon"},
 
     {"gkw_88type.weapon","gkw_88typemod3.weapon"},
-    
+    {"gkw_88type_7106.weapon","gkw_88typemod3_7106.weapon"},
+
     {"gkw_mg4.weapon","gkw_mg4mod3.weapon"},
     {"gkw_mg4_703.weapon","gkw_mg4mod3_703.weapon"},
     {"gkw_mg4_oc.weapon","gkw_mg4mod3_oc.weapon"},
