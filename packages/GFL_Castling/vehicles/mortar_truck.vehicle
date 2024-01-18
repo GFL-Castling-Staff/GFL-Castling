@@ -29,7 +29,7 @@
 	steer_smoothening="0.7" />
     <turret offset="0 1.7 -1.2" weapon_key="truck_mortar.weapon" weapon_offset="0 0 0" weapon_recoil="0.05" max_rotation_step="0.00008" rotation="0"/>
     <physics 
-	max_health="40" 
+	max_health="75" 
 	mass="200" 
 	broken_mass="150"
     remove_collision_threshold="0.3"	
@@ -70,9 +70,9 @@
     <effect event_key="slide_hard" type="splat_map" surface_tag="road" size="0.5" atlas_index="2" layer="0" />
     <effect event_key="slide" type="splat_map" surface_tag="dirt" size="1.0" atlas_index="2" layer="1" />
     <effect event_key="slide" type="particle" key="terrain" ref="Burst" surface_tag="dirt" use_surface_color="1" />
-    <effect event_key="health" value="24" ref="BrokenSparkle" post_processing="0" offset="0.0 1.6 3.92"  />
-    <effect event_key="health" value="12" ref="BrokenSparkle" post_processing="0" offset="0.0 1.6 3.92"  />
-    <effect event_key="health" value="12" ref="SmallSmokeVehicle" offset="0.0 1.6 3.92" />
+    <effect event_key="health" value="40" ref="BrokenSparkle" post_processing="0" offset="0.0 1.6 3.92"  />
+    <effect event_key="health" value="20" ref="BrokenSparkle" post_processing="0" offset="0.0 1.6 3.92"  />
+    <effect event_key="health" value="20" ref="SmallSmokeVehicle" offset="0.0 1.6 3.92" />
     <effect event_key="destroyed" ref="SmallSmokeVehicle" offset="1.0 1.2 0.48" />
     <effect event_key="destroyed" ref="SmallFireRepeat" offset="1.0 1.04 0.48" />
     <effect event_key="destroyed" ref="SmallSmokeVehicle" offset="0.48 2.08 2.0" />
