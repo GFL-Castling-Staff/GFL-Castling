@@ -365,6 +365,9 @@ class ItemDropEvent : Tracker {
                     else if (checkQueue(pId,"m1897") && (itemKey=="gkw_m1897.weapon" || itemKey=="gkw_m1897_skill.weapon")){
                         giveDigimindItem(cId, pId, "gkw_m1897mod3.weapon", "m1897");
                     }         
+                    else if (checkQueue(pId,"m1897") && (itemKey=="gkw_m1897_2505.weapon" || itemKey=="gkw_m1897_2505_skill.weapon")){
+                        giveDigimindItem(cId, pId, "gkw_m1897mod3_2505.weapon", "m1897");
+                    }                      
                     else if (checkQueue(pId,"stg44") && (itemKey=="gkw_stg44.weapon")){
                         giveDigimindItem(cId, pId, "gkw_stg44mod3.weapon", "stg44");
                     }

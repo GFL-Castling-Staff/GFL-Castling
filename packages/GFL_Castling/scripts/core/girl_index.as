@@ -441,6 +441,7 @@ dictionary tdoll_complex_index = {
     {modded_key(108).toString(),"gkw_cz805.weapon"},
 
     {modded_key(109).toString(),"gkw_mg5.weapon"},
+    {modded_key(109,2501).toString(),"gkw_mg5_2501.weapon"},
 
     {modded_key(110).toString(),"gkw_fg42.weapon"},
     {modded_key(110,0,"only").toString(),"gkw_fg42_only.weapon"},
@@ -563,9 +564,12 @@ dictionary tdoll_complex_index = {
 
     // 从编号150开始
     {modded_key(151).toString(),"gkw_m1887.weapon"},
+    {modded_key(151,2503).toString(),"gkw_m1887_2503.weapon"},
 
     {modded_key(152).toString(),"gkw_m1897.weapon"},
     {modded_key(152,0,"mod3").toString(),"gkw_m1897mod3.weapon"},
+    {modded_key(152,2505).toString(),"gkw_m1897_2505.weapon"},
+    {modded_key(152,2505,"mod3").toString(),"gkw_m1897mod3_2505.weapon"},
 
     {modded_key(153).toString(),"gkw_m37.weapon"},
     {modded_key(153,1105).toString(),"gkw_m37_1105.weapon"},
@@ -945,6 +949,7 @@ dictionary tdoll_complex_index = {
 
     {modded_key(318).toString(),"gkw_vhs.weapon"},
     {modded_key(318,562).toString(),"gkw_vhs_562.weapon"},
+    {modded_key(318,5203).toString(),"gkw_vhs_5203.weapon"},
 
     {modded_key(319).toString(),"gkw_pm1910.weapon"},
     {modded_key(319,5307).toString(),"gkw_pm1910_5307.weapon"},

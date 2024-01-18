@@ -12,6 +12,7 @@ array<string> AR_grenade_AntiArmor = {
     "gkw_m4sopmodii.weapon",
     "gkw_vhs.weapon",
     "gkw_vhs_562.weapon",
+    "gkw_vhs_5203.weapon",
     "gkw_hk416.weapon",
     "gkw_hk416_6505.weapon",
     "gkw_hk416_537.weapon",
@@ -468,6 +469,8 @@ dictionary commandSkillIndex = {
 
         {"gkw_m1897mod3.weapon",78},
         {"gkw_m1897mod3_skill.weapon",78},
+        {"gkw_m1897mod3_2505.weapon",78},
+        {"gkw_m1897mod3_2505_skill.weapon",78},
 
         {"gkw_type82.weapon",79},
 
