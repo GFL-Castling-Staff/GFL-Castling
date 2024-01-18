@@ -115,6 +115,7 @@ dictionary commandSkillIndex = {
         // UMP45
         {"gkw_ump45.weapon",14},
         {"gkw_ump45_535.weapon",14},
+        {"gkw_ump45_555.weapon",14},
         {"gkw_ump45_410.weapon",14},      
         {"gkw_ump45_3403.weapon",14},
         {"gkw_ump45_5405.weapon",14},
@@ -277,6 +278,7 @@ dictionary commandSkillIndex = {
         // UMP45MOD3
         {"gkw_ump45mod3.weapon",47},
         {"gkw_ump45mod3_535.weapon",47},
+        {"gkw_ump45mod3_555.weapon",47},
         {"gkw_ump45mod3_410.weapon",47},
         {"gkw_ump45mod3_3403.weapon",47},
         {"gkw_ump45mod3_5405.weapon",47},

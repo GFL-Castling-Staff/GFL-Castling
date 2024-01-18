@@ -159,7 +159,7 @@
 		<sound key="stab_hit_any" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
 		<sound key="stab_hit_any" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
 		<sound key="stab_hit_any" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
-        <model filename="gkw_88typemod3_7106_melee.xml" />
+        <model filename="gkw_88typemod3_melee.xml" />
         <hud_icon filename="gkw_88type_7106.png" />
         <effect class="muzzle" ref="sawsnone" />
         <projectile file="teal.projectile"/>

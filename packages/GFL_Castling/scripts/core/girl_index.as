@@ -407,11 +407,13 @@ dictionary tdoll_complex_index = {
     {modded_key(103).toString(),"gkw_ump45.weapon"},
     {modded_key(103,410).toString(),"gkw_ump45_410.weapon"},
     {modded_key(103,535).toString(),"gkw_ump45_535.weapon"},
+    {modded_key(103,555).toString(),"gkw_ump45_555.weapon"},
     {modded_key(103,3404).toString(),"gkw_ump45_3403.weapon"},
     {modded_key(103,5405).toString(),"gkw_ump45_5405.weapon"},
     {modded_key(103,0,"mod3").toString(),"gkw_ump45mod3.weapon"},
     {modded_key(103,410,"mod3").toString(),"gkw_ump45mod3_410.weapon"},
     {modded_key(103,535,"mod3").toString(),"gkw_ump45mod3_535.weapon"},
+    {modded_key(103,555,"mod3").toString(),"gkw_ump45mod3_555.weapon"},
     {modded_key(103,3404,"mod3").toString(),"gkw_ump45mod3_3403.weapon"},
     {modded_key(103,5405,"mod3").toString(),"gkw_ump45mod3_5405.weapon"},
 
