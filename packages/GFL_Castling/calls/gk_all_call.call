@@ -6,7 +6,16 @@
         <capacity value="0" source="rank" source_value="0.0" />
         <capacity value="100" source="rank" source_value="1.143" />
         <inventory encumbrance="0.0" price="300.0" />
-        <round launch_time="1.0" spawn_time="1.0">
+        <round 
+        instances="0"
+        instance_class="projectile"
+        instance_key=""
+        launch_time="1.0"
+        spawn_time="1.0">
+        </round>
+
+        <round launch_time="1.0"
+        spawn_time="1.0">
         </round>
     </call>
     <!-- Martina V -->
