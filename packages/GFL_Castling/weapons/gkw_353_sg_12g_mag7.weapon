@@ -14,7 +14,7 @@
 	reload_one_at_a_time="0"
 	sight_range_modifier="1.0" 
 	projectile_speed="100" 
-	barrel_offset="0.4" 
+	barrel_offset="0.2" 
 	projectiles_per_shot="6"
 	spread_range="0.25"
 	burst_shots="1" />
@@ -29,7 +29,7 @@
     <sound class="impact" fileref="rifle_drop.wav" />
     <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
-    <model filename="gkw_sg_sat8.xml" />
+    <model filename="gkw_sg_mag7.xml" />
     <hud_icon filename="gkw_mag7.png" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
