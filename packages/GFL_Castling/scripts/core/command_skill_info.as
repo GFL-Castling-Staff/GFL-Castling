@@ -393,6 +393,7 @@ dictionary commandSkillIndex = {
         {"gkw_zasm21_2104.weapon",60},
 
         {"gkw_c96mod3.weapon",61},
+        {"gkw_c96mod3_8405.weapon",61},
 
         {"gkw_hvy_ags30.weapon",62},
         {"gkw_hvy_ags30_fix.weapon",62},

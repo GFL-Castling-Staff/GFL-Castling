@@ -55,6 +55,7 @@ class kill_event : Tracker {
         {"gkw_apsmod3_4306.weapon",3},
         {"gkw_apsmod3_6808.weapon",3},
         {"gkw_c96mod3.weapon",3},
+        {"gkw_c96mod3_8405.weapon",3},
         {"gkw_makarovmod3.weapon",3},
         {"ff_alchemist.weapon",3},
         {"ff_alchemist_skill.weapon",3},
