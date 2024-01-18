@@ -241,6 +241,7 @@ dictionary commandSkillIndex = {
         {"gkw_sten.weapon",38},
         {"gkw_m3.weapon",38},
         {"gkw_saf.weapon",38},
+        {"gkw_saf_5205.weapon",38},
         {"gkw_saf_6607.weapon",38},
 
         // 炼金术师 大限

@@ -2412,7 +2412,7 @@ class CommandSkill : Tracker {
                             CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_english.projectile",characterId,factionid,30.0,3.0);
                         }                        
                     }       
-                    else if(weaponname=="gkw_saf.weapon" || weaponname=="gkw_saf_6607.weapon") {
+                    else if(weaponname=="gkw_saf.weapon" || weaponname=="gkw_saf_6607.weapon" || weaponname=="gkw_saf_5205.weapon") {
                         array<string> Voice={
                             "SAF_SKILL1_JP.wav",
                             "SAF_SKILL2_JP.wav",

@@ -167,6 +167,7 @@ class kill_event : Tracker {
         {"gkw_sten.weapon",3},
         {"gkw_stenmod3.weapon",3},
         {"gkw_saf.weapon",3},
+        {"gkw_saf_5205.weapon",3},
         {"gkw_saf_6607.weapon",3},
         {"gkw_f1.weapon",3},
         {"gkw_f1mod3.weapon",3},
