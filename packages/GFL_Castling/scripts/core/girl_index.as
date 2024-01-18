@@ -1028,7 +1028,7 @@ dictionary tdoll_complex_index = {
 
     {modded_key(393).toString(),"gkw_beowulf.weapon"},
     {modded_key(394).toString(),"gkw_cm901.weapon"},
-
+    {modded_key(395).toString(),"gkw_fm24.weapon"},
     {modded_key(396).toString(),"gkw_mg15.weapon"},
 
     {"-1",""}
