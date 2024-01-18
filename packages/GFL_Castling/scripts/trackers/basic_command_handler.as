@@ -921,8 +921,8 @@ class BasicCommandHandler : Tracker {
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_c96_8405.weapon");
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_88type_7106.weapon");
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_m1911_8406.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_88type_7106.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_88type_7106.weapon");
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_pkp_5904.weapon");
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_g36c_5201.weapon");
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_88type_7106.weapon");
 
 
