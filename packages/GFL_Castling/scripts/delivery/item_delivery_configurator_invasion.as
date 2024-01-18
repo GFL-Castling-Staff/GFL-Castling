@@ -1512,6 +1512,8 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_type82.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_hk433.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_jatimatic.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_stevens520.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_stevens620.weapon", "weapon", 0.2f),
 
 				ScoredResource("gkw_negev.weapon", "weapon", 0.2f)
 
@@ -1855,6 +1857,9 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_mk3a1.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_m1887.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_tps.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_stevens520.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_stevens620.weapon", "weapon", 0.2f),
+
 				ScoredResource("gkw_ltlx7000.weapon","weapon",0.2f)
 
 			},
