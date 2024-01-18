@@ -27,7 +27,8 @@ array<string> AR_grenade_AntiPersonal = {
     "gkw_k11_20mm_impact.weapon",
     "gkw_56-1type.weapon",
     "gkw_56-1typemod3.weapon",
-    "gkw_hk416_agent.weapon"
+    "gkw_hk416_agent.weapon",
+    "gkw_cz805.weapon"
 };
 
 // 列举枪对应的脚本技能编号。注意字典的值为了配合后面的只能用uint，不可用string，float等    

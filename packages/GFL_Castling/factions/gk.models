@@ -2708,7 +2708,9 @@
     <model filename="gkd_hvy_bgm71_2.xml">
         <requirement class="weapon" key="gkw_hvy_bgm71_m4.weapon" slot="0" />
     </model>
-    <model filename="gkd_hvy_bgm71_3.xml">
+    <model filename="gkd_rf_zasm76.xml">
+        <requirement class="weapon" key="gkw_zasm76.weapon" slot="0" />
+    </model>    <model filename="gkd_hvy_bgm71_3.xml">
         <requirement class="weapon" key="gkw_hvy_bgm71_m4.weapon" slot="0" />
     </model>
     <model filename="gkd_hvy_bgm71_4.xml">
@@ -2753,5 +2755,11 @@
     </model>  
     <model filename="gkd_rf_zasm76.xml">
         <requirement class="weapon" key="gkw_zasm76.weapon" slot="0" />
-    </model>         
+    </model>     
+    <model filename="gkd_ar_cr21.xml">
+        <requirement class="weapon" key="gkw_cr21.weapon" slot="0" />
+    </model>
+    <model filename="gkd_ar_cz805.xml">
+        <requirement class="weapon" key="gkw_cz805.weapon" slot="0" />
+    </model>
 </models> 

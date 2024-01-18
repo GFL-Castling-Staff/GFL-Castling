@@ -1362,7 +1362,16 @@ class CommandSkill : Tracker {
                         };
                         playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.0);
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
-                    }                    
+                    }             
+                    if(weaponname=="gkw_cz805.weapon") {
+                        array<string> Voice={
+                            "CZ805_SKILL1_JP.wav",
+                            "CZ805_SKILL2_JP.wav",
+                            "CZ805_SKILL3_JP.wav"
+                        };
+                        playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.15);
+                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);                        
+                    }                           
                     playAnimationKey(m_metagame,characterId,"recoil1, big",true,false);
                     Vector3 s_pos = stringToVector3(target);
                     c_pos=c_pos.add(Vector3(0,1,0));
