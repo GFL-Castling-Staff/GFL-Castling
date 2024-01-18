@@ -27,4 +27,161 @@
 	<text key="pard_nyto_summon" text='Sisters, head to this location and bring victory to "Father".'/>
 	<text key="pard_nyto_summon" text="You worthless ones, come to me! It's time to assess the results of your training!"/>
 	<text key="pard_nyto_summon" text="Sisters, the mission objectives are confirmed, coordinates have been sent. Assemble in the attack formation.	"/>
+
+
+	<text key="Hint - call - rebuytochange" text="[Tactic Point system]Purchase the same Fairy system again to equip this Tactic Fairy in that slot." />
+	<text key="Hint - call - changesuccess" text="[Tactic Point system]Already equipped with &#37;call_key in slot &#37;slot" />
+	<text key="Hint - call - locked" text="[Tactic Point system]Failed to equip Tactic Fairy, you do not have call sign access for this type of support" />
+
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_82mm_mortar_free" text="Mortar Squad Support - 82mm Mortar Strike" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_82mm_mortar_free" text="<cooldown  240seconds consume 0TP>
+-Marks target point, fires mortar after 2 seconds, 2 rounds per round for 3 rounds after 1 round of calibration test fire
+-Each 82mm round deals (7.5x4) blast damage at range 7.5"/>
+
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_82mm_mortar" text="Bombardment Fairy - 82mm Mortar Strike" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_82mm_mortar" text="<cooldown  60seconds consume 20TP>
+-Marks target point, fires mortar after 2 seconds, 4 rounds per round for 3 rounds after 1 calibration test shot
+-Each 82mm round deals (7.5x4) blast damage at range 7.5"/>
+
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_105mm_grenade_barrage" text="Bombardment Fairy - 105mm Artillery Barrage" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_105mm_grenade_barrage" text="<cooldown  90seconds consume 30TP>
+-Marks target point and fires cluster howitzer shells after 1seconds, splitting 8-10 warheads per round for 6 rounds.
+-Each cluster warhead deals 7.1 blast damage at range 7.
+-Finally fires 1 round of 105mm high explosive warheads to finish, dealing 40 blast damage at range 9"/>
+
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_155mm_air_burst" text="Bombardment Fairy - 155mm Airburst Grenade Strike" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_155mm_air_burst" text="<cooldown  120seconds consume 45TP>
+-Marks target point, fires 1 airburst grenade after 3 seconds, exploding in the air at a distance of 10 from the ground, dealing (20x10) blast damage to range 30"/>
+
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_170mm_cannon" text="Bombardment Fairy - 170mm Cannon" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_170mm_cannon" text="<cooldown  90seconds consume 30TP>
+-Marks the target point and fires after 5 seconds, canon rounds do 100 blast damage at range 15
+-The point of impact is not precise, there is an error of distance 10 from the actual position"/>
+
+	<text key="Hint - call - title - call_ui_t2_airstrike_fairy_bomber" text="Airstrike Fairy - High-Altitude Bombardment" />
+	<text key="Hint - call - intro - call_ui_t2_airstrike_fairy_bomber" text="<cooldown  120seconds consume 50TP>
+-Marks the target point, then summons a bomber from a path perpendicular to (the line between you and the target point) to drop bombs
+-Drops a total of 9 aerial bombs, each dealing 75 blast damage to range 10
+-(This support is affected by airspace bans)"/>
+
+	<text key="Hint - call - title - call_ui_t1_airstrike_fairy_precise" text="Airstrike Fairy - Precise Airstrike" />
+	<text key="Hint - call - intro - call_ui_t1_airstrike_fairy_precise" text="<cooldown  30seconds consume 20TP>
+-Marks the target point, after 3seconds a precision bomb is dropped on the target point, dealing 100b damage to range 7.5
+-(This support is affected by airspace bans)"/>
+
+	<text key="Hint - call - title - call_ui_t2_airstrike_fairy_precise" text="Airstrike Fairy - Precise Airstrike" />
+	<text key="Hint - call - intro - call_ui_t2_airstrike_fairy_precise" text="<cooldown  30seconds consume 20TP>
+-Marks the target point, after 3 seconds a precision bomb is dropped on the target point, dealing 100b damage to range 7.5
+-(This support is affected by airspace bans)"/>
+
+	<text key="Hint - call - title - call_ui_t3_airstrike_fairy_precise" text="Airstrike Fairy - Precise Airstrike" />
+	<text key="Hint - call - intro - call_ui_t3_airstrike_fairy_precise" text="<cooldown  30seconds consume 20TP>
+-Marks the target point, after 3 seconds a precision bomb is dropped on the target point, dealing 100b damage to range 7.5
+-(This support is affected by airspace bans)"/>
+
+	<text key="Hint - call - title - call_ui_t1_airstrike_fairy_cas" text="Airstrike Fairy - Close Air Support" />
+	<text key="Hint - call - intro - call_ui_t1_airstrike_fairy_cas" text="<cooldown  90seconds consume 25TP>
+-Marks the target point, then summons an attack plane from a path perpendicular to (the line connecting you to the target point) for close air support
+-Each round deals (2x3.1) blast damage at range 4
+-0.5seconds after the end of the sweep, an aerial bomb is dropped on the target location, dealing 50 blast damage at range 5
+-(This support is affected by airspace bans)"/>
+
+	<text key="Hint - call - title - call_ui_t1_airstrike_fairy_cas_p2p" text="Airstrike Fairy - Close Air Support - P2P" />
+	<text key="Hint - call - intro - call_ui_t1_airstrike_fairy_cas_p2p" text="<cooldown  90seconds consume 25TP>
+-Marks the target point, and when it does so again within 5 seconds, summons an attack plane from the direction of the line between the two points for close air support.
+-Each round deals (2x3.1) blast damage at range 4.
+-0.5seconds after strafing ends, an aerial bomb is dropped on the target, dealing 50 blast damage at range 5.
+-(This support is affected by airspace bans)"/>
+
+	<text key="Hint - call - title - call_ui_t2_warrior_fairy_recon_heli" text="Warrior Fairy - Recon Helicopter" />
+	<text key="Hint - call - intro - call_ui_t2_warrior_fairy_recon_heli" text="<cooldown  180seconds consume 60TP>
+-Marked the target point and then called a recon helicopter from base to cruise the area for 20seconds
+-Fires a YAK-B 12.7mm aerial machine gun every 3seconds at a random target, each round does 3.1 blast damage at range 3.0
+-Scan the area at 5seconds and if there are enemy carriers in the area, fire 2 x 9M114 Cocoon Anti-tank Missiles dealing 50 blast damage at range 4
+-(This support is affected by airspace bans)"/>
+
+	<text key="Hint - call - title - call_ui_t2_warrior_fairy_vtol_sentry" text="Warrior Fairy - VTOL Jet" />
+	<text key="Hint - call - intro - call_ui_t2_warrior_fairy_vtol_sentry" text="<cooldown  150seconds consume 60TP>
+-Marks the target point, then calls in a vertical takeoff and landing fighter from the base for a single aerial bombardment of the target point.
+-Drops a total of 2 aerial bombs, each doing 50 blast damage at range 7.5
+-Switches to hover mode for the next 30seconds, sentrying the area around the caller.
+-Fires the Gsh-30-1 cannon every 2seconds at enemies within a 20-second radius of the character.
+-Does 5.0 blast damage per round at range 4
+-(This support is affected by airspace bans)"/>
+
+	<text key="Hint - call - title - call_ui_t3_warrior_fairy_armed_heli" text="Warrior Fairy - Attack Helicopter" />
+	<text key="Hint - call - intro - call_ui_t3_warrior_fairy_armed_heli" text="<cooldown  240seconds consume 90TP>
+-Marks target points and then calls in a helicopter gunship from base to conduct area sweeps for 30seconds
+-Fires a 2A42 30mm cannon at a random target every 2 seconds, with each round doing 10 blast damage at range 4.0
+-Scan the area every 10 seconds and if there are enemy carriers in the area, fire a 9M127 Vortex Anti-tank Missile, dealing 100 blast damage at range 4.0
+-Fires a total of 5 S-13 rockets at random targets every 10 seconds, each rocket dealing 20 blast damage at range 5.0
+-(This support is affected by airspace bans)"/>
+
+	<text key="Hint - call - title - call_ui_t3_rampage_fairy_gunship" text="Fury Fairy - Gunship Run" />
+	<text key="Hint - call - intro - call_ui_t3_rampage_fairy_gunship" text="<cooldown  300seconds consume 150TP>
+-Marking of target points, followed by calling in a gunship from the base to sweep the area until fuel or ammunition is depleted.
+-The gunship has three attack modes
+-Machine gun fire: Fires 4-8 rounds of 25mm cannon, dealing 6.1 blast damage at a range of 4.0.
+-Shotgun Cannon: Fires 4 high velocity armor piercing rounds in a single burst, dealing 40 blast damage at a range of 5.0.
+Air-to-Surface Missile: fires three 120mm rockets, each dealing 20 blast damage at a range of 10.0.
+-(This support is affected by airspace bans)"/>
+
+	<text key="Hint - call - title - call_ui_t1_rocket_fairy_missile" text="Rocket Fairy - Cruise Missile" />
+	<text key="Hint - call - intro - call_ui_t1_rocket_fairy_missile" text="<cooldown  90seconds consume 30TP>
+-Refreshes its position every seconds after use and drops the missile at the mouse pointer after 3 seconds.
+-(This support is affected by airspace bans)"/>
+
+	<text key="Hint - call - title - call_ui_t2_rocket_fairy_bm30" text="Rocket Fairy - Rocket Artillery" />
+	<text key="Hint - call - intro - call_ui_t2_rocket_fairy_bm30" text="<cooldown  90seconds consume 50TP>
+-Marks target point, then fires a total of 10 300mm rockets, 2 per seconds
+-Rockets land randomly in the area, dealing 30 blast damage at range 8.0"/>
+
+	<text key="Hint - call - title - call_ui_t3_rocket_fairy_aircraft" text="Rocket Fairy - Aircraft Rush" />
+	<text key="Hint - call - intro - call_ui_t3_rocket_fairy_aircraft" text="<cooldown  90seconds consume 50TP>
+-Mark the target point, then call an attack plane from a path perpendicular (to your line with the target point) to fire a straight line of S-8 rockets.
+-4 rockets per round, 5 rounds total.
+-Rockets do 15 blast damage at range 6.0.
+-(This support is affected by airspace bans)"/>
+
+	<text key="Hint - call - title - call_ui_t3_rocket_fairy_cover" text="Rocket Fairy - Saturation Attack" />
+	<text key="Hint - call - intro - call_ui_t3_rocket_fairy_cover" text="<cooldown  300seconds consume 150TP>
+-Marks the target point and starts rocket coverage after 5seconds, 24 rockets per round, spread range 35
+-Continues for 9 rounds, 3seconds between rounds.
+-From the second wave onwards, each round will have a 10 radius deviation, allowing for a wider strike area.
+-Rockets do 10 blast damage at range 6.0"/>
+
+	<text key="fairycommand_cooldown" text="[fairy command] Fairy system Please hold your call, deployment is expected in &#37;time seconds. Items required for this call have been returned."/>
+	<text key="fairycommand_overload" text="[fairy command] Fairy system is busy, please wait for the completion of other tasks before calling, has returned the items needed for this call."/>
+
+	<text key="tactic point system,info" text="[Tactic Point system] Depending on your system privileges, the number of TPs currently available to you is &#37;num" />
+	<text key="tactic point system,destroy target vehicle" text="[Tactic Point system] Destroy enemy vehicle &#37;name, &#37;num extra TP points have been allocated for your use." />
+	<text key="tactic point system,destroy target defend" text="[Tactic Point system] Destroy enemy defensive structure &#37;name, &#37;num extra TP points have been allocated for your use." />
+	<text key="tactic point system,destroy target important" text="[Tactic Point system] Destruction of key enemy nodes - &#37;name. All units have been assigned &#37;num TP." />
+	<text key="tactic point system,destroy target aa" text="[Tactic Point system] Hostile airspace restrictions lifted, &#37;num TP points assigned to all units." />
+	<text key="tactic point system,destroy target gas" text="[Tactic Point system] Destroyed enemy logistic facilities, &#37;num TP points have been allocated to all units." />
+	<text key="tactic point system,get call info" text="[Tactic Point system] Intercepted information on enemy deployment. &#37;num extra TP points have been allocated for your use." />
+	<text key="tactic point system,stop call info" text="[Tactic Point system] Enemy deployment has been halted. &#37;num additional TP points have been allocated for your use." />
+
+	<text key="call event,not enough point" text="[Tactic Fairy] Not enough TP to call for support~ You're still short &#37;num TP!" />
+	<text key="call event,cost point" text="[Tactic Fairy] The call was successful.~ &#37;cost_num point of TP expended. You have &#37;num points to spare." />
+	<text key="call event,cool down" text="[Tactic Fairy] The call was failed~ This support is not ready. We have &#37;time seconds to deploy." />
+	<text key="call event,anti air" text="[Tactic Fairy] The call has failed. Our fighters have no way to break through the enemy's anti-aircraft fire network." />
+
+	<text key="kill streak,10kill,gain 1 TP reward" text="[kill streak] Reach 10 points and get an extra 1 TP bonus!" />
+	<text key="kill streak,20kill,gain 2 TP reward" text="[kill streak] Reach 20 points and get an extra 2 TP bonus!" />
+	<text key="kill streak,30kill,gain 3 TP reward" text="[kill streak] Reach 30 points and get an extra 3 TP bonus!" />
+	<text key="kill streak,40kill,gain 4 TP reward" text="[kill streak] Reach 40 points and get an extra 4 TP bonus!" />
+	<text key="kill streak,50kill,gain 5 TP reward" text="[kill streak] Reach 50 points and get an extra 5 TP bonus!" />
+	<text key="kill streak,10 TP gained, extra 5 TP reward" text="[kill streak] Already got 10 points, so get an extra 5 TP bonus!" />
+	<text key="kill streak,boss reward 4TP" text="[kill streak] Get 4 extra points for killing boss units" />
+	<text key="kill streak,elite reward 2TP" text="[kill streak] Kill a strong enemy unit and gain 2 extra points" />
+	<text key="kill streak,death report" text="[kill streak] Doll destruction rate 100.0%, have reset your points acquisition process, new doll in allocation ......" />
+
+	<text key="spot reward,hint" text="Scout enemy vehicles for &#37;num TP  bonus, now you have &#37;current_num TP to deploy." />
+	<text key="vehicle destroy reward for personal" text="Destroying an enemy vehicle &#37;vehicle .You have been assigned a &#37;num TP bonus and you now have &#37;current_num TP to deploy." />
+
+	<text key="spawn_in_base_call, alerted, kcco_deploy_coeus.call" text="Our UAVs have detected a Typhon deployed at &#37;base_name, so watch out for its power-up EMP!"/>
+	<text key="spawn_in_base_call, alerted, kcco_deploy_typhon.call" text="Our UAV scouted an enemy Coeus deployed at &#37;base_name , deploying an anti-tank team!"/>
+	<text key="spawn_in_base_call, alerted, para_deploy_uhlan.call" text="Our UAV scouted an enemy Uhlan deployed at &#37;base_name , ready for impact!"/>
+	<text key="spawn_in_base_call, alerted, para_deploy_uhlan_nyto.call" text="Our UAV scouts an enemy Uhlan Gun Trooper deployed at &#37;base_name, ready for impact!"/>	
 </translation>
