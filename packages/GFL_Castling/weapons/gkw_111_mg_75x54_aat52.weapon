@@ -31,7 +31,7 @@
         <sound key="cycle" fileref="mk48_cycle_FromCOD9.wav" volume="0.8" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
-        <model filename="gkw_mg_aat52_n.xml" />
+        <model filename="gkw_mg_aat52.xml" />
         <hud_icon filename="gkw_aat52.png" />
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="3" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="1.967" kill_decay_end_time="3.279" />

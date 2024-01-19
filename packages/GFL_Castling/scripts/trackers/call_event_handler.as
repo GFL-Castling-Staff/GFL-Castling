@@ -122,7 +122,7 @@ class call_event : Tracker {
                                     m_DummyCallID++;
                                     const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
                                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));                                    
-                                    Event_call_bombardment_fairy_82mm_mortar@ new_task = Event_call_bombardment_fairy_82mm_mortar(m_metagame,2.0,characterId,factionId,c_pos,stringToVector3(position),"bombardment_fairy_82mm_mortar_free_lv0",flagId);
+                                    Event_call_bombardment_fairy_82mm_mortar@ new_task = Event_call_bombardment_fairy_82mm_mortar(m_metagame,2.0,characterId,factionId,c_pos,stringToVector3(position),"bombardment_fairy_82mm_mortar_lv0",flagId);
                                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                                     tasker.add(new_task);
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
@@ -172,7 +172,7 @@ class call_event : Tracker {
                                 case 100300: //155mm
                                 {
                                     if(!costTacticPoint(battleInfo,45,playerId)) break;
-                                    addCallCoolDown(playerName,playerId,120.0,"tier1",m_playerinfo);
+                                    addCallCoolDown(playerName,playerId,105.0,"tier1",m_playerinfo);
                                     sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
                                     int flagId = m_DummyCallID + 15000;
                                     CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
@@ -194,7 +194,7 @@ class call_event : Tracker {
                                 case 100400: //空袭妖精-近空支援
                                 {
                                     if(checkAntiAir(playerId)) break;
-                                    if(!costTacticPoint(battleInfo,25,playerId)) break;
+                                    if(!costTacticPoint(battleInfo,20,playerId)) break;
                                     addCallCoolDown(playerName,playerId,90.0,"tier1",m_playerinfo);
                                     sendFactionMessageKey(m_metagame,factionId,"airstrikecallstarthint");
                                     int flagId = m_DummyCallID + 15000;
@@ -219,7 +219,7 @@ class call_event : Tracker {
                                     if(findCooldown(playerName,"airstrike_cas_p2p")){
                                         Call_Cooldown@ call_cooldowninfo = getCooldownInfo(playerName,"airstrike_cas_p2p");
                                         if(call_cooldowninfo is null) break;
-                                        if(!costTacticPoint(battleInfo,25,playerId)) break;
+                                        if(!costTacticPoint(battleInfo,20,playerId)) break;
                                         addCallCoolDown(playerName,playerId,90.0,"tier1",m_playerinfo);
                                         sendFactionMessageKey(m_metagame,factionId,"airstrikecallstarthint");
                                         int flagId = m_DummyCallID + 15000;
@@ -272,7 +272,7 @@ class call_event : Tracker {
                                 }
                                 case 100700: //火箭妖精 巡曳飞弹
                                 {
-                                    if(!costTacticPoint(battleInfo,30,playerId)) break;
+                                    if(!costTacticPoint(battleInfo,25,playerId)) break;
                                     addCallCoolDown(playerName,playerId,90.0,"tier1",m_playerinfo);
                                     sendFactionMessageKey(m_metagame,factionId,"rocketfight");
                                     int flagId = m_DummyCallID + 15000;
@@ -316,8 +316,8 @@ class call_event : Tracker {
                                 case 200100: //空袭妖精-高空投弹
                                 {
                                     if(checkAntiAir(playerId)) break;
-                                    if(!costTacticPoint(battleInfo,50,playerId)) break;
-                                    addCallCoolDown(playerName,playerId,120.0,"tier2",m_playerinfo);
+                                    if(!costTacticPoint(battleInfo,45,playerId)) break;
+                                    addCallCoolDown(playerName,playerId,90.0,"tier2",m_playerinfo);
                                     sendFactionMessageKey(m_metagame,factionId,"airstrikecallstarthint");
                                     int flagId = m_DummyCallID + 15000;
                                     CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
@@ -361,8 +361,8 @@ class call_event : Tracker {
                                 case 200300: //勇士妖精 侦察直升机
                                 {
                                     if(checkAntiAir(playerId)) break;
-                                    if(!costTacticPoint(battleInfo,90,playerId)) break;
-                                    addCallCoolDown(playerName,playerId,180.0,"tier2",m_playerinfo);
+                                    if(!costTacticPoint(battleInfo,50,playerId)) break;
+                                    addCallCoolDown(playerName,playerId,120.0,"tier2",m_playerinfo);
                                     sendFactionMessageKey(m_metagame,factionId,"warriorcallstarthint");
                                     int flagId = m_DummyCallID + 15000;
                                     CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
@@ -476,8 +476,8 @@ class call_event : Tracker {
                                 case 300100: //勇士妖精 武装直升机
                                 {
                                     if(checkAntiAir(playerId)) break;
-                                    if(!costTacticPoint(battleInfo,90,playerId)) break;
-                                    addCallCoolDown(playerName,playerId,240.0,"tier3",m_playerinfo);
+                                    if(!costTacticPoint(battleInfo,75,playerId)) break;
+                                    addCallCoolDown(playerName,playerId,120.0,"tier3",m_playerinfo);
                                     sendFactionMessageKey(m_metagame,factionId,"warriorcallstarthint");
                                     int flagId = m_DummyCallID + 15000;
                                     CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
@@ -507,9 +507,10 @@ class call_event : Tracker {
                                         if (character !is null) {
                                             sendPrivateMessageKey(m_metagame,playerId,"ac130callexisthint");
                                         }
+                                        break;
                                     }
                                     if(checkAntiAir(playerId)) break;
-                                    if(!costTacticPoint(battleInfo,150,playerId)) break;
+                                    if(!costTacticPoint(battleInfo,120,playerId)) break;
                                     addCallCoolDown(playerName,playerId,300.0,"tier3",m_playerinfo);
                                     sendFactionMessageKey(m_metagame,factionId,"ac130callstarthint");
                                     int flagId = m_DummyCallID + 15000;
@@ -555,7 +556,7 @@ class call_event : Tracker {
 
                                 case 300400: //BM21
                                 {
-                                    if(!costTacticPoint(battleInfo,150,playerId)) break;
+                                    if(!costTacticPoint(battleInfo,120,playerId)) break;
                                     addCallCoolDown(playerName,playerId,300.0,"tier3",m_playerinfo);
                                     sendFactionMessageKey(m_metagame,factionId,"rocketcallstarthint");
                                     int flagId = m_DummyCallID + 15000;

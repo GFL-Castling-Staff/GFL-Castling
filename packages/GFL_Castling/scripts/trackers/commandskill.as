@@ -947,7 +947,6 @@ class CommandSkill : Tracker {
         int factionid = characterinfo.getIntAttribute("faction_id");
         c_pos=c_pos.add(Vector3(0,1,0));
 
-        healCharacter(m_metagame,characterId,4);
 
         float dx = s_pos.m_values[0]-c_pos.m_values[0];
         float dy = s_pos.m_values[2]-c_pos.m_values[2];
@@ -965,7 +964,7 @@ class CommandSkill : Tracker {
         // playAnimationKey(m_metagame,characterId,"excution_skill",false,false);
 
         if (weaponname=="ff_excutioner_1.weapon"){
-            addCooldown("FF_EXCUTIONER_1",10,characterId,modifer);
+            addCooldown("FF_EXCUTIONER_1",15,characterId,modifer);
             Skill_ff_excutioner@ shot = Skill_ff_excutioner(m_metagame,0.4,characterId,factionid,s_pos);
             TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
             tasker.add(shot);
@@ -984,6 +983,7 @@ class CommandSkill : Tracker {
                 CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2)                    ,1,dy*dd*(ix*2)                    )),c_pos.add(Vector3(dx*dd*(ix*2)                    ,0,dy*dd*(ix*2)                    )),"excutioner_skill.projectile",characterId,factionid,100,0.001);
                 CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,1,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"excutioner_skill.projectile",characterId,factionid,100,0.001);
             }
+            healCharacter(m_metagame,characterId,4);
         }
     }
 
