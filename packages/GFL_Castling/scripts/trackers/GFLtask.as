@@ -1233,7 +1233,7 @@ class Event_call_bombardment_fairy_82mm_mortar : event_call_task_hasMarker {
 		{
 			m_excute_Limit = 4;
 			m_time_internal = 1.3;
-			m_airstrike_key = "mortar_82mm_x2";
+			m_airstrike_key = "mortar_82mm_x4";
 			m_airstrike_key_alt = "mortar_82mm";
 		}		
 	}
