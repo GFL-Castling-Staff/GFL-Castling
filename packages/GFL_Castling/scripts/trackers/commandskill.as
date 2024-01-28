@@ -4180,8 +4180,10 @@ class CommandSkill : Tracker {
                     playAnimationKey(m_metagame,characterId,"air thrust",true,true);
                     c_pos=c_pos.add(Vector3(0,2,0));
                     Skill_ff_dreamer@ shot = Skill_ff_dreamer(m_metagame,1,characterId,factionid,c_pos,t_pos);
+                    DelayGPSScanRequest@ shoti = DelayGPSScanRequest(m_metagame,1.5,10,characterId,factionid,"_poslimited",c_pos,250.0);
                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                     tasker.add(shot);
+                    tasker.add(shoti);
                     addCooldown("FF_Dreamer",30,characterId,modifer);
                 }
             }

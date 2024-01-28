@@ -419,17 +419,99 @@
 	};
 
 
-    // parameters for "save_system.as":
+// parameters for "save_system.as":
     const string call_slot_default_1 = "t1_bombardment_fairy_82mm_mortar_lv0";
     const string call_slot_default_2 = "t2_airstrike_fairy_precise_lv0";
     const string call_slot_default_3 = "t3_rocket_fairy_aircraft_lv0";
 
     // 默认引用的支援key
 
-    // parameters for "kill_event.as":
+// parameters for "kill_event.as":
 
     array<string> point_nerfed_reward = {
-    "kcco_pathfinder",
-    "infected",
-    "sf_dinergate"
-};
+        "kcco_pathfinder",
+        "infected",
+        "sf_dinergate"
+    };
+
+// parameters for "GFLtask.as":
+
+    array<string> GPSScanTargets_All = {
+		"typhon.vehicle",
+		"coeus.vehicle",
+		"neosu_kuergants.vehicle",
+		"kcco_pathfinder_factory.vehicle",
+		"sandstorm.vehicle",
+
+		"par_uhlan.vehicle",
+		"par_elenusinus.vehicle",
+		"par_aceso.vehicle",
+		"par_cherub.vehicle",
+		"par_moth.vehicle",
+        "par_compass.vehicle",
+
+		"sf_JWAG.vehicle",
+		"rubber_boat.vehicle",
+
+		"deployed_mortar.vehicle",
+		"hornet_ct.vehicle",
+		"bgm71_tow.vehicle",
+		"kcco_1130.vehicle",
+
+		"radar_tower.vehicle",
+		"radio_jammer.vehicle",
+		"radio_jammer2.vehicle",
+		"radio_jammer3.vehicle",
+
+		"gas_tank.vehicle",
+		"water_tower.vehicle",
+		"mortar_ammunition_crates.vehicle",
+
+		"aa_emplacement.vehicle",
+		"sf_jupiter.vehicle",
+		"par_sentrytower.vehicle",
+		"par_sentrytower_deadzone.vehicle"
+    };
+
+    array<string> GPSScanTargets_Vehicle = {
+		"typhon.vehicle",
+		"coeus.vehicle",
+		"neosu_kuergants.vehicle",
+		"kcco_pathfinder_factory.vehicle",
+		"sandstorm.vehicle",
+
+		"par_uhlan.vehicle",
+		"par_elenusinus.vehicle",
+		"par_aceso.vehicle",
+		"par_cherub.vehicle",
+		"par_moth.vehicle",
+
+		"sf_JWAG.vehicle",
+		"rubber_boat.vehicle"
+	};
+
+    array<string> GPSScanTargets_Building = {
+        "par_compass.vehicle",
+		"deployed_mortar.vehicle",
+		"hornet_ct.vehicle",
+		"bgm71_tow.vehicle",
+		"kcco_1130.vehicle",
+
+		"radar_tower.vehicle",
+		"radio_jammer.vehicle",
+		"radio_jammer2.vehicle",
+		"radio_jammer3.vehicle"
+	};
+
+    array<string> GPSScanTargets_Support = {
+		"gas_tank.vehicle",
+		"water_tower.vehicle",
+		"mortar_ammunition_crates.vehicle"
+	};
+
+    array<string> GPSScanTargets_AA = {
+		"aa_emplacement.vehicle",
+		"sf_jupiter.vehicle",
+		"par_sentrytower.vehicle",
+		"par_sentrytower_deadzone.vehicle"
+    };
