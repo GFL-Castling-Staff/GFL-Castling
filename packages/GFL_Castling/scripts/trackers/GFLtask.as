@@ -1915,9 +1915,16 @@ class DelayGPSScanRequest : Task{
 						
 						int markerId = vehicles[j].getIntAttribute("id") + 7000;
 						string position = vehicles[j].getStringAttribute("position");
-						string vehicleName = vehicles[j].getStringAttribute("name");
+						string vehicleName = vehicle.getStringAttribute("name");
+
+						// 限制扫描距离
 						if(m_scan_mode.findFirst("_poslimited") != -1){
 							if(getAimUnitDistance(1.0,m_pos,stringToVector3(position)) > m_radius) continue;
+						}
+
+						// 扫描不显示名称
+						if(m_scan_mode.findFirst("_nameinvisible") != -1){
+							vehicleName = "";
 						}
 						//set_spotting(m_metagame,vehicleId,0);
 						//collecting marker ids for removal later
