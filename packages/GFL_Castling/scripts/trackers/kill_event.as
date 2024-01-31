@@ -822,11 +822,4 @@ int findNodeleteDataIndex(string name,string type){
     }
     return -1;
 }
-int findNodeleteDataIndex(int pid,string type){
-    for (uint i=0;i<No_Delete_DataArray.length();i++){
-        if (No_Delete_DataArray[i].m_playerid==pid && No_Delete_DataArray[i].m_data_key == type ) {
-            return i;
-        }
-    }
-    return -1;
-}
+
