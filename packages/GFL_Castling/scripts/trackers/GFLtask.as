@@ -9,6 +9,7 @@
 #include "GFLhelpers.as"
 #include "GFLairstrike.as"
 #include "fairy_command.as"
+#include "GFLparameters.as"
 
 //Author: NetherCrow
 
@@ -1837,5 +1838,142 @@ class Event_call_rocket_fairy_cover : event_call_task_hasMarker {
 		m_timeLeft_internal = m_time_internal;
 		insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos1,m_pos2);
 		m_pos1 = getRandomOffsetVector(e_pos.add(Vector3(0,50,0)),4.5 + m_excute_time*1.5);
+	}
+}
+
+class DelayGPSScanRequest : Task{
+	protected GameMode@ m_metagame;
+	protected float m_time;
+	protected float m_addtime;
+    protected int m_character_id;
+    protected int m_faction_id;
+	protected float m_timeLeft;
+	protected string m_scan_mode;	
+	protected Vector3 m_pos;
+	protected float m_radius;
+	protected bool m_scanned = false;
+	protected array<int> m_markers;
+	array<string> GPSScanTargets;
+
+	DelayGPSScanRequest(GameMode@ metagame, float time, float time_duration, int cId, int fId, string scan_mode="_all", Vector3 position = Vector3(0,0,0), float radius = 10000.0){
+		@m_metagame = metagame;
+		m_time = time;
+		m_addtime = time + time_duration;
+		m_character_id = cId;
+		m_faction_id = fId;
+		m_scan_mode = scan_mode;
+		m_pos = position;
+		m_radius = radius;
+		GPSScanTargets = GPSScanTargets_All;
+		if(m_scan_mode.findFirst("_vonly")!=-1)	{GPSScanTargets = GPSScanTargets_Vehicle;}
+		if(m_scan_mode.findFirst("_bonly")!=-1)	{GPSScanTargets = GPSScanTargets_Building;}
+		if(m_scan_mode.findFirst("_sonly")!=-1)	{GPSScanTargets = GPSScanTargets_Support;}
+		if(m_scan_mode.findFirst("_aaonly")!=-1)	{GPSScanTargets = GPSScanTargets_AA;}
+	}
+
+	void start() {
+		_log("DelayGPSScanRequest start");
+		m_timeLeft = m_time;
+    }
+
+	void update(float time) {
+		_log("DelayGPSScanRequest update");
+		m_timeLeft -= time;
+		m_addtime -= time;
+				
+		if (m_addtime < 0 && m_timeLeft < 0){
+			for (uint i = 0; i < m_markers.length(); ++i){
+				//removing the marker
+				XmlElement command("command");
+					command.setStringAttribute("class", "set_marker");
+					command.setIntAttribute("id", m_markers[i]);
+					command.setIntAttribute("enabled", 0);
+					command.setIntAttribute("faction_id", 0);
+				m_metagame.getComms().send(command);
+			}
+			//clearing the marker list
+			m_markers.resize(0);
+		}	
+
+		if (m_timeLeft < 0 && m_scanned == false){
+			bool anyFound = false;
+			
+			for (uint f = 0; f < 4; ++f){
+				if(f == m_faction_id) continue;
+				//scanning for all vehicles on the list
+				for (uint i = 0; i < GPSScanTargets.length(); ++i){
+					string vehicleKey = GPSScanTargets[i];
+					array<const XmlElement@>@ vehicles = getVehicles(m_metagame, f, vehicleKey);
+					for (uint j = 0; j < vehicles.length(); ++j){
+						int vehicleId = vehicles[j].getIntAttribute("id");
+						const XmlElement@ vehicle = getVehicleInfo(m_metagame,vehicleId);
+						
+						if (vehicle is null) continue;
+						
+						float health = vehicle.getFloatAttribute("health");
+						if (health <= 0.0) continue;
+						
+						int markerId = vehicles[j].getIntAttribute("id") + 7000;
+						string position = vehicles[j].getStringAttribute("position");
+						string vehicleName = vehicle.getStringAttribute("name");
+
+						// 限制扫描距离
+						if(m_scan_mode.findFirst("_poslimited") != -1){
+							if(getAimUnitDistance(1.0,m_pos,stringToVector3(position)) > m_radius) continue;
+						}
+
+						// 扫描不显示名称
+						if(m_scan_mode.findFirst("_nameinvisible") != -1){
+							vehicleName = "";
+						}
+						//set_spotting(m_metagame,vehicleId,0);
+						//collecting marker ids for removal later
+						m_markers.insertLast(markerId);
+						int atlas_index = 0;
+						string atlas_color = "#00b9ff";
+						float atlas_size = 0.6;
+						if(GPSScanTargets_Vehicle.find(vehicleKey) != -1) 	{atlas_index = 0; atlas_color = "#00b9ff";}
+						if(GPSScanTargets_Building.find(vehicleKey) != -1) {atlas_index = 13; atlas_color = "#00b9ff";}
+						if(GPSScanTargets_Support.find(vehicleKey) != -1) 	{atlas_index = 7; atlas_color = "#ccccff";}
+						if(GPSScanTargets_AA.find(vehicleKey) != -1) 		{atlas_index = 14; atlas_color = "#00b9ff"; atlas_size = 1.0;}
+						
+						//placing the marker
+						XmlElement command("command");
+							command.setStringAttribute("class", "set_marker");
+							command.setIntAttribute("id", markerId);
+							command.setIntAttribute("faction_id", 0);
+							command.setIntAttribute("atlas_index", atlas_index);
+							command.setFloatAttribute("size", atlas_size);
+							command.setFloatAttribute("range", 0.0);
+							command.setIntAttribute("enabled", 1);
+							command.setStringAttribute("position", position);
+							command.setStringAttribute("text", vehicleName);
+							command.setStringAttribute("color", atlas_color);
+							command.setBoolAttribute("show_in_map_view", true);
+							command.setBoolAttribute("show_in_game_view", false);
+							command.setBoolAttribute("show_at_screen_edge", false);
+							
+						m_metagame.getComms().send(command);
+
+						if (!anyFound) {
+							sendFactionMessageKey(m_metagame, 0, "gps_laptop, targets ok", dictionary = {}, 1.0);
+							anyFound = true;
+						}
+					}
+				}
+			}
+			
+			if (!anyFound) {
+				sendFactionMessageKey(m_metagame, 0, "gps_laptop, targets not ok", dictionary = {}, 1.0); 
+			}
+			m_scanned = true;			
+		}
+	}
+
+    bool hasEnded() const {
+		if (m_addtime < 0) {
+			return true;
+		}
+		return false;
 	}
 }
