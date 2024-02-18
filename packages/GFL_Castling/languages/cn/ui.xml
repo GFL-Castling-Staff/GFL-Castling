@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ui>
+	<text key="Off" text="关闭" />
+	<text key="On" text="开启" />
+	<text key="Map" text="地图" />
+	<text key="No maps found" text="未发现地图文件" />
+	<text key="Change!" text="改变！" />
+
+	<text key="ContentConfig:Map" text="地图" />
+	<text key="Setup mods" text="加载MOD模组" />
+	<text key="Load resources and advance!" text="加载资源并继续！" />	
+	<text key="Help:Load resources and advance!" text="点击进入到比赛设置菜单" />
+
+	<text key="Back to options menu" text="返回选项菜单" />
+
+	<text key="Up" text="上" />
+	<text key="Help:Up" text="向上走，载具前进" />
+	<text key="Down" text="下" />
+	<text key="Help:Down" text="向下走，载具倒车" />
+	<text key="Left" text="左" />
+	<text key="Help:Left" text="向左走，载具左转" />
+	<text key="Right" text="右" />
+	<text key="Help:Right" text="向右走，载具右转" />
+	<text key="Shoot" text="射击" />
+	<text key="Help:Shoot" text="按住/点击来射击或者使用道具，指向并点击C4进行引爆" />
+	<text key="Reload" text="装弹" />
+	<text key="Grenade" text="手榴弹" />
+	<text key="Help:Grenade" text="投掷手榴弹或者安放C4" />
+	<text key="Radio" text="显示无线电呼叫菜单" />
+	<text key="Help:Radio" text="按住以显示无线电呼叫菜单" />
+	<text key="Knife" text="匕首" />
+	<text key="Help:Knife" text="近身刺杀" />
+	<text key="Swap_Weapon" text="装备主/副武器" />
+	<text key="Help:Swap_Weapon" text="切换主武器和副武器/道具" />
+	<text key="Jump" text="翻越/进入载具" />
+	<text key="Crouch" text="蹲伏" />
+	<text key="Prone" text="卧倒" />
+	<text key="Walk" text="步行" />
+	<text key="Pick_Up" text="捡起" />
+	<text key="Help:Pick_Up" text="点击来捡起物品，按住来与军械库或贮藏处互动" />
+	<text key="Faction_Chat" text="阵营聊天" />
+	<text key="Squad_Command" text="小队命令" />
+	<text key="Help:Squad_Command" text="右键点击来命令队员向目标移动，双击让其快速行动，点击自己以重组" />
+	<text key="Global_Chat" text="全局聊天" />
+	<text key="Faction_Chat" text="阵营聊天" />
+	<text key="Squad_Chat" text="小队聊天" />
+	<text key="Crouch_Toggle" text="切换蹲伏" />
+	<text key="Prone_Toggle" text="切换卧倒" />
+	<text key="Map" text="地图" />
+	<text key="Help:Map" text="使用鼠标滚轮缩放地图" />
+	<text key="Statistics" text="统计数据" />
+	<text key="Help:Statistics" text="统计数据和聊天记录" />
+	<text key="Controls_Config_Shortcut" text="按键配置" />
+	<text key="Help:Controls_Config_Shortcut" text="快速查看本页面" />
+	<text key="Increase_Squad_Size" text="增加小队人数" />
+	<text key="Help:Increase_Squad_Size" text="相反操作来减小小队人数" />
+	<text key="Decrease_Squad_Size" text="减小小队人数" />
+	<text key="Help:Decrease_Squad_Size" text="太多的跟班？这是你的选择。" />
+	<text key="Squad_Command_Modifier" text="辅助小队命令" />
+	<text key="Help:Squad_Command_Modifier" text="在载具中的时候可以分别对小队内的载具队员和步行队员下命令" />
+	<text key="Next_Squad_Config" text="下一个小队命令" />
+	<text key="Help:Next_Squad_Config" text="实验性 / MOD键" />
+	<text key="Previous_Squad_Config" text="上一个小队命令" />
+	<text key="Help:Previous_Squad_Config" text="实验性 / MOD键" />
+	<text key="Map_Zoom_In" text="放大地图" />
+	<text key="Help:Map_Zoom_In" text="也可以用鼠标滚轮来放大" />
+	<text key="Map_Zoom_Out" text="缩小地图" />
+	<text key="Help:Map_Zoom_Out" text="也可以用鼠标滚轮来缩小" />
+	<text key="Pause_Game" text="暂停游戏" />
+	<text key="Help:Pause_Game" text="暂停/恢复游戏：仅限单人模式" />
+	<text key="Next_Weapon_In_Chain" text="武器模式切换" />
+    
+	<text key="Call 1" text="无线电呼叫 1" />
+	<text key="Call 2" text="无线电呼叫 2" />
+	<text key="Call 3" text="无线电呼叫 3" />
+	<text key="Call 4" text="无线电呼叫 4" />
+	<text key="Call 5" text="无线电呼叫 5" />
+	<text key="Call 6" text="无线电呼叫 6" />
+	<text key="Call 7" text="无线电呼叫 7" />
+	<text key="Call 8" text="无线电呼叫 8" />
+	<text key="Call 9" text="无线电呼叫 9" />
+	<text key="Call 10" text="无线电呼叫 10" />
+
+	<text key="Hotkey1" text="快捷键 1" />
+	<text key="Hotkey2" text="快捷键 2" />
+	<text key="Hotkey3" text="快捷键 3" />
+	<text key="Hotkey4" text="快捷键 4" />
+	<text key="Hotkey5" text="快捷键 5" />
+	<text key="Hotkey6" text="快捷键 6" />
+	<text key="Hotkey7" text="快捷键 7" />
+	<text key="Hotkey8" text="快捷键 8" />
+	<text key="Hotkey9" text="快捷键 9" />
+	<text key="Hotkey10" text="快捷键 10" />
+
+	<text key="Press/Click it!" text="请按键！" />
+	<text key="Unassigned" text="未分配按键" />
+
+	<text key="Port forwarding" text="注意！&#37;EOL &#37;EOL如果您使用的是NAT网络（大多数玩家都是这样），您为服务器设置的UDP端口还需要在路由器中配置端口转发。&#37;EOL &#37;EOL请参考您的路由器用户手册了解如何设置端口转发，或者百度一下。&#37;EOL &#37;EOL只有服务器需要配置端口转发，加入服务器的客户端用户则不需要。" />
+	<text key="Host:Port" text="UDP端口号" />
+	<text key="Server name" text="服务器名称" />
+
+	<text key="Add to public server list" text="添加到公共服务器列表" />
+	<text key="No" text="否" />
+	<text key="Yes" text="是" />
+	<text key="Start!" text="开始！" />
+	<text key="Join!" text="加入！" />
+	<text key="Still joining..." text="加入中..." />
+	<text key="Login / create account" text="登录/创建新的账户" />
+	<text key="Back to game menu" text="返回游戏菜单" />
+
+	<text key="Port" text="端口" />
+	<text key="Address" text="地址" />
+	<text key="Help:Address" text="IP地址或域名" />
+	<text key="Username" text="用户名" />
+	<text key="Your password" text="密码" />
+	<text key="Help:Your password" text="在这里输入您的个人密码，不是服务器密码" />
+	<text key="Remember password" text="记住密码" />
+	<text key="Back to join online menu" text="返回在线游戏菜单" />
+	<text key="Back to server list" text="返回服务器列表" />
+	<text key="Visit &#37;url!" text="访问&#37;url！" />
+
+	<text key="Invalid port" text="无效的端口" />
+	<text key="Invalid address" text="无效的地址" />
+	<text key="Invalid username" text="无效的用户名" />
+	<text key="Couldn't connect to server" text="服务器无法访问，检查地址和端口"/>
+	<text key="Connection timed out" text="连接超时" />
+	<text key="Version mismatch" text="与服务器版本不匹配" />
+	<text key="Kicked from server" text="被服务器踢出" />
+	<text key="Banned from server" text="被服务器封停" />
+	<text key="Incorrect username or password" text="用户名或密码错误" />
+	<text key="Profile already in game" text="角色资料已存在" />
+	<text key="Incompatible profile" text="存档不兼容" />
+	<text key="Profile server unreachable" text="无法连接到存档服务器，请重试"/>
+	<text key="Unaccepted username" text="用户名不合法，请用大写字母" />
+
+	<text key="Public server list" text="公共服务器列表" />
+	<text key="Manual IP" text="手动输入IP地址" />
+	<text key="Official Invasion server list" text="官方入侵模式（Coop多人合作）服务器列表" />
+	<text key="Official Dominance server list" text="官方抢攻模式（PvP多人对战）服务器列表" />
+
+	<text key="Back to main menu" text="返回主菜单" />
+
+	<text key="Existing games" text="存档" />
+	<text key="No save games found" text="未发现游戏存档" />
+	<text key="Delete!" text="删除！" />
+	<text key="Confirm delete" text="是的，删除它，真的！"/>
+	<text key="Manage in file browser!" text="在资源管理器中打开！" />
+	<text key="Continue!" text="继续！" />
+
+	<text key="Enter playground" text="进入练兵场" />
+	<text key="Enter playground radio message" text="随便走走，观察四周并熟悉环境" />
+	<text key="Start new campaign" text="开始新的战役" />
+	<text key="Continue recent game" text="继续最近的游戏" />
+	<text key="Help:Continue recent game" text="继续之前的战役或者快速比赛模式" />
+	<text key="Start new quick match" text="开始新的快速比赛模式" />
+	<text key="Help:Start new quick match" text="在单张地图上建立一个快速比赛模式" />
+	<text key="Join online game" text="加入在线游戏" />
+	<text key="Activate server" text="激活服务器" />
+	<text key="Change map &amp; resources" text="改变地图和资源文件" />
+	<text key="Options" text="选项" />
+	<text key="Visit RWR Online Wiki!" text="访问RWR Wiki百科（英文）！" />
+	<text key="Quit" text="退出" />
+	<text key="Quit to main menu" text="退出到主菜单" />
+	<text key="Campaign stats" text="战报" />
+	<text key="Press ESC for the playground!" text="按ESC进入练兵场！" />
+
+	<text key="Start new game" text="开始新的游戏" />
+	<text key="Online settings and profile" text="在线设置和存档" />
+	<text key="Save &amp; quit to main menu" text="保存并退出到主菜单" />
+
+	<text key="Setup mods (&#37;count)" text="加载模组（&#37;count）" />
+	<text key="Setup custom campaign (&#37;name)" text="设置自定义战役（&#37;name）" />
+	<text key="No custom campaign selected" text="未选择任何自定义战役" />
+
+	<text key="Starting XP level" text="初始XP" />
+	<text key="Faction" text="阵营" />
+
+	<text key="AI accuracy" text="AI射击准确率" />
+	<text key="Capacity" text="规模" />
+
+	<text key="XP rate" text="XP增幅" />
+	<text key="RP multiplier" text="RP增幅" />
+	<text key="Help:XP rate" text="XP用于解锁道具和提升小队人数" />
+	<text key="Help:RP multiplier" text="RP用于军械库交易和发出无线电请求" />
+
+	<text key="Match settings filename" text="快速比赛配置文件名称" />
+	<text key="Open match settings folder" text="打开快速比赛配置文件" />
+
+	<text key="Save as" text="保存为" />
+	<text key="Presets" text="难度" />
+	<text key="Let's play" text="试玩模式" />
+	<text key="Help:Let's play" text="与简单模式类似，但有一些初始XP和RP。方便游戏主播录制试玩视频。" />
+	<text key="Easy" text="简单" />
+	<text key="Help:Easy" text="增加友军数量并提高玩家生存几率" />
+	<text key="Hard" text="困难" />
+	<text key="Help:Hard" text="默认难度" />
+	<text key="Veteran" text="老兵" />
+	<text key="Help:Veteran" text="敌军加强，选择这个模式的人纯属找虐" />
+	<text key="Presets:Custom" text="自定义" />	
+	<text key="Unfair" text="极难" />
+	<text key="Help:Unfair" text="敌军加强，选择这个模式的人纯属找虐" />
+	<text key="Presets:Custom" text="自定义" />
+	<text key="Presets:Advanced" text="高级" />
+
+	<text key="Fellow capacity" text="友军兵力值" />
+	<text key="Enemy capacity" text="敌军兵力值" />
+	<text key="Fellow accuracy" text="友军射击准确率" />
+	<text key="Enemy accuracy" text="敌军射击准确率" />
+
+	<text key="Max soldiers" text="最大兵力值" />
+	<text key="AI accuracy" text="AI射击准确率" />
+	<text key="Starting XP" text="初始XP" />
+	<text key="Starting RP" text="初始RP" />
+	<text key="Bases to capture" text="需要占领的基地数" />
+	<text key="Default" text="默认" />
+
+	<text key="Sound volume" text="游戏特效音量" />
+	<text key="Background sound volume" text="背景音乐音量" />
+	<text key="Soundtrack volume" text="菜单音乐音量" />
+	<text key="Controls config" text="按键配置" />
+	<text key="Visual options" text="个性化和鼠标指示" />
+	<text key="Visual quality options" text="画质与性能" />
+	<text key="Visual tweaking" text="进阶" />
+
+	<text key="Back to map setup" text="返回地图设置" />
+	<text key="Back to campaign setup" text="返回战役设置" />
+
+	<text key="Disconnect!" text="断开连接！" />
+	<text key="Server info" text="服务器信息" />
+	<text key="Waiting..." text="请稍等..." />
+	<text key="Squad tag" text="小队标签" />
+
+	<text key="Deactivate server!" text="关闭服务器！" />
+	<text key="Server" text="服务器" />
+	<text key="Comment" text="说明" />
+
+	<text key="ServerList:Name" text="名称" />
+	<text key="ServerList:Players" text="玩家" />
+	<text key="ServerList:Country" text="国家/地区" />
+	<text key="ServerList:Map" text="地图" />
+	<text key="ServerList:Mode" text="模式" />
+
+	<text key="Refresh" text="刷新" />
+
+	<text key="Back to join online game menu" text="返回加入在线游戏菜单" />
+	<text key="dedicated server" text="专用服务器" />
+ 
+	<text key="Score notification" text="得分提示" />
+	<text key="Help:Score notification" text="XP和RP变动指示" />
+	<text key="Line of sight" text="瞄准线" />
+	<text key="Help:Line of sight" text="可视化辅助瞄准线" />
+	<text key="Helper" text="弹着点" />
+	<text key="Helper &amp; line" text="弹着点+弹道线" />
+	<text key="Player markers" text="玩家标记" />
+	<text key="Help:Player markers" text="关闭以进入纯净模式" />
+	<text key="Commander notifications" text="指挥官消息" />
+	<text key="Help:Commander notifications" text="厌烦了指挥官的无线电？那就调低点吧" />
+	<text key="Gore level" text="画面血腥程度" />
+	<text key="Help:Gore level" text="太血腥了？在这里把它关掉" />
+	<text key="Clear bodies threshold" text="消除尸体阈值" />
+	<text key="Isoline occurrence" text="等高线密度" />	
+	<text key="Help:Isoline occurrence" text="实验性辅助，在地图上绘制等高线，可以更好地辨别高度" />
+	<text key="Isoline intensity" text="等值线强度" />
+	<text key="Help:Isoline intensity" text="实验性辅助，在地图上绘制等高线，可以更好地辨别高度" />
+	<text key="Back line intensity" text="黑线强度" />
+	<text key="Help:Back line intensity" text="视觉辅助，可以看到建筑物被遮挡部分的轮廓" />
+	<text key="Back to options menu" text="返回选项菜单" />
+	<text key="Control help" text="操作帮助" />
+	<text key="Help:Control help" text="针对菜鸟的操作提示" />
+	<text key="Transparent bubbles" text="透明对话气泡" />
+	<text key="Help:Transparent bubbles" text="当准心悬浮在对话气泡上时会使其透明"/>
+	<text key="Global chat" text="全局聊天" />
+	<text key="Faction chat" text="阵营聊天" />
+	<text key="Squad chat" text="小队聊天" />
+	<text key="Commander" text="指挥官/游戏提示" />
+	<text key="Radio notifications" text="无线电消息" />
+	<text key="Field inspector info" text="物品提示信息" />
+	<text key="Normal" text="正常" />
+	<text key="Reduced" text="较少" />
+
+	
+
+	<text key="Reset settings" text="重置设置" />
+
+	<text key="Shadows" text="阴影" />
+	<text key="Post processing" text="后期处理" />
+	<text key="Help:Post processing" text="几何轮廓渲染" />
+	<text key="Bullet trails" text="子弹弹道" />
+	<text key="Grass" text="草地" />
+	<text key="Water detail" text="水面细节" />
+	<text key="Low" text="低" />
+	<text key="Medium" text="中等" />  
+	<text key="High" text="高" />
+	<text key="Weather effect" text="天气特效" />
+	<text key="Surface effect" text="地面特效" />
+	<text key="Help:Surface effect" text="动态地面特效、血液、刹车印等等。" />
+	<text key="Voxel preset" text="预置像素" />
+	<text key="Help:Voxel preset" text="角色和物品的渲染质量" />
+	<text key="Voxel density" text="像素密度" />
+	<text key="Voxel size" text="像素尺寸" />
+	<text key="Voxel shading" text="像素阴影" />
+	<text key="Shadow depth bias" text="阴影深度偏移" />
+	<text key="Help:Shadow depth bias" text="实验性，数值过低会导致失真，过高则不能渲染所有阴影" />
+
+	<text key="Paused" text="暂停" />
+	<text key="Paused - Online disconnected" text="暂停-网络断开连接" />
+
+	<text key="All-time stats" text="最高纪录" />
+	<text key="Game stats" text="游戏统计数据" />
+
+	<text key="soldiers killed" text="击杀士兵数" />
+	<text key="times died" text="死亡次数" />
+	<text key="players killed" text="玩家击杀数" />
+	<text key="friendlies killed" text="友军击杀数" />
+	<text key="kill streak" text="连杀次数" />
+	<text key="vehicles destroyed" text="摧毁载具数" />
+	<text key="targets destroyed" text="摧毁目标数" />
+	<text key="soldiers healed" text="治疗士兵数" />
+	<text key="hours played" text="游戏小时数" />
+	<text key="kill combo" text="连击次数" />
+	<text key="death streak" text="连续死亡数" />
+
+	<text key="Match stats" text="比赛统计" />
+	<text key="Total stats" text="总计" />
+
+	<text key="#" text="#" />
+	<text key="Name" text="名字" />
+	<text key="Score" text="分数" />
+	<text key="Kills" text="杀敌" />
+	<text key="Deaths" text="死亡" />
+	<text key="Streak" text="连杀" />
+	<text key="K/D" text="杀/死比" />
+	<text key="Time" text="时间" />
+	<text key="Squad" text="小队" />
+
+	<text key="total time played" text="总游戏时间" />
+	<text key="campaign days" text="战斗天数" />
+	<text key="experience points" text="获得XP" />
+	<text key="rank" text="等级" />
+	<text key="shots fired" text="开火次数" />
+	<text key="stuff thrown around" text="物品投掷数" />
+	<text key="distance covered" text="行走距离" />
+
+  <text key="CampaignConfig:Campaign" text="选择战役" />
+  <text key="Back to campaign selection" text="回到战役选择界面" />
+  
+  <text key="Available factions for clients" text="玩家可选阵营"/>
+  <text key="Max players" text="最大玩家数"/>
+
+  <text key="Download Steam Workshop items!" text="下载Steam创意工坊内容！" />
+  <text key="Resource mismatch" text="资源文件缺失" />
+  <text key="Click to cancel, x items ready" text="点击取消，已下载文件&#37;ready / &#37;total" />  
+  
+  <text key="Continue campaign as new" text="新的开始" /> 
+  
+  <text key="Players" text="玩家" />
+  <text key="Kick selected player!" text="踢出选定玩家" />    
+
+   <text key="Automatic port" text="自动" />
+
+   <text key="client connecting to nat server" text="正在连接 &#37;nat_server_index 号主服务器：&#37;nat_server_address" />
+   <text key="client connected to nat server, request access to rwr server" text="已与 &#37;nat_server_index 号主服务器：&#37;nat_server_address建立连接" />
+   <text key="client connecting to rwr server" text="正在连接到服务器：&#37;rwr_server_address" />
+   <text key="client connected to rwr server" text="已连接到服务器：&#37;rwr_server_address" />
+
+   <text key="client failed to connect to nat server" text="无法与任何主服务器建立连接" />
+   <text key="client failed to connect to rwr server" text="服务器连接失败" />
+   
+   <text key="server connecting to nat server" text="正在连接 &#37;nat_server_index 号主服务器：&#37;nat_server_address" />
+   <text key="server connected to nat server, register" text="已与 &#37;nat_server_index 号主服务器：&#37;nat_server_address建立连接" />
+   <text key="server failed to connect to nat server" text="无法与任何主服务器建立连接" />   
+
+   <text key="Activation failed" text="服务器开启失败" />
+   <text key="Server full" text="服务器人数已满" />
+   
+	<text key="Official Pacific server list" text="官方二战DLC（Coop多人合作）服务器列表" />
+
+	<text key="FOV Visualization" text="真实视野（FOV）" />
+	<text key="On, FOV match only" text="开启，仅限FOV战局" />
+	<text key="Help:On, FOV match only" text="仅在抢攻模式的战局中生效.不在玩家所操控士兵视野范围内的敌人或目标，不会被显示在屏幕上。需启用后期处理,不推荐性能较差的电脑使用。" />   
+	<text key="On, always" text="开启,全局生效" />
+	<text key="Help:On, always" text="在全部战局中生效.需启用后期处理,不推荐性能较差的电脑使用" />  
+  
+	<text key="Lobby main menu ad 1" text="瞧瞧太平洋战役扩展包！" /> 
+	<text key="Lobby main menu ad 2" text="瞧瞧新出的雪绒花扩展包！" />      
+    <text key="Lobby main menu ad 3" text="瞧瞧新出的东线扩展包！" />  	
+
+	<text key="Username already registered" text="用户名已被其他玩家注册" />   
+	<text key="Username already registered, please enter password or choose another username" text="用户名已注册，请输入密码或选择其他用户名" /> 
+  
+	<!-- v1.7 -->
+	<text key="Journal" text="战地日志" />
+	<text key="Installed mods" text="已安装模组"/>
+	<text key="Journal notifications" text="日志提示"/>
+
+	<text key="Primary_Weapon" text="装备第一件武器" />
+	<text key="Help:Primary_Weapon" text="装备主武器" />
+	<text key="Secondary_Weapon" text="装备第二件武器" />
+	<text key="Help:Secondary_Weapon" text="装备副武器" />
+
+	<text key="Player damage modifier" text="强化玩家生存力" />
+    <text key="Help:Player damage modifier" text="影响玩家在被子弹击中后存活的几率" />  
+    
+	<text key="Restart map" text="重新开始当前关卡！" />    
+    
+    <text key="Difficulty:Normal" text="普通" />
+    <text key="Help:Hard_WW2" text="一个更适合那些已经熟悉RWR的玩家的挑战" />
+    <text key="Help:Presets:Custom" text="按照你的偏好调整设置。请记得，这有可能严重影响游戏平衡性。" />  
+
+	<text key="Steam friends server list" text="Steam 好友所在服务器列表" />	
+	
+	<text key="Dedicated mod server list" text="MOD 专用服务器列表" />
+
+    <text key="Change campaign settings" text="调整战役难度设定" />   
+    <text key="Apply!" text="应用！" />
+	
+<!-- 1.91 -->      
+    <text key="Max frame rate" text="最大帧速率"/>   
+	<text key="Mouse sensitivity" text="准星灵敏度" />
+	<text key="Aim assist" text="手柄辅助瞄准" />
+	<text key="Gamepad controls config" text="手柄控制配置" />	
+
+<!-- 1.92 -->  
+	<text key="Mouse wheel sensitivity" text="鼠标滚轮灵敏度" />
+	
+<!-- 1.93 -->
+
+	<text key="Warning: Steam Cloud unavailable" text="警告：Steam云存档未启用" />
+	<text key="Warning: Steam unavailable" text="警告：Steam未启用" />
+</ui>
