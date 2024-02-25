@@ -459,6 +459,7 @@ class GFL_playerInfo_Buck
         for(uint i=0;i<size();++i){
             if(m_playerInfo[i].getPlayerName() == name){
                 m_playerInfo[i].addDead();
+                m_playerInfo[i].cleanKillSkillInfo();
             }
         }
     }    

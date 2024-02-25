@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="rocket" slot="2" pulldown_in_air="0.5" key="rpg29_tgv29.projectile" >
     <tag name="rocket"/>
-    <trigger class="time" time_to_live="0.7"/>
+    <trigger class="impact" />
     <collision class="sticky" />
     <rotation class="motion" />
     <model mesh_filename="rpg29_tbg29v.xml" />

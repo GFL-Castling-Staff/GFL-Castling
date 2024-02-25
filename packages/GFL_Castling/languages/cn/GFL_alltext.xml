@@ -257,12 +257,12 @@
 
 	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_82mm_mortar_free" text="重装支援 - 82mm迫击炮打击" />
 	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_82mm_mortar_free" text="<冷却时间 240秒 消耗 0战术点>
--标定目标点，2秒后发射迫击炮，校准试射1发后，每轮2发，持续3轮
+-标定目标点，2秒后发射迫击炮，校准试射1发后，每轮4发，持续3轮
 -每发82mm弹头在范围7.5内造成(7.5x4)的blast伤害"/>
 
 	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_82mm_mortar" text="炮击妖精 - 82mm迫击炮打击" />
-	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_82mm_mortar" text="<冷却时间 60秒 消耗 20战术点>
--标定目标点，2秒后发射迫击炮，校准试射1发后，每轮4发，持续3轮
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_82mm_mortar" text="<冷却时间 60秒 消耗 15战术点>
+-标定目标点，2秒后发射迫击炮，校准试射1发后，每轮8发，持续3轮
 -每发82mm弹头在范围7.5内造成(7.5x4)的blast伤害"/>
 
 	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_105mm_grenade_barrage" text="炮击妖精 - 105mm榴弹扫荡" />
@@ -272,7 +272,7 @@
 -最后发射1发105mm高爆弹头收尾，对范围9造成40的blast伤害"/>
 
 	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_155mm_air_burst" text="炮击妖精 - 155mm空爆榴弹打击" />
-	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_155mm_air_burst" text="<冷却时间 120秒 消耗 45战术点>
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_155mm_air_burst" text="<冷却时间 105秒 消耗 45战术点>
 -标定目标点，3秒后发射1发空爆榴弹，在空中离地距离10处爆炸，对范围30造成(20x10)的blast伤害"/>
 
 	<text key="Hint - call - title - call_ui_t2_bombardment_fairy_170mm_cannon" text="炮击妖精 - 170mm加农炮" />
@@ -281,7 +281,7 @@
 -弹着点并不精准，与实际位置存在距离10的误差"/>
 
 	<text key="Hint - call - title - call_ui_t2_airstrike_fairy_bomber" text="空袭妖精 - 高空投弹" />
-	<text key="Hint - call - intro - call_ui_t2_airstrike_fairy_bomber" text="<冷却时间 120秒 消耗 50战术点>
+	<text key="Hint - call - intro - call_ui_t2_airstrike_fairy_bomber" text="<冷却时间 90秒 消耗 45战术点>
 -标定目标点，随后从垂直于（你和目标点连线）的路径召唤一架轰炸机进行投弹
 -总共投下9颗航弹，每发对范围10造成75的blast伤害
 -(该支援受空域禁制影响)"/>
@@ -302,23 +302,23 @@
 -(该支援受空域禁制影响)"/>
 
 	<text key="Hint - call - title - call_ui_t1_airstrike_fairy_cas" text="空袭妖精 - 近空支援" />
-	<text key="Hint - call - intro - call_ui_t1_airstrike_fairy_cas" text="<冷却时间 90秒 消耗 25战术点>
+	<text key="Hint - call - intro - call_ui_t1_airstrike_fairy_cas" text="<冷却时间 90秒 消耗 20战术点>
 -标定目标点，随后从垂直于（你和目标点连线）的路径召唤一架攻击机进行近空支援
 -每发弹头在范围4造成(2x3.1)的blast伤害
 -扫射结束后0.5秒，一颗航弹会投向目标位置，对范围5造成50的blast伤害
 -(该支援受空域禁制影响)"/>
 
 	<text key="Hint - call - title - call_ui_t1_airstrike_fairy_cas_p2p" text="空袭妖精 - 近空支援·总座高见" />
-	<text key="Hint - call - intro - call_ui_t1_airstrike_fairy_cas_p2p" text="<冷却时间 90秒 消耗 25战术点>
+	<text key="Hint - call - intro - call_ui_t1_airstrike_fairy_cas_p2p" text="<冷却时间 90秒 消耗 20战术点>
 -标定目标点，5秒内再次标定目标点则从两点之间连线方向召唤一架攻击机进行近空支援
 -每发弹头在范围4造成(2x3.1)的blast伤害
 -扫射结束后0.5秒，一颗航弹会投向目标位置，对范围5造成50的blast伤害
 -(该支援受空域禁制影响)"/>
 
 	<text key="Hint - call - title - call_ui_t2_warrior_fairy_recon_heli" text="勇士妖精 - 侦察直升机扫荡" />
-	<text key="Hint - call - intro - call_ui_t2_warrior_fairy_recon_heli" text="<冷却时间 180秒 消耗 60战术点>
+	<text key="Hint - call - intro - call_ui_t2_warrior_fairy_recon_heli" text="<冷却时间 120秒 消耗 50战术点>
 -标定目标点，随后从基地呼叫一架侦察直升机进行区域巡航20秒
--每3秒对随机目标进行一次YAK-B 12.7mm航空机枪扫射，每发弹头在范围3.0造成3.1的blast伤害
+-每2秒对随机目标进行一次YAK-B 12.7mm航空机枪扫射，每发弹头在范围3.0造成3.1的blast伤害
 -第5秒时扫描区域，如果区域内存在敌方载具，则发射2枚9M114茧反坦克导弹，对范围4造成50的blast伤害
 -(该支援受空域禁制影响)"/>
 
@@ -332,7 +332,7 @@
 -(该支援受空域禁制影响)"/>
 
 	<text key="Hint - call - title - call_ui_t3_warrior_fairy_armed_heli" text="勇士妖精 - 武装直升机扫荡" />
-	<text key="Hint - call - intro - call_ui_t3_warrior_fairy_armed_heli" text="<冷却时间 240秒 消耗 90战术点>
+	<text key="Hint - call - intro - call_ui_t3_warrior_fairy_armed_heli" text="<冷却时间 120秒 消耗 75战术点>
 -标定目标点，随后从基地呼叫一架武装直升机进行区域扫除30秒
 -每2秒对随机目标进行一次2A42 30mm机炮扫射，每发弹头在范围4.0造成10的blast伤害
 -每10秒时扫描区域，如果区域内存在敌方载具，则发射一枚9M127涡流反坦克导弹，对范围4造成100的blast伤害
@@ -340,7 +340,7 @@
 -(该支援受空域禁制影响)"/>
 
 	<text key="Hint - call - title - call_ui_t3_rampage_fairy_gunship" text="暴怒妖精 - 空中炮艇支援" />
-	<text key="Hint - call - intro - call_ui_t3_rampage_fairy_gunship" text="<冷却时间 300秒 消耗 150战术点>
+	<text key="Hint - call - intro - call_ui_t3_rampage_fairy_gunship" text="<冷却时间 300秒 消耗 120战术点>
 -标定目标点，随后从基地呼叫一架炮艇机进行区域扫除，直至燃料或弹药耗尽
 -炮艇机有三种攻击模式
 -机枪扫射:发射4-8发25mm机炮，在范围4.0内造成6.1的blast伤害
@@ -349,7 +349,7 @@
 -(该支援受空域禁制影响)"/>
 
 	<text key="Hint - call - title - call_ui_t1_rocket_fairy_missile" text="火箭妖精 - 巡曳飞弹" />
-	<text key="Hint - call - intro - call_ui_t1_rocket_fairy_missile" text="<冷却时间 90秒 消耗 30战术点>
+	<text key="Hint - call - intro - call_ui_t1_rocket_fairy_missile" text="<冷却时间 90秒 消耗 25战术点>
 -使用后每秒刷新一次位置，3秒后在鼠标标点位置落下导弹
 -导弹在范围7.5造成100的blast伤害"/>
 
@@ -366,7 +366,7 @@
 -(该支援受空域禁制影响)"/>
 
 	<text key="Hint - call - title - call_ui_t3_rocket_fairy_cover" text="火箭妖精 - 地毯式覆盖" />
-	<text key="Hint - call - intro - call_ui_t3_rocket_fairy_cover" text="<冷却时间 300秒 消耗 150战术点>
+	<text key="Hint - call - intro - call_ui_t3_rocket_fairy_cover" text="<冷却时间 300秒 消耗 120战术点>
 -标定目标点，5秒后开始火箭弹覆盖，每轮发射24发火箭弹，扩散范围35
 -持续9轮，每轮间隔3秒
 -从第二波开始每次覆盖都会有10半径的偏离，让打击面更广

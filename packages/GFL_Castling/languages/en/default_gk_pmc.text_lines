@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <character filename="default_base.character">
 	<tag name="meat_man" />
-  <parameter class="walking_steer_amount" value="0.45" />
-	<parameter class="running_steer_amount" value="0.63" />
+  <parameter class="walking_steer_amount" value="0.35" />
+  <parameter class="running_steer_amount" value="0.63" />
   <parameter class="request_strike_time" value="-1.0" />
 	<parameter class="request_strike_no_signal_time" value="-1.0" /> 
   <comment key="Driver, abandon vehicle" text="This vehicle is Toast" />

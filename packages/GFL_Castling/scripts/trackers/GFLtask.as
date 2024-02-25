@@ -1227,14 +1227,14 @@ class Event_call_bombardment_fairy_82mm_mortar : event_call_task_hasMarker {
 		{
 			m_excute_Limit = 4;
 			m_time_internal = 1.3;
-			m_airstrike_key = "mortar_82mm_x4";
+			m_airstrike_key = "mortar_82mm_x8";
 			m_airstrike_key_alt = "mortar_82mm";
 		}
 		if(m_mode == "bombardment_fairy_82mm_mortar_free_lv0")
 		{
 			m_excute_Limit = 4;
 			m_time_internal = 1.3;
-			m_airstrike_key = "mortar_82mm_x2";
+			m_airstrike_key = "mortar_82mm_x4";
 			m_airstrike_key_alt = "mortar_82mm";
 		}		
 	}
@@ -1466,7 +1466,7 @@ class Event_call_warrior_fairy_recon_heil : event_call_task_hasMarker {
 		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
 		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
 		m_timeLeft_internal = m_time_internal;
-		if(m_excute_time % 3 == 0)
+		if(m_excute_time % 2 == 0)
 		{
 			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,e_pos,30.0f);
 			if(luckyGuyid!=-1){
@@ -1561,6 +1561,7 @@ class Event_call_warrior_fairy_attack_heil : event_call_task_hasMarker {
 			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,e_pos,45.0f);
 			if(luckyGuyid!=-1){
 				const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+				if(luckyGuy is null) return;
 				Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
 				insertCommonStrike(m_character_id,m_faction_id,"warrior_2a42_30mm",getRandomOffsetVector(m_pos1,8),luckyGuyPos);
 			}
@@ -1578,6 +1579,7 @@ class Event_call_warrior_fairy_attack_heil : event_call_task_hasMarker {
 			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,e_pos,45.0f);
 			if(luckyGuyid!=-1){
 				const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+				if(luckyGuy is null) return;
 				Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
 				insertCommonStrike(m_character_id,m_faction_id,"warrior_S13_rocket",getRandomOffsetVector(m_pos1,8),luckyGuyPos);
 			}			
@@ -1615,11 +1617,17 @@ class Event_call_warrior_fairy_VTOL : event_call_task_hasMarker {
 		if(m_excute_time % 2 == 0 && m_excute_time!=0)
 		{
 			const XmlElement@ ItsmeInfo = getCharacterInfo(m_metagame, m_character_id);
-			if(ItsmeInfo is null) m_character_pos = e_pos;
-			m_character_pos = stringToVector3(ItsmeInfo.getStringAttribute("position"));
+			if(ItsmeInfo is null) 
+			{
+				m_character_pos = e_pos;
+			}
+			else{
+				m_character_pos = stringToVector3(ItsmeInfo.getStringAttribute("position"));
+			}
 			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,m_character_pos,30.0f);
 			if(luckyGuyid!=-1){
 				const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+				if(luckyGuy is null) return;
 				Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
 				float strike_rand = 10.0;
 				float rand_x = rand(-strike_rand,strike_rand);

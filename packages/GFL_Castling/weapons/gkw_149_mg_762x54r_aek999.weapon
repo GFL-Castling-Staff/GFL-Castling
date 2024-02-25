@@ -27,7 +27,7 @@
     <sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.6" />
     <sound key="cycle" fileref="qjy80_cycle_FromCOD16.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_mg_aek999.xml" />
     <hud_icon filename="gkw_aek999.png" />
     <projectile file="bullet.projectile" >
@@ -52,7 +52,7 @@
     sustained_fire_diminish_rate="2.6"
     stance_accuracy_rate="0.5"
     magazine_size="100" 
-    spread_range="0.55"
+    spread_range="0.4"
     suppressed="1" 
     name="AEK-999 Barsuk-[Hunting Impulse N]" 
     class="0" 
@@ -71,7 +71,7 @@
     <sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.6" />
     <sound key="cycle" fileref="qjy80_cycle_FromCOD16.wav" volume="0.6" />
     <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_mg_aek999.xml" />
     <hud_icon filename="gkw_aek999_skill.png" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0" can_be_detected_by_driver="0">
