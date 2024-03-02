@@ -56,8 +56,8 @@
         <sound key="cycle" fileref="ARMod_DEFENSE_JP.wav" volume="1.4" pitch_variety="0"/>
         <sound class="impact" fileref="rifle_drop.wav" />
         <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
         <model filename="gkw_ar_galil_mod3_from_gua.xml" />
         <hud_icon filename="gkw_galilmod3.png" />
         <weak_hand_hold offset="0.2" />
@@ -142,8 +142,8 @@
         <sound key="cycle" fileref="galilace_cycle_FromCOD16.wav" volume="0.4" pitch_variety="0"/>
         <sound class="impact" fileref="rifle_drop.wav" />
         <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
         <model filename="gkw_ar_galil_mod3_from_gua.xml" />
         <hud_icon filename="gkw_galilmod3_skill.png" />
         <effect class="muzzle" ref="muzzle_big_yellow"/>
