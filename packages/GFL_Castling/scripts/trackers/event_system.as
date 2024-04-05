@@ -58,6 +58,7 @@ class GFL_event_system : Tracker {
 	// --------------------------------------------
 	GFL_event_system(GameMode@ metagame) {
 		@m_metagame = @metagame;
+        GFL_event_array.resize(0);
 	}
 
     void update(float time) {
