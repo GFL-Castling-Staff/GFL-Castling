@@ -4,7 +4,7 @@
         <specification 
     retrigger_time="-1"
     last_burst_retrigger_time="0.25"
-    accuracy_factor="0.9"
+    accuracy_factor="1.0"
     sustained_fire_grow_step="2.0"
     sustained_fire_diminish_rate="1.0"
     magazine_size="6"
@@ -58,13 +58,13 @@
         </projectile>
         <stance state_key="running" accuracy="0.8"/>
         <stance state_key="walking" accuracy="0.85"/>
-        <stance state_key="crouch_moving" accuracy="0.85"/>
-        <stance state_key="standing" accuracy="0.9"/>
-        <stance state_key="crouching" accuracy="0.9"/>
-        <stance state_key="prone" accuracy="0.9"/>
-        <stance state_key="prone_moving" accuracy="0.85"/>
-        <stance state_key="over_wall" accuracy="0.9"/>
-        <modifier class="speed" value="1.0"/>
+        <stance state_key="crouch_moving" accuracy="1.0"/>
+        <stance state_key="standing" accuracy="1.0"/>
+        <stance state_key="crouching" accuracy="1.1"/>
+        <stance state_key="prone" accuracy="1.1"/>
+        <stance state_key="prone_moving" accuracy="1.1"/>
+        <stance state_key="over_wall" accuracy="1.1"/>
+        <modifier class="speed" value="0.75"/>
         <tag name="pistol"/>
         <commonness value="0.2" in_stock="0" can_respawn_with="1"/>
         <capacity value="1" source="rank" source_value="0.0"/>
@@ -79,7 +79,7 @@
         <specification 
         retrigger_time="0.08"
         last_burst_retrigger_time="-1"
-        accuracy_factor="0.9"
+        accuracy_factor="1.0"
         sustained_fire_grow_step="0.4"
         sustained_fire_diminish_rate="1.0"
         magazine_size="6"
@@ -130,17 +130,17 @@
         <effect class="muzzle" ref="ejection_556"/>
         <weak_hand_hold offset="0.1"/>
         <projectile file="bullet.projectile">
-            <result class="blast" damage="3.1" radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal"/>
+            <result class="blast" damage="5.1" radius="1.5" decal="1" push="0.3" character_state="death" faction_compare="not_equal"/>
         </projectile>
         <stance state_key="running" accuracy="0.8"/>
         <stance state_key="walking" accuracy="0.85"/>
-        <stance state_key="crouch_moving" accuracy="0.85"/>
-        <stance state_key="standing" accuracy="0.9"/>
-        <stance state_key="crouching" accuracy="0.9"/>
-        <stance state_key="prone" accuracy="0.9"/>
-        <stance state_key="prone_moving" accuracy="0.85"/>
-        <stance state_key="over_wall" accuracy="0.9"/>
-        <modifier class="speed" value="1.0"/>
+        <stance state_key="crouch_moving" accuracy="1.0"/>
+        <stance state_key="standing" accuracy="1.0"/>
+        <stance state_key="crouching" accuracy="1.1"/>
+        <stance state_key="prone" accuracy="1.1"/>
+        <stance state_key="prone_moving" accuracy="1.1"/>
+        <stance state_key="over_wall" accuracy="1.1"/>
+        <modifier class="speed" value="0.75"/>
         <tag name="pistol"/>
         <capacity value="1" source="rank" source_value="0.0"/>
         <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
