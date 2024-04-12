@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon key="gkw_m1911_inf.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
     <tag name="pistol" />
+    <tag name="elite" />
     <specification
 	retrigger_time="0.125"
 	use_basic_muzzle_smoke_effect="0"
@@ -18,6 +19,7 @@
 	projectile_speed="100"
 	projectiles_per_shot="1"
 	burst_shots="1"
+    can_shoot_running="1"
 	stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1" />
     <inventory encumbrance="6.0" buy_price="328.0" sell_price="328.0" />
