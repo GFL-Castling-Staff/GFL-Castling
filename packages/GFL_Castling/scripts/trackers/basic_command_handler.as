@@ -911,7 +911,9 @@ class BasicCommandHandler : Tracker {
 		} else  if(checkCommand(message, "spawn k25")) {
 			spawnInstanceNearPlayer(senderId, "neosu_kuergants.vehicle", "vehicle", 0);							
 		} else  if(checkCommand(message, "spawn pathfinder")) {
-			spawnInstanceNearPlayer(senderId, "kcco_pathfinder_factory.vehicle", "vehicle", 0);							
+			spawnInstanceNearPlayer(senderId, "kcco_pathfinder_factory.vehicle", "vehicle", 0);			
+		} else  if(checkCommand(message, "spawnm1a1")) {
+			spawnInstanceNearPlayer(senderId, "m1a1_off_test.vehicle", "vehicle", 0);				
 		} else  if(checkCommand(message, "tph")) {
 			spawnInstanceNearPlayer(senderId, "para_heal_skill.projectile", "projectile", 0);			 						 						
 		} else if (checkCommand(message,"givetestweapon")){
