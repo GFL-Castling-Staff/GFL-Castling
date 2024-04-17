@@ -2592,15 +2592,17 @@ class CommandSkill : Tracker {
         }
         addCooldown("FF_ALCHEMIST",25,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-        Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
-        int factionid = character.getIntAttribute("faction_id");
-        array<string> Voice={
+        if (character !is null) {
+            Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+            int factionid = character.getIntAttribute("faction_id");
+            array<string> Voice={
             "Alchemist_buhuo_SKILL01_JP.wav",
             "Alchemist_buhuo_SKILL02_JP.wav"
-        };
-        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-        c_pos = c_pos.add(Vector3(0,1,0));
-        CreateDirectProjectile(m_metagame,c_pos,c_pos.add(Vector3(0,-1,0)),"ff_alchemist_skill_scan.projectile",characterId,factionid,60);	   
+            };
+            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+            c_pos = c_pos.add(Vector3(0,1,0));
+            CreateDirectProjectile(m_metagame,c_pos,c_pos.add(Vector3(0,-1,0)),"ff_alchemist_skill_scan.projectile",characterId,factionid,60);
+        }
     }  
     void excute88typeskill(int characterId,int playerId,SkillModifer@ modifer,bool mod3=false){
         bool ExistQueue = false;
