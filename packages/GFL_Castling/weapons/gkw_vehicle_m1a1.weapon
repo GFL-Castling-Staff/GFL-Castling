@@ -9,12 +9,13 @@
 	</projectile>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="100.0" base_score="0.5"/>
 	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
+	<target_factors tag="vehicle" distance="1.0" direction="0.0" squad_command="1.0" base_score="50.0"/>
 	<target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
 	<target_factors tag="tank" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
 	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
-	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
 	<effect class="muzzle" ref="coeus"/>
 	<effect class="muzzle" ref="coeusphere"/>
 	<effect class="muzzle" ref="coeusmuzzle" lighting="0"/>
@@ -84,7 +85,7 @@
 	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="200.0"/>
 </weapon>  
 <weapon key="gkw_vehicle_m1a1_laser.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.5" barrel_offset="1.4" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="0" slot="0" sight_range_modifier="1.5" burst_shots="1" magazine_size="-1" name="GK-Dreamer-[Nirvanic Demolition]" projectile_speed="500" spread_range="0.01" retrigger_time="0.01" last_burst_retrigger_time="1" suppressed="0" sustained_fire_grow_step="0.0036" sustained_fire_diminish_rate="0.1" cooldown_start="0.6" cooldown_end="0.0" projectiles_per_shot="1" use_basic_muzzle_smoke_effect="0"/>
+	<specification  accuracy_factor="1.5" barrel_offset="1.4" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="0" slot="0" sight_range_modifier="1.5" burst_shots="1" magazine_size="-1" name="GK-Dreamer-[Nirvanic Demolition]" projectile_speed="500" spread_range="0.01" retrigger_time="0.01" last_burst_retrigger_time="1" suppressed="0" sustained_fire_grow_step="0.0036" sustained_fire_diminish_rate="0.1" cooldown_start="0.6" cooldown_end="0.0" projectiles_per_shot="1" use_basic_muzzle_smoke_effect="0"/>
 	<sound key="fire" fileref="cherub_fire.wav" pitch_variety="0.00" volume="0.2"/>
 	<sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8"/>
 	<sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8"/>
@@ -103,6 +104,85 @@
 	<inventory encumbrance="17.0" buy_price="328.0" sell_price="328.0"/>
 	<capacity value="0" source="rank" source_value="0.0"/>
 	<capacity value="1" source="rank" source_value="39.633"/>
+</weapon>
+<weapon key="gkw_vehicle_m1a1_mortar.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<tag name="mortar"/>
+	<specification retrigger_time="0.5" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="0.132" cooldown_start="0.50" cooldown_end="0.33" accuracy_factor="1.0" sight_range_modifier="4.0" sight_height_offset="9.0" spread_range="0.3" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="M2 Mortar" class="0" projectile_speed="100.0" barrel_offset="0.6" projectiles_per_shot="1" reload_one_at_a_time="1" slot="2"/>
+	<animation state_key="recoil" animation_key="recoil, portable mortar"/>
+	<animation state_key="crouching" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="reload" animation_key="reloading, m2 mortar"/>
+	<animation state_key="hold" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="hold_on_wall" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="still_against_wall" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="hold_casual" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="running" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="walking" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="walking_backwards" animation_key="crouch, still, portable mortar"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon out,mortar"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in,jav"/>
+	<sound key="fire" fileref="m2_mortar_fire.wav" pitch_variety="0.1" volume="1.2"/>
+	<sound key="reload_one" fileref="portable_mortar_reload.wav" volume="0.7"/>
+	<sound key="cycle" fileref="portable_mortar_reload.wav" volume="0.7"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<inventory encumbrance="100.0" buy_price="420.0" sell_price="0.0"/>
+	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
+	<hud_icon filename="gkw_m2.png"/>
+	<capacity value="0" source="rank" source_value="0.0"/>
+	<capacity value="1" source="rank" source_value="3.28"/>
+	<weak_hand_hold offset="0.3"/>
+	<projectile can_be_detected_by_footmen="1" can_be_detected_by_driver="1" class="grenade" name="60mm mortar" slot="1" pulldown_in_air="30" key="mortar_60mm.projectile">
+	<tag name="rocket"/>
+	<result class="spawn" instance_class="projectile" instance_key="blast_heavy_rad6_damage12.projectile" min_amount="2" max_amount="2" offset="0 2.0 0" position_spread="0.1 0" direction_spread="0 0" damage_origin_vehicle="0"/>
+	<trigger class="impact"/>
+	<rotation class="motion"/>
+	<model />
+	<commonness value="0.0"/>
+	<sound class="result" key="other" fileref="mortar_01.wav" volume="1.35" pitch_variety="0.1"/>
+	<sound class="result" key="other" fileref="mortar_02.wav" volume="1.35" pitch_variety="0.1"/>
+	<sound class="result" key="other" fileref="mortar_03.wav" volume="1.35" pitch_variety="0.1"/>
+	<sound class="result" key="terrain" copy="other"/>
+	<sound class="result" key="static_object" copy="other"/>
+	<sound class="result" key="vehicle" copy="other"/>
+	<sound class="result" key="character" copy="other"/>
+	<effect class="result" key="terrain" ref="general_weapon_result_blast_smoke" lighting="0" post_processing="1"/>
+	<effect class="result" key="terrain" ref="general_weapon_result_blast_smoke_expanding" lighting="0" post_processing="1"/>
+	<effect class="result" key="terrain" ref="general_weapon_result_blast_ring" lighting="0"/>
+	<effect class="result" key="terrain" ref="general_weapon_result_blast_ring_2" lighting="0"/>
+	<effect class="result" key="terrain" ref="general_weapon_result_blast_spray_1" lighting="0"/>
+	<effect class="result" key="terrain" ref="general_weapon_result_blast_spray_2" lighting="0"/>
+	<effect class="result" key="terrain" ref="general_weapon_result_blast_fire" lighting="0"/>
+	<effect class="result" key="terrain" ref="general_weapon_result_blast_fire_wave" lighting="0"/>
+	<effect class="result" type="splat_map" surface_tag="" size="4.0" atlas_index="0" layer="1"/>
+	<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="4" layer="0"/>
+	<effect class="result" type="splat_map" surface_tag="" size="8.0" atlas_index="0" layer="2" additive="0"/>
+	<effect class="result" key="other" copy="terrain"/>
+	<effect class="result" key="static_object" copy="terrain"/>
+	<effect class="result" key="vehicle" copy="terrain"/>
+	<effect class="result" key="character" copy="terrain"/>
+	<effect class="activated" ref="Propulsion_gl"/>
+	<effect class="activated" ref="FlareSparkle" post_processing="0"/>
+	<effect class="activated" ref="FlareFlash" post_processing="0"/>
+	</projectile>
+	<ballistics near_far_distance="1.0" speed_estimation_near="10.0" speed_estimation_far="50.0" max_speed="200.0" randomness="0.03"/>
+	<effect class="muzzle" ref="MusketMuzzle"/>
+	<effect class="muzzle" ref="UpDust"/>
+	<stance state_key="running" accuracy="1.0"/>
+	<stance state_key="walking" accuracy="1.0"/>
+	<stance state_key="crouch_moving" accuracy="1.0"/>
+	<stance state_key="prone_moving" accuracy="1.0"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="1.0"/>
+	<stance state_key="prone" accuracy="1.0"/>
+	<stance state_key="over_wall" accuracy="1.0"/>
+	<modifier class="speed" value="-5.0"/>
+	<modifier class="hit_success_probability" value="0.3"/>
+	<modifier class="detectability" value="0.5"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
+	<target_factors tag="vehicle" distance="1.0" direction="0.0" squad_command="1.0" base_score="18.0"/>
+	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
+	<target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 </weapon>
 <weapon key="gkw_vehicle_m1a1_shield.weapon">
 	<shield offset="0.0 0.0 0.0" extent="0.6 1.8 0.6"/>
