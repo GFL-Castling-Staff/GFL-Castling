@@ -180,6 +180,9 @@ dictionary gameSkillIndex = {
         // 铁血boss 衔尾蛇 技能 热毒坠落
         {"sf_boss_oroborus_skill",56},
 
+        //菲德洛夫
+        {"fedorov_medkit",57},
+
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
 };

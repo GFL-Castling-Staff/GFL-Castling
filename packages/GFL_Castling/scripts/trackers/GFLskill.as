@@ -1601,6 +1601,19 @@ class GFLskill : Tracker {
 				break;
 			}
 
+			case 57: { //菲德洛夫
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
+					int factionid = character.getIntAttribute("faction_id");
+					float ori4 = rand(0.0,3.14);
+					spawnStaticProjectile(m_metagame,"medkit_fedorov_spawn1.projectile",grenade_pos,characterId,factionid,Orientation(0,1,0,ori4));
+					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+					tasker.add(AOEVestRecoverTask(m_metagame,3.0,grenade_pos,5,5,factionid,10));
+				}				
+			}
+
             default:
                 break;
 		}

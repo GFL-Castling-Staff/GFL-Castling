@@ -120,7 +120,7 @@ class AOEVestRecoverTask : Task {
 	protected int m_heal_layer;
 	protected int m_faction_id;
 	protected float m_radius;
-	protected Vector3@ m_pos;
+	protected Vector3 m_pos;
 
 	AOEVestRecoverTask(Metagame@ metagame, float internal, Vector3 pos,int heal_time,int heal_layer,int fid,float radius)
 	{

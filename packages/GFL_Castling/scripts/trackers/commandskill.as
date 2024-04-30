@@ -270,6 +270,7 @@ class CommandSkill : Tracker {
                 case 78:{excuteM1897MOD3skill(cId,senderId,m_modifer);break;}
                 case 79:{excuteType82skill(cId,senderId,m_modifer);break;}
                 case 80:{excuteGsh18skill(cId,senderId,m_modifer);break;}
+                case 81:{excuteFedorovSkill(cId,senderId,m_modifer);break;}
                 default:
                     break;
             }
@@ -4449,6 +4450,41 @@ class CommandSkill : Tracker {
                 c.setIntAttribute("untransform_count", 3);
                 m_metagame.getComms().send(c);
             }
+        }
+    }    
+
+    void excuteFedorovSkill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i],true) && SkillArray[i].m_weapontype=="fedorov") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character is null) return;
+        const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+        if (player is null) return;
+        if (player.hasAttribute("aim_target")) {
+            string target = player.getStringAttribute("aim_target");
+            Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+            int factionid = character.getIntAttribute("faction_id");
+            c_pos=c_pos.add(Vector3(0,1,0));
+            CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"medkit_fedorov_spawn.projectile",characterId,factionid,30.0,5.0);
+            array<string> Voice={
+            "Fedorov_SKILL3_JP.wav",
+            "Fedorov_SKILL2_JP.wav",
+            "Fedorov_DEFENSE_JP.wav"
+            };
+            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+            addCooldown("fedorov",90,characterId,modifer);
         }
     }    
 }

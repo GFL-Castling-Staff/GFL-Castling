@@ -308,7 +308,7 @@
 	<effect class="result" key="vehicle" copy="terrain" />
 </projectile>
 <projectile class="grenade" name="artillery shell" slot="2" key="artillery_shell_fairies_155_airburst.projectile" pulldown_in_air="30">
-    <result class="spawn" instance_class="grenade" instance_key="blast_shard_rad30_155mm.projectile" min_amount="20" max_amount="20" offset="0 0 0" position_spread="2 0.5" direction_spread="0.0 0.0" />   
+    <result class="spawn" instance_class="grenade" instance_key="blast_shard_rad20_155mm.projectile" min_amount="20" max_amount="20" offset="0 0 0" position_spread="2 0.5" direction_spread="0.0 0.0" />   
     <trigger class="time" time_to_live="1.0"/>
     <rotation class="motion" />
     <model mesh_filename="shell_152mm.xml" />
