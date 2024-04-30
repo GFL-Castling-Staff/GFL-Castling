@@ -54,7 +54,7 @@
     <effect class="muzzle" ref="muzzle_cannon_fire_light" lighting="0"/>
     <modifier class="speed" value="-0.3" />     
 </weapon>
-<weapon on_ground_up="0 0 1" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" key="kcco_pf98_player.weapon">
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" key="kcco_pf98_player.weapon" player_death_drop_owner_lock_time="60.0">
     <tag name="bazooka" />
     <tag name="antiarmor" />
     <tag name="elite" />

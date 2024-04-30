@@ -1245,9 +1245,6 @@ class CommandSkill : Tracker {
                     int factionid = character.getIntAttribute("faction_id");
                     
                     if(weaponname=="gkw_arx160.weapon") {
-                        array<string> Voice={
-                        };
-                        playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                         playSoundAtLocation(m_metagame,"416mod3skill_Fire_FromL4D2.wav",factionid,c_pos,1.0);                      
                     }
                     if(weaponname=="gkw_vhs.weapon" || weaponname=="gkw_vhs_562.weapon" || weaponname=="gkw_vhs_5203.weapon") {
