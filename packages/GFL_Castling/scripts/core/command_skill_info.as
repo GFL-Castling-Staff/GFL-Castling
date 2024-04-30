@@ -195,7 +195,7 @@ dictionary commandSkillIndex = {
         {"gkw_m9.weapon",27},
 
         {"gkw_ump9mod3.weapon",28},
-        {"gkw_ump9mod3_556.weapon",27},
+        {"gkw_ump9mod3_556.weapon",28},
         {"gkw_ump9mod3_6704.weapon",28},
         {"gkw_ump9mod3_6704_skill.weapon",28},
         {"gkw_ump9mod3_3404.weapon",28},
