@@ -2028,7 +2028,14 @@ class CommandSkill : Tracker {
                         playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
                         addCooldown("Flashbang",16,characterId,modifer);
                     }
-                    if(weaponname=="gkw_ump9.weapon" || weaponname=="gkw_ump9_409.weapon" || weaponname=="gkw_ump9_536.weapon" || weaponname=="gkw_ump9_3404.weapon"  || weaponname=="gkw_ump9_6704.weapon" || weaponname=="gkw_ump9_6704_skill.weapon" || weaponname=="gkw_ump9_556.weapon") {
+                    if(weaponname=="gkw_ump9.weapon" || 
+                    weaponname=="gkw_ump9_409.weapon" || 
+                    weaponname=="gkw_ump9_536.weapon" || 
+                    weaponname=="gkw_ump9_3404.weapon"  || 
+                    weaponname=="gkw_ump9_6704.weapon" || 
+                    weaponname=="gkw_ump9_6704_skill.weapon" || 
+                    weaponname=="gkw_ump9_556.weapon"
+                    ) {
                         array<string> Voice={
                             "UMP9_skill1.wav",
                             "UMP9_skill2.wav",
