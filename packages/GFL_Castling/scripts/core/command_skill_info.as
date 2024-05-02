@@ -195,7 +195,7 @@ dictionary commandSkillIndex = {
         {"gkw_m9.weapon",27},
 
         {"gkw_ump9mod3.weapon",28},
-        {"gkw_ump9mod3_556.weapon",27},
+        {"gkw_ump9mod3_556.weapon",28},
         {"gkw_ump9mod3_6704.weapon",28},
         {"gkw_ump9mod3_6704_skill.weapon",28},
         {"gkw_ump9mod3_3404.weapon",28},
@@ -480,6 +480,8 @@ dictionary commandSkillIndex = {
         {"gkw_medical_agl_hg.weapon",80},
         {"gkw_gsh18mod3_523.weapon",80},
         {"gkw_medical_agl_hg_523.weapon",80},
+
+        {"gkw_fedorov.weapon",81},
 
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}

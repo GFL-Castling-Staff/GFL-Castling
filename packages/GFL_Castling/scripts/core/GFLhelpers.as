@@ -923,6 +923,24 @@ void spawnStaticProjectile(Metagame@ metagame,string key,Vector3 pos,int charact
 	metagame.getComms().send(command);
 }
 
+void spawnStaticProjectile(Metagame@ metagame,string key,Vector3 pos,int characterId,int factionId,Orientation@ rotation)
+{
+	string m_pos = pos.toString();
+
+	XmlElement command("command");
+	command.setStringAttribute("class", "create_instance");
+	command.setIntAttribute("character_id", characterId);
+	command.setIntAttribute("faction_id", factionId);
+
+	command.setStringAttribute("instance_class", "grenade");
+	command.setStringAttribute("instance_key", key);	
+	command.setStringAttribute("position", m_pos);	
+	command.setStringAttribute("offset", "0 0 0");	
+	command.setStringAttribute("orientation", rotation.output());	
+
+	metagame.getComms().send(command);
+}
+
 void spawnStaticProjectile(Metagame@ metagame,string key,string pos,int characterId,int factionId)
 {
 	XmlElement command("command");
