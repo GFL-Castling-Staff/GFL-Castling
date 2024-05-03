@@ -29,13 +29,13 @@
         <sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.6" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
         <model filename="gkw_ar_ar15.xml" />
         <hud_icon filename="gkw_ar15_30001.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-            <result class="hit" kill_probability="4.2" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.292" kill_decay_end_time="2.154" />
+            <result class="hit" kill_probability="6.8" kill_probability_offset_on_successful_hit="0.9" kill_decay_start_time="1.292" kill_decay_end_time="2.154" />
         </projectile>
         <effect class="muzzle" ref="ejection_556" />
         <stance state_key="running" accuracy="0.5" />

@@ -12,9 +12,9 @@
 	retrigger_time="0.12" 
 	suppressed="1"
     spread_range="0.3" 
-	sustained_fire_diminish_rate="1.2" 
+	sustained_fire_grow_step="0.22"
+	sustained_fire_diminish_rate="1.6" 
     stance_accuracy_rate="2.0"
-	sustained_fire_grow_step="0.25"
 	sight_range_modifier="1.5"/>
     <inventory encumbrance="35.0" buy_price="30.0" sell_price="30.0" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
@@ -24,14 +24,14 @@
     <sound key="magazine_in" fileref="aug_mgz_in_FromCOD17.wav" volume="0.8" />
     <sound key="cycle" fileref="aug_cycle_FromCOD17.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
     <model filename="gkw_ar_aug.xml" />
     <hud_icon filename="gkw_aug.png" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="4.3" kill_probability_offset_on_successful_hit="0.3" kill_decay_start_time="1.113" kill_decay_end_time="1.856" />
+        <result class="hit"  kill_probability="6.15" kill_probability_offset_on_successful_hit="0.45" kill_decay_start_time="0.8" kill_decay_end_time="1.333" />
     </projectile>
     <effect class="muzzle" ref="ejection_556" />
     <stance state_key="running" accuracy="0.2" />
@@ -56,8 +56,8 @@
 	retrigger_time="0.04" 
 	suppressed="1"
     spread_range="0.4" 
-	sustained_fire_diminish_rate="1.4" 
-	sustained_fire_grow_step="0.3"
+	sustained_fire_grow_step="0.22"
+	sustained_fire_diminish_rate="1.6" 
     projectiles_per_shot="2"
 	sight_range_modifier="1.3"/>
     <inventory encumbrance="35.0" buy_price="30.0" sell_price="30.0" />
@@ -69,14 +69,14 @@
     <sound key="magazine_in" fileref="aug_mgz_in_FromCOD17.wav" volume="0.8" />
     <sound key="cycle" fileref="aug_cycle_FromCOD17.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
     <model filename="gkw_ar_aug.xml" />
     <hud_icon filename="gkw_aug.png" />
     <weak_hand_hold offset="0.2" />
-    <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="0.3" kill_decay_end_time="0.3" />
+    <projectile file="bullet.projectile" time_to_live="0.3">
+        <result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="0.3" kill_decay_end_time="0.3" />
     </projectile>
     <effect class="muzzle" ref="ejection_556" />
     <stance state_key="running" accuracy="0.2" />
