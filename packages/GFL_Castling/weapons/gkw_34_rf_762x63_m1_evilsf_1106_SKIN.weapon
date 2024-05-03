@@ -54,7 +54,7 @@
     <hud_icon filename="gkw_m1_1106.png" />
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet_sf_player.projectile">
-        <result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="9.75" kill_decay_start_time="0.964" kill_decay_end_time="1.607"/>
+        <result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="10.5" kill_decay_start_time="0.964" kill_decay_end_time="1.607"/>
     </projectile>
 	<effect class="muzzle" ref="ejection_76251" />
 	<stance state_key="running" accuracy="0.3" />
