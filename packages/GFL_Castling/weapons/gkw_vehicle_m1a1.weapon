@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
 <weapon key="vehicle_m1a1_105mm.weapon">
-	<specification retrigger_time="5.5" accuracy_factor="0.9" spread_range="0.3" sustained_fire_grow_step="5.0" sustained_fire_diminish_rate="0.5" sight_range_modifier="2.5" ai_sight_range_modifier="0.7" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Tank 122mm" class="0" projectile_speed="200.0" slot="2" barrel_offset="5.3" sight_height_offset="2.0" projectiles_per_shot="1"/>
+	<specification retrigger_time="5.5" accuracy_factor="0.9" spread_range="0.3" sustained_fire_grow_step="5.0" sustained_fire_diminish_rate="0.5" sight_range_modifier="2.5" ai_sight_range_modifier="0.7" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Tank 122mm" class="0" projectile_speed="200.0" slot="2" barrel_offset="3.3" sight_height_offset="2.0" projectiles_per_shot="1"/>
 	<model mesh_filename="m1a1_cannon.mesh" texture_filename="balloon.png" />
 	<hud_icon filename="gkw_v_LM5.png"/>
 	<commonness value="0.0"/>
 	<projectile file="cannon_m1a1_105mm.projectile">
+	<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="1"/>
+	<effect class="result" type="splat_map" surface_tag="" size="6.5" atlas_index="4" layer="0"/>
+	<effect class="result" type="splat_map" surface_tag="" size="8.0" atlas_index="0" layer="2" additive="0"/>
+	<effect class="result" key="terrain" ref="missile_result_cannon_blast_fire" lighting="0"/>
+	<effect class="result" key="terrain" ref="missile_result_cannon_blast_AmbientLight" lighting="0"/>
+	<effect class="result" key="terrain" ref="missile_result_expanding_fire" lighting="0" post_processing="1"/>
+	<effect class="result" key="terrain" ref="cannon_result_smoke" lighting="0" post_processing="1"/>
+	<effect class="result" key="terrain" ref="cannon_result_smoke_thick_expanding" lighting="0" post_processing="1"/>
+	<effect class="result" key="terrain" ref="cannon_result_smoke_ground" lighting="0" post_processing="1"/>
+	<effect class="activated" ref="general_activated_at_smoke_trail"/>
+	<trail probability="1" key="green_coeus"/>
+	<effect class="result" key="other" copy="terrain"/>
+	<effect class="result" key="static_object" copy="terrain"/>
+	<effect class="result" key="character" copy="terrain"/>
+	<effect class="result" key="shield" copy="terrain"/>
+	<effect class="result" key="vehicle" copy="terrain"/>
 	</projectile>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="100.0" base_score="0.5"/>
 	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
@@ -107,7 +123,7 @@
 </weapon>
 <weapon key="gkw_vehicle_m1a1_mortar.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="mortar"/>
-	<specification retrigger_time="0.5" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="0.132" cooldown_start="0.50" cooldown_end="0.33" accuracy_factor="1.0" sight_range_modifier="4.0" sight_height_offset="9.0" spread_range="0.3" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="M2 Mortar" class="0" projectile_speed="100.0" barrel_offset="0.6" projectiles_per_shot="1" reload_one_at_a_time="1" slot="2"/>
+	<specification retrigger_time="0.5" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="0.132" cooldown_start="0.50" cooldown_end="0.33" accuracy_factor="1.0" sight_range_modifier="3.2" sight_height_offset="9.0" spread_range="0.3" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="M2 Mortar" class="0" projectile_speed="100.0" barrel_offset="0.6" projectiles_per_shot="1" reload_one_at_a_time="1" slot="2"/>
 	<animation state_key="recoil" animation_key="recoil, portable mortar"/>
 	<animation state_key="crouching" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="reload" animation_key="reloading, m2 mortar"/>
@@ -184,6 +200,110 @@
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
 	<target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 </weapon>
+<weapon key="gkw_vehicle_m1a1_mgcannon.weapon" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<tag name="rifle"/>
+	<tag name="antiarmor"/>
+	<specification retrigger_time="0.33" last_burst_retrigger_time="0.6" accuracy_factor="1.45" sustained_fire_grow_step="0.15" sustained_fire_diminish_rate="0.15" cooldown_start="0.40" cooldown_end="0.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="Barrett M82A1" class="0" reload_one_at_a_time="0" sight_range_modifier="2.75" projectile_speed="210" barrel_offset="0" projectiles_per_shot="1" spread_range="0.5" stance_accuracy_rate="1.5" burst_shots="1"/>
+	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="35.0" buy_price="300.0" sell_price="300.0"/>
+	<capacity value="1" source="rank" source_value="0.1"/>
+	<sound key="fire" fileref="m82a1_fire_FromSAM4.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="cycle" fileref="m82a1_cycle_FromCOD16.wav" volume="0.4"/>
+	<sound key="magazine_out" fileref="m82a1_mgz_out_FromCOD16.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="m82a1_mgz_in_FromCOD16.wav" volume="0.4"/>
+	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+	<sound key="dry_fire" fileref="dryfire_atrf.wav" pitch_variety="0.05" volume="1.0"/>
+	<hud_icon filename="gkw_m82a1.png"/>
+	<weak_hand_hold offset="0.3"/>
+	<projectile pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.5" class="bullet" name="AP bullet" key="at_rf_spawn.projectile" slot="0" on_ground_up="0 1 0" time_to_live="60" blast_damage_threshold="50" time_to_live_out_in_the_open="0" player_death_drop_owner_lock_time="0">
+	<result class="spawn" instance_class="projectile" instance_key="sub_damage_m82a1.projectile" min_amount="9" max_amount="9" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0"/>
+	<trigger class="impact"/>
+	<rotation class="motion"/>
+	<collision class="sticky"/>
+	<commonness value="0" can_respawn_with="0" in_stock="0"/>
+	<inventory encumbrance="0" price="0.0"/>
+	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
+	<sound class="result" key="terrain" fileref="ricochet2.wav"/>
+	<sound class="result" key="terrain" fileref="ricochet3.wav"/>
+	<sound class="result" key="terrain" fileref="ricochet4.wav"/>
+	<sound class="result" key="shield" file="metal_hit_1.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="shield" file="metal_hit_2.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="shield" file="metal_hit_3.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="shield" file="metal_hit_4.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="shield" file="metal_hit_5.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="shield" file="metal_hit_6.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" fileref="impact_body2.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" fileref="impact_body3.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" fileref="impact_body4.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" fileref="impact_body3.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="vehicle" copy="terrain"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_01.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_02.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_03.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_04.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_05.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_06.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_07.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_06.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_07.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_06.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_07.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_08.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_08.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="metal_heavy" file="metal_heavy_01.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="metal_heavy" file="metal_heavy_02.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="metal_heavy" file="metal_heavy_03.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="sandbag" file="barrier_bullet_01.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="sandbag" file="barrier_bullet_02.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="sandbag" file="barrier_bullet_03.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_01.wav" pitch_variety="0.4" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_01.wav" pitch_variety="0.4" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_02.wav" pitch_variety="0.4" volume="1.0"/>
+	<sound class="result" key="static_object" copy="terrain"/>
+	<effect class="activated" ref="general_weapon_activated_bullet_light" lighting="0"/>
+	<effect class="activated" ref="general_weapon_activated_bullet_centerlight" lighting="0"/>
+	<effect class="result" key="terrain" ref="hitGround_20mm" use_surface_color="1"/>
+	<effect class="result" key="terrain" ref="BulletImpactDust4"/>
+	<effect class="result" key="terrain" ref="BulletImpactDust5"/>
+	<effect class="result" key="terrain" ref="BulletImpactDust6"/>
+	<effect class="result" key="terrain" ref="result_cannon_blast_AmbientLight_small" lighting="0"/>
+	<effect class="result" key="terrain" ref="result_cannon_blast_smoke_small" lighting="0"/>
+	<effect class="result" key="vehicle" ref="Burst" use_surface_color="1"/>
+	<effect class="result" key="vehicle" ref="hitMetal"/>
+	<effect class="result" key="vehicle" ref="hitMetal_1"/>
+	<effect class="result" key="vehicle" ref="result_cannon_blast_AmbientLight_small" lighting="0"/>
+	<effect class="result" key="vehicle" ref="result_cannon_blast_smoke_small" lighting="0"/>
+	<effect class="result" key="vehicle" ref="BulletImpact"/>
+	<effect class="result" key="terrain" ref="BulletImpact"/>
+	<effect class="result" key="character" ref="BulletImpact"/>
+	<effect class="result" key="shield" ref="BulletImpact"/>
+	<effect class="result" key="terrain" ref="Bullet_Burnout_20mm"/>
+	<effect class="result" key="static_object" copy="terrain"/>
+	<effect class="result" key="other" copy="terrain"/>
+	<effect class="result" key="shield" ref="hitMetal"/>
+	<effect class="result" key="shield" ref="hitMetal_1"/>
+	<effect class="result" key="shield" ref="result_cannon_blast_AmbientLight_small" lighting="0"/>
+	<effect class="result" key="shield" ref="result_cannon_blast_smoke_small" lighting="0"/>
+	<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1"/>
+	<effect class="result" type="splat_map" surface_tag="" size="4.5" atlas_index="4" layer="0"/>
+	<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="2" additive="0"/>
+	<effect class="result" key="character" ref="common_hit_effect_1" lighting="0"/>
+	<effect class="result" key="character" ref="common_hit_effect_2" lighting="0"/>
+	<trail probability="1" key="bullet_atrf"/>
+	</projectile>
+	<effect class="muzzle" ref="at_bullet_smoke_trail" lighting="0"/>
+	<effect class="muzzle" ref="general_weapon_muzzle_crossfire" lighting="0"/>
+	<effect class="muzzle" ref="general_weapon_muzzle_crossfire_smoke" lighting="0"/>
+	<effect class="muzzle" ref="ejection_50BMG"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
+	<target_factors tag="vehicle" distance="1.0" direction="0.0" squad_command="1.0" base_score="18.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="18.0"/>
+	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
+	<target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+</weapon>
+
 <weapon key="gkw_vehicle_m1a1_shield.weapon">
 	<shield offset="0.0 0.0 0.0" extent="0.6 1.8 0.6"/>
 </weapon>

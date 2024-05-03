@@ -22,7 +22,7 @@
 3	<turret offset="-1.8 2.3 0" weapon_key="gkw_vehicle_m1a1_laser.weapon" weapon_offset="0 0 0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.000015" parent_turret_index="1" rotation_range="0" rotation="0.05" />
 4	<turret offset="0.68 2.3 -0.1" weapon_key="gkw_vehicle_m1a1_mortar.weapon" weapon_offset="0 1.2 0.2" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.002" parent_turret_index="1" rotation="0.75" />
 5	<turret offset="-0.08 3.3 -2.4" weapon_key="amos_none.weapon" weapon_offset="0 0 0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.002" parent_turret_index="1" rotation="0" />
-6	<turret offset="0 0 0" weapon_key="gkw_vehicle_m1a1_basemg.weapon" weapon_offset="0 2.1 1.6s" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.002" parent_turret_index="1" rotation="0" rotation_range="0" />
+6	<turret offset="0 0 0" weapon_key="gkw_vehicle_m1a1_basemg.weapon" weapon_offset="0 2.3 1.6" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.002" parent_turret_index="1" rotation="0" rotation_range="0" />
 7	<turret offset="-0.5 1.9 0" weapon_key="gkw_vehicle_m1a1_shield.weapon" weapon_offset="0 0 0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.002" parent_turret_index="1" rotation="0.75" />
 
 	<visual class="chassis" mesh_filename="" />
