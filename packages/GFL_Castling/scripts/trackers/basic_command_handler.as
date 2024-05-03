@@ -920,32 +920,9 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "para_heal_skill.projectile", "projectile", 0);			 						 						
 		} else if (checkCommand(message,"givetestweapon")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_tec9_5206.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","ff_dreamer.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_c14_7506.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_c96_8405.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_88type_7106.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_m1911_8406.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_pkp_5904.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_g36c_5201.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_sacr_5903.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_rpk203_5901.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_QBZ95_7202.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_sl8_5202.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_saf_5205.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_supershorty_5204.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_ump40_559.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_ump9_556.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_ump45_555.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_hk416_557.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_g11_558.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_g11_8401.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_mg5_2501.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_m1897_2505.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_m1887_2503.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_vhs_5203.weapon");
-
-
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_consume_papertank.weapon");
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_consume_papertank.weapon");
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_consume_papertank.weapon");
 			
 		} else if (checkCommand(message,"gsft")){		
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
