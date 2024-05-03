@@ -95,7 +95,7 @@ material stensterling_medal : alpha_blend_base
     pass{
 		depth_func always_pass
         texture_unit{
-            texture stensterling_medal.jpg 	
+            texture stensterling_medal.png
 }}}}
 
 material alpha_blend_base

@@ -856,7 +856,8 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("holy_meat_buns.carry_item", "carry_item", 0.000001f),
 		ScoredResource("sweet_bomb_box.carry_item", "carry_item", 0.00001f),
 		ScoredResource("ice_theatre.carry_item", "carry_item", 0.0001f),
-		ScoredResource("SOPII_Ant_Doll.carry_item", "carry_item", 0.5f),
+		ScoredResource("SOPII_Ant_Doll.carry_item", "carry_item", 1.0f),
+		ScoredResource("SOPII_Ant_Doll.carry_item", "carry_item", 0.5f,2),
 		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 1.6f),
 		ScoredResource("kalina.carry_item", "carry_item", 1.0f),
 		ScoredResource("city_gifts.carry_item", "carry_item", 1.0f, 20),
@@ -884,6 +885,11 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("cc_sp_tyls.carry_item", "carry_item", 0.7f),
 		ScoredResource("bp_sp_naben.carry_item", "carry_item", 0.7f),
 		ScoredResource("black_card.carry_item", "carry_item", 0.1f),
+
+		ScoredResource("gkw_consume_papertank.weapon", "weapon", 0.5f),
+		ScoredResource("gkw_consume_papertank_2.weapon", "weapon", 0.5f),
+		ScoredResource("gkw_consume_papertank_3.weapon", "weapon", 0.5f),
+
 
 		ScoredResource("gkw_yurine.weapon","weapon",0.7f)
 			}
