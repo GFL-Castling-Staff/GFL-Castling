@@ -33,7 +33,7 @@
         <model filename="gkw_mg_m60.xml"/>
         <hud_icon filename="gkw_m60.png"/>
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="3.5" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="1" kill_decay_end_time="1"/>
+            <result class="hit" kill_probability="8.6" kill_probability_offset_on_successful_hit="0.75" kill_decay_start_time="1" kill_decay_end_time="1"/>
             <trail probability="1.0" key="bullet_new_deep"/>
         </projectile>
         <effect class="muzzle" ref="ejection_76251"/>

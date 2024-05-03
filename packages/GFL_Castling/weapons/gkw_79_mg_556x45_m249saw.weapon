@@ -32,7 +32,7 @@
 	<model filename="gkw_mg_m249.xml"/>
 	<hud_icon filename="gkw_m249.png"/>
 	<projectile file="bullet.projectile">
-        <result class="hit" kill_probability="4.2" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="1.967" kill_decay_end_time="3.279"/>
+        <result class="hit" kill_probability="5.5" kill_probability_offset_on_successful_hit="1.2" kill_decay_start_time="1.967" kill_decay_end_time="3.279"/>
         <trail probability="1.0" key="BulletMgTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>

@@ -27,7 +27,7 @@
         sight_range_modifier="1.3"
         />
         <inventory encumbrance="50.0" buy_price="42.0" sell_price="42.0" />
-        <animation key="reload" animation_key="reloading, Machine gun 1.6" />
+        <animation key="reload" animation_key="reloading, Machine gun 1.0" />
         <next_in_chain key="gkw_mg42_skill.weapon" share_ammo="0" />
         <animation state_key="next_in_chain_in" animation_key="change weapon install part" />
         <animation state_key="next_in_chain_out" animation_key="change weapon install part" />
@@ -55,7 +55,7 @@
         <model filename="gkw_mg_mg42.xml" />
         <hud_icon filename="gkw_mg42.png" />
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="5" kill_probability_offset_on_successful_hit="2.8" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
+            <result class="hit" kill_probability="5.5" kill_probability_offset_on_successful_hit="2.8" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
             <trail probability="1.0" key="BulletMgTrail" />
         </projectile>
         <effect class="muzzle" ref="ejection_76251"/>
@@ -124,7 +124,7 @@
         <hud_icon filename="gkw_mg42_skill.png" />
         <effect class="muzzle" ref="muzzle_yellow"/>
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="5" kill_probability_offset_on_successful_hit="2.8" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
+            <result class="hit" kill_probability="5.5" kill_probability_offset_on_successful_hit="2.8" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
             <trail probability="1.0" key="BulletMgTrail" />
         </projectile>
         <effect class="muzzle" ref="ejection_76251"/>
