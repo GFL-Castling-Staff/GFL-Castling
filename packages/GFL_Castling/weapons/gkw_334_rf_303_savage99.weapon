@@ -46,7 +46,7 @@
     <sound key="fire" fileref="savage99_fire_FromUNKNOWN.wav" pitch_variety="0.05" volume="1.45" />
     <sound key="cycle" fileref="savage99_cycle_FromREALLIFE.wav" volume="0.6"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-<sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
     <sound key="reload_one" fileref="savage99_reload_FromREALLIFE.wav" volume="1.0" />
 
     <!--Model, Icon, Cost-->
@@ -55,7 +55,7 @@
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet_rf.projectile" can_be_detected_by_footmen="0">
-        <result class="hit" kill_probability="3.03" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="1.0" kill_decay_end_time="1.75" />
+        <result class="hit" kill_probability="3.03" kill_probability_offset_on_successful_hit="15.0" kill_decay_start_time="1.0" kill_decay_end_time="1.75" />
         <trail probability="1" key="BulletApTrail_rf"/>	
     </projectile>
     <!--Accuracy, Movement speed-->

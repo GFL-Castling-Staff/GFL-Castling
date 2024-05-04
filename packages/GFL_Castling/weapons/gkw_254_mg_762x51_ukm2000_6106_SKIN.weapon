@@ -48,12 +48,12 @@
     <sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6" />
     <sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.6" />
     <sound key="cycle" fileref="qjy80_cycle_FromCOD16.wav" volume="0.6" />
-        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
     <sound class="impact" fileref="rifle_drop.wav"/>
     <model filename="gkw_mg_ukm2000_n.xml"/>
     <hud_icon filename="gkw_ukm2000_6106.png"/>
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="2.6" kill_probability_offset_on_successful_hit="6.0" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>
+        <result class="hit" kill_probability="2.6" kill_probability_offset_on_successful_hit="6.6" kill_decay_start_time="1.5" kill_decay_end_time="1.6"/>
         <trail probability="1.0" key="BulletApTrail_ct" />
     </projectile>
     <effect class="muzzle" ref="ejection_76251" />

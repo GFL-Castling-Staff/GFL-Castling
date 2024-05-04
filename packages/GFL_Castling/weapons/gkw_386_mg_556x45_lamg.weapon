@@ -56,7 +56,7 @@
         <hud_icon filename="gkw_lamg.png"/>
         <effect class="muzzle" ref="muzzle_yellow"/>
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="2.432" kill_decay_end_time="4.054"/>
+            <result class="hit" kill_probability="6.6" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="2.432" kill_decay_end_time="4.054"/>
             <trail probability="1.0" key="BulletMgTrail" />
         </projectile>
         <effect class="muzzle" ref="ejection_556"/>
@@ -125,7 +125,7 @@
         <hud_icon filename="gkw_lamg.png"/>
         <effect class="muzzle" ref="muzzle_yellow"/>
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="4.3" kill_probability_offset_on_successful_hit="0.3" kill_decay_start_time="2.432" kill_decay_end_time="4.054"/>
+            <result class="hit" kill_probability="6.6" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="2.432" kill_decay_end_time="4.054"/>
         </projectile>
         <effect class="muzzle" ref="ejection_556"/>
         <stance state_key="running" accuracy="0.35" />

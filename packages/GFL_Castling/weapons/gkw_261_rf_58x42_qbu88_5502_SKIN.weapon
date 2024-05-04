@@ -33,7 +33,7 @@
     <sound key="magazine_in" fileref="qbu88_mgz_in_FromBF4.wav" volume="0.8"/>
     <sound key="cycle" fileref="qbu88_cycle_FromBF4.wav" volume="0.8"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-<sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_qbu88.xml" />
     <hud_icon filename="gkw_qbu88_5502.png" />
@@ -41,7 +41,7 @@
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet_rf.projectile">
         <result class="hit" 
-        kill_probability="3"
+        kill_probability="5"
         kill_probability_offset_on_successful_hit="5.8" 
         kill_decay_start_time="1.0" 
         kill_decay_end_time="2.0" />

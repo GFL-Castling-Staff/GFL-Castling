@@ -58,7 +58,7 @@
         <hud_icon filename="gkw_m1895mod3.png" />
         <weak_hand_hold offset="0.1" />
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="8.0" kill_decay_start_time="0.215" kill_decay_end_time="0.52"/>
+            <result class="hit" kill_probability="10.0" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="0.25" kill_decay_end_time="0.5"/>
         </projectile>
         <effect class="muzzle" ref="ejection_9mm"/>
         <stance state_key="running" accuracy="0.95"/>
@@ -131,7 +131,7 @@
         <weak_hand_hold offset="0.1" />
         <effect class="muzzle" ref="ejection_9mm"/>
         <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-            <result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="8.0" kill_decay_start_time="0.25" kill_decay_end_time="0.5"/>
+            <result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="0.25" kill_decay_end_time="0.5"/>
         </projectile>
         <effect class="muzzle" ref="ejection_9mm"/>
         <stance state_key="running" accuracy="0.95"/>

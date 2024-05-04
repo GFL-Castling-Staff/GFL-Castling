@@ -42,7 +42,7 @@
 	<hud_icon filename="gkw_4type_only.png"/>
 	<inventory encumbrance="35.0" price="200.0"/>
 	<projectile file="bullet_rf.projectile">
-		<result class="hit" kill_probability="7.7" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="1.0" kill_decay_end_time="1.0"/>
+		<result class="hit" kill_probability="7.7" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="1.0" kill_decay_end_time="1.0"/>
 		<trail probability="1" key="BulletApTrail_rf"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251" />

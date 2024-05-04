@@ -3,6 +3,7 @@
 <tag name="pistol" />
 	<!--Weapon specifications-->
 	<specification
+	can_shoot_running="1"
 	retrigger_time="-1"
 	last_burst_retrigger_time="0.085"
 	accuracy_factor="0.95"

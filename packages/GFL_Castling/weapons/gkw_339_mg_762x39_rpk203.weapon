@@ -29,7 +29,7 @@
     <hud_icon filename="gkw_rpk203.png" />
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="4.0" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="1.933" kill_decay_end_time="3.222" />
+        <result class="hit"  kill_probability="4.0" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="1.933" kill_decay_end_time="3.222" />
         <trail probability="1.0" key="BulletMgTrail" />
     </projectile>
     <effect class="muzzle" ref="ejection_76239" />

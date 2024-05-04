@@ -51,7 +51,7 @@
 	<model filename="gkw_mg_zb26.xml" />
 	<hud_icon filename="gkw_zb26.png" />
 	<projectile file="bullet.projectile">
-		<result class="hit" kill_probability="5.0" kill_probability_offset_on_successful_hit="2.8" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
+		<result class="hit" kill_probability="7.4" kill_probability_offset_on_successful_hit="2.8" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
 		<trail probability="1.0" key="BulletMgTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251" />

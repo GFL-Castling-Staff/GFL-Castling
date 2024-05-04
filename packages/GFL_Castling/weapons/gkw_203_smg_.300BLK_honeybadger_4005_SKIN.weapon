@@ -37,12 +37,12 @@
     <sound key="magazine_in" fileref="pdw_mgz_in_FromDAYSGONE.wav" volume="0.5" />
     <sound key="cycle" fileref="pdw_cycle_FromDAYSGONE.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.3" />
+    <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.3" />
     <model filename="gkw_smg_pdw_4005.xml" />
     <hud_icon filename="gkw_pdw_4005.png" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0" can_be_detected_by_driver="0">
-        <result class="hit"  kill_probability="2.95" kill_probability_offset_on_successful_hit="2.3" kill_decay_start_time="0.1" kill_decay_end_time="0.4" />
+        <result class="hit"  kill_probability="2.95" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="0.1" kill_decay_end_time="0.4" />
     </projectile>
     <effect class="muzzle" ref="ejection_556" />
     <stance state_key="running" accuracy="0.3" />

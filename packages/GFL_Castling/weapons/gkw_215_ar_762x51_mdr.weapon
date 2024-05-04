@@ -24,13 +24,13 @@
         <sound key="cycle" fileref="mdr_cycle_FromDIVISION2.wav" volume="0.9" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
         <model filename="gkw_ar_mdr.xml" />
         <hud_icon filename="gkw_mdr.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="4.0" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="1.688" kill_decay_end_time="2.813" />
+            <result class="hit" kill_probability="4.0" kill_probability_offset_on_successful_hit="4.6" kill_decay_start_time="1.688" kill_decay_end_time="2.813" />
         </projectile>
         <effect class="muzzle" ref="ejection_76251" />
         <stance state_key="running" accuracy="0.2" />

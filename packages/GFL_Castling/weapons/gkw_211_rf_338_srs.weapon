@@ -30,14 +30,14 @@
     <sound key="cycle_out" fileref="srs_cycle_out_FromFC5.wav"  volume="0.7"/>
     <sound key="cycle_in" fileref="srs_cycle_in_FromFC5.wav"  volume="0.7"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-<sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfi    re_rf.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_srs.xml" />
     <hud_icon filename="gkw_srs.png" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
 	<projectile file="bullet_rf.projectile">
-        <result class="hit" kill_probability="15" kill_probability_offset_on_successful_hit="6.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
+        <result class="hit" kill_probability="25" kill_probability_offset_on_successful_hit="6.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
         <trail probability="1" key="BulletApTrail_rf"/>	
 	</projectile>
     <!--Accuracy, Movement speed-->

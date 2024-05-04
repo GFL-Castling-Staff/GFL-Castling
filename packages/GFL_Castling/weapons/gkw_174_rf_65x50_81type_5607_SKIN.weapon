@@ -43,7 +43,7 @@
     <sound key="cycle_out" fileref="type88_cycle_out_FromBF1.wav"  volume="0.45"/>
     <sound key="cycle_in" fileref="type88_cycle_in_FromBF1.wav"  volume="0.45"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-<sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_rf_88type.xml" />
     <hud_icon filename="gkw_type81_5607.png" />
     <capacity value="1" source="rank" source_value="0.0" />

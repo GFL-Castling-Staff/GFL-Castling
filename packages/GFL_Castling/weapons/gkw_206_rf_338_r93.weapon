@@ -29,14 +29,14 @@
     <sound key="cycle_out" fileref="r93_cycle_out_FromCF.wav"  volume="0.8"/>
     <sound key="cycle_in" fileref="r93_cycle_in_FromCF.wav"  volume="0.8"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-<sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_rf_r93.xml" />
     <hud_icon filename="gkw_r93.png" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet_rf.projectile">
-        <result class="hit" kill_probability="5.8" kill_probability_offset_on_successful_hit="15" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
+        <result class="hit" kill_probability="8" kill_probability_offset_on_successful_hit="15" kill_decay_start_time="1.448" kill_decay_end_time="2.414"/>
         <trail probability="1" key="BulletApTrail_rf"/>	
     </projectile>
     <!--Accuracy, Movement speed-->

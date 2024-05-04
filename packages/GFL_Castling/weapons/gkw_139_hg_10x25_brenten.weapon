@@ -3,6 +3,7 @@
 <tag name="pistol" />
 	<!--Weapon specifications-->
 	<specification
+	can_shoot_running="1"
 	retrigger_time="-1"
 	last_burst_retrigger_time="0.1"
 	accuracy_factor="1.0"
@@ -42,7 +43,7 @@
     <animation state_key="stabbing" animation_key="pistol whip" />
 	<animation state_key="stabbing" animation_key="pistol whip 3" />
 	<!--Sounds-->
-<sound key="dry_fire" fileref="dryfire_9mmhg_1.wav" pitch_variety="0.05" volume="1.0" />
+	<sound key="dry_fire" fileref="dryfire_9mmhg_1.wav" pitch_variety="0.05" volume="1.0" />
 	<sound key="fire" fileref="brenten_fire_FromTTF2.wav" pitch_variety="0.05" volume="1" />
 	<sound key="magazine_out" fileref="brenten_mgz_out_FromTTF2.wav" volume="0.7" />
 	<sound key="magazine_in" fileref="brenten_mgz_in_FromTTF2.wav" volume="0.7"/>
@@ -53,7 +54,7 @@
 	<!--Ballistics-->
 	<weak_hand_hold offset="0.1" />
 	<projectile file="bullet.projectile">
-		<result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="2.75" kill_decay_start_time="0.3" kill_decay_end_time="0.35" />
+		<result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="4.75" kill_decay_start_time="0.3" kill_decay_end_time="0.35" />
 	</projectile>
 	<!--Accuracy, Movement speed-->
 	<stance state_key="running" accuracy="0.85" />

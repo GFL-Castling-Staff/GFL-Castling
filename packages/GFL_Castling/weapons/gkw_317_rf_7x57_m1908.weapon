@@ -41,7 +41,7 @@
         <projectile file="bullet_rf.projectile">
             <result class="hit" 
         kill_probability="3"
-        kill_probability_offset_on_successful_hit="8.0" 
+        kill_probability_offset_on_successful_hit="11.0" 
         kill_decay_start_time="1.448" 
         kill_decay_end_time="2.414" />
             <trail probability="1" key="BulletApTrail_rf"/>
@@ -101,7 +101,7 @@
         <projectile file="bullet_rf.projectile">
             <result class="hit" 
             kill_probability="4.6"
-            kill_probability_offset_on_successful_hit="4.0" 
+            kill_probability_offset_on_successful_hit="6.0" 
             kill_decay_start_time="1.448" 
             kill_decay_end_time="2.414" />
             <trail probability="1" key="BulletApTrail_rf"/>

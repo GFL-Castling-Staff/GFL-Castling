@@ -25,7 +25,7 @@
     <sound key="magazine_in" fileref="a545_mgz_in_FromCOD17.wav" volume="0.5" />
     <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
     <model filename="gkw_ar_a545.xml" />
@@ -71,14 +71,14 @@
     <sound key="magazine_in" fileref="ak74_mgz_in_FromCOD16.wav" volume="0.5" />
     <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
     <model filename="gkw_ar_a545.xml" />
     <hud_icon filename="gkw_a545_skill.png" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="4.5" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.881" kill_decay_end_time="1.469" />
+        <result class="hit"  kill_probability="5.5" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="0.881" kill_decay_end_time="1.469" />
         <trail probability="1.0"/>
     </projectile>
     <effect class="muzzle" ref="ejection_556" />
@@ -86,7 +86,7 @@
     <stance state_key="walking" accuracy="0.8" />
     <stance state_key="crouch_moving" accuracy="0.85" />
     <stance state_key="prone_moving" accuracy="0.85" />
-    <stance state_key="standing" accuracy="0.92" />
+    <stance state_key="standing" accuracy="0.98" />
     <stance state_key="crouching" accuracy="0.98" />
     <stance state_key="prone" accuracy="1" />
     <modifier class="detectability" value="0.15" />

@@ -13,8 +13,8 @@
         stance_accuracy_rate="2.5"
         sight_range_modifier="1.25"
 		suppressed="0" 
-		sustained_fire_diminish_rate="1.6" 
-		sustained_fire_grow_step="0.6" />
+		sustained_fire_diminish_rate="1.8" 
+		sustained_fire_grow_step="0.3" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <inventory encumbrance="35.0" buy_price="8.0" sell_price="8.0" />
     <sound key="fire" fileref="fara83_Fire_FromCOD17.wav" pitch_variety="0.05" volume="1.2" />
@@ -26,7 +26,7 @@
     <hud_icon filename="gkw_fara83.png" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="4.8" kill_decay_start_time="0.621" kill_decay_end_time="1.035" />
+        <result class="hit"  kill_probability="6.8" kill_decay_start_time="0.621" kill_decay_end_time="1.035" />
     </projectile>
     <effect class="muzzle" ref="ejection_556" />
     <stance state_key="running" accuracy="0.45" />

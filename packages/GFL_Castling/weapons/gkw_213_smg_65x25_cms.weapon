@@ -38,7 +38,7 @@
 		<hud_icon filename="gkw_cms.png" />
 		<weak_hand_hold offset="0.2" />
 		<projectile file="bullet.projectile">
-			<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="1.2" kill_decay_start_time="0.22" kill_decay_end_time="0.465" />
+			<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="1.8" kill_decay_start_time="0.22" kill_decay_end_time="0.465" />
 		</projectile>
 		<stance state_key="running" accuracy="0.85" />
 		<stance state_key="walking" accuracy="0.85" />

@@ -14,7 +14,7 @@
         sight_range_modifier="1.75"
 		suppressed="0" 
 		sustained_fire_diminish_rate="1.65" 
-		sustained_fire_grow_step="0.5"/>
+		sustained_fire_grow_step="0.25"/>
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <inventory encumbrance="35.0" buy_price="10.0" sell_price="10.0" />
     <sound key="fire" fileref="type89_fire_FromWF.wav" pitch_variety="0.05" volume="1" />
@@ -29,7 +29,7 @@
     <hud_icon filename="gkw_howatype89.png" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="4.85" kill_decay_start_time="0.621" kill_decay_end_time="1.035" />
+        <result class="hit"  kill_probability="6.6" kill_decay_start_time="0.621" kill_decay_end_time="1.035" />
     </projectile>
     <effect class="muzzle" ref="ejection_556" />
     <stance state_key="running" accuracy="0.45" />

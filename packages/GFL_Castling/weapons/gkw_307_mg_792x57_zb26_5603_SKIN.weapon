@@ -47,11 +47,11 @@
     <sound key="magazine_in" fileref="zb26_mgz_in_FromPOSTSCRIPTUM.wav" volume="0.6" />
     <sound key="cycle_out" fileref="zb26_cycle_FromPOSTSCRIPTUM.wav" volume="0.6" />
 	<sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
+	<sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
 	<model filename="gkw_mg_zb26_5603.xml" />
 	<hud_icon filename="gkw_zb26_5603.png" />
 	<projectile file="bullet.projectile">
-		<result class="hit" kill_probability="5.0" kill_probability_offset_on_successful_hit="2.8" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
+		<result class="hit" kill_probability="7.4" kill_probability_offset_on_successful_hit="2.8" kill_decay_start_time="2.432" kill_decay_end_time="4.054" />
 		<trail probability="1.0" key="BulletMgTrail"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251" />

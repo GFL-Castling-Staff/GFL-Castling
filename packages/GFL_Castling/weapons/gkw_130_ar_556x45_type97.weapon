@@ -24,13 +24,13 @@
         <sound key="cycle" fileref="qbz97_cycle_FromCOD20.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
         <model filename="gkw_ar_97type.xml" />
         <hud_icon filename="gkw_97type.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
-            <result class="hit"  kill_probability="4.5" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="1.565" kill_decay_end_time="2.609" />
+            <result class="hit"  kill_probability="6" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="1.565" kill_decay_end_time="2.609" />
         </projectile>
         <effect class="muzzle" ref="ejection_556" />
         <stance state_key="running" accuracy="0.45" />

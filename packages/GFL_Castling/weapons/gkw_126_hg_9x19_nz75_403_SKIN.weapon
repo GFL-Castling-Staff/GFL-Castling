@@ -44,7 +44,7 @@
     <animation state_key="stabbing" animation_key="pistol whip 2" />
     <animation state_key="stabbing" animation_key="pistol whip 3" />
     <!--Sounds-->
-<sound key="dry_fire" fileref="dryfire_9mmhg_1.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_9mmhg_1.wav" pitch_variety="0.05" volume="1.0" />
     <sound key="fire" fileref="nz75_fire_FromWF.wav" pitch_variety="0.05" volume="1.1" />
     <sound key="magazine_out" fileref="cz75_mgz_out_FromBF1.wav" volume="0.65" />
     <sound key="magazine_in" fileref="cz75_mgz_in_FromBF1.wav" volume="0.65"/>
@@ -55,7 +55,7 @@
     <!--Ballistics-->
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="1.7" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.1" kill_decay_end_time="0.4" />
+        <result class="hit" kill_probability="1.7" kill_probability_offset_on_successful_hit="4.8" kill_decay_start_time="0.1" kill_decay_end_time="0.4" />
     </projectile>
     <effect class="muzzle" ref="ejection_9mm" />
     <effect class="muzzle" ref="MuzzleDual1" />

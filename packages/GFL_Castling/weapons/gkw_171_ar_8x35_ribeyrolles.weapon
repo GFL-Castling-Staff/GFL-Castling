@@ -32,7 +32,7 @@
         <hud_icon filename="gkw_ribeyrolles.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="3.4" kill_probability_offset_on_successful_hit="3.05" kill_decay_start_time="0.881" kill_decay_end_time="1.469" />
+            <result class="hit" kill_probability="4.5" kill_probability_offset_on_successful_hit="3.05" kill_decay_start_time="0.881" kill_decay_end_time="1.469" />
         </projectile>
         <effect class="muzzle" ref="muzzle_big_yellow"/>
         <effect class="muzzle" ref="ejection_76239" />
@@ -70,13 +70,13 @@
         <sound key="cycle" fileref="ribeyrolles_cycle_FromBF1.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
         <model filename="gkw_ar_Ribeyrolles_from_MELONDOVE.xml" />
         <hud_icon filename="gkw_ribeyrolles_skill.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="2.75" kill_decay_start_time="0.881" kill_decay_end_time="1.469" />
+            <result class="hit" kill_probability="4.5" kill_probability_offset_on_successful_hit="3.05" kill_decay_start_time="0.881" kill_decay_end_time="1.469" />
         </projectile>
         <effect class="muzzle" ref="muzzle_big_yellow"/>
         <effect class="muzzle" ref="ejection_76239" />

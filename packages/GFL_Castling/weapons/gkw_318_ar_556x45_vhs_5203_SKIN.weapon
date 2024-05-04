@@ -14,7 +14,7 @@
         stance_accuracy_rate="2.5"
         sight_range_modifier="1.25" 
 		sustained_fire_diminish_rate="1.7" 
-		sustained_fire_grow_step="0.3"/>
+		sustained_fire_grow_step="0.18"/>
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <commonness value="0" in_stock="0" can_respawn_with="1" />
     <inventory encumbrance="35.0" buy_price="11.0" sell_price="11.0" />
@@ -27,7 +27,7 @@
     <hud_icon filename="gkw_vhs_5203.png" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="4.15" kill_probability_offset_on_successful_hit="0.85" kill_decay_start_time="0.989" kill_decay_end_time="1.648" />
+        <result class="hit"  kill_probability="4.15" kill_probability_offset_on_successful_hit="1.55" kill_decay_start_time="0.989" kill_decay_end_time="1.648" />
     </projectile>
     <effect class="muzzle" ref="ejection_556" />
     <stance state_key="running" accuracy="0.45" />

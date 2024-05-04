@@ -10,10 +10,10 @@
         spread_range="0.3"
 		projectile_speed="230" 
 		retrigger_time="0.0857" 
-        stance_accuracy_rate="2.0"
+        stance_accuracy_rate="2.5"
 		suppressed="0" 
         sight_range_modifier="1.75"
-		sustained_fire_diminish_rate="1.25" 
+		sustained_fire_diminish_rate="1.8" 
 		sustained_fire_grow_step="0.3"/>
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <inventory encumbrance="35.0" buy_price="21.0" sell_price="21.0" />
@@ -27,14 +27,14 @@
         <weak_hand_hold offset="0.2" />
         <commonness value="0.2" in_stock="1" can_respawn_with="1" />
         <projectile file="bullet.projectile">
-            <result class="hit"  kill_probability="4.85" kill_decay_start_time="1" kill_decay_end_time="1.667" />
+            <result class="hit"  kill_probability="6.55" kill_decay_start_time="1" kill_decay_end_time="1.667" />
         </projectile>
         <effect class="muzzle" ref="ejection_556" />
         <stance state_key="running" accuracy="0.45" />
         <stance state_key="walking" accuracy="0.45" />
         <stance state_key="crouch_moving" accuracy="0.65" />
         <stance state_key="prone_moving" accuracy="0.65" />
-        <stance state_key="standing" accuracy="0.92" />
+        <stance state_key="standing" accuracy="0.98" />
         <stance state_key="crouching" accuracy="0.98" />
         <stance state_key="prone" accuracy="1.0" />
         <stance state_key="over_wall" accuracy="1.0" />

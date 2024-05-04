@@ -48,13 +48,13 @@
         <sound key="cycle" fileref="zastavam21_cycle_FromEFT.wav" volume="0.8"/>
         <sound class="impact" fileref="rifle_drop.wav" />
         <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
         <model filename="gkw_ar_zasm21.xml" />
         <hud_icon filename="gkw_zasm21.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
-            <result class="hit"  kill_probability="4.45" kill_decay_start_time="0.8" kill_decay_end_time="1.333" />
+            <result class="hit"  kill_probability="6.6" kill_decay_start_time="0.8" kill_decay_end_time="1.333" />
         </projectile>
         <effect class="muzzle" ref="ejection_556" />
         <stance state_key="running" accuracy="0.2" />
