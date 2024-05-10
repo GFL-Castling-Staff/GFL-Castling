@@ -17,18 +17,18 @@
 	<physics max_health="200" blast_damage_threshold="10.0" mass="500.0" broken_mass="300" gravity="-40" remove_collision_threshold="50.0" extent="3.74 0.0 6.84" offset="0.0 0 -0.0" top_offset="0 4.07 0" collision_model_pos="0 0.92 0.0" collision_model_extent="3.74 1.8 7.73" visual_offset="0 0.28 0" drag_offset="-0.5" friction_offset="-0.1" preserve_motion_on_impact_factor="1" />
 
 0   <turret offset="0 0 0" weapon_key="amos_none.weapon" weapon_offset="0 0 0" max_rotation_step="0.000010" rotation_range="0"/>
-1	<turret offset="0 0 0" weapon_key="vehicle_m1a1_105mm.weapon" weapon_offset="0 2.1 3.6" weapon_recoil="0.2" physics_recoil="0.1" max_rotation_step="0.000045"/>
-2	<turret offset="1.8 2.3 0" weapon_key="gkw_vehicle_m1a1_laser.weapon" weapon_offset="0 0 0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.000015" parent_turret_index="1" rotation_range="0" rotation="-0.05" />
-3	<turret offset="-1.8 2.3 0" weapon_key="gkw_vehicle_m1a1_laser.weapon" weapon_offset="0 0 0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.000015" parent_turret_index="1" rotation_range="0" rotation="0.05" />
-4	<turret offset="0.68 2.3 -0.1" weapon_key="gkw_vehicle_m1a1_mgcannon.weapon" weapon_offset="0 1.1 0.2" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.002" parent_turret_index="1" rotation="0.75" />
-5	<turret offset="-0.08 3.3 -2.4" weapon_key="amos_none.weapon" weapon_offset="0 0 0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.002" parent_turret_index="1" rotation="0" />
-6	<turret offset="0 0 0" weapon_key="gkw_vehicle_m1a1_basemg.weapon" weapon_offset="0 2.3 1.6" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.002" parent_turret_index="1" rotation="0" rotation_range="0" />
-7	<turret offset="-0.5 1.9 0" weapon_key="gkw_vehicle_m1a1_shield.weapon" weapon_offset="0 0 0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.002" parent_turret_index="1" rotation="0.75" />
+1	<turret offset="0 0 0.6" weapon_key="vehicle_m1a1_105mm.weapon" weapon_offset="0 2.1 3" weapon_recoil="0.2" physics_recoil="0.1" max_rotation_step="0.000045"/>
+2	<turret offset="1.8 2.3 -0.6" weapon_key="gkw_vehicle_m1a1_laser.weapon" weapon_offset="0 0 0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.000015" parent_turret_index="1" rotation_range="0" rotation="-0.05" />
+3	<turret offset="-1.8 2.3 -0.6" weapon_key="gkw_vehicle_m1a1_laser.weapon" weapon_offset="0 0 0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.000015" parent_turret_index="1" rotation_range="0" rotation="0.05" />
+4	<turret offset="0.68 2.3 -0.7" weapon_key="gkw_vehicle_m1a1_mgcannon.weapon" weapon_offset="0 1.1 0.2" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.002" parent_turret_index="1" rotation="0.75" />
+5	<turret offset="-0.08 3.3 -3" weapon_key="amos_none.weapon" weapon_offset="0 0 0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.002" parent_turret_index="1" rotation="0" />
+6	<turret offset="0 0 -0.6" weapon_key="gkw_vehicle_m1a1_basemg.weapon" weapon_offset="0 2.3 1.6" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.002" parent_turret_index="1" rotation="0" rotation_range="0" />
+7	<turret offset="-0.5 1.9 -0.6" weapon_key="gkw_vehicle_m1a1_shield.weapon" weapon_offset="0 0 0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.002" parent_turret_index="1" rotation="0.75" />
 
 	<visual class="chassis" mesh_filename="" />
 
 0	<visual class="turret" turret_index="0" mesh_filename="m1a1_body.mesh" texture_filename="balloon.png" />
-1	<visual class="turret" turret_index="1" mesh_filename="m1a1_turret.mesh" texture_filename="balloon.png" />
+1	<visual offset="0 0 -0.6" class="turret" turret_index="1" mesh_filename="m1a1_turret.mesh" texture_filename="balloon.png" />
 2	<visual class="turret" turret_index="2" mesh_filename="m1a1_laser_l.mesh" texture_filename="balloon.png" />
 3	<visual class="turret" turret_index="3" mesh_filename="m1a1_laser_r.mesh" texture_filename="balloon.png" />
 4	<visual class="turret" turret_index="4" mesh_filename="m1a1_mgcannon.mesh" texture_filename="balloon.png" />
