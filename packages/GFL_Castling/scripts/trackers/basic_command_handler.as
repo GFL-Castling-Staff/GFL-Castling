@@ -920,6 +920,8 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "m1a1_off_test_3.vehicle", "vehicle", 0);				
 		} else  if(checkCommand(message, "spawnm1a1d")) {
 			spawnInstanceNearPlayer(senderId, "m1a1_off_test_4.vehicle", "vehicle", 0);				
+		} else  if(checkCommand(message, "spawnm1a1e")) {
+			spawnInstanceNearPlayer(senderId, "m1a1_off_test_5.vehicle", "vehicle", 0);				
 		} else  if(checkCommand(message, "spawnt14")) {
 			spawnInstanceNearPlayer(senderId, "t14_test.vehicle", "vehicle", 0);				
 		} else  if(checkCommand(message, "tph")) {
