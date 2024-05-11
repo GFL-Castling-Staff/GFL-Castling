@@ -999,6 +999,11 @@ class GFL_playerlist_system : Tracker {
             g_playerInfo_Buck.addNewInfo(player_username,player_playerid,player_characterid,player_factionid,player_profile_hash,player_sid,player_equipment,player_color);
         }
     }
+
+	void onRemove() {
+		g_playerInfo_Buck.clearAll();
+	}
+
 }
 
 // 删 - 单个玩家
