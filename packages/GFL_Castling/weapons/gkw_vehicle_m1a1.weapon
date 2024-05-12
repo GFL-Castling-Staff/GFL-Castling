@@ -25,13 +25,13 @@
 	</projectile>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="100.0" base_score="0.5"/>
 	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
-	<target_factors tag="vehicle" distance="1.0" direction="0.0" squad_command="1.0" base_score="50.0"/>
+	<target_factors tag="vehicle" distance="1.0" direction="0.0" squad_command="1.0" base_score="450.0"/>
 	<target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
 	<target_factors tag="tank" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
 	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
-	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="98.0"/>
 	<effect class="muzzle" ref="coeus"/>
 	<effect class="muzzle" ref="coeusphere"/>
 	<effect class="muzzle" ref="coeusmuzzle" lighting="0"/>
@@ -710,6 +710,93 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
+	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
+	<target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+</weapon>
+
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0.5" drop_count_factor_on_player_death="1.0" key="gkw_vehicle_m1a1_coax_rocker.weapon">
+    <specification 
+    retrigger_time="0.5" last_burst_retrigger_time="0.6" accuracy_factor="1.45" sustained_fire_grow_step="0.01" sustained_fire_diminish_rate="0.004" cooldown_start="0.012" cooldown_end="0.0" magazine_size="-1"
+    can_shoot_standing="1" 
+    can_shoot_crouching="1" 
+    can_shoot_prone="0"
+    suppressed="0" 
+    name="Type 25 disposable rocker launcher" 
+    class="3" 
+    reload_one_at_a_time="0" 
+    sight_range_modifier="2.5" 
+    projectile_speed="120.0" 
+    slot="1" 
+    projectiles_per_shot="1" />
+    <inventory encumbrance="10.0" buy_price="15.0" sell_price="15.0" />
+    <sound key="fire" fileref="type25_fire_FromCOD16.wav" volume="1.6"/>
+    <sound key="cycle" fileref="sniper_cycle.wav" />
+    <sound key="magazine_out" fileref="sniper_clip_out.wav" />
+    <sound key="magazine_in" fileref="sniper_clip_in.wav" />
+    <sound key="cycle_out" fileref="sniper_cycle_out.wav" />
+    <sound key="cycle_in" fileref="sniper_cycle_in.wav" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model />
+    <ballistics near_far_distance="1000.0" speed_estimation_near="120.0" speed_estimation_far="120.0" max_speed="125.0" randomness="0.0" />
+    <projectile file="88_HEAT.projectile" radius="0.3" >
+        <result class="blast" damage="20.0" radius="8" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+    </projectile>
+    <weak_hand_hold offset="0.3" />
+    <hud_icon filename="88rocket.png" />
+    <effect class="muzzle" ref="LawMuzzle" />
+    <effect class="muzzle" ref="UpDust" />
+    
+    <stance state_key="running" accuracy="0.9" />
+    <stance state_key="walking" accuracy="0.9" />
+    <stance state_key="crouch_moving" accuracy="0.9" />
+    <stance state_key="standing" accuracy="1" />
+    <stance state_key="crouching" accuracy="1" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="prone_moving" accuracy="0.9" />
+    <stance state_key="over_wall" accuracy="1" />
+    <modifier class="speed" value="0" />
+</weapon>
+
+<weapon key="gkw_vehicle_m1a1_pulse_stun.weapon" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<tag name="antiarmor"/>
+	<specification retrigger_time="0.33" last_burst_retrigger_time="0.6" accuracy_factor="1.45" sustained_fire_grow_step="0.15" sustained_fire_diminish_rate="0.15" cooldown_start="0.29" cooldown_end="0.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="Barrett M82A1" class="0" reload_one_at_a_time="0" sight_range_modifier="0.75" projectile_speed="0" barrel_offset="0" projectiles_per_shot="1" spread_range="0.5" stance_accuracy_rate="1.5" burst_shots="1"/>
+	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="35.0" buy_price="300.0" sell_price="300.0"/>
+	<capacity value="1" source="rank" source_value="0.1"/>
+
+	<projectile class="grenade" slot="1" pulldown_in_air="0.5" file="gkw_vehicle_pulse_stun.projectile">
+	<trigger class="time" time_to_live="0.01"/>
+	<rotation class="motion"/>
+	<model/>
+	</projectile>
+
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
+	<target_factors tag="vehicle" distance="1.0" direction="0.0" squad_command="1.0" base_score="18.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="18.0"/>
+	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
+	<target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+</weapon>
+
+<weapon key="gkw_vehicle_m1a1_pulse_death.weapon" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<tag name="antiarmor"/>
+	<specification retrigger_time="0.33" last_burst_retrigger_time="0.6" accuracy_factor="1.45" sustained_fire_grow_step="0.15" sustained_fire_diminish_rate="0.15" cooldown_start="0.29" cooldown_end="0.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="Barrett M82A1" class="0" reload_one_at_a_time="0" sight_range_modifier="0.75" projectile_speed="0" barrel_offset="0" projectiles_per_shot="1" spread_range="0.5" stance_accuracy_rate="1.5" burst_shots="1"/>
+	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="35.0" buy_price="300.0" sell_price="300.0"/>
+	<capacity value="1" source="rank" source_value="0.1"/>
+
+	<projectile class="grenade" slot="1" pulldown_in_air="0.5" file="gkw_vehicle_pulse_death.projectile">
+	<trigger class="time" time_to_live="0.01"/>
+	<rotation class="motion"/>
+	<model/>
+	</projectile>
+
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
+	<target_factors tag="vehicle" distance="1.0" direction="0.0" squad_command="1.0" base_score="18.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="18.0"/>
 	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
 	<target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
