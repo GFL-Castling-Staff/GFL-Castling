@@ -29,8 +29,8 @@
 		extent="4.0 4.0 4.2" 
 		offset="0 0.0 0" 
 		top_offset="0 2 0" 
-		collision_model_pos="0 0.7 0" 
-		collision_model_extent="2 2 3" 
+		collision_model_pos="0 1.7 0" 
+		collision_model_extent="2 4 3" 
 		visual_offset="0 0.0 0" 
 		collision_response_factor="0" 
 		blast_push_threshold="10.0" 
@@ -48,7 +48,7 @@
 	<visual offset="0 0.24 0" class="turret" turret_index="0" mesh_filename="Jupiter_turret_2.mesh" texture_filename="Jupiter.jpg" />
 	<visual offset="0 0.24 0" class="turret" key="broken" turret_index="0" mesh_filename="Jupiter_turret_2.mesh" texture_filename="Jupiter.jpg" />	
 	
-	<character_slot type="gunner" seat_position="-0.0 2.6 -1.0" enter_position="0 0 -1.5" rotation="0" exit_rotation="1.57" hiding="1" >
+	<character_slot type="gunner" seat_position="-0.0 1.0 -1.0" enter_position="0 0 -1.5" rotation="0" exit_rotation="1.57" hiding="1" >
 		<turret index="0" />
 		<turret index="1" />  
 		<turret index="2" />  
