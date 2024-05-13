@@ -18,7 +18,8 @@
 	projectiles_per_shot="1"
 	burst_shots="1"
     carry_in_two_hands="0"
-	stab_enabled="2"/>
+	stab_range="3.5"
+	stab_enabled="1"/>
 	<inventory encumbrance="5.0" buy_price="10.0" sell_price="5.0" />
     <commonness value="0.2" in_stock="0" can_respawn_with="1" />
     <capacity value="1" source="rank" source_value="0.0" />
@@ -40,8 +41,8 @@
 	<animation state_key="crouch_moving_backwards"	animation_key="crouching backwards, single hand carry" />
 	<animation state_key="prone_still" 			animation_key="prone_still, pistol" />
 	<animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
-	<animation state_key="stabbing" 			animation_key="pistol whip" />
-	<animation state_key="stabbing" 			animation_key="pistol whip 3" />
+	<animation state_key="stabbing" 			animation_key="pistol whip knife qsb91" />
+	<animation state_key="stabbing" 			animation_key="pistol whip knife qsb91 2" />
 	<sound key="fire" fileref="qsb91_fire_FromRO2.wav" volume="1" pitch_variety="0.05" />
 	<sound key="magazine_out" fileref="revolver_magazine_out.wav" volume="0.9" />
 	<sound key="magazine_in" fileref="revolver_magazine_in.wav" volume="0.9" />
