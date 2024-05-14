@@ -23,28 +23,29 @@
     <commonness value="0.0001" in_stock="0" can_respawn_with="1" />
 	<capacity value="1" source="rank" source_value="0.0" />
     <inventory encumbrance="5.0" buy_price="150.0" sell_price="125.0" />
-    <animation state_key="recoil" animation_key="recoil, hip revolver"/>
+    <animation state_key="recoil" animation_key="recoil, revolver"/>
+    <animation state_key="recoil" stance_key="crouching" animation_key="recoil, hip revolver"/>
     <animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone"/>
     <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol"/>
-    <animation state_key="cycle" animation_key="cycle, revolver"/>
-    <animation state_key="cycle" stance_key="crouching" animation_key="cycle, hip revolver"/>
+    <animation state_key="cycle" animation_key="cycle, revolver saa"/>
+    <animation state_key="cycle" stance_key="crouching" animation_key="cycle, hip revolver big iron"/>
     <animation state_key="cycle" stance_key="prone" animation_key="cycle, revolver, prone"/>
-    <animation state_key="reload" animation_key="RevolverReload"/>
-    <animation state_key="hold" animation_key="hold, hip revolver"/>
-    <animation state_key="hold_casual" animation_key="dancing, kazachok"/>
+    <animation state_key="reload" animation_key="RevolverReload saa"/>
+    <animation state_key="hold" animation_key="hold, pistol"/>
+    <animation state_key="hold" stance_key="crouching" animation_key="hold, hip revolver"/>
+    <animation state_key="hold_casual" animation_key="dancing, helltaker"/>
     <animation state_key="hold_on_wall" animation_key="hold, overwall pistol"/>
     <animation state_key="still_against_wall" animation_key="hold_casual, pistol 4"/>
     <animation state_key="running" animation_key="running, pistol"/>
-    <animation state_key="walking" animation_key="walking, hip revolver"/>
-    <animation state_key="walking_backwards" animation_key="walking backwards, hip revolver"/>
-    <animation state_key="crouching" animation_key="crouch, hip revolver"/>
-    <animation state_key="crouch_moving" animation_key="crouching forwards, single hand carry"/>
-    <animation state_key="crouch_moving_backwards" animation_key="crouching backwards, single hand carry"/>
+    <animation state_key="crouching" animation_key="hold, hip revolver"/>
+    <animation state_key="crouch_moving" animation_key="walking, hip revolver"/>
+    <animation state_key="crouch_moving_backwards" animation_key="walking backwards, hip revolver"/>    
     <animation state_key="prone_still" animation_key="prone_still, pistol"/>
     <animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
     <animation state_key="stabbing" animation_key="pistol whip"/>
     <animation state_key="stabbing" animation_key="pistol whip 3"/>
-    <inventory encumbrance="5.0" buy_price="10.0" sell_price="10.0"/>
+    <animation state_key="walking" animation_key="walking, pistol"/>
+    <animation state_key="walking_backwards" animation_key="walking backwards, pistol"/>
     <sound key="fire" fileref="m1873_fire_FromCOD15.wav" pitch_variety="0.05" volume="3.0"/>
     <sound key="magazine_out" fileref="python_mgz_out_FromINS.wav" volume="1.5"/>
     <sound key="magazine_in" fileref="python_mgz_in_FromINS.wav" volume="1"/>
@@ -58,16 +59,16 @@
     <hud_icon filename="gkw_m1873mod3.png"/>
     <weak_hand_hold offset="0.1"/>
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="18.6" kill_decay_start_time="0.22" kill_decay_end_time="0.7"/>
+        <result class="hit" kill_probability="20.6" kill_decay_start_time="0.4" kill_decay_end_time="0.7"/>
     </projectile>
-    <stance state_key="running" accuracy="0.8"/>
-    <stance state_key="walking" accuracy="0.85"/>
-    <stance state_key="crouch_moving" accuracy="1.0"/>
-    <stance state_key="standing" accuracy="1.0"/>
-    <stance state_key="crouching" accuracy="1.1"/>
-    <stance state_key="prone" accuracy="1.1"/>
-    <stance state_key="prone_moving" accuracy="1.1"/>
-    <stance state_key="over_wall" accuracy="1.1"/>
+    <stance state_key="running" accuracy="1.6"/>
+    <stance state_key="walking" accuracy="1.6"/>
+    <stance state_key="crouch_moving" accuracy="0.85"/>
+    <stance state_key="standing" accuracy="1.6"/>
+    <stance state_key="crouching" accuracy="0.85"/>
+    <stance state_key="prone" accuracy="1.6"/>
+    <stance state_key="prone_moving" accuracy="1.6"/>
+    <stance state_key="over_wall" accuracy="1.6"/>
     <modifier class="speed" value="0.8"/>
     <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
     <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
