@@ -13,7 +13,7 @@ blast_damage_threshold="5"
 use_time_to_live="1" 
 time_to_live="60">
 
-    <result class="blast" radius="18" damage="1" push="0.2" decal="1" character_state="stun" faction_compare="not_equal" damage_origin_vehicle="0"/>
+    <result class="blast" radius="21" damage="1" push="0.2" decal="1" character_state="stun" faction_compare="not_equal" damage_origin_vehicle="0"/>
     <trigger class="impact"> 
      <collider class="terrain" enabled="1" />  
      <collider class="static_object" enabled="1" />  
