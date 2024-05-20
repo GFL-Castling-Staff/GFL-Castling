@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+
+<weapon key="rabits_none.weapon">
+	<specification slot="2" retrigger_time="0.075" accuracy_factor="0.5" sustained_fire_grow_step="0.25" sustained_fire_diminish_rate="2.0" sight_range_modifier="3.0" ai_sight_range_modifier="1.0" magazine_size="0" suppressed="0" name="RABI Sight" class="0" projectile_speed="195"/>
+	<model filename=""/>
+	<hud_icon filename="testing.png"/>
+	<commonness value="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
+	<result class="hit" damage_origin_vehicle="0"/>
+	<trigger class="impact"/>
+	<rotation class="motion"/>
+	</projectile>
+</weapon>
+
+<weapon key="rabits_none_1.weapon">
+	<specification slot="2" retrigger_time="0.075" accuracy_factor="0.5" sustained_fire_grow_step="0.25" sustained_fire_diminish_rate="2.0" sight_range_modifier="1.0" ai_sight_range_modifier="1.0" magazine_size="0" suppressed="0" name="RABI Sight" class="0" projectile_speed="195"/>
+	<model filename=""/>
+	<hud_icon filename="testing.png"/>
+	<commonness value="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
+	<result class="hit" damage_origin_vehicle="0"/>
+	<trigger class="impact"/>
+	<rotation class="motion"/>
+	</projectile>
+</weapon>
+
+<weapon key="rabits_drone_0.weapon">
+	<specification slot="2" retrigger_time="0.075" accuracy_factor="0.5" sustained_fire_grow_step="0.25" sustained_fire_diminish_rate="2.0" sight_range_modifier="1.2" ai_sight_range_modifier="1.0" magazine_size="0" suppressed="0" name="RABI Sight" class="0" projectile_speed="195"/>
+	<model mesh_filename="RABITS_drone.mesh" texture_filename="balloon.png"/>
+	<hud_icon filename="testing.png"/>
+	<commonness value="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
+	<result class="hit" damage_origin_vehicle="0"/>
+	<trigger class="impact"/>
+	<rotation class="motion"/>
+	</projectile>
+</weapon>
+
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0.5" drop_count_factor_on_player_death="1.0" key="rabits_rocker_silo.weapon">
+    <specification 
+    retrigger_time="4" last_burst_retrigger_time="0.6" accuracy_factor="1.45" sustained_fire_grow_step="0.01" sustained_fire_diminish_rate="0.004" cooldown_start="0.012" cooldown_end="0.0" magazine_size="-1"
+    can_shoot_standing="1" 
+    can_shoot_crouching="1" 
+    can_shoot_prone="0"
+    suppressed="0" 
+    name="Type 25 disposable rocker launcher" 
+    class="3" 
+    reload_one_at_a_time="0" 
+    sight_range_modifier="2.5" 
+    projectile_speed="200.0" 
+    slot="1" 
+    projectiles_per_shot="1" />
+    <inventory encumbrance="10.0" buy_price="15.0" sell_price="15.0" />
+    <sound key="fire" fileref="type25_fire_FromCOD16.wav" volume="1.6"/>
+    <sound key="cycle" fileref="sniper_cycle.wav" />
+    <sound key="magazine_out" fileref="sniper_clip_out.wav" />
+    <sound key="magazine_in" fileref="sniper_clip_in.wav" />
+    <sound key="cycle_out" fileref="sniper_cycle_out.wav" />
+    <sound key="cycle_in" fileref="sniper_cycle_in.wav" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <model />
+    <ballistics near_far_distance="1000.0" speed_estimation_near="120.0" speed_estimation_far="120.0" max_speed="1250.0" randomness="0.0" />
+    <projectile file="88_HEAT.projectile" radius="0.3" pulldown_in_air="4">
+        <result class="blast" damage="120.0" radius="12" decal="1" push="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+    </projectile>
+    <weak_hand_hold offset="0.3" />
+    <hud_icon filename="88rocket.png" />
+    <effect class="muzzle" ref="LawMuzzle" />
+    <effect class="muzzle" ref="UpDust" />
+    
+    <stance state_key="running" accuracy="0.9" />
+    <stance state_key="walking" accuracy="0.9" />
+    <stance state_key="crouch_moving" accuracy="0.9" />
+    <stance state_key="standing" accuracy="1" />
+    <stance state_key="crouching" accuracy="1" />
+    <stance state_key="prone" accuracy="1" />
+    <stance state_key="prone_moving" accuracy="0.9" />
+    <stance state_key="over_wall" accuracy="1" />
+    <modifier class="speed" value="0" />
+</weapon>
+
+</weapons>
