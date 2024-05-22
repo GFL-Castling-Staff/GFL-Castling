@@ -928,6 +928,8 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "m1a1_off_test_7.vehicle", "vehicle", 0);				
 		} else  if(checkCommand(message, "spawnt14")) {
 			spawnInstanceNearPlayer(senderId, "t14_test.vehicle", "vehicle", 0);				
+		} else  if(checkCommand(message, "spawnrabits")) {
+			spawnInstanceNearPlayer(senderId, "deploy_kit_rabits.weapon", "weapon", 0);				
 		} else  if(checkCommand(message, "tph")) {
 			spawnInstanceNearPlayer(senderId, "para_heal_skill.projectile", "projectile", 0);			 						 						
 		} else if (checkCommand(message,"givetestweapon")){
