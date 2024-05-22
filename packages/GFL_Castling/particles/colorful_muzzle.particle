@@ -187,3 +187,15 @@ material point_hard_edge : add_base
         texture_unit{
             texture point_hard_edge.png 	
 }}}}
+
+material add_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+		}
+	}
+}
