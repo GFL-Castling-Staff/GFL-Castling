@@ -35,7 +35,7 @@
 
     <model filename="" /> 
     <capacity value="0" source="rank" source_value="0.0" />
-    <commonness value="1" can_respawn_with="1" in_stock="1" /> 
+    <commonness value="0" can_respawn_with="1" in_stock="1" /> 
     <inventory encumbrance="0.0" price="0.0" /> 
     <weak_hand_hold offset="0.3" /> 
     <projectile file="bullet.projectile">
