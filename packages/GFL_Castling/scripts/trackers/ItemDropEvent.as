@@ -281,7 +281,7 @@ class ItemDropEvent : Tracker {
                             playPrivateSound(m_metagame,"sfx_failed.wav",pId);
                         }
                     }
-                    else if (checkQueue(pId,"type88") && (itemKey=="gkw_88typemod3.weapon" || itemKey=="gkw_88typemod3_skill.weapon")){
+                    else if (checkQueue(pId,"type88") && (itemKey=="gkw_88typemod3.weapon" || itemKey=="gkw_88typemod3_skill.weapon" || itemKey=="gkw_88typemod3_7106.weapon" || itemKey=="gkw_88typemod3_7106_skill.weapon")){
                         giveDigimindItem(cId, pId, "gkw_88typemod3_6503.weapon", "type88");
                     }
                     else if (checkQueue(pId,"aa12") && (itemKey=="gkw_aa12.weapon" || itemKey=="gkw_aa12_skill.weapon")){
