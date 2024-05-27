@@ -210,7 +210,7 @@
         <effect class="muzzle" ref="ejection_50BMG" />
         <!--Accuracy, Movement speed-->
         <stance state_key="running" accuracy="0.1" />
-        <stance state_key="walking" accuracy="0.7" />
+        <stance state_key="walking" accuracy="0.4" />
         <stance state_key="crouch_moving" accuracy="0.6" />
         <stance state_key="prone_moving" accuracy="0.8" />
         <stance state_key="standing" accuracy="1.05"/>
