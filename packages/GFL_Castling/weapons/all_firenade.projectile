@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectiles>
+	<projectile class="grenade" name="" slot="2" key="firenade_Vector_sub.projectile" radius="0.15" pulldown_in_air="20" can_be_detected_by_footmen="0" can_be_detected_by_driver="0">
+		<tag name="fire" />
+		<trigger class="time" time_to_live="0.0" />
+		<result class="spawn" instance_class="grenade" instance_key="firenade_sub_big.projectile" min_amount="30" max_amount="30" offset="0 4.0 0" position_spread="4 0" direction_spread="0.0 0.0" />
+		<commonness value="0.0" />
+		<rotation class="random" />
+		<model mesh_filename="" />
+		<hud_icon filename="" />
+	</projectile>
+    <projectile class="grenade" name="" slot="2" key="firenade_Vector_blast.projectile" radius="0.15" pulldown_in_air="20">
+        <tag name="fire" />
+        <trigger class="time" time_to_live="0.0" />
+		<result class="spawn" instance_class="grenade" instance_key="blast_shard_rad8_flameblast.projectile" min_amount="7" max_amount="7" offset="0 0.5 0" position_spread="0 0" direction_spread="0.0 0.0" />
+        <commonness value="0.0"/>
+        <rotation class="random" />
+        <model mesh_filename="" />
+        <hud_icon filename="" />
+    </projectile>    
+	<projectile class="grenade" name="" slot="2" key="firenade_kcco_flamethrower.projectile" radius="0.15" pulldown_in_air="20">
+		<tag name="grenade" />
+		<trigger class="time" time_to_live="0.0" />
+		<result class="spawn" instance_class="grenade" instance_key="firenade_sub.projectile" min_amount="5" max_amount="5" offset="0 4.0 0" position_spread="4 3" direction_spread="0.0 0.0" />
+		<commonness value="0.0" />
+		<rotation class="random" />
+		<model mesh_filename="" />
+		<hud_icon filename="" />
+	</projectile>
+</projectiles>

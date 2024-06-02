@@ -11,12 +11,12 @@
         sustained_fire_diminish_rate="2.5" 
         leave_crouch_accuracy_penalty="0.6"
         stance_accuracy_rate="0.9"
-        spread_range="0.75"
+        spread_range="0.7"
         magazine_size="200" 
         suppressed="0" 
         name="MG3(MOD3)-[Full Moon's Gaze]" 
         class="0" 
-        projectile_speed="200" 
+        projectile_speed="250" 
         sight_range_modifier="2.0"/>
         <animation key="reload" animation_key="reloading, Machine gun 2.4" />
         <animation state_key="next_in_chain_out" animation_key="open tripod"/>
@@ -58,11 +58,11 @@
         sustained_fire_diminish_rate="2.5" 
         magazine_size="200" 
         suppressed="0" 
-        spread_range="0.55"
+        spread_range="0.5"
         name="MG3(MOD3)-[Full Moon's Gaze]-[Supercompressed Bulletswarm]" 
         class="0" 
         leave_crouch_accuracy_penalty="0.5"
-        projectile_speed="200" 
+        projectile_speed="250" 
         sight_range_modifier="2.0"
         can_shoot_running="1"
         can_shoot_standing="1"

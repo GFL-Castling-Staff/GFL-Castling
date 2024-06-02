@@ -260,7 +260,57 @@ class DelayMovingProjectileSet :Task{
 	}
 }
 
+class ConstantStaticProjectileEvent :Task{
+	protected Metagame@ m_metagame;
+	protected float m_time; 
+    protected int m_character_id;
+    protected int m_faction_id;
+    protected string m_key;
+	protected float m_timeLeft;
+	protected Vector3 m_pos;	
+	protected int m_trigger_time;
+	protected float m_time_internal;
+	protected bool m_strict_check;
 
+	ConstantStaticProjectileEvent(Metagame@ metagame, float time, int cId,int fId,string key,Vector3 pos,int trigger,float time_internal,bool strict_check=true) {
+		@m_metagame = metagame;
+		m_time = time;
+		m_character_id = cId;
+		m_faction_id =fId;
+		m_key=key;
+		m_pos=pos;
+		m_trigger_time = trigger;
+		m_time_internal = time_internal;
+		m_strict_check = strict_check;
+	}
+
+	void start() {
+		m_timeLeft=m_time;
+	}
+
+	void update(float time) {
+		m_timeLeft -= time;
+		if (m_timeLeft < 0)
+		{
+			if(m_strict_check)
+			{
+				const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
+				if (character is null) return;
+				int death = character.getIntAttribute("dead");
+				if (death == 1) return;				
+			}
+			string c = 
+				"<command class='create_instance'" +
+				" faction_id='"+ m_faction_id +"'" +
+				" instance_class='grenade'" +
+				" instance_key='" + m_key +"'" +
+				" position='" + m_pos + "'"+
+				" character_id='" + m_character_id + "' />";
+			m_metagame.getComms().send(c);
+			m_timeLeft= m_time_internal;
+		}
+	}	
+}
 
 
 class DelayAirstrikeRequest :Task{
