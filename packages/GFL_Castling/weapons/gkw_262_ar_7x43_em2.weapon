@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon key="gkw_g3_1303.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_em2.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
     <tag name="autorifle" />
     <specification 
     stab_enabled="1"
@@ -11,16 +11,16 @@
     class="0"
     slot="0" 
     magazine_size="20" 
-    spread_range="0.45"
-    name="G3-[Parsty Cook on Battlefield]" 
-    projectile_speed="200.0" 
-    retrigger_time="0.1" 
-    stance_accuracy_rate="1.5"
-    sight_range_modifier="1.25"
+    spread_range="0.55"
+    name="Janson EM-2" 
+    projectile_speed="175.0" 
+    retrigger_time="0.112" 
+    stance_accuracy_rate="2.0"
+    sight_range_modifier="1.5"
     suppressed="0" 
-    sustained_fire_diminish_rate="1.7" 
-    sustained_fire_grow_step="0.66" />
-    <commonness value="0" in_stock="0" can_respawn_with="1" />
+    sustained_fire_diminish_rate="2.0" 
+    sustained_fire_grow_step="0.37" />
+    <commonness value="0.2" in_stock="1" can_respawn_with="1" />
     <animation key="recoil" animation_key="recoil1" />
     <animation key="recoil" animation_key="recoil2" />
     <animation key="recoil" animation_key="recoil3" />
@@ -33,27 +33,28 @@
     <animation state_key="stabbing" animation_key="pistol whip 3" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <inventory encumbrance="35.0" buy_price="7.0" sell_price="7.0" />
-    <sound key="fire" fileref="g3_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="magazine_out" fileref="g3_mgz_out_FromCOD17.wav" volume="0.4" />
-    <sound key="magazine_in" fileref="g3_mgz_in_FromCOD17.wav" volume="0.4" />
-    <sound key="cycle" fileref="g3_cycle_FromCOD17.wav" volume="0.4" />
+    <sound key="fire" fileref="em2_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="em2_mgz_out_FromCOD17.wav" volume="0.4" />
+    <sound key="magazine_in" fileref="em2_mgz_in_FromCOD17.wav" volume="0.4" />
+    <sound key="cycle" fileref="em2_cycle_FromCOD17.wav" volume="0.4" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
     <model filename="gkw_ar_g3.xml" />
-    <hud_icon filename="gkw_g3_1303.png" />
+    <hud_icon filename="gkw_em2.png" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
-        <result class="hit"  kill_probability="8.6" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.125" kill_decay_end_time="1.875" />
+        <result class="hit" kill_probability="7.43" kill_probability_offset_on_successful_hit="2.4" kill_decay_start_time="1.825" kill_decay_end_time="1.875" />
+        <trail probability="1.0" key="BulletApTrail_ct" />
     </projectile>
     <effect class="muzzle" ref="ejection_76251" />
-    <stance state_key="running" accuracy="0.1" />
-    <stance state_key="walking" accuracy="0.4" />
+    <stance state_key="running" accuracy="0.15" />
+    <stance state_key="walking" accuracy="0.35" />
     <stance state_key="crouch_moving" accuracy="0.85" />
     <stance state_key="prone_moving" accuracy="0.85" />
     <stance state_key="standing" accuracy="0.98" />
-    <stance state_key="crouching" accuracy="1" />
+    <stance state_key="crouching" accuracy="1.0" />
     <stance state_key="prone" accuracy="1" />
     <stance state_key="over_wall" accuracy="1"/>
     <modifier class="detectability" value="0.0" />
