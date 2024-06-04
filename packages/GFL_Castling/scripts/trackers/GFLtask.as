@@ -269,6 +269,7 @@ class ConstantStaticProjectileEvent :Task{
 	protected float m_timeLeft;
 	protected Vector3 m_pos;	
 	protected int m_trigger_time;
+	protected int m_triggered_time = 0;
 	protected float m_time_internal;
 	protected bool m_strict_check;
 
@@ -304,12 +305,20 @@ class ConstantStaticProjectileEvent :Task{
 				" faction_id='"+ m_faction_id +"'" +
 				" instance_class='grenade'" +
 				" instance_key='" + m_key +"'" +
-				" position='" + m_pos + "'"+
+				" position='" + m_pos.toString() + "'"+
 				" character_id='" + m_character_id + "' />";
 			m_metagame.getComms().send(c);
 			m_timeLeft= m_time_internal;
+			m_triggered_time++;
 		}
-	}	
+	}
+	
+    bool hasEnded() const {
+		if (m_triggered_time >= m_trigger_time) {
+			return true;
+		}
+		return false;
+	}		
 }
 
 

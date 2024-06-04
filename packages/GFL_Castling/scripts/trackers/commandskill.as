@@ -992,7 +992,7 @@ class CommandSkill : Tracker {
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"FF_ALINA",true,"charge_recover_1",4)) return;
         const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
         if(characterinfo !is null){
-            if (!canCastSkill(character)) return;
+            if (!canCastSkill(characterinfo)) return;
             const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
             if(playerinfo !is null){
                 if (playerinfo.hasAttribute("aim_target")) {

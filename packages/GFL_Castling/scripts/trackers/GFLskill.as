@@ -1558,7 +1558,7 @@ class GFLskill : Tracker {
 								string luckyonepos = luckyoneC.getStringAttribute("position");
 								Vector3 luckyoneposV = stringToVector3(luckyonepos);
 								CreateProjectile_H(m_metagame,character_pos.add(Vector3(0,2,0)),luckyoneposV,"sf_emp_mine.projectile",characterId,factionId,90,2);
-							}				
+							}
 						}
 					}
 

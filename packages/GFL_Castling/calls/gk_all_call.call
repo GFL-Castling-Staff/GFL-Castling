@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <calls>
     <!-- 嘲讽妖精 -->
-    <call name="Provocation Fairy" key="target.call" initiation_comment1="Provocation Fairy" initiation_comment2="Deploy Target Drone" acknowledge_comment="Unlock" launch_comment="Targetdrone,Unlock!" notify_metagame="1">
+    <call name="Provocation Fairy" key="target.call" initiation_comment1="Provocation Fairy" initiation_comment2="Deploy Target Drone" acknowledge_comment="Unlock" acknowledge_time="0" launch_comment="Targetdrone,Unlock!" notify_metagame="1">
         <hud_icon filename="call_Airborne_targetdrone.png" />
         <capacity value="0" source="rank" source_value="0.0" />
         <capacity value="100" source="rank" source_value="1.143" />

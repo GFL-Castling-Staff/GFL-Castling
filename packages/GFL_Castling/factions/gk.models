@@ -2336,7 +2336,8 @@
     <model filename="gkd_sg_nova.xml">
         <requirement class="weapon" key="gkw_nova_skill.weapon" slot="0" />
     </model>
-    <model filename="gkd_hg_px4.xml">
+    <model filename="gkd_hg_px4mod3.xml">
+        <!-- 晚点记得改回去px4原皮 -->
         <requirement class="weapon" key="gkw_px4.weapon" slot="0" />
     </model>
     <model filename="gkd_hg_px4mod3.xml">
