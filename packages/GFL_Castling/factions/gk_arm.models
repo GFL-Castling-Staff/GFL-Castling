@@ -236,15 +236,50 @@
     <model score="1500" filename="gkd_persica.xml"><requirement class="carry_item" slot="0" key="gk_persica_7"/><requirement class="rank" range="0 1000000" /></model>
     <model score="1500" filename="gkd_persica.xml"><requirement class="carry_item" slot="0" key="gk_persica_8"/><requirement class="rank" range="0 1000000" /></model>
 
-    <model score="1500" filename="gkd_persica.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt.carry_item"/><requirement class="rank" range="0 1000000" /></model>
-    <model score="1500" filename="gkd_persica.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_1"/><requirement class="rank" range="0 1000000" /></model>
-    <model score="1500" filename="gkd_persica.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_2"/><requirement class="rank" range="0 1000000" /></model>
-    <model score="1500" filename="gkd_persica.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_3"/><requirement class="rank" range="0 1000000" /></model>
-    <model score="1500" filename="gkd_persica.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_4"/><requirement class="rank" range="0 1000000" /></model>
-    <model score="1500" filename="gkd_persica.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_5"/><requirement class="rank" range="0 1000000" /></model>
-    <model score="1500" filename="gkd_persica.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_6"/><requirement class="rank" range="0 1000000" /></model>
-    <model score="1500" filename="gkd_persica.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_7"/><requirement class="rank" range="0 1000000" /></model>
-    <model score="1500" filename="gkd_persica.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_8"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_persicaria_alt.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt.carry_item"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_persicaria_alt.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_1"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_persicaria_alt.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_2"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_persicaria_alt.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_3"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_persicaria_alt.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_4"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_persicaria_alt.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_5"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_persicaria_alt.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_6"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_persicaria_alt.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_7"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_persicaria_alt.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_8"/><requirement class="rank" range="0 1000000" /></model>
+    
+    <model score="1500" filename="gkd_persicaria_alt_1.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt.carry_item"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_persicaria_alt_1.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_1"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_persicaria_alt_1.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_2"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_persicaria_alt_1.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_3"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_persicaria_alt_1.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_4"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_persicaria_alt_1.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_5"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_persicaria_alt_1.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_6"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_persicaria_alt_1.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_7"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_persicaria_alt_1.xml"><requirement class="carry_item" slot="0" key="gk_persica_alt_8"/><requirement class="rank" range="0 1000000" /></model>
+
+    <model score="1500" filename="gkd_dima_rabbit.xml"><requirement class="carry_item" slot="0" key="dima_bunny.carry_item"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_dima_rabbit.xml"><requirement class="carry_item" slot="0" key="dima_bunny_1"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_dima_rabbit.xml"><requirement class="carry_item" slot="0" key="dima_bunny_2"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_dima_rabbit.xml"><requirement class="carry_item" slot="0" key="dima_bunny_3"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_dima_rabbit.xml"><requirement class="carry_item" slot="0" key="dima_bunny_4"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_dima_rabbit.xml"><requirement class="carry_item" slot="0" key="dima_bunny_5"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_dima_rabbit.xml"><requirement class="carry_item" slot="0" key="dima_bunny_6"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_dima_rabbit.xml"><requirement class="carry_item" slot="0" key="dima_bunny_7"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_dima_rabbit.xml"><requirement class="carry_item" slot="0" key="dima_bunny_8"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_dima_rabbit.xml"><requirement class="carry_item" slot="0" key="dima_bunny_9"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_dima_rabbit.xml"><requirement class="carry_item" slot="0" key="dima_bunny_10"/><requirement class="rank" range="0 1000000" /></model>
+
+    <model score="1500" filename="gkd_dima_rabbit_1.xml"><requirement class="carry_item" slot="0" key="dima_bunny.carry_item"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_dima_rabbit_1.xml"><requirement class="carry_item" slot="0" key="dima_bunny_1"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_dima_rabbit_1.xml"><requirement class="carry_item" slot="0" key="dima_bunny_2"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_dima_rabbit_1.xml"><requirement class="carry_item" slot="0" key="dima_bunny_3"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_dima_rabbit_1.xml"><requirement class="carry_item" slot="0" key="dima_bunny_4"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_dima_rabbit_1.xml"><requirement class="carry_item" slot="0" key="dima_bunny_5"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_dima_rabbit_1.xml"><requirement class="carry_item" slot="0" key="dima_bunny_6"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_dima_rabbit_1.xml"><requirement class="carry_item" slot="0" key="dima_bunny_7"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_dima_rabbit_1.xml"><requirement class="carry_item" slot="0" key="dima_bunny_8"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_dima_rabbit_1.xml"><requirement class="carry_item" slot="0" key="dima_bunny_9"/><requirement class="rank" range="0 1000000" /></model>
+    <model score="1500" filename="gkd_dima_rabbit_1.xml"><requirement class="carry_item" slot="0" key="dima_bunny_10"/><requirement class="rank" range="0 1000000" /></model>
+
 
     <model score="1500" filename="gkd_sp_naben.xml"><requirement class="carry_item" slot="0" key="bp_sp_naben.carry_item"/><requirement class="rank" range="0 1000000" /></model>
     <model score="1500" filename="gkd_sp_naben.xml"><requirement class="carry_item" slot="0" key="bp_sp_naben_14"/><requirement class="rank" range="0 1000000" /></model>

@@ -490,7 +490,17 @@ class ItemDropEvent : Tracker {
                         addMutilItemInBackpack(m_metagame,cId,"carry_item","chip_b_t6.carry_item",3);
                         playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
                         break;
-                    }                                                                                                                       
+                    }        
+                    case 13:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","gk_persica_alt.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    } 
+                    case 14:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","dima_bunny.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }                                                                                                                                                        
                     default:{
                         break;
                     }

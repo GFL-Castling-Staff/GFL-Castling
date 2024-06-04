@@ -161,7 +161,6 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		};
 		array<array<ScoredResource@>> rewardPasses = {
 			{
-		ScoredResource("exchange_t6_ticket_1", "carry_item", 1.0f),
 		ScoredResource("exchange_t6_ticket_2", "carry_item", 1.0f),
 		ScoredResource("exchange_t6_ticket_3", "carry_item", 1.0f),
 		ScoredResource("exchange_t6_ticket_4", "carry_item", 1.0f),
@@ -172,7 +171,12 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("exchange_t6_ticket_9", "carry_item", 1.0f),
 		ScoredResource("exchange_t6_ticket_10", "carry_item", 0.2f),
 		ScoredResource("exchange_t6_ticket_11", "carry_item", 1.0f),
-		ScoredResource("exchange_t6_ticket_12", "carry_item", 1.0f)
+		ScoredResource("exchange_t6_ticket_12", "carry_item", 1.0f),
+		ScoredResource("exchange_t6_ticket_13", "carry_item", 0.2f),
+		ScoredResource("exchange_t6_ticket_14", "carry_item", 0.2f),
+
+		ScoredResource("exchange_t6_ticket_1", "carry_item", 1.0f)
+
 			}
 		};
 		processRewardPasses(rewardPasses);

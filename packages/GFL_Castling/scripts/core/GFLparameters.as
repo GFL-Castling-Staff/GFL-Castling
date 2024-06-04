@@ -302,6 +302,7 @@
         {"exchange_t6_ticket_11",11}, 
         {"exchange_t6_ticket_12",12}, 
         {"exchange_t6_ticket_13",13}, 
+        {"exchange_t6_ticket_14",14}, 
 
         {"666",0}
     };
