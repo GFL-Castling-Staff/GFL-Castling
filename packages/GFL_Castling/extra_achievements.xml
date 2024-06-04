@@ -123,6 +123,7 @@
 		</criteria>
 		<criteria class="vehicle_destroy" owner="any" description="* destroy %target_count Pyxis">
 			<vehicle key="par_compass.vehicle" />
+			<vehicle key="par_compass_inf.vehicle" />
 			<level value="5" />
 			<level value="10" />
 			<level value="50" />

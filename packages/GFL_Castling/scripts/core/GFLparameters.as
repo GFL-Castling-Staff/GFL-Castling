@@ -171,6 +171,7 @@
         {"par_cherub.vehicle",1},
         {"par_moth.vehicle",1},
         {"par_compass.vehicle",1},
+        {"par_compass_inf.vehicle",1},
 
         {"aa_emplacement.vehicle",10},
         {"sf_jupiter.vehicle",10},
@@ -203,6 +204,7 @@
         {"par_cherub.vehicle",2},
         {"par_moth.vehicle",2},
         {"par_compass.vehicle",1},
+        {"par_compass_inf.vehicle",1},
 
         {"aa_emplacement.vehicle",10},
         {"sf_jupiter.vehicle",10},
@@ -449,6 +451,7 @@
 		"par_cherub.vehicle",
 		"par_moth.vehicle",
         "par_compass.vehicle",
+        "par_compass_inf.vehicle",
 
 		"sf_JWAG.vehicle",
 		"rubber_boat.vehicle",
