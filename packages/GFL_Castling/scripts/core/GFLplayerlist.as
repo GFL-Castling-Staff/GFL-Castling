@@ -252,7 +252,7 @@ class GFL_playerInfo{
     void addKill(int num)
     {
         m_battleinfo.addKill(num);
-        _log("断点，执行battlelog添加击杀");
+        // _log("断点，执行battlelog添加击杀");
     }
 
     void addDead()
@@ -646,9 +646,9 @@ class GFL_battleInfo{
         if(m_counter > m_oneLifekillCount){
             m_oneLifekillCount = m_counter;
         }
-        _log("断点，执行battlelog内部添加击杀");
-        _log("断点，当前m_killstreak_point为"+m_killstreak_point);
-        _log("断点，当前m_killstreak_point_counter为"+m_killstreak_point_counter);        
+        // _log("断点，执行battlelog内部添加击杀");
+        // _log("断点，当前m_killstreak_point为"+m_killstreak_point);
+        // _log("断点，当前m_killstreak_point_counter为"+m_killstreak_point_counter);        
 	}
 
 	void addDead(){

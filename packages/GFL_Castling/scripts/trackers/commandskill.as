@@ -271,6 +271,8 @@ class CommandSkill : Tracker {
                 case 79:{excuteType82skill(cId,senderId,m_modifer);break;}
                 case 80:{excuteGsh18skill(cId,senderId,m_modifer);break;}
                 case 81:{excuteFedorovSkill(cId,senderId,m_modifer);break;}
+
+                case 82:{excuteTac50Skill(cId,senderId,m_modifer);break;}
                 default:
                     break;
             }
@@ -4498,5 +4500,61 @@ class CommandSkill : Tracker {
             playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
             addCooldown("fedorov",90,characterId,modifer);
         }
-    }    
+    }   
+
+    void excuteTac50Skill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"tac50")) return;
+        const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
+        if (characterinfo is null) return;
+        const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
+        if (playerinfo is null) return;
+        if (playerinfo.hasAttribute("aim_target")) {
+            string target = playerinfo.getStringAttribute("aim_target");
+            Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
+            Vector3 s_pos = stringToVector3(target);
+            int factionid = characterinfo.getIntAttribute("faction_id");
+    
+            int m_fnum = m_metagame.getFactionCount();
+            array<const XmlElement@> affectedCharacter;
+            for(int i=0;i<m_fnum;i++) {
+                if(i!=factionid) {
+                    array<const XmlElement@> affectedCharacter2;
+                    affectedCharacter2 = getCharactersNearPosition(m_metagame,s_pos,i,10.0f);
+                    if (affectedCharacter2 !is null){
+                        for(uint x=0;x<affectedCharacter2.length();x++){
+                            affectedCharacter.insertLast(affectedCharacter2[x]);
+                        }
+                    }
+                }
+            }
+
+            if (affectedCharacter !is null && affectedCharacter.length > 0){
+                int closestIndex = -1;
+                float closestDistance = -1.0f;                
+                for(uint i=0;i<affectedCharacter.length();i++){
+                    float distance = getPositionDistance(s_pos, stringToVector3(affectedCharacter[i].getStringAttribute("position")));
+                    if (distance < closestDistance || closestDistance < 0.0){
+                        closestDistance = distance;
+                        closestIndex = i;
+                    }
+                }
+
+                if (closestIndex >= 0){
+                    int target_id = affectedCharacter[closestIndex].getIntAttribute("id");
+                    playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
+                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    DelayAntiPersonSnipeRequest@ snipe_quest = DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_blast_80.projectile",c_pos.add(Vector3(0,0.5,0)),target_id);
+                    tasker.add(snipe_quest);
+                    tasker.add(Tac50_Maple_Sniper_Drone(m_metagame,1.0,characterId,factionid));
+                    // playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1.0);     
+                    addCooldown("tac50",90,characterId,modifer,"normal",false);
+                }
+            }
+            else{
+                modifer.setCooldownMinus(0);
+                modifer.setCooldownReduction(1.0);
+                addCooldown("tac50",1.5,characterId,modifer,"normal",false);
+            }
+        } 
+    }     
 }

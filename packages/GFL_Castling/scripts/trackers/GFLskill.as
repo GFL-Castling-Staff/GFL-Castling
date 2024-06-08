@@ -1001,6 +1001,10 @@ class GFLskill : Tracker {
 			}
 
 			case 35: {// LBLL
+				array<string> banned_skill_index = {
+					"RBLL",
+					"Nagant"
+				};
 				Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
 				int lbll_cid = event.getIntAttribute("character_id");
 				healCharacter(m_metagame,lbll_cid,2);
@@ -1024,7 +1028,7 @@ class GFLskill : Tracker {
 						c.setIntAttribute("character_id", target_id); 
 						c.setIntAttribute("untransform_count", 4);
 						m_metagame.getComms().send(c);
-						int index = findSkillIndex_reserve(target_id,"RBLL");
+						int index = findSkillIndex_reserve_array(target_id,banned_skill_index);
 						if(index != -1){
 							SkillArray[index].m_time-=5.0;
 						}

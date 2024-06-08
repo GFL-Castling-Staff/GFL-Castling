@@ -2050,3 +2050,70 @@ class DelayGPSScanRequest : Task{
 		return false;
 	}
 }
+
+class Tac50_Maple_Sniper_Drone : DelaySkill {
+	protected array<const XmlElement@> affectedCharacter;
+	protected int luckyoneid = -1;
+
+	void start(){
+		m_timeLeft=m_time;
+		m_timeLeft_internal = 0;
+		this.setExcuteLimit(10);
+		this.setInternal(5.0);		
+	}
+
+	Tac50_Maple_Sniper_Drone(GameMode@ metagame, float time, int cId,int fId){
+		super(metagame, time,cId,fId);
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time;return;}
+		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
+		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
+		m_timeLeft_internal = m_time_internal;
+
+		const XmlElement@ character_tac50 = getCharacterInfo(m_metagame, m_character_id);
+		if(character_tac50 is null)
+		{
+			m_end = true;
+			return;
+		}
+		if(character_tac50.getIntAttribute("dead") == 1 )
+		{
+			m_end = true;
+			return;
+		}
+		Vector3 tac50_pos = stringToVector3(character_tac50.getStringAttribute("position"));
+		Vector3 maple_pos = tac50_pos.add(Vector3(0,40,0));
+		
+		int m_fnum = m_metagame.getFactionCount();
+		for(int i=0;i<m_fnum;i++) {
+			if(i!=m_faction_id) {
+				array<const XmlElement@> affectedCharacter2;
+				affectedCharacter2 = getCharactersNearPosition(m_metagame,tac50_pos,i,30.0f);
+				if (affectedCharacter2 !is null){
+					for(uint x=0;x<affectedCharacter2.length();x++){
+						affectedCharacter.insertLast(affectedCharacter2[x]);
+					}
+				}
+			}
+		}		
+		luckyoneid = affectedCharacter[getRandomIndex(affectedCharacter.length())].getIntAttribute("id");
+		const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyoneid);
+		if(luckyGuy is null)
+		{
+			m_timeLeft_internal = 0;
+			return;
+		}
+		if(luckyGuy.getIntAttribute("dead")==1)
+		{
+			m_timeLeft_internal = 0;
+			return;
+		}
+		Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+		CreateDirectProjectile(m_metagame,maple_pos,luckyGuyPos,"m200_snipe.projectile",m_character_id,m_faction_id,400);
+		playSoundAtLocation(m_metagame,"tac50_fire_FromINS.wav",m_faction_id,luckyGuyPos,2.0);       		
+
+		m_excute_time++;
+	}
+}

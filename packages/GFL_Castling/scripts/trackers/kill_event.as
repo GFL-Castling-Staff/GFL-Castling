@@ -387,7 +387,7 @@ class kill_event : Tracker {
             //只查询我方杀敌
             if (!(factionId==0) || !(characterId > 0)) return;
 
-            _log("击杀断点，角色ID:"+playerId);
+            // _log("击杀断点，角色ID:"+playerId);
             GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(playerId);
             if (playerInfo.m_name == default_string ) return;
 
@@ -791,6 +791,15 @@ int findSkillIndex(int cId){
 int findSkillIndex_reserve(int cId,string key){
     for (uint i=0;i<SkillArray.length();i++){
         if (SkillArray[i].m_character_id==cId && SkillArray[i].m_weapontype!=key) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int findSkillIndex_reserve_array(int cId,array<string> keys){
+    for (uint i=0;i<SkillArray.length();i++){
+        if (SkillArray[i].m_character_id==cId && keys.find(SkillArray[i].m_weapontype) < 0) {
             return i;
         }
     }
