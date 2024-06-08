@@ -472,7 +472,7 @@ class GFLskill : Tracker {
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 				if (character is null) return;
 				int factionid = character.getIntAttribute("faction_id");
-				Vector3 Pos_40mm = stringToVector3(event.getStringAttribute("position"));
+				Vector3 Pos_40mm = stringToVector3(character.getStringAttribute("position"));
 				string command = "<command class='update_character' id='" + characterId + "' dead='1' />";
 				m_metagame.getComms().send(command);
 				spawnStaticProjectile(m_metagame,"cl.projectile",Pos_40mm,characterId,factionid);
@@ -1610,7 +1610,9 @@ class GFLskill : Tracker {
 					float ori4 = rand(0.0,3.14);
 					spawnStaticProjectile(m_metagame,"medkit_fedorov_spawn1.projectile",grenade_pos,characterId,factionid,Orientation(0,1,0,ori4));
 					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-					tasker.add(AOEVestRecoverTask(m_metagame,3.0,grenade_pos,5,5,factionid,10));
+					AOEVestRecoverTask@ new_quest = AOEVestRecoverTask(m_metagame,3,grenade_pos,5,5,factionid,10);
+					new_quest.setEffectParticle("particle_effect_radius_heal.projectile");
+					tasker.add(new_quest);
 				}				
 			}
 

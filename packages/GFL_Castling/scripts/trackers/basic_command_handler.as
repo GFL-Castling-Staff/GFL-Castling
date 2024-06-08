@@ -935,7 +935,7 @@ class BasicCommandHandler : Tracker {
 		} else if (checkCommand(message,"givetestweapon")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_mg42_597.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_consume_papertank2.weapon");
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"carry_item","black_card.carry_item");
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_consume_papertank3.weapon");
 			
 		} else if (checkCommand(message,"gsft")){		

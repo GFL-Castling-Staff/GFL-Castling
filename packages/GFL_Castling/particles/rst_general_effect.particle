@@ -2416,6 +2416,49 @@ particle_system spawn_at_ground_smoke_leave : spawn_at_ground_smoke
 	}
 }
 
+particle_system emoticon_heal_cross
+{
+	quota 100
+	material tuxing_7_1
+	particle_width 1
+	particle_height 1
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Box
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 6
+		position 0 5 0
+		velocity_min 1
+		velocity_max 0.5
+		time_to_live 0.4
+		duration 1
+		depth 3
+		width 3
+		height 3
+	}
+	affector Scaler
+	{
+		rate 0.5
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 1 1 0 1
+		time1 0.7
+		colour1 1 0.6 0 1
+		time2 1
+		colour2 0 0 0 0
+	}
+}
 
 --------------------------------------material-----------------------------------
 material alpha_blend_base{
@@ -2686,12 +2729,27 @@ material disaster_smoke : alpha_blend_base
         texture_unit{
             texture disaster_smoke.png 	
 }}}}
+
 material double_freedom_trail : add_base
 {
 	technique{
 		pass{
-			texture_unit{
-			texture double_freedom_trail.png
+			texture_unit
+			{
+				texture double_freedom_trail.png
+			}
+		}
+	}
+}
+
+material tuxing_7_1 : add_base
+{
+	technique{
+		pass{
+			texture_unit
+			{
+				texture tuxing_7_1.png
+			}
 		}
 	}
 }

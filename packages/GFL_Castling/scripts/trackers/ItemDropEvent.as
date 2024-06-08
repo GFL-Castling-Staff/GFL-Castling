@@ -151,6 +151,12 @@ class ItemDropEvent : Tracker {
                     upgrade(cId, pId, "truecore", "core_mask.carry_item", "truemask", "sfx_equip.wav");
                     break;
                 }
+
+                case 114:{
+                    upgrade(cId, pId, "blackcard", "black_card.carry_item", "blackcard_hint", "sfx_equip.wav",45.0);
+                    break;
+                }
+
                 case 3:{
                     upgrade(cId, pId, "type88", "upgrade_type88.carry_item", "upgrade_88type", "sfx_equip.wav");
                     break;
@@ -234,7 +240,8 @@ class ItemDropEvent : Tracker {
                 case 23:{
                     upgrade(cId, pId, "sr3mp", "upgrade_sr3mp.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
-                }                
+                }
+
                 default:{
                     if (checkQueue(pId,"mod3")){
                         string outputItem = string(MOD3craftList[itemKey]);
@@ -506,8 +513,6 @@ class ItemDropEvent : Tracker {
                     }
                 }
             }
-
-
         }  
     }
 
@@ -593,7 +598,7 @@ class ItemDropEvent : Tracker {
             if (itemKey==""){
                 addItemInBackpack(m_metagame,cId,"carry_item","core_mask.carry_item");;
                 sendPrivateMessageKey(m_metagame, senderId, "truemask_failed");
-                playPrivateSound(m_metagame,"sfx_failed.wav",senderId);                    
+                playPrivateSound(m_metagame,"sfx_failed.wav",senderId);
             }
             else{
                 addItemInBackpack(m_metagame,cId,"weapon",itemKey);
@@ -617,6 +622,64 @@ class ItemDropEvent : Tracker {
             }
         }
 
+        if(checkCommand(message,"bc")){
+            if(checkQueue(senderId,"blackcard") != true) return;
+            m_craftQueue.removeAt(findQueueIndex(senderId,"blackcard"));
+
+            const XmlElement@ player = getPlayerInfo(m_metagame,senderId);
+            if (player is null) return;
+            int cId=player.getIntAttribute("character_id");
+            string profile_hash = player.getStringAttribute("profile_hash");
+
+            array<string> word = MassageBreakUp(message, " ", -1);
+            int ws = word.size();
+            if (ws == 0 || ws == 1 || ws == 2) 
+            {
+                addItemInBackpack(m_metagame,cId,"carry_item","black_card.carry_item");
+                sendPrivateMessageKey(m_metagame, senderId, "blackcard_hint_syntax");
+                playPrivateSound(m_metagame,"sfx_failed.wav",senderId);                
+                return;
+            }
+            string doll_index = word[1];
+            string skin_index = word[2];
+
+            if (skin_index == "0")
+            {
+                addItemInBackpack(m_metagame,cId,"carry_item","black_card.carry_item");
+                sendPrivateMessageKey(m_metagame, senderId, "blackcard_hint_dumb");
+                playPrivateSound(m_metagame,"sfx_failed.wav",senderId);                
+                return;                
+            }
+
+            string weapon_key = getKeyfromIndex(doll_index,skin_index,"none");
+            if (weapon_key == "")
+            {
+                addItemInBackpack(m_metagame,cId,"carry_item","black_card.carry_item");
+                sendPrivateMessageKey(m_metagame, senderId, "blackcard_hint_failed");
+                playPrivateSound(m_metagame,"sfx_failed.wav",senderId);                
+                return;                
+            }
+            
+            addItemInBackpack(m_metagame,cId,"weapon",weapon_key);
+            dictionary a;
+            a["%doll_name"] = getResourceName(m_metagame, weapon_key, "weapon");
+            sendPrivateMessageKey(m_metagame, senderId, "blackcard_hint_success",a);
+            playPrivateSound(m_metagame,"sfx_big.wav",senderId);
+            player_data newdata = PlayerProfileLoad(readFile(m_metagame,sender,profile_hash)); 
+            if(newdata.FindWeapon(weapon_key)) 
+            {
+                return;
+            }
+            else
+            {
+                newdata.addWeapon(weapon_key);
+                notify(m_metagame, "Logger Mask Auto", dictionary(), "misc", senderId, false, "", 1.0);
+                string filename = ("save_" + profile_hash +".xml" );
+                writeXML(m_metagame,filename,PlayerProfileSave(newdata));  
+                return;                  
+            }
+        }
+        
 		if (!m_metagame.getAdminManager().isAdmin(sender, senderId)) {
 			return;
 		}
@@ -760,14 +823,14 @@ class ItemDropEvent : Tracker {
         }
     }
 
-    protected void upgrade(int cId, int pId, string pid_name, string item_name, string message_key, string wav){
+    protected void upgrade(int cId, int pId, string pid_name, string item_name, string message_key, string wav,float time =20.0){
         if(checkQueue(pId, pid_name))
         {
             failedUpgrade(cId, pId, item_name);
         }
         else
         {
-            startQueue(pId, pid_name);
+            startQueue(pId, pid_name,time);
             sendPrivateMessageKey(m_metagame, pId, message_key);
             playPrivateSound(m_metagame, wav, pId);
         }

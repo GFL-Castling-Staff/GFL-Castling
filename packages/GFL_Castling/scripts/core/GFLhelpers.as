@@ -1109,3 +1109,12 @@ int getIntSymbol()
 	}
 	return -1;
 }
+
+
+// by Rst from hell_diver mod
+array<string> MassageBreakUp(string message, string command, int preNumber) 
+{
+	string s = message.trim().substr(command.length() + preNumber + 1);
+	array<string> a = s.split(" ");
+	return a;
+}

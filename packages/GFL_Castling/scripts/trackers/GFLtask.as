@@ -121,6 +121,7 @@ class AOEVestRecoverTask : Task {
 	protected int m_faction_id;
 	protected float m_radius;
 	protected Vector3 m_pos;
+	protected string m_effect_projectile = "";
 
 	AOEVestRecoverTask(Metagame@ metagame, float internal, Vector3 pos,int heal_time,int heal_layer,int fid,float radius)
 	{
@@ -133,10 +134,12 @@ class AOEVestRecoverTask : Task {
 		m_radius = radius;
 	}
 
-
+	void setEffectParticle(string key){
+		m_effect_projectile = key;
+	}
 
     void start() {
-		m_timeLeft=m_time;
+		m_timeLeft=0;
 		m_numLeft = m_num;
 	}
 
@@ -144,6 +147,10 @@ class AOEVestRecoverTask : Task {
 		m_timeLeft -= time;
 		if (m_timeLeft < 0)
 		{
+			if(m_effect_projectile!="")
+			{
+				spawnStaticProjectile(m_metagame,m_effect_projectile,m_pos,-1,m_faction_id);
+			}
 			array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,m_pos,m_faction_id,m_radius);
 			if (affectedCharacter !is null){
                 for(uint x=0;x<affectedCharacter.length();x++){
@@ -156,7 +163,6 @@ class AOEVestRecoverTask : Task {
 		}
 
 	}
-
     bool hasEnded() const {
 		if (m_numLeft <= 0) {
 			return true;

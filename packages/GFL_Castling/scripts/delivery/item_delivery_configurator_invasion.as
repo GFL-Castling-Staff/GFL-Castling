@@ -892,8 +892,8 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("black_card.carry_item", "carry_item", 0.1f),
 
 		ScoredResource("gkw_consume_papertank.weapon", "weapon", 0.5f),
-		ScoredResource("gkw_consume_papertank_2.weapon", "weapon", 0.5f),
-		ScoredResource("gkw_consume_papertank_3.weapon", "weapon", 0.5f),
+		ScoredResource("gkw_consume_papertank2.weapon", "weapon", 0.5f),
+		ScoredResource("gkw_consume_papertank3.weapon", "weapon", 0.5f),
 
 
 		ScoredResource("gkw_yurine.weapon","weapon",0.7f)
