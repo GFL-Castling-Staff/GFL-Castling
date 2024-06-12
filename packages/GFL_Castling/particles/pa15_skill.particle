@@ -292,6 +292,91 @@ particle_system pa15_result_blast_shine_particle		//爆炸碎片
 	}
 }
 
+particle_system obr_result_blast_shine_center_hollow		//爆炸辉光
+{
+	quota 1000
+	material hollow_blast_smoke_01
+	particle_width 0.1
+	particle_height 0.1
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type point
+	
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 30
+		position 0 0 0
+		velocity 0
+		time_to_live 0.2
+		duration 0.05
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0 0.6 0.93 0
+		time1 0.7
+		colour1 0 0.6 0.93 0
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector Scaler
+	{
+		rate 20
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start -60
+		rotation_speed_range_end 60
+		rotation_range_start 0
+		rotation_range_end 360
+	}
+}
+particle_system obr_result_blast_shine_particle		//爆炸碎片
+{
+	quota 1000
+	material bao_7_6
+	particle_width 1.0
+	particle_height 1.0
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type point
+	
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 30
+		position 0 0 0
+		velocity 0
+		time_to_live 0.3
+		duration 0.05
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0 0.6 0.93 0
+		time1 0.7
+		colour1 0 0.6 0.93 0
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector Scaler
+	{
+		rate 10
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start -60
+		rotation_speed_range_end 60
+		rotation_range_start 0
+		rotation_range_end 360
+	}
+}
+
 particle_system pa15_result_blast_stop		//停
 {
 	quota 250
@@ -437,6 +522,13 @@ material bao_7_7_bw : add_base
     pass{
         texture_unit{
             texture bao_7_7_bw.png 	
+}}}}
+material bao_7_6 : add_base
+{   
+    technique{
+    pass{
+        texture_unit{
+            texture bao_7_6.png 	
 }}}}
 material pa15_stop : add_base
 {   

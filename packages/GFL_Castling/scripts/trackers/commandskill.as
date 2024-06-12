@@ -273,6 +273,9 @@ class CommandSkill : Tracker {
                 case 81:{excuteFedorovSkill(cId,senderId,m_modifer);break;}
 
                 case 82:{excuteTac50Skill(cId,senderId,m_modifer);break;}
+                case 83:{excuteOBRMod3Skill(cId,senderId,m_modifer);break;}
+
+                
                 default:
                     break;
             }
@@ -4556,5 +4559,33 @@ class CommandSkill : Tracker {
                 addCooldown("tac50",1.5,characterId,modifer,"normal",false);
             }
         } 
-    }     
+    }
+
+    void excuteOBRMod3Skill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"OBR",true)) return;
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 aim_pos = stringToVector3(target);
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    aim_pos = aim_pos.add(Vector3(0,1.8,0));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "OBRMod_SKILL1_JP.wav",
+                        "OBRMod_SKILL2_JP.wav",
+                        "OBRMod_SKILL3_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                    c_pos=c_pos.add(Vector3(0,1.8,0));
+                    CreateDirectProjectile_T(m_metagame,c_pos,aim_pos,"skill_obr_knife.projectile",characterId,factionid,0.2);
+                    addCooldown("OBR",45,characterId,modifer);
+                }
+            }
+        }
+    }         
 }

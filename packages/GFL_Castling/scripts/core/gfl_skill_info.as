@@ -183,6 +183,10 @@ dictionary gameSkillIndex = {
         //菲德洛夫
         {"fedorov_medkit",57},
 
+        {"obr_knife_1",58},
+        {"obr_knife_2",59},
+
+
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
 };

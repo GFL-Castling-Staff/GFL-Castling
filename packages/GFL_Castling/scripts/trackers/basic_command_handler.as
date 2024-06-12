@@ -703,7 +703,7 @@ class BasicCommandHandler : Tracker {
 				" position='" + pos.toString() + "'" +
 				" character_id='" + playerInfo.getIntAttribute("character_id") + "'/>";				
 			m_metagame.getComms().send(c);				
-		} else  if(checkCommand(message, "testme")) {
+		} else  if(checkCommand(message, "particle")) {
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			const XmlElement@ characterInfo = getCharacterInfo(m_metagame, playerInfo.getIntAttribute("character_id"));
 			Vector3 pos = stringToVector3(playerInfo.getStringAttribute("aim_target"));	

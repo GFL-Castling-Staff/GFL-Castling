@@ -1620,6 +1620,122 @@ class GFLskill : Tracker {
 				}				
 			}
 
+			case 58: {// OBR一阶段
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					uint factionid = character.getIntAttribute("faction_id");
+					Vector3 pos_smartgrenade = stringToVector3(event.getStringAttribute("position"));
+					spawnStaticProjectile(m_metagame,"skill_obr_knife_damage.projectile",pos_smartgrenade,characterId,factionid);
+					//获取技能影响的敌人数量
+					m_fnum = m_metagame.getFactionCount();
+					array<const XmlElement@> affectedCharacter;
+					for(uint i=0;i<m_fnum;i++) {
+						if(i==factionid) continue;
+						array<const XmlElement@> affectedCharacter2;
+						affectedCharacter2 = getCharactersNearPosition(m_metagame,pos_smartgrenade,i,15.0f);
+						if (affectedCharacter2 is null) continue;
+						for(uint x=0;x<affectedCharacter2.length();x++){
+							affectedCharacter.insertLast(affectedCharacter2[x]);
+						}
+					}
+
+					if (affectedCharacter.length()>0) {
+						bool getTarget =false;
+						Vector3 luckyGuyPos = pos_smartgrenade;
+						while(!getTarget)
+						{
+							if(affectedCharacter.length() <= 0)
+							{
+								break;
+							}
+							uint luckyGuyindex = rand(0,affectedCharacter.length()-1);
+							uint luckyGuyid = affectedCharacter[luckyGuyindex].getIntAttribute("id");
+							const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+							if (luckyGuy is null) 
+							{
+								affectedCharacter.removeAt(luckyGuyindex);
+								return;
+							}
+							if (luckyGuy.getIntAttribute("dead") == 1)
+							{
+								affectedCharacter.removeAt(luckyGuyindex);
+								return;
+							}
+							luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+							getTarget = true;
+						}
+						Vector3 offset = Vector3(0,1.8,0);
+						CreateDirectProjectile_T(m_metagame,pos_smartgrenade,luckyGuyPos.add(offset),"skill_obr_knife_1.projectile",characterId,factionid,0.2);
+					}
+					else {
+						float strike_rand = 6;
+						float rand_x = rand(-strike_rand,strike_rand);
+						float rand_y = rand(-strike_rand,strike_rand);							
+						CreateDirectProjectile_T(m_metagame,pos_smartgrenade,pos_smartgrenade.add(Vector3(rand_x,-1.8,rand_y)),"skill_obr_knife_1.projectile",characterId,factionid,0.2);
+					}									
+				}			
+				break;			
+			}
+
+			case 59: {// OBR二阶段
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					uint factionid = character.getIntAttribute("faction_id");
+					Vector3 pos_smartgrenade = stringToVector3(event.getStringAttribute("position"));
+					spawnStaticProjectile(m_metagame,"skill_obr_knife_damage.projectile",pos_smartgrenade,characterId,factionid);
+					//获取技能影响的敌人数量
+					m_fnum = m_metagame.getFactionCount();
+					array<const XmlElement@> affectedCharacter;
+					for(uint i=0;i<m_fnum;i++) {
+						if(i==factionid) continue;
+						array<const XmlElement@> affectedCharacter2;
+						affectedCharacter2 = getCharactersNearPosition(m_metagame,pos_smartgrenade,i,20.0f);
+						if (affectedCharacter2 is null) continue;
+						for(uint x=0;x<affectedCharacter2.length();x++){
+							affectedCharacter.insertLast(affectedCharacter2[x]);
+						}
+					}
+
+					if (affectedCharacter.length()>0) {
+						bool getTarget =false;
+						Vector3 luckyGuyPos = pos_smartgrenade;
+						while(!getTarget)
+						{
+							if(affectedCharacter.length() <= 0)
+							{
+								break;
+							}
+							uint luckyGuyindex = rand(0,affectedCharacter.length()-1);
+							uint luckyGuyid = affectedCharacter[luckyGuyindex].getIntAttribute("id");
+							const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+							if (luckyGuy is null) 
+							{
+								affectedCharacter.removeAt(luckyGuyindex);
+								return;
+							}
+							if (luckyGuy.getIntAttribute("dead") == 1)
+							{
+								affectedCharacter.removeAt(luckyGuyindex);
+								return;
+							}
+							luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+							getTarget = true;
+						}
+						Vector3 offset = Vector3(0,8.5,0);
+						CreateDirectProjectile_T(m_metagame,pos_smartgrenade,luckyGuyPos.add(offset),"skill_obr_knife_2.projectile",characterId,factionid,0.33);
+					}
+					else {
+						float strike_rand = 4;
+						float rand_x = rand(-strike_rand,strike_rand);
+						float rand_y = rand(-strike_rand,strike_rand);						
+						CreateDirectProjectile_T(m_metagame,pos_smartgrenade.add(Vector3(rand_x,8.5,rand_y)),pos_smartgrenade.add(Vector3(0,-10,0)),"skill_obr_knife_2.projectile",characterId,factionid,0.33);
+					}									
+				}			
+				break;			
+			}
+
             default:
                 break;
 		}

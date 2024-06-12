@@ -9,19 +9,15 @@
     <inventory encumbrance="1.0" price="5.0" />
     <capacity value="1" source="rank" source_value="0.0" />
 
-    <!-- <effect class="result" key="terrain" ref="carcano_charge01" lighting="0" />
-    <effect class="result" key="terrain" ref="carcano_charge02" lighting="0" />
-    <effect class="result" key="terrain" ref="carcano_charge03" lighting="0" />
-    <effect class="result" key="terrain" ref="carcano_charge04" />    
-    <effect class="result" key="terrain" ref="carcano_charge05" />    
-    <effect class="result" key="terrain" ref="carcano_charge06" />
-
+	<effect class="result" key="terrain" ref="ring_spread_smoke_apocalypse_tank" />
+	<effect class="result" key="terrain" ref="vertical_smoke_apocalypse_tank" />
+	<effect class="result" key="terrain" ref="ring_spread_fog_apocalypse_tank" />
+	<effect class="result" key="terrain" ref="flat_spark_thunder_apocalypse_tank_01" />
+	<effect class="result" key="terrain" ref="flat_spark_thunder_apocalypse_tank_02" />
+	<effect class="result" key="terrain" ref="flat_spark_thunder_apocalypse_tank_03" />
+    <effect class="result" key="vehicle" copy="terrain" />
     <effect class="result" key="static_object" copy="terrain" />
-    <effect class="result" key="vehicle" copy="terrain" />     
-    <effect class="result" key="character" copy="terrain" />
-    <effect class="result" key="other" copy="terrain" /> -->
-    <effect class="activated" ref="jupiter_warning_border" lighting="0" />
-    <effect class="activated" ref="jupiter_warning_close" lighting="0" />
-    <effect class="activated" ref="jupiter_warning_aim" lighting="0" />
+    <effect class="result" key="character" copy="terrain" /> 
+	<effect class="result" key="other" copy="terrain" /> 
 
 </projectile>
