@@ -1,0 +1,381 @@
+作者：RST from hell_diver mod
+2023.3.37修改
+授权异向易位 Castling mod 使用
+已作修改适配
+
+particle_system ring_spread_smoke_apocalypse_tank		//地面环形烟雾
+{
+	quota 100
+	material explosion_smoke_03
+	particle_width 1
+	particle_height 1
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type point
+	emitter Ring
+	{
+		angle 90
+		colour 0 0.3 1 1
+		direction 0 1 0
+		emission_rate 300
+		position 0 0 0
+		velocity 0.001
+		velocity_min 0.001
+		velocity_max 0.001
+		time_to_live 1
+		time_to_live_min 0.2
+		time_to_live_max 0.3
+		duration 0.15
+		width 2.5
+		height 2.5
+		depth 0.5
+		inner_width 0.1
+		inner_height 0.1
+	}
+
+	affector Scaler
+	{
+		rate 10
+	}
+	affector ColourFader2
+	{
+		red1	3
+		green1  3
+		blue1	3
+		alpha1	3
+		red2	 -5
+		green2  -5
+		blue2	-5
+		alpha2	-5
+		state_change 0.1
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+}
+particle_system ring_spread_fog_apocalypse_tank		//环境烟雾
+{
+	quota 100
+	material explosion_fog_01
+	particle_width 1
+	particle_height 1
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type point
+	emitter Ring
+	{
+		angle 90
+		colour 0 0.3 1 1
+		direction 0 1 0
+		emission_rate 100
+		position 0 0 0
+		velocity 0.001
+		velocity_min 0.001
+		velocity_max 0.001
+		time_to_live 1
+		time_to_live_min 0.4
+		time_to_live_max 0.5
+		duration 0.15
+		width 2.5
+		height 2.5
+		depth 1
+		inner_width 1
+		inner_height 1
+	}
+
+	affector Scaler
+	{
+		rate 10
+	}
+	affector ColourFader2
+	{
+		red1	0
+		green1  0.15
+		blue1	0.5
+		alpha1	0.5
+		red2	 -5
+		green2  -5
+		blue2	-5
+		alpha2	-5
+		state_change 0.1
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+}
+particle_system vertical_smoke_apocalypse_tank		//柱状烟雾
+{
+	quota 100
+	material explosion_smoke_03
+	particle_width 2
+	particle_height 2
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_type point
+	emitter Point
+	{
+		angle 0
+		colour 0 0.3 1 1
+		direction 0 1 0
+		emission_rate 200
+		position 0 0 0
+		velocity 25
+		velocity_min 5
+		velocity_max 30
+		time_to_live 1
+		time_to_live_min 0.1
+		time_to_live_max 0.3
+		duration 0.2
+	}
+
+	affector Scaler
+	{
+		rate -9
+	}
+	affector ColourFader2
+	{
+		red1	0
+		green1  0.3
+		blue1	1
+		alpha1	10
+		red2	 -1
+		green2  -1
+		blue2	-1
+		alpha2	0
+		state_change 0.1
+	}
+}
+particle_system flat_spark_thunder_apocalypse_tank_01		//地面环形闪电
+{
+	quota 100
+	material spark_thunder_01
+	particle_width 2
+	particle_height 2
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_origin bottom_center
+	billboard_type perpendicular_common
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 30
+		position 0 0 0
+		velocity 0.001
+		velocity_min 0.001
+		velocity_max 0.001
+		time_to_live 0.1
+		duration 0.3
+	}
+	affector ColourFader2
+	{
+		red1	0
+		green1  0
+		blue1	0
+		alpha1	0
+		red2	 -5
+		green2  -5
+		blue2	-5
+		alpha2	-5
+		state_change 0.5
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+}
+particle_system flat_spark_thunder_apocalypse_tank_02		//地面环形闪电
+{
+	quota 100
+	material spark_thunder_02
+	particle_width 1.5
+	particle_height 1.5
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_origin bottom_center
+	billboard_type perpendicular_common
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 30
+		position 0 0 0
+		velocity 0.001
+		velocity_min 0.001
+		velocity_max 0.001
+		time_to_live 0.12
+		duration 0.3
+	}
+	affector ColourFader2
+	{
+		red1	0
+		green1  0
+		blue1	0
+		alpha1	0
+		red2	 -5
+		green2  -5
+		blue2	-5
+		alpha2	-5
+		state_change 0.5
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+}
+particle_system flat_spark_thunder_apocalypse_tank_03		//地面环形闪电
+{
+	quota 100
+	material spark_thunder_03
+	particle_width 2.25
+	particle_height 2.25
+	renderer billboard
+	billboard_rotation_type vertex
+	billboard_origin bottom_center
+	billboard_type perpendicular_common
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	emitter Point
+	{
+		angle 0
+		colour 1 1 1 1
+		direction 0 1 0
+		emission_rate 30
+		position 0 0 0
+		velocity 0.001
+		velocity_min 0.001
+		velocity_max 0.001
+		time_to_live 0.08
+		duration 0.3
+	}
+	affector ColourFader2
+	{
+		red1	0
+		green1  0
+		blue1	0
+		alpha1	0
+		red2	 -5
+		green2  -5
+		blue2	-5
+		alpha2	-5
+		state_change 0.5
+	}
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+}
+
+material explosion_smoke_03 	//高透明度爆炸烟雾
+{
+	receive_shadows off
+    technique
+    {
+        pass
+        {
+            lighting off
+            scene_blend add
+            depth_write off
+			fog_override true
+            texture_unit
+            {
+                texture explosion_smoke_03.png
+            }
+        }
+    }
+}
+material explosion_fog_01 	//高透明度爆炸环境烟雾
+{
+	receive_shadows off
+    technique
+    {
+        pass
+        {
+            lighting off
+            scene_blend add
+            depth_write off
+			fog_override true
+            texture_unit
+            {
+                texture explosion_fog_01.png
+            }
+        }
+    }
+}
+material spark_thunder_01 	//折线型闪电
+{
+	receive_shadows off
+    technique
+    {
+        pass
+        {
+            lighting off
+            scene_blend add
+            depth_write off
+			fog_override true
+            texture_unit
+            {
+                texture spark_thunder_01.png
+            }
+        }
+    }
+}
+material spark_thunder_02 	//V形分裂闪电
+{
+	receive_shadows off
+    technique
+    {
+        pass
+        {
+            lighting off
+            scene_blend add
+            depth_write off
+			fog_override true
+            texture_unit
+            {
+                texture spark_thunder_02.png
+            }
+        }
+    }
+}
+material spark_thunder_03 	//II形竖直闪电
+{
+	receive_shadows off
+    technique
+    {
+        pass
+        {
+            lighting off
+            scene_blend add
+            depth_write off
+			fog_override true
+            texture_unit
+            {
+                texture spark_thunder_03.png
+            }
+        }
+    }
+}

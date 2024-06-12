@@ -76,6 +76,8 @@
         spread_range="0.21"
 		sustained_fire_diminish_rate="1.8" 
 		sustained_fire_grow_step="0.18"
+        sight_range_modifier_at_night="2.5"
+		accuracy_factor_at_night="1.15"          
         sight_range_modifier="2.1" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />

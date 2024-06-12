@@ -113,7 +113,7 @@
         <animation state_key="stabbing" animation_key="pistol whip 2" />
         <animation state_key="stabbing" animation_key="pistol whip 3" />
         <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
-        <sound key="fire" fileref="m4mod_fire_FromBF5.wav" pitch_variety="0.05" volume="2" />
+        <sound key="fire" fileref="m4a1mod3_fire_jupiter_fromGFL.wav" pitch_variety="0.01" volume="2" />
         <sound key="magazine_out" fileref="m4mod_mgz_out_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
         <sound key="magazine_in" fileref="m4mod_mgz_in_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
         <sound key="cycle" fileref="m4mod_cycle_FromBORDERLAND3.wav" volume="0.8" pitch_variety="0" />
@@ -153,7 +153,7 @@
         tweak_factor="2.5"
         /> -->
 
-        <ballistics near_far_distance="1000.0" speed_estimation_near="120.0" speed_estimation_far="120.0" max_speed="125.0" randomness="0.0" />
+        <ballistics near_far_distance="1000.0" curve_height="2.2" speed_estimation_near="120.0" speed_estimation_far="120.0" max_speed="125.0" randomness="0.0" tweak_factor="1.89" />
 
         <weak_hand_hold offset="0.2" />
         <projectile file="m4a1mod3_skill.projectile" can_be_detected_by_footmen="0"/>

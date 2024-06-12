@@ -18,6 +18,8 @@
         spread_range="0.35"
 		sustained_fire_diminish_rate="1.4" 
 		sustained_fire_grow_step="0.25"
+        sight_range_modifier_at_night="2.0"
+		accuracy_factor_at_night="1.15"          
         sight_range_modifier="1.0" />
         <inventory 
         encumbrance="12.5" 

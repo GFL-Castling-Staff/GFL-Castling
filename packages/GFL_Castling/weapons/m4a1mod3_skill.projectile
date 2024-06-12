@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="" slot="1" pulldown_in_air="1.5" key="m4a1mod3_skill.projectile">
+<projectile class="grenade" name="" slot="1" pulldown_in_air="1.0" key="m4a1mod3_skill.projectile">
     <tag name="rocket"/>
-    <result class="spawn" instance_class="projectile" instance_key="m4a1mod3_skill_s.projectile" min_amount="1" max_amount="1" offset="0 0.0 0" position_spread="0 0" direction_spread="0 -1" />
+    <result class="spawn" instance_class="projectile" instance_key="blast_shard_m4a1_skillcannon.projectile" min_amount="6" max_amount="6" offset="0 0.5 0" position_spread="0 0" direction_spread="0 -1" />
     <trigger class="time" time_to_live="0.5"/>
     <rotation class="motion" />
     <model  />
 
     <commonness value="0.0" />
     
-    <effect class="result" key="other" ref="SmokeBurst" post_processing="1" />
-    <effect class="result" key="other" ref="Shine" lighting="0" />
-    <effect class="result" key="other" ref="HitTankSparks" lighting="0" />     
+    <sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2" />
+    <sound class="result" key="other" fileref="explosion_FromSQUAD_2.wav" volume="2" />
+    <sound class="result" key="other" fileref="explosion_FromSQUAD_3.wav" volume="2" />
+
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_smoke" lighting="0" post_processing="1"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_smoke_expanding" lighting="0" post_processing="1"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_ring" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_ring_2" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_spray_1" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_spray_2" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_fire" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_fire_wave" lighting="0"/> 
+    
+    <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="6.5" atlas_index="4" layer="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="8.0" atlas_index="0" layer="2" additive="0" />
+
+    <effect class="result" key="other" copy="terrain" />
+    <effect class="result" key="static_object" copy="terrain" />
+    <effect class="result" key="vehicle" copy="terrain" />
+    <effect class="result" key="character" copy="terrain" /> 
 
     <effect class="activated" ref="Propulsion" />
 

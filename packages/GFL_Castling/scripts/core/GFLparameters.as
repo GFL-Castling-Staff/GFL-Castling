@@ -49,6 +49,31 @@
         "kcco_ar_human_elite"
     };
 
+    array<string> scarl_list = {
+        "gkw_scarl.weapon",
+        "gkw_scarl_only.weapon"
+    };
+
+    array<string> scarh_list = {
+        "gkw_scarh.weapon",
+        "gkw_scarh_only.weapon"        
+    };
+
+    array<string> Daybreak_Squad = {
+        "gkw_scarl.weapon",
+        "gkw_scarl_only.weapon",
+        "gkw_scarh.weapon",
+        "gkw_scarh_only.weapon",   
+        "gkw_contender.weapon",
+        "gkw_contender_1502.weapon",
+        "gkw_contender_3201.weapon",
+        "gkw_scr.weapon",               
+        "gkw_scr_10102.weapon",               
+        "gkw_m249saw.weapon",               
+        "gkw_m249saw_3604.weapon",               
+        "gkw_m60.weapon"          
+    };
+
 // parameters for "GFLhelpers.as":
 
     array<string> unlockable_vehicles = {

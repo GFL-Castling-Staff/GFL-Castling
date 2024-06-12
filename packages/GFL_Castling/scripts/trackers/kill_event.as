@@ -680,6 +680,7 @@ class kill_event : Tracker {
             }
         }
 	}
+
     protected void handlePlayerDieEvent(const XmlElement@ event){
         const XmlElement@ player = event.getFirstElementByTagName("target");
         if(player is null) return;
@@ -689,7 +690,16 @@ class kill_event : Tracker {
         if(cId==-1) return;
         handleDeadEventToPlayerInfo(name);
         notify(m_metagame, "kill streak,death report", dictionary(), "misc", pId, false, "", 1.0);
+
+        string weapon_key = getPlayerWeaponFromList(name,0);
+
+        if (Daybreak_Squad.find(weapon_key) >=0 )
+        {
+
+        }
+
     }
+
     void update(float time){
         if(HealOnKill_track.length()>0){
             for (uint a=0;a<HealOnKill_track.length();a++){
