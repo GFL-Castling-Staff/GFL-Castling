@@ -7,6 +7,7 @@
     <specification
 	retrigger_time="-1"
 	accuracy_factor="1.0"
+    accuracy_factor_at_night="1.5"
 	sustained_fire_grow_step="0.1"
 	sustained_fire_diminish_rate="1.5"
 	magazine_size="8"
@@ -17,6 +18,7 @@
     slot="0"
 	reload_one_at_a_time="0"
 	sight_range_modifier="1.5"
+    sight_range_modifier_at_night="2.5"
 	projectile_speed="140"
 	projectiles_per_shot="1"
 	burst_shots="1"/>
@@ -68,7 +70,8 @@
     <stance state_key="prone" accuracy="1" />
 	<stance state_key="over_wall" accuracy="1" />
     <modifier class="detectability" value="-0.25" />
-    <modifier class="speed" value="0.8" />
+    <modifier class="night_detectability" value="-0.05" />
+    <modifier class="speed" value="0.7" />
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
     <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
     <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
