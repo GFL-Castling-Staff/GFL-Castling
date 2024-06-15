@@ -4155,7 +4155,8 @@ class CommandSkill : Tracker {
         }
     }        
     void excuteHunterskill(int characterId,int playerId,SkillModifer@ modifer){
-        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"FF_Hunter")) return;
+        //if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"FF_Hunter")) return;
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"FF_Hunter",true,"charge_recover_all",2)) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             if (!canCastSkill(character)) return;
@@ -4166,20 +4167,40 @@ class CommandSkill : Tracker {
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     Vector3 t_pos = stringToVector3(target);
                     t_pos = t_pos.add(Vector3(0,0,0));
+                    c_pos=c_pos.add(Vector3(0,2,0));
+
                     int factionid = character.getIntAttribute("faction_id");
 					array<string> Voice={
 						"Hunter_buhuo_SKILL01_JP.wav",
 						"Hunter_buhuo_SKILL03_JP.wav"
 					};
+
 					playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
-                    c_pos=c_pos.add(Vector3(0,2,0));
-                    CreateProjectile_H(m_metagame,c_pos,t_pos,"ff_emp_mine.projectile",characterId,factionid,90,2);
-                    Skill_ff_hunter@ shot = Skill_ff_hunter(m_metagame,1,characterId,factionid,t_pos);
-                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                    tasker.add(shot);
-                    addCooldown("FF_Hunter",20,characterId,modifer);
+
+                    array<const XmlElement@> affectedCharacter = getEnemyCharactersNearPosition(m_metagame,t_pos,factionid,8.0f,10);
+                    if(affectedCharacter.length()>=1){
+                        int luckyoneid = affectedCharacter[getRandomIndex(affectedCharacter.length())].getIntAttribute("id");
+                        const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+                        if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
+                            string luckyonepos = luckyoneC.getStringAttribute("position");
+                            Vector3 target = stringToVector3(luckyonepos);
+                            CreateDirectProjectile(m_metagame,target.add(Vector3(0,2,0)),target,"ff_emp_bullet_stun.projectile",characterId,factionid,90);
+                            CreateDirectProjectile(m_metagame,target,target.add(Vector3(0,-2,0)),"ff_emp_bullet_kill.projectile",characterId,factionid,90);
+                        }	
+                    }
+                    else{
+                        CreateDirectProjectile(m_metagame,t_pos.add(Vector3(0,2,0)),t_pos,"ff_emp_bullet_stun.projectile",characterId,factionid,90);
+                        CreateDirectProjectile(m_metagame,t_pos,t_pos.add(Vector3(0,-2,0)),"ff_emp_bullet_kill.projectile",characterId,factionid,90);
+                    }
+                    if(!tryaddChargeCount("FF_Hunter",characterId,modifer,true)){
+                        // _log("no new charge");
+                        addCooldown("FF_Hunter",15,characterId,modifer,"charge_recover_all");
+                    }
+                    //Skill_ff_hunter@ shot = Skill_ff_hunter(m_metagame,1,characterId,factionid,t_pos);
+                    //TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    //tasker.add(shot);
                 }
             }
         }
@@ -4385,18 +4406,17 @@ class CommandSkill : Tracker {
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                     c_pos=c_pos.add(Vector3(0,1,0));
 
-                    array<const XmlElement@> affectedCharacter;
 					array<const XmlElement@> characters = getEnemyCharactersNearPosition(m_metagame,c_pos,factionid,25.0f,20);
-                    for (uint i = 0; i < characters.length(); i++) {   
-                        int cidd = characters[i].getIntAttribute("id");
-                        const XmlElement@ possibleElitecharacter = getCharacterInfo(m_metagame,cidd);
-                        string soldier_name = possibleElitecharacter.getStringAttribute("soldier_group_name");
-                        if(eliteEnemyName.find(soldier_name)> -1){
-                            affectedCharacter.insertLast(characters[i]);
-                            _log("found elite");
-                            break;                                  
-                        }
-                    }
+                    // for (uint i = 0; i < characters.length(); i++) {   
+                    //     int cidd = characters[i].getIntAttribute("id");
+                    //     const XmlElement@ possibleElitecharacter = getCharacterInfo(m_metagame,cidd);
+                    //     string soldier_name = possibleElitecharacter.getStringAttribute("soldier_group_name");
+                    //     if(eliteEnemyName.find(soldier_name)> -1){
+                    //         affectedCharacter.insertLast(characters[i]);
+                    //         _log("found elite");
+                    //         break;                                  
+                    //     }
+                    // }
 
                     int count = g_playerInfo_Buck.getKillSkillCountbyName(player_name,"Type82");
                     int jud = (characters.length()>0)?(1+characters.length()/10):0;
@@ -4427,8 +4447,9 @@ class CommandSkill : Tracker {
                         }
                     }
                     if (count >= 4){
-                        if(affectedCharacter.length()>0){
-                            int luckyoneid = affectedCharacter[0].getIntAttribute("id");
+                        array<const XmlElement@> affectedCharacter = characters;
+                        if(affectedCharacter.length()>=1){
+                            int luckyoneid = affectedCharacter[getRandomIndex(affectedCharacter.length())].getIntAttribute("id");
                             const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
                             if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
                                 string luckyonepos = luckyoneC.getStringAttribute("position");
