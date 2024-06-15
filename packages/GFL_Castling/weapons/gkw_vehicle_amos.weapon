@@ -160,11 +160,8 @@
 
 <weapon key="amos_emp.weapon">
     <specification 
-	retrigger_time="4.3" 
-    accuracy_factor="2.0" 
-    sustained_fire_grow_step="0.0" 
-    sustained_fire_diminish_rate="1.0" 
-    sight_range_modifier="2.0"
+    retrigger_time="0.08" accuracy_factor="1.0" sustained_fire_grow_step="0.025" sustained_fire_diminish_rate="0.030" cooldown_start="0.089" cooldown_end="0.0"
+    sight_range_modifier="1.8"
     ai_sight_range_modifier="1.0"
     magazine_size="-1" 
     can_shoot_standing="0" 
@@ -174,13 +171,14 @@
     class="0" 
     projectile_speed="130.0" 
     slot="2" 
-	spread_range="0.0"
-	use_basic_muzzle_smoke_effect="0"/>
+	spread_range="4"
+	use_basic_muzzle_smoke_effect="0"
+    projectiles_per_shot="6" />
     <model  />
     <hud_icon filename="testing.png" />
     <commonness value="0.0" />
     <sound key="fire" fileref="amos_fire.wav" pitch_variety="0.02" volume="1.5" />
-    <projectile file="amos_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7"> 
+    <!-- <projectile file="amos_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7"> 
 		<result class="spawn" instance_class="projectile" instance_key="amos_ap.projectile" min_amount="3" max_amount="3" offset="0 0.5 0" position_spread="0.5 0" direction_spread="0 0" />	
 		<trigger class="impact" time_to_live="0.2"  />
 		<rotation class="motion" />
@@ -188,7 +186,72 @@
         <effect class="muzzle" ref="coeus" />
         <effect class="muzzle" ref="coeusphere" />
         <effect class="muzzle" ref="coeusmuzzle" lighting="1" />
-    </projectile>
+    </projectile> -->
+	<commonness value="0.0001" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="100.0" buy_price="50.0" sell_price="25.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+
+	<sound key="fire" fileref="Manticore_fire_FromSQUAD.wav" volume="1.8"/>
+
+	<model filename=""/>
+
+	<projectile class="grenade" name="" file="amos_ap.projectile" slot="2" radius="0.1" pulldown_in_air="4" time_to_live="1.0">
+	<result class="blast" radius="4.5" damage="2.00" push="0.01" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<trigger class="impact"/>
+	<rotation class="motion"/>
+	<model mesh_filename="40mm.mesh" texture_filename="40mm.png"/>
+	<hud_icon filename="testing.png"/>
+	<sound class="result" key="other" fileref="explosion1.wav"/>
+	<sound class="result" key="other" fileref="explosion2.wav"/>
+	<sound class="result" key="terrain" copy="other"/>
+	<sound class="result" key="static_object" copy="other"/>
+	<sound class="result" key="vehicle" copy="other"/>
+	<sound class="result" key="character" copy="other"/>
+	<trail probability="1.0" key="red_thick"/>
+	<effect class="result" type="splat_map" surface_tag="" size="2.0" atlas_index="0" layer="1"/>
+	<effect class="result" type="splat_map" surface_tag="" size="2.5" atlas_index="4" layer="0"/>
+	<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="2" additive="0"/>
+	<effect class="result" key="terrain" ref="result_cannon_blast_AmbientLight_small" lighting="0"/>
+	<effect class="result" key="terrain" ref="result_cannon_blast_smoke_small" lighting="0"/>
+	<effect class="result" key="terrain" ref="hitGround_20mm" use_surface_color="1"/>
+	<effect class="result" key="other" copy="terrain"/>
+	<effect class="result" key="static_object" copy="terrain"/>
+	<effect class="result" key="character" copy="terrain"/>
+	<effect class="result" key="shield" copy="terrain"/>
+	<effect class="result" key="vehicle" copy="terrain"/>
+	<effect class="result" key="shield" ref="Laser_ImpactShine_Red"/>
+	<effect class="result" key="vehicle" ref="Laser_ImpactShine_Red"/>
+	<effect class="result" key="other" copy="vehicle"/>
+	<effect class="result" key="shield" ref="Laser_ImpactBeam_Red"/>
+	<effect class="result" key="vehicle" ref="Laser_ImpactBeam_Red"/>
+	<effect class="result" key="terrain" ref="Laser_Burnout"/>
+	<effect class="result" key="static_object" ref="Laser_Burnout_on_staticobject"/>
+	<effect class="result" key="terrain" ref="Laser_ImpackSmoke"/>
+	<effect class="result" key="static_object" ref="Laser_ImpackSmoke"/>
+	<effect class="result" key="terrain" ref="Laser_ImpactShine_Red"/>
+	<effect class="result" key="static_object" ref="Laser_ImpactShine_Red"/>
+	<effect class="result" key="other" ref="LaserImpact_Red"/>
+	<effect class="result" key="terrain" ref="LaserImpact_Red"/>
+	<effect class="result" key="character" ref="LaserImpact_Red"/>
+	<effect class="result" key="static_object" ref="LaserImpact_Red"/>
+    <effect class="muzzle" ref="coeus" />
+        <effect class="muzzle" ref="coeusphere" />
+        <effect class="muzzle" ref="coeusmuzzle" lighting="1" />
+	</projectile>
+
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.1"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
+	<target_factors tag="pistol" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
+	<target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
+	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="autorifle" distance="1.25" direction="0.0" squad_command="1.0" base_score="10.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
+	<target_factors tag="machine gun" distance="2.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
+	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="15.0"/>
+	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0"/>
+	<inventory encumbrance="0.0" price="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<stance state_key="over_wall" accuracy="1"/>
 </weapon>
 
 <weapon key="amos_mg.weapon">
