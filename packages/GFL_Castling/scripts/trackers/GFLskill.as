@@ -1618,6 +1618,7 @@ class GFLskill : Tracker {
 					new_quest.setEffectParticle("particle_effect_radius_heal.projectile");
 					tasker.add(new_quest);
 				}				
+				break;
 			}
 
 			case 58: {// OBR一阶段
