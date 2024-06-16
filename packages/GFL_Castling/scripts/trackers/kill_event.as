@@ -438,80 +438,140 @@ class kill_event : Tracker {
 
             if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(1))
             {
-                m_tactic_point+=1;
+                int m_tactic_point_offset = 0;
+                if(gk_weapon_sf_nerfed.find(c_weaponType) > -1)
+                {
+                    m_tactic_point_offset+=0;
+                }
+                else
+                {
+                    m_tactic_point_offset+=1;
+                }
                 if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1)
                 {
-                    m_tactic_point+=1;
-                }
-                battleInfo.setTacticPoint(m_tactic_point);
+                    m_tactic_point_offset+=1;
+                }                  
+                battleInfo.setTacticPoint(m_tactic_point+m_tactic_point_offset);
                 m_counter-=10;
                 battleInfo.setKillStreakPointCounter(m_counter);
                 battleInfo.addKillStreakIndex(1);
-                notify(m_metagame, "kill streak,10kill", dictionary(), "misc", playerId, false, "", 1.0);
+                dictionary a;
+                a["%num"] = ""+ m_tactic_point_offset;                
+                notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
             }
             else if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(2))
             {
-                m_tactic_point+=2;
+                int m_tactic_point_offset = 0;
+                if(gk_weapon_sf_nerfed.find(c_weaponType) > -1)
+                {
+                    m_tactic_point_offset+=1;
+                }
+                else
+                {
+                    m_tactic_point_offset+=2;
+                }
                 if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1)
                 {
-                    m_tactic_point+=1;
-                }                
-                battleInfo.setTacticPoint(m_tactic_point);
+                    m_tactic_point_offset+=1;
+                }                  
+                battleInfo.setTacticPoint(m_tactic_point+m_tactic_point_offset);
                 m_counter-=10;
                 battleInfo.setKillStreakPointCounter(m_counter);   
                 battleInfo.addKillStreakIndex(2);  
-                notify(m_metagame, "kill streak,20kill", dictionary(), "misc", playerId, false, "", 1.0);
+                dictionary a;
+                a["%num"] = ""+ m_tactic_point_offset;                
+                notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
             }
             else if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(3))
             {
-                m_tactic_point+=3;
+                int m_tactic_point_offset = 0;
+                if(gk_weapon_sf_nerfed.find(c_weaponType) > -1)
+                {
+                    m_tactic_point_offset+=2;
+                }
+                else
+                {
+                    m_tactic_point_offset+=3;
+                }
                 if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1)
                 {
-                    m_tactic_point+=1;
-                }                
-                battleInfo.setTacticPoint(m_tactic_point);
+                    m_tactic_point_offset+=1;
+                }                  
+                battleInfo.setTacticPoint(m_tactic_point+m_tactic_point_offset);
                 m_counter-=10;
                 battleInfo.setKillStreakPointCounter(m_counter);
                 battleInfo.addKillStreakIndex(3);       
-                notify(m_metagame, "kill streak,30kill", dictionary(), "misc", playerId, false, "", 1.0);
+                dictionary a;
+                a["%num"] = ""+ m_tactic_point_offset;                
+                notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
             }
             else if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(4))
             {
-                m_tactic_point+=4;
+                int m_tactic_point_offset = 0;
+                if(gk_weapon_sf_nerfed.find(c_weaponType) > -1)
+                {
+                    m_tactic_point_offset+=3;
+                }
+                else
+                {
+                    m_tactic_point_offset+=4;
+                }
                 if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1)
                 {
-                    m_tactic_point+=1;
-                }                
-                battleInfo.setTacticPoint(m_tactic_point);
+                    m_tactic_point_offset+=1;
+                }                  
+                battleInfo.setTacticPoint(m_tactic_point+m_tactic_point_offset);
                 m_counter-=10;
                 battleInfo.setKillStreakPointCounter(m_counter);  
                 battleInfo.addKillStreakIndex(4);
-                notify(m_metagame, "kill streak,40kill", dictionary(), "misc", playerId, false, "", 1.0);
+                dictionary a;
+                a["%num"] = ""+ m_tactic_point_offset;                
+                notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
             }
             else if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(5))
             {
-                m_tactic_point+=5;
+                int m_tactic_point_offset = 0;
+                if(gk_weapon_sf_nerfed.find(c_weaponType) > -1)
+                {
+                    m_tactic_point_offset+=4;
+                }
+                else
+                {
+                    m_tactic_point_offset+=5;
+                }
                 if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1)
                 {
-                    m_tactic_point+=1;
-                }                
-                battleInfo.setTacticPoint(m_tactic_point);
+                    m_tactic_point_offset+=1;
+                }                  
+                battleInfo.setTacticPoint(m_tactic_point+m_tactic_point_offset);
                 m_counter-=10;
                 battleInfo.setKillStreakPointCounter(m_counter); 
                 battleInfo.addKillStreakIndex(5);
-                notify(m_metagame, "kill streak,50kill", dictionary(), "misc", playerId, false, "", 1.0);
+                dictionary a;
+                a["%num"] = ""+ m_tactic_point_offset;                
+                notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
             }
             else if(m_counter>=10 && m_killstreak_point>50)
             {
-                m_tactic_point+=5;
+                int m_tactic_point_offset = 0;
+                if(gk_weapon_sf_nerfed.find(c_weaponType) > -1)
+                {
+                    m_tactic_point_offset+=4;
+                }
+                else
+                {
+                    m_tactic_point_offset+=5;
+                }
                 if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1)
                 {
-                    m_tactic_point+=1;
-                }                
-                battleInfo.setTacticPoint(m_tactic_point);
+                    m_tactic_point_offset+=1;
+                }               
+                battleInfo.setTacticPoint(m_tactic_point+m_tactic_point_offset);
                 m_counter-=10;
                 battleInfo.setKillStreakPointCounter(m_counter);        
-                notify(m_metagame, "kill streak,more", dictionary(), "misc", playerId, false, "", 1.0);
+                dictionary a;
+                a["%num"] = ""+ m_tactic_point_offset;                
+                notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
             }
 
 

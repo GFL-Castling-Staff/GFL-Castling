@@ -157,9 +157,9 @@ class SpawnInBaseCallHandler : Tracker {
 				const XmlElement@ baseInfo = getClosestBaseAndPosition(position, factionId, distance, targetPosition,m_forcerefresh);
 				if (baseInfo !is null) {
 					dictionary a = {{"%base_name", baseInfo.getStringAttribute("name")}};
-					sendFactionMessageKey(m_metagame, factionId, "spawn_in_base_call, accepted, key=" + m_listenCallKey,a);
+					sendFactionMessageKey(m_metagame, factionId, "spawn_in_base_call, accepted, " + m_listenCallKey,a);
 					if(m_boardcast && factionId!=0){
-						sendFactionMessageKey(m_metagame, 0, "spawn_in_base_call, alerted, key=" + m_listenCallKey,a);
+						sendFactionMessageKey(m_metagame, 0, "spawn_in_base_call, alerted, " + m_listenCallKey,a);
 					}
 					XmlElement command("command");
 					command.setStringAttribute("class", "create_call");
@@ -171,7 +171,7 @@ class SpawnInBaseCallHandler : Tracker {
 					// _log("生成call 坐标"+ targetPosition.toString());
 				} else {
 					// denied, no acceptable base found
-					sendFactionMessageKey(m_metagame, factionId, "spawn_in_base_call, denied, key=" + m_listenCallKey);
+					sendFactionMessageKey(m_metagame, factionId, "spawn_in_base_call, denied, " + m_listenCallKey);
 				}
 			}
 		}

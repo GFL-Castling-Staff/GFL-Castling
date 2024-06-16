@@ -167,6 +167,9 @@ Air-to-Surface Missile: fires three 120mm rockets, each dealing 20 blast damage 
 	<text key="call event,cool down" text="[Tactic Fairy] The call was failed~ This support is not ready. We have &#37;time seconds to deploy." />
 	<text key="call event,anti air" text="[Tactic Fairy] The call has failed. Our fighters have no way to break through the enemy's anti-aircraft fire network." />
 
+
+	<text key="kill streak,get reward" text="[kill streak] Reach 10 points, +&#37;num Tactic Point" />
+
 	<text key="kill streak,10kill,gain 1 TP reward" text="[kill streak] Reach 10 points and get an extra 1 TP bonus!" />
 	<text key="kill streak,20kill,gain 2 TP reward" text="[kill streak] Reach 20 points and get an extra 2 TP bonus!" />
 	<text key="kill streak,30kill,gain 3 TP reward" text="[kill streak] Reach 30 points and get an extra 3 TP bonus!" />
@@ -180,8 +183,13 @@ Air-to-Surface Missile: fires three 120mm rockets, each dealing 20 blast damage 
 	<text key="spot reward,hint" text="Scout enemy vehicles for &#37;num TP  bonus, now you have &#37;current_num TP to deploy." />
 	<text key="vehicle destroy reward for personal" text="Destroying an enemy vehicle &#37;vehicle .You have been assigned a &#37;num TP bonus and you now have &#37;current_num TP to deploy." />
 
-	<text key="spawn_in_base_call, alerted, kcco_deploy_coeus.call" text="Our UAVs have detected a Typhon deployed at &#37;base_name, so watch out for its power-up EMP!"/>
-	<text key="spawn_in_base_call, alerted, kcco_deploy_typhon.call" text="Our UAV scouted an enemy Coeus deployed at &#37;base_name , deploying an anti-tank team!"/>
+	<text key="spawn_in_base_call, alerted, kcco_deploy_coeus.call" text="Our UAVs have detected a Typhon deployed at &#37;base_name, Watch out for its laser cannon!"/>
+	<text key="spawn_in_base_call, alerted, kcco_deploy_typhon.call" text="Our UAV scouted an enemy Coeus deployed at &#37;base_name , Deploy anti-tank squad!"/>
 	<text key="spawn_in_base_call, alerted, para_deploy_uhlan.call" text="Our UAV scouted an enemy Uhlan deployed at &#37;base_name , ready for impact!"/>
-	<text key="spawn_in_base_call, alerted, para_deploy_uhlan_nyto.call" text="Our UAV scouts an enemy Uhlan Gun Trooper deployed at &#37;base_name, ready for impact!"/>	
+	<text key="spawn_in_base_call, alerted, para_deploy_uhlan_nyto.call" text="Our UAV scouts an enemy Uhlan deployed at &#37;base_name, ready for impact!"/>	
+
+	<text key="spawn_in_base_call, alerted, para_deploy_cherub.call" text="Our UAV scouts an enemy Cherub deployed at &#37;base_name, find cover!"/>
+	<text key="spawn_in_base_call, alerted, para_deploy_cherub_nyto.call" text="Our UAV scouts an enemy Cherub deployed at &#37;base_name, find cover!"/>
+	<text key="spawn_in_base_call, alerted, kcco_deploy_k25.call" text="Our UAVs have detected a Typhon deployed at &#37;base_name, so watch out for its power-up EMP!"/>
+
 </translation>

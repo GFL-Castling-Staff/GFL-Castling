@@ -91,10 +91,7 @@ class Phase1 : Phase {
 
 		// set friendly commander ai
 		m_metagame.getComms().send("<command class='commander_ai' faction='0' base_defense='0.9' border_defense='0.0' />");
-
-		string position("515 0 562");
-		m_metagame.getComms().send("<command class='create_call' key='paratroopers2.call' position='" + position + "' faction_id='1'/>");    
-
+  
 		// some resets for map restart:
 		m_metagame.getComms().send("<command class='update_base' base_key='lab' capturable='1' />");
 		m_metagame.getComms().send("<command class='update_base' base_key='castle ruins' capturable='1' />");
@@ -129,15 +126,6 @@ class Phase2 : Phase {
 
 	// --------------------------------------------
 	protected void applyCapacityMultipliers() {
-		// decrease amount of enemy soldiers in phase 2
-		m_metagame.getComms().send(
-			"<command class='change_game_settings'>" + 
-			// was 0.8, 0.667*1.2 = 0.8
-			"  <faction capacity_multiplier='" + (m_metagame.getUserSettings().m_fellowCapacityFactor * 0.667) + "' />" + 
-			// was 0.5, 0.5*1.0 = 0.5
-			"  <faction capacity_multiplier='" + (m_metagame.getUserSettings().m_enemyCapacityFactor * 0.5) + "' />" + 
-			"  <faction />" + 
-			"</command>");
 	}
 
 	// --------------------------------------------
@@ -149,12 +137,6 @@ class Phase2 : Phase {
 		m_metagame.getComms().send("<command class='commander_ai' faction='1' base_defense='0.7' border_defense='0.2' />");
 
 		applyCapacityMultipliers();
-
-		// set enemy soldier ai modifications, back to normal actually
-		m_metagame.getComms().send(
-			"<command class='soldier_ai' faction='1'>" + 
-			"  <parameter class='willingness_to_charge' value='0.0' />" +
-			"</command>");
 
 		// set friendly commander ai
 		m_metagame.getComms().send("<command class='commander_ai' faction='0' base_defense='0.4' border_defense='0.0' />");
@@ -179,7 +161,7 @@ class Phase2 : Phase {
 		bool found = false;
 		for (uint i = 0; i < destroyTargets.size(); ++i) {
 			string key = destroyTargets[i];
-			if (key == "radio_jammer.vehicle" || key == "aa_emplacement.vehicle") {
+			if (key == "radio_jammer.vehicle" || key == "sf_jupiter.vehicle") {
 				// one of these still exist, can't end yet
 				found = true;
 				break;
@@ -328,12 +310,12 @@ class Phase4 : Phase {
 
 		if (!m_continueMode) {
 			// spawners to fill the arena at moment of getting to own it
-			m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(638,0,522), 5, "default_ai"));
-			m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(686,0,521), 5, "default_ai"));
-			m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(707,0,460), 5, "default_ai"));
-			m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(655,0,435), 5, "default_ai"));
-			m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(699,0,391), 5, "default_ai"));
-			m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(617,0,408), 5, "default_ai"));
+			// m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(638,0,522), 5, "default_ai"));
+			// m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(686,0,521), 5, "default_ai"));
+			// m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(707,0,460), 5, "default_ai"));
+			// m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(655,0,435), 5, "default_ai"));
+			// m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(699,0,391), 5, "default_ai"));
+			// m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(617,0,408), 5, "default_ai"));
 
 			// spawn enemy tank2
 			{
@@ -440,7 +422,7 @@ class PhaseControllerMap12 : PhaseController {
 
 		m_currentPhaseIndex = 0;
 
-		array<string> targets = {"radio_jammer.vehicle", "aa_emplacement.vehicle", "radar_tower.vehicle"};
+		array<string> targets = {"radio_jammer.vehicle", "sf_jupiter.vehicle", "radar_tower.vehicle"};
 		m_destroyTargets = targets;
 	}
 
@@ -521,19 +503,12 @@ class PhaseControllerMap12 : PhaseController {
 		// when AA emplacement is destroyed, spawn reinforcements at start base
 
 		string key = event.getStringAttribute("vehicle_key");
-		if (key == "aa_emplacement.vehicle") {
-			_log("vehicle being destroyed, key " + key); 
-
+		if (key == "sf_jupiter.vehicle") {
 			array<string> positions;
 			positions.insertLast("240 25 468");
 			positions.insertLast("225 25 444");
 			positions.insertLast("254 25 445");
 			positions.insertLast("240 25 468");
-
-			for (uint i = 0; i < positions.size(); ++i) {
-				string position = positions[i];
-				m_metagame.getComms().send("<command class='create_call' key='paratroopers2.call' position='" + position + "' faction_id='0'/>");
-			}
 		}
 
 		int i = m_destroyTargets.find(key);

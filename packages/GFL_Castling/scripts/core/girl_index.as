@@ -1606,3 +1606,32 @@ array<string> gk_weapon_hvy_nerfed = {
     "ff_destroyer.weapon",
     "ff_destroyer_skin.weapon"
 };
+
+array<string> gk_weapon_sf_nerfed = {
+    "ff_agent.weapon",
+    "ff_alchemist.weapon",
+    "ff_alchemist_skill.weapon",
+    "ff_architect.weapon",
+    "ff_architect_1.weapon",
+    "ff_destroyer.weapon",
+    "ff_destroyer_skin.weapon",
+    "ff_gager.weapon",
+    "ff_gager_1.weapon",
+    "ff_hunter.weapon",
+    "ff_hunter_skill.weapon",
+    "ff_Intruder.weapon",
+    "ff_Intruder_1.weapon",
+    "ff_justice.weapon",
+    "ff_scarecrow.weapon",
+    "ff_scarecrow_skill.weapon",
+    "ff_weaver.weapon",
+    "ff_weaver_1.weapon",
+    "ff_dreamer.weapon",
+    "ff_dreamer_skill.weapon",
+    "ff_dreamer_skill_1.weapon",
+    "ff_excutioner_1.weapon",
+    "ff_excutioner_2.weapon",
+    "ff_parw_alina.weapon",
+    "ff_parw_nyto_black.weapon",
+    "ff_parw_nyto_black_1.weapon"
+};

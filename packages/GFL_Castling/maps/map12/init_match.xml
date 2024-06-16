@@ -1,0 +1,187 @@
+<commands>
+  <!-- start_game command: new game menu picks up defaults from here and allows user to override certain settings -->
+  <command 
+	  class="start_game" 
+	  vehicles="1" 
+	  max_soldiers="80" 
+	  player_bot_compensation="6" 
+	  xp_multiplier="1.0"
+	  rp_multiplier="1.0"
+	  friendly_fire="0" 
+	  base_capture_system="any" >
+
+    <faction initial_over_capacity="0" ai_accuracy="0.94" capacity_multiplier="0.4" />
+    <!-- <faction initial_over_capacity="0" ai_accuracy="0.94" capacity_multiplier="1.0" /> --> 
+    <faction initial_over_capacity="0" ai_accuracy="0.94" lose_without_bases="0" />
+    <faction initial_over_capacity="0" ai_accuracy="0.94" capacity_multiplier="0.0" />
+  
+  </command>
+  
+  <command
+	  class="faction_resources"
+	  faction_id="0">
+    <vehicle key="radar_truck.vehicle" enabled="0"/>
+  </command>
+  <command
+	  class="faction_resources"
+	  faction_id="1">
+    <vehicle key="aa_emplacement.vehicle" enabled="1"/>
+  </command>  
+
+<!--
+  
+ <command 
+	class="create_instance" 
+	faction_id="1"
+	position="120 0 173"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="soldier" 
+  instance_key="default" >
+</command>  
+
+ 
+  
+ <command 
+	class="create_instance" 
+	faction_id="0"
+	position="120 0 173"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="flare_checkpoint.projectile" >
+</command>   
+
+
+
+
+ <command class="commander_ai" faction="1" active="0" />
+ <command class="commander_ai" faction="2" active="0" />
+
+ <command 
+	class="create_instance" 
+	faction_id="0"
+	position="340 10 560"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="ap_mine.projectile" >
+</command> 
+
+ <command 
+	class="create_instance" 
+	faction_id="0"
+	position="340 10 550"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="ap_mine.projectile" >
+</command>
+
+ <command 
+	class="create_instance" 
+	faction_id="0"
+	position="340 10 540"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="ap_mine.projectile" >
+</command>
+
+ <command 
+	class="create_instance" 
+	faction_id="0"
+	position="340 10 530"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="ap_mine.projectile" >
+</command>
+
+ <command 
+	class="create_instance" 
+	faction_id="0"
+	position="340 10 520"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="ap_mine.projectile" >
+</command>
+
+ <command 
+	class="create_instance" 
+	faction_id="0"
+	position="340 10 510"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="ap_mine.projectile" >
+</command>
+
+ <command 
+	class="create_instance" 
+	faction_id="0"
+	position="360 10 540"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="ap_mine.projectile" >
+</command>
+
+ <command 
+	class="create_instance" 
+	faction_id="0"
+	position="370 10 530"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="ap_mine.projectile" >
+</command>
+
+ <command 
+	class="create_instance" 
+	faction_id="0"
+	position="380 10 520"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="ap_mine.projectile" >
+</command>
+
+ <command 
+	class="create_instance" 
+	faction_id="0"
+	position="390 10 510"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="ap_mine.projectile" >
+</command>
+
+ <command 
+	class="create_instance" 
+	faction_id="0"
+	position="400 10 600"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="ap_mine.projectile" >
+</command>
+
+
+
+
+
+<command 
+	class="create_instance" 
+	faction_id="0"
+	position="200 6 200"
+	offset="0 0 0"
+	character_id="0" 
+	instance_class="projectile"
+	instance_key="at_mine.projectile" >
+</command>   -->
+
+
+</commands>
+

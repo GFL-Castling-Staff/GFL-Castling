@@ -1,0 +1,39 @@
+<vehicle name="Flare" key="para_spawn.vehicle" map_view_atlas_index="18" allow_ai_to_use="1" should_be_destroyed="1" usable_for_cover="0" respawn_time="36000" >
+	<tire_set offset="0.1 0.0 0.1" radius="0.1" />
+	<tire_set offset="0.1 0.0 -0.1" radius="0.1" />
+
+	<control max_speed="20.0" acceleration="6.0" max_reverse_speed="5.0" max_rotation="0.8" max_water_depth="0.2" steer_smoothening="0.1" />
+
+	<physics max_health="0.9" mass="70.0" extent="0.2 0.0 0.2" offset="0 0.0 0" top_offset="0 0.5 0" collision_model_pos="0 0.2 0" collision_model_extent="0.6 0.2 0.6" visual_offset="0 0.0 0" collision_response_factor="0.2" blast_push_threshold="1.0" vehicle_collision_damage_factor="1000.0" destroy_on_top_hit="0" /> 
+
+	<visual class="chassis" mesh_filename="flare_stick.mesh" texture_filename="flare_stick.png" />
+<!--	<visual class="chassis" key="broken" mesh_filename="flare_stick.mesh" texture_filename="flare_stick.png" />  -->
+
+	<spawn_point offset="0 21 -5" player_only="0" />             	
+
+
+	<!-- sound handling -->
+	<rev_sound filename="truck_rev0.wav" low_pitch="0.95" high_pitch="1.05" low_rev="0.0" high_rev="0.2" volume="1.0" />
+	<rev_sound filename="truck_rev1.wav" low_pitch="0.8" high_pitch="1.1" low_rev="0.05" high_rev="0.7" volume="0.75" />
+	<rev_sound filename="truck_rev3.wav" low_pitch="0.8" high_pitch="1.1" low_rev="0.4" high_rev="1.0" volume="1.0" />
+
+
+	<effect event_key="idle_chassis" ref="FlareSparkle" post_processing="0" offset="0 0.1 0.3"/>
+	<effect event_key="idle_chassis" ref="FlareSmoke" post_processing="0" offset="0 0.4 0.3"/>
+	<effect event_key="idle_chassis" ref="FlareFlash" post_processing="0" offset="0 0.1 0.3"/> 
+
+	<effect event_key="destroy" key="other"  />
+
+   
+	<event key="receive_damage_xp_reward">
+		<trigger class="receive_damage" />
+		<result class="reward" xp="0.0070" />
+	</event>
+  
+	<event key="spot_rp_reward">
+		<trigger class="spot" />
+		<result class="reward" rp="30.0" />
+	</event>
+  
+  
+</vehicle>

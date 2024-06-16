@@ -909,7 +909,9 @@ class BasicCommandHandler : Tracker {
 		} else  if(checkCommand(message, "spawn sgfq")) {
 			spawnInstanceNearPlayer(senderId, "par_cherub.vehicle", "vehicle", 0);				
 		} else  if(checkCommand(message, "spawn k25")) {
-			spawnInstanceNearPlayer(senderId, "neosu_kuergants.vehicle", "vehicle", 0);							
+			spawnInstanceNearPlayer(senderId, "neosu_kuergants.vehicle", "vehicle", 0);		
+		} else  if(checkCommand(message, "spawn kboss")) {
+			spawnInstanceNearPlayer(senderId, "neosu_kuergants_boss.vehicle", "vehicle", 0);									
 		} else  if(checkCommand(message, "spawn pathfinder")) {
 			spawnInstanceNearPlayer(senderId, "kcco_pathfinder_factory.vehicle", "vehicle", 0);			
 		} else  if(checkCommand(message, "spawnm1a1a")) {
