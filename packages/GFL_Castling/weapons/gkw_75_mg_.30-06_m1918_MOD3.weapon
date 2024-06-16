@@ -84,7 +84,7 @@
         <model filename="gkw_mg_m1918_mod3.xml" />
         <hud_icon filename="gkw_m1918mod3_skill.png" />
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="9.9" kill_decay_start_time="1.147" kill_decay_end_time="1.912" />
+            <result class="hit" kill_probability="8.6" kill_decay_start_time="1.147" kill_decay_end_time="1.912" />
             <trail probability="1.0" key="BulletApTrail_ct"/>
         </projectile>
         <effect class="muzzle" ref="ejection_76251" />

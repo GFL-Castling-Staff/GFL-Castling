@@ -165,9 +165,9 @@ ai_burst_wait_time_variance="0">
     </projectile>
 </weapon>
 
-<weapon key="kcco_2A42_30mm_het_1" 
-ai_burst_time="5" 
-ai_burst_time_variance="0" 
+<weapon key="kcco_2A42_30mm_het" 
+ai_burst_time="2.5" 
+ai_burst_time_variance="0.5" 
 ai_burst_wait_time="1.0" 
 ai_burst_wait_time_variance="0">
     <specification 
@@ -176,57 +176,7 @@ ai_burst_wait_time_variance="0">
 	accuracy_factor="1.0" 
     spread_range="0.2"
 	sustained_fire_grow_step="1.0" 
-	sustained_fire_diminish_rate="4.4544" 
-    cooldown_start="0.6559"
-    cooldown_end="0.3433"
-    sight_range_modifier="1.8"
-    ai_sight_range_modifier="1"
-    magazine_size="-1" 
-    can_shoot_standing="0" 
-    can_shoot_crouching="0" 
-    suppressed="0" 
-    name="2A42 30mm HET" 
-    projectile_speed="120.0" 
-    sight_height_offset="4.0"
-    class="0" 
-    barrel_offset="1.2" 
-    projectiles_per_shot="1"
-    />
-    
-    <sound key="fire" fileref="2a42_fire_FromWARTHUNDER.wav" pitch_variety="0.05" volume="1.4" />
-    <sound key="magazine_out" fileref="mg_clip_out.wav" />
-    <sound key="magazine_in" fileref="mg_clip_in.wav" />
-    <sound key="cycle" fileref="rifle_chamber.wav" />
-    <sound class="impact" fileref="rifle_drop.wav" />
-    <model mesh_filename="neosu_kuergants_cannon.mesh" texture_filename="neosu_kuergants_main.jpg" />
-
-    <hud_icon filename="commander_ye.png" />
-    <commonness value="0.0" />
-
-	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
-    <target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
-	<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
-    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
-    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
-
-    <weak_hand_hold offset="0.4" />
-    <projectile file="cannon_30mm_hei.projectile">
-    </projectile>
-</weapon>
-<weapon key="kcco_2A42_30mm_het_2" 
-ai_burst_time="5" 
-ai_burst_time_variance="0" 
-ai_burst_wait_time="1.0" 
-ai_burst_wait_time_variance="0">
-    <specification 
-    slot="2" 
-    retrigger_time="0.075"
-	accuracy_factor="1.0" 
-    spread_range="0.2"
-	sustained_fire_grow_step="0.6004" 
-	sustained_fire_diminish_rate="2.6767" 
-    cooldown_start="0.7893"
-    cooldown_end="0.6100"
+	sustained_fire_diminish_rate="5.0" 
     sight_range_modifier="1.8"
     ai_sight_range_modifier="1"
     magazine_size="-1" 
@@ -269,7 +219,7 @@ ai_burst_wait_time_variance="0">
     <specification 
     magazine_size="-1" 
 	accuracy_factor="0.85" 
-	barrel_offset="0.6" 
+	barrel_offset="0" 
 	can_shoot_standing="1" 
 	can_shoot_crouching="1"
 	can_shoot_prone="0"
@@ -304,7 +254,7 @@ ai_burst_wait_time_variance="0">
     <specification 
     magazine_size="-1" 
 	accuracy_factor="0.85" 
-	barrel_offset="0.6" 
+	barrel_offset="0" 
 	can_shoot_standing="1" 
 	can_shoot_crouching="1"
 	can_shoot_prone="0"

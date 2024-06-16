@@ -60,13 +60,13 @@
     drag_offset="-0.1" friction_offset="-0.1"/>
     <modifier class="blast_damage" value="-3.0" />
 
-    <turret offset="0 2.05 -1.2" weapon_key="vehicle_none_kurgant" weapon_offset="0 0 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.0004"  rotation_range="6.28" />
-    <turret parent_turret_index="0" offset="0 0 0" weapon_key="kcco_2A42_30mm_het_1" weapon_offset="0.13 1.32 -0.1" weapon_recoil="0.09" physics_recoil="0.0" max_rotation_step="0.0005" rotation_range="0.001" />
-    <turret parent_turret_index="0" offset="0 0 0" weapon_key="kcco_2A42_30mm_het_2" weapon_offset="-0.13 1.32 -0.1" weapon_recoil="0.09" physics_recoil="0.0" max_rotation_step="0.0005" rotation_range="0.001" />
+    <turret offset="0 2.05 -1.2" weapon_key="vehicle_none_kurgant" weapon_offset="0 0 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.0007"  rotation_range="6.28" />
+    <turret parent_turret_index="0" offset="0 0 0" weapon_key="kcco_2A42_30mm_het" weapon_offset="0.13 1.32 -0.1" weapon_recoil="0.09" physics_recoil="0.0" max_rotation_step="0.0005" rotation_range="0.001" />
+    <turret parent_turret_index="0" offset="0 0 0" weapon_key="kcco_2A42_30mm_het" weapon_offset="-0.13 1.32 -0.1" weapon_recoil="0.09" physics_recoil="0.0" max_rotation_step="0.0005" rotation_range="0.001" />
     <turret parent_turret_index="0" offset="0 0 0" weapon_key="kuergants_missile_1.weapon" weapon_offset="0.8 1.35 -1.1" weapon_recoil="0.0" physics_recoil="0.1" max_rotation_step="0.0005" rotation_range="0.05" />
     <turret parent_turret_index="0" offset="0 0 0" weapon_key="kuergants_missile_2.weapon" weapon_offset="-0.8 1.35 -1.1" weapon_recoil="0.0" physics_recoil="0.1" max_rotation_step="0.0005" rotation_range="0.05" />
-    <turret offset="0 0 0" weapon_key="kcco_ags30_vehicle_1" weapon_offset="0.4 1.05 -0.7" weapon_recoil="0.0" physics_recoil="0.05" max_rotation_step="0.0005" rotation_range="0.05" />
-    <turret offset="0 0 0" weapon_key="kcco_ags30_vehicle_2" weapon_offset="-0.4 1.05 -0.7" weapon_recoil="0.0" physics_recoil="0.05" max_rotation_step="0.0005" rotation_range="0.05" />
+    <turret offset="0 0 0" weapon_key="kcco_ags30_vehicle_1" weapon_offset="0.4 1.2 -0.7" weapon_recoil="0.0" physics_recoil="0" max_rotation_step="0.0005" rotation_range="0.1" />
+    <turret offset="0 0 0" weapon_key="kcco_ags30_vehicle_2" weapon_offset="-0.4 1.2 -0.7" weapon_recoil="0.0" physics_recoil="0" max_rotation_step="0.0005" rotation_range="0.1" />
 
     <visual class="chassis" mesh_filename="neosu_kuergants_main_edited.mesh" texture_filename="neosu_kuergants_main.jpg" offset="0 0.6 0"/>
     <visual class="chassis" key="broken" mesh_filename="neosu_kuergants_main_edited.mesh" texture_filename="tank_2_broken.png" offset="0 0.6 0"/>
@@ -107,13 +107,6 @@
         <turret index="6" />
     </character_slot>    
 
-    <character_slot type="passenger" position="0.5 0.5 -2.8" rotation="3.14" exit_rotation="3.14" hiding="1" animation_key="passenger, boat" marker_offset="0 0.0 0" rotation_range="6.40" />
-    <character_slot type="passenger" position="-0.5 0.5 -2.8" rotation="3.14" exit_rotation="3.14" hiding="1" animation_key="passenger, boat" marker_offset="0 0.0 0" rotation_range="6.40" />
-    <character_slot type="passenger" position="-1.5 0.5 -2.8" rotation="3.14" exit_rotation="3.14" hiding="1" animation_key="passenger, boat" marker_offset="0 0.0 0" rotation_range="6.40" />
-    <character_slot type="passenger" position="1.5 0.5 -2.8" rotation="3.14" exit_rotation="3.14" hiding="1" animation_key="passenger, boat" marker_offset="0 0.0 0" rotation_range="6.40" />
-    <character_slot type="passenger" position="2.5 0.5 -2.8" rotation="3.14" exit_rotation="3.14" hiding="1" animation_key="passenger, boat" marker_offset="0 0.0 0" rotation_range="6.40" />
-    <character_slot type="passenger" position="-2.5 0.5 -2.8" rotation="3.14" exit_rotation="3.14" hiding="1" animation_key="passenger, boat" marker_offset="0 0.0 0" rotation_range="6.40" />
-    
 	<event key="receive_damage_xp_reward">
 		<trigger class="receive_damage" />
 		<result class="reward" xp="0.0010" />
