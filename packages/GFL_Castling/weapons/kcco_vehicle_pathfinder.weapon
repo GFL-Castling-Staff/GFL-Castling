@@ -21,6 +21,8 @@
     <hud_icon filename="testing.png" />
     <commonness value="0.0" />
 
+    <sound key="fire" fileref="kcco_pathfinder_spawn.wav" pitch_variety="0" volume="1.3" />
+
     <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
     <effect class="muzzle" ref="sawsnone" />
 

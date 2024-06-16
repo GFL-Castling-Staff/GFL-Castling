@@ -1061,7 +1061,7 @@ class Skill_M200_Snipe : DelaySkill {
 		m_timeLeft=m_time;
 		m_timeLeft_internal = 0;
 		this.setExcuteLimit(7);
-		this.setInternal(1.3);
+		this.setInternal(2.0);
 	}
 
 	void update(float time) {
@@ -1077,7 +1077,7 @@ class Skill_M200_Snipe : DelaySkill {
 			Vector3 startPos = getRandomOffsetVector(luckyGuyPos,70.0);
 			startPos = startPos.add(Vector3(0,60,0));
 			CreateDirectProjectile(m_metagame,startPos,luckyGuyPos,"m200_snipe.projectile",m_character_id,m_faction_id,400);
-			playSoundAtLocation(m_metagame,"m200_fire_snipe.wav",m_faction_id,luckyGuyPos,2.0);                  
+			playSoundAtLocation(m_metagame,"m200_fire_snipe_GFL.wav",m_faction_id,luckyGuyPos,2.0);                  
 		}		
 	}
 

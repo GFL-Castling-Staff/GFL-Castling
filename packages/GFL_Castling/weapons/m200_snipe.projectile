@@ -98,7 +98,7 @@
     <capacity value="1" source="rank" source_value="0.0" />
 </projectile>
 <projectile class="grenade" key="fairy_snipe.projectile" name="AP bullet" slot="1" pulldown_in_air="4" can_be_detected_by_footmen="0" can_be_detected_by_driver="0">
-    <result class="spawn" instance_class="projectile" instance_key="m200_snipe_sub.projectile" min_amount="15" max_amount="15" offset="0 1 0" position_spread="0 0" direction_spread="0.0 0.0" />
+    <result class="spawn" instance_class="projectile" instance_key="m200_snipe_sub.projectile" min_amount="20" max_amount="20" offset="0 1 0" position_spread="0 0" direction_spread="0.0 0.0" />
     <rotation class="motion" />
     <trigger class="impact"/>
     <sound class="result" key="terrain" fileref="ricochet1.wav" />
