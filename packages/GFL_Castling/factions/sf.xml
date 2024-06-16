@@ -533,7 +533,7 @@
 		<ai filename="shield.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_guard_swap.weapon" enabled="1"/>
-			<carry_item key="vest_40hp_21" enabled="1" />
+			<carry_item key="vest_40hp_20" enabled="1" />
 			<weapon key="cover_deploy_enemy.weapon" enabled="1"/>
 			<weapon key="cover_deploy_2.weapon" enabled="1"/>
 			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
@@ -991,7 +991,7 @@
 		<ai filename="agent.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_agent.weapon" enabled="1"/>
-			<carry_item key="vest_50hp_tank.carry_item" enabled="1" />
+			<carry_item key="vest_80hp_tank.carry_item" enabled="1" />
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
@@ -1076,7 +1076,7 @@
 		<ai filename="sf_gager.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_justice.weapon" enabled="1"/>
-			<carry_item key="vest_50hp_tank.carry_item" enabled="1" />
+			<carry_item key="vest_80hp_tank.carry_item" enabled="1" />
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />

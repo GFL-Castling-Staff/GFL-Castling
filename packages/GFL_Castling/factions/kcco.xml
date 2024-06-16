@@ -522,7 +522,8 @@
 			<call key="kcco_quartz.call" />	
 			<call key="kcco_zircon.call" />
 			<call key="kcco_zircon1.call" />
-			<call key="kcco_argo_vela_precision.call" />	
+			<call key="kcco_argo_puppis_three.call" />	
+			<call key="kcco_argo_vela_precision.call" />
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="weapon" slot="1" probability="0.75" />
@@ -557,12 +558,6 @@
 			<weapon key="kcco_rpg7.weapon" enabled="1" />
 			<weapon key="kcco_pf98.weapon" enabled="1" />
 			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
-			<call key="kcco_assault.call" />
-			<call key="kcco_zircon.call" />
-			<call key="kcco_zircon1.call" />
-			<call key="kcco_assault.call" />	
-			<call key="kcco_quartz.call" />		
-			<call key="kcco_dog.call" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.5" max="1.0" />
@@ -582,12 +577,6 @@
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="kcco_gatling.weapon" enabled="1" />
 			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
-			<call key="kcco_assault.call" />
-			<call key="kcco_zircon.call" />
-			<call key="kcco_zircon1.call" />
-			<call key="kcco_assault.call" />	
-			<call key="kcco_quartz.call" />		
-			<call key="kcco_dog.call" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="1.0" max="1.5" />
@@ -598,12 +587,12 @@
 		</attribute_config>	
 	</soldier>
 	<!-- 独眼巨人喷火兵 -->
-	<soldier name="kcco_talos" spawn_score="0.3" copy_from="default_bot">
+	<soldier name="kcco_talos" spawn_score="0.2" copy_from="default_bot">
 		<model filename="kccod_talos.xml" />
 		<ai filename="kcco_talos.ai" />
 		<resources clear_weapons="1" clear_grenades="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="kcco_flamethrower.weapon" enabled="1" />
-			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
+			<carry_item key="vest_40hp_10" enabled="1" />
 		</resources>
 		<item_class_existence_config>
 			<!-- wearables -->
@@ -619,18 +608,24 @@
 		<ai filename="kcco_dog.ai" />
 		<resources clear_weapons="1" clear_grenades="1" clear_vehicles="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="kcco_othrusdog.weapon" enabled="1" />
-			<carry_item key="vest_40hp_21" enabled="1" />
+			<carry_item key="vest_40hp_20" enabled="1" />
 			<projectile key="selfnone_dog.projectile" enabled="1" />
 		</resources>
 	</soldier>
 	<!-- archer -->
 	<soldier name="kcco_archer" spawn_score="0.3" squad_size_xp_cap="0.0" copy_from="default_bot">
 		<model filename="kccod_archer.xml" />
-		<ai filename="sniper.ai" />
+		<ai filename="kcco_bot_archer.ai" />
 		<resources file="kcco_lonewolf_archer.resources" clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="compound_bow.weapon" enabled="1" />
 			<weapon key="compound_bow_2.weapon" enabled="1" />
 			<carry_item key="kcco_sg.carry_item" />
+			<call key="kcco_assault.call" />
+			<call key="kcco_zircon.call" />
+			<call key="kcco_zircon1.call" />
+			<call key="kcco_assault.call" />	
+			<call key="kcco_quartz.call" />
+			<call key="kcco_dog.call" />			
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.5" max="1.8" />
@@ -642,7 +637,10 @@
 	<!-- cerynitis-牝鹿 -->
 	<soldier name="kcco_cerynitis" spawn_score="0.5" squad_size_xp_cap="0.0" copy_from="default_bot">
 		<model filename="kccod_cerynitis.xml" />
-		<character filename="kcco_mecha.character" />
+		<character filename="kcco_mecha.character" >
+			<animation key="stunned" target_key="stun, cet" />
+			<parameter class="being_stunned_steer_amount" value="0.08"/>
+		</character>
 		<ai filename="kcco_cet.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="kcco_cerynitis.weapon" enabled="1" />
@@ -656,10 +654,13 @@
 	<soldier name="kcco_cerynitis_swap" spawn_score="0.2" squad_size_xp_cap="0.0" copy_from="default_bot">
 		<model filename="kccod_cerynitis_remake.xml" />
 		<ai filename="kcco_cet_swap.ai" />
-		<character filename="kcco_mecha.character" />
+		<character filename="kcco_mecha.character" >
+			<animation key="stunned" target_key="stun, cet" />
+			<parameter class="being_stunned_steer_amount" value="0.08"/>
+		</character>
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="kcco_cerynitis_swap.weapon" enabled="1" />
-			<carry_item key="vest_cet_10" />
+			<carry_item key="vest_cet.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.5" max="0.8" />
@@ -671,14 +672,7 @@
 		<ai filename="shield.ai" />
 		<resources clear_calls="1" clear_grenades="1" clear_carry_items="1" clear_weapons="1" clear_vehicles="1">
 			<weapon key="kcco_aegis.weapon" enabled="1" />
-			<carry_item key="vest_aegis_5" enabled="1" />
-			<call key="kcco_assault.call" />
-			<call key="kcco_zircon.call" />
-			<call key="kcco_zircon1.call" />
-			<call key="kcco_assault.call" />	
-			<call key="kcco_quartz.call" />		
-			<call key="kcco_dog.call" />
-			<call key="kcco_argo_carina_tcs.call" />
+			<carry_item key="vest_aegis.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="10.015" max="13.008" />
@@ -695,13 +689,6 @@
 		<resources clear_calls="1" clear_grenades="1" clear_carry_items="1" clear_weapons="1" clear_vehicles="1">
 			<weapon key="kcco_aegis_swap.weapon" enabled="1" />
 			<carry_item key="vest_aegis.carry_item" enabled="1" />
-			<call key="kcco_assault.call" />
-			<call key="kcco_zircon.call" />
-			<call key="kcco_zircon1.call" />
-			<call key="kcco_assault.call" />	
-			<call key="kcco_quartz.call" />		
-			<call key="kcco_dog.call" />
-			<call key="kcco_argo_carina_tcs.call" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="13.015" max="15.008" />
@@ -794,7 +781,7 @@
 			<call key="kcco_zircon1.call" />
 			<call key="kcco_assault.call" />	
 			<call key="kcco_quartz.call" />		
-			<call key="kcco_dog.call" />
+			<call key="kcco_dog.call" />			
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="carry_item" slot="1" probability="1" />
@@ -871,7 +858,7 @@
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="kcco_pkp.weapon" enabled="1" />
 			<weapon key="kcco_pf98.weapon" enabled="1" />
-			<carry_item key="vest_50hp_tank.carry_item" />
+			<carry_item key="vest_80hp_tank.carry_item" />
 			<call key="kcco_Hephaestus.call" />
 			<call key="kcco_argo_vela.call" />
 			<call key="kcco_argo_puppis.call" />
