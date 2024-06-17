@@ -589,4 +589,13 @@
 		<capacity value="100" source="rank" source_value="0.0" />
 		<commonness value="0.0" in_stock="0" can_respawn_with="0" />
 	</carry_item>
+	<carry_item name="the goose" key="goose.carry_item" time_to_live_out_in_the_open="30.0" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="0">
+		<hud_icon filename="hud_statue_goose.png" />
+		<inventory encumbrance="0.0" price="6666.0" />
+		<model mesh_filename="statue_goose.xml" />
+		<capacity value="100" source="rank" source_value="0.0" />
+		<commonness value="0.0" in_stock="0" can_respawn_with="0" />
+		<!-- 来自Bad Goose from PA -->
+	</carry_item>
+	
 </carry_items>

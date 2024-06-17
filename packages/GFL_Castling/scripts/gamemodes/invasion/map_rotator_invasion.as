@@ -248,6 +248,10 @@ class MapRotatorInvasion : MapRotator {
 					rewardlist.insertLast(Resource("complete_box_hardcore.carry_item","carry_item"));
 				}
 
+				if (map_name == "Swan River"){
+					rewardlist.insertLast(Resource("goose.carry_item","carry_item"));
+				}
+
 				for (uint i = 0; i < players.size(); ++i) {
 					int characterId = players[i].getIntAttribute("character_id");
 					if (characterId >= 0) {
