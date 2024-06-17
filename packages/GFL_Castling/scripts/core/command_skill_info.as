@@ -482,6 +482,7 @@ dictionary commandSkillIndex = {
         {"gkw_medical_agl_hg_523.weapon",80},
 
         {"gkw_fedorov.weapon",81},
+        {"gkw_fedorov_10305.weapon",81},
 
         {"gkw_tac50.weapon",82},
         {"gkw_tac50_2602.weapon",82},

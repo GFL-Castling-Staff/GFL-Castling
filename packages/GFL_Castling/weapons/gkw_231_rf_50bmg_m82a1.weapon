@@ -54,7 +54,7 @@
 		<!--Ballistics-->
 		<weak_hand_hold offset="0.3" />
 		<projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.5">
-			<result class="spawn" instance_class="projectile" instance_key="sub_damage_m82a1.projectile" min_amount="9" max_amount="9" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0" />
+			<result class="spawn" instance_class="projectile" instance_key="sub_damage_m82a1.projectile" min_amount="5" max_amount="5" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0" />
 			<trigger class="impact" />
 			<rotation class="motion" />
 			<collision class="sticky" />
@@ -129,7 +129,7 @@
 		<!--Ballistics-->
 		<weak_hand_hold offset="0.3" />
 		<projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="0" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.5">
-			<result class="spawn" instance_class="projectile" instance_key="sub_damage_gm6.projectile" min_amount="9" max_amount="9" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0" />
+			<result class="spawn" instance_class="projectile" instance_key="sub_damage_m82a1.projectile" min_amount="4" max_amount="5" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0" />
 			<trigger class="impact" />
 			<rotation class="motion" />
 			<collision class="sticky" />

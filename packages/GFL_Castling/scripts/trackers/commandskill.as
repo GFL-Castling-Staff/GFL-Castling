@@ -4156,7 +4156,7 @@ class CommandSkill : Tracker {
     }        
     void excuteHunterskill(int characterId,int playerId,SkillModifer@ modifer){
         //if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"FF_Hunter")) return;
-        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"FF_Hunter",true,"charge_recover_all",2)) return;
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"FF_Hunter",true,"charge_recover_1",3)) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             if (!canCastSkill(character)) return;
@@ -4178,7 +4178,9 @@ class CommandSkill : Tracker {
 					playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
-
+                    if(!tryaddChargeCount("FF_Hunter",characterId,modifer,true)){
+                        addCooldown("FF_Hunter",15,characterId,modifer,"charge_recover_1");
+                    }
                     array<const XmlElement@> affectedCharacter = getEnemyCharactersNearPosition(m_metagame,t_pos,factionid,8.0f,10);
                     if(affectedCharacter.length()>=1){
                         int luckyoneid = affectedCharacter[getRandomIndex(affectedCharacter.length())].getIntAttribute("id");
@@ -4194,13 +4196,6 @@ class CommandSkill : Tracker {
                         CreateDirectProjectile(m_metagame,t_pos.add(Vector3(0,2,0)),t_pos,"ff_emp_bullet_stun.projectile",characterId,factionid,10);
                         CreateDirectProjectile(m_metagame,t_pos.add(Vector3(0,2,0)),t_pos,"ff_emp_bullet_kill.projectile",characterId,factionid,10);
                     }
-                    if(!tryaddChargeCount("FF_Hunter",characterId,modifer,true)){
-                        // _log("no new charge");
-                        addCooldown("FF_Hunter",15,characterId,modifer,"charge_recover_all");
-                    }
-                    //Skill_ff_hunter@ shot = Skill_ff_hunter(m_metagame,1,characterId,factionid,t_pos);
-                    //TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                    //tasker.add(shot);
                 }
             }
         }
