@@ -508,6 +508,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_m1897_2505.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_m1887_2503.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_vhs_5203.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_scr_10102.weapon", "weapon", 1.0f),
 
 		ScoredResource("gkw_m870_3803.weapon", "weapon", 1.0f)
 			},
@@ -1690,6 +1691,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_augpara.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_type82.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_jatimatic.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_scr.weapon", "weapon", 0.2f),
 
 				ScoredResource("gkw_sr3mp.weapon", "weapon", 0.2f)
 
@@ -1773,6 +1775,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 				ScoredResource("gkw_aug.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_beowulf.weapon", "weapon", 0.2f),
 				ScoredResource("gkw_hk433.weapon", "weapon", 0.2f),
+				ScoredResource("gkw_scr.weapon", "weapon", 0.2f),
 
 				ScoredResource("gkw_zasm21.weapon","weapon",0.2f)
 
@@ -2214,6 +2217,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_g11_4102.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_ots12_3605.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_ar57_6705.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_scr_10102.weapon", "weapon", 1.0f),
 
 		ScoredResource("gkw_QBZ95_405.weapon","weapon",1.0f)
 			}
