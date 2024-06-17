@@ -636,7 +636,7 @@ class GFLskill : Tracker {
 						const XmlElement@ LiveGuy = getCharacterInfo(m_metagame, characterId);
 						if(LiveGuy !is null){
 							CreateProjectile(m_metagame,sniperPos,luckyGuyPos,"kcco_smartbullet_AA.projectile",characterId,factionid,240,0.01);
-							CreateProjectile(m_metagame,sniperPos,luckyGuyPos,"kcco_smartbullet_1.projectile",characterId,factionid,240,0.01);
+							CreateDirectProjectile_TG(m_metagame,sniperPos.add(Vector3(0,1,0)),luckyGuyPos.add(Vector3(0,2,0)),"kcco_smartbullet_1.projectile",characterId,factionid,0.1*1.3,4);
 							break;
 						}
 					}			

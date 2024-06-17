@@ -51,10 +51,11 @@ key="kccow_tactical_sniper_rf.weapon">
     <model filename="kccow_tactical_sniper_rf.xml" />
     <hud_icon filename="kcco_cerynitis.png" />
     <!--Ballistics-->
-    <ballistics near_far_distance="0.0" speed_estimation_near="240.0" speed_estimation_far="240.0" max_speed="3200.0" randomness="0.0" curve_height="4.5" tweak_factor="4.8"/>
+    <ballistics near_far_distance="0.0" speed_estimation_near="240.0" speed_estimation_far="240.0" max_speed="3200.0" randomness="0.0" curve_height="1" tweak_factor="4.8"/>
     <!-- <weak_hand_hold offset="0.1" /> -->
     <projectile file="kcco_smartbullet.projectile" />
     <!-- state modifiers for weapons are connected to shield impact events -->
+    <effect class="muzzle" ref="kcco_smart_bullet_aim_trail" lighting="0"/>
     <stance state_key="running" accuracy="1.1" />
     <stance state_key="walking" accuracy="1.1" />
     <stance state_key="crouch_moving" accuracy="1.1" />

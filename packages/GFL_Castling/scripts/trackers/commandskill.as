@@ -4186,13 +4186,13 @@ class CommandSkill : Tracker {
                         if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
                             string luckyonepos = luckyoneC.getStringAttribute("position");
                             Vector3 target = stringToVector3(luckyonepos);
-                            CreateDirectProjectile(m_metagame,target.add(Vector3(0,2,0)),target,"ff_emp_bullet_stun.projectile",characterId,factionid,90);
-                            CreateDirectProjectile(m_metagame,target,target.add(Vector3(0,-2,0)),"ff_emp_bullet_kill.projectile",characterId,factionid,90);
+                            CreateDirectProjectile(m_metagame,target.add(Vector3(0,2,0)),target,"ff_emp_bullet_stun.projectile",characterId,factionid,10);
+                            CreateDirectProjectile(m_metagame,target.add(Vector3(0,2,0)),target,"ff_emp_bullet_kill.projectile",characterId,factionid,10);
                         }	
                     }
                     else{
-                        CreateDirectProjectile(m_metagame,t_pos.add(Vector3(0,2,0)),t_pos,"ff_emp_bullet_stun.projectile",characterId,factionid,90);
-                        CreateDirectProjectile(m_metagame,t_pos,t_pos.add(Vector3(0,-2,0)),"ff_emp_bullet_kill.projectile",characterId,factionid,90);
+                        CreateDirectProjectile(m_metagame,t_pos.add(Vector3(0,2,0)),t_pos,"ff_emp_bullet_stun.projectile",characterId,factionid,10);
+                        CreateDirectProjectile(m_metagame,t_pos.add(Vector3(0,2,0)),t_pos,"ff_emp_bullet_kill.projectile",characterId,factionid,10);
                     }
                     if(!tryaddChargeCount("FF_Hunter",characterId,modifer,true)){
                         // _log("no new charge");
