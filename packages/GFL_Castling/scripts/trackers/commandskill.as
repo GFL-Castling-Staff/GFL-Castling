@@ -275,6 +275,7 @@ class CommandSkill : Tracker {
                 case 82:{excuteTac50Skill(cId,senderId,m_modifer);break;}
                 case 83:{excuteOBRMod3Skill(cId,senderId,m_modifer);break;}
                 case 84:{excuteAEK999skill(cId,senderId,m_modifer);break;}
+                case 85:{excuteM14MOD3skill(cId,senderId,m_modifer);break;}
                 
                 default:
                     break;
@@ -4156,7 +4157,7 @@ class CommandSkill : Tracker {
     }        
     void excuteHunterskill(int characterId,int playerId,SkillModifer@ modifer){
         //if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"FF_Hunter")) return;
-        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"FF_Hunter",true,"charge_recover_1",3)) return;
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"FF_Hunter",true,"charge_recover_all",2)) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             if (!canCastSkill(character)) return;
@@ -4178,24 +4179,29 @@ class CommandSkill : Tracker {
 					playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
-                    if(!tryaddChargeCount("FF_Hunter",characterId,modifer,true)){
-                        addCooldown("FF_Hunter",15,characterId,modifer,"charge_recover_1");
-                    }
+
                     array<const XmlElement@> affectedCharacter = getEnemyCharactersNearPosition(m_metagame,t_pos,factionid,8.0f,10);
                     if(affectedCharacter.length()>=1){
                         int luckyoneid = affectedCharacter[getRandomIndex(affectedCharacter.length())].getIntAttribute("id");
                         const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
                         if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
                             string luckyonepos = luckyoneC.getStringAttribute("position");
-                            Vector3 targetV = stringToVector3(luckyonepos);
-                            CreateDirectProjectile(m_metagame,targetV.add(Vector3(0,2,0)),targetV,"ff_emp_bullet_stun.projectile",characterId,factionid,10);
-                            CreateDirectProjectile(m_metagame,targetV.add(Vector3(0,2,0)),targetV,"ff_emp_bullet_kill.projectile",characterId,factionid,10);
+                            Vector3 target = stringToVector3(luckyonepos);
+                            CreateDirectProjectile(m_metagame,target.add(Vector3(0,2,0)),target,"ff_emp_bullet_stun.projectile",characterId,factionid,10);
+                            CreateDirectProjectile(m_metagame,target.add(Vector3(0,2,0)),target,"ff_emp_bullet_kill.projectile",characterId,factionid,10);
                         }	
                     }
                     else{
                         CreateDirectProjectile(m_metagame,t_pos.add(Vector3(0,2,0)),t_pos,"ff_emp_bullet_stun.projectile",characterId,factionid,10);
                         CreateDirectProjectile(m_metagame,t_pos.add(Vector3(0,2,0)),t_pos,"ff_emp_bullet_kill.projectile",characterId,factionid,10);
                     }
+                    if(!tryaddChargeCount("FF_Hunter",characterId,modifer,true)){
+                        // _log("no new charge");
+                        addCooldown("FF_Hunter",15,characterId,modifer,"charge_recover_all");
+                    }
+                    //Skill_ff_hunter@ shot = Skill_ff_hunter(m_metagame,1,characterId,factionid,t_pos);
+                    //TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    //tasker.add(shot);
                 }
             }
         }
@@ -4627,4 +4633,32 @@ class CommandSkill : Tracker {
             }
         }
     }    
+
+    void excuteM14MOD3Skill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"M14MOD3",true)) return;
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 aim_pos = stringToVector3(target);
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    aim_pos = aim_pos.add(Vector3(0,1.8,0));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "OBRMod_SKILL1_JP.wav",
+                        "OBRMod_SKILL2_JP.wav",
+                        "OBRMod_SKILL3_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                    c_pos=c_pos.add(Vector3(0,1.8,0));
+                    CreateDirectProjectile_T(m_metagame,c_pos,aim_pos,"skill_obr_knife.projectile",characterId,factionid,0.2);
+                    addCooldown("M14MOD3",45,characterId,modifer);
+                }
+            }
+        }
+    }
 }
