@@ -855,8 +855,11 @@
     <model filename="gkd_mg_negev_3202_damaged_model_from_melondove_skeleton_from_IAQS.xml">
         <requirement class="weapon" key="gkw_negev_3202_skill_3.weapon" slot="0" />
     </model>
-    <model filename="gkd_mg_qjy88.xml">
+    <model filename="gkd_mg_qjy88_new.xml">
         <requirement class="weapon" key="gkw_qjy88.weapon" slot="0" />
+    </model>
+    <model filename="gkd_mg_qjy88_new.xml">
+        <requirement class="weapon" slot="0" key="gkw_qjy88_skill.weapon"/>
     </model>
     <model filename="gkd_mg_rpd.xml">
         <requirement class="weapon" key="gkw_rpd.weapon" slot="0" />
@@ -1629,9 +1632,6 @@
     <model filename="gkd_rf_hs50.xml">
         <requirement class="weapon" key="gkw_hs50.weapon" slot="0" />
     </model>
-    <model filename="gkd_mg_qjy88.xml">
-        <requirement class="weapon" key="gkw_qjy88.weapon" slot="0" />
-    </model>
     <model filename="gkd_rf_r93.xml">
         <requirement class="weapon" key="gkw_r93.weapon" slot="0" />
     </model>
@@ -2342,8 +2342,7 @@
     <model filename="gkd_sg_nova.xml">
         <requirement class="weapon" key="gkw_nova_skill.weapon" slot="0" />
     </model>
-    <model filename="gkd_hg_px4mod3.xml">
-        <!-- 晚点记得改回去px4原皮 -->
+    <model filename="gkd_hg_px4.xml">
         <requirement class="weapon" key="gkw_px4.weapon" slot="0" />
     </model>
     <model filename="gkd_hg_px4mod3.xml">
@@ -2895,4 +2894,10 @@
     <model filename="gkd_ar_scr_10102.xml">
         <requirement class="weapon" key="gkw_scr_10102.weapon" slot="0" />
     </model>    
+    <model filename="gkd_mg_aek999_1505.xml">
+        <requirement class="weapon" key="gkw_aek999_1505.weapon" slot="0" />
+    </model>
+    <model filename="gkd_mg_aek999_1505.xml">
+        <requirement class="weapon" key="gkw_aek999_1505_skill.weapon" slot="0" />
+    </model>        
 </models> 

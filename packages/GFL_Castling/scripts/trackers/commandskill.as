@@ -274,7 +274,7 @@ class CommandSkill : Tracker {
 
                 case 82:{excuteTac50Skill(cId,senderId,m_modifer);break;}
                 case 83:{excuteOBRMod3Skill(cId,senderId,m_modifer);break;}
-
+                case 84:{excuteAEK999skill(cId,senderId,m_modifer);break;}
                 
                 default:
                     break;
@@ -4187,9 +4187,9 @@ class CommandSkill : Tracker {
                         const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
                         if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
                             string luckyonepos = luckyoneC.getStringAttribute("position");
-                            Vector3 target = stringToVector3(luckyonepos);
-                            CreateDirectProjectile(m_metagame,target.add(Vector3(0,2,0)),target,"ff_emp_bullet_stun.projectile",characterId,factionid,10);
-                            CreateDirectProjectile(m_metagame,target.add(Vector3(0,2,0)),target,"ff_emp_bullet_kill.projectile",characterId,factionid,10);
+                            Vector3 targetV = stringToVector3(luckyonepos);
+                            CreateDirectProjectile(m_metagame,targetV.add(Vector3(0,2,0)),targetV,"ff_emp_bullet_stun.projectile",characterId,factionid,10);
+                            CreateDirectProjectile(m_metagame,targetV.add(Vector3(0,2,0)),targetV,"ff_emp_bullet_kill.projectile",characterId,factionid,10);
                         }	
                     }
                     else{
@@ -4603,5 +4603,28 @@ class CommandSkill : Tracker {
                 }
             }
         }
-    }         
+    }
+
+    void excuteAEK999skill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"aek999",true)) return;
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 aim_pos = stringToVector3(target);
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    Vector3 u_pos = getAimUnitPosition(c_pos,aim_pos,4.5);
+                    int factionid = character.getIntAttribute("faction_id");
+                    float ori4 = getAimOrientation4(c_pos,aim_pos);
+                    playAnimationKey(m_metagame,characterId,"aek999 skill henshin",false,true);
+                    addCooldown("aek999",300,characterId,modifer);
+                    playSoundAtLocation(m_metagame,"skill_aek999_henshin.wav",factionid,c_pos,0.7);
+                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    tasker.add(Skill_AEK999(m_metagame,19.5,characterId,factionid,u_pos,ori4));
+                }
+            }
+        }
+    }    
 }

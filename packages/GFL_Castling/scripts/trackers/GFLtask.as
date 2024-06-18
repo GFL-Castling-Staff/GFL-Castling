@@ -2117,3 +2117,23 @@ class Tac50_Maple_Sniper_Drone : DelaySkill {
 		m_excute_time++;
 	}
 }
+
+class Skill_AEK999 : DelaySkill {
+	float m_ori4;
+	Skill_AEK999(GameMode@ metagame, float time, int cId,int fId,Vector3 pos,float ori4){
+		super(metagame,time,cId,fId);
+		t_pos = pos;
+		m_ori4 = ori4;
+	}
+
+	void start(){
+		m_timeLeft=m_time;
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time;return;}
+		spawnVehicle(m_metagame,1,m_faction_id,t_pos.add(Vector3(0,30,0)),Orientation(0,1,0,m_ori4),"aek999.vehicle");
+		healCharacter(m_metagame,m_character_id,30);
+		m_end = true;
+	}
+}
