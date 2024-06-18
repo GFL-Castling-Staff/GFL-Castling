@@ -147,7 +147,7 @@ class Phase2 : Phase {
 		m_controller.invalidateDestroyTargets();
 
 		if (!hasEnded()) {
-			string textKeyPrefix = "Final mission II, phase 2, ";
+			string textKeyPrefix = "Operation Homecoming, phase 2, ";
 			m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, textKeyPrefix + "part 1"));
 			m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, textKeyPrefix + "part 2"));
 			m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, textKeyPrefix +"part 3"));
@@ -223,7 +223,7 @@ class Phase3 : Phase {
 		m_controller.invalidateDestroyTargets();
 
 		if (!hasEnded()) {
-			string textKeyPrefix = "Final mission II, phase 3, ";
+			string textKeyPrefix = "Operation Homecoming, phase 3, ";
 			m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, textKeyPrefix + "part 1"));
 			m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, textKeyPrefix + "part 2"));
 			m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, textKeyPrefix + "part 3"));
@@ -295,7 +295,7 @@ class Phase4 : Phase {
 
 		// disable enemy commander ai; soldiers will stay mainly where they spawn
 		//$this->metagame->comms->send("<command class='commander_ai' faction='1' base_defense='1.0' border_defense='0.0' active='0' />");
-		// change of plans; ai commander to be active to handle tank2 protector allocation for failsafes
+		// change of plans; ai commander to be active to handle neosu_kuergants_boss protector allocation for failsafes
 		// - doesn't matter that the commander will then also move troops around the arena a bit
 		m_metagame.getComms().send("<command class='commander_ai' faction='1' base_defense='1.0' border_defense='0.0' active='1' />");
 		m_metagame.getComms().send("<command class='set_comms' faction_id='1' enabled='1' />");
@@ -317,14 +317,14 @@ class Phase4 : Phase {
 			// m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(699,0,391), 5, "default_ai"));
 			// m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(617,0,408), 5, "default_ai"));
 
-			// spawn enemy tank2
+			// spawn enemy neosu_kuergants_boss
 			{
 				Vector3 position(696, 10, 415);              // 			was	Vector3 position(660, 10, 498); in 1.63
-				string vehicleKey = "tank2.vehicle";
+				string vehicleKey = "neosu_kuergants_boss.vehicle";
 				m_metagame.getComms().send("<command class='create_instance' faction_id='1' position='"+position.toString()+"' instance_class='vehicle' instance_key='"+vehicleKey+"' />");
 
 				/*
-				// spawn enemy boss_driver, and set his role as vehicle protector; he'll go to tank2
+				// spawn enemy boss_driver, and set his role as vehicle protector; he'll go to neosu_kuergants_boss
 				$position[0] += 10.0;
 				$soldier_group = "boss_driver";
 				$this->metagame->comms->send("<command class='create_instance' faction_id='1' position='".vector_to_string($position)."' instance_class='soldier' instance_key='".$soldier_group."' event='1' />");
@@ -336,7 +336,7 @@ class Phase4 : Phase {
 			}
 
 			{
-				string textKeyPrefix = "Final mission II, phase 4, ";
+				string textKeyPrefix = "Operation Homecoming, phase 4, ";
 				m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, textKeyPrefix + "part 1"));
 				m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 5.0, 0, textKeyPrefix + "part 2", dictionary(), 2.0, "objective_priority.wav"));
 			}
@@ -366,7 +366,7 @@ class Phase4 : Phase {
 	protected void handleVehicleDestroyEvent(const XmlElement@ event) {
 
 		string key = event.getStringAttribute("vehicle_key");
-		if (key == "tank2.vehicle") {
+		if (key == "neosu_kuergants_boss.vehicle") {
 			_log("Phase4, vehicle being destroyed, key " + key); 
 
 			end();
