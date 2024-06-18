@@ -206,6 +206,8 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("upgrade_cso.carry_item", "carry_item", 0.1f),
 		ScoredResource("upgrade_type4.carry_item", "carry_item", 0.1f),
 		ScoredResource("upgrade_sr3mp.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_tac50.carry_item", "carry_item", 0.1f),
+		ScoredResource("upgrade_usas12.carry_item", "carry_item", 0.1f),
 
 		
 		ScoredResource("upgrade_9a91.carry_item", "carry_item", 0.1f)
@@ -511,6 +513,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_scr_10102.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_fedorov_10305.weapon", "weapon", 1.0f),
 		ScoredResource("gkw_aek999_1505.weapon", "weapon", 1.0f),
+		ScoredResource("gkw_usas12_2704.weapon", "weapon", 1.0f),
 
 		ScoredResource("gkw_m870_3803.weapon", "weapon", 1.0f)
 			},

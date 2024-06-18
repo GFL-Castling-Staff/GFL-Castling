@@ -277,6 +277,8 @@
         {"upgrade_cso.carry_item",21},
         {"upgrade_type4.carry_item",22},
         {"upgrade_sr3mp.carry_item",23},
+        {"upgrade_usas12.carry_item",24},
+        {"upgrade_tac50.carry_item",25},
 
         {"666",0}
     };
@@ -308,6 +310,8 @@
         {"cso",21},
         {"type4",22},
         {"sr3mp",23},
+        {"usas12",24},
+        {"tac50",25},
 
         {"666",0}
     };

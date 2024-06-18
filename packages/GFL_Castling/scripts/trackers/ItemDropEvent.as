@@ -241,6 +241,14 @@ class ItemDropEvent : Tracker {
                     upgrade(cId, pId, "sr3mp", "upgrade_sr3mp.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
                 }
+                case 24:{
+                    upgrade(cId, pId, "usas12", "upgrade_usas12.carry_item", "upgrade_common", "sfx_equip.wav");
+                    break;
+                }
+                case 25:{
+                    upgrade(cId, pId, "tac50", "upgrade_tac50.carry_item", "upgrade_common", "sfx_equip.wav");
+                    break;
+                }
 
                 default:{
                     if (checkQueue(pId,"mod3")){
@@ -428,7 +436,13 @@ class ItemDropEvent : Tracker {
                     }
                     else if (checkQueue(pId,"sr3mp") && (itemKey=="gkw_sr3mp_4101.weapon" || itemKey=="gkw_sr3mp_4101_skill.weapon")){
                         giveDigimindItem(cId, pId, "gkw_sr3mp_4101_only.weapon", "sr3mp");
-                    }                                         
+                    }
+                    else if (checkQueue(pId,"usas12") && (itemKey=="gkw_usas12.weapon" || itemKey=="gkw_usas12_skill.weapon")){
+                        giveDigimindItem(cId, pId, "gkw_usas12_only.weapon", "usas12");
+                    }
+                    else if (checkQueue(pId,"usas12") && (itemKey=="gkw_usas12_2704.weapon" || itemKey=="gkw_usas12_2704_skill.weapon")){
+                        giveDigimindItem(cId, pId, "gkw_usas12_2704_only.weapon", "usas12");
+                    }                                        
                     break;
                 }
             }
@@ -812,7 +826,15 @@ class ItemDropEvent : Tracker {
                             case 23:{
                                 upgradeTimeout(cId, pId, "upgrade_sr3mp.carry_item");
                                 break;
-                            }                                                                                                                          
+                            }          
+                            case 24:{
+                                upgradeTimeout(cId, pId, "upgrade_usas12.carry_item");
+                                break;
+                            }
+                            case 25:{
+                                upgradeTimeout(cId, pId, "upgrade_tac50.carry_item");
+                                break;
+                            }                                                                                                                                                                        
                             default:
                                 break;
                         }                                      
