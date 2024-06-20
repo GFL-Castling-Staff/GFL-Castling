@@ -269,7 +269,40 @@ class fairyCommand : Tracker {
             sendFactionMessageKey(m_metagame,factionId,"Request trauma team support!");
             sendFactionMessageKey(m_metagame,factionId,"Receive, transport aircraft is maneuvering");
             CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,120.0,"fc_defend"));
-        }                    
+        }   
+        if(EventKeyGet == "fc_daybreak"){
+            int characterId = event.getIntAttribute("character_id");
+            const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+            if (character is null) return;
+            int playerId = character.getIntAttribute("player_id");
+            int factionId= character.getIntAttribute("faction_id");
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player is null) return;
+            if (!player.hasAttribute("aim_target")) return;
+            string playerName = player.getStringAttribute("name");
+            if(findCooldown(playerName,"fc_attack")){
+                dictionary a;
+                a["%time"] = ""+getCooldown(playerName,"fc_attack");                        
+                notify(m_metagame, "fairycommand_cooldown",a, "misc", playerId, false, "", 1.0);
+                addItemInBackpack(m_metagame,characterId,"weapon","reinforcement_fairy_antirain.weapon");
+                return;
+            }            
+            if (m_taskQueue.getSize() >= 3){
+                notify(m_metagame, "fairycommand_overload",dictionary(), "misc", playerId, false, "", 1.0);
+                addItemInBackpack(m_metagame,characterId,"weapon","reinforcement_fairy_antirain.weapon");
+                return;
+            }
+            Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
+            CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,target);
+            FairyRequest.setIconTypeKey("call_marker_drop");
+            FairyRequest.setIndex(4);
+            FairyRequest.setSize(0.5);
+            FairyRequest.setDummyId(m_DummyCallID);
+            m_DummyCallID++;                        
+            addCastlingMarker(FairyRequest);
+            m_taskQueue.add(DelayFairyCommand(m_metagame,0.5,factionId,"fc_daybreak",target,FairyRequest,characterId));
+            // CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,240.0,"fc_attack"));
+        }                         
     }    
 
     bool hasEnded() const {
@@ -465,6 +498,10 @@ class DelayFairyCommand : Task {
                     soldier_spawn_request("Task_MG",3)
                 };
                 tasker2.add(DelaySpawnSoldier(m_metagame,4.0,m_factionId,spawn_soldier,m_pos.add(Vector3(0,-50,0)),3.0,3.0));
+            }
+            if(m_spawnkey == "fc_daybreak"){
+                playSoundAtLocation(m_metagame,"airstrike_flyby.wav",m_factionId,m_pos,1.5f);
+                createCallatPos(m_metagame,m_characterId,m_factionId,"gk_daybreak.call",m_pos);
             }            
 		}
 

@@ -1118,3 +1118,25 @@ array<string> MassageBreakUp(string message, string command, int preNumber)
 	array<string> a = s.split(" ");
 	return a;
 }
+
+void createCallatPos(Metagame@ metagame,int character_id,int faction_id,string m_targetCallKey,Vector3 targetPosition)
+{
+	XmlElement command("command");
+	command.setStringAttribute("class", "create_call");
+	command.setStringAttribute("key", m_targetCallKey);
+	command.setStringAttribute("position", targetPosition.toString());
+	command.setIntAttribute("faction_id", faction_id);
+	command.setIntAttribute("character_id", character_id);
+	metagame.getComms().send(command);	
+}
+
+void createCallatPos(Metagame@ metagame,int character_id,int faction_id,string m_targetCallKey,string targetPosition)
+{
+	XmlElement command("command");
+	command.setStringAttribute("class", "create_call");
+	command.setStringAttribute("key", m_targetCallKey);
+	command.setStringAttribute("position", targetPosition);
+	command.setIntAttribute("faction_id", faction_id);
+	command.setIntAttribute("character_id", character_id);
+	metagame.getComms().send(command);	
+}

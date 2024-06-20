@@ -46,7 +46,7 @@ particle_system TracerFlash
 
  particle_system TracerFlash_green
 {
-	quota	100
+	quota	50
 	material	FlareFlash
 	particle_width	3.0
 	particle_height	3.0
@@ -93,7 +93,7 @@ particle_system TracerFlash
 
 particle_system TracerFlash_Quick
 {
-	quota	100
+	quota	50
 	material	FlareFlash
 	particle_width	3.0
 	particle_height	3.0
@@ -137,9 +137,9 @@ particle_system TracerFlash_Quick
 	}
 }
 
- particle_system TracerFlash_sf_jammer
+particle_system TracerFlash_sf_jammer
 {
-	quota	100
+	quota	50
 	material	FlareFlash
 	particle_width	3.0
 	particle_height	3.0

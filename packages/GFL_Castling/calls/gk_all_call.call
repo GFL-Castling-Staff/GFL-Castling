@@ -403,5 +403,24 @@
         <capacity value="0" source="rank" source_value="0.0" />
         <capacity value="100" source="rank" source_value="0" />
         <inventory encumbrance="0.0" price="0.0" />
-    </call>            
+    </call>   
+	<call name="Daybreak" key="gk_daybreak.call" initiation_comment1="Request trauma team support!" acknowledge_comment="Receive, transport aircraft is maneuvering" launch_comment="Echelon enter the battlefield" notify_metagame="1">
+        <round instances="1" instance_class="soldier" instance_key="ar_378_scarl" instance_spread="0 0 0" common_spread="0 0 0" vertical_offset_at_spawn="60.0" horizontal_offset_at_spawn="0.0" launch_time="1.0" spawn_time="1.1"/>
+        <round instances="7" instance_class="soldier" instance_key="daybreak_squad" instance_spread="6 0 6" common_spread="0 0 0" vertical_offset_at_spawn="60.0" horizontal_offset_at_spawn="0.0" launch_time="1.0" spawn_time="1.1"/>
+		<round instances="1" instance_class="vehicle" instance_key="daybreak_emp_jammer.vehicle" vertical_offset_at_spawn="0.0" horizontal_offset_at_spawn="0.0" instance_spread="0 0 0" common_spread="0 0 0" launch_time="1.0" spawn_time="1.2"/>
+        <round instances="8"
+                instance_class="grenade"
+                instance_key="stun_grenade_daybreak.projectile" 
+                instance_spread="8 5 8" 
+                common_spread="0 0 0" 
+                launch_time="1.0"
+                vertical_offset_at_spawn="30.0"
+                spawn_time="1.5">
+        </round>
+        
+		<hud_icon filename="testing.png" />
+		<capacity value="0" source="rank" source_value="0.0" />
+		<capacity value="100" source="rank" source_value="0.0" />
+		<inventory encumbrance="0.0" price="0.0" />
+	</call>
 </calls>
