@@ -142,7 +142,7 @@
             <effect class="launch" ref="ShadowAirplaneFlyby" shadow="1" />
             <sound class="launch" fileref="plane_flyby.wav" />
         </round>
-        <hud_icon filename="call_Airborne_armory.png" />
+        <hud_icon filename="call_Airborne_Storagebox.png" />
         <capacity value="0" source="rank" source_value="0.0" />
         <capacity value="100" source="rank" source_value="1.143" />
         <inventory encumbrance="0.0" price="150.0" />

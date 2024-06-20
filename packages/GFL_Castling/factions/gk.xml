@@ -836,21 +836,6 @@
 			<attribute weight="1.0" min="14.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="smg_101_ump9" spawn_score="0.05" copy_from="default_smg">
-		<character filename="default_gk_pmc.text_lines">
-			<sound key="death" fileref="UMP9_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
-			<sound key="throw" fileref="UMP9_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
-			<sound key="throw" fileref="UMP9_SKILL2_JP.wav" pitch_variety="0.01" volume="0.8" />
-		</character>
-		<resources file="gk_elite.resources">
-			<weapon key="gkw_ump9.weapon" />
-			<weapon key="medikit.weapon" />
-			<carry_item key="exo_t5_16lab.carry_item" />
-		</resources>
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.100" max="102.833" />
-		</attribute_config>
-	</soldier>
 	<soldier name="ar_106_fal" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="FNFAL_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
@@ -883,21 +868,6 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="mg_110_fg42" spawn_score="0.05" copy_from="default_mg">
-		<character filename="default_gk_pmc.text_lines">
-			<sound key="death" fileref="FG42_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
-			<sound key="throw" fileref="FG42_MEET_JP.wav" pitch_variety="0.01" volume="0.8" />
-			<sound key="throw" fileref="FG42_SKILL1_JP.wav" pitch_variety="0.01" volume="0.8" />
-		</character>
-		<resources file="gk_elite.resources">
-			<weapon key="gkw_fg42.weapon" />
-			<carry_item key="bp_t5_16lab.carry_item" />
-			<carry_item key="bp_t5_16lab.carry_item" />
-		</resources>
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.100" max="102.833" />
-		</attribute_config>
-	</soldier>
 	<soldier name="smg_102_ump40" spawn_score="0.05" copy_from="default_smg">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="UMP40_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
@@ -913,21 +883,87 @@
 			<attribute weight="1.0" min="0.100" max="102.833" />
 		</attribute_config>
 	</soldier>
-	<soldier name="smg_103_ump45" spawn_score="0.05" copy_from="default_smg">
+	<soldier name="mg_112_negev" spawn_score="0.05" copy_from="default_mg">
+		<ai filename="gk_sentry.ai" />
 		<character filename="default_gk_pmc.text_lines">
-			<sound key="death" fileref="UMP45_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />
-			<sound key="throw" fileref="UMP45_SKILL2_JP.wav" pitch_variety="0.01" volume="0.8" />
-			<sound key="throw" fileref="UMP45_SKILL3_JP.wav" pitch_variety="0.01" volume="0.8" />
 		</character>
 		<resources file="gk_elite.resources">
-			<weapon key="gkw_ump45.weapon" />
-			<weapon key="medikit.weapon" />
-			<carry_item key="exo_t5_16lab.carry_item" />
+			<weapon key="gkw_negev.weapon" />
+			<weapon key="gkw_consume_at4.weapon" />
+			<carry_item key="bp_t5_16lab.carry_item" />
 		</resources>
 		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.100" max="102.833" />
+			<attribute weight="1.0" min="0.100" max="10.0" />
 		</attribute_config>
 	</soldier>
+	<soldier name="mg_112_negev" spawn_score="0.02" copy_from="default_mg">
+		<ai filename="gk_sentry.ai" />
+		<character filename="default_gk_pmc.text_lines">
+		</character>
+		<resources file="gk_elite.resources">
+			<weapon key="gkw_negev.weapon" />
+			<weapon key="gkw_consume_at4.weapon" />
+			<carry_item key="bp_t6.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.100" max="10.0" />
+		</attribute_config>
+	</soldier>	
+	<soldier name="ar_71_galil" spawn_score="0.02" copy_from="default_mg">
+		<ai filename="gk_sentry.ai" />
+		<character filename="default_gk_pmc.text_lines">
+		</character>
+		<resources file="gk_elite.resources">
+			<weapon key="gkw_galil_skill.weapon" />
+			<weapon key="gkw_galilmod3_skill.weapon" />
+			<weapon key="gkw_consume_at4.weapon" />
+			<carry_item key="bp_t6.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.100" max="10.0" />
+		</attribute_config>
+	</soldier>
+	<soldier name="ar_72_tar21" spawn_score="0.02" copy_from="default_mg">
+		<ai filename="gk_sentry.ai" />
+		<character filename="default_gk_pmc.text_lines">
+		</character>
+		<resources file="gk_elite.resources">
+			<weapon key="gkw_tar21.weapon" />
+			<weapon key="gkw_consume_at4.weapon" />
+			<carry_item key="bp_t6.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.100" max="10.0" />
+		</attribute_config>
+	</soldier>
+	<soldier name="smg_32_uzi" spawn_score="0.02" copy_from="default_mg">
+		<ai filename="gk_sentry.ai" />
+		<character filename="default_gk_pmc.text_lines">
+		</character>
+		<resources file="gk_elite.resources">
+			<weapon key="gkw_uzi.weapon" />
+			<weapon key="gkw_uzimod3.weapon" />
+			<carry_item key="tms_t6.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.100" max="10.0" />
+		</attribute_config>
+	</soldier>
+	<soldier name="hg_248_jericho" spawn_score="0.02" copy_from="default_mg">
+		<ai filename="gk_call.ai" />
+		<character filename="default_gk_pmc.text_lines">
+		</character>
+		<resources file="gk_elite.resources">
+			<weapon key="gkw_Jericho.weapon" />
+			<carry_item key="exo_t6.carry_item" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.100" max="10.0" />
+		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="1000" max="1000" />
+		</attribute_config>		
+	</soldier>	
 	<soldier name="ar_118_9a91" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="9A91_RETREAT_JP.wav" pitch_variety="0.05" volume="0.8" />

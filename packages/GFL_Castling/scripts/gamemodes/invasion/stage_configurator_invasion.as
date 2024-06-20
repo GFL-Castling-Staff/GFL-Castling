@@ -184,9 +184,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	}
 
 	// ------------------------------------------------------------------------------------------------
-	protected void setupNormalStages() {
-		addStage(setupFinalStage2());  
-		
+	protected void setupNormalStages() {		
 		addStage(setupStage1_rust());     // map2_c by diling
 		// addStage(setupStageRace());          // DEJAHU
 		addStage(setupStage10());         // map10
@@ -208,8 +206,9 @@ class StageConfiguratorInvasion : StageConfigurator {
 		addStage(setupStage109());		  // chapter2 by diling
 		addStage(setupStage12());         // map14
 		addStage(setupStage106());		  // map106 E30 Route by diling
-		addStage(setupStage110());		  // map110 Rising Sand by diling
+		addStage(setupFinalStage2());     // map12 Opreation Homecoming
 		addStage(setupStage17());         // map17
+		addStage(setupStage110());		  // map110 Rising Sand by diling
 		addStage(setupStage15());         // map1_2
 		addStage(setupFinalStage1());     // map11
 		addStage(setupStage104()); 		  // map105_1 zoneAttack by diling
