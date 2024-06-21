@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ai filename="default.ai">
-  <parameter class="uses_vehicles" value="0.0" />
+  <parameter class="uses_vehicles" value="1.0" />
   <parameter class="force_as_leader" value="1.0" />
+  <parameter class="check_vehicles_interval" value="0.5" />
 
   <parameter class="burst_time" value="1.5" />
   <parameter class="burst_time_variance" value="0.3" />

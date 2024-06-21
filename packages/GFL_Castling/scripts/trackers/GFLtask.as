@@ -2137,3 +2137,49 @@ class Skill_AEK999 : DelaySkill {
 		m_end = true;
 	}
 }
+
+class Airdrop_Support_Negev : DelaySkill {
+
+	Airdrop_Support_Negev(GameMode@ metagame, float time, int cId,int fId,Vector3 pos){
+		super(metagame,time,cId,fId);
+		t_pos = pos;
+	}
+
+	void start(){
+		m_timeLeft=m_time;
+		m_timeLeft_internal = 0;
+		this.setExcuteLimit(4);
+		this.setInternal(1.0);
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time;return;}
+		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
+		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
+		m_excute_time++;
+		m_timeLeft_internal = m_time_internal;
+		int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,t_pos,40.0f);
+		if(luckyGuyid!=-1){
+			const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+			Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+			Vector3 startPos = t_pos.add(Vector3(0,60,0));
+
+			float strike_rand=2.0;
+			for(int j=1;j<=5;j++)
+			{
+				float rand_x = rand(-strike_rand,strike_rand);
+				float rand_y = rand(-strike_rand,strike_rand);
+				float offset = rand(-0.2,0.2);
+				CreateDirectProjectile(m_metagame,startPos,luckyGuyPos.add(Vector3(rand_x,0,rand_y)),"fairy_airstrike_heavymg.projectile",m_character_id,m_faction_id,150);
+				CreateDirectProjectile(m_metagame,startPos,luckyGuyPos.add(Vector3(rand_x+offset,0,rand_y+offset)),"fairy_airstrike_heavymg.projectile",m_character_id,m_faction_id,150);
+			}
+			playSoundAtLocation(m_metagame,"yakb_shot_fromWarthunder.wav",m_faction_id,luckyGuyPos,2.2);                  
+		}
+	}
+    bool hasEnded() const {
+		if (m_end) {
+			return true;
+		}
+		return false;
+	}		
+}

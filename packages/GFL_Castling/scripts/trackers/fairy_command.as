@@ -232,7 +232,77 @@ class fairyCommand : Tracker {
             sendFactionMessageKey(m_metagame,factionId,"Request trauma team support!");
             sendFactionMessageKey(m_metagame,factionId,"Receive, transport aircraft is maneuvering");
             CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,120.0,"fc_attack"));
-        }              
+        }   
+        if(EventKeyGet == "fc_negev"){
+            int characterId = event.getIntAttribute("character_id");
+            const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+            if (character is null) return;
+            int playerId = character.getIntAttribute("player_id");
+            int factionId= character.getIntAttribute("faction_id");
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player is null) return;
+            if (!player.hasAttribute("aim_target")) return;
+            string playerName = player.getStringAttribute("name");
+            if(findCooldown(playerName,"fc_defend")){
+                dictionary a;
+                a["%time"] = ""+getCooldown(playerName,"fc_defend");                        
+                notify(m_metagame, "fairycommand_cooldown",a, "misc", playerId, false, "", 1.0);
+                addItemInBackpack(m_metagame,characterId,"weapon","reinforcement_fairy_negev.weapon");
+                return;
+            }            
+            if (m_taskQueue.getSize() >= 3){
+                notify(m_metagame, "fairycommand_overload",dictionary(), "misc", playerId, false, "", 1.0);
+                addItemInBackpack(m_metagame,characterId,"weapon","reinforcement_fairy_negev.weapon");
+                return;
+            }
+            Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
+            Vector3 height = Vector3(0,50,0);
+            target = target.add(height);
+            CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,target);
+            FairyRequest.setIconTypeKey("call_marker_drop");
+            FairyRequest.setIndex(4);
+            FairyRequest.setSize(0.5);
+            FairyRequest.setDummyId(m_DummyCallID);
+            m_DummyCallID++;                        
+            addCastlingMarker(FairyRequest);
+            m_taskQueue.add(DelayFairyCommand(m_metagame,5,factionId,"fc_negev",target,FairyRequest,characterId));
+            sendFactionMessageKey(m_metagame,factionId,"Request trauma team support!");
+            sendFactionMessageKey(m_metagame,factionId,"Receive, transport aircraft is maneuvering");
+            CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,120.0,"fc_defend"));
+        }   
+        if(EventKeyGet == "fc_daybreak"){
+            int characterId = event.getIntAttribute("character_id");
+            const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+            if (character is null) return;
+            int playerId = character.getIntAttribute("player_id");
+            int factionId= character.getIntAttribute("faction_id");
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player is null) return;
+            if (!player.hasAttribute("aim_target")) return;
+            string playerName = player.getStringAttribute("name");
+            if(findCooldown(playerName,"fc_attack")){
+                dictionary a;
+                a["%time"] = ""+getCooldown(playerName,"fc_attack");                        
+                notify(m_metagame, "fairycommand_cooldown",a, "misc", playerId, false, "", 1.0);
+                addItemInBackpack(m_metagame,characterId,"weapon","reinforcement_fairy_antirain.weapon");
+                return;
+            }            
+            if (m_taskQueue.getSize() >= 3){
+                notify(m_metagame, "fairycommand_overload",dictionary(), "misc", playerId, false, "", 1.0);
+                addItemInBackpack(m_metagame,characterId,"weapon","reinforcement_fairy_antirain.weapon");
+                return;
+            }
+            Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
+            CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,target);
+            FairyRequest.setIconTypeKey("call_marker_drop");
+            FairyRequest.setIndex(4);
+            FairyRequest.setSize(0.5);
+            FairyRequest.setDummyId(m_DummyCallID);
+            m_DummyCallID++;                        
+            addCastlingMarker(FairyRequest);
+            m_taskQueue.add(DelayFairyCommand(m_metagame,0.5,factionId,"fc_daybreak",target,FairyRequest,characterId));
+            // CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,240.0,"fc_attack"));
+        }                         
     }    
 
     bool hasEnded() const {
@@ -410,6 +480,28 @@ class DelayFairyCommand : Task {
                     soldier_spawn_request("ar_54_m16a1",1)
                 };
                 tasker.add(DelaySpawnSoldier(m_metagame,4.0,m_factionId,spawn_soldier,m_pos.add(Vector3(0,-50,0)),3.0,3.0));
+            }
+            if(m_spawnkey == "fc_negev"){
+                playSoundAtLocation(m_metagame,"osprey.wav",m_factionId,m_pos,7.0f);
+                spawnVehicle(m_metagame,1,m_factionId,m_pos,Orientation(0,1,0,0.1),"osprey_enter");
+                sendFactionMessageKey(m_metagame,m_factionId,"Echelon enter the battlefield");
+                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                TaskSequencer@ tasker2 = m_metagame.getTaskManager().newTaskSequencer();
+				tasker.add(Airdrop_Support_Negev(m_metagame,2.0,m_characterId,m_factionId,m_pos));
+                array<soldier_spawn_request@> spawn_soldier =   
+                {
+                    soldier_spawn_request("mg_112_negev",1),
+                    soldier_spawn_request("ar_71_galil",1),
+                    soldier_spawn_request("ar_72_tar21",1),
+                    soldier_spawn_request("smg_32_uzi",1),
+                    soldier_spawn_request("hg_248_jericho",1),
+                    soldier_spawn_request("Task_MG",3)
+                };
+                tasker2.add(DelaySpawnSoldier(m_metagame,4.0,m_factionId,spawn_soldier,m_pos.add(Vector3(0,-50,0)),3.0,3.0));
+            }
+            if(m_spawnkey == "fc_daybreak"){
+                playSoundAtLocation(m_metagame,"airstrike_flyby.wav",m_factionId,m_pos,1.5f);
+                createCallatPos(m_metagame,m_characterId,m_factionId,"gk_daybreak.call",m_pos);
             }            
 		}
 
