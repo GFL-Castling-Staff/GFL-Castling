@@ -363,7 +363,12 @@ dictionary commandSkillIndex = {
         {"gkw_98k_8301.weapon",51},
         {"gkw_98k_8301_skill.weapon",51},
 
+        {"gkw_scarh.weapon",51},
         {"gkw_scarh_only.weapon",51},
+
+        {"gkw_contender.weapon",51},
+        {"gkw_contender_1502.weapon",51},
+        {"gkw_contender_3201.weapon",51},
 
         //墨尔斯假面 乐
         {"gkw_carcano1938.weapon",52},

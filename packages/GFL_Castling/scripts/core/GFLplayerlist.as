@@ -416,6 +416,11 @@ class GFL_playerInfo_Buck
         return default_equipment;
     }    
 
+    array<GFL_playerInfo@> getAllPlayerInfoArray()
+    {
+        return m_playerInfo;
+    }
+
 	void clearAll(){
 		m_playerInfo.resize(0);
 	}
@@ -1100,6 +1105,30 @@ string getPlayerWeaponFromListByPID(int pid, int weaponnum) {
 int getPlayerWeaponAmountFromListByPID(int pid, int weaponnum) {
     GFL_equipment@ equipment = g_playerInfo_Buck.getEquipmentByPid(pid);
     return equipment.getWeaponNum(weaponnum);
+}
+
+array<int> getPlayerPidByWeaponKeys(array<string> weapon_keys,int slot){
+    array<int> result = {};
+    array<GFL_playerInfo@> all_playerinfo = g_playerInfo_Buck.getAllPlayerInfoArray();
+    for(uint i=0;i<all_playerinfo.size();i++)
+    {
+        string equipment = all_playerinfo[i].getPlayerEquipment().getWeapon(slot);
+        if (equipment == default_string) continue;
+        if (weapon_keys.find(equipment) > -1) result.insertLast(all_playerinfo[i].getPlayerPid());
+    }
+    return result;    
+}
+
+array<int> getPlayerCidByWeaponKeys(array<string> weapon_keys,int slot){
+    array<int> result = {};
+    array<GFL_playerInfo@> all_playerinfo = g_playerInfo_Buck.getAllPlayerInfoArray();
+    for(uint i=0;i<all_playerinfo.size();i++)
+    {
+        string equipment = all_playerinfo[i].getPlayerEquipment().getWeapon(slot);
+        if (equipment == default_string) continue;
+        if (weapon_keys.find(equipment) > -1) result.insertLast(all_playerinfo[i].getPlayerCid());
+    }
+    return result;    
 }
 
 bool checkCharacterIdisPlayerOwn(int cid) {

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="M67 defence grenade" key="hand_defence_grenade.projectile" slot="0" radius="0.15">
+    <tag name="grenade" />
+
+    <result class="spawn" instance_class="grenade" instance_key="defence_grenade_sub.projectile" min_amount="30" max_amount="30" offset="0 0.25 0" position_spread="0.8 0" direction_spread="0.0 0.0" />
+    <trigger class="time" time_to_live="6.0"/>
+
+    <rotation class="random" />
+
+    <model mesh_filename="defence_grenade.xml" />
+    <hud_icon filename="hud_grenade.png" />
+
+    <throwable curve_height="6.5" near_far_distance="3.0" speed_estimation_near="12.0" speed_estimation_far="15.0" max_speed="15.0" randomness="0.1" />
+    <!-- throwable para adjusted from Bad Goose's PA -->
+    <commonness value="1.0" />
+    <capacity value="6" source="rank" source_value="0" />
+    <inventory encumbrance="4.0" buy_price="10.0" sell_price="0.0" />
+
+    <sound class="result" key="other" fileref="explosion_FromFC5_1.wav" volume="1.4" />
+    <sound class="result" key="other" fileref="explosion_FromFC5_2.wav" volume="1.4" />
+    <sound class="result" key="other" fileref="explosion_FromFC5_3.wav" volume="1.4" />
+    <sound class="result" key="other" fileref="explosion_FromFC5_4.wav" volume="1.4" />
+
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="vehicle" copy="other" />
+    <sound class="result" key="character" copy="other" />
+
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_smoke" lighting="0" post_processing="1"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_smoke_expanding" lighting="0" post_processing="1"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_ring" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_ring_2" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_spray_1" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_spray_2" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_fire" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_fire_wave" lighting="0"/> 
+
+    <effect class="result" key="static_object" copy="terrain" />
+    <effect class="result" key="vehicle" copy="terrain" />     
+    <effect class="result" key="character" copy="terrain" />
+    <effect class="result" key="other" copy="terrain" />
+    <effect class="activated" ref="SatchelSparkle" />
+    <effect class="activated" ref="SatchelFlash" />
+</projectile>
