@@ -61,6 +61,10 @@ class GFL_event_system : Tracker {
         GFL_event_array.resize(0);
 	}
 
+    void onAdd() {
+        GFL_event_array.resize(0);
+    }
+
     void update(float time) {
         if(GFL_event_array.length()>0){        
             for (uint a=0;a<GFL_event_array.length();a++){
