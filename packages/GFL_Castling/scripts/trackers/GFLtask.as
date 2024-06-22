@@ -1971,7 +1971,7 @@ class DelayGPSScanRequest : Task{
 		if (m_timeLeft < 0 && m_scanned == false){
 			bool anyFound = false;
 			
-			for (uint f = 0; f < 4; ++f){
+			for (int f = 0; f < 4; ++f){
 				if(f == m_faction_id) continue;
 				//scanning for all vehicles on the list
 				for (uint i = 0; i < GPSScanTargets.length(); ++i){
@@ -2158,7 +2158,7 @@ class Airdrop_Support_Negev : DelaySkill {
 		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
 		m_excute_time++;
 		m_timeLeft_internal = m_time_internal;
-		int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,t_pos,40.0f);
+		int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,t_pos,20.0f);
 		if(luckyGuyid!=-1){
 			const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
 			Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));

@@ -316,6 +316,29 @@ class kill_event : Tracker {
             string KillerWeaponKey = event.getStringAttribute("key");
             string killway = event.getStringAttribute("method_hint");
 
+            if(factionId !=0 && (Solider_Name =="ar_378_scarl" || Solider_Name == "daybreak_squad") )
+            {
+                array<string> scarl = {"gkw_scarl.weapon","gkw_scarl_only.weapon"};
+                array<string> scarh = {"gkw_scarh.weapon","gkw_scarh_only.weapon"};
+                array<int> characterid_scarl =getPlayerCidByWeaponKeys(scarl,0);
+                array<int> characterid_scarh =getPlayerCidByWeaponKeys(scarh,0);
+                for(uint i=0;i<characterid_scarl.size();i++)
+                {
+                    int scarl_cid = characterid_scarl[i];
+                    healCharacter(m_metagame,scarl_cid,rand(1,2));
+                    sendFactionMessageKeySaidAsCharacter(m_metagame,0,scarl_cid,"scarl_dogtag_gain",dictionary(),0.9);
+                }
+                for(uint i=0;i<characterid_scarh.size();i++)
+                {
+                    int scarh_cid = characterid_scarh[i];
+                    int j = findSkillIndex(scarh_cid,"sniper");
+                    if(j >=0){
+                        SkillArray[j].m_time-=2.0;
+                    }                    
+                    sendFactionMessageKeySaidAsCharacter(m_metagame,0,scarh_cid,"scarh_dogtag_gain",dictionary(),0.9);
+                }
+            }
+
             if(reward_pool_key != "" && factionId==0){
                 if(reward_pool_key=="common"){
                     if(rand(0.0f,1.0f) <= (0.15f+ m_droprate_offset)){
@@ -755,7 +778,25 @@ class kill_event : Tracker {
 
         if (Daybreak_Squad.find(weapon_key) >=0 )
         {
-
+            array<string> scarl = {"gkw_scarl.weapon","gkw_scarl_only.weapon"};
+            array<string> scarh = {"gkw_scarh.weapon","gkw_scarh_only.weapon"};
+            array<int> characterid_scarl =getPlayerCidByWeaponKeys(scarl,0);
+            array<int> characterid_scarh =getPlayerCidByWeaponKeys(scarh,0);
+            for(uint i=0;i<characterid_scarl.size();i++)
+            {
+                int scarl_cid = characterid_scarl[i];
+                healCharacter(m_metagame,scarl_cid,3);
+                sendFactionMessageKeySaidAsCharacter(m_metagame,0,scarl_cid,"scarl_dogtag_gain",dictionary(),0.9);
+            }
+            for(uint i=0;i<characterid_scarh.size();i++)
+            {
+                int scarh_cid = characterid_scarh[i];
+                int j = findSkillIndex(scarh_cid,"sniper");
+                if(j >=0){
+                    SkillArray[j].m_time-=5.0;
+                }                    
+                sendFactionMessageKeySaidAsCharacter(m_metagame,0,scarh_cid,"scarh_dogtag_gain",dictionary(),0.9);
+            }
         }
 
     }

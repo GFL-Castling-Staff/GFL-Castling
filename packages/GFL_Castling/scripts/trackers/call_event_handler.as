@@ -814,7 +814,8 @@ class call_event : Tracker {
                     }
                     case 8:{
                         if(findCooldown(playerName,"vehicle")){
-                            returnCooldown("vehicle", 2000, characterId, playerName, playerId, "vehicle_drop_cooldown");
+                            returnCooldown("vehicle", 0, characterId, playerName, playerId, "vehicle_drop_cooldown");
+                            addItemInBackpack(m_metagame,characterId,"weapon","fairy_vehicle_pierre.weapon");
                             break;
                         }
                         else {
@@ -838,7 +839,8 @@ class call_event : Tracker {
                     }
                     case 9:{
                         if(findCooldown(playerName,"vehicle")){
-                            returnCooldown("vehicle", 1000, characterId, playerName, playerId, "vehicle_drop_cooldown");
+                            returnCooldown("vehicle", 0, characterId, playerName, playerId, "vehicle_drop_cooldown");
+                            addItemInBackpack(m_metagame,characterId,"weapon","fairy_vehicle_chiara.weapon");
                             break;
                         }
                         else {
@@ -862,7 +864,8 @@ class call_event : Tracker {
                     }
                     case 10:{
                         if(findCooldown(playerName,"vehicle")){
-                            returnCooldown("vehicle", 400, characterId, playerName, playerId, "vehicle_drop_cooldown");
+                            returnCooldown("vehicle", 0, characterId, playerName, playerId, "vehicle_drop_cooldown");
+                            addItemInBackpack(m_metagame,characterId,"weapon","fairy_vehicle_martina.weapon");
                             break;
                         }
                         else {
@@ -886,7 +889,8 @@ class call_event : Tracker {
                     }
                     case 11:{
                         if(findCooldown(playerName,"vehicle")){
-                            returnCooldown("vehicle", 300, characterId, playerName, playerId, "vehicle_drop_cooldown");
+                            returnCooldown("vehicle", 0, characterId, playerName, playerId, "vehicle_drop_cooldown");
+                            addItemInBackpack(m_metagame,characterId,"weapon","fairy_vehicle_guerche.weapon");
                             break;
                         }
                         else {
@@ -910,7 +914,8 @@ class call_event : Tracker {
                     }
                     case 12:{
                         if(findCooldown(playerName,"vehicle")){
-                            returnCooldown("vehicle", 150, characterId, playerName, playerId, "vehicle_drop_cooldown");
+                            returnCooldown("vehicle", 0, characterId, playerName, playerId, "vehicle_drop_cooldown");
+                            addItemInBackpack(m_metagame,characterId,"weapon","fairy_vehicle_tricycle.weapon");
                             break;
                         }
                         else {
