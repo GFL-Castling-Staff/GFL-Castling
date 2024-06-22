@@ -814,9 +814,9 @@
 	<model />
 	<ballistics curve_height="2.0" near_far_distance="10.0" speed_estimation_near="300.0" speed_estimation_far="300.0" max_speed="150.0" randomness="0.0" tweak_factor="2.0"/>
 	<projectile class="grenade" name="default" slot="1" time_to_live="1.0" pulldown_in_air="4">
-	    <result class="spawn" instance_class="grenade" instance_key="blast_shard_m1a1_mg_s.projectile" min_amount="9" max_amount="9" offset="0 0 0" position_spread="4 1" direction_spread="0 0" />
+	    <result class="spawn" instance_class="grenade" instance_key="blast_shard_m1a1_mg_s.projectile" min_amount="9" max_amount="9" offset="0 0 0" position_spread="4.8 2.4" direction_spread="0 0" />
 
-		<collision class="impact" />    
+		<collision class="sticky" />    
 		<trigger class="time" time_to_live="1.0"/>
 
 		<rotation class="motion" />
