@@ -1,7 +1,7 @@
 #include "query_helpers2.as"
 #include "helpers.as"
 
-bool OutOfRange(Vector3 v2){
+bool OutOfRange_2(Vector3 v2){
 	float x = v2.get_opIndex(0);
 	float z = v2.get_opIndex(2);
 
