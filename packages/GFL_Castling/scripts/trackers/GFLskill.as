@@ -1151,8 +1151,9 @@ class GFLskill : Tracker {
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 				if (character is null) return;
 				Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
+				if (OutOfRange(grenade)) return;
 				int factionid = character.getIntAttribute("faction_id");
-				spawnVehicle(m_metagame,1,factionid,grenade_pos,Orientation(0,1,0,0.1),"sf_boss_intruder_skill.vehicle");
+				spawnVehicle(m_metagame,1,factionid,grenade_pos.add(Vector3(0,10,0)),Orientation(0,1,0,0.1),"sf_boss_intruder_skill.vehicle");
 				GFL_event_array.insertLast(GFL_event(characterId,factionid,int(GFL_Event_Index["intruder_spawn"]),grenade_pos));
 				break;			
 			}

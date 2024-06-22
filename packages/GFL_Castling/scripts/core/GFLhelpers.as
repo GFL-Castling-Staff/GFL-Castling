@@ -3,6 +3,7 @@
 #include "GFLplayerlist.as"
 #include "Spawn_request.as"
 #include "GFLparameters.as"
+#include "mapsize.as"
 
 //严禁无授权转载
 //Credit: NetherCrow & Castling Staff
