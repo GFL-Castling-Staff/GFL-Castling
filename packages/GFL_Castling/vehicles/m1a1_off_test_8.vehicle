@@ -42,7 +42,7 @@
 
 	<visual class="turret" turret_index="0" key="broken" mesh_filename="m1a1_body.mesh" texture_filename="humvee_broken.png" />
 	<visual  offset="0 0 -0.6" class="turret" turret_index="1" key="broken" mesh_filename="m1a1_turret.mesh" texture_filename="humvee_broken.png" />
-	<visual  offset="0 0 -0.6" class="turret" turret_index="2" key="broken" mesh_filename="m1a1_coax_tow.mesh" texture_filename="humvee_broken.png" />
+	<visual  offset="-0.1 0 -0.6" class="turret" turret_index="2" key="broken" mesh_filename="m1a1_coax_tow.mesh" texture_filename="humvee_broken.png" />
 	<visual  class="turret" turret_index="3" key="broken" mesh_filename="m1a1_respawnp.mesh" texture_filename="humvee_broken.png" />
 	<visual  class="turret" turret_index="4" key="broken" mesh_filename="m1a1_wasp.mesh" texture_filename="humvee_broken.png" />
 
