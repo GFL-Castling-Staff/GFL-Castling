@@ -172,6 +172,18 @@ particle_system ct_vehicle_tire_smoke_3 : ct_vehicle_tire_smoke
 	material tire_smoke_3
 }
 
+particle_system ct_vehicle_tire_smoke_amos : ct_vehicle_tire_smoke
+{
+	material tire_smoke_3
+	particle_width 3
+	particle_height 3
+
+	affector Scaler
+	{
+		rate 1.05
+	}
+}
+
 
 //--------------------------------------material-----------------------------------
 
