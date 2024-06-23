@@ -275,7 +275,7 @@ class CommandSkill : Tracker {
                 case 82:{excuteTac50Skill(cId,senderId,m_modifer);break;}
                 case 83:{excuteOBRMod3Skill(cId,senderId,m_modifer);break;}
                 case 84:{excuteAEK999skill(cId,senderId,m_modifer);break;}
-                //case 85:{excuteM14MOD3skill(cId,senderId,m_modifer);break;}
+                case 85:{excuteM14MOD3skill(cId,senderId,m_modifer);break;}
                 
                 default:
                     break;
