@@ -739,23 +739,46 @@
     <sound class="impact" fileref="rifle_drop.wav" />
     <model />
     <ballistics near_far_distance="1000.0" speed_estimation_near="120.0" speed_estimation_far="120.0" max_speed="125.0" randomness="0.0" />
-    <projectile file="88_HEAT.projectile" radius="0.3" >
+	
+	<projectile class="grenade" radius="0.3" slot="2" name="default" time_to_live="1.0" pulldown_in_air="0.5" >
+		<collision class="impact" />    
+		<trigger class="impact" />
+
+	    <sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2" />
+		<sound class="result" key="other" fileref="explosion_FromSQUAD_2.wav" volume="2" />
+		<sound class="result" key="other" fileref="explosion_FromSQUAD_3.wav" volume="2" />
+
+		<sound class="result" key="vehicle" copy="other" />    
+		<sound class="result" key="terrain" copy="other" />
+		<sound class="result" key="static_object" copy="other" />
+		<sound class="result" key="character" copy="other" />
+
+		<model mesh_filename="88HEAT.xml" />
         <result class="blast" damage="20.0" radius="8" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+		<effect class="result" key="terrain" ref="general_weapon_result_blast_smoke" lighting="0" post_processing="1"/> 
+		<effect class="result" key="terrain" ref="general_weapon_result_blast_smoke_expanding" lighting="0" post_processing="1"/> 
+		<effect class="result" key="terrain" ref="general_weapon_result_blast_ring" lighting="0"/> 
+		<effect class="result" key="terrain" ref="general_weapon_result_blast_ring_2" lighting="0"/> 
+		<effect class="result" key="terrain" ref="general_weapon_result_blast_spray_1" lighting="0"/> 
+		<effect class="result" key="terrain" ref="general_weapon_result_blast_spray_2" lighting="0"/> 
+		<effect class="result" key="terrain" ref="general_weapon_result_blast_fire" lighting="0"/> 
+		<effect class="result" key="terrain" ref="general_weapon_result_blast_fire_wave" lighting="0"/> 
+
+		<effect class="activated" ref="SatchelSparkle" />
+		<effect class="activated" ref="SatchelFlash" />
+		<effect class="activated" ref="missile_activated_cannon_flysmoke" lighting="0"/>
+
+		<effect class="result" key="other" copy="terrain"/>
+		<effect class="result" key="static_object" copy="terrain" />
+		<effect class="result" key="character" copy="terrain" />
+		<effect class="result" key="shield" copy="terrain" />			
+		<effect class="result" key="vehicle" copy="terrain" />
+		<trail probability="1" key="atgm_trail_heat"/>	
     </projectile>
     <weak_hand_hold offset="0.3" />
     <hud_icon filename="88rocket.png" />
     <effect class="muzzle" ref="LawMuzzle" />
     <effect class="muzzle" ref="UpDust" />
-    
-    <stance state_key="running" accuracy="0.9" />
-    <stance state_key="walking" accuracy="0.9" />
-    <stance state_key="crouch_moving" accuracy="0.9" />
-    <stance state_key="standing" accuracy="1" />
-    <stance state_key="crouching" accuracy="1" />
-    <stance state_key="prone" accuracy="1" />
-    <stance state_key="prone_moving" accuracy="0.9" />
-    <stance state_key="over_wall" accuracy="1" />
-    <modifier class="speed" value="0" />
 </weapon>
 
 <weapon key="gkw_vehicle_m1a1_pulse_stun.weapon" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -805,16 +828,16 @@
 <weapon key="gkw_vehicle_m1a1_emgun.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
 	<tag name="elite"/>
-	<specification barrel_offset="0.5" retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="0.15" cooldown_start="0.5" cooldown_end="0.0" spread_range="0.8" magazine_size="-1" suppressed="0" name="M1A1 Electronic Machine Gun" class="0" projectile_speed="140" sight_range_modifier="2.0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" stance_accuracy_rate="0.65" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="2" leave_crouch_accuracy_penalty="0.3"/>
+	<specification sight_height_offset="3.0" barrel_offset="0.5" retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="0.15" cooldown_start="0.5" cooldown_end="0.0" spread_range="0.8" magazine_size="-1" suppressed="0" name="M1A1 Electronic Machine Gun" class="0" projectile_speed="140" sight_range_modifier="2.4" ai_sight_range_modifier="1.0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" stance_accuracy_rate="0.65" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="2" leave_crouch_accuracy_penalty="0.3"/>
 	<inventory encumbrance="50.0" buy_price="450.0" sell_price="400.0"/>
 	<inventory encumbrance="50.0" buy_price="450.0" sell_price="400.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<sound key="fire" fileref="mg4skill_fire_FromHALOINFINTE.wav" pitch_variety="0.05" volume="1"/>
 	<model />
-	<ballistics curve_height="2.0" near_far_distance="10.0" speed_estimation_near="300.0" speed_estimation_far="300.0" max_speed="150.0" randomness="0.0" tweak_factor="2.0"/>
+	<ballistics curve_height="1.5" near_far_distance="10.0" speed_estimation_near="300.0" speed_estimation_far="300.0" max_speed="150.0" randomness="0.0" tweak_factor="2.0"/>
 	<projectile class="grenade" name="default" slot="1" time_to_live="1.0" pulldown_in_air="4">
-	    <result class="spawn" instance_class="grenade" instance_key="blast_shard_m1a1_mg_s.projectile" min_amount="9" max_amount="9" offset="0 0 0" position_spread="4.8 2.4" direction_spread="0 0" />
+	    <result class="spawn" instance_class="grenade" instance_key="blast_shard_m1a1_mg_s.projectile" min_amount="12" max_amount="12" offset="0 0 0" position_spread="4.8 3.6" direction_spread="0 0" />
 
 		<collision class="sticky" />    
 		<trigger class="time" time_to_live="1.0"/>
@@ -851,7 +874,7 @@
 	<target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
-	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="200.0"/>
 </weapon>
 
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0.5" drop_count_factor_on_player_death="1.0" key="gkw_vehicle_m1a1_rocker.weapon">
@@ -917,15 +940,11 @@
     <effect class="muzzle" ref="LawMuzzle" />
     <effect class="muzzle" ref="UpDust" />
     
-    <stance state_key="running" accuracy="0.9" />
-    <stance state_key="walking" accuracy="0.9" />
-    <stance state_key="crouch_moving" accuracy="0.9" />
-    <stance state_key="standing" accuracy="1" />
-    <stance state_key="crouching" accuracy="1" />
-    <stance state_key="prone" accuracy="1" />
-    <stance state_key="prone_moving" accuracy="0.9" />
-    <stance state_key="over_wall" accuracy="1" />
-    <modifier class="speed" value="0" />
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="200.0"/>
 </weapon>
 
 
