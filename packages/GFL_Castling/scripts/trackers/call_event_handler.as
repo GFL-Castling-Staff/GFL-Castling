@@ -69,6 +69,7 @@ class call_event : Tracker {
 
 	call_event(GameMode@ metagame) {
 		@m_metagame = @metagame;
+        CallEvent_cooldown.resize(0);
 	}
 
 	protected void handleCallEvent(const XmlElement@ event) {
