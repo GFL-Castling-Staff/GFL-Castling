@@ -33,7 +33,7 @@
         <animation state_key="running" animation_key="running, line infantry" />
         <animation state_key="walking" animation_key="walking, line infantry" />     
         <animation state_key="hold_casual" animation_key="hold_casual, line infantry" />
-        <sound key="fire" fileref="mlemk1_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.4"/>
+        <sound key="fire" fileref="mlemk1mod_fire_FromBF2PR.wav" pitch_variety="0.05" volume="1.4"/>
         <sound key="cycle" fileref="mlemk1_cycle_FromPOSTSCRIPTUM.wav" volume="0.7"/>
         <sound key="reload_one" fileref="mlemk1_reload_FromPOSTSCRIPTUM.wav" volume="0.7"/>
         <sound key="cycle_out" fileref="mlemk1_cycle_out_FromPOSTSCRIPTUM.wav" volume="0.7"/>
@@ -103,7 +103,7 @@
         <animation key="recoil" animation_key="recoil1, big"/>
         <animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
         <animation state_key="hold_casual" animation_key="hold_casual, line infantry" />
-        <sound key="fire" fileref="mlemk1_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.4"/>
+        <sound key="fire" fileref="mlemk1mod_fire_FromBF2PR.wav" pitch_variety="0.05" volume="1.4"/>
         <sound key="cycle" fileref="mlemk1_cycle_FromPOSTSCRIPTUM.wav" volume="0.7"/>
         <sound key="cycle_out" fileref="mlemk1_cycle_out_FromPOSTSCRIPTUM.wav" volume="0.7"/>
         <sound key="cycle_in" fileref="mlemk1_cycle_in_FromPOSTSCRIPTUM.wav" volume="0.7"/>
