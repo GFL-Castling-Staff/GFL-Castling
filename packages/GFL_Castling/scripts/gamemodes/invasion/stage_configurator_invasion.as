@@ -184,7 +184,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 	}
 
 	// ------------------------------------------------------------------------------------------------
-	protected void setupNormalStages() {		
+	protected void setupNormalStages() {	
 		addStage(setupStage1_rust());     // map2_c by diling
 		// addStage(setupStageRace());          // DEJAHU
 		addStage(setupStage10());         // map10

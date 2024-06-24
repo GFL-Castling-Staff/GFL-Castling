@@ -32,7 +32,8 @@ array<string> BadAssMapList = {
 	"Elk Island",
 	"Rising Sand",
 	"Hell's High Way",
-	"Palo Island"
+	"Palo Island",
+	"Operation Homecoming"
 };
 
 // --------------------------------------------
@@ -242,6 +243,10 @@ class MapRotatorInvasion : MapRotator {
 
 				if (map_name=="Shock Zone" || map_name=="Zone Attack"|| map_name=="Dead Zone"){		
 					rewardlist.insertLast(Resource("complete_box_singularity.carry_item","carry_item"));
+				}
+
+				if (map_name=="Operation Homecoming"){		
+					rewardlist.insertLast(Resource("complete_box_arcticwarfare.carry_item","carry_item"));
 				}
 
 				if (BadAssMapList.find(map_name)>-1){

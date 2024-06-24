@@ -65,6 +65,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		setupSingularity();
 		setupBadAss();
 		setupXiangBing();
+		setupSWZ();
 		_log("adding supply reward box", 1);
 	}
 
@@ -752,6 +753,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
 			);
 	}
+
 	protected void setupSingularity() {
 		array<Resource@> deliveryList = {
 			Resource("complete_box_singularity.carry_item", "carry_item")
@@ -782,6 +784,45 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("gkw_rfb.weapon", "weapon", 0.5f),
 		ScoredResource("black_card.carry_item", "carry_item", 0.32f),
 		ScoredResource("equip_only_ticket.carry_item", "carry_item", 0.08f)
+			}
+		};
+		processRewardPasses(rewardPasses);
+
+		GiftItemDeliveryRandomRewarder@ rewarder = GiftItemDeliveryRandomRewarder(m_metagame, rewardPasses);
+
+		m_itemDeliveryOrganizer.addObjective(
+			ItemDeliveryObjective(m_metagame, 0, deliveryList, m_itemDeliveryOrganizer, null, "", "", "", -1 /* loop */, rewarder)
+			);
+	}
+
+	protected void setupSWZ() {
+		array<Resource@> deliveryList = {
+			Resource("complete_box_arcticwarfare.carry_item", "carry_item")
+		};
+
+		array<array<ScoredResource@>> rewardPasses = {
+			{
+		ScoredResource("RO365_Ant_Doll.carry_item", "carry_item", 15.0f),
+		ScoredResource("wild_gifts.carry_item", "carry_item", 10.0f, 20),
+		ScoredResource("snow_gifts.carry_item", "carry_item", 10.0f, 20),
+		ScoredResource("gift_box_1.carry_item", "carry_item", 30.0f,3),
+		ScoredResource("firecontrol.carry_item", "carry_item", 15.0f,1),
+		ScoredResource("gift_box_2.carry_item", "carry_item", 15.0f,1),
+		ScoredResource("lottery.carry_item", "carry_item", 20.0f,3),
+		ScoredResource("core_mask.carry_item", "carry_item", 5.0f,1),
+		ScoredResource("gift_box_1.carry_item", "carry_item", 30.0f,5)
+			},
+			{
+		ScoredResource("gkw_56typer.weapon", "weapon", 0.5f),
+		ScoredResource("gkw_supersass.weapon", "weapon", 0.5f),
+		ScoredResource("gkw_ots44.weapon", "weapon", 0.5f),
+		// ScoredResource("gkw_ar70.weapon", "weapon", 0.5f),
+		ScoredResource("gkw_evo3.weapon", "weapon", 0.5f),
+		// ScoredResource("gkw_59type.weapon", "weapon", 0.5f),
+		ScoredResource("gkw_g28.weapon", "weapon", 0.5f),
+		ScoredResource("gkw_m1887.weapon", "weapon", 0.5f),
+		ScoredResource("black_card.carry_item", "carry_item", 0.24f),
+		ScoredResource("equip_only_ticket.carry_item", "carry_item", 0.06f)
 			}
 		};
 		processRewardPasses(rewardPasses);

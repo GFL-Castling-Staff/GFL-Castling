@@ -213,8 +213,8 @@ class Phase3 : Phase {
 
 		// refilling the radar_tower side-base to have defenders 
 		string position = "515 0 562";
-		m_metagame.getComms().send("<command class='create_call' key='paratroopers2.call' position='"+position+"' faction_id='1'/>");
-		m_metagame.getComms().send("<command class='create_call' key='paratroopers2.call' position='"+position+"' faction_id='1'/>");    
+		// m_metagame.getComms().send("<command class='create_call' key='paratroopers2.call' position='"+position+"' faction_id='1'/>");
+		// m_metagame.getComms().send("<command class='create_call' key='paratroopers2.call' position='"+position+"' faction_id='1'/>");    
 		m_metagame.getComms().send("<command class='create_instance' faction_id='1' position='"+position+"' instance_class='vehicle' instance_key='para_spawn.vehicle' />");
 
 		// testing helper:
@@ -373,6 +373,29 @@ class Phase4 : Phase {
 		}
 	}
 
+	protected void handleVehicleSpawnEvent(const XmlElement@ event) {
+		string key = event.getStringAttribute("vehicle_key");
+        int vehicleId = event.getIntAttribute("vehicle_id");
+		if (key != "neosu_kuergants_boss.vehicle") return;
+            _log("boss_detected");
+			int currentplayers;
+            array<const XmlElement@> players = getPlayers(m_metagame);
+			if(players is null)
+			{
+				currentplayers = 1;
+			}
+			else
+			{
+				currentplayers = players.length;
+			}
+            float hp_mutil = currentplayers * 0.2 +1.0;
+            const XmlElement@ vehicleInfo = getVehicleInfo(m_metagame, vehicleId);
+            if (vehicleInfo is null) return;
+            float vehicleMaxHealth = vehicleInfo.getFloatAttribute("max_health");
+            float vehicleHealth = vehicleMaxHealth * hp_mutil;
+			setVehicleHP(m_metagame,vehicleId,vehicleHealth);
+
+	}
 	// --------------------------------------------
 	void save(XmlElement@ root) {
 	}

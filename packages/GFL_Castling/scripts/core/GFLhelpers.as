@@ -1141,3 +1141,12 @@ void createCallatPos(Metagame@ metagame,int character_id,int faction_id,string m
 	command.setIntAttribute("character_id", character_id);
 	metagame.getComms().send(command);	
 }
+
+void setVehicleHP(Metagame@ metagame,int vehicleid,float health)
+{
+	XmlElement command("command");
+	command.setStringAttribute("class", "update_vehicle");
+	command.setIntAttribute("id", vehicleid);
+	command.setFloatAttribute("health", health);
+	metagame.getComms().send(command);	
+}
