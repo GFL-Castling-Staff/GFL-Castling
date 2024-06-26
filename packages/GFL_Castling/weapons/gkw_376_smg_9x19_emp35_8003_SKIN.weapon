@@ -39,10 +39,10 @@
     <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
     <animation state_key="stabbing" animation_key="melee, quick knife" />
     <animation state_key="stabbing" animation_key="pistol whip 3" />
-    <sound key="fire" fileref="erma_emp35_fire_fromEnlisted.wav" pitch_variety="0.05" volume="0.65" />
-    <sound key="magazine_out" fileref="erma_emp35_mgz_out_fromEnlisted.wav" volume="0.7" />
-    <sound key="magazine_in" fileref="erma_emp35_mgz_in_fromEnlisted.wav" volume="0.7" />
-    <sound key="cycle" fileref="erma_emp35_cycle_fromEnlisted.wav" volume="0.7" />
+    <sound key="fire" fileref="emp35_fire_FromBFV.wav" pitch_variety="0.05" volume="1.1" />
+    <sound key="magazine_out" fileref="emp35_mgz_out_FromBFV.wav" volume="0.9" />
+    <sound key="magazine_in" fileref="emp35_mgz_in_FromBFV.wav" volume="0.9" />
+    <sound key="cycle" fileref="emp35_cycle_FromBFV.wav" volume="0.9" />
     <sound class="impact" fileref="rifle_drop.wav" />
         <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.3" />
     <model filename="gkw_smg_erma.xml"/>
