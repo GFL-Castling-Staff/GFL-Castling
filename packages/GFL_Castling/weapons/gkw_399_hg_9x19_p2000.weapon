@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon key="gkw_p2000.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<tag name="pistol" />
+	<!--Weapon specifications-->
+    <specification
+	retrigger_time="-1"
+	last_burst_retrigger_time="0.2"
+	accuracy_factor="1.0"
+	sustained_fire_grow_step="0.35"
+	sustained_fire_diminish_rate="1.45"
+	magazine_size="13"
+	suppressed="0"
+	name="HK P2000"
+	class="4"
+	slot="0"
+	reload_one_at_a_time="0"
+	sight_range_modifier="1.0"
+	projectile_speed="110.5"
+	projectiles_per_shot="1"
+	carry_in_two_hands="0"
+	spread_range="0.225"
+	burst_shots="1"/>
+	<commonness value="0.2" in_stock="0" can_respawn_with="1" />
+    <inventory encumbrance="5.0" buy_price="10.0" sell_price="7.0"/>
+    <capacity value="1" source="rank" source_value="0.0" />
+	<!--Animations-->
+	<animation state_key="recoil"	animation_key="recoil, pistol" />
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone" />
+    <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol" />
+	<animation state_key="reload"	animation_key="reloading, SA OHG 1.0" />
+	<animation state_key="reload"	animation_key="reloading2, SA OHG 1.0" />
+	<animation state_key="hold"	animation_key="hold, pistol" />
+	<animation state_key="hold_casual"	animation_key="hold_casual, pistol" />
+	<animation state_key="hold_on_wall"	animation_key="hold, pistol" />
+	<animation state_key="still_against_wall"	animation_key="hold, pistol" />
+	<animation state_key="crouching"	animation_key="crouch, pistol" />
+	<animation state_key="running"	animation_key="running, pistol" />
+	<animation state_key="walking"	animation_key="walking, pistol" />
+    <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
+    <animation state_key="prone_still" animation_key="prone_still, pistol" />
+    <animation state_key="walking_backwards" animation_key="walking backwards, pistol" />
+    <animation state_key="stabbing" animation_key="pistol whip" />
+	<animation state_key="stabbing" animation_key="pistol whip 3" />
+	<!--Sounds-->
+	<sound key="dry_fire" fileref="dryfire_9mmhg_1.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="fire" fileref="p2000_fire_FromCSGO.wav" pitch_variety="0.05" volume="1.4" />
+    <sound key="magazine_out" fileref="p2000_mgz_out_FromCSGO.wav" volume="0.5" />
+    <sound key="magazine_in" fileref="p2000_mgz_in_FromCSGO.wav" volume="0.5"/>    
+    <sound key="cycle" fileref="p2000_cycle_FromCSGO.wav" volume="0.5" />
+	<!--Model, Icon, Cost-->
+    <model filename="gkw_hg_p2000.xml" />
+    <hud_icon filename="gkw_p2000.png" />
+	<!--Ballistics-->
+    <weak_hand_hold offset="0.1" />
+    <projectile file="bullet.projectile">
+        <result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.3" kill_decay_end_time="0.35" />
+    </projectile>
+    <effect class="muzzle" ref="ejection_9mm" />
+    <!--Accuracy, Movement speed-->
+    <stance state_key="running" accuracy="0.85" />
+    <stance state_key="walking" accuracy="0.85" />
+    <stance state_key="crouch_moving" accuracy="0.85" />
+    <stance state_key="prone_moving" accuracy="0.85" />
+    <stance state_key="standing" accuracy="0.9" />
+    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="prone" accuracy="1" />
+	<stance state_key="over_wall" accuracy="1" />
+	<modifier class="speed" value="0.7" />
+</weapon>

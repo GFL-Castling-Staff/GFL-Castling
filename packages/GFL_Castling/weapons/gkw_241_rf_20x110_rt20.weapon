@@ -21,7 +21,7 @@
         sight_range_modifier="2.2"  
         projectile_speed="200" 
         stance_accuracy_rate="1.0"
-        barrel_offset="0.6" 
+        barrel_offset="0.72" 
         projectiles_per_shot="1"
         stab_enabled="1"
         stab_range="4"
@@ -46,7 +46,7 @@
     <!--Sounds-->
     <sound key="fire" fileref="rt20_fire_FromCOD13.wav" volume="1.6" />
     <sound key="cycle" fileref="rt20_cycle_FromTKF.wav" volume="1.0"/>
-    <sound key="magazine_out" fileref="rt20_mgz_out_FromCOD15.wav" volume="0.7"/>
+    <sound key="magazine_out" fileref="rt20_mgz_out_FromTKF.wav" volume="0.7"/>
     <sound key="magazine_in" fileref="rt20_mgz_in_FromCOD15.wav" volume="0.7"/>
     <sound key="dry_fire" fileref="dryfire_atrf.wav" pitch_variety="0.05" volume="1.0" />
     <sound class="impact" fileref="rifle_drop.wav" />
