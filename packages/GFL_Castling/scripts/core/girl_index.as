@@ -796,7 +796,11 @@ dictionary tdoll_complex_index = {
 
     {modded_key(240).toString(),"gkw_mk46.weapon"},
 
+    {modded_key(241).toString(),"gkw_rt20.weapon"},
+
     {modded_key(242).toString(),"gkw_p22.weapon"},
+
+    {modded_key(243).toString(),"gkw_howa64.weapon"},
 
     {modded_key(244).toString(),"gkw_tec9.weapon"},
     {modded_key(244,5206).toString(),"gkw_tec9_5206.weapon"},
@@ -881,6 +885,9 @@ dictionary tdoll_complex_index = {
     {modded_key(276,5102).toString(),"gkw_kord_5102.weapon"},
     {modded_key(276,8201).toString(),"gkw_kord_8201.weapon"},
 
+
+    {modded_key(278).toString(),"gkw_six12.weapon"},
+
     {modded_key(281).toString(),"gkw_caws.weapon"},
 
     {modded_key(282).toString(),"gkw_dp12.weapon"},
@@ -922,6 +929,8 @@ dictionary tdoll_complex_index = {
     {modded_key(296).toString(),"gkw_sl8.weapon"},
     {modded_key(296,576).toString(),"gkw_sl8_576.weapon"},
     {modded_key(296,5202).toString(),"gkw_sl8_5202.weapon"},
+
+    {modded_key(299).toString(),"gkw_hsm10.weapon"},
 
     {modded_key(300).toString(),"gkw_car.weapon"},
 
@@ -971,6 +980,8 @@ dictionary tdoll_complex_index = {
     {modded_key(319,5307).toString(),"gkw_pm1910_5307.weapon"},
 
     {modded_key(320).toString(),"gkw_gm6.weapon"},
+
+    {modded_key(321).toString(),"gkw_ts12.weapon"},
 
     {modded_key(322).toString(),"gkw_qsb91.weapon"},
 
@@ -1100,6 +1111,14 @@ dictionary tdoll_complex_index = {
     {modded_key(396).toString(),"gkw_mg15.weapon"},
     {modded_key(397).toString(),"gkw_stevens520.weapon"},
     {modded_key(398).toString(),"gkw_stevens620.weapon"},
+
+
+    {modded_key(399).toString(),"gkw_p2000.weapon"},
+    {modded_key(400).toString(),"gkw_m1851n.weapon"},
+    {modded_key(401).toString(),"gkw_p50.weapon"},
+    {modded_key(402).toString(),"gkw_martini.weapon"},
+
+
 
     {"-1",""}
 };
@@ -1485,6 +1504,10 @@ array<string> gk_weapon_rf_list = {
     "gkw_falcon.weapon",
     "gkw_falconmod3.weapon",
     "gkw_tfq.weapon",
+    "gkw_rt20.weapon",
+    "gkw_tcms.weapon",
+    "gkw_martini.weapon",
+    "gkw_ots44.weapon",
     "gkw_zasm76.weapon"
 };
 
@@ -1609,6 +1632,8 @@ array<string> gk_weapon_hg_list = {
     "gkw_webley_5601.weapon",
     "gkw_tec9.weapon",
     "gkw_tec9_5206.weapon",
+    "gkw_p2000.weapon",
+    "gkw_m1851n.weapon",
     "gkw_zip22.weapon"
 };
 

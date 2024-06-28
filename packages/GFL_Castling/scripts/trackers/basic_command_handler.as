@@ -790,12 +790,9 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "equip_only_ticket.carry_item", "carry_item", 0);        
 			spawnInstanceNearPlayer(senderId, "equip_only_ticket.carry_item", "carry_item", 0);        
 			spawnInstanceNearPlayer(senderId, "equip_only_ticket.carry_item", "carry_item", 0);   			 
-		} else if (checkCommand(message, "cb1")) {
-			spawnInstanceNearPlayer(senderId, "gift_box_community_1.carry_item", "carry_item", 0); 
-            spawnInstanceNearPlayer(senderId, "gift_box_community_1.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "gift_box_community_1.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "gift_box_community_1.carry_item", "carry_item", 0);
-            spawnInstanceNearPlayer(senderId, "gift_box_community_1.carry_item", "carry_item", 0);
+		} else if (checkCommand(message, "gb5")) {
+			spawnInstanceNearPlayer(senderId, "black_card.carry_item", "carry_item", 0); 
+            spawnInstanceNearPlayer(senderId, "black_card.carry_item", "carry_item", 0);
 		} else if (checkCommand(message, "cb2")) {
 			spawnInstanceNearPlayer(senderId, "sf_box.carry_item", "carry_item", 0);
             spawnInstanceNearPlayer(senderId, "sf_box.carry_item", "carry_item", 0);

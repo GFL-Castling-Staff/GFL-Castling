@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon key="gkw_rt20.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+    <tag name="rifle" />
+    <tag name="antiarmor" />
+    <!--Weapon specifications-->
+    <specification 
+        retrigger_time="-1" 
+        accuracy_factor="1" 
+        sustained_fire_grow_step="1.0" 
+        sustained_fire_diminish_rate="4.0" 
+        magazine_size="1" 
+        can_shoot_standing="0" 
+        can_shoot_crouching="1"
+        can_shoot_prone="1"
+        suppressed="0" 
+        name="RT-20" 
+        class="4" 
+        slot="0"
+        spread_range="0.5"
+        reload_one_at_a_time="0" 
+        sight_range_modifier="2.2"  
+        projectile_speed="200" 
+        stance_accuracy_rate="1.0"
+        barrel_offset="0.6" 
+        projectiles_per_shot="1"
+        stab_enabled="1"
+        stab_range="4"
+	    carry_in_two_hands="1" />
+    <inventory encumbrance="35.0" buy_price="550.0" sell_price="450.0" />
+    <commonness value="0.0001" in_stock="0" can_respawn_with="1" />
+    <!--Animations-->
+    <animation state_key="recoil" animation_key="recoil1, big" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone" />
+    <animation key="hold" animation_key="still, heavy weapon" />
+    <animation key="hold" stance_key="crouching" animation_key="rt20_crouch_still" />
+    <animation state_key="hold_casual"	animation_key="still, carrying load" />
+    <animation state_key="crouch_still" animation_key="rt20_crouch_still" />
+    <animation state_key="prone" animation_key="rt20_prone" />
+    <animation state_key="running" animation_key="running, line infantry" />
+    <animation state_key="walking" animation_key="walking, line infantry" />
+    <animation state_key="walking_backwards" animation_key="walking, line infantry" />
+    <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
+    <animation state_key="stabbing" animation_key="stabbing, bat" />
+    <animation key="reload" animation_key="RT20_reload" />
+    <animation key="reload" stance_key="prone" animation_key="RT20_reload_prone" />
+    <!--Sounds-->
+    <sound key="fire" fileref="rt20_fire_FromCOD13.wav" volume="1.6" />
+    <sound key="cycle" fileref="rt20_cycle_FromTKF.wav" volume="1.0"/>
+    <sound key="magazine_out" fileref="rt20_mgz_out_FromCOD15.wav" volume="0.7"/>
+    <sound key="magazine_in" fileref="rt20_mgz_in_FromCOD15.wav" volume="0.7"/>
+    <sound key="dry_fire" fileref="dryfire_atrf.wav" pitch_variety="0.05" volume="1.0" />
+    <sound class="impact" fileref="rifle_drop.wav" />
+    <!--Model, Icon, Cost-->
+    <model filename="gkw_rf_rt20.xml" />
+    <hud_icon filename="gkw_rt20.png" />
+    <capacity value="1" source="rank" source_value="0.0" />
+    <!--Ballistics-->
+    <weak_hand_hold offset="0.3" />
+    <projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.6">
+        <result class="spawn" instance_class="projectile" instance_key="sub_damage_rt20.projectile" min_amount="10" max_amount="10" offset="0 0.8 0" position_spread="0.3 0.3" direction_spread="0 0" />
+        <trigger class="impact" />
+        <rotation class="motion" />
+        <collision class="sticky" />
+        <trail probability="1" key="bullet_atrf_thick"/>
+    </projectile>
+    <effect class="muzzle" ref="at_bullet_smoke_trail" lighting="0"/> 
+	<effect class="muzzle" ref="general_weapon_muzzle_crossfire" lighting="0"/> 
+	<effect class="muzzle" ref="general_weapon_muzzle_crossfire_smoke" lighting="0"/> 
+	<effect class="muzzle" ref="ejection_50BMG" />
+    <!--Accuracy, Movement speed-->
+    <stance state_key="running" accuracy="0.1" />
+    <stance state_key="walking" accuracy="0.5" />
+    <stance state_key="crouch_moving" accuracy="0.5" />
+    <stance state_key="prone_moving" accuracy="0.5" />
+    <stance state_key="standing" accuracy="1.0"/>
+    <stance state_key="crouching" accuracy="1.0" />
+    <stance state_key="prone" accuracy="1.1" />
+    <stance state_key="over_wall" accuracy="1.1" />
+    <modifier class="speed" value="-0.15" />
+    <modifier class="detectability" value="-0.1"/>
+</weapon>
