@@ -17,10 +17,10 @@
 		sustained_fire_grow_step="0.28"/>
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <inventory encumbrance="35.0" buy_price="8.0" sell_price="8.0" />
-        <sound key="fire" fileref="qbz95_fire_FromCOD20.wav" pitch_variety="0.05" volume="1.2" />
-        <sound key="magazine_out" fileref="qbz95_mgz_out_FromCOD20.wav" volume="0.7" />
-        <sound key="magazine_in" fileref="qbz95_mgz_in_FromCOD20.wav" volume="0.7" />
-        <sound key="cycle" fileref="qbz95_cycle_FromCOD20.wav" volume="0.7" />
+        <sound key="fire" fileref="qbz03_fire_FromCOD20.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="magazine_out" fileref="qbz191_mgz_out_FromCOD15.wav" volume="0.7" />
+        <sound key="magazine_in" fileref="qbz191_mgz_in_FromCOD15.wav" volume="0.7" />
+        <sound key="cycle" fileref="qbz191_cycle_FromCOD16.wav" volume="0.7" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
         <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
