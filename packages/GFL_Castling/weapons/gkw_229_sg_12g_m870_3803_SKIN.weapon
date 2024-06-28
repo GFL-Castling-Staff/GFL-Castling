@@ -4,6 +4,7 @@
 		<tag name="shotgun" />
 		<!-- Weapon specifications -->
 		<specification 
+		can_shoot_running="1"
 		retrigger_time="-1.0"
 		accuracy_factor="1.0" 
 		sustained_fire_grow_step="2.0" 
@@ -99,6 +100,7 @@
 		<tag name="shotgun" />
 		<!-- Weapon specifications -->
 		<specification 
+		can_shoot_running="1"
 		retrigger_time="0.1"
 		last_burst_retrigger_time="0.25"
 		accuracy_factor="0.7" 

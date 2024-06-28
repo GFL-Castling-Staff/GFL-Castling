@@ -3,6 +3,7 @@
 <tag name="pistol"/>
 <tag name="elite"/>
     <specification 
+    can_shoot_running="1"
     retrigger_time="-1"
     accuracy_factor="0.98"
     sustained_fire_grow_step="3.0"
