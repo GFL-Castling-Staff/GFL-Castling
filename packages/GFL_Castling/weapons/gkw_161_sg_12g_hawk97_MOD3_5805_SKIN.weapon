@@ -2,6 +2,7 @@
 <weapon file="two_hands_sg.animation_base" key="gkw_hawk97mod3_5805.weapon">
     <!--Weapon specifications-->
     <specification 
+    can_shoot_running="1"
 	retrigger_time="-1.0" 
 	accuracy_factor="1.0" 
 	sustained_fire_grow_step="2.0" 

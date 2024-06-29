@@ -36,7 +36,7 @@
 	<sound key="cycle_out" fileref="ssg3000_cycle_out_FromCOD19.wav" volume="0.65" />  
 	<sound key="cycle_in" fileref="ssg3000_cycle_in_FromCOD19.wav" volume="0.65" />  
     <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_rf_ssg3000.xml" />
 
     <hud_icon filename="gkw_ssg3000.png" />

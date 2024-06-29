@@ -203,7 +203,7 @@ particle_system kcco_smart_bullet_aim_trail
 	quota 100
 	material at_bullet_smoke_trail
 	particle_width 2.5
-	particle_height 80
+	particle_height 100
 	renderer billboard
 	billboard_type oriented_self
 	billboard_origin bottom_center
@@ -214,7 +214,7 @@ particle_system kcco_smart_bullet_aim_trail
 	emitter Point
 	{
 		angle 0
-		colour 1 0 0 0.3
+		colour 0 0.9 0.15 0.3
 		direction 0 1 0
 		emission_rate 10
 		position 0 0 0

@@ -301,7 +301,7 @@ class fairyCommand : Tracker {
             m_DummyCallID++;                        
             addCastlingMarker(FairyRequest);
             m_taskQueue.add(DelayFairyCommand(m_metagame,0.5,factionId,"fc_daybreak",target,FairyRequest,characterId));
-            // CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,240.0,"fc_attack"));
+            CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,240.0,"fc_attack"));
         }                         
     }    
 
