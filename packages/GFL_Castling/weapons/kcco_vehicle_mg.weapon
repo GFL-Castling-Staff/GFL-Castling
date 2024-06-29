@@ -173,8 +173,8 @@ ai_burst_wait_time_variance="0">
     <specification 
     slot="2" 
     retrigger_time="0.075"
-	accuracy_factor="1.0" 
-    spread_range="0.2"
+	accuracy_factor="0.9" 
+    spread_range="0.4"
 	sustained_fire_grow_step="1.0" 
 	sustained_fire_diminish_rate="5.0" 
     sight_range_modifier="1.8"
@@ -218,7 +218,7 @@ ai_burst_wait_time="1.0"
 ai_burst_wait_time_variance="0">
     <specification 
     magazine_size="-1" 
-	accuracy_factor="0.85" 
+	accuracy_factor="0.75" 
 	barrel_offset="0" 
 	can_shoot_standing="1" 
 	can_shoot_crouching="1"
@@ -243,42 +243,7 @@ ai_burst_wait_time_variance="0">
     <model filename="" />
     <hud_icon filename="gkw_ags30.png" />
     <weak_hand_hold offset="0.3" />
-    <projectile file="30mm_agl_ags_kcco.projectile"/>
-    <ballistics curve_height="18.0" near_far_distance="1000.0" speed_estimation_near="60.0" speed_estimation_far="120.0" max_speed="150.0" randomness="0.0" tweak_factor="1.55"/>
-</weapon>
-<weapon key="kcco_ags30_vehicle_2" 
-ai_burst_time="5" 
-ai_burst_time_variance="0" 
-ai_burst_wait_time="1.0" 
-ai_burst_wait_time_variance="0">
-    <specification 
-    magazine_size="-1" 
-	accuracy_factor="0.85" 
-	barrel_offset="0" 
-	can_shoot_standing="1" 
-	can_shoot_crouching="1"
-	can_shoot_prone="0"
-	class="0"
-    sight_range_modifier="1.8"
-    slot="0" 
-	name="AGS-30 Atlant" 
-	projectile_speed="120" 
-	retrigger_time="0.15" 
-	suppressed="0" 
-    cooldown_start="0.7885"
-    cooldown_end="0.61"
-	sustained_fire_diminish_rate="0.6008" 
-	sustained_fire_grow_step="1.3433"
-	spread_range="0.1" />
-    <sound key="fire" fileref="ags30_fire_FromEFT.wav" pitch_variety="0.05" volume="1.4" />
-    <sound key="magazine_out" fileref="ags30_mgz_out_FromBF1.wav" volume="0.9" />
-    <sound key="magazine_in" fileref="ags30_mgz_in_FromBF1.wav" volume="0.9" />
-    <sound key="cycle" fileref="ags30_cycle_FromCOD6R.wav" volume="0.9" />
-    <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="" />
-    <hud_icon filename="gkw_ags30.png" />
-    <weak_hand_hold offset="0.3" />
-    <projectile file="30mm_agl_ags_kcco.projectile"/>
-    <ballistics curve_height="18.0" near_far_distance="1000.0" speed_estimation_near="60.0" speed_estimation_far="120.0" max_speed="150.0" randomness="0.0" tweak_factor="1.55"/>
+    <projectile file="30mm_agl_ags_kcco.projectile" pulldown_in_air="26"/>
+	<ballistics curve_height="6" near_far_distance="0.0" speed_estimation_near="60.0" speed_estimation_far="60.0" max_speed="75.0" randomness="0.0" tweak_factor="1.7"/>
 </weapon>
 </weapons>
