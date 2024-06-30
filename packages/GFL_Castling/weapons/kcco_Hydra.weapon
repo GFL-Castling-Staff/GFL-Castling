@@ -194,9 +194,33 @@
 	<model filename=""/>
 	<hud_icon filename="kccow_qwd.png"/>
     <projectile file="bullet_kcco.projectile">
-        <result class="blast" damage="15.0" radius="3.0" decal="1" push="0.5" character_state="death" faction_compare="not_equal"/>
+        <result class="blast" damage="15.0" radius="5.0" decal="1" push="0.5" character_state="death" faction_compare="not_equal"/>
         <trigger class="impact" />
         <trail probability="1.0" key="lazer_hydra_at" />
+   	<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTank" lighting="1" />
+   	<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTankSparks" />
+    <effect class="result" key="vehicle" tag="metal_heavy" ref="SmokeBurst" post_processing="1" />  
+    <effect class="result" key="vehicle" tag="metal_heavy" ref="BurstShine" lighting="0" />
+    <effect class="result" key="vehicle" tag="metal_heavy" ref="Godray" lighting="0" />
+
+    <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
+    <effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
+    <effect class="result" key="terrain" ref="Smoke" post_processing="1" />
+    <effect class="result" key="terrain" ref="Shine" lighting="0" />
+    <effect class="result" key="terrain" ref="Godray" lighting="0" />
+    <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="1" />
+    <effect class="result" type="splat_map" surface_tag="" size="6.5" atlas_index="4" layer="0" />
+    <effect class="result" type="splat_map" surface_tag="" size="8.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
+	<effect class="result" key="terrain" ref="missile_result_cannon_blast_fire" lighting="0"/>
+	<effect class="result" key="terrain" ref="missile_result_cannon_blast_AmbientLight" lighting="0"/>
+	<effect class="result" key="terrain" ref="missile_result_expanding_fire" lighting="0" post_processing="1"/>
+
+    <effect class="result" key="other" copy="terrain" />
+	<effect class="result" key="shield" copy="terrain"/>
+    <effect class="result" key="static_object" copy="terrain" />
+    <effect class="result" key="vehicle" copy="terrain" />     
+    <effect class="result" key="character" copy="terrain" />
     </projectile>
 	<effect class="muzzle" ref="coeus" />
     <effect class="muzzle" ref="coeusphere" />
