@@ -1016,6 +1016,8 @@ dictionary tdoll_complex_index = {
     {modded_key(335).toString(),"gkw_fedorov.weapon"},
     {modded_key(335,10305).toString(),"gkw_fedorov_10305.weapon"},
 
+    {modded_key(336).toString(),"gkw_ppd40.weapon"},
+
     {modded_key(337).toString(),"gkw_delisle.weapon"},
     {modded_key(337,6202).toString(),"gkw_delisle_6202.weapon"},
     {modded_key(337,7801).toString(),"gkw_delisle_7801.weapon"},
@@ -1049,6 +1051,7 @@ dictionary tdoll_complex_index = {
     {modded_key(349,7305).toString(),"gkw_ak74m_7305.weapon"},
 
     {modded_key(350).toString(),"gkw_fo12.weapon"},
+    {modded_key(351).toString(),"gkw_m26mass.weapon"},
 
     {modded_key(352).toString(),"gkw_nova.weapon"},
     {modded_key(353).toString(),"gkw_mag7.weapon"},
