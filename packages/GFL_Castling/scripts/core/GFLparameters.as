@@ -150,7 +150,41 @@
         "hand_grenade.projectile",
         "hand_88grenade.projectile",
         "hand_atgrenade.projectile",
-        "c4.projectile"
+        "hand_defence_grenade.projectile",
+        "hand_atgrenade.projectile",
+        "at_mine.projectile",
+        "gkw_cz75_axe.projectile"
+    };
+
+    dictionary resupply_grenade_index = {
+        {"hand_grenade.projectile",8},
+        {"hand_88grenade.projectile",4},
+        {"hand_atgrenade.projectile",4},
+        {"hand_defence_grenade.projectile",4},
+        {"at_mine.projectile",6},
+        {"gkw_cz75_axe.projectile",6}
+    };
+    
+    array<string> resupply_secondary_list = {
+        "gkw_88rocker.weapon",
+        "gkw_consume_at4.weapon",
+        "gkw_consume_m202.weapon",
+        "pack_vest_repair_plate_x8",
+        "vest_repair_plate.weapon",
+        "kcco_rpg7_player.weapon",
+        "parw_rocket_player.weapon",
+        "medikit.weapon"
+    };
+
+    dictionary resupply_secondary_index = {
+        {"gkw_88rocker.weapon",6},
+        {"gkw_consume_at4.weapon",3},
+        {"gkw_consume_m202.weapon",4},
+        {"pack_vest_repair_plate_x8",1},
+        {"vest_repair_plate.weapon",6},
+        {"kcco_rpg7_player.weapon",3},
+        {"parw_rocket_player.weapon",3},
+        {"medikit.weapon",1}
     };
 
 // parameters for "GFLplayerlist.as"

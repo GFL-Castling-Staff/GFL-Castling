@@ -1002,7 +1002,30 @@ void deleteItemToGrenadeSlot(Metagame@ metagame,int cid,uint num,string m_key,st
 void GrenadeSupply(Metagame@ metagame,int cid,uint num,string m_key,string m_type="projectile")
 {
 	if(resupply_grenade_list.find(m_key)==-1) return;
+	_log("adding grenade weapon");
 	addItemToGrenadeSlot(metagame,cid,num,m_key,m_type);
+}
+
+void addItemToSecondarySlot(Metagame@ metagame,int cid,uint num,string m_key,string m_type="weapon")
+{
+	XmlElement c ("command");
+	c.setStringAttribute("class", "update_inventory");
+	c.setStringAttribute("container_type_class","backpack");
+	c.setIntAttribute("character_id", cid); 
+	XmlElement k("item");
+	k.setStringAttribute("class", m_type);
+	k.setStringAttribute("key", m_key);
+	for(uint i=0;i<num;i++){
+		c.appendChild(k);
+	}
+	metagame.getComms().send(c);
+}
+
+void SecondarySupply(Metagame@ metagame,int cid,uint num,string m_key,string m_type="weapon")
+{
+	if(resupply_secondary_list.find(m_key)==-1) return;
+	_log("adding secondary weapon");
+	addItemToSecondarySlot(metagame,cid,num,m_key,m_type);
 }
 
 array<const XmlElement@>@ getEnemyCharactersNearPosition(GameMode@ metagame, const Vector3@ position, int factionId, float range = 80.0f, int num = 1) {
@@ -1031,16 +1054,27 @@ array<const XmlElement@>@ getEnemyCharactersNearPosition(GameMode@ metagame, con
 	return affectedCharacter;
 }
 
-
-
-void GrenadeSupplyGroup(Metagame@ metagame,array<const XmlElement@>@ characters,uint num,string m_type="projectile")
+void GrenadeSupplyGroup(Metagame@ metagame,array<const XmlElement@>@ characters,uint num,string add_type="normal",string m_type="projectile")
 {
 	for (uint i = 0; i < characters.length(); i++) {
 		int luckyhealguyid = characters[i].getIntAttribute("id");
 		if (!checkCharacterIdisPlayerOwn(luckyhealguyid)) continue;
 		string key = getPlayerWeaponFromListByID(luckyhealguyid,2);
 		if(key == "-nan-") continue;
+		if(add_type=="asindex") num = uint(resupply_grenade_index[key]);
 		GrenadeSupply(metagame,luckyhealguyid,num,key,m_type);
+	}
+}
+
+void SecondarySupplyGroup(Metagame@ metagame,array<const XmlElement@>@ characters,uint num,string add_type="normal",string m_type="weapon")
+{
+	for (uint i = 0; i < characters.length(); i++) {
+		int luckyhealguyid = characters[i].getIntAttribute("id");
+		if (!checkCharacterIdisPlayerOwn(luckyhealguyid)) continue;
+		string key = getPlayerWeaponFromListByID(luckyhealguyid,1);
+		if(key == "-nan-") continue; 
+		if(add_type=="asindex") num = uint(resupply_secondary_index[key]);
+		SecondarySupply(metagame,luckyhealguyid,num,key,m_type);
 	}
 }
 

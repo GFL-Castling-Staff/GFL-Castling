@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vehicle file="vehicle_base.vehicle" name='T14 Armata Tank' key="t14_test.vehicle" respawn_time="-1" time_to_live_unsteerable="1.0" map_view_atlas_index="5" minimum_fill_requirement="1.0" max_character_collision_speed_on_normal="8.0" max_character_collision_speed="8" character_leave_request_mode="friendly" allow_ai_to_use="1" allow_owner_to_use_only="1" ai_driver_turns_to_target="1" ai_abandon_when_unsteerable="0" existence="one_per_faction" ai_stop_to_fight="1">
+<vehicle file="vehicle_base.vehicle" name='T14 Armata Tank' key="t14_test.vehicle" respawn_time="30.0"  time_to_live_unsteerable="1.0" map_view_atlas_index="5" minimum_fill_requirement="1.0" max_character_collision_speed_on_normal="8.0" max_character_collision_speed="8" character_leave_request_mode="friendly" allow_ai_to_use="1" allow_owner_to_use_only="1" ai_driver_turns_to_target="1" ai_abandon_when_unsteerable="0" existence="one_per_faction" ai_stop_to_fight="1">
 	<tag name="metal_heavy" />
 	<tag name="tank" />
 	<tag name="heavy_combat" />
@@ -12,7 +12,7 @@
 
 	<sky_diving chute_offset="0 2.55 0.0" trigger_height="20.0" gravity="-10" mesh_filename="chute_large.mesh" texture_filename="chute.png" />
 
-	<control max_speed="13" acceleration="6.0" max_reverse_speed="15.0" min_health_to_steer="5" max_rotation="0" max_water_depth="6.0" can_steer_in_water="0.0" steer_smoothening="0.99" tracked="1" gears="1" max_limiter_speed="5" tracked_visual_tire_max_rotation="1.0" tracked_visual_tire_rotation_smoothening="1" simulated_speed_factor="0.2" />
+	<control max_speed="13" acceleration="15.0" max_reverse_speed="15.0" min_health_to_steer="5" max_rotation="0" max_water_depth="6.0" can_steer_in_water="0.0" steer_smoothening="0.99" tracked="1" gears="1" max_limiter_speed="5" tracked_visual_tire_max_rotation="1.0" tracked_visual_tire_rotation_smoothening="1" simulated_speed_factor="0.2" />
 	<modifier class="blast_damage" value="-0" />
 	<physics max_health="200" blast_damage_threshold="10.0" mass="500.0" broken_mass="300" gravity="-40" remove_collision_threshold="50.0" extent="3.74 0.0 6.84" offset="0.0 0 -0.0" top_offset="0 4.07 0" collision_model_pos="0 0.92 0.0" collision_model_extent="3.74 1.8 7.73" visual_offset="0 0.28 0" drag_offset="-0.5" friction_offset="-0.1" preserve_motion_on_impact_factor="1" />
 
@@ -22,13 +22,17 @@
 3	<turret offset="0 0 0" weapon_key="gkw_vehicle_m1a1_basemg.weapon" weapon_offset="0 2.1 1" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.002" parent_turret_index="1" rotation="0" rotation_range="0" />
 4	<turret offset="0 0 0" weapon_key="chiara_breath.weapon" weapon_offset="0.5 2.1 3.6" weapon_recoil="0" physics_recoil="0" rotation_range="0.16" rotation="0.5"/>
 5	<turret offset="0 0 0" weapon_key="chiara_breath.weapon" weapon_offset="-0.5 2.1 3.6" weapon_recoil="0" physics_recoil="0" rotation_range="0.16" rotation="-0.5"/>
-
-
 	<visual class="chassis" mesh_filename="" />
 
-0	<visual class="turret" turret_index="0" mesh_filename="t14_body.mesh" texture_filename="balloon.png" />
-1	<visual class="turret" turret_index="1" mesh_filename="t14_turret.mesh" texture_filename="balloon.png" />
+0	<visual class="turret" turret_index="0" mesh_filename="t14_body.mesh" texture_filename="t14.png" />
+1	<visual class="turret" turret_index="1" mesh_filename="t14_turret.mesh" texture_filename="t14.png" />
 2	<visual class="turret" turret_index="2" mesh_filename="m1a1_minigun.mesh" texture_filename="balloon.png" />
+
+	<visual class="chassis" key="broken" mesh_filename="" />
+
+0	<visual class="turret" key="broken" turret_index="0" mesh_filename="t14_body.mesh" texture_filename="humvee_broken.png" />
+1	<visual class="turret" key="broken" turret_index="1" mesh_filename="t14_turret.mesh" texture_filename="humvee_broken.png" />
+2	<visual class="turret" key="broken" turret_index="2" mesh_filename="m1a1_minigun.mesh" texture_filename="humvee_broken.png" />
 
     <!-- <turret offset="0 1 18" weapon_key="amos_none.weapon" weapon_offset="0 0 0" parent_turret_index="6" max_rotation_step="0.000020" rotation="3.14" rotation_range="6.28"/> -->
 

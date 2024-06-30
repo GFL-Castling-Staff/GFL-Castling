@@ -37,7 +37,7 @@
     <model filename="kccow_pf98.xml" />
 
     <ballistics near_far_distance="1000.0" speed_estimation_near="75.0" speed_estimation_far="75.0" max_speed="75.0" randomness="0.0" />
-	<drop_on_death_result class="spawn" instance_class="weapon" instance_key="kcco_pf98_player.weapon" min_amount="0" max_amount="1" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
+	<drop_on_death_result class="spawn" instance_class="weapon" instance_key="kcco_pf98_player.weapon" min_amount="0" max_amount="1" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" /> 
     <projectile file="120mm_pf98.projectile" />
     <weak_hand_hold offset="0.3" />
 

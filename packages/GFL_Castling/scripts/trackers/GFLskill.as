@@ -1738,6 +1738,24 @@ class GFLskill : Tracker {
 				}			
 				break;			
 			}
+			
+			case 60: { //弹药箱补给
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					Vector3 c_pos = stringToVector3(event.getStringAttribute("position"));
+					int factionid = character.getIntAttribute("faction_id");
+					
+					array<const XmlElement@>@ characters = getCharactersNearPosition(m_metagame, c_pos, factionid, 20.0f);
+                    if (characters is null) return;
+					_log("script activated");
+                    SecondarySupplyGroup(m_metagame,characters,0,"asindex");
+					_log("secondary script finished");
+					GrenadeSupplyGroup(m_metagame,characters,0,"asindex");
+					_log("grenade script finished");
+				}				
+				break;
+			}
 
             default:
                 break;
