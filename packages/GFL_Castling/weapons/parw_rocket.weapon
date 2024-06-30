@@ -21,7 +21,7 @@
     slot="1" 
     projectiles_per_shot="1" />
     <inventory encumbrance="3.0" buy_price="5.0" sell_price="5.0" />
-	<drop_on_death_result class="spawn" instance_class="weapon" instance_key="parw_rocket_player.weapon" min_amount="0" max_amount="1" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
+	<drop_on_death_result class="spawn" instance_class="weapon" instance_key="parw_rocket_player.weapon" min_amount="0" max_amount="3" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
     <capacity value="2" source="rank" source_value="0.0" />
     <capacity value="4" source="rank" source_value="2.1" />
     <capacity value="6" source="rank" source_value="4.1" />

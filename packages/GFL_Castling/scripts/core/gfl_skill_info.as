@@ -186,6 +186,9 @@ dictionary gameSkillIndex = {
         {"obr_knife_1",58},
         {"obr_knife_2",59},
 
+        //弹药箱回复弹药
+        {"ammunition_supply",60},
+
 
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
