@@ -85,13 +85,12 @@
 
     <ballistics near_far_distance="1000.0" speed_estimation_near="60.0" speed_estimation_far="60.0" max_speed="100.0" randomness="0.0" />
 
-    <projectile file="rpg-7.projectile" />
+    <projectile file="rpg-7.projectile" >
+        <result class="blast"  damage="40" radius="5.0" decal="1" push="0.8" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+    </projectile>
     <weak_hand_hold offset="0.3" />
 
-    <capacity value="1" source="rank" source_value="0.0" />
-    <capacity value="2" source="rank" source_value="1.0" />
-    <capacity value="3" source="rank" source_value="2.0" />
-    <capacity value="4" source="rank" source_value="3.0" />
+    <capacity value="4" source="rank" source_value="0.0" />
     <addon_model filename="rpg7back.xml" />
 
     <hud_icon filename="rpg-7.png" />

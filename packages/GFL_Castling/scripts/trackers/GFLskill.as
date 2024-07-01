@@ -1753,7 +1753,7 @@ class GFLskill : Tracker {
 					_log("secondary script finished");
 					GrenadeSupplyGroup(m_metagame,characters,0,"asindex");
 					_log("grenade script finished");
-				}				
+				}
 				break;
 			}
 
