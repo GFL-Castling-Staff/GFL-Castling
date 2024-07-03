@@ -31,7 +31,7 @@
 	<visual class="chassis" mesh_filename="" />
 
 0	<visual class="turret" turret_index="0" mesh_filename="m1a1_body.mesh" texture_filename="balloon.png" />
-1	<visual offset="0 0 -0.6" class="turret" turret_index="1" mesh_filename="m1a1_turret.mesh" texture_filename="balloon.png" />
+1	<visual offset="0 1.6 0" class="turret" turret_index="1" mesh_filename="m1a1_turret.mesh" texture_filename="balloon.png" />
 2	<visual class="turret" turret_index="2" mesh_filename="m1a1_laser_l.mesh" texture_filename="balloon.png" />
 3	<visual class="turret" turret_index="3" mesh_filename="m1a1_laser_r.mesh" texture_filename="balloon.png" />
 4	<visual class="turret" turret_index="4" mesh_filename="m1a1_m2hb_2.mesh" texture_filename="balloon.png" />

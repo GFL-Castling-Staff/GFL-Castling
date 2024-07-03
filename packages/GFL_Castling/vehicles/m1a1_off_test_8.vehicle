@@ -36,7 +36,7 @@
 <!-- 模型只会挨个填，中间不能有没有模型的炮塔，即前面的turret必须先把有模型的全放上去 -->
 
 0	<visual class="turret" turret_index="0" mesh_filename="m1a1_body.mesh" texture_filename="m1a1_test.png" />
-1	<visual offset="0 0 -0.6" class="turret" turret_index="1" mesh_filename="m1a1_turret.mesh" texture_filename="m1a1_test.png" />
+1	<visual offset="0 1.6 0" class="turret" turret_index="1" mesh_filename="m1a1_turret.mesh" texture_filename="m1a1_test.png" />
 2	<visual offset="0 2.2 0.6" class="turret" turret_index="2" mesh_filename="m1a1_coax_tow.mesh" texture_filename="balloon.png" />
 3	<visual class="turret" turret_index="3" mesh_filename="m1a1_respawnp.mesh" texture_filename="balloon.png" />
 4	<visual class="turret" turret_index="4" mesh_filename="m1a1_emgun.mesh" texture_filename="balloon.png" />
