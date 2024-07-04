@@ -1008,7 +1008,7 @@ class GFLskill : Tracker {
 				};
 				Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
 				int lbll_cid = event.getIntAttribute("character_id");
-				healCharacter(m_metagame,lbll_cid,2);
+				healCharacter(m_metagame,lbll_cid,4);
 				int factionid = 0;
 				array<const XmlElement@>@ affectedCharacter = getCharactersNearPosition(m_metagame, grenade_pos, factionid, 2.5f);
 
@@ -1029,10 +1029,10 @@ class GFLskill : Tracker {
 						c.setIntAttribute("character_id", target_id); 
 						c.setIntAttribute("untransform_count", 4);
 						m_metagame.getComms().send(c);
-						int index = findSkillIndex_reserve_array(target_id,banned_skill_index);
-						if(index != -1){
-							SkillArray[index].m_time-=5.0;
-						}
+						// int index = findSkillIndex_reserve_array(target_id,banned_skill_index);
+						// if(index != -1){
+						// 	SkillArray[index].m_time-=5.0;
+						// }
 					}					
 				}
 

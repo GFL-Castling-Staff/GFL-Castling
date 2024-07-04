@@ -639,7 +639,7 @@
 		<model filename="kccod_cerynitis.xml" />
 		<character filename="kcco_mecha.character" >
 			<animation key="stunned" target_key="stun, cet" />
-			<parameter class="being_stunned_steer_amount" value="0.08"/>
+			<parameter class="being_stunned_steer_amount" value="0.12"/>
 		</character>
 		<ai filename="kcco_cet.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
@@ -656,7 +656,7 @@
 		<ai filename="kcco_cet_swap.ai" />
 		<character filename="kcco_mecha.character" >
 			<animation key="stunned" target_key="stun, cet" />
-			<parameter class="being_stunned_steer_amount" value="0.08"/>
+			<parameter class="being_stunned_steer_amount" value="0.12"/>
 		</character>
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="kcco_cerynitis_swap.weapon" enabled="1" />
