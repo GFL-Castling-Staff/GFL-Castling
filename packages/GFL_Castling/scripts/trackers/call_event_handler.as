@@ -38,6 +38,7 @@ dictionary callLaunchIndex = {
     {"gk_vehicle_martina.call",10},
     {"gk_vehicle_guerche.call",11},
     {"gk_vehicle_tricycle.call",12},
+    {"gk_vehicle_t14.call",14},
 
     {"target.call",13},
 
@@ -54,7 +55,8 @@ array<string> vehicle_drop_call = {
     "gk_vehicle_martina.call",
     "gk_vehicle_chiara.call",
     "gk_vehicle_guerche.call",
-    "gk_vehicle_tricycle.call"
+    "gk_vehicle_tricycle.call",
+    "gk_vehicle_t14.call"
 };
 
 //Originally created by NetherCrow
@@ -956,6 +958,45 @@ class call_event : Tracker {
                             tasker.add(DelaySpawnSoldier(m_metagame,3.0,factionId,spawn_soldier,call_pos,6.0,6.0));
                         }
                         break;
+                    }
+                    case 14:{
+                        if(findCooldown(playerName,"vehicle")){
+                            returnCooldown("vehicle", 0, characterId, playerName, playerId, "vehicle_drop_cooldown");
+                            addItemInBackpack(m_metagame,characterId,"weapon","fairy_vehicle_t14.weapon");
+                            break;
+                        }
+                        int vehicle_number_exist = getNumberedVehicle(m_metagame,factionId,"t14_gk.vehicle");
+                        if(vehicle_number_exist >= 1)
+                        {
+                            notify(m_metagame, "vehicle limited", dictionary(), "misc", playerId, false, "", 1.0);
+                            addItemInBackpack(m_metagame,characterId,"weapon","fairy_vehicle_t14.weapon");
+                            break;                            
+                        }
+                        GFL_playerInfo@ m_playerinfo = getPlayerInfoFromList(playerName);
+                        GFL_battleInfo@ battleInfo = m_playerinfo.getBattleInfo();
+                        if(!costTacticPoint(battleInfo,50,playerId))
+                        {
+                            addItemInBackpack(m_metagame,characterId,"weapon","fairy_vehicle_t14.weapon");                            
+                            break;
+                        }
+                        else {
+                            Vector3 call_pos = stringToVector3(position);
+                            Vector3 v_offset = Vector3(0,50,0);
+                            call_pos = call_pos.add(v_offset);
+                            CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,300.0,"vehicle"));
+                            int flagId = m_DummyCallID + 15000;
+                            CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
+                            FairyRequest.setIconTypeKey("call_marker_drop");
+                            FairyRequest.setIndex(8);
+                            FairyRequest.setSize(0.5);
+                            FairyRequest.setDummyId(flagId);
+                            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                            tasker.add(TimerMarker(m_metagame,3,FairyRequest));
+                            m_DummyCallID++;
+                            float ori4 = rand(0.0,3.14);
+                            spawnVehicle(m_metagame,1,factionId,call_pos,Orientation(0,1,0,ori4),"t14_gk.vehicle");
+                        }
+                        break;
                     }                    
                     default:
                         break;
@@ -968,7 +1009,7 @@ class call_event : Tracker {
 		string message = event.getStringAttribute("message");
 		string p_name = event.getStringAttribute("player_name");
 		int senderId = event.getIntAttribute("player_id");
-        if(checkCommand(message,"point")){
+        if(checkCommand(message,"point") || message =="/tp" ){
             GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
             if (playerInfo.m_name == default_string ) return;
             int player_id = playerInfo.getPlayerPid();

@@ -352,7 +352,20 @@
     <hud_icon filename="testing.png" />
     <capacity value="100" source="rank" source_value="0.0" />
     <inventory encumbrance="0.0" price="0.0" />
-</call>    
+    </call>
+    <call name="" key="gk_vehicle_t14.call"
+    initiation_comment1=""
+    acknowledge_comment=""
+    launch_comment=""
+    notify_metagame="1">
+
+    <round launch_time="3.0" spawn_time="5.0">
+    </round>
+
+    <hud_icon filename="testing.png" />
+    <capacity value="100" source="rank" source_value="0.0" />
+    <inventory encumbrance="0.0" price="0.0" />
+    </call>
     <call name="Tactic Fairy Tier 1" key="gk_call_tier1.call" initiation_comment1="Tactic Fairy Tier 1" acknowledge_comment="Data has been confirmed" acknowledge_time="0" launch_comment="Tactical Fairy System Initializing, standby." notify_metagame="1">
         <round 
         instances="0"

@@ -239,6 +239,9 @@
 	<text key="Parachute Fairy-[Martina V]" text="空降妖精-[Martina V 玛蒂娜 - 廉价运输悍马]"/>
 	<text key="Parachute Fairy-[Mortar Truck]" text="空降妖精-[迫击炮卡车 - 古尔号]"/>
 	<text key="Parachute Fairy-[Sidecar Motorcycle]" text="空降妖精-[边三轮机车]"/>
+	<text key="Parachute Fairy-[T-14 Armata][Cost 50 TP]" text="空降妖精-[T-14 阿玛塔主战坦克][需求50战术点]"/>
+
+	
 
 	<text key="Tactic Fairy Tier 1" text="战术妖精 Tier 1" />
 	<text key="Tactic Fairy Tier 2" text="战术妖精 Tier 2" />
@@ -2128,6 +2131,10 @@
 	<text key="tactic point system,destroy target gas" text="[战术系统] 摧毁敌方后勤设施,已为所有单元分配&#37;num点战术点" />
 	<text key="tactic point system,get call info" text="[战术系统] 截获敌方部署情报,已分配额外&#37;num点战术点供您调遣" />
 	<text key="tactic point system,stop call info" text="[战术系统] 已中止敌方部署进程,已分配额外&#37;num点战术点供您调遣" />
+
+	<text key="vehicle limited" text="[无可用载具] 战场中的载具维护压力超出了我们的后勤能力，请等待载具可用。" />
+
+	
 
 	<text key="call event,not enough point" text="[战术妖精] 战术点不够呼叫本次支援哦~ 还缺少&#37;num点战术点" />
 	<text key="call event,cost point" text="[战术妖精] 呼叫成功~ 消耗了&#37;cost_num点战术点,您还有&#37;num点可供调遣捏~" />
