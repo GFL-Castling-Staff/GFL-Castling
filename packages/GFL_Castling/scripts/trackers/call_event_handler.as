@@ -1009,7 +1009,7 @@ class call_event : Tracker {
 		string message = event.getStringAttribute("message");
 		string p_name = event.getStringAttribute("player_name");
 		int senderId = event.getIntAttribute("player_id");
-        if(checkCommand(message,"point") || message =="/tp" ){
+        if(checkCommand(message,"point") || message =="/tp" || message =="/TP" ){
             GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
             if (playerInfo.m_name == default_string ) return;
             int player_id = playerInfo.getPlayerPid();

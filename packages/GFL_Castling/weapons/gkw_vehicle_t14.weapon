@@ -18,7 +18,7 @@
 		<effect class="muzzle" ref="coeus"/>
 		<effect class="muzzle" ref="coeusphere"/>
 		<effect class="muzzle" ref="coeusmuzzle" lighting="0"/>
-		<sound class="operation" key="fire" fileref="Abrams_fire_FromCOD16.wav" pitch_variety="0.0" volume="1.0"/>
+		<sound class="operation" key="fire" fileref="Abrams_fire_FromCOD16.wav" pitch_variety="0.0" volume="3.0"/>
 	</weapon>
     <weapon key="vehicle_t14_kord.weapon" ai_burst_time="3.0" ai_burst_time_variance="1.0" ai_burst_wait_time="0.8" ai_burst_wait_time_variance="0.2">
         <specification 
