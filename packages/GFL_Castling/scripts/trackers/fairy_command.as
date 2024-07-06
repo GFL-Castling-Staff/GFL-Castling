@@ -284,12 +284,12 @@ class fairyCommand : Tracker {
                 dictionary a;
                 a["%time"] = ""+getCooldown(playerName,"fc_attack");                        
                 notify(m_metagame, "fairycommand_cooldown",a, "misc", playerId, false, "", 1.0);
-                addItemInBackpack(m_metagame,characterId,"weapon","reinforcement_fairy_antirain.weapon");
+                addItemInBackpack(m_metagame,characterId,"weapon","reinforcement_fairy_daybreak.weapon");
                 return;
             }            
             if (m_taskQueue.getSize() >= 3){
                 notify(m_metagame, "fairycommand_overload",dictionary(), "misc", playerId, false, "", 1.0);
-                addItemInBackpack(m_metagame,characterId,"weapon","reinforcement_fairy_antirain.weapon");
+                addItemInBackpack(m_metagame,characterId,"weapon","reinforcement_fairy_daybreak.weapon");
                 return;
             }
             Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));

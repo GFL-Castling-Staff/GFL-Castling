@@ -84,6 +84,7 @@
         <effect class="result" key="static_object" copy="terrain" />
         <effect class="result" key="vehicle" copy="terrain" />     
         <effect class="result" key="character" copy="terrain" />
+        <effect class="result" key="other" copy="terrain" />
 	</projectile>
 
     <effect class="muzzle" ref="coeus" />

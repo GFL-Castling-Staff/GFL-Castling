@@ -149,11 +149,9 @@
     array<string> resupply_grenade_list = {
         "hand_grenade.projectile",
         "hand_88grenade.projectile",
-        "hand_atgrenade.projectile",
         "hand_defence_grenade.projectile",
         "hand_atgrenade.projectile",
-        "at_mine.projectile",
-        "gkw_cz75_axe.projectile"
+        "c4.projectile"
     };
 
     dictionary resupply_grenade_index = {
@@ -225,8 +223,8 @@
         {"par_uhlan.vehicle",5},
         {"par_elenusinus.vehicle",4},
         {"par_aceso.vehicle",3},
-        {"par_cherub.vehicle",1},
-        {"par_moth.vehicle",1},
+        {"par_cherub.vehicle",2},
+        {"par_moth.vehicle",2},
         {"par_compass.vehicle",1},
         {"par_compass_inf.vehicle",1},
 
@@ -274,6 +272,7 @@
         {"bgm71_tow.vehicle",2},
         {"kcco_1130.vehicle",2},
         {"rubber_boat.vehicle",2},
+        {"hornet_ct.vehicle",2},
 
         {"",0}
     };    
