@@ -147,7 +147,7 @@ dictionary MOD3craftList = {
     {"gkw_lwmmg.weapon","gkw_lwmmgmod3.weapon"},
     {"gkw_lwmmg_1808.weapon","gkw_lwmmgmod3_1808.weapon"},
     {"gkw_lwmmg_skill.weapon","gkw_lwmmgmod3.weapon"},
-    {"gkw_lwmmg_1808_skill.weapon","gkw_lwmmgmod3_1808.weapon"},
+    {"gkw_lwmmg_skill_1808.weapon","gkw_lwmmgmod3_1808.weapon"},
 
     {"gkw_an94.weapon","gkw_an94_mod3.weapon"},
     {"gkw_an94_2404.weapon","gkw_an94mod3_2404.weapon"},

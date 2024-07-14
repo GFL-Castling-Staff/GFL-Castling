@@ -1364,6 +1364,7 @@ class GFLskill : Tracker {
 					for (int i1=0;i1<target_num;i1++)	{
 						int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
 						const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+						if(luckyoneC is null) continue;
 						if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
 							Vector3 luckyonepos = stringToVector3(luckyoneC.getStringAttribute("position"));
 							target_pos = target_pos.add(luckyonepos);
