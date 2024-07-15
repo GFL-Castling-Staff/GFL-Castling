@@ -381,7 +381,6 @@ dictionary commandSkillIndex = {
         {"gkw_ptrd.weapon",53},
 
         // 这几位都要重做
-        {"gkw_tac50.weapon",53},
         {"gkw_m82a1.weapon",53},
         {"gkw_m82a1_skill.weapon",53},
         {"gkw_gepardm1.weapon",53},

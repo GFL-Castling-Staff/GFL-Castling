@@ -2847,12 +2847,6 @@ class CommandSkill : Tracker {
                 tasker.add(DelayAntiTankSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_blast_30.projectile",c_pos.add(Vector3(0,0.5,0)),s_pos));
                 addCooldown("sniper",45,characterId,modifer);
             }
-            else if (weapon_name == "gkw_tac50.weapon"){
-                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
-                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                tasker.add(DelayAntiTankSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_blast_30.projectile",c_pos.add(Vector3(0,0.5,0)),s_pos));
-                addCooldown("sniper",45,characterId,modifer);
-            }   
             else if (weapon_name == "gkw_gepardm1.weapon" || weapon_name == "gkw_gepardm1_4006.weapon" ){
                 playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
