@@ -226,6 +226,7 @@ void excuteYaoren(GameMode@ metagame,GFL_event@ eventinfo){
     int luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,eventinfo.m_pos,30.0f);
     if(luckyGuyid!=-1){
         const XmlElement@ luckyGuy = getCharacterInfo(metagame, luckyGuyid);
+        if(luckyGuy is null) return;
         Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
         insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,9,eventinfo.m_pos.add(Vector3(0.0,float(ParatrooperHeight[eventinfo.m_phase]),4.0)),luckyGuyPos);                        
     }

@@ -1541,8 +1541,8 @@ class GFLskill : Tracker {
 			case 55: {// 猎手 boss 技能 困兽狙击
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-				int factionId = character.getIntAttribute("faction_id");
 				if (character !is null) {
+					int factionId = character.getIntAttribute("faction_id");
 					Vector3 character_pos = stringToVector3(event.getStringAttribute("position"));
 					healCharacter(m_metagame,characterId,10);
 
