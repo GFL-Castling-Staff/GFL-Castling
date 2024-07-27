@@ -111,6 +111,8 @@ class Stage {
 	
 	bool m_allowChangeCapacityOnTheFly;
 
+	array<array<int>> m_presetBases;
+
 	// --------------------------------------------
 	Stage(const UserSettings@ userSettings) {
 		@m_userSettings = @userSettings;
@@ -396,6 +398,15 @@ class Stage {
 				faction.setIntAttribute("initial_occupied_bases", f.m_ownedBases.size());
 			} else if (f.m_bases >= 0) {
 				faction.setIntAttribute("initial_occupied_bases", f.m_bases);
+			} else if (m_presetBases.length() > i) {
+				// custom initial base distribution
+				for (uint j = 0; j < m_presetBases[i].length(); ++j) {
+					if (m_presetBases[i][j] >= 0) {
+						XmlElement base("base");
+						base.setIntAttribute("id", m_presetBases[i][j]);
+						faction.appendChild(base);
+					}
+				}
 			}
 
 			faction.setBoolAttribute("lose_without_bases", f.m_loseWithoutBases);
