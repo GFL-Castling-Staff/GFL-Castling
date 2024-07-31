@@ -1340,7 +1340,7 @@ array<string> gk_weapon_rf_list = {
     "gkw_iws2000_7308_skill.weapon",
     "gkw_88type.weapon",
     "gkw_88typemod3.weapon",
-    "gkw_88typemod3_6503.weapon",
+    "gkw_88typemod3_7106.weapon",
     "gkw_ntw20.weapon",
     "gkw_ntw20_307.weapon",
     "gkw_ntw20_4801.weapon",
