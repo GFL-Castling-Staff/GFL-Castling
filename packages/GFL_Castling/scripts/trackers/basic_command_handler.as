@@ -923,23 +923,23 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "neosu_kuergants_boss.vehicle", "vehicle", 0);									
 		} else  if(checkCommand(message, "spawn pathfinder")) {
 			spawnInstanceNearPlayer(senderId, "kcco_pathfinder_factory.vehicle", "vehicle", 0);			
-		} else  if(checkCommand(message, "spawnm1a1a")) {
+		} else  if(checkCommand(message, "spawnm1a11")) {
 			spawnInstanceNearPlayer(senderId, "m1a1_off_test.vehicle", "vehicle", 0);				
-		} else  if(checkCommand(message, "spawnm1a1b")) {
+		} else  if(checkCommand(message, "spawnm1a12")) {
 			spawnInstanceNearPlayer(senderId, "m1a1_off_test_2.vehicle", "vehicle", 0);				
-		} else  if(checkCommand(message, "spawnm1a1c")) {
+		} else  if(checkCommand(message, "spawnm1a13")) {
 			spawnInstanceNearPlayer(senderId, "m1a1_off_test_3.vehicle", "vehicle", 0);				
-		} else  if(checkCommand(message, "spawnm1a1d")) {
+		} else  if(checkCommand(message, "spawnm1a14")) {
 			spawnInstanceNearPlayer(senderId, "m1a1_off_test_4.vehicle", "vehicle", 0);				
-		} else  if(checkCommand(message, "spawnm1a1e")) {
+		} else  if(checkCommand(message, "spawnm1a15")) {
 			spawnInstanceNearPlayer(senderId, "m1a1_off_test_5.vehicle", "vehicle", 0);				
-		} else  if(checkCommand(message, "spawnm1a1f")) {
+		} else  if(checkCommand(message, "spawnm1a16")) {
 			spawnInstanceNearPlayer(senderId, "m1a1_off_test_6.vehicle", "vehicle", 0);				
-		} else  if(checkCommand(message, "spawnm1a1g")) {
+		} else  if(checkCommand(message, "spawnm1a17")) {
 			spawnInstanceNearPlayer(senderId, "m1a1_off_test_7.vehicle", "vehicle", 0);				
-		} else  if(checkCommand(message, "spawnm1a1h")) {
+		} else  if(checkCommand(message, "spawnm1a18")) {
 			spawnInstanceNearPlayer(senderId, "m1a1_off_test_8.vehicle", "vehicle", 0);				
-		} else  if(checkCommand(message, "spawnm1a1i")) {
+		} else  if(checkCommand(message, "spawnm1a19")) {
 			spawnInstanceNearPlayer(senderId, "m1a1_off_test_9.vehicle", "vehicle", 0);				
 		} else  if(checkCommand(message, "spawnm1a1")) {
 			spawnInstanceNearPlayer(senderId, "m1a1_off_test_fin.vehicle", "vehicle", 0);				
