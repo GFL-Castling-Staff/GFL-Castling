@@ -167,7 +167,10 @@ class CommandSkill : Tracker {
                     m_modifer.setCooldownReduction(0.8);
                 }
 
-                if (startsWith(c_armorType,'gk_persica')){
+                if (startsWith(c_armorType,'gk_persica_alt')){
+                    m_modifer.setCooldownMinus(5.0);
+                }
+                else if (startsWith(c_armorType,'gk_persica')){
                     m_modifer.setCooldownReduction(0.8);
                 }
 
@@ -2101,9 +2104,10 @@ class CommandSkill : Tracker {
     }    
     void excuteUMP9skill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
+        bool summonCooldown = false;
         int j=-1;
         for (uint i=0;i<SkillArray.length();i++){
-            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="UMP9") {
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="Flashbang") {
                 ExistQueue=true;
                 j=i;
             }
@@ -2115,34 +2119,52 @@ class CommandSkill : Tracker {
             //_log("skill cooldown" + SkillArray[j].m_time);
             return;
         }
+        //召唤CD
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="UMP9") {
+                summonCooldown=true;
+            }
+        }
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-        if (character !is null) {
-            if (!canCastSkill(character)) return;
-            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
-            if (player !is null){
-                if (player.hasAttribute("aim_target")) {
-                    string target = player.getStringAttribute("aim_target");
-                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
-                    int factionid = character.getIntAttribute("faction_id");
-                    array<string> Voice={
-                        "UMP9_skill1.wav",
-                        "UMP9_skill2.wav",
-                        "UMP9_skill3.wav",
-                        "UMP9_skill4.wav",
-                        "UMP9_skill5.wav"                        
-                    };
-                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
-                    c_pos=c_pos.add(Vector3(0,1,0));
-                    if (checkFlatRange(c_pos,stringToVector3(target),10)){
-                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ump9_stun_grenade_spawner.projectile",characterId,factionid,60);
-                    }
-                    else{
-                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"ump9_stun_grenade_spawner.projectile",characterId,factionid,60.0,6.0);
-                    }                    
-                    addCooldown("UMP9",15,characterId,modifer);
+        if (character is null) return;
+        if (!canCastSkill(character)) return;
+        const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+        if (player is null) return;
+        if (player.hasAttribute("aim_target")) {
+            string target = player.getStringAttribute("aim_target");
+            Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+            int factionid = character.getIntAttribute("faction_id");
+            array<string> Voice={
+                "UMP9_skill1.wav",
+                "UMP9_skill2.wav",
+                "UMP9_skill3.wav",
+                "UMP9_skill4.wav",
+                "UMP9_skill5.wav"                        
+            };
+            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+            playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+            c_pos=c_pos.add(Vector3(0,1,0));
+
+            if(summonCooldown)
+            {
+                if (checkFlatRange(c_pos,stringToVector3(target),10)){
+                    CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"skill_flashbang.projectile",characterId,factionid,60);
+                }
+                else{
+                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"skill_flashbang.projectile",characterId,factionid,60.0,6.0);
                 }
             }
+            else
+            {
+                if (checkFlatRange(c_pos,stringToVector3(target),10)){
+                    CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"ump9_stun_grenade_spawner.projectile",characterId,factionid,60);
+                }
+                else{
+                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"ump9_stun_grenade_spawner.projectile",characterId,factionid,60.0,6.0);
+                }
+                addCooldown("UMP9",60,characterId,modifer);
+            }
+            addCooldown("Flashbang",15,characterId,modifer);
         }
     }
     void excuteMab38skill(int characterId,int playerId,SkillModifer@ modifer){

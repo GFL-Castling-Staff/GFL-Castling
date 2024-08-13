@@ -2097,7 +2097,12 @@ class Tac50_Maple_Sniper_Drone : DelaySkill {
 					}
 				}
 			}
-		}		
+		}
+
+		if(affectedCharacter.length() <= 0){
+			return;
+		}
+
 		luckyoneid = affectedCharacter[getRandomIndex(affectedCharacter.length())].getIntAttribute("id");
 		const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyoneid);
 		if(luckyGuy is null)

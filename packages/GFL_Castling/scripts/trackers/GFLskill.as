@@ -123,7 +123,7 @@ class GFLskill : Tracker {
 						string sendtext= "白鸮轰鸣击中了"+ affectedNumber +"个敌人";
 						sendPrivateMessage(m_metagame,playerId,sendtext);
 						int PlayerfactionId = player.getIntAttribute("faction_id");
-						grenade_pos = grenade_pos.add(Vector3(0,3,0));
+						grenade_pos = grenade_pos.add(Vector3(0,5.0,0));
 						string c = 
 							"<command class='create_instance'" +
 							" faction_id='"+ PlayerfactionId +"'" +
