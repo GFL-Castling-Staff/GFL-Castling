@@ -403,28 +403,11 @@
 	<modifier class="speed" value="-0.35"/>
 </weapon>
 
-<weapon key="gkw_vehicle_m1a1_grenade.weapon" ai_burst_time="2" ai_burst_time_variance="0" ai_burst_wait_time="1" ai_burst_wait_time_variance="0" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_vehicle_m1a1_grenade.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="bazooka"/>
-	<specification sight_height_offset="6.0" retrigger_time="0.15" accuracy_factor="0.8" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" cooldown_start="3.5" cooldown_end="1.5" stance_accuracy_rate="4.0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="0" sight_range_modifier="2.5" slot="0" magazine_size="-1" name="AGS-30 Atlant" projectile_speed="120" suppressed="0" barrel_offset_3d="0 0.1 1.2" carry_in_two_hands="0" spread_range="0.2"/>
+	<specification sight_height_offset="6.0" retrigger_time="0.15" accuracy_factor="0.8" sustained_fire_grow_step="0.125" sustained_fire_diminish_rate="0.25" cooldown_start="0.75" cooldown_end="0.0" stance_accuracy_rate="4.0" class="0" sight_range_modifier="2.5" slot="2" magazine_size="-1" name="AGS-30 Atlant" projectile_speed="120" suppressed="0" barrel_offset_3d="0 0.1 1.2" spread_range="0.2" projectiles_per_shot="1" last_burst_retrigger_time="-1" burst_shots="1"/>
 	<inventory encumbrance="100.0" buy_price="450.0" sell_price="400.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
-	<capacity value="0" source="rank" source_value="0.0"/>
-	<capacity value="1" source="rank" source_value="10.0"/>
-	<animation key="reload" animation_key="reloading, agl 4.0"/>
-	<animation state_key="hold_casual" animation_key="crouch, pistol dual"/>
-	<animation state_key="recoil" animation_key="recoil, pistol dual 1"/>
-	<animation key="recoil" stance_key="over_wall" animation_key="recoil, pistol dual 1"/>
-	<animation state_key="hold" animation_key="crouch, pistol dual"/>
-	<animation state_key="hold_on_wall" animation_key="crouch, pistol dual"/>
-	<animation state_key="running" animation_key="crouch, pistol dual"/>
-	<animation state_key="walking" animation_key="crouch, pistol dual"/>
-	<animation state_key="walking_backwards" animation_key="crouch, pistol dual"/>
-	<animation state_key="crouching" animation_key="crouch, pistol dual"/>
-	<animation state_key="crouch_moving" animation_key="crouch, pistol dual"/>
-	<animation state_key="crouch_moving_backwards" animation_key="crouch, pistol dual"/>
-	<animation state_key="prone" animation_key="crouch, pistol dual"/>
-	<animation state_key="prone, moving forwards" animation_key="crouch, pistol dual"/>
-	<animation state_key="stabbing" animation_key="crouch, pistol dual"/>
 	<sound key="fire" fileref="ags30_fire_FromEFT.wav" pitch_variety="0.05" volume="1.4"/>
 	<sound key="magazine_out" fileref="ags30_mgz_out_FromBF1.wav" volume="0.9"/>
 	<sound key="magazine_in" fileref="ags30_mgz_in_FromBF1.wav" volume="0.9"/>
@@ -461,7 +444,7 @@
 	<effect class="result" key="other" copy="terrain"/>
 	<effect class="activated" ref="Propulsion_gl"/>
 	</projectile>
-	<ballistics curve_height="18.0" near_far_distance="0.0" speed_estimation_near="60.0" speed_estimation_far="150.0" max_speed="150.0" randomness="0.0" tweak_factor="1.6"/>
+	<ballistics curve_height="18.0" near_far_distance="0.0" speed_estimation_near="60.0" speed_estimation_far="150.0" max_speed="150.0" randomness="0.0" tweak_factor="1.54"/>
 	<stance state_key="running" accuracy="0.6"/>
 	<stance state_key="walking" accuracy="0.6"/>
 	<stance state_key="crouch_moving" accuracy="1.2"/>
@@ -812,13 +795,13 @@
 
 <weapon key="gkw_vehicle_m1a1_pulse_stun.weapon" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="antiarmor"/>
-	<specification retrigger_time="0.33" last_burst_retrigger_time="0.6" accuracy_factor="1.45" sustained_fire_grow_step="0.15" sustained_fire_diminish_rate="0.15" cooldown_start="0.29" cooldown_end="0.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="Barrett M82A1" class="0" reload_one_at_a_time="0" sight_range_modifier="0.75" projectile_speed="0" barrel_offset="0" projectiles_per_shot="1" spread_range="0.5" stance_accuracy_rate="1.5" burst_shots="1"/>
+	<specification retrigger_time="0.33" last_burst_retrigger_time="0.6" accuracy_factor="1.45" sustained_fire_grow_step="0.15" sustained_fire_diminish_rate="0.15" cooldown_start="0.29" cooldown_end="0.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="Barrett M82A1" class="0" reload_one_at_a_time="0" sight_range_modifier="0.75" projectile_speed="0.0001" barrel_offset="0" projectiles_per_shot="1" spread_range="0.5" stance_accuracy_rate="1.5" burst_shots="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="35.0" buy_price="300.0" sell_price="300.0"/>
 	<capacity value="1" source="rank" source_value="0.1"/>
 
-	<projectile class="grenade" slot="1" pulldown_in_air="0.5" file="gkw_vehicle_pulse_stun.projectile">
-	<trigger class="time" time_to_live="0.01"/>
+	<projectile class="grenade" slot="1" pulldown_in_air="0.005" file="gkw_vehicle_pulse_stun.projectile">
+	<trigger class="time" time_to_live="0.0001"/>
 	<rotation class="motion"/>
 	<model/>
 	</projectile>
@@ -834,13 +817,13 @@
 
 <weapon key="gkw_vehicle_m1a1_pulse_death.weapon" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="antiarmor"/>
-	<specification retrigger_time="0.33" last_burst_retrigger_time="0.6" accuracy_factor="1.45" sustained_fire_grow_step="0.15" sustained_fire_diminish_rate="0.15" cooldown_start="0.29" cooldown_end="0.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="Barrett M82A1" class="0" reload_one_at_a_time="0" sight_range_modifier="0.75" projectile_speed="0" barrel_offset="0" projectiles_per_shot="1" spread_range="0.5" stance_accuracy_rate="1.5" burst_shots="1"/>
+	<specification retrigger_time="0.33" last_burst_retrigger_time="0.6" accuracy_factor="1.45" sustained_fire_grow_step="0.15" sustained_fire_diminish_rate="0.15" cooldown_start="0.29" cooldown_end="0.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="Barrett M82A1" class="0" reload_one_at_a_time="0" sight_range_modifier="0.75" projectile_speed="0.0001" barrel_offset="0" projectiles_per_shot="1" spread_range="0.5" stance_accuracy_rate="1.5" burst_shots="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="35.0" buy_price="300.0" sell_price="300.0"/>
 	<capacity value="1" source="rank" source_value="0.1"/>
 
-	<projectile class="grenade" slot="1" pulldown_in_air="0.5" file="gkw_vehicle_pulse_death.projectile">
-	<trigger class="time" time_to_live="0.01"/>
+	<projectile class="grenade" slot="1" pulldown_in_air="0.005" file="gkw_vehicle_pulse_death.projectile">
+	<trigger class="time" time_to_live="0.0001"/>
 	<rotation class="motion"/>
 	<model/>
 	</projectile>

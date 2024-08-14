@@ -34,7 +34,7 @@
 9	<turret offset="-0.5 -0.42 -0.72" weapon_key="gkw_vehicle_m1a1_shield.weapon" weapon_offset="0 -0.1 -0.08" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.002" parent_turret_index="2" />
 
 <!-- 车顶武器站 -->
-10	<turret offset="0.64 0 -0.66" weapon_key="gkw_vehicle_m1a1_pulse_stun.weapon" weapon_offset="0 0.84 0.5" max_rotation_step="0.002" parent_turret_index="2" />
+10	<turret offset="0.605 0 -0.625" weapon_key="gkw_vehicle_m1a1_pulse_stun.weapon" weapon_offset="0 0 1.5" max_rotation_step="0.002" parent_turret_index="2" />
 11	<turret offset="0 0 0" weapon_key="gkw_vehicle_m1a1_pulse_death.weapon" weapon_offset="0 0 0" max_rotation_step="0.000" parent_turret_index="10" />
 
 	<visual class="chassis" mesh_filename="" />
