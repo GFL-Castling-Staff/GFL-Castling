@@ -160,7 +160,7 @@ class Metagame {
 
 		if (isInServerMode()) {
 			// recreated every match begin, it's fine
-			addTracker(BanManager(this));
+			addTracker(BanManager(this,true));
 			getAdminManager().loadFromFile();
 			getModeratorManager().loadFromFile();
 		}
