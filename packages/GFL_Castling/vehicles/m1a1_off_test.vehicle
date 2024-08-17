@@ -22,7 +22,7 @@
 1   <turret offset="0 0 0" weapon_key="vehicle_m1a1_none.weapon" weapon_offset="0 0 0" max_rotation_step="0.000010" rotation_range="0"/>
 
 <!-- 主炮及同轴机枪 -->
-2   <turret offset="0 2.44 0.5" weapon_key="vehicle_m1a1_none.weapon" weapon_offset="0 0 0" parent_turret_index="1" max_rotation_step="0.000045"/>
+2   <turret offset="0 2.44 0.5" weapon_key="vehicle_m1a1_105mm_none.weapon" weapon_offset="0 5 0" parent_turret_index="1" max_rotation_step="0.000045"/>
 3	<turret offset="0 0 0" weapon_key="vehicle_m1a1_105mm.weapon" weapon_offset="0 -0.4 3" weapon_recoil="0.2" physics_recoil="0.1" parent_turret_index="2" rotation_range="0"/>
 4	<turret offset="0 0 0" weapon_key="vehicle_m1a1_none.weapon" weapon_offset="0 0 0" parent_turret_index="2" max_rotation_step="0.000045" rotation_range="0"/>
 5	<turret offset="0 0 0" weapon_key="gkw_vehicle_m1a1_basemg.weapon" weapon_offset="-0.15 -0.3 1.6" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.002" parent_turret_index="2" rotation="0" rotation_range="0" />

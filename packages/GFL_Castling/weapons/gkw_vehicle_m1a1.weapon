@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
 <weapon key="vehicle_m1a1_none.weapon">
-	<specification slot="2" retrigger_time="0.075" accuracy_factor="0.5" sustained_fire_grow_step="0.25" sustained_fire_diminish_rate="2.0" sight_range_modifier="2.5" ai_sight_range_modifier="0.9" magazine_size="0" suppressed="0" name="Amos MG" class="0" projectile_speed="195"/>
+	<specification slot="2" retrigger_time="0.075" accuracy_factor="1.0" sustained_fire_grow_step="0" sustained_fire_diminish_rate="2.0" sight_range_modifier="2.5" ai_sight_range_modifier="0.9" magazine_size="0" suppressed="0" name="Amos MG" class="0" projectile_speed="195"/>
+	<model filename=""/>
+	<hud_icon filename="testing.png"/>
+	<commonness value="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
+	<result class="hit" damage_origin_vehicle="0"/>
+	<trigger class="impact"/>
+	<rotation class="motion"/>
+	</projectile>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="100.0" base_score="10.0"/>
+</weapon>
+<weapon key="vehicle_m1a1_105mm_none.weapon">
+	<specification slot="2" retrigger_time="0.075" accuracy_factor="1.0" sustained_fire_grow_step="0" sustained_fire_diminish_rate="2.0" sight_range_modifier="2.5" ai_sight_range_modifier="0.9" magazine_size="0" suppressed="0" name="Amos MG" class="0" projectile_speed="195"/>
 	<model filename=""/>
 	<hud_icon filename="testing.png"/>
 	<commonness value="0.0"/>
@@ -130,7 +143,7 @@
 	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="200.0"/>
 </weapon>  
 <weapon key="gkw_vehicle_m1a1_coax_laser.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification  accuracy_factor="1.5" barrel_offset="1.4" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="0" slot="0" sight_range_modifier="1.5" burst_shots="1" magazine_size="-1" name="GK-Dreamer-[Nirvanic Demolition]" projectile_speed="500" spread_range="0.01" retrigger_time="0.01" last_burst_retrigger_time="1" suppressed="0" sustained_fire_grow_step="0.0036" sustained_fire_diminish_rate="0.1" cooldown_start="0.6" cooldown_end="0.0" projectiles_per_shot="1" use_basic_muzzle_smoke_effect="0"/>
+	<specification  accuracy_factor="1.5" barrel_offset="1.4" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="0" slot="0" sight_range_modifier="1.5" burst_shots="1" magazine_size="-1" name="GK-Dreamer-[Nirvanic Demolition]" projectile_speed="500" spread_range="0.01" retrigger_time="0.02" last_burst_retrigger_time="1" suppressed="0" sustained_fire_grow_step="0.0036" sustained_fire_diminish_rate="0.1" cooldown_start="0.6" cooldown_end="0.0" projectiles_per_shot="1" use_basic_muzzle_smoke_effect="0"/>
 	<sound key="fire" fileref="cherub_fire.wav" pitch_variety="0.00" volume="0.2"/>
 	<sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8"/>
 	<sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8"/>
@@ -140,9 +153,9 @@
 	<hud_icon filename="sfw_dreamer_skill2.png"/>
 	<effect class="muzzle" ref="dreamer"/>
 	<weak_hand_hold offset="0.4"/>
-	<projectile file="rocket_dreamer.projectile">
+	<projectile file="rocket_dreamer.projectile" radius="0.25" pulldown_in_air="2">
 	<trail probability="1.0" key="laser_dreamer"/>
-	<result class="blast" damage="3.2" radius="4" decal="1" push="0.01" character_state="death" faction_compare="not_equal"/>
+	<result class="spawn" instance_class="projectile" instance_key="laser_m1a1_dam3_5_rad4.projectile" min_amount="1" max_amount="1" offset="0 2.0 0" position_spread="2 0" direction_spread="0 0" damage_origin_vehicle="0"/>
 	</projectile>
 	<tag name="elite"/>
 	<commonness value="0.0000001" in_stock="0" can_respawn_with="1"/>
@@ -336,8 +349,7 @@
 </weapon>
 
 <weapon key="gkw_vehicle_m1a1_m2hb.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.9" class="0" magazine_size="-1" barrel_offset="0.8" name="Browning M2HB-[Terminating Barrage]" projectile_speed="200" retrigger_time="0.1" suppressed="0" stance_accuracy_rate="0.5" spread_range="0.5" sustained_fire_grow_step="1.3" sustained_fire_diminish_rate="4.5" sight_range_modifier="2.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1"/>
-	<inventory encumbrance="50.0" buy_price="60.0" sell_price="60.0"/>
+	<specification accuracy_factor="0.8" class="0" magazine_size="-1" barrel_offset="0.8" name="Browning M2HB-[Terminating Barrage]" projectile_speed="180" retrigger_time="0.1" suppressed="0" stance_accuracy_rate="0.5" spread_range="0.5" sustained_fire_grow_step="0.0085" sustained_fire_diminish_rate="0.02" cooldown_start="0.675" cooldown_end="0.05" sight_range_modifier="2.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
@@ -464,7 +476,7 @@
 </weapon>
 
 <weapon key="gkw_vehicle_m1a1_m2hb_none.weapon">
-	<specification slot="2" retrigger_time="0.075" accuracy_factor="0.5" sustained_fire_grow_step="0.25" sustained_fire_diminish_rate="2.0" sight_range_modifier="2.4" ai_sight_range_modifier="1.0" magazine_size="0" suppressed="0" name="Amos MG" class="0" projectile_speed="195"/>
+	<specification slot="2" retrigger_time="0.075" accuracy_factor="0.5" sustained_fire_grow_step="0.25" sustained_fire_diminish_rate="2.0" sight_range_modifier="2.1" ai_sight_range_modifier="1.0" magazine_size="0" suppressed="0" name="Amos MG" class="0" projectile_speed="195"/>
 	<model filename=""/>
 	<hud_icon filename="testing.png"/>
 	<commonness value="0.0"/>
@@ -889,7 +901,7 @@
 	<target_factors tag="bazooka" distance="1.0" direction="0.0" squad_command="1.0" base_score="200.0"/>
 </weapon>
 
-<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0.5" drop_count_factor_on_player_death="1.0" key="gkw_vehicle_m1a1_rocker.weapon">
+<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0.5" drop_count_factor_on_player_death="1.0" key="gkw_vehicle_m1a1_wasp.weapon">
     <specification 
     retrigger_time="0.3" last_burst_retrigger_time="0.6" accuracy_factor="1.45" sustained_fire_grow_step="0.01" sustained_fire_diminish_rate="0.01" cooldown_start="0.069" cooldown_end="0.06" magazine_size="-1"
     can_shoot_standing="1" 
@@ -913,13 +925,13 @@
     <sound class="impact" fileref="rifle_drop.wav" />
     <model />
     <ballistics near_far_distance="1000.0" speed_estimation_near="120.0" speed_estimation_far="120.0" max_speed="125.0" randomness="0.0" />
-    <projectile class="grenade" radius="0.3" slot="2" name="default" time_to_live="1.0" pulldown_in_air="0.5" >
+    <projectile class="grenade" radius="0.3" slot="2" name="default" time_to_live="1.0" pulldown_in_air="4" >
 		<model mesh_filename="m202_rocket.xml"/>
 
 		<collision class="impact" />    
 		<trigger class="impact" />
 
-        <result class="blast" damage="10.0" radius="6" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+		<result class="spawn" instance_class="projectile" instance_key="blast_shard_m1a1_wasp_s.projectile" min_amount="3" max_amount="3" offset="0 2.0 0" position_spread="0 0" direction_spread="0 0" damage_origin_vehicle="0"/>
 	    <sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2" />
 		<sound class="result" key="other" fileref="explosion_FromSQUAD_2.wav" volume="2" />
 		<sound class="result" key="other" fileref="explosion_FromSQUAD_3.wav" volume="2" />
@@ -929,8 +941,6 @@
 		<sound class="result" key="static_object" copy="other" />
 		<sound class="result" key="character" copy="other" />
 
-		<effect class="result" key="terrain" ref="general_weapon_result_blast_smoke" lighting="0" post_processing="1"/> 
-		<effect class="result" key="terrain" ref="general_weapon_result_blast_smoke_expanding" lighting="0" post_processing="1"/> 
 		<effect class="result" key="terrain" ref="general_weapon_result_blast_smaller_ring" lighting="0"/> 
 		<effect class="result" key="terrain" ref="general_weapon_result_blast_smaller_ring_2" lighting="0"/> 
 		<effect class="result" key="terrain" ref="general_weapon_result_blast_smaller_spray_1" lighting="0"/> 

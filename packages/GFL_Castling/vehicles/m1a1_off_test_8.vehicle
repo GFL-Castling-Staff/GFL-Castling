@@ -22,7 +22,7 @@
 1   <turret offset="0 0 0" weapon_key="vehicle_m1a1_none.weapon" weapon_offset="0 0 0" max_rotation_step="0.000010" rotation_range="0"/>
 
 <!-- 主炮及同轴机枪 -->
-2   <turret offset="0 2.44 0.5" weapon_key="vehicle_m1a1_none.weapon" weapon_offset="0 0 0" parent_turret_index="1" max_rotation_step="0.000045"/>
+2   <turret offset="0 2.44 0.5" weapon_key="vehicle_m1a1_105mm_none.weapon" weapon_offset="0 5 0" parent_turret_index="1" max_rotation_step="0.000045"/>
 3	<turret offset="0 0 0" weapon_key="vehicle_m1a1_105mm.weapon" weapon_offset="0 -0.4 3" weapon_recoil="0.2" physics_recoil="0.1" parent_turret_index="2" rotation_range="0"/>
 4	<turret offset="0 0 0" weapon_key="vehicle_m1a1_none.weapon" weapon_offset="0 0 0" parent_turret_index="2" max_rotation_step="0.000045" rotation_range="0"/>
 5	<turret offset="0 0 0" weapon_key="gkw_vehicle_m1a1_basemg.weapon" weapon_offset="-0.15 -0.3 1.6" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.002" parent_turret_index="2" rotation="0" rotation_range="0" />
@@ -34,7 +34,7 @@
 9	<turret offset="-0.5 -0.42 -0.72" weapon_key="gkw_vehicle_m1a1_shield.weapon" weapon_offset="0 -0.1 -0.08" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.002" parent_turret_index="2" />
 
 <!-- 车顶武器站 -->
-10	<turret offset="0.605 0 -0.625" weapon_key="gkw_vehicle_m1a1_emgun.weapon" weapon_offset="0 0.84 0.5" max_rotation_step="0.002" parent_turret_index="2" />
+10	<turret offset="0.605 0 -0.625" weapon_key="gkw_vehicle_m1a1_wasp.weapon" weapon_offset="0 0.84 0.5" max_rotation_step="0.002" parent_turret_index="2" />
 
 	<visual class="chassis" mesh_filename="" />
 	<visual class="chassis" key="broken" mesh_filename="" />
@@ -51,7 +51,7 @@
 	<visual class="turret" turret_index="7" offset="0 100 0" mesh_filename="40mm.mesh" texture_filename="balloon.png"/>
 	<visual class="turret" turret_index="8" mesh_filename="m1a1_respawnp.mesh" texture_filename="m1a1_coax_respawn.png" />
 	<visual class="turret" turret_index="9" offset="0 100 0" mesh_filename="40mm.mesh" texture_filename="balloon.png"/>
-	<visual class="turret" turret_index="10" mesh_filename="m1a1_emgun.mesh" texture_filename="m1a1_emgun.png" />
+	<visual class="turret" turret_index="10" mesh_filename="m1a1_wasp.mesh" texture_filename="m1a1_wasp.png" />
 
 	<visual class="turret" turret_index="0" key="broken" offset="0 100 0" mesh_filename="40mm.mesh" texture_filename="humvee_broken.png"/>
 	<visual class="turret" turret_index="1" key="broken" mesh_filename="m1a1_d_base.mesh" texture_filename="humvee_broken.png" />
@@ -63,7 +63,7 @@
 	<visual class="turret" turret_index="7" key="broken" offset="0 100 0" mesh_filename="40mm.mesh" texture_filename="humvee_broken.png"/>
 	<visual class="turret" turret_index="8" key="broken" mesh_filename="m1a1_respawnp.mesh" texture_filename="humvee_broken.png" />
 	<visual class="turret" turret_index="9" key="broken" offset="0 100 0" mesh_filename="40mm.mesh" texture_filename="humvee_broken.png"/>
-	<visual class="turret" turret_index="10" key="broken" mesh_filename="m1a1_emgun.mesh" texture_filename="humvee_broken.png" />
+	<visual class="turret" turret_index="10" key="broken" mesh_filename="m1a1_wasp.mesh" texture_filename="humvee_broken.png" />
 
 	<visual class="track" mesh_filename="m1a1_track_r.mesh" offset="-1.57 0.6 0.1" >
 		<part texture_filename="is2_m1895_track.jpg" texture_animation="translate" factor="-1" tire_binding="0" />
