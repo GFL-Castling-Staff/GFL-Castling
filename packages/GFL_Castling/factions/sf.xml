@@ -462,7 +462,28 @@
 			<item_class_existence class="grenade" slot="0" probability="0.3" />
 		</item_class_existence_config>
 	</soldier>
-	<soldier name="sf_vespid_swap" spawn_score="1.0" copy_from="default_spawn_ai">
+	<soldier name="sf_vespid_swap" spawn_score="0.2" copy_from="default_spawn_ai">
+		<model filename="sfd_vespid_swap_from_dusk.xml" />
+		<ai filename="elite.ai" />
+		<resources clear_weapons="1" clear_calls="1">
+			<weapon key="sfw_vespid_swap.weapon" enabled="1"/>
+			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
+			<weapon key="cover_deploy_enemy.weapon" enabled="1"/>
+			<weapon key="sfw_m2g.weapon" enabled="1"/>
+			<call key="sf_assault.call" />
+			<call key="sf_trooper_small_scout.call" />
+		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="0.75" />
+			<item_class_existence class="grenade" slot="0" probability="0.75" />
+		</item_class_existence_config>	
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="100.0" max="100.0" />
+			<attribute weight="0.3" min="300.0" max="500.0" />
+			<attribute weight="0.3" min="0.0" max="0.0" />
+		</attribute_config>			
+	</soldier>
+	<soldier name="sf_vespid_vehicle_user" spawn_score="0.8" copy_from="default_spawn_ai">
 		<model filename="sfd_vespid_swap_from_dusk.xml" />
 		<ai filename="elite.ai" />
 		<resources clear_weapons="1" clear_calls="1">

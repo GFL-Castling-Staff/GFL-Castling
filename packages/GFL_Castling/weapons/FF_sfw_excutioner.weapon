@@ -91,13 +91,12 @@
 		range="6.5"
 		character_state="death" 
 		consume="0" 
-		success_probability="15.0"
-		damage="15.0"
+		success_probability="25.0"
 		class="5"
 		stab_enabled="1"
 		stab_range="5"
 		affect_characters="1"
-		affect_vehicles="1" 
+		affect_vehicles="0" 
 		barrel_offset="-0.05"
 		/>
 		<animation state_key="recoil" animation_key="excution_skill"/>
