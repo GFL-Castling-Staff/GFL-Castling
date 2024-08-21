@@ -46,7 +46,7 @@
         <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
         <animation state_key="stabbing" 			animation_key="pistol whip" />
         <animation state_key="stabbing" 			animation_key="pistol whip 3" />
-        <sound key="fire" fileref="m1895_fire_FromHUNT.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="fire" fileref="m1895mod3skill_fire_FromBF5.wav" pitch_variety="0.05" volume="1.5" />
         <sound key="magazine_out" fileref="revolver_magazine_out.wav" volume="0.8" />
         <sound key="magazine_in" fileref="revolver_magazine_in.wav" volume="0.8" />
         <sound key="cycle_out" fileref="revolver_cycle_out.wav" volume="0.8" />
@@ -98,6 +98,7 @@
         <capacity value="1" source="rank" source_value="0.0" />
         <inventory encumbrance="5.0" buy_price="270.0" sell_price="270.0"/>
         <commonness value="0" can_respawn_with="1" in_stock="0" />
+        
         <next_in_chain key="gkw_m1895mod3.weapon" share_ammo="1" />
         <animation state_key="recoil" animation_key="recoil, pistol" />
         <animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone" />
@@ -117,7 +118,7 @@
         <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
         <animation state_key="stabbing" 			animation_key="pistol whip" />
         <animation state_key="stabbing" 			animation_key="pistol whip 3" />
-        <sound key="fire" fileref="m1895mod3skill_fire_FromBF5.wav" pitch_variety="0.05" volume="1.5" />
+        <sound key="fire" fileref="m1895_fire_FromHUNT.wav" pitch_variety="0.05" volume="1.2" />
         <sound key="magazine_out" fileref="revolver_magazine_out.wav" volume="0.8" />
         <sound key="magazine_in" fileref="revolver_magazine_in.wav" volume="0.8" />
         <sound key="cycle_out" fileref="revolver_cycle_out.wav" volume="0.8" />
