@@ -4203,9 +4203,9 @@ class CommandSkill : Tracker {
                         const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
                         if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
                             string luckyonepos = luckyoneC.getStringAttribute("position");
-                            Vector3 target = stringToVector3(luckyonepos);
-                            CreateDirectProjectile(m_metagame,target.add(Vector3(0,2,0)),target,"ff_emp_bullet_stun.projectile",characterId,factionid,10);
-                            CreateDirectProjectile(m_metagame,target.add(Vector3(0,2,0)),target,"ff_emp_bullet_kill.projectile",characterId,factionid,10);
+                            Vector3 targetPos = stringToVector3(luckyonepos);
+                            CreateDirectProjectile(m_metagame,targetPos.add(Vector3(0,2,0)),targetPos,"ff_emp_bullet_stun.projectile",characterId,factionid,10);
+                            CreateDirectProjectile(m_metagame,targetPos.add(Vector3(0,2,0)),targetPos,"ff_emp_bullet_kill.projectile",characterId,factionid,10);
                         }	
                     }
                     else{

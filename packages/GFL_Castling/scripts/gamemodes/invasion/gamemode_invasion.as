@@ -108,34 +108,34 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 
 			int loading_map_index = 0;
 
-			XmlElement@ query = XmlElement(
-			makeQuery(this, array<dictionary> = {
-			dictionary = { {"TagName", "data"}, {"class", "saved_data"} } }));
-			const XmlElement@ doc = getComms().query(query);
+			if (isInServerMode()) {
+				string FILENAME = "current_stage_index.xml";
 
-			if (doc !is null) {
-				const XmlElement@ root = doc.getFirstChild();
-				const XmlElement@ settings = root.getFirstElementByTagName("map_status");
-				if (settings !is null) {
-					const XmlElement@ stringXml = settings[0];
-					if (stringXml !is null)
-					{
-						loading_map_index = stringXml.getIntAttribute("value");
+				XmlElement@ query = XmlElement(
+					makeQuery(this, array<dictionary> = {
+						dictionary = { {"TagName", "data"}, {"class", "saved_data"}, {"filename", FILENAME},{"location", "app_data"}}}));
+				const XmlElement@ xml = this.getComms().query(query);
+				if(xml !is null){
+					const XmlElement@ root = xml.getFirstChild();
+					if(root !is null){
+						loading_map_index = root.getIntAttribute("map_index");
+					}
+				}
+
+				if (loading_map_index !=0)
+				{
+					for (int x1=0;x1<(loading_map_index);x1++){
+						m_mapRotator.setStageCompleted(x1);
 					}
 				}
 			}
+
 			m_unlockManager.init(0);
 
 			// - init sets up map rotator according to settings
 			// - settings are stored in metagame savegame data
 			m_mapRotator.init();
 
-			if (loading_map_index !=0)
-			{
-				for (int x1=0;x1<(loading_map_index);x1++){
-					m_mapRotator.setStageCompleted(x1);
-				}
-			}
 			
 			// changes map, start the match, calls pre/post_begin_match
 			m_mapRotator.startRotation(false,loading_map_index);
@@ -521,7 +521,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 				continue;
 			} 
 			all_girls_information.insertLast(info);
-			_log("这是第几个 " + (all_girls_information.length()));
+			// _log("这是第几个 " + (all_girls_information.length()));
 		}		
 	}
 

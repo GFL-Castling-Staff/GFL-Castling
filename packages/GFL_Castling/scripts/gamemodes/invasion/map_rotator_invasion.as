@@ -177,7 +177,7 @@ class MapRotatorInvasion : MapRotator {
 	}
 
 	// --------------------------------------------
-	protected void setStageCompleted(int index) {
+	void setStageCompleted(int index) {
 		if (!isStageCompleted(index)) {
 			m_stagesCompleted.insertLast(index);
 		}
@@ -216,6 +216,7 @@ class MapRotatorInvasion : MapRotator {
 		}
 
 		_log("faction " + factionId + " won");
+		_log("现在是第几关啊啊" + m_currentStageIndex + "啊啊啊");
 
 
 		if (factionId == 0) {
@@ -225,6 +226,29 @@ class MapRotatorInvasion : MapRotator {
 
 			// not real data to add about it, is there a "set" in php?
 			setStageCompleted(m_currentStageIndex);
+
+			if(m_metagame.isInServerMode())
+			{
+				string FILENAME =  "current_stage_index.xml";
+
+				int m_savedStageIndex = m_currentStageIndex + 1;
+
+				if (m_savedStageIndex == int(m_stages.size()))
+				{
+					m_savedStageIndex = 0;
+				}
+
+				XmlElement root("current_stage_index");
+				root.setIntAttribute("map_index", m_savedStageIndex);
+
+				XmlElement command("command");
+				command.setStringAttribute("class", "save_data");
+				command.setStringAttribute("filename", FILENAME);
+				command.setStringAttribute("location", "app_data");
+				command.appendChild(root);
+
+				m_metagame.getComms().send(command);
+			}
 
 			string map_name = getMapName(m_currentStageIndex);
 
@@ -1110,6 +1134,19 @@ class MapRotatorInvasion : MapRotator {
 					setStageCompleted(index);
 				}
 			}
+
+			{
+				string mapPath = m_metagame.m_gameMapPath;
+				int index = getStageIndexFromMapPath(mapPath);
+				if (index < 0) {
+					_log("ERROR, couldn't resolve stage index from map path, mapPath=" + mapPath);
+					index = 0;
+				}
+				m_nextStageIndex = index;
+				m_currentStageIndex = m_nextStageIndex;
+				_log("current/next stage at load: " + m_currentStageIndex);
+			}
+
 		} else {
 			_log("WARNING, map_rotator not found", -1);
 		}
@@ -1129,5 +1166,17 @@ class MapRotatorInvasion : MapRotator {
 				m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, mapname+" advance, held by enemy, part "+j, a));
 			}
 		}
+	}	
+
+	protected int getStageIndexFromMapPath(string path) const {
+		int result = -1;
+		for (uint i = 0; i < m_stages.size(); ++i) {
+			Stage@ stage = m_stages[i];
+			if (stage.m_mapInfo.m_path == path) {
+				result = int(i);
+				break;
+			}
+		}
+		return result;
 	}	
 }
