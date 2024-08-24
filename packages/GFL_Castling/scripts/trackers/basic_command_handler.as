@@ -115,7 +115,7 @@ class BasicCommandHandler : Tracker {
 				playSound(m_metagame, "objective_priority.wav", 0); //high priority
 				sendFactionMessageKey(m_metagame, 0,"quickchat5d",a,2.0);
 				sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat5",dictionary(),0.9);
-			}
+			}		
 			if (message=="/chat6") {
 				const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 				if (playerInfo is null) return;
@@ -367,6 +367,18 @@ class BasicCommandHandler : Tracker {
 				sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat30",dictionary(),0.9);
 			}
 		}
+
+		else if (message=="/shout") {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			if (playerInfo is null) return;
+			string strname= playerInfo.getStringAttribute("name");
+			dictionary a;
+			a["%name"] = strname;
+			int cId= playerInfo.getIntAttribute("character_id");
+			playSound(m_metagame, "test2222.wav", 0); //high priority
+			sendFactionMessageKey(m_metagame, 0,"quickchat5d",a,2.0);
+			sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat5",dictionary(),0.9);
+		}	
 
 		else if (checkCommand(message, "dance1")) {
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);

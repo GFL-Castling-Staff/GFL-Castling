@@ -19,7 +19,7 @@
 	slot="0"
 	spread_range="0.5"
 	reload_one_at_a_time="0" 
-	stance_accuracy_rate="1.5"
+	stance_accuracy_rate="3.0"
 	sight_range_modifier="2.25" 
 	projectile_speed="170" 
 	barrel_offset="0.65" 
@@ -60,7 +60,7 @@
 		<collision class="sticky" />
 	</projectile>
 	<!--Accuracy, Movement speed-->
-	<stance state_key="running" accuracy="0.15" />
+	<stance state_key="running" accuracy="0.2" />
 	<stance state_key="walking" accuracy="0.65" />
 	<stance state_key="crouch_moving" accuracy="0.5" />
 	<stance state_key="prone_moving" accuracy="0.8" />

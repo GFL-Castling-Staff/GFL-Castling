@@ -109,7 +109,7 @@ class map_DeadZone_Phase1 : map_DeadZone_Phase {
 			"  <parameter class='willingness_to_charge' value='0.4' />" +
 			"</command>");		
 		_log("Phase1 starting");
-		playSoundtrack(m_metagame,"Singularity_4.wav");
+		// playSoundtrack(m_metagame,"Singularity_4.wav");
 	}
 
 	protected float m_timer = 90.0;
@@ -172,7 +172,7 @@ class map_DeadZone_Phase2 : map_DeadZone_Phase {
 	void start() {
 		map_DeadZone_Phase::start();
 		_log("Phase2 starting");
-		playSoundtrack(m_metagame,"Singularity_6.wav");
+		// playSoundtrack(m_metagame,"Singularity_6.wav");
 		m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "Map105_3,all tower destoryed1"));
 		m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "Map105_3,all tower destoryed2"));
 		m_metagame.getTaskSequencer().add(AnnounceTask(m_metagame, 3.0, 0, "Map105_3,all tower destoryed3"));

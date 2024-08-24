@@ -8,8 +8,8 @@
 
 class DeadZoneHack : Tracker {
 	protected Metagame@ m_metagame;
-	protected float m_updateTimer = 5.0;
-	protected float m_updateTime = 5.0;
+	protected float m_updateTimer = 10.0;
+	protected float m_updateTime = 10.0;
 	protected bool m_updatePhase;
 
 
@@ -37,10 +37,6 @@ class DeadZoneHack : Tracker {
 				updateMapViewPic(m_metagame,"map_ruin.png");
 				updateMapViewPic(m_metagame,"map.png");
 				updateMapViewPic(m_metagame,"map_ruin.png");
-				updateMapViewPic(m_metagame,"map.png");
-				updateMapViewPic(m_metagame,"map_ruin.png");
-				updateMapViewPic(m_metagame,"map.png");
-				updateMapViewPic(m_metagame,"map_ruin.png");
 				updateMapViewPic(m_metagame,"map.png");				
 				m_updatePhase = false;
 			}
@@ -53,10 +49,6 @@ class DeadZoneHack : Tracker {
 				updateMapViewPic(m_metagame,"map_ruin.png");
 				updateMapViewPic(m_metagame,"map.png");
 				updateMapViewPic(m_metagame,"map_ruin.png");				
-				updateMapViewPic(m_metagame,"map.png");
-				updateMapViewPic(m_metagame,"map_ruin.png");
-				updateMapViewPic(m_metagame,"map.png");
-				updateMapViewPic(m_metagame,"map_ruin.png");
 				updateMapViewPic(m_metagame,"map.png");
 				updateMapViewPic(m_metagame,"map_ruin.png");
 				updateMapViewPic(m_metagame,"map.png");
