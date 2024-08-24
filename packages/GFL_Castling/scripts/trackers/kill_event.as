@@ -234,6 +234,8 @@ class kill_event : Tracker {
         {"gkw_jatimatic.weapon",3},
         {"gkw_43m.weapon",3},
         {"ff_dragoon.weapon",3},
+        {"gkw_evo3.weapon",3},
+        {"gkw_evo3mod3.weapon",3},
 
 
         //短突

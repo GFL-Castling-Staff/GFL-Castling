@@ -60,7 +60,7 @@
     <hud_icon filename="gkw_m1873_2105.png"/>
     <weak_hand_hold offset="0.1"/>
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="20.6" kill_decay_start_time="0.4" kill_decay_end_time="0.7"/>
+        <result class="hit" kill_probability="25.6" kill_decay_start_time="0.4" kill_decay_end_time="0.7"/>
     </projectile>
     <stance state_key="running" accuracy="1.6"/>
     <stance state_key="walking" accuracy="1.6"/>

@@ -4,6 +4,7 @@
 <tag name="elite"/>
     <!--Weapon specifications-->
     <specification
+    can_shoot_running="1"
 	retrigger_time="0.0667"
 	accuracy_factor="1.0"
 	sustained_fire_grow_step="0.45"

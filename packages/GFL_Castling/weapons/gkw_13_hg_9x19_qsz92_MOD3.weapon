@@ -4,14 +4,15 @@
 <tag name="elite"/>
     <!--Weapon specifications-->
     <specification
+    can_shoot_running="1"
 	retrigger_time="0.33"
 	accuracy_factor="1.0"
 	sustained_fire_grow_step="0.3"
-	sustained_fire_diminish_rate="0.8"
+	sustained_fire_diminish_rate="1.5"
 	magazine_size="15"
 	suppressed="0"
 	name="QSZ-92(MOD3)"
-	class="4"
+	class="0"
 	reload_one_at_a_time="0"
 	sight_range_modifier="1.35"
 	projectile_speed="140"
@@ -61,7 +62,7 @@
     <stance state_key="crouch_moving" accuracy="0.8" />
     <stance state_key="prone_moving" accuracy="0.8" />
     <stance state_key="standing" accuracy="0.9" />
-    <stance state_key="crouching" accuracy="0.95" />
+    <stance state_key="crouching" accuracy="0.98" />
     <stance state_key="prone" accuracy="1" />
 	<stance state_key="over_wall" accuracy="1" />
     <modifier class="speed" value="0.8" />
