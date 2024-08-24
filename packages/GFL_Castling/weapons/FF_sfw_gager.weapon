@@ -72,7 +72,8 @@
 	can_shoot_crouching="0"
 	can_shoot_prone="0"
 	class="5"
-	solt="0" 
+	slot="0" 
+    consume="0"
 	magazine_size="100" 
 	name="GK-Gager-[Lunar Return]" 
     sight_range_modifier="1.0" 
@@ -80,10 +81,11 @@
     affect_vehicles="0" 
 	retrigger_time="-1"
     use_basic_muzzle_smoke_effect="0"
-    range="5.5"
-    success_probability="16.0"
+    range="7.5"
+    success_probability="25.0"
+    character_state="death" 
     stab_enabled="1"
-    stab_range="7.5"/>
+    stab_range="5.5"/>
 
     <next_in_chain key="ff_gager.weapon" share_ammo="0" />
     <inventory encumbrance="20.0" buy_price="648.0" sell_price="324.0"/>
@@ -92,7 +94,8 @@
     <animation state_key="reload" animation_key="reload, gager_melee" />
 	<animation state_key="hold" animation_key="hold, gager_melee" />
 	<animation state_key="hold_on_wall" animation_key="hold, gager_melee" />
-    <animation state_key="still_against_wall" 	animation_key="hold, gager_melee" />
+	<animation state_key="still" animation_key="walking, gager_melee" />
+    <animation state_key="still_against_wall" 	animation_key="walking, gager_melee" />
 	<animation state_key="running" animation_key="rush, gager" />  
 	<animation state_key="walking" animation_key="walking, gager_melee" />
     <animation state_key="walking_backwards" animation_key="walking, gager_melee" />  
@@ -115,6 +118,10 @@
 	<sound key="stab_hit_any" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
 	<sound key="stab_hit_any" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
 	<sound key="stab_hit_any" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
+    <sound key="effect" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+    <sound key="effect" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+    <sound key="effect" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+    <sound key="effect" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
     <sound key="magazine_out" fileref="gager_mgz_out_FromCOD13.wav" volume="0.8" />
     <sound key="magazine_in" fileref="gager_mgz_in_FromCOD13.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
