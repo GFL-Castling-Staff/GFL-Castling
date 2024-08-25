@@ -3,8 +3,9 @@
 <weapon file="designated_marksman_rifle.animation_base" key="gkw_m1891mod3.weapon">
 
     <specification 
-    retrigger_time="-1.0" 
-    accuracy_factor="1.0" 
+    retrigger_time="1.5" 
+    accuracy_factor="1.0"
+    last_burst_retrigger_time="1.5" 
     sustained_fire_grow_step="3.0" 
     sustained_fire_diminish_rate="2.5" 
     spread_range="0.3"
@@ -16,7 +17,7 @@
     reload_one_at_a_time="1" 
     sight_range_modifier="2.5" 
     projectile_speed="210" 
-    stance_accuracy_rate="2.0"
+    stance_accuracy_rate="2.5"
     barrel_offset="0.6" 
     projectiles_per_shot="1" />
 
@@ -26,9 +27,8 @@
 
     <next_in_chain key="gkw_m1891mod3_skill.weapon" share_ammo="0"/>
 
-    <animation key="cycle" animation_key="Brifle1.3" />
-	<animation key="cycle" stance_key="prone" animation_key="Brifle0.8p" />	
-    <animation key="cycle" stance_key="over_wall" animation_key="Brifle0.8" />	
+	<animation key="cycle" animation_key="Brifle action"/>
+	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>	
     <animation key="reload" animation_key="reloading, oaat" />	
 	
 	<sound key="fire" fileref="m1891skill_fire_FromCOD8.wav" volume="1.6" />  
@@ -43,7 +43,7 @@
     <hud_icon filename="gkw_m1891mod3.png" />
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet_rf.projectile">
-        <result class="hit" kill_probability="2.8" kill_probability_offset_on_successful_hit="20.8" kill_decay_start_time="1.895" kill_decay_end_time="3.158"/>
+        <result class="hit" kill_probability="16.6" kill_probability_offset_on_successful_hit="20" kill_decay_start_time="1.895" kill_decay_end_time="3.158"/>
         <trail probability="1" key="BulletApTrail_rf"/>	
     </projectile>
     <stance state_key="running" accuracy="0.3" />

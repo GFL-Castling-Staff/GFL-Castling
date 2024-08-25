@@ -2,7 +2,7 @@
 <weapons>
     <weapon key="gkw_98k_8301.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
         <specification 
-        retrigger_time="-1.0"
+        retrigger_time="1.1"
         accuracy_factor="1.0"
         spread_range="0.15"
         sustained_fire_grow_step="3.5"
@@ -26,8 +26,8 @@
         slot="0"/>
         <inventory encumbrance="35.0" buy_price="98.0" sell_price="98.0"/>
         <next_in_chain key="gkw_98k_8301_skill.weapon" share_ammo="0" />
-        <animation key="cycle" animation_key="Brifle1.1"/>
-        <animation key="cycle" stance_key="prone" animation_key="Brifle1.1p"/>
+        <animation key="cycle" animation_key="Brifle action"/>
+        <animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
         <animation key="reload" animation_key="reloading, oaat"/>
         <animation state_key="next_in_chain_in" animation_key="change weapon install part" />
         <animation state_key="next_in_chain_out" animation_key="change weapon install part" />
@@ -73,7 +73,7 @@
     </weapon>
     <weapon key="gkw_98k_8301_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
         <specification 
-        retrigger_time="-1.0"
+        retrigger_time="0.8"
         accuracy_factor="0.95"
         spread_range="0.15"
         sustained_fire_grow_step="3.5"
@@ -97,8 +97,8 @@
         slot="0"/>
         <inventory encumbrance="35.0" buy_price="98.0" sell_price="98.0"/>
         <next_in_chain key="gkw_98k_8301.weapon" share_ammo="0" />
-        <animation key="cycle" animation_key="Brifle0.8"/>
-        <animation key="cycle" stance_key="prone" animation_key="Brifle0.8p"/>
+        <animation key="cycle" animation_key="Brifle action"/>
+        <animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
         <animation key="reload" animation_key="reloading, clip"/>
         <animation state_key="next_in_chain_in" animation_key="change weapon install part" />
         <animation state_key="next_in_chain_out" animation_key="change weapon install part" />

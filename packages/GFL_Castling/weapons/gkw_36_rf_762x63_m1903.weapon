@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapon key="gkw_m1903.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification 
-    retrigger_time="-1.0"
+    retrigger_time="1"
     accuracy_factor="1.0"
     sustained_fire_grow_step="3.0"
     sustained_fire_diminish_rate="1.5"
@@ -20,11 +20,11 @@
     stance_accuracy_rate="2.5"
     carry_in_two_hands="1"
     burst_shots="1"
-    last_burst_retrigger_time="-1"
+    last_burst_retrigger_time="1.0"
     slot="0"/>
 	<inventory encumbrance="35.0" buy_price="19.03" sell_price="19.03"/>
-	<animation key="cycle" animation_key="Brifle1"/>
-	<animation key="cycle" stance_key="prone" animation_key="Brifle0.8p"/>
+	<animation key="cycle" animation_key="Brifle action"/>
+	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
 	<animation key="reload" animation_key="reloading, clip"/>
 	<sound key="fire" fileref="m1903_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.05" volume="1.5"/>
 	<sound key="cycle" fileref="m1903_cycle_FromPOSTSCRIPTUM.wav" volume="0.6"/>

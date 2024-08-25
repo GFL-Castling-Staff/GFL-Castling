@@ -13,7 +13,7 @@
     carry_in_two_hands="1"
 	suppressed="0" 
 	name="Savage Model 99" 
-    stance_accuracy_rate="1.8"
+    stance_accuracy_rate="3.5"
 	class="2" 
     slot="0"
 	reload_one_at_a_time="1" 
@@ -63,7 +63,7 @@
     <stance state_key="walking" accuracy="0.5" />
     <stance state_key="crouch_moving" accuracy="0.8" />
     <stance state_key="prone_moving" accuracy="0.95" />
-    <stance state_key="standing" accuracy="0.92" />
+    <stance state_key="standing" accuracy="0.99" />
     <stance state_key="crouching" accuracy="1.0" />
     <stance state_key="prone" accuracy="0.7" />
     <stance state_key="over_wall" accuracy="1.0" />

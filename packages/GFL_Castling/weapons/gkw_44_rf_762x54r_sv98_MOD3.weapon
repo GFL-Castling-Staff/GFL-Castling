@@ -4,7 +4,7 @@
     <tag name="rifle"/>
     <tag name="elite"/>
         <specification 
-        retrigger_time="-1.0"
+        retrigger_time="1.0"
         accuracy_factor="1.0"
         sustained_fire_grow_step="2.0" 
         sustained_fire_diminish_rate="2.0" 
@@ -22,7 +22,7 @@
         stab_enabled="1"
         carry_in_two_hands="1"
         burst_shots="1"
-        last_burst_retrigger_time="-1"
+        last_burst_retrigger_time="1.0"
         slot="0"/>
         <commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
         <inventory encumbrance="35.0" buy_price="298.0" sell_price="198.0"/>
@@ -38,9 +38,8 @@
         <animation state_key="stabbing" animation_key="melee, quick knife"/>
         <animation state_key="stabbing" animation_key="pistol whip 3"/>
         <animation state_key="hold_casual" animation_key="dancing, kazachok"/>
-        <animation key="cycle" animation_key="Brifle1"/>
-        <animation key="cycle" stance_key="prone" animation_key="Brifle0.8p"/>
-        <animation key="cycle" stance_key="over_wall" animation_key="Brifle0.8"/>
+        <animation key="cycle" animation_key="Brifle action"/>
+        <animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
         <animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
         <sound key="fire" fileref="sv98_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
         <sound key="cycle" fileref="sv98_cycle_FromEFT.wav" volume="0.8"/>
@@ -78,7 +77,7 @@
     <tag name="rifle"/>
     <tag name="elite"/>
         <specification 
-        retrigger_time="-1.0"
+        retrigger_time="1.0"
         accuracy_factor="1.0"
         sustained_fire_grow_step="4.0"
         sustained_fire_diminish_rate="4.0"
@@ -93,7 +92,7 @@
         stab_enabled="1"
         carry_in_two_hands="1"
         burst_shots="1"
-        last_burst_retrigger_time="-1"
+        last_burst_retrigger_time="1"
         slot="0"/>
         <commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
         <inventory encumbrance="35.0" buy_price="298.0" sell_price="198.0"/>
@@ -109,8 +108,8 @@
         <animation state_key="stabbing" animation_key="melee, quick knife"/>
         <animation state_key="stabbing" animation_key="pistol whip 3"/>
         <animation state_key="hold_casual" animation_key="dancing, kazachok"/>
-        <animation key="cycle" animation_key="Brifle1"/>
-        <animation key="cycle" stance_key="prone" animation_key="Brifle1p"/>
+        <animation key="cycle" animation_key="Brifle action"/>
+        <animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
         <animation key="reload" animation_key="reloading, magazine rifle 2.1"/>
         <animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
         <sound key="fire" fileref="sv98skill_fire_FromWF.wav" pitch_variety="0.05" volume="1.3"/>
