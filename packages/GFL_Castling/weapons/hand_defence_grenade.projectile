@@ -3,7 +3,7 @@
     <tag name="grenade" />
 
     <result class="spawn" instance_class="grenade" instance_key="defence_grenade_sub.projectile" min_amount="30" max_amount="30" offset="0 0.25 0" position_spread="0.8 0" direction_spread="0.0 0.0" />
-    <trigger class="time" time_to_live="6.0"/>
+    <trigger class="time" time_to_live="4.0"/>
 
     <rotation class="random" />
 
