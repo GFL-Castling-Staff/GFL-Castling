@@ -2980,13 +2980,13 @@ class CommandSkill : Tracker {
                     else if (weapon_name == "gkw_m1903_302.weapon" || weapon_name=="gkw_m1903_302_exp.weapon" || weapon_name=="gkw_m1903_302_exp_skill.weapon" || weapon_name=="gkw_m1903_302_only.weapon"){
                         playAnimationKey(m_metagame,characterId,"recoil1, big",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipe_60.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipe_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                         addCooldown("sniper",10,characterId,modifer);
                     }
                     else if (weapon_name == "gkw_m1903_1107.weapon" || weapon_name=="gkw_m1903_1107_exp.weapon" || weapon_name=="gkw_m1903_1107_exp_skill.weapon" || weapon_name=="gkw_m1903_1107_only.weapon"){
                         playAnimationKey(m_metagame,characterId,"recoil1, big",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipe_60.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipe_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                         addCooldown("sniper",10,characterId,modifer);
                     }
                     else if (weapon_name == "gkw_m1891.weapon"){
