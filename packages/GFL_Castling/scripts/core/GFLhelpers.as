@@ -1220,3 +1220,8 @@ int getFactionId(const XmlElement@ character)
 {
 	return character.getIntAttribute("faction_id");
 }
+
+string getPlayerInfoName(const XmlElement@ player)
+{
+	return player.getStringAttribute("name");
+}

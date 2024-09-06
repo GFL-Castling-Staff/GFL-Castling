@@ -893,8 +893,13 @@ class GFL_playerlist_system : Tracker {
         if(reward_point <= 0) return;
         const XmlElement@ characterInfo = getCharacterInfo(m_metagame,characterId);
         if(characterInfo is null) return;
+
         int playerId = characterInfo.getIntAttribute("player_id");
-        GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(playerId);
+        const XmlElement@ _playerInfo = getPlayerInfo(m_metagame,playerId);
+        if(_playerInfo is null) return;
+        string _player_name = getPlayerInfoName(_playerInfo);
+
+        GFL_playerInfo@ playerInfo = getPlayerInfoFromList(_player_name);
         GFL_battleInfo@ battleInfo = playerInfo.getBattleInfo();
         int m_tactic_point = battleInfo.getTacticPoint();
         m_tactic_point+=reward_point;
@@ -924,10 +929,14 @@ class GFL_playerlist_system : Tracker {
         if(characterInfo is null) return;
         int playerId = characterInfo.getIntAttribute("player_id");
 
+        const XmlElement@ _playerInfo = getPlayerInfo(m_metagame,playerId);
+        if(_playerInfo is null) return;
+        string _player_name = getPlayerInfoName(_playerInfo);
+
         int reward_point = int(tactic_point_vehicle_destroy_reward[vehicle_key]);
         if(reward_point > 0)
         {
-            GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(playerId);
+            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(_player_name);
             if (playerInfo.m_name == default_string) return;
             string player_name = playerInfo.getPlayerName();
             dictionary a;
@@ -943,7 +952,7 @@ class GFL_playerlist_system : Tracker {
         int reward_point_1 = int(tactic_point_vehicle_destroy_personal_reward[vehicle_key]);
         if(reward_point_1 > 0)
         {
-            GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(playerId);
+            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(_player_name);
             if (playerInfo.m_name == default_string) return;
             GFL_battleInfo@ battleInfo = playerInfo.getBattleInfo();
             int m_tactic_point = battleInfo.getTacticPoint();
