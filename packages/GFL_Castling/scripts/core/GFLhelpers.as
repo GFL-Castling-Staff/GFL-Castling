@@ -1184,3 +1184,39 @@ void setVehicleHP(Metagame@ metagame,int vehicleid,float health)
 	command.setFloatAttribute("health", health);
 	metagame.getComms().send(command);	
 }
+
+
+//适用于角色需要存活的场景，一般第一个使用后retur，自带null判断。
+bool checkCharacterDead(const XmlElement@ character)
+{
+	if(character is null) return true;
+	int dead = character.getIntAttribute("dead");	
+	return (dead == 1) ? true : false;
+}
+
+bool checkCharacterWound(const XmlElement@ character)
+{
+	if(character is null) return true;
+	int wound = character.getIntAttribute("wounded");	
+	return (wound == 1) ? true : false;
+}
+
+//以后需要调用xmlElementInfo的属性使用此类封装方法
+//早该改改了妈的
+//请判断非null后再使用
+Vector3 getCharacterPosition(const XmlElement@ character)
+{
+	Vector3 result;
+	result = stringToVector3(character.getStringAttribute("position"));
+	return result;
+}
+
+string getCharacterPositionAsString(const XmlElement@ character)
+{
+	return character.getStringAttribute("position");
+}
+
+int getFactionId(const XmlElement@ character)
+{
+	return character.getIntAttribute("faction_id");
+}

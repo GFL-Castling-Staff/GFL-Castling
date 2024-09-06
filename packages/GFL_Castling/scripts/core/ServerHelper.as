@@ -208,6 +208,8 @@ class ServerHelper : Tracker {
                 if(s=="tareus") spawnSoldier(m_metagame,1,0,target,"tareus");
                 if(s=="aileron") spawnSoldier(m_metagame,1,0,target,"aileron");
                 if(s=="hunter") spawnSoldier(m_metagame,1,1,target,"sfw_hunter");
+                if(s=="gly") spawnSoldier(m_metagame,1,1,target,"sf_goliath");
+                if(s=="gly2") spawnSoldier(m_metagame,1,1,target,"sf_goliath_plus");
             }   
         }
 

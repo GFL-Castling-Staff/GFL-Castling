@@ -490,11 +490,9 @@ class CommandSkill : Tracker {
     }
 
     bool canCastSkill(const XmlElement@ character){
-        int death = character.getIntAttribute("dead");
-        int wound = character.getIntAttribute("wounded");
-        if (death == 1 || wound == 1) return false;
-        return true;
+        return !checkCharacterDead(character) && !checkCharacterWound(character);
     }
+
 
     string getCooldownFromIndex(int j)
     {

@@ -316,13 +316,18 @@ class kill_event : Tracker {
             int targetId = target.getIntAttribute("id");
             int factionId = killer.getIntAttribute("faction_id");
             int characterId = killer.getIntAttribute("id");
-            string Solider_Name = target.getStringAttribute("soldier_group_name");
+            string solider_name = target.getStringAttribute("soldier_group_name");
             string dead_pos = target.getStringAttribute("position");
-            string reward_pool_key = getRewardPool(Solider_Name);
+            string reward_pool_key = getRewardPool(solider_name);
             string KillerWeaponKey = event.getStringAttribute("key");
             string killway = event.getStringAttribute("method_hint");
 
-            if(factionId !=0 && (Solider_Name =="ar_378_scarl" || Solider_Name == "daybreak_squad") )
+            if (startsWith(solider_name,"sf_goliath") && killway == "drive_over")
+            {
+                spawnStaticProjectile(m_metagame,"goliath.projectile",dead_pos,targetId,target.getIntAttribute("faction_id"));
+            }
+
+            if(factionId !=0 && (solider_name =="ar_378_scarl" || solider_name == "daybreak_squad") )
             {
                 array<string> scarl = {"gkw_scarl.weapon","gkw_scarl_only.weapon"};
                 array<string> scarh = {"gkw_scarh.weapon","gkw_scarh_only.weapon"};
@@ -437,7 +442,7 @@ class kill_event : Tracker {
                 kill_to_heal_scale = 2;
                 notify(m_metagame, "kill streak,elite reward", dictionary(), "misc", playerId, false, "", 1.0);
             } 
-            else if(point_nerfed_reward.find(Solider_Name) > -1)
+            else if(point_nerfed_reward.find(solider_name) > -1)
             {
                 if(rand(0.0f,1.0f) <= 0.3f)
                 {
@@ -651,7 +656,7 @@ class kill_event : Tracker {
                 updateHealByKillEvent(characterId,factionId,10,60,"vest",kill_to_heal_scale);
             }
             else if(startsWith(c_armorType,"exo_t6") || startsWith(c_armorType,"dima_bunny")){
-                if(boss_list.find(Solider_Name)>-1){
+                if(boss_list.find(solider_name)>-1){
                     healCharacter(m_metagame,characterId,5);
                 }
                 else if(reward_pool_key=="rare" || reward_pool_key=="elite")
@@ -749,18 +754,18 @@ class kill_event : Tracker {
 
             if(KillerWeaponKey=="blast_snipe_ff_hunter.projectile" && killway=="blast")
             {
-                if(eliteEnemyName.find(Solider_Name)>-1)
+                if(eliteEnemyName.find(solider_name)>-1)
                     healCharacter(m_metagame,characterId,1);
             }
 
-            if (Solider_Name=="") return;
+            if (solider_name=="") return;
 
-            if(SFbossList.find(Solider_Name)>-1 && characterId > 0){
+            if(SFbossList.find(solider_name)>-1 && characterId > 0){
                 addCustomStatToCharacter(m_metagame,"sfboss_kill",characterId);
             }
             
-            int GivenRP = getRPKillReward(Solider_Name);
-            float GivenXP = getXPKillReward(Solider_Name);
+            int GivenRP = getRPKillReward(solider_name);
+            float GivenXP = getXPKillReward(solider_name);
             if(GivenRP>0){
                 givePlayerRPcount(playerId,GivenRP);
             }

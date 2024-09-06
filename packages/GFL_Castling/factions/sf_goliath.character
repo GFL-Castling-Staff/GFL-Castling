@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<character filename="default_base.character">
+	<tag name="metal_man" />
+
+	<parameter class="walking_steer_amount" value="0.63" />
+	<parameter class="running_steer_amount" value="0.63" />
+	<parameter class="being_stunned_steer_amount" value="0" />
+
+	<sound key="death" fileref="kill_sound_mechabot_01.wav" volume="0.4" pitch_variety="0.025" />
+	<sound key="death" fileref="kill_sound_mechabot_02.wav" volume="0.4" pitch_variety="0.025" />
+	<sound key="death" fileref="kill_sound_mechabot_03.wav" volume="0.4" pitch_variety="0.025" />
+
+	<parameter class="can_use_vehicles" value="0" /> 
+	<parameter class="speed" value="1.0" />
+
+	<parameter class="throwing_self_over_initial_bounce" value="0.2" />
+	<!--翻跃后横向移动距离-->
+	<parameter class="throwing_self_over_steer_amount" value="0.35" />
+	<!--翻跃后纵向移动距离-->
+	<parameter class="throwing_self_over_lift_up" value="0.15" />
+    <parameter class="lifting_up_initial_bounce" value="0.05"/>
+    <parameter class="jumping_up_bounce" value="0.05"/>
+	<!-- <parameter class="player_aim_to_crosshair" value="0" />  -->
+	
+	<parameter class="ending_climbing_ladder_initial_bounce" value="0.05" />
+	<!--多爬一定高度的梯子-->
+	<parameter class="ending_climbing_up_ladder_steer_amount" value="0.35" />
+
+	<parameter class="climbing_end_height_offset" value="0.15" />
+	<parameter class="climbing_with_jump_end_height_offset" value="0.15" />
+
+	<animation state_key="hold"  animation_key="gly_still" />
+	<animation state_key="hold_on_wall"  animation_key="gly_still" />
+	<animation key="still" target_key="gly_still" />
+	<animation key="still against wall" target_key="gly_still" />
+	<animation key="still, heavy weapon" target_key="gly_still" />
+	<animation key="walking" target_key="gly_running" />
+	<animation key="walking backwards" target_key="gly_running_back" />
+	<animation key="running" target_key="gly_running" />
+	<animation key="crouch still" target_key="gly_still" />
+	<animation key="crouching forwards" target_key="gly_running" />
+	<animation key="crouching backwards" target_key="gly_running_back" />
+	<animation key="prone" target_key="gly_still" />
+	<animation key="prone, moving forwards" target_key="gly_running" />
+	<animation key="falling" target_key="gly_falling" />
+	<animation key="arriving ground" target_key="gly_on_ground" />
+	<animation key="going prone" target_key="gly_falling" />
+	<animation key="leaving prone" target_key="gly_still" />
+	<animation key="dive" target_key="gly_still" />
+	<animation key="jumping" target_key="gly_up_ladder" />
+	<animation key="lifting up" target_key="gly_up_ladder" />
+	<animation key="throwing self over" target_key="gly_up_ladder" />
+	<animation key="stunned" target_key="gly_still_bone" />
+	<animation key="wounded, still, 66" target_key="gly_still" />
+	<animation key="wounded, moving forwards, 67" target_key="gly_still" />
+	<animation key="tank mg still" target_key="gly_still" />
+	<animation key="stabbing" target_key="gly_charge" />
+	<animation key="throwing, upside" target_key="gly_stab" />
+	<animation key="travelling car, aiming" target_key="gly_still" />
+	<animation key="change weapon out" target_key="gly_still" />
+	<animation key="change weapon in" target_key="gly_still" />
+	<animation key="change weapon out, reversed" target_key="gly_still" />
+	<animation key="change weapon in, reversed" target_key="gly_still" />
+	<animation key="change weapon in, single hand carry" target_key="gly_still" />
+	<animation key="swimming still" target_key="gly_still" />
+	<animation key="swimming forwards" target_key="gly_running" />
+	<animation key="reloading" target_key="gly_still" />
+	<animation key="celebrating" target_key="gly_rotation" />
+	<animation key="surrender" target_key="gly_still" />
+	<animation key="leaving_wounded" target_key="gly_still" />
+	<animation key="climbing ladder, still" target_key="gly_still" />
+	<animation key="climbing ladder" target_key="gly_up_ladder" />
+	<animation key="climbing ladder ending" target_key="gly_falling" />
+
+</character>

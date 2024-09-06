@@ -471,13 +471,12 @@ class GFLskill : Tracker {
 			case 16: {// 刺雷半载
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-				if (character is null) return;
-				int factionid = character.getIntAttribute("faction_id");
-				Vector3 Pos_40mm = stringToVector3(character.getStringAttribute("position"));
-				string command = "<command class='update_character' id='" + characterId + "' dead='1' />";
-				m_metagame.getComms().send(command);
-				spawnStaticProjectile(m_metagame,"cl.projectile",Pos_40mm,characterId,factionid);
-				spawnStaticProjectile(m_metagame,"cl_1.projectile",Pos_40mm,characterId,factionid);
+				if (checkCharacterDead(character)) return;
+				int factionid = getFactionId(character);
+				Vector3 _pos = getCharacterPosition(character);
+				killCharacter(m_metagame,characterId);
+				spawnStaticProjectile(m_metagame,"cl.projectile",_pos,characterId,factionid);
+				spawnStaticProjectile(m_metagame,"cl_1.projectile",_pos,characterId,factionid);
 				break;			
 			}
 
@@ -599,9 +598,8 @@ class GFLskill : Tracker {
 			case 22: {// KCCO狙击手脚本榴弹
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-				if (character is null) return;
-				if (character.getIntAttribute("dead") == 1) return;
-				if (character.getIntAttribute("wounded") == 1) return;
+				if(checkCharacterDead(character)) return;
+				if(checkCharacterWound(character)) return;
 				uint factionid = character.getIntAttribute("faction_id");
 				Vector3 pos_smartbullet = stringToVector3(event.getStringAttribute("position"));
 				//获取技能影响的敌人数量
@@ -1479,9 +1477,8 @@ class GFLskill : Tracker {
 						int luckyhealguyid = characters[i].getIntAttribute("id");
 						bool jud = false;
 						const XmlElement@ luckyhealguyC = getCharacterInfo(m_metagame, luckyhealguyid);
-						Vector3 c_pos = stringToVector3(luckyhealguyC.getStringAttribute("position"));
-						int death = luckyhealguyC.getIntAttribute("dead");
-						if(death == 1) continue;
+						if(checkCharacterDead(luckyhealguyC)) continue;
+						Vector3 c_pos = getCharacterPosition(luckyhealguyC);
 						string judname = luckyhealguyC.getStringAttribute("soldier_group_name");
 						if(nytoAllList.find(judname) >= 0)
 						{
@@ -1661,7 +1658,7 @@ class GFLskill : Tracker {
 								affectedCharacter.removeAt(luckyGuyindex);
 								return;
 							}
-							if (luckyGuy.getIntAttribute("dead") == 1)
+							if (checkCharacterDead(luckyGuy))
 							{
 								affectedCharacter.removeAt(luckyGuyindex);
 								return;
@@ -1719,7 +1716,7 @@ class GFLskill : Tracker {
 								affectedCharacter.removeAt(luckyGuyindex);
 								return;
 							}
-							if (luckyGuy.getIntAttribute("dead") == 1)
+							if (checkCharacterDead(luckyGuy))
 							{
 								affectedCharacter.removeAt(luckyGuyindex);
 								return;
@@ -1757,6 +1754,17 @@ class GFLskill : Tracker {
 				}
 				break;
 			}
+
+			case 61: {// 歌莉娅半载
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (checkCharacterDead(character)) return;
+				int factionid = getFactionId(character);
+				Vector3 _pos = getCharacterPosition(character);
+				killCharacter(m_metagame,characterId);
+				spawnStaticProjectile(m_metagame,"goliath.projectile",_pos,characterId,factionid);
+				break;
+			}			
 
             default:
                 break;

@@ -44,7 +44,7 @@ dictionary RP_enemy_index = {
 
     {"sfw_nemeum",50},
     {"sfw_nemeum_swap",75},
-    {"sf_manticore",200},
+    {"sf_manticore",250},
     {"sf_vespid_swap",20},
     {"sf_vespid_vehicle_user",20},
     {"sf_ripper_swap",20},
@@ -55,7 +55,8 @@ dictionary RP_enemy_index = {
     {"sfw_dragoon_swap",80},
     {"sfw_prowler_swap",40},
 
-
+    {"sf_goliath",200},
+    {"sf_goliath_plus",400},
 
     {"sfw_hunter",300},
     {"sfw_architect",300},
@@ -127,6 +128,8 @@ dictionary XP_enemy_index = {
     {"sfw_dragoon_swap",0.006},
     {"Brute_swap",0.002},
     {"sfw_prowler_sweap",0.002},
+    {"sf_goliath",0.008},
+    {"sf_goliath_plus",0.016},    
     {"para_rodelero",0.002},
 
     {"sfw_hunter",0.02},
@@ -191,6 +194,8 @@ dictionary reward_pool_list= {
     {"Thunder","elite"},
 
     {"sf_manticore","rare"},
+    {"sf_goliath","rare"},
+    {"sf_goliath_plus","rare"},
     {"Paradeus_doppelsoldner","rare"},
     {"Paradeus_roarer","rare"},
     {"kcco_Hydra","rare"},

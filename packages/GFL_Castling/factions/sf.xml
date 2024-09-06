@@ -368,15 +368,14 @@
 	<!-- player group -->
 
 	<soldier name="default" spawn_score="0.0">
-		<character filename="default_sf.text_lines"/>
+		<!-- <character filename="default_sf.text_lines"/> -->
 		<!-- <character filename="sf_cerberus.character"/> -->
+		<character filename="sf_goliath.character" />
 
 		<ai filename="default.ai" />
 
 		<model file="sfd_vespid.xml" />
 		<models file="sf.models" />
-		<models file="common_bonus.models" />
-		<!-- <models file="common_bonus.models" /> -->
 
 		<resources file="common.resources" />
 		<resources file="sf.resources" />
@@ -1167,12 +1166,12 @@
 
 
 	<!-- dinergate兵蚁 -->
-	<soldier name="sf_dinergate" spawn_score="1.0">
+	<soldier name="sf_dinergate" squad_size_xp_cap="0" spawn_score="1.0">
 		<model filename="sfd_dinergate_from_SAIWA.xml" />
 		<character filename="sf_dinergate.character" />
 		<ai filename="eod_mecha.ai" />
 
-		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="sfw_dinergate.weapon"/>
 			<carry_item key="sf_dinergate.carry_item" />
 		</resources>
@@ -1182,12 +1181,12 @@
 	</soldier>
 
 	<!-- tarantula狼蛛 -->
-	<soldier name="sf_tarantula" spawn_score="1.0">
+	<soldier name="sf_tarantula" squad_size_xp_cap="0" spawn_score="1.0">
 		<models filename="sf_tarantula.models" />
 		<character filename="sf_dinergate.character" />
 		<ai filename="melee_nb.ai" />
 
-		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="sfw_tarantula.weapon"/>
 			<carry_item key="sf_dinergate.carry_item" />
 		</resources>
@@ -1196,12 +1195,12 @@
 		</attribute_config>
 	</soldier>
 
-	<soldier name="sf_cerberus" spawn_score="0.01">
+	<soldier name="sf_cerberus" squad_size_xp_cap="0" spawn_score="0.01">
 		<model filename="sfd_boss_cerberus_gua.xml" />
 		<character filename="sf_cerberus.character" />
 		<ai filename="sf_cerberus.ai" />
 
-		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="sfw_cerberus.weapon"/>
 			<carry_item key="vest_200hp_200" />
 		</resources>
@@ -1221,16 +1220,62 @@
 	
 
 	<!-- scouts侦查者 -->
-	<soldier name="sf_scouts" spawn_score="2.0">
+	<soldier name="sf_scouts" squad_size_xp_cap="0" spawn_score="2.0">
 		<model filename="sfd_scout.xml" />
 		<ai filename="eod_mecha.ai" />
 		<character filename="default_sf_bot.character" />
-		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="sfw_scouts.weapon"/>
 			<carry_item key="sf_ar.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="0.3" min="0.0" max="1.0" />
+		</attribute_config>
+	</soldier>
+
+	<!-- 歌莉娅 -->
+
+	<soldier name="sf_goliath" squad_size_xp_cap="0" spawn_score="0.05">
+		<model filename="sfd_goliath_black.xml" />
+		<ai filename="sf_goliath.ai" />
+		<character filename="sf_goliath.character" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="sfw_goliath.weapon"/>
+			<carry_item key="vest_60hp_nostun_60" />
+			<projectile key="skill_trigger_goliath.throwable" enabled="1" probability="1.0" />
+		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="carry_item" slot="1" probability="1.0" />
+			<item_class_existence class="grenade" slot="0" probability="1.0" />
+			<item_class_existence class="carry_item" slot="0" probability="0.001" />
+		</item_class_existence_config>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="33.0" max="33.0" />
+		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="100.0" max="100.0" />
+		</attribute_config>
+	</soldier>
+
+	<soldier name="sf_goliath_plus" squad_size_xp_cap="0" spawn_score="0.02">
+		<model filename="sfd_goliath_red.xml" />
+		<ai filename="sf_goliath.ai" />
+		<character filename="sf_goliath.character" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="sfw_goliath_plus.weapon"/>
+			<carry_item key="vest_60hp_nostun_60" />
+			<projectile key="skill_trigger_goliath.throwable" enabled="1" probability="1.0" />
+		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="carry_item" slot="1" probability="1.0" />
+			<item_class_existence class="grenade" slot="0" probability="1.0" />
+			<item_class_existence class="carry_item" slot="0" probability="0.001" />
+		</item_class_existence_config>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="33.0" max="33.0" />
+		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="100.0" max="100.0" />
 		</attribute_config>
 	</soldier>
 

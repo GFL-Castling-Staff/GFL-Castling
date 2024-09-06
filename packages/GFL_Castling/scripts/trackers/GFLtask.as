@@ -302,9 +302,7 @@ class ConstantStaticProjectileEvent :Task{
 			if(m_strict_check)
 			{
 				const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
-				if (character is null) return;
-				int death = character.getIntAttribute("dead");
-				if (death == 1) return;				
+				if(checkCharacterDead(character)) return;
 			}
 			string c = 
 				"<command class='create_instance'" +
@@ -405,12 +403,8 @@ class DelayCommonCallRequest :Task{
 		if (m_timeLeft < 0)
 		{
             const XmlElement@ characterInfo = getCharacterInfo(m_metagame,m_character_id);
-            if (characterInfo is null) return;
-			int dead = characterInfo.getIntAttribute("dead");
-			if(dead !=1)
-			{
-				insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos_1,m_pos_2);
-			}
+			if(checkCharacterDead(characterInfo)) return;
+			insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos_1,m_pos_2);
 		}
 	}
 
@@ -1316,9 +1310,10 @@ class Event_call_bombardment_fairy_82mm_mortar : event_call_task_hasMarker {
 		m_excute_time++;
 		
 		const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
-		if (character !is null) {
-			int dead = character.getIntAttribute("dead");
-			if(dead == 1){m_end = true;return;}
+		if (checkCharacterDead(character))
+		{
+			m_end = true;
+			return;
 		}
 		if(m_excute_time==1)
 		{
@@ -1366,9 +1361,10 @@ class Event_call_airstrike_fairy_precise : event_call_task_hasMarker {
 		m_excute_time++;
 		
 		const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
-		if (character !is null) {
-			int dead = character.getIntAttribute("dead");
-			if(dead == 1){m_end = true;return;}
+		if (checkCharacterDead(character))
+		{
+			m_end = true;
+			return;
 		}
 		playSoundAtLocation(m_metagame,"airstrike_flyby.wav",m_faction_id,m_pos2,1.5);
 		insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos1,m_pos2);
@@ -1769,9 +1765,10 @@ class Event_call_bombardment_fairy_155mm_airburst : event_call_task_hasMarker {
 		m_excute_time++;
 		
 		const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
-		if (character !is null) {
-			int dead = character.getIntAttribute("dead");
-			if(dead == 1){m_end = true;return;}
+		if (checkCharacterDead(character))
+		{
+			m_end = true;
+			return;
 		}
 		insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos1,m_pos2);
 	}
@@ -1803,9 +1800,10 @@ class Event_call_bombardment_fairy_170mm : event_call_task_hasMarker {
 		m_excute_time++;
 		
 		const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
-		if (character !is null) {
-			int dead = character.getIntAttribute("dead");
-			if(dead == 1){m_end = true;return;}
+		if (checkCharacterDead(character))
+		{
+			m_end = true;
+			return;
 		}
 		insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos1,m_pos2);
 	}
@@ -1837,26 +1835,27 @@ class Event_call_rocket_fairy_missile : event_call_task_hasMarker {
 		m_timeLeft_internal = m_time_internal;
 		
 		const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
-		if (character !is null) {
-			int dead = character.getIntAttribute("dead");
-			if(dead == 1){m_end = true;return;}
-			int playerId = character.getIntAttribute("player_id");
-			const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
-			if (player !is null) {
-				if (player.hasAttribute("aim_target")) {
-					Vector3 aim_pos = stringToVector3(player.getStringAttribute("aim_target"));
-					spawnStaticProjectile(m_metagame,"hd_effect_radar_scan.projectile",aim_pos,m_character_id,m_faction_id);
-					if(m_excute_time == 3)
-					{
-						playSoundAtLocation(m_metagame,"cruise_missile_accel_fromCOD16.wav",m_faction_id,aim_pos,1.8);
-						spawnStaticProjectile(m_metagame,"hd_effect_radar_scan.projectile",aim_pos,m_character_id,m_faction_id);
-						DelayCommonCallRequest@ shot = DelayCommonCallRequest(m_metagame,1.3,m_character_id,m_faction_id,m_airstrike_key,aim_pos.add(Vector3(0,50,0)),aim_pos);
-						TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-						tasker.add(shot);							
-					}	
-				}
-			}			
+		if (checkCharacterDead(character))
+		{
+			m_end = true;
+			return;
 		}
+		int playerId = character.getIntAttribute("player_id");
+		const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+		if (player !is null) {
+			if (player.hasAttribute("aim_target")) {
+				Vector3 aim_pos = stringToVector3(player.getStringAttribute("aim_target"));
+				spawnStaticProjectile(m_metagame,"hd_effect_radar_scan.projectile",aim_pos,m_character_id,m_faction_id);
+				if(m_excute_time == 3)
+				{
+					playSoundAtLocation(m_metagame,"cruise_missile_accel_fromCOD16.wav",m_faction_id,aim_pos,1.8);
+					spawnStaticProjectile(m_metagame,"hd_effect_radar_scan.projectile",aim_pos,m_character_id,m_faction_id);
+					DelayCommonCallRequest@ shot = DelayCommonCallRequest(m_metagame,1.3,m_character_id,m_faction_id,m_airstrike_key,aim_pos.add(Vector3(0,50,0)),aim_pos);
+					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+					tasker.add(shot);							
+				}	
+			}
+		}			
 	}
 }
 
@@ -2073,16 +2072,11 @@ class Tac50_Maple_Sniper_Drone : DelaySkill {
 		m_timeLeft_internal = m_time_internal;
 
 		const XmlElement@ character_tac50 = getCharacterInfo(m_metagame, m_character_id);
-		if(character_tac50 is null)
+		if (checkCharacterDead(character_tac50))
 		{
 			m_end = true;
 			return;
-		}
-		if(character_tac50.getIntAttribute("dead") == 1 )
-		{
-			m_end = true;
-			return;
-		}
+		}		
 		Vector3 tac50_pos = stringToVector3(character_tac50.getStringAttribute("position"));
 		Vector3 maple_pos = tac50_pos.add(Vector3(0,40,0));
 		
@@ -2105,14 +2099,9 @@ class Tac50_Maple_Sniper_Drone : DelaySkill {
 
 		luckyoneid = affectedCharacter[getRandomIndex(affectedCharacter.length())].getIntAttribute("id");
 		const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyoneid);
-		if(luckyGuy is null)
+		if (checkCharacterDead(luckyGuy))
 		{
-			m_timeLeft_internal = 0;
-			return;
-		}
-		if(luckyGuy.getIntAttribute("dead")==1)
-		{
-			m_timeLeft_internal = 0;
+			m_timeLeft_internal = 0.0;
 			return;
 		}
 		Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
