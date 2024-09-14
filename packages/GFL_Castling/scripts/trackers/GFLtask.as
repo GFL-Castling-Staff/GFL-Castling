@@ -302,6 +302,7 @@ class ConstantStaticProjectileEvent :Task{
 			if(m_strict_check)
 			{
 				const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
+				if(character is null) return;
 				if(checkCharacterDead(character)) return;
 			}
 			string c = 
@@ -403,6 +404,7 @@ class DelayCommonCallRequest :Task{
 		if (m_timeLeft < 0)
 		{
             const XmlElement@ characterInfo = getCharacterInfo(m_metagame,m_character_id);
+			if(characterInfo is null) return;
 			if(checkCharacterDead(characterInfo)) return;
 			insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos_1,m_pos_2);
 		}
@@ -741,11 +743,13 @@ class strafe_task_30mm : event_call_task {
 		luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,e_pos,8.0f);
 		if(luckyGuyid!=-1){
 			const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+			if(luckyGuy is null) return;
 			e_pos = stringToVector3(luckyGuy.getStringAttribute("position"));
 		}
 		luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,e_pos,32.0f);
 		if(luckyGuyid!=-1){
 			const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+			if(luckyGuy is null) return;
 			e_pos2 = stringToVector3(luckyGuy.getStringAttribute("position"));
 		}
 		m_timeLeft=m_time;
@@ -1067,6 +1071,7 @@ class Skill_M200_Snipe : DelaySkill {
 		int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,t_pos,40.0f);
 		if(luckyGuyid!=-1){
 			const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+			if(luckyGuy is null) return;
 			Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
 			Vector3 startPos = getRandomOffsetVector(luckyGuyPos,70.0);
 			startPos = startPos.add(Vector3(0,60,0));
@@ -1109,6 +1114,7 @@ class Skill_Fairy_Snipe : DelaySkill {
 		int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,t_pos,40.0f);
 		if(luckyGuyid!=-1){
 			const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+			if(luckyGuy is null) return;
 			Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
 			Vector3 startPos = getRandomOffsetVector(luckyGuyPos,70.0);
 			startPos = startPos.add(Vector3(0,60,0));
@@ -1310,6 +1316,10 @@ class Event_call_bombardment_fairy_82mm_mortar : event_call_task_hasMarker {
 		m_excute_time++;
 		
 		const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
+		if (character is null){
+			m_timeLeft_internal = 0;
+			return;
+		}
 		if (checkCharacterDead(character))
 		{
 			m_end = true;
@@ -1361,6 +1371,10 @@ class Event_call_airstrike_fairy_precise : event_call_task_hasMarker {
 		m_excute_time++;
 		
 		const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
+		if (character is null){
+			m_timeLeft_internal = 0;
+			return;
+		}
 		if (checkCharacterDead(character))
 		{
 			m_end = true;
@@ -1532,6 +1546,7 @@ class Event_call_warrior_fairy_recon_heil : event_call_task_hasMarker {
 			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,e_pos,30.0f);
 			if(luckyGuyid!=-1){
 				const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+				if(luckyGuy is null) return;
 				Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
 				insertCommonStrike(m_character_id,m_faction_id,"warrior_yakb_12.7mm",getRandomOffsetVector(m_pos1,8),luckyGuyPos);
 			}
@@ -1765,6 +1780,10 @@ class Event_call_bombardment_fairy_155mm_airburst : event_call_task_hasMarker {
 		m_excute_time++;
 		
 		const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
+		if (character is null){
+			m_timeLeft_internal = 0;
+			return;
+		}
 		if (checkCharacterDead(character))
 		{
 			m_end = true;
@@ -1800,6 +1819,10 @@ class Event_call_bombardment_fairy_170mm : event_call_task_hasMarker {
 		m_excute_time++;
 		
 		const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
+		if (character is null){
+			m_timeLeft_internal = 0;
+			return;
+		}
 		if (checkCharacterDead(character))
 		{
 			m_end = true;
@@ -1835,6 +1858,10 @@ class Event_call_rocket_fairy_missile : event_call_task_hasMarker {
 		m_timeLeft_internal = m_time_internal;
 		
 		const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
+		if (character is null){
+			m_timeLeft_internal = 0;
+			return;
+		}
 		if (checkCharacterDead(character))
 		{
 			m_end = true;
@@ -2072,6 +2099,10 @@ class Tac50_Maple_Sniper_Drone : DelaySkill {
 		m_timeLeft_internal = m_time_internal;
 
 		const XmlElement@ character_tac50 = getCharacterInfo(m_metagame, m_character_id);
+		if (character_tac50 is null){
+			m_timeLeft_internal = 0;
+			return;
+		}
 		if (checkCharacterDead(character_tac50))
 		{
 			m_end = true;
@@ -2099,6 +2130,10 @@ class Tac50_Maple_Sniper_Drone : DelaySkill {
 
 		luckyoneid = affectedCharacter[getRandomIndex(affectedCharacter.length())].getIntAttribute("id");
 		const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyoneid);
+		if (luckyGuy is null){
+			m_timeLeft_internal = 0;
+			return;
+		}
 		if (checkCharacterDead(luckyGuy))
 		{
 			m_timeLeft_internal = 0.0;
@@ -2155,6 +2190,7 @@ class Airdrop_Support_Negev : DelaySkill {
 		int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,t_pos,20.0f);
 		if(luckyGuyid!=-1){
 			const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+			if(luckyGuy is null) return;
 			Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
 			Vector3 startPos = t_pos.add(Vector3(0,60,0));
 

@@ -109,14 +109,8 @@ class GFLskill : Tracker {
 						int factionid = player.getIntAttribute("faction_id");
 						int affectedNumber =0;
 						//获取技能影响的敌人数量
-						array<int> enemyfaction = {0,1,2,3,4};
-						for(int i =0;i<4;i++){
-							if (enemyfaction[i] ==factionid){
-								enemyfaction.removeAt(i);
-							}
-						}
-						int n=enemyfaction.length-1;
-						for(int i=0;i<n;i++){
+						uint n=m_metagame.getFactionCount();
+						for(uint i=0;i<n;i++){
 							array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,grenade_pos,enemyfaction[i],15.0f);
 							affectedNumber += affectedCharacter.length;
 						}
@@ -132,7 +126,7 @@ class GFLskill : Tracker {
 							" position='" + grenade_pos.toString() + "'"+
 							" character_id='" + characterId + "' />";
 						m_metagame.getComms().send(c);					
-						if (affectedNumber >= 6){
+						if (affectedNumber >= 5){
 							Vector3 UMP9_pos = stringToVector3(character.getStringAttribute("position"));
 							string c1 = 
 								"<command class='create_instance'" +
@@ -471,6 +465,7 @@ class GFLskill : Tracker {
 			case 16: {// 刺雷半载
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if(character is null) return;
 				if (checkCharacterDead(character)) return;
 				int factionid = getFactionId(character);
 				Vector3 _pos = getCharacterPosition(character);
@@ -598,6 +593,7 @@ class GFLskill : Tracker {
 			case 22: {// KCCO狙击手脚本榴弹
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if(character is null) return;
 				if(checkCharacterDead(character)) return;
 				if(checkCharacterWound(character)) return;
 				uint factionid = character.getIntAttribute("faction_id");
@@ -692,6 +688,7 @@ class GFLskill : Tracker {
 							i0+=1;
 							int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
 							const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+							if(luckyoneC is null) continue;
 							if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
 								string luckyonepos = luckyoneC.getStringAttribute("position");
 								Vector3 luckyoneposV = stringToVector3(luckyonepos);
@@ -792,6 +789,7 @@ class GFLskill : Tracker {
 						uint luckyGuyindex = rand(0,affectedCharacter.length()-1);
 						uint luckyGuyid = affectedCharacter[luckyGuyindex].getIntAttribute("id");
 						const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+						if(luckyGuy is null) return;
 						Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
 						CreateProjectile(m_metagame,pos_smartgrenade,luckyGuyPos,"grenade_g41.projectile",characterId,factionid,100,0.01);
 					}
@@ -907,6 +905,7 @@ class GFLskill : Tracker {
 									int jud1=1;
 									int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
 									const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+									if(luckyoneC is null) continue;
 									if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
 										i0+=1;	jud1=0;
 										string luckyonepos = luckyoneC.getStringAttribute("position");
@@ -1218,6 +1217,7 @@ class GFLskill : Tracker {
 					for (int i1=0;i1<target_num;i1++)	{
 						int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
 						const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+						if(luckyoneC is null) continue;
 						if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
 							Vector3 luckyonepos = stringToVector3(luckyoneC.getStringAttribute("position"));
 							target_pos = target_pos.add(luckyonepos);
@@ -1298,7 +1298,7 @@ class GFLskill : Tracker {
 							i0+=1;
 							int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
 							const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
-							if (luckyoneC is null) break;
+							if(luckyoneC is null) continue;
 							if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
 								string luckyonepos = luckyoneC.getStringAttribute("position");
 								Vector3 luckyoneposV = stringToVector3(luckyonepos);
@@ -1405,6 +1405,7 @@ class GFLskill : Tracker {
 					if(target_num==0)break;
 					int luckyoneid = affectedCharacter[0].getIntAttribute("id");
 					const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+					if(luckyoneC is null) break;
 					if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
 						Vector3 luckyonepos = stringToVector3(luckyoneC.getStringAttribute("position"));
 						Skill_Sf_Boss_Dreamer@ shot = Skill_Sf_Boss_Dreamer(m_metagame,1.5,characterId,factionid,luckyonepos);
@@ -1477,6 +1478,7 @@ class GFLskill : Tracker {
 						int luckyhealguyid = characters[i].getIntAttribute("id");
 						bool jud = false;
 						const XmlElement@ luckyhealguyC = getCharacterInfo(m_metagame, luckyhealguyid);
+						if(luckyhealguyC is null) continue;
 						if(checkCharacterDead(luckyhealguyC)) continue;
 						Vector3 c_pos = getCharacterPosition(luckyhealguyC);
 						string judname = luckyhealguyC.getStringAttribute("soldier_group_name");
@@ -1557,7 +1559,7 @@ class GFLskill : Tracker {
 							i0+=1;
 							int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
 							const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
-							if (luckyoneC is null) break;
+							if (luckyoneC is null) continue;
 							if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
 								string luckyonepos = luckyoneC.getStringAttribute("position");
 								Vector3 luckyoneposV = stringToVector3(luckyonepos);
@@ -1758,6 +1760,7 @@ class GFLskill : Tracker {
 			case 61: {// 歌莉娅半载
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character is null) return;
 				if (checkCharacterDead(character)) return;
 				int factionid = getFactionId(character);
 				Vector3 _pos = getCharacterPosition(character);
