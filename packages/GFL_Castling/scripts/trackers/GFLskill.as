@@ -465,7 +465,6 @@ class GFLskill : Tracker {
 			case 16: {// 刺雷半载
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-				if(character is null) return;
 				if (checkCharacterDead(character)) return;
 				int factionid = getFactionId(character);
 				Vector3 _pos = getCharacterPosition(character);
@@ -593,7 +592,6 @@ class GFLskill : Tracker {
 			case 22: {// KCCO狙击手脚本榴弹
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-				if(character is null) return;
 				if(checkCharacterDead(character)) return;
 				if(checkCharacterWound(character)) return;
 				uint factionid = character.getIntAttribute("faction_id");
@@ -1478,7 +1476,6 @@ class GFLskill : Tracker {
 						int luckyhealguyid = characters[i].getIntAttribute("id");
 						bool jud = false;
 						const XmlElement@ luckyhealguyC = getCharacterInfo(m_metagame, luckyhealguyid);
-						if(luckyhealguyC is null) continue;
 						if(checkCharacterDead(luckyhealguyC)) continue;
 						Vector3 c_pos = getCharacterPosition(luckyhealguyC);
 						string judname = luckyhealguyC.getStringAttribute("soldier_group_name");
@@ -1655,11 +1652,6 @@ class GFLskill : Tracker {
 							uint luckyGuyindex = rand(0,affectedCharacter.length()-1);
 							uint luckyGuyid = affectedCharacter[luckyGuyindex].getIntAttribute("id");
 							const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
-							if (luckyGuy is null) 
-							{
-								affectedCharacter.removeAt(luckyGuyindex);
-								return;
-							}
 							if (checkCharacterDead(luckyGuy))
 							{
 								affectedCharacter.removeAt(luckyGuyindex);
@@ -1713,11 +1705,6 @@ class GFLskill : Tracker {
 							uint luckyGuyindex = rand(0,affectedCharacter.length()-1);
 							uint luckyGuyid = affectedCharacter[luckyGuyindex].getIntAttribute("id");
 							const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
-							if (luckyGuy is null) 
-							{
-								affectedCharacter.removeAt(luckyGuyindex);
-								return;
-							}
 							if (checkCharacterDead(luckyGuy))
 							{
 								affectedCharacter.removeAt(luckyGuyindex);
@@ -1760,7 +1747,6 @@ class GFLskill : Tracker {
 			case 61: {// 歌莉娅半载
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-				if (character is null) return;
 				if (checkCharacterDead(character)) return;
 				int factionid = getFactionId(character);
 				Vector3 _pos = getCharacterPosition(character);
