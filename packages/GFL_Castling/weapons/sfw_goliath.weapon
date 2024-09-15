@@ -21,8 +21,8 @@
 	stab_enabled="1"
 	/>
 	<animation state_key="recoil" animation_key="gly_still"/>
-	<animation state_key="hold" animation_key="gly_still"/>
-	<animation state_key="hold_casual" animation_key="gly_still"/>
+	<animation state_key="hold" animation_key="gly_running"/>
+	<animation state_key="hold_casual" animation_key="gly_running"/>
 	<animation state_key="hold_on_wall" animation_key="gly_still"/>
 	<animation state_key="running" animation_key="gly_running"/>
 	<animation state_key="walking" animation_key="gly_running"/>
