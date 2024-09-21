@@ -424,7 +424,7 @@ class kill_event : Tracker {
             // _log("击杀断点，角色ID:"+playerId);
             GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(playerId);
             if (playerInfo.m_name == default_string ) return;
-
+            string playerName = playerInfo.m_name;
             int kill_to_heal_scale = 1;
 
             string c_weaponType = playerInfo.getPlayerEquipment().getWeapon(0);
@@ -606,6 +606,11 @@ class kill_event : Tracker {
                 dictionary a;
                 a["%num"] = ""+ m_tactic_point_offset;                
                 notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
+            }
+
+            if(gk_weapon_hg_list.find(KillerWeaponKey)>=0)
+            {
+                reduceAllCallCooldown(playerName,1.0);
             }
 
 

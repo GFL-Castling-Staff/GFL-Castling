@@ -1199,6 +1199,25 @@ Call_Cooldown@ getCooldownInfo(string pName,string type)
     return null;    
 }
 
+void reduceAllCallCooldown(string pName,float num)
+{
+    for(uint i=0;i<CallEvent_cooldown.size();i++){
+        if(CallEvent_cooldown[i].m_playerName==pName){
+            CallEvent_cooldown[i].m_time-=num;
+        }
+    }    
+}
+
+void reduceTypeCallCooldown(string pName,float num,string type)
+{
+    for(uint i=0;i<CallEvent_cooldown.size();i++){
+        if(CallEvent_cooldown[i].m_playerName==pName && CallEvent_cooldown[i].m_type==type){
+            CallEvent_cooldown[i].m_time-=num;
+        }
+    }    
+}
+
+
 dictionary call_tier_index = {
 
     // 新支援系统（注意命名按照T1=1xxxx,T2=2xxxx,T3=3xxxx的格式来）
