@@ -71,9 +71,9 @@ class ItemDropEvent : Tracker {
                 deleteItemInBackpack(m_metagame,cId,"weapon",key);
                 int pId = event.getIntAttribute("player_id");
                 GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(pId);
-                if (playerInfo.m_name == default_string) return;
-                string profile_hash = playerInfo.m_hash;
-                string p_name = playerInfo.m_name;
+                if (playerInfo.getPlayerName() == default_string) return;
+                string profile_hash = playerInfo.getHash();
+                string p_name = playerInfo.getPlayerName();
                 if(handleCallChangeEvent(cId,pId,key))
                 {
                     player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
@@ -119,9 +119,9 @@ class ItemDropEvent : Tracker {
                     return;
                 }
                 GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(pId);
-                if (playerInfo.m_name == default_string) return;
-                string profile_hash = playerInfo.m_hash;
-                string p_name = playerInfo.m_name;
+                if (playerInfo.getPlayerName() == default_string) return;
+                string profile_hash = playerInfo.getHash();
+                string p_name = playerInfo.getPlayerName();
                 player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
                 if(newdata.FindWeapon(itemKey))
                 {
@@ -262,9 +262,9 @@ class ItemDropEvent : Tracker {
                             playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
                             //下面是自动录入功能
                             GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(pId);
-                            if (playerInfo.m_name == default_string) return;
-                            string profile_hash = playerInfo.m_hash;
-                            string p_name = playerInfo.m_name;
+                            if (playerInfo.getPlayerName() == default_string) return;
+                            string profile_hash = playerInfo.getHash();
+                            string p_name = playerInfo.getPlayerName();
                             player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
                             if(newdata.FindWeapon(outputItem))
                             {
@@ -536,9 +536,9 @@ class ItemDropEvent : Tracker {
         playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
         //下面是自动录入功能
         GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(pId);
-        if (playerInfo.m_name == default_string) return;
-        string profile_hash = playerInfo.m_hash;
-        string p_name = playerInfo.m_name;
+        if (playerInfo.getPlayerName() == default_string) return;
+        string profile_hash = playerInfo.getHash();
+        string p_name = playerInfo.getPlayerName();
         player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
         if(newdata.FindWeapon(weapon_xml_name))
         {

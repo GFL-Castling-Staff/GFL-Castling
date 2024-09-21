@@ -423,8 +423,8 @@ class kill_event : Tracker {
 
             // _log("击杀断点，角色ID:"+playerId);
             GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(playerId);
-            if (playerInfo.m_name == default_string ) return;
-            string playerName = playerInfo.m_name;
+            if (playerInfo.getPlayerName() == default_string ) return;
+            string playerName = playerInfo.getPlayerName();
             int kill_to_heal_scale = 1;
 
             string c_weaponType = playerInfo.getPlayerEquipment().getWeapon(0);
@@ -485,7 +485,7 @@ class kill_event : Tracker {
                 {
                     m_tactic_point_offset+=1;
                 }                  
-                battleInfo.setTacticPoint(m_tactic_point+m_tactic_point_offset);
+                battleInfo.addTacticPoint(m_tactic_point_offset);
                 m_counter-=10;
                 battleInfo.setKillStreakPointCounter(m_counter);
                 battleInfo.addKillStreakIndex(1);
@@ -508,7 +508,7 @@ class kill_event : Tracker {
                 {
                     m_tactic_point_offset+=1;
                 }                  
-                battleInfo.setTacticPoint(m_tactic_point+m_tactic_point_offset);
+                battleInfo.addTacticPoint(m_tactic_point_offset);
                 m_counter-=10;
                 battleInfo.setKillStreakPointCounter(m_counter);   
                 battleInfo.addKillStreakIndex(2);  
@@ -531,7 +531,7 @@ class kill_event : Tracker {
                 {
                     m_tactic_point_offset+=1;
                 }                  
-                battleInfo.setTacticPoint(m_tactic_point+m_tactic_point_offset);
+                battleInfo.addTacticPoint(m_tactic_point_offset);
                 m_counter-=10;
                 battleInfo.setKillStreakPointCounter(m_counter);
                 battleInfo.addKillStreakIndex(3);       
@@ -554,7 +554,7 @@ class kill_event : Tracker {
                 {
                     m_tactic_point_offset+=1;
                 }                  
-                battleInfo.setTacticPoint(m_tactic_point+m_tactic_point_offset);
+                battleInfo.addTacticPoint(m_tactic_point_offset);
                 m_counter-=10;
                 battleInfo.setKillStreakPointCounter(m_counter);  
                 battleInfo.addKillStreakIndex(4);
@@ -577,7 +577,7 @@ class kill_event : Tracker {
                 {
                     m_tactic_point_offset+=1;
                 }                  
-                battleInfo.setTacticPoint(m_tactic_point+m_tactic_point_offset);
+                battleInfo.addTacticPoint(m_tactic_point_offset);
                 m_counter-=10;
                 battleInfo.setKillStreakPointCounter(m_counter); 
                 battleInfo.addKillStreakIndex(5);
@@ -600,7 +600,7 @@ class kill_event : Tracker {
                 {
                     m_tactic_point_offset+=1;
                 }               
-                battleInfo.setTacticPoint(m_tactic_point+m_tactic_point_offset);
+                battleInfo.addTacticPoint(m_tactic_point_offset);
                 m_counter-=10;
                 battleInfo.setKillStreakPointCounter(m_counter);        
                 dictionary a;

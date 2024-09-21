@@ -103,7 +103,7 @@ class call_event : Tracker {
                         else
                         {
                             GFL_playerInfo@ m_playerinfo = getPlayerInfoFromListbyPid(playerId);
-                            if (m_playerinfo.m_name == default_string ) break;
+                            if (m_playerinfo.getPlayerName() == default_string ) break;
                             GFL_battleInfo@ battleInfo = m_playerinfo.getBattleInfo();
                             player_data newdata = PlayerProfileLoad(readFile(m_metagame,playerName,profile_hash));
                             string call_slot_key = newdata.getCallSlot(1);
@@ -309,7 +309,7 @@ class call_event : Tracker {
                         else
                         {
                             GFL_playerInfo@ m_playerinfo = getPlayerInfoFromListbyPid(playerId);
-                            if (m_playerinfo.m_name == default_string ) break;
+                            if (m_playerinfo.getPlayerName() == default_string ) break;
                             GFL_battleInfo@ battleInfo = m_playerinfo.getBattleInfo();
                             player_data newdata = PlayerProfileLoad(readFile(m_metagame,playerName,profile_hash));
                             string call_slot_key = newdata.getCallSlot(2);
@@ -469,7 +469,7 @@ class call_event : Tracker {
                         else
                         {
                             GFL_playerInfo@ m_playerinfo = getPlayerInfoFromListbyPid(playerId);
-                            if (m_playerinfo.m_name == default_string ) break;
+                            if (m_playerinfo.getPlayerName() == default_string ) break;
                             GFL_battleInfo@ battleInfo = m_playerinfo.getBattleInfo();
                             player_data newdata = PlayerProfileLoad(readFile(m_metagame,playerName,profile_hash));
                             string call_slot_key = newdata.getCallSlot(3);
@@ -678,7 +678,7 @@ class call_event : Tracker {
                             }
                             else {
                                 GFL_playerInfo@ m_playerinfo = getPlayerInfoFromListbyPid(playerId);
-                                if (m_playerinfo.m_name == default_string ) break;
+                                if (m_playerinfo.getPlayerName() == default_string ) break;
                                 GFL_battleInfo@ battleInfo = m_playerinfo.getBattleInfo();                                
                                 if(!costTacticPoint(battleInfo,15,playerId)) break;
                                 CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,90.0,"sniper_call"));
@@ -1011,7 +1011,7 @@ class call_event : Tracker {
 		int senderId = event.getIntAttribute("player_id");
         if(checkCommand(message,"point") || message =="/tp" || message =="/TP" ){
             GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
-            if (playerInfo.m_name == default_string ) return;
+            if (playerInfo.getPlayerName() == default_string ) return;
             int player_id = playerInfo.getPlayerPid();
             int tactic_point = playerInfo.getBattleInfo().getTacticPoint();
             dictionary a;
@@ -1020,7 +1020,7 @@ class call_event : Tracker {
         }
         if(checkCommand(message,"call")){
             GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
-            if (playerInfo.m_name == default_string ) return;
+            if (playerInfo.getPlayerName() == default_string ) return;
             int player_id = playerInfo.getPlayerPid();
             player_data newdata = PlayerProfileLoad(readFile(m_metagame,playerInfo.getPlayerName(),playerInfo.getHash()));
             string call_slot_key1 = newdata.getCallSlot(1);

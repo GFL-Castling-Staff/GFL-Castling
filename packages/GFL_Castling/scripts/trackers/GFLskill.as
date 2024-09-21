@@ -111,7 +111,8 @@ class GFLskill : Tracker {
 						//获取技能影响的敌人数量
 						uint n=m_metagame.getFactionCount();
 						for(uint i=0;i<n;i++){
-							array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,grenade_pos,enemyfaction[i],15.0f);
+							if (i == factionid) continue;
+							array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,grenade_pos,i,15.0f);
 							affectedNumber += affectedCharacter.length;
 						}
 						string sendtext= "白鸮轰鸣击中了"+ affectedNumber +"个敌人";

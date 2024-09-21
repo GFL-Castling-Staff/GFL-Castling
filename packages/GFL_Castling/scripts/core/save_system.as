@@ -33,12 +33,15 @@ class GFL_call_info
 class player_data
 {
 	int m_corenum=0;
+    int m_dev_point;
+    int m_dev_point_lifemax;
     string m_playername;
     string m_profile_hash;
     string m_sid;
     string m_call_slot_1;
     string m_call_slot_2;
     string m_call_slot_3;
+
 
     array<string> m_weapons={};
     array<GFL_call_info@> m_unlocked_call={
@@ -77,6 +80,8 @@ class player_data
         m_call_slot_1 = "";
         m_call_slot_2 = "";
         m_call_slot_3 = "";
+        m_dev_point = 0;
+        m_dev_point_lifemax =0;
     }
 
     void addWeapon(const string key)
@@ -96,7 +101,45 @@ class player_data
         }  
     }
 
+    //研发点相关
 
+    //getter setter
+    int getDevPoint() const
+    {
+        return m_dev_point;
+    }
+
+    int getDevPointLife() const
+    {
+        return m_dev_point_lifemax;
+    }
+
+    void setDevPoint(int num)
+    {
+        m_dev_point=num;
+    }
+
+    void setDevPointLife(int num)
+    {
+        m_dev_point_lifemax=num;
+    }
+
+    // 这里是实际应用接口
+    void addDevPoint(int newPointNum)
+    {
+        m_dev_point += newPointNum;
+        m_dev_point_lifemax+= newPointNum;
+    }
+
+    bool tryCostDevPoint(int num_devpoint_need)
+    {
+        if(m_dev_point < num_devpoint_need) return false;
+        m_dev_point-= num_devpoint_need;
+        return true;
+    }
+
+
+    //核心相关 废案暂时
     int GetCoreNum() const
     {
         return m_corenum;
@@ -267,6 +310,8 @@ XmlElement@ PlayerProfileSave(player_data@ player_info) {
 	root.setStringAttribute("sid", player_info.m_sid);
 	root.setStringAttribute("profile_hash", player_info.m_profile_hash);
     root.setIntAttribute("core_num", player_info.m_corenum);
+    root.setIntAttribute("dev_point", player_info.m_dev_point);
+    root.setIntAttribute("dev_point_lifemax", player_info.m_dev_point_lifemax);
 	string FILENAME =  ("save_" + player_info.m_sid +".xml" );
 
     XmlElement subroot_0("weapons");
@@ -312,10 +357,14 @@ player_data@ PlayerProfileLoad(const XmlElement@ player_profile){
     string m_profile_hash = player_profile.getStringAttribute("profile_hash");
     string m_sid = player_profile.getStringAttribute("sid");
     int m_corenum = player_profile.getIntAttribute("core_num");
+    int m_dev_point = player_profile.getIntAttribute("dev_point");
+    int m_dev_point_lifemax = player_profile.getIntAttribute("dev_point_lifemax");
 
     player_data output = player_data(m_username,m_profile_hash);
     output.SetSid(m_sid);
     output.SetCoreNum(m_corenum);
+    output.setDevPoint(m_dev_point);
+    output.setDevPointLife(m_dev_point_lifemax);
 
     const XmlElement@ weapon_dump = player_profile.getFirstElementByTagName("weapons");
     if(weapon_dump !is null)
@@ -400,9 +449,9 @@ class Save_System : Tracker {
         if(checkCommand(message,"craft")){
 
             GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);            
-            if (playerInfo.m_name == default_string ) return;
-            string profile_hash = playerInfo.m_hash;
-            string sid = playerInfo.m_sid;
+            if (playerInfo.getPlayerName() == default_string ) return;
+            string profile_hash = playerInfo.getHash();
+            string sid = playerInfo.getSid();
             int player_id = playerInfo.getPlayerPid();
 
             if(checkQueue(player_id,"craft_2nd"))
@@ -498,9 +547,9 @@ class Save_System : Tracker {
         }        
         if(checkCommand(message,"random")){
             GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);            
-            if (playerInfo.m_name == default_string ) return;
-            string profile_hash = playerInfo.m_hash;
-            string sid = playerInfo.m_sid;
+            if (playerInfo.getPlayerName() == default_string ) return;
+            string profile_hash = playerInfo.getHash();
+            string sid = playerInfo.getSid();
             int player_id = playerInfo.getPlayerPid();
             player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash)); 
             string weapon_key = newdata.getRandomWeapon();
@@ -517,9 +566,9 @@ class Save_System : Tracker {
         }
         if(checkCommand(message,"info")){
             GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);            
-            if (playerInfo.m_name == default_string ) return;
-            string profile_hash = playerInfo.m_hash;
-            string sid = playerInfo.m_sid;
+            if (playerInfo.getPlayerName() == default_string ) return;
+            string profile_hash = playerInfo.getHash();
+            string sid = playerInfo.getSid();
             int player_id = playerInfo.getPlayerPid();
             player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash)); 
             const XmlElement@ player = getPlayerInfo(m_metagame,player_id);
@@ -528,11 +577,28 @@ class Save_System : Tracker {
             dictionary a;
             a["%doll_number"] = "" + newdata.getAllNum();
             a["%all_dollnum"] = "" + (tdoll_complex_index.getSize() -1);
+            float collect_value = float(newdata.getAllNum()) / (tdoll_complex_index.getSize() -1) * 100;
+            string collect = formatFloat(collect_value,"",0,2);
+            a["%doll_collect"] = "" + collect;
+            notify(m_metagame, "Logger info query", a, "misc", player_id, false, "", 1.0);
+        }
+        if(checkCommand(message,"balance")){
+            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
+            if (playerInfo.getPlayerName() == default_string ) return;
+            string profile_hash = playerInfo.getHash();
+            string sid = playerInfo.getSid();
+            int player_id = playerInfo.getPlayerPid();
+            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash)); 
+            const XmlElement@ player = getPlayerInfo(m_metagame,player_id);
+            if (player is null) return;
+            int cId = player.getIntAttribute("character_id");
+            dictionary a;
+            a["%dev_point"] = "" + newdata.getDevPoint();
+            a["%dev_point_life"] = "" + newdata.getDevPointLife();
             string collect = formatFloat((newdata.getAllNum() / (tdoll_complex_index.getSize() -1)));
             a["%doll_collect"] = "" + collect;
             notify(m_metagame, "Logger info query", a, "misc", player_id, false, "", 1.0);
         }
-
 
 
 		if (!m_metagame.getAdminManager().isAdmin(p_name, senderId) && !m_metagame.getModeratorManager().isModerator(p_name, senderId)) {
@@ -541,36 +607,21 @@ class Save_System : Tracker {
  
         if(checkCommand(message,"savetest")){
             GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
-            if (playerInfo.m_name == default_string ) return;
-            string profile_hash = playerInfo.m_hash;
-            string sid = playerInfo.m_sid;
+            if (playerInfo.getPlayerName() == default_string ) return;
+            string profile_hash = playerInfo.getHash();
+            string sid = playerInfo.getSid();
             int player_id = playerInfo.getPlayerPid();
             player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
-            notify(m_metagame, "你有" + newdata.m_weapons.length() + "个武器", dictionary(), "misc", player_id, false, "", 1.0);
-            for(uint i = 0; i < newdata.m_weapons.length();i++)
-            {
-                string weapon_key = newdata.m_weapons[i];
-                notify(m_metagame, "比如" + weapon_key + "这把枪", dictionary(), "misc", player_id, false, "", 1.0);
-            }
-            newdata.addWeapon("gkw_negev.weapon");
-            newdata.addWeapon("gkw_m4a1.weapon");
-            newdata.addWeapon("gkw_ak47.weapon");
-            newdata.addWeapon("gkw_m3.weapon");
-            newdata.addWeapon("gkw_vz61.weapon");
-            newdata.addWeapon("gkw_negev.weapon");
-            newdata.SetCoreNum(newdata.m_corenum+= 1500);
-            newdata.SetSid(sid);
-            // newdata.m_profile_hash = "test114514";
-            // string filename = ("save_" + "test114514" +".xml" );
+            newdata.addDevPoint(1000);
             string filename = ("save_" + profile_hash +".xml" );
             writeXML(m_metagame,filename,PlayerProfileSave(newdata));
         }
         if(checkCommand(message,"gfl_load")){
             string girl_index = message.substr(message.findFirst(" ")+1);
             GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
-            if (playerInfo.m_name == default_string ) return;
-            string profile_hash = playerInfo.m_hash;
-            string sid = playerInfo.m_sid;
+            if (playerInfo.getPlayerName() == default_string ) return;
+            string profile_hash = playerInfo.getHash();
+            string sid = playerInfo.getSid();
             int player_id = playerInfo.getPlayerPid();
             player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
 
