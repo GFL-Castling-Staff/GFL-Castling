@@ -279,6 +279,7 @@ class CommandSkill : Tracker {
                 case 83:{excuteOBRMod3Skill(cId,senderId,m_modifer);break;}
                 case 84:{excuteAEK999skill(cId,senderId,m_modifer);break;}
                 //case 85:{excuteM14MOD3skill(cId,senderId,m_modifer);break;}
+                case 86:{excuteDelisleSkill(cId,senderId,m_modifer);break;}
                 
                 default:
                     break;
@@ -2755,12 +2756,18 @@ class CommandSkill : Tracker {
 
     void excuteM200skill(int characterId,int playerId,SkillModifer@ modifer){
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"M200",true)) return;
-        addCooldown("M200",45,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character is null) return;
         if (!canCastSkill(character)) return;
         const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
         if (player is null) return;
+        string player_name = player.getStringAttribute("name");
+        int snipe_killnum = g_playerInfo_Buck.getKillSkillCountbyName(player_name,"snipecharge");
+        if (snipe_killnum < 10)
+        {
+            sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"snipe_fairy_not_ready");
+            return;
+        }
         if (player.hasAttribute("aim_target")) {
             string target = player.getStringAttribute("aim_target");
             int factionid = character.getIntAttribute("faction_id");
@@ -2782,8 +2789,50 @@ class CommandSkill : Tracker {
             FairyRequest.setIconTypeKey("call_marker_snipe_m200");
             addCastlingMarker(FairyRequest);
             tasker.add(Skill_M200_Snipe(m_metagame,1.0,characterId,factionid,stringToVector3(target),FairyRequest));
-            // GFL_event_array.insertLast(GFL_event(characterId,factionid,"sniper_m200",stringToVector3(target),2.0,-1.0,flagId));
             m_DummyCallID++;
+            g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"snipecharge",-10);
+            addCooldown("M200",45,characterId,modifer);
+        }        
+    }
+
+    void excuteSSG3000skill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"SSG3000",true)) return;
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character is null) return;
+        if (!canCastSkill(character)) return;
+        const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+        if (player is null) return;
+        string player_name = player.getStringAttribute("name");
+        int snipe_killnum = g_playerInfo_Buck.getKillSkillCountbyName(player_name,"snipecharge");
+        if (snipe_killnum < 10)
+        {
+            sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"snipe_fairy_not_ready");
+            return;
+        }
+        if (player.hasAttribute("aim_target")) {
+            string target = player.getStringAttribute("aim_target");
+            int factionid = character.getIntAttribute("faction_id");
+            Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+            array<string> Voice={
+                "M200_SKILL1_JP.wav",
+                "M200_SKILL2_JP.wav",
+                "M200_SKILL3_JP.wav",
+                "M200_ATTACK_JP.wav"
+            };
+            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),2.0);
+            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+            int flagId = m_DummyCallID + 20000;
+            CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionid,stringToVector3(target));
+            FairyRequest.setIndex(14);
+            FairyRequest.setSize(0.5);
+            FairyRequest.setDummyId(flagId);
+            FairyRequest.setRange(80.0);
+            FairyRequest.setIconTypeKey("call_marker_snipe_m200");
+            addCastlingMarker(FairyRequest);
+            tasker.add(Skill_M200_Snipe(m_metagame,1.0,characterId,factionid,stringToVector3(target),FairyRequest));
+            m_DummyCallID++;
+            g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"snipecharge",-10);
+            addCooldown("SSG3000",45,characterId,modifer);
         }        
     }
 
@@ -4594,6 +4643,60 @@ class CommandSkill : Tracker {
                 modifer.setCooldownMinus(0);
                 modifer.setCooldownReduction(1.0);
                 addCooldown("tac50",1.5,characterId,modifer,"normal",false);
+            }
+        } 
+    }
+
+    void excuteDelisleSkill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"delisle")) return;
+        const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
+        if (characterinfo is null) return;
+        const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
+        if (playerinfo is null) return;
+        if (playerinfo.hasAttribute("aim_target")) {
+            string target = playerinfo.getStringAttribute("aim_target");
+            Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
+            Vector3 s_pos = stringToVector3(target);
+            int factionid = characterinfo.getIntAttribute("faction_id");
+    
+            int m_fnum = m_metagame.getFactionCount();
+            array<const XmlElement@> affectedCharacter;
+            for(int i=0;i<m_fnum;i++) {
+                if(i!=factionid) {
+                    array<const XmlElement@> affectedCharacter2;
+                    affectedCharacter2 = getCharactersNearPosition(m_metagame,s_pos,i,10.0f);
+                    if (affectedCharacter2 !is null){
+                        for(uint x=0;x<affectedCharacter2.length();x++){
+                            affectedCharacter.insertLast(affectedCharacter2[x]);
+                        }
+                    }
+                }
+            }
+
+            if (affectedCharacter !is null && affectedCharacter.length > 0){
+                int closestIndex = -1;
+                float closestDistance = -1.0f;                
+                for(uint i=0;i<affectedCharacter.length();i++){
+                    float distance = getPositionDistance(s_pos, stringToVector3(affectedCharacter[i].getStringAttribute("position")));
+                    if (distance < closestDistance || closestDistance < 0.0){
+                        closestDistance = distance;
+                        closestIndex = i;
+                    }
+                }
+
+                if (closestIndex >= 0){
+                    int target_id = affectedCharacter[closestIndex].getIntAttribute("id");
+                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    DelayAntiPersonSnipeRequest@ snipe_quest = DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipe_delisle.projectile",c_pos.add(Vector3(0,0.5,0)),target_id);
+                    snipe_quest.setSound("delisle_fire_FromBF5.wav");
+                    tasker.add(snipe_quest);
+                    addCooldown("delisle",60,characterId,modifer,"normal",false);
+                }
+            }
+            else{
+                modifer.setCooldownMinus(0);
+                modifer.setCooldownReduction(1.0);
+                addCooldown("delisle",1.5,characterId,modifer,"normal",false);
             }
         } 
     }

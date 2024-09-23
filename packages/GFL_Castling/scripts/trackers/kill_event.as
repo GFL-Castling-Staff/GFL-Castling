@@ -717,6 +717,19 @@ class kill_event : Tracker {
                 }
             }
 
+            //狙击妖精类 击杀无人机充能
+
+            if(KillerWeaponKey=="gkw_m200.weapon" || KillerWeaponKey=="gkw_m200_560.weapon" || KillerWeaponKey=="gkw_m200_4502.weapon"
+            || KillerWeaponKey=="gkw_ssg3000.weapon"
+            )
+            {
+                if (killway=="hit"){
+                    g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"snipecharge");
+                }
+            }
+
+            //莫辛纳甘技能 苍白收割者
+
             if(KillerWeaponKey=="blast_snipe_mosin.projectile" && killway=="blast")
             {
                 g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"mosin");
@@ -742,7 +755,7 @@ class kill_event : Tracker {
                 }
             }
 
-            if(KillerWeaponKey=="gkw_m1891mod3.projectile" && killway=="hit")
+            if(KillerWeaponKey=="gkw_m1891mod3.weapon" && killway=="hit")
             {
                 int i = findSkillIndex(characterId,"mosin");
                 if(i >=0){
@@ -757,10 +770,45 @@ class kill_event : Tracker {
                 }
             }
 
+            //德利尔技能 无声标记
+
+            if(KillerWeaponKey=="blast_snipe_delisle.projectile" && killway=="blast")
+            {
+                if(reward_pool_key=="boss")
+                {
+                    battleInfo.addTacticPoint(3);
+                }
+                else
+                {
+                    battleInfo.addTacticPoint(1);
+                }
+            }
+
+            if(KillerWeaponKey=="gkw_delisle.weapon"
+            || KillerWeaponKey=="gkw_delisle_6202.weapon"
+            || KillerWeaponKey=="gkw_delisle_7801.weapon"
+            )
+            {
+                if(killway != "hit") continue;
+                int i = findSkillIndex(characterId,"delisle");
+                if(i >=0){
+                    if(reward_pool_key=="boss")
+                    {
+                        SkillArray[i].m_time-=10.0;
+                    }
+                    else
+                    {
+                        SkillArray[i].m_time-=2.0;
+                    }
+                }
+            }
+
             if(KillerWeaponKey=="blast_snipe_ff_hunter.projectile" && killway=="blast")
             {
                 if(eliteEnemyName.find(solider_name)>-1)
+                {
                     healCharacter(m_metagame,characterId,1);
+                }
             }
 
             if (solider_name=="") return;

@@ -294,6 +294,16 @@
         <inventory encumbrance="1.0" price="5.0" />
         <capacity value="1" source="rank" source_value="0.0" />
     </projectile>
+    <projectile class="grenade" name="" key="blast_snipe_delisle.projectile" slot="2" radius="0.01">
+        <result class="blast" radius="2.0" damage="1.01" push="0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" make_vehicle_hit_sound="0"/>
+        <trigger class="time" time_to_live="0.0"/>
+        <rotation class="random" />
+        <model mesh_filename="" />
+        <hud_icon filename="88r.png" />
+        <commonness value="0" />
+        <inventory encumbrance="1.0" price="5.0" />
+        <capacity value="1" source="rank" source_value="0.0" />
+    </projectile>    
     <projectile class="grenade" name="" key="blast_ju87.projectile" slot="2" radius="0.01">
         <result class="blast" radius="19" damage="95.0" push="2.0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.0"/>

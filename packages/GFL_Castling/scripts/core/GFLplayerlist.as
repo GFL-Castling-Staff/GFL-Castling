@@ -630,9 +630,7 @@ class GFL_battleInfo{
     int getDevPoint()
     {
         int m_num = m_dev_point_convert;
-        print("Before reset: " + m_dev_point_convert);  // 输出转换前的值
         m_dev_point_convert = 0;
-        print("After reset: " + m_dev_point_convert);   // 输出重置后的值
         return m_num;
     }
 
