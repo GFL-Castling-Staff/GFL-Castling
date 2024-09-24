@@ -24,7 +24,7 @@
         <requirement class="weapon" key="gkw_m4sopmodiimod3.weapon" slot="0" />
 		<requirement class="dlc_skin" tag="supporter" />
     </model>
-    <model score="1000" filename="gkw_c96.xml">
+    <model score="1000" filename="gkd_hg_c96.xml">
         <requirement class="weapon" key="gkw_c96mod3.weapon" slot="0" />
 		<requirement class="dlc_skin" tag="supporter" />
     </model>
@@ -36,11 +36,11 @@
         <requirement class="weapon" key="gkw_mp446mod3.weapon" slot="0" />
 		<requirement class="dlc_skin" tag="supporter" />
     </model>
-	<model score="1000" filename="gkd_ar_galil.xml">
+	<model score="1000" filename="gkd_ar_galil_from_melondove.xml">
         <requirement class="weapon" key="gkw_galilmod3.weapon" slot="0" />
 		<requirement class="dlc_skin" tag="supporter" />
     </model>
-	<model score="1000" filename="gkd_ar_galil.xml">
+	<model score="1000" filename="gkd_ar_galil_from_melondove.xml">
         <requirement class="weapon" key="gkw_galilmod3_skill.weapon" slot="0" />
 		<requirement class="dlc_skin" tag="supporter" />
     </model>
@@ -164,20 +164,216 @@
         <requirement class="weapon" key="gkw_fn49mod3.weapon" slot="0" />
 		<requirement class="dlc_skin" tag="supporter" />
     </model>	
+    <model score="1000" filename="gkd_rf_fn49.xml">
+        <requirement class="weapon" key="gkw_fn49mod3_skill.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>	
     <model score="1000" filename="gkd_smg_sten.xml">
         <requirement class="weapon" key="gkw_stenmod3.weapon" slot="0" />
 		<requirement class="dlc_skin" tag="supporter" />
     </model>
-    <model score="1000" filename="gkd_rf_fn49.xml">
-        <requirement class="weapon" key="gkw_fn49mod3.weapon" slot="0" />
-		<requirement class="dlc_skin" tag="supporter" />
-    </model>
-    <model score="1000" filename="gkd_rf_fn49.xml">
-        <requirement class="weapon" key="gkw_fn49mod3.weapon" slot="0" />
-		<requirement class="dlc_skin" tag="supporter" />
-    </model>
     <model score="1000" filename="gkd_sg_type97.xml">
         <requirement class="weapon" key="gkw_hawk97.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>	
+    <model score="1000" filename="gkd_hg_k5.xml">
+        <requirement class="weapon" key="gkw_k5mod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>	
+    <model score="1000" filename="gkd_mg_type80.xml">
+        <requirement class="weapon" key="gkw_type80mod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+	<model score="1000" filename="gkd_mg_type80.xml">
+        <requirement class="weapon" key="gkw_type80mod3_skill.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>	
+    <model score="1000" filename="gkd_rf_obr.xml">
+        <requirement class="weapon" key="gkw_obrmod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_hg_m1873.xml">
+        <requirement class="weapon" key="gkw_m1873mod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_rf_gepardm1mod3.xml">
+        <requirement class="weapon" key="gkw_gepardm1mod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_hg_px4.xml">
+        <requirement class="weapon" key="gkw_px4mod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_ar_56-1type.xml">
+        <requirement class="weapon" key="gkw_56-1typemod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_rf_56typer.xml">
+        <requirement class="weapon" key="gkw_56typermod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_rf_56typer.xml">
+        <requirement class="weapon" key="gkw_56typermod3_skill.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>	
+    <model score="1000" filename="gkd_smg_type64.xml">
+        <requirement class="weapon" key="gkw_64typemod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>	
+    <model score="1000" filename="gkd_mg_mg3.xml">
+        <requirement class="weapon" key="gkw_mg3mod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>	
+    <model score="1000" filename="gkd_mg_mg3.xml">
+        <requirement class="weapon" key="gkw_mg3mod3_skill.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_sg_rmb93.xml">
+        <requirement class="weapon" key="gkw_rmb93mod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>	
+    <model score="1000" filename="gkd_hg_makarov.xml">
+		<requirement class="weapon" slot="0" key="gkw_makarovmod3.weapon"/>
+		<requirement class="dlc_skin" tag="supporter" />
+	</model>	
+    <model score="1000" filename="gkd_hg_qsz92.xml">
+		<requirement class="weapon" slot="0" key="gkw_qsz92mod3.weapon"/>
+		<requirement class="dlc_skin" tag="supporter" />
+	</model>
+    <model score="1000" filename="gkd_smg_type100.xml">
+		<requirement class="weapon" slot="0" key="gkw_type100mod3.weapon"/>
+		<requirement class="dlc_skin" tag="supporter" />
+	</model>
+    <model score="1000" filename="gkd_smg_type100.xml">
+		<requirement class="weapon" slot="0" key="gkw_type100mod3_skill.weapon"/>
+		<requirement class="dlc_skin" tag="supporter" />
+	</model>
+    <model score="1000" filename="gkd_mg_bren.xml">
+        <requirement class="weapon" key="gkw_brenmod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>   
+    <model score="1000" filename="gkd_mg_bren.xml">
+        <requirement class="weapon" key="gkw_brenmod3_skill.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_mg_mg4.xml">
+        <requirement class="weapon" key="gkw_mg4mod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_mg_mg4.xml">
+        <requirement class="weapon" key="gkw_mg4mod3_skill.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_smg_kp31.xml">
+        <requirement class="weapon" key="gkw_kp31mod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_hg_m1895.xml">
+        <requirement class="weapon" key="gkw_m1895mod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_hg_m1895.xml">
+        <requirement class="weapon" key="gkw_m1895mod3_skill.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_ar_an94.xml">
+        <requirement class="weapon" key="gkw_an94_mod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_ar_an94.xml">
+        <requirement class="weapon" key="gkw_an94_mod3_skill.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_mg_lwmmg_from_melondove.xml">
+        <requirement class="weapon" key="gkw_lwmmgmod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_mg_lwmmg_from_melondove.xml">
+        <requirement class="weapon" key="gkw_lwmmgmod3_skill.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_ar_xm8_mod3_from_melondove.xml">
+        <requirement class="weapon" key="gkw_xm8_mod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_smg_mp5.xml">
+        <requirement class="weapon" key="gkw_mp5mod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_ar_ribeyrolles.xml">
+        <requirement class="weapon" key="gkw_ribeyrollesmod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_ar_ribeyrolles.xml">
+        <requirement class="weapon" key="gkw_ribeyrollesmod3_skill.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_hg_ppk.xml">
+        <requirement class="weapon" key="gkw_ppkmod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_rf_xm3_from_Enterprise.xml">
+        <requirement class="weapon" key="gkw_xm3mod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_rf_xm3_from_Enterprise.xml">
+        <requirement class="weapon" key="gkw_xm3mod3_skill.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_sg_m1897_from_NZ75.xml">
+        <requirement class="weapon" key="gkw_m1897mod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_sg_m1897_from_NZ75.xml">
+        <requirement class="weapon" key="gkw_m1897mod3_skill.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_mg_m1918.xml">
+        <requirement class="weapon" key="gkw_m1918mod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_mg_m1918.xml">
+        <requirement class="weapon" key="gkw_m1918mod3_skill.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_ar_g36.xml">
+        <requirement class="weapon" key="gkw_g36mod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_ar_g36.xml">
+        <requirement class="weapon" key="gkw_g36mod3_skill.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_smg_ppsh41.xml">
+        <requirement class="weapon" key="gkw_ppsh41mod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_rf_m1891.xml">
+        <requirement class="weapon" key="gkw_m1891mod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_rf_m1891.xml">
+        <requirement class="weapon" key="gkw_m1891mod3_skill.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_ar_ak15.xml">
+        <requirement class="weapon" key="gkw_ak15mod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_ar_ak15.xml">
+        <requirement class="weapon" key="gkw_ak15mod3_skill.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_hg_welrod_melondove.xml">
+        <requirement class="weapon" key="gkw_welrodmod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_mg_m1919a4.xml">
+        <requirement class="weapon" key="gkw_m1919a4mod3.weapon" slot="0" />
+		<requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_mg_m1919a4.xml">
+        <requirement class="weapon" key="gkw_m1919a4mod3_skill.weapon" slot="0" />
 		<requirement class="dlc_skin" tag="supporter" />
     </model>	
 </models>

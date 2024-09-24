@@ -93,11 +93,16 @@ class ItemDropEvent : Tracker {
                     notify(m_metagame, "Hint - call - changesuccess", a, "misc", pId, false, "", 1.0);
                 }
             }
-            else if(key == "pack_vest_repair_plate_x8")
+            else if(key == "pack_vest_repair_plate_x10")
             {
                 deleteItemInBackpack(m_metagame,cId,"weapon",key);
                 addMutilItemInBackpack(m_metagame,cId,"weapon","vest_repair_plate.weapon",10);
             }
+            else if(key == "pack_c4_x8")
+            {
+                deleteItemInBackpack(m_metagame,cId,"weapon",key);
+                addMutilItemInBackpack(m_metagame,cId,"projectile","c4.projectile",8);
+            }            
         }        
         if (type_id == 1){
             string itemKey = event.getStringAttribute("item_key");
