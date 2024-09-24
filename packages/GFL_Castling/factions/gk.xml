@@ -212,7 +212,6 @@
 			<animation key="dive" target_key="dive,fast" />
 			<animation key="going prone" target_key="hd_tac_prone" add="1" />
 			<animation key="leaving prone" target_key="hd_leave_prone" add="1" />
-			
 		</character>
 		<ai filename="default.ai" />
 		<model file="gkd_xxv_idwmod.xml" />
@@ -220,6 +219,7 @@
 		<models file="gk_2.models" />
 		<models file="gk_arm.models" />
 		<models file="common_bonus.models" />
+		<models file="gk_bonus.models" />
 		<resources file="common.resources" />
 		<resources file="gk.resources" />
 		<item_class_existence_config>

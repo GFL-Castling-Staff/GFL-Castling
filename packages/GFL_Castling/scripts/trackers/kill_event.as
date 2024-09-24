@@ -789,16 +789,18 @@ class kill_event : Tracker {
             || KillerWeaponKey=="gkw_delisle_7801.weapon"
             )
             {
-                if(killway != "hit") continue;
-                int i = findSkillIndex(characterId,"delisle");
-                if(i >=0){
-                    if(reward_pool_key=="boss")
-                    {
-                        SkillArray[i].m_time-=10.0;
-                    }
-                    else
-                    {
-                        SkillArray[i].m_time-=2.0;
+                if(killway == "hit")
+                {
+                    int i = findSkillIndex(characterId,"delisle");
+                    if(i >=0){
+                        if(reward_pool_key=="boss")
+                        {
+                            SkillArray[i].m_time-=10.0;
+                        }
+                        else
+                        {
+                            SkillArray[i].m_time-=2.0;
+                        }
                     }
                 }
             }
