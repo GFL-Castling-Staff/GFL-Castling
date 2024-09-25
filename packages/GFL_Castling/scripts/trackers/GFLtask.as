@@ -2018,7 +2018,7 @@ class DelayGPSScanRequest : Task{
 		if (m_timeLeft < 0 && m_scanned == false){
 			bool anyFound = false;
 			
-			for (int f = 0; f < 4; ++f){
+			for (int f = 0; f < m_metagame.getFactionCount(); ++f){
 				if(f == m_faction_id) continue;
 				//scanning for all vehicles on the list
 				for (uint i = 0; i < GPSScanTargets.length(); ++i){
@@ -2053,7 +2053,7 @@ class DelayGPSScanRequest : Task{
 						string atlas_color = "#00b9ff";
 						float atlas_size = 0.6;
 						if(GPSScanTargets_Vehicle.find(vehicleKey) != -1) 	{atlas_index = 0; atlas_color = "#00b9ff";}
-						if(GPSScanTargets_Building.find(vehicleKey) != -1) {atlas_index = 13; atlas_color = "#00b9ff";}
+						if(GPSScanTargets_Building.find(vehicleKey) != -1) {atlas_index = 0; atlas_color = "#ff0000";}
 						if(GPSScanTargets_Support.find(vehicleKey) != -1) 	{atlas_index = 7; atlas_color = "#ccccff";}
 						if(GPSScanTargets_AA.find(vehicleKey) != -1) 		{atlas_index = 14; atlas_color = "#00b9ff"; atlas_size = 1.0;}
 						
@@ -2076,7 +2076,6 @@ class DelayGPSScanRequest : Task{
 						m_metagame.getComms().send(command);
 
 						if (!anyFound) {
-							sendFactionMessageKey(m_metagame, 0, "gps_laptop, targets ok", dictionary = {}, 1.0);
 							anyFound = true;
 						}
 					}
@@ -2086,7 +2085,7 @@ class DelayGPSScanRequest : Task{
 			if (!anyFound) {
 				sendFactionMessageKey(m_metagame, 0, "gps_laptop, targets not ok", dictionary = {}, 1.0); 
 			}
-			m_scanned = true;			
+			m_scanned = true;
 		}
 	}
 

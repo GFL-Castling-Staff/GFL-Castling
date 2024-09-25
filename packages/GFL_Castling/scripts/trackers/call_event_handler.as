@@ -46,6 +46,8 @@ dictionary callLaunchIndex = {
     {"gk_call_tier2.call",1002},
     {"gk_call_tier3.call",1003},
 
+    {"gk_illumination_fairy.call",15},
+
     // 空空投
     {"",0}
 };
@@ -724,7 +726,7 @@ class call_event : Tracker {
                             GFL_event_array.insertLast(newCall);
                         }      
                         break;
-                    }              
+                    }
                     case 4:{
                         if(findCooldown(playerName,"TU160")){
                             const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -996,6 +998,27 @@ class call_event : Tracker {
                             float ori4 = rand(0.0,3.14);
                             spawnVehicle(m_metagame,1,factionId,call_pos,Orientation(0,1,0,ori4),"t14_gk.vehicle");
                         }
+                        break;
+                    }
+                    case 15:{
+                        int j=-1;
+                        if(findCooldown("Globalcooldown","uav")){
+                            const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                            if (character !is null) {
+                                dictionary a;
+                                a["%time"] = ""+getCooldown("Globalcooldown","uav");                        
+                                sendPrivateMessageKey(m_metagame,playerId,"callcooldown",a);
+                            }
+                        }
+                        else {
+                            GFL_playerInfo@ m_playerinfo = getPlayerInfoFromListbyPid(playerId);
+                            if (m_playerinfo.getPlayerName() == default_string ) break;
+                            GFL_battleInfo@ battleInfo = m_playerinfo.getBattleInfo();
+                            if(!costTacticPoint(battleInfo,10,playerId)) break;
+                            CallEvent_cooldown.insertLast(Call_Cooldown("Globalcooldown",playerId,120.0,"uav"));
+                            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                            tasker.add(DelayGPSScanRequest(m_metagame,5,60,characterId,factionId,"_all"));
+                        }      
                         break;
                     }                    
                     default:

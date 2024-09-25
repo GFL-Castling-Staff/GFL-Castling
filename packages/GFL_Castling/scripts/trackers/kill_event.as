@@ -797,6 +797,10 @@ class kill_event : Tracker {
                         {
                             SkillArray[i].m_time-=10.0;
                         }
+                        else if(reward_pool_key=="elite")
+                        {
+                            SkillArray[i].m_time-=5.0;
+                        }
                         else
                         {
                             SkillArray[i].m_time-=2.0;
