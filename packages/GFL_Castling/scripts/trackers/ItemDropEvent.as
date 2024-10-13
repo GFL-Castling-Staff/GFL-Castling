@@ -99,7 +99,7 @@ class ItemDropEvent : Tracker {
                 string profile_hash = playerInfo.getHash();
                 string p_name = playerInfo.getPlayerName();
                 string call_key = getQueueByStartString(pId,"call_ui");
-                if(call_key != "")
+                if(call_key != "" && callUI_Slot.exists(call_key))
                 {
                     string update_call_key = call_key;
                     player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
@@ -140,12 +140,16 @@ class ItemDropEvent : Tracker {
                 string profile_hash = playerInfo.getHash();
                 string p_name = playerInfo.getPlayerName();
                 string call_key = getQueueByStartString(pId,"call_ui");
-                if(call_key != "")
+                if(call_key != "" && call_key.findFirst("_update") < 0)
                 {
                     string dict_title_key = "Hint - call - title - " + call_key;
-                    string dict_intro_key = "Hint - call - intro - " + call_key + " " + key;
+                    string dict_intro_key = "Hint - call - intro - " + call_key + "_" + key;
                     notify(m_metagame, dict_intro_key, dictionary(), "misc", pId, true, dict_title_key, 1.0);
                     resetQueueTypeString(pId,"call_ui",addition);
+                }
+                else if(call_key != "" && call_key.findFirst("_update") >= 0)
+                {
+                    notify(m_metagame, "Hint - call - dontrepeat",dictionary(), "misc", pId, false, "", 1.0);
                 }
             }            
             else if(key == "pack_vest_repair_plate_x10")

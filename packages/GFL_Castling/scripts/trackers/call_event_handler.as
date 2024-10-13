@@ -112,7 +112,8 @@ class call_event : Tracker {
                             if(call_slot_key == "") break;
                             switch(int(call_tier_index[call_slot_key]))
                             { 
-                                case 100000: //免费炮击
+                                // 000 重装部队-[引导炮击]
+                                case 100000: //BASE
                                 {
                                     addCallCoolDown(playerName,playerId,240.0,"tier1",m_playerinfo);
                                     sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
@@ -133,6 +134,70 @@ class call_event : Tracker {
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
                                     break;                                    
                                 }
+                                case 100001: //分支α [精英班组]
+                                {
+                                    addCallCoolDown(playerName,playerId,120.0,"tier1",m_playerinfo);
+                                    sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
+                                    int flagId = m_DummyCallID + 15000;
+                                    CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
+                                    FairyRequest.setIndex(11);
+                                    FairyRequest.setSize(0.5);
+                                    FairyRequest.setDummyId(flagId);
+                                    FairyRequest.setRange(15.0);
+                                    FairyRequest.setIconTypeKey("call_marker_bomb");
+                                    addCastlingMarker(FairyRequest);
+                                    m_DummyCallID++;
+                                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));                                    
+                                    Event_call_bombardment_fairy_82mm_mortar@ new_task = Event_call_bombardment_fairy_82mm_mortar(m_metagame,2.0,characterId,factionId,c_pos,stringToVector3(position),"bombardment_fairy_82mm_mortar_free_lv0",flagId);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
+                                    addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    break;                                    
+                                }
+                                case 100002: //分支β [强化弹头]
+                                {
+                                    addCallCoolDown(playerName,playerId,240.0,"tier1",m_playerinfo);
+                                    sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
+                                    int flagId = m_DummyCallID + 15000;
+                                    CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
+                                    FairyRequest.setIndex(11);
+                                    FairyRequest.setSize(0.5);
+                                    FairyRequest.setDummyId(flagId);
+                                    FairyRequest.setRange(15.0);
+                                    FairyRequest.setIconTypeKey("call_marker_bomb");
+                                    addCastlingMarker(FairyRequest);
+                                    m_DummyCallID++;
+                                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));                                    
+                                    Event_call_bombardment_fairy_82mm_mortar@ new_task = Event_call_bombardment_fairy_82mm_mortar(m_metagame,2.0,characterId,factionId,c_pos,stringToVector3(position),"bombardment_fairy_82mm_mortar_free_beta",flagId);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
+                                    addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    break;                                    
+                                }
+                                case 100003: //分支γ [班组扩编]
+                                {
+                                    addCallCoolDown(playerName,playerId,240.0,"tier1",m_playerinfo);
+                                    sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
+                                    int flagId = m_DummyCallID + 15000;
+                                    CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
+                                    FairyRequest.setIndex(11);
+                                    FairyRequest.setSize(0.5);
+                                    FairyRequest.setDummyId(flagId);
+                                    FairyRequest.setRange(15.0);
+                                    FairyRequest.setIconTypeKey("call_marker_bomb");
+                                    addCastlingMarker(FairyRequest);
+                                    m_DummyCallID++;
+                                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));                                    
+                                    Event_call_bombardment_fairy_82mm_mortar@ new_task = Event_call_bombardment_fairy_82mm_mortar(m_metagame,2.0,characterId,factionId,c_pos,stringToVector3(position),"bombardment_fairy_82mm_mortar_lv0",flagId);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
+                                    addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    break;                                    
+                                }
+                                // 000 重装部队-[引导炮击]
                                 case 100100: //82mm
                                 {
                                     if(!costTacticPoint(battleInfo,15,playerId)) break;
@@ -1253,7 +1318,15 @@ dictionary call_tier_index = {
     // T1 001 炮击妖精-[82mm迫击炮打击]
         // lv0
         {"t1_bombardment_fairy_82mm_mortar_free",100000},
+        {"t1_bombardment_fairy_82mm_mortar_free_update_alpha",100001},
+        {"t1_bombardment_fairy_82mm_mortar_free_update_beta",100002},
+        {"t1_bombardment_fairy_82mm_mortar_free_update_gamma",100003},
+
         {"t1_bombardment_fairy_82mm_mortar",100100},
+        {"t1_bombardment_fairy_82mm_mortar_update_alpha",100101},
+        {"t1_bombardment_fairy_82mm_mortar_update_beta",100102},
+        {"t1_bombardment_fairy_82mm_mortar_update_gamma",100103},
+        
 
     // T1 002 炮击妖精-[105mm榴弹扫荡]
         // lv0

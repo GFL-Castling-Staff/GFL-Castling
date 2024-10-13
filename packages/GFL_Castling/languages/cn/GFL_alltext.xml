@@ -290,6 +290,27 @@
 -标定目标点，2秒后发射迫击炮，校准试射1发后，每轮4发，持续3轮
 -每发82mm弹头在范围7.5内造成(7.5x4)的blast伤害" />
 
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_82mm_mortar_free_update_alpha" text="重装支援 - 82mm迫击炮打击" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_82mm_mortar_free_update_alpha" text="<冷却时间 120秒 消耗 0战术点>
+-标定目标点，2秒后发射迫击炮，校准试射1发后，每轮4发，持续3轮
+-每发82mm弹头在范围7.5内造成(7.5x4)的blast伤害
+#####分支α[精英班组]#####
+(进行攻击后能更快转移火力阵地，冷却时间下降至120秒)"/>
+
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_82mm_mortar_free_update_beta" text="重装支援 - 82mm迫击炮打击" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_82mm_mortar_free_update_beta" text="<冷却时间 240秒 消耗 0战术点>
+-标定目标点，2秒后发射迫击炮，校准试射1发后，每轮4发，持续3轮
+-每发82mm弹头在范围7.5内造成35的blast伤害
+#####分支β[强化弹头]#####
+(使用毁伤能力更强的炮弹，伤害提升至35)"/>
+
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_82mm_mortar_free_update_gamma" text="重装支援 - 82mm迫击炮打击" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_82mm_mortar_free_update_gamma" text="<冷却时间 240秒 消耗 0战术点>
+-标定目标点，2秒后发射迫击炮，校准试射1发后，每轮8发，持续3轮
+-每发82mm弹头在范围7.5内造成(7.5x4)的blast伤害
+#####分支γ[班组扩编]#####
+(扩大重装部队的编制，每轮发射额外4发炮弹)"/>
+
 	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_82mm_mortar" text="炮击妖精 - 82mm迫击炮打击" />
 	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_82mm_mortar" text="<冷却时间 60秒 消耗 15战术点>
 -标定目标点，2秒后发射迫击炮，校准试射1发后，每轮8发，持续3轮
