@@ -1050,9 +1050,9 @@ class call_event : Tracker {
             string call_slot_key2 = newdata.getCallSlot(2);
             string call_slot_key3 = newdata.getCallSlot(3);
             dictionary a;
-            a["%call1"] = ""+call_slot_key1;       
-            a["%call2"] = ""+call_slot_key2;              
-            a["%call3"] = ""+call_slot_key3;              
+            a["%call1"] = "Hint - call - title - call_ui_"+call_slot_key1;       
+            a["%call2"] = "Hint - call - title - call_ui_"+call_slot_key2;              
+            a["%call3"] = "Hint - call - title - call_ui_"+call_slot_key3;              
             notify(m_metagame, "call event,equiped", a, "misc", player_id, false, "", 1.0);
         }        
     }
@@ -1246,87 +1246,87 @@ dictionary call_tier_index = {
     // 新支援系统（注意命名按照T1=1xxxx,T2=2xxxx,T3=3xxxx的格式来）
     // x-xxx-xx : 支援tier级别-支援编号-支援等级/变种
     // key命名规范
-    // tier+种类+具体名字+lv等级
+    // tier+种类+具体名字+分支
 
     // T1 ----------------------------------- //
 
     // T1 001 炮击妖精-[82mm迫击炮打击]
         // lv0
-        {"t1_bombardment_fairy_82mm_mortar_free_lv0",100000},
-        {"t1_bombardment_fairy_82mm_mortar_lv0",100100},
+        {"t1_bombardment_fairy_82mm_mortar_free",100000},
+        {"t1_bombardment_fairy_82mm_mortar",100100},
 
     // T1 002 炮击妖精-[105mm榴弹扫荡]
         // lv0
-        {"t1_bombardment_fairy_105mm_grenade_barrage_lv0",100200},
+        {"t1_bombardment_fairy_105mm_grenade_barrage",100200},
 
     // T1 003 炮击妖精-[155mm空爆榴弹]
-        {"t1_bombardment_fairy_155mm_air_burst_lv0",100300},
+        {"t1_bombardment_fairy_155mm_air_burst",100300},
 
     // T1 004/005 空袭妖精-[俯冲攻击]
         //lv0
-        {"t1_airstrike_fairy_cas_lv0",100400},
-        {"t1_airstrike_fairy_cas_p2p_lv0",100500},
+        {"t1_airstrike_fairy_cas",100400},
+        {"t1_airstrike_fairy_cas_p2p",100500},
 
     // T1 006 空袭妖精-[精准空袭]
         // lv0
-        {"t1_airstrike_fairy_precise_lv0",100600},
+        {"t1_airstrike_fairy_precise",100600},
 
     // T1 007 火箭妖精-[巡航导弹]
         // lv0
-        {"t1_rocket_fairy_missile_lv0",100700},
+        {"t1_rocket_fairy_missile",100700},
 
 
     // T2 ----------------------------------- //
 
     // T2 001 空袭妖精-[高空投弹]
         // lv0
-        {"t2_airstrike_fairy_bomber_lv0",200100},
+        {"t2_airstrike_fairy_bomber",200100},
 
     // T2 002 炮击妖精-[170]
         // lv0
-        {"t2_bombardment_fairy_170mm_cannon_lv0",200200},
+        {"t2_bombardment_fairy_170mm_cannon",200200},
         
 
     // T2 006 空袭妖精-[精准空袭]
         // lv0
-        {"t2_airstrike_fairy_precise_lv0",200600},
+        {"t2_airstrike_fairy_precise",200600},
 
     // T2 003 勇士妖精-[侦察直升机扫荡]
         // lv0 
-        {"t2_warrior_fairy_recon_heli_lv0",200300},
+        {"t2_warrior_fairy_recon_heli",200300},
 
     // T2 004 勇士妖精-[VTOL战机巡航]
         // lv0
-        {"t2_warrior_fairy_vtol_sentry_lv0",200400},
+        {"t2_warrior_fairy_vtol_sentry",200400},
 
     // T2 005 火箭妖精-[火箭弹打击]
         // lv0
-        {"t2_rocket_fairy_bm30_lv0",200500},
+        {"t2_rocket_fairy_bm30",200500},
 
     // T2 耀夜姬-[轨道激光打击]
         // lv0
-        {"t2_lv0_nightshine_princess",200700},
+        {"t2_nightshine_princess",200700},
 
     // T3 ----------------------------------- //
     // T3 001 勇士妖精-[武装直升机扫荡]
         // lv0
-        {"t3_warrior_fairy_armed_heli_lv0",300100},
+        {"t3_warrior_fairy_armed_heli",300100},
 
     // T3 002 暴怒妖精-[炮艇支援]
         // lv0
-        {"t3_rampage_fairy_gunship_lv0",300200},
+        {"t3_rampage_fairy_gunship",300200},
 
     // T3 006 空袭妖精-[精准空袭]
         // lv0
-        {"t3_airstrike_fairy_precise_lv0",300600},
+        {"t3_airstrike_fairy_precise",300600},
 
     // T3 火箭妖精-[火箭弹突袭]
         // lv0
-        {"t3_rocket_fairy_aircraft_lv0",300300},
+        {"t3_rocket_fairy_aircraft",300300},
 
     // T3 火箭妖精-[地毯式覆盖]
         // lv0
-        {"t3_rocket_fairy_cover_lv0",300400},
+        {"t3_rocket_fairy_cover",300400},
 
     {"",0}
 };

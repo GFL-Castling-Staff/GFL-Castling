@@ -378,7 +378,7 @@ int getNearByEnemyVehicle(Metagame@ metagame, uint ownerfid, Vector3 judgePos, f
 			if(vehicleInfo is null){continue;}  //载具不存在
 			if(vehicleInfo.getIntAttribute("health")==0){continue;}  //载具被击毁
 			if(unlockable_vehicles.find(vehicleInfo.getStringAttribute("key"))>-1){continue;} //载具是中立地图物件
-			_log("Get vehicle id successful.");
+			// _log("Get vehicle id successful.");
 			return vehicleid;			
 		}		
 	}

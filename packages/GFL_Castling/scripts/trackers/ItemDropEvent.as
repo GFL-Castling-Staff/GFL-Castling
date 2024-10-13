@@ -66,6 +66,7 @@ class ItemDropEvent : Tracker {
                 int pId = event.getIntAttribute("player_id");     
                 notify(m_metagame, "Help - logger system", dictionary(), "misc", pId, true, "Help - logger system title", 1.0);
             }
+            //选择基础支援
             else if(startsWith(key,"call_ui"))
             {
                 deleteItemInBackpack(m_metagame,cId,"weapon",key);
@@ -74,25 +75,79 @@ class ItemDropEvent : Tracker {
                 if (playerInfo.getPlayerName() == default_string) return;
                 string profile_hash = playerInfo.getHash();
                 string p_name = playerInfo.getPlayerName();
-                if(handleCallChangeEvent(cId,pId,key))
+                if(getQueueByStartString(pId,"call_ui")!="")
                 {
-                    player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
-                    int slot = int(callUI_Slot[key]);
-                    string call_key = getCallKeyfromPlayerData(newdata,key);
-                    if(call_key == "")
-                    {
-                        notify(m_metagame, "Hint - call - locked",dictionary(), "misc", pId, false, "", 1.0);
-                        return;
-                    }
-                    newdata.setCallSlot(slot,call_key);
-                    string filename = ("save_" + profile_hash +".xml" );
-                    writeXML(m_metagame,filename,PlayerProfileSave(newdata));
-                    dictionary a;
-                    a["%call_key"] = "Hint - call - title - " + key;
-                    a["%slot"] = "Tier " + slot;
-                    notify(m_metagame, "Hint - call - changesuccess", a, "misc", pId, false, "", 1.0);
+                    return;
+                }
+                else
+                {
+                    if (!callUI_Slot.exists(key)) return;
+                    string dict_intro_key = "Hint - call - intro - " + key;
+                    string dict_title_key = "Hint - call - title - " + key;
+                    startQueue(pId, key,10.0);
+                    notify(m_metagame, dict_intro_key, dictionary(), "misc", pId, true, dict_title_key, 1.0);
+                    notify(m_metagame, "Hint - call - rebuytochange", dictionary(), "misc", pId, false, "", 1.0);
+                    notify(m_metagame, "Hint - call - update_hint", dictionary(), "misc", pId, false, "", 1.0);
                 }
             }
+            else if(key == "call_confirm")
+            {
+                deleteItemInBackpack(m_metagame,cId,"projectile",key);
+                int pId = event.getIntAttribute("player_id");
+                GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(pId);
+                if (playerInfo.getPlayerName() == default_string) return;
+                string profile_hash = playerInfo.getHash();
+                string p_name = playerInfo.getPlayerName();
+                string call_key = getQueueByStartString(pId,"call_ui");
+                if(call_key != "")
+                {
+                    string update_call_key = call_key;
+                    player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+                    string updated_call_key = getCallKeyfromPlayerData(newdata,update_call_key);
+                    _log("更新前的key==="+ update_call_key);
+                    _log("更新后的key==="+ updated_call_key);
+                    if(updated_call_key =="")
+                    {
+                        notify(m_metagame, "Hint - call - locked",dictionary(), "misc", pId, false, "", 1.0);
+                        m_craftQueue.removeAt(findQueueIndex(pId,call_key));
+                    }
+                    else
+                    {
+                        int slot = int(callUI_Slot[update_call_key]);
+                        newdata.setCallSlot(slot,updated_call_key);
+                        string filename = ("save_" + profile_hash +".xml" );     
+                        writeXML(m_metagame,filename,PlayerProfileSave(newdata));
+                        dictionary a;
+                        a["%call_key"] = "Hint - call - title - " + update_call_key;
+                        a["%slot"] = "Tier " + slot;
+                        notify(m_metagame, "Hint - call - changesuccess", a, "misc", pId, false, "", 1.0);
+                        m_craftQueue.removeAt(findQueueIndex(pId,call_key));
+                    }                    
+                }
+                else
+                {
+                    notify(m_metagame, "Hint - call - 404notfound",dictionary(), "misc", pId, false, "", 1.0);
+                }
+            }
+            //升级支援
+            else if(call_update_const.exists(key))
+            {
+                deleteItemInBackpack(m_metagame,cId,"projectile",key);
+                string addition = string(call_update_const[key]);
+                int pId = event.getIntAttribute("player_id");
+                GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(pId);
+                if (playerInfo.getPlayerName() == default_string) return;
+                string profile_hash = playerInfo.getHash();
+                string p_name = playerInfo.getPlayerName();
+                string call_key = getQueueByStartString(pId,"call_ui");
+                if(call_key != "")
+                {
+                    string dict_title_key = "Hint - call - title - " + call_key;
+                    string dict_intro_key = "Hint - call - intro - " + call_key + " " + key;
+                    notify(m_metagame, dict_intro_key, dictionary(), "misc", pId, true, dict_title_key, 1.0);
+                    resetQueueTypeString(pId,"call_ui",addition);
+                }
+            }            
             else if(key == "pack_vest_repair_plate_x10")
             {
                 deleteItemInBackpack(m_metagame,cId,"weapon",key);
@@ -863,23 +918,22 @@ class ItemDropEvent : Tracker {
         }
     }
 
-    protected bool handleCallChangeEvent(int cId, int pId, string call_key){
-        if(checkQueue(pId, call_key))
-        {
-            m_craftQueue.removeAt(findQueueIndex(pId,call_key));
-            return true;
-        }
-        else
-        {
-            if (!callUI_Slot.exists(call_key)) return false;
-            string dict_intro_key = "Hint - call - intro - " + call_key;
-            string dict_title_key = "Hint - call - title - " + call_key;
-            startQueue(pId, call_key,10.0);
-            notify(m_metagame, dict_intro_key, dictionary(), "misc", pId, true, dict_title_key, 1.0);
-            notify(m_metagame, "Hint - call - rebuytochange", dictionary(), "misc", pId, false, "", 1.0);
-        }
-        return false;
-    }
+    // protected bool handleCallChangeEvent(int cId, int pId, string call_key){
+    //     if(checkQueue(pId, call_key))
+    //     {
+    //         return true;
+    //     }
+    //     else
+    //     {
+    //         if (!callUI_Slot.exists(call_key)) return false;
+    //         string dict_intro_key = "Hint - call - intro - " + call_key;
+    //         string dict_title_key = "Hint - call - title - " + call_key;
+    //         startQueue(pId, call_key,10.0);
+    //         notify(m_metagame, dict_intro_key, dictionary(), "misc", pId, true, dict_title_key, 1.0);
+    //         notify(m_metagame, "Hint - call - rebuytochange", dictionary(), "misc", pId, false, "", 1.0);
+    //     }
+    //     return false;
+    // }
 
     protected string getCallKeyfromPlayerData(player_data@ data,string key)
     {
@@ -916,6 +970,26 @@ class ItemDropEvent : Tracker {
 
     void startQueue(int playerId,string key,float time){
         m_craftQueue.insertLast(CraftQueue(playerId,key,time));
+    }
+
+    string getQueueByStartString(int pId,string type)
+    {
+        for(uint i=0;i<m_craftQueue.size();i++){
+            if(m_craftQueue[i].m_playerId==pId && startsWith(m_craftQueue[i].m_typekey,type)){
+                return m_craftQueue[i].m_typekey;
+            }
+        }
+        return "";
+    }
+
+    void resetQueueTypeString(int pId,string type,string add)
+    {
+        for(uint i=0;i<m_craftQueue.size();i++){
+            if(m_craftQueue[i].m_playerId==pId && startsWith(m_craftQueue[i].m_typekey,type)){
+                m_craftQueue[i].m_typekey += add;
+                m_craftQueue[i].m_time = 10;
+            }
+        }        
     }
 
 }

@@ -1251,7 +1251,7 @@ girls_information ParseGFLString(const string input,const string key,const strin
             // 提取第二个数字
             string secondPart = remaining.substr(0, secondDash);
             secondPart = secondPart.substr(5);
-            _log("第二部分: " + secondPart);
+            // _log("第二部分: " + secondPart);
             secondNumber = parseInt(secondPart); // 使用parseInt
 
             // 提取mod字符串

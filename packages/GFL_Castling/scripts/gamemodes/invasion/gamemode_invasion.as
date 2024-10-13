@@ -92,6 +92,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		setupLocalBanManager();
 		setupTestingToolsTracker();
 		reverse_tdoll_index_dict_init();
+		call_slot_init();
 
 		if (m_userSettings.m_continue) {
 			_log("* restoring old game");
@@ -523,6 +524,29 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 			all_girls_information.insertLast(info);
 			// _log("这是第几个 " + (all_girls_information.length()));
 		}		
+	}
+
+	//懒得写一堆，这里初始化支援槽位，往每个合适的支援下面都安插对应分支
+	protected void call_slot_init(){
+		array<string> keys = callUI_Slot.getKeys();
+		for(uint i=0;i < keys.length();i++)
+		{
+			string key = keys[i];
+			if(key == "" || key =="666") continue;
+			int value = int(callUI_Slot[key]);
+			callUI_Slot.set(key+"_update_alpha",value);
+			callUI_Slot.set(key+"_update_beta",value);
+			callUI_Slot.set(key+"_update_gamma",value);
+		}
+
+		//这一段是检修代码 log
+		// array<string> keys2 = callUI_Slot.getKeys();
+		// for (uint i = 0; i < keys2.length(); ++i)
+		// {
+		// 	string key = keys2[i];
+		// 	string value = int(callUI_Slot[key]);
+		// 	print("Key: " + key + ", Value: " + value);
+		// }		
 	}
 
 	// --------------------------------------------

@@ -18,15 +18,12 @@
 
 class GFL_call_info
 {
-    string m_call_ui_key;
-    int m_level=0;
     string m_call_key;
-
-    GFL_call_info(string call_ui_key,int m_level =0)
+    string m_call_ui_key;
+    GFL_call_info(string call_ui_key)
     {
         m_call_ui_key = call_ui_key;
-        string call_ui_key_suffix = call_ui_key.substr(8);
-        m_call_key = call_ui_key_suffix + "_lv" + m_level;
+        m_call_key = call_ui_key.substr(8);
     }
 }
 
@@ -45,29 +42,29 @@ class player_data
 
     array<string> m_weapons={};
     array<GFL_call_info@> m_unlocked_call={
-        GFL_call_info("call_ui_t1_bombardment_fairy_82mm_mortar_free",0),
-        GFL_call_info("call_ui_t1_bombardment_fairy_82mm_mortar",0),
-        GFL_call_info("call_ui_t1_bombardment_fairy_105mm_grenade_barrage",0),
-        GFL_call_info("call_ui_t2_bombardment_fairy_170mm_cannon",0),
-        GFL_call_info("call_ui_t2_airstrike_fairy_bomber",0),
-        GFL_call_info("call_ui_t1_airstrike_fairy_precise",0),
-        GFL_call_info("call_ui_t2_airstrike_fairy_precise",0),
-        GFL_call_info("call_ui_t3_airstrike_fairy_precise",0),
-        GFL_call_info("call_ui_t1_airstrike_fairy_cas",0),
-        GFL_call_info("call_ui_t1_airstrike_fairy_cas_p2p",0),
+        GFL_call_info("call_ui_t1_bombardment_fairy_82mm_mortar_free"),
+        GFL_call_info("call_ui_t1_bombardment_fairy_82mm_mortar"),
+        GFL_call_info("call_ui_t1_bombardment_fairy_105mm_grenade_barrage"),
+        GFL_call_info("call_ui_t2_bombardment_fairy_170mm_cannon"),
+        GFL_call_info("call_ui_t2_airstrike_fairy_bomber"),
+        GFL_call_info("call_ui_t1_airstrike_fairy_precise"),
+        GFL_call_info("call_ui_t2_airstrike_fairy_precise"),
+        GFL_call_info("call_ui_t3_airstrike_fairy_precise"),
+        GFL_call_info("call_ui_t1_airstrike_fairy_cas"),
+        GFL_call_info("call_ui_t1_airstrike_fairy_cas_p2p"),
 
-        GFL_call_info("call_ui_t2_warrior_fairy_recon_heli",0),
-        GFL_call_info("call_ui_t2_warrior_fairy_vtol_sentry",0),
-        GFL_call_info("call_ui_t3_warrior_fairy_armed_heli",0),
+        GFL_call_info("call_ui_t2_warrior_fairy_recon_heli"),
+        GFL_call_info("call_ui_t2_warrior_fairy_vtol_sentry"),
+        GFL_call_info("call_ui_t3_warrior_fairy_armed_heli"),
 
-        GFL_call_info("call_ui_t3_rampage_fairy_gunship",0),
-        GFL_call_info("call_ui_t1_rocket_fairy_missile",0),
-        GFL_call_info("call_ui_t2_rocket_fairy_bm30",0),
-        GFL_call_info("call_ui_t3_rocket_fairy_aircraft",0),
-        GFL_call_info("call_ui_t3_rocket_fairy_cover",0),
+        GFL_call_info("call_ui_t3_rampage_fairy_gunship"),
+        GFL_call_info("call_ui_t1_rocket_fairy_missile"),
+        GFL_call_info("call_ui_t2_rocket_fairy_bm30"),
+        GFL_call_info("call_ui_t3_rocket_fairy_aircraft"),
+        GFL_call_info("call_ui_t3_rocket_fairy_cover"),
 
 
-        GFL_call_info("call_ui_t1_bombardment_fairy_155mm_air_burst",0)
+        GFL_call_info("call_ui_t1_bombardment_fairy_155mm_air_burst")
 
     };
 
@@ -342,7 +339,6 @@ XmlElement@ PlayerProfileSave(player_data@ player_info) {
         XmlElement e("unlocked_call");
         e.setStringAttribute("call_key", player_info.m_unlocked_call[i].m_call_ui_key);
         e.setStringAttribute("key", player_info.m_unlocked_call[i].m_call_key);
-        e.setIntAttribute("level", player_info.m_unlocked_call[i].m_level);
         subroot_2.appendChild(e);
     }
 
@@ -391,9 +387,8 @@ player_data@ PlayerProfileLoad(const XmlElement@ player_profile){
             for(uint i = 0; i < unlocked_call_list.length();i++)
             {
                 string call_ui_key = unlocked_call_list[i].getStringAttribute("call_key");
-                int level = unlocked_call_list[i].getIntAttribute("level");
                 if(call_ui_key =="") continue;
-                GFL_call_info@ new_call_info = GFL_call_info(call_ui_key,level);
+                GFL_call_info@ new_call_info = GFL_call_info(call_ui_key);
                 output.addUnlockedCall(new_call_info);
             }
         }

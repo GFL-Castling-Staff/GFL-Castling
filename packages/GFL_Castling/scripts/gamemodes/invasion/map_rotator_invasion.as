@@ -216,7 +216,7 @@ class MapRotatorInvasion : MapRotator {
 		}
 
 		_log("faction " + factionId + " won");
-		_log("现在是第几关啊啊" + m_currentStageIndex + "啊啊啊");
+		// _log("现在是第几关啊啊" + m_currentStageIndex + "啊啊啊");
 
 
 		if (factionId == 0) {

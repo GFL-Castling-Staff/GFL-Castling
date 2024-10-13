@@ -5,7 +5,9 @@
 	map_view_atlas_index="4"
 	respawn_time="90" 
 	time_to_live_unsteerable="85" 
-	character_leave_request_mode="friendly" >
+	character_leave_request_mode="friendly" 
+	allow_ai_to_use="0"
+	>
 	
 	<tag name="metal_thin" />
 	<tag name="boat" />

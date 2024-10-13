@@ -369,6 +369,19 @@
         {"666",0}
     };
 
+    dictionary call_update_const = {
+            // 空需求
+            {"",-1},
+
+            {"update_alpha","_update_alpha"},
+
+            {"update_beta","_update_beta"},
+
+            {"update_gamma","_update_gamma"},
+            
+            {"666",-1}
+    };    
+
     dictionary callUI_Slot = {
         // 空
         {"",0},
@@ -486,9 +499,9 @@
 
 
 // parameters for "save_system.as":
-    const string call_slot_default_1 = "t1_bombardment_fairy_82mm_mortar_lv0";
-    const string call_slot_default_2 = "t2_airstrike_fairy_precise_lv0";
-    const string call_slot_default_3 = "t3_rocket_fairy_aircraft_lv0";
+    const string call_slot_default_1 = "t1_bombardment_fairy_82mm_mortar";
+    const string call_slot_default_2 = "t2_airstrike_fairy_precise";
+    const string call_slot_default_3 = "t3_rocket_fairy_aircraft";
 
     // 默认引用的支援key
 
