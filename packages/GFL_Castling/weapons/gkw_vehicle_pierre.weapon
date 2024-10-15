@@ -95,7 +95,7 @@
 </weapon>
 
 <weapon key="pierre_rocket3.weapon">
-	<specification slot="1" accuracy_factor="0.9"  retrigger_time="0.2" last_burst_retrigger_time="0.6" sustained_fire_grow_step="0.01" sustained_fire_diminish_rate="0.007" cooldown_start="0.029" cooldown_end="0.022" sight_range_modifier="2.1" ai_sight_range_modifier="1.05" barrel_offset_3d="10 0 0.8" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Pierre II ROCKET" class="0" projectile_speed="180.0"/>
+	<specification slot="1" accuracy_factor="0.9"  retrigger_time="0.2" last_burst_retrigger_time="0.6" sustained_fire_grow_step="0.01" sustained_fire_diminish_rate="0.007" cooldown_start="0.029" cooldown_end="0.022" sight_range_modifier="2.25" ai_sight_range_modifier="1.05" barrel_offset_3d="10 0 0.8" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Pierre II ROCKET" class="0" projectile_speed="180.0"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>
@@ -115,6 +115,15 @@
 	<projectile file="m202_aa_1.projectile">
 	</projectile>
 	<ballistics near_far_distance="10.0" speed_estimation_near="360.0" speed_estimation_far="360.0" max_speed="450.0" randomness="0.0" curve_height="1.6" tweak_factor="4.8"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="elite" distance="1.1" direction="0.0" squad_command="1.0" base_score="9.0"/>
+	<target_factors tag="bazooka" distance="1.2" direction="0.0" squad_command="1.0" base_score="20.0"/>
+	<target_factors tag="metal_thin" distance="1.1" direction="0.0" squad_command="1.0" base_score="20.0"/>
+	<target_factors tag="aceso" distance="1.2" direction="0.0" squad_command="1.0" base_score="20.0"/>
+	<target_factors tag="ifv" distance="1.2" direction="0.0" squad_command="1.0" base_score="20.0"/>
+	<target_factors tag="minigun_deploy" distance="1.2" direction="0.0" squad_command="1.0" base_score="20.0"/>
 </weapon>
 
 </weapons>

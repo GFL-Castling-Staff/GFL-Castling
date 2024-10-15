@@ -24,10 +24,10 @@
 	<tire_set offset="0.96 0 1.068" radius="0.48" />
 	<tire_set offset="0.96 0 -1.068" radius="0.48" />
 	<control 
-	max_speed="28" 
+	max_speed="20" 
 	max_limiter_speed="15"
 	acceleration="8.0" 
-	max_reverse_speed="24.0" 
+	max_reverse_speed="20.0" 
 	min_health_to_steer="1.5" 
 	max_rotation="0.5" 
 	max_water_depth="2.0" 
@@ -50,7 +50,8 @@
 	destroy_on_top_hit="1"
 	destroy_on_top_hit_time="2.0"
 	gravity="-70"
-	drag_offset="-0.05" />
+	drag_offset="-0.05"
+	preserve_motion_on_impact_factor="1" />
 	<sky_diving chute_offset="0 3.05 0.0" trigger_height="20.0" gravity="-10" mesh_filename="chute_large.mesh" texture_filename="chute.png" />
 	<turret offset="0 1.88 -0.02" weapon_key="pierre_rocket3.weapon" weapon_offset="0.47 1.23 -0.82" weapon_recoil="0.0" max_rotation_step="0.0053"/>	
 	<turret offset="0 1.88 -0.02" weapon_key="pierre_mg.weapon" weapon_offset="-0.45 0.85 1.08" weapon_recoil="0.0" max_rotation_step="0.0053" />
