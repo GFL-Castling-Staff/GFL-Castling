@@ -110,7 +110,7 @@ class GFLskill : Tracker {
 						int affectedNumber =0;
 						//获取技能影响的敌人数量
 						uint n=m_metagame.getFactionCount();
-						for(int i=0;i<n;i++){
+						for(uint i=0;i<n;i++){
 							if (i == factionid) continue;
 							array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,grenade_pos,i,15.0f);
 							affectedNumber += affectedCharacter.length;
@@ -1764,7 +1764,7 @@ class GFLskill : Tracker {
 
 	void update(float time) {
 		if(XM8track.length()>0){
-			for (uint a=0;a<XM8track.length();a++){
+			for (int a = XM8track.length() - 1; a >= 0; a--) {
 				XM8track[a].m_time-=time;
 				if(XM8track[a].m_time<0){
 					m_fnum= m_metagame.getFactionCount();
@@ -1831,7 +1831,7 @@ class GFLskill : Tracker {
 			}
 		}
 		if(HK416_track.length()>0){
-			for (uint a=0;a<HK416_track.length();a++){
+			for (int a = HK416_track.length() - 1; a >= 0; a--) {
 				HK416_track[a].m_time-=time;
 				if(HK416_track[a].m_time<0){	
 					if (HK416_track[a].m_affected.length()>0){
@@ -1864,7 +1864,7 @@ class GFLskill : Tracker {
 			}
 		}
 		if(Vector_track.length()>0){
-			for (uint a=0;a<Vector_track.length();a++){
+			for (int a = Vector_track.length() - 1; a >= 0; a--) {
 				Vector_track[a].m_time-=time;
 				if(Vector_track[a].m_time<0){
 					string c = 
@@ -1884,7 +1884,7 @@ class GFLskill : Tracker {
 			}
 		}
 		if(Javelin_list.length()>0){
-			for (uint a=0;a<Javelin_list.length();a++){
+			for (int a = Javelin_list.length() - 1; a >= 0; a--) {
 				Javelin_list[a].m_time-=time;
 				if(Javelin_list[a].m_time<0){				
 					Javelin_list[a].m_numtime--;
@@ -1896,7 +1896,7 @@ class GFLskill : Tracker {
 			}
 		}
 		if(UZI_track.length()>0){
-			for (uint a=0;a<UZI_track.length();a++){
+			for (int a = UZI_track.length() - 1; a >= 0; a--) {
 				UZI_track[a].m_time-=time;
 				if(UZI_track[a].m_time<0){	
 					if (UZI_track[a].m_affected.length()>0){
@@ -1929,7 +1929,7 @@ class GFLskill : Tracker {
 			}
 		}			
 		if(DOT_track.length()>0){
-			for (uint a=0;a<DOT_track.length();a++){
+			for (int a = DOT_track.length() - 1; a >= 0; a--) {
 				DOT_track[a].m_time-=time;
 				if(DOT_track[a].m_time<0){
 					string c = 

@@ -789,7 +789,7 @@ class ItemDropEvent : Tracker {
 
     void update(float time) {
         if(m_craftQueue.size()>0){
-            for(uint a=0;a<m_craftQueue.size();a++){
+            for (int a = m_craftQueue.size() - 1; a >= 0; a--) {
                 m_craftQueue[a].m_time-=time;
                 if(m_craftQueue[a].m_time<0){
                     int pId=m_craftQueue[a].m_playerId;

@@ -67,7 +67,7 @@ class GFL_event_system : Tracker {
 
     void update(float time) {
         if(GFL_event_array.length()>0){        
-            for (uint a=0;a<GFL_event_array.length();a++){
+            for (int a = GFL_event_array.length() - 1; a >= 0; a--) {
                 GFL_event_array[a].m_time-=time;
                 if(GFL_event_array[a].m_time<=0){
                     if(GFL_event_array[a].m_enable){
@@ -663,7 +663,7 @@ void excuteWarriorFariyApache(GameMode@ metagame,GFL_event@ eventinfo){
 
     if(eventinfo.m_phase==8){
         if(Apache_Javelin_list.length()>0){
-            for (uint a=0;a<Apache_Javelin_list.length();a++){
+            for (int a = Apache_Javelin_list.length() - 1; a >= 0; a--) {
                 if((Apache_Javelin_list[a].m_characterId==eventinfo.m_characterId)&&(Apache_Javelin_list[a].m_factionid==eventinfo.m_factionid)){//在序列中如果能找到
                     _log("javelin_locate_aimer success");
                     int target_id = Apache_Javelin_list[a].m_vehicleid;

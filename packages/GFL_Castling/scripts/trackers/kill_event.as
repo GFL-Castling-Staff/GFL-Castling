@@ -873,7 +873,7 @@ class kill_event : Tracker {
 
     void update(float time){
         if(HealOnKill_track.length()>0){
-            for (uint a=0;a<HealOnKill_track.length();a++){
+            for (int a = HealOnKill_track.length() - 1; a >= 0; a--) {
                 HealOnKill_track[a].m_time-=time;
                 if(HealOnKill_track[a].m_time<0){	
 					if (HealOnKill_track[a].m_numtime>=0){

@@ -1153,15 +1153,16 @@ class call_event : Tracker {
 	}
 
     void update(float time) {
-        if(CallEvent_cooldown.length()>0){
-            for(uint a=0;a<CallEvent_cooldown.length();a++){
-                CallEvent_cooldown[a].m_time-=time;
-                if(CallEvent_cooldown[a].m_time<0){
+        if (CallEvent_cooldown.length() > 0) {
+            for (int a = CallEvent_cooldown.length() - 1; a >= 0; a--) {
+                CallEvent_cooldown[a].m_time -= time;
+                if (CallEvent_cooldown[a].m_time < 0) {
                     CallEvent_cooldown.removeAt(a);
                 }
             }
         }
     }
+
 
     protected bool costTacticPoint(GFL_battleInfo@ battle_info,int num,int player_id)
     {

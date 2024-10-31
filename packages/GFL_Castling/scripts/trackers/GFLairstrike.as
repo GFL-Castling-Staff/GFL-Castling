@@ -149,7 +149,7 @@ class GFLairstrike : Tracker {
 	void update(float time) {
         airstrike_per_frame = 0;
         if(Airstrike_strafe.length()<=0)return;
-        for (uint a=0;a<Airstrike_strafe.length();a++){
+        for (int a = Airstrike_strafe.length() - 1; a >= 0; a--) {
             //如果超过单帧空袭个数上限，立刻结束，在下一次update的时候再循环
             if(airstrike_per_frame>=max_airstrike_per_frame)break;
             airstrike_per_frame+=1;

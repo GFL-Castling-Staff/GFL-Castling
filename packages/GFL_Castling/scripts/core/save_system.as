@@ -650,17 +650,17 @@ class Save_System : Tracker {
 	}
 
     void update(float time) {
-        if(m_craftQueue.size()>0){
-            for(uint a=0;a<m_craftQueue.size();a++){
-                m_craftQueue[a].m_time-=time;
-                if(m_craftQueue[a].m_time<0){
-                    int pId=m_craftQueue[a].m_playerId;
-                    notify(m_metagame,"Logger Timeout", dictionary(), "misc", pId, false, "", 1.0);
+        if(m_craftQueue.size() > 0) {
+            for(int a = m_craftQueue.size() - 1; a >= 0; a--) {
+                m_craftQueue[a].m_time -= time;
+                if(m_craftQueue[a].m_time < 0) {
+                    int pId = m_craftQueue[a].m_playerId;
+                    notify(m_metagame, "Logger Timeout", dictionary(), "misc", pId, false, "", 1.0);
                     m_craftQueue.removeAt(a);
                 }
             }
         }
-    } 
+    }
 
     bool checkQueue(int pId,string type){
         for(uint i=0;i<m_craftQueue.size();i++){

@@ -321,17 +321,17 @@ class CommandSkill : Tracker {
         m_ended=true;
     }
     void update(float time) {
-        if(DontSpamingYourFuckingSkillWhileCoolDownBro.length()>0){
-            for(uint a=0;a<DontSpamingYourFuckingSkillWhileCoolDownBro.length();a++){
-                DontSpamingYourFuckingSkillWhileCoolDownBro[a].m_time-=time;
-                if(DontSpamingYourFuckingSkillWhileCoolDownBro[a].m_time<0){
+        if (DontSpamingYourFuckingSkillWhileCoolDownBro.length() > 0) {
+            for (int a = DontSpamingYourFuckingSkillWhileCoolDownBro.length() - 1; a >= 0; a--) {
+                DontSpamingYourFuckingSkillWhileCoolDownBro[a].m_time -= time;
+                if (DontSpamingYourFuckingSkillWhileCoolDownBro[a].m_time < 0) {
                     DontSpamingYourFuckingSkillWhileCoolDownBro.removeAt(a);
                 }
             }
         }
         if(SkillArray.length()>0)
 		{
-            for (uint a=0;a<SkillArray.length();a++){
+            for (int a = SkillArray.length() - 1; a >= 0; a--) {
                 SkillArray[a].m_time-=time;
                 if(SkillArray[a].m_time<0){
                     if(SkillArray[a].m_weapontype =="REDEPLOY"){
@@ -369,7 +369,7 @@ class CommandSkill : Tracker {
         }
         if(TimerArray.length()>0)
         {
-            for (uint a=0;a<TimerArray.length();a++){
+            for (int a = TimerArray.length() - 1; a >= 0; a--) {
                 TimerArray[a].m_time-=time;
                 if(TimerArray[a].m_time<0){
                     excuteTimerEffect(TimerArray[a]);

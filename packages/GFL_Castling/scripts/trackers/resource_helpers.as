@@ -38,7 +38,7 @@ void updateResources(array<const XmlElement@>@ calls, const array<Resource@>@ re
 		// remove
 		for (uint i = 0; i < resourcesToChange.size(); ++i) {
 			Resource@ r = resourcesToChange[i];
-			for (uint j = 0; j < calls.size(); ++j) {
+			for (int j = calls.size() - 1; j >= 0; --j) {
 				const XmlElement@ call = calls[j];
 				if (call.getStringAttribute("key") == r.m_key) {
 					calls.removeAt(j);
