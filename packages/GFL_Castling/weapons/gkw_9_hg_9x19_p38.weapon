@@ -3,6 +3,7 @@
 <tag name="pistol" />
     <!--Weapon specifications-->
     <specification
+    can_shoot_running="1"
 	retrigger_time="0.15"
 	accuracy_factor="0.98"
 	sustained_fire_grow_step="0.35"

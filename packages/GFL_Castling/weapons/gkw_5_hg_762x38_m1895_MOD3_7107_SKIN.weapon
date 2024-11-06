@@ -5,7 +5,7 @@
         <specification
         retrigger_time="-1"	
         last_burst_retrigger_time="0.3"
-        accuracy_factor="0.9"
+        accuracy_factor="1.0"
         sustained_fire_grow_step="1.5"
         sustained_fire_diminish_rate="2.0"
         magazine_size="7"
@@ -82,7 +82,7 @@
         <specification
         retrigger_time="-1"	
         last_burst_retrigger_time="0.3"
-        accuracy_factor="0.9"
+        accuracy_factor="1.0"
         sustained_fire_grow_step="1.0"
         sustained_fire_diminish_rate="2.0"
         magazine_size="7"

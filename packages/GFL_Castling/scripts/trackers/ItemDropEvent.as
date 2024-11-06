@@ -807,6 +807,10 @@ class ItemDropEvent : Tracker {
                                 upgradeTimeout(cId, pId, "core_mask.carry_item");
                                 break;
                             }
+                            case 114:{ // 黑卡
+                                upgradeTimeout(cId, pId, "black_card.carry_item");
+                                break;
+                            }                            
                             case 3:{ // type88
                                 upgradeTimeout(cId, pId, "upgrade_type88.carry_item");
                                 break;

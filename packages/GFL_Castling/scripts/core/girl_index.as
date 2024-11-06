@@ -73,6 +73,7 @@ dictionary tdoll_complex_index = {
 
     {modded_key(14,8107).toString(),"gkw_357_8107.weapon"},
 
+    {modded_key(15).toString(),"gkw_glock17.weapon"},
 
     {modded_key(16).toString(),"gkw_thompson.weapon"},
     {modded_key(16,5703).toString(),"gkw_thompson_5703.weapon"},
@@ -1644,6 +1645,7 @@ array<string> gk_weapon_hg_list = {
     "gkw_tec9_5206.weapon",
     "gkw_p2000.weapon",
     "gkw_m1851n.weapon",
+    "gkw_glock17.weapon"
     "gkw_zip22.weapon"
 };
 
