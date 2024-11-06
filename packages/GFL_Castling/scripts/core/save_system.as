@@ -63,11 +63,6 @@ class player_data
         GFL_call_info("call_ui_t3_rocket_fairy_aircraft"),
         GFL_call_info("call_ui_t3_rocket_fairy_cover"),
 
-        GFL_call_info("call_ui_t1_bombardment_fairy_82mm_mortar_free_update_alpha"),
-        GFL_call_info("call_ui_t1_bombardment_fairy_82mm_mortar_free_update_beta"),
-        GFL_call_info("call_ui_t1_bombardment_fairy_82mm_mortar_free_update_gamma"),
-
-
         GFL_call_info("call_ui_t1_bombardment_fairy_155mm_air_burst")
 
     };

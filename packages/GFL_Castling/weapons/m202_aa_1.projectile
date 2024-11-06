@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile key="m202_aa_1.projectile" class="grenade" name="M202-Anti-Air-Rocket" slot="2" pulldown_in_air="8" radius="0.2">
-    <tag name="rocket"/> 
-	
-    <result class="spawn" instance_class="projectile" instance_key="m202_aa_2.projectile" min_amount="4" max_amount="4" offset="0 -3 0" position_spread="3.6 1.2" direction_spread="0 0"  damage_origin_vehicle="0"/>
+    <tag name="rocket"/>
+
+    <result class="spawn" instance_class="projectile" instance_key="m202_aa_2.projectile" min_amount="6" max_amount="6" offset="0 -2 0" position_spread="3.0 1.2" direction_spread="0 0" damage_origin_vehicle="0"/>
     <trigger class="time" time_to_live="0.4"/>
     <rotation class="motion" />
     <model mesh_filename="m202_rocket.xml"/>
 
     <commonness value="0.0" />
 
-	    <sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2" />
-		<sound class="result" key="other" fileref="explosion_FromSQUAD_2.wav" volume="2" />
-		<sound class="result" key="other" fileref="explosion_FromSQUAD_3.wav" volume="2" />
+    <sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2" />
+    <sound class="result" key="other" fileref="explosion_FromSQUAD_2.wav" volume="2" />
+    <sound class="result" key="other" fileref="explosion_FromSQUAD_3.wav" volume="2" />
 
-		<sound class="result" key="vehicle" copy="other" />    
-		<sound class="result" key="terrain" copy="other" />
-		<sound class="result" key="static_object" copy="other" />
-		<sound class="result" key="character" copy="other" />
+    <sound class="result" key="vehicle" copy="other" />
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="character" copy="other" />
 
-        <effect class="result" key="terrain" ref="SmokeBurst" post_processing="1"/>
-        <effect class="result" key="terrain" ref="Shine" lighting="0"/>
-        <effect class="result" key="terrain" ref="HitTankSparks" lighting="0"/>
-        <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
-        <effect class="result" key="other" ref="SmokeBurst" post_processing="1"/>
-        <effect class="result" key="other" ref="Shine" lighting="0"/>
-        <effect class="result" key="other" ref="HitTankSparks" lighting="0"/>
-        <effect class="result" key="other" ref="ShadowSmoke" shadow="1" />
-        <effect class="result" key="static_object" copy="terrain"/>
-        <effect class="result" key="vehicle" copy="terrain"/>
-        <effect class="result" key="character" copy="terrain"/>
+    <effect class="result" key="terrain" ref="SmokeBurst" post_processing="1"/>
+    <effect class="result" key="terrain" ref="Shine" lighting="0"/>
+    <effect class="result" key="terrain" ref="HitTankSparks" lighting="0"/>
+    <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+    <effect class="result" key="other" ref="SmokeBurst" post_processing="1"/>
+    <effect class="result" key="other" ref="Shine" lighting="0"/>
+    <effect class="result" key="other" ref="HitTankSparks" lighting="0"/>
+    <effect class="result" key="other" ref="ShadowSmoke" shadow="1" />
+    <effect class="result" key="static_object" copy="terrain"/>
+    <effect class="result" key="vehicle" copy="terrain"/>
+    <effect class="result" key="character" copy="terrain"/>
 
-		<effect class="activated" ref="missile_activated_cannon_flysmoke" lighting="0"/>
+    <effect class="activated" ref="missile_activated_cannon_flysmoke" lighting="0"/>
 
-		<trail probability="1" key="atgm_trail_heat"/>	
+    <trail probability="1" key="atgm_trail_heat"/>
 
 </projectile>

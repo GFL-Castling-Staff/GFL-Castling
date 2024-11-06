@@ -46,9 +46,9 @@
     <specification
 	name="Tactic Fairy Console"
     spawn_instance_class="vehicle" 
-    spawn_instance_key="call_ui" 
+    spawn_instance_key="call_ui_store" 
 	/>
-    <model mesh_filename="deploy_boxi.mesh" texture_filename="box2.png" />
+    <model filename="fairy_radio.mesh" texture_filename="fairy_radio.jpg" />
     <hud_icon filename="gki_callui.png" />
 </weapon>
 </weapons>

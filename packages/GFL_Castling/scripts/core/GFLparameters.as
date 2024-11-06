@@ -415,6 +415,17 @@
         {"666",0}
     };
 
+    dictionary call_devcost = {
+        // 空
+        {"",0},
+
+        {"call_ui_t1_bombardment_fairy_82mm_mortar_free_update_alpha",100},
+        {"call_ui_t1_bombardment_fairy_82mm_mortar_free_update_beta",100},
+        {"call_ui_t1_bombardment_fairy_82mm_mortar_free_update_gamma",100},
+
+        {"666",0}
+    };
+
 // parameters for "ServerHelper.as":
 
     dictionary lv120dict={

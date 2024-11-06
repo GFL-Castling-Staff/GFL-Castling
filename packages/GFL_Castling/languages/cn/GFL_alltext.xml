@@ -248,6 +248,12 @@
 	<text key="Parachute Fairy-[T-14 Armata][Cost 50 TP]" text="空降妖精-[T-14 阿玛塔主战坦克][需求50战术点]"/>
 
 	
+	<text key="call_confirm" text="[确认当前选择]"/>
+	<text key="call_dev" text="[研发当前选择分支]"/>
+	<text key="call_update_alpha" text="[选择α分支]"/>
+	<text key="call_update_beta" text="[选择β分支]"/>
+	<text key="call_update_gamma" text="[选择γ分支]"/>
+	
 
 	<text key="Tactic Fairy Tier 1" text="战术妖精 Tier 1" />
 	<text key="Tactic Fairy Tier 2" text="战术妖精 Tier 2" />
@@ -284,6 +290,11 @@
 	<text key="Hint - call - changesuccess" text="[战术系统]已在槽位&#37;slot装备&#37;call_key" />
 	<text key="Hint - call - locked" text="[战术系统]装备战术妖精失败，您未拥有该种类支援的呼号权限" />
 	<text key="Hint - call - 404notfound" text="[战术系统]装备战术妖精失败，请先选择一类战术妖精" />
+	<text key="Hint - call - notadvanced" text="[战术系统]您必须先选择一个分支以研发对应分支的升级" />
+	<text key="Hint - call - already dev" text="[战术系统]您已经研发过了此分支" />
+	<text key="Hint - call - devsuccess" text="[战术系统]您已成功研发此分支" />
+	<text key="Hint - call - cantafford" text="[战术系统]您的研发点不足，无法研发" />
+	<text key="Hint - call - dev - cost" text="[战术系统]研发该分支需要&#37;cost点研发点" />
 
 	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_82mm_mortar_free" text="重装支援 - 82mm迫击炮打击" />
 	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_82mm_mortar_free" text="<冷却时间 240秒 消耗 0战术点>

@@ -129,6 +129,54 @@ class ItemDropEvent : Tracker {
                     notify(m_metagame, "Hint - call - 404notfound",dictionary(), "misc", pId, false, "", 1.0);
                 }
             }
+            //研发支援
+            else if(key == "call_dev")
+            {
+                deleteItemInBackpack(m_metagame,cId,"projectile",key);
+                int pId = event.getIntAttribute("player_id");
+                GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(pId);
+                if (playerInfo.getPlayerName() == default_string) return;
+                string profile_hash = playerInfo.getHash();
+                string p_name = playerInfo.getPlayerName();
+                string call_key = getQueueByStartString(pId,"call_ui");
+                if(call_key != "" && callUI_Slot.exists(call_key))
+                {
+                    if(call_key.findFirst("_update") < 0)
+                    {
+                        notify(m_metagame, "Hint - call - notadvanced", dictionary(), "misc", pId, false, "", 1.0);
+                        m_craftQueue.removeAt(findQueueIndex(pId,call_key));                        
+                    }
+                    else
+                    {
+                        player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+                        if(newdata.FindCallUnlock(call_key))
+                        {
+                            notify(m_metagame, "Hint - call - already dev", dictionary(), "misc", pId, false, "", 1.0);
+                            m_craftQueue.removeAt(findQueueIndex(pId,call_key));  
+                        }
+                        else
+                        {
+                            int cost = int(call_devcost[call_key]);
+                            if(newdata.tryCostDevPoint(cost))
+                            {
+                                string filename = ("save_" + profile_hash +".xml" );
+                                newdata.addUnlockedCall(GFL_call_info(call_key));
+                                writeXML(m_metagame,filename,PlayerProfileSave(newdata));
+                                notify(m_metagame, "Hint - call - devsuccess", dictionary(), "misc", pId, false, "", 1.0);
+                            }
+                            else
+                            {
+                                notify(m_metagame, "Hint - call - cantafford", dictionary(), "misc", pId, false, "", 1.0);
+                            }
+                            m_craftQueue.removeAt(findQueueIndex(pId,call_key));
+                        }
+                    }
+                }
+                else
+                {
+                    notify(m_metagame, "Hint - call - 404notfound",dictionary(), "misc", pId, false, "", 1.0);
+                }
+            }            
             //升级支援
             else if(call_update_const.exists(key))
             {
@@ -145,13 +193,17 @@ class ItemDropEvent : Tracker {
                     string dict_title_key = "Hint - call - title - " + call_key;
                     string dict_intro_key = "Hint - call - intro - " + call_key + "_" + key;
                     notify(m_metagame, dict_intro_key, dictionary(), "misc", pId, true, dict_title_key, 1.0);
+                    int cost = int(call_devcost[(call_key+addition)]);
+                    dictionary a;
+                    a["%cost"] = "" + cost;
+                    notify(m_metagame, "Hint - call - dev - cost", a, "misc", pId, false, dict_title_key, 1.0);
                     resetQueueTypeString(pId,"call_ui",addition);
                 }
                 else if(call_key != "" && call_key.findFirst("_update") >= 0)
                 {
                     notify(m_metagame, "Hint - call - dontrepeat",dictionary(), "misc", pId, false, "", 1.0);
                 }
-            }            
+            }
             else if(key == "pack_vest_repair_plate_x10")
             {
                 deleteItemInBackpack(m_metagame,cId,"weapon",key);

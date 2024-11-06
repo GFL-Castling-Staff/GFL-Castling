@@ -13,6 +13,9 @@
         <inventory encumbrance="3.0" buy_price="5.0" sell_price="0.0" />
         <capacity value="8" source="rank" source_value="0.0" />
         <capacity value="12" source="rank" source_value="6.48" />
+
+        <animation key="throw" animation_key="throwing, upside fast hand" /> 
+
         <sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2" />
         <sound class="result" key="other" fileref="explosion_FromSQUAD_2.wav" volume="2" />
         <sound class="result" key="other" fileref="explosion_FromSQUAD_3.wav" volume="2" />

@@ -13,6 +13,7 @@
         <!-- bound to change -->
         <commonness value="2.0" />
         <inventory encumbrance="10.0" buy_price="8.0" sell_price="0.0" />
+        <animation key="throw" animation_key="throwing, upside fast hand" />
         <capacity value="6" source="rank" source_value="0.0" />
         <capacity value="8" source="rank" source_value="4.622" />
         <capacity value="10" source="rank" source_value="34.833" />

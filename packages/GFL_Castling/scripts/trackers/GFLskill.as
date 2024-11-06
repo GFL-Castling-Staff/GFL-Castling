@@ -109,8 +109,8 @@ class GFLskill : Tracker {
 						int factionid = player.getIntAttribute("faction_id");
 						int affectedNumber =0;
 						//获取技能影响的敌人数量
-						uint n=m_metagame.getFactionCount();
-						for(uint i=0;i<n;i++){
+						int n=m_metagame.getFactionCount();
+						for(int i=0;i<n;i++){
 							if (i == factionid) continue;
 							array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,grenade_pos,i,15.0f);
 							affectedNumber += affectedCharacter.length;
