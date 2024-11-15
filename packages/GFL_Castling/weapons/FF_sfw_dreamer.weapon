@@ -138,7 +138,7 @@
 
 	<specification 
 	accuracy_factor="1.5" 
-	barrel_offset="1.4" 
+	barrel_offset="0.5" 
 	can_shoot_standing="1" 
 	can_shoot_crouching="1"
 	can_shoot_prone="0"
@@ -146,17 +146,15 @@
 	slot="0" 
 	sight_range_modifier="1.5"
 	burst_shots="1"  
-	magazine_size="-1" 
+	magazine_size="500" 
 	name="GK-Dreamer-[Nirvanic Demolition]" 
 	projectile_speed="500" 
 	spread_range="0.01"
 	retrigger_time="0.01" 
 	last_burst_retrigger_time="1"
 	suppressed="0" 
-	sustained_fire_grow_step="0.0036" 
-    sustained_fire_diminish_rate="0.1" 
-	cooldown_start="0.6"
-	cooldown_end="0.0"
+	sustained_fire_grow_step="0.01" 
+    sustained_fire_diminish_rate="1.0" 
 	projectiles_per_shot="1"
     use_basic_muzzle_smoke_effect="0" />
 
@@ -189,7 +187,7 @@
     <weak_hand_hold offset="0.4" />
 	<projectile file="rocket_dreamer.projectile">
 	    <trail probability="1.0" key="laser_dreamer" />
-		<result class="blast"  damage="0.425" radius="7.25" decal="1" push="0.05" character_state="death" faction_compare="not_equal" damage_as_probability="1" />
+		<result class="blast" damage="0.4" radius="3.0" decal="1" push="0.0" character_state="death" faction_compare="not_equal" damage_as_probability="1" />
     </projectile>
 	<stance state_key="running" accuracy="1.0" />
     <stance state_key="walking" accuracy="1.0" />

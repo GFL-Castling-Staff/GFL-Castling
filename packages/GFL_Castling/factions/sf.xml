@@ -368,9 +368,9 @@
 	<!-- player group -->
 
 	<soldier name="default" spawn_score="0.0">
-		<!-- <character filename="default_sf.text_lines"/> -->
+		<character filename="default_sf.text_lines"/>
 		<!-- <character filename="sf_cerberus.character"/> -->
-		<character filename="sf_goliath.character" />
+		<!-- <character filename="sf_goliath.character" /> -->
 
 		<ai filename="default.ai" />
 
@@ -484,7 +484,10 @@
 	</soldier>
 	<soldier name="sf_vespid_vehicle_user" spawn_score="0.8" copy_from="default_spawn_ai">
 		<model filename="sfd_vespid_swap_from_dusk.xml" />
-		<ai filename="elite.ai" />
+		<ai filename="elite.ai" >
+			<parameter class="force_as_leader" value="1" />
+			<parameter class="check_vehicles_interval" value="0.5" />
+		</ai>
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_vespid_swap.weapon" enabled="1"/>
 			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />

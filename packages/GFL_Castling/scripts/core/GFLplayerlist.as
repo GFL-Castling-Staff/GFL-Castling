@@ -761,8 +761,21 @@ class GFL_playerlist_system : Tracker {
         int cid = info.getPlayerCid(); 
         if(cid==-1) return;
         GFL_equipment@ equipment = info.getPlayerEquipment();
-        string armor = equipment.getWeapon(3);
-        if(startsWith(armor,"srexo_t6")) healCharacter(m_metagame,cid,2);
+        string _armor = equipment.getWeapon(3);
+        if(startsWith(_armor,"srexo_t6"))
+        {
+            string _weapon = equipment.getWeapon(0);
+            if( _weapon=="gkw_kp31mod3.weapon"
+            ||  _weapon=="gkw_kp31mod3_310.weapon"
+            ||  _weapon=="gkw_kp31mod3_3101.weapon")
+            {
+                healCharacter(m_metagame,cid,3);
+            }
+            else
+            {
+                healCharacter(m_metagame,cid,2);
+            }
+        }
         info.handleRpReward(m_metagame);
         info.handleXpReward(m_metagame);
     }
