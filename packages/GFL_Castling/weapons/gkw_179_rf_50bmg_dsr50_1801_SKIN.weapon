@@ -48,7 +48,7 @@
     <commonness value="0" in_stock="0" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
-    <projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7"> 
+    <projectile file="at_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="0" can_be_detected_by_driver="0" can_be_disarmed="0" radius="0.7"> 
         <result class="spawn" instance_class="projectile" instance_key="sub_damage_dsr50.projectile" min_amount="10" max_amount="10" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0" />
         <trigger class="impact" time_to_live="0"  />
 		<rotation class="motion" />
