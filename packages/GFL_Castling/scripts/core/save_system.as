@@ -451,7 +451,7 @@ class Save_System : Tracker {
             if(checkQueue(player_id,"craft_2nd"))
             {
                 int queue_index = findQueueIndex(player_id,"craft_2nd");
-                array<string> parameters = parseParameters(message, "craft");
+                array<string> parameters = parseParameters(message.toLowerCase(), "craft");
                 if(parameters.length() <= 1 || parameters.length() >=3)
                 {
                     notify(m_metagame, "Doll query format error", dictionary(), "misc", player_id, false, "", 1.0);

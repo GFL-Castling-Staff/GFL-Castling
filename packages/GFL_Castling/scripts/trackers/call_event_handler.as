@@ -603,7 +603,7 @@ class call_event : Tracker {
                                 {
                                     if(checkAntiAir(playerId)) break;
                                     if(!costTacticPoint(battleInfo,50,playerId)) break;
-                                    addCallCoolDown(playerName,playerId,90.0,"tier2",m_playerinfo);
+                                    addCallCoolDown(playerName,playerId,90.0,"tier3",m_playerinfo);
                                     sendFactionMessageKey(m_metagame,factionId,"rocketfight");
                                     int flagId = m_DummyCallID + 15000;
                                     CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));

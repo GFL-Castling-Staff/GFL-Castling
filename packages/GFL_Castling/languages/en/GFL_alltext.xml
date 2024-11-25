@@ -34,7 +34,13 @@
 	<text key="Hint - call - rebuytochange" text="[Tactic Point system]Purchase the same Fairy system again to equip this Tactic Fairy in that slot." />
 	<text key="Hint - call - changesuccess" text="[Tactic Point system]Already equipped with &#37;call_key in slot &#37;slot" />
 	<text key="Hint - call - locked" text="[Tactic Point system]Failed to equip Tactic Fairy, you do not have call sign access for this type of support" />
-
+	<text key="Hint - call - 404notfound" text="[Tactic Point system]Failed to equip Tactical Fairy, please select a type first" />
+	<text key="Hint - call - notadvanced" text="[Tactic Point system]You must select a type to dev" />
+	<text key="Hint - call - already dev" text="[Tactic Point system]You have already developed this type" />
+	<text key="Hint - call - devsuccess" text="[Tactic Point system]Developed successfully" />
+	<text key="Hint - call - cantafford" text="[Tactic Point system]You cant afford the devpoint" />
+	<text key="Hint - call - dev - cost" text="[Tactic Point system]研发该分支需要&#37;cost点研发点" />
+	
 	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_82mm_mortar_free" text="Mortar Squad Support - 82mm Mortar Strike" />
 	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_82mm_mortar_free" text="<cooldown 240s cost 0TP>
 -Marks target point, fires mortar after 2 seconds, 4 shells per round for 3 rounds after 1 round of calibration test fire

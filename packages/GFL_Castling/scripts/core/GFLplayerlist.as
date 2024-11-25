@@ -804,6 +804,30 @@ class GFL_playerlist_system : Tracker {
             if(g_playerInfo_Buck.size() <= 0) return;
             for(uint i=0;i<g_playerInfo_Buck.size();i++){
                 GFL_playerInfo@ playerInfo = g_playerInfo_Buck.m_playerInfo[i];
+                GFL_battleInfo@ battleInfo = playerInfo.getBattleInfo();
+                string p_name = playerInfo.getPlayerName();
+                string profile_hash = playerInfo.getHash();
+                string sid = playerInfo.getSid();
+                int player_id = playerInfo.getPlayerPid();
+
+
+                //结束时的战术点转换为研发点
+                int m_dev_point_add = battleInfo.getDevPoint();
+                int m_dev_point_complete = 20; //通关奖励研发点
+                m_dev_point_add = min(250,m_dev_point_add);
+                m_dev_point_add += m_dev_point_complete;
+
+                player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+                newdata.addDevPoint(m_dev_point_add);
+                string filename = ("save_" + profile_hash +".xml" );
+                writeXML(m_metagame,filename,PlayerProfileSave(newdata));
+
+                int _current_dev_point = newdata.getDevPoint();
+                dictionary a;
+                a["%num"] = ""+m_dev_point_add;   
+                a["%current_num"] = ""+_current_dev_point;
+                notify(m_metagame, "complete reward, dev point", a, "misc", player_id, false, "", 1.0);        
+
                 string c_weaponType = playerInfo.getPlayerEquipment().getWeapon(0);
                 if(
                     c_weaponType == "gkw_98kmod3.weapon" ||
@@ -879,19 +903,7 @@ class GFL_playerlist_system : Tracker {
                         string c_pos = characterInfo.getStringAttribute("position");
                         spawnStaticProjectile(m_metagame,"particle_effect_stensterling_medal.projectile",c_pos,g_playerInfo_Buck.m_playerInfo[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));
                     }
-                }
-
-                GFL_battleInfo@ battleInfo = playerInfo.getBattleInfo();
-                //结束时的战术点转换为研发点
-                int m_dev_point_add = battleInfo.getDevPoint();
-                string p_name = playerInfo.getPlayerName();
-                string profile_hash = playerInfo.getHash();
-                string sid = playerInfo.getSid();
-                int player_id = playerInfo.getPlayerPid();
-                player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
-                newdata.addDevPoint(m_dev_point_add);
-                string filename = ("save_" + profile_hash +".xml" );
-                writeXML(m_metagame,filename,PlayerProfileSave(newdata));
+                }                        
             }
         }
     }    
