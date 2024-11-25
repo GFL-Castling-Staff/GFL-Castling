@@ -549,7 +549,8 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_maxRandomCrates = 3;
 		
 		stage.m_primaryObjective = "phases";
-		stage.addTracker(DeadZoneHack(m_metagame));
+		// stage.addTracker(DeadZoneHack(m_metagame));
+		// 呜呜呜SB RWR
 		stage.addStartComment(Comment("Map105_3,start comment1", 2.5));
 		stage.addStartComment(Comment("Map105_3,start comment2", 2.5));
 		stage.addStartComment(Comment("Map105_3,start comment3", 2.5));
