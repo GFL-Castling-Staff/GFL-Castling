@@ -423,6 +423,10 @@
         {"call_ui_t1_bombardment_fairy_82mm_mortar_free_update_beta",100},
         {"call_ui_t1_bombardment_fairy_82mm_mortar_free_update_gamma",100},
 
+        {"call_ui_t1_bombardment_fairy_82mm_mortar_update_alpha",200},
+        {"call_ui_t1_bombardment_fairy_82mm_mortar_update_beta",200},
+        {"call_ui_t1_bombardment_fairy_82mm_mortar_update_gamma",200},
+
         {"666",0}
     };
 

@@ -197,7 +197,7 @@ class call_event : Tracker {
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
                                     break;                                    
                                 }
-                                // 000 重装部队-[引导炮击]
+                                // 000 炮击妖精-[82mm迫击炮打击]
                                 case 100100: //82mm
                                 {
                                     if(!costTacticPoint(battleInfo,15,playerId)) break;
@@ -220,6 +220,83 @@ class call_event : Tracker {
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
                                     break;
                                 }
+                                case 100101: //分支α [车载臼榴]
+                                {
+                                    if(findCooldown(playerName,"tier1_charge")){
+                                        returnCooldown_Slot("tier1_charge", 0, characterId, playerName, playerId, "call event,cool down");
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        addCallCoolDown(playerName,playerId,45.0,"tier1_charge",m_playerinfo,true,3);
+                                    }
+                                    if(!costTacticPoint(battleInfo,10,playerId)) break;
+                                    
+                                    sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
+                                    int flagId = m_DummyCallID + 15000;
+                                    CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
+                                    FairyRequest.setIndex(11);
+                                    FairyRequest.setSize(0.5);
+                                    FairyRequest.setDummyId(flagId);
+                                    FairyRequest.setRange(20.0);
+                                    FairyRequest.setIconTypeKey("call_marker_bomb");
+                                    addCastlingMarker(FairyRequest);
+                                    m_DummyCallID++;
+                                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));                                    
+                                    Event_call_bombardment_fairy_82mm_mortar@ new_task = Event_call_bombardment_fairy_82mm_mortar(m_metagame,2.0,characterId,factionId,c_pos,stringToVector3(position),"bombardment_fairy_82mm_mortar_lv0",flagId);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
+                                    addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    break;
+                                }        
+
+                                case 100102: //分支β
+                                {
+                                    if(!costTacticPoint(battleInfo,15,playerId)) break;
+                                    addCallCoolDown(playerName,playerId,60.0,"tier1",m_playerinfo);
+                                    sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
+                                    int flagId = m_DummyCallID + 15000;
+                                    CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
+                                    FairyRequest.setIndex(11);
+                                    FairyRequest.setSize(0.5);
+                                    FairyRequest.setDummyId(flagId);
+                                    FairyRequest.setRange(20.0);
+                                    FairyRequest.setIconTypeKey("call_marker_bomb");
+                                    addCastlingMarker(FairyRequest);
+                                    m_DummyCallID++;
+                                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));                                    
+                                    Event_call_bombardment_fairy_82mm_mortar@ new_task = Event_call_bombardment_fairy_82mm_mortar(m_metagame,2.0,characterId,factionId,c_pos,stringToVector3(position),"bombardment_fairy_82mm_mortar_beta",flagId);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
+                                    addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    break;
+                                }
+
+                                case 100103: //分支GAMMA
+                                {
+                                    if(!costTacticPoint(battleInfo,15,playerId)) break;
+                                    addCallCoolDown(playerName,playerId,60.0,"tier1",m_playerinfo);
+                                    sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
+                                    int flagId = m_DummyCallID + 15000;
+                                    CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
+                                    FairyRequest.setIndex(11);
+                                    FairyRequest.setSize(0.5);
+                                    FairyRequest.setDummyId(flagId);
+                                    FairyRequest.setRange(40.0);
+                                    FairyRequest.setIconTypeKey("call_marker_bomb");
+                                    addCastlingMarker(FairyRequest);
+                                    m_DummyCallID++;
+                                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));                                    
+                                    Event_call_bombardment_fairy_82mm_mortar@ new_task = Event_call_bombardment_fairy_82mm_mortar(m_metagame,2.0,characterId,factionId,c_pos,stringToVector3(position),"bombardment_fairy_82mm_mortar_gamma",flagId);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
+                                    addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    break;
+                                }
+
                                 case 100200: //105mm
                                 {
                                     if(!costTacticPoint(battleInfo,30,playerId)) break;
@@ -1157,7 +1234,19 @@ class call_event : Tracker {
             for (int a = CallEvent_cooldown.length() - 1; a >= 0; a--) {
                 CallEvent_cooldown[a].m_time -= time;
                 if (CallEvent_cooldown[a].m_time < 0) {
-                    CallEvent_cooldown.removeAt(a);
+                    if(CallEvent_cooldown[a].m_is_charge)
+                    {
+                        CallEvent_cooldown[a].reduceCharge();
+                        CallEvent_cooldown[a].m_time = CallEvent_cooldown[a].m_timemax;
+                        if(CallEvent_cooldown[a].m_charge <= 0)
+                        {
+                            CallEvent_cooldown.removeAt(a);
+                        }
+                    }
+                    else
+                    {
+                        CallEvent_cooldown.removeAt(a);
+                    }
                 }
             }
         }
@@ -1186,11 +1275,11 @@ class call_event : Tracker {
         }
     }
 
-    protected void returnCooldown(string player_name, int rp, int characterId, string playerName, int playerId, string message) {
+    protected void returnCooldown(string type, int rp, int characterId, string playerName, int playerId, string message) {
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             dictionary a;
-            a["%time"] = ""+getCooldown(playerName, player_name);
+            a["%time"] = ""+getCooldown(playerName, type);
             sendPrivateMessageKey(m_metagame,playerId, message,a);
             if(rp > 0)
             {
@@ -1199,11 +1288,11 @@ class call_event : Tracker {
         }
     }
 
-    protected void returnCooldown_Slot(string player_name, int rp, int characterId, string playerName, int playerId, string message) {
+    protected void returnCooldown_Slot(string type, int rp, int characterId, string playerName, int playerId, string message) {
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             dictionary a;
-            a["%time"] = ""+getCooldown(playerName, player_name);
+            a["%time"] = ""+getCooldown(playerName, type);
             notify(m_metagame, message, a, "misc", playerId, false, "", 1.0);
             if(rp > 0)
             {
@@ -1226,27 +1315,73 @@ class call_event : Tracker {
         }
     }
 
-    protected void addCallCoolDown(string playerName,int playerId,float time,string key,GFL_playerInfo@ playerInfo)
+    protected void addCallCoolDown(string playerName,int playerId,float time,string key,GFL_playerInfo@ playerInfo,bool is_charge=false,int chargemax=0)
     {
         if(playerInfo.getPlayerEquipment().getWeapon(3) == "god_vest.carry_item")
         {
             return;
         }
-        CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,time,key));
+        Call_Cooldown cd = Call_Cooldown(playerName,playerId,time,key,is_charge,chargemax);
+        if(is_charge)
+        {
+            cd.addCharge();
+        }
+        CallEvent_cooldown.insertLast(cd);
     }
 }
 
 class Call_Cooldown{
-    string m_playerName;
+    string m_playerName="";
     float m_time=0;
-    int m_playerid;
-    string m_type;
+    float m_timemax=0;
+    int m_playerid=0;
+    string m_type="";
     Vector3 m_pos;
+
+    bool m_is_charge = false;
+    int m_charge_max = 0;
+    int m_charge = 0;
+
+    Call_Cooldown(){}
+
     Call_Cooldown(string playerName,int pId,float time,string type){
         m_playerName=playerName;
         m_time=time;
         m_playerid=pId;
         m_type=type;
+        m_timemax = time;
+    }
+
+    Call_Cooldown(string playerName,int pId,float time,string type,bool is_charge,int chargemax){
+        m_playerName=playerName;
+        m_time=time;
+        m_playerid=pId;
+        m_type=type;
+        m_timemax = time;
+        m_charge_max= chargemax;
+        m_is_charge = is_charge;
+    }
+
+    bool tryaddCharge()
+    {
+        m_charge+=1;
+        if (m_charge > m_charge_max)
+        {
+            m_charge-=1;
+            return false;
+        }
+        else return true;
+    }
+
+    void reduceCharge()
+    {
+        m_charge-=1;
+        m_charge = max(m_charge,0);
+    }
+
+    void addCharge()
+    {
+        m_charge+=1;
     }
 
     void setPos(Vector3 pos)
@@ -1263,6 +1398,17 @@ class Call_Cooldown{
 bool findCooldown(string pName,string type){
     for(uint i=0;i<CallEvent_cooldown.size();i++){
         if(CallEvent_cooldown[i].m_playerName==pName && CallEvent_cooldown[i].m_type==type){
+            if(CallEvent_cooldown[i].m_is_charge)
+            {
+                if(CallEvent_cooldown[i].tryaddCharge())
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
             return true;
         }
     }
