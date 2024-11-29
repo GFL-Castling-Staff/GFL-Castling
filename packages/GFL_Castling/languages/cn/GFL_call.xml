@@ -76,7 +76,7 @@
 -标定目标点，2秒后发射迫击炮，校准试射1发后，每轮8发，持续3轮
 -每发82mm弹头在范围7.5内造成(7.5x4)的blast伤害
 #####分支α[车载臼榴]#####
-(进行攻击后能更快转移火力阵地，消耗战术点降低至10，冷却改为3次充能，充能时间下降至45秒。)"/>
+(进行攻击后能更快转移火力阵地，消耗战术点降低至10，冷却改为3次充能，充能时间下降至45秒)"/>
 
 	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_82mm_mortar_update_beta" text="炮击妖精 - 82mm迫击炮打击" />
 	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_82mm_mortar_update_beta" text="<冷却时间 60秒 消耗 15战术点>
@@ -92,11 +92,42 @@
 #####分支γ[饱和打击]#####
 (增加炮兵部队的基数，每轮发射额外8发炮弹，且覆盖范围提升)"/>
 
+	<!-- 炮击妖精 - 105mm榴弹扫荡 -->
+
 	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_105mm_grenade_barrage" text="炮击妖精 - 105mm榴弹扫荡" />
 	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_105mm_grenade_barrage" text="<冷却时间 90秒 消耗 30战术点>
--标定目标点，1秒后发射集束榴弹炮弹,每轮炮击分裂8-10个弹头，持续6轮
--每发集束子弹头在范围7内造成7.1的blast伤害
--最后发射1发105mm高爆弹头收尾，对范围9造成40的blast伤害"/>
+-标定目标点，3秒后发射集束榴弹炮弹,每轮炮击分裂8-10个弹头，持续6轮
+-每发集束子弹头在范围7内造成15的blast伤害
+-最后发射1发105mm高爆弹头收尾，对范围9造成40的blast伤害
+"/>
+
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_105mm_grenade_barrage_update_alpha" text="炮击妖精 - 105mm榴弹扫荡" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_105mm_grenade_barrage_update_alpha" text="<冷却时间 45秒 消耗 25战术点>
+-标定目标点，3秒后发射集束榴弹炮弹,每轮炮击分裂8-10个弹头，持续6轮
+-每发集束子弹头在范围7内造成15的blast伤害
+-最后发射1发105mm高爆弹头收尾，对范围9造成40的blast伤害
+#####分支α[自行火炮]#####
+(增加经费，由牵引式火炮改为自行火炮，进行攻击后能更快转移火力阵地，冷却时间下降至45秒，战术点消耗降低至25)
+"/>
+
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_105mm_grenade_barrage_update_beta" text="炮击妖精 - 105mm榴弹扫荡" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_105mm_grenade_barrage_update_beta" text="<冷却时间 90秒 消耗 30战术点>
+-标定目标点，发射集束榴弹炮弹,每轮炮击分裂8-10个弹头，持续6轮
+-每发集束子弹头在范围7内造成15的blast伤害
+-最后发射1发105mm高爆弹头收尾，对范围9造成40的blast伤害
+#####分支β[火炮射表]#####
+(提前观测，做好图表，火炮可以立刻开火，冷却改为3点充能)
+"/>
+
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_105mm_grenade_barrage_update_gamma" text="炮击妖精 - 105mm榴弹扫荡" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_105mm_grenade_barrage_update_gamma" text="<冷却时间 90秒 消耗 30战术点>
+-标定目标点，3秒后发射集束榴弹炮弹,每轮炮击分裂8-10个弹头，持续6轮
+-每发集束子弹头在范围7内造成15的blast伤害
+-最后发射1发105mm高爆弹头收尾，对范围12造成(100x2)的blast伤害
+#####分支γ[狂欢终结]#####
+(最后改为发射105mm铁血工造高爆弹，伤害增加至(100x2)b，范围增加至12)
+"/>
+
 
 	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_155mm_air_burst" text="炮击妖精 - 155mm空爆榴弹打击" />
 	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_155mm_air_burst" text="<冷却时间 105秒 消耗 45战术点>

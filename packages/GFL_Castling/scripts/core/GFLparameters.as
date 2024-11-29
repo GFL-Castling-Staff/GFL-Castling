@@ -427,6 +427,10 @@
         {"call_ui_t1_bombardment_fairy_82mm_mortar_update_beta",200},
         {"call_ui_t1_bombardment_fairy_82mm_mortar_update_gamma",200},
 
+        {"call_ui_t1_bombardment_fairy_105mm_grenade_barrage_update_alpha",200},
+        {"call_ui_t1_bombardment_fairy_105mm_grenade_barrage_update_beta",200},
+        {"call_ui_t1_bombardment_fairy_105mm_grenade_barrage_update_gamma",200},
+
         {"666",0}
     };
 

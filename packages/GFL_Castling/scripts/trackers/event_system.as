@@ -266,24 +266,48 @@ void excuteLightningStorm(GameMode@ metagame,GFL_event@ eventinfo){
 }
 
 void excuteBombFairy(GameMode@ metagame,GFL_event@ eventinfo){
-    eventinfo.m_time=1.0;
-    if(eventinfo.m_phase<=1)
+    if(eventinfo.m_specialkey == 1)
     {
-        sendFactionMessageKey(metagame,eventinfo.m_factionid,"bombfight");
-    }    
-    if(eventinfo.m_phase!=7){
-        insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,14,eventinfo.m_pos.add(Vector3(0,40,0)),eventinfo.m_pos);
+        eventinfo.m_time=1.0;
+        if(eventinfo.m_phase<=1)
+        {
+            sendFactionMessageKey(metagame,eventinfo.m_factionid,"bombfight");
+        }    
+        if(eventinfo.m_phase!=7){
+            insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,14,eventinfo.m_pos.add(Vector3(0,40,0)),eventinfo.m_pos);
+        }
+        if(eventinfo.m_phase==6){
+            eventinfo.m_time=2.0;
+        }    
+        if(eventinfo.m_phase==7){
+            insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,15,eventinfo.m_pos.add(Vector3(0,40,0)),eventinfo.m_pos);
+        }
+        eventinfo.m_phase++;
+        if(eventinfo.m_phase>=8){
+            eventinfo.m_enable=false;
+        }
     }
-    if(eventinfo.m_phase==6){
-        eventinfo.m_time=2.0;
-    }    
-    if(eventinfo.m_phase==7){
-        insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,15,eventinfo.m_pos.add(Vector3(0,40,0)),eventinfo.m_pos);
+    else if(eventinfo.m_specialkey == 2)
+    {
+        eventinfo.m_time=1.0;
+        if(eventinfo.m_phase<=1)
+        {
+            sendFactionMessageKey(metagame,eventinfo.m_factionid,"bombfight");
+        }    
+        if(eventinfo.m_phase!=7){
+            insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,14,eventinfo.m_pos.add(Vector3(0,40,0)),eventinfo.m_pos);
+        }
+        if(eventinfo.m_phase==6){
+            eventinfo.m_time=2.0;
+        }    
+        if(eventinfo.m_phase==7){
+            insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,126,eventinfo.m_pos.add(Vector3(0,40,0)),eventinfo.m_pos);
+        }
+        eventinfo.m_phase++;
+        if(eventinfo.m_phase>=8){
+            eventinfo.m_enable=false;
+        }        
     }
-    eventinfo.m_phase++;
-    if(eventinfo.m_phase>=8){
-        eventinfo.m_enable=false;
-    }        
 }
 
 int ac130_rocket_ready = 8;

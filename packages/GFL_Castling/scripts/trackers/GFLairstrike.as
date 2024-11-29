@@ -538,6 +538,12 @@ class GFLairstrike : Tracker {
                     Airstrike_strafe.removeAt(a);
                     break;                        
                 }
+                case 126:{//炮击105 BIG高爆
+                    CreateDirectProjectile(m_metagame,start_pos,end_pos,"artillery_shell_fairies_105_boom.projectile",cid,fid,15);	
+                    playSoundAtLocation(m_metagame,"mortar_whistle_105mm_fromCTA.wav",fid,start_pos,1.35);
+                    Airstrike_strafe.removeAt(a);
+                    break;                        
+                }                
                 case 16:{                        
                     float strike_rand=2.0;
                     playSoundAtLocation(m_metagame,"ks23skill_fire_FromBORDERLAND3.wav",fid,end_pos,1.5);

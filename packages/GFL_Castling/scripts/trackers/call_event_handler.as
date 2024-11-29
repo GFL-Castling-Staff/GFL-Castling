@@ -197,7 +197,7 @@ class call_event : Tracker {
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
                                     break;                                    
                                 }
-                                // 000 炮击妖精-[82mm迫击炮打击]
+                                // 001 炮击妖精-[82mm迫击炮打击]
                                 case 100100: //82mm
                                 {
                                     if(!costTacticPoint(battleInfo,15,playerId)) break;
@@ -296,7 +296,7 @@ class call_event : Tracker {
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
                                     break;
                                 }
-
+                                // 002 炮击妖精-[105mm]
                                 case 100200: //105mm
                                 {
                                     if(!costTacticPoint(battleInfo,30,playerId)) break;
@@ -312,10 +312,85 @@ class call_event : Tracker {
                                     FairyRequest.setIconTypeKey("call_marker_bomb");
                                     addCastlingMarker(FairyRequest);
                                     m_DummyCallID++;
-                                    GFL_event_array.insertLast(GFL_event(characterId,factionId,int(GFL_Event_Index["bomb_fairy"]),stringToVector3(position),1.0,-1.0,flagId));
+                                    GFL_event@ newCall = GFL_event(characterId,factionId,int(GFL_Event_Index["bomb_fairy"]),stringToVector3(position),3.0,-1.0,flagId);
+                                    GFL_event_array.insertLast(newCall);
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
                                     break;
                                 }
+
+                                case 100201: //105mm alpha
+                                {
+                                    if(!costTacticPoint(battleInfo,25,playerId)) break;
+                                    addCallCoolDown(playerName,playerId,45.0,"tier1",m_playerinfo);
+                                    playSoundAtLocation(m_metagame,"kcco_dn_1.wav",factionId,position,1.5);
+                                    sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
+                                    int flagId = m_DummyCallID + 15000;
+                                    CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
+                                    FairyRequest.setIndex(11);
+                                    FairyRequest.setSize(0.5);
+                                    FairyRequest.setDummyId(flagId);
+                                    FairyRequest.setRange(40.0);
+                                    FairyRequest.setIconTypeKey("call_marker_bomb");
+                                    addCastlingMarker(FairyRequest);
+                                    m_DummyCallID++;
+                                    GFL_event@ newCall = GFL_event(characterId,factionId,int(GFL_Event_Index["bomb_fairy"]),stringToVector3(position),3.0,-1.0,flagId);
+                                    GFL_event_array.insertLast(newCall);
+                                    addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    break;
+                                }
+
+                                case 100202: //105mm beta
+                                {
+                                    if(findCooldown(playerName,"tier1_charge")){
+                                        returnCooldown_Slot("tier1_charge", 0, characterId, playerName, playerId, "call event,cool down");
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        addCallCoolDown(playerName,playerId,90.0,"tier1_charge",m_playerinfo,true,3);
+                                    }
+                                    if(!costTacticPoint(battleInfo,30,playerId)) break;
+                                    playSoundAtLocation(m_metagame,"kcco_dn_1.wav",factionId,position,1.5);
+                                    sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
+                                    int flagId = m_DummyCallID + 15000;
+                                    CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
+                                    FairyRequest.setIndex(11);
+                                    FairyRequest.setSize(0.5);
+                                    FairyRequest.setDummyId(flagId);
+                                    FairyRequest.setRange(40.0);
+                                    FairyRequest.setIconTypeKey("call_marker_bomb");
+                                    addCastlingMarker(FairyRequest);
+                                    m_DummyCallID++;
+                                    GFL_event@ newCall = GFL_event(characterId,factionId,int(GFL_Event_Index["bomb_fairy"]),stringToVector3(position),0.0,-1.0,flagId);
+                                    GFL_event_array.insertLast(newCall);
+                                    addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    break;
+                                }
+
+                                case 100203: //105mm gamma
+                                {
+                                    if(!costTacticPoint(battleInfo,30,playerId)) break;
+                                    addCallCoolDown(playerName,playerId,90.0,"tier1",m_playerinfo);
+                                    playSoundAtLocation(m_metagame,"kcco_dn_1.wav",factionId,position,1.5);
+                                    sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
+                                    int flagId = m_DummyCallID + 15000;
+                                    CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
+                                    FairyRequest.setIndex(11);
+                                    FairyRequest.setSize(0.5);
+                                    FairyRequest.setDummyId(flagId);
+                                    FairyRequest.setRange(40.0);
+                                    FairyRequest.setIconTypeKey("call_marker_bomb");
+                                    addCastlingMarker(FairyRequest);
+                                    m_DummyCallID++;
+                                    GFL_event@ newCall = GFL_event(characterId,factionId,int(GFL_Event_Index["bomb_fairy"]),stringToVector3(position),3.0,-1.0,flagId);
+                                    newCall.setSpeicalKey(2);
+                                    GFL_event_array.insertLast(newCall);
+                                    addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    break;
+                                }             
+
+                                ///                   
+
                                 case 100300: //155mm
                                 {
                                     if(!costTacticPoint(battleInfo,45,playerId)) break;
@@ -1478,6 +1553,9 @@ dictionary call_tier_index = {
     // T1 002 炮击妖精-[105mm榴弹扫荡]
         // lv0
         {"t1_bombardment_fairy_105mm_grenade_barrage",100200},
+        {"t1_bombardment_fairy_105mm_grenade_barrage_update_alpha",100201},
+        {"t1_bombardment_fairy_105mm_grenade_barrage_update_beta",100202},
+        {"t1_bombardment_fairy_105mm_grenade_barrage_update_gamma",100203},
 
     // T1 003 炮击妖精-[155mm空爆榴弹]
         {"t1_bombardment_fairy_155mm_air_burst",100300},
