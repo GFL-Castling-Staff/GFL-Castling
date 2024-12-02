@@ -26,7 +26,7 @@
         <inventory encumbrance="30" buy_price="200.0" sell_price="200.0"/>
         <next_in_chain key="gkw_usas12_2704_only_skill.weapon" share_ammo="1"/>
         <animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
-        <sound key="fire" fileref="usas12_only_fire_fromCSOL.wav" pitch_variety="0.05" volume="1.2"/>
+        <sound key="fire" fileref="usas12_fire_FromCOD21.wav" pitch_variety="0.05" volume="1.2"/>
         <sound key="magazine_out" fileref="usas12_mgz_out_FromCOD21.wav" volume="0.7"/>
         <sound key="magazine_in" fileref="usas12_mgz_in_FromCOD21.wav" volume="0.7"/>
         <sound key="cycle" fileref="usas12_cycle_FromCOD21.wav" volume="0.5"/>
@@ -105,7 +105,7 @@
         <inventory encumbrance="30" buy_price="200.0" sell_price="200.0"/>
         <next_in_chain key="gkw_usas12_2704_only.weapon" share_ammo="1"/>
         <animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
-        <sound key="fire" fileref="usas12_fire_FromCOD21.wav" pitch_variety="0.05" volume="1.2"/>
+        <sound key="fire" fileref="usas12_only_fire_fromCSOL.wav" pitch_variety="0.05" volume="1.2"/>
         <sound key="magazine_out" fileref="usas12_mgz_out_FromCOD21.wav" volume="0.7"/>
         <sound key="magazine_in" fileref="usas12_mgz_in_FromCOD21.wav" volume="0.7"/>
         <sound key="cycle" fileref="usas12_cycle_FromCOD21.wav" volume="0.5"/>
