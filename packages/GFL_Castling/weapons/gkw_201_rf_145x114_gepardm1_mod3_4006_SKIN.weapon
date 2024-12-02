@@ -26,7 +26,9 @@
 	last_burst_retrigger_time="1"
     stance_accuracy_rate="2.0"
     spread_range="0.6"
-	burst_shots="1" />
+	burst_shots="1"
+    stab_enabled="1"
+    stab_range="4" />
     <inventory encumbrance="35.0" buy_price="350.0" sell_price="300.0" />
     <commonness value="0" in_stock="0" can_respawn_with="1" />
     <capacity value="1" source="rank" source_value="0.0" />

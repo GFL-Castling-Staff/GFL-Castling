@@ -17,7 +17,7 @@
         carry_in_two_hands="0"  
         can_shoot_running ="1"
         can_shoot_standing="1" 
-        can_shoot_crouching="0"
+        can_shoot_crouching="1"
         can_shoot_prone="0"
         burst_shots="1"
         projectiles_per_shot="3"
@@ -38,6 +38,9 @@
     <animation state_key="walking"	animation_key="walking, scarecrow" />
     <animation state_key="walking_backwards" animation_key="walking, scarecrow" />
     <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
+    <animation state_key="crouching"    animation_key="crouch, pistol" />
+    <animation state_key="crouch_moving"    animation_key="crouching forwards, single hand carry" />
+    <animation state_key="crouch_moving_backwards"  animation_key="crouching backwards, pistol 2" />
     <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
     <animation state_key="reload" animation_key="reload, scarecrow" />
     <animation state_key="stabbing" animation_key="pistol whip" />
@@ -82,7 +85,7 @@
         sight_range_modifier="1.75" 
         carry_in_two_hands="0"  
         can_shoot_standing="1" 
-        can_shoot_crouching="0"
+        can_shoot_crouching="1"
         can_shoot_prone="0"
         burst_shots="3"
         projectiles_per_shot="3"
@@ -103,6 +106,9 @@
     <animation state_key="walking"	animation_key="walking, scarecrow" />
     <animation state_key="walking_backwards" animation_key="walking, scarecrow" />
     <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
+	<animation state_key="crouching"    animation_key="crouch, pistol" />
+	<animation state_key="crouch_moving"    animation_key="crouching forwards, single hand carry" />
+	<animation state_key="crouch_moving_backwards"  animation_key="crouching backwards, pistol 2" />
     <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
     <animation state_key="reload" animation_key="reload, scarecrow" />
     <animation state_key="stabbing" animation_key="pistol whip" />
@@ -172,6 +178,9 @@
     <animation state_key="walking"	animation_key="walking, scarecrow" />
     <animation state_key="walking_backwards" animation_key="walking, scarecrow" />
     <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
+	<animation state_key="crouching"    animation_key="crouch, pistol" />
+	<animation state_key="crouch_moving"    animation_key="crouching forwards, single hand carry" />
+	<animation state_key="crouch_moving_backwards"  animation_key="crouching backwards, pistol 2" />
     <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
     <animation state_key="reload" animation_key="reload, scarecrow" />
     <animation state_key="stabbing" animation_key="pistol whip" />

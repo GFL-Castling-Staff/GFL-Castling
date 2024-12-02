@@ -69,6 +69,7 @@
 </weapon>
 <weapon key="gkw_56typermod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification 
+	can_shoot_running="1"
     retrigger_time="-1.0"
     accuracy_factor="1"
     sustained_fire_grow_step="1.0"
@@ -117,7 +118,8 @@
     <stance state_key="crouching" accuracy="0.98" />
     <stance state_key="prone" accuracy="1.1" />
     <stance state_key="over_wall" accuracy="1.2" />
-	<modifier class="speed" value="0.15"/>
+	<modifier class="speed" value="0.3"/>
+	<modifier class="hit_success_probability" value="-0.2"/>
 	<tag name="rifle"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
