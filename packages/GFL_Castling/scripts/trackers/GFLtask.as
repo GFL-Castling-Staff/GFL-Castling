@@ -1483,6 +1483,8 @@ class Event_call_airstrike_fairy_bomber : event_call_task_hasMarker {
 }
 
 class Event_call_airstrike_fairy_cas : event_call_task_hasMarker {
+	string bomb_string = "airstrike_cas_bomb";
+	
 	void start(){
 		m_timeLeft=m_time;
 		m_timeLeft_internal = 0;
@@ -1495,6 +1497,14 @@ class Event_call_airstrike_fairy_cas : event_call_task_hasMarker {
 		m_excute_Limit = 10;
 		m_time_internal = 0.1;
 		m_airstrike_key = "airstrike_cas_23mm";
+		if(m_mode == "airstrike_fairy_cas_beta")
+		{
+			m_airstrike_key = "airstrike_cas_23mm+2";
+		}
+		if(m_mode == "airstrike_fairy_cas_gamma")
+		{
+			bomb_string = "airstrike_cas_bomb_big";
+		}
 	}
 
 	Event_call_airstrike_fairy_cas(GameMode@ metagame, float time, int cId,int fId,Vector3 characterpos,Vector3 targetpos,string mode,int markerid){
@@ -1517,7 +1527,7 @@ class Event_call_airstrike_fairy_cas : event_call_task_hasMarker {
 		{
 			Vector3 start_pos = e_pos.add(getMultiplicationVector(strike_vector,Vector3(-6,0,-6)));
 			start_pos = start_pos.add(Vector3(0,40,0));
-			DelayCommonCallRequest@ shot = DelayCommonCallRequest(m_metagame,0.5,m_character_id,m_faction_id,"airstrike_cas_bomb",start_pos,e_pos);
+			DelayCommonCallRequest@ shot = DelayCommonCallRequest(m_metagame,0.5,m_character_id,m_faction_id,bomb_string,start_pos,e_pos);
             TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
             tasker.add(shot);
 			m_timeLeft_internal = m_time_internal;

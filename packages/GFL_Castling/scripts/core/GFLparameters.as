@@ -423,13 +423,25 @@
         {"call_ui_t1_bombardment_fairy_82mm_mortar_free_update_beta",100},
         {"call_ui_t1_bombardment_fairy_82mm_mortar_free_update_gamma",100},
 
-        {"call_ui_t1_bombardment_fairy_82mm_mortar_update_alpha",200},
-        {"call_ui_t1_bombardment_fairy_82mm_mortar_update_beta",200},
-        {"call_ui_t1_bombardment_fairy_82mm_mortar_update_gamma",200},
+        {"call_ui_t1_bombardment_fairy_82mm_mortar_update_alpha",250},
+        {"call_ui_t1_bombardment_fairy_82mm_mortar_update_beta",250},
+        {"call_ui_t1_bombardment_fairy_82mm_mortar_update_gamma",250},
 
-        {"call_ui_t1_bombardment_fairy_105mm_grenade_barrage_update_alpha",200},
-        {"call_ui_t1_bombardment_fairy_105mm_grenade_barrage_update_beta",200},
-        {"call_ui_t1_bombardment_fairy_105mm_grenade_barrage_update_gamma",200},
+        {"call_ui_t1_bombardment_fairy_105mm_grenade_barrage_update_alpha",250},
+        {"call_ui_t1_bombardment_fairy_105mm_grenade_barrage_update_beta",250},
+        {"call_ui_t1_bombardment_fairy_105mm_grenade_barrage_update_gamma",250},
+
+        {"call_ui_t1_bombardment_fairy_155mm_air_burst_update_alpha",250},
+        {"call_ui_t1_bombardment_fairy_155mm_air_burst_update_beta",250},
+        {"call_ui_t1_bombardment_fairy_155mm_air_burst_update_gamma",250},
+        
+        {"call_ui_t1_airstrike_fairy_cas_update_alpha",125},
+        {"call_ui_t1_airstrike_fairy_cas_update_beta",125},
+        {"call_ui_t1_airstrike_fairy_cas_update_gamma",125},   
+
+        {"call_ui_t1_airstrike_fairy_cas_p2p_update_alpha",125},
+        {"call_ui_t1_airstrike_fairy_cas_p2p_update_beta",125},
+        {"call_ui_t1_airstrike_fairy_cas_p2p_update_gamma",125},    
 
         {"666",0}
     };

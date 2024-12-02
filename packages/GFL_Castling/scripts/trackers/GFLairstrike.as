@@ -25,6 +25,7 @@
 array<Airstrike_strafer@> Airstrike_strafe;
 
 // 列空袭对应的脚本技能编号。注意字典的值为了配合后面的只能用uint，不可用string，float等    
+//目前 128 + 1
 dictionary airstrikeIndex = {
 
         // 空武器
@@ -113,6 +114,8 @@ dictionary airstrikeIndex = {
 
         {"airstrike_cas_23mm",105},
         {"airstrike_cas_bomb",106},
+        {"airstrike_cas_23mm+2",127},
+        {"airstrike_cas_bomb_big",128},
 
         {"rocket_s8ko",107},
 
@@ -841,7 +844,20 @@ class GFLairstrike : Tracker {
                         float rand_speed = rand(130,160);
                         float rand_x = rand(-strike_rand,strike_rand);
                         float rand_y = rand(-strike_rand,strike_rand);
-                        CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"ASW_A10_strafe.projectile",cid,fid,rand_speed);
+                        CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"fairy_airstrike_cas_strafe.projectile",cid,fid,rand_speed);
+                    } 
+                    Airstrike_strafe.removeAt(a);
+                    break;
+                } 
+
+                case 127:{ // cas 23mm 多2发
+                    float strike_rand=2.0;
+                    for(int j=1;j<=8;j++)
+                    {
+                        float rand_speed = rand(130,160);
+                        float rand_x = rand(-strike_rand,strike_rand);
+                        float rand_y = rand(-strike_rand,strike_rand);
+                        CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"fairy_airstrike_cas_strafe_beta.projectile",cid,fid,rand_speed);
                     } 
                     Airstrike_strafe.removeAt(a);
                     break;
@@ -849,6 +865,15 @@ class GFLairstrike : Tracker {
 
                 case 106:{ // cas bomb
                     CreateDirectProjectile(m_metagame,start_pos,end_pos,"artillery_shell_airstrike_cas_bomb.projectile",cid,fid,40);
+                    array<string> Voice={
+                        "mortar_whistle_105mm_fromCTA.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,1.3);
+                    Airstrike_strafe.removeAt(a);
+                    break;                    
+                }
+                case 128:{ // cas bomb big
+                    CreateDirectProjectile(m_metagame,start_pos,end_pos,"artillery_shell_airstrike_cas_bomb_big.projectile",cid,fid,40);
                     array<string> Voice={
                         "mortar_whistle_105mm_fromCTA.wav"
                     };

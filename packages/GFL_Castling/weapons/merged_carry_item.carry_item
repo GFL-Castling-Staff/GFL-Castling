@@ -6672,7 +6672,7 @@
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="hit_success_probability" value="-1.0"/>
 	<modifier class="detectability" value="-0.3"/>
-	<modifier class="speed" value="0.45"/>
+	<modifier class="speed" value="0.6"/>
 </carry_item>
 
 <carry_item key="lcc_t6_1" time_to_live_out_in_the_open="0" name="Light Weight Reinforced cloak" transform_on_consume="lcc_t6_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -6690,7 +6690,7 @@
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="hit_success_probability" value="-1.0"/>
 	<modifier class="detectability" value="-0.3"/>
-	<modifier class="speed" value="0.45"/>
+	<modifier class="speed" value="0.6"/>
 </carry_item>
 
 <carry_item key="lcc_t6_2" time_to_live_out_in_the_open="0" name="Light Weight Reinforced cloak" transform_on_consume="lcc_t6_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -6708,7 +6708,7 @@
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="hit_success_probability" value="-1.0"/>
 	<modifier class="detectability" value="-0.3"/>
-	<modifier class="speed" value="0.45"/>
+	<modifier class="speed" value="0.6"/>
 </carry_item>
 
 <carry_item key="lcc_t6_3" time_to_live_out_in_the_open="0" name="Light Weight Reinforced cloak" transform_on_consume="lcc_t6_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -6726,7 +6726,7 @@
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="none"/>
 	<modifier class="hit_success_probability" value="-1.0"/>
 	<modifier class="detectability" value="-0.3"/>
-	<modifier class="speed" value="0.45"/>
+	<modifier class="speed" value="0.6"/>
 </carry_item>
 
 <carry_item key="lcc_t6_4" time_to_live_out_in_the_open="0" name="Light Weight Reinforced cloak" transform_on_consume="lcc_t6_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -6744,7 +6744,7 @@
 	<modifier class="melee_hit_result" input_character_state="death" output_character_state="wound"/>
 	<modifier class="hit_success_probability" value="-1.0"/>
 	<modifier class="detectability" value="-0.3"/>
-	<modifier class="speed" value="0.45"/>
+	<modifier class="speed" value="0.6"/>
 </carry_item>
 
 <carry_item key="lcc_t6_5" time_to_live_out_in_the_open="0" name="Light Weight Reinforced cloak" transform_on_consume="lcc_t6_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
@@ -6767,7 +6767,7 @@
 	<modifier class="melee_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/>
 	<modifier class="hit_success_probability" value="-1.0"/>
 	<modifier class="detectability" value="-0.3"/>
-	<modifier class="speed" value="0.45"/>
+	<modifier class="speed" value="0.6"/>
 </carry_item>
 
 <carry_item key="target.carry_item" time_to_live_out_in_the_open="0" name="Punch it！" transform_on_consume="target_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
