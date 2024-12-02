@@ -1463,6 +1463,19 @@ class Event_call_airstrike_fairy_bomber : event_call_task_hasMarker {
 			m_time_internal = 0.12;
 			m_airstrike_key = "bomber_drop_lv0";
 		}
+		if(m_mode == "airstrike_fairy_bomber_alpha")
+		{
+			m_excute_Limit = 9;
+			m_time_internal = 0.12;
+			m_airstrike_key = "bomber_drop_dragonfire";
+		}
+		if(m_mode == "airstrike_fairy_bomber_gamma")
+		{
+			m_excute_Limit = 5;
+			m_time_internal = 0.4;
+			strike_didis = 9.0;
+			m_airstrike_key = "bomber_drop_gamma";
+		}		
 	}
 
 	Event_call_airstrike_fairy_bomber(GameMode@ metagame, float time, int cId,int fId,Vector3 characterpos,Vector3 targetpos,string mode,int markerid)

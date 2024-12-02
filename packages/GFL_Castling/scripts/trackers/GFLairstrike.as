@@ -112,6 +112,8 @@ dictionary airstrikeIndex = {
 
         // 航弹
         {"bomber_drop_lv0",104},
+        {"bomber_drop_dragonfire",130},
+        {"bomber_drop_gamma",131},
 
         {"airstrike_cas_23mm",105},
         {"airstrike_cas_bomb",106},
@@ -840,10 +842,21 @@ class GFLairstrike : Tracker {
 
                 case 104:{ //单发航弹
                     CreateDirectProjectile(m_metagame,start_pos,end_pos,"artillery_shell_airstrike_bomber.projectile",cid,fid,40);
-                    // array<string> Voice={
-                    //     "mortar_whistle_105mm_fromCTA.wav"
-                    // };
-                    // playRandomSoundArray(m_metagame,Voice,fid,end_pos,1.3);
+                    Airstrike_strafe.removeAt(a);
+                    break;                    
+                }
+
+                case 130:{ //单发航弹 燃烧弹
+                    CreateDirectProjectile(m_metagame,start_pos,end_pos,"artillery_shell_airstrike_bomber_alpha.projectile",cid,fid,40);
+                    ConstantStaticProjectileEvent@ new_task = ConstantStaticProjectileEvent(m_metagame,0.6,cid,fid,"firenade_fairy_dragonfire.projectile",end_pos,5,4.0,true);
+                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    tasker.add(new_task);
+                    Airstrike_strafe.removeAt(a);
+                    break;                    
+                }
+
+                case 131:{ //单发航弹 滑翔航弹
+                    CreateDirectProjectile(m_metagame,start_pos,end_pos,"artillery_shell_airstrike_bomber_gamma.projectile",cid,fid,30);
                     Airstrike_strafe.removeAt(a);
                     break;                    
                 }

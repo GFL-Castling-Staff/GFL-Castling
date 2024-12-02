@@ -27,4 +27,22 @@
 		<model mesh_filename="" />
 		<hud_icon filename="" />
 	</projectile>
+	<projectile class="grenade" name="" slot="2" key="firenade_fairy_dragonfire.projectile" radius="0.15" pulldown_in_air="20">
+		<tag name="grenade" />
+		<trigger class="time" time_to_live="0.0" />
+		<result class="spawn" instance_class="grenade" instance_key="firenade_sub_dragonfire.projectile" min_amount="20" max_amount="20" offset="0 1.0 0" position_spread="3 0" direction_spread="0.0 0.0" />
+		<commonness value="0.0" />
+		<rotation class="random" />
+		<model mesh_filename="" />
+		<hud_icon filename="" />
+	</projectile>
+	<projectile class="grenade" name="" slot="2" key="firenade_sub_dragonfire.projectile" radius="0.15" pulldown_in_air="20">
+		<tag name="fire" />
+		<trigger class="impact" />
+		<result class="blast" radius="10" damage="0.01" push="0.0" decal="1" make_vehicle_hit_sound="0" faction_compare="not_equal"/>
+		<commonness value="0.0"/>
+		<rotation class="random" />
+		<model mesh_filename="" />
+		<hud_icon filename="" />
+	</projectile>	
 </projectiles>

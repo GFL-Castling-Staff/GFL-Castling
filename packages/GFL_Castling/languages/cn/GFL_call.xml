@@ -128,6 +128,8 @@
 (最后改为发射105mm铁血工造高爆弹，伤害增加至(100x2)b，范围增加至12)
 "/>
 
+	<!-- 炮击妖精 - 155mm空爆 -->
+
 
 	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_155mm_air_burst" text="炮击妖精 - 155mm空爆榴弹打击" />
 	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_155mm_air_burst" text="<冷却时间 105秒 消耗 45战术点>
@@ -154,16 +156,51 @@
 (给负责装填的人形蛋糕吃，现在动作更加迅速，冷却时间下降至45秒)
 "/>
 
+
+	<!-- 炮击妖精 - 170mm加农 -->
+
 	<text key="Hint - call - title - call_ui_t2_bombardment_fairy_170mm_cannon" text="炮击妖精 - 170mm加农炮" />
 	<text key="Hint - call - intro - call_ui_t2_bombardment_fairy_170mm_cannon" text="<冷却时间 90秒 消耗 30战术点>
 -标定目标点，5秒后开火，加农炮弹对范围15造成100的blast伤害
 -弹着点并不精准，与实际位置存在距离10的误差"/>
+
+	<!-- 空袭妖精 - 高空投弹 -->
 
 	<text key="Hint - call - title - call_ui_t2_airstrike_fairy_bomber" text="空袭妖精 - 高空投弹" />
 	<text key="Hint - call - intro - call_ui_t2_airstrike_fairy_bomber" text="<冷却时间 90秒 消耗 45战术点>
 -标定目标点，随后从垂直于（你和目标点连线）的路径召唤一架轰炸机进行投弹
 -总共投下9颗航弹，每发对范围10造成75的blast伤害
 -(该支援受空域禁制影响)"/>
+
+	<text key="Hint - call - title - call_ui_t2_airstrike_fairy_bomber_update_alpha" text="空袭妖精 - 高空投弹" />
+	<text key="Hint - call - intro - call_ui_t2_airstrike_fairy_bomber_update_alpha" text="<冷却时间 90秒 消耗 45战术点>
+-标定目标点，随后从垂直于（你和目标点连线）的路径召唤一架轰炸机进行投弹
+-总共投下9颗航弹，每发对范围10造成75的blast伤害
+-航弹爆炸后生成持续20秒的强腐蚀性燃烧区域，每4秒结算一次20的燃烧伤害
+-角色死亡燃烧结算会中止
+-(该支援受空域禁制影响)
+#####分支α[炼狱龙炎]#####
+(使用凝固汽油弹，航弹爆炸后生成持续20秒的强腐蚀性燃烧区域，每4秒结算一次伤害，每次对范围10内的敌人造成20的后续燃烧伤害。)
+"/>
+
+	<text key="Hint - call - title - call_ui_t2_airstrike_fairy_bomber_update_beta" text="空袭妖精 - 高空投弹" />
+	<text key="Hint - call - intro - call_ui_t2_airstrike_fairy_bomber_update_beta" text="<冷却时间 60秒 消耗 40战术点>
+-标定目标点，随后从垂直于（你和目标点连线）的路径召唤一架轰炸机进行投弹
+-总共投下9颗航弹，每发对范围10造成75的blast伤害
+-(该支援受空域禁制影响)
+#####分支β[僚机编队]#####
+(组成轰炸机编队，拥有2次充能，充能时间减少至60秒，且战术点消耗降低为40)
+"/>
+
+	<text key="Hint - call - title - call_ui_t2_airstrike_fairy_bomber_update_gamma" text="空袭妖精 - 高空投弹" />
+	<text key="Hint - call - intro - call_ui_t2_airstrike_fairy_bomber_update_gamma" text="<冷却时间 90秒 消耗 45战术点>
+-标定目标点，随后从垂直于（你和目标点连线）的路径召唤一架轰炸机进行投弹
+-总共投下5颗航弹，每发对范围12造成200的blast伤害
+-(该支援受空域禁制影响)
+#####分支γ[滑翔套件]#####
+(使用更大当量的滑翔套件航弹，打击的速度变慢且只有5颗航弹，爆炸伤害提升至200b，范围提升至12)
+"/>
+
 
 	<text key="Hint - call - title - call_ui_t1_airstrike_fairy_precise" text="空袭妖精 - 精确空袭" />
 	<text key="Hint - call - intro - call_ui_t1_airstrike_fairy_precise" text="<冷却时间 30秒 消耗 20战术点>
