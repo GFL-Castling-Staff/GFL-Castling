@@ -1409,12 +1409,19 @@ class Event_call_airstrike_fairy_precise : event_call_task_hasMarker {
 		m_pos1 = e_pos.add(getMultiplicationVector(strike_vector,Vector3(0,0,0)));
 		m_pos2 = m_pos1;
 		m_pos1=m_pos1.add(Vector3(0,40,0));
-		if(m_mode == "airstrike_fairy_precise_lv0")
+		if(m_mode == "airstrike_fairy_precise")
 		{
 			m_excute_Limit = 1;
 			m_time_internal = 0.1;
 			m_airstrike_key = "precision_airstrike";
 		}
+		if(m_mode == "airstrike_fairy_precise_alpha")
+		{
+			m_excute_Limit = 1;
+			m_time_internal = 0.1;
+			m_airstrike_key = "precision_airstrike_big";
+		}
+		
 	}
 
 	Event_call_airstrike_fairy_precise(GameMode@ metagame, float time, int cId,int fId,Vector3 characterpos,Vector3 targetpos,string mode,int markerid)

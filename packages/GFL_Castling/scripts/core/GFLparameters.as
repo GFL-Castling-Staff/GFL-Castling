@@ -441,7 +441,27 @@
 
         {"call_ui_t1_airstrike_fairy_cas_p2p_update_alpha",125},
         {"call_ui_t1_airstrike_fairy_cas_p2p_update_beta",125},
-        {"call_ui_t1_airstrike_fairy_cas_p2p_update_gamma",125},    
+        {"call_ui_t1_airstrike_fairy_cas_p2p_update_gamma",125},
+
+        //
+
+        {"call_ui_t1_airstrike_fairy_precise_update_alpha",100},
+        {"call_ui_t1_airstrike_fairy_precise_update_beta",100},
+        {"call_ui_t1_airstrike_fairy_precise_update_gamma",100},
+
+        {"call_ui_t2_airstrike_fairy_precise_update_alpha",100},
+        {"call_ui_t2_airstrike_fairy_precise_update_beta",100},
+        {"call_ui_t2_airstrike_fairy_precise_update_gamma",100},
+
+        {"call_ui_t3_airstrike_fairy_precise_update_alpha",100},
+        {"call_ui_t3_airstrike_fairy_precise_update_beta",100},
+        {"call_ui_t3_airstrike_fairy_precise_update_gamma",100},
+
+        //
+
+        {"call_ui_t1_rocket_fairy_missile_update_alpha",250},
+        {"call_ui_t1_rocket_fairy_missile_update_beta",250},
+        {"call_ui_t1_rocket_fairy_missile_update_gamma",250},
 
         {"666",0}
     };

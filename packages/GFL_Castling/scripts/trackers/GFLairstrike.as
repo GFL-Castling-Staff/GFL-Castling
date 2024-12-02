@@ -25,7 +25,7 @@
 array<Airstrike_strafer@> Airstrike_strafe;
 
 // 列空袭对应的脚本技能编号。注意字典的值为了配合后面的只能用uint，不可用string，float等    
-//目前 128 + 1
+//目前 129 + 1
 dictionary airstrikeIndex = {
 
         // 空武器
@@ -108,6 +108,7 @@ dictionary airstrikeIndex = {
 
         // 精准空袭
         {"precision_airstrike",102},
+        {"precision_airstrike_big",129},
 
         // 航弹
         {"bomber_drop_lv0",104},
@@ -689,6 +690,16 @@ class GFLairstrike : Tracker {
 
                 case 102:{ //精准空袭
                     CreateDirectProjectile(m_metagame,start_pos,end_pos,"artillery_shell_airstrike_precise.projectile",cid,fid,40);
+                    array<string> Voice={
+                        "mortar_whistle_105mm_fromCTA.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,1.3);
+                    Airstrike_strafe.removeAt(a);
+                    break;                    
+                }
+
+                case 129:{ //精准空袭 big
+                    CreateDirectProjectile(m_metagame,start_pos,end_pos,"artillery_shell_airstrike_precise_big.projectile",cid,fid,40);
                     array<string> Voice={
                         "mortar_whistle_105mm_fromCTA.wav"
                     };
