@@ -47,16 +47,16 @@
 	<animation state_key="stabbing" 			animation_key="pistol whip 3" />
 	<!--Sounds-->
 	<sound key="dry_fire" fileref="dryfire_9mmhg_1.wav" pitch_variety="0.05" volume="1.0" />
-	<sound key="fire" fileref="mk23_fire_FromSINPERGWC.wav" pitch_variety="0.05" volume="1.2" />
+	<sound key="fire" fileref="mk23sd_fire_FromCOD21.wav" pitch_variety="0.05" volume="1.2" />
 	<sound key="magazine_out" fileref="mk23_mgz_out_FromSNIPER3.wav" volume="0.8" />
 	<sound key="magazine_in" fileref="mk23_mgz_in_FromSNIPER3.wav" volume="0.8"/>
 	<sound key="cycle" fileref="mk23_cycle_FromSNIPER3.wav" volume="0.8" />
 	<!--Model, Icon, Cost-->
-	<model filename="gkw_hg_mk23.xml" />
+	<model filename="gkw_hg_mk23sd.xml" />
 	<hud_icon filename="gkw_mk23.png" />
 	<!--Ballistics-->
 	<weak_hand_hold offset="0.1" />
-    <projectile file="bullet.projectile" can_be_detected_by_footmen="1">
+    <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
 		<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="5.5" kill_decay_start_time="0.5" kill_decay_end_time="0.5"  />
 	</projectile>
 	<effect class="muzzle" ref="ejection_9mm" />

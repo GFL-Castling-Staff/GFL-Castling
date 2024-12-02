@@ -33,10 +33,10 @@
     <animation state_key="stabbing" animation_key="pistol whip 3" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <inventory encumbrance="35.0" buy_price="7.0" sell_price="7.0" />
-    <sound key="fire" fileref="hk33_fire_FromCOD19.wav" pitch_variety="0.05" volume="1.2" />
-    <sound key="magazine_out" fileref="hk33_mgz_out_FromCOD19.wav" volume="0.4" />
-    <sound key="magazine_in" fileref="hk33_mgz_in_FromCOD19.wav" volume="0.4" />
-    <sound key="cycle" fileref="hk33_cycle_FromCOD19.wav" volume="0.4" />
+    <sound key="fire" fileref="cteme556_fire_FromCOD21.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="cteme556_mgz_out_FromCOD21.wav" volume="0.7" />
+    <sound key="magazine_in" fileref="cteme556_mgz_in_FromCOD21.wav" volume="0.7" />
+    <sound key="cycle" fileref="cteme556_cycle_FromCOD21.wav" volume="0.4" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />

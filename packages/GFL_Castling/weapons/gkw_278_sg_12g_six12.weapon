@@ -7,7 +7,7 @@
 	sustained_fire_diminish_rate="1.5" 
 	magazine_size="6" 
 	can_shoot_standing="1" 
-	suppressed="0" 
+	suppressed="1" 
 	name="Crye Precision SIX-12" 
 	class="0" 
 	last_burst_retrigger_time="0.25"
@@ -22,7 +22,7 @@
     <!--Animations-->
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <!--Sounds-->
-    <sound key="fire" fileref="six12_fire_FromWF.WAV" volume="1.2" />
+    <sound key="fire" fileref="six12sd_fire_FromWF.WAV" volume="1.2" />
     <sound key="magazine_out" fileref="six12_mgz_out_FromR6S.wav" volume="0.6" />
     <sound key="magazine_in" fileref="six12_mgz_in_FromR6S.wav" volume="0.6" />
     <sound key="cycle" fileref="six12_cycle_FromWF.wav" volume="0.5" />

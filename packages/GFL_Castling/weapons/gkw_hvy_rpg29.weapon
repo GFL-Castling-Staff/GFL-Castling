@@ -171,9 +171,9 @@
     <inventory encumbrance="100.0" buy_price="500.0" sell_price="0.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
     <sound key="fire" fileref="ak74uskill_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.1" />
-    <sound key="magazine_out" fileref="ak74_mgz_out_FromCOD16.wav" volume="0.5" />
-    <sound key="magazine_in" fileref="ak74_mgz_in_FromCOD16.wav" volume="0.5" />
-    <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.5" />
+    <sound key="magazine_out" fileref="ak74_mgz_out_FromCOD21.wav" volume="0.5" />
+    <sound key="magazine_in" fileref="ak74_mgz_in_FromCOD21.wav" volume="0.5" />
+    <sound key="cycle" fileref="ak74_cycle_FromCOD21.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_ex_aks74ub.xml"/>
     <animation state_key="changing_weapon_in" animation_key="change weapon in,hvy pdw mode" />

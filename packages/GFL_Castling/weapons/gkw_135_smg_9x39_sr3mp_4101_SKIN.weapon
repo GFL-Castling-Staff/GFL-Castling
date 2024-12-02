@@ -35,10 +35,10 @@
         <animation state_key="stabbing" animation_key="melee, quick knife" />
         <animation state_key="stabbing" animation_key="pistol whip 3" />
         <next_in_chain key="gkw_sr3mp_4101_skill.weapon" share_ammo="1" />
-        <sound key="fire" fileref="sr3mp_fire_FromCOD17.wav" pitch_variety="0.05" volume="1.2" />
-        <sound key="magazine_out" fileref="sr3mp_mgz_out_FromCOD16.wav" volume="0.45" />
-        <sound key="magazine_in" fileref="sr3mp_mgz_in_FromCOD16.wav" volume="0.45" />
-        <sound key="cycle" fileref="sr3mp_cycle_FromCOD16.wav" volume="0.45" />
+        <sound key="fire" fileref="sr3mp_fire_FromCOD21.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="magazine_out" fileref="sr3mp_mgz_out_FromCOD21.wav" volume="0.45" />
+        <sound key="magazine_in" fileref="sr3mp_mgz_in_FromCOD21.wav" volume="0.45" />
+        <sound key="cycle" fileref="sr3mp_cycle_FromCOD21.wav" volume="0.45" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.3" />  
         <model filename="gkw_smg_sr3mp.xml" />
@@ -88,9 +88,9 @@
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_sr3mp_4101.weapon" share_ammo="1" />
         <sound key="fire" fileref="sr3mpskill_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
-        <sound key="magazine_out" fileref="sr3mp_mgz_out_FromCOD16.wav" volume="0.45" />
-        <sound key="magazine_in" fileref="sr3mp_mgz_in_FromCOD16.wav" volume="0.45" />
-        <sound key="cycle" fileref="sr3mp_cycle_FromCOD16.wav" volume="0.45" />
+        <sound key="magazine_out" fileref="sr3mp_mgz_out_FromCOD21.wav" volume="0.45" />
+        <sound key="magazine_in" fileref="sr3mp_mgz_in_FromCOD21.wav" volume="0.45" />
+        <sound key="cycle" fileref="sr3mp_cycle_FromCOD21.wav" volume="0.45" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.3" />
         <model filename="gkw_smg_sr3mp.xml" />
