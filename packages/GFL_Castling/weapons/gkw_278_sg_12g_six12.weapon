@@ -4,7 +4,7 @@
 	retrigger_time="0.5" 
 	accuracy_factor="1.0" 
 	sustained_fire_grow_step="2.0" 
-	sustained_fire_diminish_rate="1.5" 
+	sustained_fire_diminish_rate="4.0" 
 	magazine_size="6" 
 	can_shoot_standing="1" 
 	suppressed="1" 
@@ -16,7 +16,7 @@
 	projectile_speed="100" 
 	barrel_offset="0.2" 
 	projectiles_per_shot="12"
-	spread_range="0.25"
+	spread_range="0.22"
 	burst_shots="1" />
     <inventory encumbrance="12.5" buy_price="50.0" sell_price="50.0" />
     <!--Animations-->
@@ -41,11 +41,11 @@
         kill_decay_end_time="0.5" />
     </projectile>
     <!--Accuracy, Movement speed-->
-    <stance state_key="running" accuracy="0.8" />
-    <stance state_key="walking" accuracy="0.8" />
-    <stance state_key="crouch_moving" accuracy="0.8" />
-    <stance state_key="prone_moving" accuracy="0.8" />
-    <stance state_key="standing" accuracy="0.8"/>
+    <stance state_key="running" accuracy="0.9" />
+    <stance state_key="walking" accuracy="0.9" />
+    <stance state_key="crouch_moving" accuracy="0.9" />
+    <stance state_key="prone_moving" accuracy="0.9" />
+    <stance state_key="standing" accuracy="0.9"/>
     <stance state_key="crouching" accuracy="0.9" />
     <stance state_key="prone" accuracy="0.9" />
     <stance state_key="over_wall" accuracy="0.9" />
