@@ -45,7 +45,7 @@ soldier_capacity_offset="20"
 	top_offset="0 9 0" 
 	collision_model_pos="0 1.2 0" 
 	collision_model_extent="4.2 3.0 5.2" 
-    simulated_speed_factor="2.0"
+    simulated_speed_factor="1.0"
 	visual_offset="0 2.0 0.5" /> 
 
     <turret offset="0 2.0 1" weapon_key="kcco_pathfinder_spawner" weapon_offset="0.0 0.0 0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.0003" rotation_range="1.57" />
