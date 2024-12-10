@@ -6,7 +6,7 @@
 		barrel_offset="0.4" 
 		class="0"
         slot="0" 
-		magazine_size="40" 
+		magazine_size="45" 
 		name="Type 56-1" 
 		projectile_speed="200" 
         sight_range_modifier="1.25"
@@ -14,7 +14,7 @@
 		suppressed="0" 
         spread_range="0.35"
         stance_accuracy_rate="2.0"
-		sustained_fire_diminish_rate="2.0" 
+		sustained_fire_diminish_rate="2.4" 
 		sustained_fire_grow_step="0.42" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.5" />
         <inventory encumbrance="35.0" buy_price="56.0" sell_price="56.0" />
