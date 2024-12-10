@@ -178,6 +178,7 @@ dictionary commandSkillIndex = {
 
         // Flashbang
         {"gkw_type79.weapon",27},
+        {"gkw_type79_1402.weapon",27},
         {"gkw_ump9.weapon",27},
         {"gkw_ump9_409.weapon",27},
         {"gkw_ump9_536.weapon",27},

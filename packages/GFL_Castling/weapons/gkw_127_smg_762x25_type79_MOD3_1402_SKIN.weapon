@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="two_hands_smg.animation_base" key="gkw_type79mod3_1402.weapon">
+	<specification 
+	can_shoot_running="1"
+	accuracy_factor="1.0" 
+	barrel_offset="0.4" 
+	class="0"
+	magazine_size="20" 
+	name="Type 79 SMG(MOD3)-[Fox of Green Hill]" 
+	stance_accuracy_rate="6.0"
+	projectile_speed="120" 
+	retrigger_time="0.06" 
+	suppressed="0" 
+	spread_range="0.2"
+	sight_range_modifier="1.5"
+	sustained_fire_diminish_rate="1.8" 
+	sustained_fire_grow_step="0.22" />
+	<inventory encumbrance="12.5" buy_price="79.0" sell_price="79.0" />
+	<animation state_key="reload" animation_key="reloading, magazine rifle 0.5" />
+	<commonness value="0" in_stock="0" can_respawn_with="1" />
+	<sound key="fire" fileref="type79_fire_FromBF2.wav" pitch_variety="0.05" volume="1.2" />
+	<sound key="magazine_out" fileref="type79_mgz_out_FromBF2.wav" volume="0.8" />
+	<sound key="magazine_in" fileref="type79_mgz_in_FromBF2.wav" volume="0.8" />
+	<sound key="cycle" fileref="type79_cycle_FromBF2.wav" volume="0.8" />
+	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+	<sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.3" />
+	<model filename="gkw_smg_79type.xml" />
+	<hud_icon filename="gkw_type79_1402.png" />
+	<weak_hand_hold offset="0.2" />
+	<effect class="muzzle" ref="ejection_9mm"/>
+	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">
+		<result class="hit"  kill_probability="1.79" kill_probability_offset_on_successful_hit="4.79" kill_decay_start_time="0.28" kill_decay_end_time="0.45" />
+		<trail probability="1.0" key="bullet_short"/>
+	</projectile>
+	<stance state_key="running" accuracy="0.9" />
+	<stance state_key="walking" accuracy="0.9" />
+	<stance state_key="standing" accuracy="0.9" />
+	<stance state_key="crouching" accuracy="1" />
+	<stance state_key="crouch_moving" accuracy="0.9" />
+	<stance state_key="prone" accuracy="1.0" />
+	<stance state_key="prone_moving" accuracy="0.9" />
+	<stance state_key="over_wall" accuracy="0.9" />
+	<modifier class="hit_success_probability" value="-0.3" />
+	<modifier class="speed" value="0.32" />
+</weapon>

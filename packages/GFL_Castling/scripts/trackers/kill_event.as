@@ -182,6 +182,8 @@ class kill_event : Tracker {
         {"gkw_emp35_8003.weapon",3},
         {"gkw_type79.weapon",3},
         {"gkw_type79_1402.weapon",3},
+        {"gkw_type79mod3.weapon",2},
+        {"gkw_type79mod3_1402.weapon",2},        
         {"gkw_ppsh41.weapon",3},
         {"gkw_ppsh41mod3.weapon",3},
         {"gkw_ppsh41_602.weapon",3},
