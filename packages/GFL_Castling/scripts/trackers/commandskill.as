@@ -3110,6 +3110,12 @@ class CommandSkill : Tracker {
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                         tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                         addCooldown("sniper",20,characterId,modifer);
+                    }
+                    else if (weapon_name == "gkw_98k_10001.weapon" || weapon_name == "gkw_98k_10001_skill.weapon"){
+                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        addCooldown("sniper",20,characterId,modifer);
                     }                    
                     else if (weapon_name == "gkw_supersass.weapon" || weapon_name=="gkw_supersass_1407.weapon"){
                         playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);

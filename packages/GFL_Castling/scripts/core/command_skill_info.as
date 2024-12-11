@@ -365,6 +365,8 @@ dictionary commandSkillIndex = {
         {"gkw_98k_4301_skill.weapon",51},
         {"gkw_98k_8301.weapon",51},
         {"gkw_98k_8301_skill.weapon",51},
+        {"gkw_98k_10001.weapon",51},
+        {"gkw_98k_10001_skill.weapon",51},
 
         {"gkw_scarh.weapon",51},
         {"gkw_scarh_only.weapon",51},
@@ -446,6 +448,8 @@ dictionary commandSkillIndex = {
         {"gkw_98kmod3_4301_skill.weapon",69},
         {"gkw_98kmod3_8301.weapon",69},
         {"gkw_98kmod3_8301_skill.weapon",69},
+        {"gkw_98kmod3_10001.weapon",69},
+        {"gkw_98kmod3_10001_skill.weapon",69},
 
         {"gkw_gm6.weapon",70},
 

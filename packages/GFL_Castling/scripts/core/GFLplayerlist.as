@@ -835,7 +835,9 @@ class GFL_playerlist_system : Tracker {
                     c_weaponType == "gkw_98kmod3_4301.weapon" ||
                     c_weaponType == "gkw_98kmod3_4301_skill.weapon" ||
                     c_weaponType == "gkw_98kmod3_8301.weapon" ||
-                    c_weaponType == "gkw_98kmod3_8301_skill.weapon"                     
+                    c_weaponType == "gkw_98kmod3_8301_skill.weapon" ||    
+                    c_weaponType == "gkw_98kmod3_10001.weapon" ||
+                    c_weaponType == "gkw_98kmod3_10001_skill.weapon"                                   
                     )
                 {
                     int strid = g_playerInfo_Buck.m_playerInfo[i].getPlayerPid();
