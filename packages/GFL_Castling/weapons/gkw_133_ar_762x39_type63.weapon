@@ -10,7 +10,7 @@
     magazine_size="20"
     suppressed="0"
     name="Type 63"
-	spread_range="0.28"
+	spread_range="0.4"
     class="0"
     burst_shots="1"
     reload_one_at_a_time="0"
@@ -20,6 +20,7 @@
     projectiles_per_shot="1"
     stance_accuracy_rate="1.0"
     stab_enabled="1"
+	stab_range="5.0"
     carry_in_two_hands="1"
     slot="0"/>
 	<inventory encumbrance="35.0" buy_price="6.3" sell_price="6.3"/>
@@ -32,7 +33,7 @@
 	<sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
 	<sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
 	<sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
-	<model filename="gkw_rf_sks.xml"/>
+	<model filename="gkw_ar_type63.xml"/>
 	<hud_icon filename="gkw_type63.png"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<effect class="muzzle" ref="ejection_76239"/>
@@ -65,8 +66,6 @@
 	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
-	<animation state_key="stabbing" animation_key="melee, quick knife"/>
-	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<stance state_key="running" accuracy="0.3" />
 	<stance state_key="walking" accuracy="0.65" />
 	<stance state_key="crouch_moving" accuracy="0.9" />
@@ -75,5 +74,13 @@
 	<stance state_key="crouching" accuracy="1.0" />
 	<stance state_key="prone" accuracy="1" />
 	<stance state_key="over_wall" accuracy="1" /> 	
+	<animation state_key="stabbing"	animation_key="melee, bayonet_12hp" />
+	<sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0" />	
 </weapon>
 </weapons>
