@@ -1640,7 +1640,10 @@ array<string> gk_weapon_hg_list = {
     "gkw_c96_8405.weapon",
     "gkw_c96mod3_8405.weapon",    
     "gkw_desert_eagle.weapon",
+    "gkw_desert_eagle_skill.weapon",
     "gkw_desert_eagle_6501.weapon",
+    "gkw_desert_eagle_6501_skill.weapon",
+
     "gkw_m327.weapon",
     "gkw_contender.weapon",
     "gkw_contender_1502.weapon",
