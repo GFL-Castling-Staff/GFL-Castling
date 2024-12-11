@@ -432,6 +432,9 @@ class ItemDropEvent : Tracker {
                     }
                     else if (checkQueue(pId,"m1garand") && (itemKey=="gkw_m1_6907.weapon" || itemKey=="gkw_m1_6907_skill.weapon")){
                         giveDigimindItem(cId, pId, "gkw_m1_sf_6907.weapon", "m1garand");
+                    }
+                    else if (checkQueue(pId,"m1garand") && (itemKey=="gkw_m1_10008.weapon" || itemKey=="gkw_m1_10008_skill.weapon")){
+                        giveDigimindItem(cId, pId, "gkw_m1_sf_10008.weapon", "m1garand");
                     }                    
                     else if (checkQueue(pId,"fg42") && (itemKey=="gkw_fg42.weapon" || itemKey=="gkw_fg42_skill.weapon")){
                         giveDigimindItem(cId, pId, "gkw_fg42_only.weapon", "fg42");

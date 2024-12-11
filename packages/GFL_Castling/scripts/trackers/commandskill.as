@@ -3009,12 +3009,15 @@ class CommandSkill : Tracker {
                     if (weapon_name == "gkw_m1.weapon" 
                     || weapon_name=="gkw_m1_1106.weapon" 
                     || weapon_name=="gkw_m1_6907.weapon" 
+                    || weapon_name=="gkw_m1_10008.weapon" 
                     || weapon_name=="gkw_m1_sf.weapon" 
                     || weapon_name=="gkw_m1_sf_1106.weapon" 
                     || weapon_name=="gkw_m1_sf_6907.weapon"
+                    || weapon_name=="gkw_m1_sf_10008.weapon"
                     || weapon_name=="gkw_m1_sf_skill.weapon" 
                     || weapon_name=="gkw_m1_sf_1106_skill.weapon"
-                    || weapon_name=="gkw_m1_sf_6907_skill.weapon"                    
+                    || weapon_name=="gkw_m1_sf_6907_skill.weapon"  
+                    || weapon_name=="gkw_m1_sf_10008_skill.weapon"                                         
                     ){
                         playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
