@@ -24,7 +24,7 @@ array<string> AR_grenade_AntiArmor = {
 // 反人员榴弹AR，杀伤小范围大
 array<string> AR_grenade_AntiPersonal = {
     "gkw_stg44.weapon",
-    "gkw_stg44_8602.weapon",
+    "gkw_stg44_8612.weapon",
     "gkw_famas.weapon",
     "gkw_k11_ar.weapon",
     "gkw_k11_20mm_impact.weapon",
@@ -145,7 +145,7 @@ dictionary commandSkillIndex = {
 
         // STG44MOD3
         {"gkw_stg44mod3.weapon",20},
-        {"gkw_stg44mod3_8602.weapon",20},
+        {"gkw_stg44mod3_8612.weapon",20},
 
         // WERLODMOD3
         {"gkw_welrodmod3.weapon",21},

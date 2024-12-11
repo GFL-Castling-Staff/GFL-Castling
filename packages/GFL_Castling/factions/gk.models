@@ -714,6 +714,9 @@
     <model filename="gkd_mg_m249saw.xml">
         <requirement class="weapon" key="gkw_m249saw.weapon" slot="0" />
     </model>
+    <model filename="gkd_mg_m249saw_3604.xml">
+        <requirement class="weapon" key="gkw_m249saw_3604.weapon" slot="0" />
+    </model>    
     <model filename="gkd_mg_m2hb.xml">
         <requirement class="weapon" key="gkw_m2hb.weapon" slot="0" />
     </model>
@@ -1542,11 +1545,11 @@
     <model filename="gkd_ar_stg44mod3.xml">
         <requirement class="weapon" key="gkw_stg44mod3.weapon" slot="0" />
     </model>
-    <model filename="gkd_ar_stg44_8602.xml">
-        <requirement class="weapon" key="gkw_stg44_8602.weapon" slot="0" />
+    <model filename="gkd_ar_stg44_8612.xml">
+        <requirement class="weapon" key="gkw_stg44_8612.weapon" slot="0" />
     </model>
-    <model filename="gkd_ar_stg44_8602.xml">
-        <requirement class="weapon" key="gkw_stg44mod3_8602.weapon" slot="0" />
+    <model filename="gkd_ar_stg44_8612.xml">
+        <requirement class="weapon" key="gkw_stg44mod3_8612.weapon" slot="0" />
     </model>        
     <model filename="gkd_ar_ak15.xml">
         <requirement class="weapon" key="gkw_ak15.weapon" slot="0" />

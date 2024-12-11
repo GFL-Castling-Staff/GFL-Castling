@@ -1338,7 +1338,7 @@ class CommandSkill : Tracker {
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
                     // _log("AA grenade ar spotted");
-                    if(weaponname=="gkw_stg44.weapon" || weaponname=="gkw_stg44_8602.weapon") {
+                    if(weaponname=="gkw_stg44.weapon" || weaponname=="gkw_stg44_8612.weapon") {
                         array<string> Voice={
                             "STG44_ATTACK_JP.wav",
                             "STG44_SKILL2_JP.wav",

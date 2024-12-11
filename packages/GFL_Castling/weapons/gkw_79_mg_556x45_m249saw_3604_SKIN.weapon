@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon key="gkw_m249saw.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_m249saw_3604.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification 
     barrel_offset="0.5"
     retrigger_time="0.070"
@@ -11,7 +11,7 @@
     stance_accuracy_rate="1.0"
     magazine_size="800"
     suppressed="0"
-    name="M249 SAW"
+    name="M249 SAW-[Oborozukiyo]"
     can_shoot_standing="1"
     can_shoot_crouching="1"
     can_shoot_prone="1"
@@ -30,7 +30,7 @@
 	<sound key="cycle_out" fileref="m249_cycle_FromSQUAD.wav" volume="0.6"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_mg_m249.xml"/>
-	<hud_icon filename="gkw_m249.png"/>
+	<hud_icon filename="gkw_m249_3604.png"/>
 	<projectile file="bullet.projectile">
         <result class="hit" kill_probability="5.5" kill_probability_offset_on_successful_hit="1.2" kill_decay_start_time="1.967" kill_decay_end_time="3.279"/>
         <trail probability="1.0" key="BulletMgTrail"/>
@@ -45,7 +45,7 @@
     <stance state_key="prone_moving" accuracy="0.675"/>
 	<stance state_key="over_wall" accuracy="1.2"/>
 	<tag name="machine gun"/>
-	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
