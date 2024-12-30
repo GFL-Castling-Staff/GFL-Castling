@@ -1,5 +1,6 @@
 // 反装甲榴弹AR，杀伤大范围小
 array<string> AR_grenade_AntiArmor = {
+    "gkw_ar70.weapon",
     "gkw_arx160.weapon",
     "gkw_xm8.weapon",
     "gkw_xm8_5606.weapon",

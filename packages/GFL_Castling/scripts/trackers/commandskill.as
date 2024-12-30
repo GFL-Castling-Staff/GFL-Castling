@@ -1256,7 +1256,9 @@ class CommandSkill : Tracker {
                     string target = player.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
                     int factionid = character.getIntAttribute("faction_id");
-                    
+                    if(weaponname=="gkw_ar70.weapon") {
+                        playSoundAtLocation(m_metagame,"416mod3skill_Fire_FromL4D2.wav",factionid,c_pos,1.0);                      
+                    }                    
                     if(weaponname=="gkw_arx160.weapon") {
                         playSoundAtLocation(m_metagame,"416mod3skill_Fire_FromL4D2.wav",factionid,c_pos,1.0);                      
                     }
@@ -1268,7 +1270,7 @@ class CommandSkill : Tracker {
                         };
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                         playSoundAtLocation(m_metagame,"416mod3skill_Fire_FromL4D2.wav",factionid,c_pos,1.0);                      
-                    }                    
+                    }
                     if(weaponname=="gkw_xm8.weapon"||weaponname=="gkw_xm8_5606.weapon") {
                         array<string> Voice={
                             "XM8_ATTACK_JP.wav" 

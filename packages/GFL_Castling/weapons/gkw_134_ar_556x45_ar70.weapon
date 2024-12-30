@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="two_hands_ar.animation_base" key="gkw_ar70.weapon">
+    <specification 
+		accuracy_factor="1.03" 
+		barrel_offset="0.5" 
+		class="0"
+        slot="0" 
+		magazine_size="30" 
+		name="Beretta AR70/90" 
+		projectile_speed="200" 
+		retrigger_time="0.089" 
+        spread_range="0.3"
+        stance_accuracy_rate="2.5"
+        sight_range_modifier="1.25"
+		suppressed="0" 
+		sustained_fire_diminish_rate="1.8" 
+		sustained_fire_grow_step="0.28" />
+    <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
+    <inventory encumbrance="35.0" buy_price="7.0" sell_price="7.0" />
+    <commonness value="0.2" in_stock="1" can_respawn_with="1" />
+    <sound key="fire" fileref="ar70_fire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="magazine_out" fileref="ar70_mgz_out_FromCOD15.wav" volume="0.82" />
+    <sound key="magazine_in" fileref="ar70_mgz_in_FromCOD15.wav" volume="0.82" />
+    <sound key="cycle" fileref="ar70_cycle_FromREALLIFE.wav" volume="0.82" />
+    <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+    <model filename="gkw_ar_fara83.xml" />
+    <hud_icon filename="gkw_ar70.png" />
+    <weak_hand_hold offset="0.2" />
+    <projectile file="bullet.projectile">
+        <result class="hit" kill_probability="6.8" kill_decay_start_time="0.621" kill_decay_end_time="1.035" />
+    </projectile>
+    <effect class="muzzle" ref="ejection_556" />
+    <stance state_key="running" accuracy="0.45" />
+    <stance state_key="walking" accuracy="0.5" />
+    <stance state_key="crouch_moving" accuracy="0.75" />
+    <stance state_key="prone_moving" accuracy="0.75" />
+    <stance state_key="standing" accuracy="0.98" />
+    <stance state_key="crouching" accuracy="1.0" />
+    <stance state_key="prone" accuracy="1.0" />
+    <stance state_key="over_wall" accuracy="1.0" />
+</weapon>
