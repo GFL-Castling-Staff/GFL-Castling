@@ -376,4 +376,12 @@
         <requirement class="weapon" key="gkw_m1919a4mod3_skill.weapon" slot="0" />
         <requirement class="dlc_skin" tag="supporter" />
     </model>
+    <model score="1000" filename="gkd_ar_ak12.xml">
+        <requirement class="weapon" key="gkw_ak12mod3.weapon" slot="0" />
+        <requirement class="dlc_skin" tag="supporter" />
+    </model>
+    <model score="1000" filename="gkd_ar_ak12.xml">
+        <requirement class="weapon" key="gkw_ak12mod3_skill.weapon" slot="0" />
+        <requirement class="dlc_skin" tag="supporter" />
+    </model>    
 </models>

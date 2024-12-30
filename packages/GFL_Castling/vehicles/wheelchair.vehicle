@@ -92,7 +92,7 @@
 	<visual class="front_tire" mesh_filename="" texture_filename="" />
 	<visual class="rear_tire" mesh_filename="wheelchair_wheel.mesh" texture_filename="Wheel_Chair_BaseColor.png" />
 	<character_slot type="driver" position="0.0 0.0 -1.8" rotation="0" exit_rotation="3.14" hiding="1" marker_offset="0 0.35 0.2"/>
-	<character_slot type="passenger" position="0.0 1.27 -0.4" rotation="0" exit_rotation="0" hiding="0" animation_key="crouch,slav" marker_offset="0 0.35 0.2" rotation_range="6.30"/>
+	<character_slot type="passenger" position="0.0 1.27 -0.4" rotation="0" exit_rotation="0" hiding="0" animation_key="crouch slav" marker_offset="0 0.35 0.2" rotation_range="6.30"/>
 	<rev_sound filename="" />
 	<sound key="slide" filename="slide_noise.wav" />
 	<sound key="squeal" filename="tire_squeal.wav" />

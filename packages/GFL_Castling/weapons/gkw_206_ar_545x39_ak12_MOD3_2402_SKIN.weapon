@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+    <weapon file="two_hands_ar.animation_base" key="gkw_ak12mod3_2402.weapon">
+        <specification 
+		accuracy_factor="1.0" 
+		barrel_offset="0.4" 
+		class="0"
+        slot="0" 
+		magazine_size="45" 
+		name="AK-12(MOD3)" 
+		projectile_speed="225" 
+		retrigger_time="0.075" 
+		suppressed="0" 
+        can_shoot_running="1"
+        sight_range_modifier="1.8"
+        stance_accuracy_rate="4.0" 
+        spread_range="0.3"
+        sustained_fire_diminish_rate="2.3"
+        sustained_fire_grow_step="0.33"/>
+        <next_in_chain key="gkw_ak12mod3_2402_skill.weapon" share_ammo="0" />
+        <animation state_key="hold_casual" animation_key="dancing, kazachok" />
+        <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
+        <inventory encumbrance="35.0" buy_price="120.0" sell_price="120.0" />
+        <commonness value="0.001" in_stock="0" can_respawn_with="1" />
+        <sound key="fire" fileref="AK12_Fire_FromBF4.wav" pitch_variety="0.02" volume="1" />
+        <sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6" />
+        <sound key="magazine_in" fileref="ak12_mgz_in_FromCOD16.wav" volume="0.6" />
+        <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
+        <sound key="cycle" fileref="AK12_WIN_JP.wav" volume="0.9" pitch_variety="0"/>
+        <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
+        <sound key="cycle" fileref="AK12_GOATTACK_JP.wav" volume="0.9" pitch_variety="0"/>
+        <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
+        <sound key="cycle" fileref="AK12_SKILL1_JP.wav" volume="0.9" pitch_variety="0"/>
+        <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
+        <sound key="cycle" fileref="AK12_SKILL2_JP.wav" volume="0.9" pitch_variety="0"/>
+        <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
+        <sound key="cycle" fileref="AK12_SKILL3_JP.wav" volume="0.9" pitch_variety="0"/>
+        <sound key="cycle" fileref="ak12_cycle_FromCOD16.wav" volume="0.6" />
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
+        <model filename="gkw_ar_ak12.xml" />
+        <hud_icon filename="gkw_ak12_2402.png" />
+        <weak_hand_hold offset="0.2" />
+        <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
+            <result class="hit" kill_probability="5.45" kill_probability_offset_on_successful_hit="2.12" kill_decay_start_time="0.8" kill_decay_end_time="1.333" />
+        </projectile>
+        <effect class="muzzle" ref="ejection_556" />
+        <effect class="muzzle" ref="muzzle_ak12"/>
+        <stance state_key="running" accuracy="0.3" />
+        <stance state_key="walking" accuracy="0.5" />
+        <stance state_key="crouch_moving" accuracy="0.85" />
+        <stance state_key="prone_moving" accuracy="0.65" />
+        <stance state_key="standing" accuracy="0.99" />
+        <stance state_key="crouching" accuracy="1" />
+        <stance state_key="prone" accuracy="1.1" />
+        <stance state_key="over_wall" accuracy="1.1" />
+        <modifier class="hit_success_probability" value="-0.1"/>
+        <modifier class="speed" value="0.2" />
+    </weapon>
+    <weapon key="gkw_ak12mod3_2402_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+        <specification
+        retrigger_time="0.33"
+        accuracy_factor="1.0"
+        sustained_fire_grow_step="0.8"
+        sustained_fire_diminish_rate="3.0"
+        can_shoot_running="1"
+        magazine_size="14"
+        name="Lebedev PL-15(AK-12)"
+        class="4"
+        slot="0"
+        reload_one_at_a_time="0"
+        suppressed="1"
+        sight_range_modifier="1.5"
+        projectile_speed="90"
+        projectiles_per_shot="1"
+        burst_shots="1"
+        spread_range="0.18"
+        carry_in_two_hands="0"
+        stab_enabled="1"/>
+        <next_in_chain key="gkw_ak12mod3_2402.weapon" share_ammo="0" />
+        <commonness value="0" in_stock="0" />
+        <animation state_key="hold_casual" animation_key="dancing, kazachok" />
+
+        <inventory encumbrance="35.0" buy_price="120.0" sell_price="120.0" />
+        <sound key="fire" fileref="pl15_fire_FromEFT.wav" pitch_variety="0.02" volume="1" />
+        <sound key="magazine_out" fileref="pl15_mgz_out_FromREALLIFE.wav" volume="0.9" />
+        <sound key="magazine_in" fileref="pl15_mgz_in_FromREALLIFE.wav" volume="0.9" />
+        <sound key="cycle" fileref="pl15_cycle_FromREALLIFE.wav" volume="0.8" />
+        <sound class="impact" fileref="rifle_drop.wav" />
+        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
+        <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
+
+        <animation state_key="recoil" animation_key="recoil, pistol" />
+        <animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone" />
+        <animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol" />	
+        <animation state_key="reload"	animation_key="reloading, SA OHG 0.5" />
+        <animation state_key="reload"	animation_key="reloading2, SA OHG 0.5" />
+        <animation state_key="hold"					animation_key="hold, pistol" />
+        <animation state_key="hold_casual"			animation_key="hold_casual, pistol 2" />
+        <animation state_key="hold_on_wall"			animation_key="hold, overwall pistol" />
+        <animation state_key="still_against_wall"	animation_key="hold_casual, pistol 4" />
+        <animation state_key="running"				animation_key="running, pistol 2" />
+        <animation state_key="walking"				animation_key="walking, pistol" />
+        <animation state_key="walking_backwards" 	animation_key="walking backwards, pistol" />
+        <animation state_key="crouching"			animation_key="crouch, pistol" />
+        <animation state_key="crouch_moving"		animation_key="crouching forwards, single hand carry" />
+        <animation state_key="crouch_moving_backwards"	animation_key="crouching backwards, single hand carry" />
+        <animation state_key="prone_still" 			animation_key="prone_still, pistol" />
+        <animation state_key="changing_weapon_in" 	animation_key="change weapon in, pistol fast pull" />
+        <animation state_key="changing_weapon_out" 	animation_key="change weapon out, pistol fast pull" />
+        <animation state_key="stabbing" 			animation_key="pistol whip" />
+        <animation state_key="stabbing" 			animation_key="pistol whip 3" />
+
+        <model filename="gkw_hg_pl15.xml" />
+        <hud_icon filename="gkw_ak12mod3_skill.png" />
+        <weak_hand_hold offset="0.2" />
+        <projectile file="bullet.projectile" time_to_live="0.5" can_be_detected_by_footmen="0">
+            <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="6.0" kill_decay_start_time="0.5" kill_decay_end_time="0.5"/>
+        </projectile>
+        <stance state_key="running" accuracy="0.9" />
+        <stance state_key="walking" accuracy="0.9" />
+        <stance state_key="crouch_moving" accuracy="0.8" />
+        <stance state_key="prone_moving" accuracy="0.8" />
+        <stance state_key="standing" accuracy="0.9" />
+        <stance state_key="crouching" accuracy="0.95" />
+        <stance state_key="prone" accuracy="1" />
+        <stance state_key="over_wall" accuracy="1" />
+        <modifier class="speed" value="-0.5" />
+        <modifier class="detectability" value="-0.4" />
+    </weapon>
+</weapons>

@@ -647,7 +647,7 @@ class kill_event : Tracker {
                 }
                 if(reward_pool_key=="boss")
                 {
-                    scale = 4.0;
+                    scale = 10.0;
                 }
                 int i = findSkillIndex(characterId);
                 if(i >=0){

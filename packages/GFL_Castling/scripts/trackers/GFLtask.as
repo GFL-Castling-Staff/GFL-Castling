@@ -2150,7 +2150,6 @@ class DelayGPSScanRequest : Task{
 
 class Tac50_Maple_Sniper_Drone : DelaySkill {
 	protected array<const XmlElement@> affectedCharacter;
-	protected int luckyoneid = -1;
 
 	void start(){
 		m_timeLeft=m_time;
@@ -2177,6 +2176,8 @@ class Tac50_Maple_Sniper_Drone : DelaySkill {
 		}		
 		Vector3 tac50_pos = stringToVector3(character_tac50.getStringAttribute("position"));
 		Vector3 maple_pos = tac50_pos.add(Vector3(0,40,0));
+
+		affectedCharacter.resize(0);
 		
 		int m_fnum = m_metagame.getFactionCount();
 		for(int i=0;i<m_fnum;i++) {
@@ -2195,18 +2196,39 @@ class Tac50_Maple_Sniper_Drone : DelaySkill {
 			return;
 		}
 
-		luckyoneid = affectedCharacter[getRandomIndex(affectedCharacter.length())].getIntAttribute("id");
-		const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyoneid);
-		if (checkCharacterDead(luckyGuy))
-		{
-			m_timeLeft_internal = 0.0;
-			return;
-		}
-		Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
-		CreateDirectProjectile(m_metagame,maple_pos,luckyGuyPos,"m200_snipe.projectile",m_character_id,m_faction_id,400);
-		playSoundAtLocation(m_metagame,"tac50_fire_FromINS.wav",m_faction_id,luckyGuyPos,2.0);       		
+		bool findTarget = false;
+		int maxAttempts = 15; // 限制最大尝试次数，防止死循环
+		int attempts = 0;
+		const XmlElement@ luckyGuy;
 
-		m_excute_time++;
+		while (!findTarget && affectedCharacter.length() > 0 && attempts < maxAttempts) {
+			attempts++;
+
+			// 随机选取目标索引
+			int luckyone_index = getRandomIndex(affectedCharacter.length());
+
+			// 获取随机目标信息
+			int luckyoneid = affectedCharacter[luckyone_index].getIntAttribute("id");
+			@luckyGuy = getCharacterInfo(m_metagame, luckyoneid);
+
+			// 检查目标是否有效且未死亡
+			if (luckyGuy !is null && !checkCharacterDead(luckyGuy)) {
+				findTarget = true;
+			} else {
+				// 移除无效或死亡目标，继续寻找
+				affectedCharacter.removeAt(luckyone_index);
+				if (affectedCharacter.length() == 0) break;
+			}
+		}
+
+		// 如果找到目标，执行攻击逻辑
+		if (findTarget && luckyGuy !is null) {
+			Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+			CreateDirectProjectile(m_metagame, maple_pos, luckyGuyPos, "m200_snipe.projectile", m_character_id, m_faction_id, 400);
+			playSoundAtLocation(m_metagame, "tac50_fire_FromINS.wav", m_faction_id, luckyGuyPos, 2.0);
+			_log("枫月无人机开火，现在是第"+m_excute_time);
+			m_excute_time++;
+		}
 	}
 }
 

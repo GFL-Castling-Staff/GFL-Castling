@@ -269,5 +269,12 @@ dictionary MOD3craftList = {
 
     {"gkw_evo3.weapon","gkw_evo3mod3.weapon"},
 
+    {"gkw_ak12.weapon","gkw_ak12mod3.weapon"},
+    {"gkw_ak12_skill.weapon","gkw_ak12mod3.weapon"},
+    {"gkw_ak12_blm.weapon","gkw_ak12mod3_blm.weapon"},
+    {"gkw_ak12_blm_skill.weapon","gkw_ak12mod3_blm.weapon"},
+    {"gkw_ak12_2402.weapon","gkw_ak12mod3_2402.weapon"},
+    {"gkw_ak12_2402_skill.weapon","gkw_ak12mod3_2402.weapon"},
+
     {"666","-1"}
 };
