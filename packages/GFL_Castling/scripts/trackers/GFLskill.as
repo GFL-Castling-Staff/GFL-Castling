@@ -25,7 +25,6 @@ class GFLskill : Tracker {
     protected array<XM8tracker@> XM8track;
 	protected array<HK416_tracker@> HK416_track;
 	protected array<UZI_tracker@> UZI_track;
-	protected array<Vector_tracker@> Vector_track;
 	protected array<Javelin_lister@> Javelin_list;
 	protected array<DOT_tracker@> DOT_track;
 
@@ -431,7 +430,7 @@ class GFLskill : Tracker {
 				break;			
 			}			
 
-			case 14: {// VECTOR燃烧弹
+			case 14: {// 燃烧弹
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 				if (character !is null) {
@@ -445,7 +444,9 @@ class GFLskill : Tracker {
 						" position='" + grenade_pos.toString() + "'"+
 						" character_id='" + characterId + "' />";
 					m_metagame.getComms().send(c);
-					Vector_track.insertLast(Vector_tracker(characterId,factionid,grenade_pos));
+					ConstantStaticProjectileEvent@ new_task = ConstantStaticProjectileEvent(m_metagame,0.15,characterId,factionid,"firenade_tick.projectile",grenade_pos,6,1.0,false);
+					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+					tasker.add(new_task);
 				}
 				break;			
 			}
@@ -952,7 +953,9 @@ class GFLskill : Tracker {
 						" position='" + grenade_pos.toString() + "'"+
 						" character_id='" + characterId + "' />";
 					m_metagame.getComms().send(c);
-					Vector_track.insertLast(Vector_tracker(characterId,factionid,grenade_pos));
+					ConstantStaticProjectileEvent@ new_task = ConstantStaticProjectileEvent(m_metagame,0.15,characterId,factionid,"firenade_tick.projectile",grenade_pos,6,1.0,false);
+					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+					tasker.add(new_task);
 
 					//获取技能影响的敌人数量
 					m_fnum= m_metagame.getFactionCount();
@@ -1833,26 +1836,6 @@ class GFLskill : Tracker {
 						HK416_track.removeAt(a);
 					}
 				}			
-			}
-		}
-		if(Vector_track.length()>0){
-			for (int a = Vector_track.length() - 1; a >= 0; a--) {
-				Vector_track[a].m_time-=time;
-				if(Vector_track[a].m_time<0){
-					string c = 
-						"<command class='create_instance'" +
-						" faction_id='"+ Vector_track[a].m_factionid +"'" +
-						" instance_class='grenade'" +
-						" instance_key='firenade_Vector_sub.projectile'" +
-						" position='" + Vector_track[a].m_pos.toString() + "'"+
-						" character_id='" + Vector_track[a].m_characterId + "' />";
-					m_metagame.getComms().send(c);		
-					Vector_track[a].m_numtime--;
-					Vector_track[a].m_time=1;
-					if (Vector_track[a].m_numtime<1){
-						Vector_track.removeAt(a);
-					}
-				}
 			}
 		}
 		if(Javelin_list.length()>0){

@@ -243,19 +243,6 @@ class UZI_tracker{
 	}
 }
 
-class Vector_tracker{
-    int m_characterId;
-	int m_numtime=4;
-	float m_time=0;
-	int m_factionid;
-	Vector3 m_pos;
-	Vector_tracker(int characterId,int factionid,Vector3 pos){
-		m_characterId = characterId;
-		m_factionid= factionid;
-		m_pos= pos;
-	}
-}
-
 class Javelin_lister{
     int m_characterId;
 	float m_time=6;
