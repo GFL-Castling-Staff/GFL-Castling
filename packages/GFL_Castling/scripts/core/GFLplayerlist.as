@@ -766,6 +766,7 @@ class GFL_playerlist_system : Tracker {
         {
             string _weapon = equipment.getWeapon(0);
             if( _weapon=="gkw_kp31mod3.weapon"
+            ||  _weapon=="gkw_kp31mod3_1103.weapon"            
             ||  _weapon=="gkw_kp31mod3_310.weapon"
             ||  _weapon=="gkw_kp31mod3_3101.weapon")
             {
