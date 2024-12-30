@@ -33,15 +33,24 @@
     <model filename="gkd_ar_ak12_2402.xml">
         <requirement class="weapon" key="gkw_ak12_2402_skill.weapon" slot="0" />
     </model>
-    <model filename="gkd_ar_ak12_2402.xml">
-        <requirement class="weapon" key="gkw_ak12_defyAI.weapon" slot="0" />
-    </model>
 
     <model filename="gkd_ar_ak12mod3.xml">
         <requirement class="weapon" key="gkw_ak12mod3.weapon" slot="0" />
     </model>
     <model filename="gkd_ar_ak12mod3.xml">
         <requirement class="weapon" key="gkw_ak12mod3_skill.weapon" slot="0" />
+    </model>
+    <model filename="gkd_ar_ak12_2402.xml">
+        <requirement class="weapon" key="gkw_ak12mod3_2402.weapon" slot="0" />
+    </model>
+    <model filename="gkd_ar_ak12_2402.xml">
+        <requirement class="weapon" key="gkw_ak12mod3_2402_skill.weapon" slot="0" />
+    </model>
+    <model filename="gkd_ar_ak12_blm.xml">
+        <requirement class="weapon" key="gkw_ak12mod3_blm.weapon" slot="0" />
+    </model>
+    <model filename="gkd_ar_ak12_blm.xml">
+        <requirement class="weapon" key="gkw_ak12mod3_blm_skill.weapon" slot="0" />
     </model>
 
     <model filename="gkd_ar_ak47.xml">
@@ -1747,9 +1756,6 @@
     </model>
     <model filename="gkd_ar_ak12_blm.xml">
         <requirement class="weapon" key="gkw_ak12_blm_skill.weapon" slot="0" />
-    </model>
-    <model filename="gkd_ar_ak12_blm.xml">
-        <requirement class="weapon" key="gkw_ak12_defyAI.weapon" slot="0" />
     </model>
     <model filename="gkd_mg_rpk16_blm.xml">
         <requirement class="weapon" key="gkw_rpk16_blm.weapon" slot="0" />

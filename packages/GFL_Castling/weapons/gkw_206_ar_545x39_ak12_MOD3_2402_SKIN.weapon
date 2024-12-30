@@ -7,7 +7,7 @@
 		class="0"
         slot="0" 
 		magazine_size="45" 
-		name="AK-12(MOD3)" 
+		name="AK-12(MOD3)-[Sorbet Era]" 
 		projectile_speed="225" 
 		retrigger_time="0.075" 
 		suppressed="0" 
@@ -21,7 +21,7 @@
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
         <inventory encumbrance="35.0" buy_price="120.0" sell_price="120.0" />
-        <commonness value="0.001" in_stock="0" can_respawn_with="1" />
+        <commonness value="0" in_stock="0" can_respawn_with="1" />
         <sound key="fire" fileref="AK12_Fire_FromBF4.wav" pitch_variety="0.02" volume="1" />
         <sound key="magazine_out" fileref="ak12_mgz_out_FromCOD16.wav" volume="0.6" />
         <sound key="magazine_in" fileref="ak12_mgz_in_FromCOD16.wav" volume="0.6" />
@@ -40,7 +40,7 @@
         <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
         <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
         <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
-        <model filename="gkw_ar_ak12.xml" />
+        <model filename="gkw_ar_ak12mod3.xml" />
         <hud_icon filename="gkw_ak12_2402.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
