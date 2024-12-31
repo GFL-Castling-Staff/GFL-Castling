@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" name="Gas Grenade" key="evo3_gas_grenade.projectile" slot="0" radius="0.15" pulldown_in_air="26.0">
+
+    <trigger class="impact">
+        <collider class="character" enabled="1" faction_compare="not_equal"/>
+    </trigger>
+    <result class="notify_script" key="evo3_skill" />
+
+    <rotation class="random" />
+
+    <model mesh_filename="grenade.xml" />
+
+    <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeUp1" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeUp2" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeTop1" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeTop2" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmokeTop3" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmoke1" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmoke2" post_processing="1" />
+    <effect class="result" key="terrain" ref="NavalSmoke3" post_processing="1" />
+    
+    <commonness value="0.0" />
+    <inventory encumbrance="3.0" price="2.0" />
+
+    <effect class="activated" ref="ThrownGasGrenade" />
+</projectile>

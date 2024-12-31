@@ -98,6 +98,72 @@ particle_system ThrownSmokeGrenade
 	affector LinearForce : SmokeGrenadeLinearForce {}
 }
 
+particle_system ThrownGasGrenade
+{
+	quota	500
+	material	FlareSmoke
+	particle_width	0.7
+	particle_height	0.7
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box : SmokeGrenadeEmitter {
+		width 0.1
+		height 0.0
+		depth 0.1
+	}
+	affector Scaler : SmokeGrenadeScaler {}
+	affector Rotator : SmokeGrenadeRotator {}
+	affector ColourFader2{
+		red1	0
+		green1	0.38
+		blue1	0
+		alpha1	0.6
+		
+		state_change 2.0
+
+		red2	0
+		green2	0
+		blue2	0
+		alpha2	-0.15
+	}
+	affector LinearForce : SmokeGrenadeLinearForce {}
+}
+
+particle_system GasGrenade
+{
+	quota	1000
+	material	FlareSmoke
+	particle_width	7.5
+	particle_height	7.5
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box : SmokeGrenadeEmitter {
+		width 10.0
+		height 10.0
+		emission_rate 45
+	}
+	affector Scaler : SmokeGrenadeScaler {}
+	affector Rotator : SmokeGrenadeRotator {}
+	affector ColourFader2{
+		red1	0
+		green1	0.38
+		blue1	0
+		alpha1	0.4
+		
+		state_change 2.0
+
+		red2	0
+		green2	0
+		blue2	0
+		alpha2	-0.1
+	}
+	affector LinearForce : SmokeGrenadeLinearForce {}
+}
+
 particle_system SmokeGrenade_big
 {
 	quota	1000

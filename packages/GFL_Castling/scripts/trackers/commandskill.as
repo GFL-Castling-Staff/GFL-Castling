@@ -281,6 +281,7 @@ class CommandSkill : Tracker {
                 //case 85:{excuteM14MOD3skill(cId,senderId,m_modifer);break;}
                 case 86:{excuteDelisleSkill(cId,senderId,m_modifer);break;}
                 case 87:{excute56typeRifleSkill(cId,senderId,m_modifer);break;}
+                case 88:{excuteEvo3skill(cId,senderId,m_modifer);break;}
 
                 
                 
@@ -2212,7 +2213,7 @@ class CommandSkill : Tracker {
                     c_pos=c_pos.add(Vector3(0,1,0));
                     if (checkFlatRange(c_pos,stringToVector3(target),10)){
                         CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"skill_flashbang.projectile",characterId,factionid,60);
-                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"firenade_Vector.projectile",characterId,factionid,60);
+                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"firenade_Vector.projectile",characterId,factionid,50);
                     }
                     else{
                         CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"skill_flashbang.projectile",characterId,factionid,60.0,6.0);
@@ -2223,6 +2224,52 @@ class CommandSkill : Tracker {
             }
         }
     }        
+    void excuteEvo3skill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i]) && SkillArray[i].m_weapontype=="evo3") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            if (!canCastSkill(character)) return;
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "EVO3_SKILL1_JP.wav",
+                        "EVO3_SKILL2_JP.wav",
+                        "EVO3_SKILL3_JP.wav"                     
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    if (checkFlatRange(c_pos,stringToVector3(target),10)){
+                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_evo3.projectile",characterId,factionid,60);
+                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"evo3_gas_grenade.projectile",characterId,factionid,50);
+                    }
+                    else{
+                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_evo3.projectile",characterId,factionid,65.0,6.0);
+                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"evo3_gas_grenade.projectile",characterId,factionid,26.0,6.0);
+                    }                    
+                    addCooldown("evo3",30,characterId,modifer);
+                }
+            }
+        }
+    }          
     void excutePPKMOD3skill(int characterId,int playerId,SkillModifer@ modifer){
         bool ExistQueue = false;
         int j=-1;

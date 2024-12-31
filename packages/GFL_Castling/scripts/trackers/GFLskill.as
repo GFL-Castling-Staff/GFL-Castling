@@ -1729,7 +1729,28 @@ class GFLskill : Tracker {
 				killCharacter(m_metagame,characterId);
 				spawnStaticProjectile(m_metagame,"goliath.projectile",_pos,characterId,factionid);
 				break;
-			}			
+			}		
+
+			case 62: {// evo3 毒气弹
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
+					int factionid = character.getIntAttribute("faction_id");
+					string c = 
+						"<command class='create_instance'" +
+						" faction_id='"+ factionid +"'" +
+						" instance_class='grenade'" +
+						" instance_key='evo3_gas_grenade_effect.projectile'" +
+						" position='" + grenade_pos.toString() + "'"+
+						" character_id='" + characterId + "' />";
+					m_metagame.getComms().send(c);
+					ConstantStaticProjectileEvent@ new_task = ConstantStaticProjectileEvent(m_metagame,0.1,characterId,factionid,"gasnade_tick.projectile",grenade_pos,6,1.0,false);
+					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+					tasker.add(new_task);
+				}
+				break;			
+			}
 
             default:
                 break;

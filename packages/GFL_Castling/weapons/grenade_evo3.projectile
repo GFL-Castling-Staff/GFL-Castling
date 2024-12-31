@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectiles>
+<projectile class="grenade" name="URG-86 Grenade" key="grenade_evo3.projectile" slot="0" radius="0.25" pulldown_in_air="65">
+    <tag name="grenade" />
+    <result class="spawn" instance_class="projectile" instance_key="blast_shard_rad5_low.projectile" min_amount="30" max_amount="30" offset="0 0.2 0" position_spread="0.0 0.0" direction_spread="0.0 0.0" />
+    <trigger class="impact">
+        <collider class="character" enabled="1" faction_compare="not_equal"/>
+    </trigger>
+    <rotation class="random" />
+    <model mesh_filename="grenade_rgd_5.mesh" texture_filename="grenade_rgd_5.png" />
+    <!-- 等个模型 -->
+    <hud_icon filename="" />
+
+    <commonness value="0.8" />
+    <inventory encumbrance="3.0" price="5.0" />
+    <capacity value="1" source="rank" source_value="0.0" />
+
+    <sound class="result" key="other" fileref="explosion_FromRS2V_1.wav" volume="2.8" />
+    <sound class="result" key="other" fileref="explosion_FromRS2V_2.wav" volume="2.8" />
+    <sound class="result" key="other" fileref="explosion_FromRS2V_3.wav" volume="2.8" />    
+
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="vehicle" copy="other" />
+    <sound class="result" key="character" copy="other" />
+
+    <sound class="result" key="other" fileref="explosion_FromFC5_1.wav" volume="1.4" />
+    <sound class="result" key="other" fileref="explosion_FromFC5_2.wav" volume="1.4" />
+    <sound class="result" key="other" fileref="explosion_FromFC5_3.wav" volume="1.4" />
+    <sound class="result" key="other" fileref="explosion_FromFC5_4.wav" volume="1.4" />
+
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="vehicle" copy="other" />
+    <sound class="result" key="character" copy="other" />
+
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_smoke" lighting="0" post_processing="1"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_smoke_expanding" lighting="0" post_processing="1"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_ring" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_ring_2" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_spray_1" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_spray_2" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_fire" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_fire_wave" lighting="0"/> 
+
+    <effect class="result" key="static_object" copy="terrain" />
+    <effect class="result" key="vehicle" copy="terrain" />     
+    <effect class="result" key="character" copy="terrain" />
+    <effect class="result" key="other" copy="terrain" />
+    <effect class="activated" ref="SatchelSparkle" />
+    <effect class="activated" ref="SatchelFlash" />
+</projectile>
+</projectiles>

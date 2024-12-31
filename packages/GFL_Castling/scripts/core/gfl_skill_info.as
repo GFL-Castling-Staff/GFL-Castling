@@ -191,6 +191,8 @@ dictionary gameSkillIndex = {
 
         {"goliath_explode",61},
 
+        {"evo3_skill",62},
+
 
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
