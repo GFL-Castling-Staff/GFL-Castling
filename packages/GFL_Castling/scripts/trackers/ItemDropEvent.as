@@ -174,7 +174,7 @@ class ItemDropEvent : Tracker {
                 }
                 else
                 {
-                    notify(m_metagame, "Hint - call - 404notfound",dictionary(), "misc", pId, false, "", 1.0);
+                    notify(m_metagame, "Hint - call - 404notfound dev",dictionary(), "misc", pId, false, "", 1.0);
                 }
             }            
             //升级支援

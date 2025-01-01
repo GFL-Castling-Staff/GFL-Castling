@@ -29,6 +29,7 @@
 	<text key="Hint - call - changesuccess" text="[战术系统]已在槽位&#37;slot装备&#37;call_key" />
 	<text key="Hint - call - locked" text="[战术系统]装备战术妖精失败，您未拥有该种类支援的呼号权限" />
 	<text key="Hint - call - 404notfound" text="[战术系统]装备战术妖精失败，请先选择一类战术妖精" />
+	<text key="Hint - call - 404notfound dev" text="[战术系统]研发战术妖精失败，似乎此研发分支存在问题呢" />
 	<text key="Hint - call - notadvanced" text="[战术系统]您必须先选择一个分支以研发对应分支的升级" />
 	<text key="Hint - call - already dev" text="[战术系统]您已经研发过了此分支" />
 	<text key="Hint - call - devsuccess" text="[战术系统]您已成功研发此分支" />
@@ -163,6 +164,21 @@
 	<text key="Hint - call - intro - call_ui_t2_bombardment_fairy_170mm_cannon" text="<冷却时间 90秒 消耗 30战术点>
 -标定目标点，5秒后开火，加农炮弹对范围15造成100的blast伤害
 -弹着点并不精准，与实际位置存在距离10的误差"/>
+
+	<!-- <text key="Hint - call - title - call_ui_t2_bombardment_fairy_170mm_cannon_update_alpha" text="炮击妖精 - 170mm加农炮" />
+	<text key="Hint - call - intro - call_ui_t2_bombardment_fairy_170mm_cannon_update_alpha" text="<冷却时间 90秒 消耗 30战术点>
+-标定目标点，5秒后开火，加农炮弹对范围15造成100的blast伤害
+-弹着点并不精准，与实际位置存在距离10的误差"/>
+
+	<text key="Hint - call - title - call_ui_t2_bombardment_fairy_170mm_cannon_update_beta" text="炮击妖精 - 170mm加农炮" />
+	<text key="Hint - call - intro - call_ui_t2_bombardment_fairy_170mm_cannon_update_beta" text="<冷却时间 90秒 消耗 30战术点>
+-标定目标点，5秒后开火，加农炮弹对范围15造成100的blast伤害
+-弹着点并不精准，与实际位置存在距离10的误差"/>
+
+	<text key="Hint - call - title - call_ui_t2_bombardment_fairy_170mm_cannon_update_gamma" text="炮击妖精 - 170mm加农炮" />
+	<text key="Hint - call - intro - call_ui_t2_bombardment_fairy_170mm_cannon_update_gamma" text="<冷却时间 90秒 消耗 30战术点>
+-标定目标点，5秒后开火，加农炮弹对范围15造成100的blast伤害
+-弹着点并不精准，与实际位置存在距离10的误差"/> -->
 
 	<!-- 空袭妖精 - 高空投弹 -->
 
