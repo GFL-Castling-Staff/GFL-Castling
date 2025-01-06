@@ -213,7 +213,6 @@ void soldier_skin_outline_vp(
 	float4x4 result = matrices[u];
         result = mul(viewProj, result);
 	oPosition = mul(result, position);
-	//oPosition.z = oPosition.z + 0.01;
 	oPosition.z = oPosition.z + 0.005;
 
 	oColour.r = 0.0;

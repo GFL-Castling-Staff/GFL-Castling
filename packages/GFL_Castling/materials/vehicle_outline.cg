@@ -1,0 +1,72 @@
+#include "tools.cg"
+
+void vehicle_outline_vp(float4 position : POSITION,
+				        float4 normal	: NORMAL,
+				
+						out float4 oPosition : POSITION,
+						out float4 oColour : COLOR,
+						out float2 oTexCoords : TEXCOORD0,
+				
+						uniform float4x4 world,
+						uniform float4x4 viewProj,
+						uniform float4x4 textureMatrix1) {
+				
+	float4 p = mul(world, position);
+	
+	float4 origin = mul(world, float4(0,0,0,1));
+	// not good with our flat sides in meshes, there will be a gap at the edge if done this way
+	// it's ok in some cases, for example mg tripod
+	//float3 n = mul((float3x3)world, normal.xyz);
+	// flat meshes:
+	float3 n = normalize((p - origin).xyz);
+	p.xyz += n * 0.3; // how wide dashes are
+	
+	oPosition = mul(viewProj, p);
+	float4 originViewProj = mul(viewProj, origin);
+
+	float4 d = (oPosition - originViewProj);
+	d *= 0.15f; // scale handler, the smaller the value the larger dashes, should somehow be adapted by aabb beforehand?
+	d += float4(0.5, 0.5, 0,0); // modify so that 0,0 is 0.5, 0.5
+	float2 uv = float2(d.x, d.y);
+
+    oTexCoords = mul(textureMatrix1, float4(uv,0,1)).xy;
+	
+	oColour.r = 0.0;
+	oColour.g = 0.0;
+	oColour.b = 0.0;
+	oColour.a = 1.0;
+}
+
+void vehicle_outline_fp(
+    float4 color               : COLOR,
+    float2 texCoords 		   : TEXCOORD0,
+
+    uniform sampler2D decalMap : register(s0),
+
+    out float4 result          : COLOR) {
+
+    float4 decalColor = tex2D(decalMap, texCoords);
+ 
+    result = decalColor; // + float4(1,0,0,1);
+}
+
+// ---------------------------------------------------------------------------------------------------------
+
+void vehicle_outline_mask_vp(float4 position : POSITION,
+				
+						out float4 oPosition : POSITION,
+				
+						uniform float4x4 worldViewProj) {
+				
+	oPosition = mul(worldViewProj, position);
+	oPosition.z -= 0.05;
+	// debug "spider"
+	//oPosition.z += 0.05;
+}
+
+void vehicle_outline_mask_fp(
+    out float4 result          : COLOR) {
+
+    result = float4(0,0,0,0.5);
+}
+
