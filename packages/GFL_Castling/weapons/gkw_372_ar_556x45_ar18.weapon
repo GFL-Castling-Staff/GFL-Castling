@@ -22,7 +22,7 @@
     <sound key="magazine_in" fileref="ar18_mgz_in_FromCOD21.wav" volume="0.7" />
     <sound key="cycle" fileref="ar18_cycle_FromCOD21.wav" volume="0.8" />
     <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
+    <sound key="dry_fire" fileref="dryfire_ar_1.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
     <model filename="gkw_ar_ar18.xml" />
@@ -32,11 +32,11 @@
         <result class="hit" kill_probability="6.6" kill_decay_start_time="1.0" kill_decay_end_time="1.035" />
     </projectile>
     <effect class="muzzle" ref="ejection_556" />
-    <stance state_key="running" accuracy="0.2" />
+    <stance state_key="running" accuracy="0.3" />
     <stance state_key="walking" accuracy="0.5" />
     <stance state_key="crouch_moving" accuracy="0.9" />
     <stance state_key="prone_moving" accuracy="0.9" />
-    <stance state_key="standing" accuracy="0.92" />
+    <stance state_key="standing" accuracy="0.98" />
     <stance state_key="crouching" accuracy="0.98" />
     <stance state_key="prone" accuracy="1" />
     <stance state_key="over_wall" accuracy="1" />
