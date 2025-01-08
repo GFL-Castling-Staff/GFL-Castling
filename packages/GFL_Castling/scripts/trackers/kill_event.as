@@ -728,7 +728,14 @@ class kill_event : Tracker {
             )
             {
                 if (killway=="hit"){
-                    g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"snipecharge");
+                    if(reward_pool_key=="boss")
+                    {
+                        g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"snipecharge",5);
+                    }                    
+                    else
+                    {
+                        g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"snipecharge");
+                    }
                 }
             }
 

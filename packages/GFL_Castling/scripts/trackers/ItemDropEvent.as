@@ -193,11 +193,20 @@ class ItemDropEvent : Tracker {
                     string dict_title_key = "Hint - call - title - " + call_key;
                     string dict_intro_key = "Hint - call - intro - " + call_key + "_" + key;
                     notify(m_metagame, dict_intro_key, dictionary(), "misc", pId, true, dict_title_key, 1.0);
-                    int cost = int(call_devcost[(call_key+addition)]);
-                    dictionary a;
-                    a["%cost"] = "" + cost;
-                    notify(m_metagame, "Hint - call - dev - cost", a, "misc", pId, false, dict_title_key, 1.0);
-                    resetQueueTypeString(pId,"call_ui",addition);
+                    string new_key = call_key+addition;
+                    int cost = 0;
+                    if (call_devcost.get(new_key, cost))
+                    {
+                        dictionary a;
+                        a["%cost"] = "" + cost;
+                        notify(m_metagame, "Hint - call - dev - cost", a, "misc", pId, false, dict_title_key, 1.0);
+                        resetQueueTypeString(pId,"call_ui",addition);
+                    }
+                    else
+                    {
+                        m_craftQueue.removeAt(findQueueIndex(pId,call_key));
+                        notify(m_metagame, "Hint - call - 404notfound dev",dictionary(), "misc", pId, false, "", 1.0);
+                    }
                 }
                 else if(call_key != "" && call_key.findFirst("_update") >= 0)
                 {

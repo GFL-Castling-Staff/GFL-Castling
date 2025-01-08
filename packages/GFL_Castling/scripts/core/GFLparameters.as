@@ -459,9 +459,9 @@
 
         //
 
-        {"call_ui_t1_rocket_fairy_missile_update_alpha",250},
-        {"call_ui_t1_rocket_fairy_missile_update_beta",250},
-        {"call_ui_t1_rocket_fairy_missile_update_gamma",250},
+        // {"call_ui_t1_rocket_fairy_missile_update_alpha",250},
+        // {"call_ui_t1_rocket_fairy_missile_update_beta",250},
+        // {"call_ui_t1_rocket_fairy_missile_update_gamma",250},
 
         {"call_ui_t2_airstrike_fairy_bomber_update_alpha",500},
         {"call_ui_t2_airstrike_fairy_bomber_update_beta",500},
