@@ -139,7 +139,7 @@ class ItemDropEvent : Tracker {
                 string profile_hash = playerInfo.getHash();
                 string p_name = playerInfo.getPlayerName();
                 string call_key = getQueueByStartString(pId,"call_ui");
-                if(call_key != "" && callUI_Slot.exists(call_key))
+                if(call_key != "" && callUI_Slot.exists(call_key) && call_devcost.exists(call_key))
                 {
                     if(call_key.findFirst("_update") < 0)
                     {
