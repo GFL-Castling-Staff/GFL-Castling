@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+    <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_88typemod3_50001.weapon">
+        <tag name="elite" />
+        <tag name="rifle" />
+        <specification 
+        retrigger_time="1.0" 
+        accuracy_factor="1.0" 
+        sustained_fire_grow_step="5.0" 
+        sustained_fire_diminish_rate="5.0" 
+        magazine_size="5" 
+        can_shoot_standing="1" 
+        can_shoot_prone="0"
+        can_shoot_crouching="1"
+        suppressed="0" 
+        name="Hanyang-made Type88(MOD3)-[To the Stars]"
+        class="2" 
+        reload_one_at_a_time="1" 
+        sight_range_modifier="2.0" 
+        projectile_speed="205" 
+        barrel_offset="0.8" 
+        projectiles_per_shot="1" 
+        use_basic_muzzle_smoke_effect="0"
+        stance_accuracy_rate="4.0"
+        stab_enabled="1"
+        stab_range="4.5" />
+        <next_in_chain key="gkw_88typemod3_50001_skill.weapon" share_ammo="0" />
+        <commonness value="0" in_stock="0" can_respawn_with="1" />
+        <inventory encumbrance="35.0" buy_price="550.0" sell_price="500.0"/>
+        <capacity value="1" source="rank" source_value="0.0" />
+        <animation key="recoil"  animation_key="recoil1" />
+        <animation key="recoil"  animation_key="recoil2" />
+        <animation key="recoil"  animation_key="recoil3" />
+        <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+        <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+        <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+        <animation key="cycle" animation_key="Brifle action"/>
+        <animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
+        <animation key="reload" animation_key="reloading, oaat fast hand" />
+        <animation state_key="stabbing" animation_key="melee, bayonet_12hp"/>
+        <animation state_key="hold" animation_key="still, 88typemod3" />
+        <animation state_key="hold_on_wall" animation_key="still, 88typemod3" />
+        <animation state_key="still_against_wall"   animation_key="still against wall, 88typemod3_melee" />
+        <animation state_key="hold_casual"  animation_key="still, 88typemod3" />
+        <animation state_key="running"  animation_key="running, 88typemod3_melee" />
+        <animation state_key="walking"  animation_key="walking, 88typemod3" />
+        <animation state_key="crouching"    animation_key="still, 88typemod3" />
+        <animation state_key="crouch_moving"    animation_key="walking, 88typemod3" />
+        <animation state_key="crouch_moving_backwards"  animation_key="walking, 88typemod3" />
+        <animation state_key="prone_still" animation_key="still, 88typemod3" />
+        <animation state_key="prone_moving" animation_key="walking, 88typemod3" />
+        <animation state_key="walking_backwards" animation_key="walking, 88typemod3" />
+        <sound key="fire" fileref="type88mod3_fire_FromKF2.wav" pitch_variety="0.05" volume="1.5" />
+        <sound key="fire" fileref="88typeMod_ATTACK_1.wav" pitch_variety="0.05" volume="1.5" />
+        <sound key="fire" fileref="type88mod3_fire_FromKF2.wav" pitch_variety="0.05" volume="1.5" />
+        <sound key="fire" fileref="88typeMod_ATTACK_2.wav" pitch_variety="0.05" volume="1.5" />
+        <sound key="fire" fileref="type88mod3_fire_FromKF2.wav" pitch_variety="0.05" volume="1.5" />
+        <sound key="fire" fileref="88typeMod_ATTACK_3.wav" pitch_variety="0.05" volume="1.5" />
+        <sound key="fire" fileref="type88mod3_fire_FromKF2.wav" pitch_variety="0.05" volume="1.5" />
+        <sound key="fire" fileref="88typeMod_ATTACK_4.wav" pitch_variety="0.05" volume="1.5" />
+        <sound key="fire" fileref="type88mod3_fire_FromKF2.wav" pitch_variety="0.05" volume="1.5" />
+        <sound key="cycle" fileref="type88_cycle_FromBF1.wav" volume="0.6"/>
+        <sound key="reload_one" fileref="m1903_reload_FromCOD16.wav" volume="0.4" />
+        <sound key="cycle_out" fileref="sniper_cycle_out.wav" volume="1"/>
+        <sound key="cycle_in" fileref="sniper_cycle_in.wav" volume="1"/>
+        <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+        <sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
+        <sound key="stab" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+        <sound key="stab" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+        <sound key="stab" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+        <sound key="stab_hit" fileref="blade_impact_01_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+        <sound key="stab_hit" fileref="blade_impact_02_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+        <sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+        <sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0" />
+        <model filename="gkw_rf_88typemod3.xml" />
+        <hud_icon filename="gkw_88type_50001.png" />
+        <weak_hand_hold offset="0.3" />
+        <projectile file="88type_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7">
+            <result class="spawn" instance_class="projectile" instance_key="88type_mrr.projectile" min_amount="4" max_amount="4" offset="0 0.8 0" position_spread="0.2 0.4" direction_spread="0 0" />
+            <trigger class="impact" time_to_live="0"  />
+            <trail probability="1.0" key="laser_hyz_s" />
+            <rotation class="motion" />
+            <collision class="sticky" />
+        </projectile>
+        <effect class="muzzle" ref="hyz_laser_circle_1" lighting="0"/>
+        <effect class="muzzle" ref="hyz_laser_circle_2" lighting="0"/>
+        <stance state_key="running" accuracy="0.5" />
+        <stance state_key="walking" accuracy="0.5" />
+        <stance state_key="crouch_moving" accuracy="0.95" />
+        <stance state_key="prone_moving" accuracy="0.95" />
+        <stance state_key="standing" accuracy="0.95" />
+        <stance state_key="crouching" accuracy="0.95" />
+        <stance state_key="prone" accuracy="1.0" />
+        <stance state_key="over_wall" accuracy="1.0" />
+        <modifier class="speed" value="0.4" />
+        <target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
+        <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+        <target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+        <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+        <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+        <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+    </weapon>
+    <weapon key="gkw_88typemod3_50001_skill.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" player_death_drop_owner_lock_time="0" drop_count_factor_on_player_death="0">
+        <tag name="elite" />
+        <tag name="melee" />
+        <specification 
+        magazine_size="-1"
+        can_shoot_standing="1" 
+        can_shoot_crouching="0" 
+        can_shoot_prone="0" 
+        carry_in_two_hands="0" 
+        character_state="death" 
+        consume="0"     
+        name="Hanyang-made Type88(MOD3)-[Almighty Combat Skills]" 
+        class="5"
+        supperessed="0"
+        range="3.5"
+        success_probability="15.0"    
+        stab_enabled="1"
+        stab_range="5" 
+        barrel_offset="-0.05" />
+        <next_in_chain key="gkw_88typemod3_50001.weapon" share_ammo="0" />
+        <commonness value="0" in_stock="0" can_respawn_with="1" />
+        <inventory encumbrance="35.0" buy_price="550.0" sell_price="500.0"/>
+        <capacity value="1" source="rank" source_value="0.0" />
+        <animation state_key="recoil"   animation_key="melee, 88typemod3_melee whip" />
+        <animation state_key="stabbing" animation_key="stabbing1, 88typemod3_melee" />
+        <animation state_key="stabbing" animation_key="stabbing2, 88typemod3_melee" />
+        <animation state_key="stabbing" animation_key="stabbing3, 88typemod3_melee" />
+        <animation state_key="hold" animation_key="still, 88typemod3_melee" />
+        <animation state_key="hold_on_wall" animation_key="still overwall, 88typemod3_melee" />
+        <animation state_key="still_against_wall"   animation_key="still against wall, 88typemod3_melee" />
+        <animation state_key="hold_casual"  animation_key="relaxed, 88typemod3_melee" />
+        <animation state_key="running"  animation_key="running, 88typemod3_melee" />
+        <animation state_key="walking"  animation_key="walking, 88typemod3_melee" />
+        <animation state_key="crouching"    animation_key="still, 88typemod3_melee" />
+        <animation state_key="crouch_moving"    animation_key="walking, 88typemod3_melee" />
+        <animation state_key="crouch_moving_backwards"  animation_key="walking backwards, 88typemod3_melee" />
+        <animation state_key="prone_still" animation_key="still, 88typemod3_melee" />
+        <animation state_key="prone_moving" animation_key="walking, 88typemod3_melee" />
+        <animation state_key="walking_backwards" animation_key="walking backwards, 88typemod3_melee" />
+        <animation state_key="changing_weapon_in"   animation_key="change weapon in, sword" />
+        <animation state_key="changing_weapon_out"  animation_key="change weapon out, sword" />
+        <animation state_key="reload"   animation_key="reload, 88typemod3_melee" />
+        <sound key="stab" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="stab" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="stab" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="stab" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+        <sound key="effect" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+        <sound key="effect" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+        <sound key="effect" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+        <sound key="effect" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="fire" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="fire" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="fire" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="fire" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="stab_hit" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="stab_hit" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="stab_hit" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.0" />
+		<sound key="stab_hit_any" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
+		<sound key="stab_hit_any" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
+		<sound key="stab_hit_any" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
+        <model filename="gkw_88typemod3_melee.xml" />
+        <hud_icon filename="gkw_88type_50001.png" />
+        <effect class="muzzle" ref="sawsnone" />
+        <projectile file="teal.projectile"/>
+        <stance state_key="running" accuracy="1" />
+        <stance state_key="walking" accuracy="1" />
+        <stance state_key="crouch_moving" accuracy="1" />
+        <stance state_key="standing" accuracy="1" />
+        <stance state_key="crouching" accuracy="1" />
+        <stance state_key="prone" accuracy="1" />
+        <stance state_key="prone_moving" accuracy="1" />
+        <stance state_key="over_wall" accuracy="1" />
+        <modifier class="speed" value="0.4" />
+        <modifier class="hit_success_probability" value="-0.25" />
+        <shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
+        <!-- state modifiers for weapons are connected to shield impact events -->
+        <!-- deflects all bullets; death, stun, wound become none, doesn't consume -->
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <!-- death and wound blast causes the item to be consumed, stun is ignored -->
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="melee_blast_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+	    <modifier class="melee_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+	    <modifier class="melee_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+    </weapon>
+</weapons>

@@ -266,6 +266,9 @@ dictionary commandSkillIndex = {
         {"gkw_88type_7106.weapon",40},
         {"gkw_88typemod3_7106.weapon",41},
         {"gkw_88typemod3_7106_skill.weapon",41},
+        {"gkw_88type_50001.weapon",40},
+        {"gkw_88typemod3_50001.weapon",41},
+        {"gkw_88typemod3_50001_skill.weapon",41},
 
         // 汉阳造高达，攻顶火箭
         {"gkw_88typemod3_6503.weapon",42},        
