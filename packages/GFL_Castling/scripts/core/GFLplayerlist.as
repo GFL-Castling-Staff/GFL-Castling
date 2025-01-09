@@ -803,7 +803,7 @@ class GFL_playerlist_system : Tracker {
         if (factionId == 0) 
         {
             if(g_playerInfo_Buck.size() <= 0) return;
-            for(uint i=0;i<g_playerInfo_Buck.size();i++){
+            for (uint i = g_playerInfo_Buck.size(); i-- > 0; ) {
                 GFL_playerInfo@ playerInfo = g_playerInfo_Buck.m_playerInfo[i];
                 GFL_battleInfo@ battleInfo = playerInfo.getBattleInfo();
                 string p_name = playerInfo.getPlayerName();
