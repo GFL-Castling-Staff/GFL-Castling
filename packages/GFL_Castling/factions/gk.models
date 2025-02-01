@@ -686,6 +686,15 @@
     <model filename="gkd_mg_ameli_2409.xml">
         <requirement class="weapon" key="gkw_ameli_2409.weapon" slot="0" />
     </model>
+    <model filename="gkd_mg_ameli.xml">
+        <requirement class="weapon" key="gkw_ameli_skill.weapon" slot="0" />
+    </model>
+    <model filename="gkd_mg_ameli_1605.xml">
+        <requirement class="weapon" key="gkw_ameli_1605_skill.weapon" slot="0" />
+    </model>
+    <model filename="gkd_mg_ameli_2409.xml">
+        <requirement class="weapon" key="gkw_ameli_2409_skill.weapon" slot="0" />
+    </model>
     <model filename="gkd_mg_dp28.xml">
         <requirement class="weapon" key="gkw_dp28.weapon" slot="0" />
     </model>
