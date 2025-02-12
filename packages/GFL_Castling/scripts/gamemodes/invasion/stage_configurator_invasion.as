@@ -423,7 +423,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			f.m_capacityMultiplier = 1.0;
 			stage.m_factions.insertLast(f);
 			if(getFactionConfigs()[0].m_name=="GK"){
-				_log("gotGKguys114514");
+				// _log("gotGKguys114514");
 				XmlElement command("command");
 				command.setStringAttribute("class", "faction");
 				command.setIntAttribute("faction_id", 0);
@@ -2102,17 +2102,17 @@ class StageConfiguratorInvasion : StageConfigurator {
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[FactionIndex[0]], createCommanderAiCommand(1, 0.6, 0.28));
+			Faction f(FactionConfig(1, "kcco.xml", "KCCO", "0.43 0.49 0.18", "kcco.xml"), createCommanderAiCommand(1, 0.6, 0.28));
 			f.m_overCapacity = 80;                                              // was 40 (test2)
 			f.m_capacityOffset = 10;         
 			f.m_capacityMultiplier = 1.0; 
 			stage.m_factions.insertLast(f);
 		}
 		{
-			Faction f(getFactionConfigs()[FactionIndex[1]], createCommanderAiCommand(2, 0.65, 0.1));          
+			Faction f(FactionConfig(2, "paradeus.xml", "Paradeus", "1 1 1", "paradeus.xml"), createCommanderAiCommand(2, 0.65, 0.1));          
 			f.m_overCapacity = 50;
 			f.m_capacityOffset = 5;                                                             
-			f.m_capacityMultiplier = 1.0; 
+			f.m_capacityMultiplier = 1.0; a
 			stage.m_factions.insertLast(f);
 		}
 		{
