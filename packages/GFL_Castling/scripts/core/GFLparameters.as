@@ -149,8 +149,8 @@
     array<string> resupply_grenade_list = {
         "hand_grenade.projectile",
         "hand_88grenade.projectile",
-        "hand_defence_grenade.projectile",
         "hand_atgrenade.projectile",
+        "hand_defence_grenade.projectile",
         "c4.projectile"
     };
 
@@ -159,8 +159,9 @@
         {"hand_88grenade.projectile",4},
         {"hand_atgrenade.projectile",4},
         {"hand_defence_grenade.projectile",4},
-        {"at_mine.projectile",6},
-        {"gkw_cz75_axe.projectile",6}
+        {"c4.projectile",2}
+        // {"at_mine.projectile",6},
+        // {"gkw_cz75_axe.projectile",6}
     };
     
     array<string> resupply_secondary_list = {
