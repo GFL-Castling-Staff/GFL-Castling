@@ -25,12 +25,15 @@
 	max_water_depth="6.3" 
 	steer_smoothening="0.8" />
 
+	<modifier class="blast_damage" value="-1.0" />
+	<modifier class="blast_range" value="-0.5" />
+
 	<physics 
-	max_health="28" 
+	max_health="75" 
 	mass="120.0" 
 	broken_mass="120.0" 
 	gravity="-40"
-	blast_damage_threshold="0.5"
+	blast_damage_threshold="1"
 	extent="1.87 0.0 3.41" 
 	offset="0 0.2 0" 
 	collision_model_pos="0 1.0 0" 
@@ -42,9 +45,6 @@
 	preserve_motion_on_impact_factor="0.5"
 	collision_response_factor="0.5"
 	destroy_on_top_hit="0"	/> 
-
-
-	<modifier class="blast_damage" value="-0.6" />
 
 	<visual  offset="0 0 0.24" class="turret" turret_index="0" mesh_filename="Crusher_turret.mesh" texture_filename="Crasher_Base_color.jpg" />
 	<visual  offset="0 0 0.24" class="turret" turret_index="0" key="broken" mesh_filename="Crusher_turret.mesh" texture_filename="humvee_broken.png" />

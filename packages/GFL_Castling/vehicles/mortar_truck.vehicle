@@ -28,10 +28,13 @@
 	max_water_depth="1.6" 
 	steer_smoothening="0.7" />
     <turret offset="0 1.7 -1.2" weapon_key="truck_mortar.weapon" weapon_offset="0 0 0" weapon_recoil="0.05" max_rotation_step="0.00008" rotation="0"/>
+    <modifier class="blast_damage" value="-1.0" />
+	<modifier class="blast_range" value="-0.5" />
     <physics 
-	max_health="100" 
+	max_health="125" 
 	mass="200" 
 	broken_mass="150"
+    blast_damage_threshold="1"
     remove_collision_threshold="0.3"	
 	extent="3.2 0.0 6.4" 
 	offset="0 0.0 0" 
