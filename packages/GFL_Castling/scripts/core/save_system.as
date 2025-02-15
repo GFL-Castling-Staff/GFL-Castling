@@ -588,7 +588,7 @@ class Save_System : Tracker {
             int cId = player.getIntAttribute("character_id");
             dictionary a;
             a["%dev_point"] = "" + newdata.getDevPoint();
-            a["%dev_point_life"] = "" + newdata.getDevPointLife();
+            a["%life_dev_point"] = "" + newdata.getDevPointLife();
             notify(m_metagame, "Dev info query", a, "misc", player_id, false, "", 1.0);
         }
 
