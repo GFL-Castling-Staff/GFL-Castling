@@ -84,14 +84,15 @@ class jupiter: Tracker {
 		m_pos=c_pos;
 	}
 
-	void jupiterfire(Vector3 pos){
+	void jupiterfire(Vector3 pos,float delaytime){
 		int offsetY=0;
 		for(int i=0;i<m_striketime;i++){
 			int offsetX = rand(0,2*radd-8)-radd+4;
 			int offsetZ = rand(0,2*radd-8)-radd+4;
 			Vector3 pos_a= pos.add(Vector3(offsetX,0,offsetZ));
-			CreateProjectile(m_metagame,pos_a.add(Vector3(0,60+offsetY,0)),pos_a,"artillery_jupiter_420.projectile",-1,m_faction,120,10);
-			offsetY+=60;
+			float delayheight = delaytime*60;
+			CreateProjectile(m_metagame,pos_a.add(Vector3(0,60+offsetY+delayheight,0)),pos_a,"artillery_jupiter_420.projectile",-1,m_faction,60,0);
+			offsetY+=30;
 		}
 	}
 
@@ -106,6 +107,10 @@ class jupiter: Tracker {
 		reload_time -= time;
 		if (reload_time < 0){
 			jupiterfireReady();
+			if(m_strike){
+				jupiterfire(m_pos,m_delaytime);
+				m_strike=false;
+			}
 			_log("Jupiter_Fired:"+ m_numLeft);
 			m_numLeft++;
 			if(m_numLeft<awaitingstrikes){
@@ -117,13 +122,13 @@ class jupiter: Tracker {
 				m_numLeft = 0;		
 			}
 		}
-		if(m_strike){
-			m_delaytime-=time;
-			if(m_delaytime<0){
-				jupiterfire(m_pos);
-				m_strike=false;
-			}
-		}
+		// if(m_strike){
+		// 	m_delaytime-=time;
+		// 	if(m_delaytime<0){
+		// 		jupiterfire(m_pos);
+		// 		m_strike=false;
+		// 	}
+		// }
 	}
 
 	void end() {

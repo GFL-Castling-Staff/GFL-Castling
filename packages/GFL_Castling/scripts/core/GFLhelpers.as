@@ -468,6 +468,7 @@ void spawnVehicle(Metagame@ metagame, uint count, uint factionId, string positio
 }
 
 void CreateProjectile(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,string key,int cId,int fId,float initspeed,float ggg){
+	if(ggg==0){ggg=0.001;}
 	initspeed=initspeed/60;
 	startPos = startPos.add(Vector3(0,1,0));
 	Vector3 direction = endPos.subtract(startPos);
@@ -536,6 +537,7 @@ class Orientation{
 	}
 }
 void CreateProjectile(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,string key,int cId,int fId,float initspeed,float ggg,Orientation@ rotation){
+	if(ggg==0){ggg=0.001;}
 	initspeed=initspeed/60;
 	startPos = startPos.add(Vector3(0,1,0));
 	Vector3 direction = endPos.subtract(startPos);
@@ -571,6 +573,7 @@ void CreateProjectile(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,strin
 }
 
 void CreateProjectile_H(Metagame@ m_metagame,Vector3 startPos,Vector3 endPos,string key,int cId,int fId,float gspeed,float height){
+	if(gspeed==0){gspeed=0.001;}
 	float topY = ((startPos.get_opIndex(1)>endPos.get_opIndex(1))?startPos.get_opIndex(1):endPos.get_opIndex(1));
 	topY+=height;
 	float g1= -gspeed/100;
