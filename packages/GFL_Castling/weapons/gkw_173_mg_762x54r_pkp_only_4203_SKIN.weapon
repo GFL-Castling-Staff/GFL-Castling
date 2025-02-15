@@ -111,8 +111,8 @@
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
         <hud_icon filename="gkw_pkp_4203.png"/>
         <projectile file="bullet_he.projectile">
-            <result class="blast" damage="3.1" radius="3.0" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-            <trail probability="1.0" key="BulletMgTrail_rx1" />
+            <result class="spawn" instance_class="projectile" instance_key="sub_damage_762x51ap.projectile" min_amount="2" max_amount="2" offset="0 0.0 0" position_spread="0 0" direction_spread="0 0" />
+            <trail probability="1.0" key="BulletMgTrail_rx1"/>
         </projectile>
         <effect class="muzzle" ref="ejection_76251" />
         <stance state_key="running" accuracy="0.2"/>

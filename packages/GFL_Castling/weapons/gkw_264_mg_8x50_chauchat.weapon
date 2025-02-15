@@ -32,14 +32,14 @@
     <animation key="cycle" animation_key="cycle_2h_rifle_240rpm"/>
     <animation key="cycle" animation_key="cycle_2h_rifle_200rpm"/>
     <animation key="cycle" animation_key="cycle_2h_rifle_240rpm"/>
-    <animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_240rpm_prone"/>
+    <animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_450rpm_prone"/>
     <animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_180rpm_prone"/>
-    <animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_240rpm_prone"/>
+    <animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_450rpm_prone"/>
     <animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_120rpm_prone"/>
-    <animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_240rpm_prone"/>
+    <animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_450rpm_prone"/>
     <animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_200rpm_prone"/>
     <animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_240rpm_prone"/>
-
+    
     <animation state_key="hold_on_wall" animation_key="still"/>
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
     <animation state_key="stabbing" animation_key="melee, quick knife"/>
@@ -60,7 +60,7 @@
     <model filename="gkw_mg_chauchatm1915.xml" />
     <hud_icon filename="gkw_chauchatm1915.png" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="6.6" kill_probability_offset_on_successful_hit="5" kill_decay_start_time="1.147" kill_decay_end_time="1.912" />
+        <result class="hit" kill_probability="8.0" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="1.147" kill_decay_end_time="1.912" />
         <trail probability="1.0" key="BulletMgTrail" />
     </projectile>
     <effect class="muzzle" ref="ejection_76251" />

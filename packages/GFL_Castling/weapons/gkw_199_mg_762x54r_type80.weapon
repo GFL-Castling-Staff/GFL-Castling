@@ -85,7 +85,7 @@
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <hud_icon filename="gkw_80type_skill.png" />
         <projectile file="bullet_80type.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.2"> 
-            <result class="spawn" instance_class="projectile" instance_key="80type_fire.projectile" min_amount="2" max_amount="2" offset="0 0.5 0" position_spread="0.2 0" direction_spread="0 0" />
+            <result class="spawn" instance_class="projectile" instance_key="80type_fire.projectile" min_amount="4" max_amount="5" offset="0 0.5 0" position_spread="0.2 0" direction_spread="0 0" />
         </projectile>
         <effect class="muzzle" ref="ejection_76251" />
         <effect class="muzzle" ref="muzzle_red_light" />

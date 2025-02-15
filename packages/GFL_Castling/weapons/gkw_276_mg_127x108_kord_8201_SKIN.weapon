@@ -68,9 +68,9 @@
         <model filename="gkw_mg_kord.xml"/>
         <hud_icon filename="gkw_kord_8201.png"/>
         <commonness value="0" in_stock="0" can_respawn_with="1"/>
-        <projectile file="bullet_he.projectile">
-        <result class="blast" damage="6.1" radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-        <trail probability="1.0" key="BulletApTrail_ct"/>
+        <projectile file="bullet_50bmg.projectile">
+            <result class="blast" damage="6.1" radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+            <trail probability="1.0" key="BulletApTrail_ct"/>
         </projectile>
         <effect class="muzzle" ref="ejection_50BMG"/>
         <stance state_key="running" accuracy="0.3"/>

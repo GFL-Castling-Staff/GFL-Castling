@@ -148,7 +148,7 @@
     <model filename="gkw_mg_mg4mod3.xml"/>
     <hud_icon filename="gkw_mg4_703.png" />
     <projectile file="bullet_mg4slap.projectile">
-        <result class="blast" damage="3.1" radius="2.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+        <result class="spawn" instance_class="projectile" instance_key="sub_damage_lmg_ap.projectile" min_amount="2" max_amount="2" offset="0 0.0 0" position_spread="0 0" direction_spread="0 0" />
     </projectile>
     <effect class="muzzle" ref="ejection_556"/>
     <effect class="muzzle" ref="muzzle_pink"/>

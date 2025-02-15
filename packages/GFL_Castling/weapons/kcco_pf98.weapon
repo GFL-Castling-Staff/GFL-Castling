@@ -94,10 +94,10 @@
 
     <ballistics near_far_distance="1000.0" speed_estimation_near="75.0" speed_estimation_far="75.0" max_speed="75.0" randomness="0.0" />
     <projectile file="120mm_pf98.projectile" >
-        <result class="blast" radius="7.0" damage="80.0" push="1.0" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
+        <result class="blast" radius="7.0" damage="90.0" push="1.0" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
     </projectile>
     <weak_hand_hold offset="0.3" />
-    <capacity value="4" source="rank" source_value="0.0" />
+    <capacity value="2" source="rank" source_value="0.0" />
     <addon_model filename="pf98_backpack.xml" />
 
     <hud_icon filename="kccow_pf98.png" />

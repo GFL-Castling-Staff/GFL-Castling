@@ -130,7 +130,7 @@
         <hud_icon filename="gkw_m240l_skill.png"/>
         <effect class="muzzle" ref="muzzle_yellow"/>
         <projectile file="bullet_he.projectile">
-            <result class="blast" damage="4.1" radius="3.0" decal="1" push="0.3" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+            <result class="spawn" instance_class="projectile" instance_key="sub_damage_762x51ap.projectile" min_amount="2" max_amount="2" offset="0 0.0 0" position_spread="0 0" direction_spread="0 0" />
             <trail probability="1.0" key="BulletMgTrail_rx1"/>
         </projectile>
         <effect class="muzzle" ref="ejection_76251"/>

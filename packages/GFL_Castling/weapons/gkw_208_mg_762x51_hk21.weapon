@@ -30,7 +30,7 @@
     <sound key="magazine_in" fileref="hk21_mgz_in_FromFC6.wav" volume="0.8" />
     <sound key="cycle" fileref="g3_cycle_FromCOD17.wav" volume="0.4" />
     <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
     <model filename="gkw_hk21_melondove.xml" />
     <hud_icon filename="gkw_hk21.png" />
     <weak_hand_hold offset="0.2" />
