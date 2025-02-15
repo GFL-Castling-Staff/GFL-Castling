@@ -2112,7 +2112,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 			Faction f(FactionConfig(2, "paradeus.xml", "Paradeus", "1 1 1", "paradeus.xml"), createCommanderAiCommand(2, 0.65, 0.1));          
 			f.m_overCapacity = 50;
 			f.m_capacityOffset = 5;                                                             
-			f.m_capacityMultiplier = 1.0; a
+			f.m_capacityMultiplier = 1.0;
 			stage.m_factions.insertLast(f);
 		}
 		{

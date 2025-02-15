@@ -216,7 +216,7 @@
 
 </projectile>
 <projectile class="grenade" name="bomb shell" slot="1" on_ground_up="0 1 0" key="artillery_shell_airstrike_precise.projectile" pulldown_in_air="80" radius="0.45">
-    <result class="spawn" instance_class="grenade" instance_key="blast_heavy_rad7_damage100.projectile" min_amount="1" max_amount="1" offset="0 2.5 0" position_spread="0 0" direction_spread="0.0 0.0" />   
+    <result class="spawn" instance_class="grenade" instance_key="blast_heavy_rad7_damage120.projectile" min_amount="1" max_amount="1" offset="0 2.5 0" position_spread="0 0" direction_spread="0.0 0.0" />   
     <trigger class="impact"/>
     <rotation class="motion" />
     <collision class="bounce"/>

@@ -589,9 +589,7 @@ class Save_System : Tracker {
             dictionary a;
             a["%dev_point"] = "" + newdata.getDevPoint();
             a["%dev_point_life"] = "" + newdata.getDevPointLife();
-            string collect = formatFloat((newdata.getAllNum() / (tdoll_complex_index.getSize() -1)));
-            a["%doll_collect"] = "" + collect;
-            notify(m_metagame, "Logger info query", a, "misc", player_id, false, "", 1.0);
+            notify(m_metagame, "Dev info query", a, "misc", player_id, false, "", 1.0);
         }
 
 

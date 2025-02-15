@@ -282,6 +282,7 @@ class CommandSkill : Tracker {
                 case 86:{excuteDelisleSkill(cId,senderId,m_modifer);break;}
                 case 87:{excute56typeRifleSkill(cId,senderId,m_modifer);break;}
                 case 88:{excuteEvo3skill(cId,senderId,m_modifer);break;}
+                case 89:{excuteSSG3000skill(cId,senderId,m_modifer);break;}
 
                 
                 
@@ -4807,7 +4808,7 @@ class CommandSkill : Tracker {
                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                     DelayAntiPersonSnipeRequest@ snipe_quest = DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipe_20.projectile",c_pos.add(Vector3(0,0.5,0)),target_id);
                     tasker.add(snipe_quest);
-                    addCooldown("56typer",45,characterId,modifer,"normal",false);
+                    addCooldown("56typer",30,characterId,modifer,"normal",false);
                     healCharacter(m_metagame,characterId,3);
                 }
             }
