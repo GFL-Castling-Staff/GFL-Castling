@@ -18,14 +18,11 @@
 		sustained_fire_grow_step="0.45"/>
     <inventory encumbrance="10.0" buy_price="40.0" sell_price="40.0"/>
 
-
     <animation key="recoil" animation_key="recoil1" />
     <animation key="recoil" animation_key="recoil2" />
     <animation key="recoil" animation_key="recoil3" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <animation state_key="next_in_chain_in" animation_key="switch fire mode" />
-
-
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
 
     <sound key="fire" fileref="vespid_fire_FromAPEX.wav" pitch_variety="0.05" volume="1.2" />
@@ -39,12 +36,10 @@
 	<capacity value="0" source="rank" source_value="0.0" />
     <capacity value="1" source="rank" source_value="3.058" />
 
-
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet_sf_player.projectile">
-        <result class="hit"  kill_probability="3.2" kill_probability_offset_on_successful_hit="0.75"  kill_decay_start_time="0.333" kill_decay_end_time="1.5" />
+        <result class="hit"  kill_probability="6.0" kill_probability_offset_on_successful_hit="0.75"  kill_decay_start_time="0.333" kill_decay_end_time="1.5" />
     </projectile>
-
     <stance state_key="running" accuracy="0.2" />
     <stance state_key="walking" accuracy="0.5" />
     <stance state_key="crouch_moving" accuracy="0.75" />

@@ -91,7 +91,7 @@
         <stance state_key="prone" accuracy="1.0"/>
         <stance state_key="prone_moving" accuracy="1.0"/>
         <stance state_key="over_wall" accuracy="1.0"/>
-        <modifier class="detectability" value="0.2"/>
+        <modifier class="detectability" value="0.1"/>
         <modifier class="hit_success_probability" value="0.1"/>
         <tag name="bazooka"/>
         <inventory encumbrance="50.0" buy_price="1.0" sell_price="0.0"/>
@@ -153,7 +153,7 @@
         <stance state_key="prone" accuracy="1.0"/>
         <stance state_key="prone_moving" accuracy="1.0"/>
         <stance state_key="over_wall" accuracy="1.0"/>
-        <modifier class="detectability" value="0.2"/>
+        <modifier class="detectability" value="0.1"/>
         <modifier class="hit_success_probability" value="0.1"/>
         <tag name="bazooka"/>
         <inventory encumbrance="50.0" buy_price="1.0" sell_price="0.0"/>
