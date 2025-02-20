@@ -1779,12 +1779,13 @@ class Event_call_warrior_fairy_VTOL : event_call_task_hasMarker {
 			const XmlElement@ ItsmeInfo = getCharacterInfo(m_metagame, m_character_id);
 			if(ItsmeInfo is null) 
 			{
-				m_character_pos = e_pos;
+				m_end = true;
 			}
 			else{
+				if(ItsmeInfo.getIntAttribute("dead")==1) m_end = true;
 				m_character_pos = stringToVector3(ItsmeInfo.getStringAttribute("position"));
 			}
-			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,m_character_pos,30.0f);
+			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,m_character_pos,45.0f);
 			if(luckyGuyid!=-1){
 				const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
 				if(luckyGuy is null) return;

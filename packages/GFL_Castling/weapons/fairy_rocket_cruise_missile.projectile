@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="grenade" name="rocket" slot="2" key="fairy_rocket_missile.projectile" >
+<projectile class="grenade" name="rocket" slot="2" key="fairy_rocket_cruise_missile.projectile" >
     <tag name="rocket"/>
-    <result class="blast" radius="7.5" damage="100.0" push="0.6" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
+    <result class="blast" radius="7.5" damage="120.0" push="1.0" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
     <trigger class="impact" />
     <rotation class="motion" />
     <model mesh_filename="gk_rocket_shell.xml" />

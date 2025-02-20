@@ -503,7 +503,10 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
             
             float rand_angle = eventinfo.m_randseed + eventinfo.m_phase*3.14/10;
 
-            Vector3 luckyGuyPos = stringToVector3(getCharacterInfo(metagame,luckyGuyid).getStringAttribute("position"));
+            const XmlElement@ luckyGuyInfo = getCharacterInfo(metagame,luckyGuyid);
+            if(luckyGuyInfo is null) continue;
+
+            Vector3 luckyGuyPos = stringToVector3(luckyGuyInfo.getStringAttribute("position"));
             Vector3 aimPos = eventinfo.m_pos.add(Vector3(45.0*cos(rand_angle),60,45.0*sin(rand_angle)));
             ac130_pre_pos = luckyGuyPos;
 

@@ -1034,10 +1034,10 @@ class GFLairstrike : Tracker {
                     //最终弹头随机程度
                     float strike_rand = 2.5;
                                             
-                    //每单轮扫射5发
+                    //每单轮扫射8发
                     for(int j=1;j<=8;j++)
                     {
-                        float rand_speed = rand(120,160);
+                        float rand_speed = rand(150,180);
                         float rand_x = rand(-strike_rand,strike_rand);
                         float rand_y = rand(-strike_rand,strike_rand);
                         CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"fairy_warrior_vtol_gsh23.projectile",cid,fid,rand_speed);           
@@ -1065,7 +1065,7 @@ class GFLairstrike : Tracker {
                 }
 
                 case 117:{              
-                    CreateDirectProjectile(m_metagame,start_pos,end_pos,"fairy_rocket_missile.projectile",cid,fid,125);
+                    CreateDirectProjectile(m_metagame,start_pos,end_pos,"fairy_rocket_cruise_missile.projectile",cid,fid,125);
                     Airstrike_strafe.removeAt(a);
                     break;                              
                 }

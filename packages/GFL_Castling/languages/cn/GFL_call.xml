@@ -389,7 +389,7 @@
 -标定目标点，随后从基地呼叫一架垂直起降战机，对目标点进行一次航弹轰炸
 -共投下2枚航弹，每枚航弹对范围7.5造成50的blast伤害
 -之后的30秒内切换为悬停形态，哨戒呼叫者周边区域
--每2秒会对角色半径20内的敌人使用Gsh-30-1机炮进行扫射
+-每2秒会对角色半径45内的敌人使用Gsh-30-1机炮进行扫射
 -每发弹头在范围4造成5.0的blast伤害
 -(该支援受空域禁制影响)"/>
 
@@ -413,7 +413,31 @@
 	<text key="Hint - call - title - call_ui_t1_rocket_fairy_missile" text="火箭妖精 - 巡曳飞弹" />
 	<text key="Hint - call - intro - call_ui_t1_rocket_fairy_missile" text="<冷却时间 90秒 消耗 25战术点>
 -使用后每秒刷新一次位置，3秒后在鼠标标点位置落下导弹
--导弹在范围7.5造成100的blast伤害"/>
+-导弹在范围7.5造成120的blast伤害"/>
+
+	<text key="Hint - call - title - call_ui_t1_rocket_fairy_missile_update_alpha" text="火箭妖精 - 巡曳飞弹" />
+	<text key="Hint - call - intro - call_ui_t1_rocket_fairy_missile_update_alpha" text="<冷却时间 90秒 消耗 25战术点>
+-使用后每秒刷新一次位置，3秒后在鼠标标点位置落下导弹
+-导弹在范围7.5造成120的blast伤害
+-导弹会分裂出3个末敏弹头,对随机选定的三个敌方单位在范围5.0造成80的blast伤害
+#####分支α[末敏风暴]#####
+(决定最终打击位置时，对附近的三个敌方单位分别发射三个末敏弹头，造成80b，范围5.0的伤害)
+"/>
+
+	<text key="Hint - call - title - call_ui_t1_rocket_fairy_missile_update_beta" text="火箭妖精 - 巡曳飞弹" />
+	<text key="Hint - call - intro - call_ui_t1_rocket_fairy_missile_update_beta" text="<冷却时间 90秒 消耗 25战术点>
+-使用后每秒刷新一次位置，3秒后在鼠标标点位置落下导弹
+-导弹在范围7.5造成120的blast伤害
+#####分支β[精英机组]#####
+(决定最终打击位置时，对附近的三个敌方单位分别发射三个末敏弹头，造成80b，范围5.0的伤害)
+"/>
+
+	<text key="Hint - call - title - call_ui_t1_rocket_fairy_missile_update_gamma" text="火箭妖精 - 巡曳飞弹" />
+	<text key="Hint - call - intro - call_ui_t1_rocket_fairy_missile_update_gamma" text="<冷却时间 90秒 消耗 25战术点>
+-使用后每秒刷新一次位置，3秒后在鼠标标点位置落下导弹
+-导弹在范围7.5造成120的blast伤害
+#####分支α[精英机组]#####
+"/>
 
 	<text key="Hint - call - title - call_ui_t2_rocket_fairy_bm30" text="火箭妖精 - 火箭弹打击" />
 	<text key="Hint - call - intro - call_ui_t2_rocket_fairy_bm30" text="<冷却时间 90秒 消耗 50战术点>

@@ -812,22 +812,64 @@ class call_event : Tracker {
                                     addCallCoolDown(playerName,playerId,90.0,"tier1",m_playerinfo);
                                     sendFactionMessageKey(m_metagame,factionId,"rocketfight");
                                     int flagId = m_DummyCallID + 15000;
-                                    CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
-                                    FairyRequest.setIconTypeKey("call_marker_drop");
-                                    FairyRequest.setIndex(6);
-                                    FairyRequest.setSize(0.5);
-                                    FairyRequest.setDummyId(flagId);
-                                    addCastlingMarker(FairyRequest);
                                     m_DummyCallID++;
                                     const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
                                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));                                    
-                                    Event_call_rocket_fairy_missile@ new_task = Event_call_rocket_fairy_missile(m_metagame,2.5,characterId,factionId,c_pos,stringToVector3(position),"",flagId);
+                                    Event_call_rocket_fairy_missile@ new_task = Event_call_rocket_fairy_missile(m_metagame,1.0,characterId,factionId,c_pos,stringToVector3(position),"",flagId);
                                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                                     tasker.add(new_task);
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
                                     playSoundAtLocation(m_metagame,"cruise_missile_start_fromCOD16.wav",factionId,position,1.8);
                                     break;
-                                }                                
+                                }
+                                case 100701: //火箭妖精 巡曳飞弹
+                                {
+                                    if(!costTacticPoint(battleInfo,25,playerId)) break;
+                                    addCallCoolDown(playerName,playerId,90.0,"tier1",m_playerinfo);
+                                    sendFactionMessageKey(m_metagame,factionId,"rocketfight");
+                                    int flagId = m_DummyCallID + 15000;
+                                    m_DummyCallID++;
+                                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));                                    
+                                    Event_call_rocket_fairy_missile@ new_task = Event_call_rocket_fairy_missile(m_metagame,1.0,characterId,factionId,c_pos,stringToVector3(position),"",flagId);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
+                                    addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    playSoundAtLocation(m_metagame,"cruise_missile_start_fromCOD16.wav",factionId,position,1.8);
+                                    break;
+                                }
+                                case 100702: //火箭妖精 巡曳飞弹
+                                {
+                                    if(!costTacticPoint(battleInfo,25,playerId)) break;
+                                    addCallCoolDown(playerName,playerId,90.0,"tier1",m_playerinfo);
+                                    sendFactionMessageKey(m_metagame,factionId,"rocketfight");
+                                    int flagId = m_DummyCallID + 15000;
+                                    m_DummyCallID++;
+                                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));                                    
+                                    Event_call_rocket_fairy_missile@ new_task = Event_call_rocket_fairy_missile(m_metagame,1.0,characterId,factionId,c_pos,stringToVector3(position),"",flagId);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
+                                    addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    playSoundAtLocation(m_metagame,"cruise_missile_start_fromCOD16.wav",factionId,position,1.8);
+                                    break;
+                                }
+                                case 100703: //火箭妖精 巡曳飞弹
+                                {
+                                    if(!costTacticPoint(battleInfo,25,playerId)) break;
+                                    addCallCoolDown(playerName,playerId,90.0,"tier1",m_playerinfo);
+                                    sendFactionMessageKey(m_metagame,factionId,"rocketfight");
+                                    int flagId = m_DummyCallID + 15000;
+                                    m_DummyCallID++;
+                                    const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+                                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));                                    
+                                    Event_call_rocket_fairy_missile@ new_task = Event_call_rocket_fairy_missile(m_metagame,1.0,characterId,factionId,c_pos,stringToVector3(position),"",flagId);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
+                                    addCustomStatToCharacter(m_metagame,"radio_call",characterId);
+                                    playSoundAtLocation(m_metagame,"cruise_missile_start_fromCOD16.wav",factionId,position,1.8);
+                                    break;
+                                }                                                                                                
                                 default:
                                     break;                                
                             }
