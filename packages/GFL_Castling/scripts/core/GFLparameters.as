@@ -129,6 +129,7 @@
         "ogas_pulse_generator.vehicle",	// OGAS干扰仪
         "radio_jammer.vehicle",
         "radio_jammer2.vehicle",
+        "radar_tower.vehicle",
         "sf_boss_intruder_skill.vehicle"
     };
 
