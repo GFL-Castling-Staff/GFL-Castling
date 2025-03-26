@@ -731,7 +731,11 @@ class kill_event : Tracker {
                     if(reward_pool_key=="boss")
                     {
                         g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"snipecharge",5);
-                    }                    
+                    }
+                    else if(reward_pool_key=="elite" || reward_pool_key=="rare")
+                    {
+                        g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"snipecharge",2);
+                    }
                     else
                     {
                         g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"snipecharge");

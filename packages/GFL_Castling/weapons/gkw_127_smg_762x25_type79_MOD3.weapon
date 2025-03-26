@@ -10,7 +10,7 @@
 	stance_accuracy_rate="6.0"
 	projectile_speed="120" 
 	retrigger_time="0.06" 
-	suppressed="0" 
+	suppressed="1" 
 	spread_range="0.2"
 	sight_range_modifier="1.5"
 	sustained_fire_diminish_rate="1.8" 
@@ -18,7 +18,7 @@
 	<inventory encumbrance="12.5" buy_price="79.0" sell_price="79.0" />
 	<animation state_key="reload" animation_key="reloading, magazine rifle 0.5" />
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1" />
-	<sound key="fire" fileref="type79_fire_FromBF2.wav" pitch_variety="0.05" volume="1.2" />
+	<sound key="fire" fileref="type79sd_fire_FromARENABREAKOUT.wav" pitch_variety="0.05" volume="1.2" />
 	<sound key="magazine_out" fileref="type79_mgz_out_FromBF2.wav" volume="0.8" />
 	<sound key="magazine_in" fileref="type79_mgz_in_FromBF2.wav" volume="0.8" />
 	<sound key="cycle" fileref="type79_cycle_FromBF2.wav" volume="0.8" />

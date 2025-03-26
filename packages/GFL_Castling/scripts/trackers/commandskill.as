@@ -3905,10 +3905,10 @@ class CommandSkill : Tracker {
                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                     array<soldier_spawn_request@> spawn_soldier =
                     {
-                        soldier_spawn_request("Dummy_64type",10)
+                        soldier_spawn_request("Dummy_64type",5)
                     };    
                     tasker.add(DelaySpawnSoldier(m_metagame,2.0,factionid,spawn_soldier,aim_pos,9.5,9.5));  
-                    addCooldown("64type",40,characterId,modifer);
+                    addCooldown("64type",20,characterId,modifer);
                 }
             }
         }
