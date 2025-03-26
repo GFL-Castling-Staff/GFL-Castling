@@ -1,44 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<weapon key="gkw_m1a1.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<weapon key="gkw_sm1.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification 
-	can_shoot_running="1"
     accuracy_factor="1"
     barrel_offset="0.6"
-    class="4"
+    class="0"
     burst_shots="1"
     slot="0"
-    magazine_size="15"
-    name="M1A1 Carbine"
-	spread_range="0.24"
+    magazine_size="30"
+    name="HEZI SM-1"
+	spread_range="0.28"
     projectile_speed="175"
-    retrigger_time="-1"
-    last_burst_retrigger_time="0.1"
+    retrigger_time="0.1"
     suppressed="0"
-    sustained_fire_diminish_rate="1.6"
-    sustained_fire_grow_step="0.3"
-    sight_range_modifier="1.25"
-    stance_accuracy_rate="4.0"
+    sustained_fire_diminish_rate="2.0"
+    sustained_fire_grow_step="0.24"
+    sight_range_modifier="2.0"
+    stance_accuracy_rate="3.0"
     stab_enabled="1"
     carry_in_two_hands="1"/>
 	<inventory encumbrance="35.0" buy_price="10.0" sell_price="10.0"/>
-	<animation state_key="reload" animation_key="reloading, magazine rifle 0.9"/>
-	<sound key="fire" fileref="m1a1_fire_FromPOSTSCRIPTUM.wav" pitch_variety="0.01" volume="1.3"/>
-	<sound key="magazine_out" fileref="m1a1_mgz_out_FromBF5.wav" volume="0.6"/>
-	<sound key="magazine_in" fileref="m1a1_mgz_in_FromBF5.wav" volume="0.6"/>
-	<sound key="cycle" fileref="m1a1_cycle_FromBF5.wav" volume="0.6"/>
+	<animation state_key="reload" animation_key="reloading, magazine rifle 1.2"/>
+	<sound key="fire" fileref="sm1_fire_FromRS2V.wav" pitch_variety="0.01" volume="1.3"/>
+	<sound key="magazine_out" fileref="sm1_mgz_out_FromRS2V.wav" volume="0.6"/>
+	<sound key="magazine_in" fileref="sm1_mgz_in_FromRS2V.wav" volume="0.6"/>
+	<sound key="cycle" fileref="sm1_cycle_FromRS2V.wav" volume="0.6"/>
 	<sound key="dry_fire" fileref="dryfire_rf.wav" pitch_variety="0.05" volume="1.0" />
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_rf_m1a1.xml"/>
-	<hud_icon filename="gkw_m1a1.png"/>
+	<hud_icon filename="gkw_sm1.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile">
-		<result class="hit" kill_probability="4.2" kill_probability_offset_on_successful_hit="6.5" kill_decay_start_time="0.825" kill_decay_end_time="1.375"/>
+		<result class="hit" kill_probability="3.8" kill_probability_offset_on_successful_hit="6.5" kill_decay_start_time="0.825" kill_decay_end_time="1.375"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251" />
-	<stance state_key="running" accuracy="0.75" />
-    <stance state_key="walking" accuracy="0.75" />
-    <stance state_key="crouch_moving" accuracy="0.75" />
-    <stance state_key="prone_moving" accuracy="0.75" />
+	<stance state_key="running" accuracy="0.45" />
+    <stance state_key="walking" accuracy="0.6" />
+    <stance state_key="crouch_moving" accuracy="0.5" />
+    <stance state_key="prone_moving" accuracy="0.5" />
     <stance state_key="standing" accuracy="0.98" />
     <stance state_key="crouching" accuracy="1.0" />
     <stance state_key="prone" accuracy="1.0" />
@@ -55,7 +53,7 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<modifier class="speed" value="0.3"/>
+	<modifier class="speed" value="0.0"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
