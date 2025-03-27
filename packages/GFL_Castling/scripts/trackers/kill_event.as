@@ -618,6 +618,8 @@ class kill_event : Tracker {
             }
 
 
+
+            //指定武器handle
             if(c_weaponType=="gkw_ppkmod3.weapon" || c_weaponType =="gkw_ppkmod3_3905.weapon" || c_weaponType =="gkw_ppkmod3_6109.weapon"){
                 int i = findSkillIndex(characterId,"PPKMOD3");
                 if(i >=0){
@@ -627,7 +629,15 @@ class kill_event : Tracker {
                     }
                 }
             }
-
+            else if(c_weaponType=="gkw_c96mod3.weapon" || c_weaponType =="gkw_c96mod3_8405.weapon"){
+                int i = findSkillIndex(characterId,"C96");
+                if(i >=0){
+                    SkillArray[i].m_time-=1.0;
+                    if(KillerWeaponKey=="gkw_c96mod3.weapon" || KillerWeaponKey=="gkw_c96mod3_8405.weapon"){
+                        SkillArray[i].m_time-=1.0;
+                    }
+                }
+            }
             if(c_weaponType=="gkw_m1895mod3_5309.weapon" 
             || c_weaponType =="gkw_m1895mod3_5309_skill.weapon"
             || c_weaponType =="gkw_m1895mod3_7107.weapon"
@@ -712,7 +722,7 @@ class kill_event : Tracker {
                 }
             }
 
-            if(KillerWeaponKey=="gkw_carcano1938.weapon" && killway=="hit"){
+            else if(KillerWeaponKey=="gkw_carcano1938.weapon" && killway=="hit"){
                 g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"carcano");
                 string c_pos = getStringPosFromCharacterId(m_metagame,characterId);
                 if(c_pos != "")

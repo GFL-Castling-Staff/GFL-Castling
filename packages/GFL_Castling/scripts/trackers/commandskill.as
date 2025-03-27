@@ -4001,7 +4001,7 @@ class CommandSkill : Tracker {
                     playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
                     c_pos=c_pos.add(Vector3(0,2.25,0));
                     CreateDirectProjectile_T(m_metagame,c_pos,aim_pos,"skill_c96_flare.projectile",characterId,factionid,1.5);
-                    addCooldown("C96",90,characterId,modifer);
+                    addCooldown("C96",120,characterId,modifer);
                 }
             }
         }
