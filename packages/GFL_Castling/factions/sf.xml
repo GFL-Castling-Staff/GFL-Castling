@@ -467,7 +467,6 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_vespid_swap.weapon" enabled="1"/>
 			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
-			<weapon key="cover_deploy_enemy.weapon" enabled="1"/>
 			<weapon key="sfw_m2g.weapon" enabled="1"/>
 			<call key="sf_assault.call" />
 			<call key="sf_trooper_small_scout.call" />
@@ -491,7 +490,6 @@
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_vespid_swap.weapon" enabled="1"/>
 			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
-			<weapon key="cover_deploy_enemy.weapon" enabled="1"/>
 			<weapon key="sfw_m2g.weapon" enabled="1"/>
 			<call key="sf_assault.call" />
 			<call key="sf_trooper_small_scout.call" />
@@ -539,11 +537,11 @@
 		</attribute_config>
 	</soldier>
 	<!-- guard -->
-	<soldier name="sf_guard" spawn_score="3.0" copy_from="default_spawn_ai">
+	<soldier name="sf_guard" spawn_score="1.0" copy_from="default_spawn_ai">
 		<ai filename="shield.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_guard.weapon" enabled="1"/>
-			<carry_item key="vest_15hp_elite_5" enabled="1" />
+			<carry_item key="vest_40hp_21" enabled="1" />
 			<weapon key="cover_deploy_enemy.weapon" enabled="1"/>
 			<weapon key="cover_deploy_enemy_2.weapon" enabled="1"/>
 			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
@@ -552,11 +550,11 @@
 			<item_class_existence class="weapon" slot="1" probability="0.5" />
 		</item_class_existence_config>		
 	</soldier>
-	<soldier name="sf_guard_swap" spawn_score="0.0" copy_from="default_spawn_ai">
+	<soldier name="sf_guard_swap" spawn_score="0.5" copy_from="default_spawn_ai">
 		<ai filename="shield.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_guard_swap.weapon" enabled="1"/>
-			<carry_item key="vest_40hp_20" enabled="1" />
+			<carry_item key="vest_40hp.carry_item" enabled="1" />
 			<weapon key="cover_deploy_enemy.weapon" enabled="1"/>
 			<weapon key="cover_deploy_enemy_2.weapon" enabled="1"/>
 			<projectile key="sf_ap_mine.projectile" enabled="1.0" />
@@ -595,14 +593,14 @@
 		<ai filename="sf_striker.ai" />
 		<resources clear_weapons="1" clear_calls="1">
 			<weapon key="sfw_striker.weapon" enabled="1"/>
-			<carry_item key="sf_ar.carry_item" enabled="1" />
+			<carry_item key="vest_15hp_elite_5" enabled="1" />
 			<projectile key="sf_ap_grenade.projectile" enabled="1" />
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="grenade" slot="0" probability="0.3" />
 		</item_class_existence_config>	
 	</soldier>
-	<soldier name="sf_striker_swap" spawn_score="0.75" copy_from="default_spawn_ai">
+	<soldier name="sf_striker_swap" spawn_score="1.0" copy_from="default_spawn_ai">
 		<ai filename="sf_striker.ai" />
 		<model filename="sfd_striker_swap_from_dusk.xml" />
 		<resources clear_weapons="1" clear_calls="1">
@@ -746,7 +744,7 @@
 		<character filename="brute.character" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="sfw_brute.weapon" enabled="1" />
-			<carry_item key="sf_ar.carry_item" />
+			<carry_item key="vest_15hp_elite.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.0" max="0.033" />
@@ -759,7 +757,7 @@
 		<character filename="brute.character" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="sfw_brute_swap.weapon" enabled="1" />
-			<carry_item key="sf_ar.carry_item" />
+			<carry_item key="vest_15hp_elite.carry_item" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="0.0" max="0.033" />
