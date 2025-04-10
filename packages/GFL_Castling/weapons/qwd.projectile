@@ -16,14 +16,14 @@
     <sound class="result" key="vehicle" copy="other" />
     <sound class="result" key="character" copy="other" />
 
-	<trail probability="1.0" key="red_thick" />
+	<trail probability="1.0" key="manticore" />
 
     <effect class="result" type="splat_map" surface_tag="" size="2.0" atlas_index="0" layer="1" />
     <effect class="result" type="splat_map" surface_tag="" size="2.5" atlas_index="4" layer="0" />
     <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="2" additive="0" />
 
-    <effect class="result" key="terrain" ref="result_cannon_blast_AmbientLight_small" lighting="0"/>
-    <effect class="result" key="terrain" ref="result_cannon_blast_smoke_small" lighting="0"/>    
+    <effect class="result" key="terrain" ref="result_cannon_blast_AmbientLight" lighting="0"/>
+    <effect class="result" key="terrain" ref="result_cannon_blast_smoke" lighting="0"/> 
     <effect class="result" key="terrain" ref="hitGround_20mm" use_surface_color="1" />
 
     <effect class="result" key="other" copy="terrain"/>
@@ -32,24 +32,6 @@
     <effect class="result" key="shield" copy="terrain" />			
     <effect class="result" key="vehicle" copy="terrain" />	
 
-    <effect class="result" key="shield" ref="Laser_ImpactShine_Red" />
-    <effect class="result" key="vehicle" ref="Laser_ImpactShine_Red" />
-    <effect class="result" key="other" copy="vehicle"/>
-
-    <effect class="result" key="shield" ref="Laser_ImpactBeam_Red" />
-    <effect class="result" key="vehicle" ref="Laser_ImpactBeam_Red" />
-
-    <effect class="result" key="terrain" ref="Laser_Burnout"/>
-    <effect class="result" key="static_object" ref="Laser_Burnout_on_staticobject"/>
-    <effect class="result" key="terrain" ref="Laser_ImpackSmoke"/>
-    <effect class="result" key="static_object" ref="Laser_ImpackSmoke"/>
-
-    <effect class="result" key="terrain" ref="Laser_ImpactShine_Red"/>
-    <effect class="result" key="static_object" ref="Laser_ImpactShine_Red"/>
-
-    <effect class="result" key="other" ref="LaserImpact_Red" />
-    <effect class="result" key="terrain" ref="LaserImpact_Red" />
-    <effect class="result" key="character" ref="LaserImpact_Red" />
-    <effect class="result" key="static_object" ref="LaserImpact_Red"/>
+    <effect class="activated" ref="activated_cannon_flysmoke" />
 
 </projectile>

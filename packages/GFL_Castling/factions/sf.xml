@@ -780,6 +780,9 @@
 			<call key="sf_jaguar.call" />
 			<call key="sf_assualt.call" />
 			<call key="sf_trooper.call" />
+            <call key="sf_mecha.call" />
+            <call key="sf_mecha_inf.call" />
+            <call key="sf_mecha_manticore.call" />
 			<projectile key="skill_sf_boss_hunter_scan.projectile" enabled="1" probability="1.0"/>
 			<carry_item key="vest_50hp_enforcer.carry_item" enabled="1" />
 		</resources>
@@ -802,7 +805,7 @@
 		<ai filename="sf_architect.ai" />
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<call key="sf_jupiter.call" />
-			<call key="sf_assualt.call" />
+			<call key="sf_trooper_goliath.call" />
 			<weapon key="sfw_architect.weapon" enabled="1"/>
 			<weapon key="sfw_architect_at.weapon" enabled="1"/>
 			<carry_item key="vest_40hp.carry_item" enabled="1" />
@@ -829,6 +832,7 @@
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
 			<call key="sf_assualt.call" />
+            <call key="sf_trooper_goliath.call" />
 			<weapon key="sfw_Intruder.weapon" enabled="1"/>
 			<!-- <projectile key="skill_sf_boss_intruder_spawn.projectile" enabled="1"/> -->
 			<carry_item key="vest_40hp.carry_item" enabled="1" />
@@ -984,10 +988,7 @@
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1" clear_grenades="1">
 			<weapon key="sfw_m16a1.weapon" enabled="1"/>
 			<projectile key="m16a1_flashbang.projectile" enabled="1"/>
-			<call key="sf_destroyer.call" />
-			<call key="sf_jaguar.call" />
-			<call key="sf_jupiter.call" />
-			<call key="sf_assualt.call" />
+			<call key="sf_m16a1.call" />
 			<carry_item key="sf_m16a1.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
@@ -1016,7 +1017,9 @@
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
-			<call key="sf_assualt.call" />
+			<call key="sf_mecha_manticore.call" />
+            <call key="sf_mecha_inf.call" />
+            <call key="sf_mecha.call" />
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="600.0" max="800.05" />
@@ -1043,7 +1046,9 @@
 			<carry_item key="vest_40hp.carry_item" enabled="1" />
 			<call key="sf_assualt.call" />
 			<call key="sf_jaguar.call" />
-			<call key="sf_jupiter.call" />			
+			<call key="sf_jupiter.call" />		
+            <call key="sf_mecha_inf.call" />
+            <call key="sf_mecha.call" />            	
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="300.0" max="300.05" />
@@ -1073,6 +1078,8 @@
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
+            <call key="sf_mecha_inf.call" />
+            <call key="sf_mecha.call" />            
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="500.0" max="500.05" />
@@ -1102,6 +1109,8 @@
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
 			<call key="sf_assualt.call" />
+            <call key="sf_mecha_inf.call" />
+            <call key="sf_mecha.call" />            
 		</resources>
 		<attribute_config class="xp">
 			<attribute weight="1.0" min="500.0" max="500.05" />
@@ -1151,7 +1160,7 @@
 		<ai filename="manticore.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1">
 			<weapon key="sfw_manticore.weapon"/>
-			<carry_item key="vest_100hp_mecha_80" />
+			<carry_item key="vest_100hp_mecha_100" />
 		</resources>
 
 		<attribute_config class="xp">

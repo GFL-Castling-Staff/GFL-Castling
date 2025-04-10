@@ -61,4 +61,16 @@
 		<inventory encumbrance="0.0" price="300.0" />
 	</call>
 
+	<call key="sf_mecha_manticore.call" radio_view_text="Manticore Deploy" initiation_comment1="Request S.F. Manticores" acknowledge_comment="Roger" notify_metagame="1" consume_rp="0" show_target_marker="0">
+		<tag name="reinforcements" />
+		<hud_icon filename="call_Airbone_Traumateam.png" />
+		<capacity value="0" source="rank" source_value="0.0" />
+		<capacity value="100" source="rank" source_value="0.0" />
+		<inventory encumbrance="0.0" price="500.0" />
+	</call>
+	<call key="sf_mecha_manticore_sub.call" acknowledge_time="0.0" launch_comment="">
+		<round instances="5" instance_class="soldier" instance_key="sf_manticore" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
+		<inventory encumbrance="0.0" price="500.0" />
+	</call>
 </calls>

@@ -478,8 +478,9 @@
 		</attribute_config>
 	</soldier>
 	<!--人类士兵 LV75-80-->
-	<soldier name="kcco_ar_human" spawn_score="0.75" copy_from="default_bot">
-		<ai filename="default.ai" ></ai>
+	<soldier name="kcco_ar_human" spawn_score="0.5" copy_from="default_bot">
+		<ai filename="kcco_elite.ai" >
+        </ai>
 		<character filename="default_kcco_human.character" />
 		<models file="kcco_human_basic.models" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_carry_items="1" clear_grenades="1">
@@ -499,13 +500,42 @@
 			<item_class_existence class="grenade" slot="0" probability="0.4" />
 		</item_class_existence_config>				
 		<attribute_config class="xp">
-			<attribute weight="1.0" min="10.015" max="13.008" />
+			<attribute weight="1.0" min="5" max="10" />
 		</attribute_config>
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="1500" max="2000" />
 			<attribute weight="4.0" min="500" max="1500" />
 		</attribute_config>				
 	</soldier>
+	<soldier name="kcco_ar_human_vehicle" spawn_score="0.25" copy_from="default_bot">
+		<ai filename="elite_vehicle.ai" >
+        </ai>
+		<character filename="default_kcco_human.character" />
+		<models file="kcco_human_basic.models" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_carry_items="1" clear_grenades="1">
+			<weapon key="kcco_ar_2.weapon" enabled="1" />
+			<weapon key="kcco_rpg7.weapon" enabled="1" />
+			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
+			<projectile key="kcco_smartgrenade_1.projectile" enabled="1.0" />
+			<call key="kcco_assault.call" />
+			<call key="kcco_dog.call" />
+			<call key="kcco_quartz.call" />	
+			<call key="kcco_zircon.call" />
+			<call key="kcco_zircon1.call" />
+			<call key="kcco_argo_puppis_three.call" />				
+		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="0.25" />
+			<item_class_existence class="grenade" slot="0" probability="0.4" />
+		</item_class_existence_config>				
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="20" max="20" />
+		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="1500" max="2000" />
+			<attribute weight="4.0" min="500" max="1500" />
+		</attribute_config>				
+	</soldier>    
 	<!--人类精英士官 LV80-100-->
 	<soldier name="kcco_ar_human_elite" spawn_score="0.3" copy_from="default_bot" clear_grenades="1">
 		<ai filename="kcco_elite.ai" />
@@ -529,7 +559,7 @@
 			<item_class_existence class="weapon" slot="1" probability="0.75" />
 		</item_class_existence_config>
 		<attribute_config class="xp">
-			<attribute weight="1.0" min="13.008" max="33.633" />
+			<attribute weight="1.0" min="25" max="30" />
 		</attribute_config>
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="500" max="1800" />

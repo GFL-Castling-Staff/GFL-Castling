@@ -40,5 +40,18 @@
 		<hud_icon filename="call_Airborne_architect.png" />
 		<capacity value="100" source="rank" source_value="0.0" />
 		<inventory encumbrance="0.0" price="100.0" />
-	</call>		
+	</call>
+	<call key="sf_trooper_goliath.call" radio_view_text="Reinforcements - Goliath Falling" initiation_comment="Requesting Goliath" acknowledge_comment="Roger" launch_comment="" notify_metagame="1">
+		<round instances="5" instance_class="soldier" instance_key="sf_goliath" instance_spread="3 15 3" common_spread="0 0 0" launch_time="3.0" spawn_time="3.0">
+			<effect class="launch" ref="ShadowAirplaneFlyby" shadow="1" />
+			<sound class="launch" fileref="plane_flyby.wav" />
+		</round>
+		<round instances="1" instance_class="soldier" instance_key="sf_goliath_plus" instance_spread="3 15 3" common_spread="0 0 0" launch_time="3.0" spawn_time="3.0">
+			<effect class="launch" ref="ShadowAirplaneFlyby" shadow="1" />
+			<sound class="launch" fileref="plane_flyby.wav" />
+		</round>        
+		<hud_icon filename="call_Airborne_architect.png" />
+		<capacity value="100" source="rank" source_value="0.0" />
+		<inventory encumbrance="0.0" price="500.0" />
+	</call>
 </calls>

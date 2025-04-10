@@ -1752,6 +1752,32 @@ class GFLskill : Tracker {
 				break;			
 			}
 
+            case 63:{ //强无敌空投
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character is null) return;
+				Vector3 pos = stringToVector3(event.getStringAttribute("position"));
+				int factionid = character.getIntAttribute("faction_id");
+                spawnStaticProjectile(m_metagame,"manticore_land_blast.projectile",pos,characterId,factionid);
+				array<const XmlElement@>@ groups = getSoldierGroups(m_metagame, factionid);
+				if (groups is null) return;
+				string soldier_name = "sf_manticore";
+				bool status = false;
+				for (uint i = 0; i < groups.size(); ++i) {
+					const XmlElement@ group = groups[i];
+					if (group is null) continue;
+					string name = group.getStringAttribute("name");
+					if (name == soldier_name){
+						status = true;
+						break;
+					}
+				}
+				if (status){
+					spawnSoldier(m_metagame,1,factionid,pos,soldier_name);
+				}
+				break;
+            }
+
             default:
                 break;
 		}

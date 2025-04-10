@@ -2,6 +2,7 @@
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_assault.call", "sf_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_mecha.call", "sf_mecha_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_mecha_inf.call", "sf_mecha_inf_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_mecha_manticore.call", "sf_mecha_manticore_sub.call", array<string> = {""}, false,false,false,"infantry"));
 
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_assault.call", "kcco_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
 			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_zircon.call", "kcco_zircon_sub.call", array<string> = {""}, false,false,false,"infantry"));

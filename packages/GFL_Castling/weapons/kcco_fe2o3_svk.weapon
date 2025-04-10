@@ -108,7 +108,7 @@
         <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.735" kill_decay_end_time="2.892"/>
     </projectile>
     <tag name="rifle"/>
-    <commonness value="0.05" in_stock="1" can_respawn_with="1"/>
+    <commonness value="0.02" in_stock="1" can_respawn_with="1"/>
     <capacity value="1" source="rank" source_value="0.0"/>
     <stance state_key="running" accuracy="1.0"/>
     <stance state_key="walking" accuracy="1.0"/>

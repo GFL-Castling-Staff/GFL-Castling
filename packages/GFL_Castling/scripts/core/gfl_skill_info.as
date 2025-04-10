@@ -193,6 +193,8 @@ dictionary gameSkillIndex = {
 
         {"evo3_skill",62},
 
+        {"manticore_summon",63},
+
 
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}

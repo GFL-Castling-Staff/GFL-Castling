@@ -72,4 +72,6 @@
 	<animation key="climbing ladder" target_key="gly_up_ladder" />
 	<animation key="climbing ladder ending" target_key="gly_falling" />
 
+	<parameter class="skydiving_gravity" value="-10.0" />
+
 </character>

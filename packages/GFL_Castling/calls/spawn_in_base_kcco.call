@@ -9,13 +9,13 @@
 		<inventory encumbrance="0.0" price="300.0" />
 	</call>
 	<call key="kcco_assault_sub.call" acknowledge_time="0.0" launch_comment="">
-		<round instances="4" instance_class="soldier" instance_key="kcco_ar" instance_spread="4 0 4" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		<round instances="10" instance_class="soldier" instance_key="kcco_ar" instance_spread="4 0 4" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
-		<round instances="4" instance_class="soldier" instance_key="kcco_sg" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		<round instances="5" instance_class="soldier" instance_key="kcco_sg" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
-		<round instances="1" instance_class="soldier" instance_key="kcco_mg" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		<round instances="3" instance_class="soldier" instance_key="kcco_mg" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
-		<round instances="2" instance_class="soldier" instance_key="kcco_ar_human" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.8" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		<round instances="5" instance_class="soldier" instance_key="kcco_ar_human" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.8" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
 		<round instances="1" instance_class="soldier" instance_key="kcco_ar_human_elite" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.8" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
@@ -30,13 +30,15 @@
 		<inventory encumbrance="0.0" price="500.0" />
 	</call>
 	<call key="kcco_zircon_sub.call" acknowledge_time="0.0" launch_comment="">
-		<round instances="3" instance_class="soldier" instance_key="kcco_mg" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		<round instances="5" instance_class="soldier" instance_key="kcco_sg" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>    
+		<round instances="5" instance_class="soldier" instance_key="kcco_mg" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
-		<round instances="3" instance_class="soldier" instance_key="kcco_cerynitis" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		<round instances="5" instance_class="soldier" instance_key="kcco_cerynitis" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
-		<round instances="1" instance_class="soldier" instance_key="kcco_cerynitis_swap" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		<round instances="2" instance_class="soldier" instance_key="kcco_cerynitis_swap" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
-		<round instances="4" instance_class="soldier" instance_key="kcco_aegis" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		<round instances="5" instance_class="soldier" instance_key="kcco_aegis" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
 		<round instances="1" instance_class="soldier" instance_key="kcco_zircon_squadleader" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.8" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
@@ -52,13 +54,13 @@
 		<inventory encumbrance="0.0" price="500.0" />
 	</call>
 	<call key="kcco_zircon_1_sub.call" acknowledge_time="0.0" launch_comment="">
-		<round instances="4" instance_class="soldier" instance_key="kcco_cerynitis" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		<round instances="5" instance_class="soldier" instance_key="kcco_cerynitis" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
-		<round instances="2" instance_class="soldier" instance_key="kcco_cerynitis_swap" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		<round instances="3" instance_class="soldier" instance_key="kcco_cerynitis_swap" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
-		<round instances="3" instance_class="soldier" instance_key="kcco_Hydra" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		<round instances="4" instance_class="soldier" instance_key="kcco_Hydra" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
-		<round instances="2" instance_class="soldier" instance_key="kcco_teslatrooper" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		<round instances="1" instance_class="soldier" instance_key="kcco_teslatrooper" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
 		<round instances="1" instance_class="soldier" instance_key="kcco_zircon_squadleader" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.8" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
@@ -74,7 +76,7 @@
 		<inventory encumbrance="0.0" price="500.0" />
 	</call>
 	<call key="kcco_quartz_sub.call" acknowledge_time="0.0" launch_comment="">
-		<round instances="5" instance_class="soldier" instance_key="kcco_ar_human_elite" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		<round instances="12" instance_class="soldier" instance_key="kcco_ar_human_elite" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
 		<round instances="3" instance_class="soldier" instance_key="kcco_quartz_ranger" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
@@ -89,9 +91,9 @@
 		<inventory encumbrance="0.0" price="300.0" />
 	</call>
 	<call key="kcco_dog_sub.call" acknowledge_time="0.0" launch_comment="">
-		<round instances="4" instance_class="soldier" instance_key="kcco_dog" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		<round instances="5" instance_class="soldier" instance_key="kcco_dog" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
-		<round instances="4" instance_class="soldier" instance_key="kcco_archer" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		<round instances="7" instance_class="soldier" instance_key="kcco_archer" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
 		<inventory encumbrance="0.0" price="300.0" />
 	</call>
@@ -108,7 +110,9 @@
 		<round instances="1" instance_class="vehicle" instance_key="coeus.vehicle" instance_spread="0 0 0" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
 		<round instances="4" instance_class="soldier" instance_key="kcco_ar_human" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.8" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
-		</round>			
+		</round>
+		<round instances="2" instance_class="soldier" instance_key="kcco_ar_human_vehicle" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.8" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>
 		<inventory encumbrance="0.0" price="500.0" />
 	</call>	
 
@@ -124,7 +128,9 @@
 		<round instances="1" instance_class="vehicle" instance_key="typhon.vehicle" instance_spread="0 0 0" common_spread="0 0 0" launch_time="3.0" spawn_time="4.5" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
 		</round>
 		<round instances="4" instance_class="soldier" instance_key="kcco_ar_human" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.8" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
-		</round>		
+		</round>
+		<round instances="2" instance_class="soldier" instance_key="kcco_ar_human_vehicle" instance_spread="3 0 3" common_spread="0 0 0" launch_time="3.0" spawn_time="4.8" horizontal_offset_at_spawn="0.0" vertical_offset_at_spawn="0.0" initial_speed_to_target="0.0">
+		</round>        
 		<inventory encumbrance="0.0" price="1000.0" />
 	</call>
 
