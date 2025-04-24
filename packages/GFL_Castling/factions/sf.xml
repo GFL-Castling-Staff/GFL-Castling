@@ -808,6 +808,7 @@
 			<call key="sf_trooper_goliath.call" />
 			<weapon key="sfw_architect.weapon" enabled="1"/>
 			<weapon key="sfw_architect_at.weapon" enabled="1"/>
+            <projectile key="skill_sf_boss_arch_knight.projectile" enabled="1" probability="1.0" />
 			<carry_item key="vest_40hp.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
@@ -832,6 +833,9 @@
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
 			<call key="sf_assualt.call" />
+			<call key="sf_mecha_manticore.call" />
+            <call key="sf_mecha_inf.call" />
+            <call key="sf_mecha.call" />            
             <call key="sf_trooper_goliath.call" />
 			<weapon key="sfw_Intruder.weapon" enabled="1"/>
 			<!-- <projectile key="skill_sf_boss_intruder_spawn.projectile" enabled="1"/> -->
@@ -858,6 +862,7 @@
 			<call key="sf_destroyer.call" />
 			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
+            <call key="sf_trooper_goliath.call" />
 			<weapon key="sfw_dreamer.weapon" enabled="1"/>
 			<projectile key="skill_sf_boss_dreamer_scan.projectile" enabled="1" probability="1.0" />
 			<carry_item key="vest_40hp.carry_item" enabled="1" />
@@ -965,7 +970,7 @@
 			<call key="sf_assualt.call" />
 			<call key="sf_trooper.call" />
 			<weapon key="sfw_excutioner_2.weapon" enabled="1"/>
-			<projectile key="skill_sf_boss_excutioner_scan.projectile" enabled="1" probability="1.0" />
+			<projectile key="skill_sf_boss_excutioner_scan.projectile" enabled="1" probability="1.0" />            
 			<carry_item key="vest_50hp_enforcer.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
@@ -1014,9 +1019,8 @@
 		<resources clear_vehicles="1" clear_weapons="1" clear_calls="1" clear_carry_items="1">
 			<weapon key="sfw_agent.weapon" enabled="1"/>
 			<carry_item key="vest_80hp_tank_80" enabled="1" />
-			<call key="sf_destroyer.call" />
-			<call key="sf_jaguar.call" />
 			<call key="sf_jupiter.call" />
+            <call key="sf_trooper_goliath.call" />
 			<call key="sf_mecha_manticore.call" />
             <call key="sf_mecha_inf.call" />
             <call key="sf_mecha.call" />

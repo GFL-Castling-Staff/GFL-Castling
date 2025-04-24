@@ -1778,6 +1778,43 @@ class GFLskill : Tracker {
 				break;
             }
 
+            case 64:{ //救救我，计量官先生
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (checkCharacterDead(character)) return;
+				Vector3 pos = stringToVector3(event.getStringAttribute("position"));
+				int factionid = character.getIntAttribute("faction_id");
+                int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,factionid,pos,20);
+                if(luckyGuyid!=-1){
+                    const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+                    Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+                    DelayMovingTargetProjectileSet@ new_task = DelayMovingTargetProjectileSet(m_metagame,1.5,characterId,factionid,"skill_sf_boss_arch_knight_coming.projectile",luckyGuyid);
+					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+					tasker.add(new_task);                    
+                }
+				break;
+            }
+            case 65:{ //计量官先生，救救我
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (checkCharacterDead(character)) return;
+				Vector3 pos = stringToVector3(event.getStringAttribute("position"));
+				int factionid = character.getIntAttribute("faction_id");
+                int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,factionid,pos,20);
+                if(luckyGuyid!=-1){
+                    const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+                    Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+                    DelayP2PProjectileSet@ new_task = DelayP2PProjectileSet(m_metagame,2.0,characterId,factionid,"skill_sf_boss_arch_knight_damage.projectile",pos.add(Vector3(0,100,0)),pos,200);
+					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+					tasker.add(new_task);
+                    array<soldier_spawn_request@> spawn_soldier =   
+                    {
+                        soldier_spawn_request("sfw_Gager",1)
+                    };                    
+                    tasker.add(DelaySpawnSoldier(m_metagame,0.2,factionid,spawn_soldier,pos.add(Vector3(0,2,0)),0,0));
+                }
+				break;
+            }            
             default:
                 break;
 		}

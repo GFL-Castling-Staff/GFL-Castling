@@ -171,6 +171,7 @@ class AOEVestRecoverTask : Task {
 	}
 }
 
+//task静态弹头，单次,POS
 class DelayProjectileSet :Task{
 	protected Metagame@ m_metagame;
 	protected float m_time;
@@ -216,22 +217,23 @@ class DelayProjectileSet :Task{
 	}
 }
 
-class DelayMovingProjectileSet :Task{
+//task静态弹头，跟踪cId
+class DelayMovingTargetProjectileSet :Task{
 	protected Metagame@ m_metagame;
 	protected float m_time;
     protected int m_character_id;
+    protected int m_target_id;
     protected int m_faction_id;
     protected string m_key;
 	protected float m_timeLeft;
-	protected Vector3 m_offset;
 
-	DelayMovingProjectileSet(Metagame@ metagame, float time, int cId,int fId,string key,Vector3 pos) {
+	DelayMovingTargetProjectileSet(Metagame@ metagame, float time, int cId,int fId,string key,int target) {
 		@m_metagame = metagame;
 		m_time = time;
 		m_character_id = cId;
 		m_faction_id =fId;
 		m_key=key;
-		m_offset=pos;
+        m_target_id = target;
 	}
 
 	void start() {
@@ -243,18 +245,62 @@ class DelayMovingProjectileSet :Task{
 		if (m_timeLeft < 0)
 		{
 			const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
-			if (character !is null) {
-				Vector3 now_pos = stringToVector3(character.getStringAttribute("position"));
-				now_pos=now_pos.add(m_offset);
+			if (!checkCharacterDead(character)) {
+                const XmlElement@ target = getCharacterInfo(m_metagame, m_target_id);
+                if(target is null) return;
+				Vector3 target_pos = stringToVector3(target.getStringAttribute("position"));
 				string c = 
 					"<command class='create_instance'" +
 					" faction_id='"+ m_faction_id +"'" +
 					" instance_class='grenade'" +
 					" instance_key='" + m_key +"'" +
-					" position='" + now_pos.toString() + "'"+
+					" position='" + target_pos.toString() + "'"+
 					" character_id='" + m_character_id + "' />";
 				m_metagame.getComms().send(c);
 			}
+		}
+	}
+
+    bool hasEnded() const {
+		if (m_timeLeft < 0) {
+			return true;
+		}
+		return false;
+	}
+}
+
+//task点对点弹头，单次,POS1 POS2 线速度
+class DelayP2PProjectileSet :Task{
+	protected Metagame@ m_metagame;
+	protected float m_time;
+    protected int m_character_id;
+    protected int m_faction_id;
+    protected string m_key;
+	protected float m_timeLeft;
+	protected Vector3 m_pos1;
+	protected Vector3 m_pos2;
+    protected float m_speed;
+
+	DelayP2PProjectileSet(Metagame@ metagame, float time, int cId,int fId,string key,Vector3 pos1,Vector3 pos2,float speed) {
+		@m_metagame = metagame;
+		m_time = time;
+		m_character_id = cId;
+		m_faction_id =fId;
+		m_key=key;
+		m_pos1=pos1;
+        m_pos2=pos2;
+        m_speed = speed;
+	}
+
+	void start() {
+		m_timeLeft=m_time;
+	}
+
+	void update(float time) {
+		m_timeLeft -= time;
+		if (m_timeLeft < 0)
+		{
+            CreateDirectProjectile(m_metagame,m_pos1,m_pos2,m_key,m_character_id,m_faction_id,m_speed);
 		}
 	}
 
@@ -2070,7 +2116,7 @@ class DelayGPSScanRequest : Task{
 		if (m_timeLeft < 0 && m_scanned == false){
 			bool anyFound = false;
 			
-			for (int f = 0; f < m_metagame.getFactionCount(); ++f){
+			for (uint f = 0; f < m_metagame.getFactionCount(); ++f){
 				if(f == m_faction_id) continue;
 				//scanning for all vehicles on the list
 				for (uint i = 0; i < GPSScanTargets.length(); ++i){

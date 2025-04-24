@@ -418,12 +418,14 @@ Vector3 getAimUnitPosition(Vector3 s_pos, Vector3 e_pos, float scale) {
 }
 
 Vector3 getRandomOffsetVector(Vector3 pos,float strike_rand){
+    if(strike_rand<=0) return pos;
 	float rand_x = rand(-strike_rand,strike_rand);
 	float rand_z = rand(-strike_rand,strike_rand);
 	return pos.add(Vector3(rand_x,0,rand_z));
 }
 
 Vector3 getRandomOffsetVector(Vector3 pos,float strike_randX,float strike_randY){
+    if(strike_randX<=0 && strike_randY) return pos;
 	float rand_x = rand(-strike_randX,strike_randX);
 	float rand_z = rand(-strike_randY,strike_randY);
 	return pos.add(Vector3(rand_x,0,rand_z));
