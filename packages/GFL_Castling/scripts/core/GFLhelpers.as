@@ -425,7 +425,7 @@ Vector3 getRandomOffsetVector(Vector3 pos,float strike_rand){
 }
 
 Vector3 getRandomOffsetVector(Vector3 pos,float strike_randX,float strike_randY){
-    if(strike_randX<=0 && strike_randY) return pos;
+    if(strike_randX<=0 && strike_randY <=0) return pos;
 	float rand_x = rand(-strike_randX,strike_randX);
 	float rand_z = rand(-strike_randY,strike_randY);
 	return pos.add(Vector3(rand_x,0,rand_z));
