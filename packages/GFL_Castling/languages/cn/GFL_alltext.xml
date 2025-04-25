@@ -79,6 +79,8 @@
 	<text key="Golyat" text="便携式歌莉娅"/>
 	<text key="FGM-148 Javelin" text="FGM-148“标枪”反坦克导弹"/>
     <text key="HellFire Incinerator" text="“地狱火燃烧区域"/> 
+	<text key="flamethrower" text="火焰"/>
+	<text key="flame grenade" text="燃烧弹"/>
 	<text key="MON-50 Anti-Person Mine" text="MON-50反人员地雷"/> 
 	<text key="Mon-200" text="Mon-200定向反步兵地雷"/> 
 	<text key="explosive bolt" text="高爆弩箭"/> 
@@ -110,6 +112,7 @@
 	<text key="M24 Anti-Tank grenade" text="M24反坦克手榴弹"/>
 	<text key="Anti-Tank mine" text="反坦克地雷"/>
 	<text key="S.F. Impact Grenade" text="S.F. 碰炸球形手雷"/>
+	<text key="S.F. Recoilless rifle" text="S.F. 无后坐力炮"/>
 	<text key="Med Bandage" text="绷带包"/>
 	<text key="Med Case" text="医疗箱"/>
 	<text key="M202 Air-Burst rocket launcher" text="M202“闪光”防空火箭发射器"/>
@@ -219,6 +222,12 @@
 	<text key="Targetdrone,Unlock!" text="已投送嘲讽靶机！" />
 
 	<text key="droping in" text="投放中"/>
+
+	<!-- 没啥影响的名字，但是升级解锁支援时候会显示这个 -->
+	<text key="vehicle supply" text="空投补给"/>
+	<text key="repair_capsules" text="维修胶囊"/>
+	<text key="manticore" text="蝎甲兽"/>
+	<text key="Daybreak" text="曙光小队"/>
 
 	<text key="Tier 6 Equipment Ticket" text="Tier 6 装备兑换劵"/> 
 	<text key="Defence Fairy - Hesco Bastion" text="防御妖精 - Hesco防爆墙"/>	
@@ -386,13 +395,20 @@
 	<!-- 帕拉蒂斯使用物品多以宗教相关 -->
 
 	<text key="E.L.I.D. Armed Infected" text="E.L.I.D. 武装感染者"/>
+	<text key="E.L.I.D Armed Infected" text="E.L.I.D. 武装感染者"/> <!-- 原名里少了个点翻译没对上 -->
 	<text key="E.L.I.D. Infected" text="E.L.I.D. 感染者 "/>
 	<text key="E.L.I.D. Spitter" text="E.L.I.D. 喷吐者"/>
 	<text key="E.L.I.D. Rapid" text="E.L.I.D. 急速感染者"/>
 	<text key="Silicification E.L.I.D." text="E.L.I.D. 重度硅化感染者"/>
 
 	<!-- SF 支援台词 -->
+	
+	<text key="Reinforcements - Paratrooper assault" text="增援部队 - 伞降突击单位"/>
+	<text key="Requesting assault paratroopers" text="请求伞降突击单位支援"/>
+	<text key="Reinforcements - Paratrooper scout" text="增援部队 - 伞降侦察单位"/>
+	<text key="Requesting scout paratroopers" text="请求伞降侦察单位支援"/>
 
+	<text key="Jupiter Air-Strike" text="木星火力打击"/>
 	<text key="Request Jupiter Air-Strike" text="请求木星打击" />
 	<text key="Confirm, Adjusting Jupiter rotation" text="确认,木星自旋调整中"/>
 	<text key="Jupiter is Launching" text="木星火力投射中" />
@@ -430,6 +446,19 @@
 	<text key="Argo-Puppis" text="阿尔戈-船尾座"/>
 	<text key="Argo-Carina" text="阿尔戈-船底座"/>
 
+	<text key="Armored Infanry" text="装甲自律部队"/>
+	<text key="Armored Mecha" text="重型装甲部队"/>
+	<text key="Motorized Infanry" text="机动突击部队"/>
+	<text key="Sweeping troops" text="自律清扫小组"/>
+	<text key="Deploy Coeus" text="部署奎乌"/>
+	<text key="Deploy Typhon" text="部署提丰"/>
+
+	<text key="Hematite Mortar Support" text="赤铁矿-迫击炮火力支援"/>
+	<text key="Argo-Puppis Three-Shot Calibration" text="阿尔戈-船底座-三发校射"/>
+	<text key="Argo-Carina Targeted Clearance Shelling" text="阿尔戈-船尾座-定点清除"/>
+	<text key="Argo-Vela Precision Fire Support" text="阿尔戈-船帆座-精准火力支援"/>
+	<text key="Argo-Emp" text="阿尔戈-船帆座-电磁脉冲压制"/>
+
  	<text key="To Hematite, request artillery support" text="呼叫赤铁矿行动小组，请求对该区域进行饱和式火力覆盖"/>
 	<text key="Hematite Saturation Artillery" text="赤铁矿-饱和式火力支援"/>
 	<text key="Request Carina fire support!" text="呼叫阿尔戈-船底座，请求平射炮定向打击"/>
@@ -460,6 +489,14 @@
 	<text key="Engage enemy, request Typhon Droping" text="呼叫HQ，需求反装甲平台，请求投送提丰"/>
 
 	<!-- 帕拉蒂斯 支援台词 -->
+	
+	<text key="EOD Infanry" text="镇暴单位"/>
+	<text key="Deploy Uhlan" text="部署枪骑兵"/>
+	<text key="Deploy Cherub" text="部署圣歌风琴"/>
+	<text key="Nyto Squad" text="涅托增援"/>
+
+	<text key="infected" text="受洗者"/>
+	<text key="Baptized Apostles" text="受洗使徒"/>
 
 	<text key="Request Strelet Assemble" text="侦测到威胁信号，上传集结位置，启用下一批次射击士"/>
 	<text key="Request Sentinel Assemble" text="侦测到威胁信号，上传集结位置，启用下一批次警备士"/>
@@ -511,6 +548,7 @@
 
 	<text key="AGM-64 Hornet" text="AGM-64 “黄蜂”导弹发射器"/>
 	<text key="BGM-71 TOW" text="BGM-71 “陶”反坦克导弹发射器"/>
+	<text key="BGM-71 TOW Deploy" text="BGM-71 “陶”反坦克导弹部署包"/>
 	<text key="Engineer Working" text="工兵正在部署中..."/>
 
 	<!-- 护甲新增翻译 -->
@@ -722,6 +760,7 @@
 	<text key="AK-74U-[Repulsive Response]" text="AK-74U-[排斥反应]"/>
 	<text key="Winchester Liberator" text="温彻斯特“解放者”霰弹枪"/>
 	<text key="Colt Defender" text="柯尔特“防卫者”霰弹枪"/> 
+	<text key="Colt Defender-[Fang Blossom]" text="柯尔特“防卫者”霰弹枪-[獠牙绽放]"/>
 	<text key="Walther P38" text="瓦尔特P38手枪"/>
 	<text key="Beretta M9" text="伯莱塔M9手枪"/>
 	<text key="Borchardt C93" text="博查特C93手枪"/>
@@ -751,6 +790,7 @@
 	<text key="RPK-16-[Wits of the Silver Fox]" text="RPK-16-[银狐的狡黠]"/>
 	<text key="AK-15(MOD3)-[Eye of the White Mastiff]" text="AK-15(MOD3)-[白獒之瞳]"/>
 	<text key="Summer Killer" text="夏日杀手"/>
+	<text key="Yurine" text="Yurine 花园百合铃"/>
 	<text key="De lisle Carbine" text="德利尔卡宾枪"/>
 	<text key="De lisle Carbine-[Coyote Blues]" text="德利尔卡宾枪-[郊狼蓝调]"/>
 	<text key="VZ61 Skorpion" text="VZ61“蝎式”冲锋枪"/>
@@ -791,6 +831,7 @@
 	<text key="HOWA Type 89" text="丰和89式自突击步枪"/>
 	<text key="Remington R5 RGP" text="雷明顿R5 RGP突击步枪"/>
 	<text key="IWI Jericho 941" text="IWI杰里科941" />
+	<text key="IWI Tavor TS12" text="IWI塔沃尔TS12"/>
 	<text key="PP-9 KLIN" text="PP-9 KLIN“楔子”微型冲锋枪"/>
 	<text key="Beretta Model 38" text="伯莱塔38型冲锋枪"/> 
 	<text key="Beretta Model 38(MOD3)" text="伯莱塔38型冲锋枪(MOD3)"/> 
@@ -1000,7 +1041,7 @@
 	<text key="Daewoo K2" text="大宇K2突击步枪"/>
 
 	<text key="Lebedev PL-15(AK-12)" text="列别捷夫PL-15手枪(AK-12配备)"/>
-
+	<text key="The Fix by Q Sniper Rifle" text="TF-Q狙击步枪"/>
 	
 	
 
@@ -1016,6 +1057,7 @@
 	<text key="GK-Striker SWAP" text="Striker SWAP 强化型痛击者"/>
 	<text key="GK-Vespid" text="Vespid 胡蜂"/>
 	<text key="GK-Vespid SWAP" text="Vespid SWAP 强化型胡蜂"/>
+	<text key="GK-Dragoon" text="Dragoon 龙骑兵"/>
 	
 	<text key="GK-Agent" text="Agent “代理人”"/>
 	<text key="GK-Alchemist" text="Alchemist “炼金术士”"/>
@@ -1064,6 +1106,7 @@
 	<text key="PEAK-79(QLZ-04)" text="PEAK-79冲锋枪(QLZ-04配备)"/>
 	<text key="Kamikaze" text="“神风”"/>
 	<text key="PPSH41-Engineering Mecha" text="PPSh-41 工程维修机甲"/>
+	<text key="Paul Korchagin" text="“保尔”铁路维修人形"/>
 	<text key="BGM-71E TOW ATGM" text="BGM-71E“陶式”导弹"/>
 	<text key="M4A1 Carbine(BGM-71)" text="M4A1卡宾枪(BGM-71配备)"/>
 	<text key='RPG-29 Vampir-[PG-29V]' text="RPG-29“吸血鬼”火箭推进榴弹发射器-[PG-29V串联反坦克弹]"/>
@@ -1215,6 +1258,7 @@
 	<text key="FN FNC-[Raise the Christmas Elf]" text="FN FNC-[圣夜精灵高高挂]" />
 	<text key="HK MK23" text="HK MK23"/>
 	<text key="HK MK23-[Honey Sweet Flower]" text="HK MK23-[枫糖花]"/>
+	<text key="MK23-[Honey Sweet Flower]" text="HK MK23-[枫糖花]"/> <!-- 名字少写了个HK对不上翻译 -->
 	<text key="LWMMG-[Yellow Star-thistle]" text="LWMMG-[黄星蓟]"/>
 	<text key="LWMMG-[Yellow Star-thistle]-[Hunting Impulse]" text="LWMMG-[黄星蓟]-[猎杀冲动]"/>
 	<text key="LWMMG-[Hunting Impulse]" text="LWMMG-[猎杀冲动]"/>
@@ -1338,6 +1382,7 @@
 	<text key="SV-98 (MOD3)-[Piercing the Heart]-[Shadowy Savior]" text="SV-98 (MOD3)-[正中红心！]-[阴影解救者]"/>
 	<text key="KRISS Vector-[Love is Blind]" text="维克托“短剑”冲锋枪-[盲信者]"/>
 	<text key="KRISS Vector-[Hellfire]" text="维克托“短剑”冲锋枪-[地狱火]"/>
+	<text key="KRISS Vector-[Hellfire](sticky bomb)" text="维克托“短剑”冲锋枪-[地狱火](粘弹发射器)"/>
 	<text key="FN-49-[Umbrella Daydream]" text="FN-49-[伞中之梦]"/>
 	<text key="FN-49(MOD3)-[Umbrella Daydream]" text="FN-49(MOD3)-[伞中之梦]"/>
 	<text key="Colt Python-[Hunting Time]" text="柯尔特“蟒蛇”左轮手枪-[狩猎时刻]" />
@@ -1458,6 +1503,7 @@
 	<text key="DP-28-[Zhao Yan Wan]" text="捷格加廖夫DP-28步兵机枪-[朝颜蔓]"/>
 	<text key="DP-28-[Zhao Yan Wan]-Kulakov" text="捷格加廖夫DP-28步兵机枪-[朝颜蔓]-燃烧榴弹发射器"/>
 	<text key="Type 79 SMG-[Fox of Green Hill]" text="79式冲锋枪-[青丘狐]"/>
+	<text key="Type 79 SMG(MOD3)-[Fox of Green Hill]" text="79式冲锋枪(MOD3)-[青丘狐]"/>
 	<text key="Type 56-[Pink Pear Blossom]" text="56式半自动步枪-[扶绛梨]"/>
 	<text key="Type 56(MOD3)-[Pink Pear Blossom]" text="56式半自动步枪(MOD3)-[扶绛梨]"/>
 	<text key="Type 56-[Pink Pear Blossom]-[Guerrilla Focus]" text="56式半自动步枪-[扶绛梨]-[游击专注]"/>
@@ -1668,6 +1714,7 @@
 	<text key="mortar shell" text="迫击炮弹" />
 	<text key="impact grenade" text="触发式手榴弹" />
 	<text key="C4" text="C4炸药" />
+	<text key="C4 8-Pack" text="C4炸药 8份装"/>
 	<text key="artillery shell" text="炮弹" />
 	<text key="AT mine" text="反坦克地雷" />
 	<text key="Naval mine" text="水雷" />
@@ -1877,6 +1924,7 @@
 	<text key="2 new items accessible in container" text="&#37;item_name1和&#37;item_name2（&#37;container_name）现在可用！" />
 	<text key="new items accessible in container" text="&#37;item_amount件新物品（&#37;container_name）已可用！" />
 	<text key="flare" text="空降信号弹" />
+	<text key="Flare" text="空降信号弹"/> <!-- 还有个大写F的 很抽象 -->
 	<text key="New entry:" text="教程：" />
 	<text key="Spawn point" text="重生点" />
 	<text key="Recon target" text="侦查点" />
