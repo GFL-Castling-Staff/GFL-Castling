@@ -270,20 +270,43 @@
 </weapon>
 
 <weapon key="amos_mine_sight.weapon">
- <specification 
+    <specification 
     slot="2" 
     retrigger_time="0.075"
-	accuracy_factor="0.5" 
-	sustained_fire_grow_step="0.25" 
-	sustained_fire_diminish_rate="2.0" 
-	sight_range_modifier="2.05"
+    accuracy_factor="0.5" 
+    sustained_fire_grow_step="0.25" 
+    sustained_fire_diminish_rate="2.0" 
+    sight_range_modifier="2.05"
     ai_sight_range_modifier="1.05" 
     magazine_size="0" 
     suppressed="0" 
     name="Amos MG" 
     class="0" 
     projectile_speed="195" />
-	
+
+    <model filename="" />
+    <hud_icon filename="testing.png" />
+    <commonness value="0.0" />
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+    <projectile file="bullet.projectile">
+    </projectile>
+</weapon>
+
+<weapon key="pard_tower_sight.weapon">
+    <specification 
+    slot="2" 
+    retrigger_time="0.075"
+    accuracy_factor="0.5" 
+    sustained_fire_grow_step="0.25" 
+    sustained_fire_diminish_rate="2.0" 
+    sight_range_modifier="1.8"
+    ai_sight_range_modifier="1.0" 
+    magazine_size="0" 
+    suppressed="0" 
+    name="Amos MG" 
+    class="0" 
+    projectile_speed="195" />
+
     <model filename="" />
     <hud_icon filename="testing.png" />
     <commonness value="0.0" />
