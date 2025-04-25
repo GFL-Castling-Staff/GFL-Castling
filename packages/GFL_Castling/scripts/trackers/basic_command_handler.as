@@ -368,18 +368,6 @@ class BasicCommandHandler : Tracker {
 			}
 		}
 
-		else if (message=="/shout") {
-			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
-			if (playerInfo is null) return;
-			string strname= playerInfo.getStringAttribute("name");
-			dictionary a;
-			a["%name"] = strname;
-			int cId= playerInfo.getIntAttribute("character_id");
-			playSound(m_metagame, "test2222.wav", 0); //high priority
-			sendFactionMessageKey(m_metagame, 0,"quickchat5d",a,2.0);
-			sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat5",dictionary(),0.9);
-		}	
-
 		else if (checkCommand(message, "dance1")) {
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			if (playerInfo is null) return;
@@ -560,6 +548,19 @@ class BasicCommandHandler : Tracker {
 		if (!m_metagame.getAdminManager().isAdmin(sender, senderId)) {
 			return;
 		}
+        
+		else if (message=="/shout") {
+			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
+			if (playerInfo is null) return;
+			string strname= playerInfo.getStringAttribute("name");
+			dictionary a;
+			a["%name"] = strname;
+			int cId= playerInfo.getIntAttribute("character_id");
+			playSound(m_metagame, "test2222.wav", 0); //high priority
+			sendFactionMessageKey(m_metagame, 0,"quickchat5d",a,2.0);
+			sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"quickchat5",dictionary(),0.9);
+		}	        
+
 		else if (checkCommand(message, "anime1")) {
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			if (playerInfo is null) return;
