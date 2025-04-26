@@ -27,14 +27,14 @@
         <weak_hand_hold offset="0.2" />
         <commonness value="0.2" in_stock="1" can_respawn_with="1" />
         <projectile file="bullet.projectile">
-            <result class="hit"  kill_probability="5.95" kill_probability_offset_on_successful_hit="0.3" kill_decay_start_time="0.3" kill_decay_end_time="1.667" />
+            <result class="hit"  kill_probability="5.95" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="0.3" kill_decay_end_time="1.667" />
         </projectile>
         <effect class="muzzle" ref="ejection_556" />
         <stance state_key="running" accuracy="0.6" />
         <stance state_key="walking" accuracy="0.6" />
         <stance state_key="crouch_moving" accuracy="0.65" />
         <stance state_key="prone_moving" accuracy="0.65" />
-        <stance state_key="standing" accuracy="0.85" />
+        <stance state_key="standing" accuracy="0.98" />
         <stance state_key="crouching" accuracy="1.0" />
         <stance state_key="prone" accuracy="1.0" />
         <stance state_key="over_wall" accuracy="1.0" />

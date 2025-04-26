@@ -10,12 +10,12 @@
 		name="6P62-[6P62's Offer]" 
 		projectile_speed="150" 
 		retrigger_time="0.133" 
-        sight_range_modifier="1.1" 
+        sight_range_modifier="1.4" 
 		suppressed="1" 
-        spread_range="0.6"
+        spread_range="0.55"
         can_shoot_crouching="1"
         can_shoot_standing="0"
-		sustained_fire_diminish_rate="2.5" 
+		sustained_fire_diminish_rate="4.0" 
 		sustained_fire_grow_step="0.9" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <inventory encumbrance="20.0" buy_price="138.0" sell_price="138.0" />
@@ -39,9 +39,9 @@
     <stance state_key="walking" accuracy="0.2" />
     <stance state_key="crouch_moving" accuracy="0.6" />
     <stance state_key="prone_moving" accuracy="0.6" />
-    <stance state_key="standing" accuracy="0.92" />
-    <stance state_key="crouching" accuracy="0.95" />
-    <stance state_key="prone" accuracy="1.15" />
+    <stance state_key="standing" accuracy="0.98" />
+    <stance state_key="crouching" accuracy="1.0" />
+    <stance state_key="prone" accuracy="1.2" />
     <stance state_key="over_wall" accuracy="1.2"/>
 </weapon>
 </weapons>

@@ -10,11 +10,11 @@
         name="ASH-12.7(PS-12C)" 
         projectile_speed="100" 
         retrigger_time="0.12" 
-        stance_accuracy_rate="2.0"
+        stance_accuracy_rate="4.0"
         sight_range_modifier="1.25"
         suppressed="1" 
         spread_range="0.35"
-        sustained_fire_diminish_rate="1.9" 
+        sustained_fire_diminish_rate="2.5" 
         sustained_fire_grow_step="0.65" />
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <animation state_key="reload" animation_key="reloading, magazine rifle 1.2" />
@@ -39,8 +39,8 @@
         <stance state_key="walking" accuracy="0.5" />
         <stance state_key="crouch_moving" accuracy="0.65" />
         <stance state_key="prone_moving" accuracy="0.65" />
-        <stance state_key="standing" accuracy="0.92" />
-        <stance state_key="crouching" accuracy="0.95" />
+        <stance state_key="standing" accuracy="0.98" />
+        <stance state_key="crouching" accuracy="0.98" />
         <stance state_key="prone" accuracy="1.0" />
         <stance state_key="over_wall" accuracy="1.0" />
     </weapon>
@@ -55,7 +55,7 @@
         projectile_speed="195" 
         retrigger_time="0.12" 
         suppressed="0" 
-        stance_accuracy_rate="2.0"
+        stance_accuracy_rate="4.0"
         spread_range="0.3"
         sustained_fire_diminish_rate="2.0" 
         sustained_fire_grow_step="0.75" />
@@ -86,8 +86,8 @@
         <stance state_key="walking" accuracy="0.5" />
         <stance state_key="crouch_moving" accuracy="0.65" />
         <stance state_key="prone_moving" accuracy="0.65" />
-        <stance state_key="standing" accuracy="0.65" />
-        <stance state_key="crouching" accuracy="0.85" />
+        <stance state_key="standing" accuracy="0.9" />
+        <stance state_key="crouching" accuracy="0.98" />
         <stance state_key="prone" accuracy="1" />
         <stance state_key="over_wall" accuracy="1" /> 
     </weapon>

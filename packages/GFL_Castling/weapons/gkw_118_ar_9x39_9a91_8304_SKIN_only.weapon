@@ -34,14 +34,14 @@
         <hud_icon filename="gkw_9a91_8304.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-            <result class="hit" kill_probability="5.8" kill_probability_offset_on_successful_hit="2.8" kill_decay_start_time="0.2" kill_decay_end_time="0.75" />
+            <result class="hit" kill_probability="5.8" kill_probability_offset_on_successful_hit="4.0" kill_decay_start_time="0.2" kill_decay_end_time="0.75" />
         </projectile>
         <effect class="muzzle" ref="ejection_556" />
         <stance state_key="running" accuracy="0.6" />
         <stance state_key="walking" accuracy="0.75" />
         <stance state_key="crouch_moving" accuracy="0.75" />
         <stance state_key="prone_moving" accuracy="0.75" />
-        <stance state_key="standing" accuracy="0.92" />
+        <stance state_key="standing" accuracy="0.99" />
         <stance state_key="crouching" accuracy="1.0" />
         <stance state_key="prone" accuracy="1" />
         <modifier class="speed" value="0.1" />

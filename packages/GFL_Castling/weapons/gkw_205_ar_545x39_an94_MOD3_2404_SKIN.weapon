@@ -17,8 +17,8 @@
     stance_accuracy_rate="2.5"
     spread_range="0.275"
     sight_range_modifier="1.5"
-    sustained_fire_diminish_rate="1.5" 
-	sustained_fire_grow_step="0.35"/>
+    sustained_fire_diminish_rate="2.0" 
+	sustained_fire_grow_step="0.2"/>
     <next_in_chain key="gkw_an94mod3_2404_skill.weapon" share_ammo="1" />
     <inventory encumbrance="35.0" buy_price="400.0" sell_price="400.0" />
     <capacity value="1" source="rank" source_value="0.0" />
@@ -109,7 +109,7 @@
     burst_shots="2"
     sight_range_modifier="2.0"
     sustained_fire_diminish_rate="2.4" 
-	sustained_fire_grow_step="0.35"/>
+	sustained_fire_grow_step="0.3"/>
     <next_in_chain key="gkw_an94mod3_2404.weapon" share_ammo="1" />
     <commonness value="0" in_stock="0" can_respawn_with="1" />
     <inventory encumbrance="35.0" buy_price="400.0" sell_price="400.0" />

@@ -19,7 +19,7 @@
     sight_range_modifier="1.75"
     suppressed="0" 
     sustained_fire_diminish_rate="1.75" 
-    sustained_fire_grow_step="0.3" />
+    sustained_fire_grow_step="0.25" />
     <commonness value="0.2" in_stock="0" can_respawn_with="1" />
     <animation key="recoil" animation_key="recoil1" />
     <animation key="recoil" animation_key="recoil2" />
@@ -52,7 +52,7 @@
     <stance state_key="walking" accuracy="0.5" />
     <stance state_key="crouch_moving" accuracy="0.75" />
     <stance state_key="prone_moving" accuracy="0.75" />
-    <stance state_key="standing" accuracy="0.92" />
+    <stance state_key="standing" accuracy="0.98" />
     <stance state_key="crouching" accuracy="1.0" />
     <stance state_key="prone" accuracy="1.0" />
     <stance state_key="over_wall" accuracy="1.0"/>
