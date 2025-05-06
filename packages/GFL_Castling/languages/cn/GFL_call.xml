@@ -377,12 +377,47 @@
 (使用更大当量的航弹，对范围10造成110的blast伤害)
 "/>
 
-	<text key="Hint - call - title - call_ui_t2_warrior_fairy_recon_heli" text="勇士妖精 - 侦察直升机扫荡" />
-	<text key="Hint - call - intro - call_ui_t2_warrior_fairy_recon_heli" text="<冷却时间 120秒 消耗 50战术点>
+
+    <text key="Hint - call - title - call_ui_t2_warrior_fairy_recon_heli" text="勇士妖精 - 侦察直升机扫荡" />
+    <text key="Hint - call - intro - call_ui_t2_warrior_fairy_recon_heli" text="<冷却时间 120秒 消耗 50战术点>
 -标定目标点，随后从基地呼叫一架侦察直升机进行区域巡航20秒
--每2秒对随机目标进行一次YAK-B 12.7mm航空机枪扫射，每发弹头在范围3.0造成3.1的blast伤害
+-每2秒对随机目标进行一次YAK-B 12.7mm航空机枪扫射，每发弹头在范围3.0造成5.1的blast伤害
 -第5秒时扫描区域，如果区域内存在敌方载具，则发射2枚9M114茧反坦克导弹，对范围4造成50的blast伤害
 -(该支援受空域禁制影响)"/>
+
+	<text key="Hint - call - title - call_ui_t2_warrior_fairy_recon_heli_update_alpha" text="勇士妖精 - 侦察直升机扫荡" />
+	<text key="Hint - call - intro - call_ui_t2_warrior_fairy_recon_heli_update_alpha" text="<冷却时间 120秒 消耗 50战术点>
+-标定目标点，随后从基地呼叫一架侦察直升机进行区域巡航40秒
+-每2秒对随机目标进行一次YAK-B 12.7mm航空机枪扫射，每发弹头在范围3.0造成5.1的blast伤害
+-第5秒时扫描区域，如果区域内存在敌方载具，则发射2枚9M114茧反坦克导弹，对范围4造成50的blast伤害
+-(该支援受空域禁制影响)
+#####分支α [续航升级]#####
+(巡航持续时间增加至40秒)
+"/>
+
+    <text key="Hint - call - title - call_ui_t2_warrior_fairy_recon_heli_update_beta" text="勇士妖精 - 侦察直升机扫荡" />
+    <text key="Hint - call - intro - call_ui_t2_warrior_fairy_recon_heli_update_beta" text="<冷却时间 120秒 消耗 50战术点>
+-标定目标点，随后从基地呼叫一架侦察直升机进行区域巡航40秒
+-每2秒对随机目标进行一次YAK-B 12.7mm航空机枪扫射，每发弹头在范围3.0造成5.1的blast伤害
+-第5秒时扫描区域，如果区域内存在敌方载具，则发射2枚9M114茧反坦克导弹，对范围4造成50的blast伤害
+-第10秒时投放8人小队索降进入目标点
+-(该支援受空域禁制影响)
+#####分支β [索降小队]#####
+(侦察直升机将投放8位作战人形进行支援，作战人形组成为4位机枪人形和2位霰弹枪人形，2位突击步枪人形)
+"/>
+
+    <text key="Hint - call - title - call_ui_t2_warrior_fairy_recon_heli_update_gamma" text="勇士妖精 - 侦察直升机扫荡" />
+    <text key="Hint - call - intro - call_ui_t2_warrior_fairy_recon_heli_update_gamma" text="<冷却时间 120秒 消耗 50战术点>
+-标定目标点，随后从基地呼叫一架侦察直升机进行区域巡航20秒
+-每2秒对随机目标进行一次YAK-B 12.7mm航空机枪扫射，每发弹头在范围4.5造成5.1的blast伤害,弹头会沿随机方向徐进
+-第5秒时扫描区域，如果区域内存在敌方载具，则发射2枚9M114茧反坦克导弹，对范围4造成50的blast伤害
+-(该支援受空域禁制影响)
+#####分支γ [火力压制]#####
+(扫射的弹头数量翻3倍，扫射改为以随机方向直线前进，伤害范围增加)
+"/>
+
+
+
 
 	<text key="Hint - call - title - call_ui_t2_warrior_fairy_vtol_sentry" text="勇士妖精 - VTOL战机巡航" />
 	<text key="Hint - call - intro - call_ui_t2_warrior_fairy_vtol_sentry" text="<冷却时间 150秒 消耗 60战术点>

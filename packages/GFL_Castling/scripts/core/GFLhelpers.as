@@ -341,6 +341,14 @@ Vector3 getMultiplicationVector(Vector3 s_pos, float scale) {
 	return Vector3(x,y,z);
 }
 
+Vector3 getRandomHorizonDirectVector()
+{
+    float angle = rand(0,6.28);
+    float x = cos(angle);
+    float z = sin(angle);
+    return Vector3(x,0,z);
+}
+
 float getAimUnitDistance(float scale, Vector3 s_pos, Vector3 e_pos) {
 	float dx = e_pos.m_values[0]-s_pos.m_values[0];
 	float dy = e_pos.m_values[2]-s_pos.m_values[2];

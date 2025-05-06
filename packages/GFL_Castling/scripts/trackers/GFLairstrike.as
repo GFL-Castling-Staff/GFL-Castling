@@ -126,6 +126,9 @@ dictionary airstrikeIndex = {
         {"cannon_170mm",109},
 
         {"warrior_yakb_12.7mm",110},
+        {"warrior_yakb_12.7mm_x2",1101},
+
+
         {"warrior_2a42_30mm",111},
         {"warrior_9M114",112},
         {"warrior_9M127",113},
@@ -958,6 +961,29 @@ class GFLairstrike : Tracker {
                     } 
                     array<string> Voice={
                         "yakb_shot_fromWarthunder.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,3.2);
+                    Airstrike_strafe.removeAt(a);
+                    break;
+                }
+
+                case 1101:{//勇士妖精 侦察直升机 YAK-B 12.7mm扫射
+                    //最终弹头随机程度
+                    float strike_rand = 2.0;
+                    Vector3 randomDirectOffset = getRandomHorizonDirectVector();
+                    randomDirectOffset = getMultiplicationVector(randomDirectOffset,0.7);
+                                            
+                    //每单轮扫射18发
+                    for(int j=1;j<=18;j++)
+                    {
+                        float rand_speed = rand(120,160);
+                        float rand_x = rand(-strike_rand,strike_rand);
+                        float rand_y = rand(-strike_rand,strike_rand);                     
+                        CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"fairy_warrior_recon_heil_yakb_he.projectile",cid,fid,rand_speed);           
+                        end_pos = end_pos.add(randomDirectOffset);
+                    } 
+                    array<string> Voice={
+                        "yakb_shot2_fromWarthunder.wav"
                     };
                     playRandomSoundArray(m_metagame,Voice,fid,end_pos,3.2);
                     Airstrike_strafe.removeAt(a);

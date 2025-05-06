@@ -1660,6 +1660,16 @@ class Event_call_warrior_fairy_recon_heil : event_call_task_hasMarker {
 		sendFactionMessageKey(m_metagame,m_faction_id,"warriorfight");
 		m_excute_Limit = 22;
 		m_time_internal = 1.0;
+        m_airstrike_key= "warrior_yakb_12.7mm";
+        if(m_mode == "warrior_fairy_recon_heil_alpha")
+        {
+            m_excute_Limit = 42;
+        }
+
+        if(m_mode == "warrior_fairy_recon_heil_gamma")
+        {
+            m_airstrike_key = "warrior_yakb_12.7mm_x2";
+        }        
 	}
 
 	Event_call_warrior_fairy_recon_heil(GameMode@ metagame, float time, int cId,int fId,Vector3 characterpos,Vector3 targetpos,string mode,int markerid){
@@ -1673,17 +1683,17 @@ class Event_call_warrior_fairy_recon_heil : event_call_task_hasMarker {
 		m_timeLeft_internal = m_time_internal;
 		if(m_excute_time % 2 == 0)
 		{
-			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,e_pos,30.0f);
+			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,e_pos,50.0f);
 			if(luckyGuyid!=-1){
 				const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
 				if(luckyGuy is null) return;
 				Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
-				insertCommonStrike(m_character_id,m_faction_id,"warrior_yakb_12.7mm",getRandomOffsetVector(m_pos1,8),luckyGuyPos);
+				insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,getRandomOffsetVector(m_pos1,8),luckyGuyPos);
 			}
 		}
 		if(m_excute_time == 5)
 		{
-			lucky_vehicle_id = getNearByEnemyVehicle(m_metagame,m_faction_id,e_pos,30.0f);
+			lucky_vehicle_id = getNearByEnemyVehicle(m_metagame,m_faction_id,e_pos,50.0f);
 			if(lucky_vehicle_id!=-1)
 			{
 				playSoundAtLocation(m_metagame,"atgm_lockon.wav",m_faction_id,e_pos,7.5);//锁定载具成功
@@ -1692,6 +1702,19 @@ class Event_call_warrior_fairy_recon_heil : event_call_task_hasMarker {
 				tasker.add(shot);				
 			}
 		}
+		if(m_excute_time == 10 && m_mode=="warrior_fairy_recon_heil_beta")
+        {
+            array<soldier_spawn_request@> m_soldier =   
+            {
+                soldier_spawn_request("Task_MG",4),
+                soldier_spawn_request("Task_Medic",2),
+                soldier_spawn_request("Task_SG",2)
+            };            
+            for(uint i=0;i<m_soldier.length();i++){
+				soldier_spawn_request@ foo = m_soldier[i];
+				spawnSoldier(m_metagame,foo.m_num,m_faction_id,e_pos,foo.m_type,2,2);
+			}
+        }        
 		if(m_excute_time % 3 == 0)
 		{
 			playSoundAtLocation(m_metagame,"mi24_heli_rotor_idle.wav",m_faction_id,e_pos,1.8);

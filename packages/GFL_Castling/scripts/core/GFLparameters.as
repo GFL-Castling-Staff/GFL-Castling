@@ -471,6 +471,10 @@
         {"call_ui_t2_airstrike_fairy_bomber_update_beta",500},
         {"call_ui_t2_airstrike_fairy_bomber_update_gamma",500},
 
+        {"call_ui_t2_warrior_fairy_recon_heli_update_alpha",2000},
+        {"call_ui_t2_warrior_fairy_recon_heli_update_beta",2000},
+        {"call_ui_t2_warrior_fairy_recon_heli_update_gamma",2000},
+
         {"666",0}
     };
 
