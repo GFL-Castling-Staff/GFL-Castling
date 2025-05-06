@@ -283,6 +283,9 @@ class CommandSkill : Tracker {
                 case 87:{excute56typeRifleSkill(cId,senderId,m_modifer);break;}
                 case 88:{excuteEvo3skill(cId,senderId,m_modifer);break;}
                 case 89:{excuteSSG3000skill(cId,senderId,m_modifer);break;}
+                case 90:{excuteQBZ95skill(cId,senderId,m_modifer);break;}
+
+                
 
                 
                 
@@ -4251,8 +4254,37 @@ class CommandSkill : Tracker {
                 }
             }
         }
-    }    
+    }
 
+    void excuteQBZ95skill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"qbz95",true,"charge_recover_all",1)) return;
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            if (!canCastSkill(character)) return;
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    if(!tryaddChargeCount("qbz95",characterId,modifer,true)){
+                        addCooldown("qbz95",40,characterId,modifer,"charge_recover_all");
+                    }                    
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "MAC10_SKILL1_JP.wav",
+                        "MAC10_SKILL2_JP.wav",
+                        "MAC10_ATTACK_JP.wav"
+                    };
+                    // playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    Vector3 u_pos = getAimUnitPosition(c_pos,stringToVector3(target),10);
+                    CreateProjectile_H(m_metagame,c_pos,u_pos,"grenade_qbz95_cx.projectile",characterId,factionid,60.0,2.5);
+                }
+            }
+        }
+    }
     void excuteM1911mod3skill(int characterId,int playerId,SkillModifer@ modifer){
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"M1911")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);

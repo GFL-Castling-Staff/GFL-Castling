@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectiles>
+<projectile class="grenade" name="Magnetic C4" key="grenade_qbz95_cx.projectile" slot="0" radius="0.15" pulldown_in_air="60">
+    <tag name="grenade" />
+    <result class="blast" radius="6.0" damage="30.0" push="0.5" decal="1" character_state="death" damage_origin_vehicle="0" faction_compare="not_equal" />
+    <trigger class="time" time_to_live="3.0">
+        <collider class="character" enabled="1" faction_compare="not_equal"/>
+    </trigger>
+	<collision class="sticky" />
+    <rotation class="random" />
+    <model mesh_filename="c4.mesh" texture_filename="c4.png" />
+    <hud_icon filename="88r.png" />
+
+    <commonness value="0" />
+    <inventory encumbrance="3.0" price="5.0" />
+    <capacity value="1" source="rank" source_value="0.0" />
+
+    <sound class="result" key="other" fileref="explosion_FromFC5_1.wav" volume="1.4" />
+    <sound class="result" key="other" fileref="explosion_FromFC5_2.wav" volume="1.4" />
+    <sound class="result" key="other" fileref="explosion_FromFC5_3.wav" volume="1.4" />
+    <sound class="result" key="other" fileref="explosion_FromFC5_4.wav" volume="1.4" />
+
+    <sound class="result" key="terrain" copy="other" />
+    <sound class="result" key="static_object" copy="other" />
+    <sound class="result" key="vehicle" copy="other" />
+    <sound class="result" key="character" copy="other" />
+
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_smoke" lighting="0" post_processing="1"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_smoke_expanding" lighting="0" post_processing="1"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_ring" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_ring_2" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_spray_1" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_spray_2" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_fire" lighting="0"/> 
+    <effect class="result" key="terrain" ref="general_weapon_result_blast_fire_wave" lighting="0"/> 
+
+    <effect class="result" key="static_object" copy="terrain" />
+    <effect class="result" key="vehicle" copy="terrain" />     
+    <effect class="result" key="character" copy="terrain" />
+    <effect class="result" key="other" copy="terrain" />
+
+    <effect class="activated" ref="SatchelSparkle" />
+    <effect class="activated" ref="SatchelFlash" />
+    <effect class="activated" ref="TracerFlash_Quick" lighting="0" />
+</projectile>
+</projectiles>
