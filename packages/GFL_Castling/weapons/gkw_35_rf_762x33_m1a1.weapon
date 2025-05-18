@@ -9,14 +9,14 @@
     slot="0"
     magazine_size="15"
     name="M1A1 Carbine"
-	spread_range="0.24"
+	spread_range="0.22"
     projectile_speed="175"
     retrigger_time="-1"
     last_burst_retrigger_time="0.1"
     suppressed="0"
-    sustained_fire_diminish_rate="1.6"
+    sustained_fire_diminish_rate="1.9"
     sustained_fire_grow_step="0.3"
-    sight_range_modifier="1.25"
+    sight_range_modifier="1.5"
     stance_accuracy_rate="4.0"
     stab_enabled="1"
     carry_in_two_hands="1"/>
@@ -36,7 +36,7 @@
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251" />
 	<stance state_key="running" accuracy="0.75" />
-    <stance state_key="walking" accuracy="0.75" />
+    <stance state_key="walking" accuracy="0.9" />
     <stance state_key="crouch_moving" accuracy="0.75" />
     <stance state_key="prone_moving" accuracy="0.75" />
     <stance state_key="standing" accuracy="0.98" />

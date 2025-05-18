@@ -240,6 +240,7 @@ class kill_event : Tracker {
         {"ff_dragoon.weapon",3},
         {"gkw_evo3.weapon",3},
         {"gkw_evo3mod3.weapon",3},
+        {"gkw_shipka.weapon",3},
 
 
         //短突

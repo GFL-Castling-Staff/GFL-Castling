@@ -593,7 +593,12 @@ dictionary tdoll_complex_index = {
     {modded_key(149).toString(),"gkw_aek999.weapon"},
     {modded_key(149,1505).toString(),"gkw_aek999_1505.weapon"},
 
+
+
     // 从编号150开始
+
+    {modded_key(150).toString(),"gkw_shipka.weapon"},
+
     {modded_key(151).toString(),"gkw_m1887.weapon"},
     {modded_key(151,2503).toString(),"gkw_m1887_2503.weapon"},
 
