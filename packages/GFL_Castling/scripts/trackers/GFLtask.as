@@ -1787,7 +1787,7 @@ class Event_call_warrior_fairy_attack_heil : event_call_task_hasMarker {
 		m_timeLeft_internal = m_time_internal;
 		if(m_excute_time % 2 == 0)
 		{
-			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,e_pos,45.0f);
+			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,e_pos,55.0f);
 			if(luckyGuyid!=-1){
 				const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
 				if(luckyGuy is null) return;
@@ -1797,7 +1797,7 @@ class Event_call_warrior_fairy_attack_heil : event_call_task_hasMarker {
 		}
 		if(m_excute_time % 10 == 0 && m_excute_time!= 0)
 		{
-			int lucky_vehicle_id = getNearByEnemyVehicle(m_metagame,m_faction_id,e_pos,45.0f);
+			int lucky_vehicle_id = getNearByEnemyVehicle(m_metagame,m_faction_id,e_pos,55.0f);
 			if(lucky_vehicle_id!=-1)
 			{
 				playSoundAtLocation(m_metagame,"atgm_lockon.wav",m_faction_id,e_pos,7.5);//锁定载具成功
@@ -1805,14 +1805,26 @@ class Event_call_warrior_fairy_attack_heil : event_call_task_hasMarker {
 				TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
 				tasker.add(shot);				
 			}
-			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,e_pos,45.0f);
+			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,e_pos,55.0f);
 			if(luckyGuyid!=-1){
 				const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
 				if(luckyGuy is null) return;
 				Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
 				insertCommonStrike(m_character_id,m_faction_id,"warrior_S13_rocket",getRandomOffsetVector(m_pos1,8),luckyGuyPos);
-			}			
+			}
 		}
+
+		if(m_excute_time % 5 == 0)
+		{		        
+            int luckyGuyid2 = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,e_pos,55.0f);
+			if(luckyGuyid2!=-1){
+				const XmlElement@ luckyGuy2 = getCharacterInfo(m_metagame, luckyGuyid2);
+				if(luckyGuy2 is null) return;
+				Vector3 luckyGuy2Pos = stringToVector3(luckyGuy2.getStringAttribute("position"));
+				insertCommonStrike(m_character_id,m_faction_id,"warrior_gsh23mm",getRandomOffsetVector(m_pos1,8),luckyGuy2Pos);
+			}
+        }
+
 		if(m_excute_time % 6 == 0)
 		{
 			playSoundAtLocation(m_metagame,"ka52_heli_rotor_idle.wav",m_faction_id,e_pos,1.8);
@@ -1854,7 +1866,7 @@ class Event_call_warrior_fairy_VTOL : event_call_task_hasMarker {
 				if(ItsmeInfo.getIntAttribute("dead")==1) m_end = true;
 				m_character_pos = stringToVector3(ItsmeInfo.getStringAttribute("position"));
 			}
-			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,m_character_pos,45.0f);
+			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,m_character_pos,55.0f);
 			if(luckyGuyid!=-1){
 				const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
 				if(luckyGuy is null) return;

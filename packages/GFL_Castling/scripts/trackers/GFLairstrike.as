@@ -128,6 +128,8 @@ dictionary airstrikeIndex = {
         {"warrior_yakb_12.7mm",110},
         {"warrior_yakb_12.7mm_x2",1101},
 
+        {"warrior_gsh23mm",1102},
+
 
         {"warrior_2a42_30mm",111},
         {"warrior_9M114",112},
@@ -990,6 +992,51 @@ class GFLairstrike : Tracker {
                     break;
                 }
 
+                case 1102: { // GSH23mm 多次S/Z型扫射
+                    // 参数配置
+                    float strikeWidth = 1.0f;          // 扫射宽度
+                    int segments = 24;                 // 总分段数(建议设为波形周期的整数倍)
+                    int waves = 8;                     // S/Z波形的周期数
+                    
+                    // 计算基础向量
+                    Vector3 baseDir = getAimUnitVector(1, start_pos, end_pos);
+                    baseDir = normalize(baseDir);      // 标准化方向向量
+                    Vector3 perpendicular = Vector3(-baseDir.m_values[2], 0, baseDir.m_values[0]); // 垂直方向
+                    perpendicular = normalize(perpendicular); // 标准化垂直向量
+                    float totalDistance = 18.0;
+                    
+                    // 波形参数
+                    float waveLength = totalDistance / waves; // 每个波形的长度
+                    float segmentDist = totalDistance / segments; // 每段距离
+
+                    for(int j = 1; j <= segments; j++) {
+                        // 当前段沿主方向的位置
+                        float currentDist = j * segmentDist;
+                        Vector3 segmentBase = end_pos.add(getMultiplicationVector(baseDir, currentDist));
+                        
+                        // 计算波形偏移
+                        float waveProgress = (currentDist % waveLength) / waveLength; // 当前波形进度[0,1)
+                        float waveOffset;
+                        
+                        waveOffset = sin(waveProgress * 6.283185f); // 2π为一个完整周期
+                        
+                        // 应用摆动偏移
+                        Vector3 offsetVec = getMultiplicationVector(perpendicular, waveOffset * strikeWidth);
+                        Vector3 curvedEnd = segmentBase.add(offsetVec);
+                        
+                        // 创建炮弹
+                        CreateDirectProjectile(m_metagame, start_pos, curvedEnd, 
+                                            "fairy_warrior_vtol_gsh23.projectile", cid, fid, 160.0f);
+                    }
+                    
+                    // 音效播放
+                    array<string> Voice = {"gsh23l_23mm_shot_fromWarthunder.wav"};
+                    playRandomSoundArray(m_metagame, Voice, fid, end_pos, 2.9f);
+                    
+                    Airstrike_strafe.removeAt(a);
+                    break;
+                }
+
                 case 111:{//勇士妖精 武装直升机 2A42 30mm扫射
                     //最终弹头随机程度
                     float strike_rand = 2.0;
@@ -1073,7 +1120,7 @@ class GFLairstrike : Tracker {
                     };
                     playRandomSoundArray(m_metagame,Voice,fid,end_pos,2.9);
                     Airstrike_strafe.removeAt(a);
-                    break;                    
+                    break;
                 }
 
                 case 116:{ //VTOL Bomb
