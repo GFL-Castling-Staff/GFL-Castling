@@ -4,6 +4,7 @@
 <tag name="elite"/>
 	<!--Weapon specifications-->
     <specification
+    can_shoot_running="1"
 	retrigger_time="-1"
 	last_burst_retrigger_time="0.1"
 	accuracy_factor="0.98"
@@ -15,7 +16,7 @@
 	class="4"
 	slot="0"
 	reload_one_at_a_time="0"
-	sight_range_modifier="1.0"
+	sight_range_modifier="1.6"
 	projectile_speed="115"
 	projectiles_per_shot="2"
 	burst_shots="1"

@@ -14,7 +14,7 @@
         name="Nagant M1895 revolver(MOD3)-[Cream in the Nebula]"
         class="4"
         reload_one_at_a_time="0"
-        sight_range_modifier="1.0"
+        sight_range_modifier="1.6"
         spread_range="0.3"
         projectile_speed="140.0"
         projectiles_per_shot="1"
@@ -44,7 +44,7 @@
         <animation state_key="crouch_moving_backwards"	animation_key="crouching backwards, single hand carry" />
         <animation state_key="prone_still" 			animation_key="prone_still, pistol" />
         <animation state_key="changing_weapon_in" 	animation_key="change weapon in, pistol fast pull" />
-    <animation state_key="changing_weapon_out" 	animation_key="change weapon out, pistol fast pull" />
+        <animation state_key="changing_weapon_out" 	animation_key="change weapon out, pistol fast pull" />
         <animation state_key="stabbing" 			animation_key="pistol whip" />
         <animation state_key="stabbing" 			animation_key="pistol whip 3" />
         <sound key="fire" fileref="m1895mod3skill_fire_FromBF5.wav" pitch_variety="0.05" volume="1.5" />
@@ -90,7 +90,7 @@
         suppressed="1"
         name="Nagant M1895 revolver(MOD3)-[Cream in the Nebula]-[Seven Tone Paean]"
         class="4"
-        sight_range_modifier="1.3"
+        sight_range_modifier="1.6"
         projectile_speed="120.0"
         projectiles_per_shot="1"
         reload_one_at_a_time="1"
