@@ -39,7 +39,7 @@
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet_rf.projectile">
-        <result class="hit"  kill_probability="5.6" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.788" kill_decay_end_time="1.32" />
+        <result class="hit"  kill_probability="6.0" kill_probability_offset_on_successful_hit="3.9" kill_decay_start_time="0.788" kill_decay_end_time="1.32" />
         <trail probability="1" key="BulletApTrail_rf"/>
     </projectile>
     <effect class="muzzle" ref="ejection_556" />
@@ -92,7 +92,7 @@
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet_rf.projectile">
-        <result class="hit"  kill_probability="5.6" kill_probability_offset_on_successful_hit="0.9" kill_decay_start_time="0.788" kill_decay_end_time="1.32" />
+        <result class="hit"  kill_probability="6.0" kill_probability_offset_on_successful_hit="0.9" kill_decay_start_time="0.788" kill_decay_end_time="1.32" />
         <trail probability="1" key="BulletApTrail_rf"/>
     </projectile>
     <effect class="muzzle" ref="ejection_556" />

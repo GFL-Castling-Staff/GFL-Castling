@@ -16,7 +16,7 @@
         burst_shots="1"
         spread_range="0.2"
         stance_accuracy_rate="2.0"
-		sustained_fire_diminish_rate="1.5" 
+		sustained_fire_diminish_rate="2.5" 
 		sustained_fire_grow_step="0.3"
         stab_enabled="1" />
     <commonness value="0" in_stock="0" can_respawn_with="1" />
@@ -50,14 +50,14 @@
     <hud_icon filename="gkw_mp40_902.png"/>
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="1" can_be_detected_by_driver="1">
-        <result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="5.2" kill_decay_start_time="0.2" kill_decay_end_time="0.5" />
+        <result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="5.2" kill_decay_start_time="0.5" kill_decay_end_time="0.5" />
     </projectile>
     <stance state_key="running" accuracy="0.85" />
     <stance state_key="walking" accuracy="0.85" />
     <stance state_key="standing" accuracy="0.85" />
-    <stance state_key="crouching" accuracy="0.85" />
+    <stance state_key="crouching" accuracy="1.0" />
     <stance state_key="crouch_moving" accuracy="0.85" />
-    <stance state_key="prone" accuracy="0.85" />
+    <stance state_key="prone" accuracy="0.9" />
     <stance state_key="prone_moving" accuracy="0.85" />
     <stance state_key="over_wall" accuracy="0.85" />
     <modifier class="hit_success_probability" value="-0.3" />

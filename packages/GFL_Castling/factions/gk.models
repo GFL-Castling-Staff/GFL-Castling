@@ -1382,6 +1382,9 @@
     <model filename="gkd_smg_mp40_902.xml">
         <requirement class="weapon" key="gkw_mp40_902.weapon" slot="0" />
     </model>    
+    <model filename="gkd_smg_mp40_10808.xml">
+        <requirement class="weapon" key="gkw_mp40_10808.weapon" slot="0" />
+    </model>    
     <model filename="gkd_smg_mp5.xml">
         <requirement class="weapon" key="gkw_mp5.weapon" slot="0" />
     </model>
@@ -3112,4 +3115,10 @@
     <model filename="gkd_rf_mk12.xml">
         <requirement class="weapon" key="gkw_mk12_skill.weapon" slot="0" />
     </model>
+    <model filename="gkd_smg_mp41mod3.xml">
+        <requirement class="weapon" key="gkw_mp41.weapon" slot="0" />
+    </model>
+    <model filename="gkd_smg_mp41mod3.xml">
+        <requirement class="weapon" key="gkw_mp41mod3.weapon" slot="0" />
+    </model>    
 </models> 

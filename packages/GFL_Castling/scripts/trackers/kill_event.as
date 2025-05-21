@@ -82,8 +82,8 @@ class kill_event : Tracker {
         {"gkw_ribeyrollesmod3_skill.weapon",3},
 
         // SMG——3kills
-        {"gkw_ump40.weapon",2},
-        {"gkw_ump40_559.weapon",2},
+        {"gkw_ump40.weapon",1},
+        {"gkw_ump40_559.weapon",1},
         {"gkw_ump9.weapon",3},
         {"gkw_ump9_556.weapon",3},
         {"gkw_ump9_3404.weapon",3},
@@ -104,6 +104,8 @@ class kill_event : Tracker {
         {"gkw_vector_agent_fmj.weapon",3},
         {"gkw_mpk.weapon",3},
         {"gkw_mpl.weapon",3},
+        {"gkw_mp41.weapon",3},
+        {"gkw_mp41mod3.weapon",3},
 
         {"gkw_ump45_5405.weapon",3},
         {"gkw_ump45mod3_5405.weapon",3},
@@ -154,6 +156,7 @@ class kill_event : Tracker {
         {"gkw_klin.weapon",3},
         {"gkw_mp40.weapon",3},
         {"gkw_mp40_902.weapon",3},
+        {"gkw_mp40_10808.weapon",3},
         {"gkw_mp5.weapon",3},
         {"gkw_mp5mod3.weapon",3},
         {"gkw_mp5_3.weapon",3},
