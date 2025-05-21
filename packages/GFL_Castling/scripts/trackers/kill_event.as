@@ -431,19 +431,26 @@ class kill_event : Tracker {
             if (playerInfo.getPlayerName() == default_string ) return;
             string playerName = playerInfo.getPlayerName();
             int kill_to_heal_scale = 1;
+            int kill_score_scale = 1;
 
             string c_weaponType = playerInfo.getPlayerEquipment().getWeapon(0);
             string c_armorType = playerInfo.getPlayerEquipment().getWeapon(3);
 
+            // 如果是栓动步枪 双倍积分获取
+            if(gk_bolted_rf_list.find(KillerWeaponKey) > -1)
+            {
+                kill_score_scale = 2;
+            }
+
             if(reward_pool_key=="boss")
             {
-                handleKillEventToPlayerInfo(playerId,5);
+                handleKillEventToPlayerInfo(playerId,5 * kill_score_scale);
                 kill_to_heal_scale = 5;
                 notify(m_metagame, "kill streak,boss reward", dictionary(), "misc", playerId, false, "", 1.0);
             }
             else if(reward_pool_key=="rare" || reward_pool_key=="elite")
             {
-                handleKillEventToPlayerInfo(playerId,3);
+                handleKillEventToPlayerInfo(playerId,3 * kill_score_scale);
                 kill_to_heal_scale = 2;
                 notify(m_metagame, "kill streak,elite reward", dictionary(), "misc", playerId, false, "", 1.0);
             } 
@@ -451,7 +458,7 @@ class kill_event : Tracker {
             {
                 if(rand(0.0f,1.0f) <= 0.3f)
                 {
-                    handleKillEventToPlayerInfo(playerId,1);
+                    handleKillEventToPlayerInfo(playerId,1 * kill_score_scale);
                     //兵蚁 僵尸 这种东西给的积分变少，30%概率给1点积分
                 }
             }            
@@ -459,13 +466,13 @@ class kill_event : Tracker {
             {
                 if(rand(0.0f,1.0f) <= 0.5f)
                 {
-                    handleKillEventToPlayerInfo(playerId,1);
+                    handleKillEventToPlayerInfo(playerId,1 * kill_score_scale);
                     //榴弹发射器和迫击炮击杀小兵的收益降低50%
                 }                
             }
             else
             {
-                handleKillEventToPlayerInfo(playerId,1);                
+                handleKillEventToPlayerInfo(playerId,1 * kill_score_scale);                
             }
 
 
@@ -486,7 +493,7 @@ class kill_event : Tracker {
                 {
                     m_tactic_point_offset+=1;
                 }
-                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1)
+                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1 || gk_bolted_rf_list.find(c_weaponType) > -1)
                 {
                     m_tactic_point_offset+=1;
                 }                  
@@ -509,7 +516,7 @@ class kill_event : Tracker {
                 {
                     m_tactic_point_offset+=2;
                 }
-                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1)
+                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1 || gk_bolted_rf_list.find(c_weaponType) > -1)
                 {
                     m_tactic_point_offset+=1;
                 }                  
@@ -532,7 +539,7 @@ class kill_event : Tracker {
                 {
                     m_tactic_point_offset+=3;
                 }
-                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1)
+                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1 || gk_bolted_rf_list.find(c_weaponType) > -1)
                 {
                     m_tactic_point_offset+=1;
                 }                  
@@ -555,7 +562,7 @@ class kill_event : Tracker {
                 {
                     m_tactic_point_offset+=4;
                 }
-                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1)
+                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1 || gk_bolted_rf_list.find(c_weaponType) > -1)
                 {
                     m_tactic_point_offset+=1;
                 }                  
@@ -578,7 +585,7 @@ class kill_event : Tracker {
                 {
                     m_tactic_point_offset+=5;
                 }
-                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1)
+                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1 || gk_bolted_rf_list.find(c_weaponType) > -1)
                 {
                     m_tactic_point_offset+=1;
                 }                  
@@ -601,7 +608,7 @@ class kill_event : Tracker {
                 {
                     m_tactic_point_offset+=5;
                 }
-                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1)
+                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1 || gk_bolted_rf_list.find(c_weaponType) > -1)
                 {
                     m_tactic_point_offset+=1;
                 }               
