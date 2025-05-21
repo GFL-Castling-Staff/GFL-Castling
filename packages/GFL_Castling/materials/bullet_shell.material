@@ -5,6 +5,8 @@ material bullet_shell_556
     {
         pass
         {
+			cull_hardware none
+			cull_software none            
 			emissive 1 1 1 1
             scene_blend alpha_blend
             fog_override false
@@ -22,6 +24,8 @@ material bullet_shell_76239
     {
         pass
         {
+			cull_hardware none
+			cull_software none            
 			emissive 1 1 1 1
             scene_blend alpha_blend
             fog_override false
@@ -39,6 +43,8 @@ material bullet_shell_76251
     {
         pass
         {
+			cull_hardware none
+			cull_software none            
 			emissive 1 1 1 1
             scene_blend alpha_blend
             fog_override false
@@ -56,6 +62,8 @@ material bullet_shell_9mm
     {
         pass
         {
+			cull_hardware none
+			cull_software none            
 			emissive 1 1 1 1
             scene_blend alpha_blend
             fog_override false
