@@ -196,7 +196,7 @@
 -角色死亡燃烧结算会中止
 -(该支援受空域禁制影响)
 #####分支α[炼狱龙炎]#####
-(使用凝固汽油弹，航弹爆炸后生成持续20秒的强腐蚀性燃烧区域，每4秒结算一次伤害，每次对范围10内的敌人造成20的后续燃烧伤害。)
+(使用凝固汽油弹，航弹爆炸后生成持续20秒的强腐蚀性燃烧区域，每4秒结算一次伤害，每次对范围12内的敌人造成20的后续燃烧伤害。)
 "/>
 
 	<text key="Hint - call - title - call_ui_t2_airstrike_fairy_bomber_update_beta" text="空袭妖精 - 高空投弹" />
@@ -456,23 +456,35 @@
 -导弹在范围7.5造成120的blast伤害
 -导弹会分裂出3个末敏弹头,对随机选定的三个敌方单位在范围5.0造成80的blast伤害
 #####分支α[末敏风暴]#####
-(决定最终打击位置时，对附近的三个敌方单位分别发射三个末敏弹头，造成80b，范围5.0的伤害)
+(决定最终打击位置时，对附近的随机三个敌方单位分别发射三个末敏弹头，造成80b，范围5.0的伤害)
 "/>
 
 	<text key="Hint - call - title - call_ui_t1_rocket_fairy_missile_update_beta" text="火箭妖精 - 巡曳飞弹" />
 	<text key="Hint - call - intro - call_ui_t1_rocket_fairy_missile_update_beta" text="<冷却时间 90秒 消耗 25战术点>
 -使用后每秒刷新一次位置，3秒后在鼠标标点位置落下导弹
--导弹在范围7.5造成120的blast伤害
-#####分支β[精英机组]#####
-(决定最终打击位置时，对附近的三个敌方单位分别发射三个末敏弹头，造成80b，范围5.0的伤害)
+-导弹在范围7.5造成200的blast伤害
+-导弹会在目标点半空造成一次仅针对载具和建筑的伤害，数值为200，范围为20
+#####分支β[堡垒杀手]#####
+(导弹造成的直击伤害提高至200b，且会对目标地点范围20的所有载具造成200HP的伤害)
 "/>
 
 	<text key="Hint - call - title - call_ui_t1_rocket_fairy_missile_update_gamma" text="火箭妖精 - 巡曳飞弹" />
 	<text key="Hint - call - intro - call_ui_t1_rocket_fairy_missile_update_gamma" text="<冷却时间 90秒 消耗 25战术点>
 -使用后每秒刷新一次位置，3秒后在鼠标标点位置落下导弹
--导弹在范围7.5造成120的blast伤害
-#####分支α[精英机组]#####
+-导弹在指定地点布设20个高爆反人员地雷
+-地雷触发后会对范围8的敌人造成20x3.1的伤害
+#####分支γ[布雷套件]#####
+(不再造成伤害，而改为在指定地点抛射铺设20个高爆反人员地雷，地雷触发后对范围8的敌人造成20x3.1的伤害)
 "/>
+
+<!-- <text key="Hint - call - title - call_ui_t1_rocket_fairy_missile_update_gamma" text="火箭妖精 - 巡曳飞弹" />
+<text key="Hint - call - intro - call_ui_t1_rocket_fairy_missile_update_gamma" text="<冷却时间 90秒 消耗 25战术点>
+-使用后每秒刷新一次位置，3秒后在鼠标标点位置落下导弹
+-导弹在指定地点布设20个高爆反人员地雷
+-地雷触发后会对范围8的敌人造成20x3.1的伤害
+#####分支γ[布雷套件]#####
+(不再造成伤害，而改为在指定地点抛射铺设20个高爆反人员地雷，地雷触发后对范围8的敌人造成20x3.1的伤害)
+"/> -->
 
 	<text key="Hint - call - title - call_ui_t2_rocket_fairy_bm30" text="火箭妖精 - 火箭弹打击" />
 	<text key="Hint - call - intro - call_ui_t2_rocket_fairy_bm30" text="<冷却时间 90秒 消耗 50战术点>
@@ -492,4 +504,43 @@
 -持续9轮，每轮间隔3秒
 -从第二波开始每次覆盖都会有10半径的偏离，让打击面更广
 -火箭在范围6.0造成10的blast伤害"/>
+
+    <text key="Hint - call - title - call_ui_t2_kaguya_strike" text="耀夜姬 - 轨道激光打击" />
+    <text key="Hint - call - intro - call_ui_t2_kaguya_strike" text="<冷却时间 120秒 消耗 35战术点>
+-2秒后发射天基激光，对指定区域造成伤害
+-对直击点在范围4造成150的blast伤害
+-对直击点在范围8造成10x3的blast伤害
+-对直击点在范围12造成5x6的blast伤害
+"/>
+
+    <text key="Hint - call - title - call_ui_t2_kaguya_strike_update_alpha" text="耀夜姬 - 轨道激光打击" />
+    <text key="Hint - call - intro - call_ui_t2_kaguya_strike_update_alpha" text="<冷却时间 120秒 消耗 35战术点>
+-2秒后发射天基激光，对指定区域造成伤害
+-对直击点在范围4造成300的blast伤害
+-对直击点在范围8造成100的blast伤害
+-对直击点在范围12造成50的blast伤害
+#####分支α[聚焦单元]#####
+(对范围4内的敌人造成的伤害提高至300b,对范围8内的敌人造成的伤害提升至100b,对范围12内的敌人造成的伤害提升至50b)
+"/>
+
+    <text key="Hint - call - title - call_ui_t2_kaguya_strike_update_beta" text="耀夜姬 - 轨道激光打击" />
+    <text key="Hint - call - intro - call_ui_t2_kaguya_strike_update_beta" text="<冷却时间 120秒 消耗 35战术点>
+-2秒后发射天基激光，对指定区域造成伤害
+-对直击点在范围4造成150的blast伤害
+-对直击点在范围8造成10x3的blast伤害
+-对直击点在范围12造成5x6的blast伤害
+-直击点会留下一片燃烧区域，每2秒结算一次伤害，每次对范围12内的敌人造成20的后续燃烧伤害
+#####分支β[高燃焦土]#####
+(激光会在区域地面留下灼燃区域，灼燃区域每2秒对范围12内的敌人造成20的伤害，持续10秒)
+"/>
+
+    <text key="Hint - call - title - call_ui_t2_kaguya_strike_update_gamma" text="耀夜姬 - 轨道激光打击" />
+    <text key="Hint - call - intro - call_ui_t2_kaguya_strike_update_gamma" text="<冷却时间 120秒 消耗 35战术点>
+-2秒后发射天基激光，每4秒在区域内选择三个目标发射激光造成伤害
+-对直击目标在范围5造成50的伤害
+#####分支γ[八咫辉光]#####
+(改为持续性的激光打击，每4秒在区域内随机选择三个目标造成伤害，持续16秒，伤害改为50blast)
+"/>
+
+
 </translation>
