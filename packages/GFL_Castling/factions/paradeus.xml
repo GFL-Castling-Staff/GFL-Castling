@@ -364,7 +364,7 @@
 		<hud_icon filename="commander_ye.png" />
 	</rank>
 	<!-- player group -->
-	<soldier name="default" spawn_score="0.00000001" firstnames_file="Paradeus_first.name" lastnames_file="Paradeus_last.name">
+	<soldier name="default" spawn_score="0" firstnames_file="Paradeus_first.name" lastnames_file="Paradeus_last.name">
 
 		<character filename="pard_hannibal.character"/>
 
@@ -902,7 +902,7 @@
 	<!-- 角斗士 -->
 	<soldier name="Paradeus_roarer" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.2">
 		<model filename="pard_roarer_from_sv-98.xml" />
-		<character filename="roarer.character" />
+		<character filename="pard_roarer.character" />
 		<ai filename="roarer.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_roarer.weapon" enabled="1" />
@@ -922,6 +922,28 @@
 			<attribute weight="1.0" min="30.0" max="60.0" />
 		</attribute_config>
 	</soldier>
+	<soldier name="Paradeus_Hannibal" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.1">
+		<model filename="pard_hannibal98.xml" />
+		<character filename="pard_hannibal.character" />
+		<ai filename="roarer.ai" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="parw_hannibal.weapon" enabled="1" />
+			<carry_item key="vest_100hp_mecha_100" />
+		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="1" />
+			<!-- wearables -->
+			<item_class_existence class="carry_item" slot="1" probability="1" />
+			<!-- note, always bp items -->
+			<item_class_existence class="carry_item" slot="0" probability="0.001" />
+		</item_class_existence_config>
+		<attribute_config class="xp">
+			<attribute weight="0.3" min="200.0" max="300.0" />
+		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="30.0" max="60.0" />
+		</attribute_config>
+	</soldier>    
 	<soldier name="Thunder" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.05">
 		<model filename="pard_thunder.xml" />
 		<character filename="thunder.character" />
