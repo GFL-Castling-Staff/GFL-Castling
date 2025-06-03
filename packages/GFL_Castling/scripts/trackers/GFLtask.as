@@ -1990,6 +1990,7 @@ class Event_call_bombardment_fairy_170mm : event_call_task_hasMarker {
 	}
 }
 
+//火箭妖精 巡曳飞弹
 class Event_call_rocket_fairy_missile : event_call_task_hasMarker {
  
 

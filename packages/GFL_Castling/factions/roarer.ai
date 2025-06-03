@@ -4,7 +4,7 @@
     <parameter class="vehicle_stuck_short_time" value="1000.0" />
     <parameter class="in_trenches_fade_off_timer" value="4.0" />
     <parameter class="accuracy_penalty_wear_off_rate" value="0.333" />
-    <parameter class="check_vehicles_interval" value="2.0" />
+    <parameter class="check_vehicles_interval" value="1.0" />
     <parameter class="team_member_monitor_enemies_time" value="1.5" />
     <parameter class="monitor_enemies_time" value="0.8" />
     <parameter class="check_supplies_time" value="5.0" />
@@ -31,7 +31,7 @@
     <parameter class="favor_joining_player_squad_value_increase" value="0.1" />
     <parameter class="favor_staying_in_current_player_squad_value_increase" value="0.5" />
     <parameter class="authority_margin" value="0.07" />
-    <parameter class="monitor_enemies_max_dot_range" value="1.8" />
+    <parameter class="monitor_enemies_max_dot_range" value="3.0" />
     <parameter class="active_guarding_probability" value="0.5" />
     <parameter class="leading_inspect_alarm_spread_out_distance" value="50.0" />
     <parameter class="leading_inspect_alarm_min_distance" value="45.0" />
@@ -54,13 +54,11 @@
     <parameter class="in_vehicle_burst_time_variance" value="0.3" />
     <parameter class="accuracy_penalty_range" value="0.07" />
     <parameter class="melee_attack_wait_time" value="0.5" />
-    <parameter class="shooting_against_vehicle_burst_time" value="0.5" />
+    <parameter class="shooting_against_vehicle_burst_time" value="1.0" />
     <parameter class="fighting_favor_helping_probability" value="0.7" />
     <parameter class="check_need_for_help_range" value="40.0" />
     <parameter class="check_fellows_for_shield_use_range" value="100.0" />
     <parameter class="max_active_shields_per_fellows" value="1.00" />
-    <parameter class="fighting_against_vehicle_separation" value="7.0" />
-    <parameter class="fighting_against_vehicle_move_radius" value="30.0" />
     <parameter class="day_reaction_time_to_fight_min" value="0.5" />
     <parameter class="day_reaction_time_to_fight_max" value="0.8" />
     <parameter class="night_reaction_time_to_fight_min" value="0.5" />
@@ -100,7 +98,7 @@
     <parameter class="longer_burst_time_variance" value="0" />
     <parameter class="stab_range" value="4.0" />
     <parameter class="melee_attack_wait_time" value="1.0" />
-    <parameter class="fighting_melee_move_radius" value="1.0" />
+    <parameter class="fighting_melee_move_radius" value="2.0" />
     <parameter class="fighting_regular_move_radius" value="4.0" />
     <parameter class="reaction_time_after_choosing_target" value="-1.0" />
     <parameter class="global_separation_radius_factor" value="1.0" />

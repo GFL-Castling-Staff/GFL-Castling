@@ -5,13 +5,13 @@
 	last_burst_retrigger_time="0.25"
 	accuracy_factor="1.0"
 	spread_range="0.4"
-	magazine_size="4"
+	magazine_size="1"
 	can_shoot_standing="1"
 	can_shoot_crouching="1"
 	can_shoot_prone="0"
 	suppressed="0"
 	name="M202 Air-Burst rocket launcher"
-	class="4"
+	class="3"
 	consume="1"
 	sight_range_modifier="2.0"
 	projectile_speed="150.0"
@@ -23,10 +23,10 @@
 
 	<hud_icon filename="hud_m202.png"/>
 	<inventory encumbrance="20.0" buy_price="100.0" sell_price="100.0"/>
-	<capacity value="2" source="rank" source_value="0"/>
+	<capacity value="12" source="rank" source_value="0"/>
 	<commonness value="10" in_stock="1" can_respawn_with="1"/>
 	<animation key="recoil" animation_key="recoil, m202"/>
-	<animation key="reload" animation_key="AT4Reload"/>
+	<animation key="reload" animation_key="recoil, m202"/>
 	<animation key="hold" animation_key="still, with law"/>
 	<animation key="hold_on_wall" animation_key="still, with law"/>
 	<sound key="fire" fileref="m202_flash_shot.wav"/>

@@ -257,9 +257,9 @@ particle_system FlareSmokeYellow
 		direction	0 1 0.2
 		emission_rate	50
 		position	0 0.3 0
-    width 0.1
-    height 0.0
-    depth 0.1
+        width 0.1
+        height 0.0
+        depth 0.1
 
 		velocity_min	1.0
 		velocity_max	2.4
@@ -317,9 +317,69 @@ particle_system FlareSmokeGreen
 		direction	0 1 0.2
 		emission_rate	50
 		position	0 0.3 0
-    width 0.1
-    height 0.0
-    depth 0.1
+        width 0.1
+        height 0.0
+        depth 0.1
+
+		velocity_min	1.0
+		velocity_max	2.4
+
+		time_to_live_min	6
+		time_to_live_max	10
+		duration	0.0
+	}
+
+	affector Scaler
+	{
+		rate	0.75
+	}
+
+	affector Rotator
+	{
+		rotation_speed_range_start	-45
+		rotation_speed_range_end	45
+		rotation_range_start	0
+		rotation_range_end	360
+	}
+
+	affector ColourFader
+	{
+		red	0.2
+		green	1
+		blue	0
+		alpha	-0.3
+	}
+
+	affector LinearForce
+	{
+		force_vector 1 1 0
+		force_application add
+	}
+
+}
+
+particle_system FlareSmokeLightGreen
+{
+	quota	500
+	//material	Dust4
+	material	FlareSmoke
+	particle_width	0.7
+	particle_height	0.7
+	cull_each	false
+	renderer	billboard
+	billboard_type	point
+
+	emitter Box
+	{
+		angle	2
+		colour_range_start	0.34 0.98 0.34 0.5
+		colour_range_end	0.34 0.98 0.34 1
+		direction	0 1 0.2
+		emission_rate	50
+		position	0 0.3 0
+        width 0.1
+        height 0.0
+        depth 0.1
 
 		velocity_min	1.0
 		velocity_max	2.4
