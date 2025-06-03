@@ -37,7 +37,8 @@ dictionary RP_enemy_index = {
     {"smasher",250},
     {"Paradeus_doppelsoldner",250},
     {"Paradeus_roarer",250},
-    {"Thunder",300},
+    {"Paradeus_Hannibal",500},
+    {"Thunder",500},
     {"parw_grenadier",100},
     {"para_rodelero",80},
     {"tareus",1500},
@@ -112,7 +113,8 @@ dictionary XP_enemy_index = {
     {"smasher",0.01},
     {"Paradeus_doppelsoldner",0.01},
     {"Paradeus_roarer",0.01},
-    {"Thunder",0.015},
+    {"Paradeus_Hannibal",0.02},    
+    {"Thunder",0.02},
     {"parw_grenadier",0.003},
     {"tareus",0.05},
 
@@ -192,6 +194,7 @@ dictionary reward_pool_list= {
     {"Adeline","elite"},
     {"smasher","elite"},
     {"Thunder","elite"},
+    {"Paradeus_Hannibal","elite"},
 
     {"sf_manticore","rare"},
     {"sf_goliath","rare"},

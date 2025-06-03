@@ -34,6 +34,7 @@
         "Adeline",
         "Paradeus_doppelsoldner",
         "Paradeus_roarer",
+        "Paradeus_Hannibal",
         "parw_grenadier",
         "parw_hammer",
         "parw_commander",

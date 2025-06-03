@@ -366,10 +366,10 @@
 	<!-- player group -->
 	<soldier name="default" spawn_score="0" firstnames_file="Paradeus_first.name" lastnames_file="Paradeus_last.name">
 
-		<character filename="pard_hannibal.character"/>
+		<!-- <character filename="pard_hannibal.character"/> -->
 
 
-		<!-- <character filename="paradeus.text_lines" /> -->
+		<character filename="paradeus.text_lines" />
 		<ai filename="default.ai" />
 		<models file="paradeus.models" />
 		<models file="common_bonus.models" />
@@ -928,7 +928,7 @@
 		<ai filename="roarer.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_hannibal.weapon" enabled="1" />
-			<carry_item key="vest_100hp_mecha_100" />
+			<carry_item key="vest_200hp_160" />
 		</resources>
 		<item_class_existence_config>
 			<item_class_existence class="weapon" slot="1" probability="1" />
