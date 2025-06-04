@@ -8337,7 +8337,7 @@
 	<modifier class="detectability" value="0.5"/>
 </carry_item>
 
-<carry_item key="sf_nemeum_swap.carry_item" time_to_live_out_in_the_open="0" name="Nemeum Armor Plate" transform_on_consume="sf_nemeum_swap_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="sf_nemeum_swap.carry_item" time_to_live_out_in_the_open="0" name="Nemeum Armor Plate 5" transform_on_consume="sf_nemeum_swap_1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
@@ -8355,7 +8355,7 @@
 	<modifier class="detectability" value="0.5"/>
 </carry_item>
 
-<carry_item key="sf_nemeum_swap_1" time_to_live_out_in_the_open="0" name="Nemeum Armor Plate" transform_on_consume="sf_nemeum_swap_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="sf_nemeum_swap_1" time_to_live_out_in_the_open="0" name="Nemeum Armor Plate 4" transform_on_consume="sf_nemeum_swap_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
@@ -8373,7 +8373,7 @@
 	<modifier class="detectability" value="0.5"/>
 </carry_item>
 
-<carry_item key="sf_nemeum_swap_2" time_to_live_out_in_the_open="0" name="Nemeum Armor Plate" transform_on_consume="sf_nemeum_swap_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="sf_nemeum_swap_2" time_to_live_out_in_the_open="0" name="Nemeum Armor Plate 3" transform_on_consume="sf_nemeum_swap_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
@@ -8391,7 +8391,7 @@
 	<modifier class="detectability" value="0.5"/>
 </carry_item>
 
-<carry_item key="sf_nemeum_swap_3" time_to_live_out_in_the_open="0" name="Nemeum Armor Plate" transform_on_consume="sf_nemeum_swap_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="sf_nemeum_swap_3" time_to_live_out_in_the_open="0" name="Nemeum Armor Plate 2" transform_on_consume="sf_nemeum_swap_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
@@ -8409,7 +8409,7 @@
 	<modifier class="detectability" value="0.5"/>
 </carry_item>
 
-<carry_item key="sf_nemeum_swap_4" time_to_live_out_in_the_open="0" name="Nemeum Armor Plate" transform_on_consume="sf_nemeum.carry_item" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
+<carry_item key="sf_nemeum_swap_4" time_to_live_out_in_the_open="0" name="Nemeum Armor Plate 1" transform_on_consume="sf_nemeum.carry_item" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 	<hud_icon filename="testing.png"/>
 	<capacity value="1" source="rank" source_value="0"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
