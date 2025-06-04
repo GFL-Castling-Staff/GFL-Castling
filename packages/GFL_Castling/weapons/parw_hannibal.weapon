@@ -65,7 +65,7 @@
     <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.5" />
 	<target_factors tag="shield" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />	
     <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
-    <shield offset="0 0.7 2.5" extent="2.5 4.5 3.2" usable_for_cover="0"/>
+    <shield offset="0 0.7 2.7" extent="2.5 4.5 3.2" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
