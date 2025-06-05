@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon key="gkw_thunder_3309.weapon" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+<tag name="pistol" />
+
+	<specification 
+    retrigger_time="-1" 
+    accuracy_factor="0.98" 
+    sustained_fire_grow_step="3.0" 
+    sustained_fire_diminish_rate="2.0" 
+    magazine_size="1" 
+    carry_in_two_hands="0" 
+    suppressed="0" 
+    name="Thunder.50 BMG-[Black Swan's Dream]" 
+    class="1" 
+    sight_range_modifier="1.6" 
+    projectile_speed="130.0" 
+    projectiles_per_shot="1" 
+    burst_shots="1" />
+
+	<commonness value="0.0" in_stock="0" can_respawn_with="1" />
+	<inventory encumbrance="5.0" buy_price="5.0" sell_price="5.0"/>
+	<capacity value="1" source="rank" source_value="0.0" />
+
+	<sound key="fire" fileref="thunder50_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.4" />
+	<sound key="magazine_out" fileref="thunder50_mgz_out_FromCOD16.wav" volume="0.6" />
+	<sound key="magazine_in" fileref="thunder50_mgz_in_FromCOD16.wav" volume="0.6" />
+	<sound key="reload_one" fileref="thunder50_cycle_FromCOD15.wav" volume="0.6" />
+
+	<animation state_key="cycle" animation_key="cycle, revolver" />
+
+	<model filename="gkw_hg_thunder50_from_melondove.xml" />
+    <sound key="dry_fire" fileref="dryfire_9mmhg_1.wav" pitch_variety="0.05" volume="1.0" />
+
+
+	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0" />
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0" />
+    <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
+    <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+    <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
+	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
+
+	<animation state_key="recoil" animation_key="recoil, pistol 2" />
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone" />
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol" />
+
+
+    <animation state_key="reload"	animation_key="reloading, thunder" />
+	
+	<animation state_key="hold"					animation_key="still, pistol 2" />
+  	<animation state_key="hold_casual"			animation_key="hold_casual, pistol 2" />
+	<animation state_key="hold_on_wall"			animation_key="hold, overwall pistol" />
+  	<animation state_key="still_against_wall"	animation_key="hold_casual, pistol 4" />
+	<animation state_key="running"				animation_key="running, pistol 2" />
+	<animation state_key="walking"				animation_key="walking, pistol 2" />
+    <animation state_key="walking_backwards" 	animation_key="walking backwards, pistol" />
+	
+	<animation state_key="crouching"			animation_key="crouch, pistol 2" />
+	<animation state_key="crouch_moving"		animation_key="crouching forwards, single hand carry" />
+	<animation state_key="crouch_moving_backwards"	animation_key="crouching backwards, pistol 2" />
+	
+    <animation state_key="prone_still" 			animation_key="prone_still, pistol" />
+	
+    <animation state_key="changing_weapon_in" 	animation_key="change weapon in, pistol fast pull" />
+    <animation state_key="changing_weapon_out" 	animation_key="change weapon out, pistol fast pull" />
+	
+    <animation state_key="stabbing" 			animation_key="pistol whip" />
+    <animation state_key="stabbing" 			animation_key="pistol whip 3" />
+	<hud_icon filename="gkw_thunder50_3309.png" />
+
+	<modifier class="speed" value="+0.7" />
+
+	<weak_hand_hold offset="0.1" />
+	<projectile file="ntw.projectile">
+        <result class="spawn" instance_class="projectile" instance_key="sub_damage_thunder.projectile" min_amount="3" max_amount="3" offset="0 0.5 0" position_spread="0 0" direction_spread="0 0" />	
+        <trail probability="1.0" key="BulletApTrail_ct" />
+        <effect class="result" key="terrain" ref="BigBurst" use_surface_color="1" />
+        <effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
+        <effect class="result" key="terrain" ref="Smoke" post_processing="1" />
+        <effect class="result" key="terrain" ref="Shine" lighting="0" />
+        <effect class="result" key="terrain" ref="Godray" lighting="0" />
+        <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+        <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
+        <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0" />
+        <effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0" />
+        <effect class="result" key="static_object" copy="terrain" />
+        <effect class="result" key="vehicle" copy="terrain" />     
+        <effect class="result" key="character" copy="terrain" />
+	</projectile>
+
+    <effect class="muzzle" ref="coeus" />
+    <effect class="muzzle" ref="coeusphere" />
+    <effect class="muzzle" ref="coeusmuzzle" lighting="0" />
+    <effect class="muzzle" ref="ejection_50BMG" />
+	<stance state_key="running" accuracy="0.75" />
+	<stance state_key="walking" accuracy="0.85" />
+	<stance state_key="crouch_moving" accuracy="0.8" />
+	<stance state_key="prone_moving" accuracy="0.8" />
+	<stance state_key="over_wall" accuracy="0.9" />
+	<stance state_key="standing" accuracy="0.9" />
+	<stance state_key="crouching" accuracy="0.95" />
+	<stance state_key="prone" accuracy="1" />
+
+
+</weapon>

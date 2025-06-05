@@ -367,6 +367,7 @@ dictionary commandSkillIndex = {
 
         {"gkw_thunder.weapon",51},
         {"gkw_thunder_2206.weapon",51},
+        {"gkw_thunder_3309.weapon",51},
 
         {"gkw_98k.weapon",51},
         {"gkw_98k_skill.weapon",51},
