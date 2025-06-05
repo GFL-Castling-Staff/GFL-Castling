@@ -30,6 +30,7 @@
 	<animation key="cycle" animation_key="recoil, m202"/>
 	<animation key="hold" animation_key="still, with law"/>
 	<animation key="hold_on_wall" animation_key="still, with law"/>
+    <animation state_key="changing_weapon_out" animation_key="recoil, m202"/>
 	<sound key="fire" fileref="m202_flash_shot.wav"/>
 	<sound key="cycle" fileref="sniper_cycle.wav"/>
 	<sound key="magazine_out" fileref="sniper_clip_out.wav"/>
