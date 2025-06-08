@@ -343,7 +343,7 @@ Vector3 getMultiplicationVector(Vector3 s_pos, float scale) {
 
 Vector3 getRandomHorizonDirectVector()
 {
-    float angle = rand(0,6.28);
+    float angle = rand(0.0,6.28);
     float x = cos(angle);
     float z = sin(angle);
     return Vector3(x,0,z);

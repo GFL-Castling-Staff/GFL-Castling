@@ -2126,12 +2126,12 @@ class DelayGPSScanRequest : Task{
 	}
 
 	void start() {
-		_log("DelayGPSScanRequest start");
+		// _log("DelayGPSScanRequest start");
 		m_timeLeft = m_time;
     }
 
 	void update(float time) {
-		_log("DelayGPSScanRequest update");
+		// _log("DelayGPSScanRequest update");
 		m_timeLeft -= time;
 		m_addtime -= time;
 				
@@ -2152,7 +2152,7 @@ class DelayGPSScanRequest : Task{
 		if (m_timeLeft < 0 && m_scanned == false){
 			bool anyFound = false;
 			
-			for (uint f = 0; f < m_metagame.getFactionCount(); ++f){
+			for (int f = 0; f < m_metagame.getFactionCount(); ++f){
 				if(f == m_faction_id) continue;
 				//scanning for all vehicles on the list
 				for (uint i = 0; i < GPSScanTargets.length(); ++i){

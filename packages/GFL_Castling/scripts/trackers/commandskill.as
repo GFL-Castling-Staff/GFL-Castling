@@ -284,6 +284,7 @@ class CommandSkill : Tracker {
                 case 88:{excuteEvo3skill(cId,senderId,m_modifer);break;}
                 case 89:{excuteSSG3000skill(cId,senderId,m_modifer);break;}
                 case 90:{excuteQBZ95skill(cId,senderId,m_modifer);break;}
+                case 91:{excuteSIGMCXSkill(cId,senderId,m_modifer);break;}
 
                 
 
@@ -3982,6 +3983,7 @@ class CommandSkill : Tracker {
             }
         }
     }
+
     void excuteC96MODSkill(int characterId,int playerId,SkillModifer@ modifer){
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"C96",true)) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -4009,6 +4011,7 @@ class CommandSkill : Tracker {
             }
         }
     }
+
     void excute_AGS30_Skill(int characterId,int playerId,SkillModifer@ modifer){
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"AGS-30")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -4277,7 +4280,7 @@ class CommandSkill : Tracker {
                     };
                     // playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
-                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    playAnimationKey(m_metagame,characterId,"throwing, c4",true,true);
                     c_pos=c_pos.add(Vector3(0,1,0));
                     Vector3 u_pos = getAimUnitPosition(c_pos,stringToVector3(target),10);
                     CreateProjectile_H(m_metagame,c_pos,u_pos,"grenade_qbz95_cx.projectile",characterId,factionid,60.0,2.5);
@@ -4929,4 +4932,31 @@ class CommandSkill : Tracker {
             }
         }
     }
+
+    void excuteSIGMCXSkill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"SIGMCX",true,"charge_recover_1",5)) return;     
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    if(!tryaddChargeCount("SIGMCX",characterId,modifer,true)){
+                        addCooldown("SIGMCX",10,characterId,modifer,"charge_recover_1");
+                    }                    
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 aim_pos = stringToVector3(target);
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    aim_pos = aim_pos.add(Vector3(0,1.5,0));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "taser_shot.wav"
+                    };
+                    // playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    playSoundAtLocation(m_metagame,"taser_shot.wav",factionid,c_pos,1.5);
+                    c_pos=c_pos.add(Vector3(0,1.5,0));
+                    CreateDirectProjectile_T(m_metagame,c_pos,aim_pos,"sigmcx_taser_dart.projectile",characterId,factionid,0.5);
+                }
+            }
+        }
+    }    
 }
