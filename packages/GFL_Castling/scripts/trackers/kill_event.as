@@ -304,6 +304,10 @@ class kill_event : Tracker {
         {"666",-1}
     };
 
+    // 击杀时调用：查找已有 tracker 则累加击杀，否则新建
+    // killstoheal: 回 1 甲所需击杀数（从 healOnKillWeaponList 或护甲逻辑获取）
+    // timeaddafterkill: 窗口期秒数
+    // killadd: 本次计入击杀数（通常为 kill_to_heal_scale，视具体武器和护甲有参数修正）
     protected void updateHealByKillEvent(int characterid, int factionid, int killstoheal, int timeaddafterkill, string type="weapon", int killadd=1) {
         // ✅ 更严格的参数检查
         if (killstoheal <= 0 || killadd <= 0 || timeaddafterkill <= 0) return;
@@ -948,6 +952,10 @@ class kill_event : Tracker {
                         int current_kills = HealOnKill_track[a].current_kills;
                         int m_killstoheal = HealOnKill_track[a].m_killstoheal;
                         
+                        // 向下取整：攒满 m_killstoheal 才回 1 甲，余数保留到下个 tick
+                        // 例：7杀 / 3杀回1甲 = 回2甲，余1杀
+                        // ⚠️ 不要改成 (kills + m_killstoheal - 1) / m_killstoheal
+                        //    那是向上取整，会导致 1 杀即回甲（历史 bug，见 Issue #84）
                         while(HealOnKill_track[a].current_kills>=HealOnKill_track[a].m_killstoheal){
                             vestrestore++;
                             HealOnKill_track[a].current_kills -= HealOnKill_track[a].m_killstoheal;                            
@@ -998,6 +1006,11 @@ const float HOK_TICK_INTERVAL = 0.5;       // 刷新间隔
 const float HOK_VEST_DECAY_FACTOR = 1.0;  // 衰减速度倍数
 // const float HOK_VEST_MAX_TICKS = 300.0;        // 60/0.2
 
+
+// === 击杀回甲机制 (HealOnKill) ===
+// 玩家在窗口期内攒够 m_killstoheal 次击杀，每满 N 杀回 1 甲（向下取整，不足不回）
+// weapon/vest 类型当前行为一致：每次击杀刷新窗口期
+// 窗口期结束时，未兑换的击杀数丢弃，tracker 移除
 class HealOnKill_tracker {
     int m_characterId;
     float m_time = HOK_TICK_INTERVAL;
@@ -1008,6 +1021,9 @@ class HealOnKill_tracker {
     string m_type;
     int m_timeaddafterkill;  // ✅ 新增：存储续命时长
     
+
+    // initkilladd: 首次击杀计入的杀数（受 kill_to_heal_scale 影响，如boss 首杀算 5 杀）
+    // inittimeadd: 窗口期秒数，内部转换为 tick 数（÷ HOK_TICK_INTERVAL）
     HealOnKill_tracker(int characterId, int factionid, int killstoheal, int inittimeadd, string type, int initkilladd=1) {
         m_characterId = characterId;
         m_factionid = factionid;
