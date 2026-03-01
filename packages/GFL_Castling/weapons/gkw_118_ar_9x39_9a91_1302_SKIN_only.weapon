@@ -6,7 +6,7 @@
 		barrel_offset="0.4" 
 		class="0"
         slot="0" 
-		magazine_size="20" 
+		magazine_size="30" 
 		name="9A-91-[bullet café]-[9A High-Performance Chip]" 
 		projectile_speed="130" 
         spread_range="0.3"
@@ -17,7 +17,7 @@
 		sustained_fire_grow_step="0.25"
         sight_range_modifier_at_night="2.0"
 		accuracy_factor_at_night="1.15"         
-        sight_range_modifier="1.5" />
+        sight_range_modifier="2.0" />
         <animation key="reload" animation_key="reloading, magazine rifle 0.9" />
         <animation state_key="hold_casual" animation_key="dancing, kazachok" />
         <inventory encumbrance="35.0" buy_price="91.0" sell_price="91.0" />
