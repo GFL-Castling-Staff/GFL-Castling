@@ -5037,7 +5037,7 @@ class CommandSkill : Tracker {
                     playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
                     sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"webley_c4");
                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                    tasker.add(DelayKillCharacter(m_metagame,1.8,characterId));
+                    tasker.add(DelayKillCharacter(m_metagame,1.3,characterId));
                     addCooldown("webley",120,characterId,modifer);
                 }
             }
