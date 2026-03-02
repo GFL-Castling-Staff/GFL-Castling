@@ -15,11 +15,11 @@
     class="1"
     reload_one_at_a_time="1"
     sight_range_modifier="1.6"
-    projectile_speed="130.0"
+    projectile_speed="187.3"
     projectiles_per_shot="1"
     burst_shots="1"
     slot="0"
-    spread_range="0.1"
+    spread_range="0.07"
     stab_enabled="1"/>
     <commonness value="0.0001" in_stock="0" can_respawn_with="1" />
 	<capacity value="1" source="rank" source_value="0.0" />
@@ -61,13 +61,13 @@
     <hud_icon filename="gkw_m1873_2105.png"/>
     <weak_hand_hold offset="0.1"/>
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="25.6" kill_decay_start_time="0.4" kill_decay_end_time="0.7"/>
+        <result class="hit" kill_probability="25.6" kill_decay_start_time="0.4" kill_decay_end_time="0.4"/>
     </projectile>
     <stance state_key="running" accuracy="1.6"/>
     <stance state_key="walking" accuracy="1.6"/>
-    <stance state_key="crouch_moving" accuracy="0.85"/>
+    <stance state_key="crouch_moving" accuracy="0.95"/>
     <stance state_key="standing" accuracy="1.6"/>
-    <stance state_key="crouching" accuracy="0.85"/>
+    <stance state_key="crouching" accuracy="0.95"/>
     <stance state_key="prone" accuracy="1.6"/>
     <stance state_key="prone_moving" accuracy="1.6"/>
     <stance state_key="over_wall" accuracy="1.6"/>

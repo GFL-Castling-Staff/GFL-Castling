@@ -446,12 +446,28 @@ Vector3 getVerticalUnitVector(Vector3 given_vector) {
 	return Vector3((-1.0)*given_vector.m_values[2],given_vector.m_values[1],given_vector.m_values[0]);
 }
 
+//俩点坐标延长线+范围
 Vector3 getAimUnitPosition(Vector3 s_pos, Vector3 e_pos, float scale) {
 	float dx = e_pos.m_values[0]-s_pos.m_values[0];
 	float dy = e_pos.m_values[2]-s_pos.m_values[2];
     float ds = sqrt(dx*dx+dy*dy);
     if(ds<=0.000005f) {ds=0.000005f;dx=0.000004f;dy=0.000003f;}
 	return s_pos.add(Vector3(dx*scale/ds,0,dy*scale/ds));
+}
+
+//俩点坐标延长线+范围+旋转
+Vector3 getAimUnitPositionRotate(Vector3 s_pos, Vector3 e_pos,float scale, float angle) {
+    // 计算原始坐标的差值
+    float dx = e_pos.m_values[0] - s_pos.m_values[0];
+    float dy = e_pos.m_values[2] - s_pos.m_values[2];
+    float ds = sqrt(dx*dx+dy*dy);
+    if(ds<=0.000005f) {ds=0.000005f;dx=0.000004f;dy=0.000003f;}
+    float radians = angle * (3.1415 / 180.0f);
+    float m_cos = cos(radians);
+    float m_sin = sin(radians);
+    float rotated_dx = (dx * m_cos - dy * m_sin)* scale;
+    float rotated_dy = (dx * m_sin + dy * m_cos)* scale;
+    return s_pos.add(Vector3(rotated_dx/ds, 0, rotated_dy/ds));
 }
 
 Vector3 getRandomOffsetVector(Vector3 pos,float strike_rand){

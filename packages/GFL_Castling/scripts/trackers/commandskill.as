@@ -286,6 +286,7 @@ class CommandSkill : Tracker {
                 case 90:{excuteQBZ95skill(cId,senderId,m_modifer);break;}
                 case 91:{excuteSIGMCXSkill(cId,senderId,m_modifer);break;}
                 case 92:{excuteZasM21mod3Skill(cId,senderId,m_modifer);break;}
+                case 93:{excuteWebleySkill(cId,senderId,m_modifer);break;}
 
 
                 
@@ -4999,5 +5000,48 @@ class CommandSkill : Tracker {
                 }
             }
         }
-    }    
+    }
+
+    void excuteWebleySkill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"webley",true)) return;
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            if (!canCastSkill(character)) return;
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    Vector3 e_pos = stringToVector3(target);
+                    Vector3 u_pos1 = getAimUnitPosition(c_pos,e_pos,3);
+                    Vector3 u_pos2 = getAimUnitPositionRotate(c_pos,e_pos,3,60);
+                    Vector3 u_pos3 = getAimUnitPositionRotate(c_pos,e_pos,3,120);
+                    Vector3 u_pos4 = getAimUnitPositionRotate(c_pos,e_pos,3,180);
+                    Vector3 u_pos5 = getAimUnitPositionRotate(c_pos,e_pos,3,240);
+                    Vector3 u_pos6 = getAimUnitPositionRotate(c_pos,e_pos,3,300);
+                    CreateProjectile_H(m_metagame,c_pos,u_pos1,"c4_webley.projectile",characterId,factionid,45.0,3.0);
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);                    
+                    CreateProjectile_H(m_metagame,c_pos,u_pos2,"c4_webley.projectile",characterId,factionid,45.0,3.0);
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);                    
+                    CreateProjectile_H(m_metagame,c_pos,u_pos3,"c4_webley.projectile",characterId,factionid,45.0,3.0);
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);                    
+                    CreateProjectile_H(m_metagame,c_pos,u_pos4,"c4_webley.projectile",characterId,factionid,45.0,3.0);
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                    CreateProjectile_H(m_metagame,c_pos,u_pos5,"c4_webley.projectile",characterId,factionid,45.0,3.0);
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                    CreateProjectile_H(m_metagame,c_pos,u_pos6,"c4_webley.projectile",characterId,factionid,45.0,3.0);
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                    sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"webley_c4");
+                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    tasker.add(DelayKillCharacter(m_metagame,1.8,characterId));
+                    addCooldown("webley",120,characterId,modifer);
+                }
+            }
+        }
+    }
+
 }

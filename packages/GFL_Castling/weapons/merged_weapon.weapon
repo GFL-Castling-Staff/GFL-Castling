@@ -24672,7 +24672,7 @@
 </weapon>
 
 <weapon key="gkw_9a91_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="20" name="9A-91-[9A High-Performance Chip]" projectile_speed="130" spread_range="0.3" stance_accuracy_rate="3.0" retrigger_time="0.075" suppressed="1" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.25" sight_range_modifier_at_night="2.0" accuracy_factor_at_night="1.15" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="9A-91-[9A High-Performance Chip]" projectile_speed="130" spread_range="0.3" stance_accuracy_rate="3.0" retrigger_time="0.075" suppressed="1" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.25" sight_range_modifier_at_night="2.0" accuracy_factor_at_night="1.15" sight_range_modifier="2.0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<inventory encumbrance="35.0" buy_price="91.0" sell_price="91.0"/>
@@ -24782,7 +24782,7 @@
 </weapon>
 
 <weapon key="gkw_9a91_1302_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="20" name="9A-91-[bullet café]-[9A High-Performance Chip]" projectile_speed="130" spread_range="0.3" stance_accuracy_rate="3.0" retrigger_time="0.075" suppressed="1" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.25" sight_range_modifier_at_night="2.0" accuracy_factor_at_night="1.15" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="9A-91-[bullet café]-[9A High-Performance Chip]" projectile_speed="130" spread_range="0.3" stance_accuracy_rate="3.0" retrigger_time="0.075" suppressed="1" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.25" sight_range_modifier_at_night="2.0" accuracy_factor_at_night="1.15" sight_range_modifier="2.0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<inventory encumbrance="35.0" buy_price="91.0" sell_price="91.0"/>
@@ -24892,7 +24892,7 @@
 </weapon>
 
 <weapon key="gkw_9a91_8304_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="20" name="9A-91-[Hidden Secrets]-[9A High-Performance Chip]" projectile_speed="130" spread_range="0.3" stance_accuracy_rate="2.0" retrigger_time="0.075" suppressed="1" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.25" sight_range_modifier_at_night="2.0" accuracy_factor_at_night="1.15" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="9A-91-[Hidden Secrets]-[9A High-Performance Chip]" projectile_speed="130" spread_range="0.3" stance_accuracy_rate="3.0" retrigger_time="0.075" suppressed="1" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.25" sight_range_modifier_at_night="2.0" accuracy_factor_at_night="1.15" sight_range_modifier="2.0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<inventory encumbrance="35.0" buy_price="91.0" sell_price="91.0"/>
@@ -54948,7 +54948,7 @@
 
 <weapon key="gkw_webley.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="0.90" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.5" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Webley Mark VI Revolver" class="1" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="120" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="0.98" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="3.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Webley Mark VI Revolver" class="1" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="160" projectiles_per_shot="1" burst_shots="1" spread_range="0.12" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="45.0" sell_price="45.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -54984,7 +54984,7 @@
 	<hud_icon filename="gkw_webley.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="8.0" kill_decay_start_time="0.22" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="20" kill_probability_offset_on_successful_hit="6.0" kill_decay_start_time="0.4" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -55066,7 +55066,7 @@
 
 <weapon key="gkw_webley_5601.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="0.90" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="1.5" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Webley Mark VI Revolver-[At Twilight]" class="1" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="120" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="0.98" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="3.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Webley Mark VI Revolver-[At Twilight]" class="1" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="160" projectiles_per_shot="1" burst_shots="1" spread_range="0.12" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="45.0" sell_price="45.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -55102,7 +55102,7 @@
 	<hud_icon filename="gkw_webley_5601.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="8.0" kill_decay_start_time="0.22" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="20" kill_probability_offset_on_successful_hit="6.0" kill_decay_start_time="0.4" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -77464,7 +77464,7 @@
 <weapon key="gkw_m1873mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
 	<tag name="elite"/>
-	<specification can_shoot_running="1" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="5.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt M1873(MOD3)" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" projectile_speed="130.0" projectiles_per_shot="1" burst_shots="1" slot="0" spread_range="0.1" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="5.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt M1873(MOD3)" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" projectile_speed="187.3" projectiles_per_shot="1" burst_shots="1" slot="0" spread_range="0.07" stab_enabled="1"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="5.0" buy_price="150.0" sell_price="125.0"/>
@@ -77504,7 +77504,7 @@
 	<hud_icon filename="gkw_m1873mod3.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="25.6" kill_decay_start_time="0.4" kill_decay_end_time="0.7" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="25.6" kill_decay_start_time="0.4" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -77569,9 +77569,9 @@
 	</projectile>
 	<stance state_key="running" accuracy="1.6"/>
 	<stance state_key="walking" accuracy="1.6"/>
-	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="crouch_moving" accuracy="0.95"/>
 	<stance state_key="standing" accuracy="1.6"/>
-	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.95"/>
 	<stance state_key="prone" accuracy="1.6"/>
 	<stance state_key="prone_moving" accuracy="1.6"/>
 	<stance state_key="over_wall" accuracy="1.6"/>
@@ -77709,7 +77709,7 @@
 <weapon key="gkw_m1873mod3_301.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
 	<tag name="elite"/>
-	<specification can_shoot_running="1" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="5.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt M1873(MOD3)-[Wish Upon A Star]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" projectile_speed="130.0" projectiles_per_shot="1" burst_shots="1" slot="0" spread_range="0.1" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="5.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt M1873(MOD3)-[Wish Upon A Star]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" projectile_speed="187.3" projectiles_per_shot="1" burst_shots="1" slot="0" spread_range="0.07" stab_enabled="1"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="5.0" buy_price="150.0" sell_price="125.0"/>
@@ -77750,7 +77750,7 @@
 	<hud_icon filename="gkw_m1873_301.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="25.6" kill_decay_start_time="0.4" kill_decay_end_time="0.7" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="25.6" kill_decay_start_time="0.4" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -77815,9 +77815,9 @@
 	</projectile>
 	<stance state_key="running" accuracy="1.6"/>
 	<stance state_key="walking" accuracy="1.6"/>
-	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="crouch_moving" accuracy="0.95"/>
 	<stance state_key="standing" accuracy="1.6"/>
-	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.95"/>
 	<stance state_key="prone" accuracy="1.6"/>
 	<stance state_key="prone_moving" accuracy="1.6"/>
 	<stance state_key="over_wall" accuracy="1.6"/>
@@ -77955,7 +77955,7 @@
 <weapon key="gkw_m1873mod3_2105.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
 	<tag name="elite"/>
-	<specification can_shoot_running="1" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="5.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt M1873(MOD3)-[Queen of Miracles]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" projectile_speed="130.0" projectiles_per_shot="1" burst_shots="1" slot="0" spread_range="0.1" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="5.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt M1873(MOD3)-[Queen of Miracles]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" projectile_speed="187.3" projectiles_per_shot="1" burst_shots="1" slot="0" spread_range="0.07" stab_enabled="1"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="5.0" buy_price="150.0" sell_price="125.0"/>
@@ -77996,7 +77996,7 @@
 	<hud_icon filename="gkw_m1873_2105.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="25.6" kill_decay_start_time="0.4" kill_decay_end_time="0.7" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="25.6" kill_decay_start_time="0.4" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -78061,9 +78061,9 @@
 	</projectile>
 	<stance state_key="running" accuracy="1.6"/>
 	<stance state_key="walking" accuracy="1.6"/>
-	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="crouch_moving" accuracy="0.95"/>
 	<stance state_key="standing" accuracy="1.6"/>
-	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.95"/>
 	<stance state_key="prone" accuracy="1.6"/>
 	<stance state_key="prone_moving" accuracy="1.6"/>
 	<stance state_key="over_wall" accuracy="1.6"/>
@@ -98884,9 +98884,9 @@
 </weapon>
 
 <weapon key="gkw_m26mass.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="1" suppressed="0" name="M26-MASS" class="2" spread_range="0.18" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="1" suppressed="0" name="M26-MASS" class="2" spread_range="0.14" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="110" barrel_offset="0.4" projectiles_per_shot="6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<inventory encumbrance="12.5" buy_price="60" sell_price="60"/>
-	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
+	<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<animation state_key="cycle" animation_key="Brifle0.6"/>
 	<animation state_key="cycle" stance_key="prone" animation_key="Brifle0.6"/>
 	<sound key="fire" fileref="m26mass_fire_FromCOD19.wav" pitch_variety="0.05" volume="1.5"/>
@@ -98900,7 +98900,7 @@
 	<hud_icon filename="gkw_m26mass.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile time_to_live="0.4" class="bullet" name="default" slot="1" pulldown_in_air="4">
-	<result class="hit" kill_probability="6.0" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="0.4" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="10.0" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="0.4" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -107189,7 +107189,7 @@
 
 <weapon key="gkw_m1895mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="0" name="Nagant M1895 revolver(MOD3)" class="4" reload_one_at_a_time="0" sight_range_modifier="1.6" spread_range="0.3" projectile_speed="140.0" projectiles_per_shot="1" barrel_offset="-0.1" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="0" name="Nagant M1895 revolver(MOD3)" class="4" reload_one_at_a_time="0" sight_range_modifier="2.0" spread_range="0.3" projectile_speed="185.0" projectiles_per_shot="1" barrel_offset="-0.1" burst_shots="1" slot="0" stab_enabled="1"/>
 	<commonness value="0.00001" can_respawn_with="1" in_stock="0"/>
 	<inventory encumbrance="5.0" buy_price="270.0" sell_price="270.0"/>
 	<next_in_chain key="gkw_m1895mod3_skill.weapon" share_ammo="1"/>
@@ -107227,7 +107227,7 @@
 	<hud_icon filename="gkw_m1895mod3.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="16.0" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="0.25" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="16.0" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="0.5" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -107309,7 +107309,7 @@
 
 <weapon key="gkw_m1895mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="1" name="Nagant M1895 revolver(MOD3)-[Seven Tone Paean]" class="4" sight_range_modifier="1.6" projectile_speed="120.0" projectiles_per_shot="1" reload_one_at_a_time="1" burst_shots="1"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="1" name="Nagant M1895 revolver(MOD3)-[Seven Tone Paean]" class="4" sight_range_modifier="2.0" projectile_speed="140.0" projectiles_per_shot="1" reload_one_at_a_time="1" burst_shots="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="5.0" buy_price="270.0" sell_price="270.0"/>
 	<commonness value="0" can_respawn_with="1" in_stock="0"/>
@@ -107345,7 +107345,7 @@
 	<hud_icon filename="gkw_m1895mod3_skill.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="16.0" kill_decay_start_time="0.5" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="16.0" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="0.5" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -132160,7 +132160,7 @@
 
 <weapon key="gkw_m1895mod3_5309.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="0" name="Nagant M1895 revolver(MOD3)-[Blushing Snow Princess]" class="4" reload_one_at_a_time="0" sight_range_modifier="1.6" spread_range="0.3" projectile_speed="140.0" projectiles_per_shot="1" barrel_offset="-0.1" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="0" name="Nagant M1895 revolver(MOD3)-[Blushing Snow Princess]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.0" spread_range="0.3" projectile_speed="185.0" projectiles_per_shot="1" barrel_offset="-0.1" burst_shots="1" slot="0" stab_enabled="1"/>
 	<commonness value="0.00001" can_respawn_with="1" in_stock="0"/>
 	<inventory encumbrance="5.0" buy_price="270.0" sell_price="270.0"/>
 	<next_in_chain key="gkw_m1895mod3_5309_skill.weapon" share_ammo="1"/>
@@ -132198,7 +132198,7 @@
 	<hud_icon filename="gkw_m1895_5309.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="16.0" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="0.25" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="16.0" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="0.5" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -132280,7 +132280,7 @@
 
 <weapon key="gkw_m1895mod3_5309_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="1" name="Nagant M1895 revolver(MOD3)-[Blushing Snow Princess]-[Seven Tone Paean]" class="4" sight_range_modifier="1.6" projectile_speed="120.0" projectiles_per_shot="1" reload_one_at_a_time="1" burst_shots="1"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="1" name="Nagant M1895 revolver(MOD3)-[Blushing Snow Princess]-[Seven Tone Paean]" class="4" sight_range_modifier="2.0" projectile_speed="140.0" projectiles_per_shot="1" reload_one_at_a_time="1" burst_shots="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="5.0" buy_price="270.0" sell_price="270.0"/>
 	<commonness value="0" can_respawn_with="1" in_stock="0"/>
@@ -132316,7 +132316,7 @@
 	<hud_icon filename="gkw_m1895_5309.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="16.0" kill_decay_start_time="0.5" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="16.0" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="0.5" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -132399,7 +132399,7 @@
 
 <weapon key="gkw_m1895mod3_7107.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="0" name="Nagant M1895 revolver(MOD3)-[Cream in the Nebula]" class="4" reload_one_at_a_time="0" sight_range_modifier="1.6" spread_range="0.3" projectile_speed="140.0" projectiles_per_shot="1" barrel_offset="-0.1" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="0" name="Nagant M1895 revolver(MOD3)-[Cream in the Nebula]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.0" spread_range="0.3" projectile_speed="185.0" projectiles_per_shot="1" barrel_offset="-0.1" burst_shots="1" slot="0" stab_enabled="1"/>
 	<commonness value="0.00001" can_respawn_with="1" in_stock="0"/>
 	<inventory encumbrance="5.0" buy_price="270.0" sell_price="270.0"/>
 	<next_in_chain key="gkw_m1895mod3_7107_skill.weapon" share_ammo="1"/>
@@ -132437,7 +132437,7 @@
 	<hud_icon filename="gkw_m1895_7107.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="16.0" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="0.25" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="16.0" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="0.5" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -132519,7 +132519,7 @@
 
 <weapon key="gkw_m1895mod3_7107_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="1" name="Nagant M1895 revolver(MOD3)-[Cream in the Nebula]-[Seven Tone Paean]" class="4" sight_range_modifier="1.6" projectile_speed="120.0" projectiles_per_shot="1" reload_one_at_a_time="1" burst_shots="1"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="1" name="Nagant M1895 revolver(MOD3)-[Cream in the Nebula]-[Seven Tone Paean]" class="4" sight_range_modifier="2.0" projectile_speed="140.0" projectiles_per_shot="1" reload_one_at_a_time="1" burst_shots="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="5.0" buy_price="270.0" sell_price="270.0"/>
 	<commonness value="0" can_respawn_with="1" in_stock="0"/>
@@ -132555,7 +132555,7 @@
 	<hud_icon filename="gkw_m1895_7107.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="16.0" kill_decay_start_time="0.5" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="16.0" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="0.5" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -138656,7 +138656,7 @@
 <weapon key="ff_parw_nyto_black.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="elite"/>
-	<specification accuracy_factor="1.0" barrel_offset="0.5" can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" class="4" sight_range_modifier="2.5" slot="0" magazine_size="30" name="GK-Adeline" projectile_speed="400" retrigger_time="0.1" last_burst_retrigger_time="0.5" suppressed="0" sustained_fire_diminish_rate="2.5" sustained_fire_grow_step="2.0"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.5" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="4" sight_range_modifier="2.5" slot="0" magazine_size="30" name="GK-Adeline" projectile_speed="400" retrigger_time="0.1" last_burst_retrigger_time="0.33" suppressed="1" burst_shots="1" sustained_fire_diminish_rate="2.5" sustained_fire_grow_step="2.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="25.0" buy_price="648.0" sell_price="428.0"/>
 	<capacity value="0" source="rank" source_value="0.0"/>
@@ -138682,7 +138682,7 @@
 	<effect class="muzzle" ref="cygnus_blue"/>
 	<weak_hand_hold offset="0.4"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="8.0" kill_decay_start_time="1.0" kill_decay_end_time="1.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="10.0" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="1.0" kill_decay_end_time="1.5" damage_origin_vehicle="0"/>
 	<trail key="paradeus_long" probability="1.0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -138757,7 +138757,7 @@
 <weapon key="ff_parw_nyto_black_1.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="autorifle"/>
 	<tag name="elite"/>
-	<specification accuracy_factor="1.0" barrel_offset="0.5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="0" class="4" burst_shots="1" sight_range_modifier="3.25" slot="0" magazine_size="4" name="GK-Adeline-[Pronounced Death]" projectile_speed="400" retrigger_time="-1" projectiles_per_shot="6" suppressed="0" last_burst_retrigger_time="1" sustained_fire_diminish_rate="2.5" sustained_fire_grow_step="2.0"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.5" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="4" burst_shots="1" sight_range_modifier="3.25" slot="0" magazine_size="4" name="GK-Adeline-[Pronounced Death]" projectile_speed="400" retrigger_time="-1" projectiles_per_shot="6" suppressed="0" spread_range="0" last_burst_retrigger_time="1" sustained_fire_diminish_rate="2.5" sustained_fire_grow_step="2.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="25.0" buy_price="648.0" sell_price="428.0"/>
 	<capacity value="0" source="rank" source_value="0.0"/>
@@ -150223,7 +150223,7 @@
 	<tag name="bazooka"/>
 	<tag name="anti_tank"/>
 	<specification retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="0.25" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="Seraph's Blaze" class="3" consume="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100.0" slot="1" projectiles_per_shot="1"/>
-	<inventory encumbrance="3.0" buy_price="5.0" sell_price="5.0"/>
+	<inventory encumbrance="3.0" buy_price="0.0" sell_price="0.0"/>
 	<drop_on_death_result class="spawn" instance_class="weapon" instance_key="parw_rocket_player.weapon" min_amount="0" max_amount="3" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<capacity value="2" source="rank" source_value="0.0"/>
 	<capacity value="4" source="rank" source_value="2.1"/>
@@ -150300,7 +150300,7 @@
 	<stance state_key="over_wall" accuracy="1"/>
 </weapon>
 
-<weapon time_to_live_out_in_the_open="0" drop_count_limit_in_range="3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0.0" key="parw_rocket_player.weapon">
+<weapon drop_count_limit_in_range="3" drop_count_factor_on_death="1" drop_count_factor_on_player_death="1" key="parw_rocket_player.weapon">
 	<tag name="bazooka"/>
 	<tag name="anti_tank"/>
 	<specification retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="0.25" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="Seraph's Blaze" class="3" consume="1" reload_one_at_a_time="1" sight_range_modifier="1.75" projectile_speed="100.0" slot="1" projectiles_per_shot="1"/>

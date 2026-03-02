@@ -14,9 +14,9 @@
         name="Nagant M1895 revolver(MOD3)-[Blushing Snow Princess]"
         class="4"
         reload_one_at_a_time="0"
-        sight_range_modifier="1.6"
+        sight_range_modifier="2.0"
         spread_range="0.3"
-        projectile_speed="140.0"
+        projectile_speed="185.0"
         projectiles_per_shot="1"
         barrel_offset="-0.1"
         burst_shots="1"
@@ -59,7 +59,7 @@
         <hud_icon filename="gkw_m1895_5309.png" />
         <weak_hand_hold offset="0.1" />
         <projectile file="bullet.projectile">
-            <result class="hit" kill_probability="16.0" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="0.25" kill_decay_end_time="0.5"/>
+            <result class="hit" kill_probability="16.0" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="0.5" kill_decay_end_time="0.5"/>
         </projectile>
         <stance state_key="running" accuracy="0.95"/>
         <stance state_key="walking" accuracy="0.95"/>
@@ -90,8 +90,8 @@
         suppressed="1"
         name="Nagant M1895 revolver(MOD3)-[Blushing Snow Princess]-[Seven Tone Paean]"
         class="4"
-        sight_range_modifier="1.6"
-        projectile_speed="120.0"
+        sight_range_modifier="2.0"
+        projectile_speed="140.0"
         projectiles_per_shot="1"
         reload_one_at_a_time="1"
         burst_shots="1" />
@@ -131,7 +131,7 @@
         <hud_icon filename="gkw_m1895_5309.png" />
         <weak_hand_hold offset="0.1" />
         <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-            <result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="16.0" kill_decay_start_time="0.5" kill_decay_end_time="0.5"/>
+            <result class="hit" kill_probability="16.0" kill_probability_offset_on_successful_hit="0.6" kill_decay_start_time="0.5" kill_decay_end_time="0.5"/>
         </projectile>
         <stance state_key="running" accuracy="0.95"/>
         <stance state_key="walking" accuracy="0.95"/>

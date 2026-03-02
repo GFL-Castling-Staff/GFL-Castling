@@ -21,7 +21,7 @@
     projectile_speed="100.0" 
     slot="1" 
     projectiles_per_shot="1" />
-    <inventory encumbrance="3.0" buy_price="5.0" sell_price="5.0" />
+    <inventory encumbrance="3.0" buy_price="0.0" sell_price="0.0" />
 	<drop_on_death_result class="spawn" instance_class="weapon" instance_key="parw_rocket_player.weapon" min_amount="0" max_amount="3" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
     <capacity value="2" source="rank" source_value="0.0" />
     <capacity value="4" source="rank" source_value="2.1" />
@@ -68,7 +68,7 @@
     <stance state_key="prone_moving" accuracy="0.9" />
     <stance state_key="over_wall" accuracy="1" />
 </weapon>
-<weapon time_to_live_out_in_the_open="0" drop_count_limit_in_range="3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0.0" key="parw_rocket_player.weapon">
+<weapon drop_count_limit_in_range="3" drop_count_factor_on_death="1" drop_count_factor_on_player_death="1" key="parw_rocket_player.weapon">
     <tag name="bazooka"/>
     <tag name="anti_tank"/>
     <specification 

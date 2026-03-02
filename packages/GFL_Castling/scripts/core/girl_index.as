@@ -1817,3 +1817,21 @@ array<string> gk_weapon_sf_nerfed = {
     "ff_parw_nyto_black.weapon",
     "ff_parw_nyto_black_1.weapon"
 };
+
+array<string> truecore_blacklist = {
+    "ff_agent.weapon",
+    "ff_alchemist.weapon",
+    "ff_destroyer.weapon",
+    "ff_destroyer_skin.weapon",
+    "ff_gager.weapon",
+    "ff_architect.weapon",
+    "ff_hunter.weapon",
+    "ff_Intruder.weapon",
+    "ff_justice.weapon",
+    "ff_scarecrow.weapon",
+    "ff_weaver.weapon",
+    "ff_dreamer.weapon",
+    "ff_parw_alina.weapon",
+    "ff_parw_nyto_black.weapon",
+    "ff_excutioner_1.weapon"
+};

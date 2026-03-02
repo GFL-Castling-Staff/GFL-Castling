@@ -754,6 +754,13 @@ class ItemDropEvent : Tracker {
             int cId=player.getIntAttribute("character_id");
             string profile_hash = player.getStringAttribute("profile_hash");
             string itemKey = getKeyfromIndex(s);
+            if(itemKey.find(s)>-1)
+            {
+                addItemInBackpack(m_metagame,cId,"carry_item","core_mask.carry_item");;
+                sendPrivateMessageKey(m_metagame, senderId, "truemask_failed");
+                playPrivateSound(m_metagame,"sfx_failed.wav",senderId);                
+                return;
+            }
             if (itemKey==""){
                 addItemInBackpack(m_metagame,cId,"carry_item","core_mask.carry_item");;
                 sendPrivateMessageKey(m_metagame, senderId, "truemask_failed");

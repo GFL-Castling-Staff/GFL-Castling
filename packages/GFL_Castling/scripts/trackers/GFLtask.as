@@ -585,6 +585,37 @@ class DelayDetailedCallRequest :Task{
 	}
 }
 
+class DelayKillCharacter :Task{
+	protected GameMode@ m_metagame;
+	protected float m_time;
+    protected int m_character_id;
+	protected float m_timeLeft;
+
+	DelayKillCharacter(GameMode@ metagame, float time, int cId) {
+		@m_metagame = metagame;
+		m_time = time;
+		m_character_id = cId;
+	}
+
+	void start() {
+		m_timeLeft=m_time;
+	}
+
+	void update(float time) {
+		m_timeLeft -= time;
+		if (m_timeLeft < 0)
+		{
+            const XmlElement@ characterInfo = getCharacterInfo(m_metagame,m_character_id);
+			if(checkCharacterDead(characterInfo)) return;
+			killCharacter(m_metagame,m_character_id);
+		}
+	}
+
+    bool hasEnded() const {
+		return m_timeLeft < 0;
+	}
+}
+
 class DelayAntiPersonSnipeRequest :Task{
 	protected GameMode@ m_metagame;
 	protected float m_time;
