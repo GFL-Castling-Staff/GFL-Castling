@@ -13,7 +13,7 @@
     reload_one_at_a_time="1"
     sight_range_modifier="1.6"
     spread_range="0.3"
-    projectile_speed="100.0"
+    projectile_speed="140.0"
     projectiles_per_shot="1"
     barrel_offset="-0.1"
     burst_shots="1"
@@ -51,7 +51,8 @@
     <hud_icon filename="gkw_m1851n.png"/>
     <weak_hand_hold offset="0.1"/>
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="0.5" kill_decay_end_time="0.5"/>
+        <result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="18.0" kill_decay_start_time="0.5" kill_decay_end_time="0.5"/>
+        <trail probability="1" key="BulletApTrail_ap"/>
     </projectile>
     <stance state_key="running" accuracy="0.95"/>
     <stance state_key="walking" accuracy="0.95"/>

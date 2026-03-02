@@ -325,6 +325,27 @@ class GFL_playerInfo{
         }        
     }
 
+    void saveIndexIntimacy(Metagame@ m_metagame)
+    {
+        if(this.m_tdoll_intimacy_buck.length() <= 0) return;
+        GFL_battleInfo@ battleInfo = this.getBattleInfo();
+        string p_name = this.getPlayerName();
+        string profile_hash = this.getHash();
+        string sid = this.getSid();
+        int player_id = this.getPlayerPid();        
+        player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+
+        for(uint i1=0;i1 < this.m_tdoll_intimacy_buck.length();i1++)
+        {
+            newdata.addIntimacy(this.m_tdoll_intimacy_buck[i1]);
+        }
+
+        this.clearIndexBuck();
+
+        string filename = ("save_" + profile_hash +".xml" );
+        writeXML(m_metagame,filename,PlayerProfileSave(newdata));           
+    }
+
     void clearIndexBuck()
     {
         m_tdoll_intimacy_buck.resize(0);
@@ -749,7 +770,9 @@ class GFL_playerlist_system : Tracker {
     protected float m_event_timer = 1.0; 
     protected float m_event_time = 5.0; // 事件刷新时间
     protected float m_minute_timer = 1.0; 
-    protected float m_minute_time = 60.0; // 事件刷新时间    
+    protected float m_minute_time = 60.0; // 事件刷新时间
+    protected float m_minute5_timer = 1.0; 
+    protected float m_minute5_time = 300.0; // 事件刷新时间    
     protected int m_maxplayer_overload;
 	// --------------------------------------------
 	GFL_playerlist_system(Metagame@ metagame,const UserSettings@ m_userSettings) {
@@ -763,6 +786,7 @@ class GFL_playerlist_system : Tracker {
         m_time -= time;
         m_event_timer-= time;
         m_minute_timer-= time;
+        m_minute5_timer-= time;
         if(m_time <= 0.0)
         {
             m_time = m_refresh_time;
@@ -807,6 +831,17 @@ class GFL_playerlist_system : Tracker {
                 if(player.check_Available() != true){continue;}
                 //如果处于不活跃状态，直接跳过event的处理；
                 g_playerInfo_Buck.m_playerInfo[j].m_battleinfo.tickMinute();
+            }
+        }
+        if(m_minute5_timer<=0.0)
+        {
+            m_minute5_timer = m_minute5_time;
+            for (uint j = 0; j < g_playerInfo_Buck.size(); ++j) {
+                GFL_playerInfo@ player = g_playerInfo_Buck.m_playerInfo[j];
+                if(player is null){continue;}
+                if(player.check_Available() != true){continue;}
+                //如果处于不活跃状态，直接跳过event的处理；
+                g_playerInfo_Buck.m_playerInfo[j].saveIndexIntimacy(m_metagame);
             }
         }        
     }

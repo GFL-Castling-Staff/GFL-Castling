@@ -5044,4 +5044,47 @@ class CommandSkill : Tracker {
         }
     }
 
+    void excuteG36Skill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"G36")) return;
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            if (!canCastSkill(character)) return;
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"smoke_grenade.projectile",characterId,factionid,26.0,6.0);
+                    addCooldown("G36",30,characterId,modifer);
+                }
+            }
+        }
+    }
+
+    void excuteMP7Skill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"MP7")) return;
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            if (!canCastSkill(character)) return;
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
+                    playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"smoke_grenade.projectile",characterId,factionid,26.0,6.0);
+                    addCooldown("MP7",30,characterId,modifer);
+                }
+            }
+        }
+    }    
 }
