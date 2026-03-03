@@ -90,8 +90,8 @@ class Metagame {
 
 	// --------------------------------------------
 	void run() {
-		const float TARGET_CYCLE_TIME = 0.001f;
-		const float MINIMUM_SLEEP_TIME = 0.001f;
+		const float TARGET_CYCLE_TIME = 0.016f;
+		const float MINIMUM_SLEEP_TIME = 0.016f;
 		float dummy = now();
 		bool processed = false;
 		m_gamePaused = false;

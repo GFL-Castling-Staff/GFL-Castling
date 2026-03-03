@@ -47994,7 +47994,7 @@
 </weapon>
 
 <weapon key="gkw_python.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.25" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python" class="1" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="100.0" projectiles_per_shot="1" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.25" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python" class="1" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140.0" projectiles_per_shot="1" burst_shots="1" slot="0" stab_enabled="1"/>
 	<next_in_chain key="gkw_python_skill.weapon" share_ammo="1"/>
 	<animation state_key="recoil" animation_key="recoil, revolver"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone"/>
@@ -48030,7 +48030,8 @@
 	<hud_icon filename="gkw_python.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="10.6" kill_decay_start_time="0.3" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="20" kill_decay_start_time="0.5" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
+	<trail probability="1" key="BulletApTrail_ap"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -48091,7 +48092,6 @@
 	<effect class="result" key="static_object" copy="terrain"/>
 	<effect class="result" key="shield" ref="hitMetal"/>
 	<effect class="result" key="shield" ref="hitMetal_1"/>
-	<trail probability="1.0" key="bullet_new"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.85"/>
@@ -54985,6 +54985,7 @@
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
 	<result class="hit" kill_probability="20" kill_probability_offset_on_successful_hit="6.0" kill_decay_start_time="0.4" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
+	<trail probability="1" key="BulletApTrail_ap"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -55045,7 +55046,6 @@
 	<effect class="result" key="static_object" copy="terrain"/>
 	<effect class="result" key="shield" ref="hitMetal"/>
 	<effect class="result" key="shield" ref="hitMetal_1"/>
-	<trail probability="1.0" key="bullet_new"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.85"/>
 	<stance state_key="walking" accuracy="0.85"/>
@@ -55103,6 +55103,7 @@
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
 	<result class="hit" kill_probability="20" kill_probability_offset_on_successful_hit="6.0" kill_decay_start_time="0.4" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
+	<trail probability="1" key="BulletApTrail_ap"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -55163,7 +55164,6 @@
 	<effect class="result" key="static_object" copy="terrain"/>
 	<effect class="result" key="shield" ref="hitMetal"/>
 	<effect class="result" key="shield" ref="hitMetal_1"/>
-	<trail probability="1.0" key="bullet_new"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.85"/>
 	<stance state_key="walking" accuracy="0.85"/>
@@ -77381,7 +77381,8 @@
 	<hud_icon filename="gkw_m1873.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="16.6" kill_decay_start_time="0.22" kill_decay_end_time="0.7" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="16.6" kill_decay_start_time="0.4" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
+	<trail probability="1" key="BulletApTrail_ap"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -77442,7 +77443,6 @@
 	<effect class="result" key="static_object" copy="terrain"/>
 	<effect class="result" key="shield" ref="hitMetal"/>
 	<effect class="result" key="shield" ref="hitMetal_1"/>
-	<trail probability="1.0" key="bullet_new"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.6"/>
 	<stance state_key="walking" accuracy="1.6"/>
@@ -77505,6 +77505,7 @@
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
 	<result class="hit" kill_probability="25.6" kill_decay_start_time="0.4" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
+	<trail probability="1" key="BulletApTrail_ap"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -77565,7 +77566,6 @@
 	<effect class="result" key="static_object" copy="terrain"/>
 	<effect class="result" key="shield" ref="hitMetal"/>
 	<effect class="result" key="shield" ref="hitMetal_1"/>
-	<trail probability="1.0" key="bullet_new"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.6"/>
 	<stance state_key="walking" accuracy="1.6"/>
@@ -77626,7 +77626,8 @@
 	<hud_icon filename="gkw_m1873_301.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="16.6" kill_decay_start_time="0.22" kill_decay_end_time="0.7" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="16.6" kill_decay_start_time="0.4" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
+	<trail probability="1" key="BulletApTrail_ap"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -77687,7 +77688,6 @@
 	<effect class="result" key="static_object" copy="terrain"/>
 	<effect class="result" key="shield" ref="hitMetal"/>
 	<effect class="result" key="shield" ref="hitMetal_1"/>
-	<trail probability="1.0" key="bullet_new"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.6"/>
 	<stance state_key="walking" accuracy="1.6"/>
@@ -77751,6 +77751,7 @@
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
 	<result class="hit" kill_probability="25.6" kill_decay_start_time="0.4" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
+	<trail probability="1" key="BulletApTrail_ap"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -77811,7 +77812,6 @@
 	<effect class="result" key="static_object" copy="terrain"/>
 	<effect class="result" key="shield" ref="hitMetal"/>
 	<effect class="result" key="shield" ref="hitMetal_1"/>
-	<trail probability="1.0" key="bullet_new"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.6"/>
 	<stance state_key="walking" accuracy="1.6"/>
@@ -77872,7 +77872,8 @@
 	<hud_icon filename="gkw_m1873_2105.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="16.6" kill_decay_start_time="0.22" kill_decay_end_time="0.7" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="16.6" kill_decay_start_time="0.4" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
+	<trail probability="1" key="BulletApTrail_ap"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -77933,7 +77934,6 @@
 	<effect class="result" key="static_object" copy="terrain"/>
 	<effect class="result" key="shield" ref="hitMetal"/>
 	<effect class="result" key="shield" ref="hitMetal_1"/>
-	<trail probability="1.0" key="bullet_new"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.6"/>
 	<stance state_key="walking" accuracy="1.6"/>
@@ -77997,6 +77997,7 @@
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
 	<result class="hit" kill_probability="25.6" kill_decay_start_time="0.4" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
+	<trail probability="1" key="BulletApTrail_ap"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -78057,7 +78058,6 @@
 	<effect class="result" key="static_object" copy="terrain"/>
 	<effect class="result" key="shield" ref="hitMetal"/>
 	<effect class="result" key="shield" ref="hitMetal_1"/>
-	<trail probability="1.0" key="bullet_new"/>
 	</projectile>
 	<stance state_key="running" accuracy="1.6"/>
 	<stance state_key="walking" accuracy="1.6"/>
@@ -79936,7 +79936,7 @@
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="5" kill_decay_start_time="1.0" kill_decay_end_time="1.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="10" kill_decay_start_time="1.0" kill_decay_end_time="1.0" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="bullet_short"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -80049,7 +80049,7 @@
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="5" kill_decay_start_time="1.0" kill_decay_end_time="1.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="10" kill_decay_start_time="1.0" kill_decay_end_time="1.0" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="bullet_short"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -80162,7 +80162,7 @@
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="5" kill_decay_start_time="1.0" kill_decay_end_time="1.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="10" kill_decay_start_time="1.0" kill_decay_end_time="1.0" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="bullet_short"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -80275,7 +80275,7 @@
 	<effect class="muzzle" ref="ejection_9mm"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="1.75" kill_probability_offset_on_successful_hit="5" kill_decay_start_time="1.0" kill_decay_end_time="1.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="1.8" kill_probability_offset_on_successful_hit="10" kill_decay_start_time="1.0" kill_decay_end_time="1.0" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="bullet_short"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -80462,7 +80462,7 @@
 <weapon key="gkw_m14mod3_303.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="elite"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.0" magazine_size="20" spread_range="0.6" can_shoot_standing="1" suppressed="0" name="M14(MOD3)-[Xmas Parade]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="200" barrel_offset="0.6" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.0" magazine_size="20" spread_range="0.4" can_shoot_standing="1" suppressed="0" name="M14(MOD3)-[Xmas Parade]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="200" barrel_offset="0.6" stance_accuracy_rate="2.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="100.0" sell_price="100.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -80489,7 +80489,7 @@
 	<hud_icon filename="gkw_m14_303.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="10" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="8.6" kill_probability_offset_on_successful_hit="14" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -80574,7 +80574,7 @@
 <weapon key="gkw_m14mod3_303_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="autorifle"/>
 	<tag name="elite"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.0" magazine_size="20" can_shoot_standing="1" suppressed="0" spread_range="0.6" name="M14(MOD3)-[Xmas Parade]-[Clear Fighting Spirit]" class="1" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.0" last_burst_retrigger_time="-1" stance_accuracy_rate="1.0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.0" magazine_size="20" can_shoot_standing="1" suppressed="0" spread_range="0.4" name="M14(MOD3)-[Xmas Parade]-[Clear Fighting Spirit]" class="1" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.0" last_burst_retrigger_time="-1" stance_accuracy_rate="2.5" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="100.0" sell_price="100.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -80582,8 +80582,8 @@
 	<animation state_key="recoil" animation_key="recoil_unlimit"/>
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil_unlimit"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil_prone_unlimit"/>
-	<animation key="cycle" animation_key="cycle_2h_rifle_180rpm"/>
-	<animation key="cycle" stance_key="crouching" animation_key="cycle_2h_rifle_300rpm"/>
+	<animation key="cycle" animation_key="cycle_2h_rifle_300rpm"/>
+	<animation key="cycle" stance_key="crouching" animation_key="cycle_2h_rifle_450rpm"/>
 	<animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_750rpm_prone"/>
 	<animation key="cycle" stance_key="over_wall" animation_key="cycle_2h_rifle_750rpm"/>
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
@@ -80601,7 +80601,7 @@
 	<hud_icon filename="gkw_m14_303.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="8.0" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="5.0" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -88218,7 +88218,7 @@
 </weapon>
 
 <weapon key="gkw_357_8107.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="0.9" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Astra .357 Revolver-[Shadow of Windy Butterfly]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" projectile_speed="130.0" projectiles_per_shot="1" burst_shots="1" slot="0" spread_range="0.2" stab_enabled="1"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="0.9" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Astra .357 Revolver-[Shadow of Windy Butterfly]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" projectile_speed="135.7" projectiles_per_shot="1" burst_shots="1" slot="0" spread_range="0.2" stab_enabled="1"/>
 	<animation state_key="recoil" animation_key="recoil, revolver"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone"/>
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol"/>
@@ -88252,7 +88252,8 @@
 	<hud_icon filename="gkw_357_8107.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="14.5" kill_decay_start_time="0.4" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="24" kill_decay_start_time="0.4" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
+	<trail probability="1" key="BulletApTrail_ap"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -88313,7 +88314,6 @@
 	<effect class="result" key="static_object" copy="terrain"/>
 	<effect class="result" key="shield" ref="hitMetal"/>
 	<effect class="result" key="shield" ref="hitMetal_1"/>
-	<trail probability="1.0" key="bullet_new"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.85"/>
@@ -90129,7 +90129,7 @@
 
 <weapon key="gkw_hk33.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="autorifle"/>
-	<specification stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="25" spread_range="0.3" name="HK33" projectile_speed="200.0" retrigger_time="0.085" stance_accuracy_rate="1.5" sight_range_modifier="1.75" suppressed="0" sustained_fire_diminish_rate="1.75" sustained_fire_grow_step="0.25"/>
+	<specification stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="25" spread_range="0.3" name="HK33" projectile_speed="200.0" retrigger_time="0.085" stance_accuracy_rate="1.5" sight_range_modifier="1.75" suppressed="0" sustained_fire_diminish_rate="1.75" sustained_fire_grow_step="0.23"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
@@ -90155,7 +90155,7 @@
 	<hud_icon filename="gkw_hk33.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="6.25" kill_probability_offset_on_successful_hit="0.35" kill_decay_start_time="1.125" kill_decay_end_time="1.875" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.25" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="1.125" kill_decay_end_time="1.875" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -90722,7 +90722,8 @@
 	<hud_icon filename="gkw_m327.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="15.0" kill_decay_start_time="0.4" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="22" kill_decay_start_time="0.4" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
+	<trail probability="1" key="BulletApTrail_ap"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -90783,7 +90784,6 @@
 	<effect class="result" key="static_object" copy="terrain"/>
 	<effect class="result" key="shield" ref="hitMetal"/>
 	<effect class="result" key="shield" ref="hitMetal_1"/>
-	<trail probability="1.0" key="bullet_new"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.85"/>
 	<stance state_key="walking" accuracy="0.85"/>
@@ -92723,8 +92723,8 @@
 </weapon>
 
 <weapon key="gkw_beowulf.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="10" name="Alexander Arms Beowulf" projectile_speed="175" retrigger_time="0.125" stance_accuracy_rate="1.25" sight_range_modifier="1.0" suppressed="0" sustained_fire_diminish_rate="2.8" sustained_fire_grow_step="0.6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" spread_range="0.4"/>
-	<animation state_key="reload" animation_key="reloading, magazine rifle 1.2"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="10" name="Alexander Arms Beowulf" projectile_speed="175" retrigger_time="0.125" stance_accuracy_rate="2.0" sight_range_modifier="1.8" suppressed="0" spread_range="0.5" sustained_fire_diminish_rate="2.8" sustained_fire_grow_step="0.6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<animation state_key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<inventory encumbrance="35.0" buy_price="200.0" sell_price="200.0"/>
 	<next_in_chain key="gkw_beowulf_skill.weapon" share_ammo="1"/>
 	<inventory encumbrance="20.0" buy_price="50.0" sell_price="50.0"/>
@@ -92834,8 +92834,8 @@
 </weapon>
 
 <weapon key="gkw_beowulf_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="10" name="Alexander Arms Beowulf-[Epic Hunt]" projectile_speed="160" retrigger_time="0.125" stance_accuracy_rate="1.25" sight_range_modifier="1.0" suppressed="1" spread_range="0.65" sustained_fire_diminish_rate="2.8" sustained_fire_grow_step="0.6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
-	<animation state_key="reload" animation_key="reloading, magazine rifle 1.2"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="10" name="Alexander Arms Beowulf-[Epic Hunt]" projectile_speed="175" retrigger_time="0.125" stance_accuracy_rate="2.0" sight_range_modifier="1.8" suppressed="1" spread_range="0.65" sustained_fire_diminish_rate="2.8" sustained_fire_grow_step="0.6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<animation state_key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<inventory encumbrance="35.0" buy_price="200.0" sell_price="200.0"/>
 	<next_in_chain key="gkw_beowulf.weapon" share_ammo="1"/>
 	<inventory encumbrance="35.0" buy_price="200.0" sell_price="200.0"/>
@@ -92852,7 +92852,7 @@
 	<hud_icon filename="gkw_beowulf_skill.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.5" time_to_live="0.22" class="bullet" name="default" slot="1">
-	<result class="spawn" instance_class="projectile" instance_key="beowulf50.projectile" min_amount="4" max_amount="4" offset="0 1.0 0" position_spread="0.3 0.2" direction_spread="0 0" damage_origin_vehicle="0"/>
+	<result class="spawn" instance_class="projectile" instance_key="beowulf50.projectile" min_amount="8" max_amount="8" offset="0 1.0 0" position_spread="0.3 0.2" direction_spread="0 0" damage_origin_vehicle="0"/>
 	<effect class="result" key="terrain" ref="Ct_Shine_50AE"/>
 	<effect class="result" key="other" ref="Ct_Shine_50AE"/>
 	<effect class="result" key="vehicle" ref="Ct_Shine_50AE"/>
@@ -93027,7 +93027,7 @@
 </weapon>
 
 <weapon key="gkw_6p62.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.95" barrel_offset="0.4" class="0" slot="0" magazine_size="14" name="6P62" projectile_speed="150" retrigger_time="0.133" sight_range_modifier="1.4" suppressed="1" spread_range="0.55" can_shoot_crouching="1" can_shoot_standing="0" sustained_fire_diminish_rate="4.0" sustained_fire_grow_step="0.9" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" stance_accuracy_rate="2.0"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="14" name="6P62" projectile_speed="150" retrigger_time="0.133" sight_range_modifier="1.4" suppressed="1" spread_range="0.5" can_shoot_crouching="1" can_shoot_standing="1" stance_accuracy_rate="2.0" sustained_fire_diminish_rate="4.0" sustained_fire_grow_step="0.9" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory encumbrance="20.0" buy_price="138.0" sell_price="138.0"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
@@ -93042,8 +93042,8 @@
 	<model filename="gkw_ar_6p62.xml"/>
 	<hud_icon filename="gkw_6p62.png"/>
 	<weak_hand_hold offset="0.2"/>
-	<projectile time_to_live="0.45" class="bullet" name="default" slot="1" pulldown_in_air="4">
-	<result class="hit" kill_probability="12.7" kill_probability_offset_on_successful_hit="12.7" kill_decay_start_time="1.0" kill_decay_end_time="1.0" damage_origin_vehicle="0"/>
+	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
+	<result class="hit" kill_probability="12.7" kill_probability_offset_on_successful_hit="16.2" kill_decay_start_time="1.0" kill_decay_end_time="1.0" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="other" fileref="ricochet_b1.wav"/>
@@ -93072,10 +93072,10 @@
 	<trail probability="1.0" key="bullet_new_he"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_50BMG"/>
-	<stance state_key="running" accuracy="0.1"/>
-	<stance state_key="walking" accuracy="0.2"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
-	<stance state_key="prone_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.2"/>
+	<stance state_key="walking" accuracy="0.35"/>
+	<stance state_key="crouch_moving" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.8"/>
 	<stance state_key="standing" accuracy="0.98"/>
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.2"/>
@@ -93101,7 +93101,7 @@
 </weapon>
 
 <weapon key="gkw_6p62_8610.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="0.95" barrel_offset="0.4" class="0" slot="0" magazine_size="14" name="6P62-[6P62's Offer]" projectile_speed="150" retrigger_time="0.133" sight_range_modifier="1.4" suppressed="1" spread_range="0.55" can_shoot_crouching="1" can_shoot_standing="0" sustained_fire_diminish_rate="4.0" sustained_fire_grow_step="0.9" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" stance_accuracy_rate="2.0"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="14" name="6P62-[6P62's Offer]" projectile_speed="150" retrigger_time="0.133" sight_range_modifier="1.4" suppressed="1" spread_range="0.5" can_shoot_crouching="1" can_shoot_standing="1" stance_accuracy_rate="2.0" sustained_fire_diminish_rate="4.0" sustained_fire_grow_step="0.9" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<inventory encumbrance="20.0" buy_price="138.0" sell_price="138.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -93116,8 +93116,8 @@
 	<model filename="gkw_ar_6p62.xml"/>
 	<hud_icon filename="gkw_6p62_8610.png"/>
 	<weak_hand_hold offset="0.2"/>
-	<projectile time_to_live="0.45" class="bullet" name="default" slot="1" pulldown_in_air="4">
-	<result class="hit" kill_probability="12.7" kill_probability_offset_on_successful_hit="12.7" kill_decay_start_time="1.0" kill_decay_end_time="1.0" damage_origin_vehicle="0"/>
+	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
+	<result class="hit" kill_probability="12.7" kill_probability_offset_on_successful_hit="16.2" kill_decay_start_time="1.0" kill_decay_end_time="1.0" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="other" fileref="ricochet_b1.wav"/>
@@ -93146,10 +93146,10 @@
 	<trail probability="1.0" key="bullet_new_he"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_50BMG"/>
-	<stance state_key="running" accuracy="0.1"/>
-	<stance state_key="walking" accuracy="0.2"/>
-	<stance state_key="crouch_moving" accuracy="0.6"/>
-	<stance state_key="prone_moving" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.2"/>
+	<stance state_key="walking" accuracy="0.35"/>
+	<stance state_key="crouch_moving" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.8"/>
 	<stance state_key="standing" accuracy="0.98"/>
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.2"/>
@@ -97972,7 +97972,7 @@
 </weapon>
 
 <weapon key="gkw_m1851n.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="3.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt 1851 Navy" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" spread_range="0.3" projectile_speed="100.0" projectiles_per_shot="1" barrel_offset="-0.1" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="3.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt 1851 Navy" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" spread_range="0.3" projectile_speed="140.0" projectiles_per_shot="1" barrel_offset="-0.1" burst_shots="1" slot="0" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<animation state_key="recoil" animation_key="recoil, revolver"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone"/>
@@ -98004,7 +98004,8 @@
 	<hud_icon filename="gkw_m1851n.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="0.5" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="18.0" kill_decay_start_time="0.5" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
+	<trail probability="1" key="BulletApTrail_ap"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -98065,7 +98066,6 @@
 	<effect class="result" key="static_object" copy="terrain"/>
 	<effect class="result" key="shield" ref="hitMetal"/>
 	<effect class="result" key="shield" ref="hitMetal_1"/>
-	<trail probability="1.0" key="bullet_new"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.95"/>
 	<stance state_key="walking" accuracy="0.95"/>
@@ -101183,7 +101183,6 @@
 	<weak_hand_hold offset="0.2"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
 	<result class="hit" kill_probability="8.6" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="1.125" kill_decay_end_time="1.875" damage_origin_vehicle="0"/>
-	<trail probability="1" key="BulletApTrail_ap"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -101244,6 +101243,7 @@
 	<effect class="result" key="static_object" copy="terrain"/>
 	<effect class="result" key="shield" ref="hitMetal"/>
 	<effect class="result" key="shield" ref="hitMetal_1"/>
+	<trail probability="1.0" key="bullet_new"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.2"/>
@@ -107684,7 +107684,7 @@
 <weapon key="gkw_m14mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="elite"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.0" magazine_size="20" spread_range="0.6" can_shoot_standing="1" suppressed="0" name="M14(MOD3)" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="200" barrel_offset="0.6" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.0" magazine_size="20" spread_range="0.4" can_shoot_standing="1" suppressed="0" name="M14(MOD3)" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="200" barrel_offset="0.6" stance_accuracy_rate="2.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="100.0" sell_price="100.0"/>
 	<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -107711,7 +107711,7 @@
 	<hud_icon filename="gkw_m14mod3.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="10" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="8.6" kill_probability_offset_on_successful_hit="14" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -107796,7 +107796,7 @@
 <weapon key="gkw_m14mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="autorifle"/>
 	<tag name="elite"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.0" magazine_size="20" can_shoot_standing="1" suppressed="0" spread_range="0.6" name="M14(MOD3)-[Clear Fighting Spirit]" class="1" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.0" last_burst_retrigger_time="-1" stance_accuracy_rate="1.0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.0" magazine_size="20" can_shoot_standing="1" suppressed="0" spread_range="0.4" name="M14(MOD3)-[Clear Fighting Spirit]" class="1" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.0" last_burst_retrigger_time="-1" stance_accuracy_rate="2.5" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="100.0" sell_price="100.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -107804,8 +107804,8 @@
 	<animation state_key="recoil" animation_key="recoil_unlimit"/>
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil_unlimit"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil_prone_unlimit"/>
-	<animation key="cycle" animation_key="cycle_2h_rifle_180rpm"/>
-	<animation key="cycle" stance_key="crouching" animation_key="cycle_2h_rifle_300rpm"/>
+	<animation key="cycle" animation_key="cycle_2h_rifle_300rpm"/>
+	<animation key="cycle" stance_key="crouching" animation_key="cycle_2h_rifle_450rpm"/>
 	<animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_750rpm_prone"/>
 	<animation key="cycle" stance_key="over_wall" animation_key="cycle_2h_rifle_750rpm"/>
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
@@ -107823,7 +107823,7 @@
 	<hud_icon filename="gkw_m14mod3_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="8.0" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="5.0" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -118017,7 +118017,7 @@
 </weapon>
 
 <weapon key="gkw_python_6603.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.25" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python-[Hunting Time]" class="1" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="100.0" projectiles_per_shot="1" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification retrigger_time="-1" last_burst_retrigger_time="0.25" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python-[Hunting Time]" class="1" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140.0" projectiles_per_shot="1" burst_shots="1" slot="0" stab_enabled="1"/>
 	<commonness in_stock="0" value="0"/>
 	<next_in_chain key="gkw_python_6603_skill.weapon" share_ammo="1"/>
 	<animation state_key="recoil" animation_key="recoil, revolver"/>
@@ -118054,7 +118054,8 @@
 	<hud_icon filename="gkw_python_6603.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="10.6" kill_decay_start_time="0.3" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="20" kill_decay_start_time="0.5" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
+	<trail probability="1" key="BulletApTrail_ap"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -118115,7 +118116,6 @@
 	<effect class="result" key="static_object" copy="terrain"/>
 	<effect class="result" key="shield" ref="hitMetal"/>
 	<effect class="result" key="shield" ref="hitMetal_1"/>
-	<trail probability="1.0" key="bullet_new"/>
 	</projectile>
 	<stance state_key="running" accuracy="0.8"/>
 	<stance state_key="walking" accuracy="0.85"/>
@@ -138681,7 +138681,7 @@
 	<hud_icon filename="parw_nyto_black.png"/>
 	<effect class="muzzle" ref="cygnus_blue"/>
 	<weak_hand_hold offset="0.4"/>
-	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="4">
+	<projectile radius="0.2" class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="4">
 	<result class="hit" kill_probability="10.0" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="1.0" kill_decay_end_time="1.5" damage_origin_vehicle="0"/>
 	<trail key="paradeus_long" probability="1.0"/>
 	<trigger class="impact"/>
@@ -152206,6 +152206,37 @@
 	<commonness value="0.0" can_respawn_with="0" in_stock="0"/>
 	</projectile>
 	<inventory encumbrance="2.0" price="5000.0"/>
+	<modifier class="speed" value="0"/>
+</weapon>
+
+<weapon key="nuke_fairy.weapon" on_ground_up="1 0 " radius="0.45" time_to_live_out_in_the_open="90.0">
+	<specification magazine_size="1" retrigger_time="1.0" sustained_fire_grow_step="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="1" name="Fairy Command:Origin -- An End To Hesitation" consume="1" reload_one_at_a_time="1" class="3" sight_range_modifier="1.65" slot="1" use_basic_muzzle_smoke_effect="0"/>
+	<animation key="hold" animation_key="still, binoculars"/>
+	<animation key="hold_on_wall" animation_key="still, binoculars"/>
+	<animation key="hold_casual" animation_key="still, binoculars"/>
+	<animation key="still_against_wall" animation_key="still, binoculars"/>
+	<animation key="recoil" animation_key="recoil, binoculars"/>
+	<animation key="crouching" animation_key="crouching still, binoculars"/>
+	<animation key="running" animation_key="running, binoculars"/>
+	<animation key="walking" animation_key="walking, binoculars"/>
+	<animation key="walking_backwards" animation_key="walking backwards, binoculars"/>
+	<animation key="crouch_moving" animation_key="crouching forwards, binoculars"/>
+	<animation key="changing_weapon_out" animation_key="change weapon out, reversed"/>
+	<animation key="changing_weapon_in" animation_key="change weapon in, reversed"/>
+	<animation key="reload" animation_key="reloading, m24"/>
+	<sound class="impact" fileref="sandbag_drop.wav"/>
+	<model filename="binoculars.xml"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<hud_icon filename="fairy_command_reinforce_palette.png"/>
+	<commonness value="0.0" can_respawn_with="0" in_stock="1"/>
+	<projectile class="grenade" name="" key="fairy_command_nuke.projectile" slot="0" pulldown_in_air="0.0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0">
+	<result class="notify_script" key="fc_nuke"/>
+	<trigger class="time" time_to_live="0.0"/>
+	<rotation class="random"/>
+	<model filename=""/>
+	<commonness value="0.0" can_respawn_with="0" in_stock="0"/>
+	</projectile>
+	<inventory encumbrance="2.0" price="10000.0"/>
 	<modifier class="speed" value="0"/>
 </weapon>
 

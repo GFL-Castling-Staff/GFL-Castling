@@ -344,7 +344,7 @@ class fairyCommand : Tracker {
             addCastlingMarker(FairyRequest);
             m_taskQueue.add(DelayFairyCommand(m_metagame,5,factionId,"fc_manticore",target,FairyRequest));
             CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,300.0,"fc_attack"));
-        }  
+        }
         if(EventKeyGet == "fc_palette"){
             int characterId = event.getIntAttribute("character_id");
             const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -381,7 +381,43 @@ class fairyCommand : Tracker {
             sendFactionMessageKey(m_metagame,factionId,"Request trauma team support!");
             sendFactionMessageKey(m_metagame,factionId,"Receive, transport aircraft is maneuvering");
             CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,240.0,"fc_attack"));
-        }                                       
+        }
+        if(EventKeyGet == "fc_nuke"){
+            int characterId = event.getIntAttribute("character_id");
+            const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+            if (character is null) return;
+            int playerId = character.getIntAttribute("player_id");
+            int factionId= character.getIntAttribute("faction_id");
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player is null) return;
+            string playerName = player.getStringAttribute("name");
+            GFL_playerInfo@ m_playerinfo = getPlayerInfoFromList(playerName);
+            GFL_battleInfo@ battleInfo = m_playerinfo.getBattleInfo();
+            if (m_taskQueue.getSize() >= 3){
+                notify(m_metagame, "fairycommand_overload",dictionary(), "misc", playerId, false, "", 1.0);
+                addItemInBackpack(m_metagame,characterId,"weapon","nuke_fairy.weapon");
+                return;
+            }
+            if(!costTacticPoint(battleInfo,1000,playerId))
+            {
+                addItemInBackpack(m_metagame,characterId,"weapon","nuke_fairy.weapon");
+                return;
+            }            
+            Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
+            Vector3 height = Vector3(0,50,0);
+            target = target.add(height);
+            CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,target);
+            FairyRequest.setIconTypeKey("call_marker_drop");
+            FairyRequest.setIndex(4);
+            FairyRequest.setSize(0.5);
+            FairyRequest.setDummyId(m_DummyCallID);
+            m_DummyCallID++;                        
+            addCastlingMarker(FairyRequest);
+            m_taskQueue.add(DelayFairyCommand(m_metagame,5,factionId,"fc_nuke",target,FairyRequest));
+            dictionary a;
+            a["%name"] = playerName;                
+            sendFactionMessageKey(m_metagame,factionId,"Nuke Start Message1",a,2.0);            
+        }        
     }    
 
     bool hasEnded() const {
@@ -622,6 +658,13 @@ class DelayFairyCommand : Task {
                     soldier_spawn_request("palette_squad",10)
                 };
                 tasker2.add(DelaySpawnSoldier(m_metagame,6.5,m_factionId,spawn_soldier,m_pos.add(Vector3(0,-50,0)),3.0,3.0));
+            }
+            if(m_spawnkey == "fc_nuke"){
+                playSound(m_metagame, "nuke_alert.wav", m_factionId);
+                dictionary a;
+                sendFactionMessageKey(m_metagame,m_factionId,"Nuke Start Message2",a,2.0);
+                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                tasker.add(DelayNuke(m_metagame,28,m_factionId));
             }            
 		}
 

@@ -2503,3 +2503,39 @@ class Airdrop_Support_Negev : DelaySkill {
 		return false;
 	}		
 }
+
+class DelayNuke :Task{
+	protected Metagame@ m_metagame;
+	protected float m_time;
+    protected int m_faction_id;
+	protected float m_timeLeft;
+
+	DelayNuke(Metagame@ metagame, float time, int fId) {
+		@m_metagame = metagame;
+		m_time = time;
+		m_faction_id =fId;
+	}
+
+	void start() {
+		m_timeLeft=m_time;
+	}
+
+	void update(float time) {
+		m_timeLeft -= time;
+		if (m_timeLeft < 0)
+		{
+            sendFactionMessageKey(m_metagame,m_faction_id,"Nuke End Message");
+            m_metagame.getComms().send("<command class='set_match_status' win='1' faction_id='0' />");
+            for (uint i = 1; i < m_metagame.getFactionCount(); ++i) {
+                m_metagame.getComms().send("<command class='set_match_status' lose='1' faction_id='" + i + "' />");
+            }            
+		}
+	}
+
+    bool hasEnded() const {
+		if (m_timeLeft < 0) {
+			return true;
+		}
+		return false;
+	}
+}
