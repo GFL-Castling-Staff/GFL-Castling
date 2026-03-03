@@ -498,7 +498,7 @@ class call_event : Tracker {
                                 case 100400: //空袭妖精-近空支援
                                 {
                                     if(checkAntiAir(playerId)) break;
-                                    if(!costTacticPoint(battleInfo,20,playerId)) break;
+                                    if(!costTacticPoint(battleInfo,15,playerId)) break;
                                     addCallCoolDown(playerName,playerId,90.0,"tier1",m_playerinfo);
                                     sendFactionMessageKey(m_metagame,factionId,"airstrikecallstarthint");
                                     int flagId = m_DummyCallID + 15000;
@@ -521,7 +521,7 @@ class call_event : Tracker {
                                 case 100401: //空袭妖精-近空支援A
                                 {
                                     if(checkAntiAir(playerId)) break;
-                                    if(!costTacticPoint(battleInfo,20,playerId)) break;
+                                    if(!costTacticPoint(battleInfo,15,playerId)) break;
                                     addCallCoolDown(playerName,playerId,30.0,"tier1",m_playerinfo);
                                     sendFactionMessageKey(m_metagame,factionId,"airstrikecallstarthint");
                                     int flagId = m_DummyCallID + 15000;
@@ -544,7 +544,7 @@ class call_event : Tracker {
                                 case 100402: //空袭妖精-近空支援B
                                 {
                                     if(checkAntiAir(playerId)) break;
-                                    if(!costTacticPoint(battleInfo,20,playerId)) break;
+                                    if(!costTacticPoint(battleInfo,15,playerId)) break;
                                     addCallCoolDown(playerName,playerId,90.0,"tier1",m_playerinfo);
                                     sendFactionMessageKey(m_metagame,factionId,"airstrikecallstarthint");
                                     int flagId = m_DummyCallID + 15000;
@@ -567,7 +567,7 @@ class call_event : Tracker {
                                 case 100403: //空袭妖精-近空支援Y
                                 {
                                     if(checkAntiAir(playerId)) break;
-                                    if(!costTacticPoint(battleInfo,20,playerId)) break;
+                                    if(!costTacticPoint(battleInfo,15,playerId)) break;
                                     addCallCoolDown(playerName,playerId,90.0,"tier1",m_playerinfo);
                                     sendFactionMessageKey(m_metagame,factionId,"airstrikecallstarthint");
                                     int flagId = m_DummyCallID + 15000;
@@ -595,7 +595,7 @@ class call_event : Tracker {
                                     if(findCooldown(playerName,"airstrike_cas_p2p")){
                                         Call_Cooldown@ call_cooldowninfo = getCooldownInfo(playerName,"airstrike_cas_p2p");
                                         if(call_cooldowninfo is null) break;
-                                        if(!costTacticPoint(battleInfo,20,playerId)) break;
+                                        if(!costTacticPoint(battleInfo,15,playerId)) break;
                                         addCallCoolDown(playerName,playerId,90.0,"tier1",m_playerinfo);
                                         sendFactionMessageKey(m_metagame,factionId,"airstrikecallstarthint");
                                         int flagId = m_DummyCallID + 15000;
@@ -630,7 +630,7 @@ class call_event : Tracker {
                                     if(findCooldown(playerName,"airstrike_cas_p2p")){
                                         Call_Cooldown@ call_cooldowninfo = getCooldownInfo(playerName,"airstrike_cas_p2p");
                                         if(call_cooldowninfo is null) break;
-                                        if(!costTacticPoint(battleInfo,20,playerId)) break;
+                                        if(!costTacticPoint(battleInfo,15,playerId)) break;
                                         addCallCoolDown(playerName,playerId,30.0,"tier1",m_playerinfo);
                                         sendFactionMessageKey(m_metagame,factionId,"airstrikecallstarthint");
                                         int flagId = m_DummyCallID + 15000;
@@ -665,7 +665,7 @@ class call_event : Tracker {
                                     if(findCooldown(playerName,"airstrike_cas_p2p")){
                                         Call_Cooldown@ call_cooldowninfo = getCooldownInfo(playerName,"airstrike_cas_p2p");
                                         if(call_cooldowninfo is null) break;
-                                        if(!costTacticPoint(battleInfo,20,playerId)) break;
+                                        if(!costTacticPoint(battleInfo,15,playerId)) break;
                                         addCallCoolDown(playerName,playerId,90.0,"tier1",m_playerinfo);
                                         sendFactionMessageKey(m_metagame,factionId,"airstrikecallstarthint");
                                         int flagId = m_DummyCallID + 15000;
@@ -700,7 +700,7 @@ class call_event : Tracker {
                                     if(findCooldown(playerName,"airstrike_cas_p2p")){
                                         Call_Cooldown@ call_cooldowninfo = getCooldownInfo(playerName,"airstrike_cas_p2p");
                                         if(call_cooldowninfo is null) break;
-                                        if(!costTacticPoint(battleInfo,20,playerId)) break;
+                                        if(!costTacticPoint(battleInfo,15,playerId)) break;
                                         addCallCoolDown(playerName,playerId,90.0,"tier1",m_playerinfo);
                                         sendFactionMessageKey(m_metagame,factionId,"airstrikecallstarthint");
                                         int flagId = m_DummyCallID + 15000;

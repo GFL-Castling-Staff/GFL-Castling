@@ -953,6 +953,46 @@ class strafe_task_30mm : event_call_task {
 	}
 }
 
+class strafe_task_15mm_mg151 : event_call_task {
+	protected int luckyGuyid = -1;
+	protected Vector3 first_offset = Vector3(-15,0,-15); 
+	protected Vector3 second_offset = Vector3(10,0,10); 
+    
+	void start(){
+		m_timeLeft=m_time;
+		m_timeLeft_internal = 0;
+		strike_vector = getAimUnitVector(1,s_pos,e_pos);
+		strike_didis = 3.0;
+		Vector3 pos_offset = strike_vector.add(getMultiplicationVector(strike_vector,Vector3(-40,0,-40))); 
+		pos_offset = pos_offset.add(Vector3(0,60,0));
+		Vector3 pos_1st = e_pos.add(getMultiplicationVector(strike_vector,first_offset));
+		Vector3 pos_2nd = e_pos.add(getMultiplicationVector(strike_vector,second_offset));
+        m_excute_Limit = max(int(getAimUnitDistance(1,pos_1st,pos_2nd)/strike_didis),6);
+		m_pos1 = pos_1st.add(pos_offset);
+		m_pos2 = pos_1st;
+		m_pos1 = m_pos1.add(getMultiplicationVector(strike_vector,Vector3(-30,0,-30)));
+		m_time_internal = 0.35;
+		m_airstrike_key = "15mm_mg151";
+	}
+
+	strafe_task_15mm_mg151(GameMode@ metagame, float time, int cId,int fId,Vector3 start_pos,Vector3 target_pos,string mode=""){
+		super(metagame,time,cId,fId,start_pos,target_pos,mode);
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time;return;}
+		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
+		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
+		m_excute_time++;
+		m_timeLeft_internal = m_time_internal;
+
+		insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos1,m_pos2);
+		m_pos1 = m_pos1.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
+		m_pos1 = m_pos1.add(Vector3(0,-20*(sqrt(float(1/m_excute_Limit)*m_excute_time)),0));
+		m_pos2 = m_pos2.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));					
+	}
+}
+
 class Ju87_Assault :Task{
 	protected Metagame@ m_metagame;
 	protected float m_time;

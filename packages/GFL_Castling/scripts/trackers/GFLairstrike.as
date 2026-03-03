@@ -93,6 +93,8 @@ dictionary airstrikeIndex = {
         // 梦想家激光射线
         {"ioncannon_strafe_dreamer",21},
 
+        {"15mm_mg151",22},
+
         // 82mm迫击炮打击
 
         {"mortar_82mm",100},
@@ -341,7 +343,7 @@ class GFLairstrike : Tracker {
 
                     CreateDirectProjectile(m_metagame,startPos.add(getMultiplicationVector(strike_vector,Vector3(-50,0,-50))),s_pos.add(Vector3(0,20,0)),"a10_warthog_shadow.projectile",cid,fid,70);    
                                                         
-                    for(int i=1;i<=12;i++){
+                    for(int i=1;i<=6;i++){
                         float rand_x = rand(-12,12);
                         float rand_y = rand(-12,12);
                         
@@ -580,7 +582,7 @@ class GFLairstrike : Tracker {
                     } 
                     Airstrike_strafe.removeAt(a);
                     break;
-                }   
+                }
                 case 18:{//地雷妖精 
                     //扫射位置偏移单位向量 与 扫射位置偏移单位距离
                     sendFactionMessageKey(m_metagame,fid,"minedrop");
@@ -659,6 +661,20 @@ class GFLairstrike : Tracker {
                     Airstrike_strafe.removeAt(a);
                     break;
                 }
+
+                case 22:{
+                    float strike_rand=3.0;
+                    int projectile_num = 5;
+                    for(int j=1;j<=projectile_num;j++)
+                    {
+                        float rand_x = rand(-strike_rand,strike_rand);
+                        float rand_y = rand(-strike_rand,strike_rand);
+                        CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"ASW_BF109_strafe.projectile",cid,fid,100);
+                    } 
+                    Airstrike_strafe.removeAt(a);
+                    break;
+                }
+            
 
                 case 100:{ //82mm迫击炮打击
                     float strike_rand = 3;
