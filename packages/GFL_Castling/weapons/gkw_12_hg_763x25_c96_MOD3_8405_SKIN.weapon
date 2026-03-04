@@ -19,7 +19,7 @@
 	projectile_speed="120"
 	projectiles_per_shot="1"
 	burst_shots="1"
-    spread_range="0.32"
+    spread_range="0.15"
     carry_in_two_hands="0"
     stab_enabled="1"/>
     <!--Animations-->
@@ -29,8 +29,8 @@
     <animation state_key="recoil" animation_key="recoil, pistol 2" />
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone" />
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol" />	
-    <animation state_key="reload"	animation_key="reloading, SA OHG 1.0" />
-    <animation state_key="reload"	animation_key="reloading2, SA OHG 1.0" />
+    <animation state_key="reload"	animation_key="reloading, SA OHG 0.8" />
+    <animation state_key="reload"	animation_key="reloading2, SA OHG 0.8" />
 	<animation state_key="hold"					animation_key="still, pistol 2" />
   	<animation state_key="hold_casual"			animation_key="hold_casual, pistol 2" />
 	<animation state_key="hold_on_wall"			animation_key="hold, overwall pistol" />
@@ -69,6 +69,6 @@
     <stance state_key="crouching" accuracy="1" />
     <stance state_key="prone" accuracy="1" />
     <stance state_key="over_wall" accuracy="1" />
-    <modifier class="speed" value="0.6" />
+    <modifier class="speed" value="0.7" />
     <modifier class="hit_success_probability" value="-0.2" />
 </weapon>

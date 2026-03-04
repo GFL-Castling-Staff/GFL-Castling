@@ -14,7 +14,7 @@
 	class="0"
 	slot="0"
 	reload_one_at_a_time="0"
-	sight_range_modifier="1.5"
+	sight_range_modifier="1.8"
 	projectile_speed="125.5"
 	projectiles_per_shot="1"
 	burst_shots="1"
@@ -57,7 +57,7 @@
 	<!--Ballistics-->
     <weak_hand_hold offset="0.1" />
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
-        <result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="5.5" kill_decay_start_time="0.5" kill_decay_end_time="0.5"  />
+		<result class="hit" kill_probability="2.0" kill_probability_offset_on_successful_hit="9.0" kill_decay_start_time="0.5" kill_decay_end_time="0.5"  />
     </projectile>
     <effect class="muzzle" ref="ejection_9mm" />
     <!--Accuracy, Movement speed-->
