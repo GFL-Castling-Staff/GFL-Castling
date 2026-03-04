@@ -404,10 +404,10 @@
     <model filename="gkd_hg_c96_8405.xml">
         <requirement class="weapon" key="gkw_c96mod3_8405.weapon" slot="0" />
     </model>    
-    <model filename="gkd_hg_desert_eagle_s.xml">
+    <model filename="gkd_hg_desert_eagle.xml">
         <requirement class="weapon" key="gkw_desert_eagle.weapon" slot="0" />
     </model>
-    <model filename="gkd_hg_desert_eagle_s.xml">
+    <model filename="gkd_hg_desert_eagle.xml">
         <requirement class="weapon" key="gkw_desert_eagle_skill.weapon" slot="0" />
     </model>
     <model filename="gkd_hg_desert_eagle_6501.xml">
@@ -1065,6 +1065,12 @@
         <requirement class="weapon" key="gkw_iws2000_3004.weapon" slot="0" />
     </model>
     <model filename="gkd_rf_iws2000_3004.xml">
+        <requirement class="weapon" key="gkw_iws2000_3004_skill.weapon" slot="0" />
+    </model>
+    <model filename="gkd_rf_iws2000_3004_d.xml">
+        <requirement class="weapon" key="gkw_iws2000_3004.weapon" slot="0" />
+    </model>
+    <model filename="gkd_rf_iws2000_3004_d.xml">
         <requirement class="weapon" key="gkw_iws2000_3004_skill.weapon" slot="0" />
     </model>    
     <model filename="gkd_rf_iws2000_7308.xml">

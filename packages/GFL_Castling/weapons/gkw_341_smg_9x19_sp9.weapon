@@ -2,42 +2,42 @@
 <weapon key="gkw_sp9.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 <tag name="smg" />
     <specification 
-    can_shoot_running="1"
+        can_shoot_running="1"
 		accuracy_factor="0.98" 
 		barrel_offset="0.1" 
 		class="0"
-    slot="0"
-    spread_range="0.2"
-		magazine_size="30" 
-    carry_in_two_hands="1"
-		name="SP-9" 
-		projectile_speed="125" 
-		retrigger_time="0.1" 
-		suppressed="0" 
-    stance_accuracy_rate="2.0"
-		sustained_fire_diminish_rate="1.5" 
-		sustained_fire_grow_step="0.2" 
+        slot="0"
+        spread_range="0.2"
+        magazine_size="30" 
+        carry_in_two_hands="1"
+        name="SP-9" 
+        projectile_speed="125" 
+        retrigger_time="0.1" 
+        suppressed="0" 
+        stance_accuracy_rate="2.0"
+        sustained_fire_diminish_rate="1.5" 
+        sustained_fire_grow_step="0.2" 
     stab_enabled="1"/>
     <commonness value="0.2" in_stock="0" can_respawn_with="1" />
-	  <inventory encumbrance="12.5" buy_price="7.0" sell_price="7.0"/>
-	  <capacity value="1" source="rank" source_value="0.0" />
+    <inventory encumbrance="12.5" buy_price="7.0" sell_price="7.0"/>
+    <capacity value="1" source="rank" source_value="0.0" />
     <animation key="recoil" animation_key="recoil1" />
-	  <animation key="recoil" animation_key="recoil2" />
-	  <animation key="recoil" animation_key="recoil3" />
-	  <animation key="recoil" stance_key="over_wall" animation_key="recoil1" />
-	  <animation key="recoil" stance_key="over_wall" animation_key="recoil2" />
-	  <animation key="recoil" stance_key="over_wall" animation_key="recoil3" />
+    <animation key="recoil" animation_key="recoil2" />
+    <animation key="recoil" animation_key="recoil3" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil1" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil2" />
+    <animation key="recoil" stance_key="over_wall" animation_key="recoil3" />
     <animation key="recoil" stance_key="crouching" animation_key="recoil1" />
     <animation key="recoil" stance_key="crouching" animation_key="recoil2" />
     <animation key="recoil" stance_key="crouching" animation_key="recoil3" />
-	  <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
-	  <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
-	  <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
-	  <animation state_key="hold_on_wall" animation_key="still" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil1, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil2, prone" />
+    <animation key="recoil" stance_key="prone" animation_key="recoil3, prone" />
+    <animation state_key="hold_on_wall" animation_key="still" />
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
     <animation state_key="reload" animation_key="reloading, magazine rifle 0.9" />
-	  <animation state_key="stabbing" animation_key="melee, quick knife" />
-	  <animation state_key="stabbing" animation_key="pistol whip 3" />
+    <animation state_key="stabbing" animation_key="melee, quick knife" />
+    <animation state_key="stabbing" animation_key="pistol whip 3" />
     <sound key="fire" fileref="sp9_fire_FromHALOINFINTE.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="sp9_mgz_out_FromDIVISION2.wav" volume="0.6" />
     <sound key="magazine_in" fileref="sp9_mgz_in_FromDIVISION2.wav" volume="0.6" />
@@ -59,7 +59,7 @@
     <sound key="cycle" fileref="SP9_SKILL2_JP.wav" volume="1.4" pitch_variety="0"/>
     <sound key="cycle" fileref="SP9_SKILL3_JP.wav" volume="1.4" pitch_variety="0"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
-    <model filename="gkw_smg_ump9.xml" />
+    <model filename="gkw_smg_sp9.xml" />
     <hud_icon filename="gkw_sp9.png" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">

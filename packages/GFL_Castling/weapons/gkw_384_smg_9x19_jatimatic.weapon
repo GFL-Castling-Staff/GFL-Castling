@@ -45,7 +45,7 @@
     <sound key="cycle" fileref="jatimatic_cycle_FromCF.wav" volume="1.0" />
     <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.3" />
     <sound class="impact" fileref="rifle_drop.wav" />
-    <model filename="gkw_smg_mp5.xml"/>
+    <model filename="gkw_smg_jatimatic.xml"/>
     <hud_icon filename="gkw_jatimatic.png"/>
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet.projectile">
