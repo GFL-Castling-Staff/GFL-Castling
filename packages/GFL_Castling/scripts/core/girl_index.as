@@ -1707,7 +1707,9 @@ array<string> gk_weapon_hg_list = {
     "gkw_gsh18.weapon",
     "gkw_gsh18_523.weapon",
     "gkw_gsh18mod3.weapon",
+    "gkw_medical_agl_hg.weapon",
     "gkw_gsh18mod3_523.weapon",
+    "gkw_medical_agl_hg_523.weapon",
     "gkw_mp443.weapon",
     "gkw_mp443mod3.weapon",
     "gkw_k5.weapon",
@@ -1759,7 +1761,8 @@ array<string> gk_weapon_hg_list = {
     "gkw_desert_eagle_skill.weapon",
     "gkw_desert_eagle_6501.weapon",
     "gkw_desert_eagle_6501_skill.weapon",
-
+    "gkw_nz75.weapon",
+    "gkw_nz75_403.weapon",
     "gkw_m327.weapon",
     "gkw_contender.weapon",
     "gkw_contender_1502.weapon",
@@ -1771,6 +1774,7 @@ array<string> gk_weapon_hg_list = {
     "gkw_p2000.weapon",
     "gkw_m1851n.weapon",
     "gkw_glock17.weapon"
+    "gkw_qsb91.weapon",
     "gkw_zip22.weapon"
 };
 

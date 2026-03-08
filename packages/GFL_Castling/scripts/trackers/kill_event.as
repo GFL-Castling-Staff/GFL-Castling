@@ -145,6 +145,7 @@ class kill_event : Tracker {
         {"gkw_lusa_7802.weapon",3},
         {"gkw_lusa_8501.weapon",3},
         {"gkw_uzi.weapon",3},
+        {"gkw_uzi_7907.weapon",3},
         {"gkw_uzimod3.weapon",3},
         {"gkw_uzimod3_skill.weapon",3},
         {"gkw_uzimod3_7907.weapon",3},
@@ -228,8 +229,8 @@ class kill_event : Tracker {
         {"gkw_cms_aps.weapon",3},
         {"gkw_cms_st.weapon",4},
         {"gkw_cms_6403.weapon",4},
-        {"gkw_cms_6403_aps.weapon",3},
-        {"gkw_cms_6403_st.weapon",4},
+        {"gkw_cms_aps_6403.weapon",3},
+        {"gkw_cms_st_6403.weapon",4},
         {"gkw_vp1915.weapon",3},
         {"gkw_vp1915_6604.weapon",3},
         {"gkw_vp1915_8503.weapon",3},
@@ -248,6 +249,10 @@ class kill_event : Tracker {
         {"gkw_evo3.weapon",3},
         {"gkw_evo3mod3.weapon",3},
         {"gkw_shipka.weapon",3},
+
+        {"gkw_cx4.weapon",3},
+        {"gkw_cx4_6606.weapon",3},
+        
 
 
         //短突
