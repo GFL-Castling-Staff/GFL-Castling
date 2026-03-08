@@ -47,9 +47,9 @@
 	<animation key="going prone" target_key="gly_falling" />
 	<animation key="leaving prone" target_key="gly_still" />
 	<animation key="dive" target_key="gly_still" />
-	<animation key="jumping" target_key="gly_up_ladder" />
-	<animation key="lifting up" target_key="gly_up_ladder" />
-	<animation key="throwing self over" target_key="gly_up_ladder" />
+	<animation key="jumping" target_key="gly_up_jump" />
+	<animation key="lifting up" target_key="gly_up_jump" />
+	<animation key="throwing self over" target_key="gly_up_jump" />
 	<animation key="stunned" target_key="gly_still_bone" />
 	<animation key="wounded, still, 66" target_key="gly_still" />
 	<animation key="wounded, moving forwards, 67" target_key="gly_still" />
