@@ -10761,7 +10761,7 @@
 	<hud_icon filename="gkw_sl8.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="10.6" kill_decay_start_time="1.0" kill_decay_end_time="2.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="16.6" kill_decay_start_time="1.0" kill_decay_end_time="2.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -10871,7 +10871,7 @@
 	<hud_icon filename="gkw_sl8_576.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="10.6" kill_decay_start_time="1.0" kill_decay_end_time="2.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="16.6" kill_decay_start_time="1.0" kill_decay_end_time="2.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -10980,7 +10980,7 @@
 	<hud_icon filename="gkw_sl8_5202.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="10.6" kill_decay_start_time="1.0" kill_decay_end_time="2.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="16.6" kill_decay_start_time="1.0" kill_decay_end_time="2.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -11812,7 +11812,7 @@
 	<hud_icon filename="gkw_vsk94.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5.2" kill_probability_offset_on_successful_hit="7" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="5.2" kill_probability_offset_on_successful_hit="9.4" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -11923,7 +11923,7 @@
 	<hud_icon filename="gkw_vsk94_5301.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5.2" kill_probability_offset_on_successful_hit="7" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="5.2" kill_probability_offset_on_successful_hit="9.4" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -12156,7 +12156,7 @@
 	<hud_icon filename="gkw_m1903_b.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="13.7" kill_decay_start_time="0.895" kill_decay_end_time="1.659" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="14.6" kill_probability_offset_on_successful_hit="13.7" kill_decay_start_time="0.895" kill_decay_end_time="1.659" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -12267,7 +12267,7 @@
 	<hud_icon filename="gkw_m1903_only.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="22.7" kill_decay_start_time="0.895" kill_decay_end_time="1.659" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="14.6" kill_probability_offset_on_successful_hit="30.0" kill_decay_start_time="0.895" kill_decay_end_time="1.659" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -12488,7 +12488,7 @@
 	<hud_icon filename="gkw_m1903_b.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="13.7" kill_decay_start_time="0.895" kill_decay_end_time="1.659" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="14.6" kill_probability_offset_on_successful_hit="13.7" kill_decay_start_time="0.895" kill_decay_end_time="1.659" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -12599,7 +12599,7 @@
 	<hud_icon filename="gkw_m1903_302.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="13.7" kill_decay_start_time="0.895" kill_decay_end_time="1.659" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="14.6" kill_probability_offset_on_successful_hit="13.7" kill_decay_start_time="0.895" kill_decay_end_time="1.659" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -12820,7 +12820,7 @@
 	<hud_icon filename="gkw_m1903_302.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="13.7" kill_decay_start_time="0.895" kill_decay_end_time="1.659" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="14.6" kill_probability_offset_on_successful_hit="13.7" kill_decay_start_time="0.895" kill_decay_end_time="1.659" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -12931,7 +12931,7 @@
 	<hud_icon filename="gkw_m1903_302.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="22.7" kill_decay_start_time="0.895" kill_decay_end_time="1.659" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="14.6" kill_probability_offset_on_successful_hit="30.0" kill_decay_start_time="0.895" kill_decay_end_time="1.659" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -13042,7 +13042,7 @@
 	<hud_icon filename="gkw_m1903_1107.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="13.7" kill_decay_start_time="0.895" kill_decay_end_time="1.659" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="14.6" kill_probability_offset_on_successful_hit="13.7" kill_decay_start_time="0.895" kill_decay_end_time="1.659" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -13263,7 +13263,7 @@
 	<hud_icon filename="gkw_m1903_1107.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="13.7" kill_decay_start_time="0.895" kill_decay_end_time="1.659" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="14.6" kill_probability_offset_on_successful_hit="13.7" kill_decay_start_time="0.895" kill_decay_end_time="1.659" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -13374,7 +13374,7 @@
 	<hud_icon filename="gkw_m1903_1107.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="22.7" kill_decay_start_time="0.895" kill_decay_end_time="1.659" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="14.6" kill_probability_offset_on_successful_hit="30.0" kill_decay_start_time="0.895" kill_decay_end_time="1.659" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -13493,7 +13493,7 @@
 	<effect class="muzzle" ref="ejection_76251"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="7.0" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -13590,7 +13590,7 @@
 	<hud_icon filename="gkw_svd.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="8.5" kill_probability_offset_on_successful_hit="8.5" kill_decay_start_time="1.735" kill_decay_end_time="2.892" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="8.5" kill_probability_offset_on_successful_hit="12" kill_decay_start_time="1.735" kill_decay_end_time="2.892" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -13812,7 +13812,7 @@
 	<hud_icon filename="gkw_svd_5506.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="8.5" kill_probability_offset_on_successful_hit="8.5" kill_decay_start_time="1.735" kill_decay_end_time="2.892" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="8.5" kill_probability_offset_on_successful_hit="12" kill_decay_start_time="1.735" kill_decay_end_time="2.892" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -14032,7 +14032,7 @@
 	<hud_icon filename="gkw_svdex.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="6.5" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="1.735" kill_decay_end_time="2.892" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="12" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="1.735" kill_decay_end_time="2.892" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="bullet_thick_long"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -14142,7 +14142,7 @@
 	<hud_icon filename="gkw_svd_5506.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="6.5" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="1.735" kill_decay_end_time="2.892" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="12" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="1.735" kill_decay_end_time="2.892" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="bullet_thick_long"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -14267,7 +14267,7 @@
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="7.6" kill_probability_offset_on_successful_hit="16" kill_decay_start_time="2.195" kill_decay_end_time="3.659" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="17.6" kill_probability_offset_on_successful_hit="16" kill_decay_start_time="2.195" kill_decay_end_time="3.659" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -14367,7 +14367,7 @@
 	<hud_icon filename="gkw_98k.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5" kill_probability_offset_on_successful_hit="20.5" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="25" kill_probability_offset_on_successful_hit="15" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -14482,7 +14482,7 @@
 	<hud_icon filename="gkw_98k_b.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5" kill_probability_offset_on_successful_hit="11.0" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="15" kill_probability_offset_on_successful_hit="11.0" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -14599,7 +14599,7 @@
 	<hud_icon filename="gkw_kar98k_mod3.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5.5" kill_probability_offset_on_successful_hit="24.5" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="25" kill_probability_offset_on_successful_hit="20" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -14715,7 +14715,7 @@
 	<hud_icon filename="gkw_kar98k_mod3.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="15" kill_probability_offset_on_successful_hit="15.0" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -14826,7 +14826,7 @@
 	<hud_icon filename="gkw_98k_4301.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5" kill_probability_offset_on_successful_hit="20.5" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="25" kill_probability_offset_on_successful_hit="15" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -14941,7 +14941,7 @@
 	<hud_icon filename="gkw_98k_4301.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5" kill_probability_offset_on_successful_hit="11.0" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="15" kill_probability_offset_on_successful_hit="11.0" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -15058,7 +15058,7 @@
 	<hud_icon filename="gkw_98k_4301.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5.5" kill_probability_offset_on_successful_hit="24.5" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="25" kill_probability_offset_on_successful_hit="20" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -15173,7 +15173,7 @@
 	<hud_icon filename="gkw_98k_4301.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="15" kill_probability_offset_on_successful_hit="15.0" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -15284,7 +15284,7 @@
 	<hud_icon filename="gkw_98k_8301.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5" kill_probability_offset_on_successful_hit="20.5" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="25" kill_probability_offset_on_successful_hit="15" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -15399,7 +15399,7 @@
 	<hud_icon filename="gkw_98k_8301.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5" kill_probability_offset_on_successful_hit="11.0" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="15" kill_probability_offset_on_successful_hit="11.0" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -15516,7 +15516,7 @@
 	<hud_icon filename="gkw_98k_8301.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5.5" kill_probability_offset_on_successful_hit="24.5" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="25" kill_probability_offset_on_successful_hit="20" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -15631,7 +15631,7 @@
 	<hud_icon filename="gkw_98k_8301.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="15" kill_probability_offset_on_successful_hit="15.0" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -15742,7 +15742,7 @@
 	<hud_icon filename="gkw_98k_10001.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5" kill_probability_offset_on_successful_hit="20.5" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="25" kill_probability_offset_on_successful_hit="15" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -15857,7 +15857,7 @@
 	<hud_icon filename="gkw_98k_10001.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5" kill_probability_offset_on_successful_hit="11.0" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="15" kill_probability_offset_on_successful_hit="11.0" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -15974,7 +15974,7 @@
 	<hud_icon filename="gkw_98k_10001.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5.5" kill_probability_offset_on_successful_hit="24.5" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="25" kill_probability_offset_on_successful_hit="20" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -16089,7 +16089,7 @@
 	<hud_icon filename="gkw_98k_10001.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="15" kill_probability_offset_on_successful_hit="15.0" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -16189,7 +16189,7 @@
 	<hud_icon filename="gkw_g43.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="8.5" kill_decay_start_time="1.16" kill_decay_end_time="1.933" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="4.3" kill_probability_offset_on_successful_hit="15" kill_decay_start_time="1.16" kill_decay_end_time="1.933" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -16297,7 +16297,7 @@
 	<hud_icon filename="gkw_g43_kurz.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="1.16" kill_decay_end_time="1.933" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="6.0" kill_decay_start_time="1.16" kill_decay_end_time="1.933" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -16404,7 +16404,7 @@
 	<hud_icon filename="gkw_g43_7607.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="8.5" kill_decay_start_time="1.16" kill_decay_end_time="1.933" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="4.3" kill_probability_offset_on_successful_hit="15" kill_decay_start_time="1.16" kill_decay_end_time="1.933" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -16512,7 +16512,7 @@
 	<hud_icon filename="gkw_g43_7607.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="1.16" kill_decay_end_time="1.933" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="1.9" kill_probability_offset_on_successful_hit="6.0" kill_decay_start_time="1.16" kill_decay_end_time="1.933" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -30704,7 +30704,7 @@
 	<hud_icon filename="gkw_c14.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="12.0" kill_probability_offset_on_successful_hit="19.0" kill_decay_start_time="1.0" kill_decay_end_time="2.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="34.0" kill_probability_offset_on_successful_hit="14.0" kill_decay_start_time="1.0" kill_decay_end_time="2.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -30816,7 +30816,7 @@
 	<hud_icon filename="gkw_c14_7506.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="12.0" kill_probability_offset_on_successful_hit="19.0" kill_decay_start_time="1.0" kill_decay_end_time="2.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="34.0" kill_probability_offset_on_successful_hit="14.0" kill_decay_start_time="1.0" kill_decay_end_time="2.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -31576,7 +31576,7 @@
 	<hud_icon filename="gkw_wa2000.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="1.824" kill_decay_end_time="3.04" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="20.0" kill_decay_start_time="1.824" kill_decay_end_time="3.04" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -31687,7 +31687,7 @@
 	<hud_icon filename="gkw_wa2000_306.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="1.824" kill_decay_end_time="3.04" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="20.0" kill_decay_start_time="1.824" kill_decay_end_time="3.04" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -31797,7 +31797,7 @@
 	<hud_icon filename="gkw_wa2000_1108.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="1.824" kill_decay_end_time="3.04" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="20.0" kill_decay_start_time="1.824" kill_decay_end_time="3.04" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -31908,7 +31908,7 @@
 	<hud_icon filename="gkw_wa2000_only.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="6.0" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="1.0" kill_decay_end_time="1.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.0" kill_probability_offset_on_successful_hit="20.0" kill_decay_start_time="1.0" kill_decay_end_time="1.5" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -32019,7 +32019,7 @@
 	<hud_icon filename="gkw_wa2000_only.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="6.0" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="1.0" kill_decay_end_time="1.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.0" kill_probability_offset_on_successful_hit="20.0" kill_decay_start_time="1.0" kill_decay_end_time="1.5" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="bullet_thick_long"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -32134,7 +32134,7 @@
 	<hud_icon filename="gkw_wa2000_306.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="6.0" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="1.0" kill_decay_end_time="1.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.0" kill_probability_offset_on_successful_hit="20.0" kill_decay_start_time="1.0" kill_decay_end_time="1.5" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -32245,7 +32245,7 @@
 	<hud_icon filename="gkw_wa2000_306.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="6.0" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="1.0" kill_decay_end_time="1.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.0" kill_probability_offset_on_successful_hit="20.0" kill_decay_start_time="1.0" kill_decay_end_time="1.5" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="bullet_thick_long"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -32360,7 +32360,7 @@
 	<hud_icon filename="gkw_wa2000_1108.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="6.0" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="1.0" kill_decay_end_time="1.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.0" kill_probability_offset_on_successful_hit="20.0" kill_decay_start_time="1.0" kill_decay_end_time="1.5" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -32471,7 +32471,7 @@
 	<hud_icon filename="gkw_wa2000_1108.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="6.0" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="1.0" kill_decay_end_time="1.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.0" kill_probability_offset_on_successful_hit="20.0" kill_decay_start_time="1.0" kill_decay_end_time="1.5" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="bullet_thick_long"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -41525,7 +41525,7 @@
 	<hud_icon filename="gkw_4type.png"/>
 	<inventory encumbrance="35.0" price="40.0"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5.0" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="1.0" kill_decay_end_time="1.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="5.0" kill_probability_offset_on_successful_hit="15.0" kill_decay_start_time="1.0" kill_decay_end_time="1.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -41638,7 +41638,7 @@
 	<hud_icon filename="gkw_4type_only.png"/>
 	<inventory encumbrance="35.0" price="200.0"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="7.7" kill_probability_offset_on_successful_hit="7.7" kill_decay_start_time="1.0" kill_decay_end_time="1.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="7.7" kill_probability_offset_on_successful_hit="17.7" kill_decay_start_time="1.0" kill_decay_end_time="1.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -41732,7 +41732,7 @@
 <weapon key="gkw_4type_only_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="elite"/>
-	<specification retrigger_time="1" accuracy_factor="1.0" sustained_fire_grow_step="5.0" sustained_fire_diminish_rate="5.0" magazine_size="10" can_shoot_standing="0" can_shoot_crouching="1" spread_range="0.1" suppressed="0" name="Type 4-[Arisaka AP Rounds]-[Dead Line Strike]" class="4" burst_shots="1" reload_one_at_a_time="1" projectile_speed="300" barrel_offset="0.6" projectiles_per_shot="10" stance_accuracy_rate="1.85" sight_range_modifier="1.8" stab_range="2.5" stab_enabled="1" slot="0"/>
+	<specification retrigger_time="1" accuracy_factor="1.0" sustained_fire_grow_step="5.0" sustained_fire_diminish_rate="5.0" magazine_size="10" can_shoot_standing="0" can_shoot_crouching="1" spread_range="0.01" suppressed="0" name="Type 4-[Arisaka AP Rounds]-[Dead Line Strike]" class="4" burst_shots="1" reload_one_at_a_time="1" projectile_speed="300" barrel_offset="0.6" projectiles_per_shot="20" stance_accuracy_rate="1.85" sight_range_modifier="1.8" stab_range="2.5" stab_enabled="1" slot="0"/>
 	<next_in_chain key="gkw_4type_only.weapon" share_ammo="1"/>
 	<animation key="reload" animation_key="reloading, clip"/>
 	<weak_hand_hold offset="0.3"/>
@@ -41864,7 +41864,7 @@
 	<hud_icon filename="gkw_carcano1891.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="15" kill_probability_offset_on_successful_hit="13.0" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="15" kill_probability_offset_on_successful_hit="20.0" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -41979,7 +41979,7 @@
 	<hud_icon filename="gkw_carcano1938.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="10" kill_probability_offset_on_successful_hit="15.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="15" kill_probability_offset_on_successful_hit="15.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -42084,7 +42084,7 @@
 	<hud_icon filename="gkw_g28.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.1" kill_probability_offset_on_successful_hit="7.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.1" kill_probability_offset_on_successful_hit="12" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -42430,7 +42430,7 @@
 	<hud_icon filename="gkw_k31_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="4" kill_probability_offset_on_successful_hit="12.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="10" kill_probability_offset_on_successful_hit="12.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -43629,7 +43629,7 @@
 	<hud_icon filename="gkw_mlemk1mod3.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7" class="bullet" name="AP bullet" key="at_rf_spawn.projectile" slot="0" on_ground_up="0 1 0" time_to_live="60" blast_damage_threshold="50" time_to_live_out_in_the_open="0" player_death_drop_owner_lock_time="0">
-	<result class="spawn" instance_class="projectile" instance_key="rf_blast_damage.projectile" min_amount="13" max_amount="15" offset="0 0.2 0" position_spread="0.1 0" direction_spread="0 0"/>
+	<result class="spawn" instance_class="projectile" instance_key="rf_blast_damage.projectile" min_amount="15" max_amount="15" offset="0 0.2 0" position_spread="0.1 0" direction_spread="0 0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<collision class="sticky"/>
@@ -43748,7 +43748,7 @@
 	<hud_icon filename="gkw_mlemk1mod3.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="7.5" kill_probability_offset_on_successful_hit="16" kill_decay_start_time="1.895" kill_decay_end_time="3.158" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="30.3" kill_probability_offset_on_successful_hit="10" kill_decay_start_time="1.895" kill_decay_end_time="3.158" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -44094,7 +44094,7 @@
 	<hud_icon filename="gkw_mlemk1_604.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7" class="bullet" name="AP bullet" key="at_rf_spawn.projectile" slot="0" on_ground_up="0 1 0" time_to_live="60" blast_damage_threshold="50" time_to_live_out_in_the_open="0" player_death_drop_owner_lock_time="0">
-	<result class="spawn" instance_class="projectile" instance_key="rf_blast_damage.projectile" min_amount="13" max_amount="15" offset="0 0.2 0" position_spread="0.1 0" direction_spread="0 0"/>
+	<result class="spawn" instance_class="projectile" instance_key="rf_blast_damage.projectile" min_amount="15" max_amount="15" offset="0 0.2 0" position_spread="0.1 0" direction_spread="0 0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<collision class="sticky"/>
@@ -44213,7 +44213,7 @@
 	<hud_icon filename="gkw_mlemk1_604.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="7.5" kill_probability_offset_on_successful_hit="16" kill_decay_start_time="1.895" kill_decay_end_time="3.158" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="30.3" kill_probability_offset_on_successful_hit="10" kill_decay_start_time="1.895" kill_decay_end_time="3.158" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -45071,7 +45071,7 @@
 	<hud_icon filename="gkw_r93.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="16" kill_probability_offset_on_successful_hit="15" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="30" kill_probability_offset_on_successful_hit="15" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -48958,7 +48958,7 @@
 	<hud_icon filename="gkw_svch.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="10" kill_probability_offset_on_successful_hit="6.5" kill_decay_start_time="1.0" kill_decay_end_time="2.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="10" kill_probability_offset_on_successful_hit="10.8" kill_decay_start_time="1.0" kill_decay_end_time="2.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -55198,7 +55198,7 @@
 	<hud_icon filename="gkw_mondragonm1908.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3" kill_probability_offset_on_successful_hit="11.0" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="10" kill_probability_offset_on_successful_hit="18.0" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -55310,7 +55310,7 @@
 	<hud_icon filename="gkw_mondragonm1908_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="6.0" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -55761,7 +55761,7 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="10" kill_probability_offset_on_successful_hit="7.0" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="10" kill_probability_offset_on_successful_hit="17.0" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -56825,7 +56825,7 @@
 	<hud_icon filename="gkw_m21.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="9.5" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="15" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -67853,7 +67853,7 @@
 	<hud_icon filename="gkw_generalliu.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="4.5" kill_probability_offset_on_successful_hit="18" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.6" kill_probability_offset_on_successful_hit="28" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -67964,7 +67964,7 @@
 	<hud_icon filename="gkw_generalliu.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="8" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="18" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -68187,7 +68187,7 @@
 	<hud_icon filename="gkw_generalliu_563.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="4.5" kill_probability_offset_on_successful_hit="18" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.6" kill_probability_offset_on_successful_hit="28" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -68298,7 +68298,7 @@
 	<hud_icon filename="gkw_generalliu_563.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="8" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="18" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -68410,7 +68410,7 @@
 	<hud_icon filename="gkw_generalliu_5101.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="4.5" kill_probability_offset_on_successful_hit="18" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.6" kill_probability_offset_on_successful_hit="28" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -68521,7 +68521,7 @@
 	<hud_icon filename="gkw_generalliu_5101.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="8" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="18" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -71081,7 +71081,7 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="10" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="20" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -71321,7 +71321,7 @@
 	<hud_icon filename="gkw_delisle.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="12.6" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.75" kill_decay_end_time="0.75" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="12.6" kill_probability_offset_on_successful_hit="8.0" kill_decay_start_time="0.75" kill_decay_end_time="0.75" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -71432,7 +71432,7 @@
 	<hud_icon filename="gkw_delisle_6202.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="12.6" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.75" kill_decay_end_time="0.75" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="12.6" kill_probability_offset_on_successful_hit="8.0" kill_decay_start_time="0.75" kill_decay_end_time="0.75" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -71643,7 +71643,7 @@
 	<inventory encumbrance="35.0" price="150.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.8" kill_probability_offset_on_successful_hit="10.5" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.8" kill_probability_offset_on_successful_hit="14.9" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -71750,7 +71750,7 @@
 	<inventory encumbrance="35.0" price="150.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.05" kill_probability_offset_on_successful_hit="7.75" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.8" kill_probability_offset_on_successful_hit="14.9" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -76349,7 +76349,7 @@
 <weapon key="gkw_obrmod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="autorifle"/>
 	<tag name="elite"/>
-	<specification accuracy_factor="1.0" barrel_offset="0.55" class="0" slot="0" magazine_size="25" name="LaRue OBR(MOD3)-[Blade of Frost]" projectile_speed="230" retrigger_time="0.15" stance_accuracy_rate="1.5" suppressed="0" spread_range="0.4" stab_enabled="1" stab_range="3" sight_range_modifier="1.75" carry_in_two_hands="1" sustained_fire_diminish_rate="1.45" sustained_fire_grow_step="0.4"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.55" class="0" slot="0" magazine_size="25" name="LaRue OBR(MOD3)-[Blade of Frost]" projectile_speed="230" retrigger_time="0.15" stance_accuracy_rate="1.5" suppressed="0" spread_range="0.4" stab_enabled="1" stab_range="3" sight_range_modifier="1.75" carry_in_two_hands="1" sustained_fire_diminish_rate="2.0" sustained_fire_grow_step="0.4"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
 	<animation key="recoil" animation_key="recoil3"/>
@@ -76373,7 +76373,7 @@
 	<hud_icon filename="gkw_obrmod3.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.2" kill_probability_offset_on_successful_hit="5.45" kill_decay_start_time="1.2" kill_decay_end_time="1.85" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.2" kill_probability_offset_on_successful_hit="7.5" kill_decay_start_time="1.2" kill_decay_end_time="1.85" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -76705,7 +76705,7 @@
 	<hud_icon filename="gkw_qbu88.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5" kill_probability_offset_on_successful_hit="5.8" kill_decay_start_time="1.0" kill_decay_end_time="2.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="15" kill_probability_offset_on_successful_hit="5.8" kill_decay_start_time="1.0" kill_decay_end_time="2.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -76922,7 +76922,7 @@
 	<hud_icon filename="gkw_qbu88_5502.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5" kill_probability_offset_on_successful_hit="5.8" kill_decay_start_time="1.0" kill_decay_end_time="2.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="15" kill_probability_offset_on_successful_hit="5.8" kill_decay_start_time="1.0" kill_decay_end_time="2.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -79793,7 +79793,7 @@
 </weapon>
 
 <weapon key="gkw_scarh_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.4" spread_range="0.3" magazine_size="20" can_shoot_standing="1" suppressed="0" name="FN SCAR-H-[M948 MODX]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.3" stance_accuracy_rate="1.0" projectile_speed="200" barrel_offset="0.55" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.4" spread_range="0.3" magazine_size="30" can_shoot_standing="1" suppressed="0" name="FN SCAR-H-[M948 MODX]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.3" stance_accuracy_rate="1.0" projectile_speed="200" barrel_offset="0.55" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="35.0" buy_price="50.0" sell_price="50.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
@@ -80379,7 +80379,7 @@
 	<effect class="muzzle" ref="ejection_76251"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="7.0" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -80602,7 +80602,7 @@
 	<hud_icon filename="gkw_m14_303.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5.0" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="5.0" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -81748,7 +81748,7 @@
 	<hud_icon filename="gkw_delisle_7801.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="12.6" kill_probability_offset_on_successful_hit="5.0" kill_decay_start_time="0.75" kill_decay_end_time="0.75" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="12.6" kill_probability_offset_on_successful_hit="8.0" kill_decay_start_time="0.75" kill_decay_end_time="0.75" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -83327,7 +83327,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -83437,7 +83437,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -83752,7 +83752,7 @@
 	<effect class="muzzle" ref="ejection_76239"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="7.62" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="7.62" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -84090,7 +84090,7 @@
 	<effect class="muzzle" ref="ejection_76239"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="7.62" kill_probability_offset_on_successful_hit="6.5" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="7.62" kill_probability_offset_on_successful_hit="10" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -84204,7 +84204,7 @@
 	<effect class="muzzle" ref="ejection_76239"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="7.62" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="7.62" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -84542,7 +84542,7 @@
 	<effect class="muzzle" ref="ejection_76239"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="7.62" kill_probability_offset_on_successful_hit="6.5" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="7.62" kill_probability_offset_on_successful_hit="10" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -89392,7 +89392,7 @@
 	<hud_icon filename="gkw_savage99.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.03" kill_probability_offset_on_successful_hit="20.0" kill_decay_start_time="1.0" kill_decay_end_time="1.75" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.03" kill_probability_offset_on_successful_hit="25.0" kill_decay_start_time="1.0" kill_decay_end_time="1.75" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -90255,7 +90255,7 @@
 	<hud_icon filename="gkw_wz29.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5" kill_probability_offset_on_successful_hit="15.0" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="15" kill_probability_offset_on_successful_hit="15.0" kill_decay_start_time="2.0" kill_decay_end_time="3.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -93744,7 +93744,7 @@
 	<effect class="muzzle" ref="ejection_76239"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="8.0" kill_probability_offset_on_successful_hit="3.0" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="10.0" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -93863,7 +93863,7 @@
 	<hud_icon filename="gkw_bm59.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="7.75" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.0" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -94187,7 +94187,7 @@
 	<hud_icon filename="gkw_ssg3000.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="8" kill_probability_offset_on_successful_hit="17" kill_decay_start_time="1.895" kill_decay_end_time="3.158" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="30" kill_probability_offset_on_successful_hit="5" kill_decay_start_time="1.895" kill_decay_end_time="3.158" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -95971,7 +95971,7 @@
 </weapon>
 
 <weapon key="gkw_zasm76.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="2.8" magazine_size="10" can_shoot_standing="1" suppressed="0" name="Zastava M76" class="4" spread_range="0.3" burst_shots="1" last_burst_retrigger_time="0.25" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="195" barrel_offset="0.4" stance_accuracy_rate="2.0" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="3.2" magazine_size="10" can_shoot_standing="1" suppressed="0" name="Zastava M76" class="4" spread_range="0.3" burst_shots="1" last_burst_retrigger_time="0.25" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="195" barrel_offset="0.4" stance_accuracy_rate="2.0" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="40.0" sell_price="40.0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
@@ -95985,7 +95985,7 @@
 	<hud_icon filename="gkw_zasm76.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="4.1" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="1.735" kill_decay_end_time="2.892" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="4.1" kill_probability_offset_on_successful_hit="18.0" kill_decay_start_time="1.735" kill_decay_end_time="2.892" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -97541,7 +97541,7 @@
 	<hud_icon filename="gkw_tfq.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="6.6" kill_probability_offset_on_successful_hit="18" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.6" kill_probability_offset_on_successful_hit="24" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -98218,7 +98218,7 @@
 	<hud_icon filename="gkw_tcms.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="23.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.6" kill_probability_offset_on_successful_hit="30" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -98454,7 +98454,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="16.6" kill_probability_offset_on_successful_hit="25.0" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="16.6" kill_probability_offset_on_successful_hit="50.0" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -105236,7 +105236,7 @@
 	<hud_icon filename="gkw_supersassmod3.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.3" kill_probability_offset_on_successful_hit="8.0" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.3" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -105365,7 +105365,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="7.6" kill_probability_offset_on_successful_hit="18.5" kill_decay_start_time="2.195" kill_decay_end_time="3.659" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="19.8" kill_probability_offset_on_successful_hit="19.8" kill_decay_start_time="2.195" kill_decay_end_time="3.659" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -107824,7 +107824,7 @@
 	<hud_icon filename="gkw_m14mod3_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="5.0" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="5.0" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="0.974" kill_decay_end_time="1.624" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -108735,7 +108735,7 @@
 	<hud_icon filename="gkw_m1891mod3.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="16.6" kill_probability_offset_on_successful_hit="20" kill_decay_start_time="1.895" kill_decay_end_time="3.158" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="16.6" kill_probability_offset_on_successful_hit="30" kill_decay_start_time="1.895" kill_decay_end_time="3.158" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -108867,7 +108867,7 @@
 	<hud_icon filename="gkw_m1891mod3_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" time_to_live="0.25" class="bullet" name="default" slot="1" pulldown_in_air="4">
-	<result class="hit" kill_probability="30" kill_decay_start_time="0.25" kill_decay_end_time="0.25" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="80" kill_decay_start_time="0.25" kill_decay_end_time="0.25" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -124106,7 +124106,7 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="7.6" kill_probability_offset_on_successful_hit="16" kill_decay_start_time="2.195" kill_decay_end_time="3.659" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="17.6" kill_probability_offset_on_successful_hit="16" kill_decay_start_time="2.195" kill_decay_end_time="3.659" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -124212,7 +124212,7 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="7.6" kill_probability_offset_on_successful_hit="16" kill_decay_start_time="2.195" kill_decay_end_time="3.659" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="17.6" kill_probability_offset_on_successful_hit="16" kill_decay_start_time="2.195" kill_decay_end_time="3.659" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -127782,7 +127782,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.3" kill_probability_offset_on_successful_hit="8.0" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.3" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -133907,7 +133907,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="7.6" kill_probability_offset_on_successful_hit="18.5" kill_decay_start_time="2.195" kill_decay_end_time="3.659" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="19.8" kill_probability_offset_on_successful_hit="19.8" kill_decay_start_time="2.195" kill_decay_end_time="3.659" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -134146,7 +134146,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="7.6" kill_probability_offset_on_successful_hit="18.5" kill_decay_start_time="2.195" kill_decay_end_time="3.659" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="19.8" kill_probability_offset_on_successful_hit="19.8" kill_decay_start_time="2.195" kill_decay_end_time="3.659" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -134378,7 +134378,7 @@
 	<inventory encumbrance="35.0" price="150.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.8" kill_probability_offset_on_successful_hit="10.5" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.8" kill_probability_offset_on_successful_hit="14.9" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -134485,7 +134485,7 @@
 	<inventory encumbrance="35.0" price="150.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.05" kill_probability_offset_on_successful_hit="7.75" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.8" kill_probability_offset_on_successful_hit="14.9" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
