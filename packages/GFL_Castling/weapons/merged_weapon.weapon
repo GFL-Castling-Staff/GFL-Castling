@@ -152229,7 +152229,7 @@
 	<sound class="impact" fileref="sandbag_drop.wav"/>
 	<model filename="binoculars.xml"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<hud_icon filename="fairy_command_reinforce_palette.png"/>
+	<hud_icon filename="fairy_command_nuke.png"/>
 	<commonness value="0.0" can_respawn_with="0" in_stock="1"/>
 	<projectile class="grenade" name="" key="fairy_command_nuke.projectile" slot="0" pulldown_in_air="0.0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0">
 	<result class="notify_script" key="fc_nuke"/>
