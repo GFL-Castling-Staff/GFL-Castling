@@ -2545,12 +2545,12 @@ class Airdrop_Support_Negev : DelaySkill {
 }
 
 class DelayNuke :Task{
-	protected Metagame@ m_metagame;
+	protected GameMode@ m_metagame;
 	protected float m_time;
     protected int m_faction_id;
 	protected float m_timeLeft;
 
-	DelayNuke(Metagame@ metagame, float time, int fId) {
+	DelayNuke(GameMode@ metagame, float time, int fId) {
 		@m_metagame = metagame;
 		m_time = time;
 		m_faction_id =fId;
