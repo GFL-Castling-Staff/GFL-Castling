@@ -5393,14 +5393,14 @@ house_window_open = 2,0; </desc>
        id="rect9344-6-8-0"
        style="display:inline;fill:#73f0a1;fill-opacity:1;fill-rule:nonzero;stroke:#5ee08f;stroke-width:5;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter10219);enable-background:new">
       <desc
-         id="desc9346-4-7-4">day_color = #73f0a1ff; 
-night_color = #5ee08fff; 
+         id="desc9346-4-7-4">day_color = #c0ffe0ff; 
+night_color = #a0f0c0ff; 
 name = Dead_Zone; 
 description = 18 bases;
 show_base_names_in_map_view = 0; 
 randomize_faction_index=0; 
 flip = 1; 
-global_effect = DynFog;
+#global_effect = DynFog;
 ambience_day_sound = static.wav; 
 ambience_night_sound = static.wav; </desc>
     </rect>
