@@ -1016,16 +1016,6 @@ void spawnStaticProjectile(Metagame@ metagame,string key,string pos,int characte
 	metagame.getComms().send(command);
 }
 
-void setSpawnScore(Metagame@ metagame,int fId,string name,float spawnScore)
-{
-	XmlElement command("command");
-	command.setStringAttribute("class", "faction");
-	command.setIntAttribute("faction_id", fId);
-	command.setStringAttribute("soldier_group_name", name);
-	command.setFloatAttribute("spawn_score", spawnScore);
-	metagame.getComms().send(command);
-}
-
 void addItemToGrenadeSlot(Metagame@ metagame,int cid,uint num,string m_key,string m_type="projectile")
 {
 	XmlElement c ("command");
@@ -1283,4 +1273,56 @@ int getFactionId(const XmlElement@ character)
 string getPlayerInfoName(const XmlElement@ player)
 {
 	return player.getStringAttribute("name");
+}
+
+void changeSoldierGroupResource(Metagame@ metagame, int factionId, const array<const Resource@>@ resources, bool add, string soldier_group_name) {
+    XmlElement command("command");
+    command.setStringAttribute("class", "faction_resources");
+    command.setIntAttribute("faction_id", factionId);
+    command.setStringAttribute("soldier_group_name", soldier_group_name);
+
+    for (uint i = 0; i < resources.size(); ++i) {
+        const Resource@ resource = resources[i];
+        addFactionResourceElements(command, resource.m_type, array<string> = {resource.m_key}, add);
+    }
+
+    metagame.getComms().send(command);
+}
+
+void changeSoldierGroupResource(Metagame@ metagame, int factionId, const Resource@ resource, bool add, string soldier_group_name) {
+    XmlElement command("command");
+    command.setStringAttribute("class", "faction_resources");
+    command.setIntAttribute("faction_id", factionId);
+    command.setStringAttribute("soldier_group_name", soldier_group_name);
+
+    addFactionResourceElements(command, resource.m_type, array<string> = {resource.m_key}, add);
+
+    metagame.getComms().send(command);
+}
+
+class SoldierInfo {
+    string soldier_groupname;
+    float spawn_score;
+
+    SoldierInfo(string name, float score) {
+        soldier_groupname = name;
+        spawn_score = score;
+    }
+}
+
+void setSpawnScoresForFaction(Metagame@ metagame, int factionId, const array<SoldierInfo@>& soldierInfos) {
+    for (uint i = 0; i < soldierInfos.length(); ++i) {
+        const SoldierInfo@ info = soldierInfos[i];
+        setSpawnScore(metagame, factionId, info.soldier_groupname, info.spawn_score);
+    }
+}
+
+void setSpawnScore(Metagame@ metagame,int fId,string name,float spawnScore)
+{
+	XmlElement command("command");
+	command.setStringAttribute("class", "faction");
+	command.setIntAttribute("faction_id", fId);
+	command.setStringAttribute("soldier_group_name", name);
+	command.setFloatAttribute("spawn_score", spawnScore);
+	metagame.getComms().send(command);
 }
