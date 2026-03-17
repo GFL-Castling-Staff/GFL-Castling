@@ -304,6 +304,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		setupSpawnTimeHandler();
 		setupSideBaseAttackHandler();
 		setupDropTable();
+        setupDifficultyFactionResource();
 	}
 
 	// --------------------------------------------
@@ -370,6 +371,10 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 			}
 		}
 	}
+
+    protected void setupDifficultyFactionResource() {
+        int difficulty = getUserSettings().m_GlobalDifficulty;
+    }
 
 	// --------------------------------------------
 	protected void setupDisableRadioAtMatchOver() {

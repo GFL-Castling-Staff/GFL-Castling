@@ -3194,18 +3194,9 @@ class StageConfiguratorInvasion : StageConfigurator {
 		array<ResourceChange@> list;
 	
 		list.push_back(ResourceChange(Resource("armored_truck.vehicle", "vehicle"), false));
-		list.push_back(ResourceChange(Resource("mobile_armory.vehicle", "vehicle"), false));
-		list.push_back(ResourceChange(Resource("a10_gun_run.call", "call"), true));
-		list.push_back(ResourceChange(Resource("gunship_run.call", "call"), true));        
+		list.push_back(ResourceChange(Resource("mobile_armory.vehicle", "vehicle"), false));     
 
 		// disable certain weapons here; mainly because Dominance uses the same .resources files but we have further changes for Invasion here
-		list.push_back(ResourceChange(Resource("l85a2.weapon", "weapon"), false));
-		list.push_back(ResourceChange(Resource("famasg1.weapon", "weapon"), false));
-		list.push_back(ResourceChange(Resource("sg552.weapon", "weapon"), false));
-		list.push_back(ResourceChange(Resource("minig_resource.weapon", "weapon"), false));
-		list.push_back(ResourceChange(Resource("tow_resource.weapon", "weapon"), false));
-		list.push_back(ResourceChange(Resource("gl_resource.weapon", "weapon"), false));
-		list.push_back(ResourceChange(Resource("hornet_resource.weapon", "weapon"), false));
 		
 		return list;
 	}
