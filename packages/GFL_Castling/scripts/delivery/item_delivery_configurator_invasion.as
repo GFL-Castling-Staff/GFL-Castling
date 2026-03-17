@@ -623,6 +623,8 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("ff_jaeger.weapon", "weapon", 30.0f),
 		ScoredResource("ff_jaeger_swap.weapon", "weapon", 15.0f),
 
+		ScoredResource("ff_jaguar.weapon", "weapon", 15.0f),
+
 		ScoredResource("ff_striker.weapon", "weapon", 30.0f),
 		ScoredResource("ff_striker_swap.weapon", "weapon", 15.0f),
 

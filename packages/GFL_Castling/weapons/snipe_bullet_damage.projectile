@@ -143,6 +143,24 @@
         <effect class="result" key="other" ref="Godray" lighting="0" />
         <effect class="result" key="other" ref="LowDust"/>
     </projectile>
+        <projectile class="grenade" name="" key="snipe_blast_airburst_80.projectile" pulldown_in_air="4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.25">
+        <result class="spawn" instance_class="projectile" instance_key="blast_snipe_airburst.projectile" min_amount="20" max_amount="20" make_vehicle_hit_sound="0" offset="0 0.3 0" position_spread="0 0" direction_spread="0.0 0.0" />
+        <trigger class="time" time_to_live="0.0"/>
+        <rotation class="motion" />
+        <collision class="sticky" />
+        <model />
+        <hud_icon filename="88r.png" />
+        <commonness value="0.0" can_respawn_with="0" in_stock="0" />
+        <effect class="result" key="other" ref="result_cannon_blast_AmbientLight" lighting="0"/>
+        <effect class="result" key="other" ref="result_cannon_blast_smoke" lighting="0"/>
+        <effect class="result" key="other" ref="hitGround_20mm" use_surface_color="1" />
+        <effect class="result" key="other" ref="BulletImpactDust4" />
+        <effect class="result" key="other" ref="BulletImpactDust5" />
+        <effect class="result" key="other" ref="BulletImpactDust6" />
+        <effect class="result" key="other" ref="Ct_Shine" lighting="0" />
+        <effect class="result" key="other" ref="Godray" lighting="0" />
+        <effect class="result" key="other" ref="LowDust"/>
+    </projectile>
     <projectile class="grenade" name="" key="snipe_hit_kennedy.projectile" pulldown_in_air="4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="2" use_time_to_live="1" time_to_live="2">
         <result class="hit" kill_probability="45.0" kill_probability_offset_on_successful_hit="90.0" kill_decay_start_time="6.0" kill_decay_end_time="6.01" />
         <trigger class="impact">

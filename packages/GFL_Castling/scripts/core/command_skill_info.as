@@ -394,6 +394,13 @@ dictionary commandSkillIndex = {
         {"gkw_m99_3304.weapon",53},
         {"gkw_m99_404.weapon",53},
         {"gkw_ptrd.weapon",53},
+        {"gkw_ntw20.weapon",53},
+        {"gkw_ntw20_307.weapon",53},
+        {"gkw_ntw20_4801.weapon",53},
+        {"gkw_ntw20mod3.weapon",53},
+        {"gkw_ntw20mod3_307.weapon",53},
+        {"gkw_ntw20mod3_4801.weapon",53},
+        {"gkw_rt20.weapon",53},
 
         // 这几位都要重做
         {"gkw_m82a1.weapon",53},
