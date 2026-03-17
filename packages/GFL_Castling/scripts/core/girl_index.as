@@ -1547,6 +1547,8 @@ array<string> gk_weapon_rf_list = {
     "gkw_rt20.weapon",
     "gkw_ots44.weapon",
     "gkw_mk12.weapon",    
+    "ff_jaeger.weapon",
+    "ff_jaeger_swap.weapon",    
     "gkw_zasm76.weapon"
 };
 
@@ -1634,6 +1636,8 @@ array<string> gk_bolted_rf_list = {
     "gkw_sv98mod3_502_skill.weapon",
     "gkw_sv98mod3_1906.weapon",
     "gkw_sv98mod3_1906_skill.weapon",     
+    "ff_jaeger.weapon",
+    "ff_jaeger_swap.weapon",
     "gkw_martini.weapon"
 };
 
