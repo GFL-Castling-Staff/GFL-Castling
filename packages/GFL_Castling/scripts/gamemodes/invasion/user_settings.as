@@ -51,7 +51,7 @@ class UserSettings {
 
 	// dedicated servers only
 	bool m_teamKillPenaltyEnabled = true;
-	int m_teamKillsToStartPenalty = 5;
+	int m_teamKillsToStartPenalty = 3;
 	float m_teamKillPenaltyTime = 1800.0;
 	float m_forgiveTeamKillTime = 900.0;
 	float m_spawnTimeAtMaxPlayers = 1.0;  // was 2.0 (1.82)
