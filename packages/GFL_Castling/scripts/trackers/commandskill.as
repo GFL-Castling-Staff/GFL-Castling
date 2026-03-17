@@ -3001,19 +3001,19 @@ class CommandSkill : Tracker {
             else if (weapon_name == "gkw_ntw20.weapon" || weapon_name=="gkw_ntw20_307.weapon" || weapon_name=="gkw_ntw20_4801.weapon"){
                 playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                tasker.add(DelayAntiTankSnipeRequest(m_metagame,2,characterId,factionid,"snipe_blast_airburst_80.projectile",c_pos.add(Vector3(0,0.5,0)),s_pos.add(Vector3(0,3,0))));
+                tasker.add(DelayAntiTankSnipeRequest(m_metagame,2,characterId,factionid,"snipe_blast_airburst_80.projectile",c_pos.add(Vector3(0,0.5,0)),s_pos.add(Vector3(0,4,0))));
                 addCooldown("sniper",40,characterId,modifer);
             }
             else if (weapon_name == "gkw_ntw20mod3.weapon" || weapon_name=="gkw_ntw20mod3_307.weapon" || weapon_name=="gkw_ntw20mod3_4801.weapon"){
                 playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                tasker.add(DelayAntiTankSnipeRequest(m_metagame,2,characterId,factionid,"snipe_blast_airburst_80.projectile",c_pos.add(Vector3(0,0.5,0)),s_pos.add(Vector3(0,3,0))));
+                tasker.add(DelayAntiTankSnipeRequest(m_metagame,2,characterId,factionid,"snipe_blast_airburst_80.projectile",c_pos.add(Vector3(0,0.5,0)),s_pos.add(Vector3(0,4,0))));
                 addCooldown("sniper",30,characterId,modifer);
             }
             else if (weapon_name == "gkw_rt20.weapon"){
                 playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                tasker.add(DelayAntiTankSnipeRequest(m_metagame,2,characterId,factionid,"snipe_blast_airburst_80.projectile",c_pos.add(Vector3(0,0.5,0)),s_pos.add(Vector3(0,3,0))));
+                tasker.add(DelayAntiTankSnipeRequest(m_metagame,2,characterId,factionid,"snipe_blast_airburst_80.projectile",c_pos.add(Vector3(0,0.5,0)),s_pos.add(Vector3(0,4,0))));
                 addCooldown("sniper",30,characterId,modifer);
             }
         }

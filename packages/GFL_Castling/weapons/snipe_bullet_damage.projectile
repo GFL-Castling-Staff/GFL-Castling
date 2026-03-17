@@ -144,7 +144,7 @@
         <effect class="result" key="other" ref="LowDust"/>
     </projectile>
         <projectile class="grenade" name="" key="snipe_blast_airburst_80.projectile" pulldown_in_air="4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.25">
-        <result class="spawn" instance_class="projectile" instance_key="blast_snipe_airburst.projectile" min_amount="20" max_amount="20" make_vehicle_hit_sound="0" offset="0 0.3 0" position_spread="0 0" direction_spread="0.0 0.0" />
+        <result class="spawn" instance_class="projectile" instance_key="blast_snipe_airburst.projectile" min_amount="20" max_amount="20" make_vehicle_hit_sound="0" offset="0 0.5 0" position_spread="0 0" direction_spread="0.0 0.0" />
         <trigger class="time" time_to_live="0.0"/>
         <rotation class="motion" />
         <collision class="sticky" />

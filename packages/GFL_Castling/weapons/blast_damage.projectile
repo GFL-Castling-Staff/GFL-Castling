@@ -281,7 +281,7 @@
         <capacity value="1" source="rank" source_value="0.0" />
     </projectile>    
         <projectile class="grenade" name="" key="blast_snipe_airburst.projectile" slot="2" radius="0.01">
-        <result class="blast" radius="12.5" damage="3.01" push="0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" make_vehicle_hit_sound="0"/>
+        <result class="blast" radius="10" damage="3.01" push="0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" make_vehicle_hit_sound="0"/>
         <trigger class="time" time_to_live="0.0"/>
         <rotation class="random" />
         <model mesh_filename="" />
