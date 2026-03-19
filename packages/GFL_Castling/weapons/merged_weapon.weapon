@@ -104768,10 +104768,10 @@
 	<specification retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="0.1" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="Type 25 disposable rocket launcher" class="3" consume="1" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="120.0" slot="1" projectiles_per_shot="1"/>
 	<inventory encumbrance="10.0" buy_price="15.0" sell_price="15.0"/>
 	<capacity value="2" source="rank" source_value="0.0"/>
-	<capacity value="3" source="rank" source_value="4.369"/>
-	<capacity value="4" source="rank" source_value="7.495"/>
-	<capacity value="5" source="rank" source_value="20.88"/>
-	<capacity value="6" source="rank" source_value="57.433"/>
+	<capacity value="4" source="rank" source_value="4.369"/>
+	<capacity value="6" source="rank" source_value="7.495"/>
+	<capacity value="8" source="rank" source_value="20.88"/>
+	<capacity value="10" source="rank" source_value="57.433"/>
 	<commonness value="0.5" in_stock="1" can_respawn_with="1"/>
 	<animation key="recoil" animation_key="recoil, law"/>
 	<animation key="cycle" animation_key="Brifle1"/>
@@ -104789,7 +104789,7 @@
 	<model filename="88rocket.xml"/>
 	<ballistics near_far_distance="1000.0" speed_estimation_near="120.0" speed_estimation_far="120.0" max_speed="125.0" randomness="0.0"/>
 	<projectile radius="0.3" class="grenade" key="88heat.projectile" name="88HEAT" slot="2" pulldown_in_air="0.5">
-	<result class="blast" damage="20.0" radius="8" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="30.0" radius="8" decal="1" push="0.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<tag name="rocket"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -136175,7 +136175,7 @@
 </weapon>
 
 <weapon key="ff_hunter.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.15" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" spread_range="0.15" magazine_size="20" can_shoot_standing="1" carry_in_two_hands="0" can_shoot_running="1" suppressed="0" name="GK-Hunter" class="0" sight_range_modifier="1.0" projectile_speed="180" projectiles_per_shot="4" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.15" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" spread_range="0.15" magazine_size="20" can_shoot_standing="1" carry_in_two_hands="0" suppressed="0" name="GK-Hunter" class="0" sight_range_modifier="1.0" projectile_speed="180" projectiles_per_shot="5" burst_shots="1" slot="0" stab_enabled="1"/>
 	<next_in_chain key="ff_hunter_skill.weapon" share_ammo="1"/>
 	<animation state_key="recoil" animation_key="high recoil, pistol dual 1"/>
 	<animation state_key="recoil" animation_key="high recoil, pistol dual 2"/>
@@ -136204,8 +136204,8 @@
 	<model filename=""/>
 	<hud_icon filename="sfw_hunter.png"/>
 	<weak_hand_hold offset="0.1"/>
-	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="3.25" kill_probability_offset_on_successful_hit="0.25" kill_decay_start_time="0.3" kill_decay_end_time="0.3" damage_origin_vehicle="0"/>
+	<projectile time_to_live="0.35" class="bullet" name="default" slot="1" pulldown_in_air="4">
+	<result class="hit" kill_probability="3.25" kill_probability_offset_on_successful_hit="2.0" kill_decay_start_time="0.35" kill_decay_end_time="0.35" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
@@ -136286,7 +136286,7 @@
 </weapon>
 
 <weapon key="ff_hunter_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.05" accuracy_factor="1.0" spread_range="0.15" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="2.5" magazine_size="20" last_burst_retrigger_time="0.3" can_shoot_standing="1" carry_in_two_hands="0" suppressed="0" name="GK-Hunter-[Exterminating Blood Shot]" class="4" sight_range_modifier="0.75" projectile_speed="180" projectiles_per_shot="2" burst_shots="20" slot="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.05" accuracy_factor="1.0" spread_range="0.15" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="2.5" magazine_size="20" last_burst_retrigger_time="0.3" can_shoot_standing="1" carry_in_two_hands="0" suppressed="0" name="GK-Hunter-[Exterminating Blood Shot]" class="4" sight_range_modifier="0.75" projectile_speed="180" projectiles_per_shot="2" burst_shots="20" slot="0" stab_enabled="1"/>
 	<next_in_chain key="ff_hunter.weapon" share_ammo="1"/>
 	<animation state_key="recoil" animation_key="high recoil, pistol dual 1"/>
 	<animation state_key="recoil" animation_key="high recoil, pistol dual 2"/>
@@ -136316,7 +136316,7 @@
 	<hud_icon filename="sfw_hunter.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="blast" radius="2.5" damage="1.1" push="0.2" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" radius="2.5" damage="2.1" push="0.2" decal="1" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
@@ -136380,11 +136380,11 @@
 	<effect class="result" key="character" ref="common_hit_effect_2" lighting="0"/>
 	<trail probability="1.0" key="red"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.5"/>
-	<stance state_key="walking" accuracy="0.5"/>
-	<stance state_key="crouch_moving" accuracy="0.65"/>
-	<stance state_key="prone_moving" accuracy="0.65"/>
-	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="running" accuracy="0.85"/>
+	<stance state_key="walking" accuracy="0.85"/>
+	<stance state_key="crouch_moving" accuracy="0.95"/>
+	<stance state_key="prone_moving" accuracy="0.95"/>
+	<stance state_key="standing" accuracy="0.95"/>
 	<stance state_key="crouching" accuracy="0.95"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
@@ -137147,92 +137147,6 @@
 	<stance state_key="prone_moving" accuracy="0.6"/>
 	<stance state_key="over_wall" accuracy="1.1"/>
 	<modifier class="detectability" value="-0.1"/>
-</weapon>
-
-<weapon key="ff_jaguar.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-    <tag name="mecha"/>
-	<tag name="bazooka"/>
-    <tag name="antiarmor"/>
-    <specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="-1" name="GK-Jaguar" projectile_speed="90" retrigger_time="0.25" burst_shots="1" suppressed="0" stab_enabled="0" projectiles_per_shot="1" carry_in_two_hands="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" sight_range_modifier="2.0" sustained_fire_diminish_rate="0.2" sustained_fire_grow_step="0.24" cooldown_start="0.6" cooldown_end="0.01"/>
-    <commonness value="0" in_stock="0" can_respawn_with="1"/>
-	<capacity value="0" source="rank" source_value="0.0"/>
-    <capacity value="1" source="rank" source_value="3.058"/>
-    <inventory encumbrance="10.0" buy_price="300.0" sell_price="300.0"/>
-    <animation state_key="recoil" animation_key="recoil,jaguar"/>
-    <animation state_key="recoil" stance_key="over_wall" animation_key="recoil,jaguar"/>
-    <animation state_key="reload" animation_key="still,jaguar"/>
-    <animation state_key="hold" animation_key="still,jaguar"/>
-    <animation state_key="hold_on_wall" animation_key="still,jaguar"/>
-    <animation state_key="hold_casual" animation_key="still,jaguar"/>
-    <animation state_key="still_against_wall" animation_key="still,jaguar"/>
-    <animation state_key="walking" animation_key="walking,jaguar"/>
-    <animation state_key="walking_backwards" animation_key="walking,jaguar"/>  
-    <animation state_key="running" animation_key="walking,jaguar"/>
-    <animation state_key="changing_weapon_in" animation_key="still,jaguar"/>
-    <animation state_key="prone_still" animation_key="still,jaguar"/>
-    <animation state_key="crouching" animation_key="still,jaguar"/>
-    <animation state_key="crouch_moving" animation_key="walking,jaguar"/>
-    <animation state_key="crouch_moving_backwards" animation_key="walking,jaguar"/>
-    <sound key="fire" fileref="gp25_fire_FromSQUAD.wav" pitch_variety="0.05" volume="1.2"/>
-    <sound key="magazine_out" fileref="gp25_mgz_out_FromSQUAD.wav" volume="0.8"/>
-    <sound key="magazine_in" fileref="gp25_mgz_in_FromSQUAD.wav" volume="0.8"/>
-    <sound key="cycle" fileref="gp25_cycle_FromSQUAD.wav" volume="0.8"/>
-    <sound class="impact" fileref="rifle_drop.wav"/>
-    <model filename=""/>
-    <hud_icon filename="sfw_jaguar.png"/>
-    <weak_hand_hold offset="0.2"/>
-	<projectile class="grenade" name="" slot="1" pulldown_in_air="17.5" key="sf_jaguar_shell.projectile">
-	<tag name="grenade"/>
-	<trigger class="impact"/>
-	<rotation class="motion"/>
-	<model mesh_filename="sf_jaguar_shell.xml"/>
-	<result class="blast" damage="15.0" radius="5.0" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
-	<trail probability="1.0" key="FlamethrowerTrail"/>
-	<commonness value="0.0"/>
-	<sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2"/>
-	<sound class="result" key="other" fileref="explosion_FromSQUAD_2.wav" volume="2"/>
-	<sound class="result" key="other" fileref="explosion_FromSQUAD_3.wav" volume="2"/>
-	<sound class="result" key="vehicle" copy="other"/>
-	<sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.8"/>
-	<sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_02.wav" pitch_variety="0.2" volume="0.8"/>
-	<sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_03.wav" pitch_variety="0.2" volume="0.8"/>
-	<sound class="result" key="terrain" copy="other"/>
-	<sound class="result" key="static_object" copy="other"/>
-	<sound class="result" key="character" copy="other"/>
-	<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTank" lighting="1"/>
-	<effect class="result" key="vehicle" tag="metal_heavy" ref="HitTankSparks"/>
-	<effect class="result" key="vehicle" tag="metal_heavy" ref="SmokeBurst" post_processing="1"/>
-	<effect class="result" key="vehicle" tag="metal_heavy" ref="BurstShine" lighting="0"/>
-	<effect class="result" key="vehicle" tag="metal_heavy" ref="Godray" lighting="0"/>
-	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
-	<effect class="result" key="terrain" ref="SmokeTop" post_processing="1"/>
-	<effect class="result" key="terrain" ref="Smoke" post_processing="1"/>
-	<effect class="result" key="terrain" ref="Shine" lighting="0"/>
-	<effect class="result" key="terrain" ref="Godray" lighting="0"/>
-	<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1"/>
-	<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1"/>
-	<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0"/>
-	<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0"/>
-	<effect class="result" key="other" ref="SmokeTop" post_processing="1"/>
-	<effect class="result" key="other" ref="Smoke" post_processing="1"/>
-	<effect class="result" key="other" ref="Shine" lighting="0"/>
-	<effect class="result" key="other" ref="Godray" lighting="0"/>
-	<effect class="result" key="other" ref="ShadowSmoke" shadow="1"/>
-	<effect class="result" key="static_object" copy="terrain"/>
-	<effect class="result" key="vehicle" copy="terrain"/>
-	<effect class="result" key="character" copy="terrain"/>
-	<effect class="activated" ref="Propulsion_gl"/>
-	</projectile>
-    <ballistics curve_height="60.0" near_far_distance="5.0" speed_estimation_near="15.0" speed_estimation_far="20.0" max_speed="80.0" randomness="0.0" tweak_factor="0.84"/>
-	<stance state_key="running" accuracy="0.75"/>
-	<stance state_key="walking" accuracy="0.9"/>
-	<stance state_key="crouch_moving" accuracy="0.9"/>
-	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="1.0"/>
-	<stance state_key="prone" accuracy="1.0"/>
-	<stance state_key="prone_moving" accuracy="1.0"/>
-	<stance state_key="over_wall" accuracy="1.0"/>
-	<modifier class="speed" value="0.1"/>
 </weapon>
 
 <weapon key="ff_scarecrow.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -150312,12 +150226,10 @@
 	<tag name="anti_tank"/>
 	<specification retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="0.25" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="Seraph's Blaze" class="3" consume="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100.0" slot="1" projectiles_per_shot="1"/>
 	<inventory encumbrance="3.0" buy_price="0.0" sell_price="0.0"/>
-	<drop_on_death_result class="spawn" instance_class="weapon" instance_key="parw_rocket_player.weapon" min_amount="0" max_amount="3" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
+	<drop_on_death_result class="spawn" instance_class="weapon" instance_key="parw_rocket_player.weapon" min_amount="0" max_amount="1" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
 	<capacity value="2" source="rank" source_value="0.0"/>
 	<capacity value="4" source="rank" source_value="2.1"/>
 	<capacity value="6" source="rank" source_value="4.1"/>
-	<capacity value="8" source="rank" source_value="6.1"/>
-	<capacity value="10" source="rank" source_value="8.1"/>
 	<commonness value="0.1" in_stock="1" can_respawn_with="1"/>
 	<animation key="recoil" animation_key="recoil, law"/>
 	<animation key="cycle" animation_key="Brifle1"/>
@@ -159209,3 +159121,4 @@
 </weapon>
 
 </weapons>
+
