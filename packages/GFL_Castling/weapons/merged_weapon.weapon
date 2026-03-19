@@ -91229,8 +91229,8 @@
 	<stance state_key="walking" accuracy="0.55"/>
 	<stance state_key="crouch_moving" accuracy="0.75"/>
 	<stance state_key="prone_moving" accuracy="0.75"/>
-	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="standing" accuracy="0.98"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
 </weapon>
@@ -91389,8 +91389,8 @@
 	<stance state_key="walking" accuracy="0.55"/>
 	<stance state_key="crouch_moving" accuracy="0.75"/>
 	<stance state_key="prone_moving" accuracy="0.75"/>
-	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="standing" accuracy="0.98"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
 </weapon>
@@ -109198,7 +109198,7 @@
 </weapon>
 
 <weapon key="gkw_g3mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.45" class="0" slot="0" magazine_size="20" name="G3(MOD3)" spread_range="0.35" projectile_speed="250.0" retrigger_time="0.1" stance_accuracy_rate="2.0" suppressed="0" sight_range_modifier="1.0" sustained_fire_diminish_rate="3.6" sustained_fire_grow_step="0.66" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.45" class="0" slot="0" magazine_size="20" name="G3(MOD3)" spread_range="0.35" projectile_speed="250.0" retrigger_time="0.1" stance_accuracy_rate="2.5" suppressed="0" sight_range_modifier="1.75" sustained_fire_diminish_rate="3.6" sustained_fire_grow_step="0.66" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<next_in_chain key="gkw_g3mod3_skill.weapon" share_ammo="1"/>
 	<inventory encumbrance="35.0" buy_price="150.0" sell_price="150.0"/>
@@ -109310,7 +109310,7 @@
 </weapon>
 
 <weapon key="gkw_g3mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.45" class="4" slot="0" magazine_size="20" name="G3(MOD3) - G3SG1" spread_range="0.15" projectile_speed="250" retrigger_time="-1" last_burst_retrigger_time="0.2" leave_crouch_accuracy_penalty="0.48" sight_range_modifier="1.5" stance_accuracy_rate="1.0" suppressed="0" sustained_fire_diminish_rate="3.0" sustained_fire_grow_step="0.7" stab_enabled="1" carry_in_two_hands="1" burst_shots="1"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.45" class="4" slot="0" magazine_size="20" name="G3(MOD3) - G3SG1" spread_range="0.15" projectile_speed="250" retrigger_time="-1" last_burst_retrigger_time="0.2" leave_crouch_accuracy_penalty="0.48" sight_range_modifier="2.0" stance_accuracy_rate="2.0" suppressed="0" sustained_fire_diminish_rate="3.0" sustained_fire_grow_step="0.7" stab_enabled="1" carry_in_two_hands="1" burst_shots="1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<next_in_chain key="gkw_g3mod3.weapon" share_ammo="1"/>
 	<inventory encumbrance="35.0" buy_price="150.0" sell_price="150.0"/>
@@ -133005,7 +133005,7 @@
 </weapon>
 
 <weapon key="gkw_g3mod3_1303.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.45" class="0" slot="0" magazine_size="20" name="G3(MOD3)-[Parsty Cook on Battlefield]" spread_range="0.35" projectile_speed="250.0" retrigger_time="0.1" stance_accuracy_rate="2.0" suppressed="0" sight_range_modifier="1.0" sustained_fire_diminish_rate="3.6" sustained_fire_grow_step="0.66" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.45" class="0" slot="0" magazine_size="20" name="G3(MOD3)-[Parsty Cook on Battlefield]" spread_range="0.35" projectile_speed="250.0" retrigger_time="0.1" stance_accuracy_rate="2.5" suppressed="0" sight_range_modifier="1.75" sustained_fire_diminish_rate="3.6" sustained_fire_grow_step="0.66" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<next_in_chain key="gkw_g3mod3_1303_skill.weapon" share_ammo="1"/>
 	<inventory encumbrance="35.0" buy_price="150.0" sell_price="150.0"/>
@@ -133117,7 +133117,7 @@
 </weapon>
 
 <weapon key="gkw_g3mod3_1303_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.45" class="4" slot="0" magazine_size="20" name="G3(MOD3)-[Parsty Cook on Battlefield] - G3SG1" spread_range="0.15" projectile_speed="250" retrigger_time="-1" last_burst_retrigger_time="0.2" leave_crouch_accuracy_penalty="0.48" sight_range_modifier="1.5" stance_accuracy_rate="1.0" suppressed="0" sustained_fire_diminish_rate="3.0" sustained_fire_grow_step="0.7" stab_enabled="1" carry_in_two_hands="1" burst_shots="1"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.45" class="4" slot="0" magazine_size="20" name="G3(MOD3)-[Parsty Cook on Battlefield] - G3SG1" spread_range="0.15" projectile_speed="250" retrigger_time="-1" last_burst_retrigger_time="0.2" leave_crouch_accuracy_penalty="0.48" sight_range_modifier="2.0" stance_accuracy_rate="2.0" suppressed="0" sustained_fire_diminish_rate="3.0" sustained_fire_grow_step="0.7" stab_enabled="1" carry_in_two_hands="1" burst_shots="1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<next_in_chain key="gkw_g3mod3_1303.weapon" share_ammo="1"/>
 	<inventory encumbrance="35.0" buy_price="150.0" sell_price="150.0"/>
@@ -135583,7 +135583,7 @@
 </weapon>
 
 <weapon key="ff_architect.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.1" accuracy_factor="1.0" magazine_size="30" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" spread_range="0.35" stance_accuracy_rate="1.5" name="GK-Architect" class="0" slot="0" sight_range_modifier="1.0" projectile_speed="180.0" sustained_fire_diminish_rate="1.75" sustained_fire_grow_step="0.5"/>
+	<specification retrigger_time="0.1" accuracy_factor="1.0" magazine_size="30" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" spread_range="0.35" stance_accuracy_rate="1.5" name="GK-Architect" class="0" slot="0" sight_range_modifier="1.0" projectile_speed="180.0" sustained_fire_diminish_rate="2.0" sustained_fire_grow_step="0.3"/>
 	<next_in_chain key="ff_architect_1.weapon" share_ammo="0"/>
 	<inventory encumbrance="20.0" buy_price="3000.0" sell_price="648.0"/>
 	<animation key="recoil" animation_key="recoil1"/>
@@ -135671,8 +135671,8 @@
 	<stance state_key="walking" accuracy="0.5"/>
 	<stance state_key="crouch_moving" accuracy="0.9"/>
 	<stance state_key="prone_moving" accuracy="0.9"/>
-	<stance state_key="standing" accuracy="0.8"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="standing" accuracy="0.98"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<hud_icon filename="sfw_architect.png"/>
@@ -138658,7 +138658,7 @@
 <weapon key="ff_parw_nyto_black.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="elite"/>
-	<specification accuracy_factor="1.0" barrel_offset="0.5" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="4" sight_range_modifier="2.5" slot="0" magazine_size="30" name="GK-Adeline" projectile_speed="400" retrigger_time="0.1" last_burst_retrigger_time="0.33" suppressed="1" burst_shots="1" sustained_fire_diminish_rate="2.5" sustained_fire_grow_step="2.0"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.5" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="4" sight_range_modifier="2.5" slot="0" magazine_size="30" name="GK-Adeline" projectile_speed="400" retrigger_time="0.1" last_burst_retrigger_time="0.5" suppressed="1" burst_shots="3" sustained_fire_diminish_rate="6.0" sustained_fire_grow_step="1.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="25.0" buy_price="648.0" sell_price="428.0"/>
 	<capacity value="0" source="rank" source_value="0.0"/>

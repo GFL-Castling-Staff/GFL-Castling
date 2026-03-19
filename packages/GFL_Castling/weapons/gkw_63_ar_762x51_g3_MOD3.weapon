@@ -11,9 +11,9 @@
         spread_range="0.35"
 		projectile_speed="250.0" 
 		retrigger_time="0.1" 
-        stance_accuracy_rate="2.0"
+        stance_accuracy_rate="2.5"
 		suppressed="0" 
-        sight_range_modifier="1.0"
+        sight_range_modifier="1.75"
 		sustained_fire_diminish_rate="3.6" 
 		sustained_fire_grow_step="0.66" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
@@ -60,8 +60,8 @@
 		retrigger_time="-1"
         last_burst_retrigger_time="0.2" 
         leave_crouch_accuracy_penalty="0.48"
-        sight_range_modifier="1.5"
-        stance_accuracy_rate="1.0"
+        sight_range_modifier="2.0"
+        stance_accuracy_rate="2.0"
 		suppressed="0" 
 		sustained_fire_diminish_rate="3.0" 
 		sustained_fire_grow_step="0.7" />
