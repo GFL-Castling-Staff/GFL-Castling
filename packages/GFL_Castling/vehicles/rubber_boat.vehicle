@@ -5,8 +5,11 @@
 	map_view_atlas_index="4"
 	respawn_time="90" 
 	time_to_live_unsteerable="85" 
+	max_character_collision_speed_on_normal="22" 
+	max_character_collision_speed="22" 
 	character_leave_request_mode="friendly" 
 	allow_ai_to_use="0"
+	allow_owner_to_use_only="1"
 	>
 	
 	<tag name="metal_thin" />
@@ -18,6 +21,7 @@
 
 	<control 
 	max_speed="40.0" 
+	max_limiter_speed="20.0" 
 	acceleration="10.0" 
 	max_reverse_speed="35.0" 
 	min_health_to_steer="0" 
@@ -33,7 +37,7 @@
 	mass="120.0" 
 	broken_mass="120.0" 
 	gravity="-40"
-	blast_damage_threshold="1"
+	blast_damage_threshold="1.0"
 	extent="1.87 0.0 3.41" 
 	offset="0 0.2 0" 
 	collision_model_pos="0 1.0 0" 
