@@ -538,27 +538,24 @@
     };
 
 	array<Resource@> GKcallList={
-		Resource("gk_airstrike_fairy.call", "call"),
 		Resource("gk_snipe_fairy.call", "call"),
 		Resource("gk_yaoren_fairy.call", "call"),
-		Resource("martina.call", "call"),
 		Resource("gk_repair_fairy.call", "call"),
 		Resource("target.call", "call")
 	};
 
     array<Resource@> AllGKcallList={
 		Resource("gk_airdrop_supply.call", "call"),
+        Resource("gk_yaoren_fairy.call", "call"),
+        Resource("gk_repair_fairy.call", "call"),
         Resource("gk_medic_agl.call", "call"),
 		Resource("gk_rescue_fairy.call", "call"),
+        Resource("gk_snipe_fairy.call", "call"),
+		Resource("gk_illumination_fairy.call", "call"),
+		Resource("target.call", "call"),
         Resource("gk_call_tier1.call", "call"),
 		Resource("gk_call_tier2.call", "call"),
-		Resource("gk_call_tier3.call", "call"),
-		Resource("gk_snipe_fairy.call", "call"),
-		Resource("gk_illumination_fairy.call", "call"),
-        Resource("gk_yaoren_fairy.call", "call"),
-		Resource("martina.call", "call"),
-		Resource("gk_repair_fairy.call", "call"),
-		Resource("target.call", "call")
+		Resource("gk_call_tier3.call", "call")
 	};
 
 
