@@ -40,6 +40,7 @@ dictionary callLaunchIndex = {
     {"gk_vehicle_tricycle.call",12},
     {"gk_vehicle_t14.call",14},
     {"gk_vehicle_elmotruck.call",16},
+    {"gk_vehicle_degeyter.call",17},
 
     {"target.call",13},
 
@@ -60,7 +61,8 @@ array<string> vehicle_drop_call = {
     "gk_vehicle_guerche.call",
     "gk_vehicle_tricycle.call",
     "gk_vehicle_elmotruck.call",
-    "gk_vehicle_t14.call"
+    "gk_vehicle_t14.call",
+    "gk_vehicle_degeyter.call"
 };
 
 //Originally created by NetherCrow
@@ -1950,6 +1952,31 @@ class call_event : Tracker {
                         }      
                         break;
                     }                    
+                    case 17:{
+                        if(findCooldown(playerName,"vehicle")){
+                            returnCooldown("vehicle", 0, characterId, playerName, playerId, "vehicle_drop_cooldown");
+                            addItemInBackpack(m_metagame,characterId,"weapon","fairy_vehicle_degeyter.weapon");
+                            break;
+                        }
+                        else {
+                            Vector3 call_pos = stringToVector3(position);
+                            Vector3 v_offset = Vector3(0,50,0);
+                            call_pos = call_pos.add(v_offset);
+                            CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,120.0,"vehicle"));
+                            int flagId = m_DummyCallID + 15000;
+                            CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
+                            FairyRequest.setIconTypeKey("call_marker_drop");
+                            FairyRequest.setIndex(8);
+                            FairyRequest.setSize(0.5);
+                            FairyRequest.setDummyId(flagId);
+                            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                            tasker.add(TimerMarker(m_metagame,3,FairyRequest));
+                            m_DummyCallID++;
+                            float ori4 = rand(0.0,3.14);
+                            spawnVehicle(m_metagame,1,factionId,call_pos,Orientation(0,1,0,ori4),"rubber_boat.vehicle");
+                        }
+                        break;
+                    }
                     default:
                         break;
                 }
