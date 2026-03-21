@@ -131,7 +131,8 @@
         "radio_jammer.vehicle",
         "radio_jammer2.vehicle",
         "radar_tower.vehicle",
-        "sf_boss_intruder_skill.vehicle"
+        "sf_boss_intruder_skill.vehicle",
+        "sf_jupiter.vehicle"
     };
 
     dictionary specialHealIndex = {
