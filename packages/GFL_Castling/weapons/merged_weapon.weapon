@@ -28576,7 +28576,7 @@
 </weapon>
 
 <weapon key="gkw_ksvk.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="KSVK" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="240" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="KSVK" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="240" barrel_offset="1.0" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="300.0" sell_price="200.0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="cycle" animation_key="Brifle action"/>
@@ -81048,7 +81048,7 @@
 </weapon>
 
 <weapon key="gkw_ksvk_7807.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="KSVK-[Beneath Layers of Snow]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="240" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="KSVK-[Beneath Layers of Snow]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="240" barrel_offset="1.0" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="300.0" sell_price="200.0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="cycle" animation_key="Brifle action"/>
@@ -81205,7 +81205,7 @@
 </weapon>
 
 <weapon key="gkw_ksvkmod3_7807.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Beneath Layers of Snow]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="255" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="2.5" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Beneath Layers of Snow]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="255" barrel_offset="1.0" projectiles_per_shot="1" stance_accuracy_rate="2.5" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="450.0" sell_price="300.0"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_ksvkmod3_7807_skill.weapon" share_ammo="0"/>
@@ -81365,7 +81365,7 @@
 </weapon>
 
 <weapon key="gkw_ksvkmod3_7807_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.8" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Beneath Layers of Snow]-[Concussive Blast]" class="2" sight_range_modifier="2.25" reload_one_at_a_time="0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification retrigger_time="1.8" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Beneath Layers of Snow]-[Concussive Blast]" class="2" sight_range_modifier="2.25" reload_one_at_a_time="0" projectile_speed="200" barrel_offset="1.0" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="450.0" sell_price="300.0"/>
 	<next_in_chain key="gkw_ksvkmod3_7807.weapon" share_ammo="0"/>
 	<animation key="cycle" animation_key="Brifle action"/>
@@ -106540,7 +106540,7 @@
 </weapon>
 
 <weapon key="gkw_ksvkmod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="255" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="2.5" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="255" barrel_offset="1.0" projectiles_per_shot="1" stance_accuracy_rate="2.5" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="450.0" sell_price="300.0"/>
 	<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_ksvkmod3_skill.weapon" share_ammo="0"/>
@@ -106699,7 +106699,7 @@
 </weapon>
 
 <weapon key="gkw_ksvkmod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.8" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Concussive Blast]" class="2" sight_range_modifier="2.25" reload_one_at_a_time="0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification retrigger_time="1.8" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Concussive Blast]" class="2" sight_range_modifier="2.25" reload_one_at_a_time="0" projectile_speed="200" barrel_offset="1.0" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="450.0" sell_price="300.0"/>
 	<next_in_chain key="gkw_ksvkmod3.weapon" share_ammo="0"/>
 	<animation key="cycle" animation_key="Brifle action"/>
@@ -121005,7 +121005,7 @@
 </weapon>
 
 <weapon key="gkw_ksvk_3405.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="KSVK-[Angel's Brush]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="240" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="KSVK-[Angel's Brush]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="240" barrel_offset="1.0" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="300.0" sell_price="200.0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="cycle" animation_key="Brifle action"/>
@@ -121152,7 +121152,7 @@
 </weapon>
 
 <weapon key="gkw_ksvk_3805.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="KSVK-[Darkside Moonwalk]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="240" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="KSVK-[Darkside Moonwalk]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="240" barrel_offset="1.0" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="300.0" sell_price="200.0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="cycle" animation_key="Brifle action"/>
@@ -121309,7 +121309,7 @@
 </weapon>
 
 <weapon key="gkw_ksvk_4509.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="KSVK-[The Truman Traveller]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="240" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="KSVK-[The Truman Traveller]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="240" barrel_offset="1.0" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="300.0" sell_price="200.0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="cycle" animation_key="Brifle action"/>
@@ -121466,7 +121466,7 @@
 </weapon>
 
 <weapon key="gkw_ksvk_5504.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="KSVK-[Grasp of the Mimosa]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="240" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="KSVK-[Grasp of the Mimosa]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="240" barrel_offset="1.0" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.6" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="300.0" sell_price="200.0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="cycle" animation_key="Brifle action"/>
@@ -130987,7 +130987,7 @@
 </weapon>
 
 <weapon key="gkw_ksvkmod3_3405.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Angel's Brush]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="255" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="2.5" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Angel's Brush]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="255" barrel_offset="1.0" projectiles_per_shot="1" stance_accuracy_rate="2.5" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="450.0" sell_price="300.0"/>
 	<next_in_chain key="gkw_ksvkmod3_3405_skill.weapon" share_ammo="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
@@ -131136,7 +131136,7 @@
 </weapon>
 
 <weapon key="gkw_ksvkmod3_3405_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.8" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Angel's Brush]-[Concussive Blast]" class="2" sight_range_modifier="2.25" reload_one_at_a_time="0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification retrigger_time="1.8" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Angel's Brush]-[Concussive Blast]" class="2" sight_range_modifier="2.25" reload_one_at_a_time="0" projectile_speed="200" barrel_offset="1.0" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="450.0" sell_price="300.0"/>
 	<next_in_chain key="gkw_ksvkmod3_3405.weapon" share_ammo="0"/>
 	<animation key="cycle" animation_key="Brifle action"/>
@@ -131277,7 +131277,7 @@
 </weapon>
 
 <weapon key="gkw_ksvkmod3_3805.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Darkside Moonwalk]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="255" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="2.5" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Darkside Moonwalk]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="255" barrel_offset="1.0" projectiles_per_shot="1" stance_accuracy_rate="2.5" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="450.0" sell_price="300.0"/>
 	<next_in_chain key="gkw_ksvkmod3_3805_skill.weapon" share_ammo="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
@@ -131436,7 +131436,7 @@
 </weapon>
 
 <weapon key="gkw_ksvkmod3_3805_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.8" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Darkside Moonwalk]-[Concussive Blast]" class="2" sight_range_modifier="2.25" reload_one_at_a_time="0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification retrigger_time="1.8" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Darkside Moonwalk]-[Concussive Blast]" class="2" sight_range_modifier="2.25" reload_one_at_a_time="0" projectile_speed="200" barrel_offset="1.0" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="450.0" sell_price="300.0"/>
 	<next_in_chain key="gkw_ksvkmod3_3805.weapon" share_ammo="0"/>
 	<animation key="cycle" animation_key="Brifle action"/>
@@ -131586,7 +131586,7 @@
 </weapon>
 
 <weapon key="gkw_ksvkmod3_4509.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[The Truman Traveller]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="255" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="2.5" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[The Truman Traveller]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="255" barrel_offset="1.0" projectiles_per_shot="1" stance_accuracy_rate="2.5" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="450.0" sell_price="300.0"/>
 	<next_in_chain key="gkw_ksvkmod3_4509_skill.weapon" share_ammo="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
@@ -131745,7 +131745,7 @@
 </weapon>
 
 <weapon key="gkw_ksvkmod3_4509_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.8" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[The Truman Traveller]-[Concussive Blast]" class="2" sight_range_modifier="2.25" reload_one_at_a_time="0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification retrigger_time="1.8" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[The Truman Traveller]-[Concussive Blast]" class="2" sight_range_modifier="2.25" reload_one_at_a_time="0" projectile_speed="200" barrel_offset="1.0" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="450.0" sell_price="300.0"/>
 	<next_in_chain key="gkw_ksvkmod3_4509.weapon" share_ammo="0"/>
 	<animation key="cycle" animation_key="Brifle action"/>
@@ -131895,7 +131895,7 @@
 </weapon>
 
 <weapon key="gkw_ksvkmod3_5504.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Grasp of the Mimosa]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="255" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="2.5" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Grasp of the Mimosa]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="255" barrel_offset="1.0" projectiles_per_shot="1" stance_accuracy_rate="2.5" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="450.0" sell_price="300.0"/>
 	<next_in_chain key="gkw_ksvkmod3_5504_skill.weapon" share_ammo="0"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
@@ -132045,7 +132045,7 @@
 </weapon>
 
 <weapon key="gkw_ksvkmod3_5504_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.8" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Grasp of the Mimosa]-[Concussive Blast]" class="2" sight_range_modifier="2.25" reload_one_at_a_time="0" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification retrigger_time="1.8" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" suppressed="0" name="KSVK(MOD3)-[Grasp of the Mimosa]-[Concussive Blast]" class="2" sight_range_modifier="2.25" reload_one_at_a_time="0" projectile_speed="200" barrel_offset="1.0" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="450.0" sell_price="300.0"/>
 	<next_in_chain key="gkw_ksvkmod3_5504.weapon" share_ammo="0"/>
 	<animation key="cycle" animation_key="Brifle action"/>
@@ -159146,4 +159146,3 @@
 </weapon>
 
 </weapons>
-
