@@ -1415,12 +1415,15 @@ array<string> gk_weapon_rf_list = {
     "gkw_m1.weapon",
     "gkw_m1_1106.weapon",
     "gkw_m1_6907.weapon",
+    "gkw_m1_10008.weapon",
     "gkw_m1_sf.weapon",
     "gkw_m1_sf_skill.weapon",
     "gkw_m1_sf_1106.weapon",
     "gkw_m1_sf_1106_skill.weapon",
     "gkw_m1_sf_6907.weapon",
     "gkw_m1_sf_6907_skill.weapon",
+    "gkw_m1_sf_10008.weapon",
+    "gkw_m1_sf_10008_skill.weapon",
     "gkw_m1a1.weapon",
     "gkw_m110.weapon",
     "gkw_m110_skill.weapon",
@@ -1532,9 +1535,7 @@ array<string> gk_weapon_rf_list = {
     "gkw_supersass.weapon",
     "gkw_supersass_1407.weapon",
     "gkw_supersassmod3.weapon",
-    "gkw_supersassmod3_skill.weapon",
     "gkw_supersassmod3_1407.weapon",
-    "gkw_supersassmod3_1407_skill.weapon",
     "gkw_psg1.weapon",
     "gkw_psg1_8404.weapon",
     "gkw_4type.weapon",
@@ -1547,10 +1548,13 @@ array<string> gk_weapon_rf_list = {
     "gkw_falconmod3.weapon",
     "gkw_rt20.weapon",
     "gkw_ots44.weapon",
-    "gkw_mk12.weapon",    
-    "ff_jaeger.weapon",
-    "ff_jaeger_swap.weapon",    
-    "gkw_zasm76.weapon"
+    "gkw_mk12.weapon",
+    "gkw_zasm76.weapon",
+    "gkw_m1903_exp.weapon",
+    "gkw_m1903_302_exp.weapon",
+    "gkw_m1903_1107_exp.weapon",
+    "gkw_m1908.weapon",
+    "gkw_m1908_skill.weapon"
 };
 
 array<string> gk_bolted_rf_list = {
@@ -1608,7 +1612,6 @@ array<string> gk_bolted_rf_list = {
     "gkw_delisle_7801.weapon",
     "gkw_savage99.weapon",
     "gkw_svch.weapon",
-    "gkw_m1908.weapon",    
     "gkw_m1891.weapon",
     "gkw_m1891mod3.weapon",
     "gkw_m1891mod3_skill.weapon",   
@@ -1778,7 +1781,6 @@ array<string> gk_weapon_hg_list = {
     "gkw_tec9_5206.weapon",
     "gkw_p2000.weapon",
     "gkw_m1851n.weapon",
-    "gkw_glock17.weapon"
     "gkw_qsb91.weapon",
     "gkw_zip22.weapon"
 };
@@ -1793,7 +1795,7 @@ array<string> gk_weapon_hvy_nerfed = {
     "gkw_hvy_2b14.weapon",
     "gkw_hvy_m2.weapon",
     "gkw_hvy_pp93.weapon",
-    "ff_architect.weapon",
+    "ff_architect_1.weapon",
     "ff_destroyer.weapon",
     "ff_destroyer_skin.weapon"
 };
