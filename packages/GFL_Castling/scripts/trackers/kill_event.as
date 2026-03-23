@@ -746,11 +746,11 @@ class kill_event : Tracker {
             else if(startsWith(c_armorType,"tms_t6")){
                 if (c_weaponType=="gkw_hawk97mod3.weapon" || c_weaponType =="gkw_hawk97mod3_5805.weapon")
                 {
-                    updateHealByKillEvent(characterId,factionId,4,10,"vest",kill_to_heal_scale+1);
+                    updateHealByKillEvent(characterId,factionId,5,10,"vest",kill_to_heal_scale+1,2);
                 }
                 else
                 {
-                    updateHealByKillEvent(characterId,factionId,4,10,"vest",kill_to_heal_scale);
+                    updateHealByKillEvent(characterId,factionId,5,10,"vest",kill_to_heal_scale,2);
                 }
             }
 
