@@ -298,6 +298,7 @@ class kill_event : Tracker {
         {"gkw_m1903_1107_exp.weapon",4},
         {"gkw_type80mod3.weapon",8},
         {"gkw_type80mod3_skill.weapon",8},
+        {"ff_beluga.weapon",15},
 
         {"666",-1}
     };
@@ -308,12 +309,21 @@ class kill_event : Tracker {
         {"gkw_mg36_4903_skill.weapon",3},
         {"666",-1}
     };
+    dictionary healOnKillWeaponModifer ={
+        {"ff_beluga.weapon",5},
+        {"666",-1}
+    };
 
+    int getRecoverVestNum(string weaponkey)
+    {
+        if(!healOnKillWeaponModifer.exists(weaponkey)) return 1; 
+        return int(healOnKillWeaponModifer[weaponkey]);
+    }
     // 击杀时调用：查找已有 tracker 则累加击杀，否则新建
     // killstoheal: 回 1 甲所需击杀数（从 healOnKillWeaponList 或护甲逻辑获取）
     // timeaddafterkill: 窗口期秒数
     // killadd: 本次计入击杀数（通常为 kill_to_heal_scale，视具体武器和护甲有参数修正）
-    protected void updateHealByKillEvent(int characterid, int factionid, int killstoheal, int timeaddafterkill, string type="weapon", int killadd=1) {
+    protected void updateHealByKillEvent(int characterid, int factionid, int killstoheal, int timeaddafterkill, string type="weapon", int killadd=1,int vestrecover=1) {
         // ✅ 更严格的参数检查
         if (killstoheal <= 0 || killadd <= 0 || timeaddafterkill <= 0) return;
         if (type != "weapon" && type != "vest") return;  // 防止错误类型
@@ -328,7 +338,7 @@ class kill_event : Tracker {
         }
         
         if(!found) {
-            HealOnKill_track.insertLast(HealOnKill_tracker(characterid, factionid, killstoheal, timeaddafterkill, type, killadd)); 
+            HealOnKill_track.insertLast(HealOnKill_tracker(characterid, factionid, killstoheal, timeaddafterkill, type, killadd,vestrecover)); 
         }
     }
 
@@ -747,15 +757,15 @@ class kill_event : Tracker {
             if(c_weaponType=="gkw_m1911_mod3.weapon" || c_weaponType=="gkw_m1911mod3_4514.weapon" || c_weaponType=="gkw_m1911mod3_8406.weapon" ){
                 if ((startsWith(c_armorType,"bp_")))
                 {
-                    updateHealByKillEvent(characterId,factionId,4,10,"weapon",kill_to_heal_scale*2);
+                    updateHealByKillEvent(characterId,factionId,4,10,"weapon",kill_to_heal_scale*2,getRecoverVestNum(c_weaponType));
                 }
                 else
                 {
-                    updateHealByKillEvent(characterId,factionId,4,10,"weapon",kill_to_heal_scale);
+                    updateHealByKillEvent(characterId,factionId,4,10,"weapon",kill_to_heal_scale,getRecoverVestNum(c_weaponType));
                 }
             }            
 
-            updateHealByKillEvent(characterId,factionId,int(healOnKillWeaponList[c_weaponType]),10,"weapon",kill_to_heal_scale);
+            updateHealByKillEvent(characterId,factionId,int(healOnKillWeaponList[c_weaponType]),10,"weapon",kill_to_heal_scale,getRecoverVestNum(c_weaponType));
 
             if(KillerWeaponKey=="gkw_ppkmod3.weapon" || KillerWeaponKey=="gkw_ppkmod3_3905.weapon" || KillerWeaponKey=="gkw_ppkmod3_6109.weapon"){
                 // 乌鸦是猪，望周知
@@ -962,7 +972,7 @@ class kill_event : Tracker {
                         // ⚠️ 不要改成 (kills + m_killstoheal - 1) / m_killstoheal
                         //    那是向上取整，会导致 1 杀即回甲（历史 bug，见 Issue #84）
                         while(HealOnKill_track[a].current_kills>=HealOnKill_track[a].m_killstoheal){
-                            vestrestore++;
+                            vestrestore += HealOnKill_track[a].m_vestRecovery;
                             HealOnKill_track[a].current_kills -= HealOnKill_track[a].m_killstoheal;                            
                         }
                         if(HealOnKill_track[a].current_kills<0){
@@ -1025,17 +1035,19 @@ class HealOnKill_tracker {
     int current_kills = 0;
     string m_type;
     int m_timeaddafterkill;  // ✅ 新增：存储续命时长
+    int m_vestRecovery = 1; //每次回甲数量
     
 
     // initkilladd: 首次击杀计入的杀数（受 kill_to_heal_scale 影响，如boss 首杀算 5 杀）
     // inittimeadd: 窗口期秒数，内部转换为 tick 数（÷ HOK_TICK_INTERVAL）
-    HealOnKill_tracker(int characterId, int factionid, int killstoheal, int inittimeadd, string type, int initkilladd=1) {
+    HealOnKill_tracker(int characterId, int factionid, int killstoheal, int inittimeadd, string type, int initkilladd=1,int vestrecover=1) {
         m_characterId = characterId;
         m_factionid = factionid;
         m_killstoheal = killstoheal;
         current_kills = initkilladd;
         m_type = type;
         m_timeaddafterkill = inittimeadd;  // ✅ 保存参数
+        m_vestRecovery = vestrecover;
         
         // 初始化时间
         if(type == "weapon") {

@@ -661,7 +661,7 @@ class BasicCommandHandler : Tracker {
 				string command =
 					"<command class='xp_reward'" +
 					"	character_id='" + id + "'" +
-					"	reward='70.0'>" + // multiplier affected..
+					"	reward='150.0'>" + // multiplier affected..
 					"</command>";
 				m_metagame.getComms().send(command);
 			} else {
