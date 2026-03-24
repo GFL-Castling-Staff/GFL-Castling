@@ -756,15 +756,22 @@ class ItemDropEvent : Tracker {
             string itemKey = getKeyfromIndex(s);
             if(itemKey.find(s)>-1)
             {
-                addItemInBackpack(m_metagame,cId,"carry_item","core_mask.carry_item");;
+                addItemInBackpack(m_metagame,cId,"carry_item","core_mask.carry_item");
                 sendPrivateMessageKey(m_metagame, senderId, "truemask_failed");
                 playPrivateSound(m_metagame,"sfx_failed.wav",senderId);                
                 return;
             }
             if (itemKey==""){
-                addItemInBackpack(m_metagame,cId,"carry_item","core_mask.carry_item");;
+                addItemInBackpack(m_metagame,cId,"carry_item","core_mask.carry_item");
                 sendPrivateMessageKey(m_metagame, senderId, "truemask_failed");
                 playPrivateSound(m_metagame,"sfx_failed.wav",senderId);
+                return;
+            }
+            if (truecore_blacklist.find(itemKey) > -1){
+                addItemInBackpack(m_metagame,cId,"carry_item","core_mask.carry_item");
+                sendPrivateMessageKey(m_metagame, senderId, "truemask_failed");
+                playPrivateSound(m_metagame,"sfx_failed.wav",senderId);
+                return;
             }
             else{
                 addItemInBackpack(m_metagame,cId,"weapon",itemKey);
