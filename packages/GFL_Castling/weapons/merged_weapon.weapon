@@ -3788,7 +3788,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<effect class="muzzle" ref="iws2000_recoil_smoke"/>
 	<effect class="muzzle" ref="crescent_smoke_impact"/>
-	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="10" key="iws_apfsds.projectile">
+	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="10" key="iws_apfsds.projectile" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="sub_damage_iws2000.projectile" min_amount="10" max_amount="10" offset="0 0.8 0" position_spread="0.2 0.3" direction_spread="0 0" radius="4.0" damage="20" push="1" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -3868,7 +3868,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<effect class="muzzle" ref="iws2000_recoil_smoke"/>
 	<effect class="muzzle" ref="crescent_smoke_impact"/>
-	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="10" key="iws_apfsds.projectile">
+	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="10" key="iws_apfsds.projectile" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="sub_damage_iws2000s.projectile" min_amount="15" max_amount="15" offset="0 0.8 0" position_spread="0.2 0.3" direction_spread="0 0" radius="4.0" damage="20" push="1" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -3945,7 +3945,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<effect class="muzzle" ref="iws2000_recoil_smoke"/>
 	<effect class="muzzle" ref="crescent_smoke_impact"/>
-	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="10" key="iws_apfsds.projectile">
+	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="10" key="iws_apfsds.projectile" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="sub_damage_iws2000.projectile" min_amount="10" max_amount="10" offset="0 0.8 0" position_spread="0.2 0.3" direction_spread="0 0" radius="4.0" damage="20" push="1" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -4077,7 +4077,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<effect class="muzzle" ref="iws2000_recoil_smoke"/>
 	<effect class="muzzle" ref="crescent_smoke_impact"/>
-	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="10" key="iws_apfsds.projectile">
+	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="10" key="iws_apfsds.projectile" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="sub_damage_iws2000.projectile" min_amount="10" max_amount="10" offset="0 0.8 0" position_spread="0.2 0.3" direction_spread="0 0" radius="4.0" damage="20" push="1" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -4156,7 +4156,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<effect class="muzzle" ref="iws2000_recoil_smoke"/>
 	<effect class="muzzle" ref="crescent_smoke_impact"/>
-	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="10" key="iws_apfsds.projectile">
+	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="10" key="iws_apfsds.projectile" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="sub_damage_iws2000s.projectile" min_amount="15" max_amount="15" offset="0 0.8 0" position_spread="0.2 0.3" direction_spread="0 0" radius="4.0" damage="20" push="1" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -4235,7 +4235,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<effect class="muzzle" ref="iws2000_recoil_smoke"/>
 	<effect class="muzzle" ref="crescent_smoke_impact"/>
-	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="10" key="iws_apfsds.projectile">
+	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="10" key="iws_apfsds.projectile" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="sub_damage_iws2000.projectile" min_amount="10" max_amount="10" offset="0 0.8 0" position_spread="0.2 0.3" direction_spread="0 0" radius="4.0" damage="20" push="1" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -4314,7 +4314,7 @@
 	<weak_hand_hold offset="0.3"/>
 	<effect class="muzzle" ref="iws2000_recoil_smoke"/>
 	<effect class="muzzle" ref="crescent_smoke_impact"/>
-	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="10" key="iws_apfsds.projectile">
+	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="10" key="iws_apfsds.projectile" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="sub_damage_iws2000s.projectile" min_amount="15" max_amount="15" offset="0 0.8 0" position_spread="0.2 0.3" direction_spread="0 0" radius="4.0" damage="20" push="1" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -28641,7 +28641,7 @@
 	<model filename="gkw_rf_ksvk.xml"/>
 	<hud_icon filename="gkw_ksvk.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4">
+	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="sub_damage_ksvk.projectile" min_amount="10" max_amount="10" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -59633,7 +59633,7 @@
 	<hud_icon filename="gkw_thunder50.png"/>
 	<modifier class="speed" value="+0.7"/>
 	<weak_hand_hold offset="0.1"/>
-	<projectile class="bullet" key="ntw.projectile" name="AP bullet" slot="1" pulldown_in_air="4">
+	<projectile class="bullet" key="ntw.projectile" name="AP bullet" slot="1" pulldown_in_air="4" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="sub_damage_thunder.projectile" min_amount="3" max_amount="3" offset="0 0.5 0" position_spread="0 0" direction_spread="0 0" radius="4.0" damage="20" push="1" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
@@ -81115,7 +81115,7 @@
 	<model filename="gkw_rf_ksvk.xml"/>
 	<hud_icon filename="gkw_ksvk_7807.png"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4">
+	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="sub_damage_ksvk.projectile" min_amount="10" max_amount="10" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -81276,7 +81276,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4">
+	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="sub_damage_ksvkmod3.projectile" min_amount="10" max_amount="10" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -81436,7 +81436,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile class="bullet" name="AP bullet" key="ksvk_mod3_skill.projectile" slot="1" pulldown_in_air="4">
+	<projectile class="bullet" name="AP bullet" key="ksvk_mod3_skill.projectile" slot="1" pulldown_in_air="4" radius="0.7">
 	<result class="spawn" instance_class="grenade" instance_key="blast_shard_ksvk_skill.projectile" min_amount="30" max_amount="30" offset="0 1.5 0" position_spread="2.2 0.5" direction_spread="0 0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -106611,7 +106611,7 @@
 	<hud_icon filename="gkw_ksvkmod3.png"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4">
+	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="sub_damage_ksvkmod3.projectile" min_amount="10" max_amount="10" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -106771,7 +106771,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile class="bullet" name="AP bullet" key="ksvk_mod3_skill.projectile" slot="1" pulldown_in_air="4">
+	<projectile class="bullet" name="AP bullet" key="ksvk_mod3_skill.projectile" slot="1" pulldown_in_air="4" radius="0.7">
 	<result class="spawn" instance_class="grenade" instance_key="blast_shard_ksvk_skill.projectile" min_amount="30" max_amount="30" offset="0 1.5 0" position_spread="2.2 0.5" direction_spread="0 0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -121065,7 +121065,7 @@
 	<hud_icon filename="gkw_ksvk_3405.png"/>
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4">
+	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="sub_damage_ksvk.projectile" min_amount="10" max_amount="10" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -121223,7 +121223,7 @@
 	<commonness value="0" in_stock="0"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4">
+	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="sub_damage_ksvk.projectile" min_amount="10" max_amount="10" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -121381,7 +121381,7 @@
 	<commonness value="0" in_stock="0"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4">
+	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="sub_damage_ksvk.projectile" min_amount="10" max_amount="10" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -121530,7 +121530,7 @@
 	<hud_icon filename="gkw_ksvk_5504.png"/>
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4">
+	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="sub_damage_ksvk.projectile" min_amount="10" max_amount="10" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -121905,7 +121905,7 @@
 	<hud_icon filename="gkw_thunder50_2206.png"/>
 	<modifier class="speed" value="+0.7"/>
 	<weak_hand_hold offset="0.1"/>
-	<projectile class="bullet" key="ntw.projectile" name="AP bullet" slot="1" pulldown_in_air="4">
+	<projectile class="bullet" key="ntw.projectile" name="AP bullet" slot="1" pulldown_in_air="4" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="sub_damage_thunder.projectile" min_amount="3" max_amount="3" offset="0 0.5 0" position_spread="0 0" direction_spread="0 0" radius="4.0" damage="20" push="1" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
@@ -122044,7 +122044,7 @@
 	<hud_icon filename="gkw_thunder50_3309.png"/>
 	<modifier class="speed" value="+0.7"/>
 	<weak_hand_hold offset="0.1"/>
-	<projectile class="bullet" key="ntw.projectile" name="AP bullet" slot="1" pulldown_in_air="4">
+	<projectile class="bullet" key="ntw.projectile" name="AP bullet" slot="1" pulldown_in_air="4" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="sub_damage_thunder.projectile" min_amount="3" max_amount="3" offset="0 0.5 0" position_spread="0 0" direction_spread="0 0" radius="4.0" damage="20" push="1" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
@@ -131053,7 +131053,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4">
+	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="sub_damage_ksvkmod3.projectile" min_amount="10" max_amount="10" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -131204,7 +131204,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile class="bullet" name="AP bullet" key="ksvk_mod3_skill.projectile" slot="1" pulldown_in_air="4">
+	<projectile class="bullet" name="AP bullet" key="ksvk_mod3_skill.projectile" slot="1" pulldown_in_air="4" radius="0.7">
 	<result class="spawn" instance_class="grenade" instance_key="blast_shard_ksvk_skill.projectile" min_amount="30" max_amount="30" offset="0 1.5 0" position_spread="2.2 0.5" direction_spread="0 0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -131354,7 +131354,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4">
+	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="sub_damage_ksvkmod3.projectile" min_amount="10" max_amount="10" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -131514,7 +131514,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile class="bullet" name="AP bullet" key="ksvk_mod3_skill.projectile" slot="1" pulldown_in_air="4">
+	<projectile class="bullet" name="AP bullet" key="ksvk_mod3_skill.projectile" slot="1" pulldown_in_air="4" radius="0.7">
 	<result class="spawn" instance_class="grenade" instance_key="blast_shard_ksvk_skill.projectile" min_amount="30" max_amount="30" offset="0 1.5 0" position_spread="2.2 0.5" direction_spread="0 0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -131664,7 +131664,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4">
+	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="sub_damage_ksvkmod3.projectile" min_amount="10" max_amount="10" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -131824,7 +131824,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile class="bullet" name="AP bullet" key="ksvk_mod3_skill.projectile" slot="1" pulldown_in_air="4">
+	<projectile class="bullet" name="AP bullet" key="ksvk_mod3_skill.projectile" slot="1" pulldown_in_air="4" radius="0.7">
 	<result class="spawn" instance_class="grenade" instance_key="blast_shard_ksvk_skill.projectile" min_amount="30" max_amount="30" offset="0 1.5 0" position_spread="2.2 0.5" direction_spread="0 0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -131965,7 +131965,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4">
+	<projectile class="bullet" name="AP bullet" key="ksvk_mod3.projectile" slot="1" pulldown_in_air="4" radius="0.7">
 	<result class="spawn" instance_class="projectile" instance_key="sub_damage_ksvkmod3.projectile" min_amount="10" max_amount="10" offset="0 0.7 0" position_spread="0.2 0.3" direction_spread="0 0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -132116,7 +132116,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
-	<projectile class="bullet" name="AP bullet" key="ksvk_mod3_skill.projectile" slot="1" pulldown_in_air="4">
+	<projectile class="bullet" name="AP bullet" key="ksvk_mod3_skill.projectile" slot="1" pulldown_in_air="4" radius="0.7">
 	<result class="spawn" instance_class="grenade" instance_key="blast_shard_ksvk_skill.projectile" min_amount="30" max_amount="30" offset="0 1.5 0" position_spread="2.2 0.5" direction_spread="0 0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
