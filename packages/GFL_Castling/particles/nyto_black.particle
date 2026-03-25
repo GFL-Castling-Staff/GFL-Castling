@@ -1,0 +1,303 @@
+author: RST
+2022.9.14
+未经授权不可复用、修改使用
+授权[异向易位]MOD制作组修改使用
+
+
+particle_system nyto_black_blast_01
+{
+	quota 50
+	material tuan_7_23_1_pass
+	particle_width 10
+	particle_height 5
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 0
+		colour 0.1 0.1 0.1 0.8
+		direction 0 1 0
+		emission_rate 10
+		position 0 1 0
+		velocity 0.0001
+		time_to_live 0.3
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate 40
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	0
+		rotation_range_end	0
+	}
+	affector ColourFader2
+	{
+		red1 	0
+		green1 	0
+		blue1 	0
+		alpha1 	0
+		red2 	-3
+		green2	-3
+		blue2	-3
+		alpha2	-3
+		state_change 0.33
+	}
+	affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+	affector DirectionRandomiser 
+	{
+		randomness 0
+		scope 0
+		keep_velocity false
+	}
+}
+particle_system nyto_black_blast_01_r10 : nyto_black_blast_01
+{
+	emitter Point
+	{
+		angle 0
+		colour 0.1 0.1 0.1 0.8
+		direction 0 1 0
+		emission_rate 10
+		position 0 1 0
+		velocity 0.0001
+		time_to_live 0.3
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate 80
+	}
+}
+particle_system nyto_black_blast_02 : nyto_black_blast_01
+{
+	quota 50
+	material bao_7_7_pass
+	particle_width 0.1
+	particle_height 0.1
+	renderer billboard
+	billboard_type point
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		colour 0.1 0.1 0.1 0.5
+		time_to_live 0.08
+	}
+	affector Scaler
+	{
+		rate 200
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	0
+		rotation_range_end	180
+	}
+	affector ColourFader2
+	{
+		red1 	0
+		green1 	0
+		blue1 	0
+		alpha1 	0
+		red2 	-3
+		green2	-3
+		blue2	-3
+		alpha2	-3
+		state_change 0.33
+	}
+	affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+	affector DirectionRandomiser 
+	{
+		randomness 0
+		scope 0
+		keep_velocity false
+	}
+}
+particle_system nyto_black_blast_02_r10 : nyto_black_blast_02
+{
+	emitter Point
+	{
+	}
+	affector Scaler
+	{
+		rate 400
+	}
+}
+particle_system nyto_black_blast_03 : nyto_black_blast_02
+{
+	material bao_7_6_pass
+	emitter Point
+	{
+		colour 0.1 0.1 0.1 0.5
+		time_to_live 0.16
+	}
+	affector Scaler
+	{
+		rate 100
+	}
+}
+particle_system nyto_black_blast_03_r10 : nyto_black_blast_03
+{
+	emitter Point
+	{
+	}
+	affector Scaler
+	{
+		rate 200
+	}
+}
+particle_system nyto_black_blast_ring
+{
+	quota 50
+	material ring_7_5_pass
+	particle_width 1
+	particle_height 1
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	
+	emitter Point
+	{
+		angle 0
+		colour 0.1 0.1 0.1 0.5
+		direction 0 1 0
+		emission_rate 10
+		position 0 0 0
+		velocity 0.0001
+		time_to_live 0.5
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate 50
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	0
+		rotation_range_end	0
+	}
+	affector ColourFader2
+	{
+		red1 	0
+		green1 	0
+		blue1 	0
+		alpha1 	0
+		red2 	-3
+		green2	-3
+		blue2	-3
+		alpha2	-3
+		state_change 0.33
+	}
+	affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+	affector DirectionRandomiser 
+	{
+		randomness 0
+		scope 0
+		keep_velocity false
+	}
+}
+particle_system nyto_black_blast_ring_r10 : nyto_black_blast_ring
+{
+	emitter Point
+	{
+	}
+	affector Scaler
+	{
+		rate 100
+	}
+}
+
+
+--------------------------------------material-----------------------------------
+material alpha_blend_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend alpha_blend
+		}
+	}
+}
+material add_base{
+	receive_shadows off
+	technique{
+		pass{
+			lighting off
+			fog_override true
+			depth_write off
+			scene_blend add
+		}
+	}
+}
+material bao_7_5_pass : alpha_blend_base
+{   
+    technique{
+    pass{
+		depth_func always_pass
+        texture_unit{
+            texture bao_7_5.png 	
+}}}}
+material bao_7_6_pass : alpha_blend_base
+{   
+    technique{
+    pass{
+		depth_func always_pass
+        texture_unit{
+            texture bao_7_6.png 	
+}}}}
+material bao_7_7_pass : alpha_blend_base
+{   
+    technique{
+    pass{
+		depth_func always_pass
+        texture_unit{
+            texture bao_7_7.png 	
+}}}}
+material tuan_7_23_1_pass : alpha_blend_base
+{   
+    technique{
+    pass{
+		depth_func always_pass
+        texture_unit{
+            texture tuan_7_23_1.png 	
+}}}}
+material ring_7_5_pass : alpha_blend_base
+{   
+    technique{
+    pass{
+		depth_func always_pass
+        texture_unit{
+            texture ring_7_5.png 	
+}}}}

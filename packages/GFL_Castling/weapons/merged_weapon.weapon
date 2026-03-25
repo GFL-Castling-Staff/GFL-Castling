@@ -98091,7 +98091,7 @@
 
 <weapon key="gkw_howa64.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="autorifle"/>
-	<specification stab_enabled="1" carry_in_two_hands="1" burst_shots="1" accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="20" spread_range="0.42" name="Howa Type 64" projectile_speed="170.0" retrigger_time="0.12" stance_accuracy_rate="2.0" sight_range_modifier="2.0" suppressed="0" sustained_fire_diminish_rate="3.4" sustained_fire_grow_step="0.46"/>
+	<specification stab_enabled="1" carry_in_two_hands="1" burst_shots="1" accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="20" spread_range="0.42" name="Howa Type 64" projectile_speed="190.0" retrigger_time="0.12" stance_accuracy_rate="3.0" sight_range_modifier="2.2" suppressed="0" sustained_fire_diminish_rate="3.4" sustained_fire_grow_step="0.46"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
@@ -98117,7 +98117,7 @@
 	<hud_icon filename="gkw_howa64.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="8.6" kill_probability_offset_on_successful_hit="1.5" kill_decay_start_time="1.125" kill_decay_end_time="1.875" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="8.6" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="1.125" kill_decay_end_time="1.875" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -98181,7 +98181,7 @@
 	<trail probability="1.0" key="bullet_new"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
-	<stance state_key="running" accuracy="0.1"/>
+	<stance state_key="running" accuracy="0.2"/>
 	<stance state_key="walking" accuracy="0.4"/>
 	<stance state_key="crouch_moving" accuracy="0.85"/>
 	<stance state_key="prone_moving" accuracy="0.85"/>
@@ -98190,6 +98190,7 @@
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="detectability" value="0.0"/>
+	<modifier class="hit_success_probability" value="-0.1"/>
 	<modifier class="speed" value="0.0"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -138629,7 +138630,7 @@
 <weapon key="ff_parw_alina.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0" drop_count_factor_on_death="0" player_death_drop_owner_lock_time="0" drop_count_factor_on_player_death="0">
 	<tag name="melee"/>
 	<tag name="elite"/>
-	<specification can_shoot_standing="1" can_shoot_crouching="1" can_shoot_running="1" can_shoot_prone="0" magazine_size="-1" carry_in_two_hands="0" character_state="death" consume="0" name="Alina" class="5" use_basic_muzzle_smoke_effect="0" stab_enabled="1" stab_range="3.5" range="5.0" success_probability="30" affect_characters="1" affect_vehicles="0"/>
+	<specification can_shoot_standing="1" can_shoot_crouching="1" can_shoot_running="1" can_shoot_prone="0" magazine_size="-1" carry_in_two_hands="0" character_state="death" consume="0" name="GK-Alina" class="5" use_basic_muzzle_smoke_effect="0" stab_enabled="1" stab_range="3.5" range="5.0" success_probability="30" affect_characters="1" affect_vehicles="0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="20.0" buy_price="3000.0" sell_price="648.0"/>
 	<capacity value="0" source="rank" source_value="0.0"/>
@@ -139128,7 +139129,7 @@
 	<tag name="elite"/>
 	<tag name="commander"/>
 	<tag name="autorifle"/>
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="40" name="Beluga-M16A1" projectile_speed="204.26" retrigger_time="0.086" sight_range_modifier="2.0" suppressed="0" spread_range="0.28" carry_in_two_hands="1" stance_accuracy_rate="4.0" sustained_fire_diminish_rate="2.5" sustained_fire_grow_step="0.27"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="40" name="Beluga-M16A1" projectile_speed="204.26" retrigger_time="0.086" sight_range_modifier="2.0" suppressed="0" spread_range="0.3" carry_in_two_hands="1" stance_accuracy_rate="4.0" sustained_fire_diminish_rate="2.2" sustained_fire_grow_step="0.27"/>
 	<inventory encumbrance="20.0" buy_price="648.0" sell_price="648.0"/>
 	<commonness value="0.00001" in_stock="0" can_respawn_with="1"/>
 	<capacity value="0" source="rank" source_value="0.0"/>
@@ -143371,7 +143372,7 @@
 	<tag name="elite"/>
 	<tag name="commander"/>
 	<tag name="autorifle"/>
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="90" name="SF-M16A1" projectile_speed="200" retrigger_time="0.036" sight_range_modifier="1.25" suppressed="0" spread_range="0.3" carry_in_two_hands="1" sustained_fire_diminish_rate="2.1" sustained_fire_grow_step="0.6"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="90" name="SF-M16A1" projectile_speed="200" retrigger_time="0.036" sight_range_modifier="1.3" suppressed="0" spread_range="0.6" carry_in_two_hands="1" sustained_fire_diminish_rate="2.1" sustained_fire_grow_step="0.4"/>
 	<inventory encumbrance="35.0" buy_price="7.0" sell_price="7.0"/>
 	<commonness value="0.0002" in_stock="1" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -143395,7 +143396,7 @@
 	<hud_icon filename="sfw_m16a1.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="1.85" kill_probability_offset_on_successful_hit="0.4" kill_decay_start_time="0.1" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="1.9" kill_decay_start_time="0.5" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -143457,15 +143458,16 @@
 	<trail probability="1.0" key="bullet_new"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_556"/>
-	<stance state_key="running" accuracy="0.3"/>
-	<stance state_key="walking" accuracy="0.45"/>
-	<stance state_key="crouch_moving" accuracy="0.85"/>
-	<stance state_key="prone_moving" accuracy="0.85"/>
-	<stance state_key="standing" accuracy="0.7"/>
+	<stance state_key="running" accuracy="0.8"/>
+	<stance state_key="walking" accuracy="0.8"/>
+	<stance state_key="crouch_moving" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.8"/>
+	<stance state_key="standing" accuracy="0.8"/>
 	<stance state_key="crouching" accuracy="0.9"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="speed" value="0.2"/>
+	<modifier class="speed" value="0.6"/>
+	<modifier class="hit_success_probability" value="-0.4"/>
 </weapon>
 
 <weapon key="sfw_excutioner_1.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -159263,3 +159265,4 @@
 </weapon>
 
 </weapons>
+

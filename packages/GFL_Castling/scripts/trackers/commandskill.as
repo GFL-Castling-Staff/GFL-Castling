@@ -5118,7 +5118,7 @@ class CommandSkill : Tracker {
             for(int i=0;i<m_fnum;i++) {
                 if(i!=factionid) {
                     array<const XmlElement@> temp;
-                    temp = getCharactersNearPosition(m_metagame,s_pos,i,5.0f);
+                    temp = getCharactersNearPosition(m_metagame,s_pos,i,10.0f);
                     if (temp !is null){
                         for(uint x=0;x<temp.length();x++){
                             affectedCharacter.insertLast(temp[x]);
@@ -5143,7 +5143,7 @@ class CommandSkill : Tracker {
             playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1s",false);
             TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
             tasker.add(DelayNytoBlackSkillTask(m_metagame, 1.0, characterId, factionid, c_pos.add(Vector3(0,0.5,0)), s_pos, targets));
-            addCooldown("NytoBlack",20,characterId,modifer);
+            addCooldown("NytoBlack",30,characterId,modifer);
         }
     }
 }
