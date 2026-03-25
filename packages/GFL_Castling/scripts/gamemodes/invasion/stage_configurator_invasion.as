@@ -1112,7 +1112,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		stage.m_minRandomCrates = 3; 
 		stage.m_maxRandomCrates = 5;
 
-		stage.m_defenseWinTime = 1080; 
+		stage.m_defenseWinTime = 750; 
 		stage.m_defenseWinTimeMode = "custom";
 
         stage.addTracker(Overtime(m_metagame, 0,10));
