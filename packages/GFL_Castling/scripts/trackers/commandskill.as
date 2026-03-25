@@ -5118,7 +5118,7 @@ class CommandSkill : Tracker {
             for(int i=0;i<m_fnum;i++) {
                 if(i!=factionid) {
                     array<const XmlElement@> temp;
-                    temp = getCharactersNearPosition(m_metagame,s_pos,i,10.0f);
+                    temp = getCharactersNearPosition(m_metagame,s_pos,i,15.0f);
                     if (temp !is null){
                         for(uint x=0;x<temp.length();x++){
                             affectedCharacter.insertLast(temp[x]);

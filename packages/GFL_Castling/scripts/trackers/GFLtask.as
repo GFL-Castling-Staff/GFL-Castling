@@ -2591,7 +2591,7 @@ class DelayNytoBlackSkillTask : Task {
     protected Vector3 m_pos_2;
     protected array<int> m_targets;
     protected bool m_shoot = false;
-    protected string m_bullet_key = "snipe_bullet_blacknyto.projectile";
+    protected string m_bullet_key = "snipe_bullet_blacknyto.projectile";//效果不是很好 not use
     protected string m_strike_key = "snipe_nytoblack.projectile";
     protected string m_sound_key = "skill_blacknyto_fire.wav";
     protected float m_sound_volume = 2.0;
@@ -2617,7 +2617,7 @@ class DelayNytoBlackSkillTask : Task {
 
         if (m_timeLeft < 0 && m_shoot == false) {
             float dis = getFlatPositionDistance(m_pos_1, m_pos_2);
-            CreateDirectProjectile(m_metagame, m_pos_1, m_pos_2, m_bullet_key, m_character_id, m_faction_id, float(max(dis/0.05,40.0)));
+            // CreateDirectProjectile(m_metagame, m_pos_1, m_pos_2, m_bullet_key, m_character_id, m_faction_id, float(max(dis/0.05,40.0)));
             playSoundAtLocation(m_metagame, m_sound_key, m_faction_id, m_pos_1, m_sound_volume);
             m_shoot = true;
         }
