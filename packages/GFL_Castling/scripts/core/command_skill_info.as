@@ -558,6 +558,9 @@ dictionary commandSkillIndex = {
         {"gkw_webley.weapon",93},
         {"gkw_webley_5601.weapon",93},
 
+        {"ff_parw_nyto_black.weapon",94},
+        {"ff_parw_nyto_black_1.weapon",94},
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };

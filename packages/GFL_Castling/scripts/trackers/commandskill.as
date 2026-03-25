@@ -287,7 +287,7 @@ class CommandSkill : Tracker {
                 case 91:{excuteSIGMCXSkill(cId,senderId,m_modifer);break;}
                 case 92:{excuteZasM21mod3Skill(cId,senderId,m_modifer);break;}
                 case 93:{excuteWebleySkill(cId,senderId,m_modifer);break;}
-
+                case 94:{excuteNytoBlackSkill(cId,senderId,m_modifer);break;}
 
                 
                 
@@ -5099,4 +5099,51 @@ class CommandSkill : Tracker {
             }
         }
     }    
+
+    void excuteNytoBlackSkill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"NytoBlack")) return;
+        const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
+        if (characterinfo is null) return;
+        const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
+        if (playerinfo is null) return;
+
+        if (playerinfo.hasAttribute("aim_target")) {
+            string target = playerinfo.getStringAttribute("aim_target");
+            Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
+            Vector3 s_pos = stringToVector3(target);
+            int factionid = characterinfo.getIntAttribute("faction_id");
+
+            int m_fnum = m_metagame.getFactionCount();
+            array<const XmlElement@> affectedCharacter;
+            for(int i=0;i<m_fnum;i++) {
+                if(i!=factionid) {
+                    array<const XmlElement@> temp;
+                    temp = getCharactersNearPosition(m_metagame,s_pos,i,5.0f);
+                    if (temp !is null){
+                        for(uint x=0;x<temp.length();x++){
+                            affectedCharacter.insertLast(temp[x]);
+                        }
+                    }
+                }
+            }
+
+            if (affectedCharacter is null || affectedCharacter.length() == 0){
+                sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"snipe_skill_notfound");
+                modifer.setCooldownMinus(0);
+                modifer.setCooldownReduction(1.0);
+                addCooldown("NytoBlack",1.5,characterId,modifer,"normal",false);
+                return;
+            }
+
+            array<int> targets;
+            for(uint i=0;i<affectedCharacter.length();i++){
+                targets.insertLast(affectedCharacter[i].getIntAttribute("id"));
+            }
+
+            playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1s",false);
+            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+            tasker.add(DelayNytoBlackSkillTask(m_metagame, 1.0, characterId, factionid, c_pos.add(Vector3(0,0.5,0)), s_pos, targets));
+            addCooldown("NytoBlack",20,characterId,modifer);
+        }
+    }
 }
