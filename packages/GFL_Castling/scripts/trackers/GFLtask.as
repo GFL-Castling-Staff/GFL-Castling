@@ -2579,3 +2579,76 @@ class DelayNuke :Task{
 		return false;
 	}
 }
+
+class DelayNytoBlackSkillTask : Task {
+    protected GameMode@ m_metagame;
+    protected float m_time;
+    protected float m_addtime;
+    protected float m_timeLeft;
+    protected int m_character_id;
+    protected int m_faction_id;
+    protected Vector3 m_pos_1;
+    protected Vector3 m_pos_2;
+    protected array<int> m_targets;
+    protected bool m_shoot = false;
+    protected string m_bullet_key = "sniper_bullet.projectile";
+    protected string m_strike_key = "snipe_15_low.projectile";
+    protected string m_sound_key = "BT_rifle.wav";
+    protected float m_sound_volume = 2.0;
+
+    DelayNytoBlackSkillTask(GameMode@ metagame, float time, int cid, int fid, Vector3 pos1, Vector3 aimPos, array<int>@ targets) {
+        @m_metagame = metagame;
+        m_time = time;
+        m_addtime = time + 0.05f;
+        m_character_id = cid;
+        m_faction_id = fid;
+        m_pos_1 = pos1;
+        m_pos_2 = aimPos;
+        m_targets = targets;
+    }
+
+    void start() {
+        m_timeLeft = m_time;
+    }
+
+    void update(float time) {
+        m_timeLeft -= time;
+        m_addtime -= time;
+
+        if (m_timeLeft < 0 && m_shoot == false) {
+            float dis = getFlatPositionDistance(m_pos_1, m_pos_2);
+            CreateDirectProjectile(m_metagame, m_pos_1, m_pos_2, m_bullet_key, m_character_id, m_faction_id, float(max(dis/0.05,40.0)));
+            playSoundAtLocation(m_metagame, m_sound_key, m_faction_id, m_pos_1, m_sound_volume);
+            m_shoot = true;
+        }
+
+        if (m_addtime < 0 && m_timeLeft < 0) {
+            int totalShots = 6;
+            int shotCount = 0;
+            int targetCount = m_targets.length();
+            if (targetCount <= 0) {
+                return;
+            }
+
+            int index = 0;
+            int tryCount = 0;
+            int maxTry = totalShots * 2;
+            while (shotCount < totalShots && tryCount < maxTry) {
+                int idx = index % targetCount;
+                int target_id = m_targets[idx];
+                const XmlElement@ targetinfo = getCharacterInfo(m_metagame, target_id);
+                if (targetinfo !is null) {
+                    Vector3 t_pos = stringToVector3(targetinfo.getStringAttribute("position"));
+                    CreateDirectProjectile(m_metagame, t_pos.add(Vector3(0,10,0)), t_pos, m_strike_key, m_character_id, m_faction_id, 300);
+                    shotCount++;
+                }
+                index++;
+                tryCount++;
+            }
+        }
+    }
+
+    bool hasEnded() const {
+        return m_addtime < 0;
+    }
+}
