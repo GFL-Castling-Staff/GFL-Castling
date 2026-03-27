@@ -236,10 +236,11 @@ class ItemDropEvent : Tracker {
 
             if(secondary_key == "gkw_doll_logger.weapon" && itemClass == 0 && secondary_num!=0)
             {
-                if (!reverse_tdoll_complex_index.exists(itemKey)) 
+                string loggerKey = normalizeWeaponKey(itemKey);
+                if (!reverse_tdoll_complex_index.exists(loggerKey)) 
                 {
                     dictionary a;
-                    a["%doll_key"] = "" + itemKey;
+                    a["%doll_key"] = "" + loggerKey;
                     notify(m_metagame, "Doll logged failed", a, "misc", pId, false, "", 1.0);
                     return;
                 }
@@ -248,17 +249,17 @@ class ItemDropEvent : Tracker {
                 string profile_hash = playerInfo.getHash();
                 string p_name = playerInfo.getPlayerName();
                 player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
-                if(newdata.FindWeapon(itemKey))
+                if(newdata.FindWeapon(loggerKey))
                 {
                     dictionary a;
-                    a["%doll_key"] = "" + itemKey;                    
+                    a["%doll_key"] = "" + loggerKey;                    
                     notify(m_metagame, "Doll logged already", a, "misc", pId, false, "", 1.0);
                     return;
                 }
-                newdata.addWeapon(itemKey);
-                string format_string = string(reverse_tdoll_complex_index[itemKey]);
+                newdata.addWeapon(loggerKey);
+                string format_string = string(reverse_tdoll_complex_index[loggerKey]);
                 dictionary a;
-                a["%doll_key"] = "" + itemKey;
+                a["%doll_key"] = "" + loggerKey;
                 a["%doll_num"] = "" + newdata.getAllNum();
                 notify(m_metagame, "Doll logged success", a, "misc", pId, false, "", 1.0);
                 string filename = ("save_" + profile_hash +".xml" );

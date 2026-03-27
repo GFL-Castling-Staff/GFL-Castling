@@ -922,11 +922,7 @@ class GFL_playerlist_system : Tracker {
                 newdata.addDevPoint(m_dev_point_add);
 
                 string c_weaponType = playerInfo.getPlayerEquipment().getWeapon(0);
-                string weapon_string = c_weaponType;
-                int si = weapon_string.find("_skill");
-                if (si != -1) {
-                    weapon_string = weapon_string.substr(0, si) + weapon_string.substr(si + 6);
-                }
+                string weapon_string = normalizeWeaponKey(c_weaponType);
                 int index= getIndexFromKey(weapon_string);
                 if(index > -1)
                 {
@@ -1133,11 +1129,7 @@ class GFL_playerlist_system : Tracker {
             notify(m_metagame, "vehicle destroy reward for personal", a, "misc", playerId, false, "", 1.0);
 
             string c_weaponType = playerInfo.getPlayerEquipment().getWeapon(0);
-            string weapon_string = c_weaponType;
-            int si = weapon_string.find("_skill");
-            if (si != -1) {
-                weapon_string = weapon_string.substr(0, si) + weapon_string.substr(si + 6);
-            }
+            string weapon_string = normalizeWeaponKey(c_weaponType);
             if(existKeyinList(weapon_string))
             {
                 int index= getIndexFromKey(weapon_string);
