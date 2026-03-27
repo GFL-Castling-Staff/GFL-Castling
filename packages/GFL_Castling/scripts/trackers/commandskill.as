@@ -778,6 +778,7 @@ class CommandSkill : Tracker {
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         string vestkey="exo_t5_16lab.carry_item";
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
             if (vestkey=="immunity_mp5.carry_item" || vestkey==""){
                 vestkey="exo_t5_16lab.carry_item";
@@ -812,6 +813,7 @@ class CommandSkill : Tracker {
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         string vestkey="exo_t5_16lab.carry_item";
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
             if (vestkey=="immunity_mp5.carry_item" || vestkey==""){
                 vestkey=="exo_t5_16lab.carry_item";
@@ -845,6 +847,7 @@ class CommandSkill : Tracker {
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         string vestkey="exo_t5_16lab.carry_item";
         if (character !is null) {
+            if (!canCastSkill(character)) return;
             vestkey = getPlayerEquipmentKey(m_metagame,characterId,4);
             if (vestkey=="immunity_thompson.carry_item" || vestkey==""){
                 vestkey="exo_t5_16lab.carry_item";
