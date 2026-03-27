@@ -62,7 +62,7 @@
     <weak_hand_hold offset="0.2" />
 
     <projectile file="sf_jaguar_shell.projectile">
-	<result class="blast" damage="15.0" radius="5.0" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="15.0" radius="5.0" decal="1" push="0.4" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	</projectile>
 
     <ballistics curve_height="60.0" near_far_distance="5.0" speed_estimation_near="15.0" speed_estimation_far="20.0" max_speed="80.0" randomness="0.0" tweak_factor="0.84" />
