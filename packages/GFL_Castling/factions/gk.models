@@ -2500,11 +2500,17 @@
     <model filename="gkd_hg_px4_2801.xml">
         <requirement class="weapon" key="gkw_px4mod3_2801.weapon" slot="0" />
     </model>
+    <model filename="gkd_smg_cx4.xml">
+        <requirement class="weapon" key="gkw_cx4.weapon" slot="0" />
+    </model>
     <model filename="gkd_smg_cx4_6606.xml">
         <requirement class="weapon" key="gkw_cx4_6606.weapon" slot="0" />
     </model>
     <model filename="gkd_hg_brenten_7809.xml">
         <requirement class="weapon" key="gkw_brenten_7809.weapon" slot="0" />
+    </model>
+    <model filename="gkd_smg_lusa.xml">
+        <requirement class="weapon" key="gkw_lusa.weapon" slot="0" />
     </model>
     <model filename="gkd_smg_lusa_7802.xml">
         <requirement class="weapon" key="gkw_lusa_7802.weapon" slot="0" />
