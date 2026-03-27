@@ -142,6 +142,7 @@ class kill_event : Tracker {
         {"gkw_thompson_5703.weapon",3},
         {"gkw_thompson_skill.weapon",2},
         {"gkw_thompson_5703_skill.weapon",2},
+        {"gkw_lusa.weapon",3},
         {"gkw_lusa_7802.weapon",3},
         {"gkw_lusa_8501.weapon",3},
         {"gkw_uzi.weapon",3},
