@@ -514,6 +514,50 @@ void merge(array<const XmlElement@>@ a1, const array<const XmlElement@>@ a2) {
 	}
 }
 
+string normalizeWeaponKey(string key) {
+	// 不规则
+    dictionary overrideMap = {
+		{"gkw_k11_20mm_impact.weapon", "gkw_k11_ar.weapon"},
+        {"gkw_cms_aps.weapon", "gkw_cms.weapon"},
+        {"gkw_cms_st.weapon", "gkw_cms.weapon"},
+		{"gkw_cms_aps_6403.weapon", "gkw_cms_6403.weapon"},
+        {"gkw_cms_st_6403.weapon", "gkw_cms_6403.weapon"},
+		{"gkw_vector_hellfire_sticky.weapon", "gkw_vector_549.weapon"},
+		{"gkw_ks23_frag.weapon", "gkw_ks23.weapon"},
+		{"gkw_medical_agl_hg.weapon", "gkw_gsh18mod3.weapon"},
+		{"gkw_medical_agl_hg_523.weapon", "gkw_gsh18mod3_523.weapon"},
+		{"ff_architect_1.weapon", "ff_architect.weapon"},
+		{"ff_Intruder_1.weapon", "ff_Intruder.weapon"},
+		{"ff_gager_1.weapon", "ff_gager.weapon"},
+		{"ff_weaver_1.weapon", "ff_weaver.weapon"},
+		{"ff_parw_nyto_black_1.weapon", "ff_parw_nyto_black.weapon"},
+		{"ff_excutioner_2.weapon", "ff_excutioner_1.weapon"}
+    };
+    if (overrideMap.exists(key)) {
+        return string(overrideMap[key]);
+    }
+
+	// skill
+	int si = key.find("_skill_1.weapon");
+	if (si != -1) {
+        return key.substr(0, si) + key.substr(si + 8);
+    }
+	si = key.find("_skill_2.weapon");
+	if (si != -1) {
+        return key.substr(0, si) + key.substr(si + 8);
+    }
+	si = key.find("_skill_3.weapon");
+	if (si != -1) {
+        return key.substr(0, si) + key.substr(si + 8);
+    }
+	// 有几个例子是_skill_皮肤编号的，很难绷
+	si = key.find("_skill");
+    if (si != -1) {
+        key = key.substr(0, si) + key.substr(si + 6);
+    }
+    return key;
+}
+
 class rgba_color{
 	float color_r;
 	float color_g;

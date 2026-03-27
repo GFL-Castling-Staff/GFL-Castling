@@ -816,11 +816,7 @@ class Save_System : Tracker {
             const XmlElement@ player = getPlayerInfo(m_metagame,player_id);
             if (player is null) return;
             int cId = player.getIntAttribute("character_id");
-            string weaponkey = playerInfo.getPlayerEquipment().getWeapon(0);
-            int i = weaponkey.find("_skill");
-            if (i != -1) {
-                weaponkey = weaponkey.substr(0, i) + weaponkey.substr(i + 6);
-            }
+            string weaponkey = normalizeWeaponKey(playerInfo.getPlayerEquipment().getWeapon(0));
             tdoll_intimacy_info@ waifu_intimacy = newdata.getIntimacyFromKey(weaponkey);
             if (waifu_intimacy is null) 
             {

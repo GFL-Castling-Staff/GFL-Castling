@@ -658,11 +658,7 @@ class kill_event : Tracker {
                 reduceAllCallCooldown(playerName,1.0);
             }
 
-            string weapon_string = c_weaponType;
-            int si = weapon_string.find("_skill");
-            if (si != -1) {
-                weapon_string = weapon_string.substr(0, si) + weapon_string.substr(si + 6);
-            }
+            string weapon_string = normalizeWeaponKey(c_weaponType);
 
             //数据记录
             if(existKeyinList(weapon_string))
