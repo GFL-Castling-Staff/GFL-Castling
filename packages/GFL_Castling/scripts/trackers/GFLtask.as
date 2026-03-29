@@ -742,13 +742,13 @@ class DelayAntiTankSnipeRequest :Task{
 		m_addtime -= time;
 		if (m_timeLeft < 0 && m_shoot==false)
 		{
-			float dis = getFlatPositionDistance(m_pos_1,m_pos_2);
-			CreateDirectProjectile(m_metagame,m_pos_1,m_pos_2,"sniper_bullet.projectile",m_character_id,m_faction_id,float(max(dis/0.2,40.0)));
+			float dis = getFlatPositionDistance(m_pos_1,m_pos_2.add(Vector3(0,1,0)));
+			CreateDirectProjectile(m_metagame,m_pos_1,m_pos_2.add(Vector3(0,1,0)),"sniper_bullet_airburst.projectile",m_character_id,m_faction_id,float(max(dis/0.2,40.0)));
 			playSoundAtLocation(m_metagame,"BT_rifle.wav",m_faction_id,m_pos_1,2.0);
 			m_shoot = true;
 		}		
 		if (m_addtime < 0 && m_timeLeft < 0){
-			CreateDirectProjectile(m_metagame,m_pos_2.add(Vector3(0,6,0)),m_pos_2,m_airstrike_key,m_character_id,m_faction_id,100);
+			CreateDirectProjectile(m_metagame,m_pos_2.add(Vector3(0,3,0)),m_pos_2,m_airstrike_key,m_character_id,m_faction_id,100);
 		}	
 	}
 
