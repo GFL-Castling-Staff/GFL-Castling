@@ -391,6 +391,7 @@ class ItemDropEvent : Tracker {
                             a["%doll_name"] = getResourceName(m_metagame, itemKey, "weapon");
                             sendPrivateMessageKey(m_metagame, pId, "digimindupdatesuccess",a);
                             playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                            GiveRP(m_metagame,cId,7500);
                             //下面是自动录入功能
                             GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(pId);
                             if (playerInfo.getPlayerName() == default_string) return;
