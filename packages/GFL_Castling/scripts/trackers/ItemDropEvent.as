@@ -833,6 +833,12 @@ class ItemDropEvent : Tracker {
                 playPrivateSound(m_metagame,"sfx_failed.wav",senderId);                
                 return;                
             }
+            if (blackcard_blacklist.find(weapon_key) > -1){
+                addItemInBackpack(m_metagame,cId,"carry_item","black_card.carry_item");
+                sendPrivateMessageKey(m_metagame, senderId, "blackcard_hint_failed");
+                playPrivateSound(m_metagame,"sfx_failed.wav",senderId);
+                return;
+            }
             
             addItemInBackpack(m_metagame,cId,"weapon",weapon_key);
             dictionary a;

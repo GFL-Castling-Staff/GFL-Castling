@@ -1825,7 +1825,7 @@ array<string> gk_weapon_sf_nerfed = {
     "ff_dreamer_skill_1.weapon",
     "ff_excutioner_1.weapon",
     "ff_excutioner_2.weapon",
-    // "ff_beluga.weapon",
+    "ff_beluga.weapon",
     "ff_parw_alina.weapon",
     "ff_parw_nyto_black.weapon",
     "ff_parw_nyto_black_1.weapon"
@@ -1835,7 +1835,6 @@ array<string> truecore_blacklist = {
     "ff_agent.weapon",
     "ff_alchemist.weapon",
     "ff_destroyer.weapon",
-    "ff_destroyer_skin.weapon",
     "ff_gager.weapon",
     "ff_architect.weapon",
     "ff_hunter.weapon",
@@ -1848,4 +1847,8 @@ array<string> truecore_blacklist = {
     "ff_parw_nyto_black.weapon",
     "ff_beluga.weapon",
     "ff_excutioner_1.weapon"
+};
+
+array<string> blackcard_blacklist = {
+    "ff_destroyer_skin.weapon"
 };
