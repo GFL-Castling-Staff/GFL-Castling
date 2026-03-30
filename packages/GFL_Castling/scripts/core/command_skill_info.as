@@ -133,9 +133,11 @@ dictionary commandSkillIndex = {
 
         // PP19
         {"gkw_pp19.weapon",16},
+        {"gkw_pp19_10105.weapon",16},
 
         // PP19MOD3
         {"gkw_pp19mod3.weapon",17},
+        {"gkw_pp19mod3_10105.weapon",17},
 
         // AK15MOD3
         {"gkw_ak15mod3.weapon",18},
@@ -393,6 +395,7 @@ dictionary commandSkillIndex = {
         {"gkw_m99_1701.weapon",53},
         {"gkw_m99_3304.weapon",53},
         {"gkw_m99_404.weapon",53},
+        {"gkw_m99_30019.weapon",53},
         {"gkw_ptrd.weapon",53},
         {"gkw_ntw20.weapon",53},
         {"gkw_ntw20_307.weapon",53},
@@ -405,6 +408,8 @@ dictionary commandSkillIndex = {
         // 这几位都要重做
         {"gkw_m82a1.weapon",53},
         {"gkw_m82a1_skill.weapon",53},
+        {"gkw_m82a1_5803.weapon",53},
+        {"gkw_m82a1_5803_skill.weapon",53},
         {"gkw_gepardm1.weapon",53},
         {"gkw_gepardm1mod3.weapon",53},
         {"gkw_gepardm1_4006.weapon",53},
@@ -501,6 +506,8 @@ dictionary commandSkillIndex = {
         {"gkw_m1897mod3_skill.weapon",78},
         {"gkw_m1897mod3_2505.weapon",78},
         {"gkw_m1897mod3_2505_skill.weapon",78},
+        {"gkw_m1897mod3_4805.weapon",78},
+        {"gkw_m1897mod3_4805_skill.weapon",78},
 
         {"gkw_type82.weapon",79},
 
