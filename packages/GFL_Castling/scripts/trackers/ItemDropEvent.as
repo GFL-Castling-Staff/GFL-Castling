@@ -391,7 +391,7 @@ class ItemDropEvent : Tracker {
                             a["%doll_name"] = getResourceName(m_metagame, itemKey, "weapon");
                             sendPrivateMessageKey(m_metagame, pId, "digimindupdatesuccess",a);
                             playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
-                            GiveRP(m_metagame,cId,7500);
+                            GiveRP(m_metagame,cId,-2500);
                             //下面是自动录入功能
                             GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(pId);
                             if (playerInfo.getPlayerName() == default_string) return;
@@ -421,11 +421,12 @@ class ItemDropEvent : Tracker {
                             }
                         }
                         else{
-                            addItemInBackpack(m_metagame,cId,"carry_item","firecontrol.carry_item");;
+                            addItemInBackpack(m_metagame,cId,"carry_item","firecontrol.carry_item");
                             addItemInBackpack(m_metagame,cId,"weapon",itemKey);
                             m_craftQueue.removeAt(findQueueIndex(pId,"mod3"));
                             sendPrivateMessageKey(m_metagame, pId, "digimindupdatefailed");
                             playPrivateSound(m_metagame,"sfx_failed.wav",pId);
+                            GiveRP(m_metagame,cId,-10000);
                         }
                     }
                     else if (checkQueue(pId,"type88") && (itemKey=="gkw_88typemod3.weapon" 
@@ -731,9 +732,9 @@ class ItemDropEvent : Tracker {
                 c.setIntAttribute("container_type_id", 4);
                 c.setIntAttribute("character_id", cId); 
                 {
-                    XmlElement k("item");;
-                    k.setStringAttribute("class", "carry_item");;
-                    k.setStringAttribute("key", "exo_t5_16lab.carry_item");;
+                    XmlElement k("item");
+                    k.setStringAttribute("class", "carry_item");
+                    k.setStringAttribute("key", "exo_t5_16lab.carry_item");
                     c.appendChild(k);
                 }
                 m_metagame.getComms().send(c);
