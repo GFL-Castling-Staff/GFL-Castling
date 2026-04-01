@@ -838,7 +838,7 @@
             <call key="sf_mecha.call" />            
             <call key="sf_trooper_goliath.call" />
 			<weapon key="sfw_Intruder.weapon" enabled="1"/>
-			<!-- <projectile key="skill_sf_boss_intruder_spawn.projectile" enabled="1"/> -->
+			<projectile key="skill_sf_boss_intruder_spawn.projectile" enabled="1"/>
 			<carry_item key="vest_40hp.carry_item" enabled="1" />
 		</resources>
 		<attribute_config class="xp">
