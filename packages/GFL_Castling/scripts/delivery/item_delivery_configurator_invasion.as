@@ -1190,7 +1190,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 			ScoredResource("gkw_consume_javelin.weapon", "weapon", 1.0f, 2)
 				},
 				{
-			ScoredResource("kcco_smartgrenade_1.projectile", "projectile", 1.0f, 4)
+			ScoredResource("kcco_smartgrenade_player.projectile", "projectile", 1.0f, 4)
 				},
 				{
 			ScoredResource("cc_t5_16lab.carry_item", "carry_item", 1.0f)

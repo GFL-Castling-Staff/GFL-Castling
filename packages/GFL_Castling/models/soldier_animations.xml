@@ -23426,7 +23426,7 @@
 			<position x="4.599201" y="-0.159432" z="13.712048" />
 		</frame>
 	</animation>
-	<animation loop="1" end="3.000000" speed="1.000000" comment="repairing vest">
+	<animation loop="1" end="3.000000" speed="1.666667" comment="repairing vest">
 		<frame time="0.000000">
 			<position x="-8.593827" y="24.019615" z="19.773434" />
 			<position x="-8.169551" y="19.056721" z="14.855136" />
@@ -111802,7 +111802,7 @@
             <position x="17.289000" y="30.126400" z="19.096100" />
         </frame>
     </animation>	
-    <animation loop="0" end="0.333300" speed="1.000000" comment="gly_up_ladder">
+    <animation loop="1" end="0.333300" speed="1.000000" comment="gly_up_ladder">
         <frame time="0.000000">
             <position x="0.000400" y="45.849300" z="-0.032700" />
             <position x="0.000400" y="38.718498" z="-0.032700" />
@@ -111906,7 +111906,7 @@
             <position x="17.289400" y="62.605202" z="19.071301" />
         </frame>
     </animation>
-    <animation loop="1" end="0.333300" speed="1.000000" comment="gly_up_jump">
+    <animation loop="0" end="0.333300" speed="1.000000" comment="gly_up_jump">
         <frame time="0.000000">
             <position x="0.000400" y="45.849300" z="-0.032700" />
             <position x="0.000400" y="38.718498" z="-0.032700" />

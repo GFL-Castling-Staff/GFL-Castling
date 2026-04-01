@@ -2594,7 +2594,7 @@ class DelayNytoBlackSkillTask : Task {
     protected string m_bullet_key = "snipe_bullet_blacknyto.projectile";//效果不是很好 not use
     protected string m_strike_key = "snipe_nytoblack.projectile";
     protected string m_sound_key = "skill_blacknyto_fire.wav";
-    protected float m_sound_volume = 2.0;
+    protected float m_sound_volume = 1.0;
 
     DelayNytoBlackSkillTask(GameMode@ metagame, float time, int cid, int fid, Vector3 pos1, Vector3 aimPos, array<int>@ targets) {
         @m_metagame = metagame;
