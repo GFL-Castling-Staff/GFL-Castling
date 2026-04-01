@@ -39,6 +39,11 @@ dictionary included_vehicle = {
         {"",-1}
 };
 
+array<string> global_notify_vehicle = {
+    "radar_tower.vehicle",
+    "armored_truck.vehicle"
+};
+
 class vehicle_destroyed : Tracker{
     protected Metagame@ m_metagame;
     protected bool m_ended;
@@ -67,14 +72,14 @@ class vehicle_destroyed : Tracker{
 	}
 
     protected void handleVehicleDestroyEvent(const XmlElement@ event) {
-        string vehicle_name = event.getStringAttribute("vehicle_key");
+        string vehicle_key = event.getStringAttribute("vehicle_key");
         int vehicle_id = event.getIntAttribute("vehicle_id");
         int killer_cid = event.getIntAttribute("character_id");
         int killer_fid = event.getIntAttribute("faction_id");
         int vehicle_owner_fid = event.getIntAttribute("owner_id");
         // Vector3 position = stringToVector3(event.getStringAttribute("position"));
 
-        if(!included_vehicle.exists(vehicle_name)){return;}
+        if(!included_vehicle.exists(vehicle_key)){return;}
         if(killer_fid != vehicle_owner_fid){return;}
 
         const XmlElement@ characterInfo = getCharacterInfo(m_metagame, killer_cid);
@@ -85,7 +90,18 @@ class vehicle_destroyed : Tracker{
         const XmlElement@ vehicleInfo = getVehicleInfo(m_metagame, vehicle_id);
         if(vehicleInfo is null){return;}
 
-        int rp_punish = int(included_vehicle[vehicle_name]);
+        if(global_notify_vehicle.find(vehicle_key)>-1) {
+            const XmlElement@ playerInfo = getPlayerInfo(m_metagame, pid);
+            string player_name = getPlayerInfoName(playerInfo);
+            string vehicle_name = vehicleInfo.getStringAttribute("name");
+            dictionary a;
+            a["%player_name"] = ""+player_name;
+            a["%vehicle"] = ""+vehicle_name;
+            playSound(m_metagame, "objective_priority.wav", 0);
+            sendFactionMessageKey(m_metagame, killer_fid, "vehicle destroy circular criticism", a, 2.0);
+        }
+
+        int rp_punish = int(included_vehicle[vehicle_key]);
 
         dictionary a;
         a["%count"] = ""+rp_punish;   
