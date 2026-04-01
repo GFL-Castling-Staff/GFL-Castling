@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-    <weapon file="two_hands_sg.animation_base" key="gkw_m1897.weapon">
+    <weapon file="two_hands_sg.animation_base" key="gkw_m1897_4805.weapon">
         <!--Weapon specifications-->
         <specification 
         can_shoot_running="1"
@@ -11,7 +11,7 @@
         magazine_size="6" 
         can_shoot_standing="1" 
         suppressed="0" 
-        name="Winchester Model 1897" 
+        name="Winchester Model 1897-[Sentinel of the Sky]" 
         class="1" 
         reload_one_at_a_time="1"
         sight_range_modifier="1" 
@@ -22,11 +22,12 @@
         stance_accuracy_rate="2.0"
         />
         <inventory encumbrance="12.5" buy_price="18.97" sell_price="18.97" />
-        <next_in_chain key="gkw_m1897_skill.weapon" share_ammo="0"/>
+        <next_in_chain key="gkw_m1897_4805_skill.weapon" share_ammo="0"/>
         <!--Animations-->
         <animation state_key="cycle" animation_key="Pshotgun0.3" />
         <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.3p" />
         <animation key="reload" animation_key="reloading, oaat" />
+        <commonness value="0" in_stock="0" can_respawn_with="1" />
         <!--Sounds-->
         <sound key="fire" fileref="m1897_fire_FromCOD5.wav" pitch_variety="0.05" volume="1" />
         <sound key="cycle" fileref="m1897_cycle_FromCOD5.wav" volume="0.7" />
@@ -35,7 +36,7 @@
         <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <!--Model, Icon, Cost-->
         <model filename="gkw_sg_m1897_mod3.xml" />
-        <hud_icon filename="gkw_m1897.png" />
+        <hud_icon filename="gkw_m1897_4805.png" />
         <!--Ballistics-->
         <weak_hand_hold offset="0.3" />
         <projectile file="bullet_sg.projectile" time_to_live="0.66">
@@ -56,7 +57,7 @@
         <stance state_key="prone" accuracy="1.1" />
         <stance state_key="over_wall" accuracy="1.1" />
     </weapon>
-    <weapon file="two_hands_sg.animation_base" key="gkw_m1897_skill.weapon">
+    <weapon file="two_hands_sg.animation_base" key="gkw_m1897_4805_skill.weapon">
         <!--Weapon specifications-->
         <specification 
         retrigger_time="-1.0" 
@@ -66,7 +67,7 @@
         magazine_size="1" 
         can_shoot_standing="1" 
         suppressed="0" 
-        name="Winchester Model 1897-[Burst Impact]" 
+        name="Winchester Model 1897-[Sentinel of the Sky]-[Burst Impact]" 
         class="1" 
         reload_one_at_a_time="1"
         sight_range_modifier="1" 
@@ -77,7 +78,7 @@
         />
         <inventory encumbrance="12.5" buy_price="20.0" sell_price="10.0" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
-        <next_in_chain key="gkw_m1897.weapon" share_ammo="0"/>
+        <next_in_chain key="gkw_m1897_4805.weapon" share_ammo="0"/>
         <!--Animations-->
         <animation state_key="cycle" animation_key="Pshotgun0.5" />
         <animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p" />
@@ -92,7 +93,7 @@
         <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <!--Model, Icon, Cost-->
         <model filename="gkw_sg_m1897_mod3.xml" />
-        <hud_icon filename="gkw_m1897_skill.png" />
+        <hud_icon filename="gkw_m1897_4805.png" />
         <!--Ballistics-->
         <weak_hand_hold offset="0.3" />
         <projectile file="bullet_sg.projectile" time_to_live="0.15">
