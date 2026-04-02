@@ -288,7 +288,7 @@ class CommandSkill : Tracker {
                 case 92:{excuteZasM21mod3Skill(cId,senderId,m_modifer);break;}
                 case 93:{excuteWebleySkill(cId,senderId,m_modifer);break;}
                 case 94:{excuteNytoBlackSkill(cId,senderId,m_modifer);break;}
-
+                case 95:{excuteScarecrowSkill(cId,senderId,m_modifer);break;}
                 
                 
                 default:
@@ -5152,6 +5152,30 @@ class CommandSkill : Tracker {
             TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
             tasker.add(DelayNytoBlackSkillTask(m_metagame, 1.0, characterId, factionid, c_pos.add(Vector3(0,0.5,0)), s_pos, targets));
             addCooldown("NytoBlack",30,characterId,modifer);
+        }
+    }
+
+    void excuteScarecrowSkill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"scarecrow",true)) return;
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player !is null){
+                if (player.hasAttribute("aim_target")) {
+                    string target = player.getStringAttribute("aim_target");
+                    Vector3 aim_pos = stringToVector3(target);
+                    Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                    int factionid = character.getIntAttribute("faction_id");
+                    array<string> Voice={
+                        "Scarecrow_buhuo_SKILL01_JP.wav",
+                        "Scarecrow_buhuo_SKILL02_JP.wav",
+                        "Scarecrow_buhuo_SKILL03_JP.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+                    spawnSoldier(m_metagame,1,faction_id,aim_pos,"Dummy_Scarecrow");
+                    addCooldown("scarecrow",20,characterId,modifer);
+                }
+            }
         }
     }
 }
