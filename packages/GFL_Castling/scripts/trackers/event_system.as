@@ -327,132 +327,158 @@ Vector3 ac130_pre_pos = Vector3(-1,-1,-1); // 这是为了ac130索敌能每次�
 
 void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
     eventinfo.m_time = 1.8;
-    array<string> AC130StartVoice;
-    array<string> AC130EndVoice;
-    array<string> AC130NoTargetVoice;
-    array<string> AC130MinigunVoice;
-    array<string> AC130ShotgunVoice;
-    array<string> AC130M202Voice;
     const int COOLDOWN_ROCKET = 5;
     const int COOLDOWN_MINIGUN = 0;
     const int COOLDOWN_SHOTGUN = 3;
     const int AMMO_ROCKET = 1;
     const int AMMO_MINIGUN = 1;
     const int AMMO_SHOTGUN = 2;
+    const array<array<string>> AC130StartVoice = {
+        {},
+        {
+            "ac130entrance_rus1.wav",
+            "ac130entrance_rus2.wav",
+            "ac130entrance_rus3.wav"
+        },
+        {
+            "ac130entrance_blkops1.wav",
+            "ac130entrance_blkops2.wav",
+            "ac130entrance_blkops3.wav"
+        },
+        {
+            "ac130entrance_nato1.wav",
+            "ac130entrance_nato2.wav",
+            "ac130entrance_nato3.wav"
+        }
+    };
+    const array<array<string>> AC130EndVoice = {
+        {},
+        {
+            "ac130exit_rus1.wav",
+            "ac130exit_rus2.wav",
+            "ac130exit_rus3.wav"
+        },
+        {
+            "ac130exit_blkops1.wav",
+            "ac130exit_blkops2.wav",
+            "ac130exit_blkops3.wav"
+        },
+        {
+            "ac130exit_nato1.wav",
+            "ac130exit_nato2.wav",
+            "ac130exit_nato3.wav"
+        }
+    };
+    const array<array<string>> AC130NoTargetVoice = {
+        {},
+        {
+            "ac130search_rus1.wav",
+            "ac130search_rus2.wav"
+        },
+        {
+            "ac130search_blkops1.wav",
+            "ac130search_blkops2.wav",
+            "ac130search_blkops3.wav",
+            "ac130search_blkops4.wav"
+        },
+        {
+            "ac130search_nato1.wav",
+            "ac130search_nato2.wav",
+            "ac130search_nato3.wav",
+            "ac130search_nato4.wav",
+            "ac130search_nato5.wav",
+            "ac130search_nato6.wav",
+            "ac130search_nato7.wav",
+            "ac130search_nato8.wav",
+            "ac130search_nato9.wav"
+        }
+    };
+    const array<array<string>> AC130MinigunVoice = {
+        {},
+        {
+            "ac130mg_rus1.wav",
+            "ac130mg_rus2.wav",
+            "ac130allguns_rus1.wav",
+            "ac130allguns_rus2.wav",
+            "ac130allguns_rus3.wav"
+        },
+        {
+            "ac130mg_blkops1.wav",
+            "ac130mg_blkops2.wav"
+        },
+        {
+            "ac130mg_nato1.wav",
+            "ac130mg_nato2.wav",
+            "ac130mg_nato3.wav",
+            "ac130mg_nato4.wav"
+        }
+    };
+    const array<array<string>> AC130ShotgunVoice = {
+        {},
+        {
+            "ac130sg_rus1.wav",
+            "ac130sg_rus2.wav",
+            "ac130allguns_rus1.wav",
+            "ac130allguns_rus2.wav",
+            "ac130allguns_rus3.wav"
+        },
+        {
+            "ac130sg_blkops1.wav",
+            "ac130sg_blkops2.wav",
+            "ac130sg_blkops3.wav"
+        },
+        {
+            "ac130sg_nato1.wav",
+            "ac130sg_nato2.wav",
+            "ac130sg_nato3.wav"
+        }
+    };
+    const array<array<string>> AC130M202Voice = {
+        {},
+        {
+            "ac130rpg_rus1.wav",
+            "ac130rpg_rus2.wav",
+            "ac130rpg_rus3.wav",
+            "ac130allguns_rus1.wav",
+            "ac130allguns_rus2.wav",
+            "ac130allguns_rus3.wav"
+        },
+        {
+            "ac130rpg_blkops1.wav",
+            "ac130rpg_blkops2.wav",
+            "ac130rpg_blkops3.wav"
+        },
+        {
+            "ac130rpg_nato1.wav",
+            "ac130rpg_nato2.wav",
+            "ac130rpg_nato3.wav",
+            "ac130rpg_nato4.wav",
+            "ac130rpg_nato5.wav"
+        }
+    };
+    const array<string> avoid_vehicles = {
+        "armored_truck.vehicle",
+        "radar_tower.vehicle"
+    };
 
     if(ac130_voice_interval>0)ac130_voice_interval -= 1;
     if(eventinfo.m_phase>=(ac130_strike_num-2))ac130_voice_interval = 99;
     if(ac130_flyby_interval>0)ac130_flyby_interval -= 1;
 
-    switch(eventinfo.m_specialkey){
-        case 1:
-        {
-            AC130StartVoice.insertLast("ac130entrance_rus1.wav");
-            AC130StartVoice.insertLast("ac130entrance_rus2.wav");
-            AC130StartVoice.insertLast("ac130entrance_rus3.wav");
+    // 语音音频
+    int voicekey = eventinfo.m_specialkey;
+    if(voicekey < 1 || voicekey > 3) voicekey = 1;
 
-            AC130EndVoice.insertLast("ac130exit_rus1.wav");
-            AC130EndVoice.insertLast("ac130exit_rus2.wav");
-            AC130EndVoice.insertLast("ac130exit_rus3.wav");
-
-            AC130NoTargetVoice.insertLast("ac130search_rus1.wav");
-            AC130NoTargetVoice.insertLast("ac130search_rus2.wav");
-
-            AC130MinigunVoice.insertLast("ac130mg_rus1.wav");
-            AC130MinigunVoice.insertLast("ac130mg_rus2.wav");
-            AC130MinigunVoice.insertLast("ac130allguns_rus1.wav");
-            AC130MinigunVoice.insertLast("ac130allguns_rus2.wav");
-            AC130MinigunVoice.insertLast("ac130allguns_rus3.wav");
-
-            AC130ShotgunVoice.insertLast("ac130sg_rus1.wav");
-            AC130ShotgunVoice.insertLast("ac130sg_rus2.wav");
-            AC130ShotgunVoice.insertLast("ac130allguns_rus1.wav");
-            AC130ShotgunVoice.insertLast("ac130allguns_rus2.wav");
-            AC130ShotgunVoice.insertLast("ac130allguns_rus3.wav");
-
-            AC130M202Voice.insertLast("ac130rpg_rus1.wav");
-            AC130M202Voice.insertLast("ac130rpg_rus2.wav");
-            AC130M202Voice.insertLast("ac130rpg_rus3.wav");
-            AC130M202Voice.insertLast("ac130allguns_rus1.wav");
-            AC130M202Voice.insertLast("ac130allguns_rus2.wav");
-            AC130M202Voice.insertLast("ac130allguns_rus3.wav");
-            break;
-        }
-        case 2:
-        {
-            AC130StartVoice.insertLast("ac130entrance_blkops1.wav");
-            AC130StartVoice.insertLast("ac130entrance_blkops2.wav");
-            AC130StartVoice.insertLast("ac130entrance_blkops3.wav");
-
-            AC130EndVoice.insertLast("ac130exit_blkops1.wav");
-            AC130EndVoice.insertLast("ac130exit_blkops2.wav");
-            AC130EndVoice.insertLast("ac130exit_blkops3.wav");
-
-            AC130NoTargetVoice.insertLast("ac130search_blkops1.wav");
-            AC130NoTargetVoice.insertLast("ac130search_blkops2.wav");
-            AC130NoTargetVoice.insertLast("ac130search_blkops3.wav");
-            AC130NoTargetVoice.insertLast("ac130search_blkops4.wav");
-
-            AC130MinigunVoice.insertLast("ac130mg_blkops1.wav");
-            AC130MinigunVoice.insertLast("ac130mg_blkops2.wav");
-
-            AC130ShotgunVoice.insertLast("ac130sg_blkops1.wav");
-            AC130ShotgunVoice.insertLast("ac130sg_blkops2.wav");
-            AC130ShotgunVoice.insertLast("ac130sg_blkops3.wav");
-
-            AC130M202Voice.insertLast("ac130rpg_blkops1.wav");
-            AC130M202Voice.insertLast("ac130rpg_blkops2.wav");
-            AC130M202Voice.insertLast("ac130rpg_blkops3.wav");
-            break;
-        }
-        case 3:
-        {
-            AC130StartVoice.insertLast("ac130entrance_nato1.wav");
-            AC130StartVoice.insertLast("ac130entrance_nato2.wav");
-            AC130StartVoice.insertLast("ac130entrance_nato3.wav");
-
-            AC130EndVoice.insertLast("ac130exit_nato1.wav");
-            AC130EndVoice.insertLast("ac130exit_nato2.wav");
-            AC130EndVoice.insertLast("ac130exit_nato3.wav");
-
-            AC130NoTargetVoice.insertLast("ac130search_nato1.wav");
-            AC130NoTargetVoice.insertLast("ac130search_nato2.wav");
-            AC130NoTargetVoice.insertLast("ac130search_nato3.wav");
-            AC130NoTargetVoice.insertLast("ac130search_nato4.wav");
-            AC130NoTargetVoice.insertLast("ac130search_nato5.wav");
-            AC130NoTargetVoice.insertLast("ac130search_nato6.wav");
-            AC130NoTargetVoice.insertLast("ac130search_nato7.wav");
-            AC130NoTargetVoice.insertLast("ac130search_nato8.wav");
-            AC130NoTargetVoice.insertLast("ac130search_nato9.wav");
-
-            AC130MinigunVoice.insertLast("ac130mg_nato1.wav");
-            AC130MinigunVoice.insertLast("ac130mg_nato2.wav");
-            AC130MinigunVoice.insertLast("ac130mg_nato3.wav");
-            AC130MinigunVoice.insertLast("ac130mg_nato4.wav");
-
-            AC130ShotgunVoice.insertLast("ac130sg_nato1.wav");
-            AC130ShotgunVoice.insertLast("ac130sg_nato2.wav");
-            AC130ShotgunVoice.insertLast("ac130sg_nato3.wav");
-
-            AC130M202Voice.insertLast("ac130rpg_nato1.wav");
-            AC130M202Voice.insertLast("ac130rpg_nato2.wav");
-            AC130M202Voice.insertLast("ac130rpg_nato3.wav");
-            AC130M202Voice.insertLast("ac130rpg_nato4.wav");
-            AC130M202Voice.insertLast("ac130rpg_nato5.wav");
-            break;
-        }
-        default:break;        
-    }
-
+    // 初始化（m_phase初始值为1）
     if(eventinfo.m_phase<=1)
     {
         playSoundAtLocation(metagame,"ac130_flyby.wav",eventinfo.m_factionid,eventinfo.m_pos,2.5);
-        playRandomSoundArray(metagame,AC130StartVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),4.0);
+        playRandomSoundArray(metagame,AC130StartVoice[voicekey],eventinfo.m_factionid,eventinfo.m_pos.toString(),4.0);
         ac130_voice_interval = 2;
         ac130_flyby_interval = 3;
         ac130_pre_pos = eventinfo.m_pos;
         sendFactionMessageKey(metagame,eventinfo.m_factionid,"ac130fight");
-                
+
         ac130_rocket_ready = COOLDOWN_ROCKET;
         ac130_rocket_ammo = AMMO_ROCKET;
         ac130_shotgun_ready = COOLDOWN_SHOTGUN;
@@ -469,70 +495,111 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
     int voice_phase_interval = int(voice_last_time/eventinfo.m_time);
     if( (ac130_flyby_interval == 0) && ((ac130_strike_num-eventinfo.m_phase)>(voice_phase_interval-4))){
         _log("current phase: " + eventinfo.m_phase);
-        ac130_flyby_interval == 6;
+        ac130_flyby_interval = 6;
         playSoundAtLocation(metagame,"ac130_flyby.wav",eventinfo.m_factionid,eventinfo.m_pos,2.5);
     }
 
-    int luckyGuyid;
-    float searchrange_nearby = 15.0f;
-    float searchrange_origin = 60.0f;
+    if(eventinfo.m_phase>1){
+        // 充能恢复
+        if(ac130_rocket_ready<=0 && ac130_rocket_ammo<AMMO_ROCKET)     {ac130_rocket_ammo+=1; ac130_rocket_ready=COOLDOWN_ROCKET;}
+        if(ac130_shotgun_ready<=0 && ac130_shotgun_ammo<AMMO_SHOTGUN)  {ac130_shotgun_ammo+=1; ac130_shotgun_ready=COOLDOWN_SHOTGUN;}
+        if(ac130_minigun_ready<=0 && ac130_minigun_ammo<AMMO_MINIGUN)  {ac130_minigun_ammo+=1; ac130_minigun_ready=COOLDOWN_MINIGUN;}
 
-    // 随机索敌
-    // luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,ac130_pre_pos,searchrange_origin);
+        // 武器初步选择
+        int attacknum;
+        if(ac130_rocket_ammo>0)         attacknum = 7; // 火箭
+        else if(ac130_shotgun_ammo>0)   attacknum = 5; // 霰弹
+        else                            attacknum = 6; // 机炮
 
-    // 优先锁定上一个目标点旁边的
-    luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,ac130_pre_pos,searchrange_nearby);
-    Vector3 ac130_jud_pos;
+        // 索敌
+        int luckyGuyid;
+        float searchrange_nearby = 15.0f;
+        float searchrange_origin = 60.0f;
+        float searchrange_avoid_vehicle = 20.0f;
+        bool need_reselect = false;
 
-    // 如果距离超过130范围或者没有索敌到敌人，重新索敌一次
-    if (luckyGuyid!=-1) {
-        const XmlElement@ testcharacterInfo = getCharacterInfo(metagame,luckyGuyid);
-        if(testcharacterInfo is null)
-        {
+        // 随机索敌
+        // luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,ac130_pre_pos,searchrange_origin);
+
+        // 临近索敌
+        luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,ac130_pre_pos,searchrange_nearby);
+
+        if (luckyGuyid==-1){ // 没索敌到
+            need_reselect = true;
+        }
+        else {
+            const XmlElement@ testcharacterInfo = getCharacterInfo(metagame,luckyGuyid);
+            if(testcharacterInfo is null){ // 敌人不存在
+                need_reselect = true;
+            }
+            else{
+                Vector3 ac130_jud_pos = stringToVector3(testcharacterInfo.getStringAttribute("position")); 
+                if(getAimUnitDistance(1.0,ac130_jud_pos,eventinfo.m_pos)>(searchrange_origin+9.0f)){ // 超出预期范围
+                    need_reselect = true;
+                }
+                else if(attacknum!=6){ // 不为机炮时再检查是否需要避让载具
+                    array<const XmlElement@>@ vehicles = getAllVehicles(metagame, 0);
+                    for(uint i=0;i<vehicles.length();i++){
+                        Vector3 vpos = stringToVector3(vehicles[i].getStringAttribute("position"));
+                        if(getAimUnitDistance(1.0,ac130_jud_pos,vpos) > searchrange_avoid_vehicle)
+                            continue;
+                        const XmlElement@ vinfo = getVehicleInfo(metagame, vehicles[i].getIntAttribute("id"));
+                        if(vinfo is null) continue;
+                        string key = vinfo.getStringAttribute("key");
+                        if(avoid_vehicles.find(key)>-1){ // 目标在重要载具附近
+                            need_reselect = true;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        // 随机索敌 fallback
+        if(need_reselect) {
             ac130_pre_pos = eventinfo.m_pos;
             luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,ac130_pre_pos,searchrange_origin);
         }
-        else
-        {
-            ac130_jud_pos = stringToVector3(testcharacterInfo.getStringAttribute("position")); 
-            if(getAimUnitDistance(1.0,ac130_jud_pos,eventinfo.m_pos)>(searchrange_origin+9.0f)) {
-                ac130_pre_pos = eventinfo.m_pos;
-                luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,ac130_pre_pos,searchrange_origin);
-            }
-        }
-    }
-    else {
-        ac130_pre_pos = eventinfo.m_pos;
-        luckyGuyid = getNearbyRandomLuckyGuyId(metagame,eventinfo.m_factionid,ac130_pre_pos,searchrange_origin);
-    }
-        
-    if(eventinfo.m_phase>1){
-        if(luckyGuyid!=-1){
+
+        if (luckyGuyid!=-1){
             // ac130_jud_confused = 0;
-            
-            float rand_angle = eventinfo.m_randseed + eventinfo.m_phase*3.14/10;
 
             const XmlElement@ luckyGuyInfo = getCharacterInfo(metagame,luckyGuyid);
             if(luckyGuyInfo is null) return;
 
+            float rand_angle = eventinfo.m_randseed + eventinfo.m_phase*3.14/10;
             Vector3 luckyGuyPos = stringToVector3(luckyGuyInfo.getStringAttribute("position"));
             Vector3 aimPos = eventinfo.m_pos.add(Vector3(45.0*cos(rand_angle),60,45.0*sin(rand_angle)));
             ac130_pre_pos = luckyGuyPos;
 
-            //攻击由phase模式改为充能模式
-            if(ac130_rocket_ready<=0 && ac130_rocket_ammo<AMMO_ROCKET)    {ac130_rocket_ammo+=1;ac130_rocket_ready=COOLDOWN_ROCKET;}
-            if(ac130_shotgun_ready<=0 && ac130_shotgun_ammo<AMMO_SHOTGUN)  {ac130_shotgun_ammo+=1;ac130_shotgun_ready=COOLDOWN_SHOTGUN;}
-            if(ac130_minigun_ready<=0 && ac130_minigun_ammo<AMMO_MINIGUN)  {ac130_minigun_ammo+=1;ac130_minigun_ready=COOLDOWN_MINIGUN;}
+            bool force_minigun = false;
+            if(attacknum!=6 && need_reselect){ // 不为机炮时，重新索敌后二次检查是否需要避让载具
+                array<const XmlElement@>@ vehicles = getAllVehicles(metagame, 0);
+                for(uint i=0;i<vehicles.length();i++){
+                    Vector3 vpos = stringToVector3(vehicles[i].getStringAttribute("position"));
+                    if(getAimUnitDistance(1.0,luckyGuyPos,vpos) > searchrange_avoid_vehicle)
+                        continue;
+                    const XmlElement@ vinfo = getVehicleInfo(metagame, vehicles[i].getIntAttribute("id"));
+                    if(vinfo is null) continue;
+                    string key = vinfo.getStringAttribute("key");
+                    if(avoid_vehicles.find(key)>-1){ // 二次索敌目标仍在重要载具附近，强制使用机炮
+                        force_minigun = true;
+                        break;
+                    }
+                }
+            }
+            if(force_minigun) attacknum = 6;
 
-            int attacknum;
-            if(ac130_rocket_ammo>0)         {attacknum=7;ac130_rocket_ammo-=1;}
-            else if(ac130_shotgun_ammo>0)   {attacknum=5;ac130_shotgun_ammo-=1;}
-            else                            {attacknum=6;ac130_minigun_ammo-=1;}
-
-            ac130_rocket_ready-=1;  ac130_shotgun_ready-=1;  ac130_minigun_ready-=0;
+            // 最终武器决策
+            if(attacknum==7)       ac130_rocket_ammo--;
+            else if(attacknum==5)  ac130_shotgun_ammo--;
+            else                   ac130_minigun_ammo--;
+            ac130_rocket_ready-=1;
+            ac130_shotgun_ready-=1;
+            ac130_minigun_ready-=0;
 
             //int attacknum = RampageFairyAC130List[int(eventinfo.m_phase%RampageFairyAC130List.length())];
 
+            // 发射音效与下一次发射间隔设定
             // 烈火看这里，对 playSoundAtLocation 这个函数的 第二项（音效文件名） 和 最后一项（音量大小） 操作就行
             // 5是霰弹音效，可以不用给其实；6是机炮音效；7是火箭弹齐射音效
             switch(attacknum)
@@ -553,7 +620,7 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
                     break;
                 }
                 default:break;
-            }  
+            }
 
             insertCommonStrike(eventinfo.m_characterId,eventinfo.m_factionid,attacknum,aimPos,luckyGuyPos);
 
@@ -561,42 +628,40 @@ void excuteRampageFairyAC130(GameMode@ metagame,GFL_event@ eventinfo){
                 switch(attacknum)
                 {
                     case 5:{
-                        playRandomSoundArray(metagame,AC130ShotgunVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.2);
+                        playRandomSoundArray(metagame,AC130ShotgunVoice[voicekey],eventinfo.m_factionid,eventinfo.m_pos.toString(),3.2);
                         ac130_voice_interval = 3;
                         break;
                     }
                     case 6:{
-                        playRandomSoundArray(metagame,AC130MinigunVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.2);
+                        playRandomSoundArray(metagame,AC130MinigunVoice[voicekey],eventinfo.m_factionid,eventinfo.m_pos.toString(),3.2);
                         ac130_voice_interval = 8;
                         break;
                     }
                     case 7:{
-                        playRandomSoundArray(metagame,AC130M202Voice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.2);
+                        playRandomSoundArray(metagame,AC130M202Voice[voicekey],eventinfo.m_factionid,eventinfo.m_pos.toString(),3.2);
                         ac130_voice_interval = 2;
                         break;
                     }
-                    default:    break;
-                }           
+                    default:break;
+                }
             }
         }
         else if(ac130_voice_interval<=0){
-            
             ac130_voice_interval = 2;
             // ac130_jud_confused++;
             // if(ac130_jud_confused>=5){
             //     ac130_jud_confused = 0;
             //     playSoundAtLocation(metagame,AC130NoTargetVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);
             // }
-            // else playRandomSoundArray(metagame,AC130NoTargetVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);
+            // else playRandomSoundArray(metagame,AC130NoTargetVoice[voicekey],eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);
 
-            playRandomSoundArray(metagame,AC130NoTargetVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);
-
-        }        
+            playRandomSoundArray(metagame,AC130NoTargetVoice[voicekey],eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);
+        }
     }
 
     eventinfo.m_phase++;
     if(eventinfo.m_phase>=ac130_strike_num){
-        playRandomSoundArray(metagame,AC130EndVoice,eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);
+        playRandomSoundArray(metagame,AC130EndVoice[voicekey],eventinfo.m_factionid,eventinfo.m_pos.toString(),3.5);
         eventinfo.m_enable=false;
     }
 }
