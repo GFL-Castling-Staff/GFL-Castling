@@ -445,6 +445,31 @@
 		</attribute_config>
 	</soldier>
 
+	<!-- 用于map12 -->
+	<soldier name="vehicle_driver" spawn_score="0.0" copy_from="default_spawn_ai">
+		<model filename="sfd_vespid_swap_from_dusk.xml" />
+		<ai filename="elite.ai" >
+			<parameter class="force_as_leader" value="1" />
+			<parameter class="check_vehicles_interval" value="0.5" />
+		</ai>
+		<resources clear_weapons="1" clear_calls="1">
+			<weapon key="sfw_vespid_swap.weapon" enabled="1"/>
+			<carry_item key="vest_15hp_elite.carry_item" enabled="1" />
+			<weapon key="sfw_m2g.weapon" enabled="1"/>
+			<call key="sf_assault.call" />
+			<call key="sf_trooper_small_scout.call" />
+		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="0.75" />
+			<item_class_existence class="grenade" slot="0" probability="0.75" />
+		</item_class_existence_config>	
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="100.0" max="100.0" />
+			<attribute weight="0.3" min="300.0" max="500.0" />
+			<attribute weight="0.3" min="0.0" max="0.0" />
+		</attribute_config>			
+	</soldier>
+
 	<!-- vespid -->
 	<soldier name="sf_vespid" spawn_score="3.0" copy_from="default_spawn_ai">
 		<ai filename="default.ai" />
