@@ -210,6 +210,11 @@ void excuteSniperM200(GameMode@ metagame,GFL_event@ eventinfo){
 
 void excuteUMP45MOD3event(GameMode@ metagame,GFL_event@ eventinfo){
     eventinfo.m_time=3.0;
+    const XmlElement@ character = getCharacterInfo(metagame,eventinfo.m_characterId);
+	if(character is null){
+        eventinfo.m_enable=false;
+        return;
+    }
     CreateDirectProjectile(metagame,eventinfo.m_pos.add(Vector3(0,6,0)),eventinfo.m_pos.add(Vector3(0,6.1,0)),'ump45mod3_skill.projectile',eventinfo.m_characterId,eventinfo.m_factionid,10);
     eventinfo.m_phase++;
     if(eventinfo.m_phase>6){

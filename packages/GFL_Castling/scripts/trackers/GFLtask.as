@@ -946,6 +946,8 @@ class strafe_task_30mm : event_call_task {
 		m_excute_time++;
 		m_timeLeft_internal = m_time_internal;
 
+		const XmlElement@ character = getCharacterInfo(m_metagame,m_character_id);
+		if(character is null){m_end = true;return;}
 		insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos1,m_pos2);
 		m_pos1 = m_pos1.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
 		m_pos1 = m_pos1.add(Vector3(0,-20*(sqrt(float(1/m_excute_Limit)*m_excute_time)),0));
@@ -986,6 +988,8 @@ class strafe_task_15mm_mg151 : event_call_task {
 		m_excute_time++;
 		m_timeLeft_internal = m_time_internal;
 
+		const XmlElement@ character = getCharacterInfo(m_metagame,m_character_id);
+		if(character is null){m_end = true;return;}
 		insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos1,m_pos2);
 		m_pos1 = m_pos1.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
 		m_pos1 = m_pos1.add(Vector3(0,-20*(sqrt(float(1/m_excute_Limit)*m_excute_time)),0));
