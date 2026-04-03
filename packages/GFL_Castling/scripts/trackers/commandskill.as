@@ -5172,7 +5172,7 @@ class CommandSkill : Tracker {
                         "Scarecrow_buhuo_SKILL03_JP.wav"
                     };
                     playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-                    spawnSoldier(m_metagame,1,faction_id,aim_pos,"Dummy_Scarecrow");
+                    spawnSoldier(m_metagame,1,factionid,aim_pos,"Dummy_Scarecrow");
                     addCooldown("scarecrow",20,characterId,modifer);
                 }
             }
