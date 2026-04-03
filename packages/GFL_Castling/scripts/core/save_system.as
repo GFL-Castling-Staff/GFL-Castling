@@ -9,6 +9,7 @@
 #include "GFLhelpers.as"
 #include "GFLplayerlist.as"
 #include "GFLparameters.as"
+#include "girl_index.as"
 
 // sid = sid
 // 记录玩家武器数据 使用<weapon key="武器key">形式存储在<weapons>元素下
@@ -790,6 +791,44 @@ class Save_System : Tracker {
             string collect = formatFloat(collect_value,"",0,2);
             a["%doll_collect"] = "" + collect;
             notify(m_metagame, "Logger info query", a, "misc", player_id, false, "", 1.0);
+        }
+        if(checkCommand(message,"missing")){
+            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);            
+            if (playerInfo.getPlayerName() == default_string ) return;
+            string profile_hash = playerInfo.getHash();
+            string sid = playerInfo.getSid();
+            int player_id = playerInfo.getPlayerPid();
+            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash)); 
+            const XmlElement@ player = getPlayerInfo(m_metagame,player_id);
+            if (player is null) return;
+            int cId = player.getIntAttribute("character_id");
+            dictionary player_weapon_set;
+            for (uint i = 0; i < newdata.m_weapons.length(); i++){
+                player_weapon_set.set(newdata.m_weapons[i], true);
+            }
+            array<string> all_keys = reverse_tdoll_complex_index.getKeys();
+            array<string> result;
+            uint start = rand(0, all_keys.length() - 1);
+            for (uint i = 0; i < all_keys.length(); i++){
+                uint idx = (start + i) % all_keys.length();
+                string key = all_keys[idx];
+                if (!player_weapon_set.exists(key)){
+                    result.insertLast(key);
+                    if (result.length() >= 3) break;
+                }
+            }
+            if (result.length() > 0){
+                dictionary a;
+                string list = "";
+                for (uint i = 0; i < result.length(); i++){
+                    list += "\n" + result[i];
+                }
+                a["%list"] = list;
+                notify(m_metagame, "Logger missing query", a, "misc", player_id, false, "", 1.0);
+            }
+            else{
+                notify(m_metagame, "Logger missing none", dictionary(), "misc", player_id, false, "", 1.0);
+            }
         }
         if(checkCommand(message,"balance")){
             GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
