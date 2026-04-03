@@ -327,12 +327,12 @@ class Phase4 : Phase {
 
 		if (!m_continueMode) {
 			// spawners to fill the arena at moment of getting to own it
-			// m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(638,0,522), 5, "default_ai"));
-			// m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(686,0,521), 5, "default_ai"));
-			// m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(707,0,460), 5, "default_ai"));
-			// m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(655,0,435), 5, "default_ai"));
-			// m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(699,0,391), 5, "default_ai"));
-			// m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(617,0,408), 5, "default_ai"));
+			m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(638,21,522), 5, "vehicle_driver"));
+			m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(686,21,521), 5, "vehicle_driver"));
+			m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(707,21,460), 5, "vehicle_driver"));
+			m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(655,21,435), 5, "vehicle_driver"));
+			m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(699,21,391), 5, "vehicle_driver"));
+			m_metagame.addTracker(Spawner(m_metagame, 1, Vector3(617,21,408), 5, "vehicle_driver"));
 
 			// spawn enemy neosu_kuergants_boss
 			{
