@@ -862,7 +862,7 @@ class GFL_playerlist_system : Tracker {
         if(cid==-1) return;
         GFL_equipment@ equipment = info.getPlayerEquipment();
         string _armor = equipment.getWeapon(3);
-        if(startsWith(_armor,"srexo_t6"))
+        if(startsWith(_armor,"srexo_t6") || startsWith(_armor,"gk_kalina_swim"))
         {
             string _weapon = equipment.getWeapon(0);
             if( _weapon=="gkw_kp31mod3.weapon"
