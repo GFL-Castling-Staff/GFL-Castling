@@ -52,7 +52,7 @@
     <hud_icon filename="sfw_agent.png" />
     <weak_hand_hold offset="0.2" />
     <projectile file="bullet_sf_player.projectile">
-        <result class="blast"  damage="0.425" radius="3.75" decal="1" push="0.25" character_state="death" faction_compare="not_equal" damage_as_probability="1" />
+        <result class="blast"  damage="0.425" radius="3.75" decal="1" push="0.05" character_state="death" faction_compare="not_equal" damage_as_probability="1" />
     </projectile>
     <stance state_key="running" accuracy="0.85"/>
     <stance state_key="walking" accuracy="0.85"/>
