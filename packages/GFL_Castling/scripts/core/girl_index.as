@@ -1519,7 +1519,9 @@ array<string> gk_weapon_rf_list = {
     "gkw_sl8_576.weapon",
     "gkw_sl8_5202.weapon",
     "gkw_qbu88.weapon",
+    "gkw_qbu88_skill.weapon",
     "gkw_qbu88_5502.weapon",
+    "gkw_qbu88_5502_skill.weapon",
     "gkw_ksvk.weapon",
     "gkw_ksvk_3405.weapon",
     "gkw_ksvk_3805.weapon",
@@ -1578,7 +1580,8 @@ array<string> gk_weapon_rf_list = {
     "gkw_m1903_302_exp.weapon",
     "gkw_m1903_1107_exp.weapon",
     "gkw_m1908.weapon",
-    "gkw_m1908_skill.weapon"
+    "gkw_m1908_skill.weapon",
+    "gkw_88typemod3_6503.weapon"
 };
 
 array<string> gk_bolted_rf_list = {
