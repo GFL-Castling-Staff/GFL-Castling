@@ -175,6 +175,7 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("exchange_t6_ticket_12", "carry_item", 1.0f),
 		ScoredResource("exchange_t6_ticket_13", "carry_item", 0.2f),
 		ScoredResource("exchange_t6_ticket_14", "carry_item", 0.2f),
+		ScoredResource("exchange_t6_ticket_15", "carry_item", 0.2f),
 
 		ScoredResource("exchange_t6_ticket_1", "carry_item", 1.0f)
 
