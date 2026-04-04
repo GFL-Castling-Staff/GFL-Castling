@@ -964,14 +964,14 @@ class GFL_playerlist_system : Tracker {
                     if(j>=0){
                         No_Delete_DataArray[j].add();
                         const XmlElement@ characterInfo = getCharacterInfo(m_metagame, g_playerInfo_Buck.m_playerInfo[i].getPlayerCid());
-                        if (characterInfo is null) return;
+                        if (characterInfo is null) continue;
                         string c_pos = characterInfo.getStringAttribute("position");
                         spawnStaticProjectile(m_metagame,"particle_effect_98k_medal.projectile",c_pos,g_playerInfo_Buck.m_playerInfo[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));
                     }
                     else{
                         No_Delete_DataArray.insertLast(no_delete_data(strname,strid,1,"kar98k"));       
                         const XmlElement@ characterInfo = getCharacterInfo(m_metagame, g_playerInfo_Buck.m_playerInfo[i].getPlayerCid());
-                        if (characterInfo is null) return;
+                        if (characterInfo is null) continue;
                         string c_pos = characterInfo.getStringAttribute("position");
                         spawnStaticProjectile(m_metagame,"particle_effect_98k_medal.projectile",c_pos,g_playerInfo_Buck.m_playerInfo[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));                            
                     }
@@ -987,14 +987,14 @@ class GFL_playerlist_system : Tracker {
                     if(j>=0){
                         No_Delete_DataArray[j].add();
                         const XmlElement@ characterInfo = getCharacterInfo(m_metagame, g_playerInfo_Buck.m_playerInfo[i].getPlayerCid());
-                        if (characterInfo is null) return;
+                        if (characterInfo is null) continue;
                         string c_pos = characterInfo.getStringAttribute("position");
                         spawnStaticProjectile(m_metagame,"particle_effect_ppsh41_medal.projectile",c_pos,g_playerInfo_Buck.m_playerInfo[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));
                     }
                     else{
                         No_Delete_DataArray.insertLast(no_delete_data(strname,strid,1,"ppsh41"));       
                         const XmlElement@ characterInfo = getCharacterInfo(m_metagame, g_playerInfo_Buck.m_playerInfo[i].getPlayerCid());
-                        if (characterInfo is null) return;
+                        if (characterInfo is null) continue;
                         string c_pos = characterInfo.getStringAttribute("position");
                         spawnStaticProjectile(m_metagame,"particle_effect_ppsh41_medal.projectile",c_pos,g_playerInfo_Buck.m_playerInfo[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));
                     } 
@@ -1010,7 +1010,7 @@ class GFL_playerlist_system : Tracker {
 
                     if(j>=0){
                         const XmlElement@ characterInfo = getCharacterInfo(m_metagame, g_playerInfo_Buck.m_playerInfo[i].getPlayerCid());
-                        if (characterInfo is null) return;
+                        if (characterInfo is null) continue;
                         string c_pos = characterInfo.getStringAttribute("position");
                         spawnStaticProjectile(m_metagame,"particle_effect_stensterling_medal.projectile",c_pos,g_playerInfo_Buck.m_playerInfo[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));
                         if(No_Delete_DataArray[j].m_num<4)No_Delete_DataArray[j].add();
@@ -1018,7 +1018,7 @@ class GFL_playerlist_system : Tracker {
                     else{
                         No_Delete_DataArray.insertLast(no_delete_data(strname,strid,1,"StenSterling"));       
                         const XmlElement@ characterInfo = getCharacterInfo(m_metagame, g_playerInfo_Buck.m_playerInfo[i].getPlayerCid());
-                        if (characterInfo is null) return;
+                        if (characterInfo is null) continue;
                         string c_pos = characterInfo.getStringAttribute("position");
                         spawnStaticProjectile(m_metagame,"particle_effect_stensterling_medal.projectile",c_pos,g_playerInfo_Buck.m_playerInfo[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));
                     }
