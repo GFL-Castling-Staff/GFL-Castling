@@ -2399,12 +2399,16 @@ class DelayGPSScanRequest : Task{
 
 class Tac50_Maple_Sniper_Drone : DelaySkill {
 	protected array<const XmlElement@> affectedCharacter;
+	protected int m_tickCount;
+	protected int m_tickLimit;
 
 	void start(){
 		m_timeLeft=m_time;
 		m_timeLeft_internal = 0;
 		this.setExcuteLimit(10);
-		this.setInternal(5.0);		
+		this.setInternal(5.0);
+		m_tickCount = 0;
+		m_tickLimit = 18; // 90s CD / 5s Internal
 	}
 
 	Tac50_Maple_Sniper_Drone(GameMode@ metagame, float time, int cId,int fId){
@@ -2415,7 +2419,9 @@ class Tac50_Maple_Sniper_Drone : DelaySkill {
 		if(m_timeLeft >= 0){m_timeLeft -= time;return;}
 		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
 		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
+		if (m_tickCount >= m_tickLimit){m_end = true;return;}
 		m_timeLeft_internal = m_time_internal;
+		m_tickCount++;
 
 		const XmlElement@ character_tac50 = getCharacterInfo(m_metagame, m_character_id);
 		if (checkCharacterDead(character_tac50))
