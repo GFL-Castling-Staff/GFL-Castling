@@ -419,37 +419,6 @@
 			<attribute weight="1.0" min="700.0" max="1500.0" />
 		</attribute_config>
 	</soldier>
-	<!-- 用于map12 -->
-	<soldier name="vehicle_driver" spawn_score="0.0" copy_from="default_ai">
-		<model filename="pard_stretletplus_neo.xml" />
-		<ai filename="pard_streletplus.ai" >
-			<parameter class="force_as_leader" value="1" />
-		</ai>
-		<character filename="paradeus.text_lines">
-			<sound key="death" fileref="kill_sound_kcco_bot01.wav" volume="0.4" pitch_variety="0.025"/>
-			<sound key="death" fileref="kill_sound_kcco_bot02.wav" volume="0.4" pitch_variety="0.025"/>
-			<sound key="death" fileref="kill_sound_kcco_bot03.wav" volume="0.4" pitch_variety="0.025"/>
-		</character>
-		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
-			<weapon key="parw_streletplus.weapon" enabled="1" />
-			<weapon key="par_deploy_compass.weapon" enabled="1" />
-			<call key="para_assault.call" />
-			<call key="para_eod.call" />
-			<carry_item key="para_vest_15hp_elite.carry_item" />
-		</resources>
-		<attribute_config class="xp">
-			<attribute weight="1.0" min="1.0" max="2.0" />
-		</attribute_config>
-		<attribute_config class="rp">
-			<attribute weight="1.0" min="300.0" max="500.0" />
-			<attribute weight="0.5" min="500.0" max="800.0" />
-			<attribute weight="3.0" min="0.0" max="0.0" />
-			<attribute weight="0.5" min="300.0" max="300.0" />
-		</attribute_config>
-		<item_class_existence_config>
-			<item_class_existence class="weapon" slot="1" probability="0.1" />
-		</item_class_existence_config>			
-	</soldier>
 	<soldier name="para_strelet" spawn_score="4.0" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<ai filename="default.ai" />
 		<character filename="paradeus.text_lines">
@@ -997,6 +966,20 @@
 			<attribute weight="1.0" min="30.0" max="60.0" />
 		</attribute_config>
 	</soldier>	
+	<!-- 用于map12 -->
+	<soldier name="vehicle_passenger" spawn_score="0.0" copy_from="para_strelet">
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.0" max="1.0" />
+		</attribute_config>
+	</soldier>
+	<soldier name="vehicle_driver" spawn_score="0.0" copy_from="para_streletplus">
+		<ai filename="pard_streletplus.ai" >
+			<parameter class="force_as_leader" value="1" />
+		</ai>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="20.0" max="20.5" />
+		</attribute_config>
+	</soldier>
 	<!-- store -->
 	<soldier name="default_hg" spawn_score="0.0">
 		<resources file="gk_hg.resources" />

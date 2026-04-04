@@ -3127,7 +3127,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 		{
 			// neutral
-			Faction f(getFactionConfigs()[3], createCommanderAiCommand(3));
+			Faction f(getFactionConfigs()[3], createCommanderAiCommand(2));
 			f.m_capacityMultiplier = 0.0;
 			stage.m_factions.insertLast(f);
 		}
