@@ -521,6 +521,10 @@ dictionary commandSkillIndex = {
 
         {"gkw_tac50.weapon",82},
         {"gkw_tac50_2602.weapon",82},
+        {"gkw_tac50_only.weapon",82},
+        {"gkw_tac50_only_skill.weapon",82},
+        {"gkw_tac50_2602_only.weapon",82},
+        {"gkw_tac50_2602_only_skill.weapon",82},
 
         {"gkw_obrmod3.weapon",83},
         {"gkw_obrmod3_skill.weapon",83},

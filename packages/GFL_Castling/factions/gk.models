@@ -813,13 +813,19 @@
         <requirement class="weapon" key="gkw_tac50.weapon" slot="0" />
     </model>
     <model filename="gkd_rf_tac50.xml">
-        <requirement class="weapon" key="gkw_tac50_only_ap.weapon" slot="0" />
+        <requirement class="weapon" key="gkw_tac50_only.weapon" slot="0" />
     </model>
     <model filename="gkd_rf_tac50.xml">
-        <requirement class="weapon" key="gkw_tac50_only_he.weapon" slot="0" />
+        <requirement class="weapon" key="gkw_tac50_only_skill.weapon" slot="0" />
     </model>
     <model filename="gkd_rf_tac50_2602.xml">
         <requirement class="weapon" key="gkw_tac50_2602.weapon" slot="0" />
+    </model>
+    <model filename="gkd_rf_tac50_2602.xml">
+        <requirement class="weapon" key="gkw_tac50_2602_only.weapon" slot="0" />
+    </model>
+    <model filename="gkd_rf_tac50_2602.xml">
+        <requirement class="weapon" key="gkw_tac50_2602_only_skill.weapon" slot="0" />
     </model>
     <model filename="gkd_ar_qbz191.xml">
         <requirement class="weapon" key="gkw_qbz191.weapon" slot="0" />

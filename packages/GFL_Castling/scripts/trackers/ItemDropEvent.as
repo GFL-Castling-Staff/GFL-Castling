@@ -587,7 +587,13 @@ class ItemDropEvent : Tracker {
                     }
                     else if ( (checkQueue(pId,"usas12") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_usas12_2704.weapon" || itemKey=="gkw_usas12_2704_skill.weapon")){
                         giveDigimindItem(cId, pId, "gkw_usas12_2704_only.weapon", "usas12");
-                    }                                        
+                    }
+                    else if ( (checkQueue(pId,"tac50") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_tac50.weapon")){
+                        giveDigimindItem(cId, pId, "gkw_tac50_only.weapon", "tac50");
+                    }
+                    else if ( (checkQueue(pId,"tac50") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_tac50_2602.weapon")){
+                        giveDigimindItem(cId, pId, "gkw_tac50_2602_only.weapon", "tac50");
+                    }
                     break;
                 }
             }

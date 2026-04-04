@@ -828,7 +828,8 @@ dictionary tdoll_complex_index = {
 
     {modded_key(222).toString(),"gkw_tac50.weapon"},
     {modded_key(222,2602).toString(),"gkw_tac50_2602.weapon"},
-    {modded_key(222,0,"only").toString(),"gkw_tac50_only_ap.weapon"},
+    {modded_key(222,0,"only").toString(),"gkw_tac50_only.weapon"},
+    {modded_key(222,2602,"only").toString(),"gkw_tac50_2602_only.weapon"},
     
     {modded_key(223).toString(),"gkw_modell.weapon"},
 
@@ -1540,6 +1541,10 @@ array<string> gk_weapon_rf_list = {
     "gkw_ksvkmod3_7807_skill.weapon",
     "gkw_tac50.weapon",
     "gkw_tac50_2602.weapon",
+    "gkw_tac50_only.weapon",
+    // "gkw_tac50_only_skill.weapon",
+    "gkw_tac50_2602_only.weapon",
+    // "gkw_tac50_2602_only_skill.weapon",
     "gkw_gepardm1.weapon",
     "gkw_gepardm1_4006.weapon",
     "gkw_gepardm1mod3.weapon",
