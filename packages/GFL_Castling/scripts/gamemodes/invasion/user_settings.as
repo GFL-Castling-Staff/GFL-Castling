@@ -55,7 +55,7 @@ class UserSettings {
 	float m_teamKillPenaltyTime = 1800.0;
 	float m_forgiveTeamKillTime = 900.0;
 	float m_spawnTimeAtMaxPlayers = 1.0;  // was 2.0 (1.82)
-	int m_GlobalDifficulty= 0;
+	int m_GlobalDifficulty= 1;
 	int m_server_overload_num= 10;
 	array<string> m_overlayPaths;
 

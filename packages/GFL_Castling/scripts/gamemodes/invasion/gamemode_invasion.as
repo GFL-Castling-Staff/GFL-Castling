@@ -57,7 +57,8 @@
 #include "save_system.as"
 #include "girl_index.as"
 #include "vehicle_destroyed.as"
-
+#include "soldier_weight.as"
+#include "soldier_resource_handler.as"
 // --------------------------------------------
 class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 	protected MapRotatorInvasion@ m_mapRotator;
@@ -327,6 +328,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		addTracker(GFL_playerlist_system(this,getUserSettings()));
 		addTracker(Save_System(this));
 		addTracker(vehicle_destroyed(this));  
+        addTracker(SoldierResourceHandler(this));
 
 		
 	}
@@ -374,7 +376,28 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 
     protected void setupDifficultyFactionResource() {
         int difficulty = getUserSettings().m_GlobalDifficulty;
+        if(difficulty == 1) //eazy
+        {   
+            for (uint i = 0; i < m_factions.size(); ++i) {
+                const FactionConfig@ config = m_factions[i].m_config;
+
+                if (config.m_file == "gk.xml") {
+                    continue;
+                }
+                else if(config.m_file == "sf.xml"){
+                    setSpawnScoresForFaction(this,i,sf_eazymode_weight);
+                }
+                else if(config.m_file == "kcco.xml"){
+                    setSpawnScoresForFaction(this,i,kcco_eazymode_weight);
+                }
+                else if(config.m_file == "paradeus.xml"){
+                    setSpawnScoresForFaction(this,i,paradeus_eazymode_weight);
+                }
+                else continue;
+            }
+        }
     }
+
 
 	// --------------------------------------------
 	protected void setupDisableRadioAtMatchOver() {

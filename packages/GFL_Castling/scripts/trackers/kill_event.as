@@ -29,7 +29,7 @@ class kill_event : Tracker {
 		m_metagame.getComms().send("<command class='set_metagame_event' name='character_kill' enabled='1' />");
 		m_metagame.getComms().send("<command class='set_metagame_event' name='player_stun' enabled='1' />");
         m_difficulty=m_userSettings.m_GlobalDifficulty;
-        m_droprate_offset= m_difficulty* 0.01;
+        // m_droprate_offset= m_difficulty* 0.01;
 	}
     
     dictionary healOnKillWeaponList = {

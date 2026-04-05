@@ -1275,11 +1275,19 @@ string getPlayerInfoName(const XmlElement@ player)
 	return player.getStringAttribute("name");
 }
 
-void changeSoldierGroupResource(Metagame@ metagame, int factionId, const array<const Resource@>@ resources, bool add, string soldier_group_name) {
+void changeSoldierGroupResource(Metagame@ metagame, int factionId, array<Resource@> resources, bool add, string soldier_group_name,bool clear) {
     XmlElement command("command");
     command.setStringAttribute("class", "faction_resources");
     command.setIntAttribute("faction_id", factionId);
+    if(clear)
+    {
+        command.setBoolAttribute("clear_calls", clear);
+        command.setBoolAttribute("clear_weapons", clear);
+        command.setBoolAttribute("clear_carry_items", clear);
+        command.setBoolAttribute("clear_grenades", clear);    
+    }
     command.setStringAttribute("soldier_group_name", soldier_group_name);
+    
 
     for (uint i = 0; i < resources.size(); ++i) {
         const Resource@ resource = resources[i];
@@ -1289,15 +1297,47 @@ void changeSoldierGroupResource(Metagame@ metagame, int factionId, const array<c
     metagame.getComms().send(command);
 }
 
-void changeSoldierGroupResource(Metagame@ metagame, int factionId, const Resource@ resource, bool add, string soldier_group_name) {
+void changeSoldierGroupResource(Metagame@ metagame, int factionId, const Resource@ resource, bool add, string soldier_group_name,bool clear) {
+    XmlElement command("command");
+    command.setStringAttribute("class", "faction_resources");
+    command.setIntAttribute("faction_id", factionId);
+    if(clear)
+    {
+        command.setBoolAttribute("clear_calls", clear);
+        command.setBoolAttribute("clear_weapons", clear);
+        command.setBoolAttribute("clear_carry_items", clear);
+        command.setBoolAttribute("clear_grenades", clear);    
+    }
+    command.setStringAttribute("soldier_group_name", soldier_group_name);
+
+    addFactionResourceElements(command, resource.m_type, array<string> = {resource.m_key}, add);
+
+    metagame.getComms().send(command);
+}
+
+XmlElement@ getChangeSoldierGroupResourceCommand(int factionId, array<Resource@> resources, bool add, string soldier_group_name)
+{
+    XmlElement command("command");
+    command.setStringAttribute("class", "faction_resources");
+    command.setIntAttribute("faction_id", factionId);
+    command.setStringAttribute("soldier_group_name", soldier_group_name);
+
+    for (uint i = 0; i < resources.size(); ++i) {
+        const Resource@ resource = resources[i];
+        addFactionResourceElements(command, resource.m_type, array<string> = {resource.m_key}, add);
+    }
+    return command;
+}
+
+XmlElement@ getChangeSoldierGroupResourceCommand(int factionId, const Resource@ resource, bool add, string soldier_group_name)
+{
     XmlElement command("command");
     command.setStringAttribute("class", "faction_resources");
     command.setIntAttribute("faction_id", factionId);
     command.setStringAttribute("soldier_group_name", soldier_group_name);
 
     addFactionResourceElements(command, resource.m_type, array<string> = {resource.m_key}, add);
-
-    metagame.getComms().send(command);
+    return command;
 }
 
 class SoldierInfo {
