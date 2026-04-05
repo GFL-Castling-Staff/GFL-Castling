@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="40mm" slot="1" pulldown_in_air="45.0" key="40mm_spread.projectile">
     <tag name="grenade"/>
-    <result class="blast" radius="7.5" damage="6.1" push="0.35" decal="1" faction_compare="not_equal" damage_origin_vehicles="0"/>
+    <result class="spawn" instance_class="grenade" instance_key="blast_shard_rad6.projectile" min_amount="20" max_amount="20" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
+    
     <trigger class="impact" />
     <rotation class="motion" />
     <model mesh_filename="agl.xml" />
