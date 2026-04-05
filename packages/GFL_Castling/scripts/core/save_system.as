@@ -30,7 +30,7 @@ class GFL_call_info
 
 class player_data
 {
-	int m_corenum=0;
+    int m_corenum=0;
     int m_dev_point;
     int m_dev_point_lifemax;
     string m_playername;
@@ -69,7 +69,7 @@ class player_data
     };
     array<tdoll_intimacy_info@> m_tdoll_intimacy={};
 
-	player_data() {}
+    player_data() {}
 
     player_data(const string _player_name, const string _profile_hash)
     {
@@ -456,38 +456,38 @@ const XmlElement@ readFile(const Metagame@ metagame,string name, string profile_
 }
 
 const XmlElement@ readXML(const Metagame@ metagame, string filename){
-	XmlElement@ query = XmlElement(
-		makeQuery(metagame, array<dictionary> = {
-			dictionary = { {"TagName", "data"}, {"class", "saved_data"}, {"filename", filename}}}));
-	const XmlElement@ xml = metagame.getComms().query(query);
+    XmlElement@ query = XmlElement(
+        makeQuery(metagame, array<dictionary> = {
+            dictionary = { {"TagName", "data"}, {"class", "saved_data"}, {"filename", filename}}}));
+    const XmlElement@ xml = metagame.getComms().query(query);
     if(xml is null){
         writeXML(metagame,filename,XmlElement(filename));
         @xml = readXML(metagame,filename);
     }
-	return xml;
+    return xml;
 }
 
 void writeXML(const Metagame@ metagame, string filename, XmlElement@ xml, string location = "" ){
-	XmlElement command("command");
-		command.setStringAttribute("class", "save_data");
-		command.setStringAttribute("filename", filename);
+    XmlElement command("command");
+        command.setStringAttribute("class", "save_data");
+        command.setStringAttribute("filename", filename);
         if(location != "")
         {
             command.setStringAttribute("location", location);
         }
-		command.appendChild(xml);
-	metagame.getComms().send(command);
+        command.appendChild(xml);
+    metagame.getComms().send(command);
 }
 
 XmlElement@ PlayerProfileSave(player_data@ player_info) {
-	XmlElement root("playerdata");
-	root.setStringAttribute("username", player_info.m_playername);
-	root.setStringAttribute("sid", player_info.m_sid);
-	root.setStringAttribute("profile_hash", player_info.m_profile_hash);
+    XmlElement root("playerdata");
+    root.setStringAttribute("username", player_info.m_playername);
+    root.setStringAttribute("sid", player_info.m_sid);
+    root.setStringAttribute("profile_hash", player_info.m_profile_hash);
     root.setIntAttribute("core_num", player_info.m_corenum);
     root.setIntAttribute("dev_point", player_info.m_dev_point);
     root.setIntAttribute("dev_point_lifemax", player_info.m_dev_point_lifemax);
-	string FILENAME =  ("save_" + player_info.m_sid +".xml" );
+    string FILENAME =  ("save_" + player_info.m_sid +".xml" );
 
     XmlElement subroot_0("weapons");
     for (uint i = 0; i < player_info.m_weapons.length(); i++)
@@ -642,20 +642,20 @@ class Save_System : Tracker {
         @m_metagame = @metagame;
     }
 
-	bool hasEnded() const {
-		// always on
-		return false;
-	}
-	// --------------------------------------------
-	bool hasStarted() const {
-		// always on
-		return true;
-	}
+    bool hasEnded() const {
+        // always on
+        return false;
+    }
+    // --------------------------------------------
+    bool hasStarted() const {
+        // always on
+        return true;
+    }
 
     protected void handleChatEvent(const XmlElement@ event){
-		string message = event.getStringAttribute("message");
-		string p_name = event.getStringAttribute("player_name");
-		int senderId = event.getIntAttribute("player_id");
+        string message = event.getStringAttribute("message");
+        string p_name = event.getStringAttribute("player_name");
+        int senderId = event.getIntAttribute("player_id");
         if(checkCommand(message,"craft")){
 
             GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
@@ -873,9 +873,9 @@ class Save_System : Tracker {
             notify(m_metagame, "Waifu info query", a, "misc", player_id, false, "", 1.0);
         }
 
-		if (!m_metagame.getAdminManager().isAdmin(p_name, senderId) && !m_metagame.getModeratorManager().isModerator(p_name, senderId)) {
-			return;
-		}
+        if (!m_metagame.getAdminManager().isAdmin(p_name, senderId) && !m_metagame.getModeratorManager().isModerator(p_name, senderId)) {
+            return;
+        }
 
         if(checkCommand(message,"savetest")){
             GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
@@ -920,7 +920,7 @@ class Save_System : Tracker {
                 _log("你没有这个武器：" + weapon_key);
             }
         }
-	}
+    }
 
     void update(float time) {
         if(m_craftQueue.size() > 0) {
