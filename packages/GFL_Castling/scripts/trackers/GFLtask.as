@@ -3316,3 +3316,104 @@ class Event_call_bomb_fairy : event_call_task_hasMarker {
 		}
 	}
 }
+
+// 勇士妖精 Apache（原 event_system case 5）
+// 环形飞行 + 机枪扫射 + 标枪导弹 + 诱饵箭矢
+class Event_call_warrior_fairy_apache : event_call_task_hasMarker {
+	protected float m_randseed;
+	protected int m_javelin_vehicle_id;
+
+	Event_call_warrior_fairy_apache(GameMode@ metagame, float time, int cId, int fId, Vector3 start_pos, Vector3 target_pos, string mode="", int markerid=0)
+	{
+		super(metagame, time, cId, fId, start_pos, target_pos, mode, markerid);
+		m_randseed = rand(0.0, 3.14);
+		m_javelin_vehicle_id = -1;
+	}
+
+	void start() {
+		m_timeLeft = m_time;
+		m_timeLeft_internal = 0;
+		m_time_internal = 0.5;
+		m_excute_Limit = 12;
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time; return;}
+		if(m_timeLeft_internal >= 0){m_timeLeft_internal -= time; return;}
+		if(m_excute_time >= m_excute_Limit){m_end = true; return;}
+		m_excute_time++;
+		m_timeLeft_internal = m_time_internal;
+
+		// 环形飞行位置（固定偏移）
+		Vector3 aimPos = e_pos.add(Vector3(10.0 * cos(m_randseed), 40, 10.0 * sin(m_randseed)));
+
+		// phase 12: 诱饵箭矢（原代码 bug 修复，原来不会执行到这里）
+		if(m_excute_time == 12)
+		{
+			insertCommonStrike(m_character_id, m_faction_id, "apache_bait", aimPos, e_pos);
+		}
+
+		// phase 1: 发消息 + 锁定载具
+		if(m_excute_time == 1)
+		{
+			sendFactionMessageKey(m_metagame, m_faction_id, "warriorfight");
+			m_javelin_vehicle_id = getNearByEnemyVehicle(m_metagame, m_faction_id, e_pos, 20);
+			if(m_javelin_vehicle_id != -1)
+			{
+				playSoundAtLocation(m_metagame, "javelin_locked.wav", m_faction_id, e_pos, 1.0);
+			}
+			else
+			{
+				playSoundAtLocation(m_metagame, "javelin_lock_fail.wav", m_faction_id, e_pos, 1.0);
+			}
+		}
+
+		// phase 6: 播放扫射音效
+		if(m_excute_time == 6)
+		{
+			playSoundAtLocation(m_metagame, "30mm_strafe.wav", m_faction_id, e_pos, 1.0);
+		}
+
+		// phase 6-11: 机枪扫射
+		if(m_excute_time >= 6 && m_excute_time <= 11)
+		{
+			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame, m_faction_id, e_pos, 30.0f);
+			if(luckyGuyid != -1)
+			{
+				const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+				Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+				DelayCommonCallRequest@ shot = DelayCommonCallRequest(m_metagame, 0.05, m_character_id, m_faction_id, "apache_mg", aimPos, luckyGuyPos);
+				TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+				tasker.add(shot);
+				tasker.add(shot);
+				tasker.add(shot);
+				tasker.add(shot);
+			}
+		}
+
+		// phase 8: 标枪导弹
+		if(m_excute_time == 8)
+		{
+			if(m_javelin_vehicle_id != -1)
+			{
+				int target_id = m_javelin_vehicle_id;
+				Vector3 target_fin_pos;
+				const XmlElement@ target_info = getVehicleInfo(m_metagame, target_id);
+				if(target_info !is null)
+				{
+					target_fin_pos = stringToVector3(target_info.getStringAttribute("position"));
+				}
+				else
+				{
+					target_fin_pos = e_pos;
+				}
+				insertCommonStrike(m_character_id, m_faction_id, "apache_javelin", aimPos, target_fin_pos);
+			}
+			else
+			{
+				// 未锁定载具时，向目标点发射
+				insertCommonStrike(m_character_id, m_faction_id, "apache_javelin", aimPos, e_pos);
+			}
+		}
+	}
+}

@@ -1673,7 +1673,9 @@ class call_event : Tracker {
                             FairyRequest.setDummyId(flagId);
                             addCastlingMarker(FairyRequest);
                             m_DummyCallID++;
-                            GFL_event_array.insertLast(GFL_event(characterId,factionId,int(GFL_Event_Index["warrior_fairy_apache"]),stringToVector3(position),1.0,-1.0,flagId));
+                            Event_call_warrior_fairy_apache@ new_task = Event_call_warrior_fairy_apache(m_metagame,1.0,characterId,factionId,stringToVector3(position),stringToVector3(position),"",flagId);
+                            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                            tasker.add(new_task);
                         }
                         break;
                     }
