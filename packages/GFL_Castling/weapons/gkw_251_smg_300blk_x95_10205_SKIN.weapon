@@ -28,7 +28,7 @@
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename="gkw_smg_x95.xml"/>
 	<hud_icon filename="gkw_x95_10205.png"/>
-	<commonness value="0.2" in_stock="0"/>
+	<commonness value="0" in_stock="0" can_respawn_with="1" />
 	<inventory encumbrance="12.5" buy_price="15.0" sell_price="15.0"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile file="bullet.projectile" can_be_detected_by_footmen="0">

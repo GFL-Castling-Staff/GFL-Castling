@@ -33,7 +33,7 @@
         <sound class="impact" fileref="rifle_drop.wav" />
         <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
         <model filename="gkw_mg_type80.xml" />
-        <commonness value="0.2" in_stock="0" can_respawn_with="1" />
+        <commonness value="0" in_stock="0" can_respawn_with="1" />
         <hud_icon filename="gkw_80type_2504.png" />
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="3.2" kill_probability_offset_on_successful_hit="5.3" kill_decay_start_time="1.5" kill_decay_end_time="1.6" />
