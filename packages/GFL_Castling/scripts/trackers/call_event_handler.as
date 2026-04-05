@@ -324,8 +324,9 @@ class call_event : Tracker {
                                     FairyRequest.setIconTypeKey("call_marker_bomb");
                                     addCastlingMarker(FairyRequest);
                                     m_DummyCallID++;
-                                    GFL_event@ newCall = GFL_event(characterId,factionId,int(GFL_Event_Index["bomb_fairy"]),stringToVector3(position),5.0,-1.0,flagId);
-                                    GFL_event_array.insertLast(newCall);
+                                    Event_call_bomb_fairy@ new_task = Event_call_bomb_fairy(m_metagame,5.0,characterId,factionId,stringToVector3(position),stringToVector3(position),"",flagId);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
                                     break;
                                 }
@@ -345,8 +346,9 @@ class call_event : Tracker {
                                     FairyRequest.setIconTypeKey("call_marker_bomb");
                                     addCastlingMarker(FairyRequest);
                                     m_DummyCallID++;
-                                    GFL_event@ newCall = GFL_event(characterId,factionId,int(GFL_Event_Index["bomb_fairy"]),stringToVector3(position),5.0,-1.0,flagId);
-                                    GFL_event_array.insertLast(newCall);
+                                    Event_call_bomb_fairy@ new_task = Event_call_bomb_fairy(m_metagame,5.0,characterId,factionId,stringToVector3(position),stringToVector3(position),"",flagId);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
                                     break;
                                 }
@@ -373,8 +375,9 @@ class call_event : Tracker {
                                     FairyRequest.setIconTypeKey("call_marker_bomb");
                                     addCastlingMarker(FairyRequest);
                                     m_DummyCallID++;
-                                    GFL_event@ newCall = GFL_event(characterId,factionId,int(GFL_Event_Index["bomb_fairy"]),stringToVector3(position),0.0,-1.0,flagId);
-                                    GFL_event_array.insertLast(newCall);
+                                    Event_call_bomb_fairy@ new_task = Event_call_bomb_fairy(m_metagame,0.0,characterId,factionId,stringToVector3(position),stringToVector3(position),"",flagId);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
                                     break;
                                 }
@@ -394,9 +397,9 @@ class call_event : Tracker {
                                     FairyRequest.setIconTypeKey("call_marker_bomb");
                                     addCastlingMarker(FairyRequest);
                                     m_DummyCallID++;
-                                    GFL_event@ newCall = GFL_event(characterId,factionId,int(GFL_Event_Index["bomb_fairy"]),stringToVector3(position),5.0,-1.0,flagId);
-                                    newCall.setSpeicalKey(2);
-                                    GFL_event_array.insertLast(newCall);
+                                    Event_call_bomb_fairy@ new_task = Event_call_bomb_fairy(m_metagame,5.0,characterId,factionId,stringToVector3(position),stringToVector3(position),"",flagId,2);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
                                     break;
                                 }             

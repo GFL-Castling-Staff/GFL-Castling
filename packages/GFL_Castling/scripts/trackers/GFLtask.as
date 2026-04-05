@@ -3256,3 +3256,63 @@ class Skill_UMP45MOD3_Smoke : event_call_task {
 		CreateDirectProjectile(m_metagame, e_pos.add(Vector3(0, 6, 0)), e_pos.add(Vector3(0, 6.1, 0)), "ump45mod3_skill.projectile", m_character_id, m_faction_id, 10);
 	}
 }
+
+// 炮击妖精 105mm（原 event_system case 7）
+// specialkey 1: phase 7 用 case 15（高爆）
+// specialkey 2: phase 7 用 case 126（大高爆）
+class Event_call_bomb_fairy : event_call_task_hasMarker {
+	protected int m_specialkey;
+
+	Event_call_bomb_fairy(GameMode@ metagame, float time, int cId, int fId, Vector3 start_pos, Vector3 target_pos, string mode="", int markerid=0, int specialkey=1)
+	{
+		super(metagame, time, cId, fId, start_pos, target_pos, mode, markerid);
+		m_specialkey = specialkey;
+	}
+
+	void start() {
+		m_timeLeft = m_time;
+		m_timeLeft_internal = 0;
+		m_time_internal = 1.0;
+		m_excute_Limit = 7;
+		m_pos1 = e_pos.add(Vector3(0, 40, 0));
+		m_pos2 = e_pos;
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time; return;}
+		if(m_timeLeft_internal >= 0){m_timeLeft_internal -= time; return;}
+		if(m_excute_time >= m_excute_Limit){m_end = true; return;}
+		m_excute_time++;
+		m_timeLeft_internal = m_time_internal;
+
+		// 首次执行发送阵营消息
+		if(m_excute_time == 1)
+		{
+			sendFactionMessageKey(m_metagame, m_faction_id, "bombfight");
+		}
+
+		if(m_excute_time != 7)
+		{
+			// phase 1-6: 105mm炮击
+			insertCommonStrike(m_character_id, m_faction_id, 14, m_pos1, m_pos2);
+		}
+		else
+		{
+			// phase 7: 最后一发高爆
+			if(m_specialkey == 1)
+			{
+				insertCommonStrike(m_character_id, m_faction_id, 15, m_pos1, m_pos2);
+			}
+			else
+			{
+				insertCommonStrike(m_character_id, m_faction_id, 126, m_pos1, m_pos2);
+			}
+		}
+
+		// phase 6（m_excute_time==6）后间隔改为 2s
+		if(m_excute_time == 6)
+		{
+			m_timeLeft_internal = 2.0;
+		}
+	}
+}
