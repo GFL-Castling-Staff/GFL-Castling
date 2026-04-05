@@ -1334,11 +1334,7 @@ class call_event : Tracker {
 
                                 case 300200: //暴怒 空中炮艇
                                 {
-                                    bool exist_ac130 = false;
-                                    for (uint i=0;i<GFL_event_array.length();i++){
-                                        if (GFL_event_array[i].m_eventkey==2) {exist_ac130=true;break;}
-                                    }
-                                    if (exist_ac130){
+                                    if (g_ac130_active){
                                         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
                                         if (character !is null) {
                                             sendPrivateMessageKey(m_metagame,playerId,"ac130callexisthint");
@@ -1358,9 +1354,12 @@ class call_event : Tracker {
                                     FairyRequest.setIconTypeKey("call_marker_fury");
                                     addCastlingMarker(FairyRequest);
                                     m_DummyCallID++;
-                                    GFL_event@ newCall = GFL_event(characterId,factionId,int(GFL_Event_Index["rampage_fairy_ac130"]),stringToVector3(position),1.0,-1.0,flagId);
-                                    newCall.setSpeicalKey(rand(1,3));
-                                    GFL_event_array.insertLast(newCall);
+                                    Event_call_rampage_fairy_ac130@ new_task = Event_call_rampage_fairy_ac130(
+                                        m_metagame, 1.0, characterId, factionId,
+                                        stringToVector3(position), stringToVector3(position),
+                                        rand(1,3), flagId);
+                                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                    tasker.add(new_task);
                                     addCustomStatToCharacter(m_metagame,"radio_call",characterId);
                                     break;
                                 }
@@ -1518,12 +1517,7 @@ class call_event : Tracker {
                         break;
                     }                    
                     case 1:{
-                        bool exsist_ac130 = false;
-                        for (uint i=0;i<GFL_event_array.length();i++){
-                            // mb break? What's the point of running whole array
-                            if (GFL_event_array[i].m_eventkey==2) {exsist_ac130=true;break;}
-                        }
-                        if (exsist_ac130){
+                        if (g_ac130_active){
                             const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
                             if (character !is null) {
                                 sendPrivateMessageKey(m_metagame,playerId,"ac130callexisthint");
@@ -1552,9 +1546,12 @@ class call_event : Tracker {
                                 FairyRequest.setIconTypeKey("call_marker_fury");
                                 addCastlingMarker(FairyRequest);
                                 m_DummyCallID++;
-                                GFL_event@ newCall = GFL_event(characterId,factionId,int(GFL_Event_Index["rampage_fairy_ac130"]),stringToVector3(position),1.0,-1.0,flagId);
-                                newCall.setSpeicalKey(rand(1,3));
-                                GFL_event_array.insertLast(newCall);
+                                Event_call_rampage_fairy_ac130@ new_task = Event_call_rampage_fairy_ac130(
+                                    m_metagame, 1.0, characterId, factionId,
+                                    stringToVector3(position), stringToVector3(position),
+                                    rand(1,3), flagId);
+                                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                                tasker.add(new_task);
                             }
                         }
                         break;

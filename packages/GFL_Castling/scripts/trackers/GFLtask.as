@@ -2724,3 +2724,433 @@ class Event_call_yaoren_fairy : event_call_task_hasMarker {
         m_timeLeft_internal = m_time_internal;
     }
 }
+
+// AC130 全局唯一性标志，同一时刻只能存在一架AC130
+bool g_ac130_active = false;
+
+// 暴怒妖精 AC130 炮艇 Task（原 event_system case 2 "rampage_fairy_ac130"）
+class Event_call_rampage_fairy_ac130 : event_call_task_hasMarker {
+
+	// --- 武器充能系统 ---
+	protected int m_rocket_ready;
+	protected int m_rocket_ammo;
+	protected int m_shotgun_ready;
+	protected int m_shotgun_ammo;
+	protected int m_minigun_ready;
+	protected int m_minigun_ammo;
+
+	// 武器常量
+	protected int COOLDOWN_ROCKET = 5;
+	protected int COOLDOWN_MINIGUN = 0;
+	protected int COOLDOWN_SHOTGUN = 3;
+	protected int AMMO_ROCKET = 1;
+	protected int AMMO_MINIGUN = 1;
+	protected int AMMO_SHOTGUN = 2;
+
+	// --- 音效控制 ---
+	protected int m_voice_interval;
+	protected int m_flyby_interval;
+
+	// --- 索敌 ---
+	protected Vector3 m_pre_pos;
+
+	// --- 语音包 ---
+	protected int m_voicekey;
+	protected array<array<string>> m_startVoice;
+	protected array<array<string>> m_endVoice;
+	protected array<array<string>> m_noTargetVoice;
+	protected array<array<string>> m_minigunVoice;
+	protected array<array<string>> m_shotgunVoice;
+	protected array<array<string>> m_m202Voice;
+
+	// --- 载具避让列表 ---
+	protected array<string> m_avoid_vehicles;
+
+	// --- 环形飞行随机种子 ---
+	protected float m_randseed;
+
+	// --- 构造函数 ---
+	// voicekey: 语音包索引 1=俄语 2=黑色行动 3=北约
+	Event_call_rampage_fairy_ac130(GameMode@ metagame, float time, int cId, int fId,
+		Vector3 characterpos, Vector3 targetpos, int voicekey, int markerid)
+	{
+		super(metagame, time, cId, fId, characterpos, targetpos, "", markerid);
+		m_voicekey = voicekey;
+		if(m_voicekey < 1 || m_voicekey > 3) m_voicekey = 1;
+	}
+
+	void start() {
+		g_ac130_active = true;
+
+		// 基础时间控制
+		m_timeLeft = m_time;          // 初始延迟（调用方传入，约1.0s）
+		m_time_internal = 1.8;        // 基础射击间隔
+		m_timeLeft_internal = 0;
+		m_excute_Limit = 50;          // 总phase数
+
+		// 随机种子
+		m_randseed = rand(0.0, 3.14);
+
+		// 武器初始化
+		m_rocket_ready = COOLDOWN_ROCKET;
+		m_rocket_ammo = AMMO_ROCKET;
+		m_shotgun_ready = COOLDOWN_SHOTGUN;
+		m_shotgun_ammo = AMMO_SHOTGUN;
+		m_minigun_ready = COOLDOWN_MINIGUN;
+		m_minigun_ammo = AMMO_MINIGUN;
+
+		// 索敌状态
+		m_pre_pos = e_pos;
+
+		// 音效控制
+		m_voice_interval = 0;
+		m_flyby_interval = 0;
+
+		// 载具避让列表
+		m_avoid_vehicles = {
+			"armored_truck.vehicle",
+			"radar_tower.vehicle"
+		};
+
+		// 语音包初始化（二维数组，索引0为空占位，1=俄语 2=黑行动 3=北约）
+		m_startVoice = {
+			{},
+			{
+				"ac130entrance_rus1.wav",
+				"ac130entrance_rus2.wav",
+				"ac130entrance_rus3.wav"
+			},
+			{
+				"ac130entrance_blkops1.wav",
+				"ac130entrance_blkops2.wav",
+				"ac130entrance_blkops3.wav"
+			},
+			{
+				"ac130entrance_nato1.wav",
+				"ac130entrance_nato2.wav",
+				"ac130entrance_nato3.wav"
+			}
+		};
+		m_endVoice = {
+			{},
+			{
+				"ac130exit_rus1.wav",
+				"ac130exit_rus2.wav",
+				"ac130exit_rus3.wav"
+			},
+			{
+				"ac130exit_blkops1.wav",
+				"ac130exit_blkops2.wav",
+				"ac130exit_blkops3.wav"
+			},
+			{
+				"ac130exit_nato1.wav",
+				"ac130exit_nato2.wav",
+				"ac130exit_nato3.wav"
+			}
+		};
+		m_noTargetVoice = {
+			{},
+			{
+				"ac130search_rus1.wav",
+				"ac130search_rus2.wav"
+			},
+			{
+				"ac130search_blkops1.wav",
+				"ac130search_blkops2.wav",
+				"ac130search_blkops3.wav",
+				"ac130search_blkops4.wav"
+			},
+			{
+				"ac130search_nato1.wav",
+				"ac130search_nato2.wav",
+				"ac130search_nato3.wav",
+				"ac130search_nato4.wav",
+				"ac130search_nato5.wav",
+				"ac130search_nato6.wav",
+				"ac130search_nato7.wav",
+				"ac130search_nato8.wav",
+				"ac130search_nato9.wav"
+			}
+		};
+		m_minigunVoice = {
+			{},
+			{
+				"ac130mg_rus1.wav",
+				"ac130mg_rus2.wav",
+				"ac130allguns_rus1.wav",
+				"ac130allguns_rus2.wav",
+				"ac130allguns_rus3.wav"
+			},
+			{
+				"ac130mg_blkops1.wav",
+				"ac130mg_blkops2.wav"
+			},
+			{
+				"ac130mg_nato1.wav",
+				"ac130mg_nato2.wav",
+				"ac130mg_nato3.wav",
+				"ac130mg_nato4.wav"
+			}
+		};
+		m_shotgunVoice = {
+			{},
+			{
+				"ac130sg_rus1.wav",
+				"ac130sg_rus2.wav",
+				"ac130allguns_rus1.wav",
+				"ac130allguns_rus2.wav",
+				"ac130allguns_rus3.wav"
+			},
+			{
+				"ac130sg_blkops1.wav",
+				"ac130sg_blkops2.wav",
+				"ac130sg_blkops3.wav"
+			},
+			{
+				"ac130sg_nato1.wav",
+				"ac130sg_nato2.wav",
+				"ac130sg_nato3.wav"
+			}
+		};
+		m_m202Voice = {
+			{},
+			{
+				"ac130rpg_rus1.wav",
+				"ac130rpg_rus2.wav",
+				"ac130rpg_rus3.wav",
+				"ac130allguns_rus1.wav",
+				"ac130allguns_rus2.wav",
+				"ac130allguns_rus3.wav"
+			},
+			{
+				"ac130rpg_blkops1.wav",
+				"ac130rpg_blkops2.wav",
+				"ac130rpg_blkops3.wav"
+			},
+			{
+				"ac130rpg_nato1.wav",
+				"ac130rpg_nato2.wav",
+				"ac130rpg_nato3.wav",
+				"ac130rpg_nato4.wav",
+				"ac130rpg_nato5.wav"
+			}
+		};
+	}
+
+	void update(float time) {
+		// 标准延迟门控
+		if(m_timeLeft >= 0) { m_timeLeft -= time; return; }
+		if(m_timeLeft_internal >= 0) { m_timeLeft_internal -= time; return; }
+		if(m_excute_time >= m_excute_Limit) { m_end = true; return; }
+
+		m_excute_time++;
+
+		// 递减音效间隔计数器
+		if(m_voice_interval > 0) m_voice_interval -= 1;
+		if(m_excute_time >= (m_excute_Limit - 2)) m_voice_interval = 99;
+		if(m_flyby_interval > 0) m_flyby_interval -= 1;
+
+		// ---- Phase 1: 进场 ----
+		if(m_excute_time <= 1) {
+			playSoundAtLocation(m_metagame, "ac130_flyby.wav", m_faction_id, e_pos, 2.5);
+			playRandomSoundArray(m_metagame, m_startVoice[m_voicekey], m_faction_id, e_pos.toString(), 4.0);
+			m_voice_interval = 2;
+			m_flyby_interval = 3;
+			m_pre_pos = e_pos;
+			sendFactionMessageKey(m_metagame, m_faction_id, "ac130fight");
+
+			// 重置武器状态（与原代码一致，phase 1 初始化）
+			m_rocket_ready = COOLDOWN_ROCKET;
+			m_rocket_ammo = AMMO_ROCKET;
+			m_shotgun_ready = COOLDOWN_SHOTGUN;
+			m_shotgun_ammo = AMMO_SHOTGUN;
+			m_minigun_ready = COOLDOWN_MINIGUN;
+			m_minigun_ammo = AMMO_MINIGUN;
+
+			m_timeLeft_internal = m_time_internal;
+			return;
+		}
+
+		// ---- 飞行音效循环 ----
+		int voice_last_time = 30;
+		int voice_phase_interval = int(voice_last_time / m_time_internal);
+		if((m_flyby_interval == 0) && ((m_excute_Limit - m_excute_time) > (voice_phase_interval - 4))) {
+			_log("current phase: " + m_excute_time);
+			m_flyby_interval = 6;
+			playSoundAtLocation(m_metagame, "ac130_flyby.wav", m_faction_id, e_pos, 2.5);
+		}
+
+		// ---- 充能恢复 ----
+		if(m_rocket_ready <= 0 && m_rocket_ammo < AMMO_ROCKET)     { m_rocket_ammo += 1; m_rocket_ready = COOLDOWN_ROCKET; }
+		if(m_shotgun_ready <= 0 && m_shotgun_ammo < AMMO_SHOTGUN)  { m_shotgun_ammo += 1; m_shotgun_ready = COOLDOWN_SHOTGUN; }
+		if(m_minigun_ready <= 0 && m_minigun_ammo < AMMO_MINIGUN)  { m_minigun_ammo += 1; m_minigun_ready = COOLDOWN_MINIGUN; }
+
+		// ---- 武器初步选择 ----
+		int attacknum;
+		if(m_rocket_ammo > 0)         attacknum = 7; // 火箭
+		else if(m_shotgun_ammo > 0)   attacknum = 5; // 霰弹
+		else                          attacknum = 6; // 机炮
+
+		// ---- 索敌 ----
+		int luckyGuyid;
+		float searchrange_nearby = 15.0f;
+		float searchrange_origin = 60.0f;
+		float searchrange_avoid_vehicle = 20.0f;
+		bool need_reselect = false;
+
+		// 临近索敌
+		luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame, m_faction_id, m_pre_pos, searchrange_nearby);
+
+		if(luckyGuyid == -1) { // 没索敌到
+			need_reselect = true;
+		}
+		else {
+			const XmlElement@ testcharacterInfo = getCharacterInfo(m_metagame, luckyGuyid);
+			if(testcharacterInfo is null) { // 敌人不存在
+				need_reselect = true;
+			}
+			else {
+				Vector3 ac130_jud_pos = stringToVector3(testcharacterInfo.getStringAttribute("position"));
+				if(getAimUnitDistance(1.0, ac130_jud_pos, e_pos) > (searchrange_origin + 9.0f)) { // 超出预期范围
+					need_reselect = true;
+				}
+				else if(attacknum != 6) { // 不为机炮时再检查是否需要避让载具
+					array<const XmlElement@>@ vehicles = getAllVehicles(m_metagame, 0);
+					for(uint i = 0; i < vehicles.length(); i++) {
+						Vector3 vpos = stringToVector3(vehicles[i].getStringAttribute("position"));
+						if(getAimUnitDistance(1.0, ac130_jud_pos, vpos) > searchrange_avoid_vehicle)
+							continue;
+						const XmlElement@ vinfo = getVehicleInfo(m_metagame, vehicles[i].getIntAttribute("id"));
+						if(vinfo is null) continue;
+						string key = vinfo.getStringAttribute("key");
+						if(m_avoid_vehicles.find(key) > -1) { // 目标在重要载具附近
+							need_reselect = true;
+							break;
+						}
+					}
+				}
+			}
+		}
+		// 随机索敌 fallback
+		if(need_reselect) {
+			m_pre_pos = e_pos;
+			luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame, m_faction_id, m_pre_pos, searchrange_origin);
+		}
+
+		if(luckyGuyid != -1) {
+			const XmlElement@ luckyGuyInfo = getCharacterInfo(m_metagame, luckyGuyid);
+			if(luckyGuyInfo is null) {
+				m_timeLeft_internal = m_time_internal;
+				return;
+			}
+
+			float rand_angle = m_randseed + m_excute_time * 3.14 / 10;
+			Vector3 luckyGuyPos = stringToVector3(luckyGuyInfo.getStringAttribute("position"));
+			Vector3 aimPos = e_pos.add(Vector3(45.0 * cos(rand_angle), 60, 45.0 * sin(rand_angle)));
+			m_pre_pos = luckyGuyPos;
+
+			// 重新索敌后二次检查载具避让
+			bool force_minigun = false;
+			if(attacknum != 6 && need_reselect) {
+				array<const XmlElement@>@ vehicles = getAllVehicles(m_metagame, 0);
+				for(uint i = 0; i < vehicles.length(); i++) {
+					Vector3 vpos = stringToVector3(vehicles[i].getStringAttribute("position"));
+					if(getAimUnitDistance(1.0, luckyGuyPos, vpos) > searchrange_avoid_vehicle)
+						continue;
+					const XmlElement@ vinfo = getVehicleInfo(m_metagame, vehicles[i].getIntAttribute("id"));
+					if(vinfo is null) continue;
+					string key = vinfo.getStringAttribute("key");
+					if(m_avoid_vehicles.find(key) > -1) {
+						force_minigun = true;
+						break;
+					}
+				}
+			}
+			if(force_minigun) attacknum = 6;
+
+			// 最终武器决策：扣弹药 + 冷却递减
+			if(attacknum == 7)       m_rocket_ammo--;
+			else if(attacknum == 5)  m_shotgun_ammo--;
+			else                     m_minigun_ammo--;
+			m_rocket_ready -= 1;
+			m_shotgun_ready -= 1;
+			m_minigun_ready -= 0;
+
+			// 发射音效与下一次发射间隔设定
+			switch(attacknum) {
+				case 5: {
+					playSoundAtLocation(m_metagame, "ac130sg_fire_FromWARTHUNDER.wav", m_faction_id, e_pos, 3);
+					m_timeLeft_internal = 1.0;
+					break;
+				}
+				case 6: {
+					playSoundAtLocation(m_metagame, "ac130mg_fire_FromSAM4.wav", m_faction_id, e_pos, 3.1);
+					m_timeLeft_internal = 0.25;
+					break;
+				}
+				case 7: {
+					playSoundAtLocation(m_metagame, "ac130rpg_fire_FromCOD16.wav", m_faction_id, e_pos, 2.4);
+					m_timeLeft_internal = 1.5;
+					break;
+				}
+				default:
+					m_timeLeft_internal = m_time_internal;
+					break;
+			}
+
+			// 发射弹头（通过 GFLairstrike 的 case 5/6/7）
+			insertCommonStrike(m_character_id, m_faction_id, attacknum, aimPos, luckyGuyPos);
+
+			// 语音播报
+			if(m_voice_interval <= 0) {
+				switch(attacknum) {
+					case 5: {
+						playRandomSoundArray(m_metagame, m_shotgunVoice[m_voicekey], m_faction_id, e_pos.toString(), 3.2);
+						m_voice_interval = 3;
+						break;
+					}
+					case 6: {
+						playRandomSoundArray(m_metagame, m_minigunVoice[m_voicekey], m_faction_id, e_pos.toString(), 3.2);
+						m_voice_interval = 8;
+						break;
+					}
+					case 7: {
+						playRandomSoundArray(m_metagame, m_m202Voice[m_voicekey], m_faction_id, e_pos.toString(), 3.2);
+						m_voice_interval = 2;
+						break;
+					}
+					default: break;
+				}
+			}
+		}
+		else if(m_voice_interval <= 0) {
+			// 无目标时播放搜索语音
+			m_voice_interval = 2;
+			playRandomSoundArray(m_metagame, m_noTargetVoice[m_voicekey], m_faction_id, e_pos.toString(), 3.5);
+			m_timeLeft_internal = m_time_internal; // 无目标时用默认间隔
+		}
+		else {
+			m_timeLeft_internal = m_time_internal; // 无目标且语音冷却中，用默认间隔
+		}
+
+		// ---- 结束判定 ----
+		if(m_excute_time >= m_excute_Limit) {
+			playRandomSoundArray(m_metagame, m_endVoice[m_voicekey], m_faction_id, e_pos.toString(), 3.5);
+			m_end = true;
+		}
+	}
+
+	bool hasEnded() const {
+		if(m_end) {
+			// 清除全局唯一性标志
+			g_ac130_active = false;
+			// 基类处理 marker 清理
+			if(m_markerId != 0) {
+				removeMarkerwithId(m_metagame, m_faction_id, m_markerId);
+			}
+			return true;
+		}
+		return false;
+	}
+}
