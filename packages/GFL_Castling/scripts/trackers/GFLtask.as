@@ -2662,3 +2662,65 @@ class DelayNytoBlackSkillTask : Task {
         return m_addtime < 0;
     }
 }
+
+// 摇人妖精 机枪压制+空投 Task（原 event_system case 4 "mg_strafe"）
+array<int> YaorenParatrooperHeight = {
+    50,50,50,50,35,20,20,20,35,50,50,50,50
+};
+
+class Event_call_yaoren_fairy : event_call_task_hasMarker {
+
+    Event_call_yaoren_fairy(GameMode@ metagame, float time, int cId, int fId, Vector3 characterpos, Vector3 targetpos, string mode, int markerid) {
+        super(metagame, time, cId, fId, characterpos, targetpos, mode, markerid);
+    }
+
+    void start() {
+        m_timeLeft = m_time;
+        m_timeLeft_internal = 0;
+        m_excute_Limit = 10;
+        m_time_internal = 1.0;
+    }
+
+    void update(float time) {
+        if(m_timeLeft >= 0) { m_timeLeft -= time; return; }
+        if(m_timeLeft_internal >= 0) { m_timeLeft_internal -= time; return; }
+        if(m_excute_time >= m_excute_Limit) { m_end = true; return; }
+
+        //索敌并发射机枪弹头
+        int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame, m_faction_id, e_pos, 30.0f);
+        if(luckyGuyid != -1) {
+            const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+            if(luckyGuy !is null) {
+                Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+                int heightIndex = m_excute_time + 1;
+                if(heightIndex >= int(YaorenParatrooperHeight.length())) {
+                    heightIndex = int(YaorenParatrooperHeight.length()) - 1;
+                }
+                insertCommonStrike(m_character_id, m_faction_id, 12,
+                    e_pos.add(Vector3(0.0, float(YaorenParatrooperHeight[heightIndex]), 0.0)),
+                    luckyGuyPos);
+            }
+        }
+
+        //phase 3（m_excute_time==2，从0开始计数）：生成鱼鹰+延迟空投士兵
+        if(m_excute_time == 2) {
+            string c =
+                "<command class='create_instance'" +
+                " faction_id='" + m_faction_id + "'" +
+                " instance_class='vehicle'" +
+                " instance_key='osprey_enter' " +
+                " character_id='" + m_character_id + "'" +
+                " position='" + (e_pos.add(Vector3(0, 50, 0))).toString() + "' />";
+            m_metagame.getComms().send(c);
+            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+            array<soldier_spawn_request@> spawn_soldier = {
+                soldier_spawn_request("Task_MG", 5),
+                soldier_spawn_request("Task_SG", 3)
+            };
+            tasker.add(DelaySpawnSoldier(m_metagame, 6.0, m_faction_id, spawn_soldier, e_pos, 3.0, 3.0));
+        }
+
+        m_excute_time++;
+        m_timeLeft_internal = m_time_internal;
+    }
+}

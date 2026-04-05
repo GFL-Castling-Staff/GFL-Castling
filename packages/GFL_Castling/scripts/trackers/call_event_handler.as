@@ -1626,8 +1626,9 @@ class call_event : Tracker {
                             FairyRequest.setDummyId(flagId);
                             addCastlingMarker(FairyRequest);
                             m_DummyCallID++;
-                            GFL_event@ newCall = GFL_event(characterId,factionId,int(GFL_Event_Index["mg_strafe"]),stringToVector3(position),1.0,-1.0,flagId);
-                            GFL_event_array.insertLast(newCall);
+                            Event_call_yaoren_fairy@ new_task = Event_call_yaoren_fairy(m_metagame, 1.0, characterId, factionId, stringToVector3(position), stringToVector3(position), "", flagId);
+                            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                            tasker.add(new_task);
                         }      
                         break;
                     }
