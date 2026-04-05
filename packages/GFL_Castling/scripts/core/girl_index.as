@@ -31,6 +31,7 @@ dictionary tdoll_complex_index = {
 
     {modded_key(4).toString(),"gkw_python.weapon"},
     {modded_key(4,6603).toString(),"gkw_python_6603.weapon"},
+    {modded_key(4,11202).toString(),"gkw_python_11202.weapon"},
 
     {modded_key(5).toString(),"gkw_m1895.weapon"},
     {modded_key(5,5309).toString(),"gkw_m1895_5309.weapon"},
@@ -404,6 +405,8 @@ dictionary tdoll_complex_index = {
     {modded_key(95,6503,"mod3").toString(),"gkw_88typemod3_6503.weapon"},
     {modded_key(95,7106).toString(),"gkw_88type_7106.weapon"},
     {modded_key(95,7106,"mod3").toString(),"gkw_88typemod3_7106.weapon"},
+    {modded_key(95,11406).toString(),"gkw_88type_11406.weapon"},
+    {modded_key(95,11406,"mod3").toString(),"gkw_88typemod3_11406.weapon"},
     {modded_key(95,50001).toString(),"gkw_88type_50001.weapon"},
     {modded_key(95,50001,"mod3").toString(),"gkw_88typemod3_50001.weapon"},
 
@@ -593,9 +596,11 @@ dictionary tdoll_complex_index = {
     {modded_key(143).toString(),"gkw_ro635.weapon"},
     {modded_key(143,534).toString(),"gkw_ro635_534.weapon"},
     {modded_key(143,554).toString(),"gkw_ro635_554.weapon"},
+    {modded_key(143,4504).toString(),"gkw_ro635_4504.weapon"},
     {modded_key(143,0,"mod3").toString(),"gkw_ro635mod3.weapon"},
     {modded_key(143,534,"mod3").toString(),"gkw_ro635mod3_534.weapon"},
     {modded_key(143,554,"mod3").toString(),"gkw_ro635mod3_554.weapon"},
+    {modded_key(143,4504,"mod3").toString(),"gkw_ro635mod3_4504.weapon"},
 
 
     {modded_key(145).toString(),"gkw_ots44.weapon"},
@@ -1217,6 +1222,7 @@ dictionary tdoll_complex_index = {
     {modded_key(400).toString(),"gkw_m1851n.weapon"},
     {modded_key(401).toString(),"gkw_p50.weapon"},
     {modded_key(402).toString(),"gkw_martini.weapon"},
+    {modded_key(402,30023).toString(),"gkw_martini_30023.weapon"},
 
     {modded_key(9000).toString(),"ff_agent.weapon"},
     {modded_key(9001).toString(),"ff_alchemist.weapon"},
@@ -1596,9 +1602,11 @@ array<string> gk_bolted_rf_list = {
     "gkw_m1903_1107_only.weapon",
     "gkw_88type.weapon",
     "gkw_88type_7106.weapon",
+    "gkw_88type_11406.weapon",
     "gkw_88type_50001.weapon",
     "gkw_88typemod3.weapon",
     "gkw_88typemod3_7106.weapon",
+    "gkw_88typemod3_11406.weapon",
     "gkw_88typemod3_50001.weapon",
     "gkw_mlemk1.weapon",
     "gkw_mlemk1_skill.weapon",
@@ -1669,7 +1677,8 @@ array<string> gk_bolted_rf_list = {
     "gkw_sv98mod3_1906_skill.weapon",     
     "ff_jaeger.weapon",
     "ff_jaeger_swap.weapon",
-    "gkw_martini.weapon"
+    "gkw_martini.weapon",
+    "gkw_martini_30023.weapon"
 };
 
 array<string> gk_weapon_hg_list = { 
@@ -1783,6 +1792,8 @@ array<string> gk_weapon_hg_list = {
     "gkw_python_skill.weapon",
     "gkw_python_6603.weapon",
     "gkw_python_6603_skill.weapon",
+    "gkw_python_11202.weapon",
+    "gkw_python_11202_skill.weapon",
     "gkw_m1873.weapon",
     "gkw_m1873_301.weapon",
     "gkw_m1873_2105.weapon",

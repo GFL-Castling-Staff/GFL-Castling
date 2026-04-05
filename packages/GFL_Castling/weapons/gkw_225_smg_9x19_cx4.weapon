@@ -49,7 +49,7 @@
     <animation state_key="recoil" animation_key="recoil_hip_unlimit"/>
     <animation state_key="recoil" stance_key="over_wall" animation_key="recoil_unlimit"/>
     <animation state_key="recoil" stance_key="prone" animation_key="recoil_prone_unlimit"/>
-    <commonness value="0" in_stock="0" can_respawn_with="1"/>
+    <commonness value="0.2" in_stock="0" can_respawn_with="1"/>
     <capacity value="1" source="rank" source_value="0.0"/>
     <modifier class="speed" value="0.2"/>
     <target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>

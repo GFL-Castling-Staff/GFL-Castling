@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-    <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_88typemod3_50001.weapon">
+    <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_88typemod3_11406.weapon">
         <tag name="elite" />
         <tag name="rifle" />
         <specification 
@@ -13,7 +13,7 @@
         can_shoot_prone="0"
         can_shoot_crouching="1"
         suppressed="0" 
-        name="Hanyang-made Type88(MOD3)-[To the Stars]"
+        name="Hanyang-made Type88(MOD3)-[Fluttering Purity]"
         class="2" 
         reload_one_at_a_time="1" 
         sight_range_modifier="2.0" 
@@ -24,7 +24,7 @@
         stance_accuracy_rate="4.0"
         stab_enabled="1"
         stab_range="4.5" />
-        <next_in_chain key="gkw_88typemod3_50001_skill.weapon" share_ammo="0" />
+        <next_in_chain key="gkw_88typemod3_11406_skill.weapon" share_ammo="0" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <inventory encumbrance="35.0" buy_price="550.0" sell_price="500.0"/>
         <capacity value="1" source="rank" source_value="0.0" />
@@ -73,7 +73,7 @@
         <sound key="stab_hit" fileref="blade_impact_03_fromESV.wav" pitch_variety="0.05" volume="2.0" />
         <sound key="stab_hit" fileref="blade_impact_04_fromESV.wav" pitch_variety="0.05" volume="2.0" />
         <model filename="gkw_rf_88typemod3.xml" />
-        <hud_icon filename="gkw_88type_50001.png" />
+        <hud_icon filename="gkw_88type_11406.png" />
         <weak_hand_hold offset="0.3" />
         <projectile file="88type_rf_spawn.projectile" pulldown_in_air="4" can_be_detected_by_footmen="1" can_be_detected_by_driver="1" can_be_disarmed="0" radius="0.7">
             <result class="spawn" instance_class="projectile" instance_key="88type_mrr.projectile" min_amount="4" max_amount="4" offset="0 0.8 0" position_spread="0.2 0.4" direction_spread="0 0" />
@@ -100,7 +100,7 @@
         <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
         <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
     </weapon>
-    <weapon key="gkw_88typemod3_50001_skill.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" player_death_drop_owner_lock_time="0" drop_count_factor_on_player_death="0">
+    <weapon key="gkw_88typemod3_11406_skill.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0.0" drop_count_factor_on_death="0.0" player_death_drop_owner_lock_time="0" drop_count_factor_on_player_death="0">
         <tag name="elite" />
         <tag name="melee" />
         <specification 
@@ -111,7 +111,7 @@
         carry_in_two_hands="0" 
         character_state="death" 
         consume="0"     
-        name="Hanyang-made Type88(MOD3)-[To the Stars]-[Almighty Combat Skills]" 
+        name="Hanyang-made Type88(MOD3)-[Fluttering Purity]-[Almighty Combat Skills]" 
         class="5"
         supperessed="0"
         range="3.5"
@@ -119,7 +119,7 @@
         stab_enabled="1"
         stab_range="5" 
         barrel_offset="-0.05" />
-        <next_in_chain key="gkw_88typemod3_50001.weapon" share_ammo="0" />
+        <next_in_chain key="gkw_88typemod3_11406.weapon" share_ammo="0" />
         <commonness value="0" in_stock="0" can_respawn_with="1" />
         <inventory encumbrance="35.0" buy_price="550.0" sell_price="500.0"/>
         <capacity value="1" source="rank" source_value="0.0" />
@@ -161,7 +161,7 @@
 		<sound key="stab_hit_any" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
 		<sound key="stab_hit_any" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
         <model filename="gkw_88typemod3_melee.xml" />
-        <hud_icon filename="gkw_88type_50001.png" />
+        <hud_icon filename="gkw_88type_11406.png" />
         <effect class="muzzle" ref="sawsnone" />
         <projectile file="teal.projectile"/>
         <stance state_key="running" accuracy="1" />
