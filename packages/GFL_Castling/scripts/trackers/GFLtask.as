@@ -2662,3 +2662,758 @@ class DelayNytoBlackSkillTask : Task {
         return m_addtime < 0;
     }
 }
+
+// 摇人妖精 机枪压制+空投 Task（原 event_system case 4 "mg_strafe"）
+array<int> YaorenParatrooperHeight = {
+    50,50,50,50,35,20,20,20,35,50,50,50,50
+};
+
+class Event_call_yaoren_fairy : event_call_task_hasMarker {
+
+    Event_call_yaoren_fairy(GameMode@ metagame, float time, int cId, int fId, Vector3 characterpos, Vector3 targetpos, string mode, int markerid) {
+        super(metagame, time, cId, fId, characterpos, targetpos, mode, markerid);
+    }
+
+    void start() {
+        m_timeLeft = m_time;
+        m_timeLeft_internal = 0;
+        m_excute_Limit = 10;
+        m_time_internal = 1.0;
+    }
+
+    void update(float time) {
+        if(m_timeLeft >= 0) { m_timeLeft -= time; return; }
+        if(m_timeLeft_internal >= 0) { m_timeLeft_internal -= time; return; }
+        if(m_excute_time >= m_excute_Limit) { m_end = true; return; }
+
+        //索敌并发射机枪弹头
+        int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame, m_faction_id, e_pos, 30.0f);
+        if(luckyGuyid != -1) {
+            const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+            if(luckyGuy !is null) {
+                Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+                int heightIndex = m_excute_time + 1;
+                if(heightIndex >= int(YaorenParatrooperHeight.length())) {
+                    heightIndex = int(YaorenParatrooperHeight.length()) - 1;
+                }
+                insertCommonStrike(m_character_id, m_faction_id, 12,
+                    e_pos.add(Vector3(0.0, float(YaorenParatrooperHeight[heightIndex]), 0.0)),
+                    luckyGuyPos);
+            }
+        }
+
+        //phase 3（m_excute_time==2，从0开始计数）：生成鱼鹰+延迟空投士兵
+        if(m_excute_time == 2) {
+            string c =
+                "<command class='create_instance'" +
+                " faction_id='" + m_faction_id + "'" +
+                " instance_class='vehicle'" +
+                " instance_key='osprey_enter' " +
+                " character_id='" + m_character_id + "'" +
+                " position='" + (e_pos.add(Vector3(0, 50, 0))).toString() + "' />";
+            m_metagame.getComms().send(c);
+            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+            array<soldier_spawn_request@> spawn_soldier = {
+                soldier_spawn_request("Task_MG", 5),
+                soldier_spawn_request("Task_SG", 3)
+            };
+            tasker.add(DelaySpawnSoldier(m_metagame, 6.0, m_faction_id, spawn_soldier, e_pos, 3.0, 3.0));
+        }
+
+        m_excute_time++;
+        m_timeLeft_internal = m_time_internal;
+    }
+}
+
+// AC130 全局唯一性标志，同一时刻只能存在一架AC130
+bool g_ac130_active = false;
+
+// 暴怒妖精 AC130 炮艇 Task（原 event_system case 2 "rampage_fairy_ac130"）
+class Event_call_rampage_fairy_ac130 : event_call_task_hasMarker {
+
+	// --- 武器充能系统 ---
+	protected int m_rocket_ready;
+	protected int m_rocket_ammo;
+	protected int m_shotgun_ready;
+	protected int m_shotgun_ammo;
+	protected int m_minigun_ready;
+	protected int m_minigun_ammo;
+
+	// 武器常量
+	protected int COOLDOWN_ROCKET = 5;
+	protected int COOLDOWN_MINIGUN = 0;
+	protected int COOLDOWN_SHOTGUN = 3;
+	protected int AMMO_ROCKET = 1;
+	protected int AMMO_MINIGUN = 1;
+	protected int AMMO_SHOTGUN = 2;
+
+	// --- 音效控制 ---
+	protected int m_voice_interval;
+	protected int m_flyby_interval;
+
+	// --- 索敌 ---
+	protected Vector3 m_pre_pos;
+
+	// --- 语音包 ---
+	protected int m_voicekey;
+	protected array<array<string>> m_startVoice;
+	protected array<array<string>> m_endVoice;
+	protected array<array<string>> m_noTargetVoice;
+	protected array<array<string>> m_minigunVoice;
+	protected array<array<string>> m_shotgunVoice;
+	protected array<array<string>> m_m202Voice;
+
+	// --- 载具避让列表 ---
+	protected array<string> m_avoid_vehicles;
+
+	// --- 环形飞行随机种子 ---
+	protected float m_randseed;
+
+	// --- 构造函数 ---
+	// voicekey: 语音包索引 1=俄语 2=黑色行动 3=北约
+	Event_call_rampage_fairy_ac130(GameMode@ metagame, float time, int cId, int fId,
+		Vector3 characterpos, Vector3 targetpos, int voicekey, int markerid)
+	{
+		super(metagame, time, cId, fId, characterpos, targetpos, "", markerid);
+		m_voicekey = voicekey;
+		if(m_voicekey < 1 || m_voicekey > 3) m_voicekey = 1;
+	}
+
+	void start() {
+		g_ac130_active = true;
+
+		// 基础时间控制
+		m_timeLeft = m_time;          // 初始延迟（调用方传入，约1.0s）
+		m_time_internal = 1.8;        // 基础射击间隔
+		m_timeLeft_internal = 0;
+		m_excute_Limit = 50;          // 总phase数
+
+		// 随机种子
+		m_randseed = rand(0.0, 3.14);
+
+		// 武器初始化
+		m_rocket_ready = COOLDOWN_ROCKET;
+		m_rocket_ammo = AMMO_ROCKET;
+		m_shotgun_ready = COOLDOWN_SHOTGUN;
+		m_shotgun_ammo = AMMO_SHOTGUN;
+		m_minigun_ready = COOLDOWN_MINIGUN;
+		m_minigun_ammo = AMMO_MINIGUN;
+
+		// 索敌状态
+		m_pre_pos = e_pos;
+
+		// 音效控制
+		m_voice_interval = 0;
+		m_flyby_interval = 0;
+
+		// 载具避让列表
+		m_avoid_vehicles = {
+			"armored_truck.vehicle",
+			"radar_tower.vehicle"
+		};
+
+		// 语音包初始化（二维数组，索引0为空占位，1=俄语 2=黑行动 3=北约）
+		m_startVoice = {
+			{},
+			{
+				"ac130entrance_rus1.wav",
+				"ac130entrance_rus2.wav",
+				"ac130entrance_rus3.wav"
+			},
+			{
+				"ac130entrance_blkops1.wav",
+				"ac130entrance_blkops2.wav",
+				"ac130entrance_blkops3.wav"
+			},
+			{
+				"ac130entrance_nato1.wav",
+				"ac130entrance_nato2.wav",
+				"ac130entrance_nato3.wav"
+			}
+		};
+		m_endVoice = {
+			{},
+			{
+				"ac130exit_rus1.wav",
+				"ac130exit_rus2.wav",
+				"ac130exit_rus3.wav"
+			},
+			{
+				"ac130exit_blkops1.wav",
+				"ac130exit_blkops2.wav",
+				"ac130exit_blkops3.wav"
+			},
+			{
+				"ac130exit_nato1.wav",
+				"ac130exit_nato2.wav",
+				"ac130exit_nato3.wav"
+			}
+		};
+		m_noTargetVoice = {
+			{},
+			{
+				"ac130search_rus1.wav",
+				"ac130search_rus2.wav"
+			},
+			{
+				"ac130search_blkops1.wav",
+				"ac130search_blkops2.wav",
+				"ac130search_blkops3.wav",
+				"ac130search_blkops4.wav"
+			},
+			{
+				"ac130search_nato1.wav",
+				"ac130search_nato2.wav",
+				"ac130search_nato3.wav",
+				"ac130search_nato4.wav",
+				"ac130search_nato5.wav",
+				"ac130search_nato6.wav",
+				"ac130search_nato7.wav",
+				"ac130search_nato8.wav",
+				"ac130search_nato9.wav"
+			}
+		};
+		m_minigunVoice = {
+			{},
+			{
+				"ac130mg_rus1.wav",
+				"ac130mg_rus2.wav",
+				"ac130allguns_rus1.wav",
+				"ac130allguns_rus2.wav",
+				"ac130allguns_rus3.wav"
+			},
+			{
+				"ac130mg_blkops1.wav",
+				"ac130mg_blkops2.wav"
+			},
+			{
+				"ac130mg_nato1.wav",
+				"ac130mg_nato2.wav",
+				"ac130mg_nato3.wav",
+				"ac130mg_nato4.wav"
+			}
+		};
+		m_shotgunVoice = {
+			{},
+			{
+				"ac130sg_rus1.wav",
+				"ac130sg_rus2.wav",
+				"ac130allguns_rus1.wav",
+				"ac130allguns_rus2.wav",
+				"ac130allguns_rus3.wav"
+			},
+			{
+				"ac130sg_blkops1.wav",
+				"ac130sg_blkops2.wav",
+				"ac130sg_blkops3.wav"
+			},
+			{
+				"ac130sg_nato1.wav",
+				"ac130sg_nato2.wav",
+				"ac130sg_nato3.wav"
+			}
+		};
+		m_m202Voice = {
+			{},
+			{
+				"ac130rpg_rus1.wav",
+				"ac130rpg_rus2.wav",
+				"ac130rpg_rus3.wav",
+				"ac130allguns_rus1.wav",
+				"ac130allguns_rus2.wav",
+				"ac130allguns_rus3.wav"
+			},
+			{
+				"ac130rpg_blkops1.wav",
+				"ac130rpg_blkops2.wav",
+				"ac130rpg_blkops3.wav"
+			},
+			{
+				"ac130rpg_nato1.wav",
+				"ac130rpg_nato2.wav",
+				"ac130rpg_nato3.wav",
+				"ac130rpg_nato4.wav",
+				"ac130rpg_nato5.wav"
+			}
+		};
+	}
+
+	void update(float time) {
+		// 标准延迟门控
+		if(m_timeLeft >= 0) { m_timeLeft -= time; return; }
+		if(m_timeLeft_internal >= 0) { m_timeLeft_internal -= time; return; }
+		if(m_excute_time >= m_excute_Limit) { m_end = true; return; }
+
+		m_excute_time++;
+
+		// 递减音效间隔计数器
+		if(m_voice_interval > 0) m_voice_interval -= 1;
+		if(m_excute_time >= (m_excute_Limit - 2)) m_voice_interval = 99;
+		if(m_flyby_interval > 0) m_flyby_interval -= 1;
+
+		// ---- Phase 1: 进场 ----
+		if(m_excute_time <= 1) {
+			playSoundAtLocation(m_metagame, "ac130_flyby.wav", m_faction_id, e_pos, 2.5);
+			playRandomSoundArray(m_metagame, m_startVoice[m_voicekey], m_faction_id, e_pos.toString(), 4.0);
+			m_voice_interval = 2;
+			m_flyby_interval = 3;
+			m_pre_pos = e_pos;
+			sendFactionMessageKey(m_metagame, m_faction_id, "ac130fight");
+
+			// 重置武器状态（与原代码一致，phase 1 初始化）
+			m_rocket_ready = COOLDOWN_ROCKET;
+			m_rocket_ammo = AMMO_ROCKET;
+			m_shotgun_ready = COOLDOWN_SHOTGUN;
+			m_shotgun_ammo = AMMO_SHOTGUN;
+			m_minigun_ready = COOLDOWN_MINIGUN;
+			m_minigun_ammo = AMMO_MINIGUN;
+
+			m_timeLeft_internal = m_time_internal;
+			return;
+		}
+
+		// ---- 飞行音效循环 ----
+		int voice_last_time = 30;
+		int voice_phase_interval = int(voice_last_time / m_time_internal);
+		if((m_flyby_interval == 0) && ((m_excute_Limit - m_excute_time) > (voice_phase_interval - 4))) {
+			_log("current phase: " + m_excute_time);
+			m_flyby_interval = 6;
+			playSoundAtLocation(m_metagame, "ac130_flyby.wav", m_faction_id, e_pos, 2.5);
+		}
+
+		// ---- 充能恢复 ----
+		if(m_rocket_ready <= 0 && m_rocket_ammo < AMMO_ROCKET)     { m_rocket_ammo += 1; m_rocket_ready = COOLDOWN_ROCKET; }
+		if(m_shotgun_ready <= 0 && m_shotgun_ammo < AMMO_SHOTGUN)  { m_shotgun_ammo += 1; m_shotgun_ready = COOLDOWN_SHOTGUN; }
+		if(m_minigun_ready <= 0 && m_minigun_ammo < AMMO_MINIGUN)  { m_minigun_ammo += 1; m_minigun_ready = COOLDOWN_MINIGUN; }
+
+		// ---- 武器初步选择 ----
+		int attacknum;
+		if(m_rocket_ammo > 0)         attacknum = 7; // 火箭
+		else if(m_shotgun_ammo > 0)   attacknum = 5; // 霰弹
+		else                          attacknum = 6; // 机炮
+
+		// ---- 索敌 ----
+		int luckyGuyid;
+		float searchrange_nearby = 15.0f;
+		float searchrange_origin = 60.0f;
+		float searchrange_avoid_vehicle = 20.0f;
+		bool need_reselect = false;
+
+		// 临近索敌
+		luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame, m_faction_id, m_pre_pos, searchrange_nearby);
+
+		if(luckyGuyid == -1) { // 没索敌到
+			need_reselect = true;
+		}
+		else {
+			const XmlElement@ testcharacterInfo = getCharacterInfo(m_metagame, luckyGuyid);
+			if(testcharacterInfo is null) { // 敌人不存在
+				need_reselect = true;
+			}
+			else {
+				Vector3 ac130_jud_pos = stringToVector3(testcharacterInfo.getStringAttribute("position"));
+				if(getAimUnitDistance(1.0, ac130_jud_pos, e_pos) > (searchrange_origin + 9.0f)) { // 超出预期范围
+					need_reselect = true;
+				}
+				else if(attacknum != 6) { // 不为机炮时再检查是否需要避让载具
+					array<const XmlElement@>@ vehicles = getAllVehicles(m_metagame, 0);
+					for(uint i = 0; i < vehicles.length(); i++) {
+						Vector3 vpos = stringToVector3(vehicles[i].getStringAttribute("position"));
+						if(getAimUnitDistance(1.0, ac130_jud_pos, vpos) > searchrange_avoid_vehicle)
+							continue;
+						const XmlElement@ vinfo = getVehicleInfo(m_metagame, vehicles[i].getIntAttribute("id"));
+						if(vinfo is null) continue;
+						string key = vinfo.getStringAttribute("key");
+						if(m_avoid_vehicles.find(key) > -1) { // 目标在重要载具附近
+							need_reselect = true;
+							break;
+						}
+					}
+				}
+			}
+		}
+		// 随机索敌 fallback
+		if(need_reselect) {
+			m_pre_pos = e_pos;
+			luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame, m_faction_id, m_pre_pos, searchrange_origin);
+		}
+
+		if(luckyGuyid != -1) {
+			const XmlElement@ luckyGuyInfo = getCharacterInfo(m_metagame, luckyGuyid);
+			if(luckyGuyInfo is null) {
+				m_timeLeft_internal = m_time_internal;
+				return;
+			}
+
+			float rand_angle = m_randseed + m_excute_time * 3.14 / 10;
+			Vector3 luckyGuyPos = stringToVector3(luckyGuyInfo.getStringAttribute("position"));
+			Vector3 aimPos = e_pos.add(Vector3(45.0 * cos(rand_angle), 60, 45.0 * sin(rand_angle)));
+			m_pre_pos = luckyGuyPos;
+
+			// 重新索敌后二次检查载具避让
+			bool force_minigun = false;
+			if(attacknum != 6 && need_reselect) {
+				array<const XmlElement@>@ vehicles = getAllVehicles(m_metagame, 0);
+				for(uint i = 0; i < vehicles.length(); i++) {
+					Vector3 vpos = stringToVector3(vehicles[i].getStringAttribute("position"));
+					if(getAimUnitDistance(1.0, luckyGuyPos, vpos) > searchrange_avoid_vehicle)
+						continue;
+					const XmlElement@ vinfo = getVehicleInfo(m_metagame, vehicles[i].getIntAttribute("id"));
+					if(vinfo is null) continue;
+					string key = vinfo.getStringAttribute("key");
+					if(m_avoid_vehicles.find(key) > -1) {
+						force_minigun = true;
+						break;
+					}
+				}
+			}
+			if(force_minigun) attacknum = 6;
+
+			// 最终武器决策：扣弹药 + 冷却递减
+			if(attacknum == 7)       m_rocket_ammo--;
+			else if(attacknum == 5)  m_shotgun_ammo--;
+			else                     m_minigun_ammo--;
+			m_rocket_ready -= 1;
+			m_shotgun_ready -= 1;
+			m_minigun_ready -= 0;
+
+			// 发射音效与下一次发射间隔设定
+			switch(attacknum) {
+				case 5: {
+					playSoundAtLocation(m_metagame, "ac130sg_fire_FromWARTHUNDER.wav", m_faction_id, e_pos, 3);
+					m_timeLeft_internal = 1.0;
+					break;
+				}
+				case 6: {
+					playSoundAtLocation(m_metagame, "ac130mg_fire_FromSAM4.wav", m_faction_id, e_pos, 3.1);
+					m_timeLeft_internal = 0.25;
+					break;
+				}
+				case 7: {
+					playSoundAtLocation(m_metagame, "ac130rpg_fire_FromCOD16.wav", m_faction_id, e_pos, 2.4);
+					m_timeLeft_internal = 1.5;
+					break;
+				}
+				default:
+					m_timeLeft_internal = m_time_internal;
+					break;
+			}
+
+			// 发射弹头（通过 GFLairstrike 的 case 5/6/7）
+			insertCommonStrike(m_character_id, m_faction_id, attacknum, aimPos, luckyGuyPos);
+
+			// 语音播报
+			if(m_voice_interval <= 0) {
+				switch(attacknum) {
+					case 5: {
+						playRandomSoundArray(m_metagame, m_shotgunVoice[m_voicekey], m_faction_id, e_pos.toString(), 3.2);
+						m_voice_interval = 3;
+						break;
+					}
+					case 6: {
+						playRandomSoundArray(m_metagame, m_minigunVoice[m_voicekey], m_faction_id, e_pos.toString(), 3.2);
+						m_voice_interval = 8;
+						break;
+					}
+					case 7: {
+						playRandomSoundArray(m_metagame, m_m202Voice[m_voicekey], m_faction_id, e_pos.toString(), 3.2);
+						m_voice_interval = 2;
+						break;
+					}
+					default: break;
+				}
+			}
+		}
+		else if(m_voice_interval <= 0) {
+			// 无目标时播放搜索语音
+			m_voice_interval = 2;
+			playRandomSoundArray(m_metagame, m_noTargetVoice[m_voicekey], m_faction_id, e_pos.toString(), 3.5);
+			m_timeLeft_internal = m_time_internal; // 无目标时用默认间隔
+		}
+		else {
+			m_timeLeft_internal = m_time_internal; // 无目标且语音冷却中，用默认间隔
+		}
+
+		// ---- 结束判定 ----
+		if(m_excute_time >= m_excute_Limit) {
+			playRandomSoundArray(m_metagame, m_endVoice[m_voicekey], m_faction_id, e_pos.toString(), 3.5);
+			m_end = true;
+		}
+	}
+
+	bool hasEnded() const {
+		if(m_end) {
+			// 清除全局唯一性标志
+			g_ac130_active = false;
+			// 基类处理 marker 清理
+			if(m_markerId != 0) {
+				removeMarkerwithId(m_metagame, m_faction_id, m_markerId);
+			}
+			return true;
+		}
+		return false;
+	}
+}
+
+// 干扰者刷兵（原 event_system case 11）
+class Skill_SF_Intruder_Spawn : event_call_task {
+
+	Skill_SF_Intruder_Spawn(GameMode@ metagame, float time, int cId, int fId, Vector3 start_pos, Vector3 target_pos, string mode="")
+	{
+		super(metagame, time, cId, fId, start_pos, target_pos, mode);
+	}
+
+	void start() {
+		m_timeLeft = m_time;
+		m_timeLeft_internal = 0;
+		m_time_internal = 2.0;
+		m_excute_Limit = 3;
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time; return;}
+		if(m_timeLeft_internal >= 0){m_timeLeft_internal -= time; return;}
+		if(m_excute_time >= m_excute_Limit){m_end = true; return;}
+		m_excute_time++;
+		m_timeLeft_internal = m_time_internal;
+		spawnSoldier(m_metagame, 6, m_faction_id, e_pos, "sf_dinergate", 4, 4);
+	}
+}
+
+// 闪电风暴（原 event_system case 9）
+class Skill_Lightning_Storm : event_call_task {
+
+	Skill_Lightning_Storm(GameMode@ metagame, float time, int cId, int fId, Vector3 start_pos, Vector3 target_pos, string mode="")
+	{
+		super(metagame, time, cId, fId, start_pos, target_pos, mode);
+	}
+
+	void start() {
+		m_timeLeft = m_time;
+		m_timeLeft_internal = 0;
+		m_time_internal = 5.0;
+		m_excute_Limit = 12;
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time; return;}
+		if(m_timeLeft_internal >= 0){m_timeLeft_internal -= time; return;}
+		if(m_excute_time >= m_excute_Limit){m_end = true; return;}
+		m_excute_time++;
+		m_timeLeft_internal = m_time_internal;
+		Vector3 lightning_pos = e_pos.add(Vector3(0, 20, 0));
+		CreateDirectProjectile(m_metagame, lightning_pos, lightning_pos, "weather_lightning_storm_1.projectile", m_character_id, m_faction_id, 0);
+	}
+}
+
+// HK416 奶包（原 event_system case 10）
+class Skill_HK416_Heal : event_call_task {
+
+	Skill_HK416_Heal(GameMode@ metagame, float time, int cId, int fId, Vector3 start_pos, Vector3 target_pos, string mode="")
+	{
+		super(metagame, time, cId, fId, start_pos, target_pos, mode);
+	}
+
+	void start() {
+		m_timeLeft = m_time;
+		m_timeLeft_internal = 0;
+		m_time_internal = 2.0;
+		m_excute_Limit = 11;
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time; return;}
+		if(m_timeLeft_internal >= 0){m_timeLeft_internal -= time; return;}
+		if(m_excute_time >= m_excute_Limit){m_end = true; return;}
+		m_excute_time++;
+		m_timeLeft_internal = m_time_internal;
+		CreateDirectProjectile(m_metagame, e_pos, e_pos.add(Vector3(0, 1, 0)), "medical_agl_call.projectile", m_character_id, m_faction_id, 10);
+		healRangedCharacters(m_metagame, e_pos, m_faction_id, 8.4, 3);
+	}
+}
+
+// UMP45MOD3 烟雾（原 event_system case 5）
+class Skill_UMP45MOD3_Smoke : event_call_task {
+
+	Skill_UMP45MOD3_Smoke(GameMode@ metagame, float time, int cId, int fId, Vector3 start_pos, Vector3 target_pos, string mode="")
+	{
+		super(metagame, time, cId, fId, start_pos, target_pos, mode);
+	}
+
+	void start() {
+		m_timeLeft = m_time;
+		m_timeLeft_internal = 0;
+		m_time_internal = 3.0;
+		m_excute_Limit = 6;
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time; return;}
+		if(m_timeLeft_internal >= 0){m_timeLeft_internal -= time; return;}
+		if(m_excute_time >= m_excute_Limit){m_end = true; return;}
+		m_excute_time++;
+		m_timeLeft_internal = m_time_internal;
+		CreateDirectProjectile(m_metagame, e_pos.add(Vector3(0, 6, 0)), e_pos.add(Vector3(0, 6.1, 0)), "ump45mod3_skill.projectile", m_character_id, m_faction_id, 10);
+	}
+}
+
+// 炮击妖精 105mm（原 event_system case 7）
+// specialkey 1: phase 7 用 case 15（高爆）
+// specialkey 2: phase 7 用 case 126（大高爆）
+class Event_call_bomb_fairy : event_call_task_hasMarker {
+	protected int m_specialkey;
+
+	Event_call_bomb_fairy(GameMode@ metagame, float time, int cId, int fId, Vector3 start_pos, Vector3 target_pos, string mode="", int markerid=0, int specialkey=1)
+	{
+		super(metagame, time, cId, fId, start_pos, target_pos, mode, markerid);
+		m_specialkey = specialkey;
+	}
+
+	void start() {
+		m_timeLeft = m_time;
+		m_timeLeft_internal = 0;
+		m_time_internal = 1.0;
+		m_excute_Limit = 7;
+		m_pos1 = e_pos.add(Vector3(0, 40, 0));
+		m_pos2 = e_pos;
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time; return;}
+		if(m_timeLeft_internal >= 0){m_timeLeft_internal -= time; return;}
+		if(m_excute_time >= m_excute_Limit){m_end = true; return;}
+		m_excute_time++;
+		m_timeLeft_internal = m_time_internal;
+
+		// 首次执行发送阵营消息
+		if(m_excute_time == 1)
+		{
+			sendFactionMessageKey(m_metagame, m_faction_id, "bombfight");
+		}
+
+		if(m_excute_time != 7)
+		{
+			// phase 1-6: 105mm炮击
+			insertCommonStrike(m_character_id, m_faction_id, 14, m_pos1, m_pos2);
+		}
+		else
+		{
+			// phase 7: 最后一发高爆
+			if(m_specialkey == 1)
+			{
+				insertCommonStrike(m_character_id, m_faction_id, 15, m_pos1, m_pos2);
+			}
+			else
+			{
+				insertCommonStrike(m_character_id, m_faction_id, 126, m_pos1, m_pos2);
+			}
+		}
+
+		// phase 6（m_excute_time==6）后间隔改为 2s
+		if(m_excute_time == 6)
+		{
+			m_timeLeft_internal = 2.0;
+		}
+	}
+}
+
+// 勇士妖精 Apache（原 event_system case 5）
+// 环形飞行 + 机枪扫射 + 标枪导弹 + 诱饵箭矢
+class Event_call_warrior_fairy_apache : event_call_task_hasMarker {
+	protected float m_randseed;
+	protected int m_javelin_vehicle_id;
+
+	Event_call_warrior_fairy_apache(GameMode@ metagame, float time, int cId, int fId, Vector3 start_pos, Vector3 target_pos, string mode="", int markerid=0)
+	{
+		super(metagame, time, cId, fId, start_pos, target_pos, mode, markerid);
+		m_randseed = rand(0.0, 3.14);
+		m_javelin_vehicle_id = -1;
+	}
+
+	void start() {
+		m_timeLeft = m_time;
+		m_timeLeft_internal = 0;
+		m_time_internal = 0.5;
+		m_excute_Limit = 12;
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time; return;}
+		if(m_timeLeft_internal >= 0){m_timeLeft_internal -= time; return;}
+		if(m_excute_time >= m_excute_Limit){m_end = true; return;}
+		m_excute_time++;
+		m_timeLeft_internal = m_time_internal;
+
+		// 环形飞行位置（固定偏移）
+		Vector3 aimPos = e_pos.add(Vector3(10.0 * cos(m_randseed), 40, 10.0 * sin(m_randseed)));
+
+		// phase 12: 诱饵箭矢（原代码 bug 修复，原来不会执行到这里）
+		if(m_excute_time == 12)
+		{
+			insertCommonStrike(m_character_id, m_faction_id, "apache_bait", aimPos, e_pos);
+		}
+
+		// phase 1: 发消息 + 锁定载具
+		if(m_excute_time == 1)
+		{
+			sendFactionMessageKey(m_metagame, m_faction_id, "warriorfight");
+			m_javelin_vehicle_id = getNearByEnemyVehicle(m_metagame, m_faction_id, e_pos, 20);
+			if(m_javelin_vehicle_id != -1)
+			{
+				playSoundAtLocation(m_metagame, "javelin_locked.wav", m_faction_id, e_pos, 1.0);
+			}
+			else
+			{
+				playSoundAtLocation(m_metagame, "javelin_lock_fail.wav", m_faction_id, e_pos, 1.0);
+			}
+		}
+
+		// phase 6: 播放扫射音效
+		if(m_excute_time == 6)
+		{
+			playSoundAtLocation(m_metagame, "30mm_strafe.wav", m_faction_id, e_pos, 1.0);
+		}
+
+		// phase 6-11: 机枪扫射
+		if(m_excute_time >= 6 && m_excute_time <= 11)
+		{
+			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame, m_faction_id, e_pos, 30.0f);
+			if(luckyGuyid != -1)
+			{
+				const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+				Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+				DelayCommonCallRequest@ shot = DelayCommonCallRequest(m_metagame, 0.05, m_character_id, m_faction_id, "apache_mg", aimPos, luckyGuyPos);
+				TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+				tasker.add(shot);
+				tasker.add(shot);
+				tasker.add(shot);
+				tasker.add(shot);
+			}
+		}
+
+		// phase 8: 标枪导弹
+		if(m_excute_time == 8)
+		{
+			if(m_javelin_vehicle_id != -1)
+			{
+				int target_id = m_javelin_vehicle_id;
+				Vector3 target_fin_pos;
+				const XmlElement@ target_info = getVehicleInfo(m_metagame, target_id);
+				if(target_info !is null)
+				{
+					target_fin_pos = stringToVector3(target_info.getStringAttribute("position"));
+				}
+				else
+				{
+					target_fin_pos = e_pos;
+				}
+				insertCommonStrike(m_character_id, m_faction_id, "apache_javelin", aimPos, target_fin_pos);
+			}
+			else
+			{
+				// 未锁定载具时，向目标点发射
+				insertCommonStrike(m_character_id, m_faction_id, "apache_javelin", aimPos, e_pos);
+			}
+		}
+	}
+}
