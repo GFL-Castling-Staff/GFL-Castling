@@ -808,7 +808,9 @@ class GFLskill : Tracker {
 					uint factionid = character.getIntAttribute("faction_id");
 					Vector3 pos_smartgrenade = stringToVector3(event.getStringAttribute("position"));
 					CreateProjectile(m_metagame,pos_smartgrenade.add(Vector3(0,0.1,0)),pos_smartgrenade,"smoke_grenade.projectile",characterId,factionid,0,26);
-                    GFL_event_array.insertLast(GFL_event(characterId,factionid,"ump45mod3_smoke",pos_smartgrenade,1.5));
+                    Skill_UMP45MOD3_Smoke@ smoke_task = Skill_UMP45MOD3_Smoke(m_metagame, 1.5, characterId, factionid, pos_smartgrenade, pos_smartgrenade);
+					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+					tasker.add(smoke_task);
 				}			
 				break;			
 			}
@@ -1069,7 +1071,9 @@ class GFLskill : Tracker {
 					const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
 					if (player !is null) {
 						Vector3 position = stringToVector3(event.getStringAttribute("position"));
-                        GFL_event_array.insertLast(GFL_event(characterId,factionId,int(GFL_Event_Index["lightning_storm"]),position,1.0,-1.0));
+                        Skill_Lightning_Storm@ storm_task = Skill_Lightning_Storm(m_metagame, 1.0, characterId, factionId, position, position);
+						TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+						tasker.add(storm_task);
 					}
 				}
 				break;
@@ -1092,7 +1096,9 @@ class GFLskill : Tracker {
 				if (character !is null) {
 					Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
 					int factionid = character.getIntAttribute("faction_id");
-                    GFL_event_array.insertLast(GFL_event(characterId,factionid,int(GFL_Event_Index["hk416_medicaid"]),grenade_pos));
+                    Skill_HK416_Heal@ heal_task = Skill_HK416_Heal(m_metagame, 0.0, characterId, factionid, grenade_pos, grenade_pos);
+					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+					tasker.add(heal_task);
 				}
 				break;	
 			}
@@ -1154,7 +1160,9 @@ class GFLskill : Tracker {
 				if (OutOfRange_2(grenade_pos)) return;
 				int factionid = character.getIntAttribute("faction_id");
 				spawnVehicle(m_metagame,1,factionid,grenade_pos.add(Vector3(0,10,0)),Orientation(0,1,0,0.1),"sf_boss_intruder_skill.vehicle");
-				GFL_event_array.insertLast(GFL_event(characterId,factionid,int(GFL_Event_Index["intruder_spawn"]),grenade_pos));
+				Skill_SF_Intruder_Spawn@ intruder_task = Skill_SF_Intruder_Spawn(m_metagame, 0.0, characterId, factionid, grenade_pos, grenade_pos);
+				TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+				tasker.add(intruder_task);
 				break;			
 			}
 

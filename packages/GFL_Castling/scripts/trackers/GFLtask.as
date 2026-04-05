@@ -3154,3 +3154,105 @@ class Event_call_rampage_fairy_ac130 : event_call_task_hasMarker {
 		return false;
 	}
 }
+
+// 干扰者刷兵（原 event_system case 11）
+class Skill_SF_Intruder_Spawn : event_call_task {
+
+	Skill_SF_Intruder_Spawn(GameMode@ metagame, float time, int cId, int fId, Vector3 start_pos, Vector3 target_pos, string mode="")
+	{
+		super(metagame, time, cId, fId, start_pos, target_pos, mode);
+	}
+
+	void start() {
+		m_timeLeft = m_time;
+		m_timeLeft_internal = 0;
+		m_time_internal = 2.0;
+		m_excute_Limit = 3;
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time; return;}
+		if(m_timeLeft_internal >= 0){m_timeLeft_internal -= time; return;}
+		if(m_excute_time >= m_excute_Limit){m_end = true; return;}
+		m_excute_time++;
+		m_timeLeft_internal = m_time_internal;
+		spawnSoldier(m_metagame, 6, m_faction_id, e_pos, "sf_dinergate", 4, 4);
+	}
+}
+
+// 闪电风暴（原 event_system case 9）
+class Skill_Lightning_Storm : event_call_task {
+
+	Skill_Lightning_Storm(GameMode@ metagame, float time, int cId, int fId, Vector3 start_pos, Vector3 target_pos, string mode="")
+	{
+		super(metagame, time, cId, fId, start_pos, target_pos, mode);
+	}
+
+	void start() {
+		m_timeLeft = m_time;
+		m_timeLeft_internal = 0;
+		m_time_internal = 5.0;
+		m_excute_Limit = 12;
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time; return;}
+		if(m_timeLeft_internal >= 0){m_timeLeft_internal -= time; return;}
+		if(m_excute_time >= m_excute_Limit){m_end = true; return;}
+		m_excute_time++;
+		m_timeLeft_internal = m_time_internal;
+		Vector3 lightning_pos = e_pos.add(Vector3(0, 20, 0));
+		CreateDirectProjectile(m_metagame, lightning_pos, lightning_pos, "weather_lightning_storm_1.projectile", m_character_id, m_faction_id, 0);
+	}
+}
+
+// HK416 奶包（原 event_system case 10）
+class Skill_HK416_Heal : event_call_task {
+
+	Skill_HK416_Heal(GameMode@ metagame, float time, int cId, int fId, Vector3 start_pos, Vector3 target_pos, string mode="")
+	{
+		super(metagame, time, cId, fId, start_pos, target_pos, mode);
+	}
+
+	void start() {
+		m_timeLeft = m_time;
+		m_timeLeft_internal = 0;
+		m_time_internal = 2.0;
+		m_excute_Limit = 11;
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time; return;}
+		if(m_timeLeft_internal >= 0){m_timeLeft_internal -= time; return;}
+		if(m_excute_time >= m_excute_Limit){m_end = true; return;}
+		m_excute_time++;
+		m_timeLeft_internal = m_time_internal;
+		CreateDirectProjectile(m_metagame, e_pos, e_pos.add(Vector3(0, 1, 0)), "medical_agl_call.projectile", m_character_id, m_faction_id, 10);
+		healRangedCharacters(m_metagame, e_pos, m_faction_id, 8.4, 3);
+	}
+}
+
+// UMP45MOD3 烟雾（原 event_system case 5）
+class Skill_UMP45MOD3_Smoke : event_call_task {
+
+	Skill_UMP45MOD3_Smoke(GameMode@ metagame, float time, int cId, int fId, Vector3 start_pos, Vector3 target_pos, string mode="")
+	{
+		super(metagame, time, cId, fId, start_pos, target_pos, mode);
+	}
+
+	void start() {
+		m_timeLeft = m_time;
+		m_timeLeft_internal = 0;
+		m_time_internal = 3.0;
+		m_excute_Limit = 6;
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0){m_timeLeft -= time; return;}
+		if(m_timeLeft_internal >= 0){m_timeLeft_internal -= time; return;}
+		if(m_excute_time >= m_excute_Limit){m_end = true; return;}
+		m_excute_time++;
+		m_timeLeft_internal = m_time_internal;
+		CreateDirectProjectile(m_metagame, e_pos.add(Vector3(0, 6, 0)), e_pos.add(Vector3(0, 6.1, 0)), "ump45mod3_skill.projectile", m_character_id, m_faction_id, 10);
+	}
+}
