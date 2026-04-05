@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="Anti Armor Grenade" slot="1" pulldown_in_air="45.0" key="std_aa_grenade.projectile">
     <tag name="grenade"/>
-    <result class="spawn" instance_class="grenade" instance_key="blast_shard_rad_40mm_aa.projectile" min_amount="2" max_amount="2" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
+    <result class="spawn" instance_class="grenade" instance_key="blast_shard_rad_40mm_aa.projectile" min_amount="6" max_amount="6" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
     <trigger class="impact">
 		<collider class="character" enabled="1" faction_compare="not_equal"/>
 	</trigger>
