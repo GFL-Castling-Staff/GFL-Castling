@@ -49,7 +49,7 @@
         <commonness value="0" />
         <inventory encumbrance="1.0" price="5.0" />
         <capacity value="1" source="rank" source_value="0.0" />
-    </projectile>    
+    </projectile>
     <projectile class="grenade" name="" key="blast_shard_ksvk_skill.projectile" slot="2" radius="0.15">
         <result class="blast" radius="5.0" damage="3.1" push="0.1" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
         <trigger class="time" time_to_live="0.0"/>
@@ -61,7 +61,7 @@
         <capacity value="1" source="rank" source_value="0.0" />
     </projectile>
     <projectile class="grenade" name="" key="blast_shard_rad6.projectile" slot="2" radius="0.15">
-        <result class="blast" radius="6.0" damage="0.1" push="0.3" decal="1" character_state="death" faction_compare="not_equal" />
+        <result class="blast" radius="6.0" damage="0.1" push="0.3" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.0"/>
         <rotation class="random" />
         <model mesh_filename="" />
@@ -81,7 +81,7 @@
         <capacity value="1" source="rank" source_value="0.0" />
     </projectile>
     <projectile class="grenade" name="" key="blast_shard_rad10.projectile" slot="2" radius="0.15">
-        <result class="blast" radius="10.0" damage="0.1" push="0" decal="1" character_state="death" faction_compare="not_equal" />
+        <result class="blast" radius="10.0" damage="0.1" push="0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.0"/>
         <rotation class="random" />
         <model mesh_filename="" />
@@ -89,7 +89,7 @@
         <commonness value="0" />
         <inventory encumbrance="1.0" price="5.0" />
         <capacity value="1" source="rank" source_value="0.0" />
-    </projectile>    
+    </projectile>
     <projectile class="grenade" name="" key="blast_heavy_rad10_damage40.projectile" slot="2" radius="0.05">
         <result class="blast" radius="10" damage="40" push="0.5" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" make_vehicle_hit_sound="0"/>
         <trigger class="time" time_to_live="0.0"/>
@@ -99,9 +99,9 @@
         <commonness value="0" />
         <inventory encumbrance="1.0" price="5.0" />
         <capacity value="1" source="rank" source_value="0.0" />
-    </projectile>    
+    </projectile>
     <projectile class="grenade" name="" key="blast_shard_rad_40mm_ap.projectile" slot="2" radius="0.15">
-        <result class="blast" radius="13.5" damage="3.1" push="0.15" decal="1" character_state="death" faction_compare="not_equal" />
+        <result class="blast" radius="13.5" damage="3.1" push="0.15" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.0"/>
         <rotation class="random" />
         <model mesh_filename="" />
@@ -111,7 +111,7 @@
         <capacity value="1" source="rank" source_value="0.0" />
     </projectile>
     <projectile class="grenade" name="" key="blast_shard_rad_40mm_aa.projectile" slot="2" radius="0.15">
-        <result class="blast" radius="6.0" damage="8.0" push="0.25" decal="1" character_state="death" faction_compare="not_equal" />
+        <result class="blast" radius="6.0" damage="8.0" push="0.25" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.0"/>
         <rotation class="random" />
         <model mesh_filename="" />
@@ -121,7 +121,7 @@
         <capacity value="1" source="rank" source_value="0.0" />
     </projectile>
     <projectile class="grenade" name="" key="blast_shard_rad_40mm_aamod3.projectile" slot="2" radius="0.15">
-        <result class="blast" radius="8.0" damage="8.1" push="0.25" decal="1" character_state="death" faction_compare="not_equal" />
+        <result class="blast" radius="8.0" damage="8.1" push="0.25" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.0"/>
         <rotation class="random" />
         <model mesh_filename="" />
@@ -129,9 +129,9 @@
         <commonness value="0" />
         <inventory encumbrance="1.0" price="5.0" />
         <capacity value="1" source="rank" source_value="0.0" />
-    </projectile>    
+    </projectile>
     <projectile class="grenade" name="" key="blast_shard_rad_g3mod3.projectile" slot="2" radius="0.15">
-        <result class="blast" radius="8.0" damage="11.1" push="0.4" decal="1" character_state="death" faction_compare="not_equal" />
+        <result class="blast" radius="8.0" damage="11.1" push="0.4" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.0"/>
         <rotation class="random" />
         <model mesh_filename="" />
@@ -179,7 +179,7 @@
         <commonness value="0" />
         <inventory encumbrance="1.0" price="5.0" />
         <capacity value="1" source="rank" source_value="0.0" />
-    </projectile>    
+    </projectile>
     <projectile class="grenade" name="" key="blast_heavy_rad10_damage4.projectile" slot="2" radius="0.05">
         <result class="blast" radius="10.0" damage="4.0" push="0.05" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.0"/>
@@ -229,7 +229,7 @@
         <commonness value="0" />
         <inventory encumbrance="1.0" price="5.0" />
         <capacity value="1" source="rank" source_value="0.0" />
-    </projectile>    
+    </projectile>
     <projectile class="grenade" name="" key="cannon_is2_122mm_damage.projectile" slot="2" radius="0.05">
         <result class="blast" radius="8.0" damage="20.0" push="0.5" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.0"/>
@@ -239,7 +239,7 @@
         <commonness value="0" />
         <inventory encumbrance="1.0" price="5.0" />
         <capacity value="1" source="rank" source_value="0.0" />
-    </projectile>    
+    </projectile>
     <projectile class="grenade" name="" key="cannon_abrams_105mm_damage_sub.projectile" slot="2" radius="0.15">
         <result class="blast" radius="5.0" damage="13.0" push="0.3" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.0"/>
@@ -279,7 +279,7 @@
         <commonness value="0" />
         <inventory encumbrance="1.0" price="5.0" />
         <capacity value="1" source="rank" source_value="0.0" />
-    </projectile>    
+    </projectile>
         <projectile class="grenade" name="" key="blast_snipe_airburst.projectile" slot="2" radius="0.01">
         <result class="blast" radius="10" damage="3.01" push="0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" make_vehicle_hit_sound="0"/>
         <trigger class="time" time_to_live="0.0"/>
@@ -373,7 +373,7 @@
         <commonness value="0" />
         <inventory encumbrance="1.0" price="5.0" />
         <capacity value="1" source="rank" source_value="0.0" />
-    </projectile>    
+    </projectile>
     <projectile class="grenade" name="" key="blast_ju87.projectile" slot="2" radius="0.01">
         <result class="blast" radius="19" damage="95.0" push="2.0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.0"/>
@@ -383,7 +383,7 @@
         <commonness value="0" />
         <inventory encumbrance="1.0" price="5.0" />
         <capacity value="1" source="rank" source_value="0.0" />
-    </projectile>    
+    </projectile>
     <projectile class="grenade" name="" key="blast_ppsh41_sub.projectile" slot="2" radius="0.01">
         <result class="blast" radius="10" damage="30" push="0.8" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.0"/>
@@ -398,34 +398,34 @@
         <collision class="sticky" />
         <trigger class="impact" />
         <result class="blast" radius="3.0" damage="1.01" push="0.05" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" make_vehicle_hit_sound="0" />
-            
+
         <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
         <effect class="result" type="splat_map" surface_tag="" size="4.0" atlas_index="4" layer="0" />
         <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="2" additive="0" />
-    
+
         <rotation class="random" />
-        <commonness value="0.0" can_respawn_with="0" in_stock="0"/>		
+        <commonness value="0.0" can_respawn_with="0" in_stock="0"/>
         <capacity value="0" source="rank" source_value="0" />
         <model />
         <hud_icon filename="testing.png" />
         <inventory encumbrance="0.5" price="0.0" />
-        <sound class="result" key="other" fileref="burn.wav" />   
-        
+        <sound class="result" key="other" fileref="burn.wav" />
+
         <sound class="result" key="terrain" copy="other" />
         <sound class="result" key="static_object" copy="other" />
         <sound class="result" key="vehicle" copy="other" />
         <sound class="result" key="character" copy="other" />
-    
+
         <effect class="result" key="terrain" ref="molotov_fire_01"/>
         <effect class="result" key="terrain" ref="molotov_fire_02"/>
         <effect class="result" key="terrain" ref="molotov_smoke"/>
-    
+
         <effect class="result" key="other" copy="terrain" />
         <effect class="result" key="static_object" copy="terrain" />
         <effect class="result" key="vehicle" copy="terrain" />
         <effect class="result" key="character" copy="terrain" />
         <effect class="activated" ref="activated_flamethrower_01" />
-    </projectile>    
+    </projectile>
     <projectile class="grenade" name="" key="blast_g41_sub.projectile" slot="2" radius="0.01">
         <result class="blast" radius="6.0" damage="2.0" push="0.1" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.0"/>
@@ -437,7 +437,7 @@
         <capacity value="1" source="rank" source_value="0.0" />
     </projectile>
     <projectile class="grenade" name="" key="blast_shard_rad_23mm_cas.projectile" slot="2" radius="0.15">
-        <result class="blast" radius="4.0" damage="3.1" push="0.2" decal="1" character_state="death" faction_compare="not_equal" />
+        <result class="blast" radius="4.0" damage="3.1" push="0.2" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.0"/>
         <rotation class="random" />
         <model mesh_filename="" />
@@ -447,7 +447,7 @@
         <capacity value="1" source="rank" source_value="0.0" />
     </projectile>
     <projectile class="grenade" name="" key="blast_shard_rad_23mm_cas_beta.projectile" slot="2" radius="0.15">
-        <result class="blast" radius="4.0" damage="4.1" push="0.2" decal="1" character_state="death" faction_compare="not_equal" />
+        <result class="blast" radius="4.0" damage="4.1" push="0.2" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.0"/>
         <rotation class="random" />
         <model mesh_filename="" />
@@ -455,9 +455,9 @@
         <commonness value="0" />
         <inventory encumbrance="1.0" price="5.0" />
         <capacity value="1" source="rank" source_value="0.0" />
-    </projectile>    
+    </projectile>
     <projectile class="grenade" name="" key="blast_shard_rad20_155mm.projectile" slot="2" radius="0.15">
-        <result class="blast" radius="20.0" damage="10.0" push="0.2" decal="1" character_state="death" faction_compare="not_equal" />
+        <result class="blast" radius="20.0" damage="10.0" push="0.2" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.0"/>
         <rotation class="random" />
         <model mesh_filename="" />
@@ -465,9 +465,9 @@
         <commonness value="0" />
         <inventory encumbrance="1.0" price="5.0" />
         <capacity value="1" source="rank" source_value="0.0" />
-    </projectile>    
+    </projectile>
     <projectile class="grenade" name="" key="blast_shard_rad8_flameblast.projectile" slot="2" radius="0.15">
-        <result class="blast" radius="8.0" damage="2.1" push="0.2" decal="1" character_state="death" faction_compare="not_equal" />
+        <result class="blast" radius="8.0" damage="2.1" push="0.2" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.0"/>
         <rotation class="random" />
         <model mesh_filename="" />
@@ -475,7 +475,7 @@
         <commonness value="0" />
         <inventory encumbrance="1.0" price="5.0" />
         <capacity value="1" source="rank" source_value="0.0" />
-    </projectile>     
+    </projectile>
     <projectile class="grenade" name="" key="blast_shard_m4a1_skillcannon.projectile" slot="2" radius="0.15">
         <result class="blast" radius="4.5" damage="5.0" push="0.25" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.0"/>
@@ -485,7 +485,7 @@
         <commonness value="0" />
         <inventory encumbrance="1.0" price="5.0" />
         <capacity value="1" source="rank" source_value="0.0" />
-    </projectile>    
+    </projectile>
     <projectile class="grenade" name="" key="blast_shard_hunter_skill.projectile" slot="2" radius="0.15">
         <result class="blast" radius="4.5" damage="3.0" push="0.01" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.0"/>
@@ -505,7 +505,7 @@
         <commonness value="0" />
         <inventory encumbrance="1.0" price="5.0" />
         <capacity value="1" source="rank" source_value="0.0" />
-    </projectile>     
+    </projectile>
     <projectile class="grenade" name="" key="blast_shard_m1a1_mg_s.projectile" slot="2" radius="0.1" pulldown_in_air="30">
     <result class="blast" damage="3.1" radius="4.5" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
         <trigger class="time" time_to_live="0.001"/>
@@ -537,7 +537,7 @@
         <effect class="result" key="character" ref="mg4_blast_shine_center_hollow"/>
         <effect class="result" key="static_object" copy="character" />
         <effect class="result" key="vehicle" copy="character"/>
-    </projectile>  
+    </projectile>
     <projectile class="grenade" name="" key="laser_m1a1_dam3_5_rad4.projectile" slot="2" radius="0.15">
         <result class="blast" radius="4" damage="3.5" push="0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
         <trigger class="time" time_to_live="0.0"/>
@@ -547,7 +547,7 @@
         <commonness value="0" />
         <inventory encumbrance="1.0" price="5.0" />
         <capacity value="1" source="rank" source_value="0.0" />
-    </projectile>    
+    </projectile>
     <projectile class="grenade" name="" key="blast_shard_m1a1_wasp_s.projectile" slot="2" radius="0.15">
         <result class="blast" radius="6.8" damage="5" push="0" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0" />
         <trigger class="time" time_to_live="0.0"/>
