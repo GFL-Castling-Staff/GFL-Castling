@@ -2756,15 +2756,132 @@ class Event_call_rampage_fairy_ac130 : event_call_task_hasMarker {
 
 	// --- 语音包 ---
 	protected int m_voicekey;
-	protected array<array<string>> m_startVoice;
-	protected array<array<string>> m_endVoice;
-	protected array<array<string>> m_noTargetVoice;
-	protected array<array<string>> m_minigunVoice;
-	protected array<array<string>> m_shotgunVoice;
-	protected array<array<string>> m_m202Voice;
+    array<array<string>> m_startVoice= {
+        {},
+        {
+            "ac130entrance_rus1.wav",
+            "ac130entrance_rus2.wav",
+            "ac130entrance_rus3.wav"
+        },
+        {
+            "ac130entrance_blkops1.wav",
+            "ac130entrance_blkops2.wav",
+            "ac130entrance_blkops3.wav"
+        },
+        {
+            "ac130entrance_nato1.wav",
+            "ac130entrance_nato2.wav",
+            "ac130entrance_nato3.wav"
+        }
+    };
+    array<array<string>> m_endVoice= {
+        {},
+        {
+            "ac130exit_rus1.wav",
+            "ac130exit_rus2.wav",
+            "ac130exit_rus3.wav"
+        },
+        {
+            "ac130exit_blkops1.wav",
+            "ac130exit_blkops2.wav",
+            "ac130exit_blkops3.wav"
+        },
+        {
+            "ac130exit_nato1.wav",
+            "ac130exit_nato2.wav",
+            "ac130exit_nato3.wav"
+        }
+    };
+    array<array<string>> m_noTargetVoice= {
+        {},
+        {
+            "ac130search_rus1.wav",
+            "ac130search_rus2.wav"
+        },
+        {
+            "ac130search_blkops1.wav",
+            "ac130search_blkops2.wav",
+            "ac130search_blkops3.wav",
+            "ac130search_blkops4.wav"
+        },
+        {
+            "ac130search_nato1.wav",
+            "ac130search_nato2.wav",
+            "ac130search_nato3.wav",
+            "ac130search_nato4.wav",
+            "ac130search_nato5.wav",
+            "ac130search_nato6.wav",
+            "ac130search_nato7.wav",
+            "ac130search_nato8.wav",
+            "ac130search_nato9.wav"
+        }
+    };
+    array<array<string>> m_minigunVoice= {
+        {},
+        {
+            "ac130mg_rus1.wav",
+            "ac130mg_rus2.wav",
+            "ac130allguns_rus1.wav",
+            "ac130allguns_rus2.wav",
+            "ac130allguns_rus3.wav"
+        },
+        {
+            "ac130mg_blkops1.wav",
+            "ac130mg_blkops2.wav"
+        },
+        {
+            "ac130mg_nato1.wav",
+            "ac130mg_nato2.wav",
+            "ac130mg_nato3.wav",
+            "ac130mg_nato4.wav"
+        }
+    };
+    array<array<string>> m_shotgunVoice= {
+        {},
+        {
+            "ac130sg_rus1.wav",
+            "ac130sg_rus2.wav",
+            "ac130allguns_rus1.wav",
+            "ac130allguns_rus2.wav",
+            "ac130allguns_rus3.wav"
+        },
+        {
+            "ac130sg_blkops1.wav",
+            "ac130sg_blkops2.wav",
+            "ac130sg_blkops3.wav"
+        },
+        {
+            "ac130sg_nato1.wav",
+            "ac130sg_nato2.wav",
+            "ac130sg_nato3.wav"
+        }
+    };
+    array<array<string>> m_m202Voice= {
+        {},
+        {
+            "ac130rpg_rus1.wav",
+            "ac130rpg_rus2.wav",
+            "ac130rpg_rus3.wav",
+            "ac130allguns_rus1.wav",
+            "ac130allguns_rus2.wav",
+            "ac130allguns_rus3.wav"
+        },
+        {
+            "ac130rpg_blkops1.wav",
+            "ac130rpg_blkops2.wav",
+            "ac130rpg_blkops3.wav"
+        },
+        {
+            "ac130rpg_nato1.wav",
+            "ac130rpg_nato2.wav",
+            "ac130rpg_nato3.wav",
+            "ac130rpg_nato4.wav",
+            "ac130rpg_nato5.wav"
+        }
+    };
 
 	// --- 载具避让列表 ---
-	protected array<string> m_avoid_vehicles;
+	array<string> m_avoid_vehicles = {"armored_truck.vehicle","radar_tower.vehicle"};
 
 	// --- 环形飞行随机种子 ---
 	protected float m_randseed;
@@ -2806,136 +2923,6 @@ class Event_call_rampage_fairy_ac130 : event_call_task_hasMarker {
 		m_voice_interval = 0;
 		m_flyby_interval = 0;
 
-		// 载具避让列表
-		m_avoid_vehicles = {
-			"armored_truck.vehicle",
-			"radar_tower.vehicle"
-		};
-
-		// 语音包初始化（二维数组，索引0为空占位，1=俄语 2=黑行动 3=北约）
-		m_startVoice = {
-			{},
-			{
-				"ac130entrance_rus1.wav",
-				"ac130entrance_rus2.wav",
-				"ac130entrance_rus3.wav"
-			},
-			{
-				"ac130entrance_blkops1.wav",
-				"ac130entrance_blkops2.wav",
-				"ac130entrance_blkops3.wav"
-			},
-			{
-				"ac130entrance_nato1.wav",
-				"ac130entrance_nato2.wav",
-				"ac130entrance_nato3.wav"
-			}
-		};
-		m_endVoice = {
-			{},
-			{
-				"ac130exit_rus1.wav",
-				"ac130exit_rus2.wav",
-				"ac130exit_rus3.wav"
-			},
-			{
-				"ac130exit_blkops1.wav",
-				"ac130exit_blkops2.wav",
-				"ac130exit_blkops3.wav"
-			},
-			{
-				"ac130exit_nato1.wav",
-				"ac130exit_nato2.wav",
-				"ac130exit_nato3.wav"
-			}
-		};
-		m_noTargetVoice = {
-			{},
-			{
-				"ac130search_rus1.wav",
-				"ac130search_rus2.wav"
-			},
-			{
-				"ac130search_blkops1.wav",
-				"ac130search_blkops2.wav",
-				"ac130search_blkops3.wav",
-				"ac130search_blkops4.wav"
-			},
-			{
-				"ac130search_nato1.wav",
-				"ac130search_nato2.wav",
-				"ac130search_nato3.wav",
-				"ac130search_nato4.wav",
-				"ac130search_nato5.wav",
-				"ac130search_nato6.wav",
-				"ac130search_nato7.wav",
-				"ac130search_nato8.wav",
-				"ac130search_nato9.wav"
-			}
-		};
-		m_minigunVoice = {
-			{},
-			{
-				"ac130mg_rus1.wav",
-				"ac130mg_rus2.wav",
-				"ac130allguns_rus1.wav",
-				"ac130allguns_rus2.wav",
-				"ac130allguns_rus3.wav"
-			},
-			{
-				"ac130mg_blkops1.wav",
-				"ac130mg_blkops2.wav"
-			},
-			{
-				"ac130mg_nato1.wav",
-				"ac130mg_nato2.wav",
-				"ac130mg_nato3.wav",
-				"ac130mg_nato4.wav"
-			}
-		};
-		m_shotgunVoice = {
-			{},
-			{
-				"ac130sg_rus1.wav",
-				"ac130sg_rus2.wav",
-				"ac130allguns_rus1.wav",
-				"ac130allguns_rus2.wav",
-				"ac130allguns_rus3.wav"
-			},
-			{
-				"ac130sg_blkops1.wav",
-				"ac130sg_blkops2.wav",
-				"ac130sg_blkops3.wav"
-			},
-			{
-				"ac130sg_nato1.wav",
-				"ac130sg_nato2.wav",
-				"ac130sg_nato3.wav"
-			}
-		};
-		m_m202Voice = {
-			{},
-			{
-				"ac130rpg_rus1.wav",
-				"ac130rpg_rus2.wav",
-				"ac130rpg_rus3.wav",
-				"ac130allguns_rus1.wav",
-				"ac130allguns_rus2.wav",
-				"ac130allguns_rus3.wav"
-			},
-			{
-				"ac130rpg_blkops1.wav",
-				"ac130rpg_blkops2.wav",
-				"ac130rpg_blkops3.wav"
-			},
-			{
-				"ac130rpg_nato1.wav",
-				"ac130rpg_nato2.wav",
-				"ac130rpg_nato3.wav",
-				"ac130rpg_nato4.wav",
-				"ac130rpg_nato5.wav"
-			}
-		};
 	}
 
 	void update(float time) {
