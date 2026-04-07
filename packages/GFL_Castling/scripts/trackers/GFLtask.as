@@ -58,7 +58,7 @@ class VestRecoverTask : Task {
 
 class TimerMarker : Task {
     protected Metagame@ m_metagame;
-	protected float m_time;	
+	protected float m_time;
 	protected CastlingMarker@ m_info;
 	protected float m_timeLeft;
 	protected bool m_end=false;
@@ -86,7 +86,7 @@ class TimerMarker : Task {
 		command.setBoolAttribute("show_in_map_view", true);
 		command.setBoolAttribute("show_in_game_view", true);
 		command.setBoolAttribute("show_at_screen_edge", false);
-        m_metagame.getComms().send(command);		
+        m_metagame.getComms().send(command);
 	}
 
     void update(float time) {
@@ -108,7 +108,7 @@ class TimerMarker : Task {
 			return true;
 		}
 		return false;
-	}	
+	}
 }
 
 class AOEVestRecoverTask : Task {
@@ -198,7 +198,7 @@ class DelayProjectileSet :Task{
 		m_timeLeft -= time;
 		if (m_timeLeft < 0)
 		{
-			string c = 
+			string c =
 				"<command class='create_instance'" +
 				" faction_id='"+ m_faction_id +"'" +
 				" instance_class='grenade'" +
@@ -249,7 +249,7 @@ class DelayMovingTargetProjectileSet :Task{
                 const XmlElement@ target = getCharacterInfo(m_metagame, m_target_id);
                 if(target is null) return;
 				Vector3 target_pos = stringToVector3(target.getStringAttribute("position"));
-				string c = 
+				string c =
 					"<command class='create_instance'" +
 					" faction_id='"+ m_faction_id +"'" +
 					" instance_class='grenade'" +
@@ -390,7 +390,7 @@ class DelayC2PProjectileSet_H :Task{
 		{
             const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
             if (checkCharacterDead(character)) return;
-            Vector3 c_pos = getCharacterPosition(character); 
+            Vector3 c_pos = getCharacterPosition(character);
             c_pos=c_pos.add(Vector3(0,1.5,0));
             CreateProjectile_H(m_metagame,c_pos,m_pos,m_key,m_character_id,m_faction_id,m_gspeed,m_height);
 		}
@@ -405,12 +405,12 @@ class DelayC2PProjectileSet_H :Task{
 }
 class ConstantStaticProjectileEvent :Task{
 	protected Metagame@ m_metagame;
-	protected float m_time; 
+	protected float m_time;
     protected int m_character_id;
     protected int m_faction_id;
     protected string m_key;
 	protected float m_timeLeft;
-	protected Vector3 m_pos;	
+	protected Vector3 m_pos;
 	protected int m_trigger_time;
 	protected int m_triggered_time = 0;
 	protected float m_time_internal;
@@ -442,7 +442,7 @@ class ConstantStaticProjectileEvent :Task{
 				const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
 				if(checkCharacterDead(character)) return;
 			}
-			string c = 
+			string c =
 				"<command class='create_instance'" +
 				" faction_id='"+ m_faction_id +"'" +
 				" instance_class='grenade'" +
@@ -453,13 +453,13 @@ class ConstantStaticProjectileEvent :Task{
 			m_triggered_time++;
 		}
 	}
-	
+
     bool hasEnded() const {
 		if (m_triggered_time >= m_trigger_time) {
 			return true;
 		}
 		return false;
-	}		
+	}
 }
 
 
@@ -498,7 +498,7 @@ class DelayAirstrikeRequest :Task{
 					"A-10_2.wav",
 					"A-10_3.wav"
 				};
-				playRandomSoundArray(m_metagame,Voice,m_faction_id,m_pos.toString(),1);		
+				playRandomSoundArray(m_metagame,Voice,m_faction_id,m_pos.toString(),1);
 			}
 		}
 	}
@@ -629,7 +629,7 @@ class DelayAntiPersonSnipeRequest :Task{
 	protected float m_timeLeft;
 	protected Vector3 m_pos_1;
 	protected Vector3 m_pos_2;
-	protected string m_airstrike_key;	
+	protected string m_airstrike_key;
 	protected bool m_shoot = false;
 	protected MutilProjectile@ m_projectiles=null;
 
@@ -654,7 +654,7 @@ class DelayAntiPersonSnipeRequest :Task{
 		m_pos_1=pos1;
 		@m_projectiles = airstrike_key;
 		m_target_id = target;
-	}	
+	}
 
 	void setKey(string key)
 	{
@@ -688,16 +688,16 @@ class DelayAntiPersonSnipeRequest :Task{
 				playSoundAtLocation(m_metagame,m_playsound_key,m_faction_id,m_pos_1,m_playsound_volume);
 				m_shoot = true;
 			}
-		}		
+		}
 		if (m_addtime < 0 && m_timeLeft < 0){
 			if(m_projectiles !is null)
 			{
 				CreateMutilDirectProjectile(m_metagame,m_pos_2.add(Vector3(0,10,0)),m_pos_2,m_projectiles.m_key,m_character_id,m_faction_id,300,m_projectiles.m_num);
-			}		
+			}
 			else
 			{
 				CreateDirectProjectile(m_metagame,m_pos_2.add(Vector3(0,10,0)),m_pos_2,m_airstrike_key,m_character_id,m_faction_id,300);
-			}	
+			}
 		}
 	}
 
@@ -718,7 +718,7 @@ class DelayAntiTankSnipeRequest :Task{
 	protected float m_timeLeft;
 	protected Vector3 m_pos_1;
 	protected Vector3 m_pos_2;
-	protected string m_airstrike_key;	
+	protected string m_airstrike_key;
 	protected bool m_shoot = false;
 
 
@@ -746,10 +746,10 @@ class DelayAntiTankSnipeRequest :Task{
 			CreateDirectProjectile(m_metagame,m_pos_1,m_pos_2.add(Vector3(0,1,0)),"sniper_bullet_airburst.projectile",m_character_id,m_faction_id,float(max(dis/0.2,40.0)));
 			playSoundAtLocation(m_metagame,"BT_rifle.wav",m_faction_id,m_pos_1,2.0);
 			m_shoot = true;
-		}		
+		}
 		if (m_addtime < 0 && m_timeLeft < 0){
 			CreateDirectProjectile(m_metagame,m_pos_2.add(Vector3(0,3,0)),m_pos_2,m_airstrike_key,m_character_id,m_faction_id,100);
-		}	
+		}
 	}
 
     bool hasEnded() const {
@@ -904,7 +904,7 @@ class strafe_task_30mm : event_call_task {
 		e_pos = e_pos.add(Vector3(rand_x,0,rand_y));
 		rand_angle = rand(-3.14,3.14);
 		rand_x = cos(rand_angle);
-		rand_y = sin(rand_angle);  		
+		rand_y = sin(rand_angle);
 		Vector3 e_pos2 = e_pos.add(Vector3(rand_x,0,rand_y));
 		luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,e_pos,8.0f);
 		if(luckyGuyid!=-1){
@@ -922,7 +922,7 @@ class strafe_task_30mm : event_call_task {
 		m_timeLeft_internal = 0;
 		strike_vector = getAimUnitVector(1,e_pos,e_pos2);
 		strike_didis = 4.0;
-		Vector3 pos_offset = strike_vector.add(getMultiplicationVector(strike_vector,Vector3(-40,0,-40))); 
+		Vector3 pos_offset = strike_vector.add(getMultiplicationVector(strike_vector,Vector3(-40,0,-40)));
 		pos_offset = pos_offset.add(Vector3(0,60,0));
 		Vector3 pos_1st = e_pos.add(getMultiplicationVector(strike_vector,Vector3(-15,0,-15)));
 		Vector3 pos_2nd = e_pos2.add(getMultiplicationVector(strike_vector,Vector3(10,0,10)));
@@ -951,21 +951,21 @@ class strafe_task_30mm : event_call_task {
 		insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos1,m_pos2);
 		m_pos1 = m_pos1.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
 		m_pos1 = m_pos1.add(Vector3(0,-20*(sqrt(float(1/m_excute_Limit)*m_excute_time)),0));
-		m_pos2 = m_pos2.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));					
+		m_pos2 = m_pos2.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
 	}
 }
 
 class strafe_task_15mm_mg151 : event_call_task {
 	protected int luckyGuyid = -1;
-	protected Vector3 first_offset = Vector3(-15,0,-15); 
-	protected Vector3 second_offset = Vector3(10,0,10); 
-    
+	protected Vector3 first_offset = Vector3(-15,0,-15);
+	protected Vector3 second_offset = Vector3(10,0,10);
+
 	void start(){
 		m_timeLeft=m_time;
 		m_timeLeft_internal = 0;
 		strike_vector = getAimUnitVector(1,s_pos,e_pos);
 		strike_didis = 3.0;
-		Vector3 pos_offset = strike_vector.add(getMultiplicationVector(strike_vector,Vector3(-40,0,-40))); 
+		Vector3 pos_offset = strike_vector.add(getMultiplicationVector(strike_vector,Vector3(-40,0,-40)));
 		pos_offset = pos_offset.add(Vector3(0,60,0));
 		Vector3 pos_1st = e_pos.add(getMultiplicationVector(strike_vector,first_offset));
 		Vector3 pos_2nd = e_pos.add(getMultiplicationVector(strike_vector,second_offset));
@@ -993,7 +993,7 @@ class strafe_task_15mm_mg151 : event_call_task {
 		insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos1,m_pos2);
 		m_pos1 = m_pos1.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
 		m_pos1 = m_pos1.add(Vector3(0,-20*(sqrt(float(1/m_excute_Limit)*m_excute_time)),0));
-		m_pos2 = m_pos2.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));					
+		m_pos2 = m_pos2.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
 	}
 }
 
@@ -1093,7 +1093,7 @@ abstract class DelaySkill :Task{
 	}
 	void setTargetPos(Vector3 pos){
 		t_pos=pos;
-	}	
+	}
 	void setExcuteLimit(int a){
 		m_excute_Limit=a;
 	}
@@ -1126,7 +1126,7 @@ class Skill_m1911mod3 : DelaySkill {
 					}
 				}
 			}
-		}		
+		}
 	}
 
 	void update(float time) {
@@ -1181,10 +1181,10 @@ class Skill_Sf_Boss_Dreamer : DelaySkill {
 			if (affectedCharacter.length()<= 0)affectedCharacter = getEnemyCharactersNearPosition(m_metagame,c_pos,m_faction_id,40.0f);
 			if (affectedCharacter.length()<= 0){m_end = true;return;}
 			int luckyoneid = affectedCharacter[0].getIntAttribute("id");
-			const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);		
-			if(luckyoneC is null){m_end = true;return;}	
+			const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+			if(luckyoneC is null){m_end = true;return;}
 			t_pos = stringToVector3(luckyoneC.getStringAttribute("position"));
-		}		
+		}
 
 		if(m_timeLeft >= 0){m_timeLeft -= time;return;}
 		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
@@ -1193,7 +1193,7 @@ class Skill_Sf_Boss_Dreamer : DelaySkill {
 		m_timeLeft_internal = m_time_internal;
 		// 细细切做臊子.jpg
 		//insertCommonStrike(m_character_id,m_faction_id,"ioncannon_strafe_dreamer",c_pos,c_pos.add(getAimUnitVector(0.8,c_pos,t_pos)));
-		CreateDirectProjectile(m_metagame,c_pos.add(Vector3(0,60,0)),c_pos,"skill_sf_boss_dreamer_ioncannon.projectile",m_character_id,m_faction_id,180);  
+		CreateDirectProjectile(m_metagame,c_pos.add(Vector3(0,60,0)),c_pos,"skill_sf_boss_dreamer_ioncannon.projectile",m_character_id,m_faction_id,180);
 		c_pos = c_pos.add(getAimUnitVector(1.5,c_pos,t_pos));
 
 		m_excute_time++;
@@ -1224,17 +1224,17 @@ class GDIIonCannonStrike : DelaySkill {
 			Vector3 strikePosition;
 			for(int i=1;i<=6;i++){
 				strikePosition = calculateStrikePosition(0,t_pos,i);
-				CreateDirectProjectile(m_metagame, strikePosition.add(Vector3(0,40,0)), strikePosition, "GDIICS_1.projectile", m_character_id, m_faction_id, 120);				
+				CreateDirectProjectile(m_metagame, strikePosition.add(Vector3(0,40,0)), strikePosition, "GDIICS_1.projectile", m_character_id, m_faction_id, 120);
 			}
         } else if (m_excute_time < 15) {
 			Vector3 strikePosition;
 			for(int i=1;i<=6;i++){
 				int num = m_excute_time-4;
 				strikePosition = calculateStrikePosition(num,t_pos,i+0.1*(1+num*0.1)*num);
-				CreateDirectProjectile(m_metagame, strikePosition.add(Vector3(0,40,0)), strikePosition, "GDIICS_1.projectile", m_character_id, m_faction_id, 120);				
+				CreateDirectProjectile(m_metagame, strikePosition.add(Vector3(0,40,0)), strikePosition, "GDIICS_1.projectile", m_character_id, m_faction_id, 120);
 			}
 		} else if (m_excute_time < 24) {
-			CreateDirectProjectile(m_metagame, t_pos.add(Vector3(0,40,0)), t_pos, "GDIICS_1.projectile", m_character_id, m_faction_id, 120);				
+			CreateDirectProjectile(m_metagame, t_pos.add(Vector3(0,40,0)), t_pos, "GDIICS_1.projectile", m_character_id, m_faction_id, 120);
 		}
 		 else if (m_excute_time == m_excute_Limit-1){
             CreateDirectProjectile(m_metagame, t_pos.add(Vector3(0,20,0)), t_pos, "GDIICS_2.projectile", m_character_id, m_faction_id, 60);
@@ -1286,8 +1286,8 @@ class Skill_M200_Snipe : DelaySkill {
 			Vector3 startPos = getRandomOffsetVector(luckyGuyPos,70.0);
 			startPos = startPos.add(Vector3(0,60,0));
 			CreateDirectProjectile(m_metagame,startPos,luckyGuyPos,"m200_snipe.projectile",m_character_id,m_faction_id,400);
-			playSoundAtLocation(m_metagame,"m200_fire_snipe_GFL.wav",m_faction_id,luckyGuyPos,2.0);                  
-		}		
+			playSoundAtLocation(m_metagame,"m200_fire_snipe_GFL.wav",m_faction_id,luckyGuyPos,2.0);
+		}
 	}
 
     bool hasEnded() const {
@@ -1296,7 +1296,7 @@ class Skill_M200_Snipe : DelaySkill {
 			return true;
 		}
 		return false;
-	}	
+	}
 }
 
 class Skill_SSG3000_Snipe : DelaySkill {
@@ -1329,8 +1329,8 @@ class Skill_SSG3000_Snipe : DelaySkill {
 			Vector3 startPos = getRandomOffsetVector(luckyGuyPos,70.0);
 			startPos = startPos.add(Vector3(0,60,0));
 			CreateDirectProjectile(m_metagame,startPos,luckyGuyPos,"m200_snipe.projectile",m_character_id,m_faction_id,400);
-			playSoundAtLocation(m_metagame,"m200_fire_snipe_GFL.wav",m_faction_id,luckyGuyPos,2.0);                  
-		}		
+			playSoundAtLocation(m_metagame,"m200_fire_snipe_GFL.wav",m_faction_id,luckyGuyPos,2.0);
+		}
 	}
 
     bool hasEnded() const {
@@ -1339,7 +1339,7 @@ class Skill_SSG3000_Snipe : DelaySkill {
 			return true;
 		}
 		return false;
-	}	
+	}
 }
 
 class Skill_Fairy_Snipe : DelaySkill {
@@ -1372,8 +1372,8 @@ class Skill_Fairy_Snipe : DelaySkill {
 			Vector3 startPos = getRandomOffsetVector(luckyGuyPos,70.0);
 			startPos = startPos.add(Vector3(0,60,0));
 			CreateDirectProjectile(m_metagame,startPos,luckyGuyPos,"fairy_snipe.projectile",m_character_id,m_faction_id,240);
-			playSoundAtLocation(m_metagame,"sniperfairy_fire_FromCOD15.wav",m_faction_id,luckyGuyPos,2.2);                  
-		}		
+			playSoundAtLocation(m_metagame,"sniperfairy_fire_FromCOD15.wav",m_faction_id,luckyGuyPos,2.2);
+		}
 		if(m_excute_time ==1)
 		{
 			sendFactionMessageKey(m_metagame,m_faction_id,"snipefight");
@@ -1385,7 +1385,7 @@ class Skill_Fairy_Snipe : DelaySkill {
 			return true;
 		}
 		return false;
-	}		
+	}
 }
 
 class Skill_ff_excutioner : DelaySkill {
@@ -1412,7 +1412,7 @@ class Skill_ff_excutioner : DelaySkill {
 					}
 				}
 			}
-		}		
+		}
 	}
 
 	void update(float time) {
@@ -1458,7 +1458,7 @@ class Skill_ff_hunter : DelaySkill {
 					}
 				}
 			}
-		}		
+		}
 	}
 
 	void update(float time) {
@@ -1493,7 +1493,7 @@ class Skill_ff_dreamer : DelaySkill {
 		m_timeLeft_internal = 0;
 		int m_fnum = m_metagame.getFactionCount();
 		this.setExcuteLimit(1);
-		this.setInternal(0.2);		
+		this.setInternal(0.2);
 	}
 
 	void update(float time) {
@@ -1504,9 +1504,9 @@ class Skill_ff_dreamer : DelaySkill {
 		m_timeLeft_internal = m_time_internal;
 
 		//扫射位置偏移单位向量 与 扫射位置偏移单位距离
-		Vector3 strike_vector = getAimUnitVector(1,c_pos,t_pos); 
+		Vector3 strike_vector = getAimUnitVector(1,c_pos,t_pos);
 		float strike_didis = 1.2;
-		//扫射起点 从弹头终点指向弹头起点的位置 
+		//扫射起点 从弹头终点指向弹头起点的位置
 		Vector3 pos_offset = Vector3(0,60,0);
 		//扫射终点的起点与终点（就生成弹头的终点的起始位置与终止位置）
 		c_pos = t_pos.add(getMultiplicationVector(strike_vector,Vector3(-12,0,-12)));
@@ -1522,14 +1522,14 @@ class Skill_ff_dreamer : DelaySkill {
 			startPos = startPos.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
 			endPos = endPos.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
 			//每单轮扫射生成1次对点扫射
-			CreateDirectProjectile(m_metagame,startPos,endPos,"skill_ff_dreamer_ioncannon.projectile",m_character_id,m_faction_id,280);           
-		}                               
+			CreateDirectProjectile(m_metagame,startPos,endPos,"skill_ff_dreamer_ioncannon.projectile",m_character_id,m_faction_id,280);
+		}
 	}
 }
 
 
 class Event_call_bombardment_fairy_82mm_mortar : event_call_task_hasMarker {
- 
+
 	string m_airstrike_key_alt="";
 
 	void start() {
@@ -1575,7 +1575,7 @@ class Event_call_bombardment_fairy_82mm_mortar : event_call_task_hasMarker {
 			m_time_internal = 1.3;
 			m_airstrike_key = "mortar_82mm_x16";
 			m_airstrike_key_alt = "mortar_82mm";
-		}		
+		}
 	}
 
 	Event_call_bombardment_fairy_82mm_mortar(GameMode@ metagame, float time, int cId,int fId,Vector3 characterpos,Vector3 targetpos,string mode,int markerid)
@@ -1588,7 +1588,7 @@ class Event_call_bombardment_fairy_82mm_mortar : event_call_task_hasMarker {
 		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
 		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
 		m_excute_time++;
-		
+
 		const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
 		if (checkCharacterDead(character))
 		{
@@ -1609,7 +1609,7 @@ class Event_call_bombardment_fairy_82mm_mortar : event_call_task_hasMarker {
 }
 
 class Event_call_airstrike_fairy_precise : event_call_task_hasMarker {
- 
+
 	string m_airstrike_key_alt="";
 
 	void start() {
@@ -1633,7 +1633,7 @@ class Event_call_airstrike_fairy_precise : event_call_task_hasMarker {
 			m_time_internal = 0.1;
 			m_airstrike_key = "precision_airstrike_big";
 		}
-		
+
 	}
 
 	Event_call_airstrike_fairy_precise(GameMode@ metagame, float time, int cId,int fId,Vector3 characterpos,Vector3 targetpos,string mode,int markerid)
@@ -1646,7 +1646,7 @@ class Event_call_airstrike_fairy_precise : event_call_task_hasMarker {
 		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
 		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
 		m_excute_time++;
-		
+
 		const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
 		if (checkCharacterDead(character))
 		{
@@ -1687,7 +1687,7 @@ class Event_call_airstrike_fairy_bomber : event_call_task_hasMarker {
 			m_time_internal = 0.4;
 			strike_didis = 9.0;
 			m_airstrike_key = "bomber_drop_gamma";
-		}		
+		}
 	}
 
 	Event_call_airstrike_fairy_bomber(GameMode@ metagame, float time, int cId,int fId,Vector3 characterpos,Vector3 targetpos,string mode,int markerid)
@@ -1699,7 +1699,7 @@ class Event_call_airstrike_fairy_bomber : event_call_task_hasMarker {
 		if(m_timeLeft >= 0){m_timeLeft -= time;return;}
 		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
 		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
-		
+
 		m_excute_time++;
 		m_timeLeft_internal = m_time_internal;
 
@@ -1716,7 +1716,7 @@ class Event_call_airstrike_fairy_bomber : event_call_task_hasMarker {
 
 class Event_call_airstrike_fairy_cas : event_call_task_hasMarker {
 	string bomb_string = "airstrike_cas_bomb";
-	
+
 	void start(){
 		m_timeLeft=m_time;
 		m_timeLeft_internal = 0;
@@ -1767,7 +1767,7 @@ class Event_call_airstrike_fairy_cas : event_call_task_hasMarker {
 		if(m_excute_time==1)
 		{
 			CreateDirectProjectile(m_metagame,m_pos1.add(getMultiplicationVector(strike_vector,Vector3(-40,0,-40))),m_pos2.add(Vector3(0,20,0)),"a10_warthog_shadow.projectile",m_character_id,m_faction_id,70);
-		}		
+		}
 	}
 }
 
@@ -1813,7 +1813,7 @@ class Event_call_airstrike_fairy_cas_p2p : event_call_task_hasMarker {
 		if(m_excute_time==1)
 		{
 			CreateDirectProjectile(m_metagame,m_pos1.add(getMultiplicationVector(strike_vector,Vector3(-40,0,-40))),m_pos2.add(Vector3(0,20,0)),"a10_warthog_shadow.projectile",m_character_id,m_faction_id,70);
-		}		
+		}
 	}
 }
 
@@ -1835,7 +1835,7 @@ class Event_call_warrior_fairy_recon_heil : event_call_task_hasMarker {
         if(m_mode == "warrior_fairy_recon_heil_gamma")
         {
             m_airstrike_key = "warrior_yakb_12.7mm_x2";
-        }        
+        }
 	}
 
 	Event_call_warrior_fairy_recon_heil(GameMode@ metagame, float time, int cId,int fId,Vector3 characterpos,Vector3 targetpos,string mode,int markerid){
@@ -1865,22 +1865,22 @@ class Event_call_warrior_fairy_recon_heil : event_call_task_hasMarker {
 				playSoundAtLocation(m_metagame,"atgm_lockon.wav",m_faction_id,e_pos,7.5);//锁定载具成功
 				DelayedVehicleProjectileStrike@ shot = DelayedVehicleProjectileStrike(m_metagame,3.0,m_character_id,m_faction_id,"warrior_9M114",getRandomOffsetVector(m_pos1,8),lucky_vehicle_id);
 				TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-				tasker.add(shot);				
+				tasker.add(shot);
 			}
 		}
 		if(m_excute_time == 10 && m_mode=="warrior_fairy_recon_heil_beta")
         {
-            array<soldier_spawn_request@> m_soldier =   
+            array<soldier_spawn_request@> m_soldier =
             {
                 soldier_spawn_request("Task_MG",4),
                 soldier_spawn_request("Task_Medic",2),
                 soldier_spawn_request("Task_SG",2)
-            };            
+            };
             for(uint i=0;i<m_soldier.length();i++){
 				soldier_spawn_request@ foo = m_soldier[i];
 				spawnSoldier(m_metagame,foo.m_num,m_faction_id,e_pos,foo.m_type,2,2);
 			}
-        }        
+        }
 		if(m_excute_time % 3 == 0)
 		{
 			playSoundAtLocation(m_metagame,"mi24_heli_rotor_idle.wav",m_faction_id,e_pos,1.8);
@@ -1969,7 +1969,7 @@ class Event_call_warrior_fairy_attack_heil : event_call_task_hasMarker {
 				playSoundAtLocation(m_metagame,"atgm_lockon.wav",m_faction_id,e_pos,7.5);//锁定载具成功
 				DelayedVehicleProjectileStrike@ shot = DelayedVehicleProjectileStrike(m_metagame,3.0,m_character_id,m_faction_id,"warrior_9M127",getRandomOffsetVector(m_pos1,8),lucky_vehicle_id);
 				TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-				tasker.add(shot);				
+				tasker.add(shot);
 			}
 			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,e_pos,55.0f);
 			if(luckyGuyid!=-1){
@@ -1981,7 +1981,7 @@ class Event_call_warrior_fairy_attack_heil : event_call_task_hasMarker {
 		}
 
 		if(m_excute_time % 5 == 0)
-		{		        
+		{
             int luckyGuyid2 = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,e_pos,55.0f);
 			if(luckyGuyid2!=-1){
 				const XmlElement@ luckyGuy2 = getCharacterInfo(m_metagame, luckyGuyid2);
@@ -2024,7 +2024,7 @@ class Event_call_warrior_fairy_VTOL : event_call_task_hasMarker {
 		if(m_excute_time % 2 == 0 && m_excute_time!=0)
 		{
 			const XmlElement@ ItsmeInfo = getCharacterInfo(m_metagame, m_character_id);
-			if(ItsmeInfo is null) 
+			if(ItsmeInfo is null)
 			{
 				m_end = true;
 			}
@@ -2039,7 +2039,7 @@ class Event_call_warrior_fairy_VTOL : event_call_task_hasMarker {
 				Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
 				float strike_rand = 10.0;
 				float rand_x = rand(-strike_rand,strike_rand);
-				float rand_y = rand(-strike_rand,strike_rand);      
+				float rand_y = rand(-strike_rand,strike_rand);
 				insertCommonStrike(m_character_id,m_faction_id,"warrior_vtol_strafe",m_character_pos.add(Vector3(rand_x,40,rand_y)),luckyGuyPos);
 			}
 		}
@@ -2087,7 +2087,7 @@ class Event_call_rocket_fairy_rush : event_call_task_hasMarker {
 }
 
 class Event_call_bombardment_fairy_155mm_airburst : event_call_task_hasMarker {
- 
+
 
 	void start() {
 		m_timeLeft=m_time;
@@ -2110,7 +2110,7 @@ class Event_call_bombardment_fairy_155mm_airburst : event_call_task_hasMarker {
 		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
 		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
 		m_excute_time++;
-		
+
 		const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
 		if (checkCharacterDead(character))
 		{
@@ -2122,7 +2122,7 @@ class Event_call_bombardment_fairy_155mm_airburst : event_call_task_hasMarker {
 }
 
 class Event_call_bombardment_fairy_170mm : event_call_task_hasMarker {
- 
+
 
 	void start() {
 		m_timeLeft=m_time;
@@ -2145,7 +2145,7 @@ class Event_call_bombardment_fairy_170mm : event_call_task_hasMarker {
 		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
 		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
 		m_excute_time++;
-		
+
 		const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
 		if (checkCharacterDead(character))
 		{
@@ -2158,7 +2158,7 @@ class Event_call_bombardment_fairy_170mm : event_call_task_hasMarker {
 
 //火箭妖精 巡曳飞弹
 class Event_call_rocket_fairy_missile : event_call_task_hasMarker {
- 
+
 
 	void start() {
 		m_timeLeft=m_time;
@@ -2181,7 +2181,7 @@ class Event_call_rocket_fairy_missile : event_call_task_hasMarker {
 		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
 		m_excute_time++;
 		m_timeLeft_internal = m_time_internal;
-		
+
 		const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
 		if (checkCharacterDead(character))
 		{
@@ -2200,10 +2200,10 @@ class Event_call_rocket_fairy_missile : event_call_task_hasMarker {
 					spawnStaticProjectile(m_metagame,"hd_effect_radar_scan.projectile",aim_pos,m_character_id,m_faction_id);
 					DelayCommonCallRequest@ shot = DelayCommonCallRequest(m_metagame,1.3,m_character_id,m_faction_id,m_airstrike_key,aim_pos.add(Vector3(0,50,0)),aim_pos);
 					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-					tasker.add(shot);							
-				}	
+					tasker.add(shot);
+				}
 			}
-		}			
+		}
 	}
 }
 
@@ -2268,7 +2268,7 @@ class DelayGPSScanRequest : Task{
     protected int m_character_id;
     protected int m_faction_id;
 	protected float m_timeLeft;
-	protected string m_scan_mode;	
+	protected string m_scan_mode;
 	protected Vector3 m_pos;
 	protected float m_radius;
 	protected bool m_scanned = false;
@@ -2300,7 +2300,7 @@ class DelayGPSScanRequest : Task{
 		// _log("DelayGPSScanRequest update");
 		m_timeLeft -= time;
 		m_addtime -= time;
-				
+
 		if (m_addtime < 0 && m_timeLeft < 0){
 			for (uint i = 0; i < m_markers.length(); ++i){
 				//removing the marker
@@ -2313,11 +2313,11 @@ class DelayGPSScanRequest : Task{
 			}
 			//clearing the marker list
 			m_markers.resize(0);
-		}	
+		}
 
 		if (m_timeLeft < 0 && m_scanned == false){
 			bool anyFound = false;
-			
+
 			for (int f = 0; f < m_metagame.getFactionCount(); ++f){
 				if(f == m_faction_id) continue;
 				//scanning for all vehicles on the list
@@ -2327,12 +2327,12 @@ class DelayGPSScanRequest : Task{
 					for (uint j = 0; j < vehicles.length(); ++j){
 						int vehicleId = vehicles[j].getIntAttribute("id");
 						const XmlElement@ vehicle = getVehicleInfo(m_metagame,vehicleId);
-						
+
 						if (vehicle is null) continue;
-						
+
 						float health = vehicle.getFloatAttribute("health");
 						if (health <= 0.0) continue;
-						
+
 						int markerId = vehicles[j].getIntAttribute("id") + 7000;
 						string position = vehicles[j].getStringAttribute("position");
 						string vehicleName = vehicle.getStringAttribute("name");
@@ -2356,7 +2356,7 @@ class DelayGPSScanRequest : Task{
 						if(GPSScanTargets_Building.find(vehicleKey) != -1) {atlas_index = 0; atlas_color = "#ff0000";}
 						if(GPSScanTargets_Support.find(vehicleKey) != -1) 	{atlas_index = 7; atlas_color = "#ccccff";}
 						if(GPSScanTargets_AA.find(vehicleKey) != -1) 		{atlas_index = 14; atlas_color = "#00b9ff"; atlas_size = 1.0;}
-						
+
 						//placing the marker
 						XmlElement command("command");
 							command.setStringAttribute("class", "set_marker");
@@ -2372,7 +2372,7 @@ class DelayGPSScanRequest : Task{
 							command.setBoolAttribute("show_in_map_view", true);
 							command.setBoolAttribute("show_in_game_view", false);
 							command.setBoolAttribute("show_at_screen_edge", false);
-							
+
 						m_metagame.getComms().send(command);
 
 						if (!anyFound) {
@@ -2381,9 +2381,9 @@ class DelayGPSScanRequest : Task{
 					}
 				}
 			}
-			
+
 			if (!anyFound) {
-				sendFactionMessageKey(m_metagame, 0, "gps_laptop, targets not ok", dictionary = {}, 1.0); 
+				sendFactionMessageKey(m_metagame, 0, "gps_laptop, targets not ok", dictionary = {}, 1.0);
 			}
 			m_scanned = true;
 		}
@@ -2406,9 +2406,9 @@ class Tac50_Maple_Sniper_Drone : DelaySkill {
 		m_timeLeft=m_time;
 		m_timeLeft_internal = 0;
 		this.setExcuteLimit(10);
-		this.setInternal(5.0);
+		this.setInternal(3.0);
 		m_tickCount = 0;
-		m_tickLimit = 18; // 90s CD / 5s Internal
+		m_tickLimit = 20;
 	}
 
 	Tac50_Maple_Sniper_Drone(GameMode@ metagame, float time, int cId,int fId){
@@ -2428,12 +2428,12 @@ class Tac50_Maple_Sniper_Drone : DelaySkill {
 		{
 			m_end = true;
 			return;
-		}		
+		}
 		Vector3 tac50_pos = stringToVector3(character_tac50.getStringAttribute("position"));
 		Vector3 maple_pos = tac50_pos.add(Vector3(0,40,0));
 
 		affectedCharacter.resize(0);
-		
+
 		int m_fnum = m_metagame.getFactionCount();
 		for(int i=0;i<m_fnum;i++) {
 			if(i!=m_faction_id) {
@@ -2452,7 +2452,7 @@ class Tac50_Maple_Sniper_Drone : DelaySkill {
 		}
 
 		bool findTarget = false;
-		int maxAttempts = 15; // 限制最大尝试次数，防止死循环
+		int maxAttempts = 10; // 限制最大尝试次数，防止死循环
 		int attempts = 0;
 		const XmlElement@ luckyGuy;
 
@@ -2543,7 +2543,7 @@ class Airdrop_Support_Negev : DelaySkill {
 				CreateDirectProjectile(m_metagame,startPos,luckyGuyPos.add(Vector3(rand_x,0,rand_y)),"fairy_airstrike_heavymg.projectile",m_character_id,m_faction_id,150);
 				CreateDirectProjectile(m_metagame,startPos,luckyGuyPos.add(Vector3(rand_x+offset,0,rand_y+offset)),"fairy_airstrike_heavymg.projectile",m_character_id,m_faction_id,150);
 			}
-			playSoundAtLocation(m_metagame,"yakb_shot_fromWarthunder.wav",m_faction_id,luckyGuyPos,2.2);                  
+			playSoundAtLocation(m_metagame,"yakb_shot_fromWarthunder.wav",m_faction_id,luckyGuyPos,2.2);
 		}
 	}
     bool hasEnded() const {
@@ -2551,7 +2551,7 @@ class Airdrop_Support_Negev : DelaySkill {
 			return true;
 		}
 		return false;
-	}		
+	}
 }
 
 class DelayNuke :Task{
@@ -2578,7 +2578,7 @@ class DelayNuke :Task{
             m_metagame.getComms().send("<command class='set_match_status' win='1' faction_id='0' />");
             for (uint i = 1; i < m_metagame.getFactionCount(); ++i) {
                 m_metagame.getComms().send("<command class='set_match_status' lose='1' faction_id='" + i + "' />");
-            }            
+            }
 		}
 	}
 
