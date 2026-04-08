@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectiles>
+	<projectile class="grenade" name="" slot="1" pulldown_in_air="45.0" key="mp7_skill.projectile">
+        <result class="spawn" instance_class="grenade" instance_key="mp7_skill_sub.projectile" min_amount="8" max_amount="8" offset="0 2.0 0" position_spread="4 2" direction_spread="0 0" />
+		<trigger class="impact">
+			<collider class="character" enabled="1" faction_compare="not_equal" />
+		</trigger>
+		<rotation class="motion" />
+        <model mesh_filename="stun_grenade.xml" />
+		<commonness value="0.0" />
+		<sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2.0" />
+		<sound class="result" key="other" fileref="explosion_FromSQUAD_2.wav" volume="2.0" />
+		<sound class="result" key="other" fileref="explosion_FromSQUAD_3.wav" volume="2.0" />
+		<sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.8" />
+		<sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_02.wav" pitch_variety="0.2" volume="0.8" />
+		<sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_03.wav" pitch_variety="0.2" volume="0.8" />
+		<sound class="result" key="terrain" copy="other" />
+		<sound class="result" key="static_object" copy="other" />
+		<sound class="result" key="character" copy="other" />
+		<sound class="result" key="vehicle" copy="other" />
+
+        <effect class="result" key="terrain" ref="SmokeTop" post_processing="1" />
+        <effect class="result" key="terrain" ref="Smoke" post_processing="1" />
+        <effect class="result" key="terrain" ref="Shine" lighting="0" />
+        <effect class="result" key="terrain" ref="Godray" lighting="0" />
+        <effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+
+		<effect class="result" key="static_object" copy="terrain" />
+		<effect class="result" key="vehicle" copy="terrain" />
+		<effect class="result" key="character" copy="terrain" />
+		<effect class="result" key="other" copy="terrain" />
+	</projectile>
+    <projectile class="grenade" name="" slot="1" pulldown_in_air="25.0" key="mp7_skill_sub.projectile">
+        <tag name="grenade"/>
+        <result class="spawn" instance_class="grenade" instance_key="blast_shard_rad4.projectile" min_amount="10" max_amount="10" offset="0 0.5 0" position_spread="0 0" direction_spread="0 0" />
+        <trigger class="time" time_to_live="0.05"/>
+        <rotation class="motion" />
+        <model />
+        <commonness value="0.0" />
+
+        <effect class="result" key="terrain" ref="Dust" post_processing="1" />
+        <effect class="result" key="terrain" ref="BurstShineSmall" lighting="0" />
+        <effect class="result" key="terrain" ref="HitTankSparks" lighting="0" />
+        <effect class="result" key="terrain" ref="Godray" lighting="0" />
+
+        <effect class="result" key="other" ref="BurstShineSmall" lighting="0" />
+        <effect class="result" key="other" ref="HitTankSparks" />
+    
+        <effect class="result" key="static_object" copy="terrain" />
+        <effect class="result" key="character" copy="terrain" />        
+    </projectile>    
+</projectiles>

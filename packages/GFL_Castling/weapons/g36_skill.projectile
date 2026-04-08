@@ -22,7 +22,9 @@
 		<effect class="result" key="terrain" ref="Godray" lighting="0" />
 		<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
 		<effect class="result" key="terrain" ref="StimSmoke" lighting="0" shadow="0" />
-		<effect class="result" key="terrain" ref="ct_heal_woosh" shadow="0" />
+        <effect class="result" key="terrain" ref="emoticon_heal_cross"/>
+		<effect class="result" key="terrain" ref="ct_heal_woosh"/>
+        <effect class="result" key="terrain" ref="ct_heal_woosh_6rad"/>        
 		<effect class="result" key="static_object" copy="terrain" />
 		<effect class="result" key="vehicle" copy="terrain" />
 		<effect class="result" key="character" copy="terrain" />

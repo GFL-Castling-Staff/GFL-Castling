@@ -290,6 +290,7 @@ class CommandSkill : Tracker {
                 case 94:{excuteNytoBlackSkill(cId,senderId,m_modifer);break;}
                 case 95:{excuteScarecrowSkill(cId,senderId,m_modifer);break;}
                 case 96:{excuteG36Skill(cId,senderId,m_modifer);break;}
+                case 97:{excuteMP7Skill(cId,senderId,m_modifer);break;}
 
 
                 default:
@@ -5073,7 +5074,6 @@ class CommandSkill : Tracker {
             if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
-
                 if (player.hasAttribute("aim_target")) {
                     string target = player.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
@@ -5095,7 +5095,6 @@ class CommandSkill : Tracker {
             if (!canCastSkill(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
-
                 if (player.hasAttribute("aim_target")) {
                     string target = player.getStringAttribute("aim_target");
                     Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
@@ -5103,7 +5102,7 @@ class CommandSkill : Tracker {
                     playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                     c_pos=c_pos.add(Vector3(0,1,0));
-                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"smoke_grenade.projectile",characterId,factionid,26.0,6.0);
+                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"mp7_skill.projectile",characterId,factionid,45.0,5.0);
                     addCooldown("MP7",30,characterId,modifer);
                 }
             }
