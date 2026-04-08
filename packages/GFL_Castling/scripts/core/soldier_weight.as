@@ -40,7 +40,7 @@ const array<SoldierInfo@> sf_eazymode_weight =
     SoldierInfo("sf_tarantula",1.0),
     SoldierInfo("sf_scouts",2.0),
     SoldierInfo("sf_goliath",0.02),
-    SoldierInfo("sf_goliath_plus",1.0)
+    SoldierInfo("sf_goliath_plus",0.01)
 };
 
 const array<SoldierInfo@> paradeus_eazymode_weight =
