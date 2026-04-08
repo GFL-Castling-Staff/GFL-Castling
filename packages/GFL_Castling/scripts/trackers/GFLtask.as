@@ -180,6 +180,7 @@ class DelayProjectileSet :Task{
     protected string m_key;
 	protected float m_timeLeft;
 	protected Vector3 m_pos;
+	protected bool m_alive_check;
 
 	DelayProjectileSet(Metagame@ metagame, float time, int cId,int fId,string key,Vector3 pos) {
 		@m_metagame = metagame;
@@ -188,6 +189,17 @@ class DelayProjectileSet :Task{
 		m_faction_id =fId;
 		m_key=key;
 		m_pos=pos;
+		m_alive_check=false;
+	}
+
+	DelayProjectileSet(Metagame@ metagame, float time, int cId,int fId,string key,Vector3 pos, bool alive_check) {
+		@m_metagame = metagame;
+		m_time = time;
+		m_character_id = cId;
+		m_faction_id =fId;
+		m_key=key;
+		m_pos=pos;
+		m_alive_check=alive_check;
 	}
 
 	void start() {
@@ -198,6 +210,10 @@ class DelayProjectileSet :Task{
 		m_timeLeft -= time;
 		if (m_timeLeft < 0)
 		{
+			if (m_alive_check) {
+				const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
+            	if (checkCharacterDead(character)) return;
+			}
 			string c =
 				"<command class='create_instance'" +
 				" faction_id='"+ m_faction_id +"'" +

@@ -51,16 +51,16 @@ class GFLskill : Tracker {
 			case 3: {// RO635技能，已弃用
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-				
+
 				if (character !is null) {
 					int playerId = character.getIntAttribute("player_id");
 					const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
-					
+
 					if (player !is null) {
-				
+
 						if (player.hasAttribute("aim_target")) {
 							Vector3 target = stringToVector3(player.getStringAttribute("aim_target"));
-							string c = 
+							string c =
 								"<command class='create_instance'" +
 								" faction_id='"+ player.getIntAttribute("faction_id") +"'" +
 								" instance_class='grenade'" +
@@ -72,7 +72,7 @@ class GFLskill : Tracker {
 				}
 				break;
 			}
- 
+
 			case 4: {// SOPMODII散射榴弹
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -81,7 +81,7 @@ class GFLskill : Tracker {
 					const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
 					if (player !is null) {
 						Vector3 Pos_40mm = stringToVector3(event.getStringAttribute("position"));
-						string c1 = 
+						string c1 =
 							"<command class='create_instance'" +
 							" faction_id='"+ player.getIntAttribute("faction_id") +"'" +
 							" instance_class='grenade'" +
@@ -91,7 +91,7 @@ class GFLskill : Tracker {
 						m_metagame.getComms().send(c1);
 						CreateProjectile_H(m_metagame,Pos_40mm,Pos_40mm.add(Vector3(0,0,4)),"40mm_spread.projectile",characterId,player.getIntAttribute("faction_id"),45.0,2.0);
 						CreateProjectile_H(m_metagame,Pos_40mm,Pos_40mm.add(Vector3(-3.4641,0,-2.0)),"40mm_spread.projectile",characterId,player.getIntAttribute("faction_id"),45.0,2.0);
-						CreateProjectile_H(m_metagame,Pos_40mm,Pos_40mm.add(Vector3(3.4641,0,-2.0)),"40mm_spread.projectile",characterId,player.getIntAttribute("faction_id"),45.0,2.0);												
+						CreateProjectile_H(m_metagame,Pos_40mm,Pos_40mm.add(Vector3(3.4641,0,-2.0)),"40mm_spread.projectile",characterId,player.getIntAttribute("faction_id"),45.0,2.0);
 					}
 				}
 				break;
@@ -118,17 +118,17 @@ class GFLskill : Tracker {
 						sendPrivateMessage(m_metagame,playerId,sendtext);
 						int PlayerfactionId = player.getIntAttribute("faction_id");
 						grenade_pos = grenade_pos.add(Vector3(0,5.0,0));
-						string c = 
+						string c =
 							"<command class='create_instance'" +
 							" faction_id='"+ PlayerfactionId +"'" +
 							" instance_class='grenade'" +
 							" instance_key='flashbang_effect_20m.projectile'" +
 							" position='" + grenade_pos.toString() + "'"+
 							" character_id='" + characterId + "' />";
-						m_metagame.getComms().send(c);					
+						m_metagame.getComms().send(c);
 						if (affectedNumber >= 5){
 							Vector3 UMP9_pos = stringToVector3(character.getStringAttribute("position"));
-							string c1 = 
+							string c1 =
 								"<command class='create_instance'" +
 								" faction_id='"+ PlayerfactionId +"'" +
 								" instance_class='grenade'" +
@@ -136,7 +136,7 @@ class GFLskill : Tracker {
 								" position='" + UMP9_pos.toString() + "'"+
 								" character_id='" + characterId + "' />";
 							m_metagame.getComms().send(c1);
-							playSoundAtLocation(m_metagame,"UMP9_skill_Extra2.wav",PlayerfactionId,UMP9_pos,0.8);						
+							playSoundAtLocation(m_metagame,"UMP9_skill_Extra2.wav",PlayerfactionId,UMP9_pos,0.8);
 						}
 						else {
 							Vector3 UMP9_pos = stringToVector3(character.getStringAttribute("position"));
@@ -159,7 +159,7 @@ class GFLskill : Tracker {
 							int soldierId = characters[i].getIntAttribute("id");
 							XmlElement c ("command");
 							c.setStringAttribute("class", "update_inventory");
-							c.setIntAttribute("character_id", soldierId); 
+							c.setIntAttribute("character_id", soldierId);
 							c.setIntAttribute("untransform_count", 20);
 							m_metagame.getComms().send(c);
 						}
@@ -177,7 +177,7 @@ class GFLskill : Tracker {
 					if (player !is null) {
 						Vector3 Pos_40mm = stringToVector3(event.getStringAttribute("position"));
 						int factionid = player.getIntAttribute("faction_id");
-						string c = 
+						string c =
 							"<command class='create_instance'" +
 							" faction_id='"+ factionid +"'" +
 							" instance_class='grenade'" +
@@ -203,7 +203,7 @@ class GFLskill : Tracker {
 						//获取技能影响的敌人数量
 						m_fnum= m_metagame.getFactionCount();
 						array<const XmlElement@> affectedCharacter;
-						for(uint i=0;i<m_fnum;i++) 
+						for(uint i=0;i<m_fnum;i++)
 							if(i!=factionid) {
 							array<const XmlElement@> affectedCharacter2;
 							affectedCharacter2 = getCharactersNearPosition(m_metagame,Pos_40mm,i,10.0f);
@@ -216,7 +216,7 @@ class GFLskill : Tracker {
 						if (affectedCharacter.length()>0){
 							HK416_track.insertLast(HK416_tracker(characterId,factionid,Pos_40mm,affectedCharacter));
 						}
-						string c = 
+						string c =
 							"<command class='create_instance'" +
 							" faction_id='"+ factionid +"'" +
 							" instance_class='grenade'" +
@@ -258,13 +258,13 @@ class GFLskill : Tracker {
 						string vestkey = getPlayerEquipmentKey(m_metagame,luckyGuyid,4);
 
 						if (
-							startsWith(vestkey,'cc_t4') 
-							|| startsWith(vestkey,'cc_t5_16lab') 
+							startsWith(vestkey,'cc_t4')
+							|| startsWith(vestkey,'cc_t5_16lab')
 							|| startsWith(vestkey,'woshieoe')
 							|| startsWith(vestkey,'bakery_jefuty')
 							|| startsWith(vestkey,'m1903')
 							|| startsWith(vestkey,'cc_sp_tyls')
-							|| startsWith(vestkey,'cc_t6') 
+							|| startsWith(vestkey,'cc_t6')
 							|| startsWith(vestkey,'lcc_t6')
 							|| startsWith(vestkey,'exo_x_t4')
 							|| startsWith(vestkey,'exo_x_t6')
@@ -276,9 +276,9 @@ class GFLskill : Tracker {
 					}
 					else {
 						CreateProjectile(m_metagame,pos_smartgrenade,pos_smartgrenade.add(Vector3(0,-10,0)),"kcco_smartgrenade_3.projectile",characterId,factionid,120,0.01);
-					}									
-				}			
-				break;			
+					}
+				}
+				break;
 			}
 
 			//标枪导弹，由初始定位弹头，最终定位弹头1,2，标枪一阶段弹头，标枪二阶段弹头五个脚本弹头联合完成。最终打击由标枪三阶段弹头完成。
@@ -310,18 +310,18 @@ class GFLskill : Tracker {
 
 					Vector3 pos1 = getAimUnitPosition(aimer_pos,target_pos,1);
 					Vector3 pos2 = getAimUnitPosition(aimer_pos,target_pos,8.0);
-					pos1 = pos1.add(Vector3(0,0.8,0));				
+					pos1 = pos1.add(Vector3(0,0.8,0));
 					pos2 = pos2.add(Vector3(0,8,0));
-					CreateProjectile(m_metagame,pos1,pos2,"javelin_rocket_1.projectile",characterId,factionid,5,6);	
-					//CreateProjectile(m_metagame,target_pos,target_pos.add(Vector3(0,0,0)),"javelin_locater_2.projectile",characterId,factionid,0,8);	
+					CreateProjectile(m_metagame,pos1,pos2,"javelin_rocket_1.projectile",characterId,factionid,5,6);
+					//CreateProjectile(m_metagame,target_pos,target_pos.add(Vector3(0,0,0)),"javelin_locater_2.projectile",characterId,factionid,0,8);
 					//CreateProjectile(m_metagame,target_pos,target_pos.add(Vector3(0,0,0)),"javelin_locater_3.projectile",characterId,factionid,0,8);
-					Javelin_list.insertLast(Javelin_lister(characterId,factionid,vehicleid,target_pos));//存储初始定位弹头锁定的载具id							
-				}			
-				break;			
+					Javelin_list.insertLast(Javelin_lister(characterId,factionid,vehicleid,target_pos));//存储初始定位弹头锁定的载具id
+				}
+				break;
 			}
-			
+
 			//激发弹头为贴在目标载具上的初始定位弹头
-				
+
 			case 11: {// 标枪锁定兼射出弹头阶段
 				int characterId = event.getIntAttribute("character_id");
 				int playerId = event.getIntAttribute("player_id");
@@ -333,7 +333,7 @@ class GFLskill : Tracker {
 
 					if (player !is null){
 						if (player.hasAttribute("aim_target")) {
-							target_pos = stringToVector3(player.getStringAttribute("aim_target"));		
+							target_pos = stringToVector3(player.getStringAttribute("aim_target"));
 						}
 					}
 					else{
@@ -347,11 +347,11 @@ class GFLskill : Tracker {
 
 					Vector3 pos1 = getAimUnitPosition(aimer_pos,target_pos,1);
 					Vector3 pos2 = getAimUnitPosition(aimer_pos,target_pos,8.0);
-					pos1 = pos1.add(Vector3(0,0.8,0));				
+					pos1 = pos1.add(Vector3(0,0.8,0));
 					pos2 = pos2.add(Vector3(0,8,0));
-					CreateProjectile(m_metagame,pos1,pos2,"javelin_rocket_1.projectile",characterId,factionid,5,6);	
-					Javelin_list.insertLast(Javelin_lister(characterId,factionid,vehicleid,target_pos));//存储初始定位弹头锁定的载具id							
-				}			
+					CreateProjectile(m_metagame,pos1,pos2,"javelin_rocket_1.projectile",characterId,factionid,5,6);
+					Javelin_list.insertLast(Javelin_lister(characterId,factionid,vehicleid,target_pos));//存储初始定位弹头锁定的载具id
+				}
 				break;
 			}
 
@@ -378,16 +378,16 @@ class GFLskill : Tracker {
 								else{
 									target_pos = Javelin_list[a].m_pos;
 								}
-								CreateProjectile(m_metagame,aimer_pos,target_pos,"javelin_rocket_2.projectile",characterId,factionid,getAimUnitDistance(0.4,aimer_pos,target_pos),-20);	
-								break;								
+								CreateProjectile(m_metagame,aimer_pos,target_pos,"javelin_rocket_2.projectile",characterId,factionid,getAimUnitDistance(0.4,aimer_pos,target_pos),-20);
+								break;
 							}
 						}
 					}
-				}		
-				break;			
+				}
+				break;
 			}
 
-			//激发弹头为最终定位弹头2			
+			//激发弹头为最终定位弹头2
 
 			case 13: {// 标枪弹头改垂直攻顶阶段
 				_log("javelin_strike");
@@ -406,13 +406,13 @@ class GFLskill : Tracker {
 									_log("aimming 2 success.");
 									const XmlElement@ target_info = getVehicleInfo(m_metagame, target_id);
 
-									//有病								
+									//有病
 									// Vector3 target_pos1 = stringToVector3(target_info.getStringAttribute("position"));
 									// _log("Position 1 = "+target_pos1.toString());
 
 									// TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
 									// tasker.add(DelayProjectileSet(m_metagame,0.8,characterId,factionid,"bullet.projectile",target_pos1));
-									
+
 									// Vector3 target_pos2 = stringToVector3(target_info.getStringAttribute("position"));
 									// _log("Position 2 = "+target_pos2.toString());
 
@@ -425,13 +425,13 @@ class GFLskill : Tracker {
 								}
 								CreateDirectProjectile(m_metagame,aimer_pos,target_fin_pos,"javelin_rocket_3.projectile",characterId,factionid,180);
 								Javelin_list.removeAt(a);
-								break;																	
+								break;
 							}
 						}
 					}
-				}		
-				break;			
-			}			
+				}
+				break;
+			}
 
 			case 14: {// 燃烧弹
 				int characterId = event.getIntAttribute("character_id");
@@ -439,7 +439,7 @@ class GFLskill : Tracker {
 				if (character !is null) {
 					Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
 					int factionid = character.getIntAttribute("faction_id");
-					string c = 
+					string c =
 						"<command class='create_instance'" +
 						" faction_id='"+ factionid +"'" +
 						" instance_class='grenade'" +
@@ -451,7 +451,7 @@ class GFLskill : Tracker {
 					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
 					tasker.add(new_task);
 				}
-				break;			
+				break;
 			}
 
 			case 15: {// STG44炎风暴
@@ -464,7 +464,7 @@ class GFLskill : Tracker {
 				spawnStaticProjectile(m_metagame,"skill_stg44_1.projectile",Pos_40mm,characterId,factionid);
 				spawnStaticProjectile(m_metagame,"skill_stg44_2.projectile",Pos_40mm,characterId,factionid);
 				spawnStaticProjectile(m_metagame,"skill_stg44_3.projectile",Pos_40mm,characterId,factionid);
-				break;			
+				break;
 			}
 
 			case 16: {// 刺雷半载
@@ -475,7 +475,7 @@ class GFLskill : Tracker {
 				Vector3 _pos = getCharacterPosition(character);
 				killCharacter(m_metagame,characterId);
 				spawnStaticProjectile(m_metagame,"cl.projectile",_pos,characterId,factionid);
-				break;			
+				break;
 			}
 
 			case 17: {// 白教白憨憨普攻砸地
@@ -485,8 +485,8 @@ class GFLskill : Tracker {
 				playAnimationKey(m_metagame,characterId,"stabbing_roarer",false);
 				Vector3 pos = stringToVector3(event.getStringAttribute("position"));
 				TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-				tasker.add(DelayProjectileSet(m_metagame,0.6,characterId,character.getIntAttribute("faction_id"),"roarer_main.projectile",pos));
-				break;			
+				tasker.add(DelayProjectileSet(m_metagame,0.6,characterId,character.getIntAttribute("faction_id"),"roarer_main.projectile",pos,true));
+				break;
 			}
 
 			case 18: {// 白教白憨憨技能搓球砸地
@@ -494,7 +494,7 @@ class GFLskill : Tracker {
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 				if (checkCharacterDead(character)) return;
 				Vector3 Pos_40mm = stringToVector3(event.getStringAttribute("position"));
-				string c = 
+				string c =
 					"<command class='create_instance'" +
 					" faction_id='"+ character.getIntAttribute("faction_id") +"'" +
 					" instance_class='grenade'" +
@@ -504,7 +504,7 @@ class GFLskill : Tracker {
 				m_metagame.getComms().send(c);
 				break;
 			}
-			
+
 			case 19: {// G3榴弹
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -516,7 +516,7 @@ class GFLskill : Tracker {
 				spawnStaticProjectile(m_metagame,"damage_40mm_g3_stun.projectile",Pos_40mm,characterId,factionid);
 				break;
 			}
-			
+
 			case 20: {// 大僵尸技能
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -548,7 +548,7 @@ class GFLskill : Tracker {
 					}
 					case 1:{
 						playAnimationKey(m_metagame,characterId,"warcry_big_unit",false);
-						string c = 
+						string c =
 							"<command class='create_instance'" +
 							" faction_id='"+ character.getIntAttribute("faction_id") +"'" +
 							" instance_class='grenade'" +
@@ -559,11 +559,11 @@ class GFLskill : Tracker {
 						break;
 					}
 					default:
-						break;					
+						break;
 				}
-				break;			
+				break;
 			}
-			
+
 			case 21: {// 刘氏步枪协同攻击
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -582,14 +582,14 @@ class GFLskill : Tracker {
 								if (RFcharacter !is null){
 									if(RFcharacter.getStringAttribute("soldier_group_name")=="rf_316_liu"){
 										string start_pos = RFcharacter.getStringAttribute("position");
-										CreateDirectProjectile(m_metagame,stringToVector3(start_pos).add(Vector3(0,1,0)),stringToVector3(target_pos),"liu.projectile",characterId,fId,220.0);  
+										CreateDirectProjectile(m_metagame,stringToVector3(start_pos).add(Vector3(0,1,0)),stringToVector3(target_pos),"liu.projectile",characterId,fId,220.0);
 									}
 								}
 							}
 						}
 					}
 				}
-				break;			
+				break;
 			}
 
 			case 22: {// KCCO狙击手脚本榴弹
@@ -613,7 +613,7 @@ class GFLskill : Tracker {
 							}
 						}
 					}
-				} 
+				}
 				//根据区域内敌人数量执行不同的脚本弹头：
 				//0~3：精准狙击
 				//4~8：精准炮击
@@ -635,22 +635,22 @@ class GFLskill : Tracker {
 							CreateDirectProjectile_TG(m_metagame,sniperPos.add(Vector3(0,1,0)),luckyGuyPos.add(Vector3(0,2,0)),"kcco_smartbullet_1.projectile",characterId,factionid,0.1*1.3,4);
 							break;
 						}
-					}			
+					}
 					else if (num_jud<=8) {
 						CreateProjectile(m_metagame,pos_smartbullet,pos_smartbullet,"kcco_smartbullet_AA_s1.projectile",characterId,factionid,240,0.01);
 						CreateProjectile(m_metagame,pos_smartbullet,pos_smartbullet,"kcco_smartbullet_2.projectile",characterId,factionid,240,0.01);
-						break;						
-					}			
+						break;
+					}
 					else if (num_jud<=15) {
 						CreateProjectile(m_metagame,pos_smartbullet,pos_smartbullet,"kcco_smartbullet_AA_s5.projectile",characterId,factionid,240,0.01);
 						CreateProjectile(m_metagame,pos_smartbullet,pos_smartbullet,"kcco_smartbullet_3.projectile",characterId,factionid,240,0.01);
-						break;						
-					}			
+						break;
+					}
 					else  {
 						CreateProjectile(m_metagame,pos_smartbullet,pos_smartbullet,"kcco_smartbullet_4.projectile",characterId,factionid,240,0.01);
-						break;						
-					}	
-				}		
+						break;
+					}
+				}
 				break;
 			}
 
@@ -693,12 +693,12 @@ class GFLskill : Tracker {
 							if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
 								string luckyonepos = luckyoneC.getStringAttribute("position");
 								Vector3 luckyoneposV = stringToVector3(luckyonepos);
-								CreateDirectProjectile(m_metagame,luckyoneposV.add(Vector3(0,1,0)),luckyoneposV,"ff_alchemist_skill_kill.projectile",characterId,factionid,60);	
-								playSoundAtLocation(m_metagame,"alchemist_fire_FromHALOINFINTE.wav",factionid,luckyonepos,1.0);								
-							}				
+								CreateDirectProjectile(m_metagame,luckyoneposV.add(Vector3(0,1,0)),luckyoneposV,"ff_alchemist_skill_kill.projectile",characterId,factionid,60);
+								playSoundAtLocation(m_metagame,"alchemist_fire_FromHALOINFINTE.wav",factionid,luckyonepos,1.0);
+							}
 						}
 					}
-				}			
+				}
 				break;
 			}
 
@@ -716,7 +716,7 @@ class GFLskill : Tracker {
 							Vector3 height = Vector3(0,70,0);
 							target = target.add(height);
 							int Faction= character.getIntAttribute("faction_id");
-							spawnVehicle(m_metagame,1,Faction,target,Orientation(0,1,0,ori4),"cover1.vehicle");	
+							spawnVehicle(m_metagame,1,Faction,target,Orientation(0,1,0,ori4),"cover1.vehicle");
 						}
 					}
 				}
@@ -737,14 +737,14 @@ class GFLskill : Tracker {
 							Vector3 height = Vector3(0,70,0);
 							target = target.add(height);
 							int Faction= character.getIntAttribute("faction_id");
-							spawnVehicle(m_metagame,1,Faction,target,Orientation(0,1,0,ori4),"cover2.vehicle");	
+							spawnVehicle(m_metagame,1,Faction,target,Orientation(0,1,0,ori4),"cover2.vehicle");
 						}
 					}
 				}
 				break;
-			}	
+			}
 
-			// 15:33:08: SCRIPT:  received: TagName=result_event character_id=851 direction=-0.871521 0.020148 -0.489943 key=moth_destroy position=289.461 10.8204 551.587 
+			// 15:33:08: SCRIPT:  received: TagName=result_event character_id=851 direction=-0.871521 0.020148 -0.489943 key=moth_destroy position=289.461 10.8204 551.587
 			case 26:{ //(已失效)趋光者概率生成残骸
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -758,11 +758,11 @@ class GFLskill : Tracker {
 
 					if(jud>1){
 						spawnVehicle(m_metagame,1,Faction,ruin_pos.add(Vector3(0,6,0)),Orientation(0,1,0,ori4),"par_moth_ruin.vehicle");
-					}			
+					}
 					else{
 						CreateProjectile(m_metagame,ruin_pos.add(Vector3(0,5.4,0)),ruin_pos.add(Vector3(0,5.4,0)),"moth_explode_death.projectile",characterId,Faction,0,1);
 						CreateProjectile(m_metagame,ruin_pos.add(Vector3(0,5.4,0)),ruin_pos.add(Vector3(0,5.4,0)),"moth_explode_stun.projectile",characterId,Faction,0,1);
-					}	
+					}
 
 					break;
 				}
@@ -776,7 +776,7 @@ class GFLskill : Tracker {
 					Vector3 pos_smartgrenade = stringToVector3(event.getStringAttribute("position"));
 					m_fnum = m_metagame.getFactionCount();
 					array<const XmlElement@> affectedCharacter;
-					for(uint i=0;i<m_fnum;i++) 
+					for(uint i=0;i<m_fnum;i++)
 						if(i!=factionid) {
 						array<const XmlElement@> affectedCharacter2;
 						affectedCharacter2 = getCharactersNearPosition(m_metagame,pos_smartgrenade,i,25.0f);
@@ -796,11 +796,11 @@ class GFLskill : Tracker {
 					}
 					else {
 						CreateProjectile(m_metagame,pos_smartgrenade,pos_smartgrenade.add(Vector3(0,-10,0)),"grenade_g41.projectile",characterId,factionid,120,0.01);
-					}									
-				}			
-				break;			
-			}			
-			
+					}
+				}
+				break;
+			}
+
 			case 28: {
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -811,8 +811,8 @@ class GFLskill : Tracker {
                     Skill_UMP45MOD3_Smoke@ smoke_task = Skill_UMP45MOD3_Smoke(m_metagame, 1.5, characterId, factionid, pos_smartgrenade, pos_smartgrenade);
 					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
 					tasker.add(smoke_task);
-				}			
-				break;			
+				}
+				break;
 			}
 
 			case 29: {
@@ -823,7 +823,7 @@ class GFLskill : Tracker {
 					int factionid = character.getIntAttribute("faction_id");
 					healRangedCharacters(m_metagame,grenade_pos,factionid,2.5,3);
 				}
-				break;		
+				break;
 			}
 
 			case 30:{
@@ -840,7 +840,7 @@ class GFLskill : Tracker {
 							Vector3 height = Vector3(0,70,0);
 							target = target.add(height);
 							int Faction= character.getIntAttribute("faction_id");
-							spawnVehicle(m_metagame,1,Faction,target,Orientation(0,1,0,ori4),"aek999.vehicle");	
+							spawnVehicle(m_metagame,1,Faction,target,Orientation(0,1,0,ori4),"aek999.vehicle");
 						}
 					}
 				}
@@ -861,7 +861,7 @@ class GFLskill : Tracker {
 							Vector3 height = Vector3(0,70,0);
 							target = target.add(height);
 							int Faction= character.getIntAttribute("faction_id");
-							spawnVehicle(m_metagame,1,Faction,target,Orientation(0,1,0,ori4),"wheelchair.vehicle");	
+							spawnVehicle(m_metagame,1,Faction,target,Orientation(0,1,0,ori4),"wheelchair.vehicle");
 						}
 					}
 				}
@@ -903,7 +903,7 @@ class GFLskill : Tracker {
 
 						for (uint i0=1;i0<=num_max_kill;){
 							if(affectedCharacter.length()>0){
-								_log("ff_weaver lock successful");								
+								_log("ff_weaver lock successful");
 								for (uint i1=0;i1<affectedCharacter.length();i1++)	{
 									int jud1=1;
 									int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
@@ -914,16 +914,16 @@ class GFLskill : Tracker {
 										string luckyonepos = luckyoneC.getStringAttribute("position");
 										Vector3 luckyoneposV = stringToVector3(luckyonepos);
 										float rand_x = rand(-1,1);
-										float rand_y = rand(-1,1);			
+										float rand_y = rand(-1,1);
 										luckyoneposV = luckyoneposV.add(Vector3(rand_x,16,rand_y));
 
 										float v_offset = getAimUnitDistance(1.0,c_pos,luckyoneposV);
-										CreateDirectProjectile(m_metagame,c_pos,luckyoneposV,"ff_weaver_rocket.projectile",characterId,factionid,1.02*v_offset/0.4);	
+										CreateDirectProjectile(m_metagame,c_pos,luckyoneposV,"ff_weaver_rocket.projectile",characterId,factionid,1.02*v_offset/0.4);
 										playSoundAtLocation(m_metagame,"m202_flash_shot.wav",factionid,c_pos,1.0);
 										_log("ff_weaver scan kill successful");
 									}
-									i0+=jud1;				
-								}								
+									i0+=jud1;
+								}
 							}
 
 							else{
@@ -933,13 +933,13 @@ class GFLskill : Tracker {
 
 								Vector3 pos_smartbullet1 = pos_smartbullet.add(Vector3(rand_x,16,rand_y));
 								float v_offset = getAimUnitDistance(1.0,c_pos,pos_smartbullet1);
-								CreateDirectProjectile(m_metagame,c_pos,pos_smartbullet1,"ff_weaver_rocket.projectile",characterId,factionid,1.02*v_offset/0.4); 
-								playSoundAtLocation(m_metagame,"m202_flash_shot.wav",factionid,c_pos,1.0);                             			
-                            }     
+								CreateDirectProjectile(m_metagame,c_pos,pos_smartbullet1,"ff_weaver_rocket.projectile",characterId,factionid,1.02*v_offset/0.4);
+								playSoundAtLocation(m_metagame,"m202_flash_shot.wav",factionid,c_pos,1.0);
+                            }
 						}
-					}				
-					_log("ff_weaver skill over.");			
-				}			
+					}
+					_log("ff_weaver skill over.");
+				}
 				break;
 			}
 
@@ -949,7 +949,7 @@ class GFLskill : Tracker {
 				if (character !is null) {
 					Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
 					uint factionid = character.getIntAttribute("faction_id");
-					string c = 
+					string c =
 						"<command class='create_instance'" +
 						" faction_id='"+ factionid +"'" +
 						" instance_class='grenade'" +
@@ -977,9 +977,9 @@ class GFLskill : Tracker {
 					}
 					if (affectedCharacter.length()>0){
 						UZI_track.insertLast(UZI_tracker(characterId,factionid,grenade_pos,affectedCharacter));
-					}					
+					}
 				}
-				break;			
+				break;
 			}
 
 			case 34: {// GSH18
@@ -994,7 +994,7 @@ class GFLskill : Tracker {
 							int soldierId = characters[i].getIntAttribute("id");
 							XmlElement c ("command");
 							c.setStringAttribute("class", "update_inventory");
-							c.setIntAttribute("character_id", soldierId); 
+							c.setIntAttribute("character_id", soldierId);
 							c.setIntAttribute("untransform_count", 3);
 							m_metagame.getComms().send(c);
 						}
@@ -1016,7 +1016,7 @@ class GFLskill : Tracker {
 
 				if (affectedCharacter !is null && affectedCharacter.length > 0){
 					int closestIndex = -1;
-					float closestDistance = -1.0f;                
+					float closestDistance = -1.0f;
 					for(uint i=0;i<affectedCharacter.length();i++){
 						float distance = getPositionDistance(grenade_pos, stringToVector3(affectedCharacter[i].getStringAttribute("position")));
 						if (distance < closestDistance || closestDistance < 0.0){
@@ -1028,14 +1028,14 @@ class GFLskill : Tracker {
 						int target_id = affectedCharacter[closestIndex].getIntAttribute("id");
 						XmlElement c ("command");
 						c.setStringAttribute("class", "update_inventory");
-						c.setIntAttribute("character_id", target_id); 
+						c.setIntAttribute("character_id", target_id);
 						c.setIntAttribute("untransform_count", 4);
 						m_metagame.getComms().send(c);
 						// int index = findSkillIndex_reserve_array(target_id,banned_skill_index);
 						// if(index != -1){
 						// 	SkillArray[index].m_time-=5.0;
 						// }
-					}					
+					}
 				}
 
 				break;
@@ -1055,7 +1055,7 @@ class GFLskill : Tracker {
 							Vector3 height = Vector3(0,70,0);
 							target = target.add(height);
 							int Faction= character.getIntAttribute("faction_id");
-							spawnVehicle(m_metagame,1,Faction,target,Orientation(0,1,0,ori4),"mortar_truck.vehicle");	
+							spawnVehicle(m_metagame,1,Faction,target,Orientation(0,1,0,ori4),"mortar_truck.vehicle");
 						}
 					}
 				}
@@ -1087,7 +1087,7 @@ class GFLskill : Tracker {
 					int factionid = character.getIntAttribute("faction_id");
 					DOT_track.insertLast(DOT_tracker(characterId,factionid,grenade_pos,1.0,"elenusis_acid_bomb_spawn.projectile",10));
 				}
-				break;			
+				break;
 			}
 
 			case 39: {// hk416 medic aid
@@ -1100,7 +1100,7 @@ class GFLskill : Tracker {
 					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
 					tasker.add(heal_task);
 				}
-				break;	
+				break;
 			}
 
 			case 40: {// paradeus heal skill for commando
@@ -1111,7 +1111,7 @@ class GFLskill : Tracker {
 					int factionid = character.getIntAttribute("faction_id");
 					healRangedCharacters(m_metagame,grenade_pos,factionid,15,5,"para_heal",8);
 				}
-				break;			
+				break;
 			}
 
 			case 41: {// PA15
@@ -1124,7 +1124,7 @@ class GFLskill : Tracker {
 				Pos_40mm = Pos_40mm.add(Vector3(0,0.5,0));
 				m_fnum= m_metagame.getFactionCount();
 				array<const XmlElement@> affectedCharacter;
-				for(uint i=0;i<m_fnum;i++) 
+				for(uint i=0;i<m_fnum;i++)
 					if(i!=factionid) {
 					array<const XmlElement@> affectedCharacter2;
 					affectedCharacter2 = getCharactersNearPosition(m_metagame,Pos_40mm,i,10.0f);
@@ -1163,7 +1163,7 @@ class GFLskill : Tracker {
 				Skill_SF_Intruder_Spawn@ intruder_task = Skill_SF_Intruder_Spawn(m_metagame, 0.0, characterId, factionid, grenade_pos, grenade_pos);
 				TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
 				tasker.add(intruder_task);
-				break;			
+				break;
 			}
 
 			// case 43: {// 地雷妖精
@@ -1180,13 +1180,13 @@ class GFLskill : Tracker {
 			// 		TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
 			// 		tasker.add(DelayCommonCallRequest(m_metagame,3,characterId,factionid,"mine_strafe",aimer_pos,aim_pos));
 			// 	}
-			// 	break;					
+			// 	break;
 			// }
 
 			case 44: {// 铁血圣盾swap
 				int characterId = event.getIntAttribute("character_id");
 				healCharacter(m_metagame,characterId,10);
-				break;			
+				break;
 			}
 
 			case 45:{
@@ -1219,7 +1219,7 @@ class GFLskill : Tracker {
 				// Vector3 t_pos = getCharacterPosition(target_character);
 				// Vector3 aim_vector = getAimUnitVector(1,c_pos,t_pos);
 				Vector3 s_pos = getCharacterPosition(target_character);
-				
+
 				c_pos=c_pos.add(Vector3(0,1,0));
 
 				float dx = s_pos.m_values[0]-c_pos.m_values[0];
@@ -1229,7 +1229,7 @@ class GFLskill : Tracker {
 				dx = dx/ds; dy=dy/ds;
 				float dd = 2; //同一列相邻弹头的距离
 				float tt = 4;   //同一行相邻弹头位置偏移比值
-			
+
 				array<string> Voice={
 				"Excutioner_buhuo_SKILL02_JP.wav",
 				"Excutioner_buhuo_SKILL03_JP.wav",
@@ -1248,7 +1248,7 @@ class GFLskill : Tracker {
 					CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2)                    ,1,dy*dd*(ix*2)                    )),c_pos.add(Vector3(dx*dd*(ix*2)                    ,0,dy*dd*(ix*2)                    )),"excutioner_skill_ai.projectile",characterId,factionid,100,0.001);
 					CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,1,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"excutioner_skill_ai.projectile",characterId,factionid,100,0.001);
 				}
-				break;	
+				break;
 			}
 
 
@@ -1286,15 +1286,15 @@ class GFLskill : Tracker {
 							if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
 								string luckyonepos = luckyoneC.getStringAttribute("position");
 								Vector3 luckyoneposV = stringToVector3(luckyonepos);
-								CreateDirectProjectile(m_metagame,luckyoneposV.add(Vector3(0,1,0)),luckyoneposV,"sfw_boss_alchemist_skill_kill.projectile",characterId,factionid,60);	
-								playSoundAtLocation(m_metagame,"alchemist_fire_FromHALOINFINTE.wav",factionid,luckyonepos,1.0);								
-							}				
+								CreateDirectProjectile(m_metagame,luckyoneposV.add(Vector3(0,1,0)),luckyoneposV,"sfw_boss_alchemist_skill_kill.projectile",characterId,factionid,60);
+								playSoundAtLocation(m_metagame,"alchemist_fire_FromHALOINFINTE.wav",factionid,luckyonepos,1.0);
+							}
 						}
 					}
-				}			
+				}
 				break;
 			}
-			
+
 			case 48: {// 侦察中枢刷人
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
@@ -1317,7 +1317,7 @@ class GFLskill : Tracker {
 				if (status){
 					spawnSoldier(m_metagame,5,factionid,pos,soldier_name);
 				}
-				break;			
+				break;
 			}
 
 			case 49: {// 敌方破坏者脚本榴弹
@@ -1350,7 +1350,7 @@ class GFLskill : Tracker {
 						if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
 							Vector3 luckyonepos = stringToVector3(luckyoneC.getStringAttribute("position"));
 							target_pos = target_pos.add(luckyonepos);
-						}				
+						}
 					}
 					target_pos = getMultiplicationVector(target_pos,1/float(target_num));
 
@@ -1360,17 +1360,17 @@ class GFLskill : Tracker {
 					int ix = 0; float dd = 2.0;
 					for(ix=1;ix<=6;ix++) {
 						CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(dd*(ix*2-7),0,0)),"skill_sf_boss_destroyer_mine.projectile",characterId,factionid,100,0.001);
-					}           
+					}
 					for(ix=1;ix<=6;ix++) {
 						CreateProjectile(m_metagame,c_pos,s_pos.add(Vector3(0,0,dd*(ix*2-7))),"skill_sf_boss_destroyer_mine.projectile",characterId,factionid,100,0.001);
-					}             
+					}
 					array<string> Voice={
 					"Destroyer_buhuo_SKILL02_JP.wav",
 					"Destroyer_buhuo_SKILL01_JP.wav",
 					"Destroyer_buhuo_MEET_JP.wav"
 					};
 					playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
-				}			
+				}
 				break;
 			}
 
@@ -1429,8 +1429,8 @@ class GFLskill : Tracker {
 				}
 				else {
 					CreateProjectile(m_metagame,pos_smartgrenade,pos_smartgrenade.add(Vector3(0,-10,0)),"kcco_smartgrenade_player_3.projectile",characterId,factionid,120,0.01);
-				}									
-				break;			
+				}
+				break;
 			}
 
 			case 52: {//轨道轰炸
@@ -1492,7 +1492,7 @@ class GFLskill : Tracker {
 						//生成延时弹头，走脚本
 					}
 				}
-				break;			
+				break;
 			}
 
 			case 54: {// 召唤随机涅托
@@ -1581,8 +1581,8 @@ class GFLskill : Tracker {
 							if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
 								string luckyonepos = luckyoneC.getStringAttribute("position");
 								Vector3 luckyoneposV = stringToVector3(luckyonepos);
-								CreateDirectProjectile(m_metagame,luckyoneposV.add(Vector3(0,1,0)),luckyoneposV,"skill_sf_boss_oroborus_warn.projectile",characterId,factionId,1);								
-							}				
+								CreateDirectProjectile(m_metagame,luckyoneposV.add(Vector3(0,1,0)),luckyoneposV,"skill_sf_boss_oroborus_warn.projectile",characterId,factionId,1);
+							}
 						}
 					}
 
@@ -1602,7 +1602,7 @@ class GFLskill : Tracker {
 					AOEVestRecoverTask@ new_quest = AOEVestRecoverTask(m_metagame,3,grenade_pos,5,5,factionid,10);
 					new_quest.setEffectParticle("particle_effect_radius_heal.projectile");
 					tasker.add(new_quest);
-				}				
+				}
 				break;
 			}
 
@@ -1652,11 +1652,11 @@ class GFLskill : Tracker {
 					else {
 						float strike_rand = 6;
 						float rand_x = rand(-strike_rand,strike_rand);
-						float rand_y = rand(-strike_rand,strike_rand);							
+						float rand_y = rand(-strike_rand,strike_rand);
 						CreateDirectProjectile_T(m_metagame,pos_smartgrenade,pos_smartgrenade.add(Vector3(rand_x,-1.8,rand_y)),"skill_obr_knife_1.projectile",characterId,factionid,0.2);
-					}									
-				}			
-				break;			
+					}
+				}
+				break;
 			}
 
 			case 59: {// OBR二阶段
@@ -1705,20 +1705,20 @@ class GFLskill : Tracker {
 					else {
 						float strike_rand = 4;
 						float rand_x = rand(-strike_rand,strike_rand);
-						float rand_y = rand(-strike_rand,strike_rand);						
+						float rand_y = rand(-strike_rand,strike_rand);
 						CreateDirectProjectile_T(m_metagame,pos_smartgrenade.add(Vector3(rand_x,8.5,rand_y)),pos_smartgrenade.add(Vector3(0,-10,0)),"skill_obr_knife_2.projectile",characterId,factionid,0.33);
-					}									
-				}			
-				break;			
+					}
+				}
+				break;
 			}
-			
+
 			case 60: { //弹药箱补给
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 				if (character !is null) {
 					Vector3 c_pos = stringToVector3(event.getStringAttribute("position"));
 					int factionid = character.getIntAttribute("faction_id");
-					
+
 					array<const XmlElement@>@ characters = getCharactersNearPosition(m_metagame, c_pos, factionid, 20.0f);
                     if (characters is null) return;
 					_log("script activated");
@@ -1739,7 +1739,7 @@ class GFLskill : Tracker {
 				killCharacter(m_metagame,characterId);
 				spawnStaticProjectile(m_metagame,"goliath.projectile",_pos,characterId,factionid);
 				break;
-			}		
+			}
 
 			case 62: {// evo3 毒气弹
 				int characterId = event.getIntAttribute("character_id");
@@ -1747,7 +1747,7 @@ class GFLskill : Tracker {
 				if (character !is null) {
 					Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
 					int factionid = character.getIntAttribute("faction_id");
-					string c = 
+					string c =
 						"<command class='create_instance'" +
 						" faction_id='"+ factionid +"'" +
 						" instance_class='grenade'" +
@@ -1759,7 +1759,7 @@ class GFLskill : Tracker {
 					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
 					tasker.add(new_task);
 				}
-				break;			
+				break;
 			}
 
             case 63:{ //强无敌空投
@@ -1800,7 +1800,7 @@ class GFLskill : Tracker {
                     Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
                     DelayMovingTargetProjectileSet@ new_task = DelayMovingTargetProjectileSet(m_metagame,1.5,characterId,factionid,"skill_sf_boss_arch_knight_coming.projectile",luckyGuyid);
 					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-					tasker.add(new_task);                    
+					tasker.add(new_task);
                 }
 				break;
             }
@@ -1817,10 +1817,10 @@ class GFLskill : Tracker {
                     DelayP2PProjectileSet@ new_task = DelayP2PProjectileSet(m_metagame,2.0,characterId,factionid,"skill_sf_boss_arch_knight_damage.projectile",pos.add(Vector3(0,100,0)),pos,200);
 					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
 					tasker.add(new_task);
-                    array<soldier_spawn_request@> spawn_soldier =   
+                    array<soldier_spawn_request@> spawn_soldier =
                     {
                         soldier_spawn_request("sfw_Gager",1)
-                    };                    
+                    };
                     tasker.add(DelaySpawnSoldier(m_metagame,0.2,factionid,spawn_soldier,pos.add(Vector3(0,2,0)),0,0));
                 }
 				break;
@@ -1836,7 +1836,27 @@ class GFLskill : Tracker {
                 spawnStaticProjectile(m_metagame,"g36_skill_damage.projectile",grenade_pos,characterId,factionid);
                 //范围6 奶5甲
 				break;
-            }            
+            }
+			case 67:{ //弥诺陶洛斯导弹
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (checkCharacterDead(character)) return;
+				int factionid = character.getIntAttribute("faction_id");
+                Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
+				int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,factionid,grenade_pos,10);
+				if(luckyGuyid!=-1){
+                    const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+                    Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+					spawnStaticProjectile(m_metagame,"kcco_teslatrooper_warn.projectile",luckyGuyPos,characterId,factionid);
+					for (uint i=0; i<4; i++) {
+						Vector3 targetPos = luckyGuyPos.add(Vector3(rand(-1.0,1.0),0.0,rand(-1.0,1.0)));
+						TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+						DelayC2PProjectileSet_H@ new_task = DelayC2PProjectileSet_H(m_metagame,1.0,characterId,factionid,"kcco_teslatrooper_rocket.projectile",targetPos,26.0,2.0);
+						tasker.add(new_task);
+					}
+                }
+				break;
+            }
             default:
                 break;
 		}
@@ -1893,14 +1913,14 @@ class GFLskill : Tracker {
 							Vector3 height = Vector3(0,0.5,0);
 							luckyoneposV = luckyoneposV.add(height);
 							luckyonepos = luckyoneposV.toString();
-							string c = 
+							string c =
 								"<command class='create_instance'" +
 								" faction_id='"+ XM8track[a].m_factionid +"'" +
 								" instance_class='grenade'" +
 								" instance_key='skill_xm8mod3.projectile'" +
 								" position='" + luckyonepos + "'"+
 								" character_id='" + XM8track[a].m_characterId + "' />";
-							m_metagame.getComms().send(c);		
+							m_metagame.getComms().send(c);
 						}
 					}
 					XM8track[a].m_numtime--;
@@ -1914,7 +1934,7 @@ class GFLskill : Tracker {
 		if(HK416_track.length()>0){
 			for (int a = HK416_track.length() - 1; a >= 0; a--) {
 				HK416_track[a].m_time-=time;
-				if(HK416_track[a].m_time<0){	
+				if(HK416_track[a].m_time<0){
 					if (HK416_track[a].m_affected.length()>0){
 						for(uint b=0;b<HK416_track[a].m_affected.length();b++){
 							int luckyoneid = HK416_track[a].m_affected[b].getIntAttribute("id");
@@ -1925,14 +1945,14 @@ class GFLskill : Tracker {
 								Vector3 height = Vector3(0,0.5,0);
 								luckyoneposV = luckyoneposV.add(height);
 								luckyonepos = luckyoneposV.toString();
-								string c = 
+								string c =
 									"<command class='create_instance'" +
 									" faction_id='"+ HK416_track[a].m_factionid +"'" +
 									" instance_class='grenade'" +
 									" instance_key='firenade_sub_416.projectile'" +
 									" position='" + luckyonepos + "'"+
 									" character_id='" + HK416_track[a].m_characterId + "' />";
-								m_metagame.getComms().send(c);								
+								m_metagame.getComms().send(c);
 							}
 						}
 					}
@@ -1941,13 +1961,13 @@ class GFLskill : Tracker {
 					if (HK416_track[a].m_numtime<0){
 						HK416_track.removeAt(a);
 					}
-				}			
+				}
 			}
 		}
 		if(Javelin_list.length()>0){
 			for (int a = Javelin_list.length() - 1; a >= 0; a--) {
 				Javelin_list[a].m_time-=time;
-				if(Javelin_list[a].m_time<0){				
+				if(Javelin_list[a].m_time<0){
 					Javelin_list[a].m_numtime--;
 					Javelin_list[a].m_time=1;
 					if (Javelin_list[a].m_numtime<1){
@@ -1959,7 +1979,7 @@ class GFLskill : Tracker {
 		if(UZI_track.length()>0){
 			for (int a = UZI_track.length() - 1; a >= 0; a--) {
 				UZI_track[a].m_time-=time;
-				if(UZI_track[a].m_time<0){	
+				if(UZI_track[a].m_time<0){
 					if (UZI_track[a].m_affected.length()>0){
 						for(uint b=0;b<UZI_track[a].m_affected.length();b++){
 							int luckyoneid = UZI_track[a].m_affected[b].getIntAttribute("id");
@@ -1970,7 +1990,7 @@ class GFLskill : Tracker {
 								Vector3 height = Vector3(0,0.5,0);
 								luckyoneposV = luckyoneposV.add(height);
 								luckyonepos = luckyoneposV.toString();
-								string c = 
+								string c =
 									"<command class='create_instance'" +
 									" faction_id='"+ UZI_track[a].m_factionid +"'" +
 									" instance_class='grenade'" +
@@ -1986,21 +2006,21 @@ class GFLskill : Tracker {
 					if (UZI_track[a].m_numtime<0){
 						UZI_track.removeAt(a);
 					}
-				}			
+				}
 			}
-		}			
+		}
 		if(DOT_track.length()>0){
 			for (int a = DOT_track.length() - 1; a >= 0; a--) {
 				DOT_track[a].m_time-=time;
 				if(DOT_track[a].m_time<0){
-					string c = 
+					string c =
 						"<command class='create_instance'" +
 						" faction_id='"+ DOT_track[a].m_factionid +"'" +
 						" instance_class='grenade'" +
 						" instance_key='" + DOT_track[a].m_projectile +"'" +
 						" position='" + DOT_track[a].m_pos.toString() + "'"+
 						" character_id='" + DOT_track[a].m_characterId + "' />";
-					m_metagame.getComms().send(c);		
+					m_metagame.getComms().send(c);
 					DOT_track[a].m_numtime--;
 					DOT_track[a].m_time=DOT_track[a].m_time_interval;
 					if (DOT_track[a].m_numtime<1){
@@ -2008,9 +2028,9 @@ class GFLskill : Tracker {
 					}
 				}
 			}
-		}			
+		}
 	}
-	
+
 	bool hasEnded() const {
 		// always on
 		return false;

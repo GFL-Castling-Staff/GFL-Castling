@@ -55921,6 +55921,27 @@
             <position x="12.650000" y="1.150000" z="1.150000" />
         </frame>
     </animation>        
+	<animation loop="0" end="0.000000" speed="1.000000" comment="throwing, teslatrooper">
+		<frame time="0.000000">
+			<position x="-0.861028" y="128.390991" z="4.402769" />
+			<position x="0.065648" y="115.741882" z="1.549469" />
+			<position x="-18.934994" y="106.028137" z="-0.820948" />
+			<position x="19.082170" y="105.982780" z="-0.483220" />
+			<position x="-42.365074" y="80.497658" z="3.606413" />
+			<position x="42.709511" y="81.769745" z="2.463746" />
+			<position x="-28.151604" y="45.502316" z="15.270698" />
+			<position x="29.112473" y="45.502316" z="15.270698" />
+			<position x="0.006496" y="87.119339" z="-1.996252" />
+			<position x="-14.500000" y="68.500000" z="-1.500000" />
+			<position x="14.500000" y="68.500000" z="-1.500000" />
+			<position x="-14.500000" y="38.500000" z="-1.500000" />
+			<position x="14.500000" y="38.500000" z="-1.500000" />
+			<position x="-14.500000" y="0.500000" z="-1.500000" />
+			<position x="14.500000" y="0.500000" z="-1.500000" />
+			<control key="swing" value="1" />
+			<control key="action" value="1" />
+		</frame>
+	</animation>
 	<animation loop="1" end="1.000000" speed="0.200000" comment="recoil2, large mecha">
 		<frame time="0.000000">
 			<position x="1.150000" y="127.650002" z="1.150000" />
