@@ -108182,7 +108182,7 @@
 </weapon>
 
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0.5" drop_count_factor_on_player_death="1.0" key="gkw_consume_at4.weapon">
-	<specification retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="AT-4-[84mm HP]" class="3" consume="1" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="150.0" stance_accuracy_rate="1.2" leave_crouch_accuracy_penalty="0.3" slot="1" projectiles_per_shot="1"/>
+	<specification retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="AT-4-[84mm HP]" class="3" consume="1" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="150.0" stance_accuracy_rate="1.2" leave_crouch_accuracy_penalty="0.3" slot="1" projectiles_per_shot="1"/>
 	<inventory encumbrance="20.0" buy_price="50.0" sell_price="50.0"/>
 	<capacity value="1" source="rank" source_value="4.369"/>
 	<capacity value="2" source="rank" source_value="10.633"/>
@@ -152852,7 +152852,7 @@
 
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="1.0" drop_count_factor_on_player_death="1.0" key="kcco_rpg7_player.weapon">
 	<tag name="bazooka"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="0.5" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" suppressed="0" name="RPG-7" class="3" reload_one_at_a_time="1" sight_range_modifier="1.5" projectile_speed="60.0" slot="1" projectiles_per_shot="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="0.5" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" suppressed="0" name="RPG-7" class="3" reload_one_at_a_time="1" sight_range_modifier="2.5" projectile_speed="60.0" slot="1" projectiles_per_shot="1"/>
 	<animation key="recoil" animation_key="recoil, law"/>
 	<animation key="cycle" animation_key="Brifle1"/>
 	<animation key="reload" animation_key="AT4Reload"/>
@@ -152995,7 +152995,7 @@
 	<tag name="bazooka"/>
 	<tag name="antiarmor"/>
 	<tag name="elite"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="PF-98M 120mm Rocket(C)" class="3" reload_one_at_a_time="1" sight_range_modifier="1.5" projectile_speed="75.0" stance_accuracy_rate="1.0" slot="1" projectiles_per_shot="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="PF-98M 120mm Rocket(C)" class="3" reload_one_at_a_time="1" sight_range_modifier="2.5" projectile_speed="75.0" stance_accuracy_rate="1.0" slot="1" projectiles_per_shot="1"/>
 	<animation key="recoil" animation_key="recoil, law"/>
 	<animation key="cycle" animation_key="Brifle1"/>
 	<animation key="reload" animation_key="reloading, pf98"/>
@@ -156860,11 +156860,11 @@
 	<capacity value="2" source="rank" source_value="0.0"/>
 	<hud_icon filename="fairy_command_target.png"/>
 	<commonness value="0.0" can_respawn_with="0" in_stock="0"/>
-	<projectile class="grenade" name="Fairy Command:Targetdrone" key="fairy_command_target.projectile" slot="0" pulldown_in_air="0.0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+	<projectile class="grenade" name="Fairy Command:Targetdrone" key="fairy_command_target.projectile" slot="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
 	<result class="notify_script" key="fc_target"/>
 	<trigger class="time" time_to_live="0.0"/>
 	<rotation class="random"/>
-	<model filename=""/>
+	<model mesh_filename="flare_stick.mesh" texture_filename="flare_stick_green.png"/>
 	<trail probability="0.0"/>
 	<commonness value="0.0" can_respawn_with="1" in_stock="1"/>
 	<capacity value="4" source="rank" source_value="6.48"/>
