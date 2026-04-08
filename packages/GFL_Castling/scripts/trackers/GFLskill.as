@@ -1824,6 +1824,18 @@ class GFLskill : Tracker {
                     tasker.add(DelaySpawnSoldier(m_metagame,0.2,factionid,spawn_soldier,pos.add(Vector3(0,2,0)),0,0));
                 }
 				break;
+            }
+            case 66:{ //G36毒奶雷
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (checkCharacterDead(character)) return;
+				Vector3 pos = stringToVector3(event.getStringAttribute("position"));
+				int factionid = character.getIntAttribute("faction_id");
+                Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
+                healRangedCharacters(m_metagame,grenade_pos,factionid,6,5);
+                spawnStaticProjectile(m_metagame,"g36_skill_damage.projectile",grenade_pos,characterId,factionid);
+                //范围6 奶5甲
+				break;
             }            
             default:
                 break;

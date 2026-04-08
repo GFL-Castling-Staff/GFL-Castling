@@ -289,6 +289,7 @@ class CommandSkill : Tracker {
                 case 93:{excuteWebleySkill(cId,senderId,m_modifer);break;}
                 case 94:{excuteNytoBlackSkill(cId,senderId,m_modifer);break;}
                 case 95:{excuteScarecrowSkill(cId,senderId,m_modifer);break;}
+                case 96:{excuteG36Skill(cId,senderId,m_modifer);break;}
 
 
                 default:
@@ -4853,7 +4854,7 @@ class CommandSkill : Tracker {
                     DelayAntiPersonSnipeRequest@ snipe_quest = DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipe_delisle.projectile",c_pos.add(Vector3(0,0.5,0)),target_id);
                     snipe_quest.setSound("delisle_fire_FromBF5.wav");
                     tasker.add(snipe_quest);
-                    addCooldown("delisle",60,characterId,modifer,"normal",false);
+                    addCooldown("delisle",30,characterId,modifer,"normal",false);
                 }
             }
             else{
@@ -4939,7 +4940,7 @@ class CommandSkill : Tracker {
                     playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
                     c_pos=c_pos.add(Vector3(0,1.8,0));
                     CreateDirectProjectile_T(m_metagame,c_pos,aim_pos,"skill_obr_knife.projectile",characterId,factionid,0.2);
-                    addCooldown("OBR",45,characterId,modifer);
+                    addCooldown("OBR",30,characterId,modifer);
                 }
             }
         }
@@ -5080,7 +5081,7 @@ class CommandSkill : Tracker {
                     playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
                     playAnimationKey(m_metagame,characterId,"throwing, upside",true,true);
                     c_pos=c_pos.add(Vector3(0,1,0));
-                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"smoke_grenade.projectile",characterId,factionid,26.0,6.0);
+                    CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"g36_skill.projectile",characterId,factionid,45.0,5.0);
                     addCooldown("G36",30,characterId,modifer);
                 }
             }

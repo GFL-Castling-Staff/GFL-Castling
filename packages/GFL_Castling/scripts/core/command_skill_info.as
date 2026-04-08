@@ -574,6 +574,14 @@ dictionary commandSkillIndex = {
         {"ff_scarecrow.weapon",95},
         {"ff_scarecrow_skill.weapon",95},
 
+        {"gkw_g36mod3.weapon",96},
+        {"gkw_g36mod3_565.weapon",96},
+        {"gkw_g36mod3_1507.weapon",96},
+        {"gkw_g36mod3_1904.weapon",96},
+        {"gkw_g36mod3_2407.weapon",96},
+        {"gkw_g36mod3_6807.weapon",96},
+        {"gkw_g36mod3_8609.weapon",96},
+
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
 };

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectiles>
+	<projectile class="grenade" name="" slot="1" pulldown_in_air="45.0" key="g36_skill.projectile">
+		<result class="notify_script" key="G36_SKILL" />
+		<trigger class="impact">
+			<collider class="character" enabled="1" faction_compare="not_equal" />
+		</trigger>
+		<rotation class="motion" />
+		<model mesh_filename="agl.xml" />
+		<commonness value="0.0" />
+		<sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2.0" />
+		<sound class="result" key="other" fileref="explosion_FromSQUAD_2.wav" volume="2.0" />
+		<sound class="result" key="other" fileref="explosion_FromSQUAD_3.wav" volume="2.0" />
+		<sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.8" />
+		<sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_02.wav" pitch_variety="0.2" volume="0.8" />
+		<sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_03.wav" pitch_variety="0.2" volume="0.8" />
+		<sound class="result" key="terrain" copy="other" />
+		<sound class="result" key="static_object" copy="other" />
+		<sound class="result" key="character" copy="other" />
+		<sound class="result" key="vehicle" copy="other" />
+		<effect class="result" key="terrain" ref="Shine" lighting="0" />
+		<effect class="result" key="terrain" ref="Godray" lighting="0" />
+		<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1" />
+		<effect class="result" key="terrain" ref="StimSmoke" lighting="0" shadow="0" />
+		<effect class="result" key="terrain" ref="ct_heal_woosh" shadow="0" />
+		<effect class="result" key="static_object" copy="terrain" />
+		<effect class="result" key="vehicle" copy="terrain" />
+		<effect class="result" key="character" copy="terrain" />
+		<effect class="result" key="other" copy="terrain" />
+	</projectile>
+    <projectile class="grenade" name="" slot="1" pulldown_in_air="45.0" key="g36_skill_damage.projectile">
+        <tag name="grenade"/>
+        <result class="spawn" instance_class="grenade" instance_key="blast_shard_rad6.projectile" min_amount="30" max_amount="30" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0" />
+        <trigger class="time" time_to_live="0.0"/>
+        <rotation class="motion" />
+        <model />
+        <commonness value="0.0" />
+    </projectile>    
+</projectiles>

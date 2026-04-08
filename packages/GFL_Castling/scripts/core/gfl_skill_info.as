@@ -199,7 +199,9 @@ dictionary gameSkillIndex = {
 
         {"spawn_gager_knight_land",65},
 
-        
+        //G36 毒奶
+        {"G36_SKILL",66},
+
 
 
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
