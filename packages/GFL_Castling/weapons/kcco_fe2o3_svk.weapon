@@ -82,7 +82,7 @@
     name="KCCO Hematite Observers" 
     class="0" 
     reload_one_at_a_time="0" 
-    sight_range_modifier="1.4" 
+    sight_range_modifier="1.1" 
     projectile_speed="160" 
     barrel_offset="0.6" 
     stance_accuracy_rate="1.0" 
@@ -105,7 +105,7 @@
     <hud_icon filename="kccow_svk.png"/>
     <weak_hand_hold offset="0.3"/>
     <projectile file="bullet_kcco.projectile">
-        <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.735" kill_decay_end_time="2.892"/>
+        <result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="1.735" kill_decay_end_time="2.892"/>
     </projectile>
     <tag name="rifle"/>
     <commonness value="0.02" in_stock="1" can_respawn_with="1"/>
