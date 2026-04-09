@@ -1848,8 +1848,12 @@ class GFLskill : Tracker {
                     const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
                     Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
 					spawnStaticProjectile(m_metagame,"kcco_teslatrooper_warn.projectile",luckyGuyPos,characterId,factionid);
-					for (uint i=0; i<4; i++) {
-						Vector3 targetPos = luckyGuyPos.add(Vector3(rand(-1.0,1.0),0.0,rand(-1.0,1.0)));
+					Vector3 targetPos = luckyGuyPos.add(Vector3(rand(-1.0,1.0),0.0,rand(-1.0,1.0)));
+					TaskSequencer@ tasker_s = m_metagame.getTaskManager().newTaskSequencer();
+					DelayC2PProjectileSet_H@ new_task_s = DelayC2PProjectileSet_H(m_metagame,1.0,characterId,factionid,"kcco_teslatrooper_rocket.projectile",targetPos,26.0,2.0,"Teslatrooper_fire_FromBF5.wav",1.1);
+					tasker_s.add(new_task_s);
+					for (uint i=1; i<5; i++) {
+						targetPos = luckyGuyPos.add(Vector3(rand(-1.0,1.0),0.0,rand(-1.0,1.0)));
 						TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
 						DelayC2PProjectileSet_H@ new_task = DelayC2PProjectileSet_H(m_metagame,1.0,characterId,factionid,"kcco_teslatrooper_rocket.projectile",targetPos,26.0,2.0);
 						tasker.add(new_task);
