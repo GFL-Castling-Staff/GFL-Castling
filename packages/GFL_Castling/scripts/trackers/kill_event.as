@@ -328,6 +328,10 @@ class kill_event : Tracker {
         "88type_mrr.projectile",
         "rf_blast_damage.projectile"
     };
+    array<string> gk_hg_blast_proj_list ={
+        "desert_eagle.projectile",
+        "sub_damage_thunder.projectile"
+    };
 
     int getRecoverVestNum(string weaponkey)
     {
@@ -487,7 +491,7 @@ class kill_event : Tracker {
             {
                 kill_score_scale = 2;
             }
-            else if(gk_bolted_rf_list.find(c_weaponType) > -1 && gk_bolted_rf_blast_proj_list.find(KillerWeaponKey) > -1)
+            else if(gk_bolted_rf_blast_proj_list.find(KillerWeaponKey) > -1 && gk_bolted_rf_list.find(c_weaponType) > -1)
             {
                 kill_score_scale = 2;
             }
@@ -673,6 +677,10 @@ class kill_event : Tracker {
             }
 
             if(gk_weapon_hg_list.find(KillerWeaponKey)>=0)
+            {
+                reduceAllCallCooldown(playerName,1.0);
+            }
+            else if (gk_hg_blast_proj_list.find(KillerWeaponKey) > -1 && gk_weapon_hg_list.find(c_weaponType) > -1)
             {
                 reduceAllCallCooldown(playerName,1.0);
             }
