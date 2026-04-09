@@ -6,7 +6,7 @@
 			<collider class="character" enabled="1" faction_compare="not_equal" />
 		</trigger>
 		<rotation class="motion" />
-        <model mesh_filename="stun_grenade.xml" />
+        <model mesh_filename="mp7_skill.xml" />
 		<commonness value="0.0" />
 		<sound class="result" key="other" fileref="explosion_FromSQUAD_1.wav" volume="2.0" />
 		<sound class="result" key="other" fileref="explosion_FromSQUAD_2.wav" volume="2.0" />
