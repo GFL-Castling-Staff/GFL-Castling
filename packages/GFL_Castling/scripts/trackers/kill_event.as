@@ -31,7 +31,7 @@ class kill_event : Tracker {
         m_difficulty=m_userSettings.m_GlobalDifficulty;
         // m_droprate_offset= m_difficulty* 0.01;
 	}
-    
+
     dictionary healOnKillWeaponList = {
 
         // 空武器，后面杀几个人回一次甲就写几
@@ -78,7 +78,7 @@ class kill_event : Tracker {
         {"gkw_asval_2907.weapon",3},
         {"gkw_asvalmod3_2907.weapon",3},
         {"gkw_asval_10106.weapon",3},
-        {"gkw_asvalmod3_10106.weapon",3},        
+        {"gkw_asvalmod3_10106.weapon",3},
         {"gkw_ribeyrollesmod3_skill.weapon",3},
 
         {"gkw_cr21mod3.weapon",4},
@@ -118,7 +118,7 @@ class kill_event : Tracker {
         {"gkw_ump9mod3_6704.weapon",3},
         {"gkw_ump9_6704_skill.weapon",3},
         {"gkw_ump9mod3_6704_skill.weapon",3},
-        
+
         {"gkw_pps43.weapon",3},
         {"gkw_m3.weapon",3},
         {"gkw_type100.weapon",3},
@@ -126,7 +126,7 @@ class kill_event : Tracker {
         {"gkw_type100_4004.weapon",3},
         {"gkw_type100mod3.weapon",3},
         {"gkw_type100mod3_4004.weapon",3},
-        {"gkw_type100mod3_skill.weapon",3},   
+        {"gkw_type100mod3_skill.weapon",3},
         {"gkw_type100mod3_4004_skill.weapon",3},
         {"gkw_sp9.weapon",3},
         {"gkw_sp9_6303.weapon",3},
@@ -160,7 +160,7 @@ class kill_event : Tracker {
         {"gkw_mab38.weapon",3},
         {"gkw_mab38mod3.weapon",3},
         {"gkw_mab38_oc.weapon",3},
-        {"gkw_mab38mod3_oc.weapon",3},        
+        {"gkw_mab38mod3_oc.weapon",3},
         {"gkw_klin.weapon",3},
         {"gkw_mp40.weapon",3},
         {"gkw_mp40_902.weapon",3},
@@ -194,7 +194,7 @@ class kill_event : Tracker {
         {"gkw_type79.weapon",3},
         {"gkw_type79_1402.weapon",3},
         {"gkw_type79mod3.weapon",2},
-        {"gkw_type79mod3_1402.weapon",2},        
+        {"gkw_type79mod3_1402.weapon",2},
         {"gkw_ppsh41.weapon",3},
         {"gkw_ppsh41mod3.weapon",3},
         {"gkw_ppsh41_602.weapon",3},
@@ -219,11 +219,11 @@ class kill_event : Tracker {
         {"gkw_kp31.weapon",3},
         {"gkw_kp31mod3.weapon",3},
         {"gkw_kp31_1103.weapon",3},
-        {"gkw_kp31mod3_1103.weapon",3},        
+        {"gkw_kp31mod3_1103.weapon",3},
         {"gkw_kp31_310.weapon",3},
         {"gkw_kp31mod3_310.weapon",3},
         {"gkw_kp31_3101.weapon",3},
-        {"gkw_kp31mod3_3101.weapon",3},        
+        {"gkw_kp31mod3_3101.weapon",3},
         {"gkw_p90.weapon",4},
         {"gkw_p90_2802.weapon",4},
         {"gkw_p90_5701.weapon",4},
@@ -259,7 +259,7 @@ class kill_event : Tracker {
 
         {"gkw_cx4.weapon",3},
         {"gkw_cx4_6606.weapon",3},
-        
+
 
 
         //短突
@@ -289,7 +289,7 @@ class kill_event : Tracker {
         {"gkw_g36c_mod3_3103_skill.weapon",5},
         {"gkw_g36c_5201.weapon",3},
         {"gkw_g36c_mod3_5201.weapon",4},
-        {"gkw_g36c_mod3_5201_skill.weapon",5},        
+        {"gkw_g36c_mod3_5201_skill.weapon",5},
         {"gkw_x95.weapon",4},
         {"gkw_x95_10205.weapon",4},
         {"gkw_ar57.weapon",4},
@@ -323,10 +323,19 @@ class kill_event : Tracker {
         {"ff_beluga.weapon",5},
         {"666",-1}
     };
+    array<string> gk_bolted_rf_blast_proj_list ={
+        "tac50_he.projectile",
+        "88type_mrr.projectile",
+        "rf_blast_damage.projectile"
+    };
+    array<string> gk_hg_blast_proj_list ={
+        "desert_eagle.projectile",
+        "sub_damage_thunder.projectile"
+    };
 
     int getRecoverVestNum(string weaponkey)
     {
-        if(!healOnKillWeaponModifer.exists(weaponkey)) return 1; 
+        if(!healOnKillWeaponModifer.exists(weaponkey)) return 1;
         return int(healOnKillWeaponModifer[weaponkey]);
     }
     // 击杀时调用：查找已有 tracker 则累加击杀，否则新建
@@ -337,7 +346,7 @@ class kill_event : Tracker {
         // ✅ 更严格的参数检查
         if (killstoheal <= 0 || killadd <= 0 || timeaddafterkill <= 0) return;
         if (type != "weapon" && type != "vest") return;  // 防止错误类型
-        
+
         bool found = false;
         for(uint a = 0; a < HealOnKill_track.length(); a++) {
             if(HealOnKill_track[a].m_characterId == characterid && HealOnKill_track[a].m_type == type) {
@@ -346,9 +355,9 @@ class kill_event : Tracker {
                 break;
             }
         }
-        
+
         if(!found) {
-            HealOnKill_track.insertLast(HealOnKill_tracker(characterid, factionid, killstoheal, timeaddafterkill, type, killadd,vestrecover)); 
+            HealOnKill_track.insertLast(HealOnKill_tracker(characterid, factionid, killstoheal, timeaddafterkill, type, killadd,vestrecover));
         }
     }
 
@@ -390,7 +399,7 @@ class kill_event : Tracker {
                     int j = findSkillIndex(scarh_cid,"sniper");
                     if(j >=0){
                         SkillArray[j].m_time-=2.0;
-                    }                    
+                    }
                     sendFactionMessageKeySaidAsCharacter(m_metagame,0,scarh_cid,"scarh_dogtag_gain",dictionary(),0.9);
                 }
             }
@@ -399,7 +408,7 @@ class kill_event : Tracker {
                 if(reward_pool_key=="common"){
                     if(rand(0.0f,1.0f) <= (0.15f+ m_droprate_offset)){
 						ScoredResource@ r = getRandomScoredResource(reward_pool_common);
-                        string c = 
+                        string c =
                             "<command class='create_instance'" +
                             " faction_id='" + 0 + "'" +
                             " instance_class='" + r.m_type + "'" +
@@ -412,7 +421,7 @@ class kill_event : Tracker {
                 else if(reward_pool_key=="uncommon"){
                     if(rand(0.0f,1.0f) <= (0.15f+ m_droprate_offset)){
 						ScoredResource@ r = getRandomScoredResource(reward_pool_uncommon);
-                        string c = 
+                        string c =
                             "<command class='create_instance'" +
                             " faction_id='" + 0 + "'" +
                             " instance_class='" + r.m_type + "'" +
@@ -425,7 +434,7 @@ class kill_event : Tracker {
                 else if(reward_pool_key=="rare"){
                     if(rand(0.0f,1.0f) <= (0.3f+ m_droprate_offset)){
 						ScoredResource@ r = getRandomScoredResource(reward_pool_rare);
-                        string c = 
+                        string c =
                             "<command class='create_instance'" +
                             " faction_id='" + 0 + "'" +
                             " instance_class='" + r.m_type + "'" +
@@ -437,7 +446,7 @@ class kill_event : Tracker {
                 }
                 else if(reward_pool_key=="elite"){
                     ScoredResource@ r = getRandomScoredResource(reward_pool_elite);
-                    string c = 
+                    string c =
                         "<command class='create_instance'" +
                         " faction_id='" + 0 + "'" +
                         " instance_class='" + r.m_type + "'" +
@@ -448,7 +457,7 @@ class kill_event : Tracker {
                 }
                 else if(reward_pool_key=="boss"){
                     ScoredResource@ r = getRandomScoredResource(reward_pool_boss);
-                    string c = 
+                    string c =
                         "<command class='create_instance'" +
                         " faction_id='" + 0 + "'" +
                         " instance_class='" + r.m_type + "'" +
@@ -456,13 +465,13 @@ class kill_event : Tracker {
                         " position='" + dead_pos + "'" +
                         " character_id='" + characterId + "'/>";
                     m_metagame.getComms().send(c);
-                }                
+                }
             }
-            
+
             int playerId = killer.getIntAttribute("player_id");
             if (playerId == -1) return; //下面的代码不计算AI击杀
-            
-            
+
+
             //只查询我方杀敌
             if (!(factionId==0) || !(characterId > 0)) return;
 
@@ -482,6 +491,11 @@ class kill_event : Tracker {
             {
                 kill_score_scale = 2;
             }
+            else if(gk_bolted_rf_blast_proj_list.find(KillerWeaponKey) > -1 && gk_bolted_rf_list.find(c_weaponType) > -1)
+            {
+                kill_score_scale = 2;
+            }
+            // _log("角色ID:"+playerId+" 击杀key:"+KillerWeaponKey+" scale:"+kill_score_scale);
 
             if(reward_pool_key=="boss")
             {
@@ -495,7 +509,7 @@ class kill_event : Tracker {
                 handleKillEventToPlayerInfo(playerId,3 * kill_score_scale);
                 kill_to_heal_scale = 2;
                 notify(m_metagame, "kill streak,elite reward", dictionary(), "misc", playerId, false, "", 1.0);
-            } 
+            }
             else if(point_nerfed_reward.find(solider_name) > -1)
             {
                 if(rand(0.0f,1.0f) <= 0.3f)
@@ -503,18 +517,18 @@ class kill_event : Tracker {
                     handleKillEventToPlayerInfo(playerId,1 * kill_score_scale);
                     //兵蚁 僵尸 这种东西给的积分变少，30%概率给1点积分
                 }
-            }            
+            }
             else if(gk_weapon_hvy_nerfed.find(c_weaponType) > -1)
             {
                 if(rand(0.0f,1.0f) <= 0.5f)
                 {
                     handleKillEventToPlayerInfo(playerId,1 * kill_score_scale);
                     //榴弹发射器和迫击炮击杀小兵的收益降低50%
-                }                
+                }
             }
             else
             {
-                handleKillEventToPlayerInfo(playerId,1 * kill_score_scale);                
+                handleKillEventToPlayerInfo(playerId,1 * kill_score_scale);
             }
 
 
@@ -538,13 +552,13 @@ class kill_event : Tracker {
                 if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1 || gk_bolted_rf_list.find(c_weaponType) > -1)
                 {
                     m_tactic_point_offset+=1;
-                }                  
+                }
                 battleInfo.addTacticPoint(m_tactic_point_offset);
                 m_counter-=10;
                 battleInfo.setKillStreakPointCounter(m_counter);
                 battleInfo.addKillStreakIndex(1);
                 dictionary a;
-                a["%num"] = ""+ m_tactic_point_offset;                
+                a["%num"] = ""+ m_tactic_point_offset;
                 notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
             }
             else if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(2))
@@ -561,13 +575,13 @@ class kill_event : Tracker {
                 if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1 || gk_bolted_rf_list.find(c_weaponType) > -1)
                 {
                     m_tactic_point_offset+=1;
-                }                  
+                }
                 battleInfo.addTacticPoint(m_tactic_point_offset);
                 m_counter-=10;
-                battleInfo.setKillStreakPointCounter(m_counter);   
-                battleInfo.addKillStreakIndex(2);  
+                battleInfo.setKillStreakPointCounter(m_counter);
+                battleInfo.addKillStreakIndex(2);
                 dictionary a;
-                a["%num"] = ""+ m_tactic_point_offset;                
+                a["%num"] = ""+ m_tactic_point_offset;
                 notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
             }
             else if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(3))
@@ -584,13 +598,13 @@ class kill_event : Tracker {
                 if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1 || gk_bolted_rf_list.find(c_weaponType) > -1)
                 {
                     m_tactic_point_offset+=1;
-                }                  
+                }
                 battleInfo.addTacticPoint(m_tactic_point_offset);
                 m_counter-=10;
                 battleInfo.setKillStreakPointCounter(m_counter);
-                battleInfo.addKillStreakIndex(3);       
+                battleInfo.addKillStreakIndex(3);
                 dictionary a;
-                a["%num"] = ""+ m_tactic_point_offset;                
+                a["%num"] = ""+ m_tactic_point_offset;
                 notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
             }
             else if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(4))
@@ -607,13 +621,13 @@ class kill_event : Tracker {
                 if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1 || gk_bolted_rf_list.find(c_weaponType) > -1)
                 {
                     m_tactic_point_offset+=1;
-                }                  
+                }
                 battleInfo.addTacticPoint(m_tactic_point_offset);
                 m_counter-=10;
-                battleInfo.setKillStreakPointCounter(m_counter);  
+                battleInfo.setKillStreakPointCounter(m_counter);
                 battleInfo.addKillStreakIndex(4);
                 dictionary a;
-                a["%num"] = ""+ m_tactic_point_offset;                
+                a["%num"] = ""+ m_tactic_point_offset;
                 notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
             }
             else if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(5))
@@ -630,13 +644,13 @@ class kill_event : Tracker {
                 if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1 || gk_bolted_rf_list.find(c_weaponType) > -1)
                 {
                     m_tactic_point_offset+=1;
-                }                  
+                }
                 battleInfo.addTacticPoint(m_tactic_point_offset);
                 m_counter-=10;
-                battleInfo.setKillStreakPointCounter(m_counter); 
+                battleInfo.setKillStreakPointCounter(m_counter);
                 battleInfo.addKillStreakIndex(5);
                 dictionary a;
-                a["%num"] = ""+ m_tactic_point_offset;                
+                a["%num"] = ""+ m_tactic_point_offset;
                 notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
             }
             else if(m_counter>=10 && m_killstreak_point>50)
@@ -653,16 +667,20 @@ class kill_event : Tracker {
                 if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1 || gk_bolted_rf_list.find(c_weaponType) > -1)
                 {
                     m_tactic_point_offset+=1;
-                }               
+                }
                 battleInfo.addTacticPoint(m_tactic_point_offset);
                 m_counter-=10;
-                battleInfo.setKillStreakPointCounter(m_counter);        
+                battleInfo.setKillStreakPointCounter(m_counter);
                 dictionary a;
-                a["%num"] = ""+ m_tactic_point_offset;                
+                a["%num"] = ""+ m_tactic_point_offset;
                 notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
             }
 
             if(gk_weapon_hg_list.find(KillerWeaponKey)>=0)
+            {
+                reduceAllCallCooldown(playerName,1.0);
+            }
+            else if (gk_hg_blast_proj_list.find(KillerWeaponKey) > -1 && gk_weapon_hg_list.find(c_weaponType) > -1)
             {
                 reduceAllCallCooldown(playerName,1.0);
             }
@@ -700,7 +718,7 @@ class kill_event : Tracker {
                     }
                 }
             }
-            if(c_weaponType=="gkw_m1895mod3_5309.weapon" 
+            if(c_weaponType=="gkw_m1895mod3_5309.weapon"
             || c_weaponType =="gkw_m1895mod3_5309_skill.weapon"
             || c_weaponType =="gkw_m1895mod3_7107.weapon"
             || c_weaponType =="gkw_m1895mod3_7107_skill.weapon"
@@ -747,8 +765,8 @@ class kill_event : Tracker {
                 else if(reward_pool_key=="rare" || reward_pool_key=="elite")
                 {
                     healCharacter(m_metagame,characterId,2);
-                }                
-            }            
+                }
+            }
             else if(startsWith(c_armorType,"tms_t6")){
                 if (c_weaponType=="gkw_hawk97mod3.weapon" || c_weaponType =="gkw_hawk97mod3_5805.weapon")
                 {
@@ -769,7 +787,7 @@ class kill_event : Tracker {
                 {
                     updateHealByKillEvent(characterId,factionId,4,10,"weapon",kill_to_heal_scale,getRecoverVestNum(c_weaponType));
                 }
-            }            
+            }
 
             updateHealByKillEvent(characterId,factionId,int(healOnKillWeaponList[c_weaponType]),10,"weapon",kill_to_heal_scale,getRecoverVestNum(c_weaponType));
 
@@ -837,7 +855,7 @@ class kill_event : Tracker {
                         notify(m_metagame, "Skill - Mosin Nagant LV5", dictionary(), "misc", playerId, false, "", 1.0);
                         addItemInBackpack(m_metagame,characterId,"carry_item","hayha_chip.carry_item");
                         break;
-                    }                        
+                    }
                     default: break;
                 }
                 if (kill_num >= 30)
@@ -913,7 +931,7 @@ class kill_event : Tracker {
             if(SFbossList.find(solider_name)>-1 && characterId > 0){
                 addCustomStatToCharacter(m_metagame,"sfboss_kill",characterId);
             }
-            
+
             int GivenRP = getRPKillReward(solider_name);
             float GivenXP = getXPKillReward(solider_name);
             if(GivenRP>0){
@@ -955,7 +973,7 @@ class kill_event : Tracker {
                 int j = findSkillIndex(scarh_cid,"sniper");
                 if(j >=0){
                     SkillArray[j].m_time-=5.0;
-                }                    
+                }
                 sendFactionMessageKeySaidAsCharacter(m_metagame,0,scarh_cid,"scarh_dogtag_gain",dictionary(),0.9);
             }
         }
@@ -966,47 +984,47 @@ class kill_event : Tracker {
         if(HealOnKill_track.length() > 0) {
             for (int a = HealOnKill_track.length() - 1; a >= 0; a--) {
                 HealOnKill_track[a].m_time -= time;
-                
-                if(HealOnKill_track[a].m_time < 0) {	
+
+                if(HealOnKill_track[a].m_time < 0) {
                     if (HealOnKill_track[a].m_numtime >= 0) {
                         int vestrestore = 0;
                         int current_kills = HealOnKill_track[a].current_kills;
                         int m_killstoheal = HealOnKill_track[a].m_killstoheal;
-                        
+
                         // 向下取整：攒满 m_killstoheal 才回 1 甲，余数保留到下个 tick
                         // 例：7杀 / 3杀回1甲 = 回2甲，余1杀
                         // ⚠️ 不要改成 (kills + m_killstoheal - 1) / m_killstoheal
                         //    那是向上取整，会导致 1 杀即回甲（历史 bug，见 Issue #84）
                         while(HealOnKill_track[a].current_kills>=HealOnKill_track[a].m_killstoheal){
                             vestrestore += HealOnKill_track[a].m_vestRecovery;
-                            HealOnKill_track[a].current_kills -= HealOnKill_track[a].m_killstoheal;                            
+                            HealOnKill_track[a].current_kills -= HealOnKill_track[a].m_killstoheal;
                         }
                         if(HealOnKill_track[a].current_kills<0){
                             HealOnKill_track[a].current_kills = 0;
                         }
-                        
+
                         if(vestrestore > 0) {
                             // 发送回甲指令
-                            string c = 
+                            string c =
                                 "<command class='update_inventory'" +
                                 " untransform_count='"+ vestrestore +"'" +
                                 " character_id='" + HealOnKill_track[a].m_characterId + "' />";
                             m_metagame.getComms().send(c);
-                            
+
                             // ✅ 回甲成功后才重置时间（仅限 weapon）【弃用】
                             // if(HealOnKill_track[a].m_type == "weapon") {
                             //     HealOnKill_track[a].m_numtime = HealOnKill_track[a].m_timeaddafterkill / HOK_TICK_INTERVAL;
                             // }
                         }
                     }
-                    
+
                     HealOnKill_track[a].m_numtime--;
                     HealOnKill_track[a].m_time = HOK_TICK_INTERVAL;
-                    
+
                     if (HealOnKill_track[a].m_numtime < 0) {
                         HealOnKill_track.removeAt(a);
                     }
-                }			
+                }
             }
         }
     }
@@ -1042,7 +1060,7 @@ class HealOnKill_tracker {
     string m_type;
     int m_timeaddafterkill;  // ✅ 新增：存储续命时长
     int m_vestRecovery = 1; //每次回甲数量
-    
+
 
     // initkilladd: 首次击杀计入的杀数（受 kill_to_heal_scale 影响，如boss 首杀算 5 杀）
     // inittimeadd: 窗口期秒数，内部转换为 tick 数（÷ HOK_TICK_INTERVAL）
@@ -1054,7 +1072,7 @@ class HealOnKill_tracker {
         m_type = type;
         m_timeaddafterkill = inittimeadd;  // ✅ 保存参数
         m_vestRecovery = vestrecover;
-        
+
         // 初始化时间
         if(type == "weapon") {
             m_numtime = inittimeadd / HOK_TICK_INTERVAL;
@@ -1063,14 +1081,14 @@ class HealOnKill_tracker {
             // if(m_numtime >= HOK_VEST_MAX_TICKS) m_numtime = HOK_VEST_MAX_TICKS;
         }
     }
-    
+
     void add(int killadd, int timeaddafterkill, string type) {
         current_kills += killadd;
         m_timeaddafterkill = timeaddafterkill;  // ✅ 更新续命时长
 
         // 改为造成击杀即可刷新
         m_numtime = m_timeaddafterkill / HOK_TICK_INTERVAL;
-        
+
         // ✅ vest 类型仍然累加时间（行为不变）【弃用】
         // if(type == "vest") {
         //     m_numtime += timeaddafterkill / (HOK_TICK_INTERVAL * HOK_VEST_DECAY_FACTOR);
@@ -1091,10 +1109,10 @@ class kill_count{
     void add(){
         m_killnum++;
     }
-    
+
     void add(int num){
         m_killnum += num;
-    }    
+    }
 }
 
 int findSkillIndex(int cId,string key){
