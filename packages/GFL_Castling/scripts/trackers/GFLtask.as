@@ -180,6 +180,7 @@ class DelayProjectileSet :Task{
     protected string m_key;
 	protected float m_timeLeft;
 	protected Vector3 m_pos;
+	protected bool m_alive_check;
 
 	DelayProjectileSet(Metagame@ metagame, float time, int cId,int fId,string key,Vector3 pos) {
 		@m_metagame = metagame;
@@ -188,6 +189,17 @@ class DelayProjectileSet :Task{
 		m_faction_id =fId;
 		m_key=key;
 		m_pos=pos;
+		m_alive_check=false;
+	}
+
+	DelayProjectileSet(Metagame@ metagame, float time, int cId,int fId,string key,Vector3 pos, bool alive_check) {
+		@m_metagame = metagame;
+		m_time = time;
+		m_character_id = cId;
+		m_faction_id =fId;
+		m_key=key;
+		m_pos=pos;
+		m_alive_check=alive_check;
 	}
 
 	void start() {
@@ -198,6 +210,10 @@ class DelayProjectileSet :Task{
 		m_timeLeft -= time;
 		if (m_timeLeft < 0)
 		{
+			if (m_alive_check) {
+				const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
+            	if (checkCharacterDead(character)) return;
+			}
 			string c =
 				"<command class='create_instance'" +
 				" faction_id='"+ m_faction_id +"'" +
@@ -368,6 +384,8 @@ class DelayC2PProjectileSet_H :Task{
 	protected Vector3 m_pos;
     protected float m_gspeed;
     protected float m_height;
+	protected string m_sound;
+	protected float m_sound_volume;
 
 	DelayC2PProjectileSet_H(Metagame@ metagame, float time, int cId,int fId,string key,Vector3 pos,float gspeed,float height) {
 		@m_metagame = metagame;
@@ -378,6 +396,21 @@ class DelayC2PProjectileSet_H :Task{
 		m_pos=pos;
         m_gspeed = gspeed;
         m_height= height;
+		m_sound = "";
+		m_sound_volume = 0;
+	}
+
+	DelayC2PProjectileSet_H(Metagame@ metagame, float time, int cId,int fId,string key,Vector3 pos,float gspeed,float height,string sound,float sound_volume) {
+		@m_metagame = metagame;
+		m_time = time;
+		m_character_id = cId;
+		m_faction_id =fId;
+		m_key=key;
+		m_pos=pos;
+        m_gspeed = gspeed;
+        m_height= height;
+		m_sound = sound;
+		m_sound_volume = sound_volume;
 	}
 
 	void start() {
@@ -392,6 +425,9 @@ class DelayC2PProjectileSet_H :Task{
             if (checkCharacterDead(character)) return;
             Vector3 c_pos = getCharacterPosition(character);
             c_pos=c_pos.add(Vector3(0,1.5,0));
+			if (m_sound != "") {
+				playSoundAtLocation(m_metagame,m_sound,m_faction_id,c_pos,m_sound_volume);
+			}
             CreateProjectile_H(m_metagame,c_pos,m_pos,m_key,m_character_id,m_faction_id,m_gspeed,m_height);
 		}
 	}
