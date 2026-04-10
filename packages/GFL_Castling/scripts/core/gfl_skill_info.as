@@ -193,6 +193,7 @@ dictionary gameSkillIndex = {
 
         {"evo3_skill",62},
 
+        //强无敌空投，暂时弃用
         {"manticore_summon",63},
 
         {"spawn_gager_knight",64},
