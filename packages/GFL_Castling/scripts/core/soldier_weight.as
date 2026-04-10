@@ -10,6 +10,7 @@ const array<SoldierInfo@> sf_eazymode_weight =
     SoldierInfo("sf_guard",1.5),
     SoldierInfo("sf_guard_swap",0.1),
     SoldierInfo("sf_jaeger",1.0),
+    SoldierInfo("sf_jaeger_swap",0.4),
     SoldierInfo("sf_striker",1.5),
     SoldierInfo("sf_striker_swap",0.5),
     SoldierInfo("sfw_nemeum",0.2),
@@ -51,6 +52,8 @@ const array<SoldierInfo@> paradeus_eazymode_weight =
     SoldierInfo("para_commander",0.2),
     SoldierInfo("para_police",1.0),
     SoldierInfo("para_hammer",0.1),
+    SoldierInfo("parw_dog",0.1),
+    SoldierInfo("parw_thrower",0.2),
     SoldierInfo("para_grenadier",0.1),
     SoldierInfo("para_defender",0.05),
     SoldierInfo("alina",0.01),
@@ -66,7 +69,8 @@ const array<SoldierInfo@> paradeus_eazymode_weight =
     SoldierInfo("infected",0.0),
     SoldierInfo("smasher",0.1),
     SoldierInfo("Paradeus_doppelsoldner",0.01),
-    SoldierInfo("Paradeus_roarer",0.01)
+    SoldierInfo("Paradeus_roarer",0.01),
+    SoldierInfo("Thunder",0.01)
 };
 
 const array<SoldierInfo@> kcco_eazymode_weight =
@@ -90,6 +94,105 @@ const array<SoldierInfo@> kcco_eazymode_weight =
     SoldierInfo("kcco_quartz_rangerl",0.1),
     SoldierInfo("kcco_zircon_squadleader",0.01),
     SoldierInfo("kcco_ar_human_tel",0.05)
+};
+
+const array<SoldierInfo@> sf_hardmode_weight =
+{
+    SoldierInfo("sf_vespid",2.0),
+    SoldierInfo("sf_vespid_swap",2.0),
+    SoldierInfo("sf_vespid_vehicle_user",0.8),
+    SoldierInfo("sf_ripper",2.0),
+    SoldierInfo("sf_ripper_swap",2.0),
+    SoldierInfo("sf_guard",1.5),
+    SoldierInfo("sf_guard_swap",1.5),
+    SoldierInfo("sf_jaeger",1.5),
+    SoldierInfo("sf_jaeger_swap",1.5),
+    SoldierInfo("sf_striker",1.5),
+    SoldierInfo("sf_striker_swap",1.5),
+    SoldierInfo("sfw_nemeum",1.0),
+    SoldierInfo("sfw_nemeum_swap",0.75),
+    SoldierInfo("sf_jaguar",0.75),
+    SoldierInfo("sfw_prowler",1.0),
+    SoldierInfo("sfw_prowler_swap",1.0),
+    SoldierInfo("sfw_aegis",0.5),
+    SoldierInfo("sfw_aegis_swap",0.5),
+    SoldierInfo("sfw_dragoon",0.5),
+    SoldierInfo("sfw_dragoon",0.5),
+    SoldierInfo("sf_Brute",0.5),
+    SoldierInfo("sf_Brute_swap",0.5),
+    SoldierInfo("sfw_hunter",0.2),
+    SoldierInfo("sfw_architect",0.2),
+    SoldierInfo("sfw_Intruder",0.2),
+    SoldierInfo("sfw_Dreamer",0.2),
+    SoldierInfo("sfw_Alchemist",0.2),
+    SoldierInfo("sfw_Gager",0.2),
+    SoldierInfo("sfw_Excutioner-Wind_rose",0.1),
+    SoldierInfo("sfw_Excutioner-Queen_of_the_Moon",0.1),
+    SoldierInfo("sfw_M16A1",0.2),
+    SoldierInfo("sfw_Agent",0.2),
+    SoldierInfo("sfw_Destroyer",0.2),
+    SoldierInfo("sfw_Weaver",0.2),
+    SoldierInfo("sfw_Justice",0.2),
+    SoldierInfo("sfw_Scarecrow",0.2),
+    SoldierInfo("sf_manticore",0.5),
+    SoldierInfo("sf_dinergate",0.2),
+    SoldierInfo("sf_tarantula",0.2),
+    SoldierInfo("sf_scouts",1.0),
+    SoldierInfo("sf_goliath",0.1),
+    SoldierInfo("sf_goliath_plus",0.05)
+};
+
+const array<SoldierInfo@> paradeus_hardmode_weight =
+{
+    SoldierInfo("para_strelet",3.0),
+    SoldierInfo("para_streletplus",3.0),
+    SoldierInfo("para_rodelero",1.0),
+    SoldierInfo("para_commander",0.5),
+    SoldierInfo("para_police",0.5),
+    SoldierInfo("para_hammer",0.5),
+    SoldierInfo("parw_dog",0.5),
+    SoldierInfo("parw_thrower",0.5),
+    SoldierInfo("para_grenadier",1.0),
+    SoldierInfo("para_defender",0.75),
+    SoldierInfo("alina",0.2),
+    SoldierInfo("teal",0.1),
+    SoldierInfo("eagleyes",0.25),
+    SoldierInfo("vanguard",0.25),
+    SoldierInfo("aileron",0.25),
+    SoldierInfo("wrath",0.25),
+    SoldierInfo("Nimogen",0.1),
+    SoldierInfo("Narciss",0.1),
+    SoldierInfo("tareus",0.05),
+    SoldierInfo("Adeline",0.2),
+    SoldierInfo("infected",0.0),
+    SoldierInfo("smasher",0.3),
+    SoldierInfo("Paradeus_doppelsoldner",0.5),
+    SoldierInfo("Paradeus_roarer",0.5),
+    SoldierInfo("Paradeus_Hannibal",0.1),
+    SoldierInfo("Thunder",0.5)
+};
+
+const array<SoldierInfo@> kcco_hardmode_weight =
+{
+    SoldierInfo("kcco_ar",3.0),
+    SoldierInfo("kcco_ar_human",0.5),
+    SoldierInfo("kcco_ar_human_vehicle",1.5),
+    SoldierInfo("kcco_ar_human_elite",2.5),
+    SoldierInfo("kcco_sg",2.0),
+    SoldierInfo("kcco_mg",1.5),
+    SoldierInfo("kcco_talos",1.0),
+    SoldierInfo("kcco_dog",1.5),
+    SoldierInfo("kcco_archer",1.0),
+    SoldierInfo("kcco_cerynitis",2.0),
+    SoldierInfo("kcco_cerynitis_swap",1.5),
+    SoldierInfo("kcco_aegis",1.0),
+    SoldierInfo("kcco_dactyl",0.5),
+    SoldierInfo("kcco_Hydra",0.5),
+    SoldierInfo("kcco_teslatrooper",0.5),
+    SoldierInfo("kcco_human_sniper",0.25),
+    SoldierInfo("kcco_quartz_rangerl",0.25),
+    SoldierInfo("kcco_zircon_squadleader",0.25),
+    SoldierInfo("kcco_ar_human_tel",0.5)
 };
 
 

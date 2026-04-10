@@ -396,6 +396,26 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
                 else continue;
             }
         }
+		else if(difficulty == 3) //hard
+        {   
+            for (uint i = 0; i < m_factions.size(); ++i) {
+                const FactionConfig@ config = m_factions[i].m_config;
+
+                if (config.m_file == "gk.xml") {
+                    continue;
+                }
+                else if(config.m_file == "sf.xml"){
+                    setSpawnScoresForFaction(this,i,sf_hardmode_weight);
+                }
+                else if(config.m_file == "kcco.xml"){
+                    setSpawnScoresForFaction(this,i,kcco_hardmode_weight);
+                }
+                else if(config.m_file == "paradeus.xml"){
+                    setSpawnScoresForFaction(this,i,paradeus_hardmode_weight);
+                }
+                else continue;
+            }
+        }
     }
 
 

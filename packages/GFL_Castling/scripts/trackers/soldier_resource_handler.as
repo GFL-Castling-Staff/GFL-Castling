@@ -33,8 +33,8 @@ class SoldierResourceHandler : Tracker {
                     continue;
                 }
                 else if(f.m_config.m_file == "sf.xml"){
-                    changeSoldierGroupResource(m_metagame,i,sf_vespid_resource,true,"sf_vespid",true);
-                    _log("starting 铁血改改改改", 1);
+                    // changeSoldierGroupResource(m_metagame,i,sf_vespid_resource,true,"sf_vespid",true);
+                    // _log("starting 铁血改改改改", 1);
                 }
                 else if(f.m_config.m_file == "kcco.xml"){
                 }
