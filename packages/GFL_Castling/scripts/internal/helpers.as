@@ -527,6 +527,7 @@ string normalizeWeaponKey(string key) {
 		{"gkw_medical_agl_hg.weapon", "gkw_gsh18mod3.weapon"},
 		{"gkw_medical_agl_hg_523.weapon", "gkw_gsh18mod3_523.weapon"},
 		{"ff_architect_1.weapon", "ff_architect.weapon"},
+		{"ff_architect_nvw_1.weapon", "ff_architect_nvw.weapon"},
 		{"ff_Intruder_1.weapon", "ff_Intruder.weapon"},
 		{"ff_gager_1.weapon", "ff_gager.weapon"},
 		{"ff_weaver_1.weapon", "ff_weaver.weapon"},
