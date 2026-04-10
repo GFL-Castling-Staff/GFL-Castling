@@ -3440,3 +3440,105 @@ class Event_call_warrior_fairy_apache : event_call_task_hasMarker {
 		}
 	}
 }
+
+// M14MOD3 火力专注 Task
+// 负责：管理技能持续时间，到期后计算冷却并清理状态
+class M14SkillActiveTask : Task {
+    protected GameMode@ m_metagame;
+    protected float m_timeLeft;
+    int m_characterId;
+    int m_playerId;
+    int m_factionId;
+    SkillModifer@ m_modifer;
+
+    // 技能状态（kill_event 通过引用直接修改 m_ammo）
+    int m_ammo = 8;
+    bool m_ended = false;
+
+    M14SkillActiveTask(GameMode@ metagame, float duration, 
+                       int cId, int pId, int fId, 
+                       SkillModifer@ mod) {
+        @m_metagame = metagame;
+        m_timeLeft = duration;
+        m_characterId = cId;
+        m_playerId = pId;
+        m_factionId = fId;
+        @m_modifer = @mod;
+    }
+
+    void start() {
+        // 技能激活提示
+        notify(m_metagame, "Skill - M14 Activate", dictionary(), 
+               "misc", m_playerId, false, "", 1.0);
+    }
+
+    void update(float time) {
+        m_timeLeft -= time;
+        // 弹药耗尽由 kill_event 设置 m_ended = true
+    }
+
+    bool hasEnded() const {
+        return m_ended || m_timeLeft < 0.0;
+    }
+
+    // 由 kill_event 在连锁弹命中时调用
+    void consumeAmmo() {
+        m_ammo--;
+        if (m_ammo <= 0) {
+            m_ended = true;
+        }
+    }
+
+    // 返回技能结束时应设置的冷却时间
+    float getCooldownTime() {
+		if (m_ammo <= 0) {
+			// 8发全部用完，奖励缩短冷却
+			return 15.0;
+		}
+		// 未用完：30 - 剩余弹药 * 3
+		return max(30.0 - (m_ammo * 3.0), 0.1);
+	}
+
+    // 是否达成火箭弹奖励条件
+    bool isRocketEarned() {
+        return m_ammo <= 0;
+    }
+}
+
+// M14 技能结束处理 Task
+class M14SkillEndTask : Task {
+    protected GameMode@ m_metagame;
+    protected M14SkillActiveTask@ m_skillState;
+    protected SkillModifer@ m_modifer;
+
+    M14SkillEndTask(GameMode@ metagame, M14SkillActiveTask@ state,
+                    SkillModifer@ mod) {
+        @m_metagame = metagame;
+        @m_skillState = @state;
+        @m_modifer = @mod;
+    }
+
+	void start() {
+		// 从全局数组中移除
+		for (int i = m14_active_tasks.length() - 1; i >= 0; i--) {
+			if (m14_active_tasks[i] is m_skillState) {
+				m14_active_tasks.removeAt(i);
+				break;
+			}
+		}
+		// 火箭弹奖励
+		if (m_skillState.isRocketEarned()) {
+			m14_rocket_reward_players.insertLast(m_skillState.m_playerId);
+			notify(m_metagame, "Skill - M14 Rocket Ready", dictionary(),
+				"misc", m_skillState.m_playerId, false, "", 1.0);
+		}
+		// 将冷却请求加入待处理队列
+		m14_pending_cooldowns.insertLast(
+			M14PendingCooldown(m_skillState.m_characterId, 
+							m_skillState.getCooldownTime(), 
+							m_modifer));
+	}
+
+    void update(float time) {}
+    bool hasEnded() const { return true; } // 立即结束
+}
