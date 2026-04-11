@@ -3608,6 +3608,36 @@ class DOTEffectTask : RepeatEffectTask {
     }
 }
 
+// HK416 寄生榴弹 Task，对锁定的敌人列表逐个释放延迟爆炸，共 9 次
+class HK416SkillTask : RepeatEffectTask {
+    protected array<const XmlElement@> m_affected;
+
+    HK416SkillTask(GameMode@ metagame, int cId, int fId,
+                   Vector3 pos, array<const XmlElement@> affected) {
+        super(metagame, cId, fId, pos, 0.5, 9);
+        m_affected = affected;
+    }
+
+    void excuteEffect() {
+        for (uint b = 0; b < m_affected.length(); b++) {
+            int luckyoneid = m_affected[b].getIntAttribute("id");
+            const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+            if (luckyoneC !is null) {
+                Vector3 luckyoneposV = stringToVector3(luckyoneC.getStringAttribute("position"));
+                luckyoneposV = luckyoneposV.add(Vector3(0, 0.5, 0));
+                string c =
+                    "<command class='create_instance'" +
+                    " faction_id='" + m_factionId + "'" +
+                    " instance_class='grenade'" +
+                    " instance_key='firenade_sub_416.projectile'" +
+                    " position='" + luckyoneposV.toString() + "'" +
+                    " character_id='" + m_characterId + "' />";
+                m_metagame.getComms().send(c);
+            }
+        }
+    }
+}
+
 // XM8 技能 Task，每秒在附近随机选一个敌人生成爆炸弹头，共 8 次
 class XM8SkillTask : RepeatEffectTask {
 

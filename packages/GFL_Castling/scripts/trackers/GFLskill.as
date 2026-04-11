@@ -22,8 +22,7 @@ class GFLskill : Tracker {
 		@m_metagame = @metagame;
 	}
 
-    protected array<HK416_tracker@> HK416_track;
-	protected array<UZI_tracker@> UZI_track;
+    protected array<UZI_tracker@> UZI_track;
 	protected array<Javelin_lister@> Javelin_list;
 
 
@@ -213,7 +212,8 @@ class GFLskill : Tracker {
 							}
 						}
 						if (affectedCharacter.length()>0){
-							HK416_track.insertLast(HK416_tracker(characterId,factionid,Pos_40mm,affectedCharacter));
+							TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+							tasker.add(HK416SkillTask(m_metagame, characterId, factionid, Pos_40mm, affectedCharacter));
 						}
 						string c =
 							"<command class='create_instance'" +
@@ -1868,39 +1868,6 @@ class GFLskill : Tracker {
 
 
 	void update(float time) {
-		if(HK416_track.length()>0){
-			for (int a = HK416_track.length() - 1; a >= 0; a--) {
-				HK416_track[a].m_time-=time;
-				if(HK416_track[a].m_time<0){
-					if (HK416_track[a].m_affected.length()>0){
-						for(uint b=0;b<HK416_track[a].m_affected.length();b++){
-							int luckyoneid = HK416_track[a].m_affected[b].getIntAttribute("id");
-							const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
-							if (luckyoneC !is null ){
-								string luckyonepos = luckyoneC.getStringAttribute("position");
-								Vector3 luckyoneposV = stringToVector3(luckyonepos);
-								Vector3 height = Vector3(0,0.5,0);
-								luckyoneposV = luckyoneposV.add(height);
-								luckyonepos = luckyoneposV.toString();
-								string c =
-									"<command class='create_instance'" +
-									" faction_id='"+ HK416_track[a].m_factionid +"'" +
-									" instance_class='grenade'" +
-									" instance_key='firenade_sub_416.projectile'" +
-									" position='" + luckyonepos + "'"+
-									" character_id='" + HK416_track[a].m_characterId + "' />";
-								m_metagame.getComms().send(c);
-							}
-						}
-					}
-					HK416_track[a].m_numtime--;
-					HK416_track[a].m_time=0.5;
-					if (HK416_track[a].m_numtime<0){
-						HK416_track.removeAt(a);
-					}
-				}
-			}
-		}
 		if(Javelin_list.length()>0){
 			for (int a = Javelin_list.length() - 1; a >= 0; a--) {
 				Javelin_list[a].m_time-=time;

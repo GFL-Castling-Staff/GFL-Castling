@@ -210,21 +210,6 @@ dictionary gameSkillIndex = {
 };
 
 
-class HK416_tracker{
-    int m_characterId;
-	float m_time=0.5;
-	int m_numtime=8;
-	int m_factionid;
-	array<const XmlElement@> m_affected;
-	Vector3 m_pos;
-	HK416_tracker(int characterId,int factionid,Vector3 pos,array<const XmlElement@> affected)
-	{
-		m_characterId = characterId;
-		m_factionid= factionid;
-		m_pos= pos;
-		m_affected= affected;
-	}
-}
 
 class UZI_tracker{
     int m_characterId;
