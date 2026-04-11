@@ -22,8 +22,7 @@ class GFLskill : Tracker {
 		@m_metagame = @metagame;
 	}
 
-    protected array<UZI_tracker@> UZI_track;
-	protected array<Javelin_lister@> Javelin_list;
+    protected array<Javelin_lister@> Javelin_list;
 
 
 	// --------------------------------------------
@@ -975,7 +974,8 @@ class GFLskill : Tracker {
 						}
 					}
 					if (affectedCharacter.length()>0){
-						UZI_track.insertLast(UZI_tracker(characterId,factionid,grenade_pos,affectedCharacter));
+						TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+						tasker.add(UZISkillTask(m_metagame, characterId, factionid, grenade_pos, affectedCharacter));
 					}
 				}
 				break;
@@ -1876,39 +1876,6 @@ class GFLskill : Tracker {
 					Javelin_list[a].m_time=1;
 					if (Javelin_list[a].m_numtime<1){
 						Javelin_list.removeAt(a);
-					}
-				}
-			}
-		}
-		if(UZI_track.length()>0){
-			for (int a = UZI_track.length() - 1; a >= 0; a--) {
-				UZI_track[a].m_time-=time;
-				if(UZI_track[a].m_time<0){
-					if (UZI_track[a].m_affected.length()>0){
-						for(uint b=0;b<UZI_track[a].m_affected.length();b++){
-							int luckyoneid = UZI_track[a].m_affected[b].getIntAttribute("id");
-							const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
-							if (luckyoneC !is null ){
-								string luckyonepos = luckyoneC.getStringAttribute("position");
-								Vector3 luckyoneposV = stringToVector3(luckyonepos);
-								Vector3 height = Vector3(0,0.5,0);
-								luckyoneposV = luckyoneposV.add(height);
-								luckyonepos = luckyoneposV.toString();
-								string c =
-									"<command class='create_instance'" +
-									" faction_id='"+ UZI_track[a].m_factionid +"'" +
-									" instance_class='grenade'" +
-									" instance_key='firenade_sub_uzi.projectile'" +
-									" position='" + luckyonepos + "'"+
-									" character_id='" + UZI_track[a].m_characterId + "' />";
-								m_metagame.getComms().send(c);
-							}
-						}
-					}
-					UZI_track[a].m_numtime--;
-					UZI_track[a].m_time=1.5;
-					if (UZI_track[a].m_numtime<0){
-						UZI_track.removeAt(a);
 					}
 				}
 			}

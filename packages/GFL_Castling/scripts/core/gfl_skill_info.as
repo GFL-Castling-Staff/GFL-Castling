@@ -211,21 +211,6 @@ dictionary gameSkillIndex = {
 
 
 
-class UZI_tracker{
-    int m_characterId;
-	float m_time=2.0;
-	int m_numtime=2;
-	int m_factionid;
-	array<const XmlElement@> m_affected;
-	Vector3 m_pos;
-	UZI_tracker(int characterId,int factionid,Vector3 pos,array<const XmlElement@> affected)
-	{
-		m_characterId = characterId;
-		m_factionid= factionid;
-		m_pos= pos;
-		m_affected= affected;
-	}
-}
 
 class Javelin_lister{
     int m_characterId;

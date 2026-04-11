@@ -3638,6 +3638,41 @@ class HK416SkillTask : RepeatEffectTask {
     }
 }
 
+// UZI MOD3 燃烧弹追踪 Task，对锁定的敌人列表逐个投掷燃烧弹，共 3 次
+// 初始等待 2.0s，后续每次间隔 1.5s
+class UZISkillTask : RepeatEffectTask {
+    protected array<const XmlElement@> m_affected;
+
+    UZISkillTask(GameMode@ metagame, int cId, int fId,
+                 Vector3 pos, array<const XmlElement@> affected) {
+        super(metagame, cId, fId, pos, 1.5, 3);
+        m_affected = affected;
+    }
+
+    void start() {
+        m_timeLeft = 2.0; // 初始等待略长于后续间隔，与原 UZI_tracker 行为一致
+    }
+
+    void excuteEffect() {
+        for (uint b = 0; b < m_affected.length(); b++) {
+            int luckyoneid = m_affected[b].getIntAttribute("id");
+            const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+            if (luckyoneC !is null) {
+                Vector3 luckyoneposV = stringToVector3(luckyoneC.getStringAttribute("position"));
+                luckyoneposV = luckyoneposV.add(Vector3(0, 0.5, 0));
+                string c =
+                    "<command class='create_instance'" +
+                    " faction_id='" + m_factionId + "'" +
+                    " instance_class='grenade'" +
+                    " instance_key='firenade_sub_uzi.projectile'" +
+                    " position='" + luckyoneposV.toString() + "'" +
+                    " character_id='" + m_characterId + "' />";
+                m_metagame.getComms().send(c);
+            }
+        }
+    }
+}
+
 // XM8 技能 Task，每秒在附近随机选一个敌人生成爆炸弹头，共 8 次
 class XM8SkillTask : RepeatEffectTask {
 
