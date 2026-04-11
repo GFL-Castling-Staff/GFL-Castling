@@ -949,12 +949,14 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "para_heal_skill.projectile", "projectile", 0);			 						 						
 		} else if (checkCommand(message,"givetestweapon")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","ff_Intruder.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","weather_lightning_storm_1.projectile");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","weather_lightning_storm_1.projectile");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","weather_lightning_storm_1.projectile");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","weather_lightning_storm_1.projectile");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"carry_item","black_card.carry_item");
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_xm8.weapon");
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_xm8_mod3.weapon");
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_hk416.weapon");
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_hk416mod3.weapon");
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_uzi.weapon");
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_uzimod3.weapon");
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_m14mod3.weapon");
+			spawnInstanceNearPlayer(senderId, "elenusis_acid_bomb_spawn.projectile", "projectile", 0);	
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_fedorov.weapon");
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_ump45.weapon");
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_ump45mod3.weapon");			
