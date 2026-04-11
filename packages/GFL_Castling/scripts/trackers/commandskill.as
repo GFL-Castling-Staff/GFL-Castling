@@ -5078,7 +5078,11 @@ class CommandSkill : Tracker {
 
         // 防止重复激活
         for (uint i = 0; i < m14_active_tasks.length(); i++) {
-            if (m14_active_tasks[i].m_characterId == characterId) return;
+            if (m14_active_tasks[i].m_characterId == characterId)
+            {
+                addCooldown("M14MOD3",3,characterId,modifer);
+                return;
+            }
         }
 
         // 播放语音
