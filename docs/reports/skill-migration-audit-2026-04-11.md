@@ -1,32 +1,41 @@
 # 技能系统迁移盘点
 
-日期：2026-04-11
+日期：2026-04-12
+
+> 说明：该文件沿用原报告路径，但内容已按当前代码现状更新。旧版 2026-04-11 盘点中关于 Javelin 未迁移、`GFLskill.as` 仍依赖 Javelin `update()` 的结论已经失效。
 
 ## 目标
 
-本文档用于盘点当前技能系统迁移的真实落地状态，重点核对以下几条结论是否已经在代码中体现：
+确认技能系统迁移在当前代码中的真实落地状态，并指出仍然存在的文档偏差与剩余技术债。
 
-1. M14 是否已经完成状态归位。
-2. `RepeatEffectTask` 是否已经建立。
-3. DOT、XM8、HK416、UZI 是否已经迁移到 Task。
-4. `GFLskill.as` 是否还保留旧式手动状态。
-5. 当前剩余技术债务主要集中在哪里。
+重点核对：
+
+1. `M14` 是否已经完成状态归位
+2. `RepeatEffectTask` 是否已经稳定落地
+3. `DOT / XM8 / HK416 / UZI` 是否已经迁移到 Task
+4. `Javelin` 是否还属于 `GFLskill.as` 的旧式残留
+5. `event_system.as` 是否已经整体迁移出旧式事件数组
 
 ## 结论概览
 
-当前迁移状态可以概括为：
+当前状态可以概括为：
 
-- M14 状态归位：已落地
-- `RepeatEffectTask` 抽象：已落地
-- DOT / XM8 / HK416 / UZI 迁移：已落地
-- `GFLskill.as` 旧式 `update()`：仍保留，但已大幅收缩
-- 剩余明确未迁移对象：Javelin
+- `M14` 状态归位：已落地
+- `RepeatEffectTask`：已落地
+- `DOT / XM8 / HK416 / UZI`：已落地
+- `Javelin`：已从 `GFLskill.as` 中拆出，迁移为独立 `javelin_tracker.as`
+- `GFLskill.as`：`update(float time)` 仍保留生命周期接口，但函数体已为空
+- `event_system.as`：未完成整体迁移，仍保留 `GFL_event_array + update()` 事件队列骨架
 
-因此，项目当前已经跨过“迁移方向不明确”的阶段，进入“只剩少数旧模式收尾和分发层瘦身”的阶段。
+因此，当前真正需要收尾的重点已经不再是 `Javelin`，而是：
 
-## 已落地项
+1. 文档与提示稿的过期描述清理
+2. `event_system.as` 的旧式事件队列收敛
+3. 分发层继续瘦身
 
-### 1. M14 已完成独立 Tracker 化
+## 已落地项目
+
+### 1. M14 已完成独立 Tracker 归位
 
 代码证据：
 
@@ -36,21 +45,8 @@
 当前状态：
 
 - 已存在独立的 `M14SkillTracker`
-- 已存在全局引用 `g_m14Tracker`
-- `m14_active_tasks`
-- `m14_rocket_reward_players`
-- `m14_pending_cooldowns`
-
-以上状态已经集中在 `m14_skill_tracker.as` 中管理，而不再散落在 `commandskill.as` 顶部。
-
-同时，`commandskill.as` 中已经改为通过 `g_m14Tracker` 调用：
-
-- `hasRocketReward`
-- `consumeRocketReward`
-- `isActive`
-- `activate`
-
-这说明 M14 的状态归属和入口边界已经明显收敛。
+- `commandskill.as` 已通过 `g_m14Tracker` 调用 M14 相关接口
+- `CLAUDE.md` 中“`commandskill.as` 仍持有 M14 全局状态”“`kill_event.as` 仍待抽离 M14 逻辑”的描述已经过期
 
 ### 2. RepeatEffectTask 已建立
 
@@ -61,141 +57,150 @@
 当前状态：
 
 - 已存在 `RepeatEffectTask`
-- 已建立基于该基类的多个技能 Task
-
-这说明“重复效果统一抽象”的路线不再停留在文档层，而是已经成为代码中的公共模式。
+- 已存在基于该基类的多个技能 Task
 
 ### 3. DOT / XM8 / HK416 / UZI 已迁移到 Task
 
 代码证据：
 
 - `packages/GFL_Castling/scripts/trackers/GFLtask.as`
+- `packages/GFL_Castling/scripts/trackers/GFLskill.as`
 
-当前已存在：
+当前状态：
 
 - `DOTEffectTask`
 - `HK416SkillTask`
 - `UZISkillTask`
 - `XM8SkillTask`
 
-这与迁移文档中的优先级顺序一致，说明第一批重复模式技能已经完成迁移。
+均已在代码中可见，且 `GFLskill.as` 中对应 case 已改为创建 Task。
 
-### 4. gfl_skill_info.as 已大幅瘦身
+### 4. Javelin 已迁移为独立 Tracker
 
 代码证据：
 
-- `packages/GFL_Castling/scripts/core/gfl_skill_info.as`
+- `packages/GFL_Castling/scripts/trackers/javelin_tracker.as`
+- `packages/GFL_Castling/scripts/trackers/GFLskill.as`
 
 当前状态：
 
-- 文件主要保留 `gameSkillIndex`
-- 旧式 tracker 类基本已移除
-- 目前仍可见的旧结构主要是 `Javelin_lister`
+- `GFLskill.as` 已 `#include "javelin_tracker.as"`
+- passive case 10-13 已改为转发到：
+  - `g_javelinTracker.beginLockForAi(event)`
+  - `g_javelinTracker.beginLockForPlayer(event)`
+  - `g_javelinTracker.handleUprise(event)`
+  - `g_javelinTracker.handleStrike(event)`
+- `gfl_skill_info.as` 中已不存在 `Javelin_lister`
+- `GFLskill.as::update(float time)` 已为空，不再承担 Javelin 状态维护
 
-这说明之前“tracker 定义散落在 gfl_skill_info.as” 的问题已经基本被解决。
+这说明 `Javelin` 已经不再是 `GFLskill.as` 的旧式残留，而是独立管理的专用 Tracker。
 
 ## 仍然存在的旧模式
 
-### 1. Javelin 仍然依赖手动状态数组
+### 1. event_system.as 仍保留旧式事件数组骨架
 
 代码证据：
 
-- `packages/GFL_Castling/scripts/trackers/GFLskill.as`
-- `packages/GFL_Castling/scripts/core/gfl_skill_info.as`
+- `packages/GFL_Castling/scripts/trackers/event_system.as`
+- `packages/GFL_Castling/scripts/trackers/call_event_handler.as`
 
-当前仍存在：
+当前仍可见：
 
-- `protected array<Javelin_lister@> Javelin_list;`
-- `Javelin_list.insertLast(...)`
-- `Javelin_list.removeAt(...)`
-- `GFLskill.as::update(float time)` 中对 `Javelin_list` 的手动 tick
-- `gfl_skill_info.as` 中仍保留 `class Javelin_lister`
+- `dictionary GFL_Event_Index`
+- `array<GFL_event@> GFL_event_array`
+- `GFL_event_system::update(float time)` 中手动倒计时与 `removeAt`
+- 其他文件直接读写 `GFL_event_array`
 
-这说明 Javelin 仍然是当前 `GFLskill.as` 中最明显的旧式残留。
+这说明 `event_system.as` 并没有整体迁移完成。
 
-### 2. GFLskill.as 仍保留 update 生命周期
+### 2. event_system.as 属于“执行体部分 Task 化，调度骨架未迁移”
 
 代码证据：
 
-- `packages/GFL_Castling/scripts/trackers/GFLskill.as`
+- `packages/GFL_Castling/scripts/trackers/GFLtask.as`
 
-当前情况：
+当前状态：
 
-- `GFLskill.as` 仍有 `update(float time)`
-- 该 `update()` 目前主要服务于 Javelin 的寿命与清理
+- `GFLtask.as` 已包含多段注明“原 event_system case”的 Task 实现
+- 但 `event_system.as` 仍负责事件存储、计时、分发和生命周期清理
 
-这说明 `GFLskill` 还没有彻底变成“纯事件分发器”，但已经接近这个状态。
+因此更准确的描述是：
 
-## 当前主要技术债务
+`event_system.as` 已经发生了局部 Task 化，但还没有完成从“数组驱动事件系统”到“统一 Task 调度”的整体迁移。
 
-### 1. Javelin 尚未纳入统一 Task 路线
+### 3. event_system.as 内仍有独立的 Apache Javelin 状态数组
 
-Javelin 不是简单的重复效果，而是多阶段状态机。它不适合直接套用 `RepeatEffectTask`，因此被保留到后续处理是合理的。
+代码证据：
 
-但从当前代码状态来看，它也已经成为 `GFLskill.as` 保留 `update()` 的主要原因。
+- `packages/GFL_Castling/scripts/trackers/event_system.as`
 
-如果后续想继续收缩 `GFLskill.as`，Javelin 是最优先的剩余对象。
+当前仍可见：
+
+- `array<Apache_Javelin_lister@> Apache_Javelin_list`
+- `insertLast(...)`
+- `removeAt(...)`
+
+这块不属于 `GFLskill` 的 Javelin，但仍然属于类似的旧式状态管理模式。
+
+## 当前主要技术债
+
+### 1. event_system.as 的调度骨架仍偏旧
+
+当前最值得继续推进的，不是重新处理 `Javelin`，而是判断 `event_system.as` 是否应该：
+
+1. 继续保留为事件入口，但把事件状态管理进一步外提
+2. 拆成多个专用 Tracker
+3. 或者逐步改为直接创建 Task / 专用状态对象
 
 ### 2. 分发层仍然偏厚
 
-虽然大量重复逻辑已经迁移到 Task，但以下文件仍然比较厚：
+以下文件仍然较重：
 
 - `commandskill.as`
 - `GFLskill.as`
 - `event_system.as`
 
-它们的问题已不再是“没有架构”，而是“业务实现仍有很多直接写在分发层里”。
+它们的问题已不再是“没有架构”，而是“分发层内仍有较多业务实现”。
 
-后续更适合做的，是把这些大文件继续薄化，而不是再引入新的平行框架。
+### 3. 文档漂移已经成为实际问题
 
-### 3. event_system.as 仍然使用旧式事件数组
+当前已确认的文档偏差包括：
 
-`event_system.as` 仍然维持：
+- `CLAUDE.md`
+- `docs/architecture/task-migration.md`
+- `docs/reports/skill-migration-audit-2026-04-11.md` 旧版内容
+- `claude_use/GFLskill_task_migration_prompt.md`
+- `claude_use/skill_doc_continuation_prompt.md`
+- `claude_use/skill_system_report.md` 中关于 Javelin “明确延后”的表述
 
-- `dictionary GFL_Event_Index`
-- `array<GFL_event@> GFL_event_array`
-- `update()` 手动遍历和倒计时
+## 推荐的文档处理方式
 
-这套机制在职责上和 Task 有一定重叠，是技能系统之外的另一块潜在收敛点。
+### 建议更新
 
-## 推荐的下一步
+- `CLAUDE.md`
+- `docs/architecture/skill-system.md`
+- `docs/architecture/task-migration.md`
 
-### 第一优先级
+这些文档承担当前开发指引职责，应该保持与代码一致。
 
-处理 Javelin。
+### 建议保留但标注为历史快照
 
-目标不是强行套入 `RepeatEffectTask`，而是判断它更适合：
+- `claude_use/GFLskill_task_migration_prompt.md`
+- `claude_use/skill_doc_continuation_prompt.md`
+- `claude_use/skill_system_report.md`
 
-1. 拆成多个串行 Task。
-2. 做成一个专用的状态机 Task。
-3. 保留独立 tracker，但从 `GFLskill.as` 中再进一步解耦。
-
-### 第二优先级
-
-继续瘦身 `commandskill.as` 和 `GFLskill.as`。
-
-建议方向：
-
-- case 保留
-- case 内实现继续外提
-- 让文件承担“分发器”而不是“业务仓库”
-
-### 第三优先级
-
-把迁移状态工具化。
-
-当前文档已经能说明迁移结论，但仍然依赖人工核对。后续可以在 `tools/` 中补一个状态扫描脚本，自动识别：
-
-- 哪些技能仍依赖旧 tracker
-- 哪些技能已经切换到 Task
-- 哪些文件仍持有技能专有状态
+这些文档仍有参考价值，但不应再被视为“当前状态说明”。
 
 ## 当前判断
 
-从代码实况看，迁移文档描述的大方向基本已经实现，不是纸面计划。
+从实际代码看，技能迁移主线已经完成了大半，尤其是 `GFLskill` 这条线比旧文档描述的更靠后。
 
-剩余问题已经从“架构方向不明”缩小为“少数特例未完成”和“分发层还偏厚”。这意味着后续重构可以更聚焦，也更适合小步快跑。
+现在最需要的不是继续围绕 `Javelin` 做计划，而是：
+
+1. 修正文档
+2. 判断 `event_system.as` 是否值得继续做系统级收敛
+3. 避免后续开发再次参考过时结论
 
 ## 备注
 
-本次盘点只基于静态代码检查，没有在游戏内进行行为回归测试，因此这里只能确认结构落地情况，不能替代实机验证。
+本次盘点基于静态代码检查，没有在游戏内做行为回归验证，因此这里只确认结构落地情况，不替代实机测试。
