@@ -209,20 +209,6 @@ dictionary gameSkillIndex = {
         {"666",-1}
 };
 
-class XM8tracker{
-    int m_characterId;
-	float m_time;
-	int m_numtime=7;
-	int m_factionid;
-	Vector3 m_pos;
-	XM8tracker(int characterId,float time,int factionid,Vector3 pos)
-	{
-		m_characterId = characterId;
-		m_time = time;
-		m_factionid= factionid;
-		m_pos=pos;
-	}
-}
 
 class HK416_tracker{
     int m_characterId;

@@ -22,8 +22,7 @@ class GFLskill : Tracker {
 		@m_metagame = @metagame;
 	}
 
-    protected array<XM8tracker@> XM8track;
-	protected array<HK416_tracker@> HK416_track;
+    protected array<HK416_tracker@> HK416_track;
 	protected array<UZI_tracker@> UZI_track;
 	protected array<Javelin_lister@> Javelin_list;
 
@@ -184,7 +183,8 @@ class GFLskill : Tracker {
 							" position='" + Pos_40mm.toString() + "'"+
 							" character_id='" + characterId + "' />";
 						m_metagame.getComms().send(c);
-						XM8track.insertLast(XM8tracker(characterId,1.0,factionid,Pos_40mm));
+						TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+						tasker.add(XM8SkillTask(m_metagame, characterId, factionid, Pos_40mm));
 					}
 				}
 				break;
@@ -1868,73 +1868,6 @@ class GFLskill : Tracker {
 
 
 	void update(float time) {
-		if(XM8track.length()>0){
-			for (int a = XM8track.length() - 1; a >= 0; a--) {
-				XM8track[a].m_time-=time;
-				if(XM8track[a].m_time<0){
-					m_fnum= m_metagame.getFactionCount();
-					array<const XmlElement@> affectedCharacter;
-					affectedCharacter = getCharactersNearPosition(m_metagame,XM8track[a].m_pos,1,8.0f);
-					if (m_fnum==3){
-						array<const XmlElement@> affectedCharacter2;
-						affectedCharacter2 = getCharactersNearPosition(m_metagame,XM8track[a].m_pos,2,8.0f);
-						if (affectedCharacter2 !is null){
-							for(uint x=0;x<affectedCharacter2.length();x++){
-								affectedCharacter.insertLast(affectedCharacter2[x]);
-							}
-						}
-					}
-					if (m_fnum==4){
-						array<const XmlElement@> affectedCharacter2;
-						affectedCharacter2 = getCharactersNearPosition(m_metagame,XM8track[a].m_pos,2,8.0f);
-						if (affectedCharacter2 !is null){
-							for(uint x=0;x<affectedCharacter2.length();x++){
-								affectedCharacter.insertLast(affectedCharacter2[x]);
-							}
-						}
-						array<const XmlElement@> affectedCharacter3;
-						affectedCharacter3 = getCharactersNearPosition(m_metagame,XM8track[a].m_pos,3,8.0f);
-						if (affectedCharacter3 !is null){
-							for(uint x=0;x<affectedCharacter3.length();x++){
-								affectedCharacter.insertLast(affectedCharacter3[x]);
-							}
-						}
-					}
-					if (affectedCharacter.length()>0){
-						int enemynum= affectedCharacter.length()-1;
-						int luckyone;
-						if (enemynum<=0) {
-							luckyone=0;
-						}
-						else{
-							luckyone = rand(0,enemynum);
-						}
-						int luckyoneid = affectedCharacter[luckyone].getIntAttribute("id");
-						const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
-						if (luckyoneC !is null){
-							string luckyonepos = luckyoneC.getStringAttribute("position");
-							Vector3 luckyoneposV = stringToVector3(luckyonepos);
-							Vector3 height = Vector3(0,0.5,0);
-							luckyoneposV = luckyoneposV.add(height);
-							luckyonepos = luckyoneposV.toString();
-							string c =
-								"<command class='create_instance'" +
-								" faction_id='"+ XM8track[a].m_factionid +"'" +
-								" instance_class='grenade'" +
-								" instance_key='skill_xm8mod3.projectile'" +
-								" position='" + luckyonepos + "'"+
-								" character_id='" + XM8track[a].m_characterId + "' />";
-							m_metagame.getComms().send(c);
-						}
-					}
-					XM8track[a].m_numtime--;
-					XM8track[a].m_time=1;
-					if (XM8track[a].m_numtime<0){
-						XM8track.removeAt(a);
-					}
-				}
-			}
-		}
 		if(HK416_track.length()>0){
 			for (int a = HK416_track.length() - 1; a >= 0; a--) {
 				HK416_track[a].m_time-=time;

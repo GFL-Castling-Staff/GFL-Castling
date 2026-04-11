@@ -3607,3 +3607,65 @@ class DOTEffectTask : RepeatEffectTask {
         m_metagame.getComms().send(c);
     }
 }
+
+// XM8 技能 Task，每秒在附近随机选一个敌人生成爆炸弹头，共 8 次
+class XM8SkillTask : RepeatEffectTask {
+
+    XM8SkillTask(GameMode@ metagame, int cId, int fId, Vector3 pos) {
+        super(metagame, cId, fId, pos, 1.0, 8);
+    }
+
+    void excuteEffect() {
+        uint fnum = m_metagame.getFactionCount();
+        array<const XmlElement@> affectedCharacter;
+        affectedCharacter = getCharactersNearPosition(m_metagame, m_pos, 1, 8.0f);
+        if (fnum == 3) {
+            array<const XmlElement@> affectedCharacter2;
+            affectedCharacter2 = getCharactersNearPosition(m_metagame, m_pos, 2, 8.0f);
+            if (affectedCharacter2 !is null) {
+                for (uint x = 0; x < affectedCharacter2.length(); x++) {
+                    affectedCharacter.insertLast(affectedCharacter2[x]);
+                }
+            }
+        }
+        if (fnum == 4) {
+            array<const XmlElement@> affectedCharacter2;
+            affectedCharacter2 = getCharactersNearPosition(m_metagame, m_pos, 2, 8.0f);
+            if (affectedCharacter2 !is null) {
+                for (uint x = 0; x < affectedCharacter2.length(); x++) {
+                    affectedCharacter.insertLast(affectedCharacter2[x]);
+                }
+            }
+            array<const XmlElement@> affectedCharacter3;
+            affectedCharacter3 = getCharactersNearPosition(m_metagame, m_pos, 3, 8.0f);
+            if (affectedCharacter3 !is null) {
+                for (uint x = 0; x < affectedCharacter3.length(); x++) {
+                    affectedCharacter.insertLast(affectedCharacter3[x]);
+                }
+            }
+        }
+        if (affectedCharacter.length() > 0) {
+            int enemynum = affectedCharacter.length() - 1;
+            int luckyone;
+            if (enemynum <= 0) {
+                luckyone = 0;
+            } else {
+                luckyone = rand(0, enemynum);
+            }
+            int luckyoneid = affectedCharacter[luckyone].getIntAttribute("id");
+            const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+            if (luckyoneC !is null) {
+                Vector3 luckyoneposV = stringToVector3(luckyoneC.getStringAttribute("position"));
+                luckyoneposV = luckyoneposV.add(Vector3(0, 0.5, 0));
+                string c =
+                    "<command class='create_instance'" +
+                    " faction_id='" + m_factionId + "'" +
+                    " instance_class='grenade'" +
+                    " instance_key='skill_xm8mod3.projectile'" +
+                    " position='" + luckyoneposV.toString() + "'" +
+                    " character_id='" + m_characterId + "' />";
+                m_metagame.getComms().send(c);
+            }
+        }
+    }
+}
