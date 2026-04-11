@@ -867,7 +867,7 @@ class kill_event : Tracker {
                                 DelayAntiPersonSnipeRequest@ shot = 
                                     DelayAntiPersonSnipeRequest(m_metagame, 0.15,
                                         characterId, factionId,
-                                        "snipe_hit_kennedy.projectile",
+                                        "snipe_hit_m14mod3.projectile",
                                         stringToVector3(shooter_pos).add(Vector3(0, 0.5, 0)),
                                         chain_target);
                                 chain.add(shot);

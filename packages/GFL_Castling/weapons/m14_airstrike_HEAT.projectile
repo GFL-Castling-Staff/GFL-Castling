@@ -2,7 +2,7 @@
 <projectile class="grenade" key="m14_airstrike_HEAT.projectile" name="M14HEAT" slot="2" pulldown_in_air="0.5" >
     <tag name="rocket"/>
 	
-    <result class="blast"  damage="40"  radius="6" decal="1" push="0" character_state="death"  faction_compare="not_equal" damage_origin_vehicle="0"/>
+    <result class="blast"  damage="60"  radius="6" decal="1" push="0" character_state="death"  faction_compare="not_equal" damage_origin_vehicle="0"/>
     <trigger class="impact" />
     <rotation class="motion" />
     <model mesh_filename="88HEAT.xml" />

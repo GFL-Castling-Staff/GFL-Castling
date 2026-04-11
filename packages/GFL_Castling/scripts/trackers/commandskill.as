@@ -5083,9 +5083,9 @@ class CommandSkill : Tracker {
 
         // 播放语音
         array<string> Voice = {
-            "OBRMod_SKILL1_JP.wav",  // 暂用OBR语音，后续替换
-            "OBRMod_SKILL2_JP.wav",
-            "OBRMod_SKILL3_JP.wav"
+            "M14Mod_SKILL1_JP.wav",
+            "M14Mod_SKILL2_JP.wav",
+            "M14Mod_SKILL3_JP.wav"
         };
         playRandomSoundArray(m_metagame, Voice, factionid, 
                             c_pos.toString(), 1);
