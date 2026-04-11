@@ -833,7 +833,7 @@ class kill_event : Tracker {
                             if (f != factionId) {
                                 array<const XmlElement@> found = 
                                     getCharactersNearPosition(m_metagame, 
-                                        dead_position, f, 8.0f);
+                                        dead_position, f, 15.0f);
                                 if (found !is null) {
                                     for (uint x = 0; x < found.length(); x++) {
                                         nearbyEnemies.insertLast(found[x]);

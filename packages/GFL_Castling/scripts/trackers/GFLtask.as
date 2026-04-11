@@ -3470,6 +3470,8 @@ class M14SkillActiveTask : Task {
         // 技能激活提示
         notify(m_metagame, "Skill - M14 Activate", dictionary(), 
                "misc", m_playerId, false, "", 1.0);
+        GFL_playerInfo@ pinfo = getPlayerInfoFromListbyPid(m_playerId);
+        pinfo.addTag("M14MOD3");
     }
 
     void update(float time) {
@@ -3526,17 +3528,16 @@ class M14SkillEndTask : Task {
 				break;
 			}
 		}
-		// 火箭弹奖励
+        GFL_playerInfo@ pinfo = getPlayerInfoFromListbyPid(m_skillState.m_playerId);
+        pinfo.removeTag("M14MOD3");        		// 火箭弹奖励
 		if (m_skillState.isRocketEarned()) {
-			m14_rocket_reward_players.insertLast(m_skillState.m_playerId);
+			pinfo.addTag("M14MOD3_Rocket");
 			notify(m_metagame, "Skill - M14 Rocket Ready", dictionary(),
 				"misc", m_skillState.m_playerId, false, "", 1.0);
 		}
 		// 将冷却请求加入待处理队列
-		m14_pending_cooldowns.insertLast(
-			M14PendingCooldown(m_skillState.m_characterId, 
-							m_skillState.getCooldownTime(), 
-							m_modifer));
+        addCooldown("M14MOD3",m_skillState.getCooldownTime(), m_skillState.m_characterId, m_skillState.m_modifer);
+
 	}
 
     void update(float time) {}

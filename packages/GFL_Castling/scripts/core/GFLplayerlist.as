@@ -103,6 +103,7 @@ class GFL_playerInfo{
     rgba_color@ m_color;
     bool m_available; //用途判定是否掉线，是否该info无效，在函数应用部分判断作错误处理
     int m_inactive_time = 0;
+    array<string> m_skilltag;
     
     // 玩家物品栏
     GFL_playerInfo(string name,int pid, int cid,int fid, string hash,string sid,GFL_equipment@ equipment,rgba_color@ color){
@@ -349,6 +350,40 @@ class GFL_playerInfo{
     void clearIndexBuck()
     {
         m_tdoll_intimacy_buck.resize(0);
+    }
+
+    void addTag(string tag)
+    {
+        if (tag == "") return;
+        // 如果已经存在则不重复添加
+        for (uint i = 0; i < m_skilltag.length(); ++i)
+        {
+            if (m_skilltag[i] == tag) return;
+        }
+        m_skilltag.insertLast(tag);
+    }
+
+    bool checkTag(string tag)
+    {
+        if (tag == "") return false;
+        for (uint i = 0; i < m_skilltag.length(); ++i)
+        {
+            if (m_skilltag[i] == tag)
+                return true;
+        }
+        return false;        
+    }
+
+    void removeTag(string tag)
+    {
+        if (tag == "") return;
+        for (int i = int(m_skilltag.length()) - 1; i >= 0; --i)
+        {
+            if (m_skilltag[i] == tag)
+            {
+                m_skilltag.removeAt(uint(i));
+            }
+        }
     }
 }
 
