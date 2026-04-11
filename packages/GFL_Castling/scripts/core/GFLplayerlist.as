@@ -905,11 +905,16 @@ class GFL_playerlist_system : Tracker {
             if(g_playerInfo_Buck.size() <= 0) return;
             for (uint i = g_playerInfo_Buck.size(); i-- > 0; ) {
                 GFL_playerInfo@ playerInfo = g_playerInfo_Buck.m_playerInfo[i];
+                if(playerInfo is null){continue;}
+                if(playerInfo.check_Available() != true){continue;}
                 GFL_battleInfo@ battleInfo = playerInfo.getBattleInfo();
+                if(battleInfo is null){continue;}
                 string p_name = playerInfo.getPlayerName();
                 string profile_hash = playerInfo.getHash();
                 string sid = playerInfo.getSid();
                 int player_id = playerInfo.getPlayerPid();
+                GFL_equipment@ equipment = playerInfo.getPlayerEquipment();
+                if(equipment is null){continue;}
 
 
                 //结束时的战术点转换为研发点
@@ -921,7 +926,7 @@ class GFL_playerlist_system : Tracker {
                 player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
                 newdata.addDevPoint(m_dev_point_add);
 
-                string c_weaponType = playerInfo.getPlayerEquipment().getWeapon(0);
+                string c_weaponType = equipment.getWeapon(0);
                 string weapon_string = normalizeWeaponKey(c_weaponType);
                 int index= getIndexFromKey(weapon_string);
                 if(index > -1)
@@ -964,14 +969,14 @@ class GFL_playerlist_system : Tracker {
                     if(j>=0){
                         No_Delete_DataArray[j].add();
                         const XmlElement@ characterInfo = getCharacterInfo(m_metagame, g_playerInfo_Buck.m_playerInfo[i].getPlayerCid());
-                        if (characterInfo is null) return;
+                        if (characterInfo is null) continue;
                         string c_pos = characterInfo.getStringAttribute("position");
                         spawnStaticProjectile(m_metagame,"particle_effect_98k_medal.projectile",c_pos,g_playerInfo_Buck.m_playerInfo[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));
                     }
                     else{
                         No_Delete_DataArray.insertLast(no_delete_data(strname,strid,1,"kar98k"));       
                         const XmlElement@ characterInfo = getCharacterInfo(m_metagame, g_playerInfo_Buck.m_playerInfo[i].getPlayerCid());
-                        if (characterInfo is null) return;
+                        if (characterInfo is null) continue;
                         string c_pos = characterInfo.getStringAttribute("position");
                         spawnStaticProjectile(m_metagame,"particle_effect_98k_medal.projectile",c_pos,g_playerInfo_Buck.m_playerInfo[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));                            
                     }
@@ -987,14 +992,14 @@ class GFL_playerlist_system : Tracker {
                     if(j>=0){
                         No_Delete_DataArray[j].add();
                         const XmlElement@ characterInfo = getCharacterInfo(m_metagame, g_playerInfo_Buck.m_playerInfo[i].getPlayerCid());
-                        if (characterInfo is null) return;
+                        if (characterInfo is null) continue;
                         string c_pos = characterInfo.getStringAttribute("position");
                         spawnStaticProjectile(m_metagame,"particle_effect_ppsh41_medal.projectile",c_pos,g_playerInfo_Buck.m_playerInfo[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));
                     }
                     else{
                         No_Delete_DataArray.insertLast(no_delete_data(strname,strid,1,"ppsh41"));       
                         const XmlElement@ characterInfo = getCharacterInfo(m_metagame, g_playerInfo_Buck.m_playerInfo[i].getPlayerCid());
-                        if (characterInfo is null) return;
+                        if (characterInfo is null) continue;
                         string c_pos = characterInfo.getStringAttribute("position");
                         spawnStaticProjectile(m_metagame,"particle_effect_ppsh41_medal.projectile",c_pos,g_playerInfo_Buck.m_playerInfo[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));
                     } 
@@ -1010,7 +1015,7 @@ class GFL_playerlist_system : Tracker {
 
                     if(j>=0){
                         const XmlElement@ characterInfo = getCharacterInfo(m_metagame, g_playerInfo_Buck.m_playerInfo[i].getPlayerCid());
-                        if (characterInfo is null) return;
+                        if (characterInfo is null) continue;
                         string c_pos = characterInfo.getStringAttribute("position");
                         spawnStaticProjectile(m_metagame,"particle_effect_stensterling_medal.projectile",c_pos,g_playerInfo_Buck.m_playerInfo[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));
                         if(No_Delete_DataArray[j].m_num<4)No_Delete_DataArray[j].add();
@@ -1018,7 +1023,7 @@ class GFL_playerlist_system : Tracker {
                     else{
                         No_Delete_DataArray.insertLast(no_delete_data(strname,strid,1,"StenSterling"));       
                         const XmlElement@ characterInfo = getCharacterInfo(m_metagame, g_playerInfo_Buck.m_playerInfo[i].getPlayerCid());
-                        if (characterInfo is null) return;
+                        if (characterInfo is null) continue;
                         string c_pos = characterInfo.getStringAttribute("position");
                         spawnStaticProjectile(m_metagame,"particle_effect_stensterling_medal.projectile",c_pos,g_playerInfo_Buck.m_playerInfo[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));
                     }
