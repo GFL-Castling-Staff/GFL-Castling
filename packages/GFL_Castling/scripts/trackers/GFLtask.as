@@ -3492,8 +3492,8 @@ class M14SkillActiveTask : Task {
     // 返回技能结束时应设置的冷却时间
     float getCooldownTime() {
 		if (m_ammo <= 0) {
-			// 8发全部用完，奖励缩短冷却
-			return 15.0;
+			// 8发全部用完，不奖励缩短冷却
+			return 30.0;
 		}
 		// 未用完：30 - 剩余弹药 * 3
 		return max(30.0 - (m_ammo * 3.0), 0.1);
