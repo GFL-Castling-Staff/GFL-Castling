@@ -212,19 +212,3 @@ dictionary gameSkillIndex = {
 
 
 
-class Javelin_lister{
-    int m_characterId;
-	float m_time=6;
-	int m_numtime=1;
-	int m_factionid;
-	int m_vehicleid;
-	Vector3 m_pos;
-	Javelin_lister(int characterId,int factionid,int vehicleid,Vector3 pos)
-	{
-		m_characterId = characterId;
-		m_factionid = factionid;
-		m_vehicleid = vehicleid;
-		m_pos = pos;
-	}
-}
-
