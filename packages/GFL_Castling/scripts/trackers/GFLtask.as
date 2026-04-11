@@ -3542,3 +3542,68 @@ class M14SkillEndTask : Task {
     void update(float time) {}
     bool hasEnded() const { return true; } // 立即结束
 }
+
+// ============================================================
+// 通用重复效果 Task 基类（用于替代 GFLskill 手动 tracker 数组模式）
+// ============================================================
+class RepeatEffectTask : Task {
+    protected GameMode@ m_metagame;
+    protected int m_characterId;
+    protected int m_factionId;
+    protected Vector3 m_pos;
+    protected float m_interval;
+    protected float m_timeLeft;
+    protected int m_remainCount;
+
+    RepeatEffectTask(GameMode@ metagame, int cId, int fId,
+                     Vector3 pos, float interval, int count) {
+        @m_metagame = metagame;
+        m_characterId = cId;
+        m_factionId = fId;
+        m_pos = pos;
+        m_interval = interval;
+        m_remainCount = count;
+    }
+
+    void start() {
+        m_timeLeft = m_interval;
+    }
+
+    void update(float time) {
+        m_timeLeft -= time;
+        if (m_timeLeft <= 0) {
+            excuteEffect();
+            m_remainCount--;
+            m_timeLeft = m_interval;
+        }
+    }
+
+    bool hasEnded() const {
+        return m_remainCount <= 0;
+    }
+
+    // 子类重写此方法实现具体效果
+    void excuteEffect() {}
+}
+
+// DOT（持续伤害）效果 Task，在固定位置重复生成弹头
+class DOTEffectTask : RepeatEffectTask {
+    protected string m_projectile;
+
+    DOTEffectTask(GameMode@ metagame, int cId, int fId,
+                  Vector3 pos, float interval, int count, string projectile) {
+        super(metagame, cId, fId, pos, interval, count);
+        m_projectile = projectile;
+    }
+
+    void excuteEffect() {
+        string c =
+            "<command class='create_instance'" +
+            " faction_id='" + m_factionId + "'" +
+            " instance_class='grenade'" +
+            " instance_key='" + m_projectile + "'" +
+            " position='" + m_pos.toString() + "'" +
+            " character_id='" + m_characterId + "' />";
+        m_metagame.getComms().send(c);
+    }
+}

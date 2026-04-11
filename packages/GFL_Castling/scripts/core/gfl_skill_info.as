@@ -272,20 +272,3 @@ class Javelin_lister{
 	}
 }
 
-class DOT_tracker{
-    int m_characterId;
-	int m_numtime;
-	float m_time=0.05;
-	float m_time_interval;
-	int m_factionid;
-	string m_projectile;
-	Vector3 m_pos;
-	DOT_tracker(int characterId,int factionid,Vector3 pos,float time,string projectile,int num){
-		m_characterId = characterId;
-		m_factionid= factionid;
-		m_pos= pos;
-		m_projectile=projectile;
-		m_time_interval=time;
-		m_numtime = num;
-	}
-}

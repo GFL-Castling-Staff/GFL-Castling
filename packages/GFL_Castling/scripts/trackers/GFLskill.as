@@ -26,7 +26,6 @@ class GFLskill : Tracker {
 	protected array<HK416_tracker@> HK416_track;
 	protected array<UZI_tracker@> UZI_track;
 	protected array<Javelin_lister@> Javelin_list;
-	protected array<DOT_tracker@> DOT_track;
 
 
 	// --------------------------------------------
@@ -1085,7 +1084,8 @@ class GFLskill : Tracker {
 				if (character !is null) {
 					Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
 					int factionid = character.getIntAttribute("faction_id");
-					DOT_track.insertLast(DOT_tracker(characterId,factionid,grenade_pos,1.0,"elenusis_acid_bomb_spawn.projectile",10));
+					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+					tasker.add(DOTEffectTask(m_metagame, characterId, factionid, grenade_pos, 1.0, 10, "elenusis_acid_bomb_spawn.projectile"));
 				}
 				break;
 			}
@@ -2009,26 +2009,6 @@ class GFLskill : Tracker {
 					UZI_track[a].m_time=1.5;
 					if (UZI_track[a].m_numtime<0){
 						UZI_track.removeAt(a);
-					}
-				}
-			}
-		}
-		if(DOT_track.length()>0){
-			for (int a = DOT_track.length() - 1; a >= 0; a--) {
-				DOT_track[a].m_time-=time;
-				if(DOT_track[a].m_time<0){
-					string c =
-						"<command class='create_instance'" +
-						" faction_id='"+ DOT_track[a].m_factionid +"'" +
-						" instance_class='grenade'" +
-						" instance_key='" + DOT_track[a].m_projectile +"'" +
-						" position='" + DOT_track[a].m_pos.toString() + "'"+
-						" character_id='" + DOT_track[a].m_characterId + "' />";
-					m_metagame.getComms().send(c);
-					DOT_track[a].m_numtime--;
-					DOT_track[a].m_time=DOT_track[a].m_time_interval;
-					if (DOT_track[a].m_numtime<1){
-						DOT_track.removeAt(a);
 					}
 				}
 			}
