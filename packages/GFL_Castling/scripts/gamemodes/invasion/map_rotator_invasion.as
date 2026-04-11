@@ -146,6 +146,7 @@ class MapRotatorInvasion : MapRotator {
 		string mapName = getMapName(index);
 
 		_log("previous stage index " + previousStageIndex + ", next stage index " + index);
+		_log("[map_transition] waitAndStart begin, previous_stage=" + previousStageIndex + ", next_stage=" + index + ", map=" + mapName + ", delay=" + time + ", countdown=" + sayCountdown, 1);
 		if (previousStageIndex != index) {
 			// show appropriate transport arrows in map now, if map is about to change
 			if (m_world !is null) {
@@ -164,16 +165,20 @@ class MapRotatorInvasion : MapRotator {
 
 		// wait a while, and let server announce a few things
 		m_metagame.getTaskSequencer().add(TimeAnnouncerTask(m_metagame, time, sayCountdown));
+		_log("[map_transition] TimeAnnouncerTask queued", 1);
 
 		if (previousStageIndex != index) {
 			// also save
 			m_metagame.getTaskSequencer().add(Call(CALL(m_metagame.save)));
+			_log("[map_transition] save task queued before startMapEx", 1);
 
 			// start new map
 			m_metagame.getTaskSequencer().add(CallInt(CALL_INT(this.startMapEx), index));
+			_log("[map_transition] startMapEx task queued for stage=" + index, 1);
 		} else {
 			// restart same map
 			m_metagame.getTaskSequencer().add(Call(CALL(this.restartMap)));
+			_log("[map_transition] restartMap task queued", 1);
 		}
 	}
 
@@ -224,9 +229,11 @@ class MapRotatorInvasion : MapRotator {
 			bool campaignCompleted = false;
 			// friendly faction won, advance to next map
 			_log("advance", 1);
+			_log("[map_transition] handleMatchEndEvent begin, current_stage=" + m_currentStageIndex, 1);
 
 			// not real data to add about it, is there a "set" in php?
 			setStageCompleted(m_currentStageIndex);
+			_log("[map_transition] stage marked completed, completed_count=" + m_stagesCompleted.size(), 1);
 
 			if(m_metagame.isInServerMode())
 			{
@@ -249,13 +256,16 @@ class MapRotatorInvasion : MapRotator {
 				command.appendChild(root);
 
 				m_metagame.getComms().send(command);
+				_log("[map_transition] saved next stage index to app_data/current_stage_index.xml, next_stage=" + m_savedStageIndex, 1);
 			}
 
 			string map_name = getMapName(m_currentStageIndex);
+			_log("[map_transition] reward stage map_name=" + map_name, 1);
 
 			array<const XmlElement@> players = getPlayers(m_metagame);
 			if(players !is null && players.size() > 0)
 			{
+				_log("[map_transition] rewarding players count=" + players.size(), 1);
 				array<Resource@> rewardlist = {
 					Resource("complete_box.carry_item","carry_item")
 				};
@@ -294,19 +304,24 @@ class MapRotatorInvasion : MapRotator {
 						addListItemInStash(m_metagame,characterId,rewardlist);
 					}
 				}
+				_log("[map_transition] base rewards complete", 1);
 			}
 
 
 			addCustomStatToAllPlayers(m_metagame,"match_complete");
+			_log("[map_transition] custom stat applied", 1);
 			
 			if (m_world !is null) {
 				// now, update world view, declare the area ours
 				m_world.refresh(m_stages, m_stagesCompleted, m_currentStageIndex);
+				_log("[map_transition] world refreshed", 1);
 			}
 
 			m_metagame.getTaskSequencer().add(Call(CALL(m_metagame.save)));
+			_log("[map_transition] metagame save queued", 1);
 
 			campaignCompleted = isCampaignCompleted();
+			_log("[map_transition] campaignCompleted=" + campaignCompleted, 1);
 			if (campaignCompleted) {
 				_log("campaign completed", 1);
 				if (m_loop) {
@@ -337,9 +352,11 @@ class MapRotatorInvasion : MapRotator {
 					// campaign completed and not looping, game over, let user handle from here on
 	
 					// actually, it's ok to call ready to advance, adventure will set extraction points etc
+					_log("[map_transition] campaign completed without loop, forwarding to readyToAdvance", 1);
 					readyToAdvance();
 				}
 			} else {
+				_log("[map_transition] forwarding to readyToAdvance", 1);
 				readyToAdvance();
 			}
 
@@ -361,6 +378,7 @@ class MapRotatorInvasion : MapRotator {
 			}
 		}
 
+		_log("[map_transition] readyToAdvance picked next_stage=" + index, 1);
 		commitToMapChange(index);
 
 	}
@@ -829,6 +847,7 @@ class MapRotatorInvasion : MapRotator {
 	// --------------------------------------------
 	// --------------------------------------------
     void startMapEx(int index) {
+		_log("[map_transition] startMapEx executing, stage=" + index, 1);
 		startMap(index);
 	}
 
@@ -844,6 +863,7 @@ class MapRotatorInvasion : MapRotator {
 	// --------------------------------------------
     void startMap(int index, bool beginOnly = false) {
 		_log("start_map, index=" + index + ", begin_only=" + beginOnly);
+		_log("[map_transition] startMap begin, stage=" + index + ", beginOnly=" + beginOnly, 1);
 		// in invasion, store the faction settings in gamemode
 		// so that we can juggle with them when the match is on
 		// and reset them back to defaults when needed
@@ -859,6 +879,7 @@ class MapRotatorInvasion : MapRotator {
 
 		if (!beginOnly) {
 			// change map 
+			_log("[map_transition] sending change_map for stage=" + index, 1);
 			m_metagame.getComms().send(getChangeMapCommand(index));
 
 			// TODO:
@@ -879,6 +900,7 @@ class MapRotatorInvasion : MapRotator {
 			// was set in the match already
 
 			handleFactionResourceConfigChangeCommands();
+			_log("[map_transition] faction resource config applied for stage=" + index, 1);
 
 			// if continuing a game, don't clear queue - we already have e.g. vehicle spawn events there as game loaded before the script,
 			// we can't lose those, otherwise some trackers may fail to be notified of the events
@@ -887,9 +909,11 @@ class MapRotatorInvasion : MapRotator {
 			// - as we just changed the map and the default match started,
 			//   we gots plenty of events that no longer are valid, ignore them
 			m_metagame.getComms().clearQueue();
+			_log("[map_transition] comm queue cleared after change_map", 1);
 		}
 
 		m_metagame.preBeginMatch();
+		_log("[map_transition] preBeginMatch done for stage=" + index, 1);
 
 		if (!beginOnly) {
 			// shut ingame commander radio before starting the match -- we'll do "high commander" briefing from the script, after that let in game commander report things
@@ -898,6 +922,7 @@ class MapRotatorInvasion : MapRotator {
 			// start game 
 			const XmlElement@ startGameCommand = getStartGameCommand(index);
 			m_metagame.getComms().send(startGameCommand);
+			_log("[map_transition] start_game command sent for stage=" + index, 1);
 
 			// prepare game menu for settings change
 			{
@@ -911,6 +936,7 @@ class MapRotatorInvasion : MapRotator {
 			// only then announce map start
 			XmlElement@ query = XmlElement(makeQuery(m_metagame, array<dictionary> = {}));
 			const XmlElement@ doc = m_metagame.getComms().query(query);
+			_log("[map_transition] post-start sync query completed for stage=" + index + ", query_null=" + (doc is null), 1);
 
 			m_metagame.resetTimer();
 		}
@@ -923,9 +949,11 @@ class MapRotatorInvasion : MapRotator {
 		if (!beginOnly) {
 			// --> now announce map start
 			announceMapStart();
+			_log("[map_transition] announceMapStart done for stage=" + index, 1);
 		}
 
 		m_metagame.postBeginMatch();
+		_log("[map_transition] postBeginMatch done for stage=" + index, 1);
 
 		// create stage specific trackers:
 		_log("trackers: " + stage.m_trackers.size(), 2);
@@ -937,6 +965,7 @@ class MapRotatorInvasion : MapRotator {
 				tracker.gameContinuePreStart();
 			}
 		}
+		_log("[map_transition] stage trackers added, count=" + stage.m_trackers.size(), 1);
 
 		// moved from MapRotatorCampaign to here to automatically share it with MVSW:
 		// for unknown reason, after map1 was completed, the game was quit and restarted,
@@ -979,13 +1008,17 @@ class MapRotatorInvasion : MapRotator {
     void restartMap() {
 		int index = m_currentStageIndex;
 		_log("restart_map, index=" + index);
+		_log("[map_transition] restartMap begin, stage=" + index, 1);
 
 		m_metagame.setFactions(m_stages[index].m_factions);
 
 		handleFactionResourceConfigChangeCommands();	
+		_log("[map_transition] restartMap faction resource config applied", 1);
 	
 		m_metagame.getComms().clearQueue();
+		_log("[map_transition] restartMap comm queue cleared", 1);
 		m_metagame.preBeginMatch();
+		_log("[map_transition] restartMap preBeginMatch done", 1);
 
 		// shut ingame commander radio before starting the match -- we'll do "high commander" briefing from the script, after that let in game commander report things
 		setCommanderAiReports(0.0);
@@ -993,15 +1026,19 @@ class MapRotatorInvasion : MapRotator {
 		// start game 
 		const XmlElement@ startGameCommand = getStartGameCommand(index);
 		m_metagame.getComms().send(startGameCommand);
+		_log("[map_transition] restartMap start_game command sent", 1);
 		
 		announceMapStart();
+		_log("[map_transition] restartMap announceMapStart done", 1);
 
 		m_metagame.postBeginMatch();
+		_log("[map_transition] restartMap postBeginMatch done", 1);
 
 		for (uint i = 0; i < m_stages[index].m_trackers.size(); ++i) {
 			Tracker@ tracker = m_stages[index].m_trackers[i];
 			m_metagame.addTracker(tracker);
 		}
+		_log("[map_transition] restartMap stage trackers added, count=" + m_stages[index].m_trackers.size(), 1);
 
 	}
 
