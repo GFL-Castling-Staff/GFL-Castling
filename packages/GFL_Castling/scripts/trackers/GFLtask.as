@@ -3519,23 +3519,23 @@ class M14SkillEndTask : Task {
     }
 
 	void start() {
-		// 从全局数组中移除
-		for (int i = m14_active_tasks.length() - 1; i >= 0; i--) {
-			if (m14_active_tasks[i] is m_skillState) {
-				m14_active_tasks.removeAt(i);
+		// 从 Tracker 状态数组中移除
+		for (int i = g_m14Tracker.m14_active_tasks.length() - 1; i >= 0; i--) {
+			if (g_m14Tracker.m14_active_tasks[i] is m_skillState) {
+				g_m14Tracker.m14_active_tasks.removeAt(i);
 				break;
 			}
 		}
 		// 火箭弹奖励
 		if (m_skillState.isRocketEarned()) {
-			m14_rocket_reward_players.insertLast(m_skillState.m_playerId);
+			g_m14Tracker.m14_rocket_reward_players.insertLast(m_skillState.m_playerId);
 			notify(m_metagame, "Skill - M14 Rocket Ready", dictionary(),
 				"misc", m_skillState.m_playerId, false, "", 1.0);
 		}
 		// 将冷却请求加入待处理队列
-		m14_pending_cooldowns.insertLast(
-			M14PendingCooldown(m_skillState.m_characterId, 
-							m_skillState.getCooldownTime(), 
+		g_m14Tracker.m14_pending_cooldowns.insertLast(
+			M14PendingCooldown(m_skillState.m_characterId,
+							m_skillState.getCooldownTime(),
 							m_modifer));
 	}
 

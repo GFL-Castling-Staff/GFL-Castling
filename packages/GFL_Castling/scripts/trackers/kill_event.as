@@ -815,75 +815,6 @@ class kill_event : Tracker {
                 }
             }
 
-            // M14MOD3 火力专注 - 连锁射击
-            if( (KillerWeaponKey=="gkw_m14mod3.weapon" 
-            || KillerWeaponKey=="gkw_m14mod3_skill.weapon"
-            || KillerWeaponKey=="gkw_m14mod3_303.weapon" 
-            || KillerWeaponKey=="gkw_m14mod3_303_skill.weapon")
-            && killway=="hit")
-            {
-                for (uint m = 0; m < m14_active_tasks.length(); m++) {
-                    if (m14_active_tasks[m].m_characterId == characterId 
-                        && m14_active_tasks[m].m_ammo > 0) {
-                        // 搜索被击杀目标附近的敌人
-                        Vector3 dead_position = stringToVector3(dead_pos);
-                        int m_fnum = m_metagame.getFactionCount();
-                        array<const XmlElement@> nearbyEnemies;
-                        for (int f = 0; f < m_fnum; f++) {
-                            if (f != factionId) {
-                                array<const XmlElement@> found = 
-                                    getCharactersNearPosition(m_metagame, 
-                                        dead_position, f, 8.0f);
-                                if (found !is null) {
-                                    for (uint x = 0; x < found.length(); x++) {
-                                        nearbyEnemies.insertLast(found[x]);
-                                    }
-                                }
-                            }
-                        }
-                        // 找最近的敌人（排除被击杀目标自身）
-                        if (nearbyEnemies.length() > 0) {
-                            int closestIdx = -1;
-                            float closestDist = -1.0;
-                            for (uint n = 0; n < nearbyEnemies.length(); n++) {
-                                if (nearbyEnemies[n].getIntAttribute("id") == targetId)
-                                    continue;
-                                float d = getPositionDistance(dead_position, 
-                                    stringToVector3(
-                                        nearbyEnemies[n].getStringAttribute("position")));
-                                if (d < closestDist || closestDist < 0.0) {
-                                    closestDist = d;
-                                    closestIdx = n;
-                                }
-                            }
-                            if (closestIdx >= 0) {
-                                int chain_target = 
-                                    nearbyEnemies[closestIdx].getIntAttribute("id");
-                                string shooter_pos = 
-                                    killer.getStringAttribute("position");
-                                // 发射连锁狙击弹
-                                TaskSequencer@ chain = 
-                                    m_metagame.getTaskManager().newTaskSequencer();
-                                DelayAntiPersonSnipeRequest@ shot = 
-                                    DelayAntiPersonSnipeRequest(m_metagame, 0.15,
-                                        characterId, factionId,
-                                        "snipe_hit_m14mod3.projectile",
-                                        stringToVector3(shooter_pos).add(Vector3(0, 0.5, 0)),
-                                        chain_target);
-                                chain.add(shot);
-                            }
-                        }
-                        // 消耗弹药并提示
-                        m14_active_tasks[m].consumeAmmo();
-                        dictionary ammo_a;
-                        ammo_a["%num"] = "" + m14_active_tasks[m].m_ammo;
-                        notify(m_metagame, "Skill - M14 Ammo", ammo_a,
-                               "misc", m14_active_tasks[m].m_playerId, 
-                               false, "", 1.0);
-                        break;
-                    }
-                }
-            }
 
             //狙击妖精类 击杀无人机充能
 
@@ -1045,14 +976,6 @@ class kill_event : Tracker {
                     SkillArray[j].m_time-=5.0;
                 }
                 sendFactionMessageKeySaidAsCharacter(m_metagame,0,scarh_cid,"scarh_dogtag_gain",dictionary(),0.9);
-            }
-        }
-
-        // M14MOD3 技能死亡清理
-        for (int i = m14_active_tasks.length() - 1; i >= 0; i--) {
-            if (m14_active_tasks[i].m_characterId == cId) {
-                m14_active_tasks[i].m_ended = true;
-                break;
             }
         }
 

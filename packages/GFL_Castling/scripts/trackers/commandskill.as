@@ -14,29 +14,13 @@
 #include "command_skill_info.as"
 #include "GFLplayerlist.as"
 #include "GFLparameters.as"
+#include "m14_skill_tracker.as"
 
 //Interface Author: NetherCrow
 //Contributor: SAIWA K309 Lappland
 
 array<SkillTrigger@> SkillArray;
 array<no_delete_data@> No_Delete_DataArray;
-
-// M14MOD3 全局状态
-array<M14SkillActiveTask@> m14_active_tasks;
-array<int> m14_rocket_reward_players;
-
-// M14MOD3 待添加冷却队列
-class M14PendingCooldown {
-    int m_characterId;
-    float m_cooldownTime;
-    SkillModifer@ m_modifer;
-    M14PendingCooldown(int cId, float cd, SkillModifer@ mod) {
-        m_characterId = cId;
-        m_cooldownTime = cd;
-        @m_modifer = @mod;
-    }
-}
-array<M14PendingCooldown@> m14_pending_cooldowns;
 
 class SkillTrigger{
     int m_character_id;
@@ -394,15 +378,6 @@ class CommandSkill : Tracker {
                         }
                     }
                 }
-            }
-        }
-        // 处理M14MOD3待添加冷却
-        if (m14_pending_cooldowns.length() > 0) {
-            for (int a = m14_pending_cooldowns.length() - 1; a >= 0; a--) {
-                addCooldown("M14MOD3", m14_pending_cooldowns[a].m_cooldownTime, 
-                            m14_pending_cooldowns[a].m_characterId, 
-                            m14_pending_cooldowns[a].m_modifer);
-                m14_pending_cooldowns.removeAt(a);
             }
         }
         if(TimerArray.length()>0)
@@ -5045,9 +5020,9 @@ class CommandSkill : Tracker {
         }
     }
 
-    void excuteM14MOD3Skill(int characterId, int playerId, 
+    void excuteM14MOD3Skill(int characterId, int playerId,
                             SkillModifer@ modifer) {
-        if (excuteCooldownCheck(m_metagame, characterId, modifer, 
+        if (excuteCooldownCheck(m_metagame, characterId, modifer,
                                 playerId, "M14MOD3", true)) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character is null) return;
@@ -5055,31 +5030,27 @@ class CommandSkill : Tracker {
         if (player is null) return;
         if (!player.hasAttribute("aim_target")) return;
 
-        Vector3 c_pos = stringToVector3(
-            character.getStringAttribute("position"));
+        Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
         int factionid = character.getIntAttribute("faction_id");
 
         // 检查并使用火箭弹奖励
-        int rocketIdx = m14_rocket_reward_players.find(playerId);
-        if (rocketIdx >= 0) {
-            m14_rocket_reward_players.removeAt(rocketIdx);
+        if (g_m14Tracker.hasRocketReward(playerId)) {
+            g_m14Tracker.consumeRocketReward(playerId);
             string target = player.getStringAttribute("aim_target");
             Vector3 aim_pos = stringToVector3(target);
             // 发射火箭弹
-            CreateDirectProjectile(m_metagame, 
+            CreateDirectProjectile(m_metagame,
                 aim_pos.add(Vector3(0, 30, 0)), aim_pos,
                 "m14_airstrike_HEAT.projectile",  // 需确认实际火箭弹 key
                 characterId, factionid, 100);
-            playSoundAtLocation(m_metagame, 
+            playSoundAtLocation(m_metagame,
                 "woosh1.wav", factionid, aim_pos, 1.5);
             notify(m_metagame, "Skill - M14 Rocket Fire", dictionary(),
                 "misc", playerId, false, "", 1.0);
         }
 
         // 防止重复激活
-        for (uint i = 0; i < m14_active_tasks.length(); i++) {
-            if (m14_active_tasks[i].m_characterId == characterId) return;
-        }
+        if (g_m14Tracker.isActive(characterId)) return;
 
         // 播放语音
         array<string> Voice = {
@@ -5087,17 +5058,10 @@ class CommandSkill : Tracker {
             "M14Mod_SKILL2_JP.wav",
             "M14Mod_SKILL3_JP.wav"
         };
-        playRandomSoundArray(m_metagame, Voice, factionid, 
-                            c_pos.toString(), 1);
+        playRandomSoundArray(m_metagame, Voice, factionid, c_pos.toString(), 1);
 
-        // 创建技能 Task
-        M14SkillActiveTask@ activeTask = M14SkillActiveTask(
-            m_metagame, 30.0, characterId, playerId, factionid, modifer);
-        m14_active_tasks.insertLast(activeTask);
-
-        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-        tasker.add(activeTask);
-        tasker.add(M14SkillEndTask(m_metagame, activeTask, modifer));
+        // 激活技能
+        g_m14Tracker.activate(characterId, playerId, factionid, modifer);
     }
 
     void excuteSIGMCXSkill(int characterId,int playerId,SkillModifer@ modifer){

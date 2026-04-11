@@ -314,6 +314,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		addTracker(RepairCrane(this));
 		addTracker(RangeFinder(this)); 
 		addTracker(GFLskill(this));
+		addTracker(M14SkillTracker(this));
 		addTracker(kill_event(this,getUserSettings()));
 		addTracker(fairyCommand(this));
 		addTracker(ServerHelper(this));
