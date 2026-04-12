@@ -1,115 +1,66 @@
-# CLAUDE.md
-
-This file provides guidance to Claude Code when working with code in this repository.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
 
-GFL-Castling is a fan-made mod for *Running With Rifles* (RWR) based on *Girls' Frontline*. It is published on Steam Workshop (ID: 2606099273, App: 270150).
-
-All gameplay logic is written in AngelScript (`.as`) and interpreted at runtime by the RWR engine. There is no standalone build step.
+GFL-Castling (异向易位) is a fan-made mod for *Running With Rifles* (RWR) based on *Girls' Frontline*. It is published on Steam Workshop (ID: 2606099273, App: 270150). Most gameplay logic is written in AngelScript (`.as` files) and loaded by the RWR engine at runtime.
 
 ## Running / Testing
 
 There is no build system, test runner, or linter.
 
-The mod is tested by:
-
-1. Copying `packages/GFL_Castling/` (and optionally `packages/optional/`) into the RWR `media/packages/` directory
-2. Launching the game and loading the mod in campaign mode
-
-Syntax/runtime issues generally surface through in-game crash logs or broken behavior.
+Typical validation flow:
+1. Copy `packages/GFL_Castling/` into the game's `media/packages/` directory.
+2. Launch RWR and start the mod from the campaign menu.
+3. Use in-game behavior and crash logs to validate script changes.
 
 ## Architecture
 
-### Entry Point & Game Mode
+### Entry Points
 
-`scripts/start_invasion.as` is the main campaign entry point declared by `package_config.xml`.
-
-`scripts/my_gamemode.as` defines `MyGameMode`, which extends the vanilla campaign mode and wires together:
-
-- `MyStageConfigurator`
-- `MyItemDeliveryConfigurator`
-- `MyVehicleDeliveryConfigurator`
-
-There are also alternative entry files such as `start_1.as` to `start_5.as`, `start_campaign.as`, `start_fr1.as`, and `start_fr2.as` for special subsets or modes.
+- `packages/GFL_Castling/scripts/start_invasion.as` is the main campaign entry point declared by `package_config.xml`.
+- `packages/GFL_Castling/scripts/gamemodes/invasion/gamemode_invasion.as` is the live invasion gamemode wiring point and the main tracker registration hub.
 
 ### Script Directories
 
 | Directory | Purpose |
-|---|---|
-| `scripts/core/` | Shared data tables and helpers |
-| `scripts/trackers/` | Runtime gameplay handlers |
-| `scripts/delivery/` | Item and vehicle delivery configuration |
-| `scripts/gamemodes/` | Campaign / invasion gamemode code |
-| `scripts/internal/` | Wrappers around vanilla framework utilities |
+| --- | --- |
+| `packages/GFL_Castling/scripts/core/` | Shared data models, helpers, persistence, player info |
+| `packages/GFL_Castling/scripts/trackers/` | Runtime gameplay trackers and event handlers |
+| `packages/GFL_Castling/scripts/gamemodes/` | Campaign and invasion gamemode classes |
+| `packages/GFL_Castling/scripts/delivery/` | Item and vehicle delivery configuration |
+| `packages/GFL_Castling/scripts/internal/` | Wrappers around vanilla RWR framework code |
 
-### Key Files in `scripts/core/`
+### Important Core Files
 
-- `girl_index.as`: master roster and metadata for T-Dolls
-- `GFLparameters.as`: centralized parameters and tunables
-- `GFLplayerlist.as`: player/soldier tracking
-- `GFLhelpers.as`: common helper functions
-- `gfl_skill_info.as`: passive skill index mapping (`notify_script key -> case`)
-- `command_skill_info.as`: active skill index mapping (`weapon key -> case`)
-- `mod3_doll.as`: Mod 3 upgrade system
-- `save_system.as`: persistence
-- `enemy_reward.as`: enemy reward / drop logic
-- `ServerHelper.as`: server-side helpers
+- `core/girl_index.as`: master roster and character metadata.
+- `core/GFLparameters.as`: centralized tunable gameplay parameters.
+- `core/GFLplayerlist.as`: player/soldier tracking plus per-player skill counters and lightweight tags.
+- `core/gfl_skill_info.as`: T-Doll skill definitions.
+- `core/command_skill_info.as`: command/support skill definitions.
+- `core/save_system.as`: persistence between sessions.
 
-### Key Files in `scripts/trackers/`
+### Important Tracker Files
 
-- `commandskill.as`: `/skill` command entry, cooldown handling, and active skill dispatch
-- `GFLskill.as`: passive skill dispatcher driven by `handleResultEvent`
-- `GFLtask.as`: Task implementations
-- `event_system.as`: event dispatcher; some implementations have moved to Task, but `GFL_event_array + update()` still exists
-- `m14_skill_tracker.as`: dedicated M14 state management
-- `javelin_tracker.as`: dedicated Javelin state machine
-- `kill_skill.as` / `kill_event.as`: kill-related skill hooks
-- `call_event_handler.as`: unit call/spawn system
-- `spawn_in_base_call_handler.as`: base spawn mechanics
-- `fairy_command.as`: fairy / command unit mechanics
-- `penalty_manager.as`, `ban_manager.as`: anti-griefing and server management
+- `trackers/GFLskill.as`: runtime skill activation/effect logic for the remaining GFL skill flows.
+- `trackers/commandskill.as`: command/support skill activation, cooldown handling, and several task-backed skill flows including the current M14MOD3 path.
+- `trackers/GFLtask.as`: shared task implementations used by skill and event flows.
+- `trackers/kill_event.as` / `trackers/kill_skill.as`: on-kill behavior and skill-related kill handling.
+- `trackers/call_event_handler.as`: call-in and spawn logic.
+- `trackers/fairy_command.as`: fairy mechanics.
+- `trackers/javelin_tracker.as`: dedicated Javelin tracker extracted from the older monolithic skill path.
 
-### Task System
+### Retired / Historical Files
 
-`scripts/internal/task_sequencer.as` defines:
+- `deleted_asset/script/event_system.as`: retired event-system implementation. It is no longer part of the live tracker chain.
 
-- `Task`
-- `TaskSequencer`
-- `TaskManager`
+## Current Implementation Notes
 
-Typical usage:
+- The codebase is in an ongoing migration away from older monolithic tracker/update-array patterns toward task-backed flows where it makes sense.
+- Not every system should become its own tracker. Reuse existing player-state infrastructure such as `GFLplayerlist.as` when a feature only needs per-player flags/counters.
+- M14MOD3 currently uses the existing `commandskill.as` / `kill_event.as` / `GFLtask.as` path with player tags stored in `GFL_playerInfo`; it is not using a standalone `M14SkillTracker`.
 
-`m_metagame.getTaskManager().newTaskSequencer()`
+## AngelScript / RWR Notes
 
-then:
-
-`tasker.add(MyTask(...))`
-
-Task implementations live mainly in `scripts/trackers/GFLtask.as`.
-
-### Current Skill-System Status
-
-The skill migration has already progressed significantly:
-
-- `RepeatEffectTask` exists
-- `DOT / XM8 / HK416 / UZI` have been migrated to Task
-- M14 state has been moved into `m14_skill_tracker.as`
-- Javelin state has been moved into `javelin_tracker.as`
-- `GFLskill.as::update(float time)` currently exists as an empty lifecycle method
-
-The main remaining old-style system is `event_system.as`, which still uses manual event arrays and an `update()` loop even though several event implementations have already been rewritten as Tasks.
-
-## Conventions
-
-- Comments are written in Chinese
-- Member variables use the `m_` prefix
-- `excute` is the project's established spelling; do not rename it to `execute`
-- Data exchange follows common RWR `XmlElement` / `dictionary` patterns
-- Version control follows Conventional Commits when making commits
-
-## Working Docs
-
-`docs/architecture/` and `docs/reports/` should be treated as the primary source of current architecture status.
-
-`claude_use/` contains working notes and historical migration prompts. Some of those files are snapshots from earlier migration phases and may contain outdated statements.
+- The mod includes both vanilla RWR scripts and mod scripts, so many engine classes/helpers are available through shared include chains.
+- `_log()` is the common logging helper.
+- Runtime data exchange uses `XmlElement`, `dictionary`, and engine tracker/task APIs following RWR conventions.
