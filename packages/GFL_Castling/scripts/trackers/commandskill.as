@@ -5025,8 +5025,8 @@ class CommandSkill : Tracker {
     void excuteM14MOD3Skill(int characterId, int playerId, SkillModifer@ modifer) {
         if (excuteCooldownCheck(m_metagame, characterId, modifer, playerId, "M14MOD3", true)) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-        if (!canCastSkill(character)) return;
         if (character is null) return;
+        if (!canCastSkill(character)) return;
         const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
         if (player is null) return;
         if (!player.hasAttribute("aim_target")) return;
