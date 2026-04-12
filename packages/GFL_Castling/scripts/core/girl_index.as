@@ -1257,6 +1257,7 @@ dictionary tdoll_complex_index = {
     {modded_key(9002,1).toString(),"ff_destroyer_skin.weapon"},
     {modded_key(9003).toString(),"ff_gager.weapon"},
     {modded_key(9004).toString(),"ff_architect.weapon"},
+    {modded_key(9004,1).toString(),"ff_architect_nvw.weapon"},
     {modded_key(9005).toString(),"ff_hunter.weapon"},
     {modded_key(9006).toString(),"ff_Intruder.weapon"},
     {modded_key(9007).toString(),"ff_justice.weapon"},
@@ -1863,6 +1864,7 @@ array<string> gk_weapon_hvy_nerfed = {
     "gkw_hvy_m2.weapon",
     "gkw_hvy_pp93.weapon",
     "ff_architect_1.weapon",
+    "ff_architect_nvw_1.weapon",
     "ff_destroyer.weapon",
     "ff_destroyer_skin.weapon"
 };
@@ -1873,6 +1875,8 @@ array<string> gk_weapon_sf_nerfed = {
     "ff_alchemist_skill.weapon",
     "ff_architect.weapon",
     "ff_architect_1.weapon",
+    "ff_architect_nvw.weapon",
+    "ff_architect_nvw_1.weapon",
     "ff_destroyer.weapon",
     "ff_destroyer_skin.weapon",
     "ff_gager.weapon",
@@ -1943,5 +1947,6 @@ array<string> truecore_blacklist = {
 };
 
 array<string> blackcard_blacklist = {
-    "ff_destroyer_skin.weapon"
+    "ff_destroyer_skin.weapon",
+    "ff_architect_nvw.weapon"
 };

@@ -1909,14 +1909,17 @@
     <model filename="sfd_boss_architect.xml">
         <requirement class="weapon" key="ff_architect_1.weapon" slot="0" />
     </model>
+    <model filename="gkd_architect_nvw.xml">
+        <requirement class="weapon" key="ff_architect_nvw.weapon" slot="0" />
+    </model>
+    <model filename="gkd_architect_nvw.xml">
+        <requirement class="weapon" key="ff_architect_nvw_1.weapon" slot="0" />
+    </model>
     <model filename="sfd_boss_hunter.xml">
         <requirement class="weapon" key="ff_hunter.weapon" slot="0" />
     </model>
     <model filename="sfd_boss_hunter.xml">
         <requirement class="weapon" key="ff_hunter_skill.weapon" slot="0" />
-    </model>
-    <model filename="sfd_boss_architect.xml">
-        <requirement class="weapon" key="ff_architect.weapon" slot="0" />
     </model>
     <model filename="sfd_intruder.xml">
         <requirement class="weapon" key="ff_Intruder.weapon" slot="0" />

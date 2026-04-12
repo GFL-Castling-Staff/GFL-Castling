@@ -548,6 +548,7 @@ string normalizeWeaponKey(string key) {
 		{"gkw_hvy_rpg29_pdw.weapon", "gkw_hvy_mk47.weapon"},
 
 		{"ff_architect_1.weapon", "ff_architect.weapon"},
+		{"ff_architect_nvw_1.weapon", "ff_architect_nvw.weapon"},
 		{"ff_Intruder_1.weapon", "ff_Intruder.weapon"},
 		{"ff_gager_1.weapon", "ff_gager.weapon"},
 		{"ff_weaver_1.weapon", "ff_weaver.weapon"},
