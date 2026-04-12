@@ -59,6 +59,15 @@ Typical validation flow:
 - Not every system should become its own tracker. Reuse existing player-state infrastructure such as `GFLplayerlist.as` when a feature only needs per-player flags/counters.
 - M14MOD3 currently uses the existing `commandskill.as` / `kill_event.as` / `GFLtask.as` path with player tags stored in `GFL_playerInfo`; it is not using a standalone `M14SkillTracker`.
 
+## Refactor Guardrails
+
+- Before creating a new standalone tracker for a single skill, first check whether the state can live in existing systems such as `GFLplayerlist.as`, `commandskill.as`, `kill_event.as`, or `GFLtask.as`.
+- If a skill still uses the shared command-skill path, preserve the normal safety checks and interaction expectations: validate `character is null` before calling `canCastSkill(character)`, keep active-state feedback clear, and avoid silent no-op branches when the player presses `/s`.
+- Prefer ending a task by applying cooldown directly at the task end when the cooldown is conceptually tied to that task's completion. Do not introduce extra pending arrays or whole trackers unless they solve a real coordination problem.
+- When listening to global events such as `character_kill`, filter as early as possible. Dedicated skill logic should avoid doing unnecessary work for unrelated kills.
+- Reuse existing player-state containers for per-player flags or rewards when the state is lightweight. Reserve ad-hoc arrays for short-lived runtime objects that truly need their own lifecycle.
+- When reverting or porting projectile logic, verify the referenced projectile keys still exist and that the damage model matches the original behavior. A direct-hit projectile and a spawn-on-impact projectile are not interchangeable.
+
 ## AngelScript / RWR Notes
 
 - The mod includes both vanilla RWR scripts and mod scripts, so many engine classes/helpers are available through shared include chains.
