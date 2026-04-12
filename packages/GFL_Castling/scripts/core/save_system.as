@@ -445,12 +445,15 @@ class tdoll_intimacy_info
 
 const XmlElement@ readFile(const Metagame@ metagame,string name, string profile_hash){
     string filename = ("save_" + profile_hash +".xml" );
-    const XmlElement@ root = readXML(metagame,filename).getFirstChild();
+    const XmlElement@ xml = readXML(metagame,filename);
+    const XmlElement@ root = xml.getFirstChild();
     if(root is null){
         _log("readFile is null,create");
-        XmlElement@ new_xml = PlayerProfileSave(player_data(name,profile_hash));
+        player_data default_data(name,profile_hash);
+        XmlElement@ new_xml = PlayerProfileSave(default_data);
         writeXML(metagame,filename,new_xml);
-        @root = readXML(metagame,filename).getFirstChild();
+        const XmlElement@ refreshed_xml = readXML(metagame,filename);
+        @root = refreshed_xml.getFirstChild();
     }
     return root;
 }
@@ -461,13 +464,14 @@ const XmlElement@ readXML(const Metagame@ metagame, string filename){
             dictionary = { {"TagName", "data"}, {"class", "saved_data"}, {"filename", filename}}}));
     const XmlElement@ xml = metagame.getComms().query(query);
     if(xml is null){
-        writeXML(metagame,filename,XmlElement(filename));
+        XmlElement@ empty_xml = XmlElement(filename);
+        writeXML(metagame,filename,empty_xml);
         @xml = readXML(metagame,filename);
     }
     return xml;
 }
 
-void writeXML(const Metagame@ metagame, string filename, XmlElement@ xml, string location = "" ){
+void writeXML(const Metagame@ metagame, string filename, const XmlElement@ xml, string location = "" ){
     XmlElement command("command");
         command.setStringAttribute("class", "save_data");
         command.setStringAttribute("filename", filename);
@@ -895,7 +899,8 @@ class Save_System : Tracker {
             player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
             newdata.addDevPoint(1000);
             string filename = ("save_" + profile_hash +".xml" );
-            writeXML(m_metagame,filename,PlayerProfileSave(newdata));
+            XmlElement@ saved_xml = PlayerProfileSave(newdata);
+            writeXML(m_metagame,filename,saved_xml);
         }
         if(checkCommand(message,"gfl_load")){
             string girl_index = message.substr(message.findFirst(" ")+1);

@@ -333,7 +333,8 @@ class GFL_playerInfo{
         string profile_hash = this.getHash();
         string sid = this.getSid();
         int player_id = this.getPlayerPid();        
-        player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+        const XmlElement@ profile_root = readFile(m_metagame,p_name,profile_hash);
+        player_data newdata = PlayerProfileLoad(profile_root);
 
         for(uint i1=0;i1 < this.m_tdoll_intimacy_buck.length();i1++)
         {
@@ -343,7 +344,8 @@ class GFL_playerInfo{
         this.clearIndexBuck();
 
         string filename = ("save_" + profile_hash +".xml" );
-        writeXML(m_metagame,filename,PlayerProfileSave(newdata));           
+        XmlElement@ saved_xml = PlayerProfileSave(newdata);
+        writeXML(m_metagame,filename,saved_xml);           
     }
 
     void clearIndexBuck()
@@ -932,7 +934,8 @@ class GFL_playerlist_system : Tracker {
                 m_dev_point_add = min(250,m_dev_point_add);
                 m_dev_point_add += m_dev_point_complete;
 
-                player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+                const XmlElement@ profile_root = readFile(m_metagame,p_name,profile_hash);
+                player_data newdata = PlayerProfileLoad(profile_root);
                 newdata.addDevPoint(m_dev_point_add);
 
                 string c_weaponType = equipment.getWeapon(0);
@@ -951,7 +954,8 @@ class GFL_playerlist_system : Tracker {
                 playerInfo.clearIndexBuck();
 
                 string filename = ("save_" + profile_hash +".xml" );
-                writeXML(m_metagame,filename,PlayerProfileSave(newdata));
+                XmlElement@ saved_xml = PlayerProfileSave(newdata);
+                writeXML(m_metagame,filename,saved_xml);
                 _log("[match_reward] profile saved for player name=" + p_name + ", filename=" + filename + ", dev_reward=" + m_dev_point_add, 1);
 
                 int _current_dev_point = newdata.getDevPoint();
