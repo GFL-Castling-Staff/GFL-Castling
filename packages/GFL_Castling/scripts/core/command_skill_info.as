@@ -197,6 +197,8 @@ dictionary commandSkillIndex = {
         {"gkw_mab38.weapon",27},
         {"gkw_mab38_oc.weapon",27},
         {"gkw_64type.weapon",27},
+        {"gkw_64type_7108.weapon",27},
+        {"gkw_64type_8507.weapon",27},
         {"gkw_m16a1.weapon",27},
         {"gkw_m16a1_533.weapon",27},
         {"gkw_m16a1_553.weapon",27},
@@ -435,6 +437,8 @@ dictionary commandSkillIndex = {
         // {"gkw_emp35_8003.weapon",58},
 
         {"gkw_64typemod3.weapon",59},
+        {"gkw_64typemod3_7108.weapon",59},
+        {"gkw_64typemod3_8507.weapon",59},
 
         {"gkw_zasm21.weapon",60},
         {"gkw_zasm21_2104.weapon",60},
