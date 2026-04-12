@@ -146,7 +146,7 @@ class XmlElement {
 
 		return elements;
 	}
-	
+
 	// --------------------------------------------
 	const XmlElement@ getFirstChild() const {
 		const XmlElement@ element = null;
@@ -205,8 +205,8 @@ class XmlElement {
 			if(index >= int(childrenData.size()) || childrenData is null){return;}
 			const XmlElement child(childrenData[index]);
 			if(tagName == child.getName()){
-				childrenData.removeAt(index);	
-			}	
+				childrenData.removeAt(index);
+			}
 		}
 	}
 	// --------------------------------------------
@@ -230,7 +230,7 @@ class XmlElement {
 						elements.insertLast(child_sub);
 					}
 				}
-			}	
+			}
 		}
 		return elements;
 	}
@@ -447,8 +447,8 @@ class Vector3 {
 
 	// [] usage
 	// --------------------------------------------
-    float get_opIndex(int i) const { 
-		return m_values[i]; 
+    float get_opIndex(int i) const {
+		return m_values[i];
 	}
 
 	// --------------------------------------------
@@ -462,7 +462,7 @@ Vector3 stringToVector3(string s) {
 	if(strings.length()!=3)
 		for (int i = 0; i < 3; ++i) {
 			d.m_values[i] = 0.0;
-		}		
+		}
 	else
 		for (int i = 0; i < 3; ++i) {
 			d.m_values[i] = parseFloat(strings[i]);
@@ -485,7 +485,7 @@ float getPositionDistance(const Vector3@ pos1, const Vector3@ pos2) {
 // --------------------------------------------
 bool checkRange(const Vector3@ pos1, const Vector3@ pos2, float range) {
 	float length = getPositionDistance(pos1, pos2);
-	return length <= range; 
+	return length <= range;
 }
 
 // --------------------------------------------
@@ -526,7 +526,29 @@ string normalizeWeaponKey(string key) {
 		{"gkw_ks23_frag.weapon", "gkw_ks23.weapon"},
 		{"gkw_medical_agl_hg.weapon", "gkw_gsh18mod3.weapon"},
 		{"gkw_medical_agl_hg_523.weapon", "gkw_gsh18mod3_523.weapon"},
+
+		{"gkw_yurine_1.weapon", "gkw_yurine.weapon"},
+
+		{"gkw_type100_1.weapon", "gkw_type100_banzai.weapon"},
+		{"gkw_hvy_bgm71_m4.weapon", "gkw_hvy_bgm71.weapon"},
+		{"gkw_hvy_ags30_fix.weapon", "gkw_hvy_ags30.weapon"},
+		{"gkw_aps_pdw.weapon", "gkw_hvy_ags30.weapon"},
+		{"gkw_hvy_2b14_pdw.weapon", "gkw_hvy_2b14.weapon"},
+		{"gkw_m2_m1a1.weapon", "gkw_hvy_m2.weapon"},
+		{"gkw_hvy_at4_incendiary.weapon", "gkw_hvy_at4.weapon"},
+		{"gkw_at4_tec-9.weapon", "gkw_hvy_at4.weapon"},
+		{"gkw_hvy_qlz04_st.weapon", "gkw_hvy_qlz04.weapon"},
+		{"gkw_qlz04_peak79.weapon", "gkw_hvy_qlz04.weapon"},
+		{"gkw_hvy_mk153_he.weapon", "gkw_hvy_mk153.weapon"},
+		{"gkw_mk153_m93r.weapon", "gkw_hvy_mk153.weapon"},
+		{"gkw_hvy_pp93_pdw.weapon", "gkw_hvy_pp93.weapon"},
+		// {"gkw_hvy_mk47_skill.weapon", "gkw_hvy_mk47.weapon"},
+		{"gkw_hvy_mk47_pdw.weapon", "gkw_hvy_mk47.weapon"},
+		{"gkw_hvy_rpg29_he.weapon", "gkw_hvy_rpg29.weapon"},
+		{"gkw_hvy_rpg29_pdw.weapon", "gkw_hvy_mk47.weapon"},
+
 		{"ff_architect_1.weapon", "ff_architect.weapon"},
+		{"ff_architect_nvw_1.weapon", "ff_architect_nvw.weapon"},
 		{"ff_Intruder_1.weapon", "ff_Intruder.weapon"},
 		{"ff_gager_1.weapon", "ff_gager.weapon"},
 		{"ff_weaver_1.weapon", "ff_weaver.weapon"},
@@ -569,7 +591,7 @@ class rgba_color{
 		color_r =1;
 		color_g =1;
 		color_b =1;
-		color_a =1;		
+		color_a =1;
 	}
 
 	rgba_color(float r,float g,float b,float a)
@@ -601,7 +623,7 @@ class rgba_color{
 		color_r =r;
 		color_g =g;
 		color_b =b;
-		color_a =a;		
+		color_a =a;
 	}
 	float getRed()
 	{
@@ -618,7 +640,7 @@ class rgba_color{
 	float getAlpha()
 	{
 		return color_a;
-	}			
+	}
 }
 
 rgba_color stringToRGBA(string s) {
@@ -669,7 +691,7 @@ function copy_folder($src, $dst) {
         }
     }
     closedir($dir);
-} 
+}
 
 // --------------------------------------------
 function get_profile_path($hash) {
@@ -699,7 +721,7 @@ function merge_profiles($source_folder_name, $target_folder_name) {
 	    @mkdir($dst, 0777, true); // recursive = true
 	}
 
-	// go through all profiles in source 
+	// go through all profiles in source
 	$dir = opendir($src);
 	while(false !== ( $file = readdir($dir)) ) {
         if (( $file != '.' ) && ( $file != '..' )) {
@@ -738,7 +760,7 @@ function merge_profile($src_file_path, $dst_file_path) {
 		<monitor name="kill combo">
 			<entry combo="x" count="y" /> --> highest count per combo
 		</monitor>
-        <monitor name="death streak" longest_death_streak="1" /> --> highest 
+        <monitor name="death streak" longest_death_streak="1" /> --> highest
 		...
 	</stats>
 

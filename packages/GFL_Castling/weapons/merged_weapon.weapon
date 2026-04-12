@@ -19302,7 +19302,7 @@
 	<next_in_chain key="gkw_ar15mod3_skill.weapon" share_ammo="0"/>
 	<inventory encumbrance="35.0" buy_price="240.0" sell_price="240.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
-	<sound key="fire" fileref="star15_fire_FromBLACKSQUAD.wav" pitch_variety="0.01" volume="0.8"/>
+	<sound key="fire" fileref="ar15mod3_fire_FromCOD8.wav" pitch_variety="0.01" volume="0.8"/>
 	<sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.6"/>
 	<sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.6"/>
@@ -20280,7 +20280,7 @@
 	<inventory encumbrance="35.0" buy_price="240.0" sell_price="240.0"/>
 	<commonness value="0" in_stock="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
-	<sound key="fire" fileref="star15_fire_FromBLACKSQUAD.wav" pitch_variety="0.01" volume="0.8"/>
+	<sound key="fire" fileref="ar15mod3_fire_FromCOD8.wav" pitch_variety="0.01" volume="0.8"/>
 	<sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.6"/>
 	<sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.6"/>
@@ -140043,13 +140043,6 @@
 	<animation state_key="crouch_moving" animation_key="crouching forwards, hip fire"/>
 	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
 	<sound key="fire" fileref="architect_fire_FromCOD15.wav" pitch_variety="0.00" volume="1.7"/>
-	<sound key="fire" fileref="architect_fire_FromCOD15.wav" pitch_variety="0.00" volume="1.7"/>
-	<sound key="fire" fileref="architect_fire_FromCOD15.wav" pitch_variety="0.00" volume="1.7"/>
-	<sound key="fire" fileref="architect_fire_FromCOD15.wav" pitch_variety="0.00" volume="1.7"/>
-	<sound key="fire" fileref="architect_fire_FromCOD16.wav" pitch_variety="0.00" volume="1.7"/>
-	<sound key="fire" fileref="architect_fire_FromCOD15.wav" pitch_variety="0.00" volume="1.7"/>
-	<sound key="fire" fileref="architect_fire_FromCOD15.wav" pitch_variety="0.00" volume="1.7"/>
-	<sound key="fire" fileref="architect_fire_FromCOD15.wav" pitch_variety="0.00" volume="1.7"/>
 	<sound key="cycle" fileref="Architectskill_cycle_FromCOD17.wav"/>
 	<sound key="magazine_out" fileref="Architectskill_mgz_out_FromCOD17.wav"/>
 	<sound key="magazine_in" fileref="Architectskill_mgz_in_FromCOD17.wav"/>
@@ -140071,6 +140064,155 @@
 	<commonness value="0.00001" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="45.0"/>
 	<hud_icon filename="sfw_architect.png"/>
+	<effect class="muzzle" ref="LawMuzzle"/>
+	<effect class="muzzle" ref="UpDust"/>
+	<stance state_key="running" accuracy="0.5"/>
+	<stance state_key="walking" accuracy="0.6"/>
+	<stance state_key="crouch_moving" accuracy="0.8"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.9"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1.2"/>
+	<stance state_key="over_wall" accuracy="1.2"/>
+	<modifier class="speed" value="-0.1"/>
+	<modifier class="detectability" value="0.1"/>
+	<tag name="elite"/>
+	<inventory encumbrance="17.0" buy_price="328.0" sell_price="328.0"/>
+	<capacity value="0" source="rank" source_value="0.0"/>
+	<capacity value="1" source="rank" source_value="39.633"/>
+</weapon>
+
+<weapon key="ff_architect_nvw.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<specification retrigger_time="0.1" accuracy_factor="1.0" magazine_size="30" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" spread_range="0.35" stance_accuracy_rate="1.5" name="GK-Architect:NVW" class="0" slot="0" sight_range_modifier="1.0" projectile_speed="180.0" sustained_fire_diminish_rate="2.0" sustained_fire_grow_step="0.3"/>
+	<next_in_chain key="ff_architect_nvw_1.weapon" share_ammo="0"/>
+	<inventory encumbrance="20.0" buy_price="3000.0" sell_price="648.0"/>
+	<animation key="recoil" animation_key="recoil1"/>
+	<animation key="recoil" animation_key="recoil2"/>
+	<animation key="recoil" animation_key="recoil3"/>
+	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
+	<animation key="hold" animation_key="still, with law"/>
+	<animation key="hold_on_wall" animation_key="still, with law"/>
+	<animation state_key="walking" animation_key="walking, hip fire"/>
+	<animation state_key="running" animation_key="walking, hip fire"/>
+	<animation state_key="crouch_moving" animation_key="crouching forwards, hip fire"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
+	<sound key="fire" fileref="Architect_fire_FromHALO4.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="magazine_out" fileref="Architect_mgz_out_FromCOD12.wav" volume="0.8"/>
+	<sound key="magazine_in" fileref="Architect_mgz_in_FromCOD12.wav" volume="0.8"/>
+	<sound key="cycle" fileref="Architect_cycle_FromCOD12.wav" volume="0.8"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename="gkw_architect_nvw.xml"/>
+	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
+	<result class="hit" kill_probability="6.25" kill_probability_offset_on_successful_hit="0.75" kill_decay_start_time="0.333" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
+	<trigger class="impact"/>
+	<rotation class="motion"/>
+	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
+	<sound class="result" key="terrain" fileref="ricochet2.wav"/>
+	<sound class="result" key="terrain" fileref="ricochet3.wav"/>
+	<sound class="result" key="terrain" fileref="ricochet4.wav"/>
+	<sound class="result" key="shield" fileref="ricochet5.wav"/>
+	<sound class="result" key="shield" fileref="ricochet6.wav"/>
+	<sound class="result" key="shield" fileref="ricochet7.wav"/>
+	<sound class="result" key="character" fileref="impact_body2.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" fileref="impact_body3.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" fileref="impact_body4.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" fileref="impact_body3.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" fileref="impact_body4.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_1.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_2.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_3.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_4.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_5.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_6.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="vehicle" copy="terrain"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_01.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_02.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_03.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_04.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_05.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_06.wav" pitch_variety="0.3" volume="0.6"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_07.wav" pitch_variety="0.3" volume="0.6"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_06.wav" pitch_variety="0.3" volume="0.6"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_07.wav" pitch_variety="0.3" volume="0.8"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_06.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_07.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_08.wav" pitch_variety="0.3" volume="0.7"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_08.wav" pitch_variety="0.3" volume="0.8"/>
+	<sound class="result" key="vehicle" tag="metal_heavy" file="metal_heavy_01.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="metal_heavy" file="metal_heavy_02.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="metal_heavy" file="metal_heavy_03.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="sandbag" file="barrier_bullet_01.wav" pitch_variety="0.3" volume="0.8"/>
+	<sound class="result" key="vehicle" tag="sandbag" file="barrier_bullet_02.wav" pitch_variety="0.3" volume="0.8"/>
+	<sound class="result" key="vehicle" tag="sandbag" file="barrier_bullet_03.wav" pitch_variety="0.3" volume="0.4"/>
+	<sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_01.wav" pitch_variety="0.4" volume="0.6"/>
+	<sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_01.wav" pitch_variety="0.4" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_02.wav" pitch_variety="0.4" volume="0.8"/>
+	<sound class="result" key="static_object" copy="terrain"/>
+	<effect class="result" key="shield" ref="Laser_ImpactShine_Red"/>
+	<effect class="result" key="vehicle" ref="Laser_ImpactShine_Red"/>
+	<effect class="result" key="other" copy="vehicle"/>
+	<effect class="result" key="shield" ref="Laser_ImpactBeam_Red"/>
+	<effect class="result" key="vehicle" ref="Laser_ImpactBeam_Red"/>
+	<effect class="result" key="terrain" ref="Laser_Burnout"/>
+	<effect class="result" key="static_object" ref="Laser_Burnout_on_staticobject"/>
+	<effect class="result" key="terrain" ref="Laser_ImpackSmoke"/>
+	<effect class="result" key="static_object" ref="Laser_ImpackSmoke"/>
+	<effect class="result" key="terrain" ref="Laser_ImpactShine_Red"/>
+	<effect class="result" key="static_object" ref="Laser_ImpactShine_Red"/>
+	<effect class="result" key="other" ref="LaserImpact_Red"/>
+	<effect class="result" key="terrain" ref="LaserImpact_Red"/>
+	<effect class="result" key="character" ref="LaserImpact_Red"/>
+	<effect class="result" key="static_object" ref="LaserImpact_Red"/>
+	<effect class="result" key="character" ref="common_hit_effect_1" lighting="0"/>
+	<effect class="result" key="character" ref="common_hit_effect_2" lighting="0"/>
+	<trail probability="1.0" key="red"/>
+	</projectile>
+	<stance state_key="running" accuracy="0.2"/>
+	<stance state_key="walking" accuracy="0.5"/>
+	<stance state_key="crouch_moving" accuracy="0.9"/>
+	<stance state_key="prone_moving" accuracy="0.9"/>
+	<stance state_key="standing" accuracy="0.98"/>
+	<stance state_key="crouching" accuracy="1.0"/>
+	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<hud_icon filename="gkw_architect_nvw.png"/>
+	<tag name="elite"/>
+	<commonness value="0.0000001" in_stock="0" can_respawn_with="1"/>
+	<inventory encumbrance="17.0" buy_price="328.0" sell_price="328.0"/>
+	<capacity value="0" source="rank" source_value="0.0"/>
+	<capacity value="1" source="rank" source_value="39.633"/>
+</weapon>
+
+<weapon key="ff_architect_nvw_1.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<specification retrigger_time="1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="0.1" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" name="GK-Architect:NVW-[Water Smash]" class="0" sight_range_modifier="3.0" projectile_speed="120" slot="0" projectiles_per_shot="1"/>
+	<inventory encumbrance="20.0" buy_price="3000.0" sell_price="648.0"/>
+	<next_in_chain key="ff_architect_nvw.weapon" share_ammo="0"/>
+	<animation key="recoil" animation_key="recoil, law"/>
+	<animation key="reload" animation_key="reload architect"/>
+	<animation key="reload" stance_key="prone" animation_key="magBrifleRpntw"/>
+	<animation key="hold" animation_key="still, with law"/>
+	<animation key="hold_on_wall" animation_key="still, with law"/>
+	<sound key="fire" fileref="architect_fire_FromCOD15.wav" pitch_variety="0.00" volume="1.7"/>
+	<sound key="cycle" fileref="Architectskill_cycle_FromCOD17.wav"/>
+	<sound key="magazine_out" fileref="Architectskill_mgz_out_FromCOD17.wav"/>
+	<sound key="magazine_in" fileref="Architectskill_mgz_in_FromCOD17.wav"/>
+	<sound key="cycle_out" fileref=""/>
+	<sound key="cycle_in" fileref=""/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename="gkw_architect_nvw.xml"/>
+	<hud_icon filename="gkw_architect_nvw.png"/>
+	<ballistics curve_height="10.0" near_far_distance="15.0" speed_estimation_near="10.0" speed_estimation_far="120.0" max_speed="120.0" randomness="0.0" tweak_factor="1.5"/>
+	<projectile can_be_detected_by_footmen="1" can_be_detected_by_driver="1" class="grenade" name="HEAT" slot="1" pulldown_in_air="24.0" key="gkw_architect_nvw_rocket.projectile">
+	<tag name="rocket"/>
+	<result class="spawn" instance_class="projectile" instance_key="gkw_architect_nvw_rocket_sub.projectile" min_amount="2" max_amount="2" offset="0 0.0 0" position_spread="0 0" direction_spread="0 0"/>
+	<trigger class="time" time_to_live="1.3"/>
+	<rotation class="motion"/>
+	<model mesh_filename="gkw_architect_nvw_rockets.xml"/>
+	<commonness value="0.0"/>
+	<effect class="activated" ref="Propulsion"/>
+	</projectile>
+	<weak_hand_hold offset="0.3"/>
+	<commonness value="0.00001" in_stock="0" can_respawn_with="1"/>
 	<effect class="muzzle" ref="LawMuzzle"/>
 	<effect class="muzzle" ref="UpDust"/>
 	<stance state_key="running" accuracy="0.5"/>
@@ -140188,7 +140330,7 @@
 	<sound key="cycle" fileref="ags30_cycle_FromCOD6R.wav" volume="0.9"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<model filename=""/>
-	<hud_icon filename="sfw_destroyer.png"/>
+	<hud_icon filename="gkw_destroyer_1.png"/>
 	<ballistics curve_height="3.0" near_far_distance="16.0" speed_estimation_near="10.0" speed_estimation_far="16.0" max_speed="47.0" randomness="0.0" tweak_factor="1.55"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile class="grenade" name="30mm" slot="1" pulldown_in_air="26.0" key="destroyer.projectile">
@@ -146723,13 +146865,6 @@
 	<stance state_key="crouching" accuracy="0.85"/>
 	<stance state_key="prone" accuracy="0.94"/>
 	<modifier class="speed" value="-0.6"/>
-	<shield offset="2.7 3.0 1.5" extent="0.3 5.0 4.0" usable_for_cover="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.1"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
 	<target_factors tag="pistol" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
@@ -146849,13 +146984,6 @@
 	<stance state_key="crouching" accuracy="0.85"/>
 	<stance state_key="prone" accuracy="0.94"/>
 	<modifier class="speed" value="-0.6"/>
-	<shield offset="2.7 3.0 1.5" extent="0.3 5.0 4.0" usable_for_cover="0"/>
-	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="stun" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.1"/>
 	<target_factors tag="jeep" distance="1.25" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
@@ -151629,7 +151757,7 @@
 	<sound key="fire" fileref=""/>
 	<sound key="cycle" fileref=""/>
 	<sound key="reload_one" fileref=""/>
-	<sound key="effect" fileref="tesla_fire.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="effect" fileref="tesla_fire.wav" pitch_variety="0.05" volume="2.5"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<weak_hand_hold offset="0.2"/>
 	<drop_on_death_result class="spawn" instance_class="projectile" instance_key="spontaneous_explosion_spawn_kcco.projectile" min_amount="0" max_amount="1" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>
@@ -152675,7 +152803,7 @@
 </weapon>
 
 <weapon key="kcco_fe2o3_svk_1.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.092" accuracy_factor="1" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="1.5" magazine_size="10" can_shoot_standing="1" suppressed="0" spread_range="0.2" name="KCCO Hematite Observers" class="0" reload_one_at_a_time="0" sight_range_modifier="1.4" projectile_speed="160" barrel_offset="0.6" stance_accuracy_rate="1.0" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="0.092" accuracy_factor="1" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="1.5" magazine_size="10" can_shoot_standing="1" suppressed="0" spread_range="0.2" name="KCCO Hematite Observers" class="0" reload_one_at_a_time="0" sight_range_modifier="1.1" projectile_speed="160" barrel_offset="0.6" stance_accuracy_rate="1.0" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="20.0" buy_price="0.0" sell_price="0.0"/>
 	<next_in_chain key="kcco_fe2o3_svk.weapon" share_ammo="1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
@@ -152688,7 +152816,7 @@
 	<hud_icon filename="kccow_svk.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="1.735" kill_decay_end_time="2.892" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="2.4" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="1.735" kill_decay_end_time="2.892" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>

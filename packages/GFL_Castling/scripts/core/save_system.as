@@ -636,6 +636,7 @@ player_data@ PlayerProfileLoad(const XmlElement@ player_profile){
 class Save_System : Tracker {
     protected Metagame@ m_metagame;
     protected array<CraftQueue@> m_craftQueue;
+    protected bool m_ended = false;
 
     Save_System(Metagame@ metagame)
     {
@@ -651,8 +652,15 @@ class Save_System : Tracker {
         // always on
         return true;
     }
+	void start() {
+        m_ended = false;
+    }
 
+    void gameContinuePreStart() {
+        m_ended = false;
+    }    
     protected void handleChatEvent(const XmlElement@ event){
+        if(m_ended) return;        
         string message = event.getStringAttribute("message");
         string p_name = event.getStringAttribute("player_name");
         int senderId = event.getIntAttribute("player_id");
@@ -793,6 +801,7 @@ class Save_System : Tracker {
             notify(m_metagame, "Logger info query", a, "misc", player_id, false, "", 1.0);
         }
         if(checkCommand(message,"missing")){
+            if(m_ended) return;            
             GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
             if (playerInfo.getPlayerName() == default_string ) return;
             string profile_hash = playerInfo.getHash();
@@ -922,6 +931,9 @@ class Save_System : Tracker {
         }
     }
 
+    protected void handleMatchEndEvent(const XmlElement@ event) {
+        m_ended = true;
+    }
     void update(float time) {
         if(m_craftQueue.size() > 0) {
             for(int a = m_craftQueue.size() - 1; a >= 0; a--) {
