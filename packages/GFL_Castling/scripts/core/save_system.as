@@ -9,6 +9,7 @@
 #include "GFLhelpers.as"
 #include "GFLplayerlist.as"
 #include "GFLparameters.as"
+#include "girl_index.as"
 
 // sid = sid
 // 记录玩家武器数据 使用<weapon key="武器key">形式存储在<weapons>元素下
@@ -29,7 +30,7 @@ class GFL_call_info
 
 class player_data
 {
-	int m_corenum=0;
+    int m_corenum=0;
     int m_dev_point;
     int m_dev_point_lifemax;
     string m_playername;
@@ -68,7 +69,7 @@ class player_data
     };
     array<tdoll_intimacy_info@> m_tdoll_intimacy={};
 
-	player_data() {}
+    player_data() {}
 
     player_data(const string _player_name, const string _profile_hash)
     {
@@ -91,11 +92,11 @@ class player_data
                 isDuplicate = true;
                 break;
             }
-        }        
+        }
         if (!isDuplicate)
         {
             m_weapons.insertLast(key);
-        }  
+        }
     }
 
     //研发点相关
@@ -171,7 +172,7 @@ class player_data
                 _log("风险! 移除未注册武器"+ m_weapons[i] +" 玩家为"+ m_playername);
             }
         }
-        m_weapons = new_weapons; 
+        m_weapons = new_weapons;
     }
 
     int getAllNum() const
@@ -245,11 +246,11 @@ class player_data
                 isDuplicate = true;
                 break;
             }
-        }        
+        }
         if (!isDuplicate)
         {
             m_unlocked_call.insertLast(call);
-        }  
+        }
     }
 
     void addIntimacy(tdoll_intimacy_info@ info)
@@ -263,7 +264,7 @@ class player_data
                 m_tdoll_intimacy[i].mergeInfo(info);
                 break;
             }
-        }        
+        }
         if (!isDuplicate)
         {
             m_tdoll_intimacy.insertLast(info);
@@ -301,7 +302,7 @@ class player_data
                     if (m_tdoll_intimacy[i].m_girl_index == index)
                     {
                         return m_tdoll_intimacy[i].getScore();
-                    }                    
+                    }
                 }
                 return 0;
             }
@@ -322,14 +323,14 @@ class player_data
                     if (m_tdoll_intimacy[i].m_girl_index == index)
                     {
                         return m_tdoll_intimacy[i];
-                    }                    
+                    }
                 }
                 return null;
             }
         }
         return null;
     }
-    
+
     string getCallKey(const string key)
     {
         for (uint i = 0; i < m_unlocked_call.length(); ++i)
@@ -455,41 +456,41 @@ const XmlElement@ readFile(const Metagame@ metagame,string name, string profile_
 }
 
 const XmlElement@ readXML(const Metagame@ metagame, string filename){
-	XmlElement@ query = XmlElement(
-		makeQuery(metagame, array<dictionary> = {
-			dictionary = { {"TagName", "data"}, {"class", "saved_data"}, {"filename", filename}}}));
-	const XmlElement@ xml = metagame.getComms().query(query);
+    XmlElement@ query = XmlElement(
+        makeQuery(metagame, array<dictionary> = {
+            dictionary = { {"TagName", "data"}, {"class", "saved_data"}, {"filename", filename}}}));
+    const XmlElement@ xml = metagame.getComms().query(query);
     if(xml is null){
         writeXML(metagame,filename,XmlElement(filename));
         @xml = readXML(metagame,filename);
     }
-	return xml;
+    return xml;
 }
 
 void writeXML(const Metagame@ metagame, string filename, XmlElement@ xml, string location = "" ){
-	XmlElement command("command");
-		command.setStringAttribute("class", "save_data");
-		command.setStringAttribute("filename", filename);
+    XmlElement command("command");
+        command.setStringAttribute("class", "save_data");
+        command.setStringAttribute("filename", filename);
         if(location != "")
         {
             command.setStringAttribute("location", location);
         }
-		command.appendChild(xml);
-	metagame.getComms().send(command);
+        command.appendChild(xml);
+    metagame.getComms().send(command);
 }
 
 XmlElement@ PlayerProfileSave(player_data@ player_info) {
-	XmlElement root("playerdata");
-	root.setStringAttribute("username", player_info.m_playername);
-	root.setStringAttribute("sid", player_info.m_sid);
-	root.setStringAttribute("profile_hash", player_info.m_profile_hash);
+    XmlElement root("playerdata");
+    root.setStringAttribute("username", player_info.m_playername);
+    root.setStringAttribute("sid", player_info.m_sid);
+    root.setStringAttribute("profile_hash", player_info.m_profile_hash);
     root.setIntAttribute("core_num", player_info.m_corenum);
     root.setIntAttribute("dev_point", player_info.m_dev_point);
     root.setIntAttribute("dev_point_lifemax", player_info.m_dev_point_lifemax);
-	string FILENAME =  ("save_" + player_info.m_sid +".xml" );
+    string FILENAME =  ("save_" + player_info.m_sid +".xml" );
 
     XmlElement subroot_0("weapons");
-    for (uint i = 0; i < player_info.m_weapons.length(); i++) 
+    for (uint i = 0; i < player_info.m_weapons.length(); i++)
     {
         XmlElement e("weapon");
         e.setStringAttribute("key", player_info.m_weapons[i]);
@@ -501,17 +502,17 @@ XmlElement@ PlayerProfileSave(player_data@ player_info) {
     XmlElement subroot_1("active_call");
     XmlElement callslot_1("callslot_1");
     callslot_1.setStringAttribute("key", checkCallSlotInvaild(1,player_info.getCallSlot(1)));
-    subroot_1.appendChild(callslot_1); 
+    subroot_1.appendChild(callslot_1);
     XmlElement callslot_2("callslot_2");
     callslot_2.setStringAttribute("key", checkCallSlotInvaild(2,player_info.getCallSlot(2)));
     subroot_1.appendChild(callslot_2);
     XmlElement callslot_3("callslot_3");
-    callslot_3.setStringAttribute("key", checkCallSlotInvaild(3,player_info.getCallSlot(3))); 
-    subroot_1.appendChild(callslot_3);       
+    callslot_3.setStringAttribute("key", checkCallSlotInvaild(3,player_info.getCallSlot(3)));
+    subroot_1.appendChild(callslot_3);
 
     //处理解锁的支援列表
     XmlElement subroot_2("unlocked_calls");
-    for (uint i = 0; i < player_info.m_unlocked_call.length(); i++) 
+    for (uint i = 0; i < player_info.m_unlocked_call.length(); i++)
     {
         XmlElement e("unlocked_call");
         e.setStringAttribute("call_key", player_info.m_unlocked_call[i].m_call_ui_key);
@@ -521,7 +522,7 @@ XmlElement@ PlayerProfileSave(player_data@ player_info) {
 
     //好感度
     XmlElement subroot_3("intimacy");
-    for (uint i = 0; i < player_info.m_tdoll_intimacy.length(); i++) 
+    for (uint i = 0; i < player_info.m_tdoll_intimacy.length(); i++)
     {
         XmlElement e("doll");
         e.setIntAttribute("index", player_info.m_tdoll_intimacy[i].m_girl_index);
@@ -530,7 +531,7 @@ XmlElement@ PlayerProfileSave(player_data@ player_info) {
         e.setIntAttribute("vehicle_count", player_info.m_tdoll_intimacy[i].m_vehicle_destroyed);
         e.setIntAttribute("boss_count", player_info.m_tdoll_intimacy[i].m_boss_killed);
         subroot_3.appendChild(e);
-    }    
+    }
 
     root.appendChild(subroot_0);
     root.appendChild(subroot_1);
@@ -588,7 +589,7 @@ player_data@ PlayerProfileLoad(const XmlElement@ player_profile){
     string call_slot_callkey_1 = call_slot_default_1;
     string call_slot_callkey_2 = call_slot_default_2;
     string call_slot_callkey_3 = call_slot_default_3;
-    
+
     const XmlElement@ active_call_dump = player_profile.getFirstElementByTagName("active_call");
     if(active_call_dump !is null)
     {
@@ -600,7 +601,7 @@ player_data@ PlayerProfileLoad(const XmlElement@ player_profile){
         if(call_slot_2 !is null) call_slot_callkey_2 = call_slot_2.getStringAttribute("key");
         if(call_slot_3 !is null) call_slot_callkey_3 = call_slot_3.getStringAttribute("key");
     }
-    
+
     output.setCallSlot(1,call_slot_callkey_1);
     output.setCallSlot(2,call_slot_callkey_2);
     output.setCallSlot(3,call_slot_callkey_3);
@@ -617,7 +618,7 @@ player_data@ PlayerProfileLoad(const XmlElement@ player_profile){
                 int kill_count = tdoll_intimacy_list[i].getIntAttribute("kill_count");
                 int match_count = tdoll_intimacy_list[i].getIntAttribute("match_count");
                 int vehicle_count = tdoll_intimacy_list[i].getIntAttribute("vehicle_count");
-                int boss_count = tdoll_intimacy_list[i].getIntAttribute("boss_count");                                
+                int boss_count = tdoll_intimacy_list[i].getIntAttribute("boss_count");
                 tdoll_intimacy_info@ new_doll_info= tdoll_intimacy_info(index);
                 new_doll_info.setKill(kill_count);
                 new_doll_info.setMatch(match_count);
@@ -635,29 +636,37 @@ player_data@ PlayerProfileLoad(const XmlElement@ player_profile){
 class Save_System : Tracker {
     protected Metagame@ m_metagame;
     protected array<CraftQueue@> m_craftQueue;
+    protected bool m_ended = false;
 
     Save_System(Metagame@ metagame)
     {
         @m_metagame = @metagame;
     }
 
-	bool hasEnded() const {
-		// always on
-		return false;
-	}
-	// --------------------------------------------
-	bool hasStarted() const {
-		// always on
-		return true;
-	}
+    bool hasEnded() const {
+        // always on
+        return false;
+    }
+    // --------------------------------------------
+    bool hasStarted() const {
+        // always on
+        return true;
+    }
+	void start() {
+        m_ended = false;
+    }
 
+    void gameContinuePreStart() {
+        m_ended = false;
+    }    
     protected void handleChatEvent(const XmlElement@ event){
-		string message = event.getStringAttribute("message");
-		string p_name = event.getStringAttribute("player_name");
-		int senderId = event.getIntAttribute("player_id");
+        if(m_ended) return;        
+        string message = event.getStringAttribute("message");
+        string p_name = event.getStringAttribute("player_name");
+        int senderId = event.getIntAttribute("player_id");
         if(checkCommand(message,"craft")){
 
-            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);            
+            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
             if (playerInfo.getPlayerName() == default_string ) return;
             string profile_hash = playerInfo.getHash();
             string sid = playerInfo.getSid();
@@ -714,14 +723,14 @@ class Save_System : Tracker {
             }
 
             string girl_index = message.substr(message.findFirst(" ")+1);
-            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash)); 
+            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
 
             int girl_index_i = parseInt(girl_index);
             _log("图鉴里有" +newdata.getAllNum() +"个武器");
             _log("图鉴index是" + girl_index_i);
 
             array<girls_information@> doll_array = findGFLIndex(girl_index_i);
-            if(doll_array.length() <= 0 ) 
+            if(doll_array.length() <= 0 )
             {
                 notify(m_metagame, "Doll query failed", dictionary(), "misc", player_id, false, "", 1.0);
                 return;
@@ -753,14 +762,14 @@ class Save_System : Tracker {
 
             startQueue(player_id,"craft_2nd",girl_index);
             notify(m_metagame, "craft progression start", dictionary(), "misc", player_id, false, "", 1.0);
-        }        
+        }
         if(checkCommand(message,"random")){
-            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);            
+            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
             if (playerInfo.getPlayerName() == default_string ) return;
             string profile_hash = playerInfo.getHash();
             string sid = playerInfo.getSid();
             int player_id = playerInfo.getPlayerPid();
-            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash)); 
+            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
             string weapon_key = newdata.getRandomWeapon();
             const XmlElement@ player = getPlayerInfo(m_metagame,player_id);
             if (player is null) return;
@@ -774,12 +783,12 @@ class Save_System : Tracker {
             playPrivateSound(m_metagame,"sfx_big.wav",player_id);
         }
         if(checkCommand(message,"info")){
-            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);            
+            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
             if (playerInfo.getPlayerName() == default_string ) return;
             string profile_hash = playerInfo.getHash();
             string sid = playerInfo.getSid();
             int player_id = playerInfo.getPlayerPid();
-            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash)); 
+            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
             const XmlElement@ player = getPlayerInfo(m_metagame,player_id);
             if (player is null) return;
             int cId = player.getIntAttribute("character_id");
@@ -791,13 +800,52 @@ class Save_System : Tracker {
             a["%doll_collect"] = "" + collect;
             notify(m_metagame, "Logger info query", a, "misc", player_id, false, "", 1.0);
         }
+        if(checkCommand(message,"missing")){
+            if(m_ended) return;            
+            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
+            if (playerInfo.getPlayerName() == default_string ) return;
+            string profile_hash = playerInfo.getHash();
+            string sid = playerInfo.getSid();
+            int player_id = playerInfo.getPlayerPid();
+            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+            const XmlElement@ player = getPlayerInfo(m_metagame,player_id);
+            if (player is null) return;
+            int cId = player.getIntAttribute("character_id");
+            dictionary player_weapon_set;
+            for (uint i = 0; i < newdata.m_weapons.length(); i++){
+                player_weapon_set.set(newdata.m_weapons[i], true);
+            }
+            array<string> all_keys = reverse_tdoll_complex_index.getKeys();
+            array<string> result;
+            uint start = rand(0, all_keys.length() - 1);
+            for (uint i = 0; i < all_keys.length(); i++){
+                uint idx = (start + i) % all_keys.length();
+                string key = all_keys[idx];
+                if (!player_weapon_set.exists(key)){
+                    result.insertLast(key);
+                    if (result.length() >= 3) break;
+                }
+            }
+            if (result.length() > 0){
+                dictionary a;
+                string list = "";
+                for (uint i = 0; i < result.length(); i++){
+                    list += "\n" + result[i];
+                }
+                a["%list"] = list;
+                notify(m_metagame, "Logger missing query", a, "misc", player_id, false, "", 1.0);
+            }
+            else{
+                notify(m_metagame, "Logger missing none", dictionary(), "misc", player_id, false, "", 1.0);
+            }
+        }
         if(checkCommand(message,"balance")){
             GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
             if (playerInfo.getPlayerName() == default_string ) return;
             string profile_hash = playerInfo.getHash();
             string sid = playerInfo.getSid();
             int player_id = playerInfo.getPlayerPid();
-            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash)); 
+            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
             const XmlElement@ player = getPlayerInfo(m_metagame,player_id);
             if (player is null) return;
             int cId = player.getIntAttribute("character_id");
@@ -807,18 +855,18 @@ class Save_System : Tracker {
             notify(m_metagame, "Dev info query", a, "misc", player_id, false, "", 1.0);
         }
         if(checkCommand(message,"waifu")){
-            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);            
+            GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
             if (playerInfo.getPlayerName() == default_string ) return;
             string profile_hash = playerInfo.getHash();
             string sid = playerInfo.getSid();
             int player_id = playerInfo.getPlayerPid();
-            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash)); 
+            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
             const XmlElement@ player = getPlayerInfo(m_metagame,player_id);
             if (player is null) return;
             int cId = player.getIntAttribute("character_id");
             string weaponkey = normalizeWeaponKey(playerInfo.getPlayerEquipment().getWeapon(0));
             tdoll_intimacy_info@ waifu_intimacy = newdata.getIntimacyFromKey(weaponkey);
-            if (waifu_intimacy is null) 
+            if (waifu_intimacy is null)
             {
                 dictionary a;
                 notify(m_metagame, "Waifu info failed", a, "misc", player_id, false, "", 1.0);
@@ -834,10 +882,10 @@ class Save_System : Tracker {
             notify(m_metagame, "Waifu info query", a, "misc", player_id, false, "", 1.0);
         }
 
-		if (!m_metagame.getAdminManager().isAdmin(p_name, senderId) && !m_metagame.getModeratorManager().isModerator(p_name, senderId)) {
-			return;
-		}
- 
+        if (!m_metagame.getAdminManager().isAdmin(p_name, senderId) && !m_metagame.getModeratorManager().isModerator(p_name, senderId)) {
+            return;
+        }
+
         if(checkCommand(message,"savetest")){
             GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
             if (playerInfo.getPlayerName() == default_string ) return;
@@ -859,11 +907,11 @@ class Save_System : Tracker {
             player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
 
             string weapon_key = getKeyfromIndex(girl_index);
-            if(weapon_key=="") 
+            if(weapon_key=="")
             {
-                _log("未找到武器key");  
+                _log("未找到武器key");
                 return;
-            }                
+            }
 
             if(newdata.FindWeapon(weapon_key))
             {
@@ -872,17 +920,20 @@ class Save_System : Tracker {
                 int cId = player.getIntAttribute("character_id");
                 addItemInBackpack(m_metagame,cId,"weapon",weapon_key);
                 dictionary a;
-                a["%doll_name"] = getResourceName(m_metagame, weapon_key, "weapon");                    
+                a["%doll_name"] = getResourceName(m_metagame, weapon_key, "weapon");
                 sendPrivateMessageKey(m_metagame, player_id, "truemask_success",a);
-                playPrivateSound(m_metagame,"sfx_big.wav",player_id);                   
+                playPrivateSound(m_metagame,"sfx_big.wav",player_id);
             }
             else
             {
-                _log("你没有这个武器：" + weapon_key);  
+                _log("你没有这个武器：" + weapon_key);
             }
-        }        
-	}
+        }
+    }
 
+    protected void handleMatchEndEvent(const XmlElement@ event) {
+        m_ended = true;
+    }
     void update(float time) {
         if(m_craftQueue.size() > 0) {
             for(int a = m_craftQueue.size() - 1; a >= 0; a--) {
@@ -916,5 +967,5 @@ class Save_System : Tracker {
 
     void startQueue(int playerId,string key,string index){
         m_craftQueue.insertLast(CraftQueue(playerId,key,index));
-    }    
+    }
 }
