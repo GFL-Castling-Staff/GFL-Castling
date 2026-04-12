@@ -6,10 +6,17 @@
 
 截至 2026-04-12，以下结论已经发生变化：
 
-- `M14` 已封装进独立 `m14_skill_tracker.as`
 - `Javelin` 已迁移进独立 `javelin_tracker.as`
 - `GFLskill.as` 不再维护旧式 Javelin 手动数组
 - `GFLskill.as::update(float time)` 当前为空实现
+- `M14` 已完成状态归位，但并不是独立 `m14_skill_tracker.as`
+
+当前 live 代码中，`M14` 走的是：
+
+- `commandskill.as`
+- `GFLtask.as`
+- `kill_event.as`
+- `GFLplayerlist.as`
 
 因此，本文件中凡是把 `M14`、`Javelin`、`GFLskill` 旧式 tracker 作为“待迁移对象”的描述，都应视为历史上下文，而不是当前状态。
 

@@ -8,7 +8,7 @@
 
 截至 2026-04-12，可以明确确认：
 
-- `M14MOD3` 已封装进独立 `m14_skill_tracker.as`
+- `M14MOD3` 已收敛到 `commandskill.as + GFLtask.as + kill_event.as + GFLplayerlist.as` 路径
 - `RepeatEffectTask` 已建立
 - `DOT / XM8 / HK416 / UZI` 已迁移到 Task
 - `Javelin` 已迁移为独立 `javelin_tracker.as`
@@ -57,7 +57,7 @@
 
 已完成：
 
-- `M14MOD3` 状态从分散文件中收束到独立 `m14_skill_tracker.as`
+- `M14MOD3` 状态已从分散逻辑收束到现有 Task、击杀联动和玩家 tag 容器
 
 ### 第二阶段：重复效果抽象
 
@@ -86,45 +86,54 @@
 
 ## 当前剩余工作
 
-`GFLskill` 主线之外，当前更值得继续推进的，是与 Task 方向存在重叠的其他旧式系统。
+`GFLskill` 主线之外，当前更值得继续推进的，是 live 代码里仍然偏厚的旧式分发与冷却系统。
 
-### 1. event_system.as
+### 1. commandskill.as
 
 当前状态：
 
-- 保留 `GFL_event_array`
-- 保留 `GFL_event_system::update(float time)` 手动倒计时
-- 部分事件执行体已经迁移为 Task
+- 保留 `SkillArray`
+- 保留 `TimerArray`
+- 保留 `update(float time)` 手动倒计时
 
-这说明 `event_system.as` 处于“部分 Task 化、骨架未迁移完成”的状态。
+这说明主动技能入口层仍然同时承担入口、状态、分发和部分执行体职责。
 
-### 2. 分发层瘦身
+### 2. call_event_handler.as
 
-以下文件仍偏厚：
+当前状态：
 
-- `commandskill.as`
-- `GFLskill.as`
-- `event_system.as`
+- 保留运行时冷却数组
+- 保留 `update(float time)` 手动倒计时
+- 大量分支在分发层内直接创建 Task
 
-后续应继续把 case 内实现外提，使这些文件更像“分发器”而不是“业务仓库”。
+这部分比历史 `event_system.as` 更接近当前 live 代码里的下一收敛目标。
+
+### 3. kill_event.as
+
+当前状态：
+
+- 仍承载一部分技能击杀联动
+- M14 等技能逻辑已收敛进来，但还没有彻底瘦身
 
 ## 建议的下一步
 
-### 优先级一：收敛 event_system.as
+### 优先级一：收敛 commandskill.as
 
-建议先确认 `event_system.as` 的长期目标：
+重点继续把：
 
-1. 保留事件入口，但把状态管理拆出去
-2. 分拆为多个专用 Tracker
-3. 或逐步过渡为 Task / Tracker 混合模型
+1. 冷却维护
+2. 定时效果
+3. case 内大段实现
 
-### 优先级二：继续削薄分发层
+逐步外提到更明确的状态容器、Task 或专用辅助函数。
 
-重点不是删除 `switch`，而是让 `switch` 只负责：
+### 优先级二：收敛 call_event_handler.as
 
-- 参数准备
-- 分发调用
-- 轻量的入口校验
+建议先确认 `call_event_handler.as` 的长期目标：
+
+1. 保留事件入口，但把冷却和状态管理拆出去
+2. 分拆为多个专用模块
+3. 或逐步过渡为更薄的 Task 分发器
 
 ### 优先级三：同步文档与分析工具
 
@@ -147,8 +156,9 @@
 
 `GFLskill` 的核心迁移路线已经兑现，本文档不再把 `Javelin` 视为待迁移对象。
 
-后续若继续推进 Task 化，真正更值得处理的是：
+当前真正更值得继续推进的是：
 
-- `event_system.as`
-- 分发层瘦身
+- `commandskill.as`
+- `call_event_handler.as`
+- `kill_event.as` 的技能联动瘦身
 - 文档与代码状态对齐
