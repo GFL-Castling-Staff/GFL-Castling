@@ -8,7 +8,7 @@
 #include "GFLhelpers.as"
 #include "call_marker_tracker.as"
 #include "fairy_command.as"
-#include "event_system.as"
+#include "GFLtask.as"
 
 dictionary callLaunchIndex = {
 
@@ -1560,11 +1560,7 @@ class call_event : Tracker {
                         break;
                     }
                     case 2:{
-                        bool exsist = false;
-                        int j=-1;
-                        for (uint i=0;i<GFL_event_array.length();i++){
-                            if (GFL_event_array[i].m_eventkey==1) {exsist=true;j=i;}
-                        }
+                        bool exsist = g_skill_fairy_snipe_active;
                         if (exsist){
                             const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
                             if (character !is null) {
@@ -1698,7 +1694,12 @@ class call_event : Tracker {
                             FairyRequest.setIconTypeKey("call_marker_bomb");
                             addCastlingMarker(FairyRequest);
                             m_DummyCallID++;
-                            GFL_event_array.insertLast(GFL_event(characterId,factionId,int(GFL_Event_Index["bomb_fairy"]),stringToVector3(position),1.0,-1.0,flagId));
+                            Event_call_bomb_fairy@ new_task = Event_call_bomb_fairy(
+                                m_metagame, 1.0, characterId, factionId,
+                                stringToVector3(position), stringToVector3(position),
+                                "", flagId);
+                            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                            tasker.add(new_task);
                         }
                         break;
                     }    

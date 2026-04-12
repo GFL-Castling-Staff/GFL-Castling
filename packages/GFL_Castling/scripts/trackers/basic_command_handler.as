@@ -7,7 +7,6 @@
 #include "generic_call_task.as"
 #include "task_sequencer.as"
 #include "GFLhelpers.as"
-#include "event_system.as"
 
 // 目前正在播放的点歌机中的歌曲剩余时间
 

@@ -1378,6 +1378,8 @@ class Skill_SSG3000_Snipe : DelaySkill {
 	}
 }
 
+bool g_skill_fairy_snipe_active = false;
+
 class Skill_Fairy_Snipe : DelaySkill {
     protected CastlingMarker@ m_info;
 
@@ -1388,6 +1390,7 @@ class Skill_Fairy_Snipe : DelaySkill {
 	}
 
 	void start(){
+		g_skill_fairy_snipe_active = true;
 		m_timeLeft=m_time;
 		m_timeLeft_internal = 0;
 		this.setExcuteLimit(10);
@@ -1417,6 +1420,7 @@ class Skill_Fairy_Snipe : DelaySkill {
 	}
     bool hasEnded() const {
 		if (m_end) {
+            g_skill_fairy_snipe_active = false;
             removeMarker(m_metagame,m_info);
 			return true;
 		}

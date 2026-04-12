@@ -9,7 +9,7 @@
 #include "task_sequencer.as"
 #include "GFLhelpers.as"
 #include "kill_event.as"
-#include "event_system.as"
+#include "GFLtask.as"
 #include "fairy_command.as"
 #include "command_skill_info.as"
 #include "GFLplayerlist.as"
