@@ -413,7 +413,7 @@
 			<item_class_existence class="carry_item" slot="0" probability="0.001" />
 		</item_class_existence_config>
 		<attribute_config class="xp">
-			<attribute weight="1.0" min="0.0" max="302.833" />
+			<attribute weight="1.0" min="0.0" max="0.833" />
 		</attribute_config>
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="700.0" max="1500.0" />
@@ -668,7 +668,7 @@
 			<model filename="pard_teal.xml" />
 			<carry_item key="vest_80hp_tank_80" />
 			<attribute_config class="xp">
-				<attribute weight="1.0" min="20.0" max="20" />
+				<attribute weight="1.0" min="200.0" max="300" />
 			</attribute_config>
 			<attribute_config class="rp">
 				<attribute weight="1.0" min="3000.0" max="5000.0" />
@@ -695,7 +695,7 @@
 			<call key="para_deploy_uhlan_nyto.call" />
 			<projectile key="selfstun.projectile" enabled="1" probability="1.0" />		
 			<attribute_config class="xp">
-				<attribute weight="1.0" min="20.0" max="20" />
+				<attribute weight="1.0" min="200.0" max="200" />
 			</attribute_config>
 			<attribute_config class="rp">
 				<attribute weight="1.0" min="3000.0" max="5000.0" />
@@ -715,7 +715,7 @@
 			<call key="para_deploy_cherub_nyto.call" />
 			<call key="para_deploy_uhlan_nyto.call" />
 			<attribute_config class="xp">
-				<attribute weight="1.0" min="20.0" max="20" />
+				<attribute weight="1.0" min="200.0" max="200" />
 			</attribute_config>
 			<attribute_config class="rp">
 				<attribute weight="1.0" min="3000.0" max="5000.0" />
@@ -735,7 +735,7 @@
 			<call key="para_deploy_cherub_nyto.call" />
 			<call key="para_deploy_uhlan_nyto.call" />	
 			<attribute_config class="xp">
-				<attribute weight="1.0" min="20.0" max="20" />
+				<attribute weight="1.0" min="200.0" max="200" />
 			</attribute_config>
 			<attribute_config class="rp">
 				<attribute weight="1.0" min="5000.0" max="5000.0" />
