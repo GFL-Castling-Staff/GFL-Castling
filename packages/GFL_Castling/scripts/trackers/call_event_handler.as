@@ -2146,6 +2146,14 @@ class call_event : Tracker {
         {
             return;
         }
+        if(is_charge)
+        {
+            Call_Cooldown@ exists = getCooldownInfo(playerName,key);
+            if(exists !is null)
+            {
+                return;
+            }
+        }
         Call_Cooldown cd = Call_Cooldown(playerName,playerId,time,key,is_charge,chargemax);
         if(is_charge)
         {
