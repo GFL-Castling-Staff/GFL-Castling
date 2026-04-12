@@ -1750,7 +1750,7 @@ class GFLskill : Tracker {
                 }
 				break;
             }
-            case 68:{ // OTS14 闂數閾惧崟娆℃壂鎻忓悗鍐呭瓨杩為攣
+            case 68:{ // OTS14 闪电链技能
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 				if (checkCharacterDead(character)) return;
