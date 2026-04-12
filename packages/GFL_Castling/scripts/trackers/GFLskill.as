@@ -1762,7 +1762,7 @@ class GFLskill : Tracker {
 				break;
 			}
 
-            case 63:{ //强无敌空投
+            case 63:{ //强无敌空投，暂时弃用
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
 				if (character is null) return;
