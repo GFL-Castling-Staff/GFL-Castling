@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    chain_lightning_hit_damage.projectile
+    连锁闪电命中伤害弹头
+    由脚本在目标位置 spawn，触发阵营判断并结算伤害，无视觉特效。
+    伤害通过 faction_compare="not_equal" 过滤友军，通过 character_state="death" 确保可靠击杀。
+    若需调整伤害强度，可改用 damage="N" 并去掉 character_state 属性。
+-->
+<projectile class="grenade" name="Chain Lightning Hit Damage"
+            key="chain_lightning_hit_damage.projectile"
+            slot="0"
+            radius="0.5"
+            pulldown_in_air="4"
+            drop_count_factor_on_death="0"
+            drop_count_factor_on_player_death="0"
+            time_to_live_out_in_the_open="0"
+            can_be_disarmed="0"
+            can_be_detected_by_driver="0"
+            can_be_detected_by_footmen="0">
+
+    <result class="blast" radius="3" damage="100" push="0.1" decal="0"
+            character_state="death" faction_compare="not_equal" />
+
+    <trigger class="time" time_to_live="0.0"/>
+    <rotation class="random" />
+    <model mesh_filename="" />
+    <commonness value="0.0" />
+
+</projectile>

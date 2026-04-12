@@ -204,6 +204,8 @@ dictionary gameSkillIndex = {
 
         {"kcco_minotauros_rockets",67},
 
+        {"ots14_chain_scan",68},
+
 
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}

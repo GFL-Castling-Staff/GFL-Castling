@@ -189,4 +189,10 @@
 
 	<projectile file="m14_airstrike_HEAT.projectile"/>
 
+	<!-- 连锁闪电系统弹头 -->
+	<projectile file="chain_lightning_starter.projectile"/>
+	<projectile file="chain_lightning_link.projectile"/>
+	<projectile file="chain_lightning_hit_damage.projectile"/>
+	<projectile file="chain_lightning_hit_effect.projectile"/>
+
 </projectiles>

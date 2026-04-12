@@ -1750,6 +1750,57 @@ class GFLskill : Tracker {
                 }
 				break;
             }
+            case 68:{ // OTS14 闂數閾惧崟娆℃壂鎻忓悗鍐呭瓨杩為攣
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (checkCharacterDead(character)) return;
+				int factionid = character.getIntAttribute("faction_id");
+                Vector3 strikePos = stringToVector3(event.getStringAttribute("position"));
+                const float scanRange = 30.0f;
+                array<int> candidateIds;
+                array<Vector3> candidatePositions;
+				m_fnum = m_metagame.getFactionCount();
+                for(uint i=0;i<m_fnum;i++) {
+                    if(i==uint(factionid)) continue;
+                    array<const XmlElement@>@ affectedCharacter = getCharactersNearPosition(m_metagame, strikePos, i, scanRange);
+                    if (affectedCharacter is null) continue;
+                    for(uint x=0;x<affectedCharacter.length();x++){
+                        const XmlElement@ enemy = affectedCharacter[x];
+                        int enemyId = enemy.getIntAttribute("id");
+                        if (candidateIds.find(enemyId) >= 0) continue;
+                        const XmlElement@ enemyInfo = getCharacterInfo2(m_metagame, enemyId);
+                        if (checkCharacterDead(enemyInfo)) continue;
+                        string enemyGroup = enemyInfo.getStringAttribute("soldier_group_name");
+                        candidateIds.insertLast(enemyId);
+                        candidatePositions.insertLast(stringToVector3(enemyInfo.getStringAttribute("position")));
+                        if (candidateIds.length() >= 20) break;
+                    }
+                    if (candidateIds.length() >= 20) break;
+                }
+                _log("ots14 chain snapshot candidates=" + candidateIds.length() +
+                    " source=" + characterId +
+                    " range=" + scanRange, 1);
+                if (candidateIds.length() <= 0) break;
+
+                ChainEffectDefinition@ def = ChainEffectDefinition();
+                def.m_first_target_acquire_radius = scanRange;
+                def.m_max_jumps = 5;
+                def.m_jump_interval = 0.12f;
+                def.m_jump_range = 9.0f;
+                def.m_max_total_chain_distance = 35.0f;
+                def.m_candidate_limit = 20;
+
+                ChainDamageProfile@ dmg = ChainDamageProfile("chain_lightning_hit_damage.projectile");
+                @def.m_damage_profile = dmg;
+
+                ChainVisualProfile@ vis = ChainVisualProfile();
+                vis.m_arc_projectile_key = "chain_lightning_link.projectile";
+                vis.m_hit_projectile_key = "chain_lightning_hit_effect.projectile";
+                @def.m_visual_profile = vis;
+
+                startChainEffectFromCandidates(m_metagame, characterId, factionid, strikePos, def, candidateIds, candidatePositions);
+				break;
+            }
             default:
                 break;
 		}
