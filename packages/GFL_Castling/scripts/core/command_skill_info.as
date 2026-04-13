@@ -97,6 +97,9 @@ dictionary commandSkillIndex = {
 
         // FF_INTRUDER
         {"ff_Intruder.weapon",8},
+        {"ff_Intruder_1.weapon",8},
+        {"ff_intruder_skin.weapon",8},
+        {"ff_intruder_skin_1.weapon",8},
 
         // FF_AGENT
         {"ff_agent.weapon",9},
@@ -111,6 +114,7 @@ dictionary commandSkillIndex = {
 
         // FF_BAIBAOZI
         {"ff_parw_alina.weapon",12},
+        {"ff_parw_alina_skin.weapon",12},
 
         // G3 Mod3
         {"gkw_g3mod3.weapon",13},
@@ -577,6 +581,8 @@ dictionary commandSkillIndex = {
 
         {"ff_scarecrow.weapon",95},
         {"ff_scarecrow_skill.weapon",95},
+        {"ff_scarecrow_skin.weapon",95},
+        {"ff_scarecrow_skin_skill.weapon",95},
 
         {"gkw_g36mod3.weapon",96},
         {"gkw_g36mod3_565.weapon",96},

@@ -319,6 +319,7 @@ class kill_event : Tracker {
     dictionary meleeWeaponList ={
         {"ff_excutioner_2.weapon",3},
         {"ff_parw_alina.weapon",3},
+        {"ff_parw_alina_skin.weapon",3},
         {"ff_gager_1.weapon",3},
         {"gkw_mg36_4903_skill.weapon",3},
         {"666",-1}

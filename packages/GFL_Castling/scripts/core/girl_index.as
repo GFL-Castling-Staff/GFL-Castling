@@ -1264,11 +1264,14 @@ dictionary tdoll_complex_index = {
     {modded_key(9004,1).toString(),"ff_architect_nvw.weapon"},
     {modded_key(9005).toString(),"ff_hunter.weapon"},
     {modded_key(9006).toString(),"ff_Intruder.weapon"},
+    {modded_key(9006,1).toString(),"ff_intruder_skin.weapon"},
     {modded_key(9007).toString(),"ff_justice.weapon"},
     {modded_key(9008).toString(),"ff_scarecrow.weapon"},
+    {modded_key(9008,1).toString(),"ff_scarecrow_skin.weapon"},
     {modded_key(9009).toString(),"ff_weaver.weapon"},
     {modded_key(9010).toString(),"ff_dreamer.weapon"},
     {modded_key(9011).toString(),"ff_parw_alina.weapon"},
+    {modded_key(9011,1).toString(),"ff_parw_alina_skin.weapon"},
     {modded_key(9012).toString(),"ff_parw_nyto_black.weapon"},
     {modded_key(9013).toString(),"ff_excutioner_1.weapon"},
     {modded_key(9014).toString(),"ff_beluga.weapon"},
@@ -1889,9 +1892,13 @@ array<string> gk_weapon_sf_nerfed = {
     "ff_hunter_skill.weapon",
     "ff_Intruder.weapon",
     "ff_Intruder_1.weapon",
+    "ff_intruder_skin.weapon",
+    "ff_intruder_skin_1.weapon",
     "ff_justice.weapon",
     "ff_scarecrow.weapon",
     "ff_scarecrow_skill.weapon",
+    "ff_scarecrow_skin.weapon",
+    "ff_scarecrow_skin_skill.weapon",
     "ff_weaver.weapon",
     "ff_weaver_1.weapon",
     "ff_dreamer.weapon",
@@ -1901,6 +1908,7 @@ array<string> gk_weapon_sf_nerfed = {
     "ff_excutioner_2.weapon",
     "ff_beluga.weapon",
     "ff_parw_alina.weapon",
+    "ff_parw_alina_skin.weapon",
     "ff_parw_nyto_black.weapon",
     "ff_parw_nyto_black_1.weapon"
 };
@@ -1952,5 +1960,8 @@ array<string> truecore_blacklist = {
 
 array<string> blackcard_blacklist = {
     "ff_destroyer_skin.weapon",
-    "ff_architect_nvw.weapon"
+    "ff_architect_nvw.weapon",
+    "ff_parw_alina_skin.weapon",
+    "ff_scarecrow_skin.weapon",
+    "ff_intruder_skin.weapon"
 };
