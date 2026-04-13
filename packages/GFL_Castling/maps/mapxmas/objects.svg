@@ -26236,7 +26236,7 @@ collision_model_size = 9.4 7.0 15.0;</desc>
          inkscape:transform-center-x="-1.7989217"
          inkscape:transform-center-y="0.29276206">
         <desc
-           id="desc34924-0-0-4-0-5-7-1-0-8-2-1-0-5-2-63-4-7-2-3-1-3">height=3; material=BuildingFactory1;</desc>
+           id="desc34924-0-0-4-0-5-7-1-0-8-2-1-0-5-2-63-4-7-2-3-1-3">height=5; material=BuildingFactory1;</desc>
       </rect>
       <rect
          style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#fc0707;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:7.5;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:new"
@@ -50712,22 +50712,6 @@ walkable = 1; </desc>
            id="desc7569-9-3-1-4-4-6-4-8-1">template = shipping_container;offset = 0 -0.9 0;</desc>
       </rect>
       <rect
-         style="display:inline;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.5;stroke-opacity:1;marker:none;filter:url(#filter99652);enable-background:new"
-         id="rect28860-4-5-1"
-         width="16.792999"
-         height="16.792999"
-         x="138.79938"
-         y="1965.3586"
-         rx="8.3964005"
-         ry="8.3964005"
-         inkscape:label="#mesh"
-         transform="rotate(-61.996879)">
-        <title
-           id="title28879-4-4-5">silo</title>
-        <desc
-           id="desc28877-7-1-0">template = silo; offset = 0 -6 0;</desc>
-      </rect>
-      <rect
          style="display:inline;fill:#800000;fill-opacity:1;fill-rule:evenodd;stroke:none;enable-background:new"
          id="rect14012-16-0-2-2-0-4-5-4"
          width="30"
@@ -50805,7 +50789,7 @@ walkable = 1; </desc>
          inkscape:transform-center-x="0.32443199"
          inkscape:transform-center-y="1.7935536">
         <desc
-           id="desc34924-0-0-4-0-5-7-1-0-8-2-1-0-5-2-63-4-7-2-3-7-3-0-4-7">height=1.3; material=BuildingDutch3; roof_type=elevated; </desc>
+           id="desc34924-0-0-4-0-5-7-1-0-8-2-1-0-5-2-63-4-7-2-3-7-3-0-4-7">height=6.6; material=BuildingDutch3; roof_type=elevated; </desc>
       </rect>
       <rect
          transform="rotate(31.985108)"
@@ -55266,18 +55250,6 @@ tag = mortar_deploy;</desc>
          width="6"
          id="rect7651-13-5-8-6-4-4-7-3-9-0-3-2-0-2-4-5-8-3-1-0"
          style="display:inline;opacity:0.797753;fill:#2cffe7;fill-opacity:1;fill-rule:nonzero;stroke:none;enable-background:new" />
-      <path
-         sodipodi:nodetypes="cccc"
-         inkscape:label=""
-         inkscape:connector-curvature="0"
-         id="wall26971-7-0-1-2"
-         d="m 1883.2364,843.13673 -4.3781,4.58485 -4.7733,1.62396 -6.4673,-1.32945"
-         style="display:inline;fill:none;stroke:#000000;stroke-width:2;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;enable-background:new"
-         inkscape:transform-center-x="-2.9470847"
-         inkscape:transform-center-y="10.093853">
-        <desc
-           id="desc26973-5-9-8-4">template = SandbagWall1;</desc>
-      </path>
       <rect
          style="display:inline;fill:#00ff66;fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient94302-1-9-8);stroke-width:1.8;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
          id="spawnhornet"
@@ -72435,24 +72407,6 @@ merge = 1; </desc>
            id="title31266-09-7-6-7">small_oil_tank</title>
         <desc
            id="desc31264-4-6-0-7">name = small_oil_tank; mesh_name = small_oil_tank.mesh; texture0 = big_oil_tank.png; collision_model_type = 0; collision_model_size = 4 10 4; walkable = 0;</desc>
-      </rect>
-      <rect
-         style="display:inline;fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:#4d4d4d;filter:url(#filter99652);enable-background:new"
-         id="rect31262-4-5-9-1"
-         width="8"
-         height="8"
-         x="-1905.7637"
-         y="-803.95648"
-         rx="4"
-         ry="4"
-         inkscape:label="#mesh"
-         inkscape:transform-center-x="-505.77915"
-         inkscape:transform-center-y="668.09699"
-         transform="scale(-1)">
-        <title
-           id="title31266-09-7-6-74">small_oil_tank</title>
-        <desc
-           id="desc31264-4-6-0-6">name = small_oil_tank; mesh_name = small_oil_tank.mesh; texture0 = big_oil_tank.png; collision_model_type = 0; collision_model_size = 4 10 4; walkable = 0;offset = 0 -4 0;</desc>
       </rect>
       <rect
          style="display:inline;fill:#666666;fill-opacity:1;fill-rule:evenodd;stroke:#4d4d4d;filter:url(#filter99652);enable-background:new"
