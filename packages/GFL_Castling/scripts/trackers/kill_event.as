@@ -41,6 +41,7 @@ class kill_event : Tracker {
         // 近战武器
         {"ff_excutioner_2.weapon",3},
         {"ff_parw_alina.weapon",2},
+        {"ff_parw_alina_skin.weapon",2},
         {"ff_gager_1.weapon",3},
         {"gkw_type100_skill.weapon",3},
         {"gkw_type100_4004_skill.weapon",3},
