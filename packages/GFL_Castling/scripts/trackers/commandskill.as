@@ -1021,7 +1021,7 @@ class CommandSkill : Tracker {
                 CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2)                    ,1,dy*dd*(ix*2)                    )),c_pos.add(Vector3(dx*dd*(ix*2)                    ,0,dy*dd*(ix*2)                    )),"excutioner_skill.projectile",characterId,factionid,100,0.001);
                 CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,1,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"excutioner_skill.projectile",characterId,factionid,100,0.001);
             }
-            healCharacter(m_metagame,characterId,4);
+            healCharacter(m_metagame,characterId,2);
         }
     }
 
@@ -2116,7 +2116,11 @@ class CommandSkill : Tracker {
                         playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionid,c_pos,1.0);
                         addCooldown("Flashbang",16,characterId,modifer);
                     }
-                    if(weaponname=="gkw_type79.weapon" || weaponname=="gkw_type79_1402.weapon") {
+                    if(weaponname=="gkw_type79.weapon"
+                    || weaponname=="gkw_type79_1402.weapon"
+                    || weaponname=="gkw_type79mod3.weapon"
+                    || weaponname=="gkw_type79mod3_1402.weapon"
+                    ) {
                         array<string> Voice={
                             "79type_skilll1.wav",
                             "79type_skilll2.wav",
