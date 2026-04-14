@@ -724,6 +724,7 @@ class CommandSkill : Tracker {
                 c.setIntAttribute("untransform_count", 6);
                 m_metagame.getComms().send(c);
             }
+            spawnStaticProjectile(m_metagame,"particle_effect_radius_heal.projectile",c_pos,characterId,factionid);
             array<string> Voice={
                 "judge_skill_1.wav",
                 "judge_skill_2.wav"
@@ -748,6 +749,7 @@ class CommandSkill : Tracker {
                 c.setIntAttribute("untransform_count", 1);
                 m_metagame.getComms().send(c);
             }
+            spawnStaticProjectile(m_metagame,"particle_effect_radius_heal.projectile",c_pos,characterId,factionid);
             array<string> Voice={
                 "P22_SKILL1_JP.wav",
                 "P22_SKILL2_JP.wav",
@@ -773,6 +775,7 @@ class CommandSkill : Tracker {
                 c.setIntAttribute("untransform_count", 1);
                 m_metagame.getComms().send(c);
             }
+            spawnStaticProjectile(m_metagame,"particle_effect_radius_heal.projectile",c_pos,characterId,factionid);
             array<string> Voice={
                 "HS2000_SKILL1_JP.wav",
                 "HS2000_SKILL2_JP.wav",
@@ -4593,6 +4596,7 @@ class CommandSkill : Tracker {
                 c.setIntAttribute("untransform_count", 5);
                 m_metagame.getComms().send(c);
             }
+            spawnStaticProjectile(m_metagame,"particle_effect_radius_heal.projectile",c_pos,characterId,factionid);
             // array<string> Voice={
             // };
             // playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
@@ -4764,6 +4768,7 @@ class CommandSkill : Tracker {
                 c.setIntAttribute("untransform_count", 3);
                 m_metagame.getComms().send(c);
             }
+            spawnStaticProjectile(m_metagame,"particle_effect_radius_heal.projectile",c_pos,characterId,factionid);
         }
     }
 
