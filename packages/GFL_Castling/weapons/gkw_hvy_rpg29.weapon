@@ -38,7 +38,7 @@
     <model filename="gkw_hvy_rpg29.xml"/>
     <ballistics near_far_distance="1000.0" speed_estimation_near="140.0" speed_estimation_far="140.0" max_speed="140.0" randomness="0.0"/>
     <projectile file="rpg29_pg29v.projectile">
-        <result class="blast" damage="85.0" radius="4.0" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+        <result class="blast" damage="105.0" radius="4.0" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
     </projectile>
     <weak_hand_hold offset="0.3"/>
     <hud_icon filename="gkw_rpg29.png"/>
