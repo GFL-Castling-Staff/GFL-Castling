@@ -64,10 +64,11 @@ const array<SoldierInfo@> paradeus_eazymode_weight =
     SoldierInfo("wrath",0.01),
     SoldierInfo("Nimogen",0.01),
     SoldierInfo("Narciss",0.01),
-    SoldierInfo("tareus",0.01),
+    SoldierInfo("tareus",0.005),
     SoldierInfo("Adeline",0.01),
     SoldierInfo("infected",0.0),
     SoldierInfo("smasher",0.1),
+    SoldierInfo("ladon",0.01),
     SoldierInfo("Paradeus_doppelsoldner",0.01),
     SoldierInfo("Paradeus_roarer",0.01),
     SoldierInfo("Thunder",0.01)

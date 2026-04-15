@@ -209,13 +209,15 @@ class ServerHelper : Tracker {
                 if(s=="cerberus+_f") spawnSoldier(m_metagame,1,0,target,"sf_cerberus_plus");                
                 if(s=="uhlan") spawnVehicle(m_metagame,1,0,target,Orientation(0,1,0,0.1),"par_uhlan.vehicle");
                 if(s=="excute") spawnSoldier(m_metagame,1,1,target,"sfw_Excutioner-Queen_of_the_Moon");
-                if(s=="tareus") spawnSoldier(m_metagame,1,0,target,"tareus");
+                if(s=="tareus") spawnSoldier(m_metagame,1,1,target,"tareus");
                 if(s=="aileron") spawnSoldier(m_metagame,1,0,target,"aileron");
                 if(s=="hunter") spawnSoldier(m_metagame,1,1,target,"sfw_hunter");
                 if(s=="gly") spawnSoldier(m_metagame,1,1,target,"sf_goliath");
                 if(s=="gly2") spawnSoldier(m_metagame,1,1,target,"sf_goliath_plus");
                 if(s=="hnb") spawnSoldier(m_metagame,1,1,target,"Paradeus_Hannibal");
                 if(s=="hnb_f") spawnSoldier(m_metagame,1,0,target,"Paradeus_Hannibal");
+                if(s=="ladon") spawnSoldier(m_metagame,1,1,target,"ladon");
+                
 
             }   
         }

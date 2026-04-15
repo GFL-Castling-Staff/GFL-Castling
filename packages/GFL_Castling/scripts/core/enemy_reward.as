@@ -40,6 +40,7 @@ dictionary RP_enemy_index = {
     {"Paradeus_roarer",250},
     {"Paradeus_Hannibal",500},
     {"Thunder",500},
+    {"ladon",500},
     {"parw_grenadier",100},
     {"para_rodelero",80},
     {"tareus",1500},
@@ -75,6 +76,7 @@ dictionary RP_enemy_index = {
     {"sfw_Justice",300},
     {"sfw_Scarecrow",300},
     {"sf_cerberus",1000},
+    {"sf_cerberus_plus",2000},
 
     {"",0}
 };
@@ -114,6 +116,7 @@ dictionary XP_enemy_index = {
     {"smasher",0.01},
     {"Paradeus_doppelsoldner",0.01},
     {"Paradeus_roarer",0.01},
+    {"ladon",0.01},
     {"Paradeus_Hannibal",0.02},    
     {"Thunder",0.02},
     {"parw_grenadier",0.003},
@@ -150,6 +153,7 @@ dictionary XP_enemy_index = {
     {"sfw_Justice",0.02},
     {"sfw_Scarecrow",0.02},
     {"sf_cerberus",0.05},
+    {"sf_cerberus_plus",0.1},
 
     {"",0}
 };
@@ -185,6 +189,7 @@ dictionary reward_pool_list= {
     {"kcco_quartz_ranger","boss"},
     {"kcco_zircon_squadleader","boss"},
     {"sf_cerberus","boss"},
+    {"sf_cerberus_plus","boss"},
     {"tareus","boss"},
 
     {"alina","elite"},
@@ -196,6 +201,7 @@ dictionary reward_pool_list= {
     {"smasher","elite"},
     {"Thunder","elite"},
     {"Paradeus_Hannibal","elite"},
+    {"ladon","elite"},
 
     {"sf_manticore","rare"},
     {"sf_goliath","rare"},

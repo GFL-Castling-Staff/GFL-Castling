@@ -19,6 +19,9 @@
     <parameter class="jumping_up_bounce" value="0.15"/>
 	<parameter class="use_walk_animation_instead_of_run_speed_threshold" value="0.6" />
 
+	<parameter class="walking_steer_amount" value="0.63" />
+	<parameter class="running_steer_amount" value="0.63" />
+
 	<parameter class="can_use_vehicles" value="0" /> 
 
 	<parameter class="ending_climbing_ladder_initial_bounce" value="0.05" />

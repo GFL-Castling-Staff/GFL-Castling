@@ -5,6 +5,7 @@
     <tag name="metal_heavy" />
     <tag name="bazooka"/>
     <specification 
+    can_shoot_running="1"
 	can_shoot_standing="1" 
 	can_shoot_crouching="0"
 	can_shoot_prone="0"
