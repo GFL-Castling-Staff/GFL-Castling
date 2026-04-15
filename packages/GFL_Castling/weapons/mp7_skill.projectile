@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectiles>
 	<projectile class="grenade" name="" slot="1" pulldown_in_air="45.0" key="mp7_skill.projectile">
-        <result class="spawn" instance_class="grenade" instance_key="mp7_skill_sub.projectile" min_amount="8" max_amount="8" offset="0 2.0 0" position_spread="4 2" direction_spread="0 0" />
+        <result class="spawn" instance_class="grenade" instance_key="mp7_skill_sub.projectile" min_amount="8" max_amount="8" offset="0 1.0 0" position_spread="4 2" direction_spread="0 0" />
 		<trigger class="impact">
 			<collider class="character" enabled="1" faction_compare="not_equal" />
 		</trigger>
@@ -32,7 +32,7 @@
 	</projectile>
     <projectile class="grenade" name="" slot="1" pulldown_in_air="25.0" key="mp7_skill_sub.projectile">
         <tag name="grenade"/>
-        <result class="spawn" instance_class="grenade" instance_key="blast_shard_rad4.projectile" min_amount="10" max_amount="10" offset="0 0.5 0" position_spread="0 0" direction_spread="0 0" />
+        <result class="spawn" instance_class="grenade" instance_key="blast_shard_rad4.projectile" min_amount="10" max_amount="10" offset="0 0.7 0" position_spread="0 0" direction_spread="0 0" />
         <trigger class="time" time_to_live="0.05"/>
         <rotation class="motion" />
         <model />
