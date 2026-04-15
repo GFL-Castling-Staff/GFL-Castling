@@ -90,6 +90,7 @@ class SkillModifer{
     float m_cdm=0;
     int m_player_id=-1;
     string m_playername="";
+    string m_armor="";
 
     SkillModifer(int pId,string pName){
         m_player_id=pId;
@@ -108,6 +109,9 @@ class SkillModifer{
     }
     void setCooldownMinus(float num){
         m_cdm=num;
+    }
+    void setArmorType(string armor){
+        m_armor = armor;
     }
 }
 
@@ -166,6 +170,8 @@ class CommandSkill : Tracker {
             if(c_armorType == default_string)_log("WARN: commandskill.as: handleChatEvent(): player weapon is nan.");
 
             SkillModifer@ m_modifer=SkillModifer(senderId,pname);
+
+            m_modifer.setArmorType(c_armorType);
 
             // 不受任何减少时间效果影响的技能
             if (Weapon_free_of_other_cooldown.find(c_weaponType)== -1){
@@ -1024,7 +1030,14 @@ class CommandSkill : Tracker {
                 CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2)                    ,1,dy*dd*(ix*2)                    )),c_pos.add(Vector3(dx*dd*(ix*2)                    ,0,dy*dd*(ix*2)                    )),"excutioner_skill.projectile",characterId,factionid,100,0.001);
                 CreateProjectile(m_metagame,c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,1,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),c_pos.add(Vector3(dx*dd*(ix*2-1)+dy*dd*(ix*2-1)/tt,0,dy*dd*(ix*2-1)-dx*dd*(ix*2-1)/tt)),"excutioner_skill.projectile",characterId,factionid,100,0.001);
             }
-            healCharacter(m_metagame,characterId,2);
+            if(startsWith(modifer.m_armor,'bp_') || startsWith(modifer.m_armor,'ultra_bp_t6') || startsWith(modifer.m_armor,'K309') )
+            {
+                healCharacter(m_metagame,characterId,5);
+            }
+            else
+            {
+                healCharacter(m_metagame,characterId,2);
+            }
         }
     }
 

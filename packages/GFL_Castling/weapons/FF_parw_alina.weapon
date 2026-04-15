@@ -15,8 +15,8 @@
     class="5"
     use_basic_muzzle_smoke_effect="0"
     stab_enabled="1"
-    stab_range="4.5"
-    range="5.0"
+    stab_range="5.0"
+    range="6.5"
     success_probability="30"   
     affect_characters="1"
     affect_vehicles="0" 
@@ -74,7 +74,7 @@
     <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
     <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
     <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-    <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0" />
+    <modifier class="projectile_blast_result" input_character_state="death" output_character_state="wound" consumes_item="0" />
     <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
     <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
 </weapon>

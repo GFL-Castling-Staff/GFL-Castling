@@ -75,7 +75,7 @@
 	sight_range_modifier="1.0" 
 	projectile_speed="100" 
 	barrel_offset="0.4" 
-	projectiles_per_shot="6"
+	projectiles_per_shot="15"
 	spread_range="0.2" />
     <commonness value="0" in_stock="0" />
 
@@ -100,7 +100,7 @@
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet_sg.projectile">
-        <result class="blast" radius="3.0" damage="0.1" push="0.0" decal="0" character_state="wound" faction_compare="not_equal"/> 
+        <result class="blast" radius="3.0" damage="1.01" push="0.0" decal="0" character_state="wound" faction_compare="not_equal"/> 
     </projectile>
     <!--Accuracy, Movement speed-->
     <stance state_key="running" accuracy="0.8" />
