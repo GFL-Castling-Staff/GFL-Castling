@@ -71,6 +71,7 @@ dictionary MOD3craftList = {
 
     {"gkw_88type.weapon","gkw_88typemod3.weapon"},
     {"gkw_88type_7106.weapon","gkw_88typemod3_7106.weapon"},
+    {"gkw_88type_11406.weapon","gkw_88typemod3_11406.weapon"},
     {"gkw_88type_50001.weapon","gkw_88typemod3_50001.weapon"},
 
     {"gkw_mg4.weapon","gkw_mg4mod3.weapon"},
@@ -106,6 +107,7 @@ dictionary MOD3craftList = {
     {"gkw_idw_2108.weapon","gkw_idwmod3_2108.weapon"},
     {"gkw_idw_3205.weapon","gkw_idwmod3_3205.weapon"},
     {"gkw_idw_4908.weapon","gkw_idwmod3_4908.weapon"},
+    {"gkw_idw_10707.weapon","gkw_idwmod3_10707.weapon"},
 
     {"gkw_kp31.weapon","gkw_kp31mod3.weapon"},
     {"gkw_kp31_310.weapon","gkw_kp31mod3_310.weapon"},
@@ -119,6 +121,7 @@ dictionary MOD3craftList = {
     {"gkw_mp5_3006.weapon","gkw_mp5mod3_3006.weapon"},
 
     {"gkw_pp19.weapon","gkw_pp19mod3.weapon"},
+    {"gkw_pp19_10105.weapon","gkw_pp19mod3_10105.weapon"},
     {"gkw_ppsh41.weapon","gkw_ppsh41mod3.weapon"},
     {"gkw_ppsh41_602.weapon","gkw_ppsh41mod3_602.weapon"},
     {"gkw_ro635.weapon","gkw_ro635mod3.weapon"},
@@ -183,6 +186,8 @@ dictionary MOD3craftList = {
     {"gkw_m1897_skill.weapon","gkw_m1897mod3.weapon"},
     {"gkw_m1897_2505.weapon","gkw_m1897mod3_2505.weapon"},
     {"gkw_m1897_2505_skill.weapon","gkw_m1897mod3_2505.weapon"},
+    {"gkw_m1897_4805.weapon","gkw_m1897mod3_4805.weapon"},
+    {"gkw_m1897_4805_skill.weapon","gkw_m1897mod3_4805.weapon"},
 
     {"gkw_mp446.weapon","gkw_mp446mod3.weapon"},
     {"gkw_mp446_103.weapon","gkw_mp446mod3_103.weapon"},
@@ -200,6 +205,8 @@ dictionary MOD3craftList = {
     {"gkw_hawk97_5805.weapon","gkw_hawk97mod3_5805.weapon"},
     {"gkw_type80.weapon","gkw_type80mod3.weapon"},
     {"gkw_type80_skill.weapon","gkw_type80mod3.weapon"},
+    {"gkw_type80_2504.weapon","gkw_type80mod3_2504.weapon"},
+    {"gkw_type80_2504_skill.weapon","gkw_type80mod3_2504.weapon"},
     {"gkw_mp443.weapon","gkw_mp443mod3.weapon"},
 
     {"gkw_98k.weapon","gkw_98kmod3.weapon"},
@@ -230,6 +237,8 @@ dictionary MOD3craftList = {
     {"gkw_56typer_5508_skill.weapon","gkw_56typermod3_5508.weapon"},
 
     {"gkw_64type.weapon","gkw_64typemod3.weapon"},
+    {"gkw_64type_7108.weapon","gkw_64typemod3_7108.weapon"},
+    {"gkw_64type_8507.weapon","gkw_64typemod3_8507.weapon"},
     {"gkw_mg3.weapon","gkw_mg3mod3.weapon"},
     {"gkw_mg3_3806.weapon","gkw_mg3mod3_3806.weapon"},
     {"gkw_mg3_skill.weapon","gkw_mg3mod3.weapon"},
@@ -263,6 +272,7 @@ dictionary MOD3craftList = {
     {"gkw_dp12.weapon","gkw_dp12mod3.weapon"},
     {"gkw_dp12_4201.weapon","gkw_dp12mod3_4201.weapon"},
     {"gkw_dp12_6102.weapon","gkw_dp12mod3_6102.weapon"},
+    {"gkw_dp12_8101.weapon","gkw_dp12mod3_8101.weapon"},
 
     {"gkw_k5.weapon","gkw_k5mod3.weapon"},
     {"gkw_px4.weapon","gkw_px4mod3.weapon"},

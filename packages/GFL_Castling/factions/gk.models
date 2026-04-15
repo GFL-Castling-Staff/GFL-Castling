@@ -1927,6 +1927,12 @@
     <model filename="sfd_intruder.xml">
         <requirement class="weapon" key="ff_Intruder_1.weapon" slot="0" />
     </model>
+    <model filename="gkd_intruder_skin.xml">
+        <requirement class="weapon" key="ff_intruder_skin.weapon" slot="0" />
+    </model>
+    <model filename="gkd_intruder_skin.xml">
+        <requirement class="weapon" key="ff_intruder_skin_1.weapon" slot="0" />
+    </model>
     <model filename="sfd_sangvisfeaal.xml">
         <requirement class="weapon" key="ff_nemeum.weapon" slot="0" />
     </model>
@@ -1962,6 +1968,12 @@
     </model>
     <model filename="sfd_scarecrow.xml">
         <requirement class="weapon" key="ff_scarecrow_skill.weapon" slot="0" />
+    </model>
+    <model filename="gkd_scarecrow_skin.xml">
+        <requirement class="weapon" key="ff_scarecrow_skin.weapon" slot="0" />
+    </model>
+    <model filename="gkd_scarecrow_skin.xml">
+        <requirement class="weapon" key="ff_scarecrow_skin_skill.weapon" slot="0" />
     </model>
     <model filename="sfd_destroyer.xml">
         <requirement class="weapon" key="ff_destroyer.weapon" slot="0" />
@@ -2625,6 +2637,18 @@
     </model>
     <model filename="gkd_smg_type64mod3.xml">
         <requirement class="weapon" key="gkw_64typemod3.weapon" slot="0" />
+    </model>
+    <model filename="gkd_smg_type64_7108.xml">
+        <requirement class="weapon" key="gkw_64type_7108.weapon" slot="0" />
+    </model>
+    <model filename="gkd_smg_type64_7108.xml">
+        <requirement class="weapon" key="gkw_64typemod3_7108.weapon" slot="0" />
+    </model>
+    <model filename="gkd_smg_type64_8507.xml">
+        <requirement class="weapon" key="gkw_64type_8507.weapon" slot="0" />
+    </model>
+    <model filename="gkd_smg_type64_8507.xml">
+        <requirement class="weapon" key="gkw_64typemod3_8507.weapon" slot="0" />
     </model>
     <model filename="gkd_smg_ump9_3404.xml">
         <requirement class="weapon" key="gkw_ump9_3404.weapon" slot="0" />
@@ -3348,6 +3372,9 @@
     </model>
     <model filename="pard_boss_nyto_white.xml">
         <requirement class="weapon" slot="0" key="ff_parw_alina.weapon" />
+    </model>
+    <model filename="gkd_alina_skin.xml">
+        <requirement class="weapon" slot="0" key="ff_parw_alina_skin.weapon" />
     </model>
     <model filename="gkd_sg_fp6.xml">
         <requirement class="weapon" slot="0" key="gkw_fp6.weapon" />

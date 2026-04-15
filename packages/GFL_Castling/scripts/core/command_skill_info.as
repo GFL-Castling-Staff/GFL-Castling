@@ -97,6 +97,9 @@ dictionary commandSkillIndex = {
 
         // FF_INTRUDER
         {"ff_Intruder.weapon",8},
+        {"ff_Intruder_1.weapon",8},
+        {"ff_intruder_skin.weapon",8},
+        {"ff_intruder_skin_1.weapon",8},
 
         // FF_AGENT
         {"ff_agent.weapon",9},
@@ -111,6 +114,7 @@ dictionary commandSkillIndex = {
 
         // FF_BAIBAOZI
         {"ff_parw_alina.weapon",12},
+        {"ff_parw_alina_skin.weapon",12},
 
         // G3 Mod3
         {"gkw_g3mod3.weapon",13},
@@ -186,6 +190,8 @@ dictionary commandSkillIndex = {
         // Flashbang
         {"gkw_type79.weapon",27},
         {"gkw_type79_1402.weapon",27},
+        {"gkw_type79mod3.weapon",27},
+        {"gkw_type79mod3_1402.weapon",27},
         {"gkw_ump9.weapon",27},
         {"gkw_ump9_409.weapon",27},
         {"gkw_ump9_536.weapon",27},
@@ -197,6 +203,8 @@ dictionary commandSkillIndex = {
         {"gkw_mab38.weapon",27},
         {"gkw_mab38_oc.weapon",27},
         {"gkw_64type.weapon",27},
+        {"gkw_64type_7108.weapon",27},
+        {"gkw_64type_8507.weapon",27},
         {"gkw_m16a1.weapon",27},
         {"gkw_m16a1_533.weapon",27},
         {"gkw_m16a1_553.weapon",27},
@@ -435,6 +443,8 @@ dictionary commandSkillIndex = {
         // {"gkw_emp35_8003.weapon",58},
 
         {"gkw_64typemod3.weapon",59},
+        {"gkw_64typemod3_7108.weapon",59},
+        {"gkw_64typemod3_8507.weapon",59},
 
         {"gkw_zasm21.weapon",60},
         {"gkw_zasm21_2104.weapon",60},
@@ -573,6 +583,8 @@ dictionary commandSkillIndex = {
 
         {"ff_scarecrow.weapon",95},
         {"ff_scarecrow_skill.weapon",95},
+        {"ff_scarecrow_skin.weapon",95},
+        {"ff_scarecrow_skin_skill.weapon",95},
 
         {"gkw_g36mod3.weapon",96},
         {"gkw_g36mod3_565.weapon",96},

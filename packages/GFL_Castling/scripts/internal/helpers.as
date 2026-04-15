@@ -550,6 +550,7 @@ string normalizeWeaponKey(string key) {
 		{"ff_architect_1.weapon", "ff_architect.weapon"},
 		{"ff_architect_nvw_1.weapon", "ff_architect_nvw.weapon"},
 		{"ff_Intruder_1.weapon", "ff_Intruder.weapon"},
+		{"ff_intruder_skin_1.weapon", "ff_intruder_skin.weapon"},
 		{"ff_gager_1.weapon", "ff_gager.weapon"},
 		{"ff_weaver_1.weapon", "ff_weaver.weapon"},
 		{"ff_parw_nyto_black_1.weapon", "ff_parw_nyto_black.weapon"},

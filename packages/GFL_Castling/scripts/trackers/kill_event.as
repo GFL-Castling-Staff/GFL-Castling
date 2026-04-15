@@ -41,6 +41,7 @@ class kill_event : Tracker {
         // 近战武器
         {"ff_excutioner_2.weapon",3},
         {"ff_parw_alina.weapon",2},
+        {"ff_parw_alina_skin.weapon",2},
         {"ff_gager_1.weapon",3},
         {"gkw_type100_skill.weapon",3},
         {"gkw_type100_4004_skill.weapon",3},
@@ -215,7 +216,11 @@ class kill_event : Tracker {
         {"gkw_idwmod3_4908.weapon",3},
         {"gkw_idwmod3_10707.weapon",3},
         {"gkw_64type.weapon",3},
+        {"gkw_64type_7108.weapon",3},
+        {"gkw_64type_8507.weapon",3},
         {"gkw_64typemod3.weapon",3},
+        {"gkw_64typemod3_7108.weapon",3},
+        {"gkw_64typemod3_8507.weapon",3},
         {"gkw_kp31.weapon",3},
         {"gkw_kp31mod3.weapon",3},
         {"gkw_kp31_1103.weapon",3},
@@ -315,6 +320,7 @@ class kill_event : Tracker {
     dictionary meleeWeaponList ={
         {"ff_excutioner_2.weapon",3},
         {"ff_parw_alina.weapon",3},
+        {"ff_parw_alina_skin.weapon",3},
         {"ff_gager_1.weapon",3},
         {"gkw_mg36_4903_skill.weapon",3},
         {"666",-1}
