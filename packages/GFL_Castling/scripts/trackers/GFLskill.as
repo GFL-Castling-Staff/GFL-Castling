@@ -7,6 +7,7 @@
 #include "GFLhelpers.as"
 #include "GFLtask.as"
 #include "task_sequencer.as"
+#include "javelin_tracker.as"
 #include "resource_helpers.as"
 #include "gfl_skill_info.as"
 #include "GFLparameters.as"
@@ -21,12 +22,6 @@ class GFLskill : Tracker {
 	GFLskill(GameMode@ metagame) {
 		@m_metagame = @metagame;
 	}
-
-    protected array<XM8tracker@> XM8track;
-	protected array<HK416_tracker@> HK416_track;
-	protected array<UZI_tracker@> UZI_track;
-	protected array<Javelin_lister@> Javelin_list;
-	protected array<DOT_tracker@> DOT_track;
 
 
 	// --------------------------------------------
@@ -185,7 +180,8 @@ class GFLskill : Tracker {
 							" position='" + Pos_40mm.toString() + "'"+
 							" character_id='" + characterId + "' />";
 						m_metagame.getComms().send(c);
-						XM8track.insertLast(XM8tracker(characterId,1.0,factionid,Pos_40mm));
+						TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+						tasker.add(XM8SkillTask(m_metagame, characterId, factionid, Pos_40mm));
 					}
 				}
 				break;
@@ -214,7 +210,8 @@ class GFLskill : Tracker {
 							}
 						}
 						if (affectedCharacter.length()>0){
-							HK416_track.insertLast(HK416_tracker(characterId,factionid,Pos_40mm,affectedCharacter));
+							TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+							tasker.add(HK416SkillTask(m_metagame, characterId, factionid, Pos_40mm, affectedCharacter));
 						}
 						string c =
 							"<command class='create_instance'" +
@@ -298,138 +295,28 @@ class GFLskill : Tracker {
 			//激发弹头为贴在目标载具上的初始定位弹头
 
 			case 10: {// 给ai用的标枪脚本
-				int characterId = event.getIntAttribute("character_id");
-				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-				if (character !is null) {
-
-					int factionid = character.getIntAttribute("faction_id");
-					Vector3 target_pos = stringToVector3(event.getStringAttribute("position"));//标枪发射器发射时的载具位置
-					int vehicleid = getNearByEnemyVehicle(m_metagame,factionid,target_pos,7);
-
-					Vector3 aimer_pos = stringToVector3(character.getStringAttribute("position"));
-
-					Vector3 pos1 = getAimUnitPosition(aimer_pos,target_pos,1);
-					Vector3 pos2 = getAimUnitPosition(aimer_pos,target_pos,8.0);
-					pos1 = pos1.add(Vector3(0,0.8,0));
-					pos2 = pos2.add(Vector3(0,8,0));
-					CreateProjectile(m_metagame,pos1,pos2,"javelin_rocket_1.projectile",characterId,factionid,5,6);
-					//CreateProjectile(m_metagame,target_pos,target_pos.add(Vector3(0,0,0)),"javelin_locater_2.projectile",characterId,factionid,0,8);
-					//CreateProjectile(m_metagame,target_pos,target_pos.add(Vector3(0,0,0)),"javelin_locater_3.projectile",characterId,factionid,0,8);
-					Javelin_list.insertLast(Javelin_lister(characterId,factionid,vehicleid,target_pos));//存储初始定位弹头锁定的载具id
-				}
+				g_javelinTracker.beginLockForAi(event);
 				break;
 			}
 
 			//激发弹头为贴在目标载具上的初始定位弹头
 
 			case 11: {// 标枪锁定兼射出弹头阶段
-				int characterId = event.getIntAttribute("character_id");
-				int playerId = event.getIntAttribute("player_id");
-				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-				if (character !is null) {
-					const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
-					Vector3 target_pos;
-					int factionid = character.getIntAttribute("faction_id");
-
-					if (player !is null){
-						if (player.hasAttribute("aim_target")) {
-							target_pos = stringToVector3(player.getStringAttribute("aim_target"));
-						}
-					}
-					else{
-						target_pos = stringToVector3(event.getStringAttribute("position"));//标枪发射器发射时的载具位置
-					}
-
-					int vehicleid = getNearByEnemyVehicle(m_metagame,factionid,target_pos,7);
-					Vector3 aimer_pos = stringToVector3(character.getStringAttribute("position"));
-					if(vehicleid!=-1)playSoundAtLocation(m_metagame,"javelin_locked.wav",factionid,aimer_pos,1.0);//锁定载具成功
-					else playSoundAtLocation(m_metagame,"javelin_lock_fail.wav",factionid,aimer_pos,1.0);//未锁定载具
-
-					Vector3 pos1 = getAimUnitPosition(aimer_pos,target_pos,1);
-					Vector3 pos2 = getAimUnitPosition(aimer_pos,target_pos,8.0);
-					pos1 = pos1.add(Vector3(0,0.8,0));
-					pos2 = pos2.add(Vector3(0,8,0));
-					CreateProjectile(m_metagame,pos1,pos2,"javelin_rocket_1.projectile",characterId,factionid,5,6);
-					Javelin_list.insertLast(Javelin_lister(characterId,factionid,vehicleid,target_pos));//存储初始定位弹头锁定的载具id
-				}
+				g_javelinTracker.beginLockForPlayer(event);
 				break;
 			}
 
 			//激发弹头为标枪导弹一阶段弹头
 
 			case 12: {// 标枪弹头改垂直爬升阶段
-				_log("javelin_uprise");
-				int characterId = event.getIntAttribute("character_id");
-				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-				if (character !is null) {
-					int factionid = character.getIntAttribute("faction_id");
-					Vector3 aimer_pos = stringToVector3(event.getStringAttribute("position"));//标枪导弹一阶段弹头位置
-					if(Javelin_list.length()>0){
-						for (uint a=0;a<Javelin_list.length();a++){
-							if((Javelin_list[a].m_characterId==characterId)&&(Javelin_list[a].m_factionid==factionid)){//在序列中如果能找到
-								_log("javelin_uprise success");
-								int target_id = Javelin_list[a].m_vehicleid;
-								Vector3 target_pos;
-								if(target_id!=-1){
-									_log("aimming 1 success.");
-									const XmlElement@ target_info = getVehicleInfo(m_metagame, target_id);
-									target_pos = stringToVector3(target_info.getStringAttribute("position"));
-								}
-								else{
-									target_pos = Javelin_list[a].m_pos;
-								}
-								CreateProjectile(m_metagame,aimer_pos,target_pos,"javelin_rocket_2.projectile",characterId,factionid,getAimUnitDistance(0.4,aimer_pos,target_pos),-20);
-								break;
-							}
-						}
-					}
-				}
+				g_javelinTracker.handleUprise(event);
 				break;
 			}
 
 			//激发弹头为最终定位弹头2
 
 			case 13: {// 标枪弹头改垂直攻顶阶段
-				_log("javelin_strike");
-				int characterId = event.getIntAttribute("character_id");
-				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-				if (character !is null) {
-					int factionid = character.getIntAttribute("faction_id");
-					Vector3 aimer_pos = stringToVector3(event.getStringAttribute("position"));//最终弹头位置
-					if(Javelin_list.length()>0){
-						for (uint a=0;a<Javelin_list.length();a++){
-							if((Javelin_list[a].m_characterId==characterId)&&(Javelin_list[a].m_factionid==factionid)){//在序列中如果能找到
-								_log("javelin_locate_aimer success");
-								int target_id = Javelin_list[a].m_vehicleid;
-								Vector3 target_fin_pos;
-								if(target_id!=-1){
-									_log("aimming 2 success.");
-									const XmlElement@ target_info = getVehicleInfo(m_metagame, target_id);
-
-									//有病
-									// Vector3 target_pos1 = stringToVector3(target_info.getStringAttribute("position"));
-									// _log("Position 1 = "+target_pos1.toString());
-
-									// TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-									// tasker.add(DelayProjectileSet(m_metagame,0.8,characterId,factionid,"bullet.projectile",target_pos1));
-
-									// Vector3 target_pos2 = stringToVector3(target_info.getStringAttribute("position"));
-									// _log("Position 2 = "+target_pos2.toString());
-
-									// target_fin_pos = target_pos2.add(getAimUnitVector(5.0,target_pos1,target_pos2));//标枪导弹目标位置
-									target_fin_pos = stringToVector3(target_info.getStringAttribute("position"));//标枪导弹目标位置
-
-								}
-								else{
-									target_fin_pos = Javelin_list[a].m_pos;
-								}
-								CreateDirectProjectile(m_metagame,aimer_pos,target_fin_pos,"javelin_rocket_3.projectile",characterId,factionid,180);
-								Javelin_list.removeAt(a);
-								break;
-							}
-						}
-					}
-				}
+				g_javelinTracker.handleStrike(event);
 				break;
 			}
 
@@ -976,7 +863,8 @@ class GFLskill : Tracker {
 						}
 					}
 					if (affectedCharacter.length()>0){
-						UZI_track.insertLast(UZI_tracker(characterId,factionid,grenade_pos,affectedCharacter));
+						TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+						tasker.add(UZISkillTask(m_metagame, characterId, factionid, grenade_pos, affectedCharacter));
 					}
 				}
 				break;
@@ -1085,7 +973,8 @@ class GFLskill : Tracker {
 				if (character !is null) {
 					Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
 					int factionid = character.getIntAttribute("faction_id");
-					DOT_track.insertLast(DOT_tracker(characterId,factionid,grenade_pos,1.0,"elenusis_acid_bomb_spawn.projectile",10));
+					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+					tasker.add(DOTEffectTask(m_metagame, characterId, factionid, grenade_pos, 1.0, 10, "elenusis_acid_bomb_spawn.projectile"));
 				}
 				break;
 			}
@@ -1866,6 +1755,57 @@ class GFLskill : Tracker {
                 }
 				break;
             }
+            case 68:{ // OTS14 闪电链技能
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (checkCharacterDead(character)) return;
+				int factionid = character.getIntAttribute("faction_id");
+                Vector3 strikePos = stringToVector3(event.getStringAttribute("position"));
+                const float scanRange = 30.0f;
+                array<int> candidateIds;
+                array<Vector3> candidatePositions;
+				m_fnum = m_metagame.getFactionCount();
+                for(uint i=0;i<m_fnum;i++) {
+                    if(i==uint(factionid)) continue;
+                    array<const XmlElement@>@ affectedCharacter = getCharactersNearPosition(m_metagame, strikePos, i, scanRange);
+                    if (affectedCharacter is null) continue;
+                    for(uint x=0;x<affectedCharacter.length();x++){
+                        const XmlElement@ enemy = affectedCharacter[x];
+                        int enemyId = enemy.getIntAttribute("id");
+                        if (candidateIds.find(enemyId) >= 0) continue;
+                        const XmlElement@ enemyInfo = getCharacterInfo2(m_metagame, enemyId);
+                        if (checkCharacterDead(enemyInfo)) continue;
+                        string enemyGroup = enemyInfo.getStringAttribute("soldier_group_name");
+                        candidateIds.insertLast(enemyId);
+                        candidatePositions.insertLast(stringToVector3(enemyInfo.getStringAttribute("position")));
+                        if (candidateIds.length() >= 20) break;
+                    }
+                    if (candidateIds.length() >= 20) break;
+                }
+                _log("ots14 chain snapshot candidates=" + candidateIds.length() +
+                    " source=" + characterId +
+                    " range=" + scanRange, 1);
+                if (candidateIds.length() <= 0) break;
+
+                ChainEffectDefinition@ def = ChainEffectDefinition();
+                def.m_first_target_acquire_radius = scanRange;
+                def.m_max_jumps = 5;
+                def.m_jump_interval = 0.12f;
+                def.m_jump_range = 9.0f;
+                def.m_max_total_chain_distance = 35.0f;
+                def.m_candidate_limit = 20;
+
+                ChainDamageProfile@ dmg = ChainDamageProfile("chain_lightning_hit_damage.projectile");
+                @def.m_damage_profile = dmg;
+
+                ChainVisualProfile@ vis = ChainVisualProfile();
+                vis.m_arc_projectile_key = "chain_lightning_link.projectile";
+                vis.m_hit_projectile_key = "chain_lightning_hit_effect.projectile";
+                @def.m_visual_profile = vis;
+
+                startChainEffectFromCandidates(m_metagame, characterId, factionid, strikePos, def, candidateIds, candidatePositions);
+				break;
+            }
             default:
                 break;
 		}
@@ -1873,171 +1813,6 @@ class GFLskill : Tracker {
 
 
 	void update(float time) {
-		if(XM8track.length()>0){
-			for (int a = XM8track.length() - 1; a >= 0; a--) {
-				XM8track[a].m_time-=time;
-				if(XM8track[a].m_time<0){
-					m_fnum= m_metagame.getFactionCount();
-					array<const XmlElement@> affectedCharacter;
-					affectedCharacter = getCharactersNearPosition(m_metagame,XM8track[a].m_pos,1,8.0f);
-					if (m_fnum==3){
-						array<const XmlElement@> affectedCharacter2;
-						affectedCharacter2 = getCharactersNearPosition(m_metagame,XM8track[a].m_pos,2,8.0f);
-						if (affectedCharacter2 !is null){
-							for(uint x=0;x<affectedCharacter2.length();x++){
-								affectedCharacter.insertLast(affectedCharacter2[x]);
-							}
-						}
-					}
-					if (m_fnum==4){
-						array<const XmlElement@> affectedCharacter2;
-						affectedCharacter2 = getCharactersNearPosition(m_metagame,XM8track[a].m_pos,2,8.0f);
-						if (affectedCharacter2 !is null){
-							for(uint x=0;x<affectedCharacter2.length();x++){
-								affectedCharacter.insertLast(affectedCharacter2[x]);
-							}
-						}
-						array<const XmlElement@> affectedCharacter3;
-						affectedCharacter3 = getCharactersNearPosition(m_metagame,XM8track[a].m_pos,3,8.0f);
-						if (affectedCharacter3 !is null){
-							for(uint x=0;x<affectedCharacter3.length();x++){
-								affectedCharacter.insertLast(affectedCharacter3[x]);
-							}
-						}
-					}
-					if (affectedCharacter.length()>0){
-						int enemynum= affectedCharacter.length()-1;
-						int luckyone;
-						if (enemynum<=0) {
-							luckyone=0;
-						}
-						else{
-							luckyone = rand(0,enemynum);
-						}
-						int luckyoneid = affectedCharacter[luckyone].getIntAttribute("id");
-						const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
-						if (luckyoneC !is null){
-							string luckyonepos = luckyoneC.getStringAttribute("position");
-							Vector3 luckyoneposV = stringToVector3(luckyonepos);
-							Vector3 height = Vector3(0,0.5,0);
-							luckyoneposV = luckyoneposV.add(height);
-							luckyonepos = luckyoneposV.toString();
-							string c =
-								"<command class='create_instance'" +
-								" faction_id='"+ XM8track[a].m_factionid +"'" +
-								" instance_class='grenade'" +
-								" instance_key='skill_xm8mod3.projectile'" +
-								" position='" + luckyonepos + "'"+
-								" character_id='" + XM8track[a].m_characterId + "' />";
-							m_metagame.getComms().send(c);
-						}
-					}
-					XM8track[a].m_numtime--;
-					XM8track[a].m_time=1;
-					if (XM8track[a].m_numtime<0){
-						XM8track.removeAt(a);
-					}
-				}
-			}
-		}
-		if(HK416_track.length()>0){
-			for (int a = HK416_track.length() - 1; a >= 0; a--) {
-				HK416_track[a].m_time-=time;
-				if(HK416_track[a].m_time<0){
-					if (HK416_track[a].m_affected.length()>0){
-						for(uint b=0;b<HK416_track[a].m_affected.length();b++){
-							int luckyoneid = HK416_track[a].m_affected[b].getIntAttribute("id");
-							const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
-							if (luckyoneC !is null ){
-								string luckyonepos = luckyoneC.getStringAttribute("position");
-								Vector3 luckyoneposV = stringToVector3(luckyonepos);
-								Vector3 height = Vector3(0,0.5,0);
-								luckyoneposV = luckyoneposV.add(height);
-								luckyonepos = luckyoneposV.toString();
-								string c =
-									"<command class='create_instance'" +
-									" faction_id='"+ HK416_track[a].m_factionid +"'" +
-									" instance_class='grenade'" +
-									" instance_key='firenade_sub_416.projectile'" +
-									" position='" + luckyonepos + "'"+
-									" character_id='" + HK416_track[a].m_characterId + "' />";
-								m_metagame.getComms().send(c);
-							}
-						}
-					}
-					HK416_track[a].m_numtime--;
-					HK416_track[a].m_time=0.5;
-					if (HK416_track[a].m_numtime<0){
-						HK416_track.removeAt(a);
-					}
-				}
-			}
-		}
-		if(Javelin_list.length()>0){
-			for (int a = Javelin_list.length() - 1; a >= 0; a--) {
-				Javelin_list[a].m_time-=time;
-				if(Javelin_list[a].m_time<0){
-					Javelin_list[a].m_numtime--;
-					Javelin_list[a].m_time=1;
-					if (Javelin_list[a].m_numtime<1){
-						Javelin_list.removeAt(a);
-					}
-				}
-			}
-		}
-		if(UZI_track.length()>0){
-			for (int a = UZI_track.length() - 1; a >= 0; a--) {
-				UZI_track[a].m_time-=time;
-				if(UZI_track[a].m_time<0){
-					if (UZI_track[a].m_affected.length()>0){
-						for(uint b=0;b<UZI_track[a].m_affected.length();b++){
-							int luckyoneid = UZI_track[a].m_affected[b].getIntAttribute("id");
-							const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
-							if (luckyoneC !is null ){
-								string luckyonepos = luckyoneC.getStringAttribute("position");
-								Vector3 luckyoneposV = stringToVector3(luckyonepos);
-								Vector3 height = Vector3(0,0.5,0);
-								luckyoneposV = luckyoneposV.add(height);
-								luckyonepos = luckyoneposV.toString();
-								string c =
-									"<command class='create_instance'" +
-									" faction_id='"+ UZI_track[a].m_factionid +"'" +
-									" instance_class='grenade'" +
-									" instance_key='firenade_sub_uzi.projectile'" +
-									" position='" + luckyonepos + "'"+
-									" character_id='" + UZI_track[a].m_characterId + "' />";
-								m_metagame.getComms().send(c);
-							}
-						}
-					}
-					UZI_track[a].m_numtime--;
-					UZI_track[a].m_time=1.5;
-					if (UZI_track[a].m_numtime<0){
-						UZI_track.removeAt(a);
-					}
-				}
-			}
-		}
-		if(DOT_track.length()>0){
-			for (int a = DOT_track.length() - 1; a >= 0; a--) {
-				DOT_track[a].m_time-=time;
-				if(DOT_track[a].m_time<0){
-					string c =
-						"<command class='create_instance'" +
-						" faction_id='"+ DOT_track[a].m_factionid +"'" +
-						" instance_class='grenade'" +
-						" instance_key='" + DOT_track[a].m_projectile +"'" +
-						" position='" + DOT_track[a].m_pos.toString() + "'"+
-						" character_id='" + DOT_track[a].m_characterId + "' />";
-					m_metagame.getComms().send(c);
-					DOT_track[a].m_numtime--;
-					DOT_track[a].m_time=DOT_track[a].m_time_interval;
-					if (DOT_track[a].m_numtime<1){
-						DOT_track.removeAt(a);
-					}
-				}
-			}
-		}
 	}
 
 	bool hasEnded() const {

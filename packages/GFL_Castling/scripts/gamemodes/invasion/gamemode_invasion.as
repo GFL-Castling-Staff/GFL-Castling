@@ -313,6 +313,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		// addTracker(GpsLaptop(this));
 		addTracker(RepairCrane(this));
 		addTracker(RangeFinder(this)); 
+		addTracker(JavelinTracker(this));
 		addTracker(GFLskill(this));
 		addTracker(kill_event(this,getUserSettings()));
 		addTracker(fairyCommand(this));
@@ -322,7 +323,6 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		addTracker(vehicle_spawn(this));
 		// addTracker(MatchCompleteReward(this));
 		addTracker(GFLairstrike(this));
-		addTracker(GFL_event_system(this));
 		addTracker(SharedReward(this));
 		addTracker(call_event(this));
 		addTracker(GFL_playerlist_system(this,getUserSettings()));

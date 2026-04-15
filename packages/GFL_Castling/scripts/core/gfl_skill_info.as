@@ -205,88 +205,13 @@ dictionary gameSkillIndex = {
 
         {"kcco_minotauros_rockets",67},
 
+        {"ots14_chain_scan",68},
+
 
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
 };
 
-class XM8tracker{
-    int m_characterId;
-	float m_time;
-	int m_numtime=7;
-	int m_factionid;
-	Vector3 m_pos;
-	XM8tracker(int characterId,float time,int factionid,Vector3 pos)
-	{
-		m_characterId = characterId;
-		m_time = time;
-		m_factionid= factionid;
-		m_pos=pos;
-	}
-}
 
-class HK416_tracker{
-    int m_characterId;
-	float m_time=0.5;
-	int m_numtime=8;
-	int m_factionid;
-	array<const XmlElement@> m_affected;
-	Vector3 m_pos;
-	HK416_tracker(int characterId,int factionid,Vector3 pos,array<const XmlElement@> affected)
-	{
-		m_characterId = characterId;
-		m_factionid= factionid;
-		m_pos= pos;
-		m_affected= affected;
-	}
-}
 
-class UZI_tracker{
-    int m_characterId;
-	float m_time=2.0;
-	int m_numtime=2;
-	int m_factionid;
-	array<const XmlElement@> m_affected;
-	Vector3 m_pos;
-	UZI_tracker(int characterId,int factionid,Vector3 pos,array<const XmlElement@> affected)
-	{
-		m_characterId = characterId;
-		m_factionid= factionid;
-		m_pos= pos;
-		m_affected= affected;
-	}
-}
 
-class Javelin_lister{
-    int m_characterId;
-	float m_time=6;
-	int m_numtime=1;
-	int m_factionid;
-	int m_vehicleid;
-	Vector3 m_pos;
-	Javelin_lister(int characterId,int factionid,int vehicleid,Vector3 pos)
-	{
-		m_characterId = characterId;
-		m_factionid = factionid;
-		m_vehicleid = vehicleid;
-		m_pos = pos;
-	}
-}
-
-class DOT_tracker{
-    int m_characterId;
-	int m_numtime;
-	float m_time=0.05;
-	float m_time_interval;
-	int m_factionid;
-	string m_projectile;
-	Vector3 m_pos;
-	DOT_tracker(int characterId,int factionid,Vector3 pos,float time,string projectile,int num){
-		m_characterId = characterId;
-		m_factionid= factionid;
-		m_pos= pos;
-		m_projectile=projectile;
-		m_time_interval=time;
-		m_numtime = num;
-	}
-}

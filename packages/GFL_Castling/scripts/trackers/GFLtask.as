@@ -1378,6 +1378,8 @@ class Skill_SSG3000_Snipe : DelaySkill {
 	}
 }
 
+bool g_skill_fairy_snipe_active = false;
+
 class Skill_Fairy_Snipe : DelaySkill {
     protected CastlingMarker@ m_info;
 
@@ -1388,6 +1390,7 @@ class Skill_Fairy_Snipe : DelaySkill {
 	}
 
 	void start(){
+		g_skill_fairy_snipe_active = true;
 		m_timeLeft=m_time;
 		m_timeLeft_internal = 0;
 		this.setExcuteLimit(10);
@@ -1417,6 +1420,7 @@ class Skill_Fairy_Snipe : DelaySkill {
 	}
     bool hasEnded() const {
 		if (m_end) {
+            g_skill_fairy_snipe_active = false;
             removeMarker(m_metagame,m_info);
 			return true;
 		}
@@ -3546,4 +3550,561 @@ class M14SkillEndTask : Task {
 
     void update(float time) {}
     bool hasEnded() const { return true; } // 立即结束
+}
+
+// ============================================================
+// 通用重复效果 Task 基类（用于替代 GFLskill 手动 tracker 数组模式）
+// ============================================================
+class RepeatEffectTask : Task {
+    protected GameMode@ m_metagame;
+    protected int m_characterId;
+    protected int m_factionId;
+    protected Vector3 m_pos;
+    protected float m_interval;
+    protected float m_timeLeft;
+    protected int m_remainCount;
+
+    RepeatEffectTask(GameMode@ metagame, int cId, int fId,
+                     Vector3 pos, float interval, int count) {
+        @m_metagame = metagame;
+        m_characterId = cId;
+        m_factionId = fId;
+        m_pos = pos;
+        m_interval = interval;
+        m_remainCount = count;
+    }
+
+    void start() {
+        m_timeLeft = m_interval;
+    }
+
+    void update(float time) {
+        m_timeLeft -= time;
+        if (m_timeLeft <= 0) {
+            excuteEffect();
+            m_remainCount--;
+            m_timeLeft = m_interval;
+        }
+    }
+
+    bool hasEnded() const {
+        return m_remainCount <= 0;
+    }
+
+    // 子类重写此方法实现具体效果
+    void excuteEffect() {}
+}
+
+// DOT（持续伤害）效果 Task，在固定位置重复生成弹头
+class DOTEffectTask : RepeatEffectTask {
+    protected string m_projectile;
+
+    DOTEffectTask(GameMode@ metagame, int cId, int fId,
+                  Vector3 pos, float interval, int count, string projectile) {
+        super(metagame, cId, fId, pos, interval, count);
+        m_projectile = projectile;
+    }
+
+    void excuteEffect() {
+        string c =
+            "<command class='create_instance'" +
+            " faction_id='" + m_factionId + "'" +
+            " instance_class='grenade'" +
+            " instance_key='" + m_projectile + "'" +
+            " position='" + m_pos.toString() + "'" +
+            " character_id='" + m_characterId + "' />";
+        m_metagame.getComms().send(c);
+    }
+}
+
+// HK416 寄生榴弹 Task，对锁定的敌人列表逐个释放延迟爆炸，共 9 次
+class HK416SkillTask : RepeatEffectTask {
+    protected array<const XmlElement@> m_affected;
+
+    HK416SkillTask(GameMode@ metagame, int cId, int fId,
+                   Vector3 pos, array<const XmlElement@> affected) {
+        super(metagame, cId, fId, pos, 0.5, 9);
+        m_affected = affected;
+    }
+
+    void excuteEffect() {
+        for (uint b = 0; b < m_affected.length(); b++) {
+            int luckyoneid = m_affected[b].getIntAttribute("id");
+            const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+            if (luckyoneC !is null) {
+                Vector3 luckyoneposV = stringToVector3(luckyoneC.getStringAttribute("position"));
+                luckyoneposV = luckyoneposV.add(Vector3(0, 0.5, 0));
+                string c =
+                    "<command class='create_instance'" +
+                    " faction_id='" + m_factionId + "'" +
+                    " instance_class='grenade'" +
+                    " instance_key='firenade_sub_416.projectile'" +
+                    " position='" + luckyoneposV.toString() + "'" +
+                    " character_id='" + m_characterId + "' />";
+                m_metagame.getComms().send(c);
+            }
+        }
+    }
+}
+
+// UZI MOD3 燃烧弹追踪 Task，对锁定的敌人列表逐个投掷燃烧弹，共 3 次
+// 初始等待 2.0s，后续每次间隔 1.5s
+class UZISkillTask : RepeatEffectTask {
+    protected array<const XmlElement@> m_affected;
+
+    UZISkillTask(GameMode@ metagame, int cId, int fId,
+                 Vector3 pos, array<const XmlElement@> affected) {
+        super(metagame, cId, fId, pos, 1.5, 3);
+        m_affected = affected;
+    }
+
+    void start() {
+        m_timeLeft = 2.0; // 初始等待略长于后续间隔，与原 UZI_tracker 行为一致
+    }
+
+    void excuteEffect() {
+        for (uint b = 0; b < m_affected.length(); b++) {
+            int luckyoneid = m_affected[b].getIntAttribute("id");
+            const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+            if (luckyoneC !is null) {
+                Vector3 luckyoneposV = stringToVector3(luckyoneC.getStringAttribute("position"));
+                luckyoneposV = luckyoneposV.add(Vector3(0, 0.5, 0));
+                string c =
+                    "<command class='create_instance'" +
+                    " faction_id='" + m_factionId + "'" +
+                    " instance_class='grenade'" +
+                    " instance_key='firenade_sub_uzi.projectile'" +
+                    " position='" + luckyoneposV.toString() + "'" +
+                    " character_id='" + m_characterId + "' />";
+                m_metagame.getComms().send(c);
+            }
+        }
+    }
+}
+
+// XM8 技能 Task，每秒在附近随机选一个敌人生成爆炸弹头，共 8 次
+class XM8SkillTask : RepeatEffectTask {
+
+    XM8SkillTask(GameMode@ metagame, int cId, int fId, Vector3 pos) {
+        super(metagame, cId, fId, pos, 1.0, 8);
+    }
+
+    void excuteEffect() {
+        uint fnum = m_metagame.getFactionCount();
+        array<const XmlElement@> affectedCharacter;
+        affectedCharacter = getCharactersNearPosition(m_metagame, m_pos, 1, 8.0f);
+        if (fnum == 3) {
+            array<const XmlElement@> affectedCharacter2;
+            affectedCharacter2 = getCharactersNearPosition(m_metagame, m_pos, 2, 8.0f);
+            if (affectedCharacter2 !is null) {
+                for (uint x = 0; x < affectedCharacter2.length(); x++) {
+                    affectedCharacter.insertLast(affectedCharacter2[x]);
+                }
+            }
+        }
+        if (fnum == 4) {
+            array<const XmlElement@> affectedCharacter2;
+            affectedCharacter2 = getCharactersNearPosition(m_metagame, m_pos, 2, 8.0f);
+            if (affectedCharacter2 !is null) {
+                for (uint x = 0; x < affectedCharacter2.length(); x++) {
+                    affectedCharacter.insertLast(affectedCharacter2[x]);
+                }
+            }
+            array<const XmlElement@> affectedCharacter3;
+            affectedCharacter3 = getCharactersNearPosition(m_metagame, m_pos, 3, 8.0f);
+            if (affectedCharacter3 !is null) {
+                for (uint x = 0; x < affectedCharacter3.length(); x++) {
+                    affectedCharacter.insertLast(affectedCharacter3[x]);
+                }
+            }
+        }
+        if (affectedCharacter.length() > 0) {
+            int enemynum = affectedCharacter.length() - 1;
+            int luckyone;
+            if (enemynum <= 0) {
+                luckyone = 0;
+            } else {
+                luckyone = rand(0, enemynum);
+            }
+            int luckyoneid = affectedCharacter[luckyone].getIntAttribute("id");
+            const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+            if (luckyoneC !is null) {
+                Vector3 luckyoneposV = stringToVector3(luckyoneC.getStringAttribute("position"));
+                luckyoneposV = luckyoneposV.add(Vector3(0, 0.5, 0));
+                string c =
+                    "<command class='create_instance'" +
+                    " faction_id='" + m_factionId + "'" +
+                    " instance_class='grenade'" +
+                    " instance_key='skill_xm8mod3.projectile'" +
+                    " position='" + luckyoneposV.toString() + "'" +
+                    " character_id='" + m_characterId + "' />";
+                m_metagame.getComms().send(c);
+            }
+        }
+    }
+}
+
+// ============================================================
+// Generic chain effect system v1
+// Pure in-memory hop execution after candidate snapshot is prepared.
+// ============================================================
+
+const int CHAIN_FILTER_CHARACTER_ONLY = 0;
+const int CHAIN_FILTER_VEHICLE_ONLY   = 1;
+const int CHAIN_FILTER_ALL_HOSTILE    = 2;
+
+const int CHAIN_DAMAGE_FIXED      = 0;
+const int CHAIN_DAMAGE_FALLOFF    = 1;
+const int CHAIN_DAMAGE_SPLIT_POOL = 2;
+
+class ChainDamageProfile {
+    string m_damage_projectile_key   = "";
+    int    m_damage_mode             = CHAIN_DAMAGE_FIXED;
+    float  m_damage_falloff_per_jump = 0.0f;
+    bool   m_split_damage_pool       = false;
+
+    ChainDamageProfile() {}
+    ChainDamageProfile(string proj_key) {
+        m_damage_projectile_key = proj_key;
+    }
+}
+
+class ChainVisualProfile {
+    string m_arc_projectile_key = "";
+    string m_hit_projectile_key = "";
+    string m_sound_key          = "";
+
+    ChainVisualProfile() {}
+}
+
+class ChainEffectDefinition {
+    float m_first_target_acquire_radius    = 5.0f;
+    float m_jump_interval                  = 0.12f;
+    int   m_max_jumps                      = 5;
+    float m_jump_range                     = 7.5f;
+    float m_max_total_chain_distance       = 35.0f;
+    bool  m_allow_repeat_target            = false;
+    int   m_repeat_target_limit            = 1;
+    bool  m_continue_when_target_invalid   = true;
+    bool  m_search_from_last_target_position = true;
+    int   m_filter_mode                    = CHAIN_FILTER_CHARACTER_ONLY;
+    int   m_candidate_limit                = 12;
+    float m_chain_lifetime_limit           = 1.2f;
+    ChainDamageProfile@ m_damage_profile   = null;
+    ChainVisualProfile@ m_visual_profile   = null;
+
+    ChainEffectDefinition() {}
+}
+
+class ChainExecutionContext {
+    int        m_source_id;
+    int        m_source_faction_id;
+    int        m_current_target_id;
+    Vector3    m_current_search_origin;
+    int        m_jump_index;
+    int        m_remaining_jumps;
+    float      m_accumulated_distance;
+    array<int>     m_hit_history;
+    array<int>     m_candidate_ids;
+    array<Vector3> m_candidate_positions;
+    ChainEffectDefinition@ m_definition;
+
+    ChainExecutionContext(int sourceId, int factionId, Vector3 triggerPos, ChainEffectDefinition@ def) {
+        m_source_id             = sourceId;
+        m_source_faction_id     = factionId;
+        m_current_search_origin = triggerPos;
+        m_current_target_id     = -1;
+        m_jump_index            = 0;
+        m_remaining_jumps       = def.m_max_jumps;
+        m_accumulated_distance  = 0.0f;
+        @m_definition           = def;
+    }
+
+    bool hasHit(int characterId) const {
+        return m_hit_history.find(characterId) >= 0;
+    }
+
+    void recordHit(int characterId) {
+        if (characterId >= 0) m_hit_history.insertLast(characterId);
+    }
+
+    bool getPositionById(int id, Vector3& out pos) const {
+        for (uint i = 0; i < m_candidate_ids.length(); i++) {
+            if (m_candidate_ids[i] == id) {
+                pos = m_candidate_positions[i];
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+int chainFindNextTarget(ChainExecutionContext@ ctx, Vector3 searchOrigin) {
+    ChainEffectDefinition@ def = ctx.m_definition;
+    float radius = (ctx.m_jump_index == 0)
+        ? def.m_first_target_acquire_radius
+        : def.m_jump_range;
+
+    int   bestId   = -1;
+    float bestDist = -1.0f;
+
+    for (uint i = 0; i < ctx.m_candidate_ids.length(); i++) {
+        int cId = ctx.m_candidate_ids[i];
+        if (!def.m_allow_repeat_target && ctx.hasHit(cId)) continue;
+
+        Vector3 cPos = ctx.m_candidate_positions[i];
+        float dist   = getAimUnitDistance(1.0f, searchOrigin, cPos);
+        _log("chain candidate id=" + cId +
+             " jump=" + ctx.m_jump_index +
+             " dist=" + dist +
+             " radius=" + radius +
+             " origin=" + searchOrigin.toString() +
+             " pos=" + cPos.toString(), 1);
+        if (dist > radius) continue;
+
+        if (bestId == -1 || dist < bestDist) {
+            bestId   = cId;
+            bestDist = dist;
+        }
+    }
+
+    if (bestId == -1) return -1;
+
+    if (def.m_max_total_chain_distance > 0.0f &&
+        ctx.m_accumulated_distance + bestDist > def.m_max_total_chain_distance) {
+        return -1;
+    }
+
+    return bestId;
+}
+
+class ChainTask : Task {
+    protected GameMode@              m_metagame;
+    protected ChainExecutionContext@ m_ctx;
+    protected float                  m_hop_timer;
+    protected float                  m_lifetime;
+    protected bool                   m_ended;
+    protected bool                   m_waiting;
+
+    ChainTask(GameMode@ metagame, ChainExecutionContext@ ctx) {
+        @m_metagame = metagame;
+        @m_ctx      = ctx;
+        m_ended     = false;
+        m_waiting   = true;
+        m_hop_timer = 0.0f;
+        m_lifetime  = 0.0f;
+    }
+
+    void start() {}
+
+    void update(float time) {
+        if (m_ended) return;
+        m_lifetime += time;
+        if (m_lifetime >= m_ctx.m_definition.m_chain_lifetime_limit) { m_ended = true; return; }
+        if (!m_waiting) return;
+        m_hop_timer -= time;
+        if (m_hop_timer > 0.0f) return;
+
+        int nextTarget = chainFindNextTarget(m_ctx, m_ctx.m_current_search_origin);
+        if (nextTarget == -1) {
+            _log("chain task no next target jump=" + m_ctx.m_jump_index +
+                 " candidates=" + m_ctx.m_candidate_ids.length() +
+                 " origin=" + m_ctx.m_current_search_origin.toString(), 1);
+            m_ended = true;
+            return;
+        }
+        m_ctx.m_current_target_id = nextTarget;
+        m_waiting = false;
+        executeHop();
+    }
+
+    bool hasEnded() const { return m_ended; }
+
+    protected void executeHop() {
+        ChainEffectDefinition@ def = m_ctx.m_definition;
+        int     targetId    = m_ctx.m_current_target_id;
+        Vector3 fromPos     = m_ctx.m_current_search_origin;
+        Vector3 toPos       = fromPos;
+        bool    targetValid = false;
+
+        if (targetId >= 0) {
+            Vector3 prePos = fromPos;
+            if (m_ctx.getPositionById(targetId, prePos)) {
+                toPos       = prePos;
+                targetValid = true;
+            }
+        }
+
+        if (!targetValid && !def.m_continue_when_target_invalid) { m_ended = true; return; }
+
+        if (targetValid && def.m_damage_profile !is null) {
+            applyDamage(toPos);
+        }
+        if (def.m_visual_profile !is null) {
+            applyVisual(fromPos, toPos);
+        }
+
+        _log("chain task hop jump=" + m_ctx.m_jump_index +
+             " target=" + targetId +
+             " from=" + fromPos.toString() +
+             " to=" + toPos.toString(), 1);
+
+        m_ctx.recordHit(targetId);
+        float hopDist = getAimUnitDistance(1.0f, fromPos, toPos);
+        m_ctx.m_accumulated_distance += hopDist;
+        if (def.m_search_from_last_target_position) {
+            m_ctx.m_current_search_origin = toPos;
+        }
+        m_ctx.m_jump_index++;
+        m_ctx.m_remaining_jumps--;
+
+        if (m_ctx.m_remaining_jumps <= 0) { m_ended = true; return; }
+        m_hop_timer = def.m_jump_interval;
+        m_waiting   = true;
+    }
+
+    protected void applyDamage(Vector3 targetPos) {
+        ChainDamageProfile@ dmg = m_ctx.m_definition.m_damage_profile;
+        if (dmg.m_damage_projectile_key == "") return;
+        spawnStaticProjectile(m_metagame, dmg.m_damage_projectile_key,
+                              targetPos, m_ctx.m_source_id, m_ctx.m_source_faction_id);
+    }
+
+    protected void applyVisual(Vector3 fromPos, Vector3 toPos) {
+        ChainVisualProfile@ vis = m_ctx.m_definition.m_visual_profile;
+        if (vis.m_arc_projectile_key != "") {
+            Vector3 arcStart = fromPos.add(Vector3(0, 0.35f, 0));
+            Vector3 arcEnd   = toPos.add(Vector3(0, 0.35f, 0));
+            CreateProjectile_H(m_metagame, arcStart, arcEnd, vis.m_arc_projectile_key,
+                               m_ctx.m_source_id, m_ctx.m_source_faction_id, 140.0f, 0.8f);
+        }
+        if (vis.m_hit_projectile_key != "") {
+            spawnStaticProjectile(m_metagame, vis.m_hit_projectile_key,
+                                  toPos, m_ctx.m_source_id, m_ctx.m_source_faction_id);
+        }
+        if (vis.m_sound_key != "") {
+            playSoundAtLocation(m_metagame, vis.m_sound_key,
+                                m_ctx.m_source_faction_id, toPos);
+        }
+    }
+}
+
+class DelayChainBootstrapTask : Task {
+    protected GameMode@ m_metagame;
+    protected float m_time;
+    protected float m_timeLeft;
+    protected int m_phase;
+    protected int m_sourceId;
+    protected int m_factionId;
+    protected Vector3 m_triggerPos;
+    protected ChainEffectDefinition@ m_definition;
+    protected bool m_end;
+
+    DelayChainBootstrapTask(GameMode@ metagame, float time, int sourceId, int factionId, Vector3 triggerPos, ChainEffectDefinition@ def) {
+        @m_metagame = metagame;
+        m_time = time;
+        m_sourceId = sourceId;
+        m_factionId = factionId;
+        m_triggerPos = triggerPos;
+        @m_definition = def;
+        m_phase = 0;
+        m_end = false;
+    }
+
+    void start() {
+        m_timeLeft = m_time;
+    }
+
+    void update(float time) {
+        if (m_end) return;
+        if (m_phase == 0) {
+            m_phase = 1;
+            _log("chain bootstrap phase advance source=" + m_sourceId, 1);
+            return;
+        }
+        if (m_timeLeft > 0.0f) {
+            m_timeLeft -= time;
+            return;
+        }
+
+        if (m_definition is null) {
+            m_end = true;
+            return;
+        }
+
+        float queryRange = m_definition.m_first_target_acquire_radius + m_definition.m_jump_range * float(m_definition.m_max_jumps);
+        if (m_definition.m_max_total_chain_distance > 0.0f && m_definition.m_max_total_chain_distance < queryRange) {
+            queryRange = m_definition.m_max_total_chain_distance;
+        }
+        if (queryRange > 60.0f) queryRange = 60.0f;
+
+        array<int> candidateIds;
+        array<Vector3> candidatePositions;
+        int factionCount = m_metagame.getFactionCount();
+        int enemyFactionCount = factionCount - 1;
+        if (enemyFactionCount < 0) enemyFactionCount = 0;
+
+        _log("chain bootstrap start source=" + m_sourceId +
+             " range=" + queryRange +
+             " factions=" + enemyFactionCount, 1);
+
+        for (int i = 0; i < factionCount; i++) {
+            if (i == m_factionId) continue;
+
+            array<const XmlElement@>@ characters = getCharactersNearPosition(m_metagame, m_triggerPos, i, queryRange);
+            if (characters is null) continue;
+
+            for (uint j = 0; j < characters.length(); j++) {
+                const XmlElement@ c = characters[j];
+                if (checkCharacterDead(c)) continue;
+
+                int cId = c.getIntAttribute("id");
+                if (candidateIds.find(cId) >= 0) continue;
+
+                candidateIds.insertLast(cId);
+                candidatePositions.insertLast(stringToVector3(c.getStringAttribute("position")));
+                if (int(candidateIds.length()) >= m_definition.m_candidate_limit) break;
+            }
+
+            if (int(candidateIds.length()) >= m_definition.m_candidate_limit) break;
+        }
+
+        _log("chain bootstrap candidates=" + candidateIds.length(), 1);
+        if (candidateIds.length() > 0) {
+            startChainEffectFromCandidates(m_metagame, m_sourceId, m_factionId, m_triggerPos, m_definition, candidateIds, candidatePositions);
+        }
+        m_end = true;
+    }
+
+    bool hasEnded() const {
+        return m_end;
+    }
+}
+
+void startChainEffectFromCandidates(GameMode@ metagame, int sourceId, int factionId, Vector3 triggerPos, ChainEffectDefinition@ def, array<int>@ candidateIds, array<Vector3>@ candidatePositions) {
+    if (def is null) return;
+    if (def.m_damage_profile is null && def.m_visual_profile is null) return;
+    if (candidateIds is null || candidatePositions is null) return;
+    if (candidateIds.length() == 0 || candidatePositions.length() == 0) return;
+
+    ChainExecutionContext@ ctx = ChainExecutionContext(sourceId, factionId, triggerPos, def);
+    uint count = candidateIds.length();
+    if (candidatePositions.length() < count) {
+        count = candidatePositions.length();
+    }
+
+    for (uint i = 0; i < count; i++) {
+        ctx.m_candidate_ids.insertLast(candidateIds[i]);
+        ctx.m_candidate_positions.insertLast(candidatePositions[i]);
+    }
+
+    if (ctx.m_candidate_ids.length() == 0) return;
+
+    _log("chain start source=" + sourceId +
+         " candidates=" + ctx.m_candidate_ids.length() +
+         " first_radius=" + def.m_first_target_acquire_radius +
+         " jump_range=" + def.m_jump_range, 1);
+
+    TaskSequencer@ tasker = metagame.getTaskManager().newTaskSequencer();
+    tasker.add(ChainTask(metagame, ctx));
 }

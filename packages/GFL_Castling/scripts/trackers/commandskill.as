@@ -9,7 +9,7 @@
 #include "task_sequencer.as"
 #include "GFLhelpers.as"
 #include "kill_event.as"
-#include "event_system.as"
+#include "GFLtask.as"
 #include "fairy_command.as"
 #include "command_skill_info.as"
 #include "GFLplayerlist.as"
@@ -122,8 +122,6 @@ class SpamAvoider{
         m_playerid=playerid;
     }
 }
-
-
 
 class CommandSkill : Tracker {
     protected GameMode@ m_metagame;
@@ -308,6 +306,7 @@ class CommandSkill : Tracker {
                 case 95:{excuteScarecrowSkill(cId,senderId,m_modifer);break;}
                 case 96:{excuteG36Skill(cId,senderId,m_modifer);break;}
                 case 97:{excuteMP7Skill(cId,senderId,m_modifer);break;}
+                case 98:{excuteOTS14Skill(cId,senderId,m_modifer);break;}
 
 
                 default:
@@ -5301,6 +5300,40 @@ class CommandSkill : Tracker {
                     addCooldown("scarecrow",20,characterId,modifer);
                 }
             }
+        }
+    }
+
+    // OTS-14 "闪电" 突击步枪技能
+    // 效果：向准心瞄准位置打出一道闪电，然后从落点发起连锁闪电跳跃
+    void excuteOTS14Skill(int characterId, int playerId, SkillModifer@ modifer) {
+        if (excuteCooldownCheck(m_metagame, characterId, modifer, playerId, "OTS14")) return;
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character is null) return;
+        if (!canCastSkill(character)) return;
+        const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+        if (player is null) return;
+
+        if (player.hasAttribute("aim_target")) {
+            string target = player.getStringAttribute("aim_target");
+            Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+            Vector3 aim_pos = stringToVector3(target);
+            int factionid = character.getIntAttribute("faction_id");
+
+            // 播放施法动画与音效
+            playAnimationKey(m_metagame, characterId, "crouching aiming, RF skill 1s", false);
+            playSoundAtLocation(m_metagame, "thunder.wav", factionid, c_pos, 0.9);
+
+            // 从角色头部位置向落点发射一道闪电特效弹
+            spawnStaticProjectile(m_metagame, "chain_lightning_starter.projectile", aim_pos, characterId, factionid);
+
+            // 从落点触发连锁闪电逻辑
+
+
+
+            // 首目标从落点吸附，不依赖特效弹头的爆炸半径
+
+
+            addCooldown("OTS14", 25, characterId, modifer);
         }
     }
 }
