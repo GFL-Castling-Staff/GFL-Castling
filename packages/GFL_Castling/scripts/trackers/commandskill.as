@@ -5049,7 +5049,7 @@ class CommandSkill : Tracker {
         
         if(pinfo.checkTag("M14MOD3"))
         {
-            addCooldown("M14MOD3",3,characterId,modifer,"normal",false);
+            addCooldown("M14MOD3",3,characterId,modifer,"nohint",false);
             return;
         }
 
