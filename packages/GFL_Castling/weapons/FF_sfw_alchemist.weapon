@@ -3,7 +3,7 @@
 <weapon file="gk_sf_boss.base_weapon" key="ff_alchemist.weapon">
 	<!--Weapon specifications-->
     <specification
-	retrigger_time="-1"
+	retrigger_time="0.125"
 	last_burst_retrigger_time="0.125"
 	accuracy_factor="0.9"
 	sustained_fire_grow_step="2.0"
