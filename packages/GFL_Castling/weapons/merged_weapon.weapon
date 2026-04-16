@@ -51099,7 +51099,7 @@
 </weapon>
 
 <weapon key="gkw_ltlx7000_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="Beretta LTLX 7000-[Opposites Repel]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="6" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="Beretta LTLX 7000-[Opposites Repel]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="15" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<commonness value="0" in_stock="0"/>
 	<inventory encumbrance="12.5" buy_price="50.0" sell_price="50.0"/>
 	<next_in_chain key="gkw_ltlx7000.weapon" share_ammo="1"/>
@@ -51118,7 +51118,7 @@
 	<hud_icon filename="gkw_ltlx7000_skill.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="blast" radius="3.0" damage="0.1" push="0.0" decal="0" character_state="wound" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" radius="3.0" damage="1.01" push="0.0" decal="0" character_state="wound" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -51339,7 +51339,7 @@
 </weapon>
 
 <weapon key="gkw_ltlx7000_6101_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="Beretta LTLX 7000-[Night-Tide Invitation]-[Opposites Repel]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="6" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="Beretta LTLX 7000-[Night-Tide Invitation]-[Opposites Repel]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="15" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<commonness value="0" in_stock="0"/>
 	<inventory encumbrance="12.5" buy_price="50.0" sell_price="50.0"/>
 	<next_in_chain key="gkw_ltlx7000_6101.weapon" share_ammo="1"/>
@@ -51358,7 +51358,7 @@
 	<hud_icon filename="gkw_ltlx7000_6101.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="blast" radius="3.0" damage="0.1" push="0.0" decal="0" character_state="wound" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" radius="3.0" damage="1.01" push="0.0" decal="0" character_state="wound" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -51579,7 +51579,7 @@
 </weapon>
 
 <weapon key="gkw_ltlx7000_6702_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="Beretta LTLX 7000-[Dancing Shrine Maiden]-[Opposites Repel]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="6" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="Beretta LTLX 7000-[Dancing Shrine Maiden]-[Opposites Repel]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="15" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<commonness value="0" in_stock="0"/>
 	<inventory encumbrance="12.5" buy_price="50.0" sell_price="50.0"/>
 	<next_in_chain key="gkw_ltlx7000_6702.weapon" share_ammo="1"/>
@@ -51598,7 +51598,7 @@
 	<hud_icon filename="gkw_ltlx7000_6702.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="blast" radius="3.0" damage="0.1" push="0.0" decal="0" character_state="wound" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" radius="3.0" damage="1.01" push="0.0" decal="0" character_state="wound" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -51819,7 +51819,7 @@
 </weapon>
 
 <weapon key="gkw_ltlx7000_10803_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="Beretta LTLX 7000-[Macallan Intoxication]-[Opposites Repel]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="6" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2" magazine_size="7" can_shoot_standing="1" suppressed="0" name="Beretta LTLX 7000-[Macallan Intoxication]-[Opposites Repel]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="100" barrel_offset="0.4" projectiles_per_shot="15" spread_range="0.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0" use_basic_muzzle_smoke_effect="0"/>
 	<commonness value="0" in_stock="0"/>
 	<inventory encumbrance="12.5" buy_price="50.0" sell_price="50.0"/>
 	<next_in_chain key="gkw_ltlx7000_10803.weapon" share_ammo="1"/>
@@ -51838,7 +51838,7 @@
 	<hud_icon filename="gkw_ltlx7000_10803.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="blast" radius="3.0" damage="0.1" push="0.0" decal="0" character_state="wound" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" radius="3.0" damage="1.01" push="0.0" decal="0" character_state="wound" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -84987,7 +84987,7 @@
 </weapon>
 
 <weapon key="gkw_cx4.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification can_shoot_running="1" accuracy_factor="0.98" barrel_offset="0.4" class="1" magazine_size="30" name="Beretta Cx4 Storm" projectile_speed="100" retrigger_time="-1" suppressed="0" sight_range_modifier="1" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.3" stab_enabled="1" carry_in_two_hands="1" spread_range="0.2" stance_accuracy_rate="2.0" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification can_shoot_running="1" accuracy_factor="0.98" barrel_offset="0.4" class="1" magazine_size="30" name="Beretta Cx4 Storm" projectile_speed="100" retrigger_time="-1" suppressed="0" sight_range_modifier="1" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.2" stab_enabled="1" carry_in_two_hands="1" spread_range="0.2" stance_accuracy_rate="2.0" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory encumbrance="12.5" buy_price="59.0" sell_price="59.0"/>
 	<sound key="fire" fileref="cx4_fire_FromCOD12.wav" pitch_variety="0.05" volume="1.1"/>
 	<sound key="magazine_out" fileref="cx4_mgz_out_FromCOD12.wav" volume="0.6"/>
@@ -84998,7 +84998,7 @@
 	<hud_icon filename="gkw_cx4.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.28" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="1.7" kill_probability_offset_on_successful_hit="6.5" kill_decay_start_time="0.5" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -85070,17 +85070,17 @@
 	<stance state_key="prone" accuracy="0.85"/>
 	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="over_wall" accuracy="0.85"/>
-	<modifier class="hit_success_probability" value="-0.3"/>
 	<tag name="smg"/>
-	<animation key="cycle" animation_key="cycle_2h_hip_300rpm"/>
-	<animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_300rpm_prone"/>
-	<animation key="cycle" stance_key="over_wall" animation_key="cycle_2h_rifle_300rpm"/>
+	<animation key="cycle" animation_key="cycle_2h_hip_400rpm"/>
+	<animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_400rpm_prone"/>
+	<animation key="cycle" stance_key="over_wall" animation_key="cycle_2h_rifle_400rpm"/>
 	<animation state_key="recoil" animation_key="recoil_hip_unlimit"/>
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil_unlimit"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil_prone_unlimit"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<modifier class="speed" value="0.2"/>
+	<modifier class="hit_success_probability" value="-0.3"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -85095,7 +85095,7 @@
 </weapon>
 
 <weapon key="gkw_cx4_6606.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification can_shoot_running="1" accuracy_factor="0.98" barrel_offset="0.4" class="1" magazine_size="30" name="Beretta Cx4 Storm-[Marvellous Poolside Christmas Encounter]" projectile_speed="100" retrigger_time="-1" suppressed="0" sight_range_modifier="1" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.3" stab_enabled="1" carry_in_two_hands="1" spread_range="0.2" stance_accuracy_rate="2.0" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification can_shoot_running="1" accuracy_factor="0.98" barrel_offset="0.4" class="1" magazine_size="30" name="Beretta Cx4 Storm-[Marvellous Poolside Christmas Encounter]" projectile_speed="100" retrigger_time="-1" suppressed="0" sight_range_modifier="1" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.2" stab_enabled="1" carry_in_two_hands="1" spread_range="0.2" stance_accuracy_rate="2.0" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory encumbrance="12.5" buy_price="59.0" sell_price="59.0"/>
 	<sound key="fire" fileref="cx4_fire_FromCOD12.wav" pitch_variety="0.05" volume="1.1"/>
 	<sound key="magazine_out" fileref="cx4_mgz_out_FromCOD12.wav" volume="0.6"/>
@@ -85106,7 +85106,7 @@
 	<hud_icon filename="gkw_cx4_6606.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.28" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="1.7" kill_probability_offset_on_successful_hit="6.5" kill_decay_start_time="0.5" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -85178,17 +85178,17 @@
 	<stance state_key="prone" accuracy="0.85"/>
 	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="over_wall" accuracy="0.85"/>
-	<modifier class="hit_success_probability" value="-0.3"/>
 	<tag name="smg"/>
-	<animation key="cycle" animation_key="cycle_2h_hip_300rpm"/>
-	<animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_300rpm_prone"/>
-	<animation key="cycle" stance_key="over_wall" animation_key="cycle_2h_rifle_300rpm"/>
+	<animation key="cycle" animation_key="cycle_2h_hip_400rpm"/>
+	<animation key="cycle" stance_key="prone" animation_key="cycle_2h_rifle_400rpm_prone"/>
+	<animation key="cycle" stance_key="over_wall" animation_key="cycle_2h_rifle_400rpm"/>
 	<animation state_key="recoil" animation_key="recoil_hip_unlimit"/>
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil_unlimit"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil_prone_unlimit"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<modifier class="speed" value="0.2"/>
+	<modifier class="hit_success_probability" value="-0.3"/>
 	<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -86671,7 +86671,7 @@
 	<effect class="muzzle" ref="ejection_76239"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="" slot="1" pulldown_in_air="4">
-	<result class="spawn" instance_class="grenade" instance_key="blast_shard_rad3_low.projectile" min_amount="12" max_amount="12" offset="0 0.5 0" position_spread="0.1 0" direction_spread="0 0"/>
+	<result class="spawn" instance_class="grenade" instance_key="blast_shard_rad4_low.projectile" min_amount="20" max_amount="20" offset="0 0.5 0" position_spread="0.1 0" direction_spread="0 0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
@@ -87123,7 +87123,7 @@
 	<effect class="muzzle" ref="ejection_76239"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="" slot="1" pulldown_in_air="4">
-	<result class="spawn" instance_class="grenade" instance_key="blast_shard_rad3_low.projectile" min_amount="12" max_amount="12" offset="0 0.5 0" position_spread="0.1 0" direction_spread="0 0"/>
+	<result class="spawn" instance_class="grenade" instance_key="blast_shard_rad4_low.projectile" min_amount="20" max_amount="20" offset="0 0.5 0" position_spread="0.1 0" direction_spread="0 0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
@@ -105910,7 +105910,7 @@
 	<model filename="gkw_hvy_mk153.xml"/>
 	<ballistics near_far_distance="1000.0" speed_estimation_near="100.0" speed_estimation_far="100.0" max_speed="125.0" randomness="0.0"/>
 	<projectile class="grenade" name="rocket" slot="2" pulldown_in_air="0.5" key="mk153_HEAT.projectile">
-	<result class="blast" damage="60.0" radius="3.5" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="80.0" radius="3.5" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<tag name="rocket"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -106191,7 +106191,7 @@
 	<model filename="gkw_hvy_at4.xml"/>
 	<ballistics near_far_distance="1000.0" speed_estimation_near="100.0" speed_estimation_far="100.0" max_speed="125.0" randomness="0.0"/>
 	<projectile class="grenade" name="rocket" slot="2" pulldown_in_air="0.5" radius="0.4">
-	<result class="blast" damage="40" radius="5.0" decal="1" push="0.8" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="60" radius="5.0" decal="1" push="0.8" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<tag name="rocket"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -107482,7 +107482,7 @@
 	<weak_hand_hold offset="-0.6"/>
 	<projectile class="grenade" name="rocket" slot="2" pulldown_in_air="0.5" key="bgm71_missile.projectile">
 	<tag name="rocket"/>
-	<result class="blast" damage="90.0" radius="6.0" decal="1" push="1.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="150.0" radius="6.0" decal="1" push="1.5" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<trigger class="time" time_to_live="0.7"/>
 	<rotation class="motion"/>
 	<model mesh_filename="tow_missile.xml"/>
@@ -107746,7 +107746,7 @@
 	<model filename="gkw_hvy_rpg29.xml"/>
 	<ballistics near_far_distance="1000.0" speed_estimation_near="140.0" speed_estimation_far="140.0" max_speed="140.0" randomness="0.0"/>
 	<projectile class="grenade" name="rocket" slot="2" pulldown_in_air="0.5" key="rpg29_pg29v.projectile">
-	<result class="blast" damage="85.0" radius="4.0" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="105.0" radius="4.0" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<tag name="rocket"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -117589,7 +117589,7 @@
 <weapon key="gkw_m99_30019.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="antiarmor"/>
-	<specification retrigger_time="0.5" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99-[30019]" class="4" slot="0" spread_range="0.5" reload_one_at_a_time="0" stance_accuracy_rate="1.5" sight_range_modifier="2.25" projectile_speed="220" barrel_offset="0.65" projectiles_per_shot="1" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
+	<specification retrigger_time="0.5" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="M99-[Fun Rehearsal]" class="4" slot="0" spread_range="0.5" reload_one_at_a_time="0" stance_accuracy_rate="1.5" sight_range_modifier="2.25" projectile_speed="220" barrel_offset="0.65" projectiles_per_shot="1" burst_shots="1" stab_enabled="1" carry_in_two_hands="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="35.0" buy_price="300.0" sell_price="200.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -143965,9 +143965,9 @@
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
-	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
+	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
 	<sound key="stab" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.5"/>
 	<sound key="stab" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="2.5"/>
 	<sound key="stab" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="2.5"/>
@@ -143995,7 +143995,7 @@
 <weapon key="ff_parw_alina.weapon" on_ground_up="0 0 1" time_to_live_out_in_the_open="0" drop_count_factor_on_death="0" player_death_drop_owner_lock_time="0" drop_count_factor_on_player_death="0">
 	<tag name="melee"/>
 	<tag name="elite"/>
-	<specification can_shoot_standing="1" can_shoot_crouching="1" can_shoot_running="1" can_shoot_prone="0" magazine_size="-1" carry_in_two_hands="0" character_state="death" consume="0" name="GK-Alina" class="5" use_basic_muzzle_smoke_effect="0" stab_enabled="1" stab_range="4.5" range="5.0" success_probability="30" affect_characters="1" affect_vehicles="0"/>
+	<specification can_shoot_standing="1" can_shoot_crouching="1" can_shoot_running="1" can_shoot_prone="0" magazine_size="-1" carry_in_two_hands="0" character_state="death" consume="0" name="GK-Alina" class="5" use_basic_muzzle_smoke_effect="0" stab_enabled="1" stab_range="5.0" range="6.5" success_probability="30" affect_characters="1" affect_vehicles="0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="20.0" buy_price="3000.0" sell_price="648.0"/>
 	<capacity value="0" source="rank" source_value="0.0"/>
@@ -144109,8 +144109,8 @@
 	<stance state_key="prone_moving" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="0.5"/>
-	<modifier class="hit_success_probability" value="-0.2"/>
-	<modifier class="detectability" value="0.35"/>
+	<modifier class="hit_success_probability" value="-0.3"/>
+	<modifier class="detectability" value="0.25"/>
 	<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
 	<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
@@ -147298,7 +147298,7 @@
 	<hud_icon filename="sfw_guard.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="1.85" kill_decay_start_time="0.3" kill_decay_end_time="0.3" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="1.7" kill_decay_start_time="0.3" kill_decay_end_time="0.3" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
@@ -147369,7 +147369,7 @@
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="-0.2"/>
-	<modifier class="hit_success_probability" value="-0.3"/>
+	<modifier class="hit_success_probability" value="-0.4"/>
 	<commonness value="1" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="0.0" buy_price="1.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -151393,7 +151393,7 @@
 	<hud_icon filename="testing.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="1.7" kill_decay_start_time="0.5" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="1.6" kill_decay_start_time="0.5" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
@@ -156442,8 +156442,8 @@
 <weapon key="parw_ladon.weapon" time_to_live_out_in_the_open="0" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" ai_burst_time="1.0" ai_burst_time_variance="0.0" ai_burst_wait_time="2.0" ai_burst_wait_time_variance="1.0">
 	<tag name="elite"/>
 	<tag name="mecha"/>
-	<tag name="bazooka"/>
-	<specification slot="0" retrigger_time="1.0" accuracy_factor="1" spread_range="0.2" stance_accuracy_rate="8.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="10" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" class="0" name="Ladon" sight_range_modifier="1.3" sight_height_offset="3.0" burst_shots="1" projectiles_per_shot="1" projectile_speed="140.0" barrel_offset="0.3" carry_in_two_hands="1" stab_enabled="1" stab_range="4"/>
+	<tag name="antiarmor"/>
+	<specification slot="0" retrigger_time="1.0" accuracy_factor="1" spread_range="0.2" stance_accuracy_rate="8.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="10" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" class="0" name="Ladon" sight_range_modifier="1.3" sight_height_offset="3.0" burst_shots="1" projectiles_per_shot="1" projectile_speed="60.0" barrel_offset="0.3" carry_in_two_hands="1" stab_enabled="1" stab_range="4"/>
 	<commonness value="0.1" in_stock="1" can_respawn_with="1"/>
 	<animation key="recoil" animation_key="tareus_recoil_left_weapon"/>
 	<animation state_key="reload" animation_key="tareus_reload"/>
@@ -156464,7 +156464,7 @@
 	<animation state_key="next_in_chain_in" animation_key="tareus_reload"/>
 	<animation state_key="next_in_chain_out" animation_key="tareus_reload"/>
 	<animation state_key="changing_weapon_in" animation_key=""/>
-	<animation state_key="changing_weapon_out" animation_key="tareus_still_left"/>
+	<animation state_key="changing_weapon_out" animation_key="tareus_reload"/>
 	<sound key="fire" fileref="tareus_laser_fire_FromHALO4.wav" volume="1.0"/>
 	<sound key="cycle" fileref="mossberg500_cycle.wav"/>
 	<sound key="effect" fileref="Doppelsoldner_reload_FromCOD13.wav" volume="0.7"/>
@@ -156475,7 +156475,7 @@
 	<inventory encumbrance="0.0" price="0.0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="grenade" key="tareus_cannon.projectile" name="" slot="2" pulldown_in_air="0.5">
-	<result class="blast" damage="10.0" radius="4.0" decal="1" push="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="5.0" radius="4.0" decal="1" push="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<tag name="rocket"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -156519,6 +156519,95 @@
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="speed" value="-0.5"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
+</weapon>
+
+<weapon key="parw_ladon_at.weapon" force_as_shoots_blast_projectiles="1" time_to_live_out_in_the_open="0" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" ai_burst_time="1.0" ai_burst_time_variance="0.0" ai_burst_wait_time="2.0" ai_burst_wait_time_variance="1.0">
+	<tag name="elite"/>
+	<tag name="mecha"/>
+	<tag name="bazooka"/>
+	<specification slot="1" retrigger_time="2.0" accuracy_factor="1" spread_range="0.2" stance_accuracy_rate="8.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="0" class="3" consume="1" name="Ladon" sight_range_modifier="1.3" sight_height_offset="3.0" burst_shots="1" projectiles_per_shot="1" projectile_speed="60.0" barrel_offset="0.3" carry_in_two_hands="1" stab_enabled="1" stab_range="4"/>
+	<commonness value="0.1" in_stock="1"/>
+	<animation key="recoil" animation_key="tareus_recoil_left_weapon"/>
+	<animation state_key="reload" animation_key="tareus_reload"/>
+	<animation state_key="hold" animation_key="tareus_still_left"/>
+	<animation state_key="hold_on_wall" animation_key="tareus_still_left"/>
+	<animation state_key="still_against_wall" animation_key="tareus_still_left"/>
+	<animation state_key="hold_casual" animation_key="tareus_still_left"/>
+	<animation state_key="running" animation_key="tareus_running"/>
+	<animation state_key="walking" animation_key="tareus_walking_left"/>
+	<animation state_key="walking_backwards" animation_key="tareus_walkingback_left"/>
+	<animation state_key="crouching" animation_key="tareus_crouching_left"/>
+	<animation state_key="crouch_moving" animation_key="tareus_walking"/>
+	<animation state_key="crouch_moving_backwards" animation_key="tareus_walkingback"/>
+	<animation state_key="prone_still" animation_key="tareus_still_left"/>
+	<animation state_key="prone_moving" animation_key="tareus_walking"/>
+	<animation state_key="stabbing" animation_key="tareus_stab_1"/>
+	<animation state_key="stabbing" animation_key="tareus_stab_2"/>
+	<animation state_key="next_in_chain_in" animation_key="tareus_reload"/>
+	<animation state_key="next_in_chain_out" animation_key="tareus_reload"/>
+	<animation state_key="changing_weapon_in" animation_key=""/>
+	<animation state_key="changing_weapon_out" animation_key="tareus_reload"/>
+	<sound key="fire" fileref="tareus_laser_fire_FromHALO4.wav" volume="1.0"/>
+	<sound key="cycle" fileref="mossberg500_cycle.wav"/>
+	<sound key="effect" fileref="Doppelsoldner_reload_FromCOD13.wav" volume="0.7"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename=""/>
+	<hud_icon filename="testing.png"/>
+	<capacity value="10" source="rank" source_value="0.0"/>
+	<inventory encumbrance="0.0" price="0.0"/>
+	<weak_hand_hold offset="0.3"/>
+	<projectile class="grenade" key="tareus_cannon.projectile" name="" slot="2" pulldown_in_air="0.5">
+	<result class="blast" damage="20.0" radius="4.0" decal="1" push="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<tag name="rocket"/>
+	<trigger class="impact"/>
+	<rotation class="motion"/>
+	<model mesh_filename=""/>
+	<commonness value="0.0"/>
+	<sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_1.wav" volume="2.9"/>
+	<sound class="result" key="other" fileref="explosion_RPG_FromSQUAD_2.wav" volume="2.9"/>
+	<sound class="result" key="vehicle" copy="other"/>
+	<sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_01.wav" pitch_variety="0.2" volume="0.8"/>
+	<sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_02.wav" pitch_variety="0.2" volume="0.8"/>
+	<sound class="result" key="vehicle" tag="metal_heavy" fileref="blast_metal_hit_03.wav" pitch_variety="0.2" volume="0.8"/>
+	<sound class="result" key="terrain" copy="other"/>
+	<sound class="result" key="static_object" copy="other"/>
+	<sound class="result" key="character" copy="other"/>
+	<effect class="result" key="terrain" ref="missile_result_cannon_blast_fire" lighting="0"/>
+	<effect class="result" key="terrain" ref="missile_result_cannon_blast_AmbientLight" lighting="0"/>
+	<effect class="result" key="terrain" ref="missile_result_expanding_fire" lighting="0" post_processing="1"/>
+	<effect class="result" key="terrain" ref="pa15_result_lens_light" lighting="0"/>
+	<effect class="result" key="terrain" ref="pa15_result_side_particle" lighting="0"/>
+	<effect class="result" key="terrain" ref="pa15_result_center_spark" lighting="0"/>
+	<effect class="result" key="terrain" ref="pa15_result_blast_shine_center_hollow" lighting="0"/>
+	<effect class="result" key="terrain" ref="pa15_result_blast_shine_particle" lighting="0"/>
+	<effect class="activated" ref="pa15_activated_ring" lighting="0"/>
+	<effect class="result" key="other" copy="terrain"/>
+	<effect class="result" key="static_object" copy="terrain"/>
+	<effect class="result" key="character" copy="terrain"/>
+	<effect class="result" key="vehicle" copy="terrain"/>
+	<effect class="result" key="shield" copy="terrain"/>
+	<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="1"/>
+	<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="4" layer="0"/>
+	<effect class="result" type="splat_map" surface_tag="" size="7.0" atlas_index="0" layer="2" additive="0"/>
+	<trail probability="1" key="atgm_trail_heat"/>
+	</projectile>
+	<stance state_key="running" accuracy="1"/>
+	<stance state_key="walking" accuracy="1"/>
+	<stance state_key="crouch_moving" accuracy="1"/>
+	<stance state_key="prone_moving" accuracy="1"/>
+	<stance state_key="standing" accuracy="1"/>
+	<stance state_key="crouching" accuracy="1"/>
+	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="speed" value="-0.5"/>
+	<modifier class="hit_success_probability" value="-0.2"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
+	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
+	<target_factors tag="tank" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
+	<target_factors tag="apc" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0"/>
+	<target_factors tag="tactical" distance="1.0" direction="0.0" squad_command="1.0" base_score="7.0"/>
+	<target_factors tag="jeep" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
 </weapon>
 
 <weapon key="parw_germdog.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -157527,7 +157616,7 @@
 	<sound class="impact" fileref="medikit_drop.wav"/>
 	<model filename="medikit.xml"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<inventory encumbrance="3.0" price="5.0"/>
+	<inventory encumbrance="0.0" price="5.0"/>
 	<hud_icon filename="hud_medikit.png"/>
 	<commonness value="0.2"/>
 	<modifier class="speed" value="+0.1"/>
@@ -157724,7 +157813,7 @@
 </weapon>
 
 <weapon key="binoculars.weapon" on_ground_up="0 1 0">
-	<specification magazine_size="-1" retrigger_time="1.0" sustained_fire_grow_step="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="1" name="Binoculars" class="3" sight_range_modifier="2.0" slot="1" use_basic_muzzle_smoke_effect="0"/>
+	<specification magazine_size="-1" retrigger_time="1.0" sustained_fire_grow_step="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" suppressed="1" name="Binoculars" class="3" sight_range_modifier="2.5" slot="1" use_basic_muzzle_smoke_effect="0"/>
 	<next_in_chain key="medikit.weapon" share_ammo="0"/>
 	<animation key="hold" animation_key="still, binoculars"/>
 	<animation key="hold_on_wall" animation_key="still, binoculars"/>
@@ -157743,7 +157832,7 @@
 	<hud_icon filename="aimer.png"/>
 	<commonness value="0.0" can_respawn_with="1" in_stock="0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<inventory encumbrance="3.0" price="5.0"/>
+	<inventory encumbrance="0.0" price="5.0"/>
 	<projectile class="grenade" name="" key="binoculars.projectile" slot="0" pulldown_in_air="0.0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0">
 	<result class="notify_script" key="rangefinder"/>
 	<trigger class="time" time_to_live="0.0"/>
