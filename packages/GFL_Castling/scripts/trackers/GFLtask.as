@@ -2736,7 +2736,7 @@ class Event_call_yaoren_fairy : event_call_task_hasMarker {
                 if(heightIndex >= int(YaorenParatrooperHeight.length())) {
                     heightIndex = int(YaorenParatrooperHeight.length()) - 1;
                 }
-                insertCommonStrike(m_character_id, m_faction_id, 12,
+                insertCommonStrike(m_character_id, m_faction_id, 9,
                     e_pos.add(Vector3(0.0, float(YaorenParatrooperHeight[heightIndex]), 0.0)),
                     luckyGuyPos);
             }
