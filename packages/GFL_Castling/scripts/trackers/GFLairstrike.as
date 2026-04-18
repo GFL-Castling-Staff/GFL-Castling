@@ -158,6 +158,7 @@ class GFLairstrike : Tracker {
 	// --------------------------------------------
 	GFLairstrike(GameMode@ metagame) {
 		@m_metagame = @metagame;
+        Airstrike_strafe.resize(0);
 	}
 
 	void update(float time) {

@@ -137,6 +137,7 @@ class CommandSkill : Tracker {
     CommandSkill(GameMode@ metagame) {
         @m_metagame = @metagame;
         m_ended = false;
+        m14_active_tasks.resize(0);
     }
 
     protected void handleChatEvent(const XmlElement@ event) {

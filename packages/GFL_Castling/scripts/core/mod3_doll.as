@@ -127,6 +127,7 @@ dictionary MOD3craftList = {
     {"gkw_ro635.weapon","gkw_ro635mod3.weapon"},
     {"gkw_ro635_534.weapon","gkw_ro635mod3_534.weapon"},
     {"gkw_ro635_554.weapon","gkw_ro635mod3_554.weapon"},
+    {"gkw_ro635_4504.weapon","gkw_ro635mod3_4504.weapon"},
 
     {"gkw_ump9.weapon","gkw_ump9mod3.weapon"},
     {"gkw_ump9_556.weapon","gkw_ump9mod3_556.weapon"},

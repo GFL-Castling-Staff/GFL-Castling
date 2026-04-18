@@ -78,6 +78,8 @@ class call_event : Tracker {
 	call_event(GameMode@ metagame) {
 		@m_metagame = @metagame;
         CallEvent_cooldown.resize(0);
+        g_ac130_active = false;
+        g_skill_fairy_snipe_active = false;
 	}
 
 	protected void handleCallEvent(const XmlElement@ event) {
