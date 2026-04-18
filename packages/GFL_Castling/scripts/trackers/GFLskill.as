@@ -1789,9 +1789,9 @@ class GFLskill : Tracker {
 
                 ChainEffectDefinition@ def = ChainEffectDefinition();
                 def.m_first_target_acquire_radius = scanRange;
-                def.m_max_jumps = 5;
+                def.m_max_jumps = 9;
                 def.m_jump_interval = 0.12f;
-                def.m_jump_range = 9.0f;
+                def.m_jump_range = 15.0f;
                 def.m_max_total_chain_distance = 35.0f;
                 def.m_candidate_limit = 20;
 
