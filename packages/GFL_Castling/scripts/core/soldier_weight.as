@@ -92,7 +92,7 @@ const array<SoldierInfo@> kcco_eazymode_weight =
     SoldierInfo("kcco_Hydra",0.05),
     SoldierInfo("kcco_teslatrooper",0.02),
     SoldierInfo("kcco_human_sniper",0.02),
-    SoldierInfo("kcco_quartz_rangerl",0.1),
+    SoldierInfo("kcco_quartz_ranger",0.02),
     SoldierInfo("kcco_zircon_squadleader",0.01),
     SoldierInfo("kcco_ar_human_tel",0.05)
 };
@@ -191,7 +191,7 @@ const array<SoldierInfo@> kcco_hardmode_weight =
     SoldierInfo("kcco_Hydra",0.5),
     SoldierInfo("kcco_teslatrooper",0.5),
     SoldierInfo("kcco_human_sniper",0.25),
-    SoldierInfo("kcco_quartz_rangerl",0.25),
+    SoldierInfo("kcco_quartz_ranger",0.25),
     SoldierInfo("kcco_zircon_squadleader",0.25),
     SoldierInfo("kcco_ar_human_tel",0.5)
 };
