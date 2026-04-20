@@ -1744,12 +1744,12 @@ class GFLskill : Tracker {
 					spawnStaticProjectile(m_metagame,"kcco_teslatrooper_warn.projectile",luckyGuyPos,characterId,factionid);
 					Vector3 targetPos = luckyGuyPos.add(Vector3(rand(-1.0,1.0),0.0,rand(-1.0,1.0)));
 					TaskSequencer@ tasker_s = m_metagame.getTaskManager().newTaskSequencer();
-					DelayC2PProjectileSet_H@ new_task_s = DelayC2PProjectileSet_H(m_metagame,1.0,characterId,factionid,"kcco_teslatrooper_rocket.projectile",targetPos,26.0,2.0,"Teslatrooper_fire_FromBF5.wav",1.1);
+					DelayC2PProjectileSet_H@ new_task_s = DelayC2PProjectileSet_H(m_metagame,1.0,characterId,factionid,"kcco_teslatrooper_rocket.projectile",targetPos,26.0,2.0,2.5,"Teslatrooper_fire_FromBF5.wav",1.1);
 					tasker_s.add(new_task_s);
 					for (uint i=1; i<5; i++) {
 						targetPos = luckyGuyPos.add(Vector3(rand(-1.0,1.0),0.0,rand(-1.0,1.0)));
 						TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-						DelayC2PProjectileSet_H@ new_task = DelayC2PProjectileSet_H(m_metagame,1.0,characterId,factionid,"kcco_teslatrooper_rocket.projectile",targetPos,26.0,2.0);
+						DelayC2PProjectileSet_H@ new_task = DelayC2PProjectileSet_H(m_metagame,1.0,characterId,factionid,"kcco_teslatrooper_rocket.projectile",targetPos,26.0,2.0,2.5);
 						tasker.add(new_task);
 					}
                 }
