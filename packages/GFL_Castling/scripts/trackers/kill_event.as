@@ -994,13 +994,100 @@ class kill_event : Tracker {
                 }
             }
 
+            if(KillerWeaponKey=="snipe_wildhunt_ntw20_main.projectile" && killway=="blast")
+            {                
+                if(playerInfo.checkTag("NTW20_Wildhunt_Main"))
+                {
+                    playerInfo.removeTag("NTW20_Wildhunt_Main");
+                    Vector3 shooter_pos = stringToVector3(killer.getStringAttribute("position"));
+                    int m_fnum = m_metagame.getFactionCount();
+                    array<const XmlElement@> nearbyEnemies;
+                    for (int f = 0; f < m_fnum; f++) {
+                        if (f != factionId) {
+                            array<const XmlElement@> found = getCharactersNearPosition(m_metagame, shooter_pos, f, 30.0f);
+                            if (found !is null) {
+                                for (uint x = 0; x < found.length(); x++) {
+                                    nearbyEnemies.insertLast(found[x]);
+                                }
+                            }
+                        }
+                    }
+                    // 找最近的敌人（排除被击杀目标自身）
+                    if (nearbyEnemies.length() > 0) {
+                        int closestIdx = -1;
+                        float closestDist = -1.0;
+                        for (uint n = 0; n < nearbyEnemies.length(); n++) {
+                            if (nearbyEnemies[n].getIntAttribute("id") == targetId)continue;
+                            float d = getPositionDistance(shooter_pos, stringToVector3(nearbyEnemies[n].getStringAttribute("position")));
+                            if (d < closestDist || closestDist < 0.0) {
+                                closestDist = d;
+                                closestIdx = n;
+                            }
+                        }
+                        if (closestIdx >= 0) {
+                            int chain_target = nearbyEnemies[closestIdx].getIntAttribute("id");
+                            // 发射连锁狙击弹
+                            TaskSequencer@ chain = m_metagame.getTaskManager().newTaskSequencer();                            DelayMovingTargetProjectileSet@ new_task = DelayMovingTargetProjectileSet(m_metagame,1.0,characterId,factionId,"snipe_wildhunt_ntw20_sub.projectile",chain_target,"ntw20_fire_FromBF2042.wav",1.6);
+                            chain.add(new_task);
+                        }
+                    }
+                }
+            }
+
+            if(KillerWeaponKey=="snipe_wildhunt_ntw20_sub.projectile" && killway=="blast")
+            {                
+                if(playerInfo.tickTag("NTW20_Wildhunt"))
+                {
+                    Tag@ ntw_tag = playerInfo.getTag("NTW20_Wildhunt");
+                    if(ntw_tag !is null)
+                    {
+                        if(!ntw_tag.checkTime())
+                        {
+                            playerInfo.removeTag("NTW20_Wildhunt");
+                        }
+                    }
+                    Vector3 dead_position = stringToVector3(dead_pos);
+                    int m_fnum = m_metagame.getFactionCount();
+                    array<const XmlElement@> nearbyEnemies;
+                    for (int f = 0; f < m_fnum; f++) {
+                        if (f != factionId) {
+                            array<const XmlElement@> found = getCharactersNearPosition(m_metagame, dead_position, f, 18.0f);
+                            if (found !is null) {
+                                for (uint x = 0; x < found.length(); x++) {
+                                    nearbyEnemies.insertLast(found[x]);
+                                }
+                            }
+                        }
+                    }
+                    // 找最近的敌人（排除被击杀目标自身）
+                    if (nearbyEnemies.length() > 0) {
+                        int closestIdx = -1;
+                        float closestDist = -1.0;
+                        for (uint n = 0; n < nearbyEnemies.length(); n++) {
+                            if (nearbyEnemies[n].getIntAttribute("id") == targetId)continue;
+                            float d = getPositionDistance(dead_position, stringToVector3(nearbyEnemies[n].getStringAttribute("position")));
+                            if (d < closestDist || closestDist < 0.0) {
+                                closestDist = d;
+                                closestIdx = n;
+                            }
+                        }
+                        if (closestIdx >= 0) {
+                            int chain_target = nearbyEnemies[closestIdx].getIntAttribute("id");
+                            // 发射连锁狙击弹
+                            TaskSequencer@ chain = m_metagame.getTaskManager().newTaskSequencer();                            DelayMovingTargetProjectileSet@ new_task = DelayMovingTargetProjectileSet(m_metagame,1.0,characterId,factionId,"snipe_wildhunt_ntw20_sub.projectile",chain_target,"ntw20_fire_FromBF2042.wav",1.6);
+                            chain.add(new_task);
+                        }
+                    }
+                }
+            }            
+
             if(KillerWeaponKey=="blast_snipe_ff_hunter.projectile" && killway=="blast")
             {
                 if(eliteEnemyName.find(soldier_name)>-1)
                 {
                     healCharacter(m_metagame,characterId,1);
                 }
-            }
+            }            
 
             if (soldier_name=="") return;
 

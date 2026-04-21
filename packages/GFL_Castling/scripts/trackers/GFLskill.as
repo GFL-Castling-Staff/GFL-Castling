@@ -863,8 +863,8 @@ class GFLskill : Tracker {
 						}
 					}
 					if (affectedCharacter.length()>0){
-						TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-						tasker.add(UZISkillTask(m_metagame, characterId, factionid, grenade_pos, affectedCharacter));
+						TaskSequencer@ tasker1 = m_metagame.getTaskManager().newTaskSequencer();
+						tasker1.add(UZISkillTask(m_metagame, characterId, factionid, grenade_pos, affectedCharacter));
 					}
 				}
 				break;

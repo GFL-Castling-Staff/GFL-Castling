@@ -144,6 +144,7 @@ dictionary airstrikeIndex = {
         {"rocket_bm30_2round",118},
         {"rocket_bm21_24round",119},
 
+        {"ntw20_wildhunt",2110},
 
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
@@ -1178,18 +1179,17 @@ class GFLairstrike : Tracker {
                 case 2110:{//狂猎燃魂 NTW20
                     //扫射位置偏移单位向量 与 扫射位置偏移单位距离
                     Vector3 strike_vector = getAimUnitVector(1,start_pos,end_pos); 
-                    float strike_didis = 3.0;
+                    float strike_didis = 4.0;
                     //扫射起点 从弹头终点指向弹头起点的位置 
                     //扫射终点的起点与终点（就生成弹头的终点的起始位置与终止位置）
                     //依据扫射位置偏移单位距离而设置的扫射次数
-                    int strike_time = int(getAimUnitDistance(1,start_pos,end_pos)/strike_didis);
+                    int strike_time = 15;
                     Vector3 endPos = start_pos.add(Vector3(0,1.0,0));
-
+                    playSoundAtLocation(m_metagame,"ntw20_fire_FromBF2042.wav",fid,start_pos,1.0);
                     for(int i=0;i<=strike_time;i++){
-                        //水平偏移
+                        // spawnStaticProjectile(m_metagame,"snipe_blast_40.projectile",endPos,cid,fid);         
+                        CreateDirectProjectile(m_metagame,endPos.add(Vector3(0,6,0)),endPos,"snipe_wildhunt_ntw20_main.projectile",cid,fid,200);
                         endPos = endPos.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
-                        //每单轮扫射生成1次对点扫射
-                        spawnStaticProjectile(m_metagame,"ASW_IonCannon_strafe.projectile",endPos,cid,fid);                            
                     }                               
                     Airstrike_strafe.removeAt(a);
                     break;
