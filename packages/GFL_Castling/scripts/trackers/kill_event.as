@@ -317,6 +317,7 @@ class kill_event : Tracker {
 
         {"666",-1}
     };
+    // 未使用
     dictionary meleeWeaponList ={
         {"ff_excutioner_2.weapon",3},
         {"ff_parw_alina.weapon",3},
@@ -325,6 +326,7 @@ class kill_event : Tracker {
         {"gkw_mg36_4903_skill.weapon",3},
         {"666",-1}
     };
+    
     dictionary healOnKillWeaponModifer ={
         {"ff_beluga.weapon",5},
         {"666",-1}
@@ -337,6 +339,14 @@ class kill_event : Tracker {
     array<string> gk_hg_blast_proj_list ={
         "desert_eagle.projectile",
         "sub_damage_thunder.projectile"
+    };
+    array<string> scarl_weapon_list = {
+        "gkw_scarl.weapon",
+        "gkw_scarl_only.weapon"
+    };
+    array<string> scarh_weapon_list = {
+        "gkw_scarh.weapon",
+        "gkw_scarh_only.weapon"
     };
 
     int getRecoverVestNum(string weaponkey)
@@ -389,10 +399,8 @@ class kill_event : Tracker {
 
             if(factionId !=0 && (soldier_name =="ar_378_scarl" || soldier_name == "daybreak_squad") )
             {
-                array<string> scarl = {"gkw_scarl.weapon","gkw_scarl_only.weapon"};
-                array<string> scarh = {"gkw_scarh.weapon","gkw_scarh_only.weapon"};
-                array<int> characterid_scarl =getPlayerCidByWeaponKeys(scarl,0);
-                array<int> characterid_scarh =getPlayerCidByWeaponKeys(scarh,0);
+                array<int> characterid_scarl =getPlayerCidByWeaponKeys(scarl_weapon_list,0);
+                array<int> characterid_scarh =getPlayerCidByWeaponKeys(scarh_weapon_list,0);
                 for(uint i=0;i<characterid_scarl.size();i++)
                 {
                     int scarl_cid = characterid_scarl[i];
@@ -544,142 +552,47 @@ class kill_event : Tracker {
             int m_tactic_point = battleInfo.getTacticPoint();
             int m_counter = battleInfo.getKillStreakPointCounter();
 
-            if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(1))
+            if(m_counter>=10)
             {
-                int m_tactic_point_offset = 0;
-                if(gk_weapon_sf_nerfed.find(c_weaponType) > -1)
+                bool triggered = false;
+                for(int streak_idx=1;streak_idx<=5;streak_idx++)
                 {
-                    m_tactic_point_offset+=0;
+                    if(!battleInfo.checkKillStreakIndexUsed(streak_idx))
+                    {
+                        int m_tactic_point_offset = streak_idx;
+                        if(gk_weapon_sf_nerfed.find(c_weaponType) > -1){
+                            m_tactic_point_offset-=1;
+                        }
+                        if(gk_weapon_hg_list.find(c_weaponType) > -1 || gk_weapon_rf_list.find(c_weaponType) > -1 || gk_bolted_rf_list.find(c_weaponType) > -1){
+                            m_tactic_point_offset+=1;
+                        }
+                        battleInfo.addTacticPoint(m_tactic_point_offset);
+                        m_counter-=10;
+                        battleInfo.setKillStreakPointCounter(m_counter);
+                        battleInfo.addKillStreakIndex(streak_idx);
+                        dictionary a;
+                        a["%num"] = ""+ m_tactic_point_offset;
+                        notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
+                        triggered = true;
+                        break;
+                    }
                 }
-                else
+                if(!triggered && m_killstreak_point>50)
                 {
-                    m_tactic_point_offset+=1;
+                    int m_tactic_point_offset = 5;
+                    if(gk_weapon_sf_nerfed.find(c_weaponType) > -1){
+                        m_tactic_point_offset-=1;
+                    }
+                    if(gk_weapon_hg_list.find(c_weaponType) > -1 || gk_weapon_rf_list.find(c_weaponType) > -1 || gk_bolted_rf_list.find(c_weaponType) > -1){
+                        m_tactic_point_offset+=1;
+                    }
+                    battleInfo.addTacticPoint(m_tactic_point_offset);
+                    m_counter-=10;
+                    battleInfo.setKillStreakPointCounter(m_counter);
+                    dictionary a;
+                    a["%num"] = ""+ m_tactic_point_offset;
+                    notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
                 }
-                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1 || gk_bolted_rf_list.find(c_weaponType) > -1)
-                {
-                    m_tactic_point_offset+=1;
-                }
-                battleInfo.addTacticPoint(m_tactic_point_offset);
-                m_counter-=10;
-                battleInfo.setKillStreakPointCounter(m_counter);
-                battleInfo.addKillStreakIndex(1);
-                dictionary a;
-                a["%num"] = ""+ m_tactic_point_offset;
-                notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
-            }
-            else if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(2))
-            {
-                int m_tactic_point_offset = 0;
-                if(gk_weapon_sf_nerfed.find(c_weaponType) > -1)
-                {
-                    m_tactic_point_offset+=1;
-                }
-                else
-                {
-                    m_tactic_point_offset+=2;
-                }
-                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1 || gk_bolted_rf_list.find(c_weaponType) > -1)
-                {
-                    m_tactic_point_offset+=1;
-                }
-                battleInfo.addTacticPoint(m_tactic_point_offset);
-                m_counter-=10;
-                battleInfo.setKillStreakPointCounter(m_counter);
-                battleInfo.addKillStreakIndex(2);
-                dictionary a;
-                a["%num"] = ""+ m_tactic_point_offset;
-                notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
-            }
-            else if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(3))
-            {
-                int m_tactic_point_offset = 0;
-                if(gk_weapon_sf_nerfed.find(c_weaponType) > -1)
-                {
-                    m_tactic_point_offset+=2;
-                }
-                else
-                {
-                    m_tactic_point_offset+=3;
-                }
-                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1 || gk_bolted_rf_list.find(c_weaponType) > -1)
-                {
-                    m_tactic_point_offset+=1;
-                }
-                battleInfo.addTacticPoint(m_tactic_point_offset);
-                m_counter-=10;
-                battleInfo.setKillStreakPointCounter(m_counter);
-                battleInfo.addKillStreakIndex(3);
-                dictionary a;
-                a["%num"] = ""+ m_tactic_point_offset;
-                notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
-            }
-            else if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(4))
-            {
-                int m_tactic_point_offset = 0;
-                if(gk_weapon_sf_nerfed.find(c_weaponType) > -1)
-                {
-                    m_tactic_point_offset+=3;
-                }
-                else
-                {
-                    m_tactic_point_offset+=4;
-                }
-                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1 || gk_bolted_rf_list.find(c_weaponType) > -1)
-                {
-                    m_tactic_point_offset+=1;
-                }
-                battleInfo.addTacticPoint(m_tactic_point_offset);
-                m_counter-=10;
-                battleInfo.setKillStreakPointCounter(m_counter);
-                battleInfo.addKillStreakIndex(4);
-                dictionary a;
-                a["%num"] = ""+ m_tactic_point_offset;
-                notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
-            }
-            else if(m_counter>=10 && !battleInfo.checkKillStreakIndexUsed(5))
-            {
-                int m_tactic_point_offset = 0;
-                if(gk_weapon_sf_nerfed.find(c_weaponType) > -1)
-                {
-                    m_tactic_point_offset+=4;
-                }
-                else
-                {
-                    m_tactic_point_offset+=5;
-                }
-                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1 || gk_bolted_rf_list.find(c_weaponType) > -1)
-                {
-                    m_tactic_point_offset+=1;
-                }
-                battleInfo.addTacticPoint(m_tactic_point_offset);
-                m_counter-=10;
-                battleInfo.setKillStreakPointCounter(m_counter);
-                battleInfo.addKillStreakIndex(5);
-                dictionary a;
-                a["%num"] = ""+ m_tactic_point_offset;
-                notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
-            }
-            else if(m_counter>=10 && m_killstreak_point>50)
-            {
-                int m_tactic_point_offset = 0;
-                if(gk_weapon_sf_nerfed.find(c_weaponType) > -1)
-                {
-                    m_tactic_point_offset+=4;
-                }
-                else
-                {
-                    m_tactic_point_offset+=5;
-                }
-                if(gk_weapon_rf_list.find(c_weaponType) > -1 || gk_weapon_hg_list.find(c_weaponType) > -1 || gk_bolted_rf_list.find(c_weaponType) > -1)
-                {
-                    m_tactic_point_offset+=1;
-                }
-                battleInfo.addTacticPoint(m_tactic_point_offset);
-                m_counter-=10;
-                battleInfo.setKillStreakPointCounter(m_counter);
-                dictionary a;
-                a["%num"] = ""+ m_tactic_point_offset;
-                notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
             }
 
             if(gk_weapon_hg_list.find(KillerWeaponKey)>=0)
@@ -702,8 +615,6 @@ class kill_event : Tracker {
                     playerInfo.addIndexKillCount(1,index,kill_is_boss);
                 }
             }
-
-
 
             //指定武器handle
             if(c_weaponType=="gkw_ppkmod3.weapon" || c_weaponType =="gkw_ppkmod3_3905.weapon" || c_weaponType =="gkw_ppkmod3_6109.weapon"){
@@ -822,24 +733,21 @@ class kill_event : Tracker {
             }
 
             // M14MOD3 火力专注 - 连锁射击
-            if( (KillerWeaponKey=="gkw_m14mod3.weapon" 
+            if( (KillerWeaponKey=="gkw_m14mod3.weapon"
             || KillerWeaponKey=="gkw_m14mod3_skill.weapon"
-            || KillerWeaponKey=="gkw_m14mod3_303.weapon" 
+            || KillerWeaponKey=="gkw_m14mod3_303.weapon"
             || KillerWeaponKey=="gkw_m14mod3_303_skill.weapon")
             && killway=="hit")
             {
+                Vector3 dead_position = stringToVector3(dead_pos);
+                int m_fnum = m_metagame.getFactionCount();
                 for (uint m = 0; m < m14_active_tasks.length(); m++) {
-                    if (m14_active_tasks[m].m_characterId == characterId 
-                        && m14_active_tasks[m].m_ammo > 0) {
+                    if (m14_active_tasks[m].m_characterId == characterId && m14_active_tasks[m].m_ammo > 0) {
                         // 搜索被击杀目标附近的敌人
-                        Vector3 dead_position = stringToVector3(dead_pos);
-                        int m_fnum = m_metagame.getFactionCount();
                         array<const XmlElement@> nearbyEnemies;
                         for (int f = 0; f < m_fnum; f++) {
                             if (f != factionId) {
-                                array<const XmlElement@> found = 
-                                    getCharactersNearPosition(m_metagame, 
-                                        dead_position, f, 15.0f);
+                                array<const XmlElement@> found = getCharactersNearPosition(m_metagame, dead_position, f, 15.0f);
                                 if (found !is null) {
                                     for (uint x = 0; x < found.length(); x++) {
                                         nearbyEnemies.insertLast(found[x]);
@@ -852,24 +760,19 @@ class kill_event : Tracker {
                             int closestIdx = -1;
                             float closestDist = -1.0;
                             for (uint n = 0; n < nearbyEnemies.length(); n++) {
-                                if (nearbyEnemies[n].getIntAttribute("id") == targetId)
-                                    continue;
+                                if (nearbyEnemies[n].getIntAttribute("id") == targetId) continue;
                                 float d = getPositionDistance(dead_position, 
-                                    stringToVector3(
-                                        nearbyEnemies[n].getStringAttribute("position")));
+                                    stringToVector3(nearbyEnemies[n].getStringAttribute("position")));
                                 if (d < closestDist || closestDist < 0.0) {
                                     closestDist = d;
                                     closestIdx = n;
                                 }
                             }
                             if (closestIdx >= 0) {
-                                int chain_target = 
-                                    nearbyEnemies[closestIdx].getIntAttribute("id");
-                                string shooter_pos = 
-                                    killer.getStringAttribute("position");
+                                int chain_target = nearbyEnemies[closestIdx].getIntAttribute("id");
+                                string shooter_pos = killer.getStringAttribute("position");
                                 // 发射连锁狙击弹
-                                TaskSequencer@ chain = 
-                                    m_metagame.getTaskManager().newTaskSequencer();
+                                TaskSequencer@ chain = m_metagame.getTaskManager().newTaskSequencer();
                                 DelayAntiPersonSnipeRequest@ shot = 
                                     DelayAntiPersonSnipeRequest(m_metagame, 0.15,
                                         characterId, factionId,
@@ -883,9 +786,7 @@ class kill_event : Tracker {
                         m14_active_tasks[m].consumeAmmo();
                         dictionary ammo_a;
                         ammo_a["%num"] = "" + m14_active_tasks[m].m_ammo;
-                        notify(m_metagame, "Skill - M14 Ammo", ammo_a,
-                               "misc", m14_active_tasks[m].m_playerId, 
-                               false, "", 1.0);
+                        notify(m_metagame, "Skill - M14 Ammo", ammo_a, "misc", m14_active_tasks[m].m_playerId, false, "", 1.0);
                         break;
                     }
                 }
@@ -995,7 +896,7 @@ class kill_event : Tracker {
             }
 
             if(KillerWeaponKey=="snipe_wildhunt_ntw20_main.projectile" && killway=="blast")
-            {                
+            {
                 if(playerInfo.checkTag("NTW20_Wildhunt_Main"))
                 {
                     playerInfo.removeTag("NTW20_Wildhunt_Main");
@@ -1027,7 +928,8 @@ class kill_event : Tracker {
                         if (closestIdx >= 0) {
                             int chain_target = nearbyEnemies[closestIdx].getIntAttribute("id");
                             // 发射连锁狙击弹
-                            TaskSequencer@ chain = m_metagame.getTaskManager().newTaskSequencer();                            DelayMovingTargetProjectileSet@ new_task = DelayMovingTargetProjectileSet(m_metagame,1.0,characterId,factionId,"snipe_wildhunt_ntw20_sub.projectile",chain_target,"ntw20_fire_FromBF2042.wav",1.6);
+                            TaskSequencer@ chain = m_metagame.getTaskManager().newTaskSequencer();
+                            DelayMovingTargetProjectileSet@ new_task = DelayMovingTargetProjectileSet(m_metagame,1.0,characterId,factionId,"snipe_wildhunt_ntw20_sub.projectile",chain_target,"ntw20_fire_FromBF2042.wav",1.6);
                             chain.add(new_task);
                         }
                     }
@@ -1035,7 +937,7 @@ class kill_event : Tracker {
             }
 
             if(KillerWeaponKey=="snipe_wildhunt_ntw20_sub.projectile" && killway=="blast")
-            {                
+            {
                 if(playerInfo.tickTag("NTW20_Wildhunt"))
                 {
                     Tag@ ntw_tag = playerInfo.getTag("NTW20_Wildhunt");
@@ -1074,12 +976,13 @@ class kill_event : Tracker {
                         if (closestIdx >= 0) {
                             int chain_target = nearbyEnemies[closestIdx].getIntAttribute("id");
                             // 发射连锁狙击弹
-                            TaskSequencer@ chain = m_metagame.getTaskManager().newTaskSequencer();                            DelayMovingTargetProjectileSet@ new_task = DelayMovingTargetProjectileSet(m_metagame,1.0,characterId,factionId,"snipe_wildhunt_ntw20_sub.projectile",chain_target,"ntw20_fire_FromBF2042.wav",1.6);
+                            TaskSequencer@ chain = m_metagame.getTaskManager().newTaskSequencer();
+                            DelayMovingTargetProjectileSet@ new_task = DelayMovingTargetProjectileSet(m_metagame,1.0,characterId,factionId,"snipe_wildhunt_ntw20_sub.projectile",chain_target,"ntw20_fire_FromBF2042.wav",1.6);
                             chain.add(new_task);
                         }
                     }
                 }
-            }            
+            }
 
             if(KillerWeaponKey=="blast_snipe_ff_hunter.projectile" && killway=="blast")
             {
@@ -1087,7 +990,7 @@ class kill_event : Tracker {
                 {
                     healCharacter(m_metagame,characterId,1);
                 }
-            }            
+            }
 
             if (soldier_name=="") return;
 
@@ -1120,10 +1023,8 @@ class kill_event : Tracker {
 
         if (Daybreak_Squad.find(weapon_key) >=0 )
         {
-            array<string> scarl = {"gkw_scarl.weapon","gkw_scarl_only.weapon"};
-            array<string> scarh = {"gkw_scarh.weapon","gkw_scarh_only.weapon"};
-            array<int> characterid_scarl =getPlayerCidByWeaponKeys(scarl,0);
-            array<int> characterid_scarh =getPlayerCidByWeaponKeys(scarh,0);
+            array<int> characterid_scarl =getPlayerCidByWeaponKeys(scarl_weapon_list,0);
+            array<int> characterid_scarh =getPlayerCidByWeaponKeys(scarh_weapon_list,0);
             for(uint i=0;i<characterid_scarl.size();i++)
             {
                 int scarl_cid = characterid_scarl[i];
