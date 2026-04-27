@@ -4102,8 +4102,8 @@ class CommandSkill : Tracker {
                             CreateProjectile_H(m_metagame,c_pos,pos_2,"hand_grenade_impact.projectile",characterId,factionid,60.0,3.5);
                         }
                     }
-                    DelayC2PProjectileSet_H@ new_task1 = DelayC2PProjectileSet_H(m_metagame,0.5,characterId,factionid,"std_aa_grenade.projectile",aim_pos,45,6);
-                    DelayC2PProjectileSet_H@ new_task2 = DelayC2PProjectileSet_H(m_metagame,1.5,characterId,factionid,"std_aa_grenade.projectile",aim_pos,45,6);
+                    DelayC2PProjectileSet_H@ new_task1 = DelayC2PProjectileSet_H(m_metagame,0.5,characterId,factionid,"std_aa_grenade.projectile",aim_pos,45,6,1.5);
+                    DelayC2PProjectileSet_H@ new_task2 = DelayC2PProjectileSet_H(m_metagame,1.5,characterId,factionid,"std_aa_grenade.projectile",aim_pos,45,6,1.5);
                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                     tasker.add(new_task1);
                     tasker.add(new_task2);

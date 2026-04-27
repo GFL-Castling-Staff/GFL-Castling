@@ -381,7 +381,7 @@ class DelayP2PProjectileSet_H :Task{
 	}
 }
 
-//task人对点定高弹头，单次,POS1 POS2 重力g 高度h
+//task人对点定高弹头，单次,POS1 POS2 重力g 高度h 起点高度偏移ho
 class DelayC2PProjectileSet_H :Task{
 	protected Metagame@ m_metagame;
 	protected float m_time;
@@ -392,10 +392,11 @@ class DelayC2PProjectileSet_H :Task{
 	protected Vector3 m_pos;
     protected float m_gspeed;
     protected float m_height;
+	protected float m_h_offset;
 	protected string m_sound;
 	protected float m_sound_volume;
 
-	DelayC2PProjectileSet_H(Metagame@ metagame, float time, int cId,int fId,string key,Vector3 pos,float gspeed,float height) {
+	DelayC2PProjectileSet_H(Metagame@ metagame, float time, int cId,int fId,string key,Vector3 pos,float gspeed,float height,float hoffset) {
 		@m_metagame = metagame;
 		m_time = time;
 		m_character_id = cId;
@@ -404,11 +405,12 @@ class DelayC2PProjectileSet_H :Task{
 		m_pos=pos;
         m_gspeed = gspeed;
         m_height= height;
+		m_h_offset = hoffset;
 		m_sound = "";
 		m_sound_volume = 0;
 	}
 
-	DelayC2PProjectileSet_H(Metagame@ metagame, float time, int cId,int fId,string key,Vector3 pos,float gspeed,float height,string sound,float sound_volume) {
+	DelayC2PProjectileSet_H(Metagame@ metagame, float time, int cId,int fId,string key,Vector3 pos,float gspeed,float height,float hoffset,string sound,float sound_volume) {
 		@m_metagame = metagame;
 		m_time = time;
 		m_character_id = cId;
@@ -417,6 +419,7 @@ class DelayC2PProjectileSet_H :Task{
 		m_pos=pos;
         m_gspeed = gspeed;
         m_height= height;
+		m_h_offset = hoffset;
 		m_sound = sound;
 		m_sound_volume = sound_volume;
 	}
@@ -432,7 +435,7 @@ class DelayC2PProjectileSet_H :Task{
             const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
             if (checkCharacterDead(character)) return;
             Vector3 c_pos = getCharacterPosition(character);
-            c_pos=c_pos.add(Vector3(0,1.5,0));
+            c_pos=c_pos.add(Vector3(0,m_h_offset,0));
 			if (m_sound != "") {
 				playSoundAtLocation(m_metagame,m_sound,m_faction_id,c_pos,m_sound_volume);
 			}
