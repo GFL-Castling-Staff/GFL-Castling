@@ -44,8 +44,8 @@
     <character_slot type="gunner" position="0 0.7 -1" rotation="0" exit_rotation="3.14" hiding="1" animation_id="37" attached_on_turret="1" seat_position="0.0 0.4 0.0">
         <turret index="1" />
     </character_slot>
-    <character_slot type="passenger" position="1 0.7 0" rotation="1.05" exit_rotation="1.57" hiding="0" animation_key="passenger, boat"  attached_on_turret="1" seat_position="0.7 0.3 0.8" rotation_range="3.40"/>
-    <character_slot type="passenger" position="-1 0.7 0" rotation="-1.05" exit_rotation="-1.57" hiding="0" animation_key="passenger, boat"  attached_on_turret="1" seat_position="-0.7 0.3 0.8" rotation_range="3.40"/>
+    <character_slot type="passenger" position="1 0.7 0" rotation="1.05" exit_rotation="1.57" hiding="0" animation_key="passenger, free weapon"  attached_on_turret="1" seat_position="0.7 0.3 0.8" rotation_range="3.40"/>
+    <character_slot type="passenger" position="-1 0.7 0" rotation="-1.05" exit_rotation="-1.57" hiding="0" animation_key="passenger, free weapon"  attached_on_turret="1" seat_position="-0.7 0.3 0.8" rotation_range="3.40"/>
     <rev_sound filename="vtol_engine_online.wav" low_pitch="0.4" high_pitch="0.5" low_rev="0.0" high_rev="1.0" volume="2.0" />
     <sound key="squeal" filename="tire_squeal.wav" />
     <sound key="ignition" filename="vtol_engine_poweron.wav" volume="2.0" />
