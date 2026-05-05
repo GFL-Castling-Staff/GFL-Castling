@@ -19,7 +19,9 @@ const array<SoldierInfo@> sf_eazymode_weight =
     SoldierInfo("sfw_prowler",2.0),
     SoldierInfo("sfw_prowler_swap",1.0),
     SoldierInfo("sfw_aegis",0.1),
+    SoldierInfo("sfw_aegis_swap",0.05),
     SoldierInfo("sfw_dragoon",0.2),
+    SoldierInfo("sfw_dragoon_swap",0.1),
     SoldierInfo("sf_Brute",0.8),
     SoldierInfo("sf_Brute_swap",0.3),
     SoldierInfo("sfw_hunter",0.01),
@@ -28,8 +30,8 @@ const array<SoldierInfo@> sf_eazymode_weight =
     SoldierInfo("sfw_Dreamer",0.01),
     SoldierInfo("sfw_Alchemist",0.01),
     SoldierInfo("sfw_Gager",0.01),
-    SoldierInfo("sfw_Excutioner-Wind_rose",0.01),
-    SoldierInfo("sfw_Excutioner-Queen_of_the_Moon",0.01),
+    SoldierInfo("sfw_Excutioner-Wind_rose",0.005),
+    SoldierInfo("sfw_Excutioner-Queen_of_the_Moon",0.005),
     SoldierInfo("sfw_M16A1",0.01),
     SoldierInfo("sfw_Agent",0.01),
     SoldierInfo("sfw_Destroyer",0.01),
@@ -39,6 +41,7 @@ const array<SoldierInfo@> sf_eazymode_weight =
     SoldierInfo("sf_manticore",0.02),
     SoldierInfo("sf_dinergate",1.0),
     SoldierInfo("sf_tarantula",1.0),
+    SoldierInfo("sf_cerberus",0.005),
     SoldierInfo("sf_scouts",2.0),
     SoldierInfo("sf_goliath",0.02),
     SoldierInfo("sf_goliath_plus",0.01)
@@ -59,19 +62,20 @@ const array<SoldierInfo@> paradeus_eazymode_weight =
     SoldierInfo("alina",0.01),
     SoldierInfo("teal",0.01),
     SoldierInfo("eagleyes",0.02),
-    SoldierInfo("vanguard",0.1),
+    SoldierInfo("vanguard",0.02),
     SoldierInfo("aileron",0.02),
-    SoldierInfo("wrath",0.01),
+    SoldierInfo("wrath",0.02),
     SoldierInfo("Nimogen",0.01),
     SoldierInfo("Narciss",0.01),
     SoldierInfo("tareus",0.005),
+    SoldierInfo("ladon",0.01),
     SoldierInfo("Adeline",0.01),
     SoldierInfo("infected",0.0),
     SoldierInfo("smasher",0.1),
-    SoldierInfo("ladon",0.01),
-    SoldierInfo("Paradeus_doppelsoldner",0.01),
-    SoldierInfo("Paradeus_roarer",0.01),
-    SoldierInfo("Thunder",0.01)
+    SoldierInfo("Paradeus_doppelsoldner",0.02),
+    SoldierInfo("Paradeus_roarer",0.02),
+    SoldierInfo("Paradeus_Hannibal",0.01),
+    SoldierInfo("Thunder",0.02)
 };
 
 const array<SoldierInfo@> kcco_eazymode_weight =
@@ -92,7 +96,7 @@ const array<SoldierInfo@> kcco_eazymode_weight =
     SoldierInfo("kcco_Hydra",0.05),
     SoldierInfo("kcco_teslatrooper",0.02),
     SoldierInfo("kcco_human_sniper",0.02),
-    SoldierInfo("kcco_quartz_rangerl",0.1),
+    SoldierInfo("kcco_quartz_ranger",0.02),
     SoldierInfo("kcco_zircon_squadleader",0.01),
     SoldierInfo("kcco_ar_human_tel",0.05)
 };
@@ -118,7 +122,7 @@ const array<SoldierInfo@> sf_hardmode_weight =
     SoldierInfo("sfw_aegis",0.5),
     SoldierInfo("sfw_aegis_swap",0.5),
     SoldierInfo("sfw_dragoon",0.5),
-    SoldierInfo("sfw_dragoon",0.5),
+    SoldierInfo("sfw_dragoon_swap",0.5),
     SoldierInfo("sf_Brute",0.5),
     SoldierInfo("sf_Brute_swap",0.5),
     SoldierInfo("sfw_hunter",0.2),
@@ -138,6 +142,7 @@ const array<SoldierInfo@> sf_hardmode_weight =
     SoldierInfo("sf_manticore",0.5),
     SoldierInfo("sf_dinergate",0.2),
     SoldierInfo("sf_tarantula",0.2),
+    SoldierInfo("sf_cerberus",0.05),
     SoldierInfo("sf_scouts",1.0),
     SoldierInfo("sf_goliath",0.1),
     SoldierInfo("sf_goliath_plus",0.05)
@@ -164,6 +169,7 @@ const array<SoldierInfo@> paradeus_hardmode_weight =
     SoldierInfo("Nimogen",0.1),
     SoldierInfo("Narciss",0.1),
     SoldierInfo("tareus",0.05),
+    SoldierInfo("ladon",0.1),
     SoldierInfo("Adeline",0.2),
     SoldierInfo("infected",0.0),
     SoldierInfo("smasher",0.3),
@@ -191,7 +197,7 @@ const array<SoldierInfo@> kcco_hardmode_weight =
     SoldierInfo("kcco_Hydra",0.5),
     SoldierInfo("kcco_teslatrooper",0.5),
     SoldierInfo("kcco_human_sniper",0.25),
-    SoldierInfo("kcco_quartz_rangerl",0.25),
+    SoldierInfo("kcco_quartz_ranger",0.25),
     SoldierInfo("kcco_zircon_squadleader",0.25),
     SoldierInfo("kcco_ar_human_tel",0.5)
 };

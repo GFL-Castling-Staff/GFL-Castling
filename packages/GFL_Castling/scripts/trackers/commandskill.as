@@ -308,6 +308,7 @@ class CommandSkill : Tracker {
                 case 96:{excuteG36Skill(cId,senderId,m_modifer);break;}
                 case 97:{excuteMP7Skill(cId,senderId,m_modifer);break;}
                 case 98:{excuteOTS14Skill(cId,senderId,m_modifer);break;}
+                case 99:{excuteNTW20MOD3Skill(cId,senderId,m_modifer);break;}
 
 
                 default:
@@ -4101,8 +4102,8 @@ class CommandSkill : Tracker {
                             CreateProjectile_H(m_metagame,c_pos,pos_2,"hand_grenade_impact.projectile",characterId,factionid,60.0,3.5);
                         }
                     }
-                    DelayC2PProjectileSet_H@ new_task1 = DelayC2PProjectileSet_H(m_metagame,0.5,characterId,factionid,"std_aa_grenade.projectile",aim_pos,45,6);
-                    DelayC2PProjectileSet_H@ new_task2 = DelayC2PProjectileSet_H(m_metagame,1.5,characterId,factionid,"std_aa_grenade.projectile",aim_pos,45,6);
+                    DelayC2PProjectileSet_H@ new_task1 = DelayC2PProjectileSet_H(m_metagame,0.5,characterId,factionid,"std_aa_grenade.projectile",aim_pos,45,6,1.5);
+                    DelayC2PProjectileSet_H@ new_task2 = DelayC2PProjectileSet_H(m_metagame,1.5,characterId,factionid,"std_aa_grenade.projectile",aim_pos,45,6,1.5);
                     TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                     tasker.add(new_task1);
                     tasker.add(new_task2);
@@ -5335,6 +5336,38 @@ class CommandSkill : Tracker {
 
 
             addCooldown("OTS14", 25, characterId, modifer);
+        }
+    }
+
+    void excuteNTW20MOD3Skill(int characterId, int playerId, SkillModifer@ modifer) {
+        if (excuteCooldownCheck(m_metagame, characterId, modifer, playerId, "NTW20")) return;
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character is null) return;
+        if (!canCastSkill(character)) return;
+        const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+        if (player is null) return;
+
+        if (player.hasAttribute("aim_target")) {
+            string target = player.getStringAttribute("aim_target");
+            Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+            Vector3 aim_pos = stringToVector3(target);
+            int factionid = character.getIntAttribute("faction_id");
+            Vector3 u_pos = getAimUnitPosition(c_pos,aim_pos,40);
+            c_pos = getAimUnitPosition(c_pos,aim_pos,3);
+            c_pos = c_pos.add(Vector3(0,1,0));
+
+            GFL_playerInfo@ pinfo = getPlayerInfoFromListbyPid(playerId);
+            if (pinfo.getPlayerName() == default_string) return;
+            pinfo.addTag(Tag("NTW20_Wildhunt_Main"));
+            pinfo.addTag(Tag("NTW20_Wildhunt",2));
+
+            DelayCommonCallRequest@ snipe = DelayCommonCallRequest(m_metagame,2.5,characterId,factionid,"ntw20_wildhunt",c_pos,u_pos);
+            playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
+            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+            tasker.add(snipe);
+            addCooldown("NTW20",90, characterId, modifer);
+            // insertCommonStrike(characterId,factionid,"ntw20_wildhunt",c_pos,aim_pos);
+
         }
     }
 }

@@ -15,7 +15,7 @@
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
         <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.4" />
-        <modifier class="detectability" value="-0.20" />
+        <modifier class="detectability" value="-0.1" />
 	</carry_item>
 	<carry_item key="bakery_jefuty_1" time_to_live_out_in_the_open="0" name="[Thank you... please live...]" transform_on_consume="bakery_jefuty_2" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="jafti_4.png"/>
@@ -32,7 +32,7 @@
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.4" />
-        <modifier class="detectability" value="-0.20" />
+        <modifier class="detectability" value="-0.1" />
 	</carry_item>
 	<carry_item key="bakery_jefuty_2" time_to_live_out_in_the_open="0" name="[Thank you... please live...]" transform_on_consume="bakery_jefuty_3" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="jafti_3.png"/>
@@ -49,7 +49,7 @@
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.4" />
-        <modifier class="detectability" value="-0.20" />
+        <modifier class="detectability" value="-0.1" />
 	</carry_item>
 	<carry_item key="bakery_jefuty_3" time_to_live_out_in_the_open="0" name="[Thank you... please live...]" transform_on_consume="bakery_jefuty_4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="jafti_2.png"/>
@@ -66,7 +66,7 @@
 		<modifier class="melee_hit_result" input_character_state="death" output_character_state="none" />
         <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.4" />
-        <modifier class="detectability" value="-0.20" />
+        <modifier class="detectability" value="-0.1" />
 	</carry_item>
 	<carry_item key="bakery_jefuty_4" time_to_live_out_in_the_open="0" name="[Thank you... please live...]" transform_on_consume="bakery_jefuty_5" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="jafti_1.png"/>
@@ -83,7 +83,7 @@
         <modifier class="melee_hit_result" input_character_state="death" output_character_state="wound" />
         <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.4" />
-        <modifier class="detectability" value="-0.20" />
+        <modifier class="detectability" value="-0.1" />
 	</carry_item>
 	<carry_item key="bakery_jefuty_5" time_to_live_out_in_the_open="0" name="[Goodbye, maybe we will meet again]" transform_on_consume="bakery_jefuty_6" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" slot="1">
 		<hud_icon filename="jafti_0.png"/>
@@ -105,6 +105,6 @@
         <modifier class="melee_hit_result" input_character_state="unwound" output_character_state="unwound" consumes_item="0"/> 
         <modifier class="speed" value="0.5" />
         <modifier class="hit_success_probability" value="-1.4" />
-        <modifier class="detectability" value="-0.20" />
+        <modifier class="detectability" value="-0.2" />
 	</carry_item>
 </carry_items>

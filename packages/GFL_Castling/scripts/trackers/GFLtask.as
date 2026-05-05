@@ -242,14 +242,18 @@ class DelayMovingTargetProjectileSet :Task{
     protected int m_faction_id;
     protected string m_key;
 	protected float m_timeLeft;
+    protected string m_soundkey;
+    protected float m_volume;
 
-	DelayMovingTargetProjectileSet(Metagame@ metagame, float time, int cId,int fId,string key,int target) {
+	DelayMovingTargetProjectileSet(Metagame@ metagame, float time, int cId,int fId,string key,int target,string soundkey="",float volume = 1.0) {
 		@m_metagame = metagame;
 		m_time = time;
 		m_character_id = cId;
 		m_faction_id =fId;
 		m_key=key;
         m_target_id = target;
+        m_soundkey = soundkey;
+        m_volume = volume;
 	}
 
 	void start() {
@@ -273,6 +277,10 @@ class DelayMovingTargetProjectileSet :Task{
 					" position='" + target_pos.toString() + "'"+
 					" character_id='" + m_character_id + "' />";
 				m_metagame.getComms().send(c);
+                if (m_soundkey != "")
+                {
+                    playSoundAtLocation(m_metagame,m_soundkey,m_faction_id,target_pos.toString(),m_volume);
+                }
 			}
 		}
 	}
@@ -373,7 +381,7 @@ class DelayP2PProjectileSet_H :Task{
 	}
 }
 
-//task人对点定高弹头，单次,POS1 POS2 重力g 高度h
+//task人对点定高弹头，单次,POS1 POS2 重力g 高度h 起点高度偏移ho
 class DelayC2PProjectileSet_H :Task{
 	protected Metagame@ m_metagame;
 	protected float m_time;
@@ -384,10 +392,11 @@ class DelayC2PProjectileSet_H :Task{
 	protected Vector3 m_pos;
     protected float m_gspeed;
     protected float m_height;
+	protected float m_h_offset;
 	protected string m_sound;
 	protected float m_sound_volume;
 
-	DelayC2PProjectileSet_H(Metagame@ metagame, float time, int cId,int fId,string key,Vector3 pos,float gspeed,float height) {
+	DelayC2PProjectileSet_H(Metagame@ metagame, float time, int cId,int fId,string key,Vector3 pos,float gspeed,float height,float hoffset) {
 		@m_metagame = metagame;
 		m_time = time;
 		m_character_id = cId;
@@ -396,11 +405,12 @@ class DelayC2PProjectileSet_H :Task{
 		m_pos=pos;
         m_gspeed = gspeed;
         m_height= height;
+		m_h_offset = hoffset;
 		m_sound = "";
 		m_sound_volume = 0;
 	}
 
-	DelayC2PProjectileSet_H(Metagame@ metagame, float time, int cId,int fId,string key,Vector3 pos,float gspeed,float height,string sound,float sound_volume) {
+	DelayC2PProjectileSet_H(Metagame@ metagame, float time, int cId,int fId,string key,Vector3 pos,float gspeed,float height,float hoffset,string sound,float sound_volume) {
 		@m_metagame = metagame;
 		m_time = time;
 		m_character_id = cId;
@@ -409,6 +419,7 @@ class DelayC2PProjectileSet_H :Task{
 		m_pos=pos;
         m_gspeed = gspeed;
         m_height= height;
+		m_h_offset = hoffset;
 		m_sound = sound;
 		m_sound_volume = sound_volume;
 	}
@@ -424,7 +435,7 @@ class DelayC2PProjectileSet_H :Task{
             const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
             if (checkCharacterDead(character)) return;
             Vector3 c_pos = getCharacterPosition(character);
-            c_pos=c_pos.add(Vector3(0,1.5,0));
+            c_pos=c_pos.add(Vector3(0,m_h_offset,0));
 			if (m_sound != "") {
 				playSoundAtLocation(m_metagame,m_sound,m_faction_id,c_pos,m_sound_volume);
 			}
@@ -3476,7 +3487,7 @@ class M14SkillActiveTask : Task {
                "misc", m_playerId, false, "", 1.0);
         GFL_playerInfo@ pinfo = getPlayerInfoFromListbyPid(m_playerId);
         if (pinfo.getPlayerName() != default_string) {
-            pinfo.addTag("M14MOD3");
+            pinfo.addTag(Tag("M14MOD3"));
         }
     }
 
@@ -3538,7 +3549,7 @@ class M14SkillEndTask : Task {
         if (pinfo.getPlayerName() != default_string) {
         pinfo.removeTag("M14MOD3");        		// 火箭弹奖励
 		if (m_skillState.isRocketEarned()) {
-			pinfo.addTag("M14MOD3_Rocket");
+			pinfo.addTag(Tag("M14MOD3_Rocket"));
 			notify(m_metagame, "Skill - M14 Rocket Ready", dictionary(),
 				"misc", m_skillState.m_playerId, false, "", 1.0);
 		}

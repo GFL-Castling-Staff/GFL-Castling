@@ -411,9 +411,6 @@ dictionary commandSkillIndex = {
         {"gkw_ntw20.weapon",53},
         {"gkw_ntw20_307.weapon",53},
         {"gkw_ntw20_4801.weapon",53},
-        {"gkw_ntw20mod3.weapon",53},
-        {"gkw_ntw20mod3_307.weapon",53},
-        {"gkw_ntw20mod3_4801.weapon",53},
         {"gkw_rt20.weapon",53},
 
         // 这几位都要重做
@@ -603,6 +600,10 @@ dictionary commandSkillIndex = {
         // {"gkw_ots14_1203.weapon",98},
         // {"gkw_ots14_4501.weapon",98},
         // 为什么闪电会有闪电链
+
+        {"gkw_ntw20mod3.weapon",99},
+        {"gkw_ntw20mod3_307.weapon",99},
+        {"gkw_ntw20mod3_4801.weapon",99},
 
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}
