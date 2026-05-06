@@ -60,7 +60,7 @@
 	<item_container class="armory" offset="0.0 0.78 -2.4" soldier_group="amos"/>
 	<spawn_point />
 	<character_slot type="driver" position="0.8 0.6 1.8" seat_position="0.5 1.2 1.8" rotation="0" exit_rotation="1.57" hiding="0" animation_id="36" />
-	<character_slot type="passenger" position="0.8 0.6 0.0" seat_position="-0.0 2.5 0.0" rotation="0" exit_rotation="1.57" rotation_range="6.283" hiding="0" animation_key="passenger, boat" marker_offset="0 0.35 0.2" />
+	<character_slot type="passenger" position="0.8 0.6 0.0" seat_position="-0.0 2.5 0.0" rotation="0" exit_rotation="1.57" rotation_range="6.283" hiding="0" animation_key="passenger, free weapon" marker_offset="0 0.35 0.2" />
 	<!-- sound handling -->
 	<rev_sound filename="truck_rev0.wav" low_pitch="1.10" high_pitch="1.3" low_rev="0.0" high_rev="0.4" volume="0.7" />
 	<rev_sound filename="truck_rev3.wav" low_pitch="0.85" high_pitch="1.05" low_rev="0.1" high_rev="0.8" volume="0.8" />

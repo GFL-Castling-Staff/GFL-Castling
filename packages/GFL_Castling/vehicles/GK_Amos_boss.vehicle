@@ -200,10 +200,10 @@
         <turret index="11" />
         <turret index="12" />
     </character_slot>
-    <character_slot type="passenger" position="3.0 0.5 -3" seat_position="2.0 5.8 -3.6" rotation="1.05" exit_rotation="1.57" hiding="0" animation_key="passenger, boat" marker_offset="0 0.0 0" rotation_range="6.40" />
-    <character_slot type="passenger" position="3.0 0.5 -5" seat_position="2.0 6.1 -5.8" rotation="2.55" exit_rotation="1.57" hiding="0" animation_key="passenger, boat" marker_offset="0 0.0 0" rotation_range="6.40" />
-    <character_slot type="passenger" position="-3.0 0.5 -3" seat_position="-2.0 5.8 -3.6" rotation="-1.05" exit_rotation="-1.57" hiding="0" animation_key="passenger, boat" marker_offset="0 0.0 0" rotation_range="6.40" />
-    <character_slot type="passenger" position="-3.0 0.5 -5" seat_position="-2.0 6.1 -5.8" rotation="-2.55" exit_rotation="-1.57" hiding="0" animation_key="passenger, boat" marker_offset="0 0.0 0" rotation_range="6.40" />
+    <character_slot type="passenger" position="3.0 0.5 -3" seat_position="2.0 5.8 -3.6" rotation="1.05" exit_rotation="1.57" hiding="0" animation_key="passenger, free weapon" marker_offset="0 0.0 0" rotation_range="6.40" />
+    <character_slot type="passenger" position="3.0 0.5 -5" seat_position="2.0 6.1 -5.8" rotation="2.55" exit_rotation="1.57" hiding="0" animation_key="passenger, free weapon" marker_offset="0 0.0 0" rotation_range="6.40" />
+    <character_slot type="passenger" position="-3.0 0.5 -3" seat_position="-2.0 5.8 -3.6" rotation="-1.05" exit_rotation="-1.57" hiding="0" animation_key="passenger, free weapon" marker_offset="0 0.0 0" rotation_range="6.40" />
+    <character_slot type="passenger" position="-3.0 0.5 -5" seat_position="-2.0 6.1 -5.8" rotation="-2.55" exit_rotation="-1.57" hiding="0" animation_key="passenger, free weapon" marker_offset="0 0.0 0" rotation_range="6.40" />
     <!-- sound handling -->
     <!--
 	<rev_sound filename="jeep_rev0.wav" low_pitch="0.8" high_pitch="1.0" low_rev="0.0" high_rev="0.2" volume="0.8" />
