@@ -7,6 +7,7 @@
 	<sound key="footstep" fileref="step_sound_mecha_small_02.wav" volume="0.9" />
 	<sound key="footstep" fileref="step_sound_mecha_small_03.wav" volume="0.9" />
 	<sound key="footstep" fileref="step_sound_mecha_small_04.wav" volume="0.9" />
+	<parameter class="lifting_up_initial_bounce" value="0.15" />
 	<parameter class="can_use_vehicles" value="0" />
 
 	<animation state_key="hold"  animation_key="arachne_still" />
@@ -28,7 +29,7 @@
 	<animation key="jumping" target_key="arachne_jump" />
 	<animation key="lifting up" target_key="arachne_lift_up" />
 	<animation key="throwing self over" target_key="arachne_lift_foward" />
-	<animation key="throwing, upside" target_key="arachne_still" />
+	<animation key="throwing, upside" target_key="arachne_throw_still" />
 	<animation key="falling" target_key="arachne_dive" />
 	<animation key="arriving ground" target_key="arachne_landing" />
 	<animation key="climbing ladder, still" target_key="arachne_climb_still" />
