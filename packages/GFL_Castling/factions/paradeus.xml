@@ -982,7 +982,7 @@
 			<attribute weight="1.0" min="30.0" max="60.0" />
 		</attribute_config>
 	</soldier>
-	<soldier name="arachne" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="1.0">
+	<soldier name="arachne" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.0">
 		<model filename="pard_arachne.xml" />
 		<character filename="pard_arachne.character" />
 		<ai filename="hydra.ai" />
@@ -1004,7 +1004,7 @@
 			<attribute weight="1.0" min="30.0" max="60.0" />
 		</attribute_config>
 	</soldier>
-	<soldier name="arachne_clone" firstnames="Paradeus-UNIT-" lastnames_file="Paradeus_last.name" spawn_score="10.0">
+	<soldier name="arachne_clone" firstnames="Paradeus-UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.0">
 		<model filename="pard_arachne_clone.xml" />
 		<character filename="pard_arachne_clone.character" />
 		<ai filename="melee.ai" />
