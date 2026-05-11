@@ -12,8 +12,8 @@
     class="5"
     stab_enabled="1"
     stab_range="3.0"
-    success_probability="3.0"
-    damage="3.0"
+    success_probability="1.0"
+    damage="1.0"
     range="3.0"
     character_state="death"
     affect_characters="1"
@@ -39,6 +39,9 @@
     <hud_icon filename="testing.png" />
     <commonness value="0.0001" can_respawn_with="1" in_stock="1"/>
     <inventory encumbrance="11.0" price="0.0" />
-    <modifier class="speed" value="0.4" />
+    <modifier class="speed" value="0.5" />
+
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
 
 </weapon>
