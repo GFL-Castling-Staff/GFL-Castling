@@ -809,6 +809,7 @@ void playPrivateSound(const Metagame@ metagame, string filename, int playerId) {
 int getNearbyRandomLuckyGuyId(GameMode@ metagame, int factionid, Vector3 pos, float range){
 	uint cur_factionid_num = metagame.getFactionCount();
     array<const XmlElement@> affectedCharacter;
+    affectedCharacter.reserve(64);
 	for(uint i=0;i<cur_factionid_num;i++) 
 		if(int(i)!=factionid) {
 			array<const XmlElement@> possible_affectedCharacter;
@@ -1081,6 +1082,7 @@ array<const XmlElement@>@ getEnemyCharactersNearPosition(GameMode@ metagame, con
 	//获取技能影响的敌人数量
 	int m_fnum = metagame.getFactionCount();
 	array<const XmlElement@> affectedCharacter;
+    affectedCharacter.reserve(64);
 	Vector3 max_character_pos =  Vector3(0,0,0);
 
 	uint num_jud = 0;

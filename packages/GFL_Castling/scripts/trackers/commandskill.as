@@ -138,6 +138,7 @@ class CommandSkill : Tracker {
         @m_metagame = @metagame;
         m_ended = false;
         m14_active_tasks.resize(0);
+        TimerArray.reserve(128);
     }
 
     protected void handleChatEvent(const XmlElement@ event) {

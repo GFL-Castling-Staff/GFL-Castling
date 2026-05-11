@@ -132,6 +132,7 @@ class XmlElement {
 	// --------------------------------------------
 	array<const XmlElement@>@ getElementsByTagName(string name) const {
 		array<const XmlElement@> elements;
+        elements.reserve(128);
 
 		array<dictionary>@ childrenData = null;
 		if (m_data.exists("Children") && m_data.get("Children", @childrenData)) {
