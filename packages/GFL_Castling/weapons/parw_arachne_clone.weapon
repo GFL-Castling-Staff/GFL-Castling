@@ -32,12 +32,9 @@
     <animation key="recoil" animation_key="arachne_clone_melee" />
     <animation state_key="stabbing" animation_key="arachne_clone_melee" />
 
-    <sound key="effect" fileref="zomb_stab1.wav" pitch_variety="0.03" volume="0.7" />
-    <sound key="effect" fileref="zomb_stab2.wav" pitch_variety="0.03" volume="0.7" />
-    <sound key="effect" fileref="zomb_stab3.wav" pitch_variety="0.03" volume="0.7" />
-    <sound key="effect" fileref="zomb_stab4.wav" pitch_variety="0.03" volume="0.7" />
-    <sound key="effect" fileref="zomb_stab5.wav" pitch_variety="0.03" volume="0.7" />
-    <sound key="effect" fileref="zomb_stab6.wav" pitch_variety="0.03" volume="0.7" />
+    <sound key="effect" fileref="arachne_clone_melee_01.wav" pitch_variety="0.03" volume="1.0" />
+    <sound key="effect" fileref="arachne_clone_melee_02.wav" pitch_variety="0.03" volume="1.0" />
+
     <model />
     <hud_icon filename="testing.png" />
     <commonness value="0.0001" can_respawn_with="1" in_stock="1"/>
