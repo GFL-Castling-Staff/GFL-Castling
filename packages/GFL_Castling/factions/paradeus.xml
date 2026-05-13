@@ -982,7 +982,7 @@
 			<attribute weight="1.0" min="30.0" max="60.0" />
 		</attribute_config>
 	</soldier>
-	<soldier name="pard_arachne" firstnames_file="Paradeus_mecha_first.name" lastnames_file="Paradeus_last.name" spawn_score="0.01">
+	<soldier name="pard_arachne" firstnames_file="Paradeus_mecha_first.name" lastnames_file="Paradeus_last.name" spawn_score="0.02">
 		<model filename="pard_arachne.xml" />
 		<character filename="pard_arachne.character" />
 		<ai filename="hydra.ai" />

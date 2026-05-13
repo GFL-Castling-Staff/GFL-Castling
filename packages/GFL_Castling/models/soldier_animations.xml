@@ -113648,7 +113648,7 @@
 			<position x="113.500000" y="0.500000" z="55.500000"/>
 		</frame>
 	</animation>
-	<animation loop="0" end="0.800000" speed="1.000000" comment="arachne_melee">
+	<animation loop="0" end="0.750000" speed="1.000000" comment="arachne_melee">
 		<frame time="0.000000">
 			<position x="0.000000" y="105.000000" z="-105.000000"/>
 			<position x="0.000000" y="105.000000" z="-27.000000"/>
@@ -113699,6 +113699,8 @@
 			<position x="127.000000" y="0.000000" z="-28.000000"/>
 			<position x="-109.500000" y="0.500000" z="69.000000"/>
 			<position x="110.000000" y="0.500000" z="69.000000"/>
+			<control key="swing" value="1"/>
+			<control key="effect" value="1"/>
 		</frame>
 		<frame time="0.350000">
 			<position x="0.000000" y="105.000000" z="-105.000000"/>
@@ -113716,8 +113718,6 @@
 			<position x="127.000000" y="0.000000" z="-28.000000"/>
 			<position x="-109.500000" y="0.500000" z="69.000000"/>
 			<position x="110.000000" y="0.500000" z="69.000000"/>
-			<control key="swing" value="1"/>
-			<control key="effect" value="1"/>
 		</frame>
 		<frame time="0.400000">
 			<position x="0.000000" y="110.500000" z="-90.500000"/>
@@ -113759,7 +113759,7 @@
 			<position x="110.000000" y="0.500000" z="69.000000"/>
 		</frame>
 	</animation>
-	<animation loop="0" end="0.800000" speed="1.000000" comment="arachne_melee_alt">
+	<animation loop="0" end="0.750000" speed="1.000000" comment="arachne_melee_alt">
 		<frame time="0.000000">
 			<position x="0.000000" y="105.000000" z="-105.000000"/>
 			<position x="0.000000" y="105.000000" z="-27.000000"/>
@@ -113810,6 +113810,8 @@
 			<position x="127.000000" y="0.000000" z="-28.000000"/>
 			<position x="-109.500000" y="0.500000" z="69.000000"/>
 			<position x="110.000000" y="0.500000" z="69.000000"/>
+			<control key="swing" value="1"/>
+			<control key="effect" value="1"/>
 		</frame>
 		<frame time="0.350000">
 			<position x="0.000000" y="105.000000" z="-105.000000"/>
@@ -113827,8 +113829,6 @@
 			<position x="127.000000" y="0.000000" z="-28.000000"/>
 			<position x="-109.500000" y="0.500000" z="69.000000"/>
 			<position x="110.000000" y="0.500000" z="69.000000"/>
-			<control key="swing" value="1"/>
-			<control key="effect" value="1"/>
 		</frame>
 		<frame time="0.400000">
 			<position x="0.000000" y="110.500000" z="-90.500000"/>
@@ -115478,7 +115478,7 @@
 			<position x="25.000000" y="0.000000" z="13.000000"/>
 		</frame>
 	</animation>
-	<animation loop="0" end="0.600000" speed="1.000000" comment="arachne_clone_melee">
+	<animation loop="0" end="0.600000" speed="1.200000" comment="arachne_clone_melee">
 		<frame time="0.000000">
 			<position x="0.000000" y="25.000000" z="-31.000000"/>
 			<position x="0.000000" y="25.000000" z="-11.000000"/>

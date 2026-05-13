@@ -51,6 +51,10 @@
     <sound key="cycle_out" fileref="type88robot_cycle_out_FromCOD13.wav" volume="0.4"/>
     <sound key="cycle_in" fileref="type88robot_cycle_in_FromCOD13.wav" volume="0.4"/>
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+    <sound key="stab" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="2.0" />
+	<sound key="stab" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="2.0" />
     <model />
     <hud_icon filename="testing.png" />
     <weak_hand_hold offset="0.2" />

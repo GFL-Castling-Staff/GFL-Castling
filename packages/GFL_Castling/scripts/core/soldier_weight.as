@@ -177,7 +177,7 @@ const array<SoldierInfo@> paradeus_hardmode_weight =
     SoldierInfo("Paradeus_doppelsoldner",0.5),
     SoldierInfo("Paradeus_roarer",0.5),
     SoldierInfo("Paradeus_Hannibal",0.1),
-    SoldierInfo("pard_arachne",0.005),
+    SoldierInfo("pard_arachne",0.1),
     SoldierInfo("Thunder",0.5)
 };
 
