@@ -208,6 +208,7 @@
     <stance state_key="over_wall" accuracy="1" />
     <modifier class="detectability" value="1.0" />
     <modifier class="speed" value="1.0" />
+    <modifier class="hit_success_probability" value="-1.2" />
     <drop_on_death_result class="spawn" instance_class="projectile" instance_key="grenade_scarecrow.projectile" min_amount="1.0" max_amount="1.0" offset="0 0.2 0" position_spread="0 0" direction_spread="0 0"/>
   </weapon>
 </weapons>
