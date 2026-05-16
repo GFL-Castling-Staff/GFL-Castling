@@ -162,23 +162,25 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		};
 		array<array<ScoredResource@>> rewardPasses = {
 			{
-		ScoredResource("exchange_t6_ticket_2", "carry_item", 1.0f),
-		ScoredResource("exchange_t6_ticket_3", "carry_item", 1.0f),
-		ScoredResource("exchange_t6_ticket_4", "carry_item", 1.0f),
-		ScoredResource("exchange_t6_ticket_5", "carry_item", 1.0f),
-		ScoredResource("exchange_t6_ticket_6", "carry_item", 1.0f),
-		ScoredResource("exchange_t6_ticket_7", "carry_item", 1.0f),
-		ScoredResource("exchange_t6_ticket_8", "carry_item", 1.0f),
-		ScoredResource("exchange_t6_ticket_9", "carry_item", 1.0f),
-		ScoredResource("exchange_t6_ticket_10", "carry_item", 0.2f),
-		ScoredResource("exchange_t6_ticket_11", "carry_item", 1.0f),
-		ScoredResource("exchange_t6_ticket_12", "carry_item", 1.0f),
-		ScoredResource("exchange_t6_ticket_13", "carry_item", 0.2f),
-		ScoredResource("exchange_t6_ticket_14", "carry_item", 0.2f),
-		ScoredResource("exchange_t6_ticket_15", "carry_item", 0.2f),
-
-		ScoredResource("exchange_t6_ticket_1", "carry_item", 1.0f)
-
+		ScoredResource("exchange_t6_ticket_1", "carry_item", 1.0f), // 弹链背包
+		ScoredResource("exchange_t6_ticket_2", "carry_item", 1.0f), // 板甲
+		ScoredResource("exchange_t6_ticket_3", "carry_item", 1.0f), // 披风
+		ScoredResource("exchange_t6_ticket_4", "carry_item", 1.0f), // 外骨骼T
+		ScoredResource("exchange_t6_ticket_5", "carry_item", 1.0f), // 外骨骼X
+		ScoredResource("exchange_t6_ticket_6", "carry_item", 1.0f), // 轻披风
+		ScoredResource("exchange_t6_ticket_7", "carry_item", 1.0f), // 自修外骨骼
+		ScoredResource("exchange_t6_ticket_8", "carry_item", 1.0f), // 机动盾
+		ScoredResource("exchange_t6_ticket_9", "carry_item", 1.0f), // 特殊战机动护板
+		ScoredResource("exchange_t6_ticket_10", "carry_item", 0.2f), // 帕斯卡（A）
+		ScoredResource("exchange_t6_ticket_11", "carry_item", 1.0f), // 芯片Alpha
+		ScoredResource("exchange_t6_ticket_12", "carry_item", 1.0f), // 芯片Beta
+		ScoredResource("exchange_t6_ticket_13", "carry_item", 0.2f), // 帕斯卡（B）
+		ScoredResource("exchange_t6_ticket_14", "carry_item", 0.2f), // Dima（EXOT）
+		ScoredResource("exchange_t6_ticket_15", "carry_item", 0.2f), // 格林娜（SREXO）
+		ScoredResource("exchange_t6_ticket_16", "carry_item", 1.0f), // 战术披肩
+		ScoredResource("exchange_t6_ticket_17", "carry_item", 1.0f), // 作战盾
+		ScoredResource("exchange_t6_ticket_18", "carry_item", 1.0f), // 芯片Gamma
+		ScoredResource("exchange_t6_ticket_19", "carry_item", 1.0f) // 爆炸物装具
 			}
 		};
 		processRewardPasses(rewardPasses);
@@ -210,8 +212,6 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("upgrade_sr3mp.carry_item", "carry_item", 0.1f),
 		// ScoredResource("upgrade_tac50.carry_item", "carry_item", 0.1f),
 		ScoredResource("upgrade_usas12.carry_item", "carry_item", 0.1f),
-
-		
 		ScoredResource("upgrade_9a91.carry_item", "carry_item", 0.1f)
 			}
 		};

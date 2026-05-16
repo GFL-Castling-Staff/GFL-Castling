@@ -179,12 +179,13 @@ class CommandSkill : Tracker {
                 if (startsWith(c_armorType,'chip_b_t6')){
                     m_modifer.setCooldownMinus(5.0);
                 }
-
-                if (startsWith(c_armorType,'chip_a_t6')){
+                else if (startsWith(c_armorType,'chip_a_t6')){
                     m_modifer.setCooldownReduction(0.8);
                 }
-
-                if (startsWith(c_armorType,'gk_persica_alt')){
+                else if (startsWith(c_armorType,'chip_y_t6')){
+                    m_modifer.setCooldownMinus(5.0);
+                }
+                else if (startsWith(c_armorType,'gk_persica_alt')){
                     m_modifer.setCooldownMinus(5.0);
                 }
                 else if (startsWith(c_armorType,'gk_persica')){

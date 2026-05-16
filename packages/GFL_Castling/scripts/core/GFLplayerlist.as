@@ -941,6 +941,10 @@ class GFL_playerlist_system : Tracker {
                 healCharacter(m_metagame,cid,2);
             }
         }
+        else if(startsWith(_armor,"cbs_t6"))
+        {
+            healCharacter(m_metagame,cid,2);
+        }
         info.handleRpReward(m_metagame);
         info.handleXpReward(m_metagame);
     }
