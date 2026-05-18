@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="Manticore Droppod" slot="1" pulldown_in_air="200.0" key="sfw_manticore_droppod.projectile">
     <tag name="grenade"/>
-    <!-- <result class="notify_script" key="manticore_summon" /> -->
-    <result class="spawn" instance_class="vehicle" instance_key="qwd_spawn.vehicle" min_amount="1" max_amount="1" offset="0 0.5 0" position_spread="0 0" direction_spread="0 0" />
+    <result class="notify_script" key="manticore_summon" />
+    <!-- <result class="spawn" instance_class="vehicle" instance_key="qwd_spawn.vehicle" min_amount="1" max_amount="1" offset="0 0.5 0" position_spread="0 0" direction_spread="0 0" /> -->
     <trigger class="time" time_to_live="1.0">
 		<collision class="sticky" />
 	</trigger>
