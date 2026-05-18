@@ -347,6 +347,50 @@ class CommandSkill : Tracker {
                 addCooldown("REDEPLOY",120,cId,m_modifer);
             }
         }
+
+        if (checkCommand(message,"alert")){
+            for(uint a=0;a<DontSpamingYourFuckingSkillWhileCoolDownBro.length();a++){
+                if(DontSpamingYourFuckingSkillWhileCoolDownBro[a].m_playerid==senderId) return;
+            }
+            DontSpamingYourFuckingSkillWhileCoolDownBro.insertLast(SpamAvoider(senderId));
+            const XmlElement@ info = getPlayerInfo(m_metagame, senderId);
+            if (info !is null) {
+                int cId = info.getIntAttribute("character_id");
+                string pname = info.getStringAttribute("name");
+                SkillModifer@ m_modifer=SkillModifer(senderId,pname);
+
+                bool ExistQueue = false;
+                int j =-1;
+                for (uint i=0;i<SkillArray.length();i++){
+                    if (InCooldown(cId,m_modifer,SkillArray[i],true) && SkillArray[i].m_weapontype=="ALERT") {
+                        ExistQueue=true;
+                        j=i;
+                    }
+                }
+                if (ExistQueue) return;
+
+                const XmlElement@ character = getCharacterInfo(m_metagame, cId);
+                if (character is null) return;
+                int factionid = character.getIntAttribute("faction_id");
+                const XmlElement@ player = getPlayerInfo(m_metagame, senderId);
+                if (player is null) return;
+                Vector3 tar_pos;
+                if (player.hasAttribute("aim_target")) {
+                    tar_pos = stringToVector3(player.getStringAttribute("aim_target"));
+                }
+                else {
+                    tar_pos = stringToVector3(character.getStringAttribute("position"));
+                }
+
+                spawnStaticProjectile(m_metagame,"alert_chat.projectile",tar_pos,cId,factionid);
+                playSoundAtLocation(m_metagame,"objective_priority.wav",factionid,tar_pos,1.0);
+                dictionary a;
+				a["%name"] = sender;
+                sendFactionMessageKey(m_metagame, 0,"alertchatd",a,2.0);
+                sendFactionMessageKeySaidAsCharacter(m_metagame, 0, cId,"alertchat",dictionary(),0.9);
+                addCooldown("ALERT",10,cId,m_modifer);
+            }
+        }
     }
     protected void handleMatchEndEvent(const XmlElement@ event) {
         m_ended=true;
@@ -367,6 +411,10 @@ class CommandSkill : Tracker {
                 if(SkillArray[a].m_time<0){
                     if(SkillArray[a].m_weapontype =="REDEPLOY"){
                         sendFactionMessageKeySaidAsCharacter(m_metagame,0,SkillArray[a].m_character_id,"redeploycooldowndone");
+                        SkillArray.removeAt(a);
+                        continue;
+                    }
+                    if(SkillArray[a].m_weapontype =="ALERT"){
                         SkillArray.removeAt(a);
                         continue;
                     }
