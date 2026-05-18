@@ -89,7 +89,6 @@
         <animation state_key="crouch_moving_backwards"	animation_key="crouching backwards, pistol 2" />
         <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
         <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
-        <animation state_key="next_in_chain_in" animation_key="change weapon in ar15"/>
 	    <animation state_key="next_in_chain_out" animation_key="change weapon out ar15"/>
 
         <inventory encumbrance="50.0" buy_price="300.0" sell_price="300.0" />
@@ -101,7 +100,7 @@
         <sound key="cycle_out" fileref="mg3_cycle_FormSQUAD.wav" volume="1.0" />
         <sound class="impact" fileref="rifle_drop.wav" />
         <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
-        <model filename="gkw_mg_mg3mod3.xml" />
+        <model filename="" />
         <hud_icon filename="gkw_mg3mod3_skill.png" />
         <projectile file="bullet.projectile" time_to_live="0.2">
             <result class="hit" kill_probability="5.0" kill_decay_start_time="1.0" kill_decay_end_time="4.054" />

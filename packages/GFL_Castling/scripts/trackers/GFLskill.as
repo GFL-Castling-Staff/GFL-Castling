@@ -1656,12 +1656,19 @@ class GFLskill : Tracker {
 				break;
 			}
 
-            case 63:{ //强无敌空投，暂时弃用
+            case 63:{ //强无敌空投
 				int characterId = event.getIntAttribute("character_id");
-				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-				if (character is null) return;
 				Vector3 pos = stringToVector3(event.getStringAttribute("position"));
-				int factionid = character.getIntAttribute("faction_id");
+				int factionid = -1;
+				array<const XmlElement@>@ factions = getFactions(m_metagame);
+				for (uint i = 0; i < factions.size(); ++i) {
+					string name = factions[i].getStringAttribute("name");
+					if (name == "S.F.") {
+						factionid = int(i);
+						break;
+					}
+				}
+				if (factionid == -1) return;
                 spawnStaticProjectile(m_metagame,"manticore_land_blast.projectile",pos,characterId,factionid);
 				array<const XmlElement@>@ groups = getSoldierGroups(m_metagame, factionid);
 				if (groups is null) return;
