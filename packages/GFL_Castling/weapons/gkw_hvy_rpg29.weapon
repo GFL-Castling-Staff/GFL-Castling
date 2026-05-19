@@ -155,7 +155,7 @@
 	sustained_fire_diminish_rate="1.2"
     stance_accuracy_rate="2.0"
 	magazine_size="30"
-	suppressed="0"
+	suppressed="1"
 	name="AKS-74UB(RPG-29)"
 	class="0"
 	reload_one_at_a_time="0"
@@ -176,7 +176,7 @@
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_ex_aks74ub.xml"/>
     <animation state_key="changing_weapon_in" animation_key="change weapon in,hvy pdw mode" />
-	<hud_icon filename="testing.png"/>
+	<hud_icon filename="gkw_aks74ub.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile">
         <result class="hit"  kill_probability="4.0" kill_decay_start_time="1.3" kill_decay_end_time="1.9" />
