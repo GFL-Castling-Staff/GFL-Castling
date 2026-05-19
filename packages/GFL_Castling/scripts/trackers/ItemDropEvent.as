@@ -677,6 +677,26 @@ class ItemDropEvent : Tracker {
                         playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
                         break;
                     }
+                    case 16:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","tcc_t6.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }
+                    case 17:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","cbs_t6.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }
+                    case 18:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","chip_y_t6.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }
+                    case 19:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","nadebag_t6.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }
                     default:{
                         break;
                     }
