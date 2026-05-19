@@ -565,6 +565,9 @@
 		<item_class_existence_config>
 			<item_class_existence class="weapon" slot="1" probability="0.5" />
 		</item_class_existence_config>		
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.5" max="5.0" />
+		</attribute_config>
 	</soldier>	
 	<!-- jaeger -->
 	<soldier name="sf_jaeger" spawn_score="2.0" copy_from="default_spawn_ai">
@@ -584,6 +587,9 @@
 			<call key="sf_assault.call" />
 			<call key="sf_trooper_small_scout.call" />
 		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.5" max="5.0" />
+		</attribute_config>
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="100.0" max="100.0" />
 			<attribute weight="0.3" min="300.0" max="500.0" />
@@ -614,6 +620,9 @@
 			<call key="sf_assault.call" />
 			<call key="sf_trooper_small_assault.call" />
 		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0.5" max="5.0" />
+		</attribute_config>
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="100.0" max="100.0" />
 			<attribute weight="0.3" min="300.0" max="500.0" />
