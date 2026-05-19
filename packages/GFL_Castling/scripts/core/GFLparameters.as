@@ -57,22 +57,22 @@
 
     array<string> scarh_list = {
         "gkw_scarh.weapon",
-        "gkw_scarh_only.weapon"        
+        "gkw_scarh_only.weapon"
     };
 
     array<string> Daybreak_Squad = {
         "gkw_scarl.weapon",
         "gkw_scarl_only.weapon",
         "gkw_scarh.weapon",
-        "gkw_scarh_only.weapon",   
+        "gkw_scarh_only.weapon",
         "gkw_contender.weapon",
         "gkw_contender_1502.weapon",
         "gkw_contender_3201.weapon",
-        "gkw_scr.weapon",               
-        "gkw_scr_10102.weapon",               
-        "gkw_m249saw.weapon",               
-        "gkw_m249saw_3604.weapon",               
-        "gkw_m60.weapon"          
+        "gkw_scr.weapon",
+        "gkw_scr_10102.weapon",
+        "gkw_m249saw.weapon",
+        "gkw_m249saw_3604.weapon",
+        "gkw_m60.weapon"
     };
 
 // parameters for "GFLhelpers.as":
@@ -147,8 +147,8 @@
 
             // 下面这行是用来占位的，在这之上添加新的即可
             {"666",-1}
-    };    
-    
+    };
+
     array<string> resupply_grenade_list = {
         "hand_grenade.projectile",
         "hand_88grenade.projectile",
@@ -166,7 +166,7 @@
         // {"at_mine.projectile",6},
         // {"gkw_cz75_axe.projectile",6}
     };
-    
+
     array<string> resupply_secondary_list = {
         "gkw_88rocker.weapon",
         "gkw_consume_at4.weapon",
@@ -279,7 +279,7 @@
         {"hornet_ct.vehicle",2},
 
         {"",0}
-    };    
+    };
 
 // parameters for "ItemDropEvent.as":
 
@@ -287,8 +287,8 @@
         // 空
 
         {"firecontrol.carry_item",1},       // 火控核心
-        {"core_mask.carry_item",2},         // 真核面具  
-        {"black_card.carry_item",114},         // 黑卡  
+        {"core_mask.carry_item",2},         // 真核面具
+        {"black_card.carry_item",114},         // 黑卡
         {"upgrade_masterkey.carry_item",514}, //
 
         {"upgrade_type88.carry_item",3},    // 汉阳造加速线圈
@@ -323,7 +323,7 @@
         {"",0},
 
         {"mod3",1},                         // 火控核心
-        {"truecore",2},                     // 真核面具  
+        {"truecore",2},                     // 真核面具
         {"type88",3},                       // 汉阳造加速线圈
         {"aa12",4},                         // AA12独头弹
         {"m1garand",5},                     // M1加兰德弹鼓
@@ -358,20 +358,24 @@
         {"",0},
 
         {"exchange_t6_ticket_1",1},
-        {"exchange_t6_ticket_2",2}, 
-        {"exchange_t6_ticket_3",3}, 
-        {"exchange_t6_ticket_4",4},     
-        {"exchange_t6_ticket_5",5}, 
-        {"exchange_t6_ticket_6",6}, 
-        {"exchange_t6_ticket_7",7}, 
-        {"exchange_t6_ticket_8",8}, 
-        {"exchange_t6_ticket_9",9}, 
-        {"exchange_t6_ticket_10",10}, 
-        {"exchange_t6_ticket_11",11}, 
-        {"exchange_t6_ticket_12",12}, 
-        {"exchange_t6_ticket_13",13}, 
-        {"exchange_t6_ticket_14",14}, 
-        {"exchange_t6_ticket_15",15}, 
+        {"exchange_t6_ticket_2",2},
+        {"exchange_t6_ticket_3",3},
+        {"exchange_t6_ticket_4",4},
+        {"exchange_t6_ticket_5",5},
+        {"exchange_t6_ticket_6",6},
+        {"exchange_t6_ticket_7",7},
+        {"exchange_t6_ticket_8",8},
+        {"exchange_t6_ticket_9",9},
+        {"exchange_t6_ticket_10",10},
+        {"exchange_t6_ticket_11",11},
+        {"exchange_t6_ticket_12",12},
+        {"exchange_t6_ticket_13",13},
+        {"exchange_t6_ticket_14",14},
+        {"exchange_t6_ticket_15",15},
+        {"exchange_t6_ticket_16",16},
+        {"exchange_t6_ticket_17",17},
+        {"exchange_t6_ticket_18",18},
+        {"exchange_t6_ticket_19",19},
 
         {"666",0}
     };
@@ -385,19 +389,19 @@
             {"update_beta","_update_beta"},
 
             {"update_gamma","_update_gamma"},
-            
+
             {"666",-1}
-    };    
+    };
 
     dictionary callUI_Slot = {
         // 空
         {"",0},
 
         {"call_ui_t1_bombardment_fairy_82mm_mortar_free",1},
-        {"call_ui_t1_bombardment_fairy_82mm_mortar",1}, 
-        {"call_ui_t1_bombardment_fairy_105mm_grenade_barrage",1}, 
-        {"call_ui_t1_bombardment_fairy_155mm_air_burst",1}, 
-        {"call_ui_t2_bombardment_fairy_170mm_cannon",2}, 
+        {"call_ui_t1_bombardment_fairy_82mm_mortar",1},
+        {"call_ui_t1_bombardment_fairy_105mm_grenade_barrage",1},
+        {"call_ui_t1_bombardment_fairy_155mm_air_burst",1},
+        {"call_ui_t2_bombardment_fairy_170mm_cannon",2},
 
         {"call_ui_t2_airstrike_fairy_bomber",2},
         {"call_ui_t1_airstrike_fairy_cas",1},
@@ -441,10 +445,10 @@
         {"call_ui_t1_bombardment_fairy_155mm_air_burst_update_alpha",250},
         {"call_ui_t1_bombardment_fairy_155mm_air_burst_update_beta",250},
         {"call_ui_t1_bombardment_fairy_155mm_air_burst_update_gamma",250},
-        
+
         {"call_ui_t1_airstrike_fairy_cas_update_alpha",125},
         {"call_ui_t1_airstrike_fairy_cas_update_beta",125},
-        {"call_ui_t1_airstrike_fairy_cas_update_gamma",125},   
+        {"call_ui_t1_airstrike_fairy_cas_update_gamma",125},
 
         {"call_ui_t1_airstrike_fairy_cas_p2p_update_alpha",125},
         {"call_ui_t1_airstrike_fairy_cas_p2p_update_beta",125},

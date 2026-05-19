@@ -675,7 +675,7 @@ class kill_event : Tracker {
             else if(startsWith(c_armorType,"exo_x_t6")){
                 updateHealByKillEvent(characterId,factionId,10,20,"vest",kill_to_heal_scale);
             }
-            else if(startsWith(c_armorType,"exo_t6") || startsWith(c_armorType,"dima_bunny")){
+            else if(startsWith(c_armorType,"exo_t6") || startsWith(c_armorType,"dima_bunny") || startsWith(c_armorType,"cbs_t6")){
                 if(boss_list.find(soldier_name)>-1){
                     healCharacter(m_metagame,characterId,5);
                 }
