@@ -50,6 +50,9 @@ dictionary callLaunchIndex = {
 
     {"gk_illumination_fairy.call",15},
 
+    // 烟雾搜救妖精
+    {"gk_rescue_fairy.call",18},
+
     // 空空投
     {"",0}
 };
@@ -1985,6 +1988,27 @@ class call_event : Tracker {
                             float ori4 = rand(0.0,3.14);
                             spawnVehicle(m_metagame,1,factionId,call_pos,Orientation(0,1,0,ori4),"rubber_boat.vehicle");
                         }
+                        break;
+                    }
+                    case 18:{
+                        if(findCooldown(playerName,"rescue_fairy")){
+                            returnCooldown_Slot("rescue_fairy", 300, characterId, playerName, playerId, "call event,cool down");
+                            break;
+                        }
+                        CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,5.0,"rescue_fairy"));
+                        Vector3 target_pos = stringToVector3(position);
+                        int flagId = m_DummyCallID + 15000;
+                        CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,target_pos);
+                        FairyRequest.setIconTypeKey("call_marker");
+                        FairyRequest.setIndex(7);
+                        FairyRequest.setSize(0.5);
+                        FairyRequest.setRange(5.0);
+                        FairyRequest.setDummyId(flagId);
+                        addCastlingMarker(FairyRequest);
+                        m_DummyCallID++;
+                        Event_call_rescue_fairy@ new_task = Event_call_rescue_fairy(m_metagame,2.0,characterId,factionId,target_pos,target_pos,"",flagId);
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        tasker.add(new_task);
                         break;
                     }
                     default:

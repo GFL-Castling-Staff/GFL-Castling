@@ -1659,6 +1659,38 @@ class Event_call_bombardment_fairy_82mm_mortar : event_call_task_hasMarker {
 	}
 }
 
+class Event_call_rescue_fairy : event_call_task_hasMarker {
+	void start() {
+		m_timeLeft = m_time;
+		m_timeLeft_internal = 0;
+		m_pos1 = e_pos.add(Vector3(0, 40, 0));
+		m_pos2 = e_pos;
+	}
+
+	Event_call_rescue_fairy(GameMode@ metagame, float time, int cId, int fId, Vector3 start_pos, Vector3 target_pos, string mode="", int markid=0) {
+		super(metagame, time, cId, fId, start_pos, target_pos, mode, markid);
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0) { m_timeLeft -= time; return; }
+		if(m_timeLeft_internal >= 0) { m_timeLeft_internal -= time; return; }
+		if(m_excute_time >= 2) { m_end = true; return; }
+		m_excute_time++;
+
+		if(m_excute_time == 1) {
+			CreateDirectProjectile(m_metagame, m_pos1, m_pos2, "smoke_grenade.projectile", m_character_id, m_faction_id, 5);
+			m_timeLeft_internal = 3.0;
+		}
+		else if(m_excute_time == 2) {
+			for(int i = 0; i < 8; i++) {
+				Vector3 offset = Vector3(rand(-1.5, 1.5), rand(-3.0, 3.0), rand(-1.5, 1.5));
+				Vector3 medical_spawn = m_pos2.add(Vector3(0, 20, 0));
+				CreateDirectProjectile(m_metagame, medical_spawn.add(offset), m_pos2.add(offset), "medical_agl_call.projectile", m_character_id, m_faction_id, 0);
+			}
+		}
+	}
+}
+
 class Event_call_airstrike_fairy_precise : event_call_task_hasMarker {
 
 	string m_airstrike_key_alt="";
