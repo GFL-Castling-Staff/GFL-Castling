@@ -1995,7 +1995,9 @@ class call_event : Tracker {
                             returnCooldown_Slot("rescue_fairy", 300, characterId, playerName, playerId, "call event,cool down");
                             break;
                         }
-                        CallEvent_cooldown.insertLast(Call_Cooldown(playerName,playerId,5.0,"rescue_fairy"));
+                        Call_Cooldown cd = Call_Cooldown(playerName,playerId,15.0,"rescue_fairy",true,3);
+                        cd.addCharge();
+                        CallEvent_cooldown.insertLast(cd);
                         Vector3 target_pos = stringToVector3(position);
                         int flagId = m_DummyCallID + 15000;
                         CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,target_pos);
@@ -2006,7 +2008,7 @@ class call_event : Tracker {
                         FairyRequest.setDummyId(flagId);
                         addCastlingMarker(FairyRequest);
                         m_DummyCallID++;
-                        Event_call_rescue_fairy@ new_task = Event_call_rescue_fairy(m_metagame,2.0,characterId,factionId,target_pos,target_pos,"",flagId);
+                        Event_call_rescue_fairy@ new_task = Event_call_rescue_fairy(m_metagame,1.0,characterId,factionId,target_pos,target_pos,"",flagId);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                         tasker.add(new_task);
                         break;
