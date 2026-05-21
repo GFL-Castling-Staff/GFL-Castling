@@ -311,7 +311,8 @@ class CommandSkill : Tracker {
                 case 97:{excuteMP7Skill(cId,senderId,m_modifer);break;}
                 case 98:{excuteOTS14Skill(cId,senderId,m_modifer);break;}
                 case 99:{excuteNTW20MOD3Skill(cId,senderId,m_modifer);break;}
-
+                case 100:{excuteHS50Skill(cId,senderId,m_modifer);break;}
+                case 101:{excutePTRDSkill(cId,senderId,m_modifer);break;}
 
                 default:
                 break;
@@ -3077,12 +3078,6 @@ class CommandSkill : Tracker {
                 playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s noob",false);
                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                 tasker.add(DelayAntiTankSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_blast_50.projectile",c_pos.add(Vector3(0,0.5,0)),s_pos));
-                addCooldown("sniper",60,characterId,modifer);
-            }
-            else if (weapon_name == "gkw_ptrd.weapon"){
-                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
-                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                tasker.add(DelayAntiTankSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_blast_80.projectile",c_pos.add(Vector3(0,0.5,0)),s_pos));
                 addCooldown("sniper",45,characterId,modifer);
             }
             else if (weapon_name == "gkw_gepardm1.weapon" || weapon_name == "gkw_gepardm1_4006.weapon" ){
@@ -3108,12 +3103,6 @@ class CommandSkill : Tracker {
                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                 tasker.add(DelayAntiTankSnipeRequest(m_metagame,2,characterId,factionid,"snipe_blast_airburst_80.projectile",c_pos.add(Vector3(0,0.5,0)),s_pos.add(Vector3(0,4,0))));
                 addCooldown("sniper",40,characterId,modifer);
-            }
-            else if (weapon_name == "gkw_ntw20mod3.weapon" || weapon_name=="gkw_ntw20mod3_307.weapon" || weapon_name=="gkw_ntw20mod3_4801.weapon"){
-                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
-                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                tasker.add(DelayAntiTankSnipeRequest(m_metagame,2,characterId,factionid,"snipe_blast_airburst_80.projectile",c_pos.add(Vector3(0,0.5,0)),s_pos.add(Vector3(0,4,0))));
-                addCooldown("sniper",30,characterId,modifer);
             }
             else if (weapon_name == "gkw_rt20.weapon"){
                 playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
@@ -5419,5 +5408,79 @@ class CommandSkill : Tracker {
             // insertCommonStrike(characterId,factionid,"ntw20_wildhunt",c_pos,aim_pos);
 
         }
+    }
+
+    // HS.50 星孛劫火
+    void excuteHS50Skill(int characterId, int playerId, SkillModifer@ modifer) {
+        if (excuteCooldownCheck(m_metagame, characterId, modifer, playerId, "HS50", true, "charge_recover_all", 5)) return;
+        if (checkCooldown(characterId, modifer, "HS50_ROF", true)) return;
+
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character is null) return;
+        if (!canCastSkill(character)) return;
+
+        const XmlElement@ playerInfo = getPlayerInfo(m_metagame, playerId);
+        if (playerInfo is null) return;
+        if (!playerInfo.hasAttribute("aim_target")) {
+            if (!checkCooldown(characterId, modifer, "HS50", true)) {
+                modifer.setCooldownMinus(0);
+                modifer.setCooldownReduction(1.0);
+                addCooldown("HS50", 3, characterId, modifer);
+            }
+            return;
+        }
+
+        Vector3 aimPos = stringToVector3(playerInfo.getStringAttribute("aim_target"));
+        Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+        int factionId = character.getIntAttribute("faction_id");
+        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+        tasker.add(DelayAntiTankSnipeRequest(m_metagame, 1.0, characterId, factionId, "snipe_blast_30.projectile", c_pos.add(Vector3(0,0.5,0)), aimPos));
+
+        if (!tryaddChargeCount("HS50", characterId, modifer, true)) {
+            addCooldown("HS50", 50, characterId, modifer, "charge_recover_all");
+            tryaddChargeCount("HS50", characterId, modifer, true);
+        }
+
+        addCooldown("HS50_ROF", 1.0, characterId, modifer, "nohint");
+        playAnimationKey(m_metagame, characterId, "crouching aiming, RF skill 1s", false);
+    }
+
+    // PTRD 阻断射击
+    void excutePTRDSkill(int characterId, int playerId, SkillModifer@ modifer) {
+        if (excuteCooldownCheck(m_metagame, characterId, modifer, playerId, "PTRD", true, "charge_recover_1", 7)) return;
+
+        int stacks = 7;
+        int cdIndex = getCooldownIndex(characterId, modifer, "PTRD", true);
+        if (cdIndex != -1) {
+            stacks = 7 - SkillArray[cdIndex].m_charge;
+            if (stacks < 1) stacks = 1;
+            if (stacks > 7) stacks = 7;
+        }
+
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character is null) return;
+        if (!canCastSkill(character)) return;
+
+        const XmlElement@ playerInfo = getPlayerInfo(m_metagame, playerId);
+        if (playerInfo is null) return;
+        if (!playerInfo.hasAttribute("aim_target")) return;
+
+        Vector3 aimPos = stringToVector3(playerInfo.getStringAttribute("aim_target"));
+        Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+        int factionId = character.getIntAttribute("faction_id");
+        // _log("PTRD现在有几层：" + stacks);
+        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+        tasker.add(DelayAntiTankSnipeRequest(m_metagame, 2.0, characterId, factionId, "snipe_blast_20.projectile", c_pos.add(Vector3(0,0.5,0)), aimPos, stacks));
+
+        if (cdIndex != -1) {
+            SkillArray[cdIndex].m_time = SkillArray[cdIndex].m_inittime;
+            SkillArray[cdIndex].setCharge(7);
+        } else {
+            addCooldown("PTRD", 10, characterId, modifer, "charge_recover_1", false);
+            int j = getCooldownIndex(characterId, modifer, "PTRD", true);
+            if (j != -1) SkillArray[j].setCharge(7);
+        }
+
+        playAnimationKey(m_metagame, characterId, "crouching aiming, RF skill 2s", false);
     }
 }

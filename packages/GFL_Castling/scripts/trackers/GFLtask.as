@@ -767,9 +767,10 @@ class DelayAntiTankSnipeRequest :Task{
 	protected Vector3 m_pos_2;
 	protected string m_airstrike_key;
 	protected bool m_shoot = false;
+	protected int m_count = 1;
 
 
-	DelayAntiTankSnipeRequest(GameMode@ metagame, float time, int cId,int fId, string airstrike_key,Vector3 pos1,Vector3 pos2) {
+	DelayAntiTankSnipeRequest(GameMode@ metagame, float time, int cId,int fId, string airstrike_key,Vector3 pos1,Vector3 pos2, int count = 1) {
 		@m_metagame = metagame;
 		m_time = time;
 		m_addtime = time + 0.2;
@@ -778,6 +779,7 @@ class DelayAntiTankSnipeRequest :Task{
 		m_pos_1=pos1;
 		m_pos_2=pos2;
 		m_airstrike_key=airstrike_key;
+		m_count = count;
 	}
 
 	void start() {
@@ -795,7 +797,9 @@ class DelayAntiTankSnipeRequest :Task{
 			m_shoot = true;
 		}
 		if (m_addtime < 0 && m_timeLeft < 0){
-			CreateDirectProjectile(m_metagame,m_pos_2.add(Vector3(0,3,0)),m_pos_2,m_airstrike_key,m_character_id,m_faction_id,100);
+			for (int i = 0; i < m_count; i++) {
+				CreateDirectProjectile(m_metagame,m_pos_2.add(Vector3(0,3,0)),m_pos_2,m_airstrike_key,m_character_id,m_faction_id,100);
+			}
 		}
 	}
 
