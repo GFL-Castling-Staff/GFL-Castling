@@ -45,7 +45,6 @@ class SkillTrigger{
     void setSkillInfo(SkillModifer@ skillinfo){
         @m_skillInfo= @skillinfo;
     }
-
     void setCharge(int num){
         m_charge=num;
     }
@@ -91,6 +90,7 @@ class SkillModifer{
     int m_player_id=-1;
     string m_playername="";
     string m_armor="";
+    int m_skill_case=0;
 
     SkillModifer(int pId,string pName){
         m_player_id=pId;
@@ -103,7 +103,6 @@ class SkillModifer{
     void setPlayerName(string num){
         m_playername=num;
     }
-
     void setCooldownReduction(float num){
         m_cdr=num;
     }
@@ -112,6 +111,9 @@ class SkillModifer{
     }
     void setArmorType(string armor){
         m_armor = armor;
+    }
+    void setSkillCase(int num){
+        m_skill_case = num;
     }
 }
 
@@ -172,6 +174,7 @@ class CommandSkill : Tracker {
             SkillModifer@ m_modifer=SkillModifer(senderId,pname);
 
             m_modifer.setArmorType(c_armorType);
+            m_modifer.setSkillCase(int(commandSkillIndex[c_weaponType]));
 
             // 不受任何减少时间效果影响的技能
             if (Weapon_free_of_other_cooldown.find(c_weaponType)== -1){
@@ -421,22 +424,26 @@ class CommandSkill : Tracker {
                         continue;
                     }
                     if(SkillArray[a].m_charge_mode=="normal" || SkillArray[a].m_charge_mode=="charge_recover_all"){
-                        if(SkillArray[a].m_alert){
-                            playPrivateSound(m_metagame,"skilldone.wav",SkillArray[a].m_skillInfo.m_player_id);
+                        if (shouldNotifySkillDone(SkillArray[a])) {
+                            if(SkillArray[a].m_alert){
+                                playPrivateSound(m_metagame,"skilldone.wav",SkillArray[a].m_skillInfo.m_player_id);
+                            }
+                            sendFactionMessageKeySaidAsCharacter(m_metagame,0,SkillArray[a].m_character_id,"skillcooldowndone");
+                            notify(m_metagame, "Hint - Skill Cooldown Done",dictionary(), "misc", SkillArray[a].m_skillInfo.m_player_id, false, "", 1.0);
                         }
-                        sendFactionMessageKeySaidAsCharacter(m_metagame,0,SkillArray[a].m_character_id,"skillcooldowndone");
-                        notify(m_metagame, "Hint - Skill Cooldown Done",dictionary(), "misc", SkillArray[a].m_skillInfo.m_player_id, false, "", 1.0);
                         SkillArray.removeAt(a);
                     }
                     else if (SkillArray[a].m_charge_mode=="nohint"){
                         SkillArray.removeAt(a);
                     }
                     else if (SkillArray[a].m_charge_mode=="charge_recover_1"){
-                        if(SkillArray[a].m_alert){
-                            playPrivateSound(m_metagame,"skilldone.wav",SkillArray[a].m_skillInfo.m_player_id);
+                        if (shouldNotifySkillDone(SkillArray[a])) {
+                            if(SkillArray[a].m_alert){
+                                playPrivateSound(m_metagame,"skilldone.wav",SkillArray[a].m_skillInfo.m_player_id);
+                            }
+                            sendFactionMessageKeySaidAsCharacter(m_metagame,0,SkillArray[a].m_character_id,"skillcooldowndone");
+                            notify(m_metagame, "Hint - Skill Cooldown Done",dictionary(), "misc", SkillArray[a].m_skillInfo.m_player_id, false, "", 1.0);
                         }
-                        sendFactionMessageKeySaidAsCharacter(m_metagame,0,SkillArray[a].m_character_id,"skillcooldowndone");
-                        notify(m_metagame, "Hint - Skill Cooldown Done",dictionary(), "misc", SkillArray[a].m_skillInfo.m_player_id, false, "", 1.0);
                         if (SkillArray[a].m_charge==0){
                             SkillArray.removeAt(a);
                         }
@@ -482,6 +489,17 @@ class CommandSkill : Tracker {
         if(j==-1)return false;
         SkillArray[j].addCharge();
         return true;
+    }
+
+    bool shouldNotifySkillDone(SkillTrigger@ trigger) {
+        int storedCase = trigger.m_skillInfo.m_skill_case;
+        if (storedCase <= 0) return true;
+
+        string curWeapon = getPlayerWeaponFromList(trigger.m_skillInfo.m_playername, 0);
+        if (curWeapon == default_string) return true;
+
+        int curCase = int(commandSkillIndex[curWeapon]);
+        return curCase == storedCase;
     }
 
     bool existCooldown(int cId, SkillModifer@ modifer,SkillTrigger@ queue,bool NoRemoveOnDeath=false){
