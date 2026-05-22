@@ -45,7 +45,6 @@ class SkillTrigger{
     void setSkillInfo(SkillModifer@ skillinfo){
         @m_skillInfo= @skillinfo;
     }
-
     void setCharge(int num){
         m_charge=num;
     }
@@ -91,6 +90,7 @@ class SkillModifer{
     int m_player_id=-1;
     string m_playername="";
     string m_armor="";
+    int m_skill_case=0;
 
     SkillModifer(int pId,string pName){
         m_player_id=pId;
@@ -103,7 +103,6 @@ class SkillModifer{
     void setPlayerName(string num){
         m_playername=num;
     }
-
     void setCooldownReduction(float num){
         m_cdr=num;
     }
@@ -112,6 +111,9 @@ class SkillModifer{
     }
     void setArmorType(string armor){
         m_armor = armor;
+    }
+    void setSkillCase(int num){
+        m_skill_case = num;
     }
 }
 
@@ -172,6 +174,7 @@ class CommandSkill : Tracker {
             SkillModifer@ m_modifer=SkillModifer(senderId,pname);
 
             m_modifer.setArmorType(c_armorType);
+            m_modifer.setSkillCase(int(commandSkillIndex[c_weaponType]));
 
             // 不受任何减少时间效果影响的技能
             if (Weapon_free_of_other_cooldown.find(c_weaponType)== -1){
@@ -311,7 +314,8 @@ class CommandSkill : Tracker {
                 case 97:{excuteMP7Skill(cId,senderId,m_modifer);break;}
                 case 98:{excuteOTS14Skill(cId,senderId,m_modifer);break;}
                 case 99:{excuteNTW20MOD3Skill(cId,senderId,m_modifer);break;}
-
+                case 100:{excuteHS50Skill(cId,senderId,m_modifer);break;}
+                case 101:{excutePTRDSkill(cId,senderId,m_modifer);break;}
 
                 default:
                 break;
@@ -420,22 +424,26 @@ class CommandSkill : Tracker {
                         continue;
                     }
                     if(SkillArray[a].m_charge_mode=="normal" || SkillArray[a].m_charge_mode=="charge_recover_all"){
-                        if(SkillArray[a].m_alert){
-                            playPrivateSound(m_metagame,"skilldone.wav",SkillArray[a].m_skillInfo.m_player_id);
+                        if (shouldNotifySkillDone(SkillArray[a])) {
+                            if(SkillArray[a].m_alert){
+                                playPrivateSound(m_metagame,"skilldone.wav",SkillArray[a].m_skillInfo.m_player_id);
+                            }
+                            sendFactionMessageKeySaidAsCharacter(m_metagame,0,SkillArray[a].m_character_id,"skillcooldowndone");
+                            notify(m_metagame, "Hint - Skill Cooldown Done",dictionary(), "misc", SkillArray[a].m_skillInfo.m_player_id, false, "", 1.0);
                         }
-                        sendFactionMessageKeySaidAsCharacter(m_metagame,0,SkillArray[a].m_character_id,"skillcooldowndone");
-                        notify(m_metagame, "Hint - Skill Cooldown Done",dictionary(), "misc", SkillArray[a].m_skillInfo.m_player_id, false, "", 1.0);
                         SkillArray.removeAt(a);
                     }
                     else if (SkillArray[a].m_charge_mode=="nohint"){
                         SkillArray.removeAt(a);
                     }
                     else if (SkillArray[a].m_charge_mode=="charge_recover_1"){
-                        if(SkillArray[a].m_alert){
-                            playPrivateSound(m_metagame,"skilldone.wav",SkillArray[a].m_skillInfo.m_player_id);
+                        if (shouldNotifySkillDone(SkillArray[a])) {
+                            if(SkillArray[a].m_alert){
+                                playPrivateSound(m_metagame,"skilldone.wav",SkillArray[a].m_skillInfo.m_player_id);
+                            }
+                            sendFactionMessageKeySaidAsCharacter(m_metagame,0,SkillArray[a].m_character_id,"skillcooldowndone");
+                            notify(m_metagame, "Hint - Skill Cooldown Done",dictionary(), "misc", SkillArray[a].m_skillInfo.m_player_id, false, "", 1.0);
                         }
-                        sendFactionMessageKeySaidAsCharacter(m_metagame,0,SkillArray[a].m_character_id,"skillcooldowndone");
-                        notify(m_metagame, "Hint - Skill Cooldown Done",dictionary(), "misc", SkillArray[a].m_skillInfo.m_player_id, false, "", 1.0);
                         if (SkillArray[a].m_charge==0){
                             SkillArray.removeAt(a);
                         }
@@ -481,6 +489,17 @@ class CommandSkill : Tracker {
         if(j==-1)return false;
         SkillArray[j].addCharge();
         return true;
+    }
+
+    bool shouldNotifySkillDone(SkillTrigger@ trigger) {
+        int storedCase = trigger.m_skillInfo.m_skill_case;
+        if (storedCase <= 0) return true;
+
+        string curWeapon = getPlayerWeaponFromList(trigger.m_skillInfo.m_playername, 0);
+        if (curWeapon == default_string) return true;
+
+        int curCase = int(commandSkillIndex[curWeapon]);
+        return curCase == storedCase;
     }
 
     bool existCooldown(int cId, SkillModifer@ modifer,SkillTrigger@ queue,bool NoRemoveOnDeath=false){
@@ -3077,12 +3096,6 @@ class CommandSkill : Tracker {
                 playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s noob",false);
                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                 tasker.add(DelayAntiTankSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_blast_50.projectile",c_pos.add(Vector3(0,0.5,0)),s_pos));
-                addCooldown("sniper",60,characterId,modifer);
-            }
-            else if (weapon_name == "gkw_ptrd.weapon"){
-                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2.5s",false);
-                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                tasker.add(DelayAntiTankSnipeRequest(m_metagame,2.5,characterId,factionid,"snipe_blast_80.projectile",c_pos.add(Vector3(0,0.5,0)),s_pos));
                 addCooldown("sniper",45,characterId,modifer);
             }
             else if (weapon_name == "gkw_gepardm1.weapon" || weapon_name == "gkw_gepardm1_4006.weapon" ){
@@ -3108,12 +3121,6 @@ class CommandSkill : Tracker {
                 TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                 tasker.add(DelayAntiTankSnipeRequest(m_metagame,2,characterId,factionid,"snipe_blast_airburst_80.projectile",c_pos.add(Vector3(0,0.5,0)),s_pos.add(Vector3(0,4,0))));
                 addCooldown("sniper",40,characterId,modifer);
-            }
-            else if (weapon_name == "gkw_ntw20mod3.weapon" || weapon_name=="gkw_ntw20mod3_307.weapon" || weapon_name=="gkw_ntw20mod3_4801.weapon"){
-                playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
-                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-                tasker.add(DelayAntiTankSnipeRequest(m_metagame,2,characterId,factionid,"snipe_blast_airburst_80.projectile",c_pos.add(Vector3(0,0.5,0)),s_pos.add(Vector3(0,4,0))));
-                addCooldown("sniper",30,characterId,modifer);
             }
             else if (weapon_name == "gkw_rt20.weapon"){
                 playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 2s",false);
@@ -5419,5 +5426,79 @@ class CommandSkill : Tracker {
             // insertCommonStrike(characterId,factionid,"ntw20_wildhunt",c_pos,aim_pos);
 
         }
+    }
+
+    // HS.50 星孛劫火
+    void excuteHS50Skill(int characterId, int playerId, SkillModifer@ modifer) {
+        if (excuteCooldownCheck(m_metagame, characterId, modifer, playerId, "HS50", true, "charge_recover_all", 5)) return;
+        if (checkCooldown(characterId, modifer, "HS50_ROF", true)) return;
+
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character is null) return;
+        if (!canCastSkill(character)) return;
+
+        const XmlElement@ playerInfo = getPlayerInfo(m_metagame, playerId);
+        if (playerInfo is null) return;
+        if (!playerInfo.hasAttribute("aim_target")) {
+            if (!checkCooldown(characterId, modifer, "HS50", true)) {
+                modifer.setCooldownMinus(0);
+                modifer.setCooldownReduction(1.0);
+                addCooldown("HS50", 3, characterId, modifer);
+            }
+            return;
+        }
+
+        Vector3 aimPos = stringToVector3(playerInfo.getStringAttribute("aim_target"));
+        Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+        int factionId = character.getIntAttribute("faction_id");
+        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+        tasker.add(DelayAntiTankSnipeRequest(m_metagame, 1.0, characterId, factionId, "snipe_blast_30.projectile", c_pos.add(Vector3(0,0.5,0)), aimPos));
+
+        if (!tryaddChargeCount("HS50", characterId, modifer, true)) {
+            addCooldown("HS50", 50, characterId, modifer, "charge_recover_all");
+            tryaddChargeCount("HS50", characterId, modifer, true);
+        }
+
+        addCooldown("HS50_ROF", 1.0, characterId, modifer, "nohint");
+        playAnimationKey(m_metagame, characterId, "crouching aiming, RF skill 1s", false);
+    }
+
+    // PTRD 阻断射击
+    void excutePTRDSkill(int characterId, int playerId, SkillModifer@ modifer) {
+        if (excuteCooldownCheck(m_metagame, characterId, modifer, playerId, "PTRD", true, "charge_recover_1", 7)) return;
+
+        int stacks = 7;
+        int cdIndex = getCooldownIndex(characterId, modifer, "PTRD", true);
+        if (cdIndex != -1) {
+            stacks = 7 - SkillArray[cdIndex].m_charge;
+            if (stacks < 1) stacks = 1;
+            if (stacks > 7) stacks = 7;
+        }
+
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character is null) return;
+        if (!canCastSkill(character)) return;
+
+        const XmlElement@ playerInfo = getPlayerInfo(m_metagame, playerId);
+        if (playerInfo is null) return;
+        if (!playerInfo.hasAttribute("aim_target")) return;
+
+        Vector3 aimPos = stringToVector3(playerInfo.getStringAttribute("aim_target"));
+        Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+        int factionId = character.getIntAttribute("faction_id");
+        // _log("PTRD现在有几层：" + stacks);
+        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+        tasker.add(DelayAntiTankSnipeRequest(m_metagame, 2.0, characterId, factionId, "snipe_blast_20.projectile", c_pos.add(Vector3(0,0.5,0)), aimPos, stacks));
+
+        if (cdIndex != -1) {
+            SkillArray[cdIndex].m_time = SkillArray[cdIndex].m_inittime;
+            SkillArray[cdIndex].setCharge(7);
+        } else {
+            addCooldown("PTRD", 10, characterId, modifer, "charge_recover_1", false);
+            int j = getCooldownIndex(characterId, modifer, "PTRD", true);
+            if (j != -1) SkillArray[j].setCharge(7);
+        }
+
+        playAnimationKey(m_metagame, characterId, "crouching aiming, RF skill 2s", false);
     }
 }
