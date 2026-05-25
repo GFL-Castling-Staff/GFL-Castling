@@ -153,8 +153,10 @@ class XmlElement {
 		const XmlElement@ element = null;
 		array<dictionary>@ childrenData = null;
 		if (m_data.exists("Children") && m_data.get("Children", @childrenData)) {
-			XmlElement child(childrenData[0]);
-			@element = child;
+			if (childrenData.size() > 0) {
+				XmlElement child(childrenData[0]);
+				@element = child;
+			}
 		}
 		return element;
 	}
@@ -203,7 +205,7 @@ class XmlElement {
 		if(index < 0){return;}
 		array<dictionary>@ childrenData = null;
 		if (m_data.exists("Children") && m_data.get("Children", @childrenData)) {
-			if(index >= int(childrenData.size()) || childrenData is null){return;}
+			if(childrenData is null || index >= int(childrenData.size())){return;}
 			const XmlElement child(childrenData[index]);
 			if(tagName == child.getName()){
 				childrenData.removeAt(index);
@@ -272,6 +274,7 @@ class XmlElement {
 			array<dictionary>@ childrenData = null;
 			if (m_data.exists("Children") && m_data.get("Children", @childrenData)) {
 				for (uint j = 0; j < childrenData.size(); ++j) {
+					if (childrenData[j] is null) {continue;}
 					const XmlElement child(childrenData[j]);
 					result += "    " + child.toString();
 				}
@@ -297,6 +300,7 @@ class XmlElement {
 			array<dictionary>@ childrenData = null;
 			if (m_data.exists("Children") && m_data.get("Children", @childrenData)) {
 				for (uint j = 0; j < childrenData.size(); ++j) {
+					if (childrenData[j] is null) {continue;}
 					const XmlElement child(childrenData[j]);
 					result += "    " + child.toStringWithFloats();
 				}
