@@ -475,7 +475,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 			// CallMarkerConfig("gk_repair_fairy.call", "call_marker_drop", 12, 0.5),
 			CallMarkerConfig("gk_medic_agl.call", "call_marker", 7, 0.5, 5.0),
 			CallMarkerConfig("target.call", "call_marker_drop", 7, 0.5, 5.0),
-			CallMarkerConfig("gk_rescue_fairy.call", "call_marker", 7, 0.5, 5.0),
+			// CallMarkerConfig("gk_rescue_fairy.call", "call_marker", 7, 0.5, 5.0),
 
 			CallMarkerConfig("kcco_argo_carina.call", "call_marker", 6, 0.5, 30.0),
 			CallMarkerConfig("kcco_argo_puppis.call", "call_marker", 6, 0.5, 30.0),

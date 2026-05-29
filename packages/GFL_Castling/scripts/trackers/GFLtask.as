@@ -1583,6 +1583,47 @@ class Skill_ff_dreamer : DelaySkill {
 }
 
 
+class Event_call_rescue_fairy : event_call_task_hasMarker {
+	void start() {
+		m_timeLeft = m_time;
+		m_timeLeft_internal = 0;
+		m_pos1 = e_pos.add(Vector3(0, 40, 0));
+		m_pos2 = e_pos;
+		m_excute_Limit = 4;
+	}
+
+	Event_call_rescue_fairy(GameMode@ metagame, float time, int cId, int fId, Vector3 start_pos, Vector3 target_pos, string mode="", int markid=0) {
+		super(metagame, time, cId, fId, start_pos, target_pos, mode, markid);
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0) {m_timeLeft -= time; return;}
+		if(m_timeLeft_internal >= 0) {m_timeLeft_internal -= time; return;}
+		if (m_excute_time >= m_excute_Limit) {m_end = true; return;}
+		m_excute_time++;
+
+		if(m_excute_time == 1) {
+			playSoundAtLocation(m_metagame,"artillery_barrage_1.wav",m_faction_id,m_pos2,1.0);
+			m_timeLeft_internal = 1.0;
+		}
+		else if(m_excute_time == 2) {
+			CreateDirectProjectile(m_metagame, m_pos1, m_pos2, "smoke_grenade.projectile", m_character_id, m_faction_id, 20);
+			m_timeLeft_internal = 2.0;
+		}
+		else if(m_excute_time == 3) {
+			playSoundAtLocation(m_metagame,"artillery_barrage_2.wav",m_faction_id,m_pos2,1.0);
+			m_timeLeft_internal = 1.0;
+		}
+		else if(m_excute_time == 4) {
+			Vector3 medical_spawn = m_pos2.add(Vector3(0, 20, 0));
+			for(int i = 0; i < 8; i++) {
+				Vector3 offset = Vector3(rand(-3.0, 3.0), rand(-6.0, 6.0), rand(-3.0, 3.0));
+				CreateDirectProjectile(m_metagame, medical_spawn.add(offset), m_pos2.add(offset), "medical_agl_call.projectile", m_character_id, m_faction_id, 5);
+			}
+		}
+	}
+}
+
 class Event_call_bombardment_fairy_82mm_mortar : event_call_task_hasMarker {
 
 	string m_airstrike_key_alt="";
