@@ -233,6 +233,11 @@ class ItemDropEvent : Tracker {
                 deleteItemInBackpack(m_metagame,cId,"weapon",key);
                 addMutilItemInBackpack(m_metagame,cId,"weapon","gkw_consume_m202.weapon",6);
             }
+            else if(key == "pack_repair_grenade")
+            {
+                deleteItemInBackpack(m_metagame,cId,"weapon",key);
+                addMutilItemInBackpack(m_metagame,cId,"projectile","hand_repair_grenade.projectile",8);
+            }
         }
         if (type_id == 1){
             string itemKey = event.getStringAttribute("item_key");

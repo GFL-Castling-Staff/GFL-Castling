@@ -20,4 +20,9 @@
         <hud_icon filename="pack_m202_6x.png" />
         <inventory encumbrance="0.0" buy_price="60.0" sell_price="0"/>
     </weapon>
+    <weapon file="call_ui.base_weapon" key="pack_repair_grenade">
+        <specification name="Single-Unit Nano Repair Device 8-Pack" slot="1"/>
+        <hud_icon filename="pack_repair_grenade_8x.png" />
+        <inventory encumbrance="0.0" buy_price="240.0" sell_price="0"/>
+    </weapon>
 </weapons>

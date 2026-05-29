@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources clear_weapons="1" clear_carry_items="1">
+<resources clear_weapons="1" clear_carry_items="1" clear_grenades="1">
 	<weapon key="gkw_hvy_qlz04.weapon" />
 	<weapon key="gkw_hvy_ags30.weapon" />
 	<weapon key="gkw_hvy_m2.weapon" />
@@ -7,7 +7,7 @@
 	<weapon key="gkw_hvy_mk153.weapon" />
 	<weapon key="gkw_type100_banzai.weapon" />
 	<weapon key="gkw_hvy_at4.weapon" />
-	<weapon key="target.weapon" />
+	<!-- <weapon key="target.weapon" /> -->
 	<weapon key="gkr_bbs.weapon" />
 	<weapon key="gkw_hvy_qlz04_ai.weapon" />
 	<weapon key="gkw_hvy_m2_ai.weapon" />
@@ -23,17 +23,32 @@
 
 	<weapon key="medikit.weapon" />
 	<weapon key="vest_repair.weapon" />
+	<weapon key="vest_repair_plate.weapon" />
 	<weapon key="gkw_consume_at4.weapon"/>
 	<weapon key="gkw_88rocker.weapon" />
-    <weapon key="deploy_kit_tow.weapon"/>
+	<weapon key="gkw_consume_m202.weapon" />
+	<weapon key="deploy_kit_tow.weapon"/>
 
+	<weapon key="pack_vest_repair_plate_x10" />
+	<weapon key="pack_c4_x8" />
 	<weapon key="pack_88rocket" />
+	<weapon key="pack_m202" />
+	<weapon key="pack_repair_grenade" />
 
     <weapon key="gkw_deploy_bunker.weapon" />
     <weapon key="gkw_deploy_bunker_tow.weapon" />
 
 	<projectile key="hand_88grenade.projectile" />
+	<projectile key="hand_atgrenade.projectile" />
+    <projectile key="at_mine.projectile" />
+    <projectile key="hand_golyat.throwable" />
+    <projectile key="hand_golyat_b.throwable" />
 	<projectile key="c4.projectile" />
+	<projectile key="hand_repair_grenade.projectile" />
+	<projectile key="smoke_device.projectile" />
+	<projectile key="flare.projectile" />
+	<projectile key="fairy_command_target.projectile" />
+    <projectile key="fairy_command_mine.projectile" />
 
 	<carry_item key="exo_t5_16lab.carry_item" />
 </resources>
