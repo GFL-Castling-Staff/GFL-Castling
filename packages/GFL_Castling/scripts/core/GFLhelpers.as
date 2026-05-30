@@ -1049,9 +1049,11 @@ void deleteItemToGrenadeSlot(Metagame@ metagame,int cid,uint num,string m_key,st
 	metagame.getComms().send(c);
 }
 
-void GrenadeSupply(Metagame@ metagame,int cid,uint num,string m_key,string m_type="projectile")
+void GrenadeSupply(Metagame@ metagame,int cid,uint num,string m_key,string add_type="normal",string m_type="projectile",bool check_list=true)
 {
-	if(resupply_grenade_list.find(m_key)==-1) return;
+	if(check_list && resupply_grenade_list.find(m_key)==-1) return;
+	if (!resupply_grenade_index.exists(m_key)) return;
+	if(add_type=="asindex") num = uint(resupply_grenade_index[m_key]);
 	_log("adding grenade weapon");
 	addItemToGrenadeSlot(metagame,cid,num,m_key,m_type);
 }
@@ -1105,15 +1107,14 @@ array<const XmlElement@>@ getEnemyCharactersNearPosition(GameMode@ metagame, con
 	return affectedCharacter;
 }
 
-void GrenadeSupplyGroup(Metagame@ metagame,array<const XmlElement@>@ characters,uint num,string add_type="normal",string m_type="projectile")
+void GrenadeSupplyGroup(Metagame@ metagame,array<const XmlElement@>@ characters,uint num,string add_type="normal",string m_type="projectile",bool check_list=true)
 {
 	for (uint i = 0; i < characters.length(); i++) {
 		int luckyhealguyid = characters[i].getIntAttribute("id");
 		if (!checkCharacterIdisPlayerOwn(luckyhealguyid)) continue;
 		string key = getPlayerWeaponFromListByID(luckyhealguyid,2);
 		if(key == "-nan-") continue;
-		if(add_type=="asindex") num = uint(resupply_grenade_index[key]);
-		GrenadeSupply(metagame,luckyhealguyid,num,key,m_type);
+		GrenadeSupply(metagame,luckyhealguyid,num,key,add_type,m_type,check_list);
 	}
 }
 
