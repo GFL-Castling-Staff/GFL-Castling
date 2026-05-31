@@ -168,6 +168,7 @@
         {"hand_atgrenade.projectile",4},
         {"at_mine.projectile",3},
         {"smoke_device.projectile",2},
+        {"hand_repair_grenade.projectile",2},
         {"c4.projectile",2},
         {"hand_golyat_b.throwable",2},
         {"hand_golyat.throwable",1}
