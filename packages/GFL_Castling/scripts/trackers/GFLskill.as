@@ -1813,6 +1813,14 @@ class GFLskill : Tracker {
                 startChainEffectFromCandidates(m_metagame, characterId, factionid, strikePos, def, candidateIds, candidatePositions);
 				break;
             }
+			case 69: { //修甲手雷
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					healCharacter(m_metagame,characterId,4);
+				}
+				break;
+			}
             default:
                 break;
 		}

@@ -193,7 +193,7 @@ dictionary gameSkillIndex = {
 
         {"evo3_skill",62},
 
-        //强无敌空投，暂时弃用
+        //强无敌空投
         {"manticore_summon",63},
 
         {"spawn_gager_knight",64},
@@ -206,6 +206,8 @@ dictionary gameSkillIndex = {
         {"kcco_minotauros_rockets",67},
 
         {"ots14_chain_scan",68},
+
+        {"gk_repair_grenade",69},
 
 
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
