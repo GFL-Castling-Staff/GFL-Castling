@@ -1746,16 +1746,17 @@ class GFLskill : Tracker {
                 Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
 				int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,factionid,grenade_pos,10);
 				if(luckyGuyid!=-1){
+					playAnimationKey(m_metagame,characterId,"teslatrooper_skill",false);
                     const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
                     Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
 					spawnStaticProjectile(m_metagame,"kcco_teslatrooper_warn.projectile",luckyGuyPos,characterId,factionid);
 					Vector3 targetPos = luckyGuyPos.add(Vector3(rand(-1.0,1.0),0.0,rand(-1.0,1.0)));
 					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-					DelayC2PProjectileSet_H@ new_task_s = DelayC2PProjectileSet_H(m_metagame,1.0,characterId,factionid,"kcco_teslatrooper_rocket.projectile",targetPos,26.0,2.0,2.5,"Teslatrooper_fire_FromBF5.wav",1.1);
+					DelayC2PProjectileSet_H@ new_task_s = DelayC2PProjectileSet_H(m_metagame,1.0,characterId,factionid,"kcco_teslatrooper_rocket.projectile",targetPos,26.0,2.0,2.0,"Teslatrooper_fire_FromBF5.wav",1.1);
 					tasker.add(new_task_s);
 					for (uint i=1; i<5; i++) {
 						targetPos = luckyGuyPos.add(Vector3(rand(-1.0,1.0),0.0,rand(-1.0,1.0)));
-						DelayC2PProjectileSet_H@ new_task = DelayC2PProjectileSet_H(m_metagame,0.01,characterId,factionid,"kcco_teslatrooper_rocket.projectile",targetPos,26.0,2.0,2.5);
+						DelayC2PProjectileSet_H@ new_task = DelayC2PProjectileSet_H(m_metagame,0.01,characterId,factionid,"kcco_teslatrooper_rocket.projectile",targetPos,26.0,2.0,2.0);
 						tasker.add(new_task);
 					}
                 }
