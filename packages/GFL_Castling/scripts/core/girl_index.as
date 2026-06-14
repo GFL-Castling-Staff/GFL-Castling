@@ -1866,7 +1866,10 @@ array<string> gk_weapon_hvy_nerfed = {
     "gkw_hvy_qlz04.weapon",
     "gkw_hvy_qlz04_st.weapon",
     "gkw_hvy_mk47.weapon",
-    "gkw_hvy_mk47_skill.weapon"
+    "gkw_hvy_mk47_skill.weapon",
+    "ff_excutioner_2.weapon",
+    "ff_parw_alina.weapon",
+    "ff_parw_alina_skin.weapon"
 };
 
 array<string> gk_weapon_sf_nerfed = {
