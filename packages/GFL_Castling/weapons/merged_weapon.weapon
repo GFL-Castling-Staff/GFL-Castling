@@ -146509,7 +146509,7 @@
 
 <weapon key="pack_vest_repair_plate_x10" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" player_death_drop_owner_lock_time="0">
 	<specification name="I.O.P. Bulletproof Plates 10-Pack" slot="1" retrigger_time="10" accuracy_factor="1.0" spread_range="0" stance_accuracy_rate="1.0" sustained_fire_grow_step="1" sustained_fire_diminish_rate="1" magazine_size="0" class="0" sight_range_modifier="1.0" projectiles_per_shot="1" projectile_speed="10.0" barrel_offset="0.9" carry_in_two_hands="0"/>
-	<hud_icon filename="gki_plate_10x.png"/>
+	<hud_icon filename="pack_plate_10x.png"/>
 	<inventory encumbrance="0.0" buy_price="300.0" sell_price="0"/>
 	<animation key="recoil" animation_key="recoil, hip fire"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1"/>
@@ -146598,7 +146598,7 @@
 
 <weapon key="pack_c4_x8" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" player_death_drop_owner_lock_time="0">
 	<specification name="C4 8-Pack" slot="1" retrigger_time="10" accuracy_factor="1.0" spread_range="0" stance_accuracy_rate="1.0" sustained_fire_grow_step="1" sustained_fire_diminish_rate="1" magazine_size="0" class="0" sight_range_modifier="1.0" projectiles_per_shot="1" projectile_speed="10.0" barrel_offset="0.9" carry_in_two_hands="0"/>
-	<hud_icon filename="hud_c4_8x.png"/>
+	<hud_icon filename="pack_c4_8x.png"/>
 	<inventory encumbrance="0.0" buy_price="240.0" sell_price="0"/>
 	<animation key="recoil" animation_key="recoil, hip fire"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1"/>
@@ -165026,4 +165026,3 @@
 </weapon>
 
 </weapons>
-
