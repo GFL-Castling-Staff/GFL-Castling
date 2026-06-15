@@ -61,7 +61,7 @@
         sustained_fire_grow_step="0.8" 
         sustained_fire_diminish_rate="4.0"
         magazine_size="250" 
-        stance_accuracy_rate="1.0"
+        stance_accuracy_rate="4.0"
         suppressed="0" 
         name="PK-[Terminating Barrage]" 
         class="0" 
@@ -114,14 +114,14 @@
         <modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
         <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-        <stance state_key="running" accuracy="0.2"/>
-        <stance state_key="walking" accuracy="0.45"/>
-        <stance state_key="crouch_moving" accuracy="1.2" />
-        <stance state_key="standing" accuracy="1.2" />
-        <stance state_key="crouching" accuracy="1.2" />
-        <stance state_key="prone" accuracy="1.2" />
-        <stance state_key="prone_moving" accuracy="1.2" />
-        <stance state_key="over_wall" accuracy="1.2" />
+		<stance state_key="running" accuracy="1"/>
+        <stance state_key="walking" accuracy="1"/>
+        <stance state_key="crouch_moving" accuracy="1"/>
+        <stance state_key="prone_moving" accuracy="1"/>
+        <stance state_key="standing" accuracy="1"/>
+        <stance state_key="crouching" accuracy="1"/>
+        <stance state_key="prone" accuracy="1"/>
+        <stance state_key="over_wall" accuracy="1"/>
         <modifier class="speed" value="-6.0" />
         <modifier class="hit_success_probability" value="-0.4" />
     </weapon>
