@@ -77,7 +77,7 @@ key="kcco_cerynitis.weapon">
     <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
     <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
-
+    <target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
 </weapon>
 
 <weapon on_ground_up="0 0 1" 
@@ -160,6 +160,7 @@ key="kcco_cerynitis_swap.weapon">
     <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
 	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0" />
     <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
+    <target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
 
 </weapon>
 </weapons>

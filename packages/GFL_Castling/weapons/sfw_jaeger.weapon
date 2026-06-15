@@ -36,8 +36,9 @@
     <model filename="sfw_jaeger.xml" />
     <hud_icon filename="sfw_jaeger.png" />
 
-
-
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+    <target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>     
+    <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0"/>
 
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet_sf.projectile">
