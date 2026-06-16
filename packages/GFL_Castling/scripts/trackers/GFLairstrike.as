@@ -143,6 +143,7 @@ dictionary airstrikeIndex = {
         {"rocket_missile",117},
         {"rocket_bm30_2round",118},
         {"rocket_bm21_24round",119},
+        {"rocket_missile_beta",132},
 
         {"ntw20_wildhunt",2110},
 
@@ -881,7 +882,13 @@ class GFLairstrike : Tracker {
                 case 131:{ //单发航弹 滑翔航弹
                     CreateDirectProjectile(m_metagame,start_pos,end_pos,"artillery_shell_airstrike_bomber_gamma.projectile",cid,fid,30);
                     Airstrike_strafe.removeAt(a);
-                    break;                    
+                    break;
+                }
+
+                case 132:{ // 火箭妖精beta — 200伤害巡曳飞弹
+                    CreateDirectProjectile(m_metagame,start_pos,end_pos,"fairy_rocket_cruise_missile_beta.projectile",cid,fid,125);
+                    Airstrike_strafe.removeAt(a);
+                    break;
                 }
 
                 case 105:{ // cas 23mm

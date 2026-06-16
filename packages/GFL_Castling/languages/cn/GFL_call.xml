@@ -163,22 +163,29 @@
 	<text key="Hint - call - title - call_ui_t2_bombardment_fairy_170mm_cannon" text="炮击妖精 - 170mm加农炮" />
 	<text key="Hint - call - intro - call_ui_t2_bombardment_fairy_170mm_cannon" text="<冷却时间 90秒 消耗 30战术点>
 -标定目标点，5秒后开火，加农炮弹对范围15造成120的blast伤害
--弹着点并不精准，与实际位置存在距离10的误差"/>
+-弹着点并不精准，与实际位置存在最大10范围的误差"/>
 
-	<!-- <text key="Hint - call - title - call_ui_t2_bombardment_fairy_170mm_cannon_update_alpha" text="炮击妖精 - 170mm加农炮" />
+	<text key="Hint - call - title - call_ui_t2_bombardment_fairy_170mm_cannon_update_alpha" text="炮击妖精 - 170mm加农炮" />
 	<text key="Hint - call - intro - call_ui_t2_bombardment_fairy_170mm_cannon_update_alpha" text="<冷却时间 90秒 消耗 30战术点>
--标定目标点，5秒后开火，加农炮弹对范围15造成100的blast伤害
--弹着点并不精准，与实际位置存在距离10的误差"/>
+-标定目标点后立刻开火，加农炮弹对范围15造成120的blast伤害
+-弹着点无偏差
+#####分支α[资深炮兵]#####
+(标定后立刻开火，偏差范围降低至0)"/>
 
 	<text key="Hint - call - title - call_ui_t2_bombardment_fairy_170mm_cannon_update_beta" text="炮击妖精 - 170mm加农炮" />
-	<text key="Hint - call - intro - call_ui_t2_bombardment_fairy_170mm_cannon_update_beta" text="<冷却时间 90秒 消耗 30战术点>
--标定目标点，5秒后开火，加农炮弹对范围15造成100的blast伤害
--弹着点并不精准，与实际位置存在距离10的误差"/>
+	<text key="Hint - call - intro - call_ui_t2_bombardment_fairy_170mm_cannon_update_beta" text="<冷却时间 45秒 消耗 20战术点>
+-标定目标点，5秒后开火，加农炮弹对范围15造成120的blast伤害
+-弹着点并不精准，与实际位置存在最大10范围的误差
+#####分支β[固定阵地]#####
+(冷却时间减少至45秒，战术点消耗降低至20)"/>
 
 	<text key="Hint - call - title - call_ui_t2_bombardment_fairy_170mm_cannon_update_gamma" text="炮击妖精 - 170mm加农炮" />
 	<text key="Hint - call - intro - call_ui_t2_bombardment_fairy_170mm_cannon_update_gamma" text="<冷却时间 90秒 消耗 30战术点>
--标定目标点，5秒后开火，加农炮弹对范围15造成100的blast伤害
--弹着点并不精准，与实际位置存在距离10的误差"/> -->
+-标定目标点，5秒后三门加农炮同时开火，每发加农炮弹对范围15造成120的blast伤害
+-弹着点并不精准，三发炮弹在最大12范围误差偏移的基础上各自有最大5范围的误差偏移
+#####分支γ[饱和打击]#####
+(现在一次有三门加农炮开火，但着弹误差略微增大)"/>
+
 
 	<!-- 空袭妖精 - 高空投弹 -->
 
@@ -196,7 +203,7 @@
 -角色死亡燃烧结算会中止
 -(该支援受空域禁制影响)
 #####分支α[炼狱龙炎]#####
-(使用凝固汽油弹，航弹爆炸后生成持续20秒的强腐蚀性燃烧区域，每4秒结算一次伤害，每次对范围12内的敌人造成20的后续燃烧伤害。)
+(使用凝固汽油弹，航弹爆炸后生成持续20秒的强腐蚀性燃烧区域，每4秒结算一次伤害，每次对范围12内的敌人造成20的后续燃烧伤害)
 "/>
 
 	<text key="Hint - call - title - call_ui_t2_airstrike_fairy_bomber_update_beta" text="空袭妖精 - 高空投弹" />
@@ -477,14 +484,6 @@
 (不再造成伤害，而改为在指定地点抛射铺设20个高爆反人员地雷，地雷触发后对范围8的敌人造成20x3.1的伤害)
 "/>
 
-<!-- <text key="Hint - call - title - call_ui_t1_rocket_fairy_missile_update_gamma" text="火箭妖精 - 巡曳飞弹" />
-<text key="Hint - call - intro - call_ui_t1_rocket_fairy_missile_update_gamma" text="<冷却时间 90秒 消耗 25战术点>
--使用后每秒刷新一次位置，3秒后在鼠标标点位置落下导弹
--导弹在指定地点布设20个高爆反人员地雷
--地雷触发后会对范围8的敌人造成20x3.1的伤害
-#####分支γ[布雷套件]#####
-(不再造成伤害，而改为在指定地点抛射铺设20个高爆反人员地雷，地雷触发后对范围8的敌人造成20x3.1的伤害)
-"/> -->
 
 	<text key="Hint - call - title - call_ui_t2_rocket_fairy_bm30" text="火箭妖精 - 火箭弹打击" />
 	<text key="Hint - call - intro - call_ui_t2_rocket_fairy_bm30" text="<冷却时间 90秒 消耗 50战术点>
