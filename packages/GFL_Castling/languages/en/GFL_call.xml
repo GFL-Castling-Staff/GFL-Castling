@@ -385,9 +385,44 @@
 -Marks the target point, then calls in a vertical takeoff and landing fighter from the base for a single aerial bombardment of the target point.
 -Drops a total of 2 aerial bombs, each doing 50 blast damage at range 7.5
 -Switches to hover mode for the next 30 seconds, sentrying the area around the caller.
--Fires the Gsh-30-1 cannon every 2 seconds at enemies within a 45 radius of the character.
+-Fires the Gsh-30-1 cannon every 2 seconds at enemies within a 55 radius of the character.
 -Does 5.0 blast damage per round at range 4
 -(This support is affected by airspace bans)"/>
+
+	<text key="Hint - call - title - call_ui_t2_warrior_fairy_vtol_sentry_update_alpha" text="Warrior Fairy - VTOL Jet" />
+	<text key="Hint - call - intro - call_ui_t2_warrior_fairy_vtol_sentry_update_alpha" text="<cooldown 150s cost 60TP>
+-Marks the target point, then calls in a vertical takeoff and landing fighter from the base for a single aerial bombardment of the target point.
+-Drops a total of 2 aerial bombs, each doing 50 blast damage at range 7.5
+-Switches to hover mode for the next 30 seconds, sentrying the area around the caller.
+-Fires the Gsh-30-1 cannon every 2 seconds at 2 enemies within a 55 radius of the character.
+-Does 6.1 blast damage per round at range 5.0
+-(This support is affected by airspace bans)
+#####Branch α[Cannon Iteration]#####
+(Engages 2 targets per strafe, the number of projectiles increases, and projectile damage increased to 6.1b at range 5.0)"/>
+
+	<text key="Hint - call - title - call_ui_t2_warrior_fairy_vtol_sentry_update_beta" text="Warrior Fairy - VTOL Jet" />
+	<text key="Hint - call - intro - call_ui_t2_warrior_fairy_vtol_sentry_update_beta" text="<cooldown 150s cost 60TP>
+-Marks the target point, then calls in a vertical takeoff and landing fighter from the base for a single aerial bombardment of the target point.
+-Drops a total of 2 aerial bombs, each doing 50 blast damage at range 7.5
+-Switches to hover mode for the next 30 seconds, sentrying the area around the caller.
+-Fires the Gsh-30-1 cannon every 2 seconds at enemies within a 55 radius of the character, restoring 2 armor to the guarded character at the same time.
+-Does 5.0 blast damage per round at range 4
+-If the character is downed, forcibly revives them and restores 10 armor, and performs an additional strafe on nearby enemies (limited to 1 rescue)
+-(This support is affected by airspace bans)
+#####Branch β[Conjugate Guardian]#####
+(Restores 2 armor per strafe; one-time revive with 10 armor and extra strafe when downed)"/>
+
+	<text key="Hint - call - title - call_ui_t2_warrior_fairy_vtol_sentry_update_gamma" text="Warrior Fairy - VTOL Jet" />
+	<text key="Hint - call - intro - call_ui_t2_warrior_fairy_vtol_sentry_update_gamma" text="<cooldown 150s cost 60TP>
+-Marks the target point, then calls in a vertical takeoff and landing fighter from the base for a single aerial bombardment of the target point.
+-Drops a total of 2 aerial bombs, each doing 50 blast damage at range 7.5
+-Switches to hover mode for the next 60 seconds, sentrying the area around the caller.
+-Fires the Gsh-30-1 cannon every 2 seconds at enemies within a 55 radius of the character.
+-Does 5.0 blast damage per round at range 4
+-(This support is affected by airspace bans)
+#####Branch γ[Extended Cruise]#####
+(VTOL hover sentry duration extended to 60 seconds)"/>
+
 
 	<!-- Warrior Fairy - Attack Helicopter -->
 
@@ -446,8 +481,29 @@
 
 	<text key="Hint - call - title - call_ui_t2_rocket_fairy_bm30" text="Rocket Fairy - Rocket Artillery" />
 	<text key="Hint - call - intro - call_ui_t2_rocket_fairy_bm30" text="<cooldown 90s cost 50TP>
--Marks target point, then fires a total of 10 300mm rockets, 2 per second
+-Marks target point, then fires a total of 10 300mm rockets, 2 rockets every 2 seconds
 -Rockets land randomly in the area, dealing 30 blast damage at range 8.0"/>
+
+	<text key="Hint - call - title - call_ui_t2_rocket_fairy_bm30_update_alpha" text="Rocket Fairy - Rocket Artillery" />
+	<text key="Hint - call - intro - call_ui_t2_rocket_fairy_bm30_update_alpha" text="<cooldown 90s cost 50TP>
+-Marks target point, then fires a total of 20 300mm rockets, 2 rockets per second
+-Rockets land randomly in the area, dealing 30 blast damage at range 8.0
+#####Branch α[Rapid Fire Formation]#####
+(Fire interval halved, total rocket count increased to 20)"/>
+
+	<text key="Hint - call - title - call_ui_t2_rocket_fairy_bm30_update_beta" text="Rocket Fairy - Rocket Artillery" />
+	<text key="Hint - call - intro - call_ui_t2_rocket_fairy_bm30_update_beta" text="<cooldown 75s cost 30TP>
+-Marks target point, then fires a total of 10 300mm rockets, 2 rockets every 2 seconds
+-Rockets land randomly in the area, dealing 30 blast damage at range 8.0
+#####Branch β[Field Mobility]#####
+(Changed to 3-point charge system, charge time reduced to 75s, tactical point cost reduced to 30)"/>
+
+	<text key="Hint - call - title - call_ui_t2_rocket_fairy_bm30_update_gamma" text="Rocket Fairy - Rocket Artillery" />
+	<text key="Hint - call - intro - call_ui_t2_rocket_fairy_bm30_update_gamma" text="<cooldown 90s cost 50TP>
+-Marks target point, then fires a total of 10 300mm rockets, 2 rockets every 2 seconds
+-Rockets prioritize targeting enemies in the area, dealing 30 blast damage at range 8.0
+#####Branch γ[Smart Fire Control]#####
+(Each rocket now prioritizes targeting enemies rather than random impact points)"/>
 
 	<!-- Rocket Fairy - Aircraft Rush -->
 

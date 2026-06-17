@@ -474,6 +474,10 @@
         {"call_ui_t1_rocket_fairy_missile_update_beta",500},
         {"call_ui_t1_rocket_fairy_missile_update_gamma",500},
 
+        {"call_ui_t2_rocket_fairy_bm30_update_alpha",750},
+        {"call_ui_t2_rocket_fairy_bm30_update_beta",750},
+        {"call_ui_t2_rocket_fairy_bm30_update_gamma",750},
+
         {"call_ui_t2_bombardment_fairy_170mm_cannon_update_alpha",250},
         {"call_ui_t2_bombardment_fairy_170mm_cannon_update_beta",250},
         {"call_ui_t2_bombardment_fairy_170mm_cannon_update_gamma",250},
@@ -485,6 +489,10 @@
         {"call_ui_t2_warrior_fairy_recon_heli_update_alpha",2000},
         {"call_ui_t2_warrior_fairy_recon_heli_update_beta",2000},
         {"call_ui_t2_warrior_fairy_recon_heli_update_gamma",2000},
+
+        {"call_ui_t2_warrior_fairy_vtol_sentry_update_alpha",1000},
+        {"call_ui_t2_warrior_fairy_vtol_sentry_update_beta",1000},
+        {"call_ui_t2_warrior_fairy_vtol_sentry_update_gamma",1000},
 
         {"666",0}
     };

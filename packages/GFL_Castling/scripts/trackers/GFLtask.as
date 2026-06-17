@@ -2098,13 +2098,19 @@ class Event_call_warrior_fairy_attack_heil : event_call_task_hasMarker {
 class Event_call_warrior_fairy_VTOL : event_call_task_hasMarker {
 	int lucky_vehicle_id = -1;
 	Vector3 m_character_pos;
+	bool m_rescue_used = false;
 	void start(){
 		m_timeLeft=m_time;
 		m_timeLeft_internal = 0;
 		m_pos1=e_pos.add(Vector3(0,40,0));
 		m_pos2=e_pos;
 		sendFactionMessageKey(m_metagame,m_faction_id,"warriorfight");
-		m_excute_Limit = 31;
+		if(m_mode == "gamma") {
+			m_excute_Limit = 61;
+		}
+		else {
+			m_excute_Limit = 31;
+		}
 		m_time_internal = 1.0;
 	}
 
@@ -2114,34 +2120,75 @@ class Event_call_warrior_fairy_VTOL : event_call_task_hasMarker {
 
 	void update(float time) {
 		if(m_timeLeft >= 0){m_timeLeft -= time;return;}
-		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
-		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
+		if(m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
+		if(m_excute_time >= m_excute_Limit){m_end = true;return;}
 		m_timeLeft_internal = m_time_internal;
-		if(m_excute_time % 2 == 0 && m_excute_time!=0)
-		{
-			const XmlElement@ ItsmeInfo = getCharacterInfo(m_metagame, m_character_id);
-			if(ItsmeInfo is null)
-			{
-				m_end = true;
-			}
-			else{
-				if(ItsmeInfo.getIntAttribute("dead")==1) m_end = true;
-				m_character_pos = stringToVector3(ItsmeInfo.getStringAttribute("position"));
-			}
-			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,m_character_pos,55.0f);
-			if(luckyGuyid!=-1){
-				const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
-				if(luckyGuy is null) return;
-				Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
-				float strike_rand = 10.0;
-				float rand_x = rand(-strike_rand,strike_rand);
-				float rand_y = rand(-strike_rand,strike_rand);
-				insertCommonStrike(m_character_id,m_faction_id,"warrior_vtol_strafe",m_character_pos.add(Vector3(rand_x,40,rand_y)),luckyGuyPos);
-			}
+
+		const XmlElement@ ItsmeInfo = getCharacterInfo(m_metagame, m_character_id);
+		if(ItsmeInfo is null) {
+			m_end = true;
+			return;
 		}
-		if(m_excute_time == 0)
-		{
+		if(ItsmeInfo.getIntAttribute("dead")==1) {
+			m_end = true;
+			return;
+		}
+		m_character_pos = stringToVector3(ItsmeInfo.getStringAttribute("position"));
+
+		if(m_excute_time == 0) {
 			insertCommonStrike(m_character_id,m_faction_id,"warrior_vtol_bomb",m_pos1,m_pos2);
+		}
+
+		if(m_excute_time % 2 == 0 && m_excute_time!=0) {
+			if(m_mode == "beta") {
+				if(!m_rescue_used && ItsmeInfo.getIntAttribute("wounded")==1) {
+					m_rescue_used = true;
+					healCharacter(m_metagame, m_character_id, 10);
+					spawnStaticProjectile(m_metagame, "fairy_warrior_vtol_unwound.projectile", m_character_pos, m_character_id, m_faction_id);
+					int enemyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,m_character_pos,55.0f);
+					if(enemyGuyid!=-1) {
+						const XmlElement@ enemyGuy = getCharacterInfo(m_metagame, enemyGuyid);
+						if(enemyGuy !is null) {
+							Vector3 enemyGuyPos = stringToVector3(enemyGuy.getStringAttribute("position"));
+							float strike_rand = 10.0;
+							float rand_x = rand(-strike_rand,strike_rand);
+							float rand_y = rand(-strike_rand,strike_rand);
+							insertCommonStrike(m_character_id,m_faction_id,"warrior_vtol_strafe",m_character_pos.add(Vector3(rand_x,40,rand_y)),enemyGuyPos);
+						}
+					}
+				}
+				else {
+					healCharacter(m_metagame, m_character_id, 2);
+				}
+			}
+
+			if(m_mode == "alpha") {
+				array<const XmlElement@>@ enemies = getEnemyCharactersNearPosition(m_metagame, m_character_pos, m_faction_id, 55.0, 2);
+				if(enemies !is null && enemies.length() > 0) {
+					for(uint i = 0; i < enemies.length(); i++) {
+						int enemyId = enemies[i].getIntAttribute("id");
+						const XmlElement@ enemyInfo = getCharacterInfo(m_metagame, enemyId);
+						if(enemyInfo is null) continue;
+						Vector3 targetPos = stringToVector3(enemyInfo.getStringAttribute("position"));
+						float strike_rand = 10.0;
+						float rand_x = rand(-strike_rand,strike_rand);
+						float rand_y = rand(-strike_rand,strike_rand);
+						insertCommonStrike(m_character_id,m_faction_id,"warrior_vtol_strafe_alpha",m_character_pos.add(Vector3(rand_x,40,rand_y)),targetPos);
+					}
+				}
+			}
+			else {
+				int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,m_character_pos,55.0f);
+				if(luckyGuyid!=-1){
+					const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+					if(luckyGuy is null) return;
+					Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+					float strike_rand = 10.0;
+					float rand_x = rand(-strike_rand,strike_rand);
+					float rand_y = rand(-strike_rand,strike_rand);
+					insertCommonStrike(m_character_id,m_faction_id,"warrior_vtol_strafe",m_character_pos.add(Vector3(rand_x,40,rand_y)),luckyGuyPos);
+				}
+			}
 		}
 		m_excute_time++;
 	}
@@ -2438,9 +2485,24 @@ class Event_call_rocket_fairy_strike : event_call_task_hasMarker {
 		m_timeLeft_internal = 0;
 		m_pos1 = e_pos.add(Vector3(0,50,0));
 		m_pos2 = e_pos;
-		m_excute_Limit = 5;
-		m_time_internal = 2.0;
-		m_airstrike_key = "rocket_bm30_2round";
+		if(m_mode == "alpha")
+		{
+			m_excute_Limit = 10;
+			m_time_internal = 1.0;
+		}
+		else
+		{
+			m_excute_Limit = 5;
+			m_time_internal = 2.0;
+		}
+		if(m_mode == "gamma")
+		{
+			m_airstrike_key = "rocket_bm30_2round_gamma";
+		}
+		else
+		{
+			m_airstrike_key = "rocket_bm30_2round";
+		}
 	}
 
 	Event_call_rocket_fairy_strike(GameMode@ metagame, float time, int cId,int fId,Vector3 characterpos,Vector3 targetpos,string mode,int markerid)
