@@ -2313,7 +2313,7 @@ class Event_call_bombardment_fairy_170mm : event_call_task_hasMarker {
 		}
 		if(m_mode == "gamma")
 		{
-			Vector3 shell_target = getRandomOffsetVectorMinMax(m_pos2,3.0,5.0);
+			Vector3 shell_target = getRandomOffsetVectorMinMax(m_pos2,4.0,8.0);
 			insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos1,shell_target);
 		}
 		else
