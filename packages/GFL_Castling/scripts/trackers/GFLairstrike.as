@@ -143,6 +143,9 @@ dictionary airstrikeIndex = {
         {"rocket_missile",117},
         {"rocket_bm30_2round",118},
         {"rocket_bm21_24round",119},
+        {"rocket_missile_beta",132},
+        {"warrior_vtol_strafe_alpha",133},
+        {"rocket_bm30_2round_gamma",134},
 
         {"ntw20_wildhunt",2110},
 
@@ -881,7 +884,13 @@ class GFLairstrike : Tracker {
                 case 131:{ //单发航弹 滑翔航弹
                     CreateDirectProjectile(m_metagame,start_pos,end_pos,"artillery_shell_airstrike_bomber_gamma.projectile",cid,fid,30);
                     Airstrike_strafe.removeAt(a);
-                    break;                    
+                    break;
+                }
+
+                case 132:{ // 火箭妖精beta — 200伤害巡曳飞弹
+                    CreateDirectProjectile(m_metagame,start_pos,end_pos,"fairy_rocket_cruise_missile_beta.projectile",cid,fid,125);
+                    Airstrike_strafe.removeAt(a);
+                    break;
                 }
 
                 case 105:{ // cas 23mm
@@ -1141,6 +1150,24 @@ class GFLairstrike : Tracker {
                     break;
                 }
 
+                case 133:{ //VTOL alpha strafe
+                    float strike_rand = 2.5;
+                    //每单轮扫射10发
+                    for(int j=1;j<=10;j++)
+                    {
+                        float rand_speed = rand(150,180);
+                        float rand_x = rand(-strike_rand,strike_rand);
+                        float rand_y = rand(-strike_rand,strike_rand);
+                        CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"fairy_warrior_vtol_gsh23_alpha.projectile",cid,fid,rand_speed);
+                    }
+                    array<string> Voice={
+                        "gsh23l_23mm_shot_fromWarthunder.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,2.9);
+                    Airstrike_strafe.removeAt(a);
+                    break;
+                }
+
                 case 116:{ //VTOL Bomb
                     float strike_rand = 3.0;
                     float rand_x = rand(-strike_rand,strike_rand);
@@ -1169,10 +1196,42 @@ class GFLairstrike : Tracker {
                 }
 
                 case 119:{//BM21 122mm
-                    spawnStaticProjectile(m_metagame,"rocket_fairy_cover_24round.projectile",start_pos,cid,fid);	
+                    spawnStaticProjectile(m_metagame,"rocket_fairy_cover_24round.projectile",start_pos,cid,fid);
                     playSoundAtLocation(m_metagame,"bm21_woosh_byBadGoose.wav",fid,start_pos,1.5);
                     Airstrike_strafe.removeAt(a);
-                    break;                        
+                    break;
+                }
+
+                case 134:{//BM30 gamma
+                    float spread_range = 15;
+                    array<const XmlElement@> enemies = getEnemyCharactersNearPosition(m_metagame, end_pos, fid, spread_range, 2);
+
+                    int enemyCount = 0;
+                    if(enemies !is null)
+                    {
+                        for(uint i = 0; i < enemies.length(); i++)
+                        {
+                            int enemyId = enemies[i].getIntAttribute("id");
+                            const XmlElement@ enemyInfo = getCharacterInfo(m_metagame, enemyId);
+                            if(enemyInfo !is null)
+                            {
+                                Vector3 enemyPos = stringToVector3(enemyInfo.getStringAttribute("position"));
+                                spawnStaticProjectile(m_metagame, "fairy_rocket_bm30_300mm.projectile", enemyPos.add(Vector3(0, 50, 0)), cid, fid);
+                                enemyCount++;
+                            }
+                        }
+                    }
+
+                    int remaining = 2 - enemyCount;
+                    for(int i = 0; i < remaining; i++)
+                    {
+                        Vector3 randPos = getRandomOffsetVector(end_pos, spread_range);
+                        spawnStaticProjectile(m_metagame, "fairy_rocket_bm30_300mm.projectile", randPos.add(Vector3(0, 50, 0)), cid, fid);
+                    }
+
+                    playSoundAtLocation(m_metagame, "bm21_woosh_byBadGoose.wav", fid, start_pos, 1.5);
+                    Airstrike_strafe.removeAt(a);
+                    break;
                 }
 
 

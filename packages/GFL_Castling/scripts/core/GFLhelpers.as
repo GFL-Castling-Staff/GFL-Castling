@@ -484,6 +484,16 @@ Vector3 getRandomOffsetVector(Vector3 pos,float strike_randX,float strike_randY)
 	return pos.add(Vector3(rand_x,0,rand_z));
 }
 
+Vector3 getRandomOffsetVectorMinMax(Vector3 pos, float min_offset, float max_offset) {
+	if (max_offset <= 0) return pos;
+	if (min_offset >= max_offset) min_offset = 0;
+	float rand_x = rand(min_offset, max_offset);
+	if (rand(0, 1) == 0) rand_x = -rand_x;
+	float rand_z = rand(min_offset, max_offset);
+	if (rand(0, 1) == 0) rand_z = -rand_z;
+	return pos.add(Vector3(rand_x, 0, rand_z));
+}
+
 void spawnVehicle(Metagame@ metagame, uint count, uint factionId, Vector3 position, Orientation@ dir, string instanceKey) {
 	// if (OutOfRange(position))
 	// {
@@ -1098,9 +1108,9 @@ array<const XmlElement@>@ getEnemyCharactersNearPosition(GameMode@ metagame, con
 		for(uint x=0;x<affectedCharacter2.length();x++){
 			affectedCharacter.insertLast(affectedCharacter2[x]);
 			num_jud += 1;
-			if(num_jud>num_max_character)break;
+			if(num_jud>=num_max_character)break;
 		}
-		if(num_jud>num_max_character)break;
+		if(num_jud>=num_max_character)break;
 	}
 	return affectedCharacter;
 }
