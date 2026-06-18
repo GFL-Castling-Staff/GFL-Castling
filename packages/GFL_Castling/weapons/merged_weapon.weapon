@@ -156917,6 +156917,233 @@
 	<target_factors tag="jeep" distance="1.0" direction="0.0" squad_command="1.0" base_score="5.0"/>
 </weapon>
 
+<weapon key="parw_arachne.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<tag name="elite"/>
+	<tag name="mecha"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="4.5" magazine_size="5" can_shoot_standing="1" can_shoot_prone="0" can_shoot_crouching="0" suppressed="0" name="Arachne" class="4" carry_in_two_hands="1" reload_one_at_a_time="0" sight_range_modifier="1.2" projectile_speed="150" last_burst_retrigger_time="1.0" barrel_offset="0.3" projectiles_per_shot="1" use_basic_muzzle_smoke_effect="0" burst_shots="1" stab_enabled="1" stab_range="5.0"/>
+	<commonness value="0.01" in_stock="1" can_respawn_with="1"/>
+	<inventory encumbrance="20.0" buy_price="0.0" sell_price="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<animation key="reload" animation_key="arachne_reload"/>
+	<animation state_key="hold" animation_key="arachne_still"/>
+	<animation state_key="hold_on_wall" animation_key="arachne_still"/>
+	<animation state_key="still_against_wall" animation_key="arachne_still"/>
+	<animation state_key="hold_casual" animation_key="arachne_casual"/>
+	<animation state_key="running" animation_key="arachne_run"/>
+	<animation state_key="walking" animation_key="arachne_walk"/>
+	<animation state_key="crouching" animation_key="arachne_still"/>
+	<animation state_key="crouch_moving" animation_key="arachne_walk"/>
+	<animation state_key="crouch_moving_backwards" animation_key="arachne_walk"/>
+	<animation state_key="prone_moving" animation_key="arachne_walk"/>
+	<animation key="recoil" animation_key="arachne_recoil_small"/>
+	<animation state_key="stabbing" animation_key="arachne_melee"/>
+	<animation state_key="stabbing" animation_key="arachne_melee_alt"/>
+	<sound key="fire" fileref="type88robot_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.05"/>
+	<sound key="cycle" fileref="type88robot_cycle_FromCOD13.wav" volume="0.4"/>
+	<sound key="magazine_out" fileref="type88robot_mgz_out_FromCOD13.wav" volume="0.4"/>
+	<sound key="magazine_in" fileref="type88robot_mgz_in_FromCOD13.wav" volume="0.4"/>
+	<sound key="cycle_out" fileref="type88robot_cycle_out_FromCOD13.wav" volume="0.4"/>
+	<sound key="cycle_in" fileref="type88robot_cycle_in_FromCOD13.wav" volume="0.4"/>
+	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
+	<sound key="stab" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="2.0"/>
+	<sound key="stab" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="2.0"/>
+	<model/>
+	<hud_icon filename="testing.png"/>
+	<weak_hand_hold offset="0.2"/>
+	<drop_on_death_result class="spawn" instance_class="soldier" instance_key="pard_arachne_clone" min_amount="5" max_amount="8" offset="0 0 0" position_spread="5 0" direction_spread="0 0"/>
+	<projectile class="bullet" name="88type_laser" slot="1" pulldown_in_air="4">
+	<trail probability="1.0" key="laser_hyz"/>
+	<result class="blast" damage="2.0" radius="3.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
+	<trigger class="impact"/>
+	<rotation class="motion"/>
+	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
+	<sound class="result" key="terrain" fileref="ricochet2.wav"/>
+	<sound class="result" key="terrain" fileref="ricochet3.wav"/>
+	<sound class="result" key="terrain" fileref="ricochet4.wav"/>
+	<sound class="result" key="vehicle" copy="terrain"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_01.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_02.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_03.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_04.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_05.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_06.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_07.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_06.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_07.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_06.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_07.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_08.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_08.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="metal_heavy" file="metal_heavy_01.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="metal_heavy" file="metal_heavy_02.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="metal_heavy" file="metal_heavy_03.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="sandbag" file="barrier_bullet_01.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="sandbag" file="barrier_bullet_02.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="sandbag" file="barrier_bullet_03.wav" pitch_variety="0.3" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_01.wav" pitch_variety="0.4" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_01.wav" pitch_variety="0.4" volume="1.0"/>
+	<sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_02.wav" pitch_variety="0.4" volume="1.0"/>
+	<sound class="result" key="static_object" copy="terrain"/>
+	<effect class="result" key="terrain" ref="hitGround_20mm" use_surface_color="1"/>
+	<effect class="result" key="terrain" ref="BulletImpactDust4"/>
+	<effect class="result" key="terrain" ref="BulletImpactDust5"/>
+	<effect class="result" key="terrain" ref="BulletImpactDust6"/>
+	<effect class="result" key="terrain" ref="Ct_Shine" lighting="0"/>
+	<effect class="result" key="terrain" ref="Godray" lighting="0"/>
+	<effect class="result" key="terrain" ref="LowDust"/>
+	<effect class="result" key="terrain" ref="Smoke" post_processing="1"/>
+	<effect class="result" key="terrain" ref="ShadowSmoke" shadow="1"/>
+	<effect class="result" key="vehicle" ref="Burst" use_surface_color="1"/>
+	<effect class="result" key="vehicle" ref="hitMetal"/>
+	<effect class="result" key="vehicle" ref="hitMetal_1"/>
+	<effect class="result" key="vehicle" ref="Ct_Shine" lighting="0"/>
+	<effect class="result" key="vehicle" ref="Godray" lighting="0"/>
+	<effect class="result" key="other" ref="BulletImpact"/>
+	<effect class="result" key="vehicle" ref="BulletImpact"/>
+	<effect class="result" key="terrain" ref="BulletImpact"/>
+	<effect class="result" key="character" ref="BulletImpact"/>
+	<effect class="result" key="shield" ref="BulletImpact"/>
+	<effect class="result" key="static_object" copy="terrain"/>
+	<effect class="result" key="shield" ref="hitMetal"/>
+	<effect class="result" key="shield" ref="hitMetal_1"/>
+	<effect class="result" key="shield" ref="Ct_Shine" lighting="0"/>
+	<effect class="result" key="shield" ref="Godray" lighting="0"/>
+	<effect class="result" key="terrain" ref="ground_break"/>
+	<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1"/>
+	<effect class="result" type="splat_map" surface_tag="" size="4.5" atlas_index="4" layer="0"/>
+	<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="2" additive="0"/>
+	<effect class="activated" ref="hyz_laser_point_trail"/>
+	</projectile>
+	<stance state_key="running" accuracy="0.75"/>
+	<stance state_key="walking" accuracy="0.75"/>
+	<stance state_key="crouch_moving" accuracy="0.75"/>
+	<stance state_key="prone_moving" accuracy="0.75"/>
+	<stance state_key="standing" accuracy="1.0"/>
+	<stance state_key="crouching" accuracy="0.75"/>
+	<stance state_key="prone" accuracy="0.75"/>
+	<stance state_key="over_wall" accuracy="0.75"/>
+	<modifier class="speed" value="0"/>
+	<modifier class="detectability" value="1.0"/>
+	<modifier class="hit_success_probability" value="-0.4"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+</weapon>
+
+<weapon on_ground_up="0 0 1" key="parw_arachne_clone.weapon" time_to_live_out_in_the_open="0" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
+	<tag name="melee"/>
+	<specification retrigger_time="1.0" barrel_offset="0" accuracy_factor="1.0" sustained_fire_diminish_rate="1.2" sustained_fire_grow_step="1.0" magazine_size="100" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="0" suppressed="0" name="Arachne's Clone" class="0" sight_range_modifier="1.0" projectile_speed="1.0" carry_in_two_hands="0" stab_enabled="1" stab_range="3.0"/>
+	<animation key="reload" animation_key="arachne_clone_reload"/>
+	<animation state_key="hold" animation_key="arachne_clone_still"/>
+	<animation state_key="hold_on_wall" animation_key="arachne_clone_still"/>
+	<animation state_key="still_against_wall" animation_key="arachne_clone_still"/>
+	<animation state_key="hold_casual" animation_key="arachne_clone_still"/>
+	<animation state_key="running" animation_key="arachne_clone_run"/>
+	<animation state_key="walking" animation_key="arachne_clone_walk"/>
+	<animation state_key="crouching" animation_key="arachne_clone_still"/>
+	<animation state_key="crouch_moving" animation_key="arachne_clone_walk"/>
+	<animation state_key="crouch_moving_backwards" animation_key="arachne_clone_walk"/>
+	<animation state_key="prone_moving" animation_key="arachne_clone_walk"/>
+	<animation key="recoil" animation_key="arachne_clone_still"/>
+	<animation state_key="stabbing" animation_key="arachne_clone_melee"/>
+	<projectile time_to_live="0.1" class="bullet" name="default" slot="1" pulldown_in_air="4">
+	<result class="hit" kill_probability="0.0" kill_decay_start_time="0.1" kill_decay_end_time="0.1" damage_origin_vehicle="0"/>
+	<trigger class="impact"/>
+	<rotation class="motion"/>
+	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
+	<sound class="result" key="terrain" fileref="ricochet2.wav"/>
+	<sound class="result" key="terrain" fileref="ricochet3.wav"/>
+	<sound class="result" key="terrain" fileref="ricochet4.wav"/>
+	<sound class="result" key="shield" fileref="ricochet5.wav"/>
+	<sound class="result" key="shield" fileref="ricochet6.wav"/>
+	<sound class="result" key="shield" fileref="ricochet7.wav"/>
+	<sound class="result" key="character" fileref="impact_body2.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" fileref="impact_body3.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" fileref="impact_body4.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" fileref="impact_body3.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" fileref="impact_body4.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_1.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_2.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_3.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_4.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_5.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_6.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="vehicle" copy="terrain"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_01.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_02.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_03.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_04.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_05.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_06.wav" pitch_variety="0.3" volume="0.6"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_07.wav" pitch_variety="0.3" volume="0.6"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_06.wav" pitch_variety="0.3" volume="0.6"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_07.wav" pitch_variety="0.3" volume="0.8"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_06.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_07.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_08.wav" pitch_variety="0.3" volume="0.7"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_08.wav" pitch_variety="0.3" volume="0.8"/>
+	<sound class="result" key="vehicle" tag="metal_heavy" file="metal_heavy_01.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="metal_heavy" file="metal_heavy_02.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="metal_heavy" file="metal_heavy_03.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="sandbag" file="barrier_bullet_01.wav" pitch_variety="0.3" volume="0.8"/>
+	<sound class="result" key="vehicle" tag="sandbag" file="barrier_bullet_02.wav" pitch_variety="0.3" volume="0.8"/>
+	<sound class="result" key="vehicle" tag="sandbag" file="barrier_bullet_03.wav" pitch_variety="0.3" volume="0.4"/>
+	<sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_01.wav" pitch_variety="0.4" volume="0.6"/>
+	<sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_01.wav" pitch_variety="0.4" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_02.wav" pitch_variety="0.4" volume="0.8"/>
+	<sound class="result" key="static_object" copy="terrain"/>
+	<effect class="result" key="shield" ref="Laser_ImpactShine_Blue"/>
+	<effect class="result" key="vehicle" ref="Laser_ImpactShine_Blue"/>
+	<effect class="result" key="other" copy="vehicle"/>
+	<effect class="result" key="shield" ref="Laser_ImpactBeam_Blue"/>
+	<effect class="result" key="vehicle" ref="Laser_ImpactBeam_Blue"/>
+	<effect class="result" key="terrain" ref="Laser_Burnout"/>
+	<effect class="result" key="static_object" ref="Laser_Burnout_on_staticobject"/>
+	<effect class="result" key="terrain" ref="Laser_ImpackSmoke"/>
+	<effect class="result" key="static_object" ref="Laser_ImpackSmoke"/>
+	<effect class="result" key="terrain" ref="Laser_ImpactShine"/>
+	<effect class="result" key="static_object" ref="Laser_ImpactShine"/>
+	<effect class="result" key="other" ref="LaserImpact_Blue"/>
+	<effect class="result" key="terrain" ref="LaserImpact_Blue"/>
+	<effect class="result" key="character" ref="LaserImpact_Blue"/>
+	<effect class="result" key="static_object" ref="LaserImpact_Blue"/>
+	<trail probability="1.0" key="blue_old"/>
+	</projectile>
+	<sound key="effect" fileref="arachne_clone_melee_01.wav" pitch_variety="0.03" volume="1.2"/>
+	<sound key="effect" fileref="arachne_clone_melee_02.wav" pitch_variety="0.03" volume="1.2"/>
+	<sound key="effect" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="effect" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="effect" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="effect" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="effect" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<sound key="effect" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9"/>
+	<model/>
+	<hud_icon filename="testing.png"/>
+	<commonness value="0.0001" can_respawn_with="1" in_stock="1"/>
+	<inventory encumbrance="11.0" price="0.0"/>
+	<modifier class="speed" value="0.5"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0"/>
+	<inventory encumbrance="0.0" price="0.0"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+	<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+	<stance state_key="running" accuracy="0.3"/>
+	<stance state_key="walking" accuracy="0.675"/>
+	<stance state_key="crouch_moving" accuracy="0.75"/>
+	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="0.95"/>
+	<stance state_key="prone_moving" accuracy="0.3"/>
+	<stance state_key="over_wall" accuracy="1"/>
+</weapon>
+
 <weapon key="parw_germdog.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="melee"/>
 	<specification accuracy_factor="0.85" barrel_offset="0.5" can_shoot_standing="1" class="0" slot="0" magazine_size="1" name="Germ" projectile_speed="80" retrigger_time="0.1" suppressed="0" carry_in_two_hands="1" sustained_fire_diminish_rate="0.8" sustained_fire_grow_step="0.5" sight_range_modifier="1.0" sight_height_offset="3.0" stab_enabled="1" stab_range="2.5"/>
