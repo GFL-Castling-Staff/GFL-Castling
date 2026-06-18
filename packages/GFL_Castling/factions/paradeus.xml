@@ -797,7 +797,7 @@
 			<attribute weight="1.0" min="3000.0" max="5000.0" />
 		</attribute_config>
 	</soldier>
-	<soldier name="tareus" spawn_score="0.01" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="tareus" firstnames_file="Paradeus_mecha_first.name" lastnames_file="Paradeus_last.name" spawn_score="0.01" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<character filename="pard_tareus.character"/>
 		<ai filename="tareus.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
@@ -816,7 +816,7 @@
 			<attribute weight="1.0" min="3000.0" max="5000.0" />
 		</attribute_config>
 	</soldier>
-	<soldier name="ladon" spawn_score="0.03" squad_size_xp_cap="0.5" copy_from="default_ai">
+	<soldier name="ladon" firstnames_file="Paradeus_mecha_first.name" lastnames_file="Paradeus_last.name" spawn_score="0.03" squad_size_xp_cap="0.5" copy_from="default_ai">
 		<character filename="pard_tareus.character"/>
 		<ai filename="tareus.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
@@ -892,7 +892,7 @@
 		</item_class_existence_config>
 	</soldier>
 	<!-- 巨剑士doppelsoldner -->
-	<soldier name="Paradeus_doppelsoldner" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.2">
+	<soldier name="Paradeus_doppelsoldner" firstnames_file="Paradeus_mecha_first.name" lastnames_file="Paradeus_last.name" spawn_score="0.2">
 		<model filename="pard_doppelsoldner_remake.xml" />
 		<character filename="dopp.character" />
 		<ai filename="para_mg.ai" />
@@ -909,14 +909,14 @@
 			<item_class_existence class="carry_item" slot="0" probability="0.001" />
 		</item_class_existence_config>
 		<attribute_config class="xp">
-			<attribute weight="0.3" min="200.0" max="300.0" />
+			<attribute weight="1.0" min="200.0" max="300.0" />
 		</attribute_config>
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="30.0" max="60.0" />
 		</attribute_config>
 	</soldier>
 	<!-- 角斗士 -->
-	<soldier name="Paradeus_roarer" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.2">
+	<soldier name="Paradeus_roarer" firstnames_file="Paradeus_mecha_first.name" lastnames_file="Paradeus_last.name" spawn_score="0.2">
 		<model filename="pard_roarer_from_sv-98.xml" />
 		<character filename="pard_roarer.character" />
 		<ai filename="roarer.ai" />
@@ -932,13 +932,13 @@
 			<item_class_existence class="carry_item" slot="0" probability="0.001" />
 		</item_class_existence_config>
 		<attribute_config class="xp">
-			<attribute weight="0.3" min="200.0" max="300.0" />
+			<attribute weight="1.0" min="200.0" max="300.0" />
 		</attribute_config>
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="30.0" max="60.0" />
 		</attribute_config>
 	</soldier>
-	<soldier name="Paradeus_Hannibal" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.03">
+	<soldier name="Paradeus_Hannibal" firstnames_file="Paradeus_mecha_first.name" lastnames_file="Paradeus_last.name" spawn_score="0.03">
 		<model filename="pard_hannibal98.xml" />
 		<character filename="pard_hannibal.character" />
 		<ai filename="roarer.ai" />
@@ -954,13 +954,13 @@
 			<item_class_existence class="carry_item" slot="0" probability="0.001" />
 		</item_class_existence_config>
 		<attribute_config class="xp">
-			<attribute weight="0.3" min="200.0" max="300.0" />
+			<attribute weight="1.0" min="200.0" max="300.0" />
 		</attribute_config>
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="30.0" max="60.0" />
 		</attribute_config>
 	</soldier>
-	<soldier name="Thunder" firstnames="Paradeus-SHIELD HEAVY ARMOR UNIT-" lastnames_file="Paradeus_last.name" spawn_score="0.05">
+	<soldier name="Thunder" firstnames_file="Paradeus_mecha_first.name" lastnames_file="Paradeus_last.name" spawn_score="0.05">
 		<model filename="pard_thunder.xml" />
 		<character filename="thunder.character" />
 		<ai filename="hydra.ai" />
@@ -976,12 +976,57 @@
 			<item_class_existence class="carry_item" slot="0" probability="0.001" />
 		</item_class_existence_config>
 		<attribute_config class="xp">
-			<attribute weight="0.3" min="200.0" max="300.0" />
+			<attribute weight="1.0" min="200.0" max="300.0" />
 		</attribute_config>
 		<attribute_config class="rp">
 			<attribute weight="1.0" min="30.0" max="60.0" />
 		</attribute_config>
 	</soldier>
+	<soldier name="pard_arachne" firstnames_file="Paradeus_mecha_first.name" lastnames_file="Paradeus_last.name" spawn_score="0.02">
+		<model filename="pard_arachne.xml" />
+		<character filename="pard_arachne.character" />
+		<ai filename="hydra.ai" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="parw_arachne.weapon" enabled="1" />
+			<carry_item key="vest_200hp_160" />
+		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="1" />
+			<!-- wearables -->
+			<item_class_existence class="carry_item" slot="1" probability="1" />
+			<!-- note, always bp items -->
+			<item_class_existence class="carry_item" slot="0" probability="0.001" />
+		</item_class_existence_config>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="200.0" max="300.0" />
+		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="30.0" max="60.0" />
+		</attribute_config>
+	</soldier>
+	<soldier name="pard_arachne_clone" firstnames_file="Paradeus_first.name" lastnames_file="Paradeus_last.name" spawn_score="0.0">
+		<model filename="pard_arachne_clone.xml" />
+		<character filename="pard_arachne_clone.character" />
+		<ai filename="melee.ai" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="parw_arachne_clone.weapon" enabled="1" />
+			<carry_item key="vest_15hp_elite_5" />
+		</resources>
+		<item_class_existence_config>
+			<item_class_existence class="weapon" slot="1" probability="1" />
+			<!-- wearables -->
+			<item_class_existence class="carry_item" slot="1" probability="1" />
+			<!-- note, always bp items -->
+			<item_class_existence class="carry_item" slot="0" probability="0.001" />
+		</item_class_existence_config>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="2.0" max="3.0" />
+		</attribute_config>
+		<attribute_config class="rp">
+			<attribute weight="1.0" min="30.0" max="60.0" />
+		</attribute_config>
+	</soldier>
+	
 	<!-- 用于map12 -->
 	<soldier name="vehicle_passenger" spawn_score="0.0" copy_from="para_strelet">
 		<attribute_config class="xp">

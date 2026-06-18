@@ -894,7 +894,7 @@ class GFL_playerlist_system : Tracker {
                 if(player is null){continue;}
                 if(player.check_Available() != true){continue;}
                 //如果处于不活跃状态，直接跳过event的处理；
-                g_playerInfo_Buck.m_playerInfo[j].m_battleinfo.tickMinute();
+                player.m_battleinfo.tickMinute();
             }
         }
         if(m_minute5_timer<=0.0)
@@ -905,7 +905,7 @@ class GFL_playerlist_system : Tracker {
                 if(player is null){continue;}
                 if(player.check_Available() != true){continue;}
                 //如果处于不活跃状态，直接跳过event的处理；
-                g_playerInfo_Buck.m_playerInfo[j].saveIndexIntimacy(m_metagame);
+                player.saveIndexIntimacy(m_metagame);
             }
         }        
     }

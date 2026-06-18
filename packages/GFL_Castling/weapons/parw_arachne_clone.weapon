@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapon file="paradeus.base_weapon" on_ground_up="0 0 1" key="parw_arachne_clone.weapon" time_to_live_out_in_the_open="0.0">
+    <tag name="melee" />
+    <specification 
+    magazine_size="1"
+    consume="0"
+    can_shoot_standing="1"
+    can_shoot_crouching="1"
+    can_shoot_prone="0"
+    carry_in_two_hands="0"
+    name="Arachne's Clone"
+    class="5"
+    stab_enabled="1"
+    stab_range="3.0"
+    success_probability="1.0"
+    damage="1.0"
+    range="3.0"
+    character_state="death"
+    affect_characters="1"
+    affect_vehicles="1"/>
+    <animation key="reload" animation_key="arachne_clone_reload" />
+    <animation state_key="hold" animation_key="arachne_clone_still" />
+    <animation state_key="hold_on_wall" animation_key="arachne_clone_still" />
+    <animation state_key="still_against_wall"   animation_key="arachne_clone_still" />
+    <animation state_key="hold_casual"  animation_key="arachne_clone_still" />
+    <animation state_key="running"  animation_key="arachne_clone_run" />
+    <animation state_key="walking"  animation_key="arachne_clone_walk" />
+    <animation state_key="crouching"    animation_key="arachne_clone_still" />
+    <animation state_key="crouch_moving"    animation_key="arachne_clone_walk" />
+    <animation state_key="crouch_moving_backwards"  animation_key="arachne_clone_walk" />
+    <animation state_key="prone_moving" animation_key="arachne_clone_walk" />
+    <animation key="recoil" animation_key="arachne_clone_melee" />
+    <animation state_key="stabbing" animation_key="arachne_clone_melee" />
+
+    <sound key="effect" fileref="arachne_clone_melee_01.wav" pitch_variety="0.03" volume="1.2" />
+    <sound key="effect" fileref="arachne_clone_melee_02.wav" pitch_variety="0.03" volume="1.2" />
+    <sound key="effect" fileref="dagger_swing1_fromFO4.wav" pitch_variety="0.01" volume="0.9" />
+    <sound key="effect" fileref="dagger_swing2_fromFO4.wav" pitch_variety="0.01" volume="0.9" />
+    <sound key="effect" fileref="dagger_swing3_fromFO4.wav" pitch_variety="0.01" volume="0.9" />
+
+    <model />
+    <hud_icon filename="testing.png" />
+    <commonness value="0.0001" can_respawn_with="1" in_stock="1"/>
+    <inventory encumbrance="11.0" price="0.0" />
+    <modifier class="speed" value="0.5" />
+
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5" />
+	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
+
+</weapon>
