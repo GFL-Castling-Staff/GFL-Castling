@@ -149,6 +149,9 @@
             {"666",-1}
     };
 
+    // nadebag手雷回复分数需求
+    int nadebag_recovery_threshold = 25;
+
     array<string> resupply_grenade_list = {
         "hand_grenade.projectile",
         "hand_88grenade.projectile",
@@ -158,13 +161,17 @@
     };
 
     dictionary resupply_grenade_index = {
-        {"hand_grenade.projectile",8},
+        {"gkw_cz75_axe.projectile",10},
+        {"hand_grenade.projectile",6},
+        {"hand_defence_grenade.projectile",6},
         {"hand_88grenade.projectile",4},
         {"hand_atgrenade.projectile",4},
-        {"hand_defence_grenade.projectile",4},
-        {"c4.projectile",2}
-        // {"at_mine.projectile",6},
-        // {"gkw_cz75_axe.projectile",6}
+        {"at_mine.projectile",3},
+        {"smoke_device.projectile",2},
+        {"hand_repair_grenade.projectile",2},
+        {"c4.projectile",2},
+        {"hand_golyat_b.throwable",2},
+        {"hand_golyat.throwable",1}
     };
 
     array<string> resupply_secondary_list = {

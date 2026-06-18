@@ -494,6 +494,7 @@ class kill_event : Tracker {
             if (playerInfo.getPlayerName() == default_string ) return;
             string playerName = playerInfo.getPlayerName();
             int kill_to_heal_scale = 1;
+            int nade_supply_scale = 1;
             int kill_score_scale = 1;
 
             string c_weaponType = playerInfo.getPlayerEquipment().getWeapon(0);
@@ -515,6 +516,7 @@ class kill_event : Tracker {
             {
                 handleKillEventToPlayerInfo(playerId,5 * kill_score_scale);
                 kill_to_heal_scale = 5;
+                nade_supply_scale = 5;
                 kill_is_boss = true;
                 notify(m_metagame, "kill streak,boss reward", dictionary(), "misc", playerId, false, "", 1.0);
             }
@@ -522,6 +524,7 @@ class kill_event : Tracker {
             {
                 handleKillEventToPlayerInfo(playerId,3 * kill_score_scale);
                 kill_to_heal_scale = 2;
+                nade_supply_scale = 2;
                 notify(m_metagame, "kill streak,elite reward", dictionary(), "misc", playerId, false, "", 1.0);
             }
             else if(point_nerfed_reward.find(soldier_name) > -1)
@@ -651,6 +654,31 @@ class kill_event : Tracker {
                     }
                 }
             }
+            // nadebag手雷回复
+            if(startsWith(c_armorType,"nadebag_t6")){
+                int nadeCurrentScore = g_playerInfo_Buck.getKillSkillCountbyPid(playerId, "nadebag_recovery");
+                int nadeNewScore = nadeCurrentScore + nade_supply_scale;
+                // _log("现在有" + nadeNewScore + "分回雷积分");
+
+                if(nadeNewScore >= nadebag_recovery_threshold){
+                    g_playerInfo_Buck.addKillSkillCountbyPid(playerId, "nadebag_recovery", nade_supply_scale - nadebag_recovery_threshold);
+                    string grenadeKey = playerInfo.getPlayerEquipment().getWeapon(2);
+                    if(grenadeKey != default_string){
+                        GrenadeSupply(m_metagame, characterId, 0, grenadeKey, "asindex", "projectile", false);
+                    }
+                }
+                else {
+                    g_playerInfo_Buck.addKillSkillCountbyPid(playerId, "nadebag_recovery", nade_supply_scale);
+                }
+            }
+            else {
+                // 未装备nadebag时清除已有分数
+                int nadeExistingScore = g_playerInfo_Buck.getKillSkillCountbyPid(playerId, "nadebag_recovery");
+                if(nadeExistingScore > 0){
+                    g_playerInfo_Buck.addKillSkillCountbyPid(playerId, "nadebag_recovery", -nadeExistingScore);
+                }
+            }
+
             // 护甲判断
             if(startsWith(c_armorType,'acbp_t6')){
                 float scale = 1.0;
