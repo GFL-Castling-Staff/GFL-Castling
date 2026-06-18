@@ -2279,7 +2279,7 @@ class Event_call_bombardment_fairy_170mm : event_call_task_hasMarker {
 		}
 		else if(m_mode == "gamma")
 		{
-			m_pos2 = getRandomOffsetVectorMinMax(e_pos,3.0,12.0);
+			m_pos2 = e_pos;
 			m_excute_Limit = 3;
 			m_time_internal = 0.1;
 		}
@@ -2313,7 +2313,7 @@ class Event_call_bombardment_fairy_170mm : event_call_task_hasMarker {
 		}
 		if(m_mode == "gamma")
 		{
-			Vector3 shell_target = getRandomOffsetVectorMinMax(m_pos2,4.0,8.0);
+			Vector3 shell_target = getRandomOffsetVectorMinMax(m_pos2,3.0,12.0);
 			insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos1,shell_target);
 		}
 		else

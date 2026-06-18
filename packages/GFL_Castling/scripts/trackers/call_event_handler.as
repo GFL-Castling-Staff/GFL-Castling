@@ -1083,7 +1083,7 @@ class call_event : Tracker {
                                 case 200202: //170mm β
                                 {
                                     if(!costTacticPoint(battleInfo,20,playerId)) break;
-                                    addCallCoolDown(playerName,playerId,45.0,"tier2",m_playerinfo);
+                                    addCallCoolDown(playerName,playerId,30.0,"tier2",m_playerinfo);
                                     sendFactionMessageKey(m_metagame,factionId,"bombcallstarthint");
                                     int flagId = m_DummyCallID + 15000;
                                     CastlingMarker@ FairyRequest = CastlingMarker(characterId,factionId,stringToVector3(position));
