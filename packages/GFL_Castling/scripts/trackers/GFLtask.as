@@ -2123,6 +2123,7 @@ class Event_call_warrior_fairy_VTOL : event_call_task_hasMarker {
 		if(m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
 		if(m_excute_time >= m_excute_Limit){m_end = true;return;}
 		m_timeLeft_internal = m_time_internal;
+		m_excute_time++;
 
 		const XmlElement@ ItsmeInfo = getCharacterInfo(m_metagame, m_character_id);
 		if(ItsmeInfo is null) {
@@ -2190,7 +2191,6 @@ class Event_call_warrior_fairy_VTOL : event_call_task_hasMarker {
 				}
 			}
 		}
-		m_excute_time++;
 	}
 }
 
