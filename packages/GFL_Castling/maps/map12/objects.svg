@@ -12873,7 +12873,7 @@ separator_depth = 0.9;</desc>
        id="mesh_template6-4"
        style="opacity:0.79775277;fill:#0e5500;fill-opacity:1;fill-rule:nonzero;stroke:none;display:inline;enable-background:new">
       <desc
-         id="desc8739-3-3-8-0-0-9-1-6-0">name = concrete_barrier; mesh_name = concrete_barrier.mesh; texture0 = winter_atlas1.png; texture0_atlas_cell = 2 0 16 16; collision_model_type = 1; collision_model_size = 1.10 1.10 2.3;</desc>
+         id="desc8739-3-3-8-0-0-9-1-6-0">name = concrete_barrier; mesh_name = concrete_barrier.mesh;static_object_type_key=concrete_barrier.static_object; texture0 = winter_atlas1.png; texture0_atlas_cell = 2 0 16 16; collision_model_type = 1; collision_model_size = 1.10 1.10 2.3;</desc>
     </rect>
     <rect
        inkscape:label="#mesh"
@@ -13691,7 +13691,7 @@ separator_depth = 0.9;</desc>
        id="rect9344-60-7-4-5-4-6-5"
        style="fill:#656565;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
       <desc
-         id="desc9346-8-2-1-6-2-7-1">name = SecurityFence1; color = 1.0 1.0 1.0 1.0; depth = -1.0; height = 2.5; side_texture = fence_atlas1.png; side_texture_scale = 1.25 1.25; side_texture_atlas_cell = 1 0 4 4 0.015625; separator_side_texture = wall_atlas1.png; separator_side_texture_scale = 0.2 1.0; separator_side_texture_atlas_cell = 6 3 16 8 0.015625 0.0078125; separator_top_texture = wall_atlas1.png; separator_top_texture_scale = 0.2 1.0; separator_top_texture_atlas_cell = 6 5 16 16 0.015625; separator_color = 1.0 1.0 1.0 1.0; separator_over_height = 0.3; separator_depth = 0.2; penetrability = 1.0; see_through = 1; climb_type = 1; hack1 = 1;</desc>
+         id="desc9346-8-2-1-6-2-7-1">name = SecurityFence1; color = 1.0 1.0 1.0 1.0; depth = -1.0; height = 2.5; side_texture = fence_atlas1.png; side_texture_scale = 1.25 1.25; side_texture_atlas_cell = 1 0 4 4 0.015625; separator_side_texture = wall_atlas1.png; separator_side_texture_scale = 0.2 1.0; separator_side_texture_atlas_cell = 6 3 16 8 0.015625 0.0078125; separator_top_texture = wall_atlas1.png; separator_top_texture_scale = 0.2 1.0; separator_top_texture_atlas_cell = 6 5 16 16 0.015625; separator_color = 1.0 1.0 1.0 1.0; separator_over_height = 0.3; separator_depth = 0.2; penetrability = 1.0; see_through = 1; climb_type = 1; hack1 = 1; static_object_type_key=security_fence.static_object;</desc>
     </rect>
     <rect
        inkscape:label=""
