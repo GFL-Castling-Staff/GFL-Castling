@@ -413,6 +413,7 @@ array<string> SFbossList ={
     "sf_cerberus"
 };
 
+// 已弃用，建议使用reward_pool_list
 array<string> boss_list ={
     "sfw_hunter",
     "sfw_architect",
@@ -434,6 +435,7 @@ array<string> boss_list ={
     "Narciss",
     "Nimogen",
     "teal",
+    "tareus",
     "kcco_quartz_ranger",
     "kcco_zircon_squadleader"
 };

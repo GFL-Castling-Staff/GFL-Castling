@@ -704,7 +704,7 @@ class kill_event : Tracker {
                 updateHealByKillEvent(characterId,factionId,10,20,"vest",kill_to_heal_scale);
             }
             else if(startsWith(c_armorType,"exo_t6") || startsWith(c_armorType,"dima_bunny") || startsWith(c_armorType,"cbs_t6")){
-                if(boss_list.find(soldier_name)>-1){
+                if(reward_pool_key=="boss"){
                     healCharacter(m_metagame,characterId,5);
                 }
                 else if(reward_pool_key=="rare" || reward_pool_key=="elite")
@@ -1014,7 +1014,7 @@ class kill_event : Tracker {
 
             if(KillerWeaponKey=="blast_snipe_ff_hunter.projectile" && killway=="blast")
             {
-                if(eliteEnemyName.find(soldier_name)>-1)
+                if(reward_pool_key=="rare" || reward_pool_key=="elite" || reward_pool_key=="boss")
                 {
                     healCharacter(m_metagame,characterId,1);
                 }
