@@ -855,6 +855,61 @@ class DelaySpawnSoldier : Task {
 	}
 }
 
+class DelaySpawnSoldierIfAlive : Task {
+    protected GameMode@ m_metagame;
+    protected float m_timeLeft;
+    protected int m_characterId;
+    protected Vector3 m_pos;
+    protected string m_soldierName;
+    protected int m_count;
+    protected bool m_useCurrentPosition;
+
+    DelaySpawnSoldierIfAlive(GameMode@ metagame, float delay, int cId, Vector3 pos, string soldierName, int count, bool useCurrentPosition) {
+        @m_metagame = metagame;
+        m_timeLeft = delay;
+        m_characterId = cId;
+        m_pos = pos;
+        m_soldierName = soldierName;
+        m_count = count;
+        m_useCurrentPosition = useCurrentPosition;
+    }
+
+    void start() {}
+
+    void update(float time) {
+        m_timeLeft -= time;
+        if (m_timeLeft >= 0) return;
+
+        const XmlElement@ character = getCharacterInfo(m_metagame, m_characterId);
+        if (checkCharacterDead(character)) return;
+
+        int factionId = character.getIntAttribute("faction_id");
+        array<const XmlElement@>@ groups = getSoldierGroups(m_metagame, factionId);
+        if (groups is null) return;
+        bool groupExists = false;
+        for (uint i = 0; i < groups.size(); ++i) {
+            const XmlElement@ group = groups[i];
+            if (group is null) continue;
+            if (group.getStringAttribute("name") == m_soldierName) {
+                groupExists = true;
+                break;
+            }
+        }
+        if (!groupExists) return;
+
+        Vector3 spawnPos = m_pos;
+        if (m_useCurrentPosition) {
+            spawnPos = stringToVector3(character.getStringAttribute("position"));
+        }
+
+        spawnSoldier(m_metagame, m_count, factionId, spawnPos, m_soldierName);
+    }
+
+    bool hasEnded() const {
+        return m_timeLeft < 0;
+    }
+}
+
 abstract class event_call_task : Task
 {
 	protected GameMode@ m_metagame;

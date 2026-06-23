@@ -1821,6 +1821,17 @@ class GFLskill : Tracker {
 				}
 				break;
 			}
+
+			case 70: {// 大蜘蛛产小蜘蛛
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character is null) return;
+				Vector3 pos = stringToVector3(character.getStringAttribute("position"));
+				playAnimationKey(m_metagame, characterId, "arachne_craft", false);
+				TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+				tasker.add(DelaySpawnSoldierIfAlive(m_metagame, 1.1, characterId, pos, "pard_arachne_clone", 3, true));
+				break;
+			}
             default:
                 break;
 		}
