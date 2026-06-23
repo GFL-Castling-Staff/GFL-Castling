@@ -133990,7 +133990,7 @@
 	<stance state_key="crouching" accuracy="0.9"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="detectability" value="0.05"/>
+	<modifier class="detectability" value="-0.05"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -134209,7 +134209,7 @@
 	<stance state_key="crouching" accuracy="0.9"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="detectability" value="0.05"/>
+	<modifier class="detectability" value="-0.05"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -156955,7 +156955,7 @@
 	<drop_on_death_result class="spawn" instance_class="soldier" instance_key="pard_arachne_clone" min_amount="5" max_amount="8" offset="0 0 0" position_spread="5 0" direction_spread="0 0"/>
 	<projectile class="bullet" name="88type_laser" slot="1" pulldown_in_air="4">
 	<trail probability="1.0" key="laser_hyz"/>
-	<result class="blast" damage="2.0" radius="3.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="2.0" radius="3.0" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
@@ -157033,6 +157033,8 @@
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
 	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
+	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0"/>
 </weapon>
 
 <weapon on_ground_up="0 0 1" key="parw_arachne_clone.weapon" time_to_live_out_in_the_open="0" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
