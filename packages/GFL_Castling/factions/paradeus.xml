@@ -988,7 +988,7 @@
 		<ai filename="para_arachne.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_arachne.weapon" enabled="1" />
-			<projectile key="pard_arachne_craft.projectile" enabled="1" probability="1.0" />
+			<projectile key="pard_arachne_craft.projectile" enabled="1" />
 			<carry_item key="vest_200hp_160" />
 		</resources>
 		<item_class_existence_config>
