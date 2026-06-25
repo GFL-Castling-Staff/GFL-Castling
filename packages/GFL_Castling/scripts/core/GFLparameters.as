@@ -228,6 +228,7 @@
         {"typhon.vehicle",5},
         {"coeus.vehicle",5},
         {"neosu_kuergants.vehicle",4},
+        {"kcco_aa_aegis.vehicle",4},
         {"kcco_pathfinder_factory.vehicle",3},
         {"sandstorm.vehicle",3},
 
@@ -261,6 +262,7 @@
         {"typhon.vehicle",5},
         {"coeus.vehicle",5},
         {"neosu_kuergants.vehicle",4},
+        {"kcco_aa_aegis.vehicle",4},
         {"kcco_pathfinder_factory.vehicle",3},
         {"sandstorm.vehicle",3},
 
@@ -607,6 +609,7 @@
 		"neosu_kuergants.vehicle",
 		"kcco_pathfinder_factory.vehicle",
 		"sandstorm.vehicle",
+        "kcco_aa_aegis.vehicle",
 
 		"par_uhlan.vehicle",
 		"par_elenusinus.vehicle",
@@ -645,6 +648,7 @@
 		"neosu_kuergants.vehicle",
 		"kcco_pathfinder_factory.vehicle",
 		"sandstorm.vehicle",
+        "kcco_aa_aegis.vehicle",
 
 		"par_uhlan.vehicle",
 		"par_elenusinus.vehicle",
