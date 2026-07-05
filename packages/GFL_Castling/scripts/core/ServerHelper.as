@@ -168,6 +168,7 @@ class ServerHelper : Tracker {
             if (player.hasAttribute("aim_target")) {
                 string target = player.getStringAttribute("aim_target");
                 if(s=="gk_qwd") spawnSoldier(m_metagame,4,0,target,"gk_manticore");
+                if(s=="jr") spawnSoldier(m_metagame,4,0,target,"ar_56_m4sop2jr");
                 if(s=="qwd") spawnSoldier(m_metagame,1,1,target,"sf_manticore");
                 if(s=="hydra") spawnSoldier(m_metagame,1,1,target,"kcco_Hydra");
                 if(s=="vespid") spawnSoldier(m_metagame,1,1,target,"sf_vespid");

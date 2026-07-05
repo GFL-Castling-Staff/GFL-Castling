@@ -144669,7 +144669,7 @@
 	<model filename="gkw_ar_m16a1.xml"/>
 	<hud_icon filename="gkw_m16a1.png"/>
 	<weak_hand_hold offset="0.2"/>
-	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="4">
+	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
 	<result class="hit" kill_probability="8.0" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="1.031" kill_decay_end_time="1.719" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -144725,6 +144725,8 @@
 	<effect class="result" key="terrain" ref="BulletImpact"/>
 	<effect class="result" key="character" ref="BulletImpact"/>
 	<effect class="result" key="shield" ref="BulletImpact"/>
+	<effect class="result" key="character" ref="common_hit_effect_1" lighting="0"/>
+	<effect class="result" key="character" ref="common_hit_effect_2" lighting="0"/>
 	<effect class="result" key="terrain" ref="Bullet_Burnout"/>
 	<effect class="result" key="static_object" copy="terrain"/>
 	<effect class="result" key="shield" ref="hitMetal"/>
@@ -146947,6 +146949,118 @@
 	<effect class="result" key="shield" ref="hitMetal_1"/>
 	<trail probability="1.0" key="bullet_new"/>
 	</projectile>
+</weapon>
+
+<weapon key="gkw_m4sopmodii_574.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+	<specification accuracy_factor="1.0" barrel_offset="0.4" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="0" slot="0" magazine_size="30" name="M4 SOPMOD II-[Resurrection Repairer Jr]" projectile_speed="200" retrigger_time="0.086" suppressed="0" stance_accuracy_rate="3.0" sight_range_modifier="1.25" sustained_fire_diminish_rate="1.5" sustained_fire_grow_step="0.33" spread_range="0.3" carry_in_two_hands="0" stab_enabled="1"/>
+	<inventory encumbrance="35.0" buy_price="7.0" sell_price="7.0"/>
+	<commonness value="0.00001" in_stock="0" can_respawn_with="1"/>
+	<capacity value="1" source="rank" source_value="0.0"/>
+	<animation state_key="recoil" animation_key="recoil, dinergate"/>
+	<animation state_key="recoil" stance_key="prone" animation_key="recoil, dinergate"/>
+	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, dinergate"/>
+	<animation state_key="reload" animation_key="reload, dinergate"/>
+	<animation key="reload" stance_key="prone" animation_key="reload, dinergate"/>
+	<animation state_key="hold" animation_key="still, dinergate"/>
+	<animation state_key="hold_on_wall" animation_key="still, dinergate"/>
+	<animation state_key="still_against_wall" animation_key="still, dinergate"/>
+	<animation state_key="running" animation_key="running, dinergate"/>
+	<animation state_key="walking" animation_key="walking, dinergate"/>
+	<animation state_key="walking_backwards" animation_key="walking, dinergate"/>
+	<animation state_key="crouching" animation_key="crouch still, dinergate"/>
+	<animation state_key="crouch_moving" animation_key="walking, dinergate"/>
+	<animation state_key="crouch_moving_backwards" animation_key="walking, dinergate"/>
+	<animation state_key="prone_still" animation_key="walking, dinergate"/>
+	<animation state_key="changing_weapon_in" animation_key="reload, dinergate"/>
+	<animation state_key="stabbing" animation_key="stab, dinergate"/>
+	<sound key="fire" fileref="m4sopmodii_fire_FromSAM4.wav" pitch_variety="0.05" volume="3"/>
+	<sound key="magazine_out" fileref="m4sopmodii_mgz_out_FromSAM4.wav" volume="2"/>
+	<sound key="magazine_in" fileref="m4sopmodii_mgz_in_FromSAM4.wav" volume="2"/>
+	<sound key="cycle" fileref="m4sopmodii_cycle_FromSAM3.wav" volume="2"/>
+	<sound class="impact" fileref="rifle_drop.wav"/>
+	<model filename=""/>
+	<hud_icon filename="gkw_m4sopmodii_574.png"/>
+	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
+	<result class="hit" kill_probability="6.3" kill_probability_offset_on_successful_hit="0.35" kill_decay_start_time="1.023" kill_decay_end_time="1.705" damage_origin_vehicle="0"/>
+	<trigger class="impact"/>
+	<rotation class="motion"/>
+	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
+	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
+	<sound class="result" key="terrain" fileref="bullet_ricochet2_fromCOD17.wav" volume="0.8"/>
+	<sound class="result" key="terrain" fileref="bullet_ricochet2_fromCOD17.wav" volume="0.8"/>
+	<sound class="result" key="terrain" fileref="bullet_ricochet5_fromCOD17.wav" volume="0.8"/>
+	<sound class="result" key="terrain" fileref="bullet_ricochet5_fromCOD17.wav" volume="0.8"/>
+	<sound class="result" key="terrain" fileref="bullet_ricochet3_fromCOD17.wav" volume="0.3"/>
+	<sound class="result" key="terrain" fileref="bullet_ricochet4_fromCOD17.wav" volume="0.3"/>
+	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
+	<sound class="result" key="terrain" fileref="ricochet2.wav"/>
+	<sound class="result" key="terrain" fileref="ricochet3.wav"/>
+	<sound class="result" key="terrain" fileref="ricochet4.wav"/>
+	<sound class="result" key="shield" file="bullet_shield1_fromCOD17.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="shield" file="bullet_shield2_fromCOD17.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" fileref="bullet_hit1_fromCOD17.wav" pitch_variety="0.4" volume="1.05"/>
+	<sound class="result" key="character" fileref="bullet_hit2_fromCOD17.wav" pitch_variety="0.4" volume="1.05"/>
+	<sound class="result" key="vehicle" copy="terrain"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_01.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_02.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_03.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_04.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_05.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_06.wav" pitch_variety="0.3" volume="0.6"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_07.wav" pitch_variety="0.3" volume="0.6"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_06.wav" pitch_variety="0.3" volume="0.6"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_07.wav" pitch_variety="0.3" volume="0.8"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_06.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_07.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_08.wav" pitch_variety="0.3" volume="0.7"/>
+	<sound class="result" key="vehicle" tag="deco_car" file="metal_thin_08.wav" pitch_variety="0.3" volume="0.8"/>
+	<sound class="result" key="vehicle" tag="metal_heavy" file="metal_heavy_01.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="metal_heavy" file="metal_heavy_02.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="metal_heavy" file="metal_heavy_03.wav" pitch_variety="0.3" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="sandbag" file="barrier_bullet_01.wav" pitch_variety="0.3" volume="0.8"/>
+	<sound class="result" key="vehicle" tag="sandbag" file="barrier_bullet_02.wav" pitch_variety="0.3" volume="0.8"/>
+	<sound class="result" key="vehicle" tag="sandbag" file="barrier_bullet_03.wav" pitch_variety="0.3" volume="0.4"/>
+	<sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_01.wav" pitch_variety="0.4" volume="0.6"/>
+	<sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_01.wav" pitch_variety="0.4" volume="0.5"/>
+	<sound class="result" key="vehicle" tag="metal_dumpster" file="dumpster_bullet_02.wav" pitch_variety="0.4" volume="0.8"/>
+	<sound class="result" key="static_object" copy="terrain"/>
+	<effect class="result" key="terrain" ref="hitGround" use_surface_color="1"/>
+	<effect class="result" key="terrain" ref="BulletImpactDust1"/>
+	<effect class="result" key="terrain" ref="BulletImpactDust2"/>
+	<effect class="result" key="terrain" ref="BulletImpactDust3"/>
+	<effect class="result" key="vehicle" ref="Burst" use_surface_color="1"/>
+	<effect class="result" key="vehicle" ref="hitMetal"/>
+	<effect class="result" key="vehicle" ref="hitMetal_1"/>
+	<effect class="result" key="other" ref="BulletImpact"/>
+	<effect class="result" key="vehicle" ref="BulletImpact"/>
+	<effect class="result" key="terrain" ref="BulletImpact"/>
+	<effect class="result" key="character" ref="BulletImpact"/>
+	<effect class="result" key="shield" ref="BulletImpact"/>
+	<effect class="result" key="character" ref="common_hit_effect_1" lighting="0"/>
+	<effect class="result" key="character" ref="common_hit_effect_2" lighting="0"/>
+	<effect class="result" key="terrain" ref="Bullet_Burnout"/>
+	<effect class="result" key="static_object" copy="terrain"/>
+	<effect class="result" key="shield" ref="hitMetal"/>
+	<effect class="result" key="shield" ref="hitMetal_1"/>
+	<trail probability="1.0" key="bullet_new"/>
+	</projectile>
+	<effect class="muzzle" ref="ejection_556"/>
+	<modifier class="speed" value="0.25"/>
+	<modifier class="hit_success_probability" value="-1.1"/>
+	<stance state_key="running" accuracy="0.3"/>
+	<stance state_key="walking" accuracy="0.45"/>
+	<stance state_key="crouch_moving" accuracy="0.85"/>
+	<stance state_key="prone_moving" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.7"/>
+	<stance state_key="crouching" accuracy="0.9"/>
+	<stance state_key="prone" accuracy="1"/>
+	<stance state_key="over_wall" accuracy="1"/>
+	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
+	<target_factors tag="commander" distance="1.0" direction="0.0" squad_command="1.0" base_score="4.0"/>
 </weapon>
 
 <weapon key="gkw_404_g11mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
