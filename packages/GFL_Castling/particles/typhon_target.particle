@@ -349,8 +349,8 @@ particle_system aegis_aim_mark_2  //瞄准的空对地指示特效
 {
 	quota 50
 	material warning_sign_anim_2
-	particle_width 32
-	particle_height 32
+	particle_width 25
+	particle_height 25
 	renderer billboard
 	billboard_type perpendicular_common
 	billboard_origin center

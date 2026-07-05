@@ -62,7 +62,7 @@ soldier_capacity_offset="20"
     <turret offset="0 2.8 0" weapon_key="kcco_aegis_eye" weapon_offset="0.0 0.0 0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.003" rotation_range="6.28" />
     <turret offset="1.1 2.2 0" weapon_key="kcco_aegis_cannon" weapon_offset="0.0 0.0 0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.003" rotation_range="0.03" />
     <turret offset="-1.1 2.2 0" weapon_key="kcco_aegis_cannon" weapon_offset="0.0 0.0 0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.003" rotation_range="0.03" />
-    <turret offset="0 30 0" weapon_key="kcco_aegis_aim" weapon_offset="0.0 0.0 0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.003" rotation_range="0.03" />
+    <turret offset="0 30 0" weapon_key="kcco_aegis_aim" weapon_offset="0.0 0.0 0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.003" rotation_range="0.15" />
 
 	<visual class="chassis" mesh_filename="aegis_body.mesh" texture_filename="aegis_body.png" />
 	<visual class="chassis" key="broken" mesh_filename="aegis_body.mesh" texture_filename="armored_truck_broken.png" />

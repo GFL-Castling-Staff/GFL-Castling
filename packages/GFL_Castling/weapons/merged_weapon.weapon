@@ -163763,7 +163763,7 @@
 	<effect class="activated" ref="missile_activated_cannon_flysmoke" lighting="0"/>
 	<trail probability="1" key="atgm_trail_heat"/>
 	</projectile>
-	<ballistics near_far_distance="10.0" speed_estimation_near="360.0" speed_estimation_far="360.0" max_speed="450.0" randomness="0.0" curve_height="3.6" tweak_factor="4.8"/>
+	<ballistics near_far_distance="10.0" speed_estimation_near="360.0" speed_estimation_far="360.0" max_speed="450.0" randomness="0.0" curve_height="3.0" tweak_factor="4.8"/>
 </weapon>
 
 <weapon key="kcco_aegis_eye">
