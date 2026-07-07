@@ -4,6 +4,8 @@
 	<sound key="death" fileref="kill_sound_mechabot_02.wav" volume="0.4" pitch_variety="0.025" />
 	<sound key="death" fileref="kill_sound_mechabot_03.wav" volume="0.4" pitch_variety="0.025" />
 	<sound key="footstep" fileref="step_sound_arachne_clone.wav" volume="0.5" pitch_variety="0.025" />
+	<sound key="throw" fileref="static.wav" volume="0.0" />
+	
 	<parameter class="lifting_up_initial_bounce" value="0.15" />
 	<parameter class="can_use_vehicles" value="0" />
 

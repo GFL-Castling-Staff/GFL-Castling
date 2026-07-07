@@ -2,6 +2,7 @@
 
 // parameters for "commandskill.as"
 
+    // 已弃用，建议使用reward_pool_list
     array<string> eliteEnemyName = {
 
         // sf
@@ -20,6 +21,7 @@
         "sfw_Justice",
         "sfw_Scarecrow",
         "sf_manticore",
+        "sf_cerberus",
 
         // paradeus
         "alina",
@@ -35,6 +37,9 @@
         "Paradeus_doppelsoldner",
         "Paradeus_roarer",
         "Paradeus_Hannibal",
+        "tareus",
+        "ladon",
+        "pard_arachne",
         "parw_grenadier",
         "parw_hammer",
         "parw_commander",

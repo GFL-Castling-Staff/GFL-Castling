@@ -2,7 +2,6 @@
 <weapon key="parw_arachne.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" >
     <tag name="elite" />
     <tag name="mecha" />
-    <!-- unfinished -->
     <specification 
     retrigger_time="-1.0" 
     accuracy_factor="1.0" 
@@ -18,6 +17,7 @@
     carry_in_two_hands="1"
     reload_one_at_a_time="0" 
     sight_range_modifier="1.2" 
+    sight_height_offset="3.0"
     projectile_speed="150" 
     last_burst_retrigger_time="1.0"
     barrel_offset="0.3" 
@@ -61,7 +61,7 @@
     <drop_on_death_result class="spawn" instance_class="soldier" instance_key="pard_arachne_clone" min_amount="5" max_amount="8" offset="0 0 0" position_spread="5 0" direction_spread="0 0" />
     <projectile file="88type_laser.projectile">
         <trail probability="1.0" key="laser_hyz" />
-        <result class="blast" damage="2.0" radius="3.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal" />
+        <result class="blast" damage="2.0" radius="3.0" decal="1" push="0.4" character_state="death" faction_compare="not_equal" />
     </projectile>
     <stance state_key="running" accuracy="0.75" />
     <stance state_key="walking" accuracy="0.75" />
@@ -80,4 +80,6 @@
     <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0" />
     <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
     <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0" />
+    <target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0" />
+    <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0" />
 </weapon>

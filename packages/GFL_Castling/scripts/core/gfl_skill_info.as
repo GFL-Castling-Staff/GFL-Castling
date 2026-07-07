@@ -209,6 +209,7 @@ dictionary gameSkillIndex = {
 
         {"gk_repair_grenade",69},
 
+        {"arachne_craft_skill",70},
 
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}

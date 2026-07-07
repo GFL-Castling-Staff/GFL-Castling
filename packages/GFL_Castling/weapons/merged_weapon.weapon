@@ -72614,7 +72614,7 @@
 	<model filename="gkw_mg_m1919a4lmg.xml"/>
 	<hud_icon filename="gkw_m1919a4_skill.png"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="4">
-	<result class="blast" damage="3.1" radius="2.5" decal="1" push="0.15" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="spawn" instance_class="projectile" instance_key="m1919a4.projectile" min_amount="2" max_amount="3" offset="0 0.5 0" position_spread="0.5 0" direction_spread="0 0" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -107107,7 +107107,7 @@
 	<stance state_key="walking" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="1.0"/>
 	<stance state_key="prone_moving" accuracy="1.0"/>
-	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.98"/>
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
@@ -107300,7 +107300,7 @@
 	<stance state_key="walking" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="1.0"/>
 	<stance state_key="prone_moving" accuracy="1.0"/>
-	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.98"/>
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1"/>
@@ -108338,7 +108338,7 @@
 	<stance state_key="walking" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="1.0"/>
 	<stance state_key="prone_moving" accuracy="1.0"/>
-	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.98"/>
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1"/>
@@ -114491,6 +114491,7 @@
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="speed" value="0.1"/>
 	<modifier class="detectability" value="-0.05"/>
 	<tag name="autorifle"/>
 	<animation key="recoil" animation_key="recoil1"/>
@@ -114503,7 +114504,6 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<modifier class="speed" value="0.0"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -114531,7 +114531,7 @@
 	<next_in_chain key="gkw_ots14_4501.weapon" share_ammo="0"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="5.6" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.35" kill_decay_end_time="0.75" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="7.6" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.35" kill_decay_end_time="0.75" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -133990,7 +133990,7 @@
 	<stance state_key="crouching" accuracy="0.9"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="detectability" value="0.05"/>
+	<modifier class="detectability" value="-0.05"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -134209,7 +134209,7 @@
 	<stance state_key="crouching" accuracy="0.9"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
-	<modifier class="detectability" value="0.05"/>
+	<modifier class="detectability" value="-0.05"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
@@ -156920,7 +156920,7 @@
 <weapon key="parw_arachne.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="elite"/>
 	<tag name="mecha"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="4.5" magazine_size="5" can_shoot_standing="1" can_shoot_prone="0" can_shoot_crouching="0" suppressed="0" name="Arachne" class="4" carry_in_two_hands="1" reload_one_at_a_time="0" sight_range_modifier="1.2" projectile_speed="150" last_burst_retrigger_time="1.0" barrel_offset="0.3" projectiles_per_shot="1" use_basic_muzzle_smoke_effect="0" burst_shots="1" stab_enabled="1" stab_range="5.0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="4.5" magazine_size="5" can_shoot_standing="1" can_shoot_prone="0" can_shoot_crouching="0" suppressed="0" name="Arachne" class="4" carry_in_two_hands="1" reload_one_at_a_time="0" sight_range_modifier="1.2" sight_height_offset="3.0" projectile_speed="150" last_burst_retrigger_time="1.0" barrel_offset="0.3" projectiles_per_shot="1" use_basic_muzzle_smoke_effect="0" burst_shots="1" stab_enabled="1" stab_range="5.0"/>
 	<commonness value="0.01" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="20.0" buy_price="0.0" sell_price="0.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -156955,7 +156955,7 @@
 	<drop_on_death_result class="spawn" instance_class="soldier" instance_key="pard_arachne_clone" min_amount="5" max_amount="8" offset="0 0 0" position_spread="5 0" direction_spread="0 0"/>
 	<projectile class="bullet" name="88type_laser" slot="1" pulldown_in_air="4">
 	<trail probability="1.0" key="laser_hyz"/>
-	<result class="blast" damage="2.0" radius="3.5" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
+	<result class="blast" damage="2.0" radius="3.0" decal="1" push="0.4" character_state="death" faction_compare="not_equal"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
@@ -157033,6 +157033,8 @@
 	<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
 	<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
 	<target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+	<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
+	<target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0"/>
 </weapon>
 
 <weapon on_ground_up="0 0 1" key="parw_arachne_clone.weapon" time_to_live_out_in_the_open="0" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0">
