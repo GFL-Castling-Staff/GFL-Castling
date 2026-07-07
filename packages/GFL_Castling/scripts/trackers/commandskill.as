@@ -3277,7 +3277,7 @@ class CommandSkill : Tracker {
                         addCooldown("sniper",15,characterId,modifer);
                     }
                     else if (weapon_name == "gkw_thunder.weapon" || weapon_name == "gkw_thunder_2206.weapon" || weapon_name == "gkw_thunder_3309.weapon"){
-                        playAnimationKey(m_metagame,characterId,"crouching aiming, RF skill 1.5s",false);
+                        playAnimationKey(m_metagame,characterId,"crouching aiming, HG skill 1.5s",false);
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                         tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.5,characterId,factionid,"snipe_blast_50.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                         addCooldown("sniper",20,characterId,modifer);
@@ -3317,6 +3317,12 @@ class CommandSkill : Tracker {
                         TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
                         tasker.add(DelayAntiPersonSnipeRequest(m_metagame,1.0,characterId,factionid,"snipe_80.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
                         addCooldown("sniper",20,characterId,modifer);
+                    }
+                    else if (weapon_name == "gkw_contender.weapon" || weapon_name=="gkw_contender_1502.weapon" || weapon_name=="gkw_contender_3201.weapon"){
+                        playAnimationKey(m_metagame,characterId,"recoil, pistol",true,false);
+                        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                        tasker.add(DelayAntiPersonSnipeRequest(m_metagame,0.2,characterId,factionid,"snipe_contender.projectile",c_pos.add(Vector3(0,0.5,0)),target_id));
+                        addCooldown("sniper",12,characterId,modifer);
                     }
 
                 }

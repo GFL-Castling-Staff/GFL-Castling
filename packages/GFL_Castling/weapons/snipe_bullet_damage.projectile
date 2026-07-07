@@ -348,4 +348,29 @@
         <effect class="result" key="character" copy="terrain" />
         <effect class="result" key="other" copy="terrain" />
     </projectile>    
+    <projectile class="grenade" name="" key="snipe_contender.projectile" pulldown_in_air="4" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" can_be_disarmed="0" can_be_detected_by_driver="0" can_be_detected_by_footmen="0" slot="0" radius="0.3" use_time_to_live="1" time_to_live="2">
+        <result class="spawn" instance_class="projectile" instance_key="blast_snipe.projectile" min_amount="15" max_amount="15" make_vehicle_hit_sound="0" offset="0 0.3 0" position_spread="0 0" direction_spread="0.0 0.0" />
+        <trigger class="impact"/>
+        <rotation class="motion" />
+        <collision class="sticky" />
+        <model />
+        <hud_icon filename="88r.png" />
+        <commonness value="0.0" can_respawn_with="0" in_stock="0" />
+        <effect class="result" key="other" ref="hitGround_20mm" use_surface_color="1" />
+        <effect class="result" key="other" ref="BulletImpactDust4" />
+        <effect class="result" key="other" ref="BulletImpactDust5" />
+        <effect class="result" key="other" ref="BulletImpactDust6" />
+        <effect class="result" key="other" ref="Ct_Shine" lighting="0" />
+        <effect class="result" key="other" ref="Godray" lighting="0" />
+        <effect class="result" key="other" ref="LowDust"/>
+        <effect class="result" key="other" ref="pa15_result_lens_light" lighting="0"/>
+        <effect class="result" key="other" ref="pa15_result_side_particle" lighting="0"/>
+        <effect class="result" key="other" ref="pa15_result_center_spark" lighting="0"/>
+        <effect class="result" key="other" ref="pa15_result_blast_shine_center_hollow" lighting="0"/>
+        <effect class="result" key="other" ref="pa15_result_blast_shine_particle" lighting="0"/>
+        <effect class="result" key="static_object" copy="other" />
+        <effect class="result" key="terrain" copy="other" />
+        <effect class="result" key="vehicle" copy="other" />
+        <effect class="result" key="character" copy="other" />
+    </projectile>
 </projectiles>
