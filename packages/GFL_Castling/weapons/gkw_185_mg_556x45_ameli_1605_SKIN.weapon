@@ -60,8 +60,8 @@
     <effect class="muzzle" ref="ejection_556" />
     <stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.4"/>
-	<stance state_key="standing" accuracy="1.2"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="standing" accuracy="1.1"/>
+	<stance state_key="crouching" accuracy="1.1"/>
     <stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.2"/>
     <stance state_key="prone_moving" accuracy="0.675"/>

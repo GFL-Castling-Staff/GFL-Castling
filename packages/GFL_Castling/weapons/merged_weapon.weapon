@@ -8644,6 +8644,7 @@
 	<stance state_key="crouching" accuracy="1.1"/>
 	<stance state_key="prone" accuracy="1.1"/>
 	<stance state_key="over_wall" accuracy="1.1"/>
+	<modifier class="hit_success_probability" value="-0.4"/>
 	<tag name="shotgun"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="10.0" buy_price="1.0" sell_price="0.0"/>
@@ -8670,7 +8671,6 @@
 	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="melee, bayonet"/>
-	<modifier class="hit_success_probability" value="-0.2"/>
 </weapon>
 
 <weapon key="gkw_m82a1.weapon" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -23253,8 +23253,8 @@
 	<stance state_key="walking" accuracy="0.2"/>
 	<stance state_key="crouch_moving" accuracy="0.5"/>
 	<stance state_key="prone_moving" accuracy="0.6"/>
-	<stance state_key="standing" accuracy="1.1"/>
-	<stance state_key="crouching" accuracy="1.0"/>
+	<stance state_key="standing" accuracy="1.05"/>
+	<stance state_key="crouching" accuracy="1.05"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="over_wall" accuracy="1.2"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
@@ -23645,7 +23645,7 @@
 	<stance state_key="running" accuracy="0.2"/>
 	<stance state_key="walking" accuracy="0.3"/>
 	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -23901,7 +23901,7 @@
 	<stance state_key="crouch_moving" accuracy="0.55"/>
 	<stance state_key="prone_moving" accuracy="0.55"/>
 	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="0.98"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.3"/>
 	<stance state_key="over_wall" accuracy="1.3"/>
 </weapon>
@@ -24116,7 +24116,7 @@
 	<stance state_key="crouch_moving" accuracy="0.55"/>
 	<stance state_key="prone_moving" accuracy="0.55"/>
 	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="0.98"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.3"/>
 	<stance state_key="over_wall" accuracy="1.3"/>
 </weapon>
@@ -24330,7 +24330,7 @@
 	<stance state_key="crouch_moving" accuracy="0.55"/>
 	<stance state_key="prone_moving" accuracy="0.55"/>
 	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="0.98"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.3"/>
 	<stance state_key="over_wall" accuracy="1.3"/>
 </weapon>
@@ -24526,7 +24526,7 @@
 	<stance state_key="crouch_moving" accuracy="0.55"/>
 	<stance state_key="prone_moving" accuracy="0.55"/>
 	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="0.98"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.3"/>
 	<stance state_key="over_wall" accuracy="1.3"/>
 	<modifier class="speed" value="0.1"/>
@@ -40583,8 +40583,8 @@
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.4"/>
-	<stance state_key="standing" accuracy="1.2"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="standing" accuracy="1.1"/>
+	<stance state_key="crouching" accuracy="1.1"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -40790,7 +40790,7 @@
 	<stance state_key="running" accuracy="0.2"/>
 	<stance state_key="walking" accuracy="0.3"/>
 	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -40977,7 +40977,7 @@
 	<stance state_key="running" accuracy="0.2"/>
 	<stance state_key="walking" accuracy="0.3"/>
 	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -41490,8 +41490,8 @@
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.4"/>
-	<stance state_key="standing" accuracy="1.2"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="standing" accuracy="1.05"/>
+	<stance state_key="crouching" accuracy="1.05"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -41838,8 +41838,8 @@
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.4"/>
-	<stance state_key="standing" accuracy="1.2"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="standing" accuracy="1.0"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -50714,7 +50714,7 @@
 	<stance state_key="running" accuracy="0.2"/>
 	<stance state_key="walking" accuracy="0.45"/>
 	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="0.99"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -50824,7 +50824,7 @@
 	<stance state_key="running" accuracy="0.2"/>
 	<stance state_key="walking" accuracy="0.45"/>
 	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="0.99"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -64566,7 +64566,7 @@
 	<stance state_key="running" accuracy="0.2"/>
 	<stance state_key="walking" accuracy="0.45"/>
 	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="0.98"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -64806,7 +64806,7 @@
 	<stance state_key="running" accuracy="0.2"/>
 	<stance state_key="walking" accuracy="0.45"/>
 	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="0.98"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -65046,7 +65046,7 @@
 	<stance state_key="running" accuracy="0.2"/>
 	<stance state_key="walking" accuracy="0.45"/>
 	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="0.98"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -66006,7 +66006,7 @@
 	<stance state_key="running" accuracy="0.2"/>
 	<stance state_key="walking" accuracy="0.45"/>
 	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="0.98"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -76586,7 +76586,7 @@
 	<stance state_key="running" accuracy="0.2"/>
 	<stance state_key="walking" accuracy="0.45"/>
 	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.1"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -76820,7 +76820,7 @@
 	<stance state_key="running" accuracy="0.2"/>
 	<stance state_key="walking" accuracy="0.45"/>
 	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.1"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -95387,7 +95387,7 @@
 	<stance state_key="running" accuracy="0.2"/>
 	<stance state_key="walking" accuracy="0.45"/>
 	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.1"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -95500,7 +95500,7 @@
 	<stance state_key="running" accuracy="0.2"/>
 	<stance state_key="walking" accuracy="0.45"/>
 	<stance state_key="standing" accuracy="1.0"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.1"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -99081,7 +99081,7 @@
 	<stance state_key="crouch_moving" accuracy="0.55"/>
 	<stance state_key="prone_moving" accuracy="0.55"/>
 	<stance state_key="standing" accuracy="1.15"/>
-	<stance state_key="crouching" accuracy="1.1"/>
+	<stance state_key="crouching" accuracy="1.15"/>
 	<stance state_key="prone" accuracy="1.4"/>
 	<stance state_key="over_wall" accuracy="1.4"/>
 	<modifier class="speed" value="0.1"/>
@@ -111872,8 +111872,8 @@
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.35"/>
 	<stance state_key="walking" accuracy="0.45"/>
-	<stance state_key="standing" accuracy="1.2"/>
-	<stance state_key="crouching" accuracy="0.98"/>
+	<stance state_key="standing" accuracy="1.05"/>
+	<stance state_key="crouching" accuracy="1.05"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -113380,8 +113380,8 @@
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.4"/>
-	<stance state_key="standing" accuracy="1.2"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="standing" accuracy="1.1"/>
+	<stance state_key="crouching" accuracy="1.1"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -113604,8 +113604,8 @@
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.4"/>
-	<stance state_key="standing" accuracy="1.2"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="standing" accuracy="1.1"/>
+	<stance state_key="crouching" accuracy="1.1"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -128727,8 +128727,8 @@
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.4"/>
-	<stance state_key="standing" accuracy="1.2"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="standing" accuracy="1.05"/>
+	<stance state_key="crouching" accuracy="1.05"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -138143,8 +138143,8 @@
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.35"/>
 	<stance state_key="walking" accuracy="0.45"/>
-	<stance state_key="standing" accuracy="1.2"/>
-	<stance state_key="crouching" accuracy="0.98"/>
+	<stance state_key="standing" accuracy="1.05"/>
+	<stance state_key="crouching" accuracy="1.05"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -138389,8 +138389,8 @@
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.4"/>
-	<stance state_key="standing" accuracy="1.2"/>
-	<stance state_key="crouching" accuracy="0.95"/>
+	<stance state_key="standing" accuracy="1.05"/>
+	<stance state_key="crouching" accuracy="1.05"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -138530,8 +138530,8 @@
 	<effect class="muzzle" ref="ejection_556"/>
 	<stance state_key="running" accuracy="0.35"/>
 	<stance state_key="walking" accuracy="0.45"/>
-	<stance state_key="standing" accuracy="1.2"/>
-	<stance state_key="crouching" accuracy="0.98"/>
+	<stance state_key="standing" accuracy="1.05"/>
+	<stance state_key="crouching" accuracy="1.05"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="0.675"/>
@@ -144669,7 +144669,7 @@
 	<model filename="gkw_ar_m16a1.xml"/>
 	<hud_icon filename="gkw_m16a1.png"/>
 	<weak_hand_hold offset="0.2"/>
-	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="4">
+	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
 	<result class="hit" kill_probability="8.0" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="1.031" kill_decay_end_time="1.719" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -144725,6 +144725,8 @@
 	<effect class="result" key="terrain" ref="BulletImpact"/>
 	<effect class="result" key="character" ref="BulletImpact"/>
 	<effect class="result" key="shield" ref="BulletImpact"/>
+	<effect class="result" key="character" ref="common_hit_effect_1" lighting="0"/>
+	<effect class="result" key="character" ref="common_hit_effect_2" lighting="0"/>
 	<effect class="result" key="terrain" ref="Bullet_Burnout"/>
 	<effect class="result" key="static_object" copy="terrain"/>
 	<effect class="result" key="shield" ref="hitMetal"/>
