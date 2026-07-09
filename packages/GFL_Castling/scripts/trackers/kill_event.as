@@ -619,7 +619,7 @@ class kill_event : Tracker {
                 }
             }
 
-            //指定武器handle
+            //指定武器handle(响应任何击杀事件)
             if(c_weaponType=="gkw_ppkmod3.weapon" || c_weaponType =="gkw_ppkmod3_3905.weapon" || c_weaponType =="gkw_ppkmod3_6109.weapon"){
                 int i = findSkillIndex(characterId,"PPKMOD3");
                 if(i >=0){
@@ -638,7 +638,7 @@ class kill_event : Tracker {
                     }
                 }
             }
-            if(c_weaponType=="gkw_m1895mod3_5309.weapon"
+            else if(c_weaponType=="gkw_m1895mod3_5309.weapon"
             || c_weaponType =="gkw_m1895mod3_5309_skill.weapon"
             || c_weaponType =="gkw_m1895mod3_7107.weapon"
             || c_weaponType =="gkw_m1895mod3_7107_skill.weapon"
@@ -654,6 +654,19 @@ class kill_event : Tracker {
                     }
                 }
             }
+            else if(c_weaponType=="gkw_m1911_mod3.weapon" || c_weaponType=="gkw_m1911mod3_4514.weapon" || c_weaponType=="gkw_m1911mod3_8406.weapon" ){
+                if ((startsWith(c_armorType,"bp_")))
+                {
+                    updateHealByKillEvent(characterId,factionId,4,10,"weapon",kill_to_heal_scale*2,getRecoverVestNum(c_weaponType));
+                }
+                else
+                {
+                    updateHealByKillEvent(characterId,factionId,4,10,"weapon",kill_to_heal_scale,getRecoverVestNum(c_weaponType));
+                }
+            }
+
+
+
             // nadebag手雷回复
             if(startsWith(c_armorType,"nadebag_t6")){
                 int nadeCurrentScore = g_playerInfo_Buck.getKillSkillCountbyPid(playerId, "nadebag_recovery");
@@ -723,18 +736,10 @@ class kill_event : Tracker {
                 }
             }
 
-            if(c_weaponType=="gkw_m1911_mod3.weapon" || c_weaponType=="gkw_m1911mod3_4514.weapon" || c_weaponType=="gkw_m1911mod3_8406.weapon" ){
-                if ((startsWith(c_armorType,"bp_")))
-                {
-                    updateHealByKillEvent(characterId,factionId,4,10,"weapon",kill_to_heal_scale*2,getRecoverVestNum(c_weaponType));
-                }
-                else
-                {
-                    updateHealByKillEvent(characterId,factionId,4,10,"weapon",kill_to_heal_scale,getRecoverVestNum(c_weaponType));
-                }
-            }
-
             updateHealByKillEvent(characterId,factionId,int(healOnKillWeaponList[c_weaponType]),10,"weapon",kill_to_heal_scale,getRecoverVestNum(c_weaponType));
+
+
+            ///指定武器handle(响应特殊条件)
 
             if(KillerWeaponKey=="gkw_ppkmod3.weapon" || KillerWeaponKey=="gkw_ppkmod3_3905.weapon" || KillerWeaponKey=="gkw_ppkmod3_6109.weapon"){
                 // 乌鸦是猪，望周知
@@ -761,7 +766,7 @@ class kill_event : Tracker {
             }
 
             // M14MOD3 火力专注 - 连锁射击
-            if( (KillerWeaponKey=="gkw_m14mod3.weapon"
+            else if( (KillerWeaponKey=="gkw_m14mod3.weapon"
             || KillerWeaponKey=="gkw_m14mod3_skill.weapon"
             || KillerWeaponKey=="gkw_m14mod3_303.weapon"
             || KillerWeaponKey=="gkw_m14mod3_303_skill.weapon")
@@ -822,7 +827,7 @@ class kill_event : Tracker {
 
             //狙击妖精类 击杀无人机充能
 
-            if(KillerWeaponKey=="gkw_m200.weapon" || KillerWeaponKey=="gkw_m200_560.weapon" || KillerWeaponKey=="gkw_m200_4502.weapon"
+            else if(KillerWeaponKey=="gkw_m200.weapon" || KillerWeaponKey=="gkw_m200_560.weapon" || KillerWeaponKey=="gkw_m200_4502.weapon"
             || KillerWeaponKey=="gkw_ssg3000.weapon"
             )
             {
@@ -844,7 +849,7 @@ class kill_event : Tracker {
 
             //莫辛纳甘技能 苍白收割者
 
-            if(KillerWeaponKey=="blast_snipe_mosin.projectile" && killway=="blast")
+            else if(KillerWeaponKey=="blast_snipe_mosin.projectile" && killway=="blast")
             {
                 g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"mosin");
                 int kill_num = g_playerInfo_Buck.getKillSkillCountbyPid(playerId,"mosin");
@@ -869,7 +874,7 @@ class kill_event : Tracker {
                 }
             }
 
-            if(KillerWeaponKey=="gkw_m1891mod3.weapon" && killway=="hit")
+            else if(KillerWeaponKey=="gkw_m1891mod3.weapon" && killway=="hit")
             {
                 int i = findSkillIndex(characterId,"mosin");
                 if(i >=0){
@@ -886,7 +891,7 @@ class kill_event : Tracker {
 
             //德利尔技能 无声标记
 
-            if(KillerWeaponKey=="blast_snipe_delisle.projectile" && killway=="blast")
+            else if(KillerWeaponKey=="blast_snipe_delisle.projectile" && killway=="blast")
             {
                 if(reward_pool_key=="boss")
                 {
@@ -898,7 +903,7 @@ class kill_event : Tracker {
                 }
             }
 
-            if(KillerWeaponKey=="gkw_delisle.weapon"
+            else if(KillerWeaponKey=="gkw_delisle.weapon"
             || KillerWeaponKey=="gkw_delisle_6202.weapon"
             || KillerWeaponKey=="gkw_delisle_7801.weapon"
             )
@@ -923,7 +928,8 @@ class kill_event : Tracker {
                 }
             }
 
-            if(KillerWeaponKey=="snipe_wildhunt_ntw20_main.projectile" && killway=="blast")
+            //NTW20技能 狂猎燃魂
+            else if(KillerWeaponKey=="snipe_wildhunt_ntw20_main.projectile" && killway=="blast")
             {
                 if(playerInfo.checkTag("NTW20_Wildhunt_Main"))
                 {
@@ -964,7 +970,7 @@ class kill_event : Tracker {
                 }
             }
 
-            if(KillerWeaponKey=="snipe_wildhunt_ntw20_sub.projectile" && killway=="blast")
+            else if(KillerWeaponKey=="snipe_wildhunt_ntw20_sub.projectile" && killway=="blast")
             {
                 if(playerInfo.tickTag("NTW20_Wildhunt"))
                 {
@@ -1011,15 +1017,32 @@ class kill_event : Tracker {
                     }
                 }
             }
-
-            if(KillerWeaponKey=="blast_snipe_ff_hunter.projectile" && killway=="blast")
+            //Hunter技能
+            else if(KillerWeaponKey=="blast_snipe_ff_hunter.projectile" && killway=="blast")
             {
                 if(reward_pool_key=="rare" || reward_pool_key=="elite" || reward_pool_key=="boss")
                 {
                     healCharacter(m_metagame,characterId,1);
                 }
             }
-
+            //老李mod3 突击模式击杀回甲
+            else if(KillerWeaponKey=="gkw_mlemk1mod3_skill.weapon" || KillerWeaponKey=="gkw_mlemk1mod3_604_skill.weapon" ){
+                if(killway == "hit")
+                {
+                    if(reward_pool_key=="boss")
+                    {
+                        healCharacter(m_metagame,characterId,5);
+                    }
+                    else if(reward_pool_key=="elite" || reward_pool_key=="rare")
+                    {
+                        healCharacter(m_metagame,characterId,2);
+                    }
+                    else
+                    {
+                        healCharacter(m_metagame,characterId,1);
+                    }                    
+                }
+            }
             if (soldier_name=="") return;
 
             if(SFbossList.find(soldier_name)>-1 && characterId > 0){

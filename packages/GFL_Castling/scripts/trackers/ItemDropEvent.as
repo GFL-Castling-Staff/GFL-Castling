@@ -494,19 +494,19 @@ class ItemDropEvent : Tracker {
                     else if ( (checkQueue(pId,"m1903_1") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1903.weapon")){
                         giveDigimindItem(cId, pId, "gkw_m1903_only.weapon", normalizeWeaponKey(itemKey), "m1903_1");
                     }
-                    else if ( (checkQueue(pId,"m1903_2") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1903.weapon")){
+                    else if ( (checkQueue(pId,"m1903_2")) && (itemKey=="gkw_m1903.weapon")){
                         giveDigimindItem(cId, pId, "gkw_m1903_exp.weapon", normalizeWeaponKey(itemKey), "m1903_2");
                     }
                     else if ( (checkQueue(pId,"m1903_1") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1903_302.weapon")){
                         giveDigimindItem(cId, pId, "gkw_m1903_302_only.weapon", normalizeWeaponKey(itemKey), "m1903_1");
                     }
-                    else if ( (checkQueue(pId,"m1903_2") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1903_302.weapon")){
+                    else if ( (checkQueue(pId,"m1903_2")) && (itemKey=="gkw_m1903_302.weapon")){
                         giveDigimindItem(cId, pId, "gkw_m1903_302_exp.weapon", normalizeWeaponKey(itemKey), "m1903_2");
                     }
                     else if ( (checkQueue(pId,"m1903_1") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1903_1107.weapon")){
                         giveDigimindItem(cId, pId, "gkw_m1903_1107_only.weapon", normalizeWeaponKey(itemKey), "m1903_1");
                     }
-                    else if ( (checkQueue(pId,"m1903_2") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1903_1107.weapon")){
+                    else if ( (checkQueue(pId,"m1903_2")) && (itemKey=="gkw_m1903_1107.weapon")){
                         giveDigimindItem(cId, pId, "gkw_m1903_1107_exp.weapon", normalizeWeaponKey(itemKey), "m1903_2");
                     }
                     else if ( (checkQueue(pId,"fn49") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_fn49.weapon")){
