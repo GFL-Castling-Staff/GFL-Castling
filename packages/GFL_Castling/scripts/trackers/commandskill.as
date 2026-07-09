@@ -154,7 +154,7 @@ class CommandSkill : Tracker {
         m_ended = false;
         m14_active_tasks.resize(0);
         TimerArray.reserve(128);
-        m_alertMarkerIdCounter = 9000;
+        m_alertMarkerIdCounter = 24000;
     }
 
     protected void handleChatEvent(const XmlElement@ event) {
@@ -854,7 +854,7 @@ class CommandSkill : Tracker {
     }
     void excuteP22skill(int characterId,int playerId,SkillModifer@ modifer){
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"P22")) return;
-        addCooldown("P22",12,characterId,modifer);
+        addCooldown("P22",60,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             if (checkCharacterDead(character)) return;
@@ -866,7 +866,7 @@ class CommandSkill : Tracker {
                 XmlElement c ("command");
                 c.setStringAttribute("class", "update_inventory");
                 c.setIntAttribute("character_id", soldierId);
-                c.setIntAttribute("untransform_count", 1);
+                c.setIntAttribute("untransform_count", 10);
                 m_metagame.getComms().send(c);
             }
             spawnStaticProjectile(m_metagame,"particle_effect_radius_heal.projectile",c_pos,characterId,factionid);
@@ -880,7 +880,7 @@ class CommandSkill : Tracker {
     }
     void excuteHS2000skill(int characterId,int playerId,SkillModifer@ modifer){
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"HS2000")) return;
-        addCooldown("HS2000",12,characterId,modifer);
+        addCooldown("HS2000",30,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
             if (checkCharacterDead(character)) return;
@@ -892,7 +892,7 @@ class CommandSkill : Tracker {
                 XmlElement c ("command");
                 c.setStringAttribute("class", "update_inventory");
                 c.setIntAttribute("character_id", soldierId);
-                c.setIntAttribute("untransform_count", 1);
+                c.setIntAttribute("untransform_count", 3);
                 m_metagame.getComms().send(c);
             }
             spawnStaticProjectile(m_metagame,"particle_effect_radius_heal.projectile",c_pos,characterId,factionid);
@@ -5481,6 +5481,21 @@ class CommandSkill : Tracker {
         }
     }
 
+
+    void excuteGrizzly(int characterId, int playerId, SkillModifer@ modifer) {
+        if (excuteCooldownCheck(m_metagame, characterId, modifer, playerId, "Grizzly")) return;
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character is null) return;
+        if (!canCastSkill(character)) return;
+        const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+        if (player is null) return;
+
+        GFL_playerInfo@ pinfo = getPlayerInfoFromListbyPid(playerId);
+        if (pinfo.getPlayerName() == default_string) return;
+        pinfo.addTag(Tag("Grizzly",5));
+        addCooldown("Grizzly",30, characterId, modifer);
+    }
+    
     // HS.50 星孛劫火
     void excuteHS50Skill(int characterId, int playerId, SkillModifer@ modifer) {
         if (excuteCooldownCheck(m_metagame, characterId, modifer, playerId, "HS50", true, "charge_recover_all", 5)) return;
