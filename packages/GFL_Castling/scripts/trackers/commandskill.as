@@ -125,12 +125,25 @@ class SpamAvoider{
     }
 }
 
+class AlertMapMarker {
+    int m_markerId;
+    float m_timeLeft;
+    int m_factionId;
+    AlertMapMarker(int id, float time, int faction) {
+        m_markerId = id;
+        m_timeLeft = time;
+        m_factionId = faction;
+    }
+}
+
 class CommandSkill : Tracker {
     protected GameMode@ m_metagame;
     protected int m_DummyCallID=0;
 
     array<SkillEffectTimer@> TimerArray;
     array<SpamAvoider@> DontSpamingYourFuckingSkillWhileCoolDownBro;
+    array<AlertMapMarker@> m_alertMapMarkers;
+    int m_alertMarkerIdCounter;
 
 
     protected bool m_ended;
@@ -141,6 +154,7 @@ class CommandSkill : Tracker {
         m_ended = false;
         m14_active_tasks.resize(0);
         TimerArray.reserve(128);
+        m_alertMarkerIdCounter = 9000;
     }
 
     protected void handleChatEvent(const XmlElement@ event) {
@@ -389,6 +403,25 @@ class CommandSkill : Tracker {
 
                 spawnStaticProjectile(m_metagame,"alert_chat.projectile",tar_pos,cId,factionid);
                 playSoundAtLocation(m_metagame,"objective_priority.wav",factionid,tar_pos,1.0);
+
+                int markerId = m_alertMarkerIdCounter;
+                m_alertMarkerIdCounter = (m_alertMarkerIdCounter >= 9999) ? 9000 : m_alertMarkerIdCounter + 1;
+                XmlElement markerCmd("command");
+                markerCmd.setStringAttribute("class", "set_marker");
+                markerCmd.setIntAttribute("id", markerId);
+                markerCmd.setIntAttribute("faction_id", factionid);
+                markerCmd.setIntAttribute("atlas_index", 14);
+                markerCmd.setFloatAttribute("size", 0.5);
+                markerCmd.setFloatAttribute("range", 0.0);
+                markerCmd.setIntAttribute("enabled", 1);
+                markerCmd.setStringAttribute("position", tar_pos.toString());
+                markerCmd.setStringAttribute("text", "");
+                markerCmd.setBoolAttribute("show_in_map_view", true);
+                markerCmd.setBoolAttribute("show_in_game_view", false);
+                markerCmd.setBoolAttribute("show_at_screen_edge", false);
+                m_metagame.getComms().send(markerCmd);
+                m_alertMapMarkers.insertLast(AlertMapMarker(markerId, 5.0, factionid));
+
                 dictionary a;
 				a["%name"] = sender;
                 sendFactionMessageKey(m_metagame, 0,"alertchatd",a,2.0);
@@ -465,6 +498,16 @@ class CommandSkill : Tracker {
                 }
             }
         }
+        if (m_alertMapMarkers.length() > 0)
+        {
+            for (int a = m_alertMapMarkers.length() - 1; a >= 0; a--) {
+                m_alertMapMarkers[a].m_timeLeft -= time;
+                if (m_alertMapMarkers[a].m_timeLeft < 0) {
+                    removeMarkerwithId(m_metagame, m_alertMapMarkers[a].m_factionId, m_alertMapMarkers[a].m_markerId);
+                    m_alertMapMarkers.removeAt(a);
+                }
+            }
+        }
     }
 
     void start() {
@@ -472,6 +515,7 @@ class CommandSkill : Tracker {
     }
     void gameContinuePreStart() {
         m_ended = false;
+        m_alertMapMarkers.resize(0);
     }
     bool hasEnded() const {
         // always on
