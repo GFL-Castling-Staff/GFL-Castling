@@ -89519,7 +89519,7 @@
 <weapon key="gkw_mg3mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
 	<tag name="elite"/>
-	<specification barrel_offset="0.65" retrigger_time="0.054" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="3.3" leave_crouch_accuracy_penalty="0.4" stance_accuracy_rate="0.9" spread_range="0.7" magazine_size="200" suppressed="0" name="MG3(MOD3)" class="0" projectile_speed="250" sight_range_modifier="2.0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.65" retrigger_time="0.054" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="3.3" leave_crouch_accuracy_penalty="0.2" stance_accuracy_rate="0.9" spread_range="0.7" magazine_size="200" suppressed="0" name="MG3(MOD3)" class="0" projectile_speed="250" sight_range_modifier="2.0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.4"/>
 	<animation state_key="next_in_chain_out" animation_key="open tripod"/>
 	<inventory encumbrance="50.0" buy_price="300.0" sell_price="300.0"/>
@@ -89978,7 +89978,7 @@
 <weapon key="gkw_mg3mod3_3806.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
 	<tag name="elite"/>
-	<specification barrel_offset="0.65" retrigger_time="0.054" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="3.3" leave_crouch_accuracy_penalty="0.4" stance_accuracy_rate="0.9" spread_range="0.7" magazine_size="200" suppressed="0" name="MG3(MOD3)-[Full Moon's Gaze]" class="0" projectile_speed="250" sight_range_modifier="2.0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.65" retrigger_time="0.054" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="3.3" leave_crouch_accuracy_penalty="0.2" stance_accuracy_rate="0.9" spread_range="0.7" magazine_size="200" suppressed="0" name="MG3(MOD3)-[Full Moon's Gaze]" class="0" projectile_speed="250" sight_range_modifier="2.0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.4"/>
 	<animation state_key="next_in_chain_out" animation_key="open tripod"/>
 	<inventory encumbrance="50.0" buy_price="300.0" sell_price="300.0"/>
@@ -107778,7 +107778,7 @@
 </weapon>
 
 <weapon key="gkw_hvy_rpg29.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.0" stance_accuracy_rate="0.4" leave_crouch_accuracy_penalty="0.4" magazine_size="1" sight_range_modifier="3.0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" barrel_offset="0.75" suppressed="0" name="RPG-29 Vampir-[PG-29V]" class="4" projectile_speed="140" slot="0" projectiles_per_shot="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.0" stance_accuracy_rate="0.4" leave_crouch_accuracy_penalty="0.2" magazine_size="1" sight_range_modifier="3.0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" barrel_offset="0.75" suppressed="0" name="RPG-29 Vampir-[PG-29V]" class="4" projectile_speed="140" slot="0" projectiles_per_shot="1"/>
 	<inventory encumbrance="100.0" buy_price="500.0" sell_price="0.0"/>
 	<next_in_chain key="gkw_hvy_rpg29_he.weapon" share_ammo="0"/>
 	<animation key="recoil" animation_key="recoil, law"/>
@@ -110869,7 +110869,7 @@
 </weapon>
 
 <weapon key="gkw_lwmmgmod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="4.8" leave_crouch_accuracy_penalty="0.4" spread_range="0.5" magazine_size="100" suppressed="0" name="LWMMG(MOD3)" class="1" projectile_speed="210" stance_accuracy_rate="2.0" sight_range_modifier="2.0" can_shoot_standing="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="4.8" leave_crouch_accuracy_penalty="0.2" spread_range="0.5" magazine_size="100" suppressed="0" name="LWMMG(MOD3)" class="1" projectile_speed="210" stance_accuracy_rate="2.0" sight_range_modifier="2.0" can_shoot_standing="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory encumbrance="50.0" buy_price="300.0" sell_price="300.0"/>
 	<commonness value="0.00001" in_stock="0" can_respawn_with="1"/>
@@ -134398,7 +134398,7 @@
 </weapon>
 
 <weapon key="gkw_lwmmgmod3_1808.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="4.8" leave_crouch_accuracy_penalty="0.4" spread_range="0.5" magazine_size="100" suppressed="0" name="LWMMG(MOD3)-[Yellow Star-thistle]" class="1" projectile_speed="210" stance_accuracy_rate="2.0" sight_range_modifier="2.0" can_shoot_standing="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="4.8" leave_crouch_accuracy_penalty="0.2" spread_range="0.5" magazine_size="100" suppressed="0" name="LWMMG(MOD3)-[Yellow Star-thistle]" class="1" projectile_speed="210" stance_accuracy_rate="2.0" sight_range_modifier="2.0" can_shoot_standing="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory encumbrance="50.0" buy_price="300.0" sell_price="300.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -165636,4 +165636,3 @@
 </weapon>
 
 </weapons>
-

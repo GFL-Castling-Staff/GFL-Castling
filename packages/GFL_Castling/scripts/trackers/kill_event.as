@@ -1289,6 +1289,10 @@ class no_delete_data{
     void add(){
         m_num++;
     }
+
+    void set(int num){
+        m_num = num;
+    }
 }
 
 int findNodeleteDataIndex(string name,string type){

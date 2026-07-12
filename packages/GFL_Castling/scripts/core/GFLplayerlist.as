@@ -1029,15 +1029,35 @@ class GFL_playerlist_system : Tracker {
                     string strname= g_playerInfo_Buck.m_playerInfo[i].getPlayerName();
                     int j = findNodeleteDataIndex(strname,"kar98k");
 
+                    tdoll_intimacy_info@ 98k_intimacy = newdata.getIntimacyFromKey(c_weaponType);
+                    int 98k_level = floor(98k_intimacy.getScore());
+                    int min_medal_level=0;
+                    if (98k_level >= 20)
+                    {
+                        min_medal_level = 4;
+                    }
+                    else if (98k_level >= 10)
+                    {
+                        min_medal_level = 3;
+                    }
+                    else if (98k_level >= 5)
+                    {
+                        min_medal_level = 2;
+                    }
+                    else if (98k_level >= 1)
+                    {
+                        min_medal_level = 1;
+                    }
+
                     if(j>=0){
-                        No_Delete_DataArray[j].add();
+                        No_Delete_DataArray[j].set(min_medal_level+1);
                         const XmlElement@ characterInfo = getCharacterInfo(m_metagame, g_playerInfo_Buck.m_playerInfo[i].getPlayerCid());
                         if (characterInfo is null) continue;
                         string c_pos = characterInfo.getStringAttribute("position");
                         spawnStaticProjectile(m_metagame,"particle_effect_98k_medal.projectile",c_pos,g_playerInfo_Buck.m_playerInfo[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));
                     }
                     else{
-                        No_Delete_DataArray.insertLast(no_delete_data(strname,strid,1,"kar98k"));       
+                        No_Delete_DataArray.insertLast(no_delete_data(strname,strid,min_medal_level+1,"kar98k"));       
                         const XmlElement@ characterInfo = getCharacterInfo(m_metagame, g_playerInfo_Buck.m_playerInfo[i].getPlayerCid());
                         if (characterInfo is null) continue;
                         string c_pos = characterInfo.getStringAttribute("position");

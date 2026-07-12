@@ -7,7 +7,7 @@
         accuracy_factor="1.0"
         sustained_fire_grow_step="1.2" 
         sustained_fire_diminish_rate="4.8" 
-        leave_crouch_accuracy_penalty="0.4"
+        leave_crouch_accuracy_penalty="0.2"
         spread_range="0.5"
         magazine_size="100"
         suppressed="0"
@@ -103,7 +103,7 @@
         last_burst_retrigger_time="-1"
         can_shoot_standing="1"
         can_shoot_prone="1"
-        leave_crouch_accuracy_penalty="0.5"
+        leave_crouch_accuracy_penalty="0.3"
         slot="0"/>
         <animation key="reload" animation_key="reloading, Machine gun 1.6"/>
         <inventory encumbrance="50.0" buy_price="300.0" sell_price="300.0"/>
