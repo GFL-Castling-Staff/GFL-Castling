@@ -4954,7 +4954,7 @@ class CommandSkill : Tracker {
             for(int i=0;i<m_fnum;i++) {
                 if(i!=factionid) {
                     array<const XmlElement@> affectedCharacter2;
-                    affectedCharacter2 = getCharactersNearPosition(m_metagame,s_pos,i,10.0f);
+                    affectedCharacter2 = getCharactersNearPosition(m_metagame,s_pos,i,5.0f);
                     if (affectedCharacter2 !is null){
                         for(uint x=0;x<affectedCharacter2.length();x++){
                             affectedCharacter.insertLast(affectedCharacter2[x]);
@@ -5011,7 +5011,7 @@ class CommandSkill : Tracker {
             for(int i=0;i<m_fnum;i++) {
                 if(i!=factionid) {
                     array<const XmlElement@> affectedCharacter2;
-                    affectedCharacter2 = getCharactersNearPosition(m_metagame,s_pos,i,10.0f);
+                    affectedCharacter2 = getCharactersNearPosition(m_metagame,s_pos,i,5.0f);
                     if (affectedCharacter2 !is null){
                         for(uint x=0;x<affectedCharacter2.length();x++){
                             affectedCharacter.insertLast(affectedCharacter2[x]);
@@ -5066,7 +5066,7 @@ class CommandSkill : Tracker {
             for(int i=0;i<m_fnum;i++) {
                 if(i!=factionid) {
                     array<const XmlElement@> affectedCharacter2;
-                    affectedCharacter2 = getCharactersNearPosition(m_metagame,s_pos,i,10.0f);
+                    affectedCharacter2 = getCharactersNearPosition(m_metagame,s_pos,i,5.0f);
                     if (affectedCharacter2 !is null){
                         for(uint x=0;x<affectedCharacter2.length();x++){
                             affectedCharacter.insertLast(affectedCharacter2[x]);
@@ -5495,7 +5495,7 @@ class CommandSkill : Tracker {
         pinfo.addTag(Tag("Grizzly",5));
         addCooldown("Grizzly",30, characterId, modifer);
     }
-    
+
     // HS.50 星孛劫火
     void excuteHS50Skill(int characterId, int playerId, SkillModifer@ modifer) {
         if (excuteCooldownCheck(m_metagame, characterId, modifer, playerId, "HS50", true, "charge_recover_all", 5)) return;

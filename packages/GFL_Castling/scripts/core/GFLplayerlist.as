@@ -1022,29 +1022,30 @@ class GFL_playerlist_system : Tracker {
                     c_weaponType == "gkw_98kmod3_8301.weapon" ||
                     c_weaponType == "gkw_98kmod3_8301_skill.weapon" ||    
                     c_weaponType == "gkw_98kmod3_10001.weapon" ||
-                    c_weaponType == "gkw_98kmod3_10001_skill.weapon"                                   
+                    c_weaponType == "gkw_98kmod3_10001_skill.weapon"
                     )
                 {
                     int strid = g_playerInfo_Buck.m_playerInfo[i].getPlayerPid();
                     string strname= g_playerInfo_Buck.m_playerInfo[i].getPlayerName();
                     int j = findNodeleteDataIndex(strname,"kar98k");
-
-                    tdoll_intimacy_info@ 98k_intimacy = newdata.getIntimacyFromKey(c_weaponType);
-                    int 98k_level = floor(98k_intimacy.getScore());
+                    string weaponkey = normalizeWeaponKey(c_weaponType);
+                    tdoll_intimacy_info@ kar98k_intimacy = newdata.getIntimacyFromKey(weaponkey);
+                    if (kar98k_intimacy is null) return;
+                    int kar98k_level = floor(kar98k_intimacy.getScore());
                     int min_medal_level=0;
-                    if (98k_level >= 20)
+                    if (kar98k_level >= 20)
                     {
                         min_medal_level = 4;
                     }
-                    else if (98k_level >= 10)
+                    else if (kar98k_level >= 10)
                     {
                         min_medal_level = 3;
                     }
-                    else if (98k_level >= 5)
+                    else if (kar98k_level >= 5)
                     {
                         min_medal_level = 2;
                     }
-                    else if (98k_level >= 1)
+                    else if (kar98k_level >= 1)
                     {
                         min_medal_level = 1;
                     }

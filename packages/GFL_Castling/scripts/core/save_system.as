@@ -880,6 +880,37 @@ class Save_System : Tracker {
             a["%waifu_boss"] = "" + waifu_intimacy.getBossKill();
             a["%waifu_vehicle"] = "" + waifu_intimacy.getVehicleDestroy();
             notify(m_metagame, "Waifu info query", a, "misc", player_id, false, "", 1.0);
+
+            if(waifu_intimacy.m_girl_index == 46)
+            {
+                int kar98k_level = floor(waifu_intimacy.getScore());
+                int min_medal_level=0;
+                if (kar98k_level >= 20)
+                {
+                    min_medal_level = 4;
+                }
+                else if (kar98k_level >= 10)
+                {
+                    min_medal_level = 3;
+                }
+                else if (kar98k_level >= 5)
+                {
+                    min_medal_level = 2;
+                }
+                else if (kar98k_level >= 1)
+                {
+                    min_medal_level = 1;
+                }
+                int j = findNodeleteDataIndex(p_name,"kar98k");
+                if (j>=0)
+                {
+                    No_Delete_DataArray[j].set(min_medal_level+1);                
+                }
+                else
+                {
+                    No_Delete_DataArray.insertLast(no_delete_data(p_name,player_id,min_medal_level+1,"kar98k"));       
+                }
+            }
         }
 
         if (!m_metagame.getAdminManager().isAdmin(p_name, senderId) && !m_metagame.getModeratorManager().isModerator(p_name, senderId)) {
