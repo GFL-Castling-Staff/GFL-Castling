@@ -1051,7 +1051,8 @@ class GFL_playerlist_system : Tracker {
                     }
 
                     if(j>=0){
-                        No_Delete_DataArray[j].set(min_medal_level+1);
+                        int _medal = max(min_medal_level,No_Delete_DataArray[j].m_num);
+                        No_Delete_DataArray[j].set(_medal+1);
                         const XmlElement@ characterInfo = getCharacterInfo(m_metagame, g_playerInfo_Buck.m_playerInfo[i].getPlayerCid());
                         if (characterInfo is null) continue;
                         string c_pos = characterInfo.getStringAttribute("position");

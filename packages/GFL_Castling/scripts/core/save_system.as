@@ -904,11 +904,12 @@ class Save_System : Tracker {
                 int j = findNodeleteDataIndex(p_name,"kar98k");
                 if (j>=0)
                 {
-                    No_Delete_DataArray[j].set(min_medal_level+1);                
+                    int _medal = max(min_medal_level,No_Delete_DataArray[j].m_num);
+                    No_Delete_DataArray[j].set(_medal);
                 }
                 else
                 {
-                    No_Delete_DataArray.insertLast(no_delete_data(p_name,player_id,min_medal_level+1,"kar98k"));       
+                    No_Delete_DataArray.insertLast(no_delete_data(p_name,player_id,min_medal_level,"kar98k"));       
                 }
             }
         }

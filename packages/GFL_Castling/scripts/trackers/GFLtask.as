@@ -3920,13 +3920,13 @@ class DOTEffectTask : RepeatEffectTask {
     }
 }
 
-// HK416 寄生榴弹 Task，对锁定的敌人列表逐个释放延迟爆炸，共 9 次
+// HK416 寄生榴弹 Task，对锁定的敌人列表逐个释放延迟爆炸，共 10 次
 class HK416SkillTask : RepeatEffectTask {
     protected array<const XmlElement@> m_affected;
 
     HK416SkillTask(GameMode@ metagame, int cId, int fId,
                    Vector3 pos, array<const XmlElement@> affected) {
-        super(metagame, cId, fId, pos, 0.5, 9);
+        super(metagame, cId, fId, pos, 0.5, 10);
         m_affected = affected;
     }
 
