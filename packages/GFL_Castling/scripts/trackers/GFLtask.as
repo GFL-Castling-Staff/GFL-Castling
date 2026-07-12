@@ -3865,6 +3865,7 @@ class RepeatEffectTask : Task {
     protected float m_interval;
     protected float m_timeLeft;
     protected int m_remainCount;
+    protected bool m_ended = false;
 
     RepeatEffectTask(GameMode@ metagame, int cId, int fId,
                      Vector3 pos, float interval, int count) {
@@ -3890,7 +3891,7 @@ class RepeatEffectTask : Task {
     }
 
     bool hasEnded() const {
-        return m_remainCount <= 0;
+        return m_remainCount <= 0 || m_ended;
     }
 
     // 子类重写此方法实现具体效果
@@ -3930,7 +3931,13 @@ class HK416SkillTask : RepeatEffectTask {
     }
 
     void excuteEffect() {
-        for (uint b = 0; b < m_affected.length(); b++) {
+        if(m_affected.length() <=0)
+        {
+            m_ended=true;
+            return;
+        }
+        // 从后向前遍历，这样删除元素不会影响未遍历的元素
+        for (int b = int(m_affected.length()) - 1; b >= 0; b--) {
             int luckyoneid = m_affected[b].getIntAttribute("id");
             const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
             if (luckyoneC !is null) {
@@ -3944,6 +3951,9 @@ class HK416SkillTask : RepeatEffectTask {
                     " position='" + luckyoneposV.toString() + "'" +
                     " character_id='" + m_characterId + "' />";
                 m_metagame.getComms().send(c);
+            } else {
+                // 删除当前元素
+                m_affected.removeAt(b);
             }
         }
     }
@@ -3965,7 +3975,13 @@ class UZISkillTask : RepeatEffectTask {
     }
 
     void excuteEffect() {
-        for (uint b = 0; b < m_affected.length(); b++) {
+        if(m_affected.length() <=0)
+        {
+            m_ended=true;
+            return;
+        }        
+        // 从后向前遍历，这样删除元素不会影响未遍历的元素
+        for (int b = int(m_affected.length()) - 1; b >= 0; b--) {
             int luckyoneid = m_affected[b].getIntAttribute("id");
             const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
             if (luckyoneC !is null) {
@@ -3979,6 +3995,9 @@ class UZISkillTask : RepeatEffectTask {
                     " position='" + luckyoneposV.toString() + "'" +
                     " character_id='" + m_characterId + "' />";
                 m_metagame.getComms().send(c);
+            } else {
+                // 删除当前无效元素
+                m_affected.removeAt(b);
             }
         }
     }
