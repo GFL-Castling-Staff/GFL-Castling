@@ -554,6 +554,7 @@ class kill_event : Tracker {
             int m_killstreak_point = battleInfo.getKillStreakPoint();
             int m_tactic_point = battleInfo.getTacticPoint();
             int m_counter = battleInfo.getKillStreakPointCounter();
+            bool m_killcheckpoint = false;
 
             if(m_counter>=10)
             {
@@ -577,6 +578,7 @@ class kill_event : Tracker {
                         a["%num"] = ""+ m_tactic_point_offset;
                         notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
                         triggered = true;
+                        m_killcheckpoint = true;
                         break;
                     }
                 }
@@ -595,6 +597,7 @@ class kill_event : Tracker {
                     dictionary a;
                     a["%num"] = ""+ m_tactic_point_offset;
                     notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
+                    m_killcheckpoint = true;
                 }
             }
 
@@ -619,6 +622,19 @@ class kill_event : Tracker {
                 }
             }
 
+            //增加战术点（10积分）时响应事件    
+            if(m_killcheckpoint)
+            {
+                if(c_weaponType=="gkw_m327.weapon")
+                {
+                    int i = findSkillIndexbyPname(playerName,"m327");
+                    if(i >=0){
+                        SkillArray[i].m_time-=20.0;
+                        notify(m_metagame, "减CD", dictionary(), "misc", playerId, false, "", 1.0);
+                    }
+                }
+            }
+
             //指定武器handle(响应任何击杀事件)
             if(c_weaponType=="gkw_ppkmod3.weapon" || c_weaponType =="gkw_ppkmod3_3905.weapon" || c_weaponType =="gkw_ppkmod3_6109.weapon"){
                 int i = findSkillIndex(characterId,"PPKMOD3");
@@ -630,7 +646,7 @@ class kill_event : Tracker {
                 }
             }
             else if(c_weaponType=="gkw_c96mod3.weapon" || c_weaponType =="gkw_c96mod3_8405.weapon"){
-                int i = findSkillIndex(characterId,"C96");
+                int i = findSkillIndexbyPname(playerName,"C96");
                 if(i >=0){
                     SkillArray[i].m_time-=1.0;
                     if(KillerWeaponKey == c_weaponType){
@@ -910,7 +926,7 @@ class kill_event : Tracker {
             {
                 if(killway == "hit")
                 {
-                    int i = findSkillIndex(characterId,"delisle");
+                    int i = findSkillIndexbyPname(playerName,"delisle");
                     if(i >=0){
                         if(reward_pool_key=="boss")
                         {
@@ -1236,6 +1252,15 @@ class kill_count{
     void add(int num){
         m_killnum += num;
     }
+}
+
+int findSkillIndexbyPname(string pname,string key){
+    for (uint i=0;i<SkillArray.length();i++){
+        if (SkillArray[i].m_skillInfo.m_playername==pname && SkillArray[i].m_weapontype==key) {
+            return i;
+        }
+    }
+    return -1;
 }
 
 int findSkillIndex(int cId,string key){

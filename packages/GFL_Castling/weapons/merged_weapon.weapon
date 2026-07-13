@@ -8810,7 +8810,7 @@
 	<animation state_key="stabbing" animation_key="stabbing, bat"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 2.1"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
-	<sound key="fire" fileref="m82a1_fire_FromSAM4.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="fire" fileref="m82a1sd_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="cycle" fileref="m82a1_cycle_FromCOD16.wav" volume="0.4"/>
 	<sound key="magazine_out" fileref="m82a1_mgz_out_FromCOD16.wav" volume="0.4"/>
 	<sound key="magazine_in" fileref="m82a1_mgz_in_FromCOD16.wav" volume="0.4"/>
@@ -9045,7 +9045,7 @@
 	<animation state_key="stabbing" animation_key="stabbing, bat"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 2.1"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
-	<sound key="fire" fileref="m82a1_fire_FromSAM4.wav" pitch_variety="0.05" volume="1.2"/>
+	<sound key="fire" fileref="m82a1sd_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="cycle" fileref="m82a1_cycle_FromCOD16.wav" volume="0.4"/>
 	<sound key="magazine_out" fileref="m82a1_mgz_out_FromCOD16.wav" volume="0.4"/>
 	<sound key="magazine_in" fileref="m82a1_mgz_in_FromCOD16.wav" volume="0.4"/>
@@ -12241,7 +12241,7 @@
 </weapon>
 
 <weapon key="gkw_gm6.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.66" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" suppressed="1" name="GM6 Lynx" class="4" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="240" barrel_offset="0.4" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="0.66" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="GM6 Lynx" class="4" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="240" barrel_offset="0.4" projectiles_per_shot="1" stance_accuracy_rate="2.0" spread_range="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="300.0" sell_price="200.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
 	<sound key="fire" fileref="gm6_fire_FromCOD19.wav" pitch_variety="0.05" volume="1.6"/>
@@ -12338,7 +12338,7 @@
 	<stance state_key="crouching" accuracy="1.1"/>
 	<stance state_key="prone" accuracy="0.95"/>
 	<stance state_key="over_wall" accuracy="1.1"/>
-	<modifier class="speed" value="-0.15"/>
+	<modifier class="speed" value="-0.05"/>
 	<tag name="rifle"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="20.0" buy_price="1.0" sell_price="0.0"/>
@@ -23372,7 +23372,7 @@
 </weapon>
 
 <weapon key="gkw_m249saw.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.070" accuracy_factor="1.0" leave_crouch_accuracy_penalty="0.5" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="4.8" spread_range="0.8" stance_accuracy_rate="1.0" magazine_size="800" suppressed="0" name="M249 SAW" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" class="0" projectile_speed="190" sight_range_modifier="1.75" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.070" accuracy_factor="1.0" leave_crouch_accuracy_penalty="0.3" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="4.8" spread_range="0.8" stance_accuracy_rate="1.0" magazine_size="800" suppressed="0" name="M249 SAW" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" class="0" projectile_speed="190" sight_range_modifier="1.75" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 5"/>
 	<inventory encumbrance="50.0" buy_price="49.0" sell_price="49.0"/>
 	<sound key="fire" fileref="m249_fire_FromCOD16.wav" pitch_variety="0.05" volume="0.8"/>
@@ -23486,7 +23486,7 @@
 </weapon>
 
 <weapon key="gkw_m249saw_3604.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.070" accuracy_factor="1.0" leave_crouch_accuracy_penalty="0.5" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="4.8" spread_range="0.8" stance_accuracy_rate="1.0" magazine_size="800" suppressed="0" name="M249 SAW-[Oborozukiyo]" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" class="0" projectile_speed="190" sight_range_modifier="1.75" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.070" accuracy_factor="1.0" leave_crouch_accuracy_penalty="0.3" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="4.8" spread_range="0.8" stance_accuracy_rate="1.0" magazine_size="800" suppressed="0" name="M249 SAW-[Oborozukiyo]" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" class="0" projectile_speed="190" sight_range_modifier="1.75" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 5"/>
 	<inventory encumbrance="50.0" buy_price="49.0" sell_price="49.0"/>
 	<sound key="fire" fileref="m249_fire_FromCOD16.wav" pitch_variety="0.05" volume="0.8"/>
@@ -23836,7 +23836,7 @@
 
 <weapon key="gkw_mg42.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
-	<specification barrel_offset="1.1" retrigger_time="0.04" accuracy_factor="1.0" stance_accuracy_rate="0.8" sustained_fire_grow_step="0.85" sustained_fire_diminish_rate="2.5" leave_crouch_accuracy_penalty="0.5" spread_range="0.6" magazine_size="50" suppressed="0" name="MG 42" class="0" projectile_speed="180" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0" sight_range_modifier="1.3"/>
+	<specification barrel_offset="1.1" retrigger_time="0.04" accuracy_factor="1.0" stance_accuracy_rate="0.8" sustained_fire_grow_step="0.85" sustained_fire_diminish_rate="2.5" leave_crouch_accuracy_penalty="0.3" spread_range="0.6" magazine_size="50" suppressed="0" name="MG 42" class="0" projectile_speed="180" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0" sight_range_modifier="1.3"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="50.0" buy_price="42.0" sell_price="42.0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.0"/>
@@ -23943,7 +23943,7 @@
 
 <weapon key="gkw_mg42_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
-	<specification retrigger_time="0.04" accuracy_factor="1.0" barrel_offset="1.1" sustained_fire_grow_step="0.85" sustained_fire_diminish_rate="2.5" leave_crouch_accuracy_penalty="0.5" spread_range="0.45" stance_accuracy_rate="1.0" magazine_size="250" suppressed="0" projectiles_per_shot="1" name="MG 42-[Damage Focus MG]" class="0" projectile_speed="215" carry_in_two_hands="1" sight_range_modifier="1.75" can_shoot_standing="0" can_shoot_crouching="0" stab_enabled="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1"/>
+	<specification retrigger_time="0.04" accuracy_factor="1.0" barrel_offset="1.1" sustained_fire_grow_step="0.85" sustained_fire_diminish_rate="2.5" leave_crouch_accuracy_penalty="0.3" spread_range="0.45" stance_accuracy_rate="1.0" magazine_size="250" suppressed="0" projectiles_per_shot="1" name="MG 42-[Damage Focus MG]" class="0" projectile_speed="215" carry_in_two_hands="1" sight_range_modifier="1.75" can_shoot_standing="0" can_shoot_crouching="0" stab_enabled="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1"/>
 	<inventory encumbrance="50.0" buy_price="42.0" sell_price="42.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_mg42.weapon" share_ammo="0"/>
@@ -24052,7 +24052,7 @@
 
 <weapon key="gkw_mg42_597.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
-	<specification barrel_offset="0.55" retrigger_time="0.04" accuracy_factor="1.0" stance_accuracy_rate="0.8" sustained_fire_grow_step="0.85" sustained_fire_diminish_rate="2.5" leave_crouch_accuracy_penalty="0.5" spread_range="0.6" magazine_size="50" suppressed="0" name="MG 42-[Shining Chess Star]" class="0" projectile_speed="180" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0" sight_range_modifier="1.3"/>
+	<specification barrel_offset="0.55" retrigger_time="0.04" accuracy_factor="1.0" stance_accuracy_rate="0.8" sustained_fire_grow_step="0.85" sustained_fire_diminish_rate="2.5" leave_crouch_accuracy_penalty="0.3" spread_range="0.6" magazine_size="50" suppressed="0" name="MG 42-[Shining Chess Star]" class="0" projectile_speed="180" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0" sight_range_modifier="1.3"/>
 	<inventory encumbrance="50.0" buy_price="42.0" sell_price="42.0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -24158,7 +24158,7 @@
 
 <weapon key="gkw_mg42_597_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
-	<specification retrigger_time="0.04" accuracy_factor="1.0" barrel_offset="0.8" sustained_fire_grow_step="0.85" sustained_fire_diminish_rate="2.5" leave_crouch_accuracy_penalty="0.5" spread_range="0.45" stance_accuracy_rate="1.0" magazine_size="250" suppressed="0" projectiles_per_shot="1" name="MG 42-[Shining Chess Star]-[Damage Focus MG]" class="0" projectile_speed="215" carry_in_two_hands="1" sight_range_modifier="1.75" can_shoot_standing="0" can_shoot_crouching="0" stab_enabled="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1"/>
+	<specification retrigger_time="0.04" accuracy_factor="1.0" barrel_offset="0.8" sustained_fire_grow_step="0.85" sustained_fire_diminish_rate="2.5" leave_crouch_accuracy_penalty="0.3" spread_range="0.45" stance_accuracy_rate="1.0" magazine_size="250" suppressed="0" projectiles_per_shot="1" name="MG 42-[Shining Chess Star]-[Damage Focus MG]" class="0" projectile_speed="215" carry_in_two_hands="1" sight_range_modifier="1.75" can_shoot_standing="0" can_shoot_crouching="0" stab_enabled="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1"/>
 	<inventory encumbrance="50.0" buy_price="42.0" sell_price="42.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_mg42_597.weapon" share_ammo="0"/>
@@ -24266,7 +24266,7 @@
 
 <weapon key="gkw_mg42_7606.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
-	<specification barrel_offset="0.55" retrigger_time="0.04" accuracy_factor="1.0" stance_accuracy_rate="0.8" sustained_fire_grow_step="0.85" sustained_fire_diminish_rate="2.5" leave_crouch_accuracy_penalty="0.5" spread_range="0.6" magazine_size="50" suppressed="0" name="MG 42-[Witch in Apprenticeship]" class="0" projectile_speed="180" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0" sight_range_modifier="1.3"/>
+	<specification barrel_offset="0.55" retrigger_time="0.04" accuracy_factor="1.0" stance_accuracy_rate="0.8" sustained_fire_grow_step="0.85" sustained_fire_diminish_rate="2.5" leave_crouch_accuracy_penalty="0.3" spread_range="0.6" magazine_size="50" suppressed="0" name="MG 42-[Witch in Apprenticeship]" class="0" projectile_speed="180" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0" sight_range_modifier="1.3"/>
 	<inventory encumbrance="50.0" buy_price="42.0" sell_price="42.0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -24372,7 +24372,7 @@
 
 <weapon key="gkw_mg42_7606_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
-	<specification retrigger_time="0.04" accuracy_factor="1.0" barrel_offset="0.8" sustained_fire_grow_step="0.85" sustained_fire_diminish_rate="2.5" leave_crouch_accuracy_penalty="0.5" spread_range="0.45" stance_accuracy_rate="1.0" magazine_size="250" suppressed="0" projectiles_per_shot="1" name="MG 42-[Witch in Apprenticeship]-[Damage Focus MG]" class="0" projectile_speed="215" carry_in_two_hands="1" sight_range_modifier="1.75" can_shoot_standing="0" can_shoot_crouching="0" stab_enabled="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1"/>
+	<specification retrigger_time="0.04" accuracy_factor="1.0" barrel_offset="0.8" sustained_fire_grow_step="0.85" sustained_fire_diminish_rate="2.5" leave_crouch_accuracy_penalty="0.3" spread_range="0.45" stance_accuracy_rate="1.0" magazine_size="250" suppressed="0" projectiles_per_shot="1" name="MG 42-[Witch in Apprenticeship]-[Damage Focus MG]" class="0" projectile_speed="215" carry_in_two_hands="1" sight_range_modifier="1.75" can_shoot_standing="0" can_shoot_crouching="0" stab_enabled="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1"/>
 	<inventory encumbrance="50.0" buy_price="42.0" sell_price="42.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_mg42_7606.weapon" share_ammo="0"/>
@@ -33725,7 +33725,7 @@
 	<hud_icon filename="gkw_apc556.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="6.25" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.621" kill_decay_end_time="1.035" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.65" kill_probability_offset_on_successful_hit="0.8" kill_decay_start_time="0.621" kill_decay_end_time="1.035" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -33835,7 +33835,7 @@
 	<hud_icon filename="gkw_apc556_8007.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="6.25" kill_probability_offset_on_successful_hit="0.5" kill_decay_start_time="0.621" kill_decay_end_time="1.035" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.65" kill_probability_offset_on_successful_hit="0.8" kill_decay_start_time="0.621" kill_decay_end_time="1.035" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -40518,7 +40518,7 @@
 
 <weapon key="gkw_ameli.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
-	<specification barrel_offset="0.5" retrigger_time="0.06" accuracy_factor="1.0" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="3.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" magazine_size="200" suppressed="0" spread_range="0.6" name="CETME Ameli MG82" class="0" slot="0" projectile_speed="210" leave_crouch_accuracy_penalty="0.25" sight_range_modifier="2.00" stance_accuracy_rate="1.2"/>
+	<specification barrel_offset="0.5" retrigger_time="0.05" accuracy_factor="1.0" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="3.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" magazine_size="200" suppressed="0" spread_range="0.6" name="CETME Ameli MG82" class="0" slot="0" projectile_speed="210" leave_crouch_accuracy_penalty="0.25" sight_range_modifier="2.00" stance_accuracy_rate="1.2"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="50.0" buy_price="150.0" sell_price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -40633,7 +40633,7 @@
 
 <weapon key="gkw_ameli_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
-	<specification retrigger_time="0.04" accuracy_factor="1.0" barrel_offset="0.8" sustained_fire_grow_step="0.85" sustained_fire_diminish_rate="2.5" leave_crouch_accuracy_penalty="0.5" spread_range="0.45" stance_accuracy_rate="1.0" magazine_size="200" suppressed="0" projectiles_per_shot="1" name="CETME Ameli MG82-[Lock and Load N]" class="0" projectile_speed="210" carry_in_two_hands="1" sight_range_modifier="1.75" can_shoot_standing="0" can_shoot_crouching="1" stab_enabled="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1"/>
+	<specification retrigger_time="0.05" accuracy_factor="1.0" barrel_offset="0.8" sustained_fire_grow_step="0.85" sustained_fire_diminish_rate="2.5" leave_crouch_accuracy_penalty="0.3" spread_range="0.45" stance_accuracy_rate="1.0" magazine_size="200" suppressed="0" projectiles_per_shot="1" name="CETME Ameli MG82-[Lock and Load N]" class="0" projectile_speed="210" carry_in_two_hands="1" sight_range_modifier="1.75" can_shoot_standing="0" can_shoot_crouching="1" stab_enabled="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1"/>
 	<inventory encumbrance="50.0" buy_price="42.0" sell_price="42.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_ameli.weapon" share_ammo="1"/>
@@ -40664,27 +40664,32 @@
 	<model filename="gkw_mg_ameli.xml"/>
 	<hud_icon filename="gkw_ameli_skill.png"/>
 	<effect class="muzzle" ref="muzzle_yellow"/>
-	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="blast" damage="2.1" radius="3.5" decal="1" push="0.1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-	<trail probability="1.0" key="BulletMgTrail"/>
+	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="4">
+	<result class="spawn" instance_class="projectile" instance_key="sub_damage_lmg_ap.projectile" min_amount="1" max_amount="2" offset="0 0.0 0" position_spread="0 0" direction_spread="0 0" damage_origin_vehicle="0"/>
+	<trail probability="1.0" key="BulletMgTrail_rx1"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet2_fromCOD17.wav" volume="0.8"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet2_fromCOD17.wav" volume="0.8"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet5_fromCOD17.wav" volume="0.8"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet5_fromCOD17.wav" volume="0.8"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet3_fromCOD17.wav" volume="0.3"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet4_fromCOD17.wav" volume="0.3"/>
 	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
 	<sound class="result" key="terrain" fileref="ricochet2.wav"/>
 	<sound class="result" key="terrain" fileref="ricochet3.wav"/>
 	<sound class="result" key="terrain" fileref="ricochet4.wav"/>
-	<sound class="result" key="shield" file="bullet_shield1_fromCOD17.wav" pitch_variety="0.2" volume="1.0"/>
-	<sound class="result" key="shield" file="bullet_shield2_fromCOD17.wav" pitch_variety="0.2" volume="1.0"/>
-	<sound class="result" key="character" fileref="bullet_hit1_fromCOD17.wav" pitch_variety="0.4" volume="1.05"/>
-	<sound class="result" key="character" fileref="bullet_hit2_fromCOD17.wav" pitch_variety="0.4" volume="1.05"/>
+	<sound class="result" key="shield" file="metal_hit_1.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="shield" file="metal_hit_2.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="shield" file="metal_hit_3.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="shield" file="metal_hit_4.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="shield" file="metal_hit_5.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="shield" file="metal_hit_6.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" fileref="impact_body2.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" fileref="impact_body3.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" fileref="impact_body4.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" fileref="impact_body3.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" tag="meat_man" fileref="impact_body4.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_1.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_2.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_3.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_4.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_5.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_6.wav" pitch_variety="0.2" volume="1.0"/>
 	<sound class="result" key="vehicle" copy="terrain"/>
 	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_01.wav" pitch_variety="0.3" volume="0.5"/>
 	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_02.wav" pitch_variety="0.3" volume="0.5"/>
@@ -40713,9 +40718,13 @@
 	<effect class="result" key="terrain" ref="BulletImpactDust1"/>
 	<effect class="result" key="terrain" ref="BulletImpactDust2"/>
 	<effect class="result" key="terrain" ref="BulletImpactDust3"/>
-	<effect class="result" key="vehicle" ref="Burst" use_surface_color="1"/>
-	<effect class="result" key="vehicle" ref="hitMetal"/>
-	<effect class="result" key="vehicle" ref="hitMetal_1"/>
+	<effect class="result" key="terrain" ref="result_cannon_blast_AmbientLight_small" lighting="0"/>
+	<effect class="result" key="terrain" ref="result_cannon_blast_smoke_small" lighting="0"/>
+	<effect class="result" key="other" copy="terrain"/>
+	<effect class="result" key="static_object" copy="terrain"/>
+	<effect class="result" key="character" copy="terrain"/>
+	<effect class="result" key="shield" copy="terrain"/>
+	<effect class="result" key="vehicle" copy="terrain"/>
 	<effect class="result" key="other" ref="BulletImpact"/>
 	<effect class="result" key="vehicle" ref="BulletImpact"/>
 	<effect class="result" key="terrain" ref="BulletImpact"/>
@@ -41558,7 +41567,7 @@
 </weapon>
 
 <weapon key="gkw_mk48.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.096" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2.0" magazine_size="100" suppressed="0" name="Mk 48" class="0" spread_range="0.8" projectile_speed="245" stance_accuracy_rate="1.0" sight_range_modifier="1.75" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" leave_crouch_accuracy_penalty="0.5" stab_enabled="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.096" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="3.0" magazine_size="100" suppressed="0" name="Mk 48" class="0" spread_range="0.5" projectile_speed="245" stance_accuracy_rate="1.0" sight_range_modifier="1.75" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" leave_crouch_accuracy_penalty="0.3" stab_enabled="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.4"/>
 	<inventory encumbrance="50.0" buy_price="48.0" sell_price="48.0"/>
 	<next_in_chain key="gkw_mk48_skill.weapon" share_ammo="1"/>
@@ -41637,7 +41646,7 @@
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.1"/>
 	<stance state_key="walking" accuracy="0.2"/>
-	<stance state_key="crouch_moving" accuracy="0.15"/>
+	<stance state_key="crouch_moving" accuracy="0.6"/>
 	<stance state_key="prone_moving" accuracy="0.6"/>
 	<stance state_key="standing" accuracy="1"/>
 	<stance state_key="crouching" accuracy="1"/>
@@ -41671,7 +41680,7 @@
 </weapon>
 
 <weapon key="gkw_mk48_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.096" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2.0" stance_accuracy_rate="0.5" spread_range="0.7" magazine_size="100" suppressed="0" name="Mk 48-[Hunting Impulse]" class="0" projectile_speed="245" sight_range_modifier="1.85" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" leave_crouch_accuracy_penalty="0.25" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.096" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="3.0" stance_accuracy_rate="0.5" spread_range="0.5" magazine_size="100" suppressed="0" name="Mk 48-[Hunting Impulse]" class="0" projectile_speed="245" sight_range_modifier="1.85" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" leave_crouch_accuracy_penalty="0.25" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.4"/>
 	<inventory encumbrance="50.0" buy_price="48.0" sell_price="48.0"/>
 	<next_in_chain key="gkw_mk48.weapon" share_ammo="1"/>
@@ -41760,7 +41769,7 @@
 	<effect class="muzzle" ref="ejection_76251"/>
 	<stance state_key="running" accuracy="0.1"/>
 	<stance state_key="walking" accuracy="0.2"/>
-	<stance state_key="crouch_moving" accuracy="0.15"/>
+	<stance state_key="crouch_moving" accuracy="0.6"/>
 	<stance state_key="prone_moving" accuracy="0.6"/>
 	<stance state_key="standing" accuracy="1"/>
 	<stance state_key="crouching" accuracy="1"/>
@@ -54582,7 +54591,7 @@
 </weapon>
 
 <weapon key="gkw_lwmmg.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="4.8" leave_crouch_accuracy_penalty="0.5" spread_range="0.5" magazine_size="100" suppressed="0" name="LWMMG" class="1" projectile_speed="210" stance_accuracy_rate="0.7" sight_range_modifier="1.75" can_shoot_standing="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="4.8" leave_crouch_accuracy_penalty="0.3" spread_range="0.5" magazine_size="100" suppressed="0" name="LWMMG" class="1" projectile_speed="210" stance_accuracy_rate="0.7" sight_range_modifier="1.75" can_shoot_standing="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory encumbrance="50.0" buy_price="33.8" sell_price="33.8"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
@@ -54692,7 +54701,7 @@
 </weapon>
 
 <weapon key="gkw_lwmmg_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="4.8" magazine_size="100" suppressed="0" name="LWMMG-[Hunting Impulse]" class="1" projectile_speed="210" stance_accuracy_rate="0.5" spread_range="0.75" sight_range_modifier="1.75" can_shoot_crouching="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_prone="1" leave_crouch_accuracy_penalty="0.5" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="4.8" magazine_size="100" suppressed="0" name="LWMMG-[Hunting Impulse]" class="1" projectile_speed="210" stance_accuracy_rate="0.5" spread_range="0.75" sight_range_modifier="1.75" can_shoot_crouching="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_prone="1" leave_crouch_accuracy_penalty="0.3" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory encumbrance="50.0" buy_price="33.8" sell_price="33.8"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -63708,7 +63717,7 @@
 </weapon>
 
 <weapon key="gkw_mg338.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.6" retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="4.8" stance_accuracy_rate="0.7" leave_crouch_accuracy_penalty="0.5" spread_range="0.5" magazine_size="100" suppressed="0" name="SIG Sauer MG 338" class="0" projectile_speed="200" sight_range_modifier="1.75" can_shoot_standing="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.6" retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="4.8" stance_accuracy_rate="0.7" leave_crouch_accuracy_penalty="0.3" spread_range="0.5" magazine_size="100" suppressed="0" name="SIG Sauer MG 338" class="0" projectile_speed="200" sight_range_modifier="1.75" can_shoot_standing="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory encumbrance="50.0" buy_price="33.8" sell_price="33.8"/>
 	<next_in_chain key="gkw_mg338_skill.weapon" share_ammo="1"/>
@@ -63822,7 +63831,7 @@
 </weapon>
 
 <weapon key="gkw_mg338_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.6" retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="4.8" stance_accuracy_rate="0.5" leave_crouch_accuracy_penalty="0.5" magazine_size="100" suppressed="0" name="SIG Sauer MG 338-[Get Drunk]" class="0" projectile_speed="200" sight_range_modifier="1.75" can_shoot_standing="0" can_shoot_crouching="1" spread_range="0.75" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.6" retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="4.8" stance_accuracy_rate="0.5" leave_crouch_accuracy_penalty="0.3" magazine_size="100" suppressed="0" name="SIG Sauer MG 338-[Get Drunk]" class="0" projectile_speed="200" sight_range_modifier="1.75" can_shoot_standing="0" can_shoot_crouching="1" spread_range="0.75" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory encumbrance="50.0" buy_price="33.8" sell_price="33.8"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -64669,7 +64678,7 @@
 </weapon>
 
 <weapon key="gkw_pkp_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.6" magazine_size="100" suppressed="0" stance_accuracy_rate="0.75" name="PKP Pecheneg-[Ultimatum]" class="0" projectile_speed="210" sight_range_modifier="1.5" leave_crouch_accuracy_penalty="0.5" slot="0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.6" magazine_size="100" suppressed="0" stance_accuracy_rate="0.75" name="PKP Pecheneg-[Ultimatum]" class="0" projectile_speed="210" sight_range_modifier="1.5" leave_crouch_accuracy_penalty="0.3" slot="0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory encumbrance="50.0" buy_price="40.0" sell_price="40.0"/>
@@ -64909,7 +64918,7 @@
 </weapon>
 
 <weapon key="gkw_pkp_4203_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.6" magazine_size="100" suppressed="0" stance_accuracy_rate="0.75" name="PKP Pecheneg-[Bamboo's Pride]-[Ultimatum]" class="0" projectile_speed="210" sight_range_modifier="1.5" leave_crouch_accuracy_penalty="0.5" slot="0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.6" magazine_size="100" suppressed="0" stance_accuracy_rate="0.75" name="PKP Pecheneg-[Bamboo's Pride]-[Ultimatum]" class="0" projectile_speed="210" sight_range_modifier="1.5" leave_crouch_accuracy_penalty="0.3" slot="0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory encumbrance="50.0" buy_price="40.0" sell_price="40.0"/>
@@ -65149,7 +65158,7 @@
 </weapon>
 
 <weapon key="gkw_pkp_5904_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.6" magazine_size="100" suppressed="0" stance_accuracy_rate="0.75" name="PKP Pecheneg-[After-Rain Assault Squad]-[Ultimatum]" class="0" projectile_speed="210" sight_range_modifier="1.5" leave_crouch_accuracy_penalty="0.5" slot="0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.6" magazine_size="100" suppressed="0" stance_accuracy_rate="0.75" name="PKP Pecheneg-[After-Rain Assault Squad]-[Ultimatum]" class="0" projectile_speed="210" sight_range_modifier="1.5" leave_crouch_accuracy_penalty="0.3" slot="0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory encumbrance="50.0" buy_price="40.0" sell_price="40.0"/>
@@ -65389,7 +65398,7 @@
 </weapon>
 
 <weapon key="gkw_pkp_only_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.6" magazine_size="200" suppressed="0" stance_accuracy_rate="1.0" name="PKP Pecheneg-[PT2 Adjustable Stock]-[Ultimatum]" class="0" projectile_speed="210" sight_range_modifier="1.8" leave_crouch_accuracy_penalty="0.5" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.6" magazine_size="200" suppressed="0" stance_accuracy_rate="1.0" name="PKP Pecheneg-[PT2 Adjustable Stock]-[Ultimatum]" class="0" projectile_speed="210" sight_range_modifier="1.8" leave_crouch_accuracy_penalty="0.3" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory encumbrance="50.0" buy_price="150.0" sell_price="150.0"/>
@@ -65629,7 +65638,7 @@
 </weapon>
 
 <weapon key="gkw_pkp_4203_only_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.6" magazine_size="200" suppressed="0" stance_accuracy_rate="1.0" name="PKP Pecheneg-[PT2 Adjustable Stock]-[Bamboo's Pride]-[Ultimatum]" class="0" projectile_speed="210" sight_range_modifier="1.8" leave_crouch_accuracy_penalty="0.5" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.6" magazine_size="200" suppressed="0" stance_accuracy_rate="1.0" name="PKP Pecheneg-[PT2 Adjustable Stock]-[Bamboo's Pride]-[Ultimatum]" class="0" projectile_speed="210" sight_range_modifier="1.8" leave_crouch_accuracy_penalty="0.3" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory encumbrance="50.0" buy_price="150.0" sell_price="150.0"/>
@@ -65869,7 +65878,7 @@
 </weapon>
 
 <weapon key="gkw_pkp_5904_only_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.6" magazine_size="200" suppressed="0" stance_accuracy_rate="1.0" name="PKP Pecheneg-[PT2 Adjustable Stock]-[After-Rain Assault Squad]-[Ultimatum]" class="0" projectile_speed="210" sight_range_modifier="1.8" leave_crouch_accuracy_penalty="0.5" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.6" magazine_size="200" suppressed="0" stance_accuracy_rate="1.0" name="PKP Pecheneg-[PT2 Adjustable Stock]-[After-Rain Assault Squad]-[Ultimatum]" class="0" projectile_speed="210" sight_range_modifier="1.8" leave_crouch_accuracy_penalty="0.3" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory encumbrance="50.0" buy_price="150.0" sell_price="150.0"/>
@@ -72539,7 +72548,7 @@
 
 <weapon key="gkw_m1919a4.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
-	<specification barrel_offset="0.6" retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="3.0" spread_range="0.65" magazine_size="250" suppressed="0" name="Browning M1919A4" class="0" projectile_speed="190" sight_range_modifier="1.3" stab_enabled="1" stance_accuracy_rate="0.75" leave_crouch_accuracy_penalty="0.5" carry_in_two_hands="1" burst_shots="1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.6" retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="3.0" spread_range="0.65" magazine_size="250" suppressed="0" name="Browning M1919A4" class="0" projectile_speed="190" sight_range_modifier="1.3" stab_enabled="1" stance_accuracy_rate="0.75" leave_crouch_accuracy_penalty="0.3" carry_in_two_hands="1" burst_shots="1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<next_in_chain key="gkw_m1919a4_skill.weapon" share_ammo="1"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
 	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
@@ -72653,7 +72662,7 @@
 
 <weapon key="gkw_m1919a4_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
-	<specification barrel_offset="0.6" retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="3.0" magazine_size="250" suppressed="0" name="Browning M1919A4-[Hunting Impulse]" class="0" projectile_speed="190" spread_range="0.75" stance_accuracy_rate="0.75" leave_crouch_accuracy_penalty="0.5" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1"/>
+	<specification barrel_offset="0.6" retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="3.0" magazine_size="250" suppressed="0" name="Browning M1919A4-[Hunting Impulse]" class="0" projectile_speed="190" spread_range="0.75" stance_accuracy_rate="0.75" leave_crouch_accuracy_penalty="0.3" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1"/>
 	<next_in_chain key="gkw_m1919a4.weapon" share_ammo="1"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
 	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
@@ -73377,7 +73386,7 @@
 	<hud_icon filename="gkw_delisle.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="12.6" kill_probability_offset_on_successful_hit="8.0" kill_decay_start_time="0.75" kill_decay_end_time="0.75" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="12.6" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="0.75" kill_decay_end_time="0.75" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -73443,7 +73452,7 @@
 	<stance state_key="running" accuracy="0.2"/>
 	<stance state_key="walking" accuracy="0.55"/>
 	<stance state_key="crouch_moving" accuracy="0.95"/>
-	<stance state_key="standing" accuracy="0.95"/>
+	<stance state_key="standing" accuracy="0.99"/>
 	<stance state_key="crouching" accuracy="0.99"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="prone_moving" accuracy="1.0"/>
@@ -73488,7 +73497,7 @@
 	<hud_icon filename="gkw_delisle_6202.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="12.6" kill_probability_offset_on_successful_hit="8.0" kill_decay_start_time="0.75" kill_decay_end_time="0.75" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="12.6" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="0.75" kill_decay_end_time="0.75" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -73554,7 +73563,7 @@
 	<stance state_key="running" accuracy="0.2"/>
 	<stance state_key="walking" accuracy="0.55"/>
 	<stance state_key="crouch_moving" accuracy="0.95"/>
-	<stance state_key="standing" accuracy="0.95"/>
+	<stance state_key="standing" accuracy="0.99"/>
 	<stance state_key="crouching" accuracy="0.99"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="prone_moving" accuracy="1.0"/>
@@ -76574,7 +76583,7 @@
 </weapon>
 
 <weapon key="gkw_type80.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.0" spread_range="0.7" magazine_size="100" suppressed="0" stance_accuracy_rate="0.8" name="Type 80 GPMG" class="0" projectile_speed="200" sight_range_modifier="1.5" leave_crouch_accuracy_penalty="0.5" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.0" spread_range="0.7" magazine_size="100" suppressed="0" stance_accuracy_rate="0.8" name="Type 80 GPMG" class="0" projectile_speed="200" sight_range_modifier="1.5" leave_crouch_accuracy_penalty="0.3" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory encumbrance="50.0" buy_price="80.0" sell_price="80.0"/>
 	<next_in_chain key="gkw_type80_skill.weapon" share_ammo="1"/>
@@ -76690,7 +76699,7 @@
 </weapon>
 
 <weapon key="gkw_type80_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.08" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.0" spread_range="0.7" magazine_size="100" stance_accuracy_rate="0.5" suppressed="0" name="Type 80 GPMG-[Damage Focus MG]" class="0" projectile_speed="200" sight_range_modifier="1.5" leave_crouch_accuracy_penalty="0.5" slot="0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" projectiles_per_shot="1" stab_enabled="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.08" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.0" spread_range="0.7" magazine_size="100" stance_accuracy_rate="0.5" suppressed="0" name="Type 80 GPMG-[Damage Focus MG]" class="0" projectile_speed="200" sight_range_modifier="1.5" leave_crouch_accuracy_penalty="0.3" slot="0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" projectiles_per_shot="1" stab_enabled="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory encumbrance="50.0" buy_price="80.0" sell_price="80.0"/>
 	<next_in_chain key="gkw_type80.weapon" share_ammo="1"/>
@@ -76808,7 +76817,7 @@
 </weapon>
 
 <weapon key="gkw_type80_2504.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.0" spread_range="0.7" magazine_size="100" suppressed="0" stance_accuracy_rate="0.8" name="Type 80 GPMG-[Steel Butterfly]" class="0" projectile_speed="200" sight_range_modifier="1.5" leave_crouch_accuracy_penalty="0.5" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.0" spread_range="0.7" magazine_size="100" suppressed="0" stance_accuracy_rate="0.8" name="Type 80 GPMG-[Steel Butterfly]" class="0" projectile_speed="200" sight_range_modifier="1.5" leave_crouch_accuracy_penalty="0.3" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory encumbrance="50.0" buy_price="80.0" sell_price="80.0"/>
 	<next_in_chain key="gkw_type80_2504_skill.weapon" share_ammo="1"/>
@@ -76924,7 +76933,7 @@
 </weapon>
 
 <weapon key="gkw_type80_2504_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.08" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.0" spread_range="0.7" magazine_size="100" stance_accuracy_rate="0.5" suppressed="0" name="Type 80 GPMG-[Steel Butterfly]-[Damage Focus MG]" class="0" projectile_speed="200" sight_range_modifier="1.5" leave_crouch_accuracy_penalty="0.5" slot="0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" projectiles_per_shot="1" stab_enabled="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.08" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.0" spread_range="0.7" magazine_size="100" stance_accuracy_rate="0.5" suppressed="0" name="Type 80 GPMG-[Steel Butterfly]-[Damage Focus MG]" class="0" projectile_speed="200" sight_range_modifier="1.5" leave_crouch_accuracy_penalty="0.3" slot="0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" projectiles_per_shot="1" stab_enabled="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory encumbrance="50.0" buy_price="80.0" sell_price="80.0"/>
 	<next_in_chain key="gkw_type80_2504.weapon" share_ammo="1"/>
@@ -77044,7 +77053,7 @@
 <weapon key="gkw_type80mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
 	<tag name="elite"/>
-	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.8" spread_range="0.5" magazine_size="100" suppressed="0" stance_accuracy_rate="0.7" leave_crouch_accuracy_penalty="0.5" name="Type 80 GPMG(MOD3)" class="0" projectile_speed="206" sight_range_modifier="1.75" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.8" spread_range="0.5" magazine_size="100" suppressed="0" stance_accuracy_rate="0.7" leave_crouch_accuracy_penalty="0.3" name="Type 80 GPMG(MOD3)" class="0" projectile_speed="206" sight_range_modifier="1.75" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
 	<inventory encumbrance="50.0" buy_price="375.0" sell_price="275.0"/>
 	<commonness value="0.00001" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_type80mod3_skill.weapon" share_ammo="1"/>
@@ -77155,7 +77164,7 @@
 <weapon key="gkw_type80mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
 	<tag name="elite"/>
-	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.8" spread_range="0.5" magazine_size="100" stance_accuracy_rate="0.7" leave_crouch_accuracy_penalty="0.5" suppressed="0" name="Type 80 GPMG(MOD3)-[Position Fortification]" class="0" projectile_speed="200" sight_range_modifier="1.75" slot="0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" projectiles_per_shot="1" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.8" spread_range="0.5" magazine_size="100" stance_accuracy_rate="0.7" leave_crouch_accuracy_penalty="0.3" suppressed="0" name="Type 80 GPMG(MOD3)-[Position Fortification]" class="0" projectile_speed="200" sight_range_modifier="1.75" slot="0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" projectiles_per_shot="1" stab_enabled="1"/>
 	<inventory encumbrance="50.0" buy_price="240.0" sell_price="240.0"/>
 	<next_in_chain key="gkw_type80mod3.weapon" share_ammo="1"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
@@ -77272,7 +77281,7 @@
 <weapon key="gkw_type80mod3_2504.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
 	<tag name="elite"/>
-	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.8" spread_range="0.5" magazine_size="100" suppressed="0" stance_accuracy_rate="0.7" leave_crouch_accuracy_penalty="0.5" name="Type 80 GPMG(MOD3)-[Steel Butterfly]" class="0" projectile_speed="206" sight_range_modifier="1.75" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.8" spread_range="0.5" magazine_size="100" suppressed="0" stance_accuracy_rate="0.7" leave_crouch_accuracy_penalty="0.3" name="Type 80 GPMG(MOD3)-[Steel Butterfly]" class="0" projectile_speed="206" sight_range_modifier="1.75" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
 	<inventory encumbrance="50.0" buy_price="375.0" sell_price="275.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_type80mod3_2504_skill.weapon" share_ammo="1"/>
@@ -77383,7 +77392,7 @@
 <weapon key="gkw_type80mod3_2504_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
 	<tag name="elite"/>
-	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.8" spread_range="0.5" magazine_size="100" stance_accuracy_rate="0.7" leave_crouch_accuracy_penalty="0.5" suppressed="0" name="Type 80 GPMG(MOD3)-[Steel Butterfly]-[Position Fortification]" class="0" projectile_speed="200" sight_range_modifier="1.75" slot="0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" projectiles_per_shot="1" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.8" spread_range="0.5" magazine_size="100" stance_accuracy_rate="0.7" leave_crouch_accuracy_penalty="0.3" suppressed="0" name="Type 80 GPMG(MOD3)-[Steel Butterfly]-[Position Fortification]" class="0" projectile_speed="200" sight_range_modifier="1.75" slot="0" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" projectiles_per_shot="1" stab_enabled="1"/>
 	<inventory encumbrance="50.0" buy_price="240.0" sell_price="240.0"/>
 	<next_in_chain key="gkw_type80mod3_2504.weapon" share_ammo="1"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
@@ -84274,7 +84283,7 @@
 	<hud_icon filename="gkw_delisle_7801.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="12.6" kill_probability_offset_on_successful_hit="8.0" kill_decay_start_time="0.75" kill_decay_end_time="0.75" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="12.6" kill_probability_offset_on_successful_hit="10.0" kill_decay_start_time="0.75" kill_decay_end_time="0.75" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -84340,7 +84349,7 @@
 	<stance state_key="running" accuracy="0.2"/>
 	<stance state_key="walking" accuracy="0.55"/>
 	<stance state_key="crouch_moving" accuracy="0.95"/>
-	<stance state_key="standing" accuracy="0.95"/>
+	<stance state_key="standing" accuracy="0.99"/>
 	<stance state_key="crouching" accuracy="0.99"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="prone_moving" accuracy="1.0"/>
@@ -85930,7 +85939,7 @@
 </weapon>
 
 <weapon key="gkw_hk21.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.5" class="0" slot="0" magazine_size="100" name="HK21" projectile_speed="190" retrigger_time="0.075" suppressed="0" stance_accuracy_rate="0.95" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="2.5" spread_range="0.55" sight_range_modifier="1.35" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1" leave_crouch_accuracy_penalty="0.5"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.5" class="0" slot="0" magazine_size="100" name="HK21" projectile_speed="190" retrigger_time="0.075" suppressed="0" stance_accuracy_rate="1.5" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.5" spread_range="0.55" sight_range_modifier="1.8" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1" leave_crouch_accuracy_penalty="0.3"/>
 	<commonness in_stock="0" value="0.2"/>
 	<animation state_key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory encumbrance="50.0" buy_price="21.0" sell_price="21.0"/>
@@ -85944,7 +85953,7 @@
 	<hud_icon filename="gkw_hk21.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="3.5" kill_probability_offset_on_successful_hit="6.1" kill_decay_start_time="1.967" kill_decay_end_time="3.279" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.7" kill_probability_offset_on_successful_hit="6.1" kill_decay_start_time="1.967" kill_decay_end_time="3.279" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -89288,7 +89297,7 @@
 </weapon>
 
 <weapon key="gkw_mg3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.65" retrigger_time="0.054" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2.0" leave_crouch_accuracy_penalty="0.5" stance_accuracy_rate="0.75" spread_range="0.8" magazine_size="200" suppressed="0" name="MG3" class="0" projectile_speed="200" sight_range_modifier="1.75" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.65" retrigger_time="0.054" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2.0" leave_crouch_accuracy_penalty="0.3" stance_accuracy_rate="0.75" spread_range="0.8" magazine_size="200" suppressed="0" name="MG3" class="0" projectile_speed="200" sight_range_modifier="1.75" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 3"/>
 	<animation state_key="next_in_chain_out" animation_key="open tripod"/>
 	<inventory encumbrance="50.0" buy_price="30.0" sell_price="30.0"/>
@@ -89402,7 +89411,7 @@
 </weapon>
 
 <weapon key="gkw_mg3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.65" retrigger_time="0.09" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2.0" magazine_size="200" suppressed="0" spread_range="0.6" name="MG3-[Lock and Load]" class="0" leave_crouch_accuracy_penalty="0.5" projectile_speed="200" sight_range_modifier="1.3" can_shoot_running="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification barrel_offset="0.65" retrigger_time="0.09" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2.0" magazine_size="200" suppressed="0" spread_range="0.6" name="MG3-[Lock and Load]" class="0" leave_crouch_accuracy_penalty="0.3" projectile_speed="200" sight_range_modifier="1.3" can_shoot_running="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 3"/>
 	<animation state_key="next_in_chain_out" animation_key="close tripod"/>
 	<inventory encumbrance="50.0" buy_price="30.0" sell_price="30.0"/>
@@ -89637,7 +89646,7 @@
 <weapon key="gkw_mg3mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
 	<tag name="elite"/>
-	<specification retrigger_time="0.08" accuracy_factor="1.0" stance_accuracy_rate="1.2" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="3.3" magazine_size="200" suppressed="0" spread_range="0.5" name="MG3(MOD3)-[Supercompressed Bulletswarm]" class="0" leave_crouch_accuracy_penalty="0.5" use_basic_muzzle_smoke_effect="0" projectile_speed="250" sight_range_modifier="2.0" carry_in_two_hands="0" projectiles_per_shot="2" barrel_offset_3d="0.5 0.3 0.60" can_shoot_running="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1"/>
+	<specification retrigger_time="0.08" accuracy_factor="1.0" stance_accuracy_rate="1.2" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="3.3" magazine_size="200" suppressed="0" spread_range="0.5" name="MG3(MOD3)-[Supercompressed Bulletswarm]" class="0" leave_crouch_accuracy_penalty="0.3" use_basic_muzzle_smoke_effect="0" projectile_speed="250" sight_range_modifier="2.0" carry_in_two_hands="0" projectiles_per_shot="2" barrel_offset_3d="0.5 0.3 0.60" can_shoot_running="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1"/>
 	<animation state_key="recoil" animation_key="recoil, destroyer"/>
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall dual"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol dual 1"/>
@@ -89746,7 +89755,7 @@
 </weapon>
 
 <weapon key="gkw_mg3_3806.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.65" retrigger_time="0.054" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2.0" leave_crouch_accuracy_penalty="0.5" stance_accuracy_rate="0.75" spread_range="0.8" magazine_size="200" suppressed="0" name="MG3-[Full Moon's Gaze]" class="0" projectile_speed="200" sight_range_modifier="1.75" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.65" retrigger_time="0.054" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2.0" leave_crouch_accuracy_penalty="0.3" stance_accuracy_rate="0.75" spread_range="0.8" magazine_size="200" suppressed="0" name="MG3-[Full Moon's Gaze]" class="0" projectile_speed="200" sight_range_modifier="1.75" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 3"/>
 	<animation state_key="next_in_chain_out" animation_key="open tripod"/>
 	<inventory encumbrance="50.0" buy_price="30.0" sell_price="30.0"/>
@@ -89860,7 +89869,7 @@
 </weapon>
 
 <weapon key="gkw_mg3_3806_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.65" retrigger_time="0.09" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2.0" magazine_size="200" suppressed="0" spread_range="0.6" name="MG3-[Full Moon's Gaze]-[Lock and Load]" class="0" leave_crouch_accuracy_penalty="0.5" projectile_speed="200" sight_range_modifier="1.3" can_shoot_running="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification barrel_offset="0.65" retrigger_time="0.09" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="2.0" magazine_size="200" suppressed="0" spread_range="0.6" name="MG3-[Full Moon's Gaze]-[Lock and Load]" class="0" leave_crouch_accuracy_penalty="0.3" projectile_speed="200" sight_range_modifier="1.3" can_shoot_running="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<animation state_key="next_in_chain_out" animation_key="close tripod"/>
 	<inventory encumbrance="50.0" buy_price="30.0" sell_price="30.0"/>
@@ -90096,7 +90105,7 @@
 <weapon key="gkw_mg3mod3_3806_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
 	<tag name="elite"/>
-	<specification retrigger_time="0.08" accuracy_factor="1.0" stance_accuracy_rate="1.2" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="3.3" magazine_size="200" suppressed="0" spread_range="0.5" name="MG3(MOD3)-[Full Moon's Gaze]-[Supercompressed Bulletswarm]" class="0" leave_crouch_accuracy_penalty="0.5" use_basic_muzzle_smoke_effect="0" projectile_speed="250" sight_range_modifier="2.0" carry_in_two_hands="0" projectiles_per_shot="2" barrel_offset_3d="0.5 0.3 0.60" can_shoot_running="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1"/>
+	<specification retrigger_time="0.08" accuracy_factor="1.0" stance_accuracy_rate="1.2" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="3.3" magazine_size="200" suppressed="0" spread_range="0.5" name="MG3(MOD3)-[Full Moon's Gaze]-[Supercompressed Bulletswarm]" class="0" leave_crouch_accuracy_penalty="0.3" use_basic_muzzle_smoke_effect="0" projectile_speed="250" sight_range_modifier="2.0" carry_in_two_hands="0" projectiles_per_shot="2" barrel_offset_3d="0.5 0.3 0.60" can_shoot_running="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1"/>
 	<animation state_key="recoil" animation_key="recoil, destroyer"/>
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall dual"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol dual 1"/>
@@ -95357,7 +95366,7 @@
 
 <weapon key="gkw_ukm2000.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
-	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1.0" sustained_fire_grow_step="0.7" sustained_fire_diminish_rate="3.0" spread_range="0.7" magazine_size="100" suppressed="0" stance_accuracy_rate="0.6" name="UKM-2000" class="0" projectile_speed="270" sight_range_modifier="2.0" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" leave_crouch_accuracy_penalty="0.5" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1.0" sustained_fire_grow_step="0.7" sustained_fire_diminish_rate="3.0" spread_range="0.7" magazine_size="100" suppressed="0" stance_accuracy_rate="0.6" name="UKM-2000" class="0" projectile_speed="270" sight_range_modifier="2.0" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" leave_crouch_accuracy_penalty="0.3" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="50.0" buy_price="50.0" sell_price="50.0"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
@@ -95470,7 +95479,7 @@
 
 <weapon key="gkw_ukm2000_6106.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
-	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.0" spread_range="0.7" magazine_size="100" suppressed="0" stance_accuracy_rate="0.6" name="UKM-2000-[Soda Tale]" class="0" projectile_speed="270" sight_range_modifier="2.0" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" leave_crouch_accuracy_penalty="0.5" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.0" spread_range="0.7" magazine_size="100" suppressed="0" stance_accuracy_rate="0.6" name="UKM-2000-[Soda Tale]" class="0" projectile_speed="270" sight_range_modifier="2.0" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" leave_crouch_accuracy_penalty="0.3" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="50.0" buy_price="50.0" sell_price="50.0"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
@@ -98058,7 +98067,7 @@
 </weapon>
 
 <weapon key="gkw_hk23.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="100" name="HK23" projectile_speed="230" retrigger_time="0.08" suppressed="0" stance_accuracy_rate="1.25" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="2.0" spread_range="0.5" sight_range_modifier="1.3" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1" leave_crouch_accuracy_penalty="0.5"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="100" name="HK23" projectile_speed="230" retrigger_time="0.08" suppressed="0" stance_accuracy_rate="2.0" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="3.0" spread_range="0.4" sight_range_modifier="1.75" can_shoot_running="1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1" leave_crouch_accuracy_penalty="0.3"/>
 	<commonness in_stock="1" value="0.2"/>
 	<animation state_key="reload" animation_key="reloading, Machine gun 1.2"/>
 	<inventory encumbrance="50.0" buy_price="23.0" sell_price="23.0"/>
@@ -98191,7 +98200,7 @@
 	<commonness value="0.2" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="4.33" kill_probability_offset_on_successful_hit="2.33" kill_decay_start_time="1.142" kill_decay_end_time="1.904" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="4.33" kill_probability_offset_on_successful_hit="4.33" kill_decay_start_time="1.142" kill_decay_end_time="1.904" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -98300,7 +98309,7 @@
 	<commonness value="0" in_stock="0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="4.33" kill_probability_offset_on_successful_hit="2.33" kill_decay_start_time="1.142" kill_decay_end_time="1.904" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="4.33" kill_probability_offset_on_successful_hit="4.33" kill_decay_start_time="1.142" kill_decay_end_time="1.904" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -98393,7 +98402,7 @@
 </weapon>
 
 <weapon key="gkw_aat52.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="4.2" magazine_size="200" suppressed="0" name="AAT-52" class="0" spread_range="0.7" projectile_speed="245" stance_accuracy_rate="1.0" sight_range_modifier="1.75" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" leave_crouch_accuracy_penalty="0.5" stab_enabled="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.075" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="4.2" magazine_size="200" suppressed="0" name="AAT-52" class="0" spread_range="0.7" projectile_speed="245" stance_accuracy_rate="1.0" sight_range_modifier="1.75" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" leave_crouch_accuracy_penalty="0.3" stab_enabled="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 3"/>
 	<inventory encumbrance="50.0" buy_price="52.0" sell_price="52.0"/>
 	<next_in_chain key="gkw_aat52_skill.weapon" share_ammo="1"/>
@@ -108850,6 +108859,7 @@
 	<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 	<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 	<modifier class="speed" value="-0.2"/>
+	<modifier class="hit_success_probability" value="-0.6"/>
 </weapon>
 
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0.05" drop_count_factor_on_player_death="1.0" drop_count_limit_in_range="3" key="cover_deploy.weapon" radius="0.25" time_to_live_out_in_the_open="30.0">
@@ -109502,7 +109512,7 @@
 	<hud_icon filename="gkw_hk416mod3.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="5.6" kill_probability_offset_on_successful_hit="1.3" kill_decay_start_time="1.142" kill_decay_end_time="1.904" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.8" kill_probability_offset_on_successful_hit="0.416" kill_decay_start_time="1.142" kill_decay_end_time="1.904" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -110988,7 +110998,7 @@
 </weapon>
 
 <weapon key="gkw_lwmmgmod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="4.8" magazine_size="100" suppressed="0" name="LWMMG(MOD3)-[Shining Barrier]" class="1" projectile_speed="210" stance_accuracy_rate="0.5" spread_range="0.5" sight_range_modifier="2.0" can_shoot_crouching="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_prone="1" leave_crouch_accuracy_penalty="0.5" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="4.8" magazine_size="100" suppressed="0" name="LWMMG(MOD3)-[Shining Barrier]" class="1" projectile_speed="210" stance_accuracy_rate="0.5" spread_range="0.5" sight_range_modifier="2.0" can_shoot_crouching="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_prone="1" leave_crouch_accuracy_penalty="0.3" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory encumbrance="50.0" buy_price="300.0" sell_price="300.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -113349,7 +113359,7 @@
 
 <weapon key="gkw_ameli_1605.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
-	<specification barrel_offset="0.5" retrigger_time="0.06" accuracy_factor="1.0" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="3.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" magazine_size="200" suppressed="0" spread_range="0.6" name="CETME Ameli MG82-[Gift-selling Christmas Tree]" class="0" slot="0" projectile_speed="210" leave_crouch_accuracy_penalty="0.25" sight_range_modifier="2.00" stance_accuracy_rate="1.2"/>
+	<specification barrel_offset="0.5" retrigger_time="0.05" accuracy_factor="1.0" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="3.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" magazine_size="200" suppressed="0" spread_range="0.6" name="CETME Ameli MG82-[Gift-selling Christmas Tree]" class="0" slot="0" projectile_speed="210" leave_crouch_accuracy_penalty="0.25" sight_range_modifier="2.00" stance_accuracy_rate="1.2"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="50.0" buy_price="150.0" sell_price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -113464,7 +113474,7 @@
 
 <weapon key="gkw_ameli_1605_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
-	<specification retrigger_time="0.04" accuracy_factor="1.0" barrel_offset="0.8" sustained_fire_grow_step="0.85" sustained_fire_diminish_rate="2.5" leave_crouch_accuracy_penalty="0.5" spread_range="0.45" stance_accuracy_rate="1.0" magazine_size="200" suppressed="0" projectiles_per_shot="1" name="CETME Ameli MG82-[Gift-selling Christmas Tree]-[Lock and Load N]" class="0" projectile_speed="210" carry_in_two_hands="1" sight_range_modifier="1.75" can_shoot_standing="0" can_shoot_crouching="1" stab_enabled="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1"/>
+	<specification retrigger_time="0.05" accuracy_factor="1.0" barrel_offset="0.8" sustained_fire_grow_step="0.85" sustained_fire_diminish_rate="2.5" leave_crouch_accuracy_penalty="0.3" spread_range="0.45" stance_accuracy_rate="1.0" magazine_size="200" suppressed="0" projectiles_per_shot="1" name="CETME Ameli MG82-[Gift-selling Christmas Tree]-[Lock and Load N]" class="0" projectile_speed="210" carry_in_two_hands="1" sight_range_modifier="1.75" can_shoot_standing="0" can_shoot_crouching="1" stab_enabled="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1"/>
 	<inventory encumbrance="50.0" buy_price="42.0" sell_price="42.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_ameli_1605.weapon" share_ammo="1"/>
@@ -113495,27 +113505,32 @@
 	<model filename="gkw_mg_ameli.xml"/>
 	<hud_icon filename="gkw_ameli_1605.png"/>
 	<effect class="muzzle" ref="muzzle_yellow"/>
-	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="blast" damage="2.1" radius="3.5" decal="1" push="0.1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-	<trail probability="1.0" key="BulletMgTrail"/>
+	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="4">
+	<result class="spawn" instance_class="projectile" instance_key="sub_damage_lmg_ap.projectile" min_amount="1" max_amount="2" offset="0 0.0 0" position_spread="0 0" direction_spread="0 0" damage_origin_vehicle="0"/>
+	<trail probability="1.0" key="BulletMgTrail_rx1"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet2_fromCOD17.wav" volume="0.8"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet2_fromCOD17.wav" volume="0.8"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet5_fromCOD17.wav" volume="0.8"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet5_fromCOD17.wav" volume="0.8"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet3_fromCOD17.wav" volume="0.3"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet4_fromCOD17.wav" volume="0.3"/>
 	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
 	<sound class="result" key="terrain" fileref="ricochet2.wav"/>
 	<sound class="result" key="terrain" fileref="ricochet3.wav"/>
 	<sound class="result" key="terrain" fileref="ricochet4.wav"/>
-	<sound class="result" key="shield" file="bullet_shield1_fromCOD17.wav" pitch_variety="0.2" volume="1.0"/>
-	<sound class="result" key="shield" file="bullet_shield2_fromCOD17.wav" pitch_variety="0.2" volume="1.0"/>
-	<sound class="result" key="character" fileref="bullet_hit1_fromCOD17.wav" pitch_variety="0.4" volume="1.05"/>
-	<sound class="result" key="character" fileref="bullet_hit2_fromCOD17.wav" pitch_variety="0.4" volume="1.05"/>
+	<sound class="result" key="shield" file="metal_hit_1.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="shield" file="metal_hit_2.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="shield" file="metal_hit_3.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="shield" file="metal_hit_4.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="shield" file="metal_hit_5.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="shield" file="metal_hit_6.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" fileref="impact_body2.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" fileref="impact_body3.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" fileref="impact_body4.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" fileref="impact_body3.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" tag="meat_man" fileref="impact_body4.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_1.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_2.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_3.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_4.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_5.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_6.wav" pitch_variety="0.2" volume="1.0"/>
 	<sound class="result" key="vehicle" copy="terrain"/>
 	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_01.wav" pitch_variety="0.3" volume="0.5"/>
 	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_02.wav" pitch_variety="0.3" volume="0.5"/>
@@ -113544,9 +113559,13 @@
 	<effect class="result" key="terrain" ref="BulletImpactDust1"/>
 	<effect class="result" key="terrain" ref="BulletImpactDust2"/>
 	<effect class="result" key="terrain" ref="BulletImpactDust3"/>
-	<effect class="result" key="vehicle" ref="Burst" use_surface_color="1"/>
-	<effect class="result" key="vehicle" ref="hitMetal"/>
-	<effect class="result" key="vehicle" ref="hitMetal_1"/>
+	<effect class="result" key="terrain" ref="result_cannon_blast_AmbientLight_small" lighting="0"/>
+	<effect class="result" key="terrain" ref="result_cannon_blast_smoke_small" lighting="0"/>
+	<effect class="result" key="other" copy="terrain"/>
+	<effect class="result" key="static_object" copy="terrain"/>
+	<effect class="result" key="character" copy="terrain"/>
+	<effect class="result" key="shield" copy="terrain"/>
+	<effect class="result" key="vehicle" copy="terrain"/>
 	<effect class="result" key="other" ref="BulletImpact"/>
 	<effect class="result" key="vehicle" ref="BulletImpact"/>
 	<effect class="result" key="terrain" ref="BulletImpact"/>
@@ -113573,7 +113592,7 @@
 
 <weapon key="gkw_ameli_2409.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
-	<specification barrel_offset="0.5" retrigger_time="0.06" accuracy_factor="1.0" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="3.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" magazine_size="200" suppressed="0" spread_range="0.6" name="CETME Ameli MG82-[Ameli`s Catching Ball]" class="0" slot="0" projectile_speed="210" leave_crouch_accuracy_penalty="0.25" sight_range_modifier="2.00" stance_accuracy_rate="1.2"/>
+	<specification barrel_offset="0.5" retrigger_time="0.05" accuracy_factor="1.0" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="3.2" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" magazine_size="200" suppressed="0" spread_range="0.6" name="CETME Ameli MG82-[Ameli`s Catching Ball]" class="0" slot="0" projectile_speed="210" leave_crouch_accuracy_penalty="0.25" sight_range_modifier="2.00" stance_accuracy_rate="1.2"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="50.0" buy_price="150.0" sell_price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -113688,7 +113707,7 @@
 
 <weapon key="gkw_ameli_2409_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="machine gun"/>
-	<specification retrigger_time="0.04" accuracy_factor="1.0" barrel_offset="0.8" sustained_fire_grow_step="0.85" sustained_fire_diminish_rate="2.5" leave_crouch_accuracy_penalty="0.5" spread_range="0.45" stance_accuracy_rate="1.0" magazine_size="200" suppressed="0" projectiles_per_shot="1" name="CETME Ameli MG82-[Ameli`s Catching Ball]-[Lock and Load N]" class="0" projectile_speed="210" carry_in_two_hands="1" sight_range_modifier="1.75" can_shoot_standing="0" can_shoot_crouching="1" stab_enabled="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1"/>
+	<specification retrigger_time="0.05" accuracy_factor="1.0" barrel_offset="0.8" sustained_fire_grow_step="0.85" sustained_fire_diminish_rate="2.5" leave_crouch_accuracy_penalty="0.3" spread_range="0.45" stance_accuracy_rate="1.0" magazine_size="200" suppressed="0" projectiles_per_shot="1" name="CETME Ameli MG82-[Ameli`s Catching Ball]-[Lock and Load N]" class="0" projectile_speed="210" carry_in_two_hands="1" sight_range_modifier="1.75" can_shoot_standing="0" can_shoot_crouching="1" stab_enabled="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_prone="1"/>
 	<inventory encumbrance="50.0" buy_price="42.0" sell_price="42.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_ameli_2409.weapon" share_ammo="1"/>
@@ -113719,27 +113738,32 @@
 	<model filename="gkw_mg_ameli.xml"/>
 	<hud_icon filename="gkw_ameli_2409.png"/>
 	<effect class="muzzle" ref="muzzle_yellow"/>
-	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="blast" damage="2.1" radius="3.5" decal="1" push="0.1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
-	<trail probability="1.0" key="BulletMgTrail"/>
+	<projectile class="bullet" name="default" slot="1" time_to_live="1.0" pulldown_in_air="4">
+	<result class="spawn" instance_class="projectile" instance_key="sub_damage_lmg_ap.projectile" min_amount="1" max_amount="2" offset="0 0.0 0" position_spread="0 0" direction_spread="0 0" damage_origin_vehicle="0"/>
+	<trail probability="1.0" key="BulletMgTrail_rx1"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet2_fromCOD17.wav" volume="0.8"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet2_fromCOD17.wav" volume="0.8"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet5_fromCOD17.wav" volume="0.8"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet5_fromCOD17.wav" volume="0.8"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet3_fromCOD17.wav" volume="0.3"/>
-	<sound class="result" key="terrain" fileref="bullet_ricochet4_fromCOD17.wav" volume="0.3"/>
 	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
 	<sound class="result" key="terrain" fileref="ricochet2.wav"/>
 	<sound class="result" key="terrain" fileref="ricochet3.wav"/>
 	<sound class="result" key="terrain" fileref="ricochet4.wav"/>
-	<sound class="result" key="shield" file="bullet_shield1_fromCOD17.wav" pitch_variety="0.2" volume="1.0"/>
-	<sound class="result" key="shield" file="bullet_shield2_fromCOD17.wav" pitch_variety="0.2" volume="1.0"/>
-	<sound class="result" key="character" fileref="bullet_hit1_fromCOD17.wav" pitch_variety="0.4" volume="1.05"/>
-	<sound class="result" key="character" fileref="bullet_hit2_fromCOD17.wav" pitch_variety="0.4" volume="1.05"/>
+	<sound class="result" key="shield" file="metal_hit_1.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="shield" file="metal_hit_2.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="shield" file="metal_hit_3.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="shield" file="metal_hit_4.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="shield" file="metal_hit_5.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="shield" file="metal_hit_6.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" fileref="impact_body2.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" fileref="impact_body3.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" fileref="impact_body4.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" fileref="impact_body3.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" tag="meat_man" fileref="impact_body4.wav" pitch_variety="0.4" volume="0.7"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_1.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_2.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_3.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_4.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_5.wav" pitch_variety="0.2" volume="1.0"/>
+	<sound class="result" key="character" tag="metal_man" file="metal_hit_6.wav" pitch_variety="0.2" volume="1.0"/>
 	<sound class="result" key="vehicle" copy="terrain"/>
 	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_01.wav" pitch_variety="0.3" volume="0.5"/>
 	<sound class="result" key="vehicle" tag="metal_thin" file="metal_thin_02.wav" pitch_variety="0.3" volume="0.5"/>
@@ -113768,9 +113792,13 @@
 	<effect class="result" key="terrain" ref="BulletImpactDust1"/>
 	<effect class="result" key="terrain" ref="BulletImpactDust2"/>
 	<effect class="result" key="terrain" ref="BulletImpactDust3"/>
-	<effect class="result" key="vehicle" ref="Burst" use_surface_color="1"/>
-	<effect class="result" key="vehicle" ref="hitMetal"/>
-	<effect class="result" key="vehicle" ref="hitMetal_1"/>
+	<effect class="result" key="terrain" ref="result_cannon_blast_AmbientLight_small" lighting="0"/>
+	<effect class="result" key="terrain" ref="result_cannon_blast_smoke_small" lighting="0"/>
+	<effect class="result" key="other" copy="terrain"/>
+	<effect class="result" key="static_object" copy="terrain"/>
+	<effect class="result" key="character" copy="terrain"/>
+	<effect class="result" key="shield" copy="terrain"/>
+	<effect class="result" key="vehicle" copy="terrain"/>
 	<effect class="result" key="other" ref="BulletImpact"/>
 	<effect class="result" key="vehicle" ref="BulletImpact"/>
 	<effect class="result" key="terrain" ref="BulletImpact"/>
@@ -122899,7 +122927,7 @@
 </weapon>
 
 <weapon key="gkw_hk21_4002.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.5" class="0" slot="0" magazine_size="100" name="HK21-[Silver Fox's 1/9 Platform]" projectile_speed="190" retrigger_time="0.075" suppressed="0" stance_accuracy_rate="0.95" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="2.5" spread_range="0.55" sight_range_modifier="1.35" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1" leave_crouch_accuracy_penalty="0.5"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.5" class="0" slot="0" magazine_size="100" name="HK21-[Silver Fox's 1/9 Platform]" projectile_speed="190" retrigger_time="0.075" suppressed="0" stance_accuracy_rate="1.5" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.5" spread_range="0.55" sight_range_modifier="1.8" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1" leave_crouch_accuracy_penalty="0.3"/>
 	<commonness in_stock="0" value="0"/>
 	<animation state_key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory encumbrance="50.0" buy_price="21.0" sell_price="21.0"/>
@@ -122913,7 +122941,7 @@
 	<hud_icon filename="gkw_hk21_4002.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="3.5" kill_probability_offset_on_successful_hit="6.1" kill_decay_start_time="1.967" kill_decay_end_time="3.279" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.7" kill_probability_offset_on_successful_hit="6.1" kill_decay_start_time="1.967" kill_decay_end_time="3.279" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -123620,7 +123648,7 @@
 </weapon>
 
 <weapon key="gkw_lwmmg_1808.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="4.8" leave_crouch_accuracy_penalty="0.5" spread_range="0.5" magazine_size="100" suppressed="0" name="LWMMG-[Yellow Star-thistle]" class="1" projectile_speed="210" stance_accuracy_rate="0.7" sight_range_modifier="1.75" can_shoot_standing="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="4.8" leave_crouch_accuracy_penalty="0.3" spread_range="0.5" magazine_size="100" suppressed="0" name="LWMMG-[Yellow Star-thistle]" class="1" projectile_speed="210" stance_accuracy_rate="0.7" sight_range_modifier="1.75" can_shoot_standing="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<commonness value="0" in_stock="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory encumbrance="50.0" buy_price="33.8" sell_price="33.8"/>
@@ -123731,7 +123759,7 @@
 </weapon>
 
 <weapon key="gkw_lwmmg_skill_1808.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="4.8" magazine_size="100" suppressed="0" name="LWMMG-[Yellow Star-thistle]-[Hunting Impulse]" class="1" projectile_speed="210" stance_accuracy_rate="0.5" spread_range="0.75" sight_range_modifier="1.75" can_shoot_crouching="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_prone="1" leave_crouch_accuracy_penalty="0.5" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="4.8" magazine_size="100" suppressed="0" name="LWMMG-[Yellow Star-thistle]-[Hunting Impulse]" class="1" projectile_speed="210" stance_accuracy_rate="0.5" spread_range="0.75" sight_range_modifier="1.75" can_shoot_crouching="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_prone="1" leave_crouch_accuracy_penalty="0.3" slot="0"/>
 	<commonness value="0" in_stock="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory encumbrance="50.0" buy_price="33.8" sell_price="33.8"/>
@@ -130867,7 +130895,7 @@
 	<hud_icon filename="gkw_hk416_537.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="5.6" kill_probability_offset_on_successful_hit="1.3" kill_decay_start_time="1.142" kill_decay_end_time="1.904" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.8" kill_probability_offset_on_successful_hit="0.416" kill_decay_start_time="1.142" kill_decay_end_time="1.904" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -130978,7 +131006,7 @@
 	<hud_icon filename="gkw_hk416_6505.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="5.6" kill_probability_offset_on_successful_hit="1.3" kill_decay_start_time="1.142" kill_decay_end_time="1.904" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.8" kill_probability_offset_on_successful_hit="0.416" kill_decay_start_time="1.142" kill_decay_end_time="1.904" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -131088,7 +131116,7 @@
 	<hud_icon filename="gkw_hk416_3401.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="5.6" kill_probability_offset_on_successful_hit="1.3" kill_decay_start_time="1.142" kill_decay_end_time="1.904" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.8" kill_probability_offset_on_successful_hit="0.416" kill_decay_start_time="1.142" kill_decay_end_time="1.904" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -131198,7 +131226,7 @@
 	<hud_icon filename="gkw_hk416_805.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="5.6" kill_probability_offset_on_successful_hit="1.3" kill_decay_start_time="1.142" kill_decay_end_time="1.904" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.8" kill_probability_offset_on_successful_hit="0.416" kill_decay_start_time="1.142" kill_decay_end_time="1.904" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -131309,7 +131337,7 @@
 	<hud_icon filename="gkw_hk416_557.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="5.6" kill_probability_offset_on_successful_hit="1.3" kill_decay_start_time="1.142" kill_decay_end_time="1.904" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.8" kill_probability_offset_on_successful_hit="0.416" kill_decay_start_time="1.142" kill_decay_end_time="1.904" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -134517,7 +134545,7 @@
 </weapon>
 
 <weapon key="gkw_lwmmgmod3_1808_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="4.8" magazine_size="100" suppressed="0" name="LWMMG(MOD3)-[Yellow Star-thistle]-[Shining Barrier]" class="1" projectile_speed="210" stance_accuracy_rate="0.5" spread_range="0.5" sight_range_modifier="2.0" can_shoot_crouching="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_prone="1" leave_crouch_accuracy_penalty="0.5" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="4.8" magazine_size="100" suppressed="0" name="LWMMG(MOD3)-[Yellow Star-thistle]-[Shining Barrier]" class="1" projectile_speed="210" stance_accuracy_rate="0.5" spread_range="0.5" sight_range_modifier="2.0" can_shoot_crouching="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_prone="1" leave_crouch_accuracy_penalty="0.3" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory encumbrance="50.0" buy_price="300.0" sell_price="300.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -147150,7 +147178,7 @@
 	<capacity value="1" source="rank" source_value="6.048"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="4.45" kill_probability_offset_on_successful_hit="1.85" kill_decay_start_time="1.142" kill_decay_end_time="1.904" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.6" kill_probability_offset_on_successful_hit="0.416" kill_decay_start_time="1.142" kill_decay_end_time="1.904" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -165636,3 +165664,4 @@
 </weapon>
 
 </weapons>
+
