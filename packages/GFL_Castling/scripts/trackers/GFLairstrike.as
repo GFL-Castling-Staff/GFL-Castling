@@ -668,13 +668,13 @@ class GFLairstrike : Tracker {
                 }
 
                 case 22:{
-                    float strike_rand=3.0;
-                    int projectile_num = 5;
+                    float strike_rand=1.8;
+                    int projectile_num = 6;
                     for(int j=1;j<=projectile_num;j++)
                     {
                         float rand_x = rand(-strike_rand,strike_rand);
                         float rand_y = rand(-strike_rand,strike_rand);
-                        CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"ASW_BF109_strafe.projectile",cid,fid,100);
+                        CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"ASW_BF109_strafe.projectile",cid,fid,140);
                     } 
                     Airstrike_strafe.removeAt(a);
                     break;

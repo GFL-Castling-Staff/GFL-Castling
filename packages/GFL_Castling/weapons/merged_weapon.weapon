@@ -2336,7 +2336,7 @@
 </weapon>
 
 <weapon key="gkw_fal.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.8" class="0" slot="0" magazine_size="20" name="FAL" projectile_speed="200" retrigger_time="0.0857" suppressed="0" spread_range="0.35" stance_accuracy_rate="2.0" sustained_fire_diminish_rate="3.6" sustained_fire_grow_step="0.7" sight_range_modifier="1.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.8" class="0" slot="0" magazine_size="20" name="FAL" projectile_speed="200" retrigger_time="0.0857" suppressed="0" spread_range="0.35" stance_accuracy_rate="2.0" sustained_fire_diminish_rate="3.6" sustained_fire_grow_step="0.7" sight_range_modifier="1.8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<inventory encumbrance="35.0" buy_price="6.0" sell_price="6.0"/>
 	<sound key="fire" fileref="fal_fire_FromCOD16.wav" pitch_variety="0.05" volume="1"/>
@@ -2862,7 +2862,7 @@
 	<stance state_key="walking" accuracy="0.35"/>
 	<stance state_key="crouch_moving" accuracy="0.75"/>
 	<stance state_key="prone_moving" accuracy="0.75"/>
-	<stance state_key="standing" accuracy="0.93"/>
+	<stance state_key="standing" accuracy="0.98"/>
 	<stance state_key="crouching" accuracy="0.98"/>
 	<stance state_key="prone" accuracy="1.35"/>
 	<stance state_key="over_wall" accuracy="1.35"/>
@@ -2979,7 +2979,7 @@
 	<stance state_key="walking" accuracy="0.4"/>
 	<stance state_key="crouch_moving" accuracy="0.75"/>
 	<stance state_key="prone_moving" accuracy="0.75"/>
-	<stance state_key="standing" accuracy="0.93"/>
+	<stance state_key="standing" accuracy="0.98"/>
 	<stance state_key="crouching" accuracy="0.98"/>
 	<stance state_key="prone" accuracy="1.35"/>
 	<stance state_key="over_wall" accuracy="1.35"/>
@@ -17936,7 +17936,7 @@
 </weapon>
 
 <weapon key="gkw_m4a1mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="M4A1(MOD3)" spread_range="0.3" projectile_speed="240" retrigger_time="0.086" suppressed="1" sight_range_modifier="1.6" stance_accuracy_rate="2.5" sustained_fire_diminish_rate="2.0" sustained_fire_grow_step="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="M4A1(MOD3)" spread_range="0.3" projectile_speed="240" retrigger_time="0.086" suppressed="1" sight_range_modifier="2.0" stance_accuracy_rate="2.5" sustained_fire_diminish_rate="2.0" sustained_fire_grow_step="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<next_in_chain key="gkw_m4a1mod3_skill.weapon" share_ammo="0"/>
 	<inventory encumbrance="35.0" buy_price="270.0" sell_price="270.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
@@ -18126,7 +18126,7 @@
 	<weak_hand_hold offset="0.2"/>
 	<projectile can_be_detected_by_footmen="0" class="grenade" name="" slot="1" pulldown_in_air="1.0" key="m4a1mod3_skill.projectile">
 	<tag name="rocket"/>
-	<result class="spawn" instance_class="projectile" instance_key="blast_shard_m4a1_skillcannon.projectile" min_amount="6" max_amount="6" offset="0 -0.3 0" position_spread="0 0" direction_spread="0 -1"/>
+	<result class="spawn" instance_class="projectile" instance_key="blast_shard_m4a1_skillcannon.projectile" min_amount="10" max_amount="10" offset="0 -0.3 0" position_spread="0 0" direction_spread="0 -1"/>
 	<trigger class="time" time_to_live="0.5"/>
 	<rotation class="motion"/>
 	<model/>
@@ -18173,7 +18173,7 @@
 </weapon>
 
 <weapon key="gkw_m4a1mod3_530.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="M4A1(MOD3)-[Girl`s Balloon Roaming]" spread_range="0.3" projectile_speed="240" retrigger_time="0.086" suppressed="1" sight_range_modifier="1.6" stance_accuracy_rate="2.5" sustained_fire_diminish_rate="2.0" sustained_fire_grow_step="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="M4A1(MOD3)-[Girl`s Balloon Roaming]" spread_range="0.3" projectile_speed="240" retrigger_time="0.086" suppressed="1" sight_range_modifier="2.0" stance_accuracy_rate="2.5" sustained_fire_diminish_rate="2.0" sustained_fire_grow_step="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<next_in_chain key="gkw_m4a1mod3_530_skill.weapon" share_ammo="0"/>
 	<inventory encumbrance="35.0" buy_price="270.0" sell_price="270.0"/>
@@ -18364,7 +18364,7 @@
 	<weak_hand_hold offset="0.2"/>
 	<projectile can_be_detected_by_footmen="0" class="grenade" name="" slot="1" pulldown_in_air="1.0" key="m4a1mod3_skill.projectile">
 	<tag name="rocket"/>
-	<result class="spawn" instance_class="projectile" instance_key="blast_shard_m4a1_skillcannon.projectile" min_amount="6" max_amount="6" offset="0 -0.3 0" position_spread="0 0" direction_spread="0 -1"/>
+	<result class="spawn" instance_class="projectile" instance_key="blast_shard_m4a1_skillcannon.projectile" min_amount="10" max_amount="10" offset="0 -0.3 0" position_spread="0 0" direction_spread="0 -1"/>
 	<trigger class="time" time_to_live="0.5"/>
 	<rotation class="motion"/>
 	<model/>
@@ -18418,7 +18418,7 @@
 </weapon>
 
 <weapon key="gkw_m4a1mod3_550.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="M4A1(MOD3)-[Sunshine through the Pines]" spread_range="0.3" projectile_speed="240" retrigger_time="0.086" suppressed="1" sight_range_modifier="1.6" stance_accuracy_rate="2.5" sustained_fire_diminish_rate="2.0" sustained_fire_grow_step="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" slot="0" magazine_size="30" name="M4A1(MOD3)-[Sunshine through the Pines]" spread_range="0.3" projectile_speed="240" retrigger_time="0.086" suppressed="1" sight_range_modifier="2.0" stance_accuracy_rate="2.5" sustained_fire_diminish_rate="2.0" sustained_fire_grow_step="0.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<next_in_chain key="gkw_m4a1mod3_550_skill.weapon" share_ammo="0"/>
 	<inventory encumbrance="35.0" buy_price="270.0" sell_price="270.0"/>
@@ -18609,7 +18609,7 @@
 	<weak_hand_hold offset="0.2"/>
 	<projectile can_be_detected_by_footmen="0" class="grenade" name="" slot="1" pulldown_in_air="1.0" key="m4a1mod3_skill.projectile">
 	<tag name="rocket"/>
-	<result class="spawn" instance_class="projectile" instance_key="blast_shard_m4a1_skillcannon.projectile" min_amount="6" max_amount="6" offset="0 -0.3 0" position_spread="0 0" direction_spread="0 -1"/>
+	<result class="spawn" instance_class="projectile" instance_key="blast_shard_m4a1_skillcannon.projectile" min_amount="10" max_amount="10" offset="0 -0.3 0" position_spread="0 0" direction_spread="0 -1"/>
 	<trigger class="time" time_to_live="0.5"/>
 	<rotation class="motion"/>
 	<model/>
@@ -19319,11 +19319,11 @@
 </weapon>
 
 <weapon key="gkw_ar15mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1" barrel_offset="0.6" can_shoot_prone="1" class="4" burst_shots="1" slot="0" magazine_size="30" name="ST-AR15(MOD3)-[SPR]" projectile_speed="240" retrigger_time="-1" last_burst_retrigger_time="0.1" stance_accuracy_rate="2.5" leave_crouch_accuracy_penalty="0.38" suppressed="0" spread_range="0.35" sustained_fire_diminish_rate="3.5" sustained_fire_grow_step="0.85" sight_range_modifier="2.25" stab_enabled="1" carry_in_two_hands="1"/>
+	<specification accuracy_factor="1" barrel_offset="0.6" can_shoot_prone="1" class="4" burst_shots="1" slot="0" magazine_size="30" name="ST-AR15(MOD3)-[SPR]" projectile_speed="240" retrigger_time="-1" last_burst_retrigger_time="0.1" stance_accuracy_rate="2.5" leave_crouch_accuracy_penalty="0.2" suppressed="1" spread_range="0.35" sustained_fire_diminish_rate="3.5" sustained_fire_grow_step="0.85" sight_range_modifier="2.25" stab_enabled="1" carry_in_two_hands="1"/>
 	<next_in_chain key="gkw_ar15mod3_skill.weapon" share_ammo="0"/>
 	<inventory encumbrance="35.0" buy_price="240.0" sell_price="240.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
-	<sound key="fire" fileref="ar15mod3_fire_FromCOD8.wav" pitch_variety="0.01" volume="0.8"/>
+	<sound key="fire" fileref="AR15mod3_Fire_FromCOD16.wav" pitch_variety="0.01" volume="0.8"/>
 	<sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.6"/>
 	<sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.6"/>
@@ -19340,10 +19340,9 @@
 	<model filename="gkw_ar_ar15mod3.xml"/>
 	<hud_icon filename="gkw_ar15mod3.png"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
-	<effect class="muzzle" ref="muzzle_big_yellow"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="4" kill_decay_start_time="1.292" kill_decay_end_time="2.154" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="8" kill_decay_start_time="1.292" kill_decay_end_time="2.154" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -19410,7 +19409,7 @@
 	<stance state_key="running" accuracy="0.25"/>
 	<stance state_key="walking" accuracy="0.45"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
-	<stance state_key="standing" accuracy="0.9"/>
+	<stance state_key="standing" accuracy="0.98"/>
 	<stance state_key="crouching" accuracy="0.98"/>
 	<stance state_key="prone" accuracy="1.1"/>
 	<stance state_key="prone_moving" accuracy="0.6"/>
@@ -19439,7 +19438,7 @@
 <weapon key="gkw_ar15mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="autorifle"/>
 	<tag name="elite"/>
-	<specification retrigger_time="0.066" accuracy_factor="1" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="1.5" magazine_size="30" can_shoot_standing="1" can_shoot_prone="0" carry_in_two_hands="0" spread_range="0.3" suppressed="0" name="ST-AR15(MOD3)-[Crime and punishment]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.25" projectile_speed="185" projectiles_per_shot="2" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification retrigger_time="0.066" accuracy_factor="1" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="2.4" magazine_size="30" can_shoot_standing="1" can_shoot_prone="0" carry_in_two_hands="0" spread_range="0.3" suppressed="0" name="ST-AR15(MOD3)-[Crime and punishment]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.25" projectile_speed="185" projectiles_per_shot="2" burst_shots="1" slot="0" stab_enabled="1"/>
 	<next_in_chain key="gkw_ar15mod3.weapon" share_ammo="0"/>
 	<commonness value="0.0001" in_stock="0"/>
 	<animation state_key="recoil" animation_key="recoil, pistol dual 1"/>
@@ -19549,7 +19548,7 @@
 	<stance state_key="crouch_moving" accuracy="0.85"/>
 	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="0.85"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
@@ -19564,7 +19563,7 @@
 </weapon>
 
 <weapon key="gkw_ar15mod3_532.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1" barrel_offset="0.6" can_shoot_prone="1" class="4" burst_shots="1" slot="0" magazine_size="30" name="ST-AR15(MOD3)-[A hat Floating to the Sea of Flowers]-[SPR]" projectile_speed="240" retrigger_time="-1" last_burst_retrigger_time="0.1" stance_accuracy_rate="2.5" leave_crouch_accuracy_penalty="0.38" suppressed="1" spread_range="0.35" sustained_fire_diminish_rate="3.5" sustained_fire_grow_step="0.85" sight_range_modifier="2.25" stab_enabled="1" carry_in_two_hands="1"/>
+	<specification accuracy_factor="1" barrel_offset="0.6" can_shoot_prone="1" class="4" burst_shots="1" slot="0" magazine_size="30" name="ST-AR15(MOD3)-[A hat Floating to the Sea of Flowers]-[SPR]" projectile_speed="240" retrigger_time="-1" last_burst_retrigger_time="0.1" stance_accuracy_rate="2.5" leave_crouch_accuracy_penalty="0.2" suppressed="1" spread_range="0.35" sustained_fire_diminish_rate="3.5" sustained_fire_grow_step="0.85" sight_range_modifier="2.25" stab_enabled="1" carry_in_two_hands="1"/>
 	<next_in_chain key="gkw_ar15mod3_532_skill.weapon" share_ammo="0"/>
 	<inventory encumbrance="35.0" buy_price="240.0" sell_price="240.0"/>
 	<commonness value="0" in_stock="0"/>
@@ -19587,7 +19586,7 @@
 	<hud_icon filename="gkw_ar15_532.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="4" kill_decay_start_time="1.292" kill_decay_end_time="2.154" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="8" kill_decay_start_time="1.292" kill_decay_end_time="2.154" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -19654,7 +19653,7 @@
 	<stance state_key="running" accuracy="0.25"/>
 	<stance state_key="walking" accuracy="0.45"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
-	<stance state_key="standing" accuracy="0.9"/>
+	<stance state_key="standing" accuracy="0.98"/>
 	<stance state_key="crouching" accuracy="0.98"/>
 	<stance state_key="prone" accuracy="1.1"/>
 	<stance state_key="prone_moving" accuracy="0.6"/>
@@ -19793,7 +19792,7 @@
 	<stance state_key="crouch_moving" accuracy="0.85"/>
 	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="0.85"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
@@ -19808,7 +19807,7 @@
 </weapon>
 
 <weapon key="gkw_ar15mod3_552.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1" barrel_offset="0.6" can_shoot_prone="1" class="4" burst_shots="1" slot="0" magazine_size="30" name="ST-AR15(MOD3)-[Breeze on a Spring Day]-[SPR]" projectile_speed="240" retrigger_time="-1" last_burst_retrigger_time="0.1" stance_accuracy_rate="2.5" leave_crouch_accuracy_penalty="0.38" suppressed="1" spread_range="0.35" sustained_fire_diminish_rate="3.5" sustained_fire_grow_step="0.85" sight_range_modifier="2.25" stab_enabled="1" carry_in_two_hands="1"/>
+	<specification accuracy_factor="1" barrel_offset="0.6" can_shoot_prone="1" class="4" burst_shots="1" slot="0" magazine_size="30" name="ST-AR15(MOD3)-[Breeze on a Spring Day]-[SPR]" projectile_speed="240" retrigger_time="-1" last_burst_retrigger_time="0.1" stance_accuracy_rate="2.5" leave_crouch_accuracy_penalty="0.2" suppressed="1" spread_range="0.35" sustained_fire_diminish_rate="3.5" sustained_fire_grow_step="0.85" sight_range_modifier="2.25" stab_enabled="1" carry_in_two_hands="1"/>
 	<next_in_chain key="gkw_ar15mod3_552_skill.weapon" share_ammo="0"/>
 	<inventory encumbrance="35.0" buy_price="240.0" sell_price="240.0"/>
 	<commonness value="0" in_stock="0"/>
@@ -19831,7 +19830,7 @@
 	<hud_icon filename="gkw_ar15_552.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="4" kill_decay_start_time="1.292" kill_decay_end_time="2.154" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="8" kill_decay_start_time="1.292" kill_decay_end_time="2.154" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -19898,7 +19897,7 @@
 	<stance state_key="running" accuracy="0.25"/>
 	<stance state_key="walking" accuracy="0.45"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
-	<stance state_key="standing" accuracy="0.9"/>
+	<stance state_key="standing" accuracy="0.98"/>
 	<stance state_key="crouching" accuracy="0.98"/>
 	<stance state_key="prone" accuracy="1.1"/>
 	<stance state_key="prone_moving" accuracy="0.6"/>
@@ -20037,7 +20036,7 @@
 	<stance state_key="crouch_moving" accuracy="0.85"/>
 	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="0.85"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
@@ -20052,7 +20051,7 @@
 </weapon>
 
 <weapon key="gkw_ar15mod3_4508.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1" barrel_offset="0.6" can_shoot_prone="1" class="4" burst_shots="1" slot="0" magazine_size="30" name="ST-AR15(MOD3)-[Dreamscape Prisoner]-[SPR]" projectile_speed="240" retrigger_time="-1" last_burst_retrigger_time="0.1" stance_accuracy_rate="2.5" leave_crouch_accuracy_penalty="0.38" suppressed="1" spread_range="0.35" sustained_fire_diminish_rate="3.5" sustained_fire_grow_step="0.85" sight_range_modifier="2.25" stab_enabled="1" carry_in_two_hands="1"/>
+	<specification accuracy_factor="1" barrel_offset="0.6" can_shoot_prone="1" class="4" burst_shots="1" slot="0" magazine_size="30" name="ST-AR15(MOD3)-[Dreamscape Prisoner]-[SPR]" projectile_speed="240" retrigger_time="-1" last_burst_retrigger_time="0.1" stance_accuracy_rate="2.5" leave_crouch_accuracy_penalty="0.2" suppressed="1" spread_range="0.35" sustained_fire_diminish_rate="3.5" sustained_fire_grow_step="0.85" sight_range_modifier="2.25" stab_enabled="1" carry_in_two_hands="1"/>
 	<next_in_chain key="gkw_ar15mod3_4508_skill.weapon" share_ammo="0"/>
 	<inventory encumbrance="35.0" buy_price="240.0" sell_price="240.0"/>
 	<commonness value="0" in_stock="0"/>
@@ -20075,7 +20074,7 @@
 	<hud_icon filename="gkw_ar15_4508.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="4" kill_decay_start_time="1.292" kill_decay_end_time="2.154" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="8" kill_decay_start_time="1.292" kill_decay_end_time="2.154" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -20142,7 +20141,7 @@
 	<stance state_key="running" accuracy="0.25"/>
 	<stance state_key="walking" accuracy="0.45"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
-	<stance state_key="standing" accuracy="0.9"/>
+	<stance state_key="standing" accuracy="0.98"/>
 	<stance state_key="crouching" accuracy="0.98"/>
 	<stance state_key="prone" accuracy="1.1"/>
 	<stance state_key="prone_moving" accuracy="0.6"/>
@@ -20281,11 +20280,10 @@
 	<stance state_key="crouch_moving" accuracy="0.85"/>
 	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="0.85"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
-	<tag name="autorifle"/>
 	<modifier class="speed" value="0.1"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -20296,12 +20294,12 @@
 </weapon>
 
 <weapon key="gkw_ar15mod3_30001.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1" barrel_offset="0.6" can_shoot_prone="1" class="4" burst_shots="1" slot="0" magazine_size="30" name="ST-AR15(MOD3)-[Sleepy Summer Wind]-[SPR]" projectile_speed="240" retrigger_time="-1" last_burst_retrigger_time="0.1" stance_accuracy_rate="2.5" leave_crouch_accuracy_penalty="0.38" suppressed="0" spread_range="0.35" sustained_fire_diminish_rate="3.5" sustained_fire_grow_step="0.85" sight_range_modifier="2.25" stab_enabled="1" carry_in_two_hands="1"/>
+	<specification accuracy_factor="1" barrel_offset="0.6" can_shoot_prone="1" class="4" burst_shots="1" slot="0" magazine_size="30" name="ST-AR15(MOD3)-[Sleepy Summer Wind]-[SPR]" projectile_speed="240" retrigger_time="-1" last_burst_retrigger_time="0.1" stance_accuracy_rate="2.5" leave_crouch_accuracy_penalty="0.2" suppressed="1" spread_range="0.35" sustained_fire_diminish_rate="3.5" sustained_fire_grow_step="0.85" sight_range_modifier="2.25" stab_enabled="1" carry_in_two_hands="1"/>
 	<next_in_chain key="gkw_ar15mod3_30001_skill.weapon" share_ammo="0"/>
 	<inventory encumbrance="35.0" buy_price="240.0" sell_price="240.0"/>
 	<commonness value="0" in_stock="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
-	<sound key="fire" fileref="ar15mod3_fire_FromCOD8.wav" pitch_variety="0.01" volume="0.8"/>
+	<sound key="fire" fileref="AR15mod3_Fire_FromCOD16.wav" pitch_variety="0.01" volume="0.8"/>
 	<sound key="magazine_out" fileref="star15_mgz_out_FromCOD17.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="star15_mgz_in_FromCOD17.wav" volume="0.6"/>
 	<sound key="cycle" fileref="star15_cycle_FromCOD17.wav" volume="0.6"/>
@@ -20317,10 +20315,9 @@
 	<sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2"/>
 	<model filename="gkw_ar_ar15mod3.xml"/>
 	<hud_icon filename="gkw_ar15_30001.png"/>
-	<effect class="muzzle" ref="muzzle_big_yellow"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile can_be_detected_by_footmen="0" class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="4" kill_decay_start_time="1.292" kill_decay_end_time="2.154" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="8" kill_decay_start_time="1.292" kill_decay_end_time="2.154" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -20387,7 +20384,7 @@
 	<stance state_key="running" accuracy="0.25"/>
 	<stance state_key="walking" accuracy="0.45"/>
 	<stance state_key="crouch_moving" accuracy="0.6"/>
-	<stance state_key="standing" accuracy="0.9"/>
+	<stance state_key="standing" accuracy="0.98"/>
 	<stance state_key="crouching" accuracy="0.98"/>
 	<stance state_key="prone" accuracy="1.1"/>
 	<stance state_key="prone_moving" accuracy="0.6"/>
@@ -20526,7 +20523,7 @@
 	<stance state_key="crouch_moving" accuracy="0.85"/>
 	<stance state_key="prone_moving" accuracy="0.85"/>
 	<stance state_key="standing" accuracy="0.85"/>
-	<stance state_key="crouching" accuracy="0.85"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="0.85"/>
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="hit_success_probability" value="-0.2"/>
@@ -20851,7 +20848,7 @@
 	<stance state_key="walking" accuracy="0.5"/>
 	<stance state_key="crouch_moving" accuracy="0.9"/>
 	<stance state_key="prone_moving" accuracy="0.9"/>
-	<stance state_key="standing" accuracy="0.93"/>
+	<stance state_key="standing" accuracy="0.99"/>
 	<stance state_key="crouching" accuracy="0.99"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
@@ -20964,7 +20961,7 @@
 	<stance state_key="walking" accuracy="0.5"/>
 	<stance state_key="crouch_moving" accuracy="0.9"/>
 	<stance state_key="prone_moving" accuracy="0.9"/>
-	<stance state_key="standing" accuracy="0.93"/>
+	<stance state_key="standing" accuracy="0.99"/>
 	<stance state_key="crouching" accuracy="0.99"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
@@ -61852,7 +61849,7 @@
 	<hud_icon filename="gkw_ak74u.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="4.2" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="1.3" kill_decay_end_time="1.9" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="5.6" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="1.3" kill_decay_end_time="1.9" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -114284,7 +114281,7 @@
 </weapon>
 
 <weapon key="gkw_fal_308.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.8" class="0" slot="0" magazine_size="20" name="FAL-[Operation Winter Veil Supply]" projectile_speed="200" retrigger_time="0.0857" suppressed="0" spread_range="0.35" stance_accuracy_rate="2.0" sustained_fire_diminish_rate="3.6" sustained_fire_grow_step="0.7" sight_range_modifier="1.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.8" class="0" slot="0" magazine_size="20" name="FAL-[Operation Winter Veil Supply]" projectile_speed="200" retrigger_time="0.0857" suppressed="0" spread_range="0.35" stance_accuracy_rate="2.0" sustained_fire_diminish_rate="3.6" sustained_fire_grow_step="0.7" sight_range_modifier="1.8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<inventory encumbrance="35.0" buy_price="6.0" sell_price="6.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -114391,7 +114388,7 @@
 </weapon>
 
 <weapon key="gkw_fal_2406.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.8" class="0" slot="0" magazine_size="20" name="FAL-[FAL's summer]" projectile_speed="200" retrigger_time="0.0857" suppressed="0" spread_range="0.35" stance_accuracy_rate="2.0" sustained_fire_diminish_rate="3.6" sustained_fire_grow_step="0.7" sight_range_modifier="1.3" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.8" class="0" slot="0" magazine_size="20" name="FAL-[FAL's summer]" projectile_speed="200" retrigger_time="0.0857" suppressed="0" spread_range="0.35" stance_accuracy_rate="2.0" sustained_fire_diminish_rate="3.6" sustained_fire_grow_step="0.7" sight_range_modifier="1.8" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<inventory encumbrance="35.0" buy_price="6.0" sell_price="6.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -120698,7 +120695,7 @@
 	<hud_icon filename="gkw_ak74u_3002.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="4.2" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="1.3" kill_decay_end_time="1.9" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="5.6" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="1.3" kill_decay_end_time="1.9" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>

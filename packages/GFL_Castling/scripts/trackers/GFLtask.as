@@ -1063,23 +1063,23 @@ class strafe_task_30mm : event_call_task {
 
 class strafe_task_15mm_mg151 : event_call_task {
 	protected int luckyGuyid = -1;
-	protected Vector3 first_offset = Vector3(-15,0,-15);
-	protected Vector3 second_offset = Vector3(10,0,10);
+	protected Vector3 first_offset = Vector3(-10,0,-10);
+	protected Vector3 second_offset = Vector3(15,0,15);
 
 	void start(){
 		m_timeLeft=m_time;
 		m_timeLeft_internal = 0;
 		strike_vector = getAimUnitVector(1,s_pos,e_pos);
 		strike_didis = 3.0;
-		Vector3 pos_offset = strike_vector.add(getMultiplicationVector(strike_vector,Vector3(-40,0,-40)));
+		Vector3 pos_offset = strike_vector.add(getMultiplicationVector(strike_vector,Vector3(-30,0,-30)));
 		pos_offset = pos_offset.add(Vector3(0,60,0));
 		Vector3 pos_1st = e_pos.add(getMultiplicationVector(strike_vector,first_offset));
 		Vector3 pos_2nd = e_pos.add(getMultiplicationVector(strike_vector,second_offset));
-        m_excute_Limit = max(int(getAimUnitDistance(1,pos_1st,pos_2nd)/strike_didis),6);
+        m_excute_Limit = max(int(getAimUnitDistance(1,pos_1st,pos_2nd)/strike_didis),8);
 		m_pos1 = pos_1st.add(pos_offset);
 		m_pos2 = pos_1st;
 		m_pos1 = m_pos1.add(getMultiplicationVector(strike_vector,Vector3(-30,0,-30)));
-		m_time_internal = 0.35;
+		m_time_internal = 0.2;
 		m_airstrike_key = "15mm_mg151";
 	}
 

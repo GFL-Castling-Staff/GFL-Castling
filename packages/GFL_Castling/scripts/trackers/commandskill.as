@@ -331,6 +331,7 @@ class CommandSkill : Tracker {
                 case 100:{excuteHS50Skill(cId,senderId,m_modifer);break;}
                 case 101:{excutePTRDSkill(cId,senderId,m_modifer);break;}
                 case 102:{excuteM327Skill(cId,senderId,m_modifer);break;}
+                case 103:{excuteMG15skill(cId,senderId,m_modifer);break;}
 
                 default:
                 break;
@@ -5629,4 +5630,46 @@ class CommandSkill : Tracker {
 
         playAnimationKey(m_metagame, characterId, "crouching aiming, RF skill 2s", false);
     }
+
+    void excuteMG15skill(int characterId,int playerId,SkillModifer@ modifer){
+        bool ExistQueue = false;
+        int j=-1;
+        for (uint i=0;i<SkillArray.length();i++){
+            if (InCooldown(characterId,modifer,SkillArray[i],true) && SkillArray[i].m_weapontype=="MG15") {
+                ExistQueue=true;
+                j=i;
+            }
+        }
+        if (ExistQueue){
+            dictionary a;
+            a["%time"] = ""+SkillArray[j].m_time;
+            notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
+            //_log("skill cooldown" + SkillArray[j].m_time);
+            return;
+        }
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (character !is null) {
+            if (!canCastSkill(character)) return;
+            const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+            if (player is null) return;
+            string player_name = player.getStringAttribute("name");
+            int _killnum = g_playerInfo_Buck.getKillSkillCountbyName(player_name,"killcharge");
+            if (_killnum < 20)
+            {
+                sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"cost_not_ready");
+                return;
+            }
+            if (player.hasAttribute("aim_target")) {
+                string target = player.getStringAttribute("aim_target");
+                Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
+                int factionid = character.getIntAttribute("faction_id");
+
+                playAnimationKey(m_metagame,characterId,"air thrust",false,true);
+                TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                tasker.add(strafe_task_15mm_mg151(m_metagame,1.0,characterId,factionid,c_pos,stringToVector3(target)));
+                addCooldown("MG15",60,characterId,modifer);
+                g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"killcharge",-20);
+            }
+        }
+    }    
 }

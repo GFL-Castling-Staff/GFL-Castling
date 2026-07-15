@@ -863,6 +863,27 @@ class kill_event : Tracker {
                 }
             }
 
+            //部分击杀类 击杀充能
+
+            else if(KillerWeaponKey=="gkw_mg15.weapon"
+            )
+            {
+                if (killway=="hit"){
+                    if(reward_pool_key=="boss")
+                    {
+                        g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"killcharge",5);
+                    }
+                    else if(reward_pool_key=="elite" || reward_pool_key=="rare")
+                    {
+                        g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"killcharge",2);
+                    }
+                    else
+                    {
+                        g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"killcharge");
+                    }
+                }
+            }
+
             //莫辛纳甘技能 苍白收割者
 
             else if(KillerWeaponKey=="blast_snipe_mosin.projectile" && killway=="blast")
