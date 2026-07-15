@@ -700,6 +700,8 @@ dictionary tdoll_complex_index = {
 
     {modded_key(167).toString(),"gkw_hk45.weapon"},
 
+    {modded_key(168).toString(),"gkw_spitfire.weapon"},
+
     {modded_key(169).toString(),"gkw_scw.weapon"},
 
     {modded_key(170).toString(),"gkw_ash127.weapon"},
@@ -1904,7 +1906,8 @@ array<string> gk_weapon_hg_list = {
     "gkw_cz52_10307.weapon",
     "gkw_hk45.weapon",
     "gkw_mp448.weapon",
-    "gkw_uspcompact.weapon"
+    "gkw_uspcompact.weapon",
+    "gkw_spitfire.weapon"
 };
 
 array<string> gk_weapon_hvy_nerfed = {
