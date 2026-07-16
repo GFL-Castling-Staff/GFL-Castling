@@ -3774,7 +3774,7 @@
 	<next_in_chain key="gkw_iws2000_skill.weapon" share_ammo="1"/>
 	<inventory encumbrance="35.0" buy_price="500.0" sell_price="300.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 1s"/>
 	<sound key="fire" fileref="iws2000_fire_FromSAMTSE.wav" pitch_variety="0.05" volume="1.4"/>
 	<sound key="cycle" fileref="iws2000_cycle_FromDIVISION2.wav" volume="0.7"/>
 	<sound key="magazine_out" fileref="iws2000_mgz_out_FromCOD17.wav" volume="0.7"/>
@@ -3854,7 +3854,7 @@
 	<commonness value="0.0" can_respawn_with="1" in_stock="0"/>
 	<inventory encumbrance="35.0" buy_price="500.0" sell_price="300.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 1s"/>
 	<sound key="fire" fileref="iws2000_fire_FromSAMTSE.wav" pitch_variety="0.05" volume="1.4"/>
 	<sound key="cycle" fileref="iws2000_cycle_FromDIVISION2.wav" volume="0.7"/>
 	<sound key="magazine_out" fileref="iws2000_mgz_out_FromCOD17.wav" volume="0.7"/>
@@ -4009,7 +4009,7 @@
 	<tag name="melee"/>
 	<specification can_shoot_standing="1" can_shoot_crouching="0" can_shoot_prone="0" magazine_size="-1" carry_in_two_hands="0" character_state="death" consume="0" name="IWS 2000-[The Seventh Banisher]-[Reaper]" class="5" use_basic_muzzle_smoke_effect="0" stab_enabled="1" stab_range="5" range="5" success_probability="7.0"/>
 	<next_in_chain key="gkw_iws2000_1403.weapon" share_ammo="0"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 1s"/>
 	<animation state_key="recoil" animation_key="melee, iws2000 slash"/>
 	<animation state_key="stabbing" animation_key="melee, iws2000 slash stab"/>
 	<animation state_key="hold" animation_key="walking, 88typemod3_melee"/>
@@ -4063,7 +4063,7 @@
 	<commonness value="0.0" can_respawn_with="1" in_stock="0"/>
 	<inventory encumbrance="35.0" buy_price="500.0" sell_price="300.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 1s"/>
 	<sound key="fire" fileref="iws2000_fire_FromSAMTSE.wav" pitch_variety="0.05" volume="1.4"/>
 	<sound key="cycle" fileref="iws2000_cycle_FromDIVISION2.wav" volume="0.7"/>
 	<sound key="magazine_out" fileref="iws2000_mgz_out_FromCOD17.wav" volume="0.7"/>
@@ -4142,7 +4142,7 @@
 	<commonness value="0.0" can_respawn_with="1" in_stock="0"/>
 	<inventory encumbrance="35.0" buy_price="500.0" sell_price="300.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 1s"/>
 	<sound key="fire" fileref="iws2000_fire_FromSAMTSE.wav" pitch_variety="0.05" volume="1.4"/>
 	<sound key="cycle" fileref="iws2000_cycle_FromDIVISION2.wav" volume="0.7"/>
 	<sound key="magazine_out" fileref="iws2000_mgz_out_FromCOD17.wav" volume="0.7"/>
@@ -4221,7 +4221,7 @@
 	<commonness value="0.0" can_respawn_with="1" in_stock="0"/>
 	<inventory encumbrance="35.0" buy_price="500.0" sell_price="300.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 1s"/>
 	<sound key="fire" fileref="iws2000_fire_FromSAMTSE.wav" pitch_variety="0.05" volume="1.4"/>
 	<sound key="cycle" fileref="iws2000_cycle_FromDIVISION2.wav" volume="0.7"/>
 	<sound key="magazine_out" fileref="iws2000_mgz_out_FromCOD17.wav" volume="0.7"/>
@@ -4300,7 +4300,7 @@
 	<commonness value="0.0" can_respawn_with="1" in_stock="0"/>
 	<inventory encumbrance="35.0" buy_price="500.0" sell_price="300.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 1s"/>
 	<sound key="fire" fileref="iws2000_fire_FromSAMTSE.wav" pitch_variety="0.05" volume="1.4"/>
 	<sound key="cycle" fileref="iws2000_cycle_FromDIVISION2.wav" volume="0.7"/>
 	<sound key="magazine_out" fileref="iws2000_mgz_out_FromCOD17.wav" volume="0.7"/>
@@ -7319,7 +7319,7 @@
 	<hud_icon filename="gkw_vector.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="1.55" kill_probability_offset_on_successful_hit="6.5" kill_decay_start_time="0.33" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="6.5" kill_decay_start_time="0.33" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -8691,7 +8691,7 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="stabbing, bat"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 2.1"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 0.5s"/>
 	<sound key="fire" fileref="m82a1_fire_FromSAM4.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="cycle" fileref="m82a1_cycle_FromCOD16.wav" volume="0.4"/>
 	<sound key="magazine_out" fileref="m82a1_mgz_out_FromCOD16.wav" volume="0.4"/>
@@ -8809,7 +8809,7 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="stabbing, bat"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 2.1"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 0.5s"/>
 	<sound key="fire" fileref="m82a1sd_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="cycle" fileref="m82a1_cycle_FromCOD16.wav" volume="0.4"/>
 	<sound key="magazine_out" fileref="m82a1_mgz_out_FromCOD16.wav" volume="0.4"/>
@@ -8926,7 +8926,7 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="stabbing, bat"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 2.1"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 0.5s"/>
 	<sound key="fire" fileref="m82a1_fire_FromSAM4.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="cycle" fileref="m82a1_cycle_FromCOD16.wav" volume="0.4"/>
 	<sound key="magazine_out" fileref="m82a1_mgz_out_FromCOD16.wav" volume="0.4"/>
@@ -9044,7 +9044,7 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="stabbing, bat"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 2.1"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 0.5s"/>
 	<sound key="fire" fileref="m82a1sd_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.2"/>
 	<sound key="cycle" fileref="m82a1_cycle_FromCOD16.wav" volume="0.4"/>
 	<sound key="magazine_out" fileref="m82a1_mgz_out_FromCOD16.wav" volume="0.4"/>
@@ -14570,7 +14570,6 @@
 	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation key="recoil" animation_key="recoil1, big"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
@@ -14680,7 +14679,6 @@
 	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
 	<animation key="reload" animation_key="reloading, clip"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
 	<animation key="recoil" animation_key="recoil1, big"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
@@ -14795,7 +14793,6 @@
 	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="stabbing" animation_key="melee, bayonet_3hp"/>
 	<animation key="recoil" animation_key="recoil1, big"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
@@ -14913,7 +14910,6 @@
 	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
 	<animation key="reload" animation_key="reloading, clip"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
 	<animation key="recoil" animation_key="recoil1, big"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
@@ -15036,7 +15032,6 @@
 	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation key="recoil" animation_key="recoil1, big"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
@@ -15146,7 +15141,6 @@
 	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
 	<animation key="reload" animation_key="reloading, clip"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
 	<animation key="recoil" animation_key="recoil1, big"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
@@ -15261,7 +15255,6 @@
 	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="stabbing" animation_key="melee, bayonet_3hp"/>
 	<animation key="recoil" animation_key="recoil1, big"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
@@ -15378,7 +15371,6 @@
 	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
 	<animation key="reload" animation_key="reloading, clip"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
 	<animation key="recoil" animation_key="recoil1, big"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
@@ -15508,7 +15500,6 @@
 	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation key="recoil" animation_key="recoil1, big"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
@@ -15618,7 +15609,6 @@
 	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
 	<animation key="reload" animation_key="reloading, clip"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
 	<animation key="recoil" animation_key="recoil1, big"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
@@ -15733,7 +15723,6 @@
 	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="stabbing" animation_key="melee, bayonet_3hp"/>
 	<animation key="recoil" animation_key="recoil1, big"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
@@ -15850,7 +15839,6 @@
 	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
 	<animation key="reload" animation_key="reloading, clip"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
 	<animation key="recoil" animation_key="recoil1, big"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
@@ -15973,7 +15961,6 @@
 	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation key="recoil" animation_key="recoil1, big"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
@@ -16083,7 +16070,6 @@
 	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
 	<animation key="reload" animation_key="reloading, clip"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
 	<animation key="recoil" animation_key="recoil1, big"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
@@ -16198,7 +16184,6 @@
 	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
 	<animation key="reload" animation_key="reloading, oaat"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="stabbing" animation_key="melee, bayonet_3hp"/>
 	<animation key="recoil" animation_key="recoil1, big"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
@@ -16315,7 +16300,6 @@
 	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
 	<animation key="reload" animation_key="reloading, clip"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="stabbing" animation_key="melee, bayonet_6hp"/>
 	<animation key="recoil" animation_key="recoil1, big"/>
 	<animation key="recoil" stance_key="prone" animation_key="recoil1, big, prone"/>
@@ -18087,7 +18071,7 @@
 	<animation state_key="running" animation_key="walking, pistol dual"/>
 	<animation state_key="walking" animation_key="walking, pistol dual"/>
 	<animation state_key="walking_backwards" animation_key="walking backwards, pistol dual"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon in m4s"/>
+	<animation state_key="next_in_chain_out" animation_key="change weapon in, single hand, 0.5s"/>
 	<animation state_key="prone_still" animation_key="prone_still, pistol dual"/>
 	<animation state_key="stabbing" animation_key="pistol whip"/>
 	<animation state_key="stabbing" animation_key="pistol whip 2"/>
@@ -18324,7 +18308,7 @@
 	<animation state_key="running" animation_key="walking, pistol dual"/>
 	<animation state_key="walking" animation_key="walking, pistol dual"/>
 	<animation state_key="walking_backwards" animation_key="walking backwards, pistol dual"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon in m4s"/>
+	<animation state_key="next_in_chain_out" animation_key="change weapon in, single hand, 0.5s"/>
 	<animation state_key="prone_still" animation_key="prone_still, pistol dual"/>
 	<animation state_key="stabbing" animation_key="pistol whip"/>
 	<animation state_key="stabbing" animation_key="pistol whip 2"/>
@@ -18569,7 +18553,7 @@
 	<animation state_key="running" animation_key="walking, pistol dual"/>
 	<animation state_key="walking" animation_key="walking, pistol dual"/>
 	<animation state_key="walking_backwards" animation_key="walking backwards, pistol dual"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon in m4s"/>
+	<animation state_key="next_in_chain_out" animation_key="change weapon in, single hand, 0.5s"/>
 	<animation state_key="prone_still" animation_key="prone_still, pistol dual"/>
 	<animation state_key="stabbing" animation_key="pistol whip"/>
 	<animation state_key="stabbing" animation_key="pistol whip 2"/>
@@ -23192,7 +23176,6 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<next_in_chain key="gkw_m2hb_skill.weapon" share_ammo="1"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
@@ -23302,7 +23285,6 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_m2hb.weapon" share_ammo="1"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
@@ -23839,7 +23821,6 @@
 	<animation key="reload" animation_key="reloading, Machine gun 1.0"/>
 	<next_in_chain key="gkw_mg42_skill.weapon" share_ammo="0"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
@@ -23945,7 +23926,6 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_mg42.weapon" share_ammo="0"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
@@ -24055,7 +24035,6 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_mg42_597_skill.weapon" share_ammo="0"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
@@ -24160,7 +24139,6 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_mg42_597.weapon" share_ammo="0"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
@@ -24269,7 +24247,6 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_mg42_7606_skill.weapon" share_ammo="0"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
@@ -24374,7 +24351,6 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_mg42_7606.weapon" share_ammo="0"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
@@ -43302,7 +43278,7 @@
 	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="7.5" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Schmidt–Rubin Kar. 31" class="2" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="260" barrel_offset="0.4" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="31.0" sell_price="31.0"/>
 	<next_in_chain key="gkw_k31_skill.weapon" share_ammo="1"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 0.5s"/>
 	<animation key="cycle" animation_key="Brifle0.4"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle0.8p"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
@@ -43414,7 +43390,7 @@
 	<specification retrigger_time="-1.0" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Schmidt–Rubin Kar. 31-[Emergency Speed]" class="4" burst_shots="1" spread_range="0.18" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="260" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="31.0" sell_price="31.0"/>
 	<next_in_chain key="gkw_k31.weapon" share_ammo="1"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 0.5s"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
 	<sound key="fire" fileref="k31_fire_FromBF5.wav" pitch_variety="0.05" volume="1.3"/>
 	<sound key="cycle" fileref="k31_cycle_FromBF5.wav" volume="0.4"/>
@@ -61342,7 +61318,6 @@
 	<inventory encumbrance="50.0" buy_price="50.0" sell_price="25.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
@@ -61461,7 +61436,6 @@
 	<inventory encumbrance="50.0" buy_price="50.0" sell_price="25.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
@@ -61583,7 +61557,6 @@
 	<inventory encumbrance="50.0" buy_price="50.0" sell_price="25.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
@@ -61702,7 +61675,6 @@
 	<inventory encumbrance="50.0" buy_price="50.0" sell_price="25.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
@@ -72548,7 +72520,6 @@
 	<specification barrel_offset="0.6" retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="3.0" spread_range="0.65" magazine_size="250" suppressed="0" name="Browning M1919A4" class="0" projectile_speed="190" sight_range_modifier="1.3" stab_enabled="1" stance_accuracy_rate="0.75" leave_crouch_accuracy_penalty="0.3" carry_in_two_hands="1" burst_shots="1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<next_in_chain key="gkw_m1919a4_skill.weapon" share_ammo="1"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<inventory encumbrance="50.0" buy_price="50.0" sell_price="19.0"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
@@ -72662,7 +72633,6 @@
 	<specification barrel_offset="0.6" retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="3.0" magazine_size="250" suppressed="0" name="Browning M1919A4-[Hunting Impulse]" class="0" projectile_speed="190" spread_range="0.75" stance_accuracy_rate="0.75" leave_crouch_accuracy_penalty="0.3" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1"/>
 	<next_in_chain key="gkw_m1919a4.weapon" share_ammo="1"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<inventory encumbrance="50.0" buy_price="50.0" sell_price="19.0"/>
 	<commonness value="0" in_stock="0"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
@@ -72782,7 +72752,6 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<next_in_chain key="gkw_m1919a4mod3_skill.weapon" share_ammo="0"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
@@ -72898,7 +72867,6 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<next_in_chain key="gkw_m1919a4mod3.weapon" share_ammo="0"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
@@ -73789,7 +73757,7 @@
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_fn49mod3_skill.weapon">
 	<tag name="autorifle"/>
 	<tag name="elite"/>
-	<specification retrigger_time="0.4" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.4" spread_range="0.5" magazine_size="10" can_shoot_standing="1" suppressed="0" name="FN-49(MOD3)" class="0" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="1.45" projectile_speed="210" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="3.0" slot="0" stab_enabled="1" stab_range="3.4"/>
+	<specification retrigger_time="0.227" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.4" spread_range="0.5" magazine_size="10" can_shoot_standing="1" suppressed="0" name="FN-49(MOD3)" class="0" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="1.45" projectile_speed="210" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="3.0" slot="0" stab_enabled="1" stab_range="3.4"/>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<animation state_key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<next_in_chain key="gkw_fn49mod3.weapon" share_ammo="1"/>
@@ -77055,7 +77023,6 @@
 	<commonness value="0.00001" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_type80mod3_skill.weapon" share_ammo="1"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
@@ -77165,7 +77132,6 @@
 	<inventory encumbrance="50.0" buy_price="240.0" sell_price="240.0"/>
 	<next_in_chain key="gkw_type80mod3.weapon" share_ammo="1"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
@@ -77283,7 +77249,6 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_type80mod3_2504_skill.weapon" share_ammo="1"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
@@ -77393,7 +77358,6 @@
 	<inventory encumbrance="50.0" buy_price="240.0" sell_price="240.0"/>
 	<next_in_chain key="gkw_type80mod3_2504.weapon" share_ammo="1"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon install part"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon install part"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
@@ -86717,7 +86681,7 @@
 	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.0" magazine_size="10" can_shoot_standing="1" suppressed="0" name="Type 56(MOD3)" spread_range="0.5" class="4" burst_shots="1" last_burst_retrigger_time="0.33" reload_one_at_a_time="1" sight_range_modifier="2.35" projectile_speed="180" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="3.5" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="56" sell_price="56"/>
 	<next_in_chain key="gkw_56typermod3_skill.weapon" share_ammo="1"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 0.5s"/>
 	<animation key="reload" animation_key="reloading, clip 10"/>
 	<sound key="fire" fileref="type56r_fire_FromCOD16.wav" pitch_variety="0.03" volume="1.1"/>
 	<sound key="reload_one" fileref="type56r_reload_FromSQUAD.wav" volume="0.75"/>
@@ -86834,7 +86798,7 @@
 	<inventory encumbrance="35.0" buy_price="56" sell_price="56"/>
 	<animation key="reload" animation_key="reloading, clip 10"/>
 	<next_in_chain key="gkw_56typermod3.weapon" share_ammo="1"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 0.5s"/>
 	<sound key="fire" fileref="type56r_fire_FromCOD16.wav" pitch_variety="0.03" volume="1.1"/>
 	<sound key="reload_one" fileref="type56r_reload_FromSQUAD.wav" volume="0.75"/>
 	<sound key="cycle" fileref="type56r_cycle_FromCOD16.wav" volume="1.0"/>
@@ -87169,7 +87133,7 @@
 	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.0" magazine_size="10" can_shoot_standing="1" suppressed="0" name="Type 56(MOD3)-[Pink Pear Blossom]" spread_range="0.5" class="4" burst_shots="1" last_burst_retrigger_time="0.33" reload_one_at_a_time="1" sight_range_modifier="2.35" projectile_speed="180" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="2.0" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="56" sell_price="56"/>
 	<next_in_chain key="gkw_56typermod3_5508_skill.weapon" share_ammo="1"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 0.5s"/>
 	<animation key="reload" animation_key="reloading, clip 10"/>
 	<sound key="fire" fileref="type56r_fire_FromCOD16.wav" pitch_variety="0.03" volume="1.1"/>
 	<sound key="reload_one" fileref="type56r_reload_FromSQUAD.wav" volume="0.75"/>
@@ -87286,7 +87250,7 @@
 	<inventory encumbrance="35.0" buy_price="56" sell_price="56"/>
 	<animation key="reload" animation_key="reloading, clip 10"/>
 	<next_in_chain key="gkw_56typermod3_5508.weapon" share_ammo="1"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 0.5s"/>
 	<sound key="fire" fileref="type56r_fire_FromCOD16.wav" pitch_variety="0.03" volume="1.1"/>
 	<sound key="reload_one" fileref="type56r_reload_FromSQUAD.wav" volume="0.75"/>
 	<sound key="cycle" fileref="type56r_cycle_FromCOD16.wav" volume="1.0"/>
@@ -99074,7 +99038,7 @@
 </weapon>
 
 <weapon key="gkw_mg15.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.06" accuracy_factor="1.0" stance_accuracy_rate="0.8" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.5" leave_crouch_accuracy_penalty="0.3" spread_range="0.6" magazine_size="75" suppressed="0" name="MG 15" class="0" projectile_speed="180" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
+	<specification barrel_offset="0.5" retrigger_time="0.06" accuracy_factor="1.0" stance_accuracy_rate="1.2" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.5" leave_crouch_accuracy_penalty="0.3" spread_range="0.6" magazine_size="75" suppressed="0" name="MG 15" class="0" projectile_speed="180" sight_range_modifier="1.5" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" slot="0"/>
 	<animation key="reload" animation_key="reloading, Machine gun 1.6"/>
 	<inventory encumbrance="50.0" buy_price="150.0" sell_price="150.0"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
@@ -105956,7 +105920,7 @@
 	<animation key="reload" animation_key="reloading, at rocket 4s"/>
 	<animation key="hold" animation_key="still, with law"/>
 	<animation key="hold_on_wall" animation_key="still, with law"/>
-	<animation state_key="changing_weapon_in" animation_key="change weapon in,jav"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, 1s"/>
 	<sound key="fire" fileref="mk153_fire_FromBFH.wav" volume="1.5"/>
 	<sound key="cycle" fileref=""/>
 	<sound key="magazine_out" fileref="mk153_mgz_out_FromSQUAD.wav"/>
@@ -106038,7 +106002,7 @@
 	<animation key="reload" animation_key="reloading, at rocket 5s"/>
 	<animation key="hold" animation_key="still, with law"/>
 	<animation key="hold_on_wall" animation_key="still, with law"/>
-	<animation state_key="changing_weapon_in" animation_key="change weapon in,jav"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, 1s"/>
 	<sound key="fire" fileref="mk153_fire_FromBFH.wav" volume="1.5"/>
 	<sound key="cycle" fileref=""/>
 	<sound key="magazine_out" fileref="mk153_mgz_out_FromSQUAD.wav"/>
@@ -106222,8 +106186,8 @@
 	<animation state_key="crouch_moving" animation_key="crouching forwards, single hand carry"/>
 	<animation state_key="crouch_moving_backwards" animation_key="crouching backwards, pistol 2"/>
 	<animation state_key="prone_still" animation_key="prone_still, pistol"/>
-	<animation state_key="changing_weapon_in" animation_key="change weapon in,hvy pdw mode"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon in,hvy pdw mode"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, 1s"/>
+	<animation state_key="next_in_chain_out" animation_key="change weapon in, 1s"/>
 	<animation state_key="stabbing" animation_key="pistol whip"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 </weapon>
@@ -107130,7 +107094,7 @@
 	<animation state_key="walking" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="walking_backwards" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon out,mortar"/>
-	<animation state_key="changing_weapon_in" animation_key="change weapon in,jav"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, 1s"/>
 	<sound key="fire" fileref="m2_mortar_fire.wav" pitch_variety="0.1" volume="1.2"/>
 	<sound key="reload_one" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound key="cycle" fileref="portable_mortar_reload.wav" volume="0.7"/>
@@ -107317,7 +107281,7 @@
 	<animation state_key="walking" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="walking_backwards" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon out,mortar"/>
-	<animation state_key="changing_weapon_in" animation_key="change weapon in,jav"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, 1s"/>
 	<sound key="fire" fileref="GeneralPurposeMortar_fire_FromSQUAD.wav" pitch_variety="0.1" volume="1.6"/>
 	<sound key="magazine_out" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
@@ -107392,7 +107356,7 @@
 <weapon key="gkw_hvy_2b14_pdw.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<specification retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" magazine_size="15" suppressed="0" name="Tokarev 33(2B14)" class="0" reload_one_at_a_time="0" sight_range_modifier="1.0" projectile_speed="105" projectiles_per_shot="1" burst_shots="1" can_shoot_running="1" stab_enabled="1" carry_in_two_hands="0" last_burst_retrigger_time="-1" slot="0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
-	<animation state_key="changing_weapon_in" animation_key="change weapon in,hvy pdw mode"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, 1s"/>
 	<next_in_chain key="gkw_hvy_2b14.weapon" share_ammo="0"/>
 	<inventory encumbrance="100.0" buy_price="500.0" sell_price="0.0"/>
 	<sound key="fire" fileref="tt33_fire_FromCOD9.wav" pitch_variety="0.05" volume="1.6"/>
@@ -107696,8 +107660,8 @@
 	<stance state_key="over_wall" accuracy="1"/>
 	<modifier class="detectability" value="-0.1"/>
 	<modifier class="speed" value="0"/>
-	<animation state_key="changing_weapon_in" animation_key="change weapon in,hvy pdw mode"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon in,hvy pdw mode"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, 1s"/>
+	<animation state_key="next_in_chain_out" animation_key="change weapon in, 1s"/>
 	<tag name="autorifle"/>
 	<animation key="recoil" animation_key="recoil1"/>
 	<animation key="recoil" animation_key="recoil2"/>
@@ -107792,7 +107756,7 @@
 	<animation key="reload" animation_key="reloading, at rocket 6s"/>
 	<animation key="hold" animation_key="still, with law"/>
 	<animation key="hold_on_wall" animation_key="still, with law"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in,jav"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 1s"/>
 	<sound key="fire" fileref="rpg29_fire_FromCOD19.wav" volume="1.5"/>
 	<sound key="cycle" fileref="rpg29_cycle_FromCOD19.wav"/>
 	<sound key="magazine_out" fileref="rpg29_mgz_out_FromSQUAD.wav"/>
@@ -107877,8 +107841,8 @@
 	<animation key="reload" animation_key="reloading, at rocket 6s"/>
 	<animation key="hold" animation_key="still, with law"/>
 	<animation key="hold_on_wall" animation_key="still, with law"/>
-	<animation state_key="changing_weapon_in" animation_key="change weapon in,jav"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in,jav"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, 1s"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 1s"/>
 	<sound key="fire" fileref="rpg29_fire_FromCOD19.wav" volume="1.5"/>
 	<sound key="cycle" fileref="rpg29_cycle_FromCOD19.wav"/>
 	<sound key="magazine_out" fileref="rpg29_mgz_out_FromSQUAD.wav"/>
@@ -107977,7 +107941,7 @@
 	<sound key="cycle" fileref="ak74_cycle_FromCOD21.wav" volume="0.5"/>
 	<sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_ex_aks74ub.xml"/>
-	<animation state_key="changing_weapon_in" animation_key="change weapon in,hvy pdw mode"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, 1s"/>
 	<hud_icon filename="gkw_aks74ub.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
@@ -108072,8 +108036,8 @@
 	<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<animation state_key="changing_weapon_in" animation_key="change weapon in,hvy pdw mode"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon in,hvy pdw mode"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, 1s"/>
+	<animation state_key="next_in_chain_out" animation_key="change weapon in, 1s"/>
 </weapon>
 
 <weapon key="gkw_hvy_mk47.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -108341,8 +108305,8 @@
 	<animation state_key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<animation state_key="stabbing" animation_key="melee, quick knife"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
-	<animation state_key="changing_weapon_in" animation_key="change weapon in,hvy pdw mode"/>
-	<animation state_key="next_in_chain_out" animation_key="change weapon in,hvy pdw mode"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, 1s"/>
+	<animation state_key="next_in_chain_out" animation_key="change weapon in, 1s"/>
 </weapon>
 
 <weapon key="gkw_hvy_pp93.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -108360,7 +108324,7 @@
 	<animation state_key="walking" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="walking_backwards" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon out,mortar"/>
-	<animation state_key="changing_weapon_in" animation_key="change weapon in,jav"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, 1s"/>
 	<sound key="fire" fileref="GeneralPurposeMortar_fire_FromSQUAD.wav" pitch_variety="0.1" volume="1.6"/>
 	<sound key="magazine_out" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
@@ -108792,7 +108756,7 @@
 	<animation key="reload" stance_key="prone" animation_key="reloading, sniper1, prone"/>
 	<animation key="hold" animation_key="still, with law"/>
 	<animation key="hold_on_wall" animation_key="still, with law"/>
-	<animation state_key="changing_weapon_in" animation_key="change weapon in,jav"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, 1s"/>
 	<sound key="cycle" fileref="sniper_cycle.wav"/>
 	<sound key="magazine_out" fileref="sniper_clip_out.wav"/>
 	<sound key="magazine_in" fileref="sniper_clip_in.wav"/>
@@ -109001,7 +108965,7 @@
 	<animation state_key="walking_backwards" animation_key="walking backwards, single hand carry"/>
 	<animation state_key="crouch_moving" animation_key="crouching forwards, single hand carry"/>
 	<animation state_key="crouch_moving_backwards" animation_key="crouching backwards, single hand carry"/>
-	<animation key="changing_weapon_in" animation_key="change weapon in,fast"/>
+	<animation key="changing_weapon_in" animation_key="change weapon in, 0.1s"/>
 	<sound class="impact" fileref="medikit_drop.wav"/>
 	<sound key="effect" fileref="plate_equip.wav" volume="1.2"/>
 	<model filename="gki_bulletplate.xml"/>
@@ -109278,7 +109242,7 @@
 	<animation key="cycle" animation_key="Brifle action"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 2.1"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 0.5s"/>
 	<sound key="fire" fileref="sv98skill_fire_FromWF.wav" pitch_variety="0.05" volume="1.3"/>
 	<sound key="cycle" fileref="sv98_cycle_FromEFT.wav" volume="0.8"/>
 	<sound key="magazine_out" fileref="sv98_mgz_out_FromWF.wav" volume="0.7"/>
@@ -129292,7 +129256,7 @@
 	<hud_icon filename="gkw_vector_1901.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.25" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="6.5" kill_decay_start_time="0.33" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -129462,7 +129426,7 @@
 	<hud_icon filename="gkw_vector_549.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.25" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="1.6" kill_probability_offset_on_successful_hit="6.5" kill_decay_start_time="0.33" kill_decay_end_time="0.5" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -138907,7 +138871,7 @@
 	<animation key="cycle" animation_key="Brifle action"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 2.1"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 0.5s"/>
 	<sound key="fire" fileref="sv98skill_fire_FromWF.wav" pitch_variety="0.05" volume="1.3"/>
 	<sound key="cycle" fileref="sv98_cycle_FromEFT.wav" volume="0.8"/>
 	<sound key="magazine_out" fileref="sv98_mgz_out_FromWF.wav" volume="0.7"/>
@@ -139146,7 +139110,7 @@
 	<animation key="cycle" animation_key="Brifle action"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 2.1"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in ssass"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 0.5s"/>
 	<sound key="fire" fileref="sv98skill_fire_FromWF.wav" pitch_variety="0.05" volume="1.3"/>
 	<sound key="cycle" fileref="sv98_cycle_FromEFT.wav" volume="0.8"/>
 	<sound key="magazine_out" fileref="sv98_mgz_out_FromWF.wav" volume="0.7"/>
@@ -139361,7 +139325,7 @@
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_fn49mod3_4709_skill.weapon">
 	<tag name="autorifle"/>
 	<tag name="elite"/>
-	<specification retrigger_time="0.4" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.4" spread_range="0.5" magazine_size="10" can_shoot_standing="1" suppressed="0" name="FN-49(MOD3)-[Umbrella Daydream]" class="0" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="1.45" projectile_speed="210" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="3.0" slot="0" stab_enabled="1" stab_range="3.4"/>
+	<specification retrigger_time="0.227" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.4" spread_range="0.5" magazine_size="10" can_shoot_standing="1" suppressed="0" name="FN-49(MOD3)-[Umbrella Daydream]" class="0" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="1.45" projectile_speed="210" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="3.0" slot="0" stab_enabled="1" stab_range="3.4"/>
 	<effect class="muzzle" ref="ejection_76251"/>
 	<animation state_key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<next_in_chain key="gkw_fn49mod3_4709.weapon" share_ammo="1"/>
@@ -143922,8 +143886,8 @@
 	<animation state_key="crouch_moving" animation_key="crouching forwards, single hand carry"/>
 	<animation state_key="crouch_moving_backwards" animation_key="crouching backwards, single hand carry"/>
 	<animation state_key="prone_still" animation_key="prone_still, pistol"/>
-	<animation state_key="changing_weapon_in" animation_key="change weapon in ntw"/>
-	<animation state_key="changing_weapon_out" animation_key="change weapon in ntw"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, 0.5s"/>
+	<animation state_key="changing_weapon_out" animation_key="change weapon in, 0.5s"/>
 	<animation state_key="stabbing" animation_key="pistol whip"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 	<sound key="fire" fileref="Executioner_pistol_fire_FromDOOM4.wav" pitch_variety="0.05" volume="1.2"/>
@@ -144335,7 +144299,7 @@
 	<animation state_key="still_against_wall" animation_key="hold, hip fire"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
 	<animation state_key="running" animation_key="walking, hip fire"/>
-	<animation state_key="next_in_chain_in" animation_key="change weapon in ntw"/>
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 0.5s"/>
 	<sound key="fire" fileref="sf_ar.wav" pitch_variety="0.05" volume="1"/>
 	<sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8"/>
 	<sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8"/>
@@ -154503,7 +154467,7 @@
 	<animation key="reload" animation_key="reloading, pf98"/>
 	<animation key="hold" animation_key="still, with law"/>
 	<animation key="hold_on_wall" animation_key="still, with law"/>
-	<animation state_key="changing_weapon_in" animation_key="change weapon in,pf98"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, 0.75s"/>
 	<sound key="fire" fileref="pf98m_fire_FromSQUAD.wav" volume="0.8"/>
 	<sound key="cycle" fileref="sniper_cycle.wav"/>
 	<sound key="magazine_out" fileref="sniper_clip_out.wav"/>
@@ -154576,7 +154540,7 @@
 	<animation key="reload" animation_key="reloading, pf98"/>
 	<animation key="hold" animation_key="still, with law"/>
 	<animation key="hold_on_wall" animation_key="still, with law"/>
-	<animation state_key="changing_weapon_in" animation_key="change weapon in,pf98"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, 0.75s"/>
 	<sound key="fire" fileref="pf98m_fire_FromSQUAD.wav" volume="1.2"/>
 	<sound key="cycle" fileref="sniper_cycle.wav"/>
 	<sound key="magazine_out" fileref="sniper_clip_out.wav"/>
@@ -161379,7 +161343,7 @@
 	<animation state_key="walking" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="walking_backwards" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon out,mortar"/>
-	<animation state_key="changing_weapon_in" animation_key="change weapon in,jav"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, 1s"/>
 	<sound key="fire" fileref="m2_mortar_fire.wav" pitch_variety="0.1" volume="1.2"/>
 	<sound key="reload_one" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound key="cycle" fileref="portable_mortar_reload.wav" volume="0.7"/>

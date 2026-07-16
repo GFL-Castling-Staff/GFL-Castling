@@ -27,7 +27,7 @@
     <animation key="reload" animation_key="reloading, at rocket 6s"/>
     <animation key="hold" animation_key="still, with law"/>
     <animation key="hold_on_wall" animation_key="still, with law"/>
-    <animation state_key="next_in_chain_in" animation_key="change weapon in,jav" />
+    <animation state_key="next_in_chain_in" animation_key="change weapon in, 1s" />
     <sound key="fire" fileref="rpg29_fire_FromCOD19.wav" volume="1.5"/>
     <sound key="cycle" fileref="rpg29_cycle_FromCOD19.wav"/>
     <sound key="magazine_out" fileref="rpg29_mgz_out_FromSQUAD.wav"/>
@@ -101,8 +101,8 @@
     <animation key="reload" animation_key="reloading, at rocket 6s"/>
     <animation key="hold" animation_key="still, with law"/>
     <animation key="hold_on_wall" animation_key="still, with law"/>
-    <animation state_key="changing_weapon_in" animation_key="change weapon in,jav" />
-    <animation state_key="next_in_chain_in" animation_key="change weapon in,jav" />
+    <animation state_key="changing_weapon_in" animation_key="change weapon in, 1s" />
+    <animation state_key="next_in_chain_in" animation_key="change weapon in, 1s" />
     <sound key="fire" fileref="rpg29_fire_FromCOD19.wav" volume="1.5"/>
     <sound key="cycle" fileref="rpg29_cycle_FromCOD19.wav"/>
     <sound key="magazine_out" fileref="rpg29_mgz_out_FromSQUAD.wav"/>
@@ -175,7 +175,7 @@
     <sound key="cycle" fileref="ak74_cycle_FromCOD21.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" volume="1"/>
 	<model filename="gkw_ex_aks74ub.xml"/>
-    <animation state_key="changing_weapon_in" animation_key="change weapon in,hvy pdw mode" />
+    <animation state_key="changing_weapon_in" animation_key="change weapon in, 1s" />
 	<hud_icon filename="gkw_aks74ub.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile file="bullet.projectile">
@@ -209,7 +209,7 @@
     <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
     <animation state_key="stabbing" animation_key="melee, quick knife" />
     <animation state_key="stabbing" animation_key="pistol whip 3" />
-    <animation state_key="changing_weapon_in" animation_key="change weapon in,hvy pdw mode"/>
-    <animation state_key="next_in_chain_out" animation_key="change weapon in,hvy pdw mode"/>
+    <animation state_key="changing_weapon_in" animation_key="change weapon in, 1s"/>
+    <animation state_key="next_in_chain_out" animation_key="change weapon in, 1s"/>
 </weapon>
 </weapons>

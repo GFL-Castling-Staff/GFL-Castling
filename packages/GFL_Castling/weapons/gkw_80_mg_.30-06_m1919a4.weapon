@@ -26,7 +26,6 @@
         slot="0"/>
         <next_in_chain key="gkw_m1919a4_skill.weapon" share_ammo="1"/>
         <animation state_key="next_in_chain_in" animation_key="change weapon install part" />
-        <animation state_key="next_in_chain_out" animation_key="change weapon install part" />
         <inventory encumbrance="50.0" buy_price="50.0" sell_price="19.0"/>
         <commonness value="0.2" in_stock="0" can_respawn_with="1"/>
         <animation state_key="recoil" animation_key="recoil, hip fire" />
@@ -100,7 +99,6 @@
         can_shoot_prone="1"/>
         <next_in_chain key="gkw_m1919a4.weapon" share_ammo="1"/>
         <animation state_key="next_in_chain_in" animation_key="change weapon install part" />
-        <animation state_key="next_in_chain_out" animation_key="change weapon install part" />
         <inventory encumbrance="50.0" buy_price="50.0" sell_price="19.0"/>
         <commonness value="0" in_stock="0"/>
         <animation state_key="recoil" animation_key="recoil, hip fire" />
