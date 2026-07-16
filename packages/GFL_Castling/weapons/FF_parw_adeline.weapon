@@ -96,7 +96,7 @@
     <animation state_key="still_against_wall" 	animation_key="hold, hip fire" />
 	<animation state_key="walking" animation_key="walking, hip fire" />
 	<animation state_key="running" animation_key="walking, hip fire" />  
-	<animation state_key="next_in_chain_in" animation_key="change weapon in ntw" />
+	<animation state_key="next_in_chain_in" animation_key="change weapon in, 0.5s" />
     <sound key="fire" fileref="sf_ar.wav" pitch_variety="0.05" volume="1" />
     <sound key="magazine_out" fileref="kccoar_mgz_out_FromINS.wav" volume="0.8" />
     <sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8" />
