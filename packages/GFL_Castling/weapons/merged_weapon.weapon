@@ -44608,7 +44608,7 @@
 <weapon key="gkw_mlemk1mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="elite"/>
-	<specification retrigger_time="0.6" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="4.8" magazine_size="10" can_shoot_standing="1" suppressed="1" name="Lee-Enfield(MOD3) L42A1 - Scoped" class="2" reload_one_at_a_time="1" sight_range_modifier="2.5" projectile_speed="240" barrel_offset="0.55" stab_range="3.0" stance_accuracy_rate="1.5" projectiles_per_shot="1"/>
+	<specification retrigger_time="0.6" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="4.8" magazine_size="10" can_shoot_standing="1" suppressed="1" name="Lee-Enfield(MOD3) L42A1 - Scoped" class="2" reload_one_at_a_time="1" sight_range_modifier="2.5" projectile_speed="240" barrel_offset="0.55" stab_range="3.0" stance_accuracy_rate="1.5" spread_range="0.3" projectiles_per_shot="1"/>
 	<inventory encumbrance="35.0" buy_price="300.0" sell_price="200.0"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -45074,7 +45074,7 @@
 <weapon key="gkw_mlemk1mod3_604.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="elite"/>
-	<specification retrigger_time="0.6" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="4.8" magazine_size="10" can_shoot_standing="1" suppressed="1" name="Lee-Enfield(MOD3) L42A1-[Lifelong Protector] - Scoped" class="2" reload_one_at_a_time="1" sight_range_modifier="2.5" projectile_speed="240" barrel_offset="0.55" stab_range="3.0" stance_accuracy_rate="1.5" projectiles_per_shot="1"/>
+	<specification retrigger_time="0.6" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="4.8" magazine_size="10" can_shoot_standing="1" suppressed="1" name="Lee-Enfield(MOD3) L42A1-[Lifelong Protector] - Scoped" class="2" reload_one_at_a_time="1" sight_range_modifier="2.5" projectile_speed="240" barrel_offset="0.55" stab_range="3.0" stance_accuracy_rate="1.5" spread_range="0.3" projectiles_per_shot="1"/>
 	<inventory encumbrance="35.0" buy_price="300.0" sell_price="200.0"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -86047,7 +86047,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -86157,7 +86157,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="2.2" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="4.6" kill_probability_offset_on_successful_hit="2.2" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -109110,7 +109110,7 @@
 <weapon key="gkw_sv98mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="elite"/>
-	<specification retrigger_time="1.0" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" stance_accuracy_rate="2.3" magazine_size="10" can_shoot_standing="1" suppressed="1" name="SV-98 (MOD3)" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="230" barrel_offset="0.7" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="1.0" slot="0"/>
+	<specification retrigger_time="1.0" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" stance_accuracy_rate="2.3" magazine_size="10" can_shoot_standing="1" suppressed="1" name="SV-98 (MOD3)" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="230" barrel_offset="0.7" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" spread_range="0.3" last_burst_retrigger_time="1.0" slot="0"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="35.0" buy_price="298.0" sell_price="198.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -138740,7 +138740,7 @@
 <weapon key="gkw_sv98mod3_502.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="elite"/>
-	<specification retrigger_time="1.0" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" stance_accuracy_rate="2.3" magazine_size="10" can_shoot_standing="1" suppressed="1" name="SV-98 (MOD3)-[Waitress]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="230" barrel_offset="0.7" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="1.0" slot="0"/>
+	<specification retrigger_time="1.0" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" stance_accuracy_rate="2.3" magazine_size="10" can_shoot_standing="1" suppressed="1" name="SV-98 (MOD3)-[Waitress]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="230" barrel_offset="0.7" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" spread_range="0.3" last_burst_retrigger_time="1.0" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="298.0" sell_price="198.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_sv98mod3_502_skill.weapon" share_ammo="1"/>
@@ -138979,7 +138979,7 @@
 <weapon key="gkw_sv98mod3_1906.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="elite"/>
-	<specification retrigger_time="1.0" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" stance_accuracy_rate="2.3" magazine_size="10" can_shoot_standing="1" suppressed="1" name="SV-98 (MOD3)-[Piercing the Heart]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="230" barrel_offset="0.7" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="1.0" slot="0"/>
+	<specification retrigger_time="1.0" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" stance_accuracy_rate="2.3" magazine_size="10" can_shoot_standing="1" suppressed="1" name="SV-98 (MOD3)-[Piercing the Heart]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="230" barrel_offset="0.7" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" spread_range="0.3" last_burst_retrigger_time="1.0" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="298.0" sell_price="198.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_sv98mod3_1906_skill.weapon" share_ammo="1"/>
