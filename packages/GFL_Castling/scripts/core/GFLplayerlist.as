@@ -925,6 +925,7 @@ class GFL_playerlist_system : Tracker {
         int cid = info.getPlayerCid(); 
         if(cid==-1) return;
         GFL_equipment@ equipment = info.getPlayerEquipment();
+        string _weapon = equipment.getWeapon(0);
         string _armor = equipment.getWeapon(3);
         if(startsWith(_armor,"srexo_t6") || startsWith(_armor,"gk_kalina_swim"))
         {
@@ -947,6 +948,10 @@ class GFL_playerlist_system : Tracker {
         }
         info.handleRpReward(m_metagame);
         info.handleXpReward(m_metagame);
+        if(_weapon=="gkw_em2mod3.weapon")
+        {
+            info.addTag(Tag("em2_bullet"));
+        }
     }
 
     void refresh_overload()

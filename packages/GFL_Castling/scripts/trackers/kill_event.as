@@ -1080,6 +1080,7 @@ class kill_event : Tracker {
                     }                    
                 }
             }
+            
             if (soldier_name=="") return;
 
             if(SFbossList.find(soldier_name)>-1 && characterId > 0){

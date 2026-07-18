@@ -1864,7 +1864,7 @@ class CommandSkill : Tracker {
                 SkillArray[j].addCharge();
             }
         }
-        if (ExistQueue && SkillArray[j].m_charge>3 ){
+        if (ExistQueue && SkillArray[j].m_charge>=3 ){
             dictionary a;
             a["%time"] = ""+SkillArray[j].m_time;
             notify(m_metagame, "Hint - Skill Cooldown Hint", a, "misc", playerId, false, "", 1.0);
