@@ -250,7 +250,7 @@
 	<animation state_key="walking" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="walking_backwards" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon out,mortar"/>
-	<animation state_key="changing_weapon_in" animation_key="change weapon in,jav"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, 1s"/>
 	<sound key="fire" fileref="m2_mortar_fire.wav" pitch_variety="0.1" volume="1.2"/>
 	<sound key="reload_one" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound key="cycle" fileref="portable_mortar_reload.wav" volume="0.7"/>
