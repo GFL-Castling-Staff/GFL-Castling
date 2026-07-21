@@ -140457,7 +140457,6 @@
 	<animation key="hold" animation_key="still, with law"/>
 	<animation key="hold_on_wall" animation_key="still, with law"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
-	<animation state_key="running" animation_key="walking, hip fire"/>
 	<animation state_key="crouch_moving" animation_key="crouching forwards, hip fire"/>
 	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
 	<sound key="fire" fileref="Architect_fire_FromHALO4.wav" pitch_variety="0.05" volume="1.2"/>
@@ -140616,7 +140615,6 @@
 	<animation key="hold" animation_key="still, with law"/>
 	<animation key="hold_on_wall" animation_key="still, with law"/>
 	<animation state_key="walking" animation_key="walking, hip fire"/>
-	<animation state_key="running" animation_key="walking, hip fire"/>
 	<animation state_key="crouch_moving" animation_key="crouching forwards, hip fire"/>
 	<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
 	<sound key="fire" fileref="Architect_fire_FromHALO4.wav" pitch_variety="0.05" volume="1.2"/>
