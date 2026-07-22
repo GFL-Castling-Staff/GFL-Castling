@@ -225,7 +225,7 @@ class StageConfiguratorInvasion : StageConfigurator {
         addStage(setupStagePolarizedLight01()); //
 		// addStage(setupStage14());         // map6_2
 		// addStage(setupStage5());          // map1
-		addStage(setupStage108());		  // xiaoxieshen by diling
+		// addStage(setupStage108());		  // xiaoxieshen by diling
 		// addStage(setupStage11());         // map13
 		addStage(setupStage4());          // map7
 	}
