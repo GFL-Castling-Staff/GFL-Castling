@@ -35,7 +35,7 @@
         <animation state_key="celebrate_shoot" animation_key="celebrating, shooting" />
         <animation state_key="stabbing" animation_key="melee, quick knife" />
         <animation state_key="stabbing" animation_key="pistol whip 3" />
-        <animation state_key="next_in_chain_in" animation_key="change weapon out, sword"/>
+        <animation state_key="next_in_chain_out" animation_key="change weapon in, sword"/>
         <sound key="fire" fileref="mg36_Fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1" />
         <sound key="magazine_out" fileref="mg36_mgz_out_FromCOD16.wav" volume="0.5" />
         <sound key="magazine_in" fileref="mg36_mgz_in_FromCOD16.wav" volume="0.5" />
@@ -99,9 +99,10 @@
         <animation state_key="stabbing"	animation_key="melee, gunto slash" />
         <animation state_key="stabbing"	animation_key="melee, gunto" />
 
-        <animation state_key="hold"			animation_key="hold, gunto" />
+        <animation state_key="hold" animation_key="still, ninjato" />
         <animation state_key="hold_casual"		animation_key="relaxed, gunto" />
-        <animation state_key="hold_on_wall"		animation_key="hold on wall, gunto" />
+		<animation state_key="hold_on_wall" animation_key="still overwall, ninjato" />
+		<animation state_key="still_against_wall" animation_key="still against wall, ninjato" />
         <animation state_key="running"	animation_key="running, gunto" />
         <animation state_key="walking"  animation_key="walking, ninjato" />
         <animation state_key="crouching"    animation_key="crouch, ninjato" />
@@ -113,7 +114,7 @@
         <animation state_key="changing_weapon_in"   animation_key="change weapon in, sword" />
         <animation state_key="changing_weapon_out"  animation_key="change weapon out, sword" />
         <animation state_key="reload"   animation_key="still, ninjato" />
-        <animation state_key="next_in_chain_in" animation_key="change weapon in, sword"/>
+        <animation state_key="next_in_chain_out" animation_key="change weapon out, sword"/>
 
         <sound class="impact" fileref="rifle_drop.wav" />
         <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />

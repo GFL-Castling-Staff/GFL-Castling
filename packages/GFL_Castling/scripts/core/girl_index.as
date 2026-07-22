@@ -1622,6 +1622,7 @@ array<string> gk_weapon_rf_list = {
     "gkw_m1903_1107_exp.weapon",
     "gkw_m1908.weapon",
     "gkw_m1908_skill.weapon",
+    "gkw_k31_skill.weapon",
     "gkw_88typemod3_6503.weapon"
 };
 
@@ -1670,7 +1671,6 @@ array<string> gk_bolted_rf_list = {
     "gkw_ballista.weapon",
     "gkw_ballista_skill.weapon",
     "gkw_k31.weapon",
-    "gkw_k31_skill.weapon",
     "gkw_m200.weapon",
     "gkw_m200_560.weapon",
     "gkw_m200_4502.weapon",
