@@ -65251,12 +65251,12 @@
 </weapon>
 
 <weapon key="gkw_pkp_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.07" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="4.0" spread_range="0.55" magazine_size="200" suppressed="0" stance_accuracy_rate="1.5" name="PKP Pecheneg-[PT2 Adjustable Stock]" class="0" projectile_speed="210" sight_range_modifier="1.8" leave_crouch_accuracy_penalty="0.35" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.110" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="5.0" spread_range="0.25" magazine_size="200" suppressed="0" stance_accuracy_rate="4.0" name="PKP Pecheneg-[PT2 Adjustable Stock]" class="0" projectile_speed="210" sight_range_modifier="1.8" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory encumbrance="50.0" buy_price="150.0" sell_price="150.0"/>
 	<next_in_chain key="gkw_pkp_only_skill.weapon" share_ammo="1"/>
-	<sound key="fire" fileref="qjy80_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.1"/>
+	<sound key="fire" fileref="pkp_fire_FromCOD20.wav" pitch_variety="0.05" volume="1.5"/>
 	<sound key="magazine_out" fileref="qjy80_mgz_out_FromCOD16.wav" volume="0.6"/>
 	<sound key="magazine_in" fileref="qjy80_mgz_in_FromCOD16.wav" volume="0.6"/>
 	<sound key="cycle" fileref="qjy80_cycle_FromCOD16.wav" volume="0.6"/>
@@ -65266,7 +65266,7 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<hud_icon filename="gkw_pkp_only.png"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="3.3" kill_probability_offset_on_successful_hit="5" kill_decay_start_time="1.5" kill_decay_end_time="1.6" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="6" kill_decay_start_time="1.5" kill_decay_end_time="1.6" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -65330,8 +65330,8 @@
 	<effect class="result" key="shield" ref="hitMetal_1"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
-	<stance state_key="running" accuracy="0.5"/>
-	<stance state_key="walking" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.8"/>
+	<stance state_key="walking" accuracy="0.8"/>
 	<stance state_key="standing" accuracy="1.0"/>
 	<stance state_key="crouching" accuracy="1.05"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
@@ -65339,6 +65339,7 @@
 	<stance state_key="prone_moving" accuracy="0.675"/>
 	<stance state_key="over_wall" accuracy="1.3"/>
 	<tag name="machine gun"/>
+	<modifier class="speed" value="0.1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
@@ -65367,7 +65368,7 @@
 </weapon>
 
 <weapon key="gkw_pkp_only_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.6" magazine_size="200" suppressed="0" stance_accuracy_rate="1.0" name="PKP Pecheneg-[PT2 Adjustable Stock]-[Ultimatum]" class="0" projectile_speed="210" sight_range_modifier="1.8" leave_crouch_accuracy_penalty="0.3" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.110" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.6" magazine_size="200" suppressed="0" stance_accuracy_rate="1.0" name="PKP Pecheneg-[PT2 Adjustable Stock]-[Ultimatum]" class="0" projectile_speed="210" sight_range_modifier="1.8" leave_crouch_accuracy_penalty="0.3" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory encumbrance="50.0" buy_price="150.0" sell_price="150.0"/>
@@ -65464,9 +65465,9 @@
 	<stance state_key="over_wall" accuracy="1.3"/>
 	<tag name="machine gun"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<animation state_key="recoil" animation_key="recoil, hip fire"/>
-	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
-	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
+	<animation key="recoil" animation_key="recoil1"/>
+	<animation key="recoil" animation_key="recoil2"/>
+	<animation key="recoil" animation_key="recoil3"/>
 	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
 	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
 	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
@@ -65491,7 +65492,7 @@
 </weapon>
 
 <weapon key="gkw_pkp_4203_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.07" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="4.0" spread_range="0.55" magazine_size="200" suppressed="0" stance_accuracy_rate="1.5" name="PKP Pecheneg-[PT2 Adjustable Stock]-[Bamboo's Pride]" class="0" projectile_speed="210" sight_range_modifier="1.8" leave_crouch_accuracy_penalty="0.35" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.110" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="5.0" spread_range="0.25" magazine_size="200" suppressed="0" stance_accuracy_rate="4.0" name="PKP Pecheneg-[PT2 Adjustable Stock]-[Bamboo's Pride]" class="0" projectile_speed="210" sight_range_modifier="1.8" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory encumbrance="50.0" buy_price="150.0" sell_price="150.0"/>
@@ -65506,7 +65507,7 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<hud_icon filename="gkw_pkp_4203.png"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="3.3" kill_probability_offset_on_successful_hit="5" kill_decay_start_time="1.5" kill_decay_end_time="1.6" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="6" kill_decay_start_time="1.5" kill_decay_end_time="1.6" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -65570,8 +65571,8 @@
 	<effect class="result" key="shield" ref="hitMetal_1"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
-	<stance state_key="running" accuracy="0.5"/>
-	<stance state_key="walking" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.8"/>
+	<stance state_key="walking" accuracy="0.8"/>
 	<stance state_key="standing" accuracy="1.0"/>
 	<stance state_key="crouching" accuracy="1.05"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
@@ -65579,6 +65580,7 @@
 	<stance state_key="prone_moving" accuracy="0.675"/>
 	<stance state_key="over_wall" accuracy="1.3"/>
 	<tag name="machine gun"/>
+	<modifier class="speed" value="0.1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
@@ -65607,7 +65609,7 @@
 </weapon>
 
 <weapon key="gkw_pkp_4203_only_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.6" magazine_size="200" suppressed="0" stance_accuracy_rate="1.0" name="PKP Pecheneg-[PT2 Adjustable Stock]-[Bamboo's Pride]-[Ultimatum]" class="0" projectile_speed="210" sight_range_modifier="1.8" leave_crouch_accuracy_penalty="0.3" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.110" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.6" magazine_size="200" suppressed="0" stance_accuracy_rate="1.0" name="PKP Pecheneg-[PT2 Adjustable Stock]-[Bamboo's Pride]-[Ultimatum]" class="0" projectile_speed="210" sight_range_modifier="1.8" leave_crouch_accuracy_penalty="0.3" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory encumbrance="50.0" buy_price="150.0" sell_price="150.0"/>
@@ -65704,9 +65706,9 @@
 	<stance state_key="over_wall" accuracy="1.3"/>
 	<tag name="machine gun"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<animation state_key="recoil" animation_key="recoil, hip fire"/>
-	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
-	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
+	<animation key="recoil" animation_key="recoil1"/>
+	<animation key="recoil" animation_key="recoil2"/>
+	<animation key="recoil" animation_key="recoil3"/>
 	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
 	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
 	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
@@ -65731,7 +65733,7 @@
 </weapon>
 
 <weapon key="gkw_pkp_5904_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.07" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="4.0" spread_range="0.55" magazine_size="200" suppressed="0" stance_accuracy_rate="1.5" name="PKP Pecheneg-[PT2 Adjustable Stock]-[After-Rain Assault Squad]" class="0" projectile_speed="210" sight_range_modifier="1.8" leave_crouch_accuracy_penalty="0.35" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.110" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="5.0" spread_range="0.25" magazine_size="200" suppressed="0" stance_accuracy_rate="4.0" name="PKP Pecheneg-[PT2 Adjustable Stock]-[After-Rain Assault Squad]" class="0" projectile_speed="210" sight_range_modifier="1.8" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory encumbrance="50.0" buy_price="150.0" sell_price="150.0"/>
@@ -65746,7 +65748,7 @@
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<hud_icon filename="gkw_pkp_5904.png"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="3.3" kill_probability_offset_on_successful_hit="5" kill_decay_start_time="1.5" kill_decay_end_time="1.6" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="6" kill_decay_start_time="1.5" kill_decay_end_time="1.6" damage_origin_vehicle="0"/>
 	<trail probability="1.0" key="BulletApTrail_ct"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -65810,8 +65812,8 @@
 	<effect class="result" key="shield" ref="hitMetal_1"/>
 	</projectile>
 	<effect class="muzzle" ref="ejection_76251"/>
-	<stance state_key="running" accuracy="0.5"/>
-	<stance state_key="walking" accuracy="0.6"/>
+	<stance state_key="running" accuracy="0.8"/>
+	<stance state_key="walking" accuracy="0.8"/>
 	<stance state_key="standing" accuracy="1.0"/>
 	<stance state_key="crouching" accuracy="1.05"/>
 	<stance state_key="crouch_moving" accuracy="0.475"/>
@@ -65819,6 +65821,7 @@
 	<stance state_key="prone_moving" accuracy="0.675"/>
 	<stance state_key="over_wall" accuracy="1.3"/>
 	<tag name="machine gun"/>
+	<modifier class="speed" value="0.1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<animation state_key="recoil" animation_key="recoil, hip fire"/>
 	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
@@ -65847,7 +65850,7 @@
 </weapon>
 
 <weapon key="gkw_pkp_5904_only_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification barrel_offset="0.5" retrigger_time="0.0923" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.6" magazine_size="200" suppressed="0" stance_accuracy_rate="1.0" name="PKP Pecheneg-[PT2 Adjustable Stock]-[After-Rain Assault Squad]-[Ultimatum]" class="0" projectile_speed="210" sight_range_modifier="1.8" leave_crouch_accuracy_penalty="0.3" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
+	<specification barrel_offset="0.5" retrigger_time="0.110" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" spread_range="0.6" magazine_size="200" suppressed="0" stance_accuracy_rate="1.0" name="PKP Pecheneg-[PT2 Adjustable Stock]-[After-Rain Assault Squad]-[Ultimatum]" class="0" projectile_speed="210" sight_range_modifier="1.8" leave_crouch_accuracy_penalty="0.3" slot="0" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" carry_in_two_hands="1" stab_enabled="1"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
 	<animation key="reload" animation_key="reloading, Machine gun 2.0"/>
 	<inventory encumbrance="50.0" buy_price="150.0" sell_price="150.0"/>
@@ -65944,9 +65947,9 @@
 	<stance state_key="over_wall" accuracy="1.3"/>
 	<tag name="machine gun"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
-	<animation state_key="recoil" animation_key="recoil, hip fire"/>
-	<animation state_key="recoil" animation_key="recoil2, hip fire"/>
-	<animation state_key="recoil" animation_key="recoil3, hip fire"/>
+	<animation key="recoil" animation_key="recoil1"/>
+	<animation key="recoil" animation_key="recoil2"/>
+	<animation key="recoil" animation_key="recoil3"/>
 	<animation key="recoil" stance_key="over_wall" animation_key="recoil1"/>
 	<animation key="recoil" stance_key="over_wall" animation_key="recoil2"/>
 	<animation key="recoil" stance_key="over_wall" animation_key="recoil3"/>
@@ -77500,7 +77503,7 @@
 	<hud_icon filename="gkw_m1_sf_1.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="6.6" kill_probability_offset_on_successful_hit="16.5" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.6" kill_probability_offset_on_successful_hit="12.5" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
@@ -77614,7 +77617,7 @@
 	<hud_icon filename="gkw_m1_sf_2.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="3.25" kill_probability_offset_on_successful_hit="13.75" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="10" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
@@ -77729,7 +77732,7 @@
 	<hud_icon filename="gkw_m1_1106.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="6.6" kill_probability_offset_on_successful_hit="16.5" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.6" kill_probability_offset_on_successful_hit="12.5" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
@@ -77843,7 +77846,7 @@
 	<hud_icon filename="gkw_m1_1106.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="3.25" kill_probability_offset_on_successful_hit="13.75" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="10" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
@@ -77958,7 +77961,7 @@
 	<hud_icon filename="gkw_m1_6907.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="6.6" kill_probability_offset_on_successful_hit="16.5" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.6" kill_probability_offset_on_successful_hit="12.5" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
@@ -78072,7 +78075,7 @@
 	<hud_icon filename="gkw_m1_6907.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="3.25" kill_probability_offset_on_successful_hit="13.75" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="10" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
@@ -78187,7 +78190,7 @@
 	<hud_icon filename="gkw_m1_10008.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="6.6" kill_probability_offset_on_successful_hit="16.5" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.6" kill_probability_offset_on_successful_hit="12.5" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
@@ -78301,7 +78304,7 @@
 	<hud_icon filename="gkw_m1_10008.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="3.25" kill_probability_offset_on_successful_hit="13.75" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="10" kill_decay_start_time="0.964" kill_decay_end_time="1.607" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="ricochet1.wav"/>
