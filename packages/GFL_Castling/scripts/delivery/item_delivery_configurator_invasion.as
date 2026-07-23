@@ -595,14 +595,9 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("ff_parw_nyto_black.weapon", "weapon", 1.0f),
 		ScoredResource("ff_justice.weapon", "weapon", 1.0f),
 		ScoredResource("ff_dreamer.weapon", "weapon", 1.0f),
-		ScoredResource("ff_ripper.weapon", "weapon", 2.0f),
 		ScoredResource("ff_scarecrow.weapon", "weapon", 1.0f),
 		ScoredResource("ff_scarecrow_skin.weapon", "weapon", 1.0f),
 		ScoredResource("ff_beluga.weapon", "weapon", 1.0f),
-		ScoredResource("ff_striker.weapon", "weapon", 2.0f),
-		// ScoredResource("ff_ripper_swap.weapon", "weapon", 1.5f),
-		// ScoredResource("ff_vespid_swap.weapon", "weapon", 1.5f),
-		// ScoredResource("ff_striker_swap.weapon", "weapon", 1.5f),
 		ScoredResource("ff_weaver.weapon", "weapon", 1.0f)
 			}
 		};
@@ -630,14 +625,19 @@ class ItemDeliveryConfiguratorInvasion : ItemDeliveryConfigurator {
 		ScoredResource("ff_parw_nyto_black.weapon", "weapon", 0.3f),
 		ScoredResource("ff_parw_alina.weapon", "weapon", 0.3f),
 		ScoredResource("ff_alchemist.weapon", "weapon", 0.3f),
+		ScoredResource("ff_architect.weapon", "weapon", 0.3f),
+		ScoredResource("ff_destroyer.weapon", "weapon", 0.3f),
 		ScoredResource("ff_gager.weapon", "weapon", 0.3f),
 		ScoredResource("ff_excutioner_1.weapon", "weapon", 0.3f),
-		ScoredResource("ff_guard.weapon", "weapon", 30.0f),
 		ScoredResource("ff_hunter.weapon", "weapon", 0.3f),
 		ScoredResource("ff_Intruder.weapon", "weapon", 0.3f),
 		ScoredResource("ff_justice.weapon", "weapon", 0.3f),
 		ScoredResource("ff_dreamer.weapon", "weapon", 0.3f),
 		ScoredResource("ff_scarecrow.weapon", "weapon", 0.3f),
+		ScoredResource("ff_beluga.weapon", "weapon", 0.3f),
+		ScoredResource("ff_weaver.weapon", "weapon", 0.3f),
+
+		ScoredResource("ff_guard.weapon", "weapon", 30.0f),
 
 		ScoredResource("ff_dragoon.weapon", "weapon", 15.0f),
 
