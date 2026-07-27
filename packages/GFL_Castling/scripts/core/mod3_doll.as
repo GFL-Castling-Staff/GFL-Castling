@@ -301,5 +301,14 @@ dictionary MOD3craftList = {
     {"gkw_zasm21.weapon","gkw_zasm21mod3.weapon"},
     {"gkw_zasm21_2104.weapon","gkw_zasm21mod3_2104.weapon"},
 
+    {"gkw_spas12.weapon","gkw_spas12mod3.weapon"},
+    {"gkw_spas12_2408.weapon","gkw_spas12mod3_2408.weapon"},
+    {"gkw_spas12_3203.weapon","gkw_spas12mod3_3203.weapon"},
+    {"gkw_spas12_10103.weapon","gkw_spas12mod3_10103.weapon"},
+    {"gkw_spas12_skill.weapon","gkw_spas12mod3.weapon"},
+    {"gkw_spas12_2408_skill.weapon","gkw_spas12mod3_2408.weapon"},
+    {"gkw_spas12_3203_skill.weapon","gkw_spas12mod3_3203.weapon"},
+    {"gkw_spas12_10103_skill.weapon","gkw_spas12mod3_10103.weapon"},
+
     {"666","-1"}
 };
