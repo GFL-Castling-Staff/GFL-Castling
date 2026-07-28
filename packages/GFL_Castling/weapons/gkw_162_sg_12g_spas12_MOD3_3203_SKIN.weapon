@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <weapons>
-	<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_spas12_3203.weapon">
+	<weapon key="gkw_spas12mod3_3203.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 		<specification 
 		retrigger_time="-1.0"
-        burst_shots="1"
+		burst_shots="1"
 		last_burst_retrigger_time="0.33"        
 		accuracy_factor="1.0"
 		can_shoot_running="1"
@@ -12,24 +12,22 @@
 		magazine_size="8"
 		can_shoot_standing="1"
 		suppressed="0"
-		name="SPAS-12-[Goblin Huntress]"
+		name="SPAS-12(MOD3)-[Goblin Huntress]"
 		class="4"
+		spread_range="0.2"
 		reload_one_at_a_time="0"
 		sight_range_modifier="1"
-		projectile_speed="96"
+		projectile_speed="120"
 		barrel_offset="0.52"
-		projectiles_per_shot="15"
-		spread_range="0.28"
-		carry_in_two_hands="0"
+		projectiles_per_shot="5"
 		stab_enabled="1"
-		stab_range="4"
-		/>
+		carry_in_two_hands="0"
+		slot="0"
+        stab_range="4"
+		use_basic_muzzle_smoke_effect="0"/>
 		<inventory encumbrance="12.5" buy_price="76.0" sell_price="76.0"/>
-		<!-- Animations -->
-		<next_in_chain key="gkw_spas12_3203_skill.weapon" share_ammo="1" />
-		<commonness value="0" in_stock="0" can_respawn_with="1" />
-		<capacity value="1" source="rank" source_value="0.0" />
-
+		<next_in_chain key="gkw_spas12mod3_3203_skill.weapon" share_ammo="1"/>
+		<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
 		<animation key="recoil"  animation_key="recoil1" />
 		<animation key="recoil"  animation_key="recoil2" />
 		<animation key="recoil"  animation_key="recoil3" />
@@ -52,13 +50,11 @@
 		<animation state_key="stabbing" animation_key="melee,spas12 skin" />
 		<animation state_key="stabbing" animation_key="melee,spas12 skin 1" />
 		<animation state_key="stabbing" animation_key="melee,spas12 skin 2" />
-		<animation state_key="stabbing" animation_key="melee,spas12 skin 3" />
-		<animation key="reload" animation_key="reloading, magazine rifle 1.2" />
-		<!-- Sounds -->
-		<sound key="fire" fileref="spas12_fire_FromWF.wav" pitch_variety="0.05" volume="1.5" />
-		<sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
-		<sound key="magazine_in" fileref="spas12_reload_FromINS.wav" volume="1.0" />
-		<sound key="stab" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<animation state_key="stabbing" animation_key="melee,spas12 skin 3" />        
+		<sound key="fire" fileref="spas12_fire_FromCOD20.wav" pitch_variety="0.05" volume="1.3"/>
+		<sound key="cycle" fileref="spas12_cycle_FromINS.wav"/>
+		<sound key="magazine_in" fileref="spas12_reload_FromINS.wav" volume="1.0"/>
+        <sound key="stab" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
 		<sound key="stab" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
 		<sound key="stab" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
 		<sound key="stab" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
@@ -70,13 +66,13 @@
 		<sound key="stab_hit_any" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
 		<sound class="impact" fileref="rifle_drop.wav" />
         <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
-		<!-- Model, Icon, Cost -->
-		<model filename="gkw_sg_spas12_3203_from_Eisen.xml" />
-		<hud_icon filename="gkw_spas12_3203.png" />
-		<!-- Ballistics -->
-		<weak_hand_hold offset="0.3" />
+
+		<model filename="gkw_sg_spas12_3203_from_Eisen.xml"/>
+		<hud_icon filename="gkw_spas12_3203.png"/>
+		<commonness value="0" in_stock="0" can_respawn_with="1"/>
+		<weak_hand_hold offset="0.3"/>
 		<projectile file="bullet_sg.projectile">
-			<result class="hit" kill_probability="2.5" kill_probability_offset_on_successful_hit="1.0" kill_decay_start_time="0.32" kill_decay_end_time="0.6"/>
+			<result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="6.0" kill_decay_start_time="0.4" kill_decay_end_time="0.4"/>
 		</projectile>
 		<stance state_key="running" accuracy="0.8"/>
 		<stance state_key="walking" accuracy="0.8"/>
@@ -92,9 +88,9 @@
 		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
-		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
-		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 		<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 		<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 		<target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -104,8 +100,7 @@
 		<effect class="muzzle" ref="muzzle_sg"/>
 		<modifier class="hit_success_probability" value="-0.2"/>
 	</weapon>
-	<weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_spas12_3203_skill.weapon">
-		<!-- Weapon specifications -->
+	<weapon key="gkw_spas12mod3_3203_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 		<specification 
 		retrigger_time="-1.0"
 		carry_in_two_hands="0"
@@ -115,7 +110,7 @@
 		magazine_size="8"
 		can_shoot_standing="1"
 		suppressed="0"
-		name="SPAS-12-[Goblin Huntress]-[Damage Focus SG]"
+		name="SPAS-12(MOD3)-[Goblin Huntress]-[Damage Focus SG]"
 		class="4"
 		reload_one_at_a_time="0"
 		sight_range_modifier="1.0"
@@ -127,13 +122,11 @@
 		last_burst_retrigger_time="0.5"
 		stab_enabled="1"
 		stab_range="4"
-		/>
+		/>        
 		<inventory encumbrance="12.5" buy_price="76.0" sell_price="76.0" />
-		<!-- Animations -->
-		<next_in_chain key="gkw_spas12_3203.weapon" share_ammo="1" />
-		<commonness value="0" in_stock="0" can_respawn_with="1" />
-		<capacity value="1" source="rank" source_value="0.0" />
-
+		<next_in_chain key="gkw_spas12mod3_3203.weapon" share_ammo="1"/>
+		<commonness value="0" in_stock="0" can_respawn_with="1"/>
+		<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
 		<animation key="recoil"  animation_key="recoil1" />
 		<animation key="recoil"  animation_key="recoil2" />
 		<animation key="recoil"  animation_key="recoil3" />
@@ -156,11 +149,10 @@
 		<animation state_key="stabbing" animation_key="melee,spas12 skin 1" />
 		<animation state_key="stabbing" animation_key="melee,spas12 skin 2" />
 		<animation state_key="stabbing" animation_key="melee,spas12 skin 3" />
-		<!-- Sounds -->
-		<sound key="fire" fileref="spas12skill_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.5" />
-		<sound key="cycle" fileref="spas12_cycle_FromINS.wav" />
-		<sound key="magazine_in" fileref="spas12_reload_FromINS.wav" volume="1.0" />
-		<sound key="stab" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
+		<sound key="fire" fileref="spas12skill_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.3"/>
+		<sound key="cycle" fileref="spas12_cycle_FromINS.wav"/>
+		<sound key="magazine_in" fileref="spas12_reload_FromINS.wav" volume="1.0"/>
+        <sound key="stab" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
 		<sound key="stab" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
 		<sound key="stab" fileref="melee_swing_nothing3_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
 		<sound key="stab" fileref="melee_swing_nothing4_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
@@ -173,13 +165,12 @@
 		<sound key="stab_hit_any" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
 		<sound class="impact" fileref="rifle_drop.wav" />
         <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
-		<!-- Model, Icon, Cost -->
-		<model filename="gkw_sg_spas12_3203_from_Eisen.xml" />
-		<hud_icon filename="gkw_spas12_3203.png" />
-		<!-- Ballistics -->
-		<weak_hand_hold offset="0.3" />
+
+		<model filename="gkw_sg_spas12_3203_from_Eisen.xml"/>
+		<hud_icon filename="gkw_spas12_3203.png"/>
+		<weak_hand_hold offset="0.3"/>
         <projectile file="bullet_sg.projectile" time_to_live="0.3">
-			<result class="blast" radius="1.5" damage="2.1" push="0.1" decal="1" faction_compare="not_equal"/>
+			<result class="blast" radius="2.0" damage="3.1" push="0.1" decal="1" faction_compare="not_equal"/>
 		</projectile>
 		<modifier class="speed" value="-0.2"/>
 		<modifier class="detectability" value="+0.5"/>
@@ -197,9 +188,9 @@
 		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
 		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
 		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
-		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0"/>
-		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0"/>
-		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
 		<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 		<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 		<target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
