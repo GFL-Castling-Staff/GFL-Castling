@@ -27,7 +27,7 @@
 		use_basic_muzzle_smoke_effect="0"/>
 		<inventory encumbrance="12.5" buy_price="76.0" sell_price="76.0"/>
 		<next_in_chain key="gkw_spas12mod3_3203_skill.weapon" share_ammo="1"/>
-		<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
+		<animation key="reload" animation_key="reloading, spas12 fastmag"/>
 		<animation key="recoil"  animation_key="recoil1" />
 		<animation key="recoil"  animation_key="recoil2" />
 		<animation key="recoil"  animation_key="recoil3" />
@@ -126,7 +126,7 @@
 		<inventory encumbrance="12.5" buy_price="76.0" sell_price="76.0" />
 		<next_in_chain key="gkw_spas12mod3_3203.weapon" share_ammo="1"/>
 		<commonness value="0" in_stock="0" can_respawn_with="1"/>
-		<animation key="reload" animation_key="reloading, magazine rifle 0.9"/>
+		<animation key="reload" animation_key="reloading, spas12 fastmag"/>
 		<animation key="recoil"  animation_key="recoil1" />
 		<animation key="recoil"  animation_key="recoil2" />
 		<animation key="recoil"  animation_key="recoil3" />
