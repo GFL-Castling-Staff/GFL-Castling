@@ -1762,57 +1762,80 @@ class GFLskill : Tracker {
                 }
 				break;
             }
-            case 68:{ // OTS14 闪电链技能
-				int characterId = event.getIntAttribute("character_id");
-				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-				if (checkCharacterDead(character)) return;
-				int factionid = character.getIntAttribute("faction_id");
-                Vector3 strikePos = stringToVector3(event.getStringAttribute("position"));
-                const float scanRange = 30.0f;
-                array<int> candidateIds;
-                array<Vector3> candidatePositions;
-				m_fnum = m_metagame.getFactionCount();
-                for(uint i=0;i<m_fnum;i++) {
-                    if(i==uint(factionid)) continue;
-                    array<const XmlElement@>@ affectedCharacter = getCharactersNearPosition(m_metagame, strikePos, i, scanRange);
-                    if (affectedCharacter is null) continue;
-                    for(uint x=0;x<affectedCharacter.length();x++){
-                        const XmlElement@ enemy = affectedCharacter[x];
-                        int enemyId = enemy.getIntAttribute("id");
-                        if (candidateIds.find(enemyId) >= 0) continue;
-                        const XmlElement@ enemyInfo = getCharacterInfo2(m_metagame, enemyId);
-                        if (checkCharacterDead(enemyInfo)) continue;
-                        string enemyGroup = enemyInfo.getStringAttribute("soldier_group_name");
-                        candidateIds.insertLast(enemyId);
-                        candidatePositions.insertLast(stringToVector3(enemyInfo.getStringAttribute("position")));
-                        if (candidateIds.length() >= 20) break;
-                    }
-                    if (candidateIds.length() >= 20) break;
-                }
-                _log("ots14 chain snapshot candidates=" + candidateIds.length() +
-                    " source=" + characterId +
-                    " range=" + scanRange, 1);
-                if (candidateIds.length() <= 0) break;
-
-                ChainEffectDefinition@ def = ChainEffectDefinition();
-                def.m_first_target_acquire_radius = scanRange;
-                def.m_max_jumps = 9;
-                def.m_jump_interval = 0.12f;
-                def.m_jump_range = 15.0f;
-                def.m_max_total_chain_distance = 35.0f;
-                def.m_candidate_limit = 20;
-
-                ChainDamageProfile@ dmg = ChainDamageProfile("chain_lightning_hit_damage.projectile");
-                @def.m_damage_profile = dmg;
-
-                ChainVisualProfile@ vis = ChainVisualProfile();
-                vis.m_arc_projectile_key = "chain_lightning_link.projectile";
-                vis.m_hit_projectile_key = "chain_lightning_hit_effect.projectile";
-                @def.m_visual_profile = vis;
-
-                startChainEffectFromCandidates(m_metagame, characterId, factionid, strikePos, def, candidateIds, candidatePositions);
-				break;
-            }
+            // ================= OTS14 闪电链 —— 已停用 =================
+            // 停用原因：闪电链在后续更新中不再使用（2026-08-04 决定）。
+            // 保留代码而非删除，是因为它是目前唯一验证通过的
+            // 「notify_script -> 一次同步快照 -> ChainTask 纯内存推进」范式，
+            // 详见 CLAUDE.md「Query Handling Notes」。将来若要做同类连锁效果，
+            // 直接照抄这里，不要重新趟一遍 getCharactersNearPosition 卡死和
+            // 逐跳特效弹头导致原生崩溃的坑。
+            //
+            // 停用方式（三处，缺一不可，恢复时全部还原）：
+            //   1. core/command_skill_info.as   OTS14 三个 weapon -> 技能 98 的映射（先前已注释）
+            //   2. trackers/commandskill.as     case 98 施法分发
+            //   3. core/gfl_skill_info.as       "ots14_chain_scan" -> 68 的 notify 映射
+            //   4. 本处 case 68 的处理体
+            // GFLtask.as 里的 ChainDamageProfile / ChainVisualProfile /
+            // ChainEffectDefinition / ChainExecutionContext / ChainTask /
+            // DelayChainBootstrapTask / startChainEffectFromCandidates 未注释，
+            // 入口封死后它们已是不可达的死代码，留着以免大段注释引入语法风险
+            // （本项目无编译器/linter 可跑，见 CLAUDE.md「Running / Testing」）。
+            //
+            // 注：下面的 m_max_jumps / m_jump_range 已回退为 dev 主线数值
+            // （9 -> 5、15.0 -> 9.0）。dev-claude 上那次「闪电链小加强」不予保留。
+            //
+            // case 68:{ // OTS14 闪电链技能
+			// 	int characterId = event.getIntAttribute("character_id");
+			// 	const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+			// 	if (checkCharacterDead(character)) return;
+			// 	int factionid = character.getIntAttribute("faction_id");
+            //     Vector3 strikePos = stringToVector3(event.getStringAttribute("position"));
+            //     const float scanRange = 30.0f;
+            //     array<int> candidateIds;
+            //     array<Vector3> candidatePositions;
+			// 	m_fnum = m_metagame.getFactionCount();
+            //     for(uint i=0;i<m_fnum;i++) {
+            //         if(i==uint(factionid)) continue;
+            //         array<const XmlElement@>@ affectedCharacter = getCharactersNearPosition(m_metagame, strikePos, i, scanRange);
+            //         if (affectedCharacter is null) continue;
+            //         for(uint x=0;x<affectedCharacter.length();x++){
+            //             const XmlElement@ enemy = affectedCharacter[x];
+            //             int enemyId = enemy.getIntAttribute("id");
+            //             if (candidateIds.find(enemyId) >= 0) continue;
+            //             const XmlElement@ enemyInfo = getCharacterInfo2(m_metagame, enemyId);
+            //             if (checkCharacterDead(enemyInfo)) continue;
+            //             string enemyGroup = enemyInfo.getStringAttribute("soldier_group_name");
+            //             candidateIds.insertLast(enemyId);
+            //             candidatePositions.insertLast(stringToVector3(enemyInfo.getStringAttribute("position")));
+            //             if (candidateIds.length() >= 20) break;
+            //         }
+            //         if (candidateIds.length() >= 20) break;
+            //     }
+            //     _log("ots14 chain snapshot candidates=" + candidateIds.length() +
+            //         " source=" + characterId +
+            //         " range=" + scanRange, 1);
+            //     if (candidateIds.length() <= 0) break;
+            //
+            //     ChainEffectDefinition@ def = ChainEffectDefinition();
+            //     def.m_first_target_acquire_radius = scanRange;
+            //     def.m_max_jumps = 5;
+            //     def.m_jump_interval = 0.12f;
+            //     def.m_jump_range = 9.0f;
+            //     def.m_max_total_chain_distance = 35.0f;
+            //     def.m_candidate_limit = 20;
+            //
+            //     ChainDamageProfile@ dmg = ChainDamageProfile("chain_lightning_hit_damage.projectile");
+            //     @def.m_damage_profile = dmg;
+            //
+            //     ChainVisualProfile@ vis = ChainVisualProfile();
+            //     vis.m_arc_projectile_key = "chain_lightning_link.projectile";
+            //     vis.m_hit_projectile_key = "chain_lightning_hit_effect.projectile";
+            //     @def.m_visual_profile = vis;
+            //
+            //     startChainEffectFromCandidates(m_metagame, characterId, factionid, strikePos, def, candidateIds, candidatePositions);
+			// 	break;
+            // }
+            // =========================================================
 			case 69: { //修甲手雷
 				int characterId = event.getIntAttribute("character_id");
 				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);

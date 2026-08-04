@@ -4074,6 +4074,22 @@ const int CHAIN_FILTER_CHARACTER_ONLY = 0;
 const int CHAIN_FILTER_VEHICLE_ONLY   = 1;
 const int CHAIN_FILTER_ALL_HOSTILE    = 2;
 
+// ============================================================================
+// 连锁效果（Chain）机制 —— 【当前无调用方，已随 OTS14 闪电链一同停用】
+//
+// 2026-08-04：唯一使用方 OTS14 闪电链已停用，本节以下所有类型与函数
+// （ChainDamageProfile / ChainVisualProfile / ChainEffectDefinition /
+//  ChainExecutionContext / ChainTask / DelayChainBootstrapTask /
+//  startChainEffectFromCandidates）目前均不可达。
+//
+// 未注释掉的原因：入口已封死，留着不影响运行；而本项目没有编译器和 linter
+// 可跑（见 CLAUDE.md「Running / Testing」），大段注释类定义只会平白引入语法风险。
+//
+// 别删。这是目前唯一验证通过的连锁效果范式，踩过的坑见 CLAUDE.md
+//「Query Handling Notes」：同步 nearby 查询会卡死、逐跳自定义特效弹头会原生崩溃。
+// 将来做同类效果请照抄，不要重写。恢复方法见 trackers/GFLskill.as 的 case 68 注释块。
+// ============================================================================
+
 const int CHAIN_DAMAGE_FIXED      = 0;
 const int CHAIN_DAMAGE_FALLOFF    = 1;
 const int CHAIN_DAMAGE_SPLIT_POOL = 2;

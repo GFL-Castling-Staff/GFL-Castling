@@ -205,7 +205,9 @@ dictionary gameSkillIndex = {
 
         {"kcco_minotauros_rockets",67},
 
-        {"ots14_chain_scan",68},
+        // OTS14 闪电链已停用（2026-08-04），后续更新不再使用。
+        // 完整停用清单与恢复方法见 trackers/GFLskill.as 的 case 68 注释块。
+        // {"ots14_chain_scan",68},
 
         {"gk_repair_grenade",69},
 

@@ -326,7 +326,9 @@ class CommandSkill : Tracker {
                 case 95:{excuteScarecrowSkill(cId,senderId,m_modifer);break;}
                 case 96:{excuteG36Skill(cId,senderId,m_modifer);break;}
                 case 97:{excuteMP7Skill(cId,senderId,m_modifer);break;}
-                case 98:{excuteOTS14Skill(cId,senderId,m_modifer);break;}
+                // OTS14 闪电链已停用（2026-08-04），后续更新不再使用。
+                // 完整停用清单与恢复方法见 trackers/GFLskill.as 的 case 68 注释块。
+                // case 98:{excuteOTS14Skill(cId,senderId,m_modifer);break;}
                 case 99:{excuteNTW20MOD3Skill(cId,senderId,m_modifer);break;}
                 case 100:{excuteHS50Skill(cId,senderId,m_modifer);break;}
                 case 101:{excutePTRDSkill(cId,senderId,m_modifer);break;}
@@ -5420,6 +5422,9 @@ class CommandSkill : Tracker {
 
     // OTS-14 "闪电" 突击步枪技能
     // 效果：向准心瞄准位置打出一道闪电，然后从落点发起连锁闪电跳跃
+    //
+    // 【已停用 2026-08-04】上面 case 98 的分发已注释，本函数当前不可达。
+    // 保留函数体便于将来恢复；完整停用清单见 trackers/GFLskill.as 的 case 68 注释块。
     void excuteOTS14Skill(int characterId, int playerId, SkillModifer@ modifer) {
         if (excuteCooldownCheck(m_metagame, characterId, modifer, playerId, "OTS14")) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
