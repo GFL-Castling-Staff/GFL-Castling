@@ -29,10 +29,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.31638275"
-     inkscape:cx="1826.9011"
-     inkscape:cy="1397.042"
+     inkscape:cx="142.23279"
+     inkscape:cy="1229.5234"
      inkscape:document-units="px"
-     inkscape:current-layer="layer16"
+     inkscape:current-layer="layer31"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
@@ -8987,8 +8987,7 @@
        width="12895.999"
        height="10272"
        x="-5100"
-       y="-4863.9995"
-       sodipodi:insensitive="true" /><rect
+       y="-4863.9995" /><rect
        style="opacity:1;fill:#beb8b2;fill-opacity:1;fill-rule:nonzero;stroke:#82d758;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0.7;stroke-dasharray:none;stroke-dashoffset:7.56;stroke-opacity:1;paint-order:normal"
        id="rect46532"
        width="1523.9999"
@@ -10878,7 +10877,7 @@ separator_over_height = 0.3;
 separator_depth = 0.2;
 penetrability = 0.7;
 see_through = 1;
-static_object_type_key=wood_fence.static_object;</desc></rect><rect
+static_object_type_key=woodfence.static_object;</desc></rect><rect
    style="display:inline;fill:#d2d2d2;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
    id="rect9344-60-7-4-5-4-6-4"
    width="77.781746"
@@ -10933,7 +10932,7 @@ separator_over_height = 0.3;
 separator_depth = 0.2;
 penetrability = 0.7;
 see_through = 1;
-static_object_type_key=wood_fence.static_object;</desc></rect><rect
+static_object_type_key=woodfence.static_object;</desc></rect><rect
    inkscape:label="#wall_template"
    y="259.33362"
    x="-1158.8055"
@@ -11004,7 +11003,7 @@ separator_over_height = 0.0;
 separator_depth = 0.0; 
 penetrability = 0.7;
 see_through = 0;
-static_object_type_key=wood_fence.static_object;</desc></rect><rect
+static_object_type_key=woodfence.static_object;</desc></rect><rect
    inkscape:label="#wall_template"
    y="339.61307"
    x="-1069.8527"
@@ -11025,7 +11024,7 @@ separator_over_height = 0.0;
 separator_depth = 0.0; 
 penetrability = 0.7;
 see_through = 0;
-static_object_type_key=wood_fence1.static_object;</desc></rect><flowRoot
+static_object_type_key=woodfence.static_object;</desc></rect><flowRoot
    transform="translate(-73.181775,-819.96011)"
    xml:space="preserve"
    id="flowRoot20701"
@@ -12225,7 +12224,7 @@ static_object_type_key=hedgehog.static_object;</desc></rect><rect
    y="901.7973"
    inkscape:label="#mesh_template"
    transform="rotate(1.2955078)"><desc
-     id="desc8739-3-3-8-0-0-9-1-6-0-2-2-9">name = concrete_barrier; mesh_name = concrete_barrier.mesh; texture0 = world_atlas1.png; texture0_atlas_cell = 4 3 32 32; collision_model_type = 1; collision_model_size = 1.10 1.10 2.3; appear_as_wall = 1;</desc></rect><rect
+     id="desc8739-3-3-8-0-0-9-1-6-0-2-2-9">name = concrete_barrier; mesh_name = concrete_barrier.mesh;static_object_type_key=concrete_barrier.static_object; texture0 = world_atlas1.png; texture0_atlas_cell = 4 3 32 32; collision_model_type = 1; collision_model_size = 1.10 1.10 2.3; appear_as_wall = 1;</desc></rect><rect
    style="display:inline;fill:#563a16;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.95491481;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;enable-background:new"
    id="rect8111-3-89-7-5-1-8-5"
    width="3.5584154"
@@ -21070,7 +21069,7 @@ separator_top_texture_scale = 3 3;
 separator_color = fill;
 separator_over_height = 0.2;
 separator_depth = 0.7;
-wood_fence.static_object;</desc></rect><rect
+woodfence.static_object;</desc></rect><rect
    inkscape:label="#wall_template"
    y="28.704918"
    x="-2158.7971"
@@ -21097,7 +21096,7 @@ separator_top_texture_atlas_cell = 6 5 16 16 0.015625;
 separator_color = fill; 
 separator_over_height = 0.1; 
 separator_depth = 0.7;
-static_object_type_key=wood_fence.static_object;</desc></rect><text
+static_object_type_key=woodfence.static_object;</desc></rect><text
    id="text7600-7-2-8"
    y="723.02289"
    x="3617.8655"
@@ -21389,7 +21388,7 @@ separator_depth = 0.2;
 penetrability = 1.0;
 see_through = 1;
 climbable = 0; 
-static_object_type_key=barbed_wire_fence.static_object;
+static_object_type_key=barbed_wire.static_object;
 </desc></rect><rect
    style="display:inline;fill:#6a6a6a;fill-opacity:1;fill-rule:nonzero;stroke:#00ff98;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 1;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter99652);enable-background:new"
    id="rect16633-4-8-7-6-9-9-3-5-6-9"
@@ -24339,7 +24338,7 @@ collision_model_size = 3.0 4.5 3.0; #collision_model_offset = 0 0 0;</desc></rec
        id="path18604-9"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccccc" /></g><g
-     style="display:none"
+     style="display:inline"
      inkscape:label="alpha_sand"
      id="layer6"
      inkscape:groupmode="layer"
@@ -129451,8 +129450,7 @@ tag = jeep;</desc></rect><rect
        inkscape:groupmode="layer"
        id="layer31"
        inkscape:label="BlockMap"
-       style="opacity:0.7"
-       sodipodi:insensitive="true"><rect
+       style="opacity:0.7"><rect
          transform="rotate(89.927697)"
          style="display:inline;opacity:1;fill:#626262;fill-opacity:1;stroke:none;enable-background:new"
          id="boundary_rect4"
@@ -129461,7 +129459,7 @@ tag = jeep;</desc></rect><rect
          x="-197.08176"
          y="-54.41367"
          inkscape:label="#rect4003"><desc
-           id="desc6099-8">height=20;</desc></rect><rect
+           id="desc6099-8">height=100;</desc></rect><rect
          transform="rotate(89.802747)"
          style="display:inline;fill:#626262;fill-opacity:1;stroke:none;enable-background:new"
          id="boundary_rect2"
@@ -129470,7 +129468,7 @@ tag = jeep;</desc></rect><rect
          x="-124.78497"
          y="-2403.616"
          inkscape:label="#rect4003"><desc
-           id="desc6099-8-7">height=28;</desc></rect><rect
+           id="desc6099-8-7">height=100;</desc></rect><rect
          transform="rotate(0.04299744)"
          style="display:inline;fill:#626262;fill-opacity:1;stroke:none;enable-background:new"
          id="boundary_rect1"
@@ -129479,7 +129477,7 @@ tag = jeep;</desc></rect><rect
          x="-102.4109"
          y="-193.3974"
          inkscape:label="#rect4003"><desc
-           id="desc6099-8-7-4">height=28;</desc></rect><rect
+           id="desc6099-8-7-4">height=100;</desc></rect><rect
          transform="rotate(0.04299744)"
          style="display:inline;fill:#626262;fill-opacity:1;stroke:none;enable-background:new"
          id="boundary_rect1-4"
@@ -129488,7 +129486,7 @@ tag = jeep;</desc></rect><rect
          x="-283.81815"
          y="1998.167"
          inkscape:label="#rect4003"><desc
-           id="desc6099-8-7-4-5">height=28;</desc></rect></g><g
+           id="desc6099-8-7-4-5">height=100;</desc></rect></g><g
        inkscape:groupmode="layer"
        id="layer36"
        inkscape:label="call_spawnpoint"><rect

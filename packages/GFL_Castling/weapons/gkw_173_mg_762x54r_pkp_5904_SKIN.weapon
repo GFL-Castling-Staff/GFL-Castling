@@ -43,7 +43,7 @@
         <stance state_key="running" accuracy="0.2"/>
         <stance state_key="walking" accuracy="0.45"/>
         <stance state_key="standing" accuracy="1.0"/>
-        <stance state_key="crouching" accuracy="0.98"/>
+        <stance state_key="crouching" accuracy="1.0"/>
         <stance state_key="crouch_moving" accuracy="0.475"/>
         <stance state_key="prone" accuracy="1.2"/>
         <stance state_key="prone_moving" accuracy="0.675"/>
@@ -91,7 +91,7 @@
         class="0"
         projectile_speed="210"
         sight_range_modifier="1.5"
-        leave_crouch_accuracy_penalty="0.5"
+        leave_crouch_accuracy_penalty="0.3"
         slot="0"
         can_shoot_standing="0"
         can_shoot_crouching="1"

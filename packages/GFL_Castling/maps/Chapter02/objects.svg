@@ -140684,7 +140684,8 @@ tag = truck;</desc>
            style="display:inline;fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;enable-background:new">
           <desc
              id="desc7945-4-0-2-7-4-8-9-5">type = end; 
-wall_template = BrickBrige; 
+wall_template = BrickWall1; 
+wall_height = 1.5; 
 top_material = terrain; 
 mode = bridge;</desc>
         </path>
@@ -146674,6 +146675,14 @@ key = radio_jammer.vehicle;
          height="2.0679491"
          width="2.2977724"
          id="rect10748-1-0-1-7-76-86-1-8-7-41-938-4-7-3-3-7"
+         style="display:inline;fill:#0070ff;fill-opacity:1;stroke:#b618f7;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;enable-background:new" />
+      <rect
+         inkscape:label="#spawnrect10748"
+         y="1904.5"
+         x="1410.5"
+         height="2.0679491"
+         width="2.2977724"
+         id="rect10748-1-0-1-7-76-86-1-8-7-41-938-4-7-3-3-1"
          style="display:inline;fill:#0070ff;fill-opacity:1;stroke:#b618f7;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;enable-background:new" />
       <rect
          inkscape:label="#spawnrect10748"

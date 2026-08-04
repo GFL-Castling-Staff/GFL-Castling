@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<projectile class="bullet" name="" slot="1" time_to_live="0.12" radius="2.5" pulldown_in_air="20.0">
+<projectile class="bullet" name="" slot="1" time_to_live="0.12" radius="5.0" pulldown_in_air="50.0">
     <result class="notify_script" key="bbs_repair" />
     <trigger class="impact">
         <collider class="terrain" enabled="0" />
         <collider class="static_object" enabled="0" />
         <collider class="vehicle" enabled="1" />
-        <collider class="character" enabled="0" />
+        <collider class="character" enabled="1" />
     </trigger>
     <rotation class="motion" />
     <sound class="result" key="other" file="torch_metal_hit.wav" pitch_variety="0.05" volume="0.5" />

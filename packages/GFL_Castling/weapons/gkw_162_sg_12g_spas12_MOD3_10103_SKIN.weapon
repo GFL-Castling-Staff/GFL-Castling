@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+	<weapon key="gkw_spas12mod3_10103.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+		<specification 
+		retrigger_time="-1.0"
+		burst_shots="1"
+		last_burst_retrigger_time="0.33"        
+		accuracy_factor="1.0"
+		can_shoot_running="1"
+		sustained_fire_grow_step="2.0"
+		sustained_fire_diminish_rate="2.0"
+		magazine_size="8"
+		can_shoot_standing="1"
+		suppressed="0"
+		name="SPAS-12(MOD3)-[Golden Fortune]"
+		class="4"
+		spread_range="0.2"
+		reload_one_at_a_time="0"
+		sight_range_modifier="1"
+		projectile_speed="120"
+		barrel_offset="0.52"
+		projectiles_per_shot="5"
+		stab_enabled="1"
+		carry_in_two_hands="1"
+		slot="0"
+		use_basic_muzzle_smoke_effect="0"/>
+		<inventory encumbrance="12.5" buy_price="76.0" sell_price="76.0"/>
+		<next_in_chain key="gkw_spas12mod3_10103_skill.weapon" share_ammo="1"/>
+		<animation key="reload" animation_key="reloading, spas12 fastmag"/>
+		<sound key="fire" fileref="spas12_fire_FromCOD20.wav" pitch_variety="0.05" volume="1.3"/>
+		<sound key="cycle" fileref="spas12_cycle_FromINS.wav"/>
+		<sound key="reload_one" fileref="spas12_reload_FromINS.wav" volume="1.0"/>
+		<sound class="impact" fileref="rifle_drop.wav"/>
+		<model filename="gkw_sg_spas12.xml"/>
+		<hud_icon filename="gkw_spas12_10103.png"/>
+		<commonness value="0" in_stock="0" can_respawn_with="1"/>
+		<weak_hand_hold offset="0.3"/>
+		<projectile file="bullet_sg.projectile">
+			<result class="hit" kill_probability="3.6" kill_probability_offset_on_successful_hit="6.0" kill_decay_start_time="0.4" kill_decay_end_time="0.4"/>
+		</projectile>
+		<stance state_key="running" accuracy="0.8"/>
+		<stance state_key="walking" accuracy="0.8"/>
+		<stance state_key="crouch_moving" accuracy="0.8"/>
+		<stance state_key="prone_moving" accuracy="0.8"/>
+		<stance state_key="standing" accuracy="0.8"/>
+		<stance state_key="crouching" accuracy="0.9"/>
+		<stance state_key="prone" accuracy="0.8"/>
+		<stance state_key="over_wall" accuracy="0.8"/>
+		<tag name="shotgun"/>
+		<capacity value="1" source="rank" source_value="0.0"/>
+		<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+		<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+		<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+		<target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+		<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+		<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+		<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+		<animation key="recoil" animation_key="recoil1"/>
+		<animation key="recoil" animation_key="recoil2"/>
+		<animation key="recoil" animation_key="recoil3"/>
+		<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+		<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+		<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+		<effect class="muzzle" ref="muzzle_sg"/>
+		<animation state_key="hold_on_wall" animation_key="still"/>
+		<animation state_key="running" animation_key="running, bayonet"/>
+		<animation state_key="walking" animation_key="walking, hip fire"/>
+		<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
+		<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+		<animation state_key="stabbing" animation_key="melee, bayonet"/>
+		<modifier class="hit_success_probability" value="-0.2"/>
+	</weapon>
+	<weapon key="gkw_spas12mod3_10103_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
+		<specification 
+		retrigger_time="-1.0"
+		accuracy_factor="1.0"
+		sustained_fire_grow_step="3.0"
+		sustained_fire_diminish_rate="2.0"
+		magazine_size="8"
+		can_shoot_standing="1"
+		suppressed="0"
+		name="SPAS-12(MOD3)-[Golden Fortune]-[Damage Focus SG]"
+		class="1"
+		reload_one_at_a_time="0"
+		sight_range_modifier="1.0"
+		projectile_speed="100"
+		barrel_offset="0.52"
+		projectiles_per_shot="15"
+		spread_range="0.15"
+		burst_shots="1"
+		/>
+		<inventory encumbrance="12.5" buy_price="76.0" sell_price="76.0" />
+		<next_in_chain key="gkw_spas12mod3_10103.weapon" share_ammo="1"/>
+		<commonness value="0" in_stock="0" can_respawn_with="1"/>
+		<animation key="reload" animation_key="reloading, spas12 fastmag"/>
+        <animation state_key="cycle" animation_key="Pshotgun0.5"/>
+		<animation state_key="cycle" stance_key="prone" animation_key="Pshotgun0.5p"/>
+		<sound key="fire" fileref="spas12skill_fire_FromCOD13.wav" pitch_variety="0.05" volume="1.3"/>
+		<sound key="cycle" fileref="spas12_cycle_FromINS.wav"/>
+		<sound key="reload_one" fileref="spas12_reload_FromINS.wav" volume="1.0"/>
+		<sound class="impact" fileref="rifle_drop.wav"/>
+		<model filename="gkw_sg_spas12.xml"/>
+		<hud_icon filename="gkw_spas12_10103.png"/>
+		<weak_hand_hold offset="0.3"/>
+        <projectile file="bullet_sg.projectile" time_to_live="0.3">
+			<result class="blast" radius="2.0" damage="3.1" push="0.1" decal="1" faction_compare="not_equal"/>
+		</projectile>
+		<modifier class="speed" value="-0.2"/>
+		<modifier class="detectability" value="+0.5"/>
+		<stance state_key="running" accuracy="0.8"/>
+		<stance state_key="walking" accuracy="0.8"/>
+		<stance state_key="crouch_moving" accuracy="0.8"/>
+		<stance state_key="prone_moving" accuracy="0.8"/>
+		<stance state_key="standing" accuracy="0.8"/>
+		<stance state_key="crouching" accuracy="0.9"/>
+		<stance state_key="prone" accuracy="0.8"/>
+		<stance state_key="over_wall" accuracy="0.8"/>
+		<tag name="shotgun"/>
+		<capacity value="1" source="rank" source_value="0.0"/>
+		<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0"/>
+		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" consumes_item="0"/>
+		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0"/>
+		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0"/>
+		<target_factors tag="metal_heavy" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
+		<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+		<target_factors tag="smg" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
+		<target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+		<target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
+		<target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+		<animation key="recoil" animation_key="recoil1"/>
+		<animation key="recoil" animation_key="recoil2"/>
+		<animation key="recoil" animation_key="recoil3"/>
+		<animation key="recoil" stance_key="prone" animation_key="recoil1, prone"/>
+		<animation key="recoil" stance_key="prone" animation_key="recoil2, prone"/>
+		<animation key="recoil" stance_key="prone" animation_key="recoil3, prone"/>
+		<effect class="muzzle" ref="muzzle_sg"/>
+		<animation state_key="hold_on_wall" animation_key="still"/>
+		<animation state_key="running" animation_key="running, bayonet"/>
+		<animation state_key="walking" animation_key="walking, hip fire"/>
+		<animation state_key="walking_backwards" animation_key="walking backwards, hip fire"/>
+		<animation state_key="celebrate_shoot" animation_key="celebrating, shooting"/>
+		<animation state_key="stabbing" animation_key="melee, bayonet"/>
+		<modifier class="hit_success_probability" value="-0.2"/>
+	</weapon>
+</weapons>

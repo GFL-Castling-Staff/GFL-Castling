@@ -40,8 +40,8 @@ class kill_event : Tracker {
 
         // 近战武器
         {"ff_excutioner_2.weapon",3},
-        {"ff_parw_alina.weapon",2},
-        {"ff_parw_alina_skin.weapon",2},
+        {"ff_parw_alina.weapon",3},
+        {"ff_parw_alina_skin.weapon",3},
         {"ff_gager_1.weapon",3},
         {"gkw_type100_skill.weapon",3},
         {"gkw_type100_4004_skill.weapon",3},
@@ -494,6 +494,7 @@ class kill_event : Tracker {
             if (playerInfo.getPlayerName() == default_string ) return;
             string playerName = playerInfo.getPlayerName();
             int kill_to_heal_scale = 1;
+            int nade_supply_scale = 1;
             int kill_score_scale = 1;
 
             string c_weaponType = playerInfo.getPlayerEquipment().getWeapon(0);
@@ -515,6 +516,7 @@ class kill_event : Tracker {
             {
                 handleKillEventToPlayerInfo(playerId,5 * kill_score_scale);
                 kill_to_heal_scale = 5;
+                nade_supply_scale = 5;
                 kill_is_boss = true;
                 notify(m_metagame, "kill streak,boss reward", dictionary(), "misc", playerId, false, "", 1.0);
             }
@@ -522,6 +524,7 @@ class kill_event : Tracker {
             {
                 handleKillEventToPlayerInfo(playerId,3 * kill_score_scale);
                 kill_to_heal_scale = 2;
+                nade_supply_scale = 2;
                 notify(m_metagame, "kill streak,elite reward", dictionary(), "misc", playerId, false, "", 1.0);
             }
             else if(point_nerfed_reward.find(soldier_name) > -1)
@@ -551,6 +554,7 @@ class kill_event : Tracker {
             int m_killstreak_point = battleInfo.getKillStreakPoint();
             int m_tactic_point = battleInfo.getTacticPoint();
             int m_counter = battleInfo.getKillStreakPointCounter();
+            bool m_killcheckpoint = false;
 
             if(m_counter>=10)
             {
@@ -574,6 +578,7 @@ class kill_event : Tracker {
                         a["%num"] = ""+ m_tactic_point_offset;
                         notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
                         triggered = true;
+                        m_killcheckpoint = true;
                         break;
                     }
                 }
@@ -592,6 +597,7 @@ class kill_event : Tracker {
                     dictionary a;
                     a["%num"] = ""+ m_tactic_point_offset;
                     notify(m_metagame, "kill streak,get reward", a, "misc", playerId, false, "", 1.0);
+                    m_killcheckpoint = true;
                 }
             }
 
@@ -616,7 +622,20 @@ class kill_event : Tracker {
                 }
             }
 
-            //指定武器handle
+            //增加战术点（10积分）时响应事件    
+            if(m_killcheckpoint)
+            {
+                if(c_weaponType=="gkw_m327.weapon")
+                {
+                    int i = findSkillIndexbyPname(playerName,"m327");
+                    if(i >=0){
+                        SkillArray[i].m_time-=20.0;
+                        notify(m_metagame, "减CD", dictionary(), "misc", playerId, false, "", 1.0);
+                    }
+                }
+            }
+
+            //指定武器handle(响应任何击杀事件)
             if(c_weaponType=="gkw_ppkmod3.weapon" || c_weaponType =="gkw_ppkmod3_3905.weapon" || c_weaponType =="gkw_ppkmod3_6109.weapon"){
                 int i = findSkillIndex(characterId,"PPKMOD3");
                 if(i >=0){
@@ -627,7 +646,7 @@ class kill_event : Tracker {
                 }
             }
             else if(c_weaponType=="gkw_c96mod3.weapon" || c_weaponType =="gkw_c96mod3_8405.weapon"){
-                int i = findSkillIndex(characterId,"C96");
+                int i = findSkillIndexbyPname(playerName,"C96");
                 if(i >=0){
                     SkillArray[i].m_time-=1.0;
                     if(KillerWeaponKey == c_weaponType){
@@ -635,7 +654,7 @@ class kill_event : Tracker {
                     }
                 }
             }
-            if(c_weaponType=="gkw_m1895mod3_5309.weapon"
+            else if(c_weaponType=="gkw_m1895mod3_5309.weapon"
             || c_weaponType =="gkw_m1895mod3_5309_skill.weapon"
             || c_weaponType =="gkw_m1895mod3_7107.weapon"
             || c_weaponType =="gkw_m1895mod3_7107_skill.weapon"
@@ -651,6 +670,44 @@ class kill_event : Tracker {
                     }
                 }
             }
+            else if(c_weaponType=="gkw_m1911_mod3.weapon" || c_weaponType=="gkw_m1911mod3_4514.weapon" || c_weaponType=="gkw_m1911mod3_8406.weapon" ){
+                if ((startsWith(c_armorType,"bp_")))
+                {
+                    updateHealByKillEvent(characterId,factionId,4,10,"weapon",kill_to_heal_scale*2,getRecoverVestNum(c_weaponType));
+                }
+                else
+                {
+                    updateHealByKillEvent(characterId,factionId,4,10,"weapon",kill_to_heal_scale,getRecoverVestNum(c_weaponType));
+                }
+            }
+
+
+
+            // nadebag手雷回复
+            if(startsWith(c_armorType,"nadebag_t6")){
+                int nadeCurrentScore = g_playerInfo_Buck.getKillSkillCountbyPid(playerId, "nadebag_recovery");
+                int nadeNewScore = nadeCurrentScore + nade_supply_scale;
+                // _log("现在有" + nadeNewScore + "分回雷积分");
+
+                if(nadeNewScore >= nadebag_recovery_threshold){
+                    g_playerInfo_Buck.addKillSkillCountbyPid(playerId, "nadebag_recovery", nade_supply_scale - nadebag_recovery_threshold);
+                    string grenadeKey = playerInfo.getPlayerEquipment().getWeapon(2);
+                    if(grenadeKey != default_string){
+                        GrenadeSupply(m_metagame, characterId, 0, grenadeKey, "asindex", "projectile", false);
+                    }
+                }
+                else {
+                    g_playerInfo_Buck.addKillSkillCountbyPid(playerId, "nadebag_recovery", nade_supply_scale);
+                }
+            }
+            else {
+                // 未装备nadebag时清除已有分数
+                int nadeExistingScore = g_playerInfo_Buck.getKillSkillCountbyPid(playerId, "nadebag_recovery");
+                if(nadeExistingScore > 0){
+                    g_playerInfo_Buck.addKillSkillCountbyPid(playerId, "nadebag_recovery", -nadeExistingScore);
+                }
+            }
+
             // 护甲判断
             if(startsWith(c_armorType,'acbp_t6')){
                 float scale = 1.0;
@@ -675,8 +732,8 @@ class kill_event : Tracker {
             else if(startsWith(c_armorType,"exo_x_t6")){
                 updateHealByKillEvent(characterId,factionId,10,20,"vest",kill_to_heal_scale);
             }
-            else if(startsWith(c_armorType,"exo_t6") || startsWith(c_armorType,"dima_bunny")){
-                if(boss_list.find(soldier_name)>-1){
+            else if(startsWith(c_armorType,"exo_t6") || startsWith(c_armorType,"dima_bunny") || startsWith(c_armorType,"cbs_t6")){
+                if(reward_pool_key=="boss"){
                     healCharacter(m_metagame,characterId,5);
                 }
                 else if(reward_pool_key=="rare" || reward_pool_key=="elite")
@@ -695,18 +752,10 @@ class kill_event : Tracker {
                 }
             }
 
-            if(c_weaponType=="gkw_m1911_mod3.weapon" || c_weaponType=="gkw_m1911mod3_4514.weapon" || c_weaponType=="gkw_m1911mod3_8406.weapon" ){
-                if ((startsWith(c_armorType,"bp_")))
-                {
-                    updateHealByKillEvent(characterId,factionId,4,10,"weapon",kill_to_heal_scale*2,getRecoverVestNum(c_weaponType));
-                }
-                else
-                {
-                    updateHealByKillEvent(characterId,factionId,4,10,"weapon",kill_to_heal_scale,getRecoverVestNum(c_weaponType));
-                }
-            }
-
             updateHealByKillEvent(characterId,factionId,int(healOnKillWeaponList[c_weaponType]),10,"weapon",kill_to_heal_scale,getRecoverVestNum(c_weaponType));
+
+
+            ///指定武器handle(响应特殊条件)
 
             if(KillerWeaponKey=="gkw_ppkmod3.weapon" || KillerWeaponKey=="gkw_ppkmod3_3905.weapon" || KillerWeaponKey=="gkw_ppkmod3_6109.weapon"){
                 // 乌鸦是猪，望周知
@@ -733,7 +782,7 @@ class kill_event : Tracker {
             }
 
             // M14MOD3 火力专注 - 连锁射击
-            if( (KillerWeaponKey=="gkw_m14mod3.weapon"
+            else if( (KillerWeaponKey=="gkw_m14mod3.weapon"
             || KillerWeaponKey=="gkw_m14mod3_skill.weapon"
             || KillerWeaponKey=="gkw_m14mod3_303.weapon"
             || KillerWeaponKey=="gkw_m14mod3_303_skill.weapon")
@@ -794,7 +843,7 @@ class kill_event : Tracker {
 
             //狙击妖精类 击杀无人机充能
 
-            if(KillerWeaponKey=="gkw_m200.weapon" || KillerWeaponKey=="gkw_m200_560.weapon" || KillerWeaponKey=="gkw_m200_4502.weapon"
+            else if(KillerWeaponKey=="gkw_m200.weapon" || KillerWeaponKey=="gkw_m200_560.weapon" || KillerWeaponKey=="gkw_m200_4502.weapon"
             || KillerWeaponKey=="gkw_ssg3000.weapon"
             )
             {
@@ -814,9 +863,30 @@ class kill_event : Tracker {
                 }
             }
 
+            //部分击杀类 击杀充能
+
+            else if(KillerWeaponKey=="gkw_mg15.weapon"
+            )
+            {
+                if (killway=="hit"){
+                    if(reward_pool_key=="boss")
+                    {
+                        g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"killcharge",5);
+                    }
+                    else if(reward_pool_key=="elite" || reward_pool_key=="rare")
+                    {
+                        g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"killcharge",2);
+                    }
+                    else
+                    {
+                        g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"killcharge");
+                    }
+                }
+            }
+
             //莫辛纳甘技能 苍白收割者
 
-            if(KillerWeaponKey=="blast_snipe_mosin.projectile" && killway=="blast")
+            else if(KillerWeaponKey=="blast_snipe_mosin.projectile" && killway=="blast")
             {
                 g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"mosin");
                 int kill_num = g_playerInfo_Buck.getKillSkillCountbyPid(playerId,"mosin");
@@ -841,7 +911,7 @@ class kill_event : Tracker {
                 }
             }
 
-            if(KillerWeaponKey=="gkw_m1891mod3.weapon" && killway=="hit")
+            else if(KillerWeaponKey=="gkw_m1891mod3.weapon" && killway=="hit")
             {
                 int i = findSkillIndex(characterId,"mosin");
                 if(i >=0){
@@ -858,7 +928,7 @@ class kill_event : Tracker {
 
             //德利尔技能 无声标记
 
-            if(KillerWeaponKey=="blast_snipe_delisle.projectile" && killway=="blast")
+            else if(KillerWeaponKey=="blast_snipe_delisle.projectile" && killway=="blast")
             {
                 if(reward_pool_key=="boss")
                 {
@@ -870,14 +940,14 @@ class kill_event : Tracker {
                 }
             }
 
-            if(KillerWeaponKey=="gkw_delisle.weapon"
+            else if(KillerWeaponKey=="gkw_delisle.weapon"
             || KillerWeaponKey=="gkw_delisle_6202.weapon"
             || KillerWeaponKey=="gkw_delisle_7801.weapon"
             )
             {
                 if(killway == "hit")
                 {
-                    int i = findSkillIndex(characterId,"delisle");
+                    int i = findSkillIndexbyPname(playerName,"delisle");
                     if(i >=0){
                         if(reward_pool_key=="boss")
                         {
@@ -895,7 +965,8 @@ class kill_event : Tracker {
                 }
             }
 
-            if(KillerWeaponKey=="snipe_wildhunt_ntw20_main.projectile" && killway=="blast")
+            //NTW20技能 狂猎燃魂
+            else if(KillerWeaponKey=="snipe_wildhunt_ntw20_main.projectile" && killway=="blast")
             {
                 if(playerInfo.checkTag("NTW20_Wildhunt_Main"))
                 {
@@ -936,7 +1007,7 @@ class kill_event : Tracker {
                 }
             }
 
-            if(KillerWeaponKey=="snipe_wildhunt_ntw20_sub.projectile" && killway=="blast")
+            else if(KillerWeaponKey=="snipe_wildhunt_ntw20_sub.projectile" && killway=="blast")
             {
                 if(playerInfo.tickTag("NTW20_Wildhunt"))
                 {
@@ -983,15 +1054,33 @@ class kill_event : Tracker {
                     }
                 }
             }
-
-            if(KillerWeaponKey=="blast_snipe_ff_hunter.projectile" && killway=="blast")
+            //Hunter技能
+            else if(KillerWeaponKey=="blast_snipe_ff_hunter.projectile" && killway=="blast")
             {
-                if(eliteEnemyName.find(soldier_name)>-1)
+                if(reward_pool_key=="rare" || reward_pool_key=="elite" || reward_pool_key=="boss")
                 {
                     healCharacter(m_metagame,characterId,1);
                 }
             }
-
+            //老李mod3 突击模式击杀回甲
+            else if(KillerWeaponKey=="gkw_mlemk1mod3_skill.weapon" || KillerWeaponKey=="gkw_mlemk1mod3_604_skill.weapon" ){
+                if(killway == "hit")
+                {
+                    if(reward_pool_key=="boss")
+                    {
+                        healCharacter(m_metagame,characterId,5);
+                    }
+                    else if(reward_pool_key=="elite" || reward_pool_key=="rare")
+                    {
+                        healCharacter(m_metagame,characterId,2);
+                    }
+                    else
+                    {
+                        healCharacter(m_metagame,characterId,1);
+                    }                    
+                }
+            }
+            
             if (soldier_name=="") return;
 
             if(SFbossList.find(soldier_name)>-1 && characterId > 0){
@@ -1187,6 +1276,15 @@ class kill_count{
     }
 }
 
+int findSkillIndexbyPname(string pname,string key){
+    for (uint i=0;i<SkillArray.length();i++){
+        if (SkillArray[i].m_skillInfo.m_playername==pname && SkillArray[i].m_weapontype==key) {
+            return i;
+        }
+    }
+    return -1;
+}
+
 int findSkillIndex(int cId,string key){
     for (uint i=0;i<SkillArray.length();i++){
         if (SkillArray[i].m_character_id==cId && SkillArray[i].m_weapontype==key) {
@@ -1237,6 +1335,10 @@ class no_delete_data{
 
     void add(){
         m_num++;
+    }
+
+    void set(int num){
+        m_num = num;
     }
 }
 

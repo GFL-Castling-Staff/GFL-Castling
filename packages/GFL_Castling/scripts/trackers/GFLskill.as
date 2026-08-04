@@ -1656,12 +1656,19 @@ class GFLskill : Tracker {
 				break;
 			}
 
-            case 63:{ //强无敌空投，暂时弃用
+            case 63:{ //强无敌空投
 				int characterId = event.getIntAttribute("character_id");
-				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-				if (character is null) return;
 				Vector3 pos = stringToVector3(event.getStringAttribute("position"));
-				int factionid = character.getIntAttribute("faction_id");
+				int factionid = -1;
+				array<const XmlElement@>@ factions = getFactions(m_metagame);
+				for (uint i = 0; i < factions.size(); ++i) {
+					string name = factions[i].getStringAttribute("name");
+					if (name == "S.F.") {
+						factionid = int(i);
+						break;
+					}
+				}
+				if (factionid == -1) return;
                 spawnStaticProjectile(m_metagame,"manticore_land_blast.projectile",pos,characterId,factionid);
 				array<const XmlElement@>@ groups = getSoldierGroups(m_metagame, factionid);
 				if (groups is null) return;
@@ -1739,16 +1746,17 @@ class GFLskill : Tracker {
                 Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
 				int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,factionid,grenade_pos,10);
 				if(luckyGuyid!=-1){
+					playAnimationKey(m_metagame,characterId,"teslatrooper_skill",false);
                     const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
                     Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
 					spawnStaticProjectile(m_metagame,"kcco_teslatrooper_warn.projectile",luckyGuyPos,characterId,factionid);
 					Vector3 targetPos = luckyGuyPos.add(Vector3(rand(-1.0,1.0),0.0,rand(-1.0,1.0)));
 					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-					DelayC2PProjectileSet_H@ new_task_s = DelayC2PProjectileSet_H(m_metagame,1.0,characterId,factionid,"kcco_teslatrooper_rocket.projectile",targetPos,26.0,2.0,2.5,"Teslatrooper_fire_FromBF5.wav",1.1);
+					DelayC2PProjectileSet_H@ new_task_s = DelayC2PProjectileSet_H(m_metagame,1.0,characterId,factionid,"kcco_teslatrooper_rocket.projectile",targetPos,26.0,2.0,2.0,"Teslatrooper_fire_FromBF5.wav",1.1);
 					tasker.add(new_task_s);
 					for (uint i=1; i<5; i++) {
 						targetPos = luckyGuyPos.add(Vector3(rand(-1.0,1.0),0.0,rand(-1.0,1.0)));
-						DelayC2PProjectileSet_H@ new_task = DelayC2PProjectileSet_H(m_metagame,0.01,characterId,factionid,"kcco_teslatrooper_rocket.projectile",targetPos,26.0,2.0,2.5);
+						DelayC2PProjectileSet_H@ new_task = DelayC2PProjectileSet_H(m_metagame,0.01,characterId,factionid,"kcco_teslatrooper_rocket.projectile",targetPos,26.0,2.0,2.0);
 						tasker.add(new_task);
 					}
                 }
@@ -1805,6 +1813,25 @@ class GFLskill : Tracker {
                 startChainEffectFromCandidates(m_metagame, characterId, factionid, strikePos, def, candidateIds, candidatePositions);
 				break;
             }
+			case 69: { //修甲手雷
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character !is null) {
+					healCharacter(m_metagame,characterId,4);
+				}
+				break;
+			}
+
+			case 70: {// 大蜘蛛产小蜘蛛
+				int characterId = event.getIntAttribute("character_id");
+				const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+				if (character is null) return;
+				Vector3 pos = stringToVector3(character.getStringAttribute("position"));
+				playAnimationKey(m_metagame, characterId, "arachne_craft", false);
+				TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+				tasker.add(DelaySpawnSoldierIfAlive(m_metagame, 1.1, characterId, pos, "pard_arachne_clone", 3, true));
+				break;
+			}
             default:
                 break;
 		}

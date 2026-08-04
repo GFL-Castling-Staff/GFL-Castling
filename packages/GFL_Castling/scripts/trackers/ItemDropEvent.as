@@ -223,6 +223,21 @@ class ItemDropEvent : Tracker {
                 deleteItemInBackpack(m_metagame,cId,"weapon",key);
                 addMutilItemInBackpack(m_metagame,cId,"projectile","c4.projectile",8);
             }
+            else if(key == "pack_88rocket")
+            {
+                deleteItemInBackpack(m_metagame,cId,"weapon",key);
+                addMutilItemInBackpack(m_metagame,cId,"weapon","gkw_88rocker.weapon",10);
+            }
+            else if(key == "pack_m202")
+            {
+                deleteItemInBackpack(m_metagame,cId,"weapon",key);
+                addMutilItemInBackpack(m_metagame,cId,"weapon","gkw_consume_m202.weapon",6);
+            }
+            else if(key == "pack_repair_grenade")
+            {
+                deleteItemInBackpack(m_metagame,cId,"weapon",key);
+                addMutilItemInBackpack(m_metagame,cId,"projectile","hand_repair_grenade.projectile",8);
+            }
         }
         if (type_id == 1){
             string itemKey = event.getStringAttribute("item_key");
@@ -479,19 +494,19 @@ class ItemDropEvent : Tracker {
                     else if ( (checkQueue(pId,"m1903_1") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1903.weapon")){
                         giveDigimindItem(cId, pId, "gkw_m1903_only.weapon", normalizeWeaponKey(itemKey), "m1903_1");
                     }
-                    else if ( (checkQueue(pId,"m1903_2") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1903.weapon")){
+                    else if ( (checkQueue(pId,"m1903_2")) && (itemKey=="gkw_m1903.weapon")){
                         giveDigimindItem(cId, pId, "gkw_m1903_exp.weapon", normalizeWeaponKey(itemKey), "m1903_2");
                     }
                     else if ( (checkQueue(pId,"m1903_1") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1903_302.weapon")){
                         giveDigimindItem(cId, pId, "gkw_m1903_302_only.weapon", normalizeWeaponKey(itemKey), "m1903_1");
                     }
-                    else if ( (checkQueue(pId,"m1903_2") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1903_302.weapon")){
+                    else if ( (checkQueue(pId,"m1903_2")) && (itemKey=="gkw_m1903_302.weapon")){
                         giveDigimindItem(cId, pId, "gkw_m1903_302_exp.weapon", normalizeWeaponKey(itemKey), "m1903_2");
                     }
                     else if ( (checkQueue(pId,"m1903_1") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1903_1107.weapon")){
                         giveDigimindItem(cId, pId, "gkw_m1903_1107_only.weapon", normalizeWeaponKey(itemKey), "m1903_1");
                     }
-                    else if ( (checkQueue(pId,"m1903_2") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1903_1107.weapon")){
+                    else if ( (checkQueue(pId,"m1903_2")) && (itemKey=="gkw_m1903_1107.weapon")){
                         giveDigimindItem(cId, pId, "gkw_m1903_1107_exp.weapon", normalizeWeaponKey(itemKey), "m1903_2");
                     }
                     else if ( (checkQueue(pId,"fn49") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_fn49.weapon")){
@@ -674,6 +689,26 @@ class ItemDropEvent : Tracker {
                     }
                     case 15:{
                         addMutilItemInBackpack(m_metagame,cId,"carry_item","gk_kalina_swim.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }
+                    case 16:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","tcc_t6.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }
+                    case 17:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","cbs_t6.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }
+                    case 18:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","chip_y_t6.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }
+                    case 19:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","nadebag_t6.carry_item",3);
                         playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
                         break;
                     }

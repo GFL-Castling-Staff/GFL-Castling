@@ -894,7 +894,7 @@ class GFL_playerlist_system : Tracker {
                 if(player is null){continue;}
                 if(player.check_Available() != true){continue;}
                 //如果处于不活跃状态，直接跳过event的处理；
-                g_playerInfo_Buck.m_playerInfo[j].m_battleinfo.tickMinute();
+                player.m_battleinfo.tickMinute();
             }
         }
         if(m_minute5_timer<=0.0)
@@ -905,7 +905,7 @@ class GFL_playerlist_system : Tracker {
                 if(player is null){continue;}
                 if(player.check_Available() != true){continue;}
                 //如果处于不活跃状态，直接跳过event的处理；
-                g_playerInfo_Buck.m_playerInfo[j].saveIndexIntimacy(m_metagame);
+                player.saveIndexIntimacy(m_metagame);
             }
         }        
     }
@@ -925,6 +925,7 @@ class GFL_playerlist_system : Tracker {
         int cid = info.getPlayerCid(); 
         if(cid==-1) return;
         GFL_equipment@ equipment = info.getPlayerEquipment();
+        string _weapon = equipment.getWeapon(0);
         string _armor = equipment.getWeapon(3);
         if(startsWith(_armor,"srexo_t6") || startsWith(_armor,"gk_kalina_swim"))
         {
@@ -941,8 +942,16 @@ class GFL_playerlist_system : Tracker {
                 healCharacter(m_metagame,cid,2);
             }
         }
+        else if(startsWith(_armor,"cbs_t6"))
+        {
+            healCharacter(m_metagame,cid,2);
+        }
         info.handleRpReward(m_metagame);
         info.handleXpReward(m_metagame);
+        if(_weapon=="gkw_em2mod3.weapon")
+        {
+            info.addTag(Tag("em2_bullet"));
+        }
     }
 
     void refresh_overload()
@@ -1018,22 +1027,44 @@ class GFL_playerlist_system : Tracker {
                     c_weaponType == "gkw_98kmod3_8301.weapon" ||
                     c_weaponType == "gkw_98kmod3_8301_skill.weapon" ||    
                     c_weaponType == "gkw_98kmod3_10001.weapon" ||
-                    c_weaponType == "gkw_98kmod3_10001_skill.weapon"                                   
+                    c_weaponType == "gkw_98kmod3_10001_skill.weapon"
                     )
                 {
                     int strid = g_playerInfo_Buck.m_playerInfo[i].getPlayerPid();
                     string strname= g_playerInfo_Buck.m_playerInfo[i].getPlayerName();
                     int j = findNodeleteDataIndex(strname,"kar98k");
+                    string weaponkey = normalizeWeaponKey(c_weaponType);
+                    tdoll_intimacy_info@ kar98k_intimacy = newdata.getIntimacyFromKey(weaponkey);
+                    if (kar98k_intimacy is null) return;
+                    int kar98k_level = floor(kar98k_intimacy.getScore());
+                    int min_medal_level=0;
+                    if (kar98k_level >= 20)
+                    {
+                        min_medal_level = 4;
+                    }
+                    else if (kar98k_level >= 10)
+                    {
+                        min_medal_level = 3;
+                    }
+                    else if (kar98k_level >= 5)
+                    {
+                        min_medal_level = 2;
+                    }
+                    else if (kar98k_level >= 1)
+                    {
+                        min_medal_level = 1;
+                    }
 
                     if(j>=0){
-                        No_Delete_DataArray[j].add();
+                        int _medal = max(min_medal_level,No_Delete_DataArray[j].m_num);
+                        No_Delete_DataArray[j].set(_medal+1);
                         const XmlElement@ characterInfo = getCharacterInfo(m_metagame, g_playerInfo_Buck.m_playerInfo[i].getPlayerCid());
                         if (characterInfo is null) continue;
                         string c_pos = characterInfo.getStringAttribute("position");
                         spawnStaticProjectile(m_metagame,"particle_effect_98k_medal.projectile",c_pos,g_playerInfo_Buck.m_playerInfo[i].getPlayerCid(),characterInfo.getIntAttribute("faction_id"));
                     }
                     else{
-                        No_Delete_DataArray.insertLast(no_delete_data(strname,strid,1,"kar98k"));       
+                        No_Delete_DataArray.insertLast(no_delete_data(strname,strid,min_medal_level+1,"kar98k"));       
                         const XmlElement@ characterInfo = getCharacterInfo(m_metagame, g_playerInfo_Buck.m_playerInfo[i].getPlayerCid());
                         if (characterInfo is null) continue;
                         string c_pos = characterInfo.getStringAttribute("position");

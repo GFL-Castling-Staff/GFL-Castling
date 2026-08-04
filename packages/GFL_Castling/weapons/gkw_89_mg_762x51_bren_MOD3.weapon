@@ -9,9 +9,9 @@
     retrigger_time="0.125" 
     accuracy_factor="1.0" 
     sustained_fire_grow_step="0.75" 
-    sustained_fire_diminish_rate="2.4" 
+    sustained_fire_diminish_rate="3.2" 
     leave_crouch_accuracy_penalty="0.2"
-    spread_range="0.4"
+    spread_range="0.35"
     magazine_size="30" 
     suppressed="0" 
     name="Bren L4 LMG(MOD3)"
@@ -19,7 +19,7 @@
     stab_enabled="1"
     stance_accuracy_rate="2.0"
     projectile_speed="215"
-    sight_range_modifier="1.75"/>
+    sight_range_modifier="2.0"/>
     <next_in_chain key="gkw_brenmod3_skill.weapon" share_ammo="1" />
     <commonness value="0.001" in_stock="0" can_respawn_with="1" />
 	<inventory encumbrance="25.0" buy_price="250.0" sell_price="200.0"/>
@@ -53,7 +53,7 @@
     <model filename="gkw_bren_mk4.xml" />
     <hud_icon filename="gkw_brenmkmod3.png" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="8.9" kill_probability_offset_on_successful_hit="0.85" kill_decay_start_time="1.147" kill_decay_end_time="1.912" />
+        <result class="hit" kill_probability="9.6" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="1.147" kill_decay_end_time="1.912" />
         <trail probability="1.0" key="BulletMgTrail" />
     </projectile>
     <effect class="muzzle" ref="ejection_76251" />
@@ -77,12 +77,12 @@
     last_burst_retrigger_time="0.183"
     accuracy_factor="1.0" 
     sustained_fire_grow_step="0.6" 
-    sustained_fire_diminish_rate="2.4" 
+    sustained_fire_diminish_rate="3.2" 
     spread_range="0.3"
     magazine_size="30" 
     suppressed="0" 
     name="Bren L4 LMG(MOD3)-[Disparity of the Strong]"
-    leave_crouch_accuracy_penalty="0.4"
+    leave_crouch_accuracy_penalty="0.2"
     class="4" 
     burst_shots="5"
     stab_enabled="1"
@@ -119,7 +119,7 @@
     <model filename="gkw_bren_mk4_n.xml" />
     <hud_icon filename="gkw_brenmkmod3.png" />
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="8.9" kill_probability_offset_on_successful_hit="0.85" kill_decay_start_time="1.147" kill_decay_end_time="1.912" />
+        <result class="hit" kill_probability="9.6" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="1.147" kill_decay_end_time="1.912" />
         <trail probability="1.0" key="BulletMgTrail" />    
     </projectile>
     <effect class="muzzle" ref="ejection_76251" />

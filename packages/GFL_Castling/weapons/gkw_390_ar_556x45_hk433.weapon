@@ -20,7 +20,7 @@
     <inventory encumbrance="35.0" buy_price="43.3" sell_price="43.3" />
     <animation key="reload" animation_key="reloading, magazine rifle 1.2" />
     <!--Sounds-->
-    <sound key="fire" fileref="hk433_fire_FromCOD16.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="fire" fileref="hk433_fire_FromBF6.wav" pitch_variety="0.05" volume="1.2" />
     <sound key="magazine_out" fileref="hk433_mgz_out_FromCOD16.wav" volume="1" />
     <sound key="magazine_in" fileref="hk433_mgz_in_FromCOD16.wav" volume="1" />
     <sound key="cycle" fileref="hk433_cycle_FromCOD16.wav" volume="1.0" />
@@ -37,7 +37,7 @@
     <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
         <result class="hit" 
         kill_probability="4.33" 
-        kill_probability_offset_on_successful_hit="2.33"
+        kill_probability_offset_on_successful_hit="4.33"
         kill_decay_start_time="1.142" 
         kill_decay_end_time="1.904" />
     </projectile>

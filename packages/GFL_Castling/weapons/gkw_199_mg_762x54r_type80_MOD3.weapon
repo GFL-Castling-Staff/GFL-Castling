@@ -13,7 +13,7 @@
         magazine_size="100" 
         suppressed="0" 
         stance_accuracy_rate="0.7"
-        leave_crouch_accuracy_penalty="0.5"
+        leave_crouch_accuracy_penalty="0.3"
         name="Type 80 GPMG(MOD3)" 
         class="0" 
         projectile_speed="206" 
@@ -28,7 +28,6 @@
         <commonness value="0.00001" in_stock="0" can_respawn_with="1" />
         <next_in_chain key="gkw_type80mod3_skill.weapon" share_ammo="1" />
         <animation state_key="next_in_chain_in" animation_key="change weapon install part" />
-        <animation state_key="next_in_chain_out" animation_key="change weapon install part" />
         <animation key="reload" animation_key="reloading, Machine gun 2.0" />
         <animation state_key="recoil" animation_key="recoil, hip fire" />
 	    <animation state_key="recoil" animation_key="recoil2, hip fire" />
@@ -81,7 +80,7 @@
         spread_range="0.5"
         magazine_size="100" 
         stance_accuracy_rate="0.7"
-        leave_crouch_accuracy_penalty="0.5"
+        leave_crouch_accuracy_penalty="0.3"
         suppressed="0" 
         name="Type 80 GPMG(MOD3)-[Position Fortification]" 
         class="0" 
@@ -97,7 +96,6 @@
         <inventory encumbrance="50.0" buy_price="240.0" sell_price="240.0" />
         <next_in_chain key="gkw_type80mod3.weapon" share_ammo="1" />
         <animation state_key="next_in_chain_in" animation_key="change weapon install part" />
-        <animation state_key="next_in_chain_out" animation_key="change weapon install part" />
         <animation key="reload" animation_key="reloading, Machine gun 2.0" />
         <animation state_key="recoil" animation_key="recoil, hip fire" />
         <animation state_key="recoil" animation_key="recoil2, hip fire" />

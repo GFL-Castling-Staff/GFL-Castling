@@ -767,9 +767,10 @@ class DelayAntiTankSnipeRequest :Task{
 	protected Vector3 m_pos_2;
 	protected string m_airstrike_key;
 	protected bool m_shoot = false;
+	protected int m_count = 1;
 
 
-	DelayAntiTankSnipeRequest(GameMode@ metagame, float time, int cId,int fId, string airstrike_key,Vector3 pos1,Vector3 pos2) {
+	DelayAntiTankSnipeRequest(GameMode@ metagame, float time, int cId,int fId, string airstrike_key,Vector3 pos1,Vector3 pos2, int count = 1) {
 		@m_metagame = metagame;
 		m_time = time;
 		m_addtime = time + 0.2;
@@ -778,6 +779,7 @@ class DelayAntiTankSnipeRequest :Task{
 		m_pos_1=pos1;
 		m_pos_2=pos2;
 		m_airstrike_key=airstrike_key;
+		m_count = count;
 	}
 
 	void start() {
@@ -795,7 +797,9 @@ class DelayAntiTankSnipeRequest :Task{
 			m_shoot = true;
 		}
 		if (m_addtime < 0 && m_timeLeft < 0){
-			CreateDirectProjectile(m_metagame,m_pos_2.add(Vector3(0,3,0)),m_pos_2,m_airstrike_key,m_character_id,m_faction_id,100);
+			for (int i = 0; i < m_count; i++) {
+				CreateDirectProjectile(m_metagame,m_pos_2.add(Vector3(0,3,0)),m_pos_2,m_airstrike_key,m_character_id,m_faction_id,100);
+			}
 		}
 	}
 
@@ -849,6 +853,61 @@ class DelaySpawnSoldier : Task {
 		}
 		return false;
 	}
+}
+
+class DelaySpawnSoldierIfAlive : Task {
+    protected GameMode@ m_metagame;
+    protected float m_timeLeft;
+    protected int m_characterId;
+    protected Vector3 m_pos;
+    protected string m_soldierName;
+    protected int m_count;
+    protected bool m_useCurrentPosition;
+
+    DelaySpawnSoldierIfAlive(GameMode@ metagame, float delay, int cId, Vector3 pos, string soldierName, int count, bool useCurrentPosition) {
+        @m_metagame = metagame;
+        m_timeLeft = delay;
+        m_characterId = cId;
+        m_pos = pos;
+        m_soldierName = soldierName;
+        m_count = count;
+        m_useCurrentPosition = useCurrentPosition;
+    }
+
+    void start() {}
+
+    void update(float time) {
+        m_timeLeft -= time;
+        if (m_timeLeft >= 0) return;
+
+        const XmlElement@ character = getCharacterInfo(m_metagame, m_characterId);
+        if (checkCharacterDead(character)) return;
+
+        int factionId = character.getIntAttribute("faction_id");
+        array<const XmlElement@>@ groups = getSoldierGroups(m_metagame, factionId);
+        if (groups is null) return;
+        bool groupExists = false;
+        for (uint i = 0; i < groups.size(); ++i) {
+            const XmlElement@ group = groups[i];
+            if (group is null) continue;
+            if (group.getStringAttribute("name") == m_soldierName) {
+                groupExists = true;
+                break;
+            }
+        }
+        if (!groupExists) return;
+
+        Vector3 spawnPos = m_pos;
+        if (m_useCurrentPosition) {
+            spawnPos = stringToVector3(character.getStringAttribute("position"));
+        }
+
+        spawnSoldier(m_metagame, m_count, factionId, spawnPos, m_soldierName);
+    }
+
+    bool hasEnded() const {
+        return m_timeLeft < 0;
+    }
 }
 
 abstract class event_call_task : Task
@@ -1004,23 +1063,23 @@ class strafe_task_30mm : event_call_task {
 
 class strafe_task_15mm_mg151 : event_call_task {
 	protected int luckyGuyid = -1;
-	protected Vector3 first_offset = Vector3(-15,0,-15);
-	protected Vector3 second_offset = Vector3(10,0,10);
+	protected Vector3 first_offset = Vector3(-10,0,-10);
+	protected Vector3 second_offset = Vector3(15,0,15);
 
 	void start(){
 		m_timeLeft=m_time;
 		m_timeLeft_internal = 0;
 		strike_vector = getAimUnitVector(1,s_pos,e_pos);
 		strike_didis = 3.0;
-		Vector3 pos_offset = strike_vector.add(getMultiplicationVector(strike_vector,Vector3(-40,0,-40)));
+		Vector3 pos_offset = strike_vector.add(getMultiplicationVector(strike_vector,Vector3(-30,0,-30)));
 		pos_offset = pos_offset.add(Vector3(0,60,0));
 		Vector3 pos_1st = e_pos.add(getMultiplicationVector(strike_vector,first_offset));
 		Vector3 pos_2nd = e_pos.add(getMultiplicationVector(strike_vector,second_offset));
-        m_excute_Limit = max(int(getAimUnitDistance(1,pos_1st,pos_2nd)/strike_didis),6);
+        m_excute_Limit = max(int(getAimUnitDistance(1,pos_1st,pos_2nd)/strike_didis),8);
 		m_pos1 = pos_1st.add(pos_offset);
 		m_pos2 = pos_1st;
 		m_pos1 = m_pos1.add(getMultiplicationVector(strike_vector,Vector3(-30,0,-30)));
-		m_time_internal = 0.35;
+		m_time_internal = 0.2;
 		m_airstrike_key = "15mm_mg151";
 	}
 
@@ -1579,6 +1638,47 @@ class Skill_ff_dreamer : DelaySkill {
 }
 
 
+class Event_call_rescue_fairy : event_call_task_hasMarker {
+	void start() {
+		m_timeLeft = m_time;
+		m_timeLeft_internal = 0;
+		m_pos1 = e_pos.add(Vector3(0, 40, 0));
+		m_pos2 = e_pos;
+		m_excute_Limit = 4;
+	}
+
+	Event_call_rescue_fairy(GameMode@ metagame, float time, int cId, int fId, Vector3 start_pos, Vector3 target_pos, string mode="", int markid=0) {
+		super(metagame, time, cId, fId, start_pos, target_pos, mode, markid);
+	}
+
+	void update(float time) {
+		if(m_timeLeft >= 0) {m_timeLeft -= time; return;}
+		if(m_timeLeft_internal >= 0) {m_timeLeft_internal -= time; return;}
+		if (m_excute_time >= m_excute_Limit) {m_end = true; return;}
+		m_excute_time++;
+
+		if(m_excute_time == 1) {
+			playSoundAtLocation(m_metagame,"artillery_barrage_1.wav",m_faction_id,m_pos2,1.0);
+			m_timeLeft_internal = 1.0;
+		}
+		else if(m_excute_time == 2) {
+			CreateDirectProjectile(m_metagame, m_pos1, m_pos2, "smoke_grenade.projectile", m_character_id, m_faction_id, 20);
+			m_timeLeft_internal = 2.0;
+		}
+		else if(m_excute_time == 3) {
+			playSoundAtLocation(m_metagame,"artillery_barrage_2.wav",m_faction_id,m_pos2,1.0);
+			m_timeLeft_internal = 1.0;
+		}
+		else if(m_excute_time == 4) {
+			Vector3 medical_spawn = m_pos2.add(Vector3(0, 20, 0));
+			for(int i = 0; i < 8; i++) {
+				Vector3 offset = Vector3(rand(-3.0, 3.0), rand(-6.0, 6.0), rand(-3.0, 3.0));
+				CreateDirectProjectile(m_metagame, medical_spawn.add(offset), m_pos2.add(offset), "medical_agl_call.projectile", m_character_id, m_faction_id, 5);
+			}
+		}
+	}
+}
+
 class Event_call_bombardment_fairy_82mm_mortar : event_call_task_hasMarker {
 
 	string m_airstrike_key_alt="";
@@ -2053,13 +2153,19 @@ class Event_call_warrior_fairy_attack_heil : event_call_task_hasMarker {
 class Event_call_warrior_fairy_VTOL : event_call_task_hasMarker {
 	int lucky_vehicle_id = -1;
 	Vector3 m_character_pos;
+	bool m_rescue_used = false;
 	void start(){
 		m_timeLeft=m_time;
 		m_timeLeft_internal = 0;
 		m_pos1=e_pos.add(Vector3(0,40,0));
 		m_pos2=e_pos;
 		sendFactionMessageKey(m_metagame,m_faction_id,"warriorfight");
-		m_excute_Limit = 31;
+		if(m_mode == "gamma") {
+			m_excute_Limit = 61;
+		}
+		else {
+			m_excute_Limit = 31;
+		}
 		m_time_internal = 1.0;
 	}
 
@@ -2069,36 +2175,77 @@ class Event_call_warrior_fairy_VTOL : event_call_task_hasMarker {
 
 	void update(float time) {
 		if(m_timeLeft >= 0){m_timeLeft -= time;return;}
-		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
-		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
+		if(m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
+		if(m_excute_time >= m_excute_Limit){m_end = true;return;}
 		m_timeLeft_internal = m_time_internal;
-		if(m_excute_time % 2 == 0 && m_excute_time!=0)
-		{
-			const XmlElement@ ItsmeInfo = getCharacterInfo(m_metagame, m_character_id);
-			if(ItsmeInfo is null)
-			{
-				m_end = true;
-			}
-			else{
-				if(ItsmeInfo.getIntAttribute("dead")==1) m_end = true;
-				m_character_pos = stringToVector3(ItsmeInfo.getStringAttribute("position"));
-			}
-			int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,m_character_pos,55.0f);
-			if(luckyGuyid!=-1){
-				const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
-				if(luckyGuy is null) return;
-				Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
-				float strike_rand = 10.0;
-				float rand_x = rand(-strike_rand,strike_rand);
-				float rand_y = rand(-strike_rand,strike_rand);
-				insertCommonStrike(m_character_id,m_faction_id,"warrior_vtol_strafe",m_character_pos.add(Vector3(rand_x,40,rand_y)),luckyGuyPos);
-			}
+		m_excute_time++;
+
+		const XmlElement@ ItsmeInfo = getCharacterInfo(m_metagame, m_character_id);
+		if(ItsmeInfo is null) {
+			m_end = true;
+			return;
 		}
-		if(m_excute_time == 0)
-		{
+		if(ItsmeInfo.getIntAttribute("dead")==1) {
+			m_end = true;
+			return;
+		}
+		m_character_pos = stringToVector3(ItsmeInfo.getStringAttribute("position"));
+
+		if(m_excute_time == 0) {
 			insertCommonStrike(m_character_id,m_faction_id,"warrior_vtol_bomb",m_pos1,m_pos2);
 		}
-		m_excute_time++;
+
+		if(m_excute_time % 2 == 0 && m_excute_time!=0) {
+			if(m_mode == "beta") {
+				if(!m_rescue_used && ItsmeInfo.getIntAttribute("wounded")==1) {
+					m_rescue_used = true;
+					healCharacter(m_metagame, m_character_id, 10);
+					spawnStaticProjectile(m_metagame, "fairy_warrior_vtol_unwound.projectile", m_character_pos, m_character_id, m_faction_id);
+					int enemyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,m_character_pos,55.0f);
+					if(enemyGuyid!=-1) {
+						const XmlElement@ enemyGuy = getCharacterInfo(m_metagame, enemyGuyid);
+						if(enemyGuy !is null) {
+							Vector3 enemyGuyPos = stringToVector3(enemyGuy.getStringAttribute("position"));
+							float strike_rand = 10.0;
+							float rand_x = rand(-strike_rand,strike_rand);
+							float rand_y = rand(-strike_rand,strike_rand);
+							insertCommonStrike(m_character_id,m_faction_id,"warrior_vtol_strafe",m_character_pos.add(Vector3(rand_x,40,rand_y)),enemyGuyPos);
+						}
+					}
+				}
+				else {
+					healCharacter(m_metagame, m_character_id, 2);
+				}
+			}
+
+			if(m_mode == "alpha") {
+				array<const XmlElement@>@ enemies = getEnemyCharactersNearPosition(m_metagame, m_character_pos, m_faction_id, 55.0, 2);
+				if(enemies !is null && enemies.length() > 0) {
+					for(uint i = 0; i < enemies.length(); i++) {
+						int enemyId = enemies[i].getIntAttribute("id");
+						const XmlElement@ enemyInfo = getCharacterInfo(m_metagame, enemyId);
+						if(enemyInfo is null) continue;
+						Vector3 targetPos = stringToVector3(enemyInfo.getStringAttribute("position"));
+						float strike_rand = 10.0;
+						float rand_x = rand(-strike_rand,strike_rand);
+						float rand_y = rand(-strike_rand,strike_rand);
+						insertCommonStrike(m_character_id,m_faction_id,"warrior_vtol_strafe_alpha",m_character_pos.add(Vector3(rand_x,40,rand_y)),targetPos);
+					}
+				}
+			}
+			else {
+				int luckyGuyid = getNearbyRandomLuckyGuyId(m_metagame,m_faction_id,m_character_pos,55.0f);
+				if(luckyGuyid!=-1){
+					const XmlElement@ luckyGuy = getCharacterInfo(m_metagame, luckyGuyid);
+					if(luckyGuy is null) return;
+					Vector3 luckyGuyPos = stringToVector3(luckyGuy.getStringAttribute("position"));
+					float strike_rand = 10.0;
+					float rand_x = rand(-strike_rand,strike_rand);
+					float rand_y = rand(-strike_rand,strike_rand);
+					insertCommonStrike(m_character_id,m_faction_id,"warrior_vtol_strafe",m_character_pos.add(Vector3(rand_x,40,rand_y)),luckyGuyPos);
+				}
+			}
+		}
 	}
 }
 
@@ -2179,10 +2326,25 @@ class Event_call_bombardment_fairy_170mm : event_call_task_hasMarker {
 		m_timeLeft=m_time;
 		m_timeLeft_internal = 0;
 		m_pos1 = e_pos;
-		m_pos2 = getRandomOffsetVector(e_pos,10.0);
+		if(m_mode == "alpha")
+		{
+			m_pos2 = e_pos;
+			m_excute_Limit = 1;
+			m_time_internal = 0.1;
+		}
+		else if(m_mode == "gamma")
+		{
+			m_pos2 = e_pos;
+			m_excute_Limit = 3;
+			m_time_internal = 0.1;
+		}
+		else
+		{
+			m_pos2 = getRandomOffsetVectorMinMax(e_pos,2.5,10.0);
+			m_excute_Limit = 1;
+			m_time_internal = 0.1;
+		}
 		m_pos1=m_pos1.add(Vector3(0,60,0));
-		m_excute_Limit = 1;
-		m_time_internal = 0.1;
 		m_airstrike_key = "cannon_170mm";
 	}
 
@@ -2196,6 +2358,7 @@ class Event_call_bombardment_fairy_170mm : event_call_task_hasMarker {
 		if (m_timeLeft_internal >= 0){m_timeLeft_internal -= time;return;}
 		if (m_excute_time >= m_excute_Limit){m_end = true;return;}
 		m_excute_time++;
+		m_timeLeft_internal = m_time_internal;
 
 		const XmlElement@ character = getCharacterInfo(m_metagame, m_character_id);
 		if (checkCharacterDead(character))
@@ -2203,7 +2366,15 @@ class Event_call_bombardment_fairy_170mm : event_call_task_hasMarker {
 			m_end = true;
 			return;
 		}
-		insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos1,m_pos2);
+		if(m_mode == "gamma")
+		{
+			Vector3 shell_target = getRandomOffsetVectorMinMax(m_pos2,3.0,12.0);
+			insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos1,shell_target);
+		}
+		else
+		{
+			insertCommonStrike(m_character_id,m_faction_id,m_airstrike_key,m_pos1,m_pos2);
+		}
 	}
 }
 
@@ -2218,7 +2389,14 @@ class Event_call_rocket_fairy_missile : event_call_task_hasMarker {
 		m_pos2 = e_pos;
 		m_excute_Limit = 3;
 		m_time_internal = 1.0;
-		m_airstrike_key = "rocket_missile";
+		if(m_mode == "beta")
+		{
+			m_airstrike_key = "rocket_missile_beta";
+		}
+		else
+		{
+			m_airstrike_key = "rocket_missile";
+		}
 	}
 
 	Event_call_rocket_fairy_missile(GameMode@ metagame, float time, int cId,int fId,Vector3 characterpos,Vector3 targetpos,string mode,int markerid)
@@ -2245,16 +2423,114 @@ class Event_call_rocket_fairy_missile : event_call_task_hasMarker {
 			if (player.hasAttribute("aim_target")) {
 				Vector3 aim_pos = stringToVector3(player.getStringAttribute("aim_target"));
 				spawnStaticProjectile(m_metagame,"hd_effect_radar_scan.projectile",aim_pos,m_character_id,m_faction_id);
-				if(m_excute_time == 3)
+				if(m_mode == "gamma")
 				{
-					playSoundAtLocation(m_metagame,"cruise_missile_accel_fromCOD16.wav",m_faction_id,aim_pos,1.8);
-					spawnStaticProjectile(m_metagame,"hd_effect_radar_scan.projectile",aim_pos,m_character_id,m_faction_id);
-					DelayCommonCallRequest@ shot = DelayCommonCallRequest(m_metagame,1.3,m_character_id,m_faction_id,m_airstrike_key,aim_pos.add(Vector3(0,50,0)),aim_pos);
-					TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
-					tasker.add(shot);
+					if(m_excute_time == 3)
+					{
+						playSoundAtLocation(m_metagame,"cruise_missile_accel_fromCOD16.wav",m_faction_id,aim_pos,1.8);
+						TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+						tasker.add(DelayMineDeploy(m_metagame,1.3,m_character_id,m_faction_id,aim_pos));
+					}
+				}
+				else
+				{
+					if(m_excute_time == 3)
+					{
+						playSoundAtLocation(m_metagame,"cruise_missile_accel_fromCOD16.wav",m_faction_id,aim_pos,1.8);
+						TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+						tasker.add(DelayCommonCallRequest(m_metagame,1.3,m_character_id,m_faction_id,m_airstrike_key,aim_pos.add(Vector3(0,50,0)),aim_pos));
+						if(m_mode == "alpha")
+						{
+							tasker.add(DelaySubmunitionScan(m_metagame,0.5,m_character_id,m_faction_id,aim_pos));
+						}
+						else if(m_mode == "beta")
+						{
+							tasker.add(DelayProjectileSet(m_metagame,0.5,m_character_id,m_faction_id,"fairy_rocket_anti_vehicle_blast.projectile",aim_pos.add(Vector3(0,5,0))));
+						}
+					}
 				}
 			}
 		}
+	}
+}
+
+// 火箭妖精α分支
+class DelaySubmunitionScan : Task {
+	protected GameMode@ m_metagame;
+	protected float m_timeLeft;
+	protected int m_character_id;
+	protected int m_faction_id;
+	protected Vector3 m_impactPos;
+
+	DelaySubmunitionScan(GameMode@ metagame, float delay, int cId, int fId, Vector3 impactPos) {
+		@m_metagame = metagame;
+		m_timeLeft = delay;
+		m_character_id = cId;
+		m_faction_id = fId;
+		m_impactPos = impactPos;
+	}
+
+	void start() {
+		// m_timeLeft already set in constructor
+	}
+
+	void update(float time) {
+		m_timeLeft -= time;
+		if (m_timeLeft >= 0) return;
+
+		array<const XmlElement@> enemies = getEnemyCharactersNearPosition(m_metagame, m_impactPos, m_faction_id, 20.0f, 3);
+		if (enemies is null || enemies.length() == 0) return;
+
+		for (uint i = 0; i < enemies.length(); i++) {
+			int luckyoneid = enemies[i].getIntAttribute("id");
+			const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
+			if(luckyoneC is null) continue;
+			if (luckyoneC.getIntAttribute("id")!=-1) {
+				Vector3 targetPos = stringToVector3(luckyoneC.getStringAttribute("position"));
+				CreateDirectProjectile(m_metagame, m_impactPos.add(Vector3(0,30,0)), targetPos,
+					"fairy_rocket_submunition.projectile", m_character_id, m_faction_id, 150);
+			}
+		}
+	}
+
+	bool hasEnded() const {
+		return m_timeLeft < 0;
+	}
+}
+
+// 火箭妖精γ分支
+class DelayMineDeploy : Task {
+	protected GameMode@ m_metagame;
+	protected float m_timeLeft;
+	protected int m_character_id;
+	protected int m_faction_id;
+	protected Vector3 m_targetPos;
+
+	DelayMineDeploy(GameMode@ metagame, float delay, int cId, int fId, Vector3 targetPos) {
+		@m_metagame = metagame;
+		m_timeLeft = delay;
+		m_character_id = cId;
+		m_faction_id = fId;
+		m_targetPos = targetPos;
+	}
+
+	void start() {
+		// m_timeLeft already set in constructor
+	}
+
+	void update(float time) {
+		m_timeLeft -= time;
+		if (m_timeLeft >= 0) return;
+
+		for (int i = 0; i < 20; i++) {
+			Vector3 minePos = getRandomOffsetVector(m_targetPos, 10.0);
+			CreateDirectProjectile(m_metagame, minePos.add(Vector3(0,10,0)), minePos,
+				"fairy_rocket_mine.projectile", m_character_id, m_faction_id, 40);
+		}
+	}
+
+	bool hasEnded() const {
+		return m_timeLeft < 0;
 	}
 }
 
@@ -2264,9 +2540,24 @@ class Event_call_rocket_fairy_strike : event_call_task_hasMarker {
 		m_timeLeft_internal = 0;
 		m_pos1 = e_pos.add(Vector3(0,50,0));
 		m_pos2 = e_pos;
-		m_excute_Limit = 5;
-		m_time_internal = 2.0;
-		m_airstrike_key = "rocket_bm30_2round";
+		if(m_mode == "alpha")
+		{
+			m_excute_Limit = 10;
+			m_time_internal = 1.0;
+		}
+		else
+		{
+			m_excute_Limit = 5;
+			m_time_internal = 2.0;
+		}
+		if(m_mode == "gamma")
+		{
+			m_airstrike_key = "rocket_bm30_2round_gamma";
+		}
+		else
+		{
+			m_airstrike_key = "rocket_bm30_2round";
+		}
 	}
 
 	Event_call_rocket_fairy_strike(GameMode@ metagame, float time, int cId,int fId,Vector3 characterpos,Vector3 targetpos,string mode,int markerid)
@@ -3574,6 +3865,7 @@ class RepeatEffectTask : Task {
     protected float m_interval;
     protected float m_timeLeft;
     protected int m_remainCount;
+    protected bool m_ended = false;
 
     RepeatEffectTask(GameMode@ metagame, int cId, int fId,
                      Vector3 pos, float interval, int count) {
@@ -3599,7 +3891,7 @@ class RepeatEffectTask : Task {
     }
 
     bool hasEnded() const {
-        return m_remainCount <= 0;
+        return m_remainCount <= 0 || m_ended;
     }
 
     // 子类重写此方法实现具体效果
@@ -3628,18 +3920,24 @@ class DOTEffectTask : RepeatEffectTask {
     }
 }
 
-// HK416 寄生榴弹 Task，对锁定的敌人列表逐个释放延迟爆炸，共 9 次
+// HK416 寄生榴弹 Task，对锁定的敌人列表逐个释放延迟爆炸，共 10 次
 class HK416SkillTask : RepeatEffectTask {
     protected array<const XmlElement@> m_affected;
 
     HK416SkillTask(GameMode@ metagame, int cId, int fId,
                    Vector3 pos, array<const XmlElement@> affected) {
-        super(metagame, cId, fId, pos, 0.5, 9);
+        super(metagame, cId, fId, pos, 0.5, 10);
         m_affected = affected;
     }
 
     void excuteEffect() {
-        for (uint b = 0; b < m_affected.length(); b++) {
+        if(m_affected.length() <=0)
+        {
+            m_ended=true;
+            return;
+        }
+        // 从后向前遍历，这样删除元素不会影响未遍历的元素
+        for (int b = int(m_affected.length()) - 1; b >= 0; b--) {
             int luckyoneid = m_affected[b].getIntAttribute("id");
             const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
             if (luckyoneC !is null) {
@@ -3653,6 +3951,9 @@ class HK416SkillTask : RepeatEffectTask {
                     " position='" + luckyoneposV.toString() + "'" +
                     " character_id='" + m_characterId + "' />";
                 m_metagame.getComms().send(c);
+            } else {
+                // 删除当前元素
+                m_affected.removeAt(b);
             }
         }
     }
@@ -3674,7 +3975,13 @@ class UZISkillTask : RepeatEffectTask {
     }
 
     void excuteEffect() {
-        for (uint b = 0; b < m_affected.length(); b++) {
+        if(m_affected.length() <=0)
+        {
+            m_ended=true;
+            return;
+        }        
+        // 从后向前遍历，这样删除元素不会影响未遍历的元素
+        for (int b = int(m_affected.length()) - 1; b >= 0; b--) {
             int luckyoneid = m_affected[b].getIntAttribute("id");
             const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
             if (luckyoneC !is null) {
@@ -3688,6 +3995,9 @@ class UZISkillTask : RepeatEffectTask {
                     " position='" + luckyoneposV.toString() + "'" +
                     " character_id='" + m_characterId + "' />";
                 m_metagame.getComms().send(c);
+            } else {
+                // 删除当前无效元素
+                m_affected.removeAt(b);
             }
         }
     }

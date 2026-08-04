@@ -21,13 +21,18 @@
         <rotation class="motion" />
         <model mesh_filename="" />
         <trail probability="0" key=""/>
-        <effect class="activated" ref="weaver_aim_mark_1" lighting="0" post_processing="0"/>
+        <effect class="activated" ref="minotauros_aim_mark_1" lighting="0" post_processing="0"/>
         <effect class="activated" ref="weaver_aim_mark_2" lighting="0" post_processing="0"/>
     </projectile>
     
     <projectile class="grenade" name="" slot="1" pulldown_in_air="26.0" key="kcco_teslatrooper_rocket.projectile">
         <tag name="rocket"/>
-        <trigger class="impact" />
+        <trigger class="impact">
+            <collider class="terrain" enabled="1" />
+            <collider class="static_object" enabled="1" />
+            <collider class="vehicle" enabled="1" />
+            <collider class="character" enabled="0" />
+        </trigger>
         <rotation class="motion" />
         <result class="blast" radius="3.0" damage="2" push="0.2" decal="1" faction_compare="not_equal"/>
 

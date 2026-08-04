@@ -41,6 +41,7 @@ dictionary RP_enemy_index = {
     {"Paradeus_Hannibal",500},
     {"Thunder",500},
     {"ladon",500},
+    {"pard_arachne",500},
     {"parw_grenadier",100},
     {"para_rodelero",80},
     {"tareus",1500},
@@ -119,6 +120,7 @@ dictionary XP_enemy_index = {
     {"ladon",0.01},
     {"Paradeus_Hannibal",0.02},    
     {"Thunder",0.02},
+    {"pard_arachne",0.02},
     {"parw_grenadier",0.003},
     {"tareus",0.05},
 
@@ -202,6 +204,7 @@ dictionary reward_pool_list= {
     {"Thunder","elite"},
     {"Paradeus_Hannibal","elite"},
     {"ladon","elite"},
+    {"pard_arachne","elite"},
 
     {"sf_manticore","rare"},
     {"sf_goliath","rare"},
@@ -410,6 +413,7 @@ array<string> SFbossList ={
     "sf_cerberus"
 };
 
+// 已弃用，建议使用reward_pool_list
 array<string> boss_list ={
     "sfw_hunter",
     "sfw_architect",
@@ -431,6 +435,7 @@ array<string> boss_list ={
     "Narciss",
     "Nimogen",
     "teal",
+    "tareus",
     "kcco_quartz_ranger",
     "kcco_zircon_squadleader"
 };

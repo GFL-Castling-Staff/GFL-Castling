@@ -73,6 +73,7 @@
 
     <text key="Parachute Fairy" text="空降妖精"/>
     <text key="Type 25 disposable rocket launcher" text="25式便携火箭筒" />
+    <text key="Type 25 disposable rocket launcher 10-Pack" text="25式便携火箭筒 10份装" />
     <text key="Egor Lebedev" text="叶戈尔画像" />
     <text key="Construction Fairy:Bunker" text="工事妖精:碉堡"/>
     <text key="Construction Fairy:Anti-Tank Bunker" text="工事妖精:反坦克碉堡"/>
@@ -123,10 +124,13 @@
     <text key="Med Bandage" text="绷带包"/>
     <text key="Med Case" text="医疗箱"/>
     <text key="M202 Air-Burst rocket launcher" text="M202“闪光”防空火箭发射器"/>
+    <text key="M202 Air-Burst rocket launcher 6-Pack" text="M202“闪光”防空火箭发射器 6份装"/>
     <text key="Smoke Device" text="烟雾发生器"/>
     <text key="Grief Lantern" text="捣蛋灯笼"/>
     <text key="I.O.P. Bulletproof Plates" text="I.O.P. 复合插板备件"/>
     <text key="I.O.P. Bulletproof Plates 10-Pack" text="I.O.P. 复合插板备件 10份装"/>
+    <text key="Single-Unit Nano Repair Device" text="单体型纳米修复装置"/>
+    <text key="Single-Unit Nano Repair Device 8-Pack" text="单体型纳米修复装置 8份装"/>
     <text key="White Jam Tower" text="白色势力干扰塔"/>
     <text key="costume, santa" text="圣诞叶套装" />
     <text key="costume, santa, destroyed" text="圣诞叶套装-超限!-" />
@@ -366,6 +370,7 @@
     <text key="Pegasus" text="帕加索斯-Pegasus 全地形车"/>
     <text key="Kurganets-2053 IFV" text="Kurganets“库尔干人-2053” 步兵战车"/>
     <text key="Recce Centre" text="Recce Centre 侦察中枢"/>
+    <text key="Aegis" text="埃奎斯-Aegis 空地两用导弹车"/>
 
     <text key="Pard-Murat" text="Murat 指挥士"/>
     <text key="Doppelsoldner-Rocket" text="Doppelsoldner “巨剑士”作战机甲 榴弹模式"/>
@@ -408,6 +413,8 @@
     <text key="Tareus-Miss Eve-[Rapid Plasma]" text="塔亚柔斯-伊芙小姐-[电磁枪]"/>
     <text key="Tareus-Miss Eve-[Charged Cannon]" text="塔亚柔斯-伊芙小姐-[蓄能炮]"/>
     <text key="Tareus-Miss Eve-[Anti Material Snipe]" text="塔亚柔斯-伊芙小姐-[反器材狙击枪]"/>
+    <text key="Arachne" text="Arachne “阿拉克涅”蛛形母体作战机甲"/>
+    <text key="Arachne's Clone" text="Arachne “阿拉克涅”复制体蛛形作战单位"/>
 
 
     <!-- 帕拉蒂斯普通单位命名多以历史兵种为主 -->
@@ -639,6 +646,10 @@
     <text key="Tactical Mobile Shield" text="机动战术护盾"/>
     <text key="Tactical Chip Alpha" text="Alpha型内核战术运算芯片"/>
     <text key="Tactical Chip Beta" text="Beta型内核战术运算芯片"/>
+    <text key="Tactical Combat Cloak" text="战术冲锋披肩"/>
+    <text key="Combat Shield" text="实验型作战盾"/>
+    <text key="Tactical Chip Gamma" text="Gamma型内核战术运算芯片"/>
+    <text key="Specialized Grenade Bag" text="特制爆炸物装具"/>
     <!-- 武器相关新增翻译 -->
 
     <text key="ST-AR15(MOD3)-[Crime and punishment]" text="ST-AR15(MOD3)-[罪与罚]" />
@@ -1082,6 +1093,8 @@
     <text key="Beretta Cx4 Storm" text="伯莱塔Cx4 风暴"/>
     <text key="Lusa" text="卢萨冲锋枪"/>
     <text key="SPP-1" text="SPP-1水下手枪"/>
+    <text key="MP-448 Skyph" text="MP-448“斯基泰”手枪"/>
+
 
 
     <!-- 融合势力武器翻译 -->
@@ -1141,7 +1154,7 @@
     <text key="2B14 Podnos" text="2B14“托盘”82mm迫击炮"/>
     <text key="Tokarev 33(2B14)" text="托卡列夫TT-33 手枪(2B14配备)"/>
     <text key="AT-4-[84mm HP]" text="AT-4 84mm反坦克火箭筒-[HP穿透弹]"/>
-    <text key="AT-4-[84mm HEAT]" text="AT-4 84mm反坦克火箭筒-[HEAT高爆反坦克]"/>
+    <text key="AT-4-[84mm HEAT]" text="AT-4 84mm反坦克火箭筒-[HEAT高爆反装甲弹]"/>
     <text key="AT-4-[84mm Incendiary]" text="AT-4 84mm反坦克火箭筒-[烈性灼烧弹]"/>
     <text key="TEC-9(at4)" text="TEC-9冲锋手枪(AT-4配备)"/>
     <text key="M2 Mortar" text="M2 60mm迫击炮"/>
@@ -1216,7 +1229,7 @@
     <text key="HK416-[Black Cat's Gift]" text="HK416-[黑猫的赠礼]" />
     <text key="HK416-[Midnight Evangelion]" text="HK416-[子夜福音]" />
     <text key="HK416-[Starry Cocoon]" text="HK416-[星之茧]" />
-    <text key="HK416-[Percussion Bolero]" text="HK416-[狩猎波尔卡]" />
+    <text key="HK416-[Percussion Bolero]" text="HK416-[敲击波丽露]" />
     <text key="HK416-Agent" text="特工416" />
     <text key="HK416-Agent-[HE]" text="特工416-[5.56mm高速爆破弹]" />
     <text key="HK416-Agent:StickyBomb[HE]" text="特工416-粘弹发射器[高爆]" />
@@ -1655,7 +1668,7 @@
     <text key="HK416(MOD3)-[Midnight Evangelion]" text="HK416(MOD3)-[子夜福音]" />
     <text key="HK416(MOD3)-[Black Cat's Gift]" text="HK416(MOD3)-[黑猫的赠礼]" />
     <text key="HK416(MOD3)-[Starry Cocoon]" text="HK416(MOD3)-[星之茧]" />
-    <text key="HK416(MOD3)-[Percussion Bolero]" text="HK416(MOD3)-[狩猎波尔卡]" />
+    <text key="HK416(MOD3)-[Percussion Bolero]" text="HK416(MOD3)-[敲击波丽露]" />
 
     <text key="G11(MOD3)-[Zombie NEET]" text="G11(MOD3)-[僵尸家里蹲]" />
     <text key="G11(MOD3)-[Courage Seeking Rex Rabbit]" text="G11(MOD3)-[寻找勇气的雷克斯兔]" />

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<character filename="default_base.character">
+	<sound key="death" fileref="kill_sound_mechabot_01.wav" volume="0.4" pitch_variety="0.025" />
+	<sound key="death" fileref="kill_sound_mechabot_02.wav" volume="0.4" pitch_variety="0.025" />
+	<sound key="death" fileref="kill_sound_mechabot_03.wav" volume="0.4" pitch_variety="0.025" />
+	<sound key="footstep" fileref="step_sound_arachne_clone.wav" volume="0.5" pitch_variety="0.025" />
+	<sound key="throw" fileref="static.wav" volume="0.0" />
+	
+	<parameter class="lifting_up_initial_bounce" value="0.15" />
+	<parameter class="can_use_vehicles" value="0" />
+
+	<animation state_key="hold"  animation_key="arachne_clone_still" />
+	<animation state_key="hold_on_wall"  animation_key="arachne_clone_still" />
+	<animation key="still" target_key="arachne_clone_still" />
+	<animation key="still against wall" target_key="arachne_clone_still" />
+	<animation key="still, heavy weapon" target_key="arachne_clone_still" />
+	<animation key="walking" target_key="arachne_clone_walk" />
+	<animation key="walking backwards" target_key="arachne_clone_walk_backward" />
+	<animation key="running" target_key="arachne_clone_run" />
+	<animation key="crouch still" target_key="arachne_clone_still" />
+	<animation key="crouching forwards" target_key="arachne_clone_walk" />
+	<animation key="crouching backwards" target_key="arachne_clone_walk_backward" />
+	<animation key="prone" target_key="arachne_clone_still" />
+	<animation key="prone, moving forwards" target_key="arachne_clone_walk" />
+	<animation key="going prone" target_key="arachne_clone_still" />
+	<animation key="leaving prone" target_key="arachne_clone_still" />
+	<animation key="dive" target_key="arachne_clone_dive" />
+	<animation key="jumping" target_key="arachne_clone_jump" />
+	<animation key="lifting up" target_key="arachne_clone_lift_up" />
+	<animation key="throwing self over" target_key="arachne_clone_lift_foward" />
+	<animation key="throwing, upside" target_key="arachne_clone_throw_still" />
+	<animation key="falling" target_key="arachne_clone_dive" />
+	<animation key="arriving ground" target_key="arachne_clone_landing" />
+	<animation key="climbing ladder, still" target_key="arachne_clone_climb_still" />
+	<animation key="climbing ladder" target_key="arachne_clone_climb" />
+	<animation key="climbing ladder ending" target_key="arachne_clone_climb_leave" />
+	<animation key="stunned" target_key="arachne_clone_stun" />
+	<animation key="tank mg still" target_key="arachne_clone_still" />
+	<animation key="stabbing" target_key="arachne_clone_melee" />
+	<animation key="travelling car, aiming" target_key="arachne_clone_still" />
+	<animation key="change weapon out" target_key="arachne_clone_reload" />
+	<animation key="change weapon in" target_key="arachne_clone_reload" />
+	<animation key="change weapon out, reversed" target_key="arachne_clone_reload" />
+	<animation key="change weapon in, reversed" target_key="arachne_clone_reload" />
+	<animation key="change weapon in, single hand carry" target_key="arachne_clone_reload" />
+	<animation key="swimming still" target_key="arachne_clone_swim_still" />
+	<animation key="swimming forwards" target_key="arachne_clone_swim" />
+	<animation key="reloading" target_key="arachne_clone_reload" />
+	<animation key="celebrating" target_key="arachne_clone_celebrate" />
+	<animation key="celebrating, shooting" target_key="arachne_clone_still" />
+	<animation key="surrender" target_key="arachne_clone_still" />
+
+</character>

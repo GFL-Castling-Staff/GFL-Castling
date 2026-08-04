@@ -32,7 +32,7 @@
 	<animation state_key="walking" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="walking_backwards" animation_key="crouch, still, portable mortar"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon out,mortar"/><!--半身动作，切换武器，本武器取出-->
-	<animation state_key="changing_weapon_in" 	animation_key="change weapon in,jav" />
+	<animation state_key="changing_weapon_in" 	animation_key="change weapon in, 1s" />
 	<sound key="fire" fileref="GeneralPurposeMortar_fire_FromSQUAD.wav" pitch_variety="0.1" volume="1.6"/>
 	<sound key="magazine_out" fileref="portable_mortar_reload.wav" volume="0.7"/>
 	<sound key="magazine_in" fileref="dry_fire.wav" volume="0.7"/>
@@ -57,7 +57,7 @@
 	<stance state_key="walking" accuracy="1.0"/>
 	<stance state_key="crouch_moving" accuracy="1.0"/>
 	<stance state_key="prone_moving" accuracy="1.0"/>
-	<stance state_key="standing" accuracy="0.85"/>
+	<stance state_key="standing" accuracy="0.98"/>
 	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.0"/>
 	<stance state_key="over_wall" accuracy="1"/>
@@ -99,7 +99,7 @@
 	<sound key="dry_fire" fileref="dryfire_ar_2.wav" pitch_variety="0.05" volume="1.2" />
 	<sound key="dry_fire" fileref="dryfire_ar_3.wav" pitch_variety="0.05" volume="1.2" />
 	<model filename="gkw_ar_type81-1a.xml" />
-	<hud_icon filename="testing.png" />
+	<hud_icon filename="gkw_type81-1a.png" />
 	<weak_hand_hold offset="0.2" />
 	<projectile file="bullet.projectile">
 		<result class="hit" kill_probability="2.6" kill_probability_offset_on_successful_hit="2.5" kill_decay_start_time="0.881" kill_decay_end_time="1.469" />

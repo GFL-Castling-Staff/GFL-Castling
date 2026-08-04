@@ -484,6 +484,16 @@ Vector3 getRandomOffsetVector(Vector3 pos,float strike_randX,float strike_randY)
 	return pos.add(Vector3(rand_x,0,rand_z));
 }
 
+Vector3 getRandomOffsetVectorMinMax(Vector3 pos, float min_offset, float max_offset) {
+	if (max_offset <= 0) return pos;
+	if (min_offset >= max_offset) min_offset = 0;
+	float rand_x = rand(min_offset, max_offset);
+	if (rand(0, 1) == 0) rand_x = -rand_x;
+	float rand_z = rand(min_offset, max_offset);
+	if (rand(0, 1) == 0) rand_z = -rand_z;
+	return pos.add(Vector3(rand_x, 0, rand_z));
+}
+
 void spawnVehicle(Metagame@ metagame, uint count, uint factionId, Vector3 position, Orientation@ dir, string instanceKey) {
 	// if (OutOfRange(position))
 	// {
@@ -809,6 +819,7 @@ void playPrivateSound(const Metagame@ metagame, string filename, int playerId) {
 int getNearbyRandomLuckyGuyId(GameMode@ metagame, int factionid, Vector3 pos, float range){
 	uint cur_factionid_num = metagame.getFactionCount();
     array<const XmlElement@> affectedCharacter;
+    affectedCharacter.reserve(64);
 	for(uint i=0;i<cur_factionid_num;i++) 
 		if(int(i)!=factionid) {
 			array<const XmlElement@> possible_affectedCharacter;
@@ -1048,9 +1059,11 @@ void deleteItemToGrenadeSlot(Metagame@ metagame,int cid,uint num,string m_key,st
 	metagame.getComms().send(c);
 }
 
-void GrenadeSupply(Metagame@ metagame,int cid,uint num,string m_key,string m_type="projectile")
+void GrenadeSupply(Metagame@ metagame,int cid,uint num,string m_key,string add_type="normal",string m_type="projectile",bool check_list=true)
 {
-	if(resupply_grenade_list.find(m_key)==-1) return;
+	if(check_list && resupply_grenade_list.find(m_key)==-1) return;
+	if (!resupply_grenade_index.exists(m_key)) return;
+	if(add_type=="asindex") num = uint(resupply_grenade_index[m_key]);
 	_log("adding grenade weapon");
 	addItemToGrenadeSlot(metagame,cid,num,m_key,m_type);
 }
@@ -1081,6 +1094,7 @@ array<const XmlElement@>@ getEnemyCharactersNearPosition(GameMode@ metagame, con
 	//获取技能影响的敌人数量
 	int m_fnum = metagame.getFactionCount();
 	array<const XmlElement@> affectedCharacter;
+    affectedCharacter.reserve(64);
 	Vector3 max_character_pos =  Vector3(0,0,0);
 
 	uint num_jud = 0;
@@ -1096,22 +1110,21 @@ array<const XmlElement@>@ getEnemyCharactersNearPosition(GameMode@ metagame, con
 		for(uint x=0;x<affectedCharacter2.length();x++){
 			affectedCharacter.insertLast(affectedCharacter2[x]);
 			num_jud += 1;
-			if(num_jud>num_max_character)break;
+			if(num_jud>=num_max_character)break;
 		}
-		if(num_jud>num_max_character)break;
+		if(num_jud>=num_max_character)break;
 	}
 	return affectedCharacter;
 }
 
-void GrenadeSupplyGroup(Metagame@ metagame,array<const XmlElement@>@ characters,uint num,string add_type="normal",string m_type="projectile")
+void GrenadeSupplyGroup(Metagame@ metagame,array<const XmlElement@>@ characters,uint num,string add_type="normal",string m_type="projectile",bool check_list=true)
 {
 	for (uint i = 0; i < characters.length(); i++) {
 		int luckyhealguyid = characters[i].getIntAttribute("id");
 		if (!checkCharacterIdisPlayerOwn(luckyhealguyid)) continue;
 		string key = getPlayerWeaponFromListByID(luckyhealguyid,2);
 		if(key == "-nan-") continue;
-		if(add_type=="asindex") num = uint(resupply_grenade_index[key]);
-		GrenadeSupply(metagame,luckyhealguyid,num,key,m_type);
+		GrenadeSupply(metagame,luckyhealguyid,num,key,add_type,m_type,check_list);
 	}
 }
 

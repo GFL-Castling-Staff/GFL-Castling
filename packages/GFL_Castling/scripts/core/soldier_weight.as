@@ -67,7 +67,7 @@ const array<SoldierInfo@> paradeus_eazymode_weight =
     SoldierInfo("wrath",0.02),
     SoldierInfo("Nimogen",0.01),
     SoldierInfo("Narciss",0.01),
-    SoldierInfo("tareus",0.005),
+    SoldierInfo("tareus",0.001),
     SoldierInfo("ladon",0.01),
     SoldierInfo("Adeline",0.01),
     SoldierInfo("infected",0.0),
@@ -75,6 +75,7 @@ const array<SoldierInfo@> paradeus_eazymode_weight =
     SoldierInfo("Paradeus_doppelsoldner",0.02),
     SoldierInfo("Paradeus_roarer",0.02),
     SoldierInfo("Paradeus_Hannibal",0.01),
+    SoldierInfo("pard_arachne",0.005),
     SoldierInfo("Thunder",0.02)
 };
 
@@ -176,6 +177,7 @@ const array<SoldierInfo@> paradeus_hardmode_weight =
     SoldierInfo("Paradeus_doppelsoldner",0.5),
     SoldierInfo("Paradeus_roarer",0.5),
     SoldierInfo("Paradeus_Hannibal",0.1),
+    SoldierInfo("pard_arachne",0.1),
     SoldierInfo("Thunder",0.5)
 };
 

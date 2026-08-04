@@ -2,6 +2,7 @@
 
 // parameters for "commandskill.as"
 
+    // 已弃用，建议使用reward_pool_list
     array<string> eliteEnemyName = {
 
         // sf
@@ -20,6 +21,7 @@
         "sfw_Justice",
         "sfw_Scarecrow",
         "sf_manticore",
+        "sf_cerberus",
 
         // paradeus
         "alina",
@@ -35,6 +37,9 @@
         "Paradeus_doppelsoldner",
         "Paradeus_roarer",
         "Paradeus_Hannibal",
+        "tareus",
+        "ladon",
+        "pard_arachne",
         "parw_grenadier",
         "parw_hammer",
         "parw_commander",
@@ -57,22 +62,22 @@
 
     array<string> scarh_list = {
         "gkw_scarh.weapon",
-        "gkw_scarh_only.weapon"        
+        "gkw_scarh_only.weapon"
     };
 
     array<string> Daybreak_Squad = {
         "gkw_scarl.weapon",
         "gkw_scarl_only.weapon",
         "gkw_scarh.weapon",
-        "gkw_scarh_only.weapon",   
+        "gkw_scarh_only.weapon",
         "gkw_contender.weapon",
         "gkw_contender_1502.weapon",
         "gkw_contender_3201.weapon",
-        "gkw_scr.weapon",               
-        "gkw_scr_10102.weapon",               
-        "gkw_m249saw.weapon",               
-        "gkw_m249saw_3604.weapon",               
-        "gkw_m60.weapon"          
+        "gkw_scr.weapon",
+        "gkw_scr_10102.weapon",
+        "gkw_m249saw.weapon",
+        "gkw_m249saw_3604.weapon",
+        "gkw_m60.weapon"
     };
 
 // parameters for "GFLhelpers.as":
@@ -147,8 +152,11 @@
 
             // 下面这行是用来占位的，在这之上添加新的即可
             {"666",-1}
-    };    
-    
+    };
+
+    // nadebag手雷回复分数需求
+    int nadebag_recovery_threshold = 25;
+
     array<string> resupply_grenade_list = {
         "hand_grenade.projectile",
         "hand_88grenade.projectile",
@@ -158,15 +166,19 @@
     };
 
     dictionary resupply_grenade_index = {
-        {"hand_grenade.projectile",8},
+        {"gkw_cz75_axe.projectile",10},
+        {"hand_grenade.projectile",6},
+        {"hand_defence_grenade.projectile",6},
         {"hand_88grenade.projectile",4},
         {"hand_atgrenade.projectile",4},
-        {"hand_defence_grenade.projectile",4},
-        {"c4.projectile",2}
-        // {"at_mine.projectile",6},
-        // {"gkw_cz75_axe.projectile",6}
+        {"at_mine.projectile",3},
+        {"smoke_device.projectile",2},
+        {"hand_repair_grenade.projectile",2},
+        {"c4.projectile",2},
+        {"hand_golyat_b.throwable",2},
+        {"hand_golyat.throwable",1}
     };
-    
+
     array<string> resupply_secondary_list = {
         "gkw_88rocker.weapon",
         "gkw_consume_at4.weapon",
@@ -221,6 +233,7 @@
         {"typhon.vehicle",5},
         {"coeus.vehicle",5},
         {"neosu_kuergants.vehicle",4},
+        {"kcco_aa_aegis.vehicle",4},
         {"kcco_pathfinder_factory.vehicle",3},
         {"sandstorm.vehicle",3},
 
@@ -254,6 +267,7 @@
         {"typhon.vehicle",5},
         {"coeus.vehicle",5},
         {"neosu_kuergants.vehicle",4},
+        {"kcco_aa_aegis.vehicle",4},
         {"kcco_pathfinder_factory.vehicle",3},
         {"sandstorm.vehicle",3},
 
@@ -279,7 +293,7 @@
         {"hornet_ct.vehicle",2},
 
         {"",0}
-    };    
+    };
 
 // parameters for "ItemDropEvent.as":
 
@@ -287,8 +301,8 @@
         // 空
 
         {"firecontrol.carry_item",1},       // 火控核心
-        {"core_mask.carry_item",2},         // 真核面具  
-        {"black_card.carry_item",114},         // 黑卡  
+        {"core_mask.carry_item",2},         // 真核面具
+        {"black_card.carry_item",114},         // 黑卡
         {"upgrade_masterkey.carry_item",514}, //
 
         {"upgrade_type88.carry_item",3},    // 汉阳造加速线圈
@@ -323,7 +337,7 @@
         {"",0},
 
         {"mod3",1},                         // 火控核心
-        {"truecore",2},                     // 真核面具  
+        {"truecore",2},                     // 真核面具
         {"type88",3},                       // 汉阳造加速线圈
         {"aa12",4},                         // AA12独头弹
         {"m1garand",5},                     // M1加兰德弹鼓
@@ -358,20 +372,24 @@
         {"",0},
 
         {"exchange_t6_ticket_1",1},
-        {"exchange_t6_ticket_2",2}, 
-        {"exchange_t6_ticket_3",3}, 
-        {"exchange_t6_ticket_4",4},     
-        {"exchange_t6_ticket_5",5}, 
-        {"exchange_t6_ticket_6",6}, 
-        {"exchange_t6_ticket_7",7}, 
-        {"exchange_t6_ticket_8",8}, 
-        {"exchange_t6_ticket_9",9}, 
-        {"exchange_t6_ticket_10",10}, 
-        {"exchange_t6_ticket_11",11}, 
-        {"exchange_t6_ticket_12",12}, 
-        {"exchange_t6_ticket_13",13}, 
-        {"exchange_t6_ticket_14",14}, 
-        {"exchange_t6_ticket_15",15}, 
+        {"exchange_t6_ticket_2",2},
+        {"exchange_t6_ticket_3",3},
+        {"exchange_t6_ticket_4",4},
+        {"exchange_t6_ticket_5",5},
+        {"exchange_t6_ticket_6",6},
+        {"exchange_t6_ticket_7",7},
+        {"exchange_t6_ticket_8",8},
+        {"exchange_t6_ticket_9",9},
+        {"exchange_t6_ticket_10",10},
+        {"exchange_t6_ticket_11",11},
+        {"exchange_t6_ticket_12",12},
+        {"exchange_t6_ticket_13",13},
+        {"exchange_t6_ticket_14",14},
+        {"exchange_t6_ticket_15",15},
+        {"exchange_t6_ticket_16",16},
+        {"exchange_t6_ticket_17",17},
+        {"exchange_t6_ticket_18",18},
+        {"exchange_t6_ticket_19",19},
 
         {"666",0}
     };
@@ -385,19 +403,19 @@
             {"update_beta","_update_beta"},
 
             {"update_gamma","_update_gamma"},
-            
+
             {"666",-1}
-    };    
+    };
 
     dictionary callUI_Slot = {
         // 空
         {"",0},
 
         {"call_ui_t1_bombardment_fairy_82mm_mortar_free",1},
-        {"call_ui_t1_bombardment_fairy_82mm_mortar",1}, 
-        {"call_ui_t1_bombardment_fairy_105mm_grenade_barrage",1}, 
-        {"call_ui_t1_bombardment_fairy_155mm_air_burst",1}, 
-        {"call_ui_t2_bombardment_fairy_170mm_cannon",2}, 
+        {"call_ui_t1_bombardment_fairy_82mm_mortar",1},
+        {"call_ui_t1_bombardment_fairy_105mm_grenade_barrage",1},
+        {"call_ui_t1_bombardment_fairy_155mm_air_burst",1},
+        {"call_ui_t2_bombardment_fairy_170mm_cannon",2},
 
         {"call_ui_t2_airstrike_fairy_bomber",2},
         {"call_ui_t1_airstrike_fairy_cas",1},
@@ -441,10 +459,10 @@
         {"call_ui_t1_bombardment_fairy_155mm_air_burst_update_alpha",250},
         {"call_ui_t1_bombardment_fairy_155mm_air_burst_update_beta",250},
         {"call_ui_t1_bombardment_fairy_155mm_air_burst_update_gamma",250},
-        
+
         {"call_ui_t1_airstrike_fairy_cas_update_alpha",125},
         {"call_ui_t1_airstrike_fairy_cas_update_beta",125},
-        {"call_ui_t1_airstrike_fairy_cas_update_gamma",125},   
+        {"call_ui_t1_airstrike_fairy_cas_update_gamma",125},
 
         {"call_ui_t1_airstrike_fairy_cas_p2p_update_alpha",125},
         {"call_ui_t1_airstrike_fairy_cas_p2p_update_beta",125},
@@ -466,9 +484,17 @@
 
         //
 
-        // {"call_ui_t1_rocket_fairy_missile_update_alpha",250},
-        // {"call_ui_t1_rocket_fairy_missile_update_beta",250},
-        // {"call_ui_t1_rocket_fairy_missile_update_gamma",250},
+        {"call_ui_t1_rocket_fairy_missile_update_alpha",500},
+        {"call_ui_t1_rocket_fairy_missile_update_beta",500},
+        {"call_ui_t1_rocket_fairy_missile_update_gamma",500},
+
+        {"call_ui_t2_rocket_fairy_bm30_update_alpha",750},
+        {"call_ui_t2_rocket_fairy_bm30_update_beta",750},
+        {"call_ui_t2_rocket_fairy_bm30_update_gamma",750},
+
+        {"call_ui_t2_bombardment_fairy_170mm_cannon_update_alpha",250},
+        {"call_ui_t2_bombardment_fairy_170mm_cannon_update_beta",250},
+        {"call_ui_t2_bombardment_fairy_170mm_cannon_update_gamma",250},
 
         {"call_ui_t2_airstrike_fairy_bomber_update_alpha",500},
         {"call_ui_t2_airstrike_fairy_bomber_update_beta",500},
@@ -477,6 +503,10 @@
         {"call_ui_t2_warrior_fairy_recon_heli_update_alpha",2000},
         {"call_ui_t2_warrior_fairy_recon_heli_update_beta",2000},
         {"call_ui_t2_warrior_fairy_recon_heli_update_gamma",2000},
+
+        {"call_ui_t2_warrior_fairy_vtol_sentry_update_alpha",1000},
+        {"call_ui_t2_warrior_fairy_vtol_sentry_update_beta",1000},
+        {"call_ui_t2_warrior_fairy_vtol_sentry_update_gamma",1000},
 
         {"666",0}
     };
@@ -584,6 +614,7 @@
 		"neosu_kuergants.vehicle",
 		"kcco_pathfinder_factory.vehicle",
 		"sandstorm.vehicle",
+        "kcco_aa_aegis.vehicle",
 
 		"par_uhlan.vehicle",
 		"par_elenusinus.vehicle",
@@ -622,6 +653,7 @@
 		"neosu_kuergants.vehicle",
 		"kcco_pathfinder_factory.vehicle",
 		"sandstorm.vehicle",
+        "kcco_aa_aegis.vehicle",
 
 		"par_uhlan.vehicle",
 		"par_elenusinus.vehicle",
