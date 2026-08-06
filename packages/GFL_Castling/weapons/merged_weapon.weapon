@@ -3770,7 +3770,7 @@
 </weapon>
 
 <weapon key="gkw_iws2000.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.5" accuracy_factor="1.0" sustained_fire_grow_step="5.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="IWS 2000" class="4" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="300" barrel_offset="0.4" projectiles_per_shot="1" last_burst_retrigger_time="1.5" stance_accuracy_rate="1.0" spread_range="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="1.5" accuracy_factor="1.0" sustained_fire_grow_step="5.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="IWS 2000" class="4" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="300" barrel_offset="0.4" projectiles_per_shot="1" last_burst_retrigger_time="1.5" stance_accuracy_rate="1.5" spread_range="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<next_in_chain key="gkw_iws2000_skill.weapon" share_ammo="1"/>
 	<inventory encumbrance="35.0" buy_price="500.0" sell_price="300.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
@@ -3849,7 +3849,7 @@
 </weapon>
 
 <weapon key="gkw_iws2000_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification affect_vehicles="1" retrigger_time="3.0" accuracy_factor="1.0" sustained_fire_grow_step="9.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" suppressed="0" name="IWS 2000-[Hawk Assault]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="300" barrel_offset="0.4" projectiles_per_shot="1" last_burst_retrigger_time="3" stance_accuracy_rate="0.75" spread_range="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification affect_vehicles="1" retrigger_time="3.0" accuracy_factor="1.0" sustained_fire_grow_step="9.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" suppressed="0" name="IWS 2000-[Hawk Assault]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="300" barrel_offset="0.4" projectiles_per_shot="1" last_burst_retrigger_time="3" stance_accuracy_rate="1.0" spread_range="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<next_in_chain key="gkw_iws2000.weapon" share_ammo="1"/>
 	<commonness value="0.0" can_respawn_with="1" in_stock="0"/>
 	<inventory encumbrance="35.0" buy_price="500.0" sell_price="300.0"/>
@@ -3928,7 +3928,7 @@
 </weapon>
 
 <weapon key="gkw_iws2000_1403.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.5" accuracy_factor="1.0" sustained_fire_grow_step="5.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="IWS 2000-[The Seventh Banisher]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="300" barrel_offset="0.4" projectiles_per_shot="1" last_burst_retrigger_time="1.5" stance_accuracy_rate="1.0" spread_range="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="1.5" accuracy_factor="1.0" sustained_fire_grow_step="5.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="IWS 2000-[The Seventh Banisher]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="300" barrel_offset="0.4" projectiles_per_shot="1" last_burst_retrigger_time="1.5" stance_accuracy_rate="1.5" spread_range="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<next_in_chain key="gkw_iws2000_1403_skill.weapon" share_ammo="0"/>
 	<inventory encumbrance="35.0" buy_price="500.0" sell_price="300.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
@@ -4058,7 +4058,7 @@
 </weapon>
 
 <weapon key="gkw_iws2000_3004.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.5" accuracy_factor="1.0" sustained_fire_grow_step="5.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="IWS 2000-[Edelweiss]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="300" barrel_offset="0.4" projectiles_per_shot="1" last_burst_retrigger_time="1.5" stance_accuracy_rate="1.0" spread_range="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="1.5" accuracy_factor="1.0" sustained_fire_grow_step="5.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="IWS 2000-[Edelweiss]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="300" barrel_offset="0.4" projectiles_per_shot="1" last_burst_retrigger_time="1.5" stance_accuracy_rate="1.5" spread_range="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<next_in_chain key="gkw_iws2000_3004_skill.weapon" share_ammo="1"/>
 	<commonness value="0.0" can_respawn_with="1" in_stock="0"/>
 	<inventory encumbrance="35.0" buy_price="500.0" sell_price="300.0"/>
@@ -4137,7 +4137,7 @@
 </weapon>
 
 <weapon key="gkw_iws2000_3004_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification affect_vehicles="1" retrigger_time="3.0" accuracy_factor="1.0" sustained_fire_grow_step="9.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" suppressed="0" name="IWS 2000-[Edelweiss]-[Hawk Assault]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="300" barrel_offset="0.4" projectiles_per_shot="1" last_burst_retrigger_time="3" stance_accuracy_rate="0.75" spread_range="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification affect_vehicles="1" retrigger_time="3.0" accuracy_factor="1.0" sustained_fire_grow_step="9.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" suppressed="0" name="IWS 2000-[Edelweiss]-[Hawk Assault]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="300" barrel_offset="0.4" projectiles_per_shot="1" last_burst_retrigger_time="3" stance_accuracy_rate="1.0" spread_range="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<next_in_chain key="gkw_iws2000_3004.weapon" share_ammo="1"/>
 	<commonness value="0.0" can_respawn_with="1" in_stock="0"/>
 	<inventory encumbrance="35.0" buy_price="500.0" sell_price="300.0"/>
@@ -4216,7 +4216,7 @@
 </weapon>
 
 <weapon key="gkw_iws2000_7308.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.5" accuracy_factor="1.0" sustained_fire_grow_step="5.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="IWS 2000-[Sand Castle Terminator]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="300" barrel_offset="0.4" projectiles_per_shot="1" last_burst_retrigger_time="1.5" stance_accuracy_rate="1.0" spread_range="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="1.5" accuracy_factor="1.0" sustained_fire_grow_step="5.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="IWS 2000-[Sand Castle Terminator]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="300" barrel_offset="0.4" projectiles_per_shot="1" last_burst_retrigger_time="1.5" stance_accuracy_rate="1.5" spread_range="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<next_in_chain key="gkw_iws2000_7308_skill.weapon" share_ammo="1"/>
 	<commonness value="0.0" can_respawn_with="1" in_stock="0"/>
 	<inventory encumbrance="35.0" buy_price="500.0" sell_price="300.0"/>
@@ -4295,7 +4295,7 @@
 </weapon>
 
 <weapon key="gkw_iws2000_7308_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification affect_vehicles="1" retrigger_time="3.0" accuracy_factor="1.0" sustained_fire_grow_step="9.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" suppressed="0" name="IWS 2000-[Sand Castle Terminator]-[Hawk Assault]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="300" barrel_offset="0.4" projectiles_per_shot="1" last_burst_retrigger_time="3" stance_accuracy_rate="0.75" spread_range="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification affect_vehicles="1" retrigger_time="3.0" accuracy_factor="1.0" sustained_fire_grow_step="9.0" sustained_fire_diminish_rate="2.0" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="0" can_shoot_prone="1" suppressed="0" name="IWS 2000-[Sand Castle Terminator]-[Hawk Assault]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="300" barrel_offset="0.4" projectiles_per_shot="1" last_burst_retrigger_time="3" stance_accuracy_rate="1.0" spread_range="0.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<next_in_chain key="gkw_iws2000_7308.weapon" share_ammo="1"/>
 	<commonness value="0.0" can_respawn_with="1" in_stock="0"/>
 	<inventory encumbrance="35.0" buy_price="500.0" sell_price="300.0"/>
@@ -13798,7 +13798,7 @@
 </weapon>
 
 <weapon key="gkw_svd.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" magazine_size="10" can_shoot_standing="1" suppressed="0" name="Dragunov SVD" class="4" spread_range="0.27" burst_shots="1" last_burst_retrigger_time="0.25" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="230" barrel_offset="0.4" stance_accuracy_rate="1.0" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" magazine_size="10" can_shoot_standing="1" suppressed="0" name="Dragunov SVD" class="4" spread_range="0.27" burst_shots="1" last_burst_retrigger_time="0.25" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="230" barrel_offset="0.4" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="40.0" sell_price="40.0"/>
 	<next_in_chain key="gkw_svd_skill.weapon" share_ammo="1"/>
 	<animation state_key="hold_casual" animation_key="dancing, kazachok"/>
@@ -14019,7 +14019,7 @@
 </weapon>
 
 <weapon key="gkw_svd_5506.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" magazine_size="10" can_shoot_standing="1" suppressed="0" name="Dragunov SVD-[Camellia's Vigil]" class="4" spread_range="0.27" burst_shots="1" last_burst_retrigger_time="0.25" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="230" barrel_offset="0.4" stance_accuracy_rate="1.0" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" magazine_size="10" can_shoot_standing="1" suppressed="0" name="Dragunov SVD-[Camellia's Vigil]" class="4" spread_range="0.27" burst_shots="1" last_burst_retrigger_time="0.25" reload_one_at_a_time="0" sight_range_modifier="2.8" projectile_speed="230" barrel_offset="0.4" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="40.0" sell_price="40.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<next_in_chain key="gkw_svd_5506_skill.weapon" share_ammo="1"/>
@@ -30003,7 +30003,7 @@
 	<hud_icon filename="gkw_c96_8405.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="1.96" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.4" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="1.96" kill_probability_offset_on_successful_hit="6.5" kill_decay_start_time="0.4" kill_decay_end_time="0.4" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -43151,7 +43151,7 @@
 </weapon>
 
 <weapon key="gkw_js05.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.3" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="3" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="JS05" class="2" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="240" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="1.3" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="3" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="JS05" class="2" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="240" barrel_offset="0.4" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="300.0" sell_price="300.0"/>
 	<animation key="cycle" animation_key="Brifle action"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
@@ -43275,7 +43275,7 @@
 </weapon>
 
 <weapon key="gkw_k31.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="7.5" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Schmidt–Rubin Kar. 31" class="2" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="260" barrel_offset="0.4" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="7.5" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Schmidt–Rubin Kar. 31" class="2" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="260" barrel_offset="0.4" stance_accuracy_rate="1.5" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="31.0" sell_price="31.0"/>
 	<next_in_chain key="gkw_k31_skill.weapon" share_ammo="1"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon in, 0.5s"/>
@@ -43387,7 +43387,7 @@
 </weapon>
 
 <weapon key="gkw_k31_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Schmidt–Rubin Kar. 31-[Emergency Speed]" class="4" burst_shots="1" spread_range="0.18" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="260" barrel_offset="0.4" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" magazine_size="6" can_shoot_standing="1" suppressed="0" name="Schmidt–Rubin Kar. 31-[Emergency Speed]" class="4" burst_shots="1" spread_range="0.18" reload_one_at_a_time="0" sight_range_modifier="2.0" projectile_speed="260" barrel_offset="0.4" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="31.0" sell_price="31.0"/>
 	<next_in_chain key="gkw_k31.weapon" share_ammo="1"/>
 	<animation state_key="next_in_chain_in" animation_key="change weapon in, 0.5s"/>
@@ -49951,10 +49951,10 @@
 </weapon>
 
 <weapon key="gkw_svch.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.33" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="3.2" spread_range="0.5" magazine_size="10" can_shoot_standing="1" suppressed="0" name="SVCh" class="4" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.0" stance_accuracy_rate="3.0" leave_crouch_accuracy_penalty="0.2" projectile_speed="180" barrel_offset="0.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="0.33" accuracy_factor="1.0" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="3.2" spread_range="0.5" magazine_size="10" can_shoot_standing="1" suppressed="0" name="SVCh" class="4" burst_shots="1" reload_one_at_a_time="0" sight_range_modifier="2.0" stance_accuracy_rate="3.0" leave_crouch_accuracy_penalty="0.2" projectile_speed="210" barrel_offset="0.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="24.0" sell_price="24.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
-	<sound key="fire" fileref="svch_fire_FromCOD15.wav" pitch_variety="0.05" volume="1.3"/>
+	<sound key="fire" fileref="svch_fire_FromCOD20.wav" pitch_variety="0.05" volume="1.3"/>
 	<sound key="cycle" fileref="svch_cycle_FromBF2042.wav" volume="0.8"/>
 	<sound key="magazine_out" fileref="svch_mgz_out_FromBF2042.wav" volume="0.8"/>
 	<sound key="magazine_in" fileref="svch_mgz_in_FromBF2042.wav" volume="0.8"/>
@@ -49964,7 +49964,7 @@
 	<hud_icon filename="gkw_svch.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="10" kill_probability_offset_on_successful_hit="10.8" kill_decay_start_time="1.0" kill_decay_end_time="2.0" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="10.6" kill_probability_offset_on_successful_hit="16" kill_decay_start_time="1.0" kill_decay_end_time="2.0" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -50027,7 +50027,7 @@
 	<effect class="result" key="shield" ref="hitMetal"/>
 	<effect class="result" key="shield" ref="hitMetal_1"/>
 	</projectile>
-	<stance state_key="running" accuracy="0.2"/>
+	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.6"/>
 	<stance state_key="crouch_moving" accuracy="0.95"/>
 	<stance state_key="standing" accuracy="0.992"/>
@@ -58279,7 +58279,7 @@
 
 <weapon key="gkw_m21.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" magazine_size="20" spread_range="0.5" can_shoot_standing="1" suppressed="0" name="M21" class="4" burst_shots="1" last_burst_retrigger_time="0.33" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="1.0" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.0" magazine_size="20" spread_range="0.5" can_shoot_standing="1" suppressed="0" name="M21" class="4" burst_shots="1" last_burst_retrigger_time="0.33" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="200" barrel_offset="0.6" projectiles_per_shot="1" stance_accuracy_rate="1.5" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="21.0" sell_price="12.0"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -60320,7 +60320,7 @@
 
 <weapon key="gkw_tac50.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
-	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="McMillan TAC-50" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="240" barrel_offset="0.66" spread_range="0.35" stance_accuracy_rate="1.0" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="McMillan TAC-50" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="240" barrel_offset="0.66" spread_range="0.35" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="300.0" sell_price="300.0"/>
 	<animation key="cycle" animation_key="Brifle action"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
@@ -60454,7 +60454,7 @@
 
 <weapon key="gkw_tac50_2602.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
-	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="McMillan TAC-50-[Elven Demon Huntress]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="240" barrel_offset="0.66" spread_range="0.35" stance_accuracy_rate="1.0" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="5" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="McMillan TAC-50-[Elven Demon Huntress]" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="240" barrel_offset="0.66" spread_range="0.35" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="300.0" sell_price="200.0"/>
 	<commonness value="0" in_stock="0"/>
 	<animation key="cycle" animation_key="Brifle action"/>
@@ -70595,7 +70595,7 @@
 </weapon>
 
 <weapon key="gkw_ballista_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.02" burst_shots="2" last_burst_retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="1.5" magazine_size="16" can_shoot_standing="0" suppressed="0" name="FN Ballista-[Falcon Strike]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="250" barrel_offset="0.65" stance_accuracy_rate="1.0" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="0.02" burst_shots="2" last_burst_retrigger_time="1.5" accuracy_factor="1" sustained_fire_grow_step="0.0" sustained_fire_diminish_rate="1.5" magazine_size="16" can_shoot_standing="0" suppressed="0" name="FN Ballista-[Falcon Strike]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="250" barrel_offset="0.65" stance_accuracy_rate="1.5" projectiles_per_shot="4" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="204.0" sell_price="204.0"/>
 	<next_in_chain key="gkw_ballista.weapon" share_ammo="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 2.1"/>
@@ -71171,7 +71171,7 @@
 
 <weapon key="gkw_liu.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="0.7" magazine_size="6" can_shoot_standing="1" suppressed="0" name="General Liu" stab_enabled="1" carry_in_two_hands="1" spread_range="0.3" class="2" slot="0" reload_one_at_a_time="1" sight_range_modifier="1.75" projectile_speed="170" barrel_offset="0.5" projectiles_per_shot="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="0.7" magazine_size="6" can_shoot_standing="1" suppressed="0" name="General Liu" stab_enabled="1" carry_in_two_hands="1" spread_range="0.3" class="2" slot="0" reload_one_at_a_time="1" sight_range_modifier="1.75" projectile_speed="170" barrel_offset="0.5" stance_accuracy_rate="1.5" projectiles_per_shot="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="35.0" buy_price="250.0" sell_price="250.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -71283,7 +71283,7 @@
 
 <weapon key="gkw_liu_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
-	<specification retrigger_time="-1.0" accuracy_factor="0.99" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.5" spread_range="0.6" magazine_size="6" suppressed="0" carry_in_two_hands="1" name="General Liu-[Shared Hatred]" class="4" slot="0" burst_shots="1" last_burst_retrigger_time="0.33" reload_one_at_a_time="1" sight_range_modifier="1.75" projectile_speed="175" barrel_offset="0.5" projectiles_per_shot="1" stab_enabled="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="0.99" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.5" spread_range="0.6" magazine_size="6" suppressed="0" carry_in_two_hands="1" name="General Liu-[Shared Hatred]" class="4" slot="0" burst_shots="1" last_burst_retrigger_time="0.33" reload_one_at_a_time="1" sight_range_modifier="1.75" projectile_speed="175" barrel_offset="0.5" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="35.0" buy_price="250.0" sell_price="250.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -71505,7 +71505,7 @@
 
 <weapon key="gkw_liu_563.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="0.7" magazine_size="6" can_shoot_standing="1" suppressed="0" name="General Liu-[Musings in the Morn]" stab_enabled="1" carry_in_two_hands="1" spread_range="0.3" class="2" slot="0" reload_one_at_a_time="1" sight_range_modifier="1.75" projectile_speed="170" barrel_offset="0.5" projectiles_per_shot="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="0.7" magazine_size="6" can_shoot_standing="1" suppressed="0" name="General Liu-[Musings in the Morn]" stab_enabled="1" carry_in_two_hands="1" spread_range="0.3" class="2" slot="0" reload_one_at_a_time="1" sight_range_modifier="1.75" projectile_speed="170" barrel_offset="0.5" stance_accuracy_rate="1.5" projectiles_per_shot="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="35.0" buy_price="250.0" sell_price="250.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -71617,7 +71617,7 @@
 
 <weapon key="gkw_liu_563_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
-	<specification retrigger_time="-1.0" accuracy_factor="0.99" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.5" spread_range="0.6" magazine_size="6" suppressed="0" carry_in_two_hands="1" name="General Liu-[Musings in the Morn]-[Shared Hatred]" class="4" slot="0" burst_shots="1" last_burst_retrigger_time="0.33" reload_one_at_a_time="1" sight_range_modifier="1.75" projectile_speed="175" barrel_offset="0.5" projectiles_per_shot="1" stab_enabled="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="0.99" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.5" spread_range="0.6" magazine_size="6" suppressed="0" carry_in_two_hands="1" name="General Liu-[Musings in the Morn]-[Shared Hatred]" class="4" slot="0" burst_shots="1" last_burst_retrigger_time="0.33" reload_one_at_a_time="1" sight_range_modifier="1.75" projectile_speed="175" barrel_offset="0.5" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="35.0" buy_price="250.0" sell_price="250.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -71728,7 +71728,7 @@
 
 <weapon key="gkw_liu_5101.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="0.7" magazine_size="6" can_shoot_standing="1" suppressed="0" name="General Liu-[Fox's Shadow of Drooping Branches]" stab_enabled="1" carry_in_two_hands="1" spread_range="0.3" class="2" slot="0" reload_one_at_a_time="1" sight_range_modifier="1.75" projectile_speed="170" barrel_offset="0.5" projectiles_per_shot="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="0.7" magazine_size="6" can_shoot_standing="1" suppressed="0" name="General Liu-[Fox's Shadow of Drooping Branches]" stab_enabled="1" carry_in_two_hands="1" spread_range="0.3" class="2" slot="0" reload_one_at_a_time="1" sight_range_modifier="1.75" projectile_speed="170" barrel_offset="0.5" stance_accuracy_rate="1.5" projectiles_per_shot="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="35.0" buy_price="250.0" sell_price="250.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -71840,7 +71840,7 @@
 
 <weapon key="gkw_liu_5101_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
-	<specification retrigger_time="-1.0" accuracy_factor="0.99" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.5" spread_range="0.6" magazine_size="6" suppressed="0" carry_in_two_hands="1" name="General Liu-[Fox's Shadow of Drooping Branches]-[Shared Hatred]" class="4" slot="0" burst_shots="1" last_burst_retrigger_time="0.33" reload_one_at_a_time="1" sight_range_modifier="1.75" projectile_speed="175" barrel_offset="0.5" projectiles_per_shot="1" stab_enabled="1"/>
+	<specification retrigger_time="-1.0" accuracy_factor="0.99" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="3.5" spread_range="0.6" magazine_size="6" suppressed="0" carry_in_two_hands="1" name="General Liu-[Fox's Shadow of Drooping Branches]-[Shared Hatred]" class="4" slot="0" burst_shots="1" last_burst_retrigger_time="0.33" reload_one_at_a_time="1" sight_range_modifier="1.75" projectile_speed="175" barrel_offset="0.5" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="35.0" buy_price="250.0" sell_price="250.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -80944,7 +80944,7 @@
 </weapon>
 
 <weapon key="gkw_qbu88_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="0.95" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="2.0" magazine_size="10" can_shoot_standing="1" suppressed="0" name="QBU-88-[Rushing Cloud]" class="4" burst_shots="1" last_burst_retrigger_time="0.5" reload_one_at_a_time="0" sight_range_modifier="1.75" projectile_speed="230" barrel_offset="0.55" spread_range="0.28" stance_accuracy_rate="1.0" leave_crouch_accuracy_penalty="0.75" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="0.95" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="2.0" magazine_size="10" can_shoot_standing="1" suppressed="0" name="QBU-88-[Rushing Cloud]" class="4" burst_shots="1" last_burst_retrigger_time="0.5" reload_one_at_a_time="0" sight_range_modifier="1.75" projectile_speed="230" barrel_offset="0.55" spread_range="0.28" stance_accuracy_rate="1.5" leave_crouch_accuracy_penalty="0.75" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="88.0" sell_price="88.0"/>
 	<next_in_chain key="gkw_qbu88.weapon" share_ammo="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -81164,7 +81164,7 @@
 </weapon>
 
 <weapon key="gkw_qbu88_5502_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="0.95" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="2.0" magazine_size="10" can_shoot_standing="1" suppressed="0" name="QBU-88-[Dance of the Trumpet Vine]-[Rushing Cloud]" class="4" burst_shots="1" last_burst_retrigger_time="0.5" reload_one_at_a_time="0" sight_range_modifier="1.75" projectile_speed="230" barrel_offset="0.55" spread_range="0.28" stance_accuracy_rate="1.0" leave_crouch_accuracy_penalty="0.75" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="0.95" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="2.0" magazine_size="10" can_shoot_standing="1" suppressed="0" name="QBU-88-[Dance of the Trumpet Vine]-[Rushing Cloud]" class="4" burst_shots="1" last_burst_retrigger_time="0.5" reload_one_at_a_time="0" sight_range_modifier="1.75" projectile_speed="230" barrel_offset="0.55" spread_range="0.28" stance_accuracy_rate="1.5" leave_crouch_accuracy_penalty="0.75" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="88.0" sell_price="88.0"/>
 	<next_in_chain key="gkw_qbu88_5502.weapon" share_ammo="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
@@ -83945,7 +83945,7 @@
 </weapon>
 
 <weapon key="gkw_scarh_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.4" spread_range="0.3" magazine_size="30" can_shoot_standing="1" suppressed="0" name="FN SCAR-H-[M948 MODX]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.3" stance_accuracy_rate="1.0" projectile_speed="200" barrel_offset="0.55" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="4.4" spread_range="0.3" magazine_size="30" can_shoot_standing="1" suppressed="0" name="FN SCAR-H-[M948 MODX]" class="4" burst_shots="1" last_burst_retrigger_time="0.125" reload_one_at_a_time="0" sight_range_modifier="2.3" stance_accuracy_rate="1.5" projectile_speed="200" barrel_offset="0.55" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" slot="0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="35.0" buy_price="50.0" sell_price="50.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
@@ -91833,7 +91833,7 @@
 </weapon>
 
 <weapon key="gkw_m110.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.5" accuracy_factor="1" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="3.6" magazine_size="20" spread_range="0.6" can_shoot_standing="1" suppressed="0" name="M110 SASS" class="0" burst_shots="1" carry_in_two_hands="1" reload_one_at_a_time="0" sight_range_modifier="2.5" stance_accuracy_rate="1.0" projectile_speed="220" barrel_offset="0.55" projectiles_per_shot="1"/>
+	<specification retrigger_time="0.5" accuracy_factor="1" sustained_fire_grow_step="0.75" sustained_fire_diminish_rate="3.6" magazine_size="20" spread_range="0.6" can_shoot_standing="1" suppressed="0" name="M110 SASS" class="0" burst_shots="1" carry_in_two_hands="1" reload_one_at_a_time="0" sight_range_modifier="2.5" stance_accuracy_rate="1.5" projectile_speed="220" barrel_offset="0.55" projectiles_per_shot="1"/>
 	<commonness value="0.02" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="35.0" buy_price="120.0" sell_price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -91934,7 +91934,7 @@
 </weapon>
 
 <weapon key="gkw_m110_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.05" accuracy_factor="1" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="4.8" magazine_size="20" spread_range="0.6" can_shoot_standing="1" suppressed="0" name="M110 SASS-[Opposite Waltz]" class="4" burst_shots="2" carry_in_two_hands="1" last_burst_retrigger_time="0.1" reload_one_at_a_time="0" sight_range_modifier="2.5" stance_accuracy_rate="1.0" projectile_speed="220" barrel_offset="0.55" projectiles_per_shot="1"/>
+	<specification retrigger_time="0.05" accuracy_factor="1" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="4.8" magazine_size="20" spread_range="0.6" can_shoot_standing="1" suppressed="0" name="M110 SASS-[Opposite Waltz]" class="4" burst_shots="2" carry_in_two_hands="1" last_burst_retrigger_time="0.1" reload_one_at_a_time="0" sight_range_modifier="2.5" stance_accuracy_rate="1.5" projectile_speed="220" barrel_offset="0.55" projectiles_per_shot="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="35.0" buy_price="120.0" sell_price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -92035,7 +92035,7 @@
 </weapon>
 
 <weapon key="gkw_m110_skill_2.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.05" accuracy_factor="1" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="6.0" magazine_size="20" spread_range="0.6" can_shoot_standing="1" suppressed="0" name="M110 SASS-[Opposite Waltz]" class="4" burst_shots="3" carry_in_two_hands="1" last_burst_retrigger_time="0.1" reload_one_at_a_time="0" sight_range_modifier="2.5" stance_accuracy_rate="1.0" projectile_speed="220" barrel_offset="0.55" projectiles_per_shot="1"/>
+	<specification retrigger_time="0.05" accuracy_factor="1" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="6.0" magazine_size="20" spread_range="0.6" can_shoot_standing="1" suppressed="0" name="M110 SASS-[Opposite Waltz]" class="4" burst_shots="3" carry_in_two_hands="1" last_burst_retrigger_time="0.1" reload_one_at_a_time="0" sight_range_modifier="2.5" stance_accuracy_rate="1.5" projectile_speed="220" barrel_offset="0.55" projectiles_per_shot="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="35.0" buy_price="120.0" sell_price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -97784,7 +97784,7 @@
 </weapon>
 
 <weapon key="gkw_boys.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" spread_range="0.3" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="Boys Anti-Tank Rifle" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="200" barrel_offset="1.0" leave_crouch_accuracy_penalty="0.3" projectiles_per_shot="1" stance_accuracy_rate="1.0" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="1.0" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" spread_range="0.3" magazine_size="5" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="Boys Anti-Tank Rifle" class="2" reload_one_at_a_time="0" sight_range_modifier="2.25" projectile_speed="200" barrel_offset="1.0" leave_crouch_accuracy_penalty="0.3" projectiles_per_shot="1" stance_accuracy_rate="1.5" burst_shots="1" stab_enabled="1" carry_in_two_hands="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="300" sell_price="300"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
 	<animation key="cycle" animation_key="Brifle action"/>
@@ -102700,7 +102700,7 @@
 </weapon>
 
 <weapon key="gkw_falconmod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="1.3" accuracy_factor="1" reload_one_at_a_time="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="2" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="ZVI Falcon(MOD3)" class="2" sight_range_modifier="2.25" projectile_speed="240" barrel_offset="0.7" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification retrigger_time="1.3" accuracy_factor="1" reload_one_at_a_time="1" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="2" can_shoot_standing="0" can_shoot_crouching="1" can_shoot_prone="1" suppressed="0" name="ZVI Falcon(MOD3)" class="2" sight_range_modifier="2.25" projectile_speed="240" barrel_offset="0.7" stance_accuracy_rate="1.5" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<inventory encumbrance="35.0" buy_price="300.0" sell_price="300.0"/>
 	<animation key="cycle" animation_key="Brifle action"/>
 	<animation key="cycle" stance_key="prone" animation_key="Brifle action prone"/>
@@ -111440,7 +111440,7 @@
 <weapon key="gkw_sv98mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="elite"/>
-	<specification retrigger_time="1.0" accuracy_factor="1.0" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="4.0" magazine_size="10" suppressed="1" name="SV-98 (MOD3)-[Shadowy Savior]" class="2" sight_range_modifier="2.25" projectile_speed="220" barrel_offset="0.7" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="1" slot="0"/>
+	<specification retrigger_time="1.0" accuracy_factor="1.0" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="4.0" stance_accuracy_rate="1.5" magazine_size="10" suppressed="1" name="SV-98 (MOD3)-[Shadowy Savior]" class="2" sight_range_modifier="2.25" projectile_speed="220" barrel_offset="0.7" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="1" slot="0"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="35.0" buy_price="298.0" sell_price="198.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -129524,7 +129524,7 @@
 	<tag name="rifle"/>
 	<tag name="elite"/>
 	<tag name="mecha"/>
-	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="7.5" sustained_fire_diminish_rate="9.0" magazine_size="5" can_shoot_standing="1" can_shoot_prone="0" can_shoot_crouching="1" suppressed="0" name="Hanyang-made Type88(MOD3)-[White Comet]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="180" last_burst_retrigger_time="1.5" barrel_offset="3.6" projectiles_per_shot="1" use_basic_muzzle_smoke_effect="0" burst_shots="1" stab_enabled="1" stab_range="6.0"/>
+	<specification retrigger_time="-1.0" accuracy_factor="1.0" sustained_fire_grow_step="7.5" sustained_fire_diminish_rate="9.0" magazine_size="5" can_shoot_standing="1" can_shoot_prone="0" can_shoot_crouching="1" suppressed="0" name="Hanyang-made Type88(MOD3)-[White Comet]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="2.5" projectile_speed="180" last_burst_retrigger_time="1.5" barrel_offset="3.6" projectiles_per_shot="1" use_basic_muzzle_smoke_effect="0" burst_shots="1" stance_accuracy_rate="1.5" stab_enabled="1" stab_range="6.0"/>
 	<next_in_chain key="gkw_88typemod3_6503_skill.weapon" share_ammo="0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="35.0" buy_price="1895.0" sell_price="648.0"/>
@@ -139993,7 +139993,7 @@
 <weapon key="gkw_sv98mod3_502_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="elite"/>
-	<specification retrigger_time="1.0" accuracy_factor="1.0" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="4.0" magazine_size="10" suppressed="1" name="SV-98 (MOD3)-[Waitress]-[Shadowy Savior]" class="2" sight_range_modifier="2.25" projectile_speed="220" barrel_offset="0.7" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="1" slot="0"/>
+	<specification retrigger_time="1.0" accuracy_factor="1.0" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="4.0" stance_accuracy_rate="1.5" magazine_size="10" suppressed="1" name="SV-98 (MOD3)-[Waitress]-[Shadowy Savior]" class="2" sight_range_modifier="2.25" projectile_speed="220" barrel_offset="0.7" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="1" slot="0"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="35.0" buy_price="298.0" sell_price="198.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -140232,7 +140232,7 @@
 <weapon key="gkw_sv98mod3_1906_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="rifle"/>
 	<tag name="elite"/>
-	<specification retrigger_time="1.0" accuracy_factor="1.0" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="4.0" magazine_size="10" suppressed="1" name="SV-98 (MOD3)-[Piercing the Heart]-[Shadowy Savior]" class="2" sight_range_modifier="2.25" projectile_speed="220" barrel_offset="0.7" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="1" slot="0"/>
+	<specification retrigger_time="1.0" accuracy_factor="1.0" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="4.0" stance_accuracy_rate="1.5" magazine_size="10" suppressed="1" name="SV-98 (MOD3)-[Piercing the Heart]-[Shadowy Savior]" class="2" sight_range_modifier="2.25" projectile_speed="220" barrel_offset="0.7" projectiles_per_shot="1" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="1" slot="0"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="35.0" buy_price="298.0" sell_price="198.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
