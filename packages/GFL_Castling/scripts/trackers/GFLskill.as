@@ -555,9 +555,8 @@ class GFLskill : Tracker {
 					uint num_max_character = 10; //最多锁定目标数
 					uint num_max_kill = 20;	//最多斩击次数，目标数不为0则对剩余目标继续用完斩杀次数
 
-					affectedCharacter.insertLast(character);
-
 					for(uint i=0;i<m_fnum;i++) {
+						if(num_jud>=num_max_character)break;
 						if(i!=factionid) {
 							array<const XmlElement@> affectedCharacter2;
 							affectedCharacter2 = getCharactersNearPosition(m_metagame,pos_smartbullet,i,25.0f);
@@ -565,25 +564,28 @@ class GFLskill : Tracker {
 								for(uint x=0;x<affectedCharacter2.length();x++){
 									affectedCharacter.insertLast(affectedCharacter2[x]);
 									num_jud += 1;
-									if(num_jud>num_max_character)break;
+									if(num_jud>=num_max_character)break;
 								}
 							}
 						}
 					}
 
-					for (uint i0=1;i0<=num_max_kill;){
+					uint num_kill = 0;
+					for (uint i0=0;i0<num_max_kill;i0++){ // 不再有实际作用，仅防止死循环
 						for (uint i1=0;i1<affectedCharacter.length();i1++)	{
-							i0+=1;
+							if (num_kill >= num_max_kill) break;
 							int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
 							const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
-							if(luckyoneC is null) continue;
+							if (luckyoneC is null) continue;
 							if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
 								string luckyonepos = luckyoneC.getStringAttribute("position");
 								Vector3 luckyoneposV = stringToVector3(luckyonepos);
 								CreateDirectProjectile(m_metagame,luckyoneposV.add(Vector3(0,1,0)),luckyoneposV,"ff_alchemist_skill_kill.projectile",characterId,factionid,60);
 								playSoundAtLocation(m_metagame,"alchemist_fire_FromHALOINFINTE.wav",factionid,luckyonepos,1.0);
+								num_kill += 1;
 							}
 						}
+						if (num_kill >= num_max_kill) break;
 					}
 				}
 				break;
@@ -769,7 +771,7 @@ class GFLskill : Tracker {
 					uint num_max_kill = 18;	//最多斩击次数，目标数不为0则对剩余目标继续用完斩杀次数
 
 					for(uint i=0;i<m_fnum;i++) {
-						if(num_jud>num_max_character)break;
+						if(num_jud>=num_max_character)break;
 						if(i!=factionid) {
 							array<const XmlElement@> affectedCharacter2;
 							affectedCharacter2 = getCharactersNearPosition(m_metagame,pos_smartbullet,i,18.0f);
@@ -777,7 +779,7 @@ class GFLskill : Tracker {
 								for(uint x=0;x<affectedCharacter2.length();x++){
 									affectedCharacter.insertLast(affectedCharacter2[x]);
 									num_jud += 1;
-									if(num_jud>num_max_character)break;
+									if(num_jud>=num_max_character)break;
 								}
 							}
 						}
@@ -788,16 +790,16 @@ class GFLskill : Tracker {
 						Vector3 c_pos = stringToVector3(now_character.getStringAttribute("position"));
 						c_pos = c_pos.add(Vector3(0,1,0));
 
-						for (uint i0=1;i0<=num_max_kill;){
-							if(affectedCharacter.length()>0){
-								_log("ff_weaver lock successful");
+						if(affectedCharacter.length()>0){
+							_log("ff_weaver lock successful");
+							uint num_kill = 0;
+							for (uint i0=0;i0<num_max_kill;i0++){ // 不再有实际作用，仅防止死循环
 								for (uint i1=0;i1<affectedCharacter.length();i1++)	{
-									int jud1=1;
+									if (num_kill >= num_max_kill) break;
 									int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
 									const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
-									if(luckyoneC is null) continue;
+									if (luckyoneC is null) continue;
 									if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
-										i0+=1;	jud1=0;
 										string luckyonepos = luckyoneC.getStringAttribute("position");
 										Vector3 luckyoneposV = stringToVector3(luckyonepos);
 										float rand_x = rand(-1,1);
@@ -808,13 +810,14 @@ class GFLskill : Tracker {
 										CreateDirectProjectile(m_metagame,c_pos,luckyoneposV,"ff_weaver_rocket.projectile",characterId,factionid,1.02*v_offset/0.4);
 										playSoundAtLocation(m_metagame,"m202_flash_shot.wav",factionid,c_pos,1.0);
 										_log("ff_weaver scan kill successful");
+										num_kill += 1;
 									}
-									i0+=jud1;
 								}
+								if (num_kill >= num_max_kill) break;
 							}
-
-							else{
-								i0+=1;
+						}
+						else{
+							for (uint i0=0;i0<num_max_kill;i0++){
 								float rand_x = rand(-4,4);
 								float rand_y = rand(-4,4);
 
@@ -822,7 +825,7 @@ class GFLskill : Tracker {
 								float v_offset = getAimUnitDistance(1.0,c_pos,pos_smartbullet1);
 								CreateDirectProjectile(m_metagame,c_pos,pos_smartbullet1,"ff_weaver_rocket.projectile",characterId,factionid,1.02*v_offset/0.4);
 								playSoundAtLocation(m_metagame,"m202_flash_shot.wav",factionid,c_pos,1.0);
-                            }
+							}
 						}
 					}
 					_log("ff_weaver skill over.");
@@ -1152,14 +1155,9 @@ class GFLskill : Tracker {
 					//获取技能影响的敌人数量
 					array<const XmlElement@> affectedCharacter = getEnemyCharactersNearPosition(m_metagame,character_pos,factionid,25.0f,10);
 
-					uint num_jud = 0;
-					uint num_max_character = 10; //最多锁定目标数
 					uint num_max_kill = 20;	//最多斩击次数，目标数不为0则对剩余目标继续用完斩杀次数
 
 					healCharacter(m_metagame,characterId,20);
-					int m_fnum = 0;
-					m_fnum = m_metagame.getFactionCount();
-					if(m_fnum==0) break;
 
 					array<string> Voice={
 						"Alchemist_buhuo_SKILL01_JP.wav",
@@ -1167,19 +1165,22 @@ class GFLskill : Tracker {
 					};
 					playRandomSoundArray(m_metagame,Voice,factionid,character_pos.toString(),1);
 
-					for (uint i0=0;i0<=num_max_kill;i0++){
+					uint num_kill = 0;
+					for (uint i0=0;i0<num_max_kill;i0++){ // 不再有实际作用，仅防止死循环
 						for (uint i1=0;i1<affectedCharacter.length();i1++)	{
-							i0+=1;
+							if (num_kill >= num_max_kill) break;
 							int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
 							const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
-							if(luckyoneC is null) continue;
+							if (luckyoneC is null) continue;
 							if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
 								string luckyonepos = luckyoneC.getStringAttribute("position");
 								Vector3 luckyoneposV = stringToVector3(luckyonepos);
 								CreateDirectProjectile(m_metagame,luckyoneposV.add(Vector3(0,1,0)),luckyoneposV,"sfw_boss_alchemist_skill_kill.projectile",characterId,factionid,60);
 								playSoundAtLocation(m_metagame,"alchemist_fire_FromHALOINFINTE.wav",factionid,luckyonepos,1.0);
+								num_kill += 1;
 							}
 						}
+						if (num_kill >= num_max_kill) break;
 					}
 				}
 				break;
@@ -1427,12 +1428,13 @@ class GFLskill : Tracker {
 					};
 					playRandomSoundArray(m_metagame,Voice,factionId,character_pos.toString(),1);
 
-					array<const XmlElement@> affectedCharacter = getEnemyCharactersNearPosition(m_metagame,character_pos,factionId,25.0f);
+					array<const XmlElement@> affectedCharacter = getEnemyCharactersNearPosition(m_metagame,character_pos,factionId,25.0f,3);
 					uint num_max_kill = 3;
 					if(affectedCharacter.length()==0)break;
-					for (uint i0=0;i0<=num_max_kill;i0++){
+					uint num_kill = 0;
+					for (uint i0=0;i0<num_max_kill;i0++){ // 不再有实际作用，仅防止死循环
 						for (uint i1=0;i1<affectedCharacter.length();i1++)	{
-							i0+=1;
+							if (num_kill >= num_max_kill) break;
 							int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
 							const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
 							if (luckyoneC is null) continue;
@@ -1440,8 +1442,10 @@ class GFLskill : Tracker {
 								string luckyonepos = luckyoneC.getStringAttribute("position");
 								Vector3 luckyoneposV = stringToVector3(luckyonepos);
 								CreateProjectile_H(m_metagame,character_pos.add(Vector3(0,2,0)),luckyoneposV,"sf_emp_mine.projectile",characterId,factionId,90,2);
+								num_kill += 1;
 							}
 						}
+						if (num_kill >= num_max_kill) break;
 					}
 
 				}
@@ -1458,26 +1462,30 @@ class GFLskill : Tracker {
 					healCharacter(m_metagame,characterId,10);
 
 					array<string> Voice={
-						"Hunter_buhuo_SKILL01_JP.wav",
-						"Hunter_buhuo_SKILL03_JP.wav"
+						"Weaver_buhuo_SKILL01_JP.wav",
+						"Weaver_buhuo_SKILL02_JP.wav",
+						"Weaver_buhuo_SKILL03_JP.wav"
 					};
 					playRandomSoundArray(m_metagame,Voice,factionId,character_pos.toString(),1);
 
 					array<const XmlElement@> affectedCharacter = getEnemyCharactersNearPosition(m_metagame,character_pos,factionId,45.0f,8);
 					uint num_max_kill = 8;
 					if(affectedCharacter.length()==0)break;
-					for (uint i0=0;i0<=num_max_kill;i0++){
+					uint num_kill = 0;
+					for (uint i0=0;i0<num_max_kill;i0++){ // 不再有实际作用，仅防止死循环
 						for (uint i1=0;i1<affectedCharacter.length();i1++)	{
-							i0+=1;
+							if (num_kill >= num_max_kill) break;
 							int luckyoneid = affectedCharacter[i1].getIntAttribute("id");
 							const XmlElement@ luckyoneC = getCharacterInfo(m_metagame, luckyoneid);
-							if (luckyoneC is null) break;
+							if (luckyoneC is null) continue;
 							if ((luckyoneC.getIntAttribute("id")!=-1)&&(luckyoneid!=characterId)){
 								string luckyonepos = luckyoneC.getStringAttribute("position");
 								Vector3 luckyoneposV = stringToVector3(luckyonepos);
 								CreateDirectProjectile(m_metagame,luckyoneposV.add(Vector3(0,1,0)),luckyoneposV,"skill_sf_boss_oroborus_warn.projectile",characterId,factionId,1);
+								num_kill += 1;
 							}
 						}
+						if (num_kill >= num_max_kill) break;
 					}
 
 				}
