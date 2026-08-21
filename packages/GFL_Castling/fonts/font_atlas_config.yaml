@@ -1,0 +1,373 @@
+########################################################## 使用说明 ##########################################################
+# RWR IMExt插件配套的动态字体渲染系统所需的字体配置文件
+# 下面以一种Fallback字体为例子说明字体配置的各参数和用法，使用者需先理解yaml的基本语法，此文件需要使用UTF-8编码
+
+# # 这是公共参数部分，这些参数也可以在后面Atlases内单独调整
+# Common:
+#   # 动态字体渲染系统的纹理宽度、高度尺寸，建议保持默认的3072x3072，这是一个权衡了显存占用和使用效率的尺寸
+#   # 在当前尺寸下实测，配合4K屏幕分辨率游玩4个小时也只占用50-60%的纹理空间，还远没有到达重置纹理的条件，仅建议屏幕大于4K分辨率的情况下按需调大
+#   textureWidth: 3072
+#   textureHeight: 3072
+#   # 字体纹理中对相邻字形位图之间的额外像素间隔，设置为1可以有效防止边缘错误采样到其他字形
+#   glyphGridPaddingX: 1
+#   glyphGridPaddingY: 1
+#   # 字体纹理占用阈值（数值范围0.0 - 1.0），当上传到GPU的字形面积超过了这个阈值以后，会在切换地图时重置纹理（但不重置字形的光栅化数据）
+#   # 如果字体纹理在未切换地图时爆满，则会立刻重置纹理，预计会产生一帧略为明显的帧率抖动（切换成OpenGl渲染模式可以大幅提高重置和上传纹理的效率）
+#   textureUsedAreaRatioThreshold: 0.80
+#   # 字体内存资源的占用阈值，当内存资源占用超过这个数值的时候，会在切换地图时完全删除当前的字形的光栅化数据
+#   memoryUsedThreshold: 524288000 # 500MB
+
+# # 这是针对游戏原本的font_config.xml的替换规则，当检测到当前package资源包的fonts路径下存在这个字体配置yaml文件时
+# # 会强制应用文件内定义的BasicConfig参数，因此本文件不需要依赖游戏原本的font_config.xml即可使用
+# BasicConfig:
+#   BasicFontOutline:
+#     letterSpacing: 0
+#     offset: [0, 0, 0]
+#   InputFontOutline:
+#     letterSpacing: 0
+#     offset: [0, 0, 0]
+#   BasicFont:
+#     letterSpacing: 0
+#     offset: [0, 0, 0]
+#   scale: 1.3
+
+# # 这是动态字体地图册的配置列表，每个列表项对应一个动态字体地图册（DynamicFontAtlas）实例，每个实例具有独立的字体纹理和字形光栅化数据
+# # 只会在游戏实际使用到这个动态字体地图册进行渲染的时候，才会去真正生成可用的字体纹理和字形光栅化数据
+# # 建议将聊天气泡字体和描边字体分开写两个实例，以确保字体风格和游戏原版一致
+# # 不同语言可以根据具体字体需求决定是否分开编写实例，当前仅区分中文和Fallback两套字体
+# Atlases:
+#     # 动态字体地图册实例的命名，不能重复否则无法正常区分Ogre字体纹理
+#   - name: "LatinOutlineFontAtlas"
+#     # 对于游戏字体（Ogre::Font）的匹配规则，使用wildmatch规则进行命名匹配，游戏字体命名可以在当前的.fontdef文件中获取
+#     # 游戏字体生成时，会自动从上到下根据规则匹配动态字体地图册实例
+#     # 此示例下的写法可以匹配游戏所有语言的描边字体
+#     patterns: [
+#       "*BasicFontOutline025", "*BasicFontOutline050", "*BasicFontOutline100",
+#       "*InputFontOutline025", "*InputFontOutline050", "*InputFontOutline100"
+#     ]
+#     # 当前动态字体地图册所用到的字体文件和渲染配置列表
+#     fonts:
+#         # 字体文件路径，支持相对路径和绝对路径，相对路径从当前yaml文件同路径查找，找不到时从系统字体目录查找同名文件
+#         # 对于Emoji字体，目前支持OpenType SVG字体和COLRv0字体，不支持COLRv1字体，建议优先采用OpenType SVG字体
+#       - fontFile: "NotoColorEmoji-Regular.ttf"
+#         # 当前字体有效码点范围，生成字符串的字形信息前，会根据码点范围进行匹配，只有匹配到的字体才进一步从字体本身搜索是否存在该码点的字形
+#         # 有效码点范围根据当前动态字体地图册实例下的字体列表从上到下进行匹配
+#         # 可选参数，默认值是单独一个全UNICODE范围匹配列表[0, MAX_UNICODE]，可以填写多个有效码点范围区间，区间是闭区间
+#         codePointRanges:
+#           - [0x7F, MAX_UNICODE]
+#         # 渲染基线高度和当前文字组件mCharHeight的比例
+#         baseLinePos: 0.72
+#         # 渲染字符高度和组件mCharHeight的比例
+#         charSizeRatio: 0.682
+#         # 用加法添加到字符之间的间隔，数值是相对于当前字号的比例，此参数和BasicConfig的letterSpacing共同构成最终的字符间隔
+#         extraSpaceAdd: 0.03
+#         # 可选参数，当前字体的Bearing额外偏移量，通过加法添加到字体的BearingRatio中，数值是相对于当前字号的比例，可以精细调整当前字体字形的上下左右偏移
+#         bearingRatioOffset: {left: 0.0, top: 0.0}
+#         # 可选参数，当前字体Bitmap渲染的描边半径、加粗参数对应的相对字号，默认值是64号字
+#         # 此参数不代表字体的渲染大小，仅作为部分参数的比例参考，实际渲染的字号是根据当前的实际像素大小动态调整的
+#         relativeFontSize: 64
+#         # 可选参数，当前字体Bitmap渲染的描边半径，必须大于等于0.0，默认值0.0代表没有描边，此参数会根据相对字号自动缩放
+#         strokeRadius: 6.5
+#         # 可选参数，描边渐变过渡的边缘厚度（通常设为 1.0f 到 1.5f 像素，用于羽化边缘），默认值1.2，此参数会根据相对字号自动缩放
+#         strokeFeatherWidth: 1.6
+#         # 可选参数，透明噪点阈值，对于emoji的描边渲染，当位图alpha小于等于阈值时，认为是噪点而略过，默认值5，数值范围0-255
+#         strokeTransparentNoiseThreshold: 5
+#         # 可选参数，实心像素阈值，对于emoji的描边渲染，当位图alpha大于阈值时，对他进行4邻域判断（邻域的实心判据也是这个阈值），
+#         # 从而确定是内部像素还是边缘像素，默认值250，数值范围0-255
+#         strokeSolidPixelThreshold: 250
+#       
+#       - fontFile: "komika_title_axix_rus_lat.otf"
+#         baseLinePos: 0.77
+#         charSizeRatio: 0.62
+#         extraSpaceAdd: 0.005
+#         strokeRadius: 6.5
+#         # 可选参数，当前字体的加粗/减细参数，此参数会根据相对字号自动缩放，默认值0.0，大于0代表加粗，小于0代表减细
+#         strength: -1.0
+#         # 可选参数，当前字体是否强制按设定颜色显示，默认值false
+#         # 此参数仅对纯文字字体生效，emoji字体不生效
+#         # 注意开启后游戏的阵营字体颜色调整会失效，建议有需要时仅针对聊天气泡文字开启
+#         forceColor: true
+#         # 可选参数，当前字体内部颜色，不管是否forceColor，字体光栅化时都按照这个颜色渲染，但实际游戏内显示出来的颜色由游戏、字体和forceColor最终决定
+#         # 默认值为白色[255, 255, 255]，其中色值顺序为RGB，单个色值数值范围0-255
+#         textColor: [255, 255, 0]
+#         # 可选参数，当前字体描边颜色，不管是否forceColor，字体光栅化时都按照这个颜色渲染，但实际游戏内显示出来的颜色由游戏、字体和forceColor最终决定
+#         # 默认值为黑色[0, 0, 0]，其中色值顺序为RGB，单个色值数值范围0-255
+#         strokeColor: [0, 20, 20]
+#       
+#         # 字体文件支持ttf、otf格式，也支持ttc字体合集格式
+#       - fontFile: "C:/Windows/Fonts/msyh.ttc"
+#         # 可选参数，字体的家族名称（如果无法找到则使用字体默认值）
+#         family: "Microsoft YaHei"
+#         # 可选参数，字体的样式名称（如果无法找到则使用字体默认值）
+#         style: "Regular"
+#         baseLinePos: 0.77
+#         charSizeRatio: 0.682
+#         extraSpaceAdd: 0.03
+#         strokeRadius: 6.5
+#     
+#     # 如下参数可以替换Common中的默认配置
+#     textureWidth: 3072
+#     textureHeight: 3072
+#     glyphGridPaddingX: 1
+#     glyphGridPaddingY: 1
+#     textureUsedAreaRatioThreshold: 0.85
+#     memoryUsedThreshold: 524288000
+
+# 注意事项
+# 1. 此文件必须放置在media/packages/*/fonts文件夹下，切换地图的时候会按游戏的资源包优先级扫描media/packages/*/fonts路径并尝试加载font_atlas_config.yaml。
+#    因此即使当前的资源包或者mod没有yaml文件，也会最终匹配到vanilla资源包路径下的font_atlas_config.yaml，并且由于其中存在Fallback匹配字体，因此vanilla的
+#    font_atlas_config.yaml一定会生效。如果需要单独修改字体，则需要在资源包的fonts文件夹下写一个新的font_atlas_config.yaml，并配上所需字体文件。
+
+########################################################### Manual ###########################################################
+# Font configuration file required by the dynamic font rendering system bundled with the RWR IMExt plugin.
+# The sections below use a Fallback font as an example to explain the parameters and usage of the font
+# configuration. Users should first understand the basic syntax of YAML, and this file must be encoded in UTF-8.
+
+# # This is the common parameters section; these parameters can also be adjusted individually in the Atlases section below.
+# Common:
+#   # Width and height of the texture used by the dynamic font rendering system. It is recommended to keep the default 3072x3072,
+#   # a size that balances VRAM usage and rendering efficiency. In practice at the current size, playing for 4 hours at 4K screen
+#   # resolution only uses 50-60% of the texture space, far from the point where the texture would need to be reset. It is only
+#   # recommended to increase it if the screen resolution is greater than 4K.
+#   textureWidth: 3072
+#   textureHeight: 3072
+#   # Extra pixel spacing between adjacent glyph bitmaps in the font texture.
+#   # Setting it to 1 effectively prevents edge sampling from incorrectly picking up other glyphs.
+#   glyphGridPaddingX: 1
+#   glyphGridPaddingY: 1
+#   # Font texture usage threshold (range 0.0 - 1.0). When the glyph area uploaded to the GPU exceeds this threshold, 
+#   # the texture is reset when switching maps (but the glyph rasterization data is not reset).
+#   # If the font texture fills up before a map switch, it will be reset immediately, which may cause a slightly noticeable
+#   # frame-rate drop for one frame. (Switching to OpenGL rendering mode can greatly improve the efficiency of texture reset and upload.)
+#   textureUsedAreaRatioThreshold: 0.80
+#   # Memory usage threshold for font resources. When memory usage exceeds this value, the rasterization data of the current glyphs
+#   # is completely deleted when switching maps.
+#   memoryUsedThreshold: 524288000 # 500MB
+
+# # This is the replacement rule for the game's original font_config.xml. When a font config YAML file is detected
+# # in the fonts path of the current package, the BasicConfig parameters defined in the file are forcibly applied,
+# # so this file can be used without relying on the game's original font_config.xml.
+# BasicConfig:
+#   BasicFontOutline:
+#     letterSpacing: 0
+#     offset: [0, 0, 0]
+#   InputFontOutline:
+#     letterSpacing: 0
+#     offset: [0, 0, 0]
+#   BasicFont:
+#     letterSpacing: 0
+#     offset: [0, 0, 0]
+#   scale: 1.3
+
+# # This is the configuration list for dynamic font atlases. Each list item corresponds to a DynamicFontAtlas instance, and each
+# # instance has its own font texture and glyph rasterization data. Usable font textures and glyph rasterization data are only
+# # actually generated when the game uses this dynamic font atlas for rendering.
+# # It is recommended to write the chat bubble font and the outline font as two separate instances to keep the font style consistent
+# # with the original game. Different languages can decide whether to use separate instances based on their specific font needs.
+# # Currently only two font sets are distinguished: Chinese and Fallback.
+# Atlases:
+#     # Name of the dynamic font atlas instance. Names must not be duplicated, otherwise Ogre font textures cannot be distinguished properly.
+#   - name: "LatinOutlineFontAtlas"
+#     # Matching rules for game fonts (Ogre::Font), using wildmatch rules for name matching.
+#     # Game font names can be obtained from the current .fontdef file.
+#     # When a game font is generated, dynamic font atlas instances are automatically matched from top to bottom according to these rules.
+#     # The patterns in this example can match outline fonts of all languages in the game.
+#     patterns: [
+#       "*BasicFontOutline025", "*BasicFontOutline050", "*BasicFontOutline100",
+#       "*InputFontOutline025", "*InputFontOutline050", "*InputFontOutline100"
+#     ]
+#     # List of font files and rendering configuration used by the current dynamic font atlas.
+#     fonts:
+#         # Font file path; both relative and absolute paths are supported. Relative paths are looked up from the directory of the current
+#         # YAML file, and if not found, the system font directory is searched for a file with the same name.
+#         # For Emoji fonts, OpenType SVG fonts and COLRv0 fonts are currently supported;
+#         # COLRv1 fonts are not supported. OpenType SVG fonts are recommended.
+#       - fontFile: "NotoColorEmoji-Regular.ttf"
+#         # Valid code point ranges for the current font. Before generating glyph information for a string, the code point ranges are 
+#         # used for matching; only matching fonts are then searched to see whether they actually contain a glyph for that code point.
+#         # The valid code point ranges are matched against the font list of the current dynamic font atlas instance from top to bottom.
+#         # Optional parameter. The default is a single full-UNICODE range match list [0, MAX_UNICODE].
+#         # Multiple valid code point range intervals can be specified, and the intervals are inclusive.
+#         codePointRanges:
+#           - [0x7F, MAX_UNICODE]
+#         # Ratio of the rendering baseline height to the current text component's mCharHeight.
+#         baseLinePos: 0.72
+#         # Ratio of the rendered character height to the component's mCharHeight.
+#         charSizeRatio: 0.682
+#         # Extra spacing added between characters, expressed as a ratio relative to the current font size.
+#         # Together with letterSpacing in BasicConfig, this parameter determines the final character spacing.
+#         extraSpaceAdd: 0.03
+#         # Optional parameter. Additional bearing offset for the current font, added to the font's BearingRatio.
+#         # The value is a ratio relative to the current font size and can finely adjust the up/down/left/right offset of the current font's glyphs.
+#         bearingRatioOffset: {left: 0.0, top: 0.0}
+#         # Optional parameter. The relative font size that the stroke radius and bold/thin parameters of the current font's Bitmap
+#         # rendering correspond to. The default is a 64-point font.
+#         # This parameter does not represent the rendered font size; it only serves as a proportional reference for some parameters.
+#         # The actual rendered font size is dynamically adjusted based on the current pixel size.
+#         relativeFontSize: 64
+#         # Optional parameter. The stroke radius for the current font's Bitmap rendering; it must be greater than or equal to 0.0.
+#         # A default of 0.0 means no stroke. This parameter is automatically scaled according to the relative font size.
+#         strokeRadius: 6.5
+#         # Optional parameter. Edge thickness of the stroke's gradient transition (usually set to 1.0f to 1.5f pixels to feather the edges);
+#         # default is 1.2. This parameter is automatically scaled according to the relative font size.
+#         strokeFeatherWidth: 1.6
+#         # Optional parameter. Transparent noise threshold. For emoji stroke rendering, when the bitmap alpha is less than or
+#         # equal to this threshold, the pixel is treated as noise and skipped. Default is 5, range 0-255.
+#         strokeTransparentNoiseThreshold: 5
+#         # Optional parameter. Solid pixel threshold. For emoji stroke rendering, when the bitmap alpha is greater than this threshold,
+#         # a 4-neighborhood check is performed on it (the neighborhood's solid-pixel criterion is also this threshold),
+#         # to determine whether it is an interior or edge pixel. Default is 250, range 0-255.
+#         strokeSolidPixelThreshold: 250
+#       
+#       - fontFile: "komika_title_axix_rus_lat.otf"
+#         baseLinePos: 0.77
+#         charSizeRatio: 0.62
+#         extraSpaceAdd: 0.005
+#         strokeRadius: 6.5
+#         # Optional parameter. The bold/thin adjustment for the current font, automatically scaled according to the relative font size.
+#         # Default is 0.0; greater than 0 means bolder, less than 0 means thinner.
+#         strength: -1.0
+#         # Optional parameter. Whether the current font is forced to display in the configured color. Default is false.
+#         # This parameter only takes effect for plain text fonts, not emoji fonts.
+#         # Note: once enabled, the game's faction font color adjustments will no longer work. It is recommended to enable it
+#         # only for chat bubble text when needed.
+#         forceColor: true
+#         # Optional parameter. The interior color of the current font. Regardless of forceColor, the font is rasterized with this color,
+#         # but the color actually displayed in the game is ultimately determined by the game, the font, and forceColor.
+#         # Default is white [255, 255, 255]; color values are in RGB order, each ranging from 0-255.
+#         textColor: [255, 255, 0]
+#         # Optional parameter. The stroke color of the current font. Regardless of forceColor, the font is rasterized with this color,
+#         # but the color actually displayed in the game is ultimately determined by the game, the font, and forceColor.
+#         # Default is black [0, 0, 0]; color values are in RGB order, each ranging from 0-255.
+#         strokeColor: [0, 20, 20]
+#       
+#         # Font files support ttf and otf formats, as well as the ttc font collection format.
+#       - fontFile: "C:/Windows/Fonts/msyh.ttc"
+#         # Optional parameter. The family name of the font (falls back to the font's default if not found).
+#         family: "Microsoft YaHei"
+#         # Optional parameter. The style name of the font (falls back to the font's default if not found).
+#         style: "Regular"
+#         baseLinePos: 0.77
+#         charSizeRatio: 0.682
+#         extraSpaceAdd: 0.03
+#         strokeRadius: 6.5
+#     
+#     # The following parameters can override the default configuration in Common.
+#     textureWidth: 3072
+#     textureHeight: 3072
+#     glyphGridPaddingX: 1
+#     glyphGridPaddingY: 1
+#     textureUsedAreaRatioThreshold: 0.85
+#     memoryUsedThreshold: 524288000
+
+# Notes
+# 1. This file must be placed in the media/packages/*/fonts folder. When switching maps, the plugin scans the media/packages/*/fonts
+#    paths according to package priority and tries to load font_atlas_config.yaml. Therefore, even if the current package or mod has
+#    no YAML file, the font_atlas_config.yaml in the vanilla package path will still be matched, and because it contains
+#    Fallback-matching fonts, the vanilla font_atlas_config.yaml will always take effect. If you need to modify fonts separately,
+#    write a new font_atlas_config.yaml in the fonts folder of a package and provide the required font files.
+###################################################################################################################################
+
+Common:
+  textureWidth: 3072
+  textureHeight: 3072
+  glyphGridPaddingX: 1
+  glyphGridPaddingY: 1
+  textureUsedAreaRatioThreshold: 0.80
+  memoryUsedThreshold: 268435456 # 256MB
+
+BasicConfig:
+  BasicFontOutline:
+    letterSpacing: 0.008
+    offset: [0, 0, 0]
+  InputFontOutline:
+    letterSpacing: 0.008
+    offset: [0, 0, 0]
+  BasicFont:
+    letterSpacing: 0
+    offset: [0, 0, 0]
+  scale: 1.3
+
+Atlases:
+########################## Chinese ##########################
+  - name: "ChineseBasicFontAtlas"
+    patterns: ["ChineseBasicFont025", "ChineseBasicFont050", "ChineseBasicFont100"]
+    fonts:
+      - fontFile: "方正准圆.ttf"
+        baseLinePos: 0.859
+        charSizeRatio: 0.82
+        extraSpaceAdd: 0
+        strength: 1.5
+        bearingRatioOffset: {left: 0.0, top: 0.036}
+
+  
+  - name: "ChineseOutlineFontAtlas"
+    patterns: [
+      "ChineseBasicFontOutline025", "ChineseBasicFontOutline050", "ChineseBasicFontOutline100",
+      "ChineseInputFontOutline025", "ChineseInputFontOutline050", "ChineseInputFontOutline100"
+    ]
+    fonts:
+      - fontFile: "方正准圆.ttf"
+        baseLinePos: 0.859
+        charSizeRatio: 0.78
+        extraSpaceAdd: 0.057
+        strokeRadius: 6.9
+        strokeFeatherWidth: 1.2
+        relativeFontSize: 64
+        strength: 1.7
+        bearingRatioOffset: {left: 0.0, top: 0.036}
+
+
+      
+
+########################## Latin / Russian / Korean / Fallback ##########################
+  - name: "LatinBasicFontAtlas"
+    patterns: ["*BasicFont025", "*BasicFont050", "*BasicFont100"]
+    fonts:
+      - fontFile: "NotoColorEmoji-Regular.ttf"
+        codePointRanges:
+          - [0x7F, MAX_UNICODE]
+        baseLinePos: 0.77
+        charSizeRatio: 0.80
+        extraSpaceAdd: 0.0
+        strokeRadius: 4.5
+        strokeFeatherWidth: 1.8
+      
+      - fontFile: "komika_title_axix_rus_lat.otf"
+        baseLinePos: 0.82
+        charSizeRatio: 0.75
+        extraSpaceAdd: 0.0
+        strength: -1.0
+      
+      - fontFile: "SarasaUISCMod-Bold.ttf"
+        baseLinePos: 0.82
+        charSizeRatio: 0.82
+        extraSpaceAdd: 0.0
+
+  - name: "LatinOutlineFontAtlas"
+    patterns: [
+      "*BasicFontOutline025", "*BasicFontOutline050", "*BasicFontOutline100",
+      "*InputFontOutline025", "*InputFontOutline050", "*InputFontOutline100"
+    ]
+    fonts:
+      - fontFile: "NotoColorEmoji-Regular.ttf"
+        codePointRanges:
+          - [0x7F, MAX_UNICODE]
+        baseLinePos: 0.72
+        charSizeRatio: 0.682
+        extraSpaceAdd: 0.03
+        strokeRadius: 6.5
+        strokeFeatherWidth: 1.6
+      
+      - fontFile: "komika_title_axix_rus_lat.otf"
+        baseLinePos: 0.77
+        charSizeRatio: 0.62
+        extraSpaceAdd: 0.005
+        strokeRadius: 6.5
+        strength: -1.0
+      
+      - fontFile: "SarasaUISCMod-Bold.ttf"
+        baseLinePos: 0.77
+        charSizeRatio: 0.682
+        extraSpaceAdd: 0.03
+        strokeRadius: 6.5
