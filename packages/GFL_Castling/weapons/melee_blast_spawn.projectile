@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<projectile class="grenade" key="melee_blast_spawn.projectile" name="" slot="1" time_to_live="0.10" pulldown_in_air="-30">
+    <trigger class="time" time_to_live="0.01">
+        <collider class="terrain" enabled="1" />
+        <collider class="static_object" enabled="1" />
+        <collider class="vehicle" enabled="1" />
+        <collider class="character" enabled="1" faction_compare="not_equal" />
+    </trigger>
+    <rotation class="motion" />
+    <model />
+</projectile>

@@ -123,8 +123,8 @@
     <animation state_key="next_in_chain_in" animation_key="change weapon to melee, gunda" />
     <model filename="gkw_88type_gudan_melee.xml" />
     <hud_icon filename="gkw_88type_6503_mod3.png" />
-    <projectile file="teal.projectile">
-        <result class="blast" radius="6" damage="5" decal="0" push="0.2" character_state="death" faction_compare="not_equal" make_vehicle_hit_sound="0" />
+    <projectile file="melee_blast_spawn.projectile">
+        <result class="spawn" instance_class="grenade" instance_key="melee_88mod3.projectile" min_amount="2" max_amount="2" offset="0 0 0" position_spread="0 0" direction_spread="0 0" />
     </projectile>
     <effect class="muzzle" ref="sawsnone" />
     <stance state_key="running" accuracy="1" />
