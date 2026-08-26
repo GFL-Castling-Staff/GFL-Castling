@@ -10,7 +10,7 @@
 //Author: Saiwa
 
 class jupiter: Tracker {
-	protected Metagame@ m_metagame;
+	protected GameMode@ m_metagame;
 	protected float reload_cycle;
 	protected float reload_time=60.0;
 	protected bool m_started=false;
@@ -25,7 +25,7 @@ class jupiter: Tracker {
 	protected int currentplayers = 1;//目前在线玩家数量
 	protected int awaitingstrikes = 1;//同时射击的木星炮数
 
-	jupiter(Metagame@ metagame,float cycle=60.0) {
+	jupiter(GameMode@ metagame,float cycle=60.0) {
 		@m_metagame = @metagame;
 		reload_cycle =cycle;
     }
@@ -59,17 +59,32 @@ class jupiter: Tracker {
 		
 		//艾莫号等一众vip载具特别保护措施
 		float jud_amos = 48.0;
-		int vehicleid;
 		int jud_fire = 1;
+		int jud_loop = 0;
 
-		while(jud_fire!=0)
-		{
-			vehicleid = getAmosPosition(m_metagame,0,c_pos,jud_amos);
-			if(vehicleid!=-1) {
-				c_pos = c_pos.add(Vector3(jud_amos*sin(rand(0,20)/20*6.28),0,jud_amos*cos(rand(0,20)/20*6.28)));
-			}
-			else	jud_fire = 0;
+		//循环外只查询一次各阵营载具列表
+		array<array<const XmlElement@>@> factionVehicles;
+		for(int f=0; f<int(m_metagame.getFactionCount()); f++){
+			factionVehicles.insertLast(getAllVehicles(m_metagame, f));
 		}
+		Vector3 jud_start = c_pos;
+
+		while(jud_fire!=0 && jud_loop<5)
+		{
+			jud_loop++;
+			jud_fire = 0;
+			for(uint i=0;i<factionVehicles.length();i++){
+				if(hasVipVehicleNear(m_metagame, factionVehicles[i], c_pos, jud_amos)!=-1){
+					jud_fire = 1;
+					break;
+				}
+			}
+			if(jud_fire!=0) {
+				float jud_rad = rand(0, 628) * 0.01;
+				c_pos = c_pos.add(Vector3(jud_amos*sin(jud_rad),0,jud_amos*cos(jud_rad)));
+			}
+		}
+		_log("Jupiter_Avoid_Offset: loops=" + jud_loop + " from=" + jud_start.toString() + " to=" + c_pos.toString());
 
 		// int circle = 8;	//警示烟雾数量
 

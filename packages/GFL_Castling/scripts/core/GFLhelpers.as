@@ -385,9 +385,8 @@ float getAimUnitDistance(float scale, Vector3 s_pos, Vector3 e_pos) {
 	return scale*ds;
 }
 
-int getAmosPosition(Metagame@ metagame, uint ownerid, Vector3 judgePos, float radius) {
-	
-	array<const XmlElement@>@ vehicles = getAllVehicles(metagame, 0);
+int hasVipVehicleNear(Metagame@ metagame, array<const XmlElement@>@ vehicles, Vector3 judgePos, float radius) {
+	if(vehicles is null){return -1;}
 	for(uint i=0;i<vehicles.length();i++){
 		Vector3 vehiclePos = stringToVector3(vehicles[i].getStringAttribute("position"));
 		if(getAimUnitDistance(1.0,judgePos,vehiclePos)>radius){continue;} //载具在查询范围外
@@ -395,10 +394,16 @@ int getAmosPosition(Metagame@ metagame, uint ownerid, Vector3 judgePos, float ra
 		int vehicleid = vehicles[i].getIntAttribute("id");
 		const XmlElement@ vehicleInfo = getVehicleInfo(metagame, vehicleid);
 		if(vehicleInfo is null){continue;}  //载具不存在
-		if(vip_vehicles.find(vehicleInfo.getStringAttribute("key"))==-1){continue;} //载具是VIP载具
+		if(vehicleInfo.getFloatAttribute("health") <= 0.0){continue;} //载具已被击毁
+		if(vip_vehicles.find(vehicleInfo.getStringAttribute("key"))==-1){continue;} //载具不是VIP载具
 		return 1;
 	}
-	return -1;	
+	return -1;
+}
+
+int getAmosPosition(Metagame@ metagame, uint ownerid, Vector3 judgePos, float radius) {
+	//修复：原本硬编码faction 0，现在按ownerid查询对应阵营的载具
+	return hasVipVehicleNear(metagame, getAllVehicles(metagame, int(ownerid)), judgePos, radius);
 }
 
 int getNearByEnemyVehicle(Metagame@ metagame, uint ownerfid, Vector3 judgePos, float radius) {
