@@ -34,7 +34,7 @@
 		<capacity value="1" source="rank" source_value="0.0"/>
 		<weak_hand_hold offset="0.3"/>
 		<projectile file="portable_mortar.projectile" pulldown_in_air="30">
-			<result class="blast" radius="5.0" damage="30.0" push="1.0" decal="1" faction_compare="not_equal" damage_origin_vehicle="0" tweak_factor="1.60"/>
+			<result class="blast" radius="5.0" damage="10.0" push="1.0" decal="1" faction_compare="not_equal" damage_origin_vehicle="0" tweak_factor="1.60"/>
 			<effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1"/>
 			<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="4" layer="0"/>
 			<effect class="result" type="splat_map" surface_tag="" size="6.0" atlas_index="0" layer="2" additive="0"/>
@@ -82,7 +82,9 @@
 	reload_one_at_a_time="1"
 	slot="0"/>
 	
-	<projectile file="mortar_60mm.projectile" can_be_detected_by_footmen="1"  can_be_detected_by_driver="1"/>
+	<projectile file="mortar_60mm.projectile" can_be_detected_by_footmen="1"  can_be_detected_by_driver="1">
+		<result class="spawn" instance_class="projectile" instance_key="blast_heavy_rad6_damage12.projectile" min_amount="4" max_amount="4" offset="0 2.0 0" position_spread="0.1 0" direction_spread="0 0"  damage_origin_vehicle="0"/>
+	</projectile>
 	<ballistics near_far_distance="1.0" speed_estimation_near="10.0" speed_estimation_far="50.0" max_speed="200.0" randomness="0.03"/>
 	<effect class="muzzle" ref="MusketMuzzle"/>
 	<effect class="muzzle" ref="UpDust"/>
