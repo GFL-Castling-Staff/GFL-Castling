@@ -4896,8 +4896,9 @@ class CommandSkill : Tracker {
                 XmlElement c ("command");
                 c.setStringAttribute("class", "update_inventory");
                 c.setIntAttribute("character_id", soldierId);
-                c.setIntAttribute("untransform_count", 3);
+                c.setIntAttribute("untransform_count", 5);
                 m_metagame.getComms().send(c);
+                setPlayerWound(m_metagame,soldierId,false);
             }
             spawnStaticProjectile(m_metagame,"particle_effect_radius_heal.projectile",c_pos,characterId,factionid);
         }

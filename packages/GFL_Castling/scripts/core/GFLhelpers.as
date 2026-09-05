@@ -785,6 +785,14 @@ void playAnimationKey(Metagame@ m_metagame,int characterId,string animekey,bool 
 	m_metagame.getComms().send(command);
 }
 
+void setPlayerWound(Metagame@ m_metagame,int characterId,bool wounded){
+	XmlElement command("command");
+	command.setStringAttribute("class", "update_character");
+	command.setIntAttribute("id", characterId);
+	command.setIntAttribute("wounded", (wounded ? 1 : 0));
+	m_metagame.getComms().send(command);
+}
+
 void addMutilItemInBackpack(Metagame@ metagame, int characterId, const Resource@ r,uint num) {
 	XmlElement command("command");
 	command.setStringAttribute("class", "update_inventory");

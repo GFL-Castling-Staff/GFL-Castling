@@ -48,8 +48,8 @@
         <animation state_key="crouch_moving_backwards"	animation_key="crouching backwards, pistol 2" />
         <animation state_key="prone_still" 			animation_key="prone_still, pistol" />
         <animation state_key="changing_weapon_in" 	animation_key="change weapon in, pistol fast pull" />
-    <animation state_key="changing_weapon_out" 	animation_key="change weapon out, pistol fast pull" />
-    <animation state_key="changing_weapon_out" 	animation_key="change weapon out, pistol fast pull" />
+        <animation state_key="changing_weapon_out" 	animation_key="change weapon out, pistol fast pull" />
+        <animation state_key="changing_weapon_out" 	animation_key="change weapon out, pistol fast pull" />
         <animation state_key="stabbing" 			animation_key="pistol whip" />
         <animation state_key="stabbing" 			animation_key="pistol whip 3" />
         <!--Sounds-->
@@ -85,7 +85,7 @@
         <tag name="stealth"/>
         <!--Weapon specifications-->
         <specification
-        retrigger_time="0.12"
+        retrigger_time="0.06"
         accuracy_factor="1.0"
         sustained_fire_grow_step="0.3"
         sustained_fire_diminish_rate="2.4"
@@ -101,6 +101,7 @@
         burst_shots="1"
         spread_range="0.15"
         carry_in_two_hands="0"
+        can_shoot_running="1"
         stab_enabled="1"/>
         <commonness value="0.0001" in_stock="0" can_respawn_with="1" />
         <capacity value="1" source="rank" source_value="0.0" />
@@ -125,8 +126,8 @@
         <animation state_key="crouch_moving_backwards"	animation_key="crouching backwards, pistol 2" />
         <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
         <animation state_key="changing_weapon_in" 	animation_key="change weapon in, pistol fast pull" />
-    <animation state_key="changing_weapon_out" 	animation_key="change weapon out, pistol fast pull" />
-    <animation state_key="changing_weapon_out" 	animation_key="change weapon out, pistol fast pull" />
+        <animation state_key="changing_weapon_out" 	animation_key="change weapon out, pistol fast pull" />
+        <animation state_key="changing_weapon_out" 	animation_key="change weapon out, pistol fast pull" />
         <animation state_key="stabbing" animation_key="pistol whip" />
         <animation state_key="stabbing" animation_key="pistol whip 2" />
         <animation state_key="stabbing" animation_key="pistol whip 3" />
