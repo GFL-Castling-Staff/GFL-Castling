@@ -1655,9 +1655,6 @@
     <model filename="gkd_ar_hk416mod3.xml">
         <requirement class="weapon" key="gkw_404_hk416mod3.weapon" slot="0" />
     </model>
-    <model filename="gkd_ar_m4sopmodiimod3.xml">
-        <requirement class="weapon" key="gkw_m4sopmodiimod3.weapon" slot="0" />
-    </model>
     <model filename="gkd_ar_stg44mod3.xml">
         <requirement class="weapon" key="gkw_stg44mod3.weapon" slot="0" />
     </model>
@@ -3810,6 +3807,9 @@
     </model>
     <model filename="gkd_ar_m4sopmodii_4507.xml">
         <requirement class="weapon" slot="0" key="gkw_m4sopmodiimod3_4507.weapon" />
+    </model>
+    <model filename="gkd_ar_m4sopmodii_574.xml">
+        <requirement class="weapon" slot="0" key="gkw_m4sopmodii_574.weapon" />
     </model>
 
     <model filename="gkd_ar_galil_from_melondove.xml">
