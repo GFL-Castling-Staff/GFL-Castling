@@ -73,7 +73,7 @@
         <effect class="result" key="vehicle" copy="terrain" />
         <effect class="result" key="character" copy="terrain" />
         <effect class="result" key="other" copy="terrain" />
-    </projectile>    
+    </projectile>
     <projectile class="grenade" name="" key="hd_effect_radar_scan.projectile" slot="2" radius="0.05">
         <result class="blast" radius="0.1" damage="0.0" decal="0" push="0.0" character_state="none" make_vehicle_hit_sound="0" />
         <trigger class="time" time_to_live="0.0"/>

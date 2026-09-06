@@ -782,7 +782,7 @@ class kill_event : Tracker {
             }
 
             // M14MOD3 火力专注 - 连锁射击
-            else if( (KillerWeaponKey=="gkw_m14mod3.weapon"
+            else if((KillerWeaponKey=="gkw_m14mod3.weapon"
             || KillerWeaponKey=="gkw_m14mod3_skill.weapon"
             || KillerWeaponKey=="gkw_m14mod3_303.weapon"
             || KillerWeaponKey=="gkw_m14mod3_303_skill.weapon")
@@ -841,6 +841,17 @@ class kill_event : Tracker {
                 }
             }
 
+            else if((KillerWeaponKey=="gkw_em2mod3.weapon"
+            ) 
+            && killway=="hit"){
+                if(playerInfo.checkTag("em2_bullet"))
+                {
+                    Vector3 dead_position = stringToVector3(dead_pos);
+                    dead_position = dead_position.add(Vector3(0,0.8,0));
+                    spawnStaticProjectile(m_metagame,"em2_voidblast.projectile",dead_position,characterId,factionId);
+                    playerInfo.removeTag("em2_bullet");
+                }
+            }
             //狙击妖精类 击杀无人机充能
 
             else if(KillerWeaponKey=="gkw_m200.weapon" || KillerWeaponKey=="gkw_m200_560.weapon" || KillerWeaponKey=="gkw_m200_4502.weapon"

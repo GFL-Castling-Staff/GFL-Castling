@@ -2643,6 +2643,153 @@ particle_system hellpod_dropping_ground_smoke_leave : hellpod_dropping_ground_sm
 	}
 }
 
+//下面是虚空震波
+
+particle_system void_shock_blast_ring
+{
+	quota 50
+	material lens_circle_08
+	particle_width 3
+	particle_height 3
+	renderer billboard
+	billboard_type perpendicular_common
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0.01
+	
+	emitter Point
+	{
+		angle 0
+		colour 0 0 0 0
+		direction 0 1 0
+		emission_rate 30
+		position 0 0.5 0
+		velocity 0.0001
+		time_to_live 0.35
+		duration 0.1
+	}
+	affector Scaler
+	{
+		rate 25
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	0
+		rotation_range_end	180
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.71 0.05 0.86 1
+		time1 0.5
+		colour1 0.71 0.05 0.86 1
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+	affector DirectionRandomiser 
+	{
+		randomness 0
+		scope 0
+		keep_velocity false
+	}
+}
+
+particle_system void_shock_blast_ring_2 : void_shock_blast_ring
+{
+	material lens_circle_07
+}
+
+particle_system void_shock_blast_spray_1
+{
+	quota 200
+	material point_hard_edge
+	particle_width 0.25
+	particle_height 1.5
+	renderer billboard
+	billboard_type oriented_self
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	emitter Point
+	{
+		angle 90
+		colour 0.71 0.05 0.86 1
+		direction 0 1 0
+		emission_rate 200
+		position 0 0 0
+		velocity_min 50
+		velocity_max 60
+		time_to_live 0.2
+		duration 0.15
+	}
+	affector Scaler
+	{
+		rate 0
+	}
+		affector Rotator
+	{
+		rotation_speed_range_start	0
+		rotation_speed_range_end	0
+		rotation_range_start	0
+		rotation_range_end	0
+	}
+	affector ColourInterpolator
+	{
+		time0 0
+		colour0 0.71 0.05 0.86 1
+		time1 0.7
+		colour1 0.71 0.05 0.86 1
+		time2 1
+		colour2 0 0 0 0
+	}
+	affector LinearForce{
+		force_vector 0 0 0
+		force_application add
+	}
+	affector DirectionRandomiser 
+	{
+		randomness 0
+		scope 0
+		keep_velocity false
+	}
+}
+particle_system void_shock_blast_spray_2 : void_shock_blast_spray_1		//top
+{
+	quota 50
+	material point_hard_edge
+	particle_width 0.12
+	particle_height 1
+	renderer billboard
+	billboard_type oriented_self
+	billboard_origin center
+	billboard_rotation_type vertex
+	common_direction 0 1 0
+	common_up_vector 0 0 1
+	iteration_interval 0
+	emitter Point
+	{
+		angle 10
+		colour 0.71 0.05 0.86 1
+		direction 0 1 0
+		emission_rate 120
+		position 0 0 0
+		velocity_min 40
+		velocity_max 50
+		time_to_live 0.3
+		duration 0.1
+	}
+}
+
 --------------------------------------material-----------------------------------
 material alpha_blend_base{
 	receive_shadows off

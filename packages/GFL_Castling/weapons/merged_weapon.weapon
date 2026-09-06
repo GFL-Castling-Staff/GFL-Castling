@@ -45547,7 +45547,7 @@
 
 <weapon key="gkw_ar57.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="autorifle"/>
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" magazine_size="50" name="AR57" projectile_speed="180" retrigger_time="0.12" suppressed="1" sight_range_modifier="1.5" stance_accuracy_rate="1.0" spread_range="0.3" sustained_fire_diminish_rate="1.4" sustained_fire_grow_step="0.3"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" magazine_size="50" name="AR57" projectile_speed="180" retrigger_time="0.12" suppressed="1" sight_range_modifier="1.5" stance_accuracy_rate="1.0" spread_range="0.3" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.27"/>
 	<inventory encumbrance="12.5" buy_price="57.0" sell_price="57.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
 	<next_in_chain key="gkw_ar57_skill.weapon" share_ammo="1"/>
@@ -45661,8 +45661,8 @@
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.55"/>
 	<stance state_key="crouch_moving" accuracy="0.7"/>
-	<stance state_key="standing" accuracy="0.92"/>
-	<stance state_key="crouching" accuracy="0.98"/>
+	<stance state_key="standing" accuracy="0.98"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="0.95"/>
 	<stance state_key="prone_moving" accuracy="0.7"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
@@ -45804,7 +45804,7 @@
 
 <weapon key="gkw_ar57_6705.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="autorifle"/>
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" magazine_size="50" name="AR57-[With the Three Friends of Winter]" projectile_speed="180" retrigger_time="0.12" suppressed="1" sight_range_modifier="1.5" stance_accuracy_rate="1.0" spread_range="0.3" sustained_fire_diminish_rate="1.4" sustained_fire_grow_step="0.3"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" magazine_size="50" name="AR57-[With the Three Friends of Winter]" projectile_speed="180" retrigger_time="0.12" suppressed="1" sight_range_modifier="1.5" stance_accuracy_rate="1.0" spread_range="0.3" sustained_fire_diminish_rate="1.8" sustained_fire_grow_step="0.27"/>
 	<inventory encumbrance="12.5" buy_price="57.0" sell_price="57.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.5"/>
 	<next_in_chain key="gkw_ar57_6705_skill.weapon" share_ammo="1"/>
@@ -45918,8 +45918,8 @@
 	<stance state_key="running" accuracy="0.3"/>
 	<stance state_key="walking" accuracy="0.55"/>
 	<stance state_key="crouch_moving" accuracy="0.7"/>
-	<stance state_key="standing" accuracy="0.92"/>
-	<stance state_key="crouching" accuracy="0.98"/>
+	<stance state_key="standing" accuracy="0.98"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="0.95"/>
 	<stance state_key="prone_moving" accuracy="0.7"/>
 	<stance state_key="over_wall" accuracy="1.0"/>
@@ -112242,7 +112242,7 @@
 	<tag name="pistol"/>
 	<tag name="elite"/>
 	<tag name="stealth"/>
-	<specification retrigger_time="0.12" accuracy_factor="1.0" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="2.4" magazine_size="36" suppressed="1" name="GSH18(MOD3)-[Chain Assault]" class="0" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="130" projectiles_per_shot="1" burst_shots="1" spread_range="0.15" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification retrigger_time="0.06" accuracy_factor="1.0" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="2.4" magazine_size="36" suppressed="1" name="GSH18(MOD3)-[Chain Assault]" class="0" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="130" projectiles_per_shot="1" burst_shots="1" spread_range="0.15" carry_in_two_hands="0" can_shoot_running="1" stab_enabled="1"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="5.0" buy_price="150.0" sell_price="150.0"/>
@@ -133974,7 +133974,7 @@
 	<tag name="pistol"/>
 	<tag name="elite"/>
 	<tag name="stealth"/>
-	<specification retrigger_time="0.12" accuracy_factor="1.0" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="2.4" magazine_size="36" suppressed="1" name="GSH18(MOD3)-[Walking operating table]-[Chain Assault]" class="0" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="130" projectiles_per_shot="1" burst_shots="1" spread_range="0.15" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification retrigger_time="0.06" accuracy_factor="1.0" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="2.4" magazine_size="36" suppressed="1" name="GSH18(MOD3)-[Walking operating table]-[Chain Assault]" class="0" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="130" projectiles_per_shot="1" burst_shots="1" spread_range="0.15" carry_in_two_hands="0" can_shoot_running="1" stab_enabled="1"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="5.0" buy_price="150.0" sell_price="150.0"/>
@@ -140899,7 +140899,7 @@
 </weapon>
 
 <weapon key="gkw_g41_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" magazine_size="30" name="G41-[H.P.T.H.D.]" projectile_speed="240" retrigger_time="0.071" suppressed="0" spread_range="0.3" stance_accuracy_rate="1.75" sight_range_modifier="1.75" sustained_fire_diminish_rate="2.05" sustained_fire_grow_step="0.28" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" magazine_size="30" name="G41-[H.P.T.H.D.]" projectile_speed="240" retrigger_time="0.071" suppressed="0" spread_range="0.26" stance_accuracy_rate="2.5" sight_range_modifier="1.75" sustained_fire_diminish_rate="2.05" sustained_fire_grow_step="0.28" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="35.0" buy_price="41.0" sell_price="41.0"/>
@@ -140915,7 +140915,7 @@
 	<hud_icon filename="gkw_g41_only.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="6.3" kill_probability_offset_on_successful_hit="0.75" kill_decay_start_time="0.8" kill_decay_end_time="1.333" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.6" kill_probability_offset_on_successful_hit="1.41" kill_decay_start_time="0.8" kill_decay_end_time="1.333" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -141009,7 +141009,7 @@
 </weapon>
 
 <weapon key="gkw_g41_2401_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" magazine_size="30" name="G41-[Beach Punk 2064]-[H.P.T.H.D.]" projectile_speed="240" retrigger_time="0.071" suppressed="0" spread_range="0.3" stance_accuracy_rate="1.75" sight_range_modifier="1.75" sustained_fire_diminish_rate="2.05" sustained_fire_grow_step="0.28" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" magazine_size="30" name="G41-[Beach Punk 2064]-[H.P.T.H.D.]" projectile_speed="240" retrigger_time="0.071" suppressed="0" spread_range="0.26" stance_accuracy_rate="2.5" sight_range_modifier="1.75" sustained_fire_diminish_rate="2.05" sustained_fire_grow_step="0.28" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="35.0" buy_price="41.0" sell_price="41.0"/>
@@ -141025,7 +141025,7 @@
 	<hud_icon filename="gkw_g41_2401.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="6.3" kill_probability_offset_on_successful_hit="0.75" kill_decay_start_time="0.8" kill_decay_end_time="1.333" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.6" kill_probability_offset_on_successful_hit="1.41" kill_decay_start_time="0.8" kill_decay_end_time="1.333" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>
@@ -141119,7 +141119,7 @@
 </weapon>
 
 <weapon key="gkw_g41_7406_only.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" magazine_size="30" name="G41-[Universal Express]-[H.P.T.H.D.]" projectile_speed="240" retrigger_time="0.071" suppressed="0" spread_range="0.3" stance_accuracy_rate="1.75" sight_range_modifier="1.75" sustained_fire_diminish_rate="2.05" sustained_fire_grow_step="0.28" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
+	<specification accuracy_factor="1.0" barrel_offset="0.4" class="0" magazine_size="30" name="G41-[Universal Express]-[H.P.T.H.D.]" projectile_speed="240" retrigger_time="0.071" suppressed="0" spread_range="0.26" stance_accuracy_rate="2.5" sight_range_modifier="1.75" sustained_fire_diminish_rate="2.05" sustained_fire_grow_step="0.28" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" slot="0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.2"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="35.0" buy_price="41.0" sell_price="41.0"/>
@@ -141135,7 +141135,7 @@
 	<hud_icon filename="gkw_g41_7406.png"/>
 	<weak_hand_hold offset="0.2"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4">
-	<result class="hit" kill_probability="6.3" kill_probability_offset_on_successful_hit="0.75" kill_decay_start_time="0.8" kill_decay_end_time="1.333" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="6.6" kill_probability_offset_on_successful_hit="1.41" kill_decay_start_time="0.8" kill_decay_end_time="1.333" damage_origin_vehicle="0"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
 	<sound class="result" key="terrain" fileref="bullet_ricochet1_fromCOD17.wav" volume="0.8"/>

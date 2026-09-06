@@ -6,6 +6,7 @@
         <tag name="stealth"/>
         <!--Weapon specifications-->
         <specification
+        barrel_offset="0.1" 
         retrigger_time="0.1"
         last_burst_retrigger_time="-1"
         accuracy_factor="1.0"
@@ -54,7 +55,7 @@
         <animation state_key="stabbing" 			animation_key="pistol whip 3" />
         <!--Sounds-->
         <sound key="dry_fire" fileref="dryfire_9mmhg_1.wav" pitch_variety="0.05" volume="1.0" />
-        <sound key="fire" fileref="gsh18sd_fire_FromR6S.wav" pitch_variety="0.05" volume="2" />
+        <sound key="fire" fileref="gsh18sd_fire_FromR6S.wav" pitch_variety="0.05" volume="2.4" />
         <sound key="magazine_out" fileref="gsh18_mgz_out_FromR6S.wav" volume="0.5" />
         <sound key="magazine_in" fileref="gsh18_mgz_in_FromR6S.wav" volume="0.5"/>
         <sound key="cycle" fileref="gsh18_cycle_FromR6S.wav" volume="0.5" />
@@ -85,6 +86,7 @@
         <tag name="stealth"/>
         <!--Weapon specifications-->
         <specification
+        barrel_offset="0.1" 
         retrigger_time="0.06"
         accuracy_factor="1.0"
         sustained_fire_grow_step="0.3"
@@ -133,7 +135,7 @@
         <animation state_key="stabbing" animation_key="pistol whip 3" />
         <!--Sounds-->
         <sound key="dry_fire" fileref="dryfire_9mmhg_1.wav" pitch_variety="0.05" volume="1.0" />
-        <sound key="fire" fileref="gsh18sd_fire_FromR6S.wav" pitch_variety="0.05" volume="2" />
+        <sound key="fire" fileref="gsh18sd_fire_FromR6S.wav" pitch_variety="0.05" volume="2.4" />
         <sound key="magazine_out" fileref="gsh18_mgz_out_FromR6S.wav" volume="0.5" />
         <sound key="magazine_in" fileref="gsh18_mgz_in_FromR6S.wav" volume="0.5"/>
         <sound key="cycle" fileref="gsh18_cycle_FromR6S.wav" volume="0.5" />
