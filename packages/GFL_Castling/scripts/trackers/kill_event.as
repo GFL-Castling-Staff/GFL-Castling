@@ -781,6 +781,13 @@ class kill_event : Tracker {
                 }
             }
 
+            else if((KillerWeaponKey=="gkw_martini.weapon"
+            || KillerWeaponKey=="gkw_martini_30023.weapon")
+            && killway=="hit")
+            {
+                g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"martini");
+            }
+
             // M14MOD3 火力专注 - 连锁射击
             else if((KillerWeaponKey=="gkw_m14mod3.weapon"
             || KillerWeaponKey=="gkw_m14mod3_skill.weapon"

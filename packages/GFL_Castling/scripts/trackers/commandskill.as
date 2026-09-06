@@ -332,6 +332,7 @@ class CommandSkill : Tracker {
                 case 101:{excutePTRDSkill(cId,senderId,m_modifer);break;}
                 case 102:{excuteM327Skill(cId,senderId,m_modifer);break;}
                 case 103:{excuteMG15skill(cId,senderId,m_modifer);break;}
+                case 104:{excuteMartiniSkill(cId,senderId,m_modifer);break;}
 
                 default:
                 break;
@@ -462,9 +463,9 @@ class CommandSkill : Tracker {
                         if (shouldNotifySkillDone(SkillArray[a])) {
                             if(SkillArray[a].m_alert){
                                 playPrivateSound(m_metagame,"skilldone.wav",SkillArray[a].m_skillInfo.m_player_id);
+                                sendFactionMessageKeySaidAsCharacter(m_metagame,0,SkillArray[a].m_character_id,"skillcooldowndone");
+                                notify(m_metagame, "Hint - Skill Cooldown Done",dictionary(), "misc", SkillArray[a].m_skillInfo.m_player_id, false, "", 1.0);
                             }
-                            sendFactionMessageKeySaidAsCharacter(m_metagame,0,SkillArray[a].m_character_id,"skillcooldowndone");
-                            notify(m_metagame, "Hint - Skill Cooldown Done",dictionary(), "misc", SkillArray[a].m_skillInfo.m_player_id, false, "", 1.0);
                         }
                         SkillArray.removeAt(a);
                     }
@@ -1504,7 +1505,7 @@ class CommandSkill : Tracker {
                             "STG44_SKILL2_JP.wav",
                             "STG44_SKILL1_JP.wav"
                         };
-                        playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.0);
+                        playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.5);
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     }
                     if(weaponname=="gkw_famas.weapon") {
@@ -1512,7 +1513,7 @@ class CommandSkill : Tracker {
                             "FAMAS_ATTACK_JP.wav",
                             "FAMAS_SKILL2_JP.wav"
                         };
-                        playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.0);
+                        playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.5);
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     }
                     if(weaponname=="gkw_k11_20mm_impact.weapon" || weaponname=="gkw_k11_ar.weapon") {
@@ -1521,7 +1522,7 @@ class CommandSkill : Tracker {
                             "K11_SKILL2_JP.wav",
                             "K11_SKILL3_JP.wav"
                         };
-                        playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.15);
+                        playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.5);
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     }
                     if(weaponname=="gkw_56-1type.weapon" || weaponname=="gkw_56-1typemod3.weapon") {
@@ -1530,7 +1531,7 @@ class CommandSkill : Tracker {
                             "56-1type_SKILL2_JP.wav",
                             "56-1type_SKILL3_JP.wav"
                         };
-                        playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.0);
+                        playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.5);
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     }
                     if(weaponname=="gkw_cz805.weapon") {
@@ -1539,7 +1540,7 @@ class CommandSkill : Tracker {
                             "CZ805_SKILL2_JP.wav",
                             "CZ805_SKILL3_JP.wav"
                         };
-                        playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.15);
+                        playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.5);
                         playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
                     }
                     playAnimationKey(m_metagame,characterId,"recoil1, big",true,false);
@@ -5672,5 +5673,52 @@ class CommandSkill : Tracker {
                 g_playerInfo_Buck.addKillSkillCountbyPid(playerId,"killcharge",-20);
             }
         }
-    }    
+    }
+
+    void excuteMartiniSkill(int characterId,int playerId,SkillModifer@ modifer){
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"sniper")) return;
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"martini")) return;
+        const XmlElement@ characterinfo = getCharacterInfo(m_metagame, characterId);
+        if (characterinfo is null) return;
+        if (!canCastSkill(characterinfo)) return;
+        const XmlElement@ playerinfo = getPlayerInfo(m_metagame, playerId);
+        if (playerinfo is null) return;
+        string player_name = playerinfo.getStringAttribute("name");
+        int kill_count = g_playerInfo_Buck.getKillSkillCountbyName(player_name,"martini");
+        if (kill_count >= 6){
+            if (playerinfo.hasAttribute("aim_target")) {
+                string target = playerinfo.getStringAttribute("aim_target");
+                Vector3 c_pos = stringToVector3(characterinfo.getStringAttribute("position"));
+                Vector3 s_pos = stringToVector3(target);
+                int factionid = characterinfo.getIntAttribute("faction_id");
+                g_playerInfo_Buck.addKillSkillCountbyName(player_name,"martini",-6);
+                g_playerInfo_Buck.addKillSkillCountbyName(player_name,"martini_charge");
+                int count = g_playerInfo_Buck.getKillSkillCountbyName(player_name,"martini_charge");
+                if (count % 6 == 0) {
+                    TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+                    tasker.add(DelayAirstrikeRequest(m_metagame,3.0,characterId,factionid,stringToVector3(target).add(Vector3(0,40,0)),"mortar_82mm_x8"));
+                    spawnStaticProjectile(m_metagame,"particle_flare_smoke.projectile",target,characterId,factionid);
+                }
+                else
+                {
+                    c_pos=c_pos.add(Vector3(0,1,0));
+                    c_pos = c_pos.add((getAimUnitVector(1,c_pos,s_pos)));
+                    if (checkFlatRange(c_pos,stringToVector3(target),15)){
+                        CreateDirectProjectile(m_metagame,c_pos,stringToVector3(target),"grenade_martini.projectile",characterId,factionid,60);
+                    }
+                    else{
+                        CreateProjectile_H(m_metagame,c_pos,stringToVector3(target),"grenade_martini.projectile",characterId,factionid,45.0,6.0);
+                    }
+                    playSoundAtLocation(m_metagame,"gp25_fire_FromSQUAD.wav",factionid,c_pos,1.5);
+                }
+                addCooldown("sniper",5,characterId,modifer,"normal",false);
+            }
+        }
+        else{
+            sendFactionMessageKeySaidAsCharacter(m_metagame,0,characterId,"cost_not_ready");
+            modifer.setCooldownMinus(0);
+            modifer.setCooldownReduction(1.0);
+            addCooldown("sniper",3,characterId,modifer,"normal",false);
+        }        
+    }
 }
