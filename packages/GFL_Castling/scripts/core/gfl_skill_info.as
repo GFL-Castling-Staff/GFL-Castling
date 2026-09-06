@@ -211,6 +211,10 @@ dictionary gameSkillIndex = {
 
         {"arachne_craft_skill",70},
 
+        // P22 directional support, resolved at the first aim point.
+        {"p22_repair",71},
+        {"p22_supply",72},
+
         // 下面这行是用来占位的，在这之上添加新的技能key和index即可
         {"666",-1}
 };

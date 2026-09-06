@@ -74,6 +74,18 @@ GFL-Castling 是基于 AngelScript 的 RWR 模组。脚本没有独立构建步�
 
 ## 运行路径
 
+### P22 两次施放三向支援
+
+P22 的主动 `case 6` 先记录瞄准位置 A，放置轮廓外透明的小号 G&K / GRIFFIN 盾形脉冲信标；再根据第二次玩家位置 P、A 和第二次瞄准位置 B 选择左、中、右。B 只用于选分支，A 是支援目标。
+
+- 左：从玩家处向 A 抛出闪光弹，碰撞后闪光并给附近玩家补充白名单投掷物；受补给者显示手雷++，本人听到奖励提示音。
+- 中：B 在 A 周围半径 10 米内时，在 A 周围 15 米恢复 10 次装备损耗；直接复用已有绿环和 dev 的小号青色治疗十字，保留类固醇音效。圈外才相对 P->A 判左右。
+- 右：向 A 抛出烟雾弹，碰撞后释放原有烟雾弹载荷。两种投掷均可能被掩体提前截住。
+- 状态归属 `GFL_playerInfo.m_p22Selection`，`P22SelectionTimeoutTask` 计时并发送短信标脉冲，不做引擎查询。6 秒超时撤销选择，不消耗技能或进入冷却；死亡、断线和角色/阵营/主武器变化也清理选择。
+- 中、左通过 `p22_support.projectile -> notify_script -> GFLskill.as` 做单次范围查询，在回调内读取受益者实时位置和投掷栏，调用现有 `healCharacter` / `GrenadeSupply`。主动入口和超时 Task 不做附近角色查询。
+
+参数、资源和入局测试步骤见 [P22 三向支援说明](../design/p22-directional-support.md)。
+
 ### 主动技能路径
 
 `/skill` -> `commandskill.as::handleChatEvent` -> `commandSkillIndex[weaponKey]` -> `switch case` -> `excute*Skill()`

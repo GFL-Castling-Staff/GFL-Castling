@@ -855,30 +855,81 @@ class CommandSkill : Tracker {
         }
     }
     void excuteP22skill(int characterId,int playerId,SkillModifer@ modifer){
-        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"P22")) return;
-        addCooldown("P22",60,characterId,modifer);
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
-        if (character !is null) {
-            if (checkCharacterDead(character)) return;
-            Vector3 c_pos = stringToVector3(character.getStringAttribute("position"));
-            int factionid = character.getIntAttribute("faction_id");
-            array<const XmlElement@>@ characters = getCharactersNearPosition(m_metagame, c_pos, factionid, 15.0f);
-            for (uint i = 0; i < characters.length; i++) {
-                int soldierId = characters[i].getIntAttribute("id");
-                XmlElement c ("command");
-                c.setStringAttribute("class", "update_inventory");
-                c.setIntAttribute("character_id", soldierId);
-                c.setIntAttribute("untransform_count", 10);
-                m_metagame.getComms().send(c);
-            }
-            spawnStaticProjectile(m_metagame,"particle_effect_radius_heal.projectile",c_pos,characterId,factionid);
-            array<string> Voice={
-                "P22_SKILL1_JP.wav",
-                "P22_SKILL2_JP.wav",
-                "P22_SKILL3_JP.wav"
-            };
-            playRandomSoundArray(m_metagame,Voice,factionid,c_pos.toString(),1);
+        GFL_playerInfo@ pinfo = getPlayerInfoFromListbyPid(playerId);
+        if (pinfo is null || pinfo.getPlayerName() == default_string) return;
+        if (character is null || !canCastSkill(character)) {
+            pinfo.clearP22Selection();
+            return;
         }
+        if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"P22")) return;
+        const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
+        if (player is null || !player.hasAttribute("aim_target")) {
+            notify(m_metagame, "Hint - P22 Aim Required", dictionary(), "misc", playerId, false, "", 1.0);
+            return;
+        }
+        Vector3 playerPos = getCharacterPosition(character);
+        Vector3 aimPos = stringToVector3(player.getStringAttribute("aim_target"));
+        int factionId = character.getIntAttribute("faction_id");
+        if (pinfo.m_p22Selection !is null && (!pinfo.m_p22Selection.m_active ||
+            pinfo.m_p22Selection.m_characterId != characterId || pinfo.m_p22Selection.m_factionId != factionId)) {
+            pinfo.clearP22Selection();
+        }
+
+        if (pinfo.m_p22Selection is null) {
+            if (!isP22TargetInRange(playerPos, aimPos)) {
+                notify(m_metagame, "Hint - P22 Out Of Range", dictionary(), "misc", playerId, false, "", 1.0);
+                return;
+            }
+            @pinfo.m_p22Selection = P22SkillSelection(characterId, factionId, aimPos);
+            spawnStaticProjectile(m_metagame, "p22_beacon_pulse.projectile", aimPos, characterId, factionId);
+            TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+            tasker.add(P22SelectionTimeoutTask(m_metagame, pinfo, pinfo.m_p22Selection));
+            dictionary hint;
+            hint["%time"] = "" + P22_SELECTION_WINDOW;
+            notify(m_metagame, "Hint - P22 Select", hint, "misc", playerId, false, "", 1.0);
+            return;
+        }
+
+        Vector3 target = pinfo.m_p22Selection.m_target;
+        if (!isP22TargetInRange(playerPos, target)) {
+            notify(m_metagame, "Hint - P22 Out Of Range", dictionary(), "misc", playerId, false, "", 1.0);
+            return;
+        }
+        int mode = selectP22Support(playerPos, target, aimPos);
+        if (mode == P22_SUPPORT_INVALID) {
+            notify(m_metagame, "Hint - P22 Direction Required", dictionary(), "misc", playerId, false, "", 1.0);
+            return;
+        }
+
+        // Consume before spawning: another cast cannot dispatch the same selection twice.
+        pinfo.clearP22Selection();
+        addCooldown("P22",P22_COOLDOWN,characterId,modifer);
+        string projectile = "p22_repair_notify.projectile";
+        string hintKey = "Hint - P22 Repair";
+        if (mode == P22_SUPPORT_SUPPLY) {
+            projectile = "p22_flash_grenade.projectile";
+            hintKey = "Hint - P22 Supply";
+        } else if (mode == P22_SUPPORT_SMOKE) {
+            projectile = "p22_smoke_grenade.projectile";
+            hintKey = "Hint - P22 Smoke";
+        }
+        if (mode == P22_SUPPORT_REPAIR) {
+            // Repair stays at A; its invisible callback resolves the friendly snapshot.
+            spawnStaticProjectile(m_metagame,projectile,target,characterId,factionId);
+        } else {
+            playAnimationKey(m_metagame,characterId,"throwing, upside",false,true);
+            playSoundAtLocation(m_metagame,"grenade_throw1.wav",factionId,playerPos,1.0);
+            Vector3 throwStart = playerPos.add(Vector3(0,1.5,0));
+            float flightTime = max(0.65f, min(1.4f, getPositionDistance(throwStart,target) / 30.0f));
+            // A visible ballistic carrier hits terrain/cover before releasing its payload.
+            // Fixed-time gravity accounts for both horizontal distance and target height.
+            CreateDirectProjectile_TG(m_metagame,throwStart,target,projectile,characterId,factionId,
+                                     flightTime,P22_THROW_GRAVITY);
+        }
+        notify(m_metagame, hintKey, dictionary(), "misc", playerId, false, "", 1.0);
+        array<string> Voice={"P22_SKILL1_JP.wav", "P22_SKILL2_JP.wav", "P22_SKILL3_JP.wav"};
+        playRandomSoundArray(m_metagame,Voice,factionId,playerPos.toString(),1);
     }
     void excuteHS2000skill(int characterId,int playerId,SkillModifer@ modifer){
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"HS2000")) return;

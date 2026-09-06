@@ -2,6 +2,17 @@
 
 // parameters for "commandskill.as"
 
+    // P22: two casts select left / middle / right at the FIRST aim point.
+    const float P22_SELECTION_WINDOW = 6.0f;
+    const float P22_COOLDOWN = 60.0f;
+    const float P22_CAST_RANGE = 40.0f;
+    const float P22_SUPPORT_RADIUS = 15.0f;
+    const int P22_REPAIR_COUNT = 10;
+    // Second aim point within this horizontal radius of the first selects repair.
+    const float P22_CENTER_RADIUS = 10.0f;
+    const float P22_BEACON_INTERVAL = 0.5f;
+    const float P22_THROW_GRAVITY = 26.0f;
+
     // 已弃用，建议使用reward_pool_list
     array<string> eliteEnemyName = {
 

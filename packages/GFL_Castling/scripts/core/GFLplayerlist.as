@@ -6,6 +6,7 @@
 #include "generic_call_task.as"
 #include "task_sequencer.as"
 #include "GFLparameters.as"
+#include "p22_skill.as"
 
 //Originally created by Saiwa
 //Remastered by NetherCrow
@@ -104,6 +105,7 @@ class GFL_playerInfo{
     bool m_available; //用途判定是否掉线，是否该info无效，在函数应用部分判断作错误处理
     int m_inactive_time = 0;
     array<Tag@> m_skilltag;
+    P22SkillSelection@ m_p22Selection;
     
     // 玩家物品栏
     GFL_playerInfo(string name,int pid, int cid,int fid, string hash,string sid,GFL_equipment@ equipment,rgba_color@ color){
@@ -120,6 +122,9 @@ class GFL_playerInfo{
     }
 
 	void update(string name,int pid, int cid,int fid, string hash,string sid,GFL_equipment@ equipment,rgba_color@ color){
+        if (cid != m_characterid || fid != m_factionid || equipment.m_weapon1key != "gkw_p22.weapon") {
+            clearP22Selection();
+        }
         m_name = name;
 	    m_playerid = pid;
         m_characterid = cid;
@@ -195,6 +200,7 @@ class GFL_playerInfo{
     }
     void ForceDisable()
     {
+        clearP22Selection();
         m_available = false;
     }
     void ForceEnable()
@@ -350,6 +356,12 @@ class GFL_playerInfo{
     void clearIndexBuck()
     {
         m_tdoll_intimacy_buck.resize(0);
+    }
+
+    void clearP22Selection()
+    {
+        if (m_p22Selection !is null) m_p22Selection.m_active = false;
+        @m_p22Selection = null;
     }
 
     void addTag(Tag tag)
@@ -1433,6 +1445,8 @@ void handleKillEventToPlayerInfo(int id,int num)
 
 void handleDeadEventToPlayerInfo(string name)
 {
+    GFL_playerInfo@ player = getPlayerInfoFromList(name);
+    if (player !is null && player.getPlayerName() != default_string) player.clearP22Selection();
     g_playerInfo_Buck.addDeadbyName(name);
 }
 

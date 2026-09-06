@@ -23,6 +23,51 @@ class GFLskill : Tracker {
 		@m_metagame = @metagame;
 	}
 
+    protected void executeP22Support(const XmlElement@ event, bool supply) {
+        int characterId = event.getIntAttribute("character_id");
+        const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
+        if (checkCharacterDead(character)) return;
+        int factionId = character.getIntAttribute("faction_id");
+        Vector3 target = stringToVector3(event.getStringAttribute("position"));
+        // One range snapshot in notify_script, never in /s or a Task update.
+        array<const XmlElement@>@ nearby = getCharactersNearPosition(m_metagame, target, factionId, P22_SUPPORT_RADIUS);
+        if (nearby is null) return;
+        array<int> seen;
+        for (uint i = 0; i < nearby.length(); ++i) {
+            const XmlElement@ ally = nearby[i];
+            if (checkCharacterDead(ally)) continue;
+            int id = ally.getIntAttribute("id");
+            if (id < 0 || seen.find(id) >= 0) continue;
+            seen.insertLast(id);
+            if (supply && !checkCharacterIdisPlayerOwn(id)) continue;
+            // Nearby snapshots can omit coordinates. Resolve each recipient's real position.
+            const XmlElement@ recipient = getCharacterInfo2(m_metagame, id);
+            if (checkCharacterDead(recipient) || !recipient.hasAttribute("position")) continue;
+            if (recipient.getIntAttribute("faction_id") != factionId) continue;
+            Vector3 recipientPos = getCharacterPosition(recipient);
+            if (supply) {
+                // Same whitelist/quantity rules as GrenadeSupplyGroup, with feedback only
+                // after an eligible supply command. Use the live grenade slot, not old cache.
+                array<const XmlElement@>@ items = recipient.getElementsByTagName("item");
+                if (items is null || items.length() != 5) continue;
+                string key = items[2].getStringAttribute("key");
+                if (resupply_grenade_list.find(key) < 0 || !resupply_grenade_index.exists(key)) continue;
+                uint count = uint(resupply_grenade_index[key]);
+                if (count == 0) continue;
+                GrenadeSupply(m_metagame,id,count,key);
+                spawnStaticProjectile(m_metagame,"p22_supply_feedback.projectile",recipientPos,id,factionId);
+                // A private reward cue prevents a nearby group from hearing every player's jingle.
+                GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(recipient.getIntAttribute("player_id"));
+                if (playerInfo !is null && playerInfo.getPlayerName() != default_string && playerInfo.getPlayerCid() == id) {
+                    playPrivateSound(m_metagame,"sfx_big.wav",playerInfo.getPlayerPid());
+                }
+            } else {
+                healCharacter(m_metagame,id,P22_REPAIR_COUNT);
+                spawnStaticProjectile(m_metagame,"p22_heal_feedback.projectile",recipientPos,id,factionId);
+            }
+        }
+    }
+
 
 	// --------------------------------------------
 	protected void handleResultEvent(const XmlElement@ event) {
@@ -31,6 +76,9 @@ class GFLskill : Tracker {
 		switch(int(gameSkillIndex[EventKeyGet]))
         {
             case 0: {break;}
+
+            case 71: {executeP22Support(event, false); break;}
+            case 72: {executeP22Support(event, true); break;}
 
             case 1: {// 生成防空炮
 				m_metagame.setAntiAirStatus(true);

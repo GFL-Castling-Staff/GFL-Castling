@@ -13,6 +13,48 @@
 
 //Author: NetherCrow
 
+// Selection timeout only: no nearby-character query in a Task update.
+class P22SelectionTimeoutTask : Task {
+    protected Metagame@ m_metagame;
+    protected GFL_playerInfo@ m_player;
+    protected P22SkillSelection@ m_selection;
+    protected float m_timeLeft = P22_SELECTION_WINDOW;
+    protected float m_beaconTimeLeft = P22_BEACON_INTERVAL;
+
+    P22SelectionTimeoutTask(Metagame@ metagame, GFL_playerInfo@ player, P22SkillSelection@ selection) {
+        @m_metagame = metagame;
+        @m_player = player;
+        @m_selection = selection;
+    }
+
+    void start() {}
+
+    void update(float time) {
+        if (!m_selection.m_active) return;
+        if (!m_player.check_Available() || m_player.getPlayerCid() != m_selection.m_characterId ||
+            m_player.getPlayerFid() != m_selection.m_factionId || m_player.m_p22Selection !is m_selection) {
+            m_selection.m_active = false;
+            return;
+        }
+        m_timeLeft -= time;
+        if (m_timeLeft <= 0.0f) {
+            m_player.clearP22Selection();
+            notify(m_metagame, "Hint - P22 Expired", dictionary(), "misc", m_player.getPlayerPid(), false, "", 1.0);
+            return;
+        }
+        m_beaconTimeLeft -= time;
+        if (m_beaconTimeLeft <= 0.0f) {
+            m_beaconTimeLeft = P22_BEACON_INTERVAL;
+            spawnStaticProjectile(m_metagame, "p22_beacon_pulse.projectile", m_selection.m_target,
+                                  m_selection.m_characterId, m_selection.m_factionId);
+        }
+    }
+
+    bool hasEnded() const {
+        return !m_selection.m_active;
+    }
+}
+
 class VestRecoverTask : Task {
     protected Metagame@ m_metagame;
 	protected float m_time;
