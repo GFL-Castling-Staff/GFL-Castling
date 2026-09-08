@@ -24024,7 +24024,6 @@
 	<stance state_key="crouching" accuracy="0.5"/>
 	<stance state_key="prone" accuracy="1.9"/>
 	<stance state_key="over_wall" accuracy="1.9"/>
-	<modifier class="speed" value="-0.4"/>
 </weapon>
 
 <weapon key="gkw_mg42_597.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -24236,7 +24235,6 @@
 	<stance state_key="crouching" accuracy="0.5"/>
 	<stance state_key="prone" accuracy="1.9"/>
 	<stance state_key="over_wall" accuracy="1.9"/>
-	<modifier class="speed" value="-0.4"/>
 </weapon>
 
 <weapon key="gkw_mg42_7606.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -24448,7 +24446,6 @@
 	<stance state_key="crouching" accuracy="0.5"/>
 	<stance state_key="prone" accuracy="1.9"/>
 	<stance state_key="over_wall" accuracy="1.9"/>
-	<modifier class="speed" value="-0.4"/>
 </weapon>
 
 <weapon key="gkw_mg34.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
@@ -34740,7 +34737,7 @@
 
 <weapon key="gkw_dp12mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="elite"/>
-	<specification retrigger_time="0.12" accuracy_factor="1.0" can_shoot_running="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="5.5" magazine_size="14" can_shoot_standing="1" suppressed="0" name="DP12(MOD3)" stance_accuracy_rate="1.5" class="4" last_burst_retrigger_time="0.2" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="105" barrel_offset="0.55" projectiles_per_shot="7" spread_range="0.16" burst_shots="2"/>
+	<specification retrigger_time="0.12" accuracy_factor="1.0" can_shoot_running="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="5.5" magazine_size="14" can_shoot_standing="1" suppressed="0" name="DP12(MOD3)" stance_accuracy_rate="1.5" class="4" last_burst_retrigger_time="0.2" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="105" barrel_offset="0.55" projectiles_per_shot="10" spread_range="0.14" burst_shots="2"/>
 	<inventory encumbrance="12.5" buy_price="450.0" sell_price="450.0"/>
 	<next_in_chain key="gkw_dp12mod3_skill.weapon" share_ammo="1"/>
 	<animation key="reload" animation_key="DP12MOD3_Reload"/>
@@ -34782,7 +34779,7 @@
 	<hud_icon filename="gkw_dp12mod3.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile time_to_live="0.2" class="bullet" name="" slot="1" pulldown_in_air="18.0" key="dragons_flame2.projectile">
-	<result class="blast" radius="2.0" damage="1.1" push="0.1" decal="1" faction_compare="not_equal" character_state="death" make_vehicle_hit_sound="0"/>
+	<result class="blast" radius="2.5" damage="1.1" push="0.1" decal="1" faction_compare="not_equal" character_state="death" make_vehicle_hit_sound="0"/>
 	<tag name="flamethrower_flame"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -34979,7 +34976,7 @@
 
 <weapon key="gkw_dp12mod3_4201.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="elite"/>
-	<specification retrigger_time="0.12" accuracy_factor="1.0" can_shoot_running="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="5.5" magazine_size="14" can_shoot_standing="1" suppressed="0" name="DP12(MOD3)-[Echeveria Lantern]" stance_accuracy_rate="1.5" class="4" last_burst_retrigger_time="0.2" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="105" barrel_offset="0.55" projectiles_per_shot="7" spread_range="0.16" burst_shots="2"/>
+	<specification retrigger_time="0.12" accuracy_factor="1.0" can_shoot_running="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="5.5" magazine_size="14" can_shoot_standing="1" suppressed="0" name="DP12(MOD3)-[Echeveria Lantern]" stance_accuracy_rate="1.5" class="4" last_burst_retrigger_time="0.2" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="105" barrel_offset="0.55" projectiles_per_shot="10" spread_range="0.14" burst_shots="2"/>
 	<inventory encumbrance="12.5" buy_price="450.0" sell_price="450.0"/>
 	<next_in_chain key="gkw_dp12mod3_4201_skill.weapon" share_ammo="1"/>
 	<animation key="reload" animation_key="DP12MOD3_Reload"/>
@@ -35021,7 +35018,7 @@
 	<hud_icon filename="gkw_dp12_4201.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile time_to_live="0.2" class="bullet" name="" slot="1" pulldown_in_air="18.0" key="dragons_flame2.projectile">
-	<result class="blast" radius="2.0" damage="1.1" push="0.1" decal="1" faction_compare="not_equal" character_state="death" make_vehicle_hit_sound="0"/>
+	<result class="blast" radius="2.5" damage="1.1" push="0.1" decal="1" faction_compare="not_equal" character_state="death" make_vehicle_hit_sound="0"/>
 	<tag name="flamethrower_flame"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -35218,7 +35215,7 @@
 
 <weapon key="gkw_dp12mod3_6102.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="elite"/>
-	<specification retrigger_time="0.12" accuracy_factor="1.0" can_shoot_running="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="5.5" magazine_size="14" can_shoot_standing="1" suppressed="0" name="DP12(MOD3)-[Morning Fable]" stance_accuracy_rate="1.5" class="4" last_burst_retrigger_time="0.2" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="105" barrel_offset="0.55" projectiles_per_shot="7" spread_range="0.16" burst_shots="2"/>
+	<specification retrigger_time="0.12" accuracy_factor="1.0" can_shoot_running="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="5.5" magazine_size="14" can_shoot_standing="1" suppressed="0" name="DP12(MOD3)-[Morning Fable]" stance_accuracy_rate="1.5" class="4" last_burst_retrigger_time="0.2" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="105" barrel_offset="0.55" projectiles_per_shot="10" spread_range="0.14" burst_shots="2"/>
 	<inventory encumbrance="12.5" buy_price="450.0" sell_price="450.0"/>
 	<next_in_chain key="gkw_dp12mod3_6102_skill.weapon" share_ammo="1"/>
 	<animation key="reload" animation_key="DP12MOD3_Reload"/>
@@ -35260,7 +35257,7 @@
 	<hud_icon filename="gkw_dp12_6102.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile time_to_live="0.2" class="bullet" name="" slot="1" pulldown_in_air="18.0" key="dragons_flame2.projectile">
-	<result class="blast" radius="2.0" damage="1.1" push="0.1" decal="1" faction_compare="not_equal" character_state="death" make_vehicle_hit_sound="0"/>
+	<result class="blast" radius="2.5" damage="1.1" push="0.1" decal="1" faction_compare="not_equal" character_state="death" make_vehicle_hit_sound="0"/>
 	<tag name="flamethrower_flame"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -35457,7 +35454,7 @@
 
 <weapon key="gkw_dp12mod3_8101.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="elite"/>
-	<specification retrigger_time="0.12" accuracy_factor="1.0" can_shoot_running="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="5.5" magazine_size="14" can_shoot_standing="1" suppressed="0" name="DP12(MOD3)-[Misty Cross]" stance_accuracy_rate="1.5" class="4" last_burst_retrigger_time="0.2" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="105" barrel_offset="0.55" projectiles_per_shot="7" spread_range="0.16" burst_shots="2"/>
+	<specification retrigger_time="0.12" accuracy_factor="1.0" can_shoot_running="1" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="5.5" magazine_size="14" can_shoot_standing="1" suppressed="0" name="DP12(MOD3)-[Misty Cross]" stance_accuracy_rate="1.5" class="4" last_burst_retrigger_time="0.2" reload_one_at_a_time="1" sight_range_modifier="1.0" projectile_speed="105" barrel_offset="0.55" projectiles_per_shot="10" spread_range="0.14" burst_shots="2"/>
 	<inventory encumbrance="12.5" buy_price="450.0" sell_price="450.0"/>
 	<next_in_chain key="gkw_dp12mod3_8101_skill.weapon" share_ammo="1"/>
 	<animation key="reload" animation_key="DP12MOD3_Reload"/>
@@ -35499,7 +35496,7 @@
 	<hud_icon filename="gkw_dp12_8101.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile time_to_live="0.2" class="bullet" name="" slot="1" pulldown_in_air="18.0" key="dragons_flame2.projectile">
-	<result class="blast" radius="2.0" damage="1.1" push="0.1" decal="1" faction_compare="not_equal" character_state="death" make_vehicle_hit_sound="0"/>
+	<result class="blast" radius="2.5" damage="1.1" push="0.1" decal="1" faction_compare="not_equal" character_state="death" make_vehicle_hit_sound="0"/>
 	<tag name="flamethrower_flame"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
