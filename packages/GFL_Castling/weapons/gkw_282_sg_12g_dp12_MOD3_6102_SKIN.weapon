@@ -20,8 +20,8 @@
 	sight_range_modifier="1.0" 
 	projectile_speed="105" 
 	barrel_offset="0.55" 
-	projectiles_per_shot="7"
-    spread_range="0.16"
+	projectiles_per_shot="10"
+    spread_range="0.14"
 	burst_shots="2" />
     <inventory encumbrance="12.5" buy_price="450.0" sell_price="450.0" />
     <next_in_chain key="gkw_dp12mod3_6102_skill.weapon" share_ammo="1" />
@@ -71,7 +71,7 @@
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
     <projectile file="dragons_breath2.projectile" time_to_live="0.2">
-        <result class="blast" radius="2.0" damage="1.1" push="0.1" decal="1" faction_compare="not_equal"/>
+		<result class="blast" radius="2.5" damage="1.1" push="0.1" decal="1" faction_compare="not_equal"/>
     </projectile>
     <commonness value="0" in_stock="0" can_respawn_with="1"/>
     <!--Accuracy, Movement speed-->
