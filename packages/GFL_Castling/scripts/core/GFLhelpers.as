@@ -167,6 +167,14 @@ void addItemInBackpack(Metagame@ metagame, int characterId, string ItemType, str
 	metagame.getComms().send(c);
 }
 
+void addItemInArmory(Metagame@ metagame, int characterId, string ItemType, string ItemKey) {
+	string c = 
+		"<command class='update_inventory' character_id='" + characterId + "' container_type_class='armory'>" + 
+			"<item class='" + ItemType + "' key='" + ItemKey + "' />" +
+		"</command>";
+	metagame.getComms().send(c);
+}
+
 void addItemInStash(Metagame@ metagame, int characterId, string ItemType, string ItemKey){
 	XmlElement c ("command");
 	c.setStringAttribute("class", "update_inventory");

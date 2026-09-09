@@ -976,9 +976,11 @@ class BasicCommandHandler : Tracker {
 			int cid = playerInfo.getIntAttribute("character_id");
 			string sid = playerInfo.getStringAttribute("profile_hash");
 			string name = playerInfo.getStringAttribute("name");
-		} else if (checkCommand(message,"1919test")){
+		} else if (checkCommand(message,"114514test")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
-			addMutilItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"carry_item","complete_box.carry_item",20);  			            			
+			addItemInArmory(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","sfw_brute.weapon");
+			addItemInArmory(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","sfw_destroyer.weapon");
+			addItemInArmory(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","sfw_dinergate.weapon");
 		} else  if(checkCommand(message, "wound")) {
 			for (int i = 2; i < 100; ++i) {
 				string command =
