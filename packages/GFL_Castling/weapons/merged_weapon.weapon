@@ -159501,7 +159501,7 @@
 	<modifier class="speed" value="-0.4"/>
 </weapon>
 
-<weapon key="vest_repair.weapon" on_ground_up="1 0 0" radius="0.45" drop_count_factor_on_death="0" drop_count_factor_on_player_death="1" time_to_live_out_in_the_open="30.0">
+<weapon key="vest_repair.weapon" on_ground_up="1 0 0" radius="0.45" drop_count_factor_on_death="0" drop_count_factor_on_player_death="1" time_to_live_out_in_the_open="60.0">
 	<tag name="bandage"/>
 	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="0" name="Battlefield armor repair kit" class="5" untransform_equipment_class="vest" untransform_count="3" consume="0" sight_range_modifier="1" slot="1"/>
 	<next_in_chain key="binoculars.weapon" share_ammo="0"/>
