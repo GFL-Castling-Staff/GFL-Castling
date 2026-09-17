@@ -7,9 +7,9 @@ array<string> nytoAllList = {
     "vanguard",
     "wrath",
     "aileron",
-    "Nimogen",
-    "Narciss",
-    "Adeline"
+    "nimogen",
+    "narciss",
+    "adeline"
 };
 
 array<string> nytoBasicList = {

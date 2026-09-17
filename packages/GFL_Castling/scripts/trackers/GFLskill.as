@@ -1728,7 +1728,7 @@ class GFLskill : Tracker {
 					tasker.add(new_task);
                     array<soldier_spawn_request@> spawn_soldier =
                     {
-                        soldier_spawn_request("sfw_Gager",1)
+                        soldier_spawn_request("sf_gager",1)
                     };
                     tasker.add(DelaySpawnSoldier(m_metagame,0.2,factionid,spawn_soldier,pos.add(Vector3(0,2,0)),0,0));
                 }
