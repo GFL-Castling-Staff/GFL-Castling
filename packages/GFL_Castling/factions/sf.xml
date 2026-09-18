@@ -649,7 +649,7 @@
 		</item_class_existence_config>				
 	</soldier>
 	<!-- nemeum 钢狮 -->
-	<soldier name="sfw_nemeum" spawn_score="0.7" copy_from="default_spawn_ai">
+	<soldier name="sf_nemeum" spawn_score="0.7" copy_from="default_spawn_ai">
 		<character filename="sf_nemeum.character"/>
 		<ai filename="sf_nemeum.ai" />
 		<model filename="sfd_sangvisfeaal.xml" />
@@ -659,7 +659,7 @@
 		</resources>
 	</soldier>
 	<!-- nemeum 钢狮 swap -->
-	<soldier name="sfw_nemeum_swap" spawn_score="0.35" copy_from="default_spawn_ai">
+	<soldier name="sf_nemeum_swap" spawn_score="0.35" copy_from="default_spawn_ai">
 		<character filename="sf_nemeum.character"/>
 		<ai filename="sf_nemeum_swap.ai" />
 		<model filename="sfd_sangvisfeaal_swap.xml" />
@@ -669,7 +669,7 @@
 		</resources>
 	</soldier>
 	<!-- 劫豹 -->
-	<soldier name="sfw_jaguar" spawn_score="0.75" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
+	<soldier name="sf_jaguar" spawn_score="0.75" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<character filename="sf_lightmecha.character"/>
 		<ai filename="rocket_mecha.ai" />
 		<model filename="sfd_sangvisfeaal_swap.xml" />
@@ -679,7 +679,7 @@
 		</resources>
 	</soldier>
 	<!-- 巡游者 -->
-	<soldier name="sfw_prowler" spawn_score="2.0" copy_from="default_spawn_ai">
+	<soldier name="sf_prowler" spawn_score="2.0" copy_from="default_spawn_ai">
 		<character filename="sf_lightmecha.character"/>
 		<ai filename="eod_mecha.ai" >
 			<parameter class="burst_time" value="0.6" />
@@ -696,7 +696,7 @@
 			<carry_item key="sf_lightmecha.carry_item" enabled="1" />
 		</resources>
 	</soldier>
-	<soldier name="sfw_prowler_swap" spawn_score="1.0" copy_from="default_spawn_ai">
+	<soldier name="sf_prowler_swap" spawn_score="1.0" copy_from="default_spawn_ai">
 		<character filename="sf_lightmecha.character"/>
 		<ai filename="eod_mecha.ai" >
 			<parameter class="burst_time" value="0.5" />
@@ -714,7 +714,7 @@
 		</resources>
 	</soldier>
 	<!-- 圣盾 -->
-	<soldier name="sfw_aegis" spawn_score="0.5" copy_from="default_spawn_ai">
+	<soldier name="sf_aegis" spawn_score="0.5" copy_from="default_spawn_ai">
 		<model filename="sfd_aegis_1.xml" />
 		<ai filename="aegis.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
@@ -722,7 +722,7 @@
 			<carry_item key="vest_aegis.carry_item" enabled="1" />
 		</resources>
 	</soldier>
-	<soldier name="sfw_aegis_swap" spawn_score="0.25" copy_from="default_spawn_ai">
+	<soldier name="sf_aegis_swap" spawn_score="0.25" copy_from="default_spawn_ai">
 		<model filename="sfd_aegis_swap.xml" />
 		<ai filename="aegis.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_calls="1" clear_grenades="1">
@@ -731,7 +731,7 @@
 		</resources>
 	</soldier>
 	<!--龙骑兵-->
-	<soldier name="sfw_dragoon" firstnames="sf_first.name" lastnames_file="sf_last.name" spawn_score="0.5" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
+	<soldier name="sf_dragoon" firstnames="sf_first.name" lastnames_file="sf_last.name" spawn_score="0.5" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<models filename="sfd_dragoon_SAIWA.models" />
 		<character filename="dragoon.character" />
 		<ai filename="dragoon.ai" />
@@ -748,7 +748,7 @@
 		</item_class_existence_config>
 	</soldier>
 
-	<soldier name="sfw_dragoon_swap" firstnames="sf_first.name" lastnames_file="sf_last.name" spawn_score="0.25" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
+	<soldier name="sf_dragoon_swap" firstnames="sf_first.name" lastnames_file="sf_last.name" spawn_score="0.25" squad_size_xp_cap="0.0" copy_from="default_spawn_ai">
 		<models filename="sfd_dragoon_swap__from_(SAIWA)dusk.models" />
 		<character filename="dragoon.character" />
 		<ai filename="dragoon.ai" />
@@ -765,7 +765,7 @@
 		</item_class_existence_config>
 	</soldier>
 
-	<soldier name="Brute" spawn_score="0.8" squad_size_xp_cap="0.5" copy_from="default_spawn_ai">
+	<soldier name="sf_brute" spawn_score="0.8" squad_size_xp_cap="0.5" copy_from="default_spawn_ai">
 		<ai filename="melee_nb.ai" />
 		<model filename="sfd_Brute_gua.xml" />
 		<character filename="brute.character" />
@@ -778,7 +778,7 @@
 		</attribute_config>
 	</soldier>
 
-	<soldier name="Brute_swap" spawn_score="0.4" squad_size_xp_cap="0.5" copy_from="default_spawn_ai">
+	<soldier name="sf_brute_swap" spawn_score="0.4" squad_size_xp_cap="0.5" copy_from="default_spawn_ai">
 		<ai filename="melee_nb.ai" />
 		<model filename="sfd_BruteSwap_gua_dusk.xml" />
 		<character filename="brute.character" />
@@ -792,7 +792,7 @@
 	</soldier>
 
 	<!-- BOSS-hunter -->
-	<soldier name="sfw_hunter" spawn_score="0.10" copy_from="default_spawn_ai">
+	<soldier name="sf_hunter" spawn_score="0.10" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<parameter class="can_use_vehicles" value="0" />
 			<sound key="death" fileref="Hunter_buhuo_RETREAT_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -824,7 +824,7 @@
 	</soldier>
 
 	<!-- BOSS-architect -->
-	<soldier name="sfw_architect" spawn_score="0.1" copy_from="default_spawn_ai">
+	<soldier name="sf_architect" spawn_score="0.1" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<parameter class="can_use_vehicles" value="0" />
 			<sound key="death" fileref="BossArchitect_buhuo_RETREAT_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -850,7 +850,7 @@
 	</soldier>
 
 	<!-- BOSS-Intruder -->
-	<soldier name="sfw_Intruder" spawn_score="0.10" copy_from="default_spawn_ai">
+	<soldier name="sf_intruder" spawn_score="0.10" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<parameter class="can_use_vehicles" value="0" />
 			<sound key="death" fileref="Intruder_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -880,7 +880,7 @@
 		</attribute_config>
 	</soldier>
 
-	<soldier name="sfw_Dreamer" spawn_score="0.10" copy_from="default_spawn_ai">
+	<soldier name="sf_dreamer" spawn_score="0.10" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<parameter class="can_use_vehicles" value="0" />
 			<sound key="death" fileref="Dreamer_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -907,7 +907,7 @@
 		</attribute_config>
 	</soldier>
 
-	<soldier name="sfw_Alchemist" spawn_score="0.10" copy_from="default_spawn_ai">
+	<soldier name="sf_alchemist" spawn_score="0.10" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<parameter class="can_use_vehicles" value="0" />
 			<sound key="death" fileref="Alchemist_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -934,7 +934,7 @@
 		</attribute_config>
 	</soldier>
 
-	<soldier name="sfw_Gager" spawn_score="0.10" copy_from="default_spawn_ai">
+	<soldier name="sf_gager" spawn_score="0.10" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<parameter class="can_use_vehicles" value="0" />
 			<sound key="death" fileref="BossGager_buhuo_RETREAT_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -960,7 +960,7 @@
 		</attribute_config>
 	</soldier>
 
-	<soldier name="sfw_Excutioner-Wind_rose" spawn_score="0.10" copy_from="default_spawn_ai">
+	<soldier name="sf_executioner_wind_rose" spawn_score="0.10" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<parameter class="can_use_vehicles" value="0" />
 			<sound key="death" fileref="Excutioner_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -986,7 +986,7 @@
 		</attribute_config>
 	</soldier>
 
-	<soldier name="sfw_Excutioner-Queen_of_the_Moon" spawn_score="0.10" copy_from="default_spawn_ai">
+	<soldier name="sf_executioner_queen_of_the_moon" spawn_score="0.10" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<sound key="death" fileref="Excutioner_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
 			<sound key="throw" fileref="Excutioner_buhuo_SKILL02_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -1016,7 +1016,7 @@
 		</attribute_config>
 	</soldier>
 
-	<soldier name="sfw_M16A1" spawn_score="0.06" copy_from="default_spawn_ai">
+	<soldier name="sf_m16a1" spawn_score="0.06" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<parameter class="can_use_vehicles" value="0" />
 			<sound key="death" fileref="" pitch_variety="0.001" volume="0.8" />
@@ -1040,7 +1040,7 @@
 		</attribute_config>
 	</soldier>
 
-	<soldier name="sfw_Agent" spawn_score="0.06" copy_from="default_spawn_ai">
+	<soldier name="sf_agent" spawn_score="0.06" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<parameter class="can_use_vehicles" value="0" />
 			<sound key="death" fileref="Agent_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -1070,7 +1070,7 @@
 		</attribute_config>
 	</soldier>
 
-	<soldier name="sfw_Destroyer" spawn_score="0.08" copy_from="default_spawn_ai">
+	<soldier name="sf_destroyer" spawn_score="0.08" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<parameter class="can_use_vehicles" value="0" />
 			<sound key="death" fileref="Destroyer_buhuo_DEAD02_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -1101,7 +1101,7 @@
 	</soldier>
 
 
-	<soldier name="sfw_Weaver" spawn_score="0.08" copy_from="default_spawn_ai">
+	<soldier name="sf_weaver" spawn_score="0.08" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<parameter class="can_use_vehicles" value="0" />
 			<sound key="death" fileref="Weaver_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -1133,7 +1133,7 @@
 	</soldier>
 
 
-	<soldier name="sfw_Justice" spawn_score="0.09" copy_from="default_spawn_ai">
+	<soldier name="sf_justice" spawn_score="0.09" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<parameter class="can_use_vehicles" value="0" />
 			<sound key="death" fileref="Justice_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />
@@ -1166,7 +1166,7 @@
 
 
 
-	<soldier name="sfw_Scarecrow" spawn_score="0.09" copy_from="default_spawn_ai">
+	<soldier name="sf_scarecrow" spawn_score="0.09" copy_from="default_spawn_ai">
 		<character filename="default_sf.text_lines">
 			<parameter class="can_use_vehicles" value="0" />
 			<sound key="death" fileref="Scarecrow_buhuo_DEAD01_JP.wav" pitch_variety="0.001" volume="0.8" />

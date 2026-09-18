@@ -99,9 +99,9 @@ class map_DeadZone_Phase1 : map_DeadZone_Phase {
 		setSpawnScore(m_metagame,1,"vanguard",0);
 		setSpawnScore(m_metagame,1,"aileron",0);
 		setSpawnScore(m_metagame,1,"wrath",0);
-		setSpawnScore(m_metagame,1,"Nimogen",0);
-		setSpawnScore(m_metagame,1,"Narciss",0);
-		setSpawnScore(m_metagame,1,"Thunder",0);
+		setSpawnScore(m_metagame,1,"nimogen",0);
+		setSpawnScore(m_metagame,1,"narciss",0);
+		setSpawnScore(m_metagame,1,"thunder",0);
 		m_metagame.addTracker(SpawnAtNode(m_metagame, tower_resource, "deadzone_tower", 1, 3));	
 		resetFactionCallResources(m_metagame, 0, AllGKcallList, false, getCallSorting());
 		m_metagame.getComms().send(

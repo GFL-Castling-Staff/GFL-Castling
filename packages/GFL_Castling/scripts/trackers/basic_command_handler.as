@@ -761,7 +761,7 @@ class BasicCommandHandler : Tracker {
             spawnInstanceNearPlayer(senderId, "default", "soldier", 1);
             spawnInstanceNearPlayer(senderId, "default", "soldier", 1);                 
 		} else if (checkCommand(message, "spawnbhh")) {
-			spawnInstanceNearPlayer(senderId, "Paradeus_roarer", "soldier", 0);            
+			spawnInstanceNearPlayer(senderId, "pard_roarer", "soldier", 0);            
 		} else if (checkCommand(message, "foe")) {
 			spawnInstanceNearPlayer(senderId, "default", "soldier", 1);
 		} else if (checkCommand(message, "eod")) {
