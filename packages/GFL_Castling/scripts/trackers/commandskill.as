@@ -5268,7 +5268,7 @@ class CommandSkill : Tracker {
         if (excuteCooldownCheck(m_metagame,characterId,modifer,playerId,"webley",true)) return;
         const XmlElement@ character = getCharacterInfo(m_metagame, characterId);
         if (character !is null) {
-            if (!canCastSkill(character)) return;
+            if (checkCharacterDead(character)) return;
             const XmlElement@ player = getPlayerInfo(m_metagame, playerId);
             if (player !is null){
 
