@@ -613,6 +613,18 @@
 			<attribute weight="1.0" min="7.622" max="102.833" />
 		</attribute_config>
 	</soldier>
+	<soldier name="ar_56_m4sop2jr" spawn_score="0.0">
+		<model filename="gkd_ar_m4sopmodii_574.xml" />
+		<character filename="sf_dinergate.character" />
+		<ai filename="sf_m16a1.ai" />
+		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
+			<weapon key="gkw_m4sopmodii_574.weapon"/>
+			<carry_item key="exo_dummy_64type_5" />
+		</resources>
+		<attribute_config class="xp">
+			<attribute weight="1.0" min="0" max="0.01" />
+		</attribute_config>
+	</soldier>
 	<soldier name="ar_57_ar15" spawn_score="0.05" copy_from="default_ar">
 		<character filename="default_gk_pmc.text_lines">
 			<sound key="death" fileref="AR15_RETREAT_JP.wav" pitch_variety="0" volume="0.8" />
