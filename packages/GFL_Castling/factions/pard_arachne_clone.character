@@ -6,9 +6,11 @@
 	<sound key="footstep" fileref="step_sound_arachne_clone.wav" volume="0.5" pitch_variety="0.025" />
 	<sound key="throw" fileref="static.wav" volume="0.0" />
 	
+	<parameter class="throwing_self_over_initial_bounce" value="0.15" />
 	<parameter class="lifting_up_initial_bounce" value="0.15" />
 	<parameter class="can_use_vehicles" value="0" />
 	<parameter class="being_stunned_steer_amount" value="-0.8" />
+	<parameter class="throwing_self_over_steer_amount" value="0.35" />
 
 	<animation state_key="hold"  animation_key="arachne_clone_still" />
 	<animation state_key="hold_on_wall"  animation_key="arachne_clone_still" />
