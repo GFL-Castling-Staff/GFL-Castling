@@ -8,6 +8,7 @@
 	
 	<parameter class="lifting_up_initial_bounce" value="0.15" />
 	<parameter class="can_use_vehicles" value="0" />
+	<parameter class="being_stunned_steer_amount" value="-0.8" />
 
 	<animation state_key="hold"  animation_key="arachne_clone_still" />
 	<animation state_key="hold_on_wall"  animation_key="arachne_clone_still" />
@@ -34,7 +35,7 @@
 	<animation key="climbing ladder, still" target_key="arachne_clone_climb_still" />
 	<animation key="climbing ladder" target_key="arachne_clone_climb" />
 	<animation key="climbing ladder ending" target_key="arachne_clone_climb_leave" />
-	<animation key="stunned" target_key="arachne_clone_stun" />
+	<animation key="stunned" target_key="arachne_clone_dash" />
 	<animation key="tank mg still" target_key="arachne_clone_still" />
 	<animation key="stabbing" target_key="arachne_clone_melee" />
 	<animation key="travelling car, aiming" target_key="arachne_clone_still" />
