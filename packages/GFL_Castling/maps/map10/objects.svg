@@ -49634,7 +49634,7 @@ tag = apc;</desc>
          id="spawn1-70-1-4-9-17-2-25-2-6-17-2-0"
          style="fill:#ac9393;fill-opacity:1;stroke:#00ff00;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:11.99999921, 11.99999921;stroke-dashoffset:4.59999952;display:inline;enable-background:new">
         <desc
-           id="desc7082-9-7-0-4-4-3-3-9-2-4-6-7">type = vehicle; key = vulcan_tank.vehicle;</desc>
+           id="desc7082-9-7-0-4-4-3-3-9-2-4-6-7">type = vehicle; tag = ifv;</desc>
       </rect>
       <rect
          style="fill:#008000;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new"
@@ -49736,19 +49736,6 @@ tag = only_aa;</desc>
            id="desc7204-7-7-2-6-8-5">type = vehicle;
 key = radio_jammer.vehicle;
 </desc>
-      </rect>
-      <rect
-         transform="matrix(0.99985227,-0.01718815,0.01718815,0.99985227,0,0)"
-         inkscape:label=""
-         y="585.29333"
-         x="967.4491"
-         height="7.3961515"
-         width="3.982286"
-         id="spawn1-70-2-8"
-         style="fill:#c8beb7;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:11.99999776, 11.99999776;stroke-dashoffset:4.59999876;display:inline;enable-background:new">
-        <desc
-           id="desc7082-9-86-1">type = vehicle;
-key = cargo_truck.vehicle;</desc>
       </rect>
       <rect
          transform="matrix(-0.00134084,-0.9999991,0.9999991,-0.00134084,0,0)"
@@ -50178,6 +50165,109 @@ tag = atv;</desc>
          style="fill:#ccff00;fill-opacity:1;stroke:#ff00ff;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000175, 12.00000175;stroke-dashoffset:4.6000009;display:inline;enable-background:new">
         <desc
            id="desc7082-7-0-45-7-94-7-1-7-1-22-61-3-1-2-7-81">tag = icecream;</desc>
+      </rect>
+      <rect
+         style="fill:#007cff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000123, 12.00000123;stroke-dashoffset:4.60000038;display:inline;enable-background:new"
+         id="spawn99508-"
+         width="3.982286"
+         height="7.3961515"
+         x="1143.3481"
+         y="-1745.0023"
+         inkscape:label=""
+         transform="matrix(-0.02466553,0.99969576,-0.99969576,-0.02466553,0,0)">
+        <desc
+           id="desc99510">type = vehicle;
+tag = trans_truck;</desc>
+      </rect>
+      <rect
+         style="fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000084, 12.00000084;stroke-dashoffset:4.60000061;display:inline;enable-background:new"
+         id="spawn99516-"
+         width="3.982286"
+         height="7.3961515"
+         x="664.32001"
+         y="528.78497"
+         inkscape:label=""
+         transform="matrix(0.99999885,0.00151851,-0.00151851,0.99999885,0,0)">
+        <desc
+           id="desc99518">type = vehicle;
+tag = tank;</desc>
+      </rect>
+      <rect
+         style="fill:#007cff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.0000003, 12.0000003;stroke-dashoffset:4.60000048;display:inline;enable-background:new"
+         id="spawn99524-"
+         width="3.982286"
+         height="7.3961515"
+         x="-165.83797"
+         y="966.63214"
+         inkscape:label=""
+         transform="matrix(0.57320941,-0.81940891,0.81940891,0.57320941,0,0)">
+        <desc
+           id="desc99526">type = vehicle;
+tag = jeep;</desc>
+      </rect>
+      <rect
+         style="fill:#007cff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.0000006, 12.0000006;stroke-dashoffset:4.60000048;display:inline;enable-background:new"
+         id="spawn9528-"
+         width="3.982286"
+         height="7.3961515"
+         x="1695.8755"
+         y="959.01965"
+         inkscape:label=""
+         transform="matrix(0.99730691,0.07334112,-0.07334112,0.99730691,0,0)">
+        <desc
+           id="desc99530">type = vehicle;
+tag = jeep;</desc>
+      </rect>
+      <rect
+         style="fill:#008000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000144, 12.00000144;stroke-dashoffset:4.60000076;display:inline;enable-background:new"
+         id="spawn9532-"
+         width="3.982286"
+         height="7.3961515"
+         x="-1314.8362"
+         y="1713.9814"
+         inkscape:label=""
+         transform="matrix(0.04306747,-0.99907217,0.99907217,0.04306747,0,0)">
+        <desc
+           id="desc99534">type = vehicle;
+tag = tank;</desc>
+      </rect>
+      <rect
+         transform="matrix(0.99866818,-0.05159326,0.05159326,0.99866818,0,0)"
+         inkscape:label=""
+         y="624.66608"
+         x="946.17932"
+         height="7.3961515"
+         width="3.982286"
+         id="spawn1-1-4-9-2-"
+         style="fill:#786721;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000162, 12.00000162;stroke-dashoffset:4.60000054;display:inline;enable-background:new">
+        <desc
+           id="desc7082-7-0-4-2">type = vehicle; 
+tag = apc;</desc>
+      </rect>
+      <rect
+         style="fill:#007cff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12.00000052, 12.00000052;stroke-dashoffset:4.60000044;display:inline;enable-background:new"
+         id="spawn9528-2-"
+         width="3.982286"
+         height="7.3961515"
+         x="-215.83418"
+         y="965.66992"
+         inkscape:label=""
+         transform="matrix(0.53882134,-0.84242006,0.84242006,0.53882134,0,0)">
+        <desc
+           id="desc99530-4">type = vehicle;
+tag = jeep;</desc>
+      </rect>
+      <rect
+         style="fill:#00ff00;fill-opacity:1;fill-rule:nonzero;stroke:#800000;stroke-width:1.79999995;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new"
+         id="spawn6969-30-5-1-4-"
+         width="2.7343748"
+         height="2.7343748"
+         x="-440.03278"
+         y="802.01593"
+         inkscape:label=""
+         transform="matrix(0.17946891,-0.98376365,0.98376365,0.17946891,0,0)">
+        <desc
+           id="desc26444-1-1-6-0">type = vehicle; tag = hornet_deploy;</desc>
       </rect>
     </g>
     <g
