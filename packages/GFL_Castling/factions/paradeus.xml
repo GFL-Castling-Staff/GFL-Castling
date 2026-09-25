@@ -988,7 +988,7 @@
 		<ai filename="para_arachne.ai" />
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_arachne.weapon" enabled="1" />
-			<projectile key="pard_arachne_craft.projectile" enabled="1" />
+			<projectile key="pard_arachne_craft.projectile" enabled="1" probability="1.0" />
 			<carry_item key="vest_200hp_160" />
 		</resources>
 		<item_class_existence_config>
@@ -1008,9 +1008,17 @@
 	<soldier name="pard_arachne_clone" firstnames_file="Paradeus_first.name" lastnames_file="Paradeus_last.name" spawn_score="0.0">
 		<model filename="pard_arachne_clone.xml" />
 		<character filename="pard_arachne_clone.character" />
-		<ai filename="melee_nb.ai" />
+		<ai filename="melee_nb.ai" >
+			<parameter class="stab_range" value="5.0" />
+			<parameter class="throw_grenade_time_interval_max" value="10.0" />
+			<parameter class="throw_grenade_time_interval_min" value="5.0" />
+			<parameter class="min_distance_to_throw_grenade" value="1.0" />
+			<parameter class="max_distance_to_throw_grenade" value="30.0" />
+			<parameter class="min_number_of_enemies_to_throw_grenade" value="1" />
+		</ai>
 		<resources clear_weapons="1" clear_vehicles="1" clear_grenades="1" clear_carry_items="1" clear_calls="1">
 			<weapon key="parw_arachne_clone.weapon" enabled="1" />
+			<projectile key="selfstun.projectile" enabled="1" probability="1.0" />
 			<carry_item key="vest_15hp_elite_5" />
 		</resources>
 		<item_class_existence_config>
