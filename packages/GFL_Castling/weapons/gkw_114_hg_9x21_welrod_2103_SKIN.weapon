@@ -5,6 +5,7 @@
 <tag name="stealth"/>
     <!--Weapon specifications-->
     <specification
+	can_shoot_running="1"
 	retrigger_time="-1"
 	accuracy_factor="0.95"
 	sustained_fire_grow_step="0.6"

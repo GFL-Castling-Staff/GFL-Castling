@@ -6976,7 +6976,7 @@
 
 <weapon key="gkw_p226.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.33" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.6" magazine_size="17" suppressed="0" name="SIG SAUER P226" class="0" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="110" projectiles_per_shot="1" carry_in_two_hands="0" spread_range="0.225" burst_shots="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.33" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.6" magazine_size="17" suppressed="0" name="SIG SAUER P226" class="0" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="110" projectiles_per_shot="1" carry_in_two_hands="0" spread_range="0.225" burst_shots="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="26.0" sell_price="26.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -8563,7 +8563,7 @@
 
 <weapon key="gkw_gsh18.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.5" magazine_size="18" suppressed="0" name="GSH18" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="120" projectiles_per_shot="1" burst_shots="1" spread_range="0.25" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.5" magazine_size="18" suppressed="0" name="GSH18" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="120" projectiles_per_shot="1" burst_shots="1" spread_range="0.25" carry_in_two_hands="0" stab_enabled="1"/>
 	<inventory encumbrance="5.0" buy_price="10.0" sell_price="5.0"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -9845,7 +9845,7 @@
 
 <weapon key="gkw_hs2000.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.4" magazine_size="16" suppressed="0" name="HS2000" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" spread_range="0.225" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.4" magazine_size="16" suppressed="0" name="HS2000" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" spread_range="0.225" carry_in_two_hands="0" stab_enabled="1"/>
 	<inventory encumbrance="5.0" buy_price="20.0" sell_price="3.0"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -10067,7 +10067,7 @@
 
 <weapon key="gkw_desert_eagle.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.4" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.0" magazine_size="7" suppressed="0" name="Desert Eagle" class="4" slot="0" spread_range="0.3" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="180.0" projectiles_per_shot="1" carry_in_two_hands="0" burst_shots="1" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.4" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.0" magazine_size="7" suppressed="0" name="Desert Eagle" class="4" slot="0" spread_range="0.3" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="180.0" projectiles_per_shot="1" carry_in_two_hands="0" burst_shots="1" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="100.0" sell_price="50.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -10177,7 +10177,7 @@
 
 <weapon key="gkw_desert_eagle_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.4" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" magazine_size="7" suppressed="0" name="Desert Eagle-[Deterrent Mark]" class="4" slot="0" spread_range="0.3" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="180.0" projectiles_per_shot="1" carry_in_two_hands="0" burst_shots="1" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.4" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" magazine_size="7" suppressed="0" name="Desert Eagle-[Deterrent Mark]" class="4" slot="0" spread_range="0.3" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="180.0" projectiles_per_shot="1" carry_in_two_hands="0" burst_shots="1" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="100.0" sell_price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -10299,7 +10299,7 @@
 
 <weapon key="gkw_desert_eagle_6501.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.4" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.0" magazine_size="7" suppressed="0" name="Desert Eagle-[Blue Sky Garuda]" class="4" slot="0" spread_range="0.3" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="180.0" projectiles_per_shot="1" carry_in_two_hands="0" burst_shots="1" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.4" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.0" magazine_size="7" suppressed="0" name="Desert Eagle-[Blue Sky Garuda]" class="4" slot="0" spread_range="0.3" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="180.0" projectiles_per_shot="1" carry_in_two_hands="0" burst_shots="1" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="100.0" sell_price="50.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -10409,7 +10409,7 @@
 
 <weapon key="gkw_desert_eagle_6501_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.4" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" magazine_size="7" suppressed="0" name="Desert Eagle-[Blue Sky Garuda]-[Deterrent Mark]" class="4" slot="0" spread_range="0.3" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="180.0" projectiles_per_shot="1" carry_in_two_hands="0" burst_shots="1" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.4" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="2.0" magazine_size="7" suppressed="0" name="Desert Eagle-[Blue Sky Garuda]-[Deterrent Mark]" class="4" slot="0" spread_range="0.3" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="180.0" projectiles_per_shot="1" carry_in_two_hands="0" burst_shots="1" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="100.0" sell_price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -11531,7 +11531,7 @@
 
 <weapon key="gkw_m1911.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.12" accuracy_factor="0.98" sustained_fire_grow_step="0.45" sustained_fire_diminish_rate="1.6" magazine_size="14" suppressed="0" use_basic_muzzle_smoke_effect="0" carry_in_two_hands="0" name="M1911" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="100" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.12" accuracy_factor="0.98" sustained_fire_grow_step="0.45" sustained_fire_diminish_rate="1.6" magazine_size="14" suppressed="0" use_basic_muzzle_smoke_effect="0" carry_in_two_hands="0" name="M1911" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="100" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="5.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -11772,7 +11772,7 @@
 
 <weapon key="gkw_m1911_4514.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.12" accuracy_factor="0.98" sustained_fire_grow_step="0.45" sustained_fire_diminish_rate="1.6" magazine_size="14" suppressed="0" use_basic_muzzle_smoke_effect="0" carry_in_two_hands="0" name="M1911-[Breaker of the Sky]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="100" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.12" accuracy_factor="0.98" sustained_fire_grow_step="0.45" sustained_fire_diminish_rate="1.6" magazine_size="14" suppressed="0" use_basic_muzzle_smoke_effect="0" carry_in_two_hands="0" name="M1911-[Breaker of the Sky]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="100" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="5.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -12013,7 +12013,7 @@
 
 <weapon key="gkw_m1911_8406.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.12" accuracy_factor="0.98" sustained_fire_grow_step="0.45" sustained_fire_diminish_rate="1.6" magazine_size="14" suppressed="0" use_basic_muzzle_smoke_effect="0" carry_in_two_hands="0" name="M1911-[Tin Soldier's Big Day]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="100" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.12" accuracy_factor="0.98" sustained_fire_grow_step="0.45" sustained_fire_diminish_rate="1.6" magazine_size="14" suppressed="0" use_basic_muzzle_smoke_effect="0" carry_in_two_hands="0" name="M1911-[Tin Soldier's Big Day]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="100" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="5.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -23284,7 +23284,7 @@
 </weapon>
 
 <weapon key="gkw_m1895.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="0.9" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="1.0" magazine_size="7" carry_in_two_hands="0" suppressed="0" name="Nagant M1895 revolver" class="4" reload_one_at_a_time="1" sight_range_modifier="1.6" spread_range="0.3" projectile_speed="120.0" projectiles_per_shot="1" barrel_offset="-0.1" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="0.9" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="1.0" magazine_size="7" carry_in_two_hands="0" suppressed="0" name="Nagant M1895 revolver" class="4" reload_one_at_a_time="1" sight_range_modifier="1.6" spread_range="0.3" projectile_speed="120.0" projectiles_per_shot="1" barrel_offset="-0.1" burst_shots="1" slot="0" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone"/>
@@ -29187,7 +29187,7 @@
 
 <weapon key="gkw_m9.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.25" accuracy_factor="1.0" sustained_fire_grow_step="0.33" sustained_fire_diminish_rate="1.5" magazine_size="15" suppressed="0" name="Beretta M9" class="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="105" projectiles_per_shot="1" burst_shots="1" spread_range="0.2" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.25" accuracy_factor="1.0" sustained_fire_grow_step="0.33" sustained_fire_diminish_rate="1.5" magazine_size="15" suppressed="0" name="Beretta M9" class="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="105" projectiles_per_shot="1" burst_shots="1" spread_range="0.2" carry_in_two_hands="0" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="10.0" sell_price="3.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -29866,7 +29866,7 @@
 
 <weapon key="gkw_c96.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.2" accuracy_factor="1" sustained_fire_grow_step="0.45" sustained_fire_diminish_rate="2.0" magazine_size="10" suppressed="0" name="Mauser C96" class="0" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="120" projectiles_per_shot="1" burst_shots="1" spread_range="0.2" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.2" accuracy_factor="1" sustained_fire_grow_step="0.45" sustained_fire_diminish_rate="2.0" magazine_size="10" suppressed="0" name="Mauser C96" class="0" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="120" projectiles_per_shot="1" burst_shots="1" spread_range="0.2" carry_in_two_hands="0" stab_enabled="1"/>
 	<inventory encumbrance="5.0" buy_price="3.0" sell_price="0.0"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -30088,7 +30088,7 @@
 
 <weapon key="gkw_c96_8405.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.2" accuracy_factor="1" sustained_fire_grow_step="0.45" sustained_fire_diminish_rate="2.0" magazine_size="10" suppressed="0" name="Mauser C96-[Heart-Stealing Magician]" class="0" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="120" projectiles_per_shot="1" burst_shots="1" spread_range="0.2" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.2" accuracy_factor="1" sustained_fire_grow_step="0.45" sustained_fire_diminish_rate="2.0" magazine_size="10" suppressed="0" name="Mauser C96-[Heart-Stealing Magician]" class="0" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="120" projectiles_per_shot="1" burst_shots="1" spread_range="0.2" carry_in_two_hands="0" stab_enabled="1"/>
 	<inventory encumbrance="5.0" buy_price="3.0" sell_price="0.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -34131,7 +34131,7 @@
 
 <weapon key="gkw_cz100.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.2" last_burst_retrigger_time="0.085" accuracy_factor="0.95" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="1.8" magazine_size="13" suppressed="0" name="CZ 100" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="125.5" projectiles_per_shot="1" burst_shots="1" spread_range="0.25" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.2" last_burst_retrigger_time="0.085" accuracy_factor="0.95" sustained_fire_grow_step="0.3" sustained_fire_diminish_rate="1.8" magazine_size="13" suppressed="0" name="CZ 100" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="125.5" projectiles_per_shot="1" burst_shots="1" spread_range="0.25" carry_in_two_hands="0" stab_enabled="1"/>
 	<inventory encumbrance="5.0" buy_price="30.0" sell_price="15.0"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -48436,7 +48436,7 @@
 
 <weapon key="gkw_nz75.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.2" accuracy_factor="0.98" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="2.0" magazine_size="24" suppressed="0" name="NZ75" class="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140" projectiles_per_shot="1" spread_range="0.25" carry_in_two_hands="0" stab_enabled="1" use_basic_muzzle_smoke_effect="0"/>
+	<specification can_shoot_running="1" retrigger_time="0.2" accuracy_factor="0.98" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="2.0" magazine_size="24" suppressed="0" name="NZ75" class="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140" projectiles_per_shot="1" spread_range="0.25" carry_in_two_hands="0" stab_enabled="1" use_basic_muzzle_smoke_effect="0"/>
 	<inventory encumbrance="5.0" buy_price="5.0" sell_price="3.0"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -48551,7 +48551,7 @@
 
 <weapon key="gkw_p22.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="-1" accuracy_factor="1" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="2.4" magazine_size="10" suppressed="0" name="P22" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140" projectiles_per_shot="1" burst_shots="1" spread_range="0.15" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="-1" accuracy_factor="1" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="2.4" magazine_size="10" suppressed="0" name="P22" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140" projectiles_per_shot="1" burst_shots="1" spread_range="0.15" carry_in_two_hands="0" stab_enabled="1"/>
 	<inventory encumbrance="5.0" buy_price="10.0" sell_price="5.0"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -48777,7 +48777,7 @@
 
 <weapon key="gkw_cz75.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="-1" accuracy_factor="0.98" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="2.0" magazine_size="13" suppressed="0" name="CZ75" class="4" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140" projectiles_per_shot="1" burst_shots="1" spread_range="0.12" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="-1" accuracy_factor="0.98" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="2.0" magazine_size="13" suppressed="0" name="CZ75" class="4" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140" projectiles_per_shot="1" burst_shots="1" spread_range="0.12" carry_in_two_hands="0" stab_enabled="1"/>
 	<inventory encumbrance="5.0" buy_price="10.0" sell_price="5.0"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -48887,7 +48887,7 @@
 
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_m950a.weapon">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.08" accuracy_factor="0.95" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="0.8" spread_range="0.25" magazine_size="50" suppressed="0" name="Calico M950A" class="0" slot="0" stance_accuracy_rate="3" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="120" projectiles_per_shot="1" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.08" accuracy_factor="0.95" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="0.8" spread_range="0.25" magazine_size="50" suppressed="0" name="Calico M950A" class="0" slot="0" stance_accuracy_rate="3" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="120" projectiles_per_shot="1" carry_in_two_hands="0" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="5.0" buy_price="20.0" sell_price="15.0"/>
@@ -49003,7 +49003,7 @@
 
 <weapon key="gkw_c93.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="-1" accuracy_factor="0.95" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.6" magazine_size="8" suppressed="0" name="Borchardt C93" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140" projectiles_per_shot="1" burst_shots="1" spread_range="0.2" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="-1" accuracy_factor="0.95" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.6" magazine_size="8" suppressed="0" name="Borchardt C93" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140" projectiles_per_shot="1" burst_shots="1" spread_range="0.2" carry_in_two_hands="0" stab_enabled="1"/>
 	<inventory encumbrance="5.0" buy_price="5.0" sell_price="3.0"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -49113,7 +49113,7 @@
 <weapon key="gkw_welrod.weapon" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
 	<tag name="stealth"/>
-	<specification retrigger_time="-1" accuracy_factor="0.95" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.6" magazine_size="8" suppressed="1" carry_in_two_hands="0" name="Welrod MK.II" class="1" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140" projectiles_per_shot="1" burst_shots="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" accuracy_factor="0.95" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.6" magazine_size="8" suppressed="1" carry_in_two_hands="0" name="Welrod MK.II" class="1" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140" projectiles_per_shot="1" burst_shots="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="10.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -49229,7 +49229,7 @@
 </weapon>
 
 <weapon key="gkw_python.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.25" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python" class="1" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140.0" projectiles_per_shot="1" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.25" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python" class="1" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140.0" projectiles_per_shot="1" burst_shots="1" slot="0" stab_enabled="1"/>
 	<next_in_chain key="gkw_python_skill.weapon" share_ammo="1"/>
 	<animation state_key="recoil" animation_key="recoil, revolver"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone"/>
@@ -49349,7 +49349,7 @@
 </weapon>
 
 <weapon key="gkw_python_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.08" last_burst_retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python-[Embrace of the Dauntless]" class="4" burst_shots="6" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="100.0" projectiles_per_shot="1" slot="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.08" last_burst_retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python-[Embrace of the Dauntless]" class="4" burst_shots="6" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="100.0" projectiles_per_shot="1" slot="0" stab_enabled="1"/>
 	<next_in_chain key="gkw_python.weapon" share_ammo="1"/>
 	<animation state_key="recoil" animation_key="recoil, hip revolver"/>
 	<animation state_key="recoil" stance_key="crouching" animation_key="recoil, crouch revolver"/>
@@ -49471,7 +49471,7 @@
 
 <weapon key="gkw_kolibri.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="-1" accuracy_factor="0.95" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.6" magazine_size="7" suppressed="1" name="Kolibri" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="3.0" projectile_speed="80" projectiles_per_shot="1" burst_shots="1" spread_range="0.15" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="-1" accuracy_factor="0.95" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.6" magazine_size="7" suppressed="1" name="Kolibri" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="3.0" projectile_speed="80" projectiles_per_shot="1" burst_shots="1" spread_range="0.15" carry_in_two_hands="0" stab_enabled="1"/>
 	<inventory encumbrance="5.0" buy_price="5.0" sell_price="0.0"/>
 	<commonness value="0.01" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -49822,7 +49822,7 @@
 
 <weapon key="gkw_contender.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.2" sustained_fire_grow_step="1.8" sustained_fire_diminish_rate="1.8" magazine_size="1" suppressed="0" name="Contender" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" projectile_speed="200.0" projectiles_per_shot="1" burst_shots="1" carry_in_two_hands="0"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.2" sustained_fire_grow_step="1.8" sustained_fire_diminish_rate="1.8" magazine_size="1" suppressed="0" name="Contender" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" projectile_speed="200.0" projectiles_per_shot="1" burst_shots="1" carry_in_two_hands="0"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="10.0" sell_price="7.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -49952,7 +49952,7 @@
 
 <weapon key="gkw_mp443.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.25" accuracy_factor="1.0" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.8" magazine_size="18" suppressed="0" name="MP-443 Rook" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="130" projectiles_per_shot="1" burst_shots="1" spread_range="0.3" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.25" accuracy_factor="1.0" sustained_fire_grow_step="0.5" sustained_fire_diminish_rate="1.8" magazine_size="18" suppressed="0" name="MP-443 Rook" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="130" projectiles_per_shot="1" burst_shots="1" spread_range="0.3" carry_in_two_hands="0" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="50.0" sell_price="43.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -50067,7 +50067,7 @@
 <weapon key="gkw_mp443mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
 	<tag name="elite"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.8" spread_range="0.25" magazine_size="18" carry_in_two_hands="0" suppressed="0" name="MP-443 Rook(MOD3)" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.8" projectile_speed="130" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.8" spread_range="0.25" magazine_size="18" carry_in_two_hands="0" suppressed="0" name="MP-443 Rook(MOD3)" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.8" projectile_speed="130" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
 	<commonness value="0.001" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="150.0" sell_price="143.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -56183,7 +56183,7 @@
 
 <weapon key="gkw_webley.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="0.98" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="3.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Webley Mark VI Revolver" class="1" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="160" projectiles_per_shot="1" burst_shots="1" spread_range="0.12" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="0.98" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="3.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Webley Mark VI Revolver" class="1" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="160" projectiles_per_shot="1" burst_shots="1" spread_range="0.12" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="45.0" sell_price="45.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -56301,7 +56301,7 @@
 
 <weapon key="gkw_webley_5601.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="0.98" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="3.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Webley Mark VI Revolver-[At Twilight]" class="1" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="160" projectiles_per_shot="1" burst_shots="1" spread_range="0.12" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="0.98" sustained_fire_grow_step="4.0" sustained_fire_diminish_rate="3.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Webley Mark VI Revolver-[At Twilight]" class="1" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="160" projectiles_per_shot="1" burst_shots="1" spread_range="0.12" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="45.0" sell_price="45.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -61401,7 +61401,7 @@
 
 <weapon key="gkw_thunder.weapon" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" accuracy_factor="0.98" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="1" carry_in_two_hands="0" suppressed="0" name="Thunder.50 BMG" class="1" sight_range_modifier="1.6" projectile_speed="130.0" projectiles_per_shot="1" burst_shots="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" accuracy_factor="0.98" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="1" carry_in_two_hands="0" suppressed="0" name="Thunder.50 BMG" class="1" sight_range_modifier="1.6" projectile_speed="130.0" projectiles_per_shot="1" burst_shots="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="5.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -66060,7 +66060,7 @@
 
 <weapon key="gkw_ppk.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.04" accuracy_factor="0.98" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.8" magazine_size="7" suppressed="0" carry_in_two_hands="0" name="Walther PPK" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.04" accuracy_factor="0.98" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.8" magazine_size="7" suppressed="0" carry_in_two_hands="0" name="Walther PPK" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="5.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -66179,7 +66179,7 @@
 	<tag name="pistol"/>
 	<tag name="elite"/>
 	<tag name="stealth"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.04" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.5" spread_range="0.3" magazine_size="7" suppressed="1" carry_in_two_hands="0" name="Walther PPK(MOD3)" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.8" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.04" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.5" spread_range="0.3" magazine_size="7" suppressed="1" carry_in_two_hands="0" name="Walther PPK(MOD3)" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.8" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="180.0" sell_price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -66298,7 +66298,7 @@
 	<tag name="pistol"/>
 	<tag name="elite"/>
 	<tag name="stealth"/>
-	<specification retrigger_time="-1" accuracy_factor="1.0" accuracy_factor_at_night="1.5" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="1.5" magazine_size="8" suppressed="1" carry_in_two_hands="0" name="Welrod MK.II (MOD3)" class="1" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.5" sight_range_modifier_at_night="2.5" projectile_speed="140" projectiles_per_shot="1" burst_shots="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" accuracy_factor="1.0" accuracy_factor_at_night="1.5" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="1.5" magazine_size="8" suppressed="1" carry_in_two_hands="0" name="Welrod MK.II (MOD3)" class="1" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.5" sight_range_modifier_at_night="2.5" projectile_speed="140" projectiles_per_shot="1" burst_shots="1"/>
 	<inventory encumbrance="5.0" buy_price="250.0" sell_price="200.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -69747,7 +69747,7 @@
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_m950amod3.weapon">
 	<tag name="pistol"/>
 	<tag name="elite"/>
-	<specification retrigger_time="0.08" accuracy_factor="0.95" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="0.9" spread_range="0.15" magazine_size="50" suppressed="0" name="Calico M950A(MOD3)" class="0" slot="0" stance_accuracy_rate="3" stab_enabled="1" carry_in_two_hands="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="130" projectiles_per_shot="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.08" accuracy_factor="0.95" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="0.9" spread_range="0.15" magazine_size="50" suppressed="0" name="Calico M950A(MOD3)" class="0" slot="0" stance_accuracy_rate="3" stab_enabled="1" carry_in_two_hands="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="130" projectiles_per_shot="1"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="5.0" buy_price="100.0" sell_price="80.0"/>
@@ -78192,7 +78192,7 @@
 
 <weapon key="gkw_k5.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="-1" accuracy_factor="1" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.7" magazine_size="14" carry_in_two_hands="0" suppressed="0" name="Daewoo K5" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="100" projectiles_per_shot="1" burst_shots="1" spread_range="0.15" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="-1" accuracy_factor="1" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.7" magazine_size="14" carry_in_two_hands="0" suppressed="0" name="Daewoo K5" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="100" projectiles_per_shot="1" burst_shots="1" spread_range="0.15" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="5.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -78309,7 +78309,7 @@
 <weapon key="gkw_k5mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
 	<tag name="elite"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="-1" accuracy_factor="1" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.7" magazine_size="14" carry_in_two_hands="0" suppressed="0" name="Daewoo K5(MOD3)" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="125" projectiles_per_shot="1" burst_shots="1" spread_range="0.125" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="-1" accuracy_factor="1" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.7" magazine_size="14" carry_in_two_hands="0" suppressed="0" name="Daewoo K5(MOD3)" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="125" projectiles_per_shot="1" burst_shots="1" spread_range="0.125" stab_enabled="1"/>
 	<commonness value="0.0002" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="50.0" sell_price="25.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -81713,7 +81713,7 @@
 
 <weapon key="gkw_m1873.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" accuracy_factor="0.98" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt M1873" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" projectile_speed="130.0" projectiles_per_shot="1" burst_shots="1" slot="0" spread_range="0.1" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" accuracy_factor="0.98" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt M1873" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" projectile_speed="130.0" projectiles_per_shot="1" burst_shots="1" slot="0" spread_range="0.1" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="10.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -81958,7 +81958,7 @@
 
 <weapon key="gkw_m1873_301.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" accuracy_factor="0.98" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt M1873-[Wish Upon A Star]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" projectile_speed="130.0" projectiles_per_shot="1" burst_shots="1" slot="0" spread_range="0.1" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" accuracy_factor="0.98" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt M1873-[Wish Upon A Star]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" projectile_speed="130.0" projectiles_per_shot="1" burst_shots="1" slot="0" spread_range="0.1" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="10.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -82204,7 +82204,7 @@
 
 <weapon key="gkw_m1873_2105.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" accuracy_factor="0.98" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt M1873-[Queen of Miracles]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" projectile_speed="130.0" projectiles_per_shot="1" burst_shots="1" slot="0" spread_range="0.1" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" accuracy_factor="0.98" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt M1873-[Queen of Miracles]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" projectile_speed="130.0" projectiles_per_shot="1" burst_shots="1" slot="0" spread_range="0.1" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="10.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -84274,7 +84274,7 @@
 
 <weapon key="gkw_tt33.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" spread_range="0.3" magazine_size="8" suppressed="0" name="Tokarev 33" class="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="105" projectiles_per_shot="1" burst_shots="1" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" spread_range="0.3" magazine_size="8" suppressed="0" name="Tokarev 33" class="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="105" projectiles_per_shot="1" burst_shots="1" carry_in_two_hands="0" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="15.0" sell_price="10.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -84387,7 +84387,7 @@
 
 <weapon key="gkw_tt33_601.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" spread_range="0.3" magazine_size="8" suppressed="0" name="Tokarev 33-[A Couple's Journey]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="105" projectiles_per_shot="1" burst_shots="1" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" spread_range="0.3" magazine_size="8" suppressed="0" name="Tokarev 33-[A Couple's Journey]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="105" projectiles_per_shot="1" burst_shots="1" carry_in_two_hands="0" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="15.0" sell_price="10.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -84500,7 +84500,7 @@
 
 <weapon key="gkw_tt33_3204.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" spread_range="0.3" magazine_size="8" suppressed="0" name="Tokarev 33-[Griffon Dancer]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="105" projectiles_per_shot="1" burst_shots="1" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" spread_range="0.3" magazine_size="8" suppressed="0" name="Tokarev 33-[Griffon Dancer]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="105" projectiles_per_shot="1" burst_shots="1" carry_in_two_hands="0" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="15.0" sell_price="10.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -84613,7 +84613,7 @@
 
 <weapon key="gkw_tt33_11007.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" spread_range="0.3" magazine_size="8" suppressed="0" name="Tokarev 33-[Wet Crow Shadow]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="105" projectiles_per_shot="1" burst_shots="1" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" spread_range="0.3" magazine_size="8" suppressed="0" name="Tokarev 33-[Wet Crow Shadow]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="105" projectiles_per_shot="1" burst_shots="1" carry_in_two_hands="0" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="15.0" sell_price="10.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -86444,7 +86444,7 @@
 
 <weapon key="gkw_px4.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="2.0" magazine_size="20" suppressed="0" name="Beretta Px4 Storm" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" spread_range="0.25" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="2.0" magazine_size="20" suppressed="0" name="Beretta Px4 Storm" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" spread_range="0.25" carry_in_two_hands="0" stab_enabled="1"/>
 	<inventory encumbrance="5.0" buy_price="10.0" sell_price="5.0"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -86554,7 +86554,7 @@
 
 <weapon key="gkw_px4_2801.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="2.0" magazine_size="20" suppressed="0" name="Beretta Px4 Storm-[Queen of Christmas Morning]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" spread_range="0.25" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="2.0" magazine_size="20" suppressed="0" name="Beretta Px4 Storm-[Queen of Christmas Morning]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" spread_range="0.25" carry_in_two_hands="0" stab_enabled="1"/>
 	<inventory encumbrance="5.0" buy_price="10.0" sell_price="5.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -86664,7 +86664,7 @@
 
 <weapon key="gkw_px4mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="3.0" magazine_size="20" suppressed="1" name="Beretta Px4 Storm(MOD3)" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.8" projectile_speed="120" projectiles_per_shot="1" burst_shots="1" spread_range="0.15" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="3.0" magazine_size="20" suppressed="1" name="Beretta Px4 Storm(MOD3)" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.8" projectile_speed="120" projectiles_per_shot="1" burst_shots="1" spread_range="0.15" carry_in_two_hands="0" stab_enabled="1"/>
 	<inventory encumbrance="5.0" buy_price="250.0" sell_price="250.0"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -86776,7 +86776,7 @@
 
 <weapon key="gkw_px4mod3_2801.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="3.0" magazine_size="20" suppressed="1" name="Beretta Px4 Storm(MOD3)-[Queen of Christmas Morning]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.8" projectile_speed="120" projectiles_per_shot="1" burst_shots="1" spread_range="0.15" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="3.0" magazine_size="20" suppressed="1" name="Beretta Px4 Storm(MOD3)-[Queen of Christmas Morning]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.8" projectile_speed="120" projectiles_per_shot="1" burst_shots="1" spread_range="0.15" carry_in_two_hands="0" stab_enabled="1"/>
 	<inventory encumbrance="5.0" buy_price="250.0" sell_price="250.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -93394,7 +93394,7 @@
 </weapon>
 
 <weapon key="gkw_357_8107.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="0.9" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Astra .357 Revolver-[Shadow of Windy Butterfly]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" projectile_speed="135.7" projectiles_per_shot="1" burst_shots="1" slot="0" spread_range="0.2" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="0.9" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="1.5" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Astra .357 Revolver-[Shadow of Windy Butterfly]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" projectile_speed="135.7" projectiles_per_shot="1" burst_shots="1" slot="0" spread_range="0.2" stab_enabled="1"/>
 	<animation state_key="recoil" animation_key="recoil, revolver"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone"/>
 	<animation state_key="recoil" stance_key="over_wall" animation_key="recoil, overwall pistol"/>
@@ -94307,7 +94307,7 @@
 
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_m950a_4302.weapon">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.08" accuracy_factor="0.95" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="0.8" spread_range="0.25" magazine_size="50" suppressed="0" name="Calico M950A-[The Warbler And The Rose]" class="0" slot="0" stance_accuracy_rate="3" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="120" projectiles_per_shot="1" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.08" accuracy_factor="0.95" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="0.8" spread_range="0.25" magazine_size="50" suppressed="0" name="Calico M950A-[The Warbler And The Rose]" class="0" slot="0" stance_accuracy_rate="3" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="120" projectiles_per_shot="1" carry_in_two_hands="0" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="5.0" buy_price="20.0" sell_price="15.0"/>
@@ -94424,7 +94424,7 @@
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_m950amod3_4302.weapon">
 	<tag name="pistol"/>
 	<tag name="elite"/>
-	<specification retrigger_time="0.08" accuracy_factor="0.95" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="0.9" spread_range="0.15" magazine_size="50" suppressed="0" name="Calico M950A(MOD3)-[The Warbler And The Rose]" class="0" slot="0" stance_accuracy_rate="3" stab_enabled="1" carry_in_two_hands="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="130" projectiles_per_shot="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.08" accuracy_factor="0.95" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="0.9" spread_range="0.15" magazine_size="50" suppressed="0" name="Calico M950A(MOD3)-[The Warbler And The Rose]" class="0" slot="0" stance_accuracy_rate="3" stab_enabled="1" carry_in_two_hands="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="130" projectiles_per_shot="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="5.0" buy_price="100.0" sell_price="80.0"/>
@@ -95089,7 +95089,7 @@
 
 <weapon key="gkw_makarov.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.33" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.4" magazine_size="8" suppressed="0" name="Makarov" class="0" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="110" projectiles_per_shot="1" burst_shots="1" spread_range="0.18" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.33" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.4" magazine_size="8" suppressed="0" name="Makarov" class="0" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="110" projectiles_per_shot="1" burst_shots="1" spread_range="0.18" carry_in_two_hands="0" stab_enabled="1"/>
 	<inventory encumbrance="5.0" buy_price="30.0" sell_price="15.0"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -95200,7 +95200,7 @@
 <weapon key="gkw_makarovmod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
 	<tag name="elite"/>
-	<specification retrigger_time="0.25" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.9" magazine_size="8" name="Makarov(MOD3)" class="0" slot="0" reload_one_at_a_time="0" suppressed="1" sight_range_modifier="1.8" projectile_speed="110" projectiles_per_shot="1" burst_shots="1" spread_range="0.12" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.25" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.9" magazine_size="8" name="Makarov(MOD3)" class="0" slot="0" reload_one_at_a_time="0" suppressed="1" sight_range_modifier="1.8" projectile_speed="110" projectiles_per_shot="1" burst_shots="1" spread_range="0.12" carry_in_two_hands="0" stab_enabled="1"/>
 	<inventory encumbrance="5.0" buy_price="150.0" sell_price="100.0"/>
 	<commonness value="0.0001" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -95310,7 +95310,7 @@
 
 <weapon key="gkw_qsz92.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.33" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="0.8" magazine_size="15" suppressed="0" name="QSZ-92" class="0" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="120" projectiles_per_shot="1" burst_shots="1" carry_in_two_hands="0" spread_range="0.24"/>
+	<specification can_shoot_running="1" retrigger_time="0.33" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="0.8" magazine_size="15" suppressed="0" name="QSZ-92" class="0" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="120" projectiles_per_shot="1" burst_shots="1" carry_in_two_hands="0" spread_range="0.24"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="10.0" sell_price="9.2"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -96207,7 +96207,7 @@
 
 <weapon key="gkw_m327.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" accuracy_factor="1.0" spread_range="0.3" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="3.2" magazine_size="8" carry_in_two_hands="0" suppressed="0" name="S.W. Model 327 Revolver" class="1" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" accuracy_factor="1.0" spread_range="0.3" sustained_fire_grow_step="0.8" sustained_fire_diminish_rate="3.2" magazine_size="8" carry_in_two_hands="0" suppressed="0" name="S.W. Model 327 Revolver" class="1" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="45.0" sell_price="45.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -103383,7 +103383,7 @@
 
 <weapon key="gkw_p2000.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.45" magazine_size="13" suppressed="0" name="HK P2000" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="110.5" projectiles_per_shot="1" carry_in_two_hands="0" spread_range="0.225" burst_shots="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.45" magazine_size="13" suppressed="0" name="HK P2000" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="110.5" projectiles_per_shot="1" carry_in_two_hands="0" spread_range="0.225" burst_shots="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="10.0" sell_price="7.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -103490,7 +103490,7 @@
 </weapon>
 
 <weapon key="gkw_m1851n.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="3.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt 1851 Navy" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" spread_range="0.3" projectile_speed="140.0" projectiles_per_shot="1" barrel_offset="-0.1" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="3.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt 1851 Navy" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" spread_range="0.3" projectile_speed="140.0" projectiles_per_shot="1" barrel_offset="-0.1" burst_shots="1" slot="0" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<animation state_key="recoil" animation_key="recoil, revolver"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone"/>
@@ -107006,7 +107006,7 @@
 
 <weapon key="gkw_cz52.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" spread_range="0.3" magazine_size="8" suppressed="0" name="CZ 52" class="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="110" projectiles_per_shot="1" burst_shots="1" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" spread_range="0.3" magazine_size="8" suppressed="0" name="CZ 52" class="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="110" projectiles_per_shot="1" burst_shots="1" carry_in_two_hands="0" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="15.0" sell_price="10.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -107119,7 +107119,7 @@
 
 <weapon key="gkw_cz52_10307.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" spread_range="0.3" magazine_size="8" suppressed="0" name="CZ 52" class="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="110" projectiles_per_shot="1" burst_shots="1" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.2" accuracy_factor="1.0" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.4" spread_range="0.3" magazine_size="8" suppressed="0" name="CZ 52" class="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="110" projectiles_per_shot="1" burst_shots="1" carry_in_two_hands="0" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="15.0" sell_price="10.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -107232,7 +107232,7 @@
 
 <weapon key="gkw_hk45.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.25" accuracy_factor="1.0" sustained_fire_grow_step="0.33" sustained_fire_diminish_rate="1.5" magazine_size="15" suppressed="0" name="HK45" class="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="105" projectiles_per_shot="1" burst_shots="1" spread_range="0.2" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.25" accuracy_factor="1.0" sustained_fire_grow_step="0.33" sustained_fire_diminish_rate="1.5" magazine_size="15" suppressed="0" name="HK45" class="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="105" projectiles_per_shot="1" burst_shots="1" spread_range="0.2" carry_in_two_hands="0" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="10.0" sell_price="3.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -107343,7 +107343,7 @@
 
 <weapon key="gkw_mp448.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.33" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.5" magazine_size="12" suppressed="0" name="MP-448 Skyph" class="0" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="110" projectiles_per_shot="1" burst_shots="1" spread_range="0.18" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.33" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.5" magazine_size="12" suppressed="0" name="MP-448 Skyph" class="0" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="110" projectiles_per_shot="1" burst_shots="1" spread_range="0.18" carry_in_two_hands="0" stab_enabled="1"/>
 	<inventory encumbrance="5.0" buy_price="30.0" sell_price="15.0"/>
 	<commonness value="0.2" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -107453,7 +107453,7 @@
 
 <weapon key="gkw_uspcompact.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.17" accuracy_factor="1.0" sustained_fire_grow_step="0.33" sustained_fire_diminish_rate="1.5" magazine_size="12" suppressed="0" name="USP Compact" class="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="105" projectiles_per_shot="1" burst_shots="1" spread_range="0.2" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.17" accuracy_factor="1.0" sustained_fire_grow_step="0.33" sustained_fire_diminish_rate="1.5" magazine_size="12" suppressed="0" name="USP Compact" class="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="105" projectiles_per_shot="1" burst_shots="1" spread_range="0.2" carry_in_two_hands="0" stab_enabled="1"/>
 	<commonness value="0.2" in_stock="1" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="10.0" sell_price="3.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -113521,7 +113521,7 @@
 
 <weapon key="gkw_m1895mod3.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="0" name="Nagant M1895 revolver(MOD3)" class="4" reload_one_at_a_time="0" sight_range_modifier="2.0" spread_range="0.3" projectile_speed="185.0" projectiles_per_shot="1" barrel_offset="-0.1" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="0" name="Nagant M1895 revolver(MOD3)" class="4" reload_one_at_a_time="0" sight_range_modifier="2.0" spread_range="0.3" projectile_speed="185.0" projectiles_per_shot="1" barrel_offset="-0.1" burst_shots="1" slot="0" stab_enabled="1"/>
 	<commonness value="0.00001" can_respawn_with="1" in_stock="0"/>
 	<inventory encumbrance="5.0" buy_price="270.0" sell_price="270.0"/>
 	<next_in_chain key="gkw_m1895mod3_skill.weapon" share_ammo="1"/>
@@ -113641,7 +113641,7 @@
 
 <weapon key="gkw_m1895mod3_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="1" name="Nagant M1895 revolver(MOD3)-[Seven Tone Paean]" class="4" sight_range_modifier="2.0" projectile_speed="140.0" projectiles_per_shot="1" reload_one_at_a_time="1" burst_shots="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="1" name="Nagant M1895 revolver(MOD3)-[Seven Tone Paean]" class="4" sight_range_modifier="2.0" projectile_speed="140.0" projectiles_per_shot="1" reload_one_at_a_time="1" burst_shots="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="5.0" buy_price="270.0" sell_price="270.0"/>
 	<commonness value="0" can_respawn_with="1" in_stock="0"/>
@@ -118126,7 +118126,7 @@
 
 <weapon key="gkw_gsh18_523.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.5" magazine_size="18" suppressed="0" name="GSH18-[Walking operating table]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="120" projectiles_per_shot="1" burst_shots="1" spread_range="0.25" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.5" magazine_size="18" suppressed="0" name="GSH18-[Walking operating table]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="120" projectiles_per_shot="1" burst_shots="1" spread_range="0.25" carry_in_two_hands="0" stab_enabled="1"/>
 	<inventory encumbrance="5.0" buy_price="10.0" sell_price="5.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -123525,7 +123525,7 @@
 
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_m950a_702.weapon">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.08" accuracy_factor="0.95" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="0.8" spread_range="0.25" magazine_size="50" suppressed="0" name="Calico M950A-[Ace on Duty]" class="0" slot="0" stance_accuracy_rate="3" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="120" projectiles_per_shot="1" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.08" accuracy_factor="0.95" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="0.8" spread_range="0.25" magazine_size="50" suppressed="0" name="Calico M950A-[Ace on Duty]" class="0" slot="0" stance_accuracy_rate="3" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="120" projectiles_per_shot="1" carry_in_two_hands="0" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="5.0" buy_price="20.0" sell_price="15.0"/>
@@ -123970,7 +123970,7 @@
 
 <weapon key="gkw_cz75_1604.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="-1" accuracy_factor="0.98" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="2.0" magazine_size="13" suppressed="0" name="CZ75-[Winter Gatherer]" class="4" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140" projectiles_per_shot="1" burst_shots="1" spread_range="0.12" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="-1" accuracy_factor="0.98" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="2.0" magazine_size="13" suppressed="0" name="CZ75-[Winter Gatherer]" class="4" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140" projectiles_per_shot="1" burst_shots="1" spread_range="0.12" carry_in_two_hands="0" stab_enabled="1"/>
 	<inventory encumbrance="5.0" buy_price="10.0" sell_price="5.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -124080,7 +124080,7 @@
 
 <weapon key="gkw_hs2000_5304.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.4" magazine_size="16" suppressed="0" name="HS2000-[Tin Man's Burning Heart]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" spread_range="0.225" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.1" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.4" magazine_size="16" suppressed="0" name="HS2000-[Tin Man's Burning Heart]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" spread_range="0.225" carry_in_two_hands="0" stab_enabled="1"/>
 	<inventory encumbrance="5.0" buy_price="20.0" sell_price="3.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -124606,7 +124606,7 @@
 </weapon>
 
 <weapon key="gkw_python_6603.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.25" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python-[Hunting Time]" class="1" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140.0" projectiles_per_shot="1" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.25" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python-[Hunting Time]" class="1" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140.0" projectiles_per_shot="1" burst_shots="1" slot="0" stab_enabled="1"/>
 	<commonness in_stock="0" value="0"/>
 	<next_in_chain key="gkw_python_6603_skill.weapon" share_ammo="1"/>
 	<animation state_key="recoil" animation_key="recoil, revolver"/>
@@ -124727,7 +124727,7 @@
 </weapon>
 
 <weapon key="gkw_python_6603_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.08" last_burst_retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python-[Hunting Time]-[Embrace of the Dauntless]" class="4" burst_shots="6" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="100.0" projectiles_per_shot="1" slot="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.08" last_burst_retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python-[Hunting Time]-[Embrace of the Dauntless]" class="4" burst_shots="6" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="100.0" projectiles_per_shot="1" slot="0" stab_enabled="1"/>
 	<next_in_chain key="gkw_python_6603.weapon" share_ammo="1"/>
 	<animation state_key="recoil" animation_key="recoil, hip revolver"/>
 	<animation state_key="recoil" stance_key="crouching" animation_key="recoil, crouch revolver"/>
@@ -124848,7 +124848,7 @@
 </weapon>
 
 <weapon key="gkw_python_11202.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.25" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python-[Slash, Dance of the Feathered Crane]" class="1" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140.0" projectiles_per_shot="1" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.25" accuracy_factor="1.0" sustained_fire_grow_step="2.0" sustained_fire_diminish_rate="1.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python-[Slash, Dance of the Feathered Crane]" class="1" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140.0" projectiles_per_shot="1" burst_shots="1" slot="0" stab_enabled="1"/>
 	<commonness in_stock="0" value="0"/>
 	<next_in_chain key="gkw_python_11202_skill.weapon" share_ammo="1"/>
 	<animation state_key="recoil" animation_key="recoil, revolver"/>
@@ -124969,7 +124969,7 @@
 </weapon>
 
 <weapon key="gkw_python_11202_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.08" last_burst_retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python-[Slash, Dance of the Feathered Crane]-[Embrace of the Dauntless]" class="4" burst_shots="6" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="100.0" projectiles_per_shot="1" slot="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.08" last_burst_retrigger_time="-1" accuracy_factor="1.0" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="1.0" magazine_size="6" carry_in_two_hands="0" suppressed="0" name="Colt Python-[Slash, Dance of the Feathered Crane]-[Embrace of the Dauntless]" class="4" burst_shots="6" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="100.0" projectiles_per_shot="1" slot="0" stab_enabled="1"/>
 	<next_in_chain key="gkw_python_11202.weapon" share_ammo="1"/>
 	<animation state_key="recoil" animation_key="recoil, hip revolver"/>
 	<animation state_key="recoil" stance_key="crouching" animation_key="recoil, crouch revolver"/>
@@ -125090,7 +125090,7 @@
 </weapon>
 
 <weapon key="gkw_m1895_5309.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="0.9" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="1.0" magazine_size="7" carry_in_two_hands="0" suppressed="0" name="Nagant M1895 revolver-[Blushing Snow Princess]" class="4" reload_one_at_a_time="1" sight_range_modifier="1.6" spread_range="0.3" projectile_speed="120.0" projectiles_per_shot="1" barrel_offset="-0.1" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="0.9" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="1.0" magazine_size="7" carry_in_two_hands="0" suppressed="0" name="Nagant M1895 revolver-[Blushing Snow Princess]" class="4" reload_one_at_a_time="1" sight_range_modifier="1.6" spread_range="0.3" projectile_speed="120.0" projectiles_per_shot="1" barrel_offset="-0.1" burst_shots="1" slot="0" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone"/>
@@ -125207,7 +125207,7 @@
 </weapon>
 
 <weapon key="gkw_m1895_7107.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="0.9" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="1.0" magazine_size="7" carry_in_two_hands="0" suppressed="0" name="Nagant M1895 revolver-[Cream in the Nebula]" class="4" reload_one_at_a_time="1" sight_range_modifier="1.6" spread_range="0.3" projectile_speed="120.0" projectiles_per_shot="1" barrel_offset="-0.1" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="0.9" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="1.0" magazine_size="7" carry_in_two_hands="0" suppressed="0" name="Nagant M1895 revolver-[Cream in the Nebula]" class="4" reload_one_at_a_time="1" sight_range_modifier="1.6" spread_range="0.3" projectile_speed="120.0" projectiles_per_shot="1" barrel_offset="-0.1" burst_shots="1" slot="0" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<animation state_key="recoil" animation_key="recoil, pistol"/>
 	<animation state_key="recoil" stance_key="prone" animation_key="recoil, pistol, prone"/>
@@ -125561,7 +125561,7 @@
 
 <weapon key="gkw_contender_3201.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.2" sustained_fire_grow_step="1.8" sustained_fire_diminish_rate="1.8" magazine_size="1" suppressed="0" name="Contender-[Dragon Wolf Cub]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" projectile_speed="200.0" projectiles_per_shot="1" burst_shots="1" carry_in_two_hands="0"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.2" sustained_fire_grow_step="1.8" sustained_fire_diminish_rate="1.8" magazine_size="1" suppressed="0" name="Contender-[Dragon Wolf Cub]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" projectile_speed="200.0" projectiles_per_shot="1" burst_shots="1" carry_in_two_hands="0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="10.0" sell_price="7.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -125691,7 +125691,7 @@
 
 <weapon key="gkw_contender_1502.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.2" sustained_fire_grow_step="1.8" sustained_fire_diminish_rate="1.8" magazine_size="1" suppressed="0" name="Contender-[Phantom of the Opera]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" projectile_speed="200.0" projectiles_per_shot="1" burst_shots="1" carry_in_two_hands="0"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.2" sustained_fire_grow_step="1.8" sustained_fire_diminish_rate="1.8" magazine_size="1" suppressed="0" name="Contender-[Phantom of the Opera]" class="1" reload_one_at_a_time="1" sight_range_modifier="1.6" projectile_speed="200.0" projectiles_per_shot="1" burst_shots="1" carry_in_two_hands="0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="10.0" sell_price="7.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -125931,7 +125931,7 @@
 
 <weapon key="gkw_nz75_403.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="0.2" accuracy_factor="0.98" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="2.0" magazine_size="24" suppressed="0" name="NZ75-[Golden Coreopsis]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140" projectiles_per_shot="1" spread_range="0.25" carry_in_two_hands="0" stab_enabled="1" use_basic_muzzle_smoke_effect="0"/>
+	<specification can_shoot_running="1" retrigger_time="0.2" accuracy_factor="0.98" sustained_fire_grow_step="0.4" sustained_fire_diminish_rate="2.0" magazine_size="24" suppressed="0" name="NZ75-[Golden Coreopsis]" class="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140" projectiles_per_shot="1" spread_range="0.25" carry_in_two_hands="0" stab_enabled="1" use_basic_muzzle_smoke_effect="0"/>
 	<inventory encumbrance="5.0" buy_price="5.0" sell_price="3.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -126746,7 +126746,7 @@
 
 <weapon key="gkw_kolibri_6802.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="-1" accuracy_factor="0.95" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.6" magazine_size="7" suppressed="1" name="Kolibri-[Splendor of Sunset]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="3.0" projectile_speed="80" projectiles_per_shot="1" burst_shots="1" spread_range="0.15" carry_in_two_hands="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="-1" accuracy_factor="0.95" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.6" magazine_size="7" suppressed="1" name="Kolibri-[Splendor of Sunset]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="3.0" projectile_speed="80" projectiles_per_shot="1" burst_shots="1" spread_range="0.15" carry_in_two_hands="0" stab_enabled="1"/>
 	<inventory encumbrance="5.0" buy_price="5.0" sell_price="0.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -128668,7 +128668,7 @@
 
 <weapon key="gkw_thunder_2206.weapon" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" accuracy_factor="0.98" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="1" carry_in_two_hands="0" suppressed="0" name="Thunder.50 BMG-[Renoirs Crow]" class="1" sight_range_modifier="1.6" projectile_speed="130.0" projectiles_per_shot="1" burst_shots="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" accuracy_factor="0.98" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="1" carry_in_two_hands="0" suppressed="0" name="Thunder.50 BMG-[Renoirs Crow]" class="1" sight_range_modifier="1.6" projectile_speed="130.0" projectiles_per_shot="1" burst_shots="1"/>
 	<commonness value="0.0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="5.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -128807,7 +128807,7 @@
 
 <weapon key="gkw_thunder_3309.weapon" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" accuracy_factor="0.98" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="1" carry_in_two_hands="0" suppressed="0" name="Thunder.50 BMG-[Black Swan's Dream]" class="1" sight_range_modifier="1.6" projectile_speed="130.0" projectiles_per_shot="1" burst_shots="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" accuracy_factor="0.98" sustained_fire_grow_step="3.0" sustained_fire_diminish_rate="2.0" magazine_size="1" carry_in_two_hands="0" suppressed="0" name="Thunder.50 BMG-[Black Swan's Dream]" class="1" sight_range_modifier="1.6" projectile_speed="130.0" projectiles_per_shot="1" burst_shots="1"/>
 	<commonness value="0.0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="5.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -131071,7 +131071,7 @@
 <weapon key="gkw_welrod_411.weapon" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
 	<tag name="stealth"/>
-	<specification retrigger_time="-1" accuracy_factor="0.95" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.6" magazine_size="8" suppressed="1" carry_in_two_hands="0" name="Welrod MK.II-[English in Love]" class="1" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140" projectiles_per_shot="1" burst_shots="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" accuracy_factor="0.95" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.6" magazine_size="8" suppressed="1" carry_in_two_hands="0" name="Welrod MK.II-[English in Love]" class="1" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140" projectiles_per_shot="1" burst_shots="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="10.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -131189,7 +131189,7 @@
 <weapon key="gkw_welrod_2103.weapon" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
 	<tag name="stealth"/>
-	<specification retrigger_time="-1" accuracy_factor="0.95" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.6" magazine_size="8" suppressed="1" carry_in_two_hands="0" name="Welrod MK.II-[Twilight Menace]" class="1" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140" projectiles_per_shot="1" burst_shots="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" accuracy_factor="0.95" sustained_fire_grow_step="0.6" sustained_fire_diminish_rate="1.6" magazine_size="8" suppressed="1" carry_in_two_hands="0" name="Welrod MK.II-[Twilight Menace]" class="1" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="140" projectiles_per_shot="1" burst_shots="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="10.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -131308,7 +131308,7 @@
 	<tag name="pistol"/>
 	<tag name="elite"/>
 	<tag name="stealth"/>
-	<specification retrigger_time="-1" accuracy_factor="1.0" accuracy_factor_at_night="1.5" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="1.5" magazine_size="8" suppressed="1" carry_in_two_hands="0" name="Welrod MK.II (MOD3)-[English in Love]" class="1" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.5" sight_range_modifier_at_night="2.5" projectile_speed="140" projectiles_per_shot="1" burst_shots="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" accuracy_factor="1.0" accuracy_factor_at_night="1.5" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="1.5" magazine_size="8" suppressed="1" carry_in_two_hands="0" name="Welrod MK.II (MOD3)-[English in Love]" class="1" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.5" sight_range_modifier_at_night="2.5" projectile_speed="140" projectiles_per_shot="1" burst_shots="1"/>
 	<inventory encumbrance="5.0" buy_price="250.0" sell_price="200.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -131428,7 +131428,7 @@
 	<tag name="pistol"/>
 	<tag name="elite"/>
 	<tag name="stealth"/>
-	<specification retrigger_time="-1" accuracy_factor="1.0" accuracy_factor_at_night="1.5" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="1.5" magazine_size="8" suppressed="1" carry_in_two_hands="0" name="Welrod MK.II (MOD3)-[Twilight Menace]" class="1" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.5" sight_range_modifier_at_night="2.5" projectile_speed="140" projectiles_per_shot="1" burst_shots="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" accuracy_factor="1.0" accuracy_factor_at_night="1.5" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="1.5" magazine_size="8" suppressed="1" carry_in_two_hands="0" name="Welrod MK.II (MOD3)-[Twilight Menace]" class="1" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.5" sight_range_modifier_at_night="2.5" projectile_speed="140" projectiles_per_shot="1" burst_shots="1"/>
 	<inventory encumbrance="5.0" buy_price="250.0" sell_price="200.0"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -131546,7 +131546,7 @@
 
 <weapon key="gkw_ppk_3905.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.04" accuracy_factor="0.98" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.8" magazine_size="7" suppressed="0" carry_in_two_hands="0" name="Walther PPK-[Mach Tempest]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.04" accuracy_factor="0.98" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.8" magazine_size="7" suppressed="0" carry_in_two_hands="0" name="Walther PPK-[Mach Tempest]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="5.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -131665,7 +131665,7 @@
 	<tag name="pistol"/>
 	<tag name="elite"/>
 	<tag name="stealth"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.04" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.5" spread_range="0.3" magazine_size="7" suppressed="1" carry_in_two_hands="0" name="Walther PPK(MOD3)-[Mach Tempest]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.8" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.04" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.5" spread_range="0.3" magazine_size="7" suppressed="1" carry_in_two_hands="0" name="Walther PPK(MOD3)-[Mach Tempest]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.8" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="180.0" sell_price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -131782,7 +131782,7 @@
 
 <weapon key="gkw_ppk_6109.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.04" accuracy_factor="0.98" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.8" magazine_size="7" suppressed="0" carry_in_two_hands="0" name="Walther PPK-[Foliage Romance]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.04" accuracy_factor="0.98" sustained_fire_grow_step="0.2" sustained_fire_diminish_rate="1.8" magazine_size="7" suppressed="0" carry_in_two_hands="0" name="Walther PPK-[Foliage Romance]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="5.0" sell_price="5.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -131901,7 +131901,7 @@
 	<tag name="pistol"/>
 	<tag name="elite"/>
 	<tag name="stealth"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.04" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.5" spread_range="0.3" magazine_size="7" suppressed="1" carry_in_two_hands="0" name="Walther PPK(MOD3)-[Foliage Romance]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.8" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.04" accuracy_factor="1.0" sustained_fire_grow_step="0.35" sustained_fire_diminish_rate="1.5" spread_range="0.3" magazine_size="7" suppressed="1" carry_in_two_hands="0" name="Walther PPK(MOD3)-[Foliage Romance]" class="4" slot="0" reload_one_at_a_time="0" sight_range_modifier="1.8" projectile_speed="115" projectiles_per_shot="1" burst_shots="1" stab_enabled="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<inventory encumbrance="5.0" buy_price="180.0" sell_price="100.0"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
@@ -138374,7 +138374,7 @@
 
 <weapon key="gkw_m1895mod3_5309.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="0" name="Nagant M1895 revolver(MOD3)-[Blushing Snow Princess]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.0" spread_range="0.3" projectile_speed="185.0" projectiles_per_shot="1" barrel_offset="-0.1" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="0" name="Nagant M1895 revolver(MOD3)-[Blushing Snow Princess]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.0" spread_range="0.3" projectile_speed="185.0" projectiles_per_shot="1" barrel_offset="-0.1" burst_shots="1" slot="0" stab_enabled="1"/>
 	<commonness value="0.00001" can_respawn_with="1" in_stock="0"/>
 	<inventory encumbrance="5.0" buy_price="270.0" sell_price="270.0"/>
 	<next_in_chain key="gkw_m1895mod3_5309_skill.weapon" share_ammo="1"/>
@@ -138494,7 +138494,7 @@
 
 <weapon key="gkw_m1895mod3_5309_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="1" name="Nagant M1895 revolver(MOD3)-[Blushing Snow Princess]-[Seven Tone Paean]" class="4" sight_range_modifier="2.0" projectile_speed="140.0" projectiles_per_shot="1" reload_one_at_a_time="1" burst_shots="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="1" name="Nagant M1895 revolver(MOD3)-[Blushing Snow Princess]-[Seven Tone Paean]" class="4" sight_range_modifier="2.0" projectile_speed="140.0" projectiles_per_shot="1" reload_one_at_a_time="1" burst_shots="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="5.0" buy_price="270.0" sell_price="270.0"/>
 	<commonness value="0" can_respawn_with="1" in_stock="0"/>
@@ -138613,7 +138613,7 @@
 
 <weapon key="gkw_m1895mod3_7107.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="0" name="Nagant M1895 revolver(MOD3)-[Cream in the Nebula]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.0" spread_range="0.3" projectile_speed="185.0" projectiles_per_shot="1" barrel_offset="-0.1" burst_shots="1" slot="0" stab_enabled="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.5" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="0" name="Nagant M1895 revolver(MOD3)-[Cream in the Nebula]" class="4" reload_one_at_a_time="0" sight_range_modifier="2.0" spread_range="0.3" projectile_speed="185.0" projectiles_per_shot="1" barrel_offset="-0.1" burst_shots="1" slot="0" stab_enabled="1"/>
 	<commonness value="0.00001" can_respawn_with="1" in_stock="0"/>
 	<inventory encumbrance="5.0" buy_price="270.0" sell_price="270.0"/>
 	<next_in_chain key="gkw_m1895mod3_7107_skill.weapon" share_ammo="1"/>
@@ -138733,7 +138733,7 @@
 
 <weapon key="gkw_m1895mod3_7107_skill.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
 	<tag name="pistol"/>
-	<specification retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="1" name="Nagant M1895 revolver(MOD3)-[Cream in the Nebula]-[Seven Tone Paean]" class="4" sight_range_modifier="2.0" projectile_speed="140.0" projectiles_per_shot="1" reload_one_at_a_time="1" burst_shots="1"/>
+	<specification can_shoot_running="1" retrigger_time="-1" last_burst_retrigger_time="0.3" accuracy_factor="1.0" sustained_fire_grow_step="1.0" sustained_fire_diminish_rate="2.0" magazine_size="7" carry_in_two_hands="0" suppressed="1" name="Nagant M1895 revolver(MOD3)-[Cream in the Nebula]-[Seven Tone Paean]" class="4" sight_range_modifier="2.0" projectile_speed="140.0" projectiles_per_shot="1" reload_one_at_a_time="1" burst_shots="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="5.0" buy_price="270.0" sell_price="270.0"/>
 	<commonness value="0" can_respawn_with="1" in_stock="0"/>
@@ -138853,7 +138853,7 @@
 <weapon on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0" key="gkw_m950amod3_702.weapon">
 	<tag name="pistol"/>
 	<tag name="elite"/>
-	<specification retrigger_time="0.08" accuracy_factor="0.95" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="0.9" spread_range="0.15" magazine_size="50" suppressed="0" name="Calico M950A(MOD3)-[Ace on Duty]" class="0" slot="0" stance_accuracy_rate="3" stab_enabled="1" carry_in_two_hands="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="130" projectiles_per_shot="1"/>
+	<specification can_shoot_running="1" retrigger_time="0.08" accuracy_factor="0.95" sustained_fire_grow_step="0.1" sustained_fire_diminish_rate="0.9" spread_range="0.15" magazine_size="50" suppressed="0" name="Calico M950A(MOD3)-[Ace on Duty]" class="0" slot="0" stance_accuracy_rate="3" stab_enabled="1" carry_in_two_hands="0" reload_one_at_a_time="0" sight_range_modifier="1.6" projectile_speed="130" projectiles_per_shot="1"/>
 	<commonness value="0" in_stock="0" can_respawn_with="1"/>
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<inventory encumbrance="5.0" buy_price="100.0" sell_price="80.0"/>
