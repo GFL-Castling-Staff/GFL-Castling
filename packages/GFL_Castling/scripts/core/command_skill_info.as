@@ -180,8 +180,10 @@ dictionary commandSkillIndex = {
         // PPSH41, PPSH41MOD3
         {"gkw_ppsh41.weapon",24},
         {"gkw_ppsh41_602.weapon",24},
+        {"gkw_ppsh41_5808.weapon",24},
         {"gkw_ppsh41mod3.weapon",25},
         {"gkw_ppsh41mod3_602.weapon",25},
+        {"gkw_ppsh41mod3_5808.weapon",25},
 
         // fo-12
         {"gkw_fo12.weapon",26},
