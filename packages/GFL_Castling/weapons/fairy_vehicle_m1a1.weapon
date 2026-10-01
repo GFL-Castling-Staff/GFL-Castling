@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weapons>
+<!-- M1A1「空降妖精」模块化改型召唤武器
+     约定：key = "fairy_vehicle_" + 变体id + ".weapon"
+               spawn_instance_key = "gk_vehicle_" + 变体id + ".call"
+               变体id = m1a1_off_c{c}_w{w}_s{s} -->
+
+<!-- 基础型：双联 M2HB + 装甲盾 / 绿涂装 -->
+<weapon on_ground_up="0 1 0" key="fairy_vehicle_m1a1_off_c0_w1_s1.weapon" radius="0.25" time_to_live_out_in_the_open="150.0" drop_count_factor_on_death="1.0">
+    <tag name="engineer" />
+    <specification
+    magazine_size="1"
+    can_shoot_standing="0"
+    can_shoot_crouching="1"
+    carry_in_two_hands="1"
+    can_shoot_prone="0"
+    name="Parachute Fairy-[M1A1 Abrams Base][Cost 300 DP + 50 TP]"
+    class="5"
+    spawn_instance_class="call"
+    spawn_instance_key="gk_vehicle_m1a1_off_c0_w1_s1.call"
+    consume="1"
+    sight_range_modifier="1"
+    slot="1"
+    deployment="1" />
+
+    <animation state_key="running" 		animation_key="walking, laptop" />
+    <animation state_key="walking" 		animation_key="walking, laptop" />
+    <animation state_key="walking_backwards" 	animation_key="walking backwards, laptop" />
+    <animation state_key="hold" 		animation_key="still, laptop" />
+    <animation state_key="hold_on_wall" 	animation_key="still, laptop" />
+    <animation state_key="hold_casual" 		animation_key="still, laptop" />
+    <animation state_key="still_against_wall"	animation_key="still, laptop" />
+
+    <animation state_key="recoil" 		animation_key="use laptop" />
+    <animation state_key="crouching" 		animation_key="crouch still, laptop" />
+    <animation state_key="crouch_moving" 		animation_key="crouching forwards, laptop" />
+    <animation state_key="crouch_moving_backwards"     animation_key="crouching backwards, laptop" />
+    <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
+
+    <sound class="impact" fileref="sandbag_drop.wav" />
+
+    <model mesh_filename="cigars.mesh" texture_filename="laptop_gps.png" />
+
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="1.0" />
+
+    <hud_icon filename="call_Airborne_pierre.png" />
+    <commonness value="0.0" can_respawn_with="0" in_stock="1" />
+
+    <inventory encumbrance="25.0" price="10000.0" />
+
+    <modifier class="speed" value="-0.2" />
+
+</weapon>
+
+<!-- 压制型：M134 转轮机枪 + 激光同轴 / 银蓝涂装 -->
+<weapon on_ground_up="0 1 0" key="fairy_vehicle_m1a1_off_c1_w2_s4.weapon" radius="0.25" time_to_live_out_in_the_open="150.0" drop_count_factor_on_death="1.0">
+    <tag name="engineer" />
+    <specification
+    magazine_size="1"
+    can_shoot_standing="0"
+    can_shoot_crouching="1"
+    carry_in_two_hands="1"
+    can_shoot_prone="0"
+    name="Parachute Fairy-[M1A1 Abrams Suppression][Cost 500 DP + 50 TP]"
+    class="5"
+    spawn_instance_class="call"
+    spawn_instance_key="gk_vehicle_m1a1_off_c1_w2_s4.call"
+    consume="1"
+    sight_range_modifier="1"
+    slot="1"
+    deployment="1" />
+
+    <animation state_key="running" 		animation_key="walking, laptop" />
+    <animation state_key="walking" 		animation_key="walking, laptop" />
+    <animation state_key="walking_backwards" 	animation_key="walking backwards, laptop" />
+    <animation state_key="hold" 		animation_key="still, laptop" />
+    <animation state_key="hold_on_wall" 	animation_key="still, laptop" />
+    <animation state_key="hold_casual" 		animation_key="still, laptop" />
+    <animation state_key="still_against_wall"	animation_key="still, laptop" />
+
+    <animation state_key="recoil" 		animation_key="use laptop" />
+    <animation state_key="crouching" 		animation_key="crouch still, laptop" />
+    <animation state_key="crouch_moving" 		animation_key="crouching forwards, laptop" />
+    <animation state_key="crouch_moving_backwards"     animation_key="crouching backwards, laptop" />
+    <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
+
+    <sound class="impact" fileref="sandbag_drop.wav" />
+
+    <model mesh_filename="cigars.mesh" texture_filename="laptop_gps.png" />
+
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="1.0" />
+
+    <hud_icon filename="call_Airborne_pierre.png" />
+    <commonness value="0.0" can_respawn_with="0" in_stock="1" />
+
+    <inventory encumbrance="25.0" price="10000.0" />
+
+    <modifier class="speed" value="-0.2" />
+
+</weapon>
+
+<!-- 突破型：电磁炮 + 无同轴特武（车体减伤）/ 城市涂装 -->
+<weapon on_ground_up="0 1 0" key="fairy_vehicle_m1a1_off_c3_w4_s2.weapon" radius="0.25" time_to_live_out_in_the_open="150.0" drop_count_factor_on_death="1.0">
+    <tag name="engineer" />
+    <specification
+    magazine_size="1"
+    can_shoot_standing="0"
+    can_shoot_crouching="1"
+    carry_in_two_hands="1"
+    can_shoot_prone="0"
+    name="Parachute Fairy-[M1A1 Abrams Breacher][Cost 500 DP + 50 TP]"
+    class="5"
+    spawn_instance_class="call"
+    spawn_instance_key="gk_vehicle_m1a1_off_c3_w4_s2.call"
+    consume="1"
+    sight_range_modifier="1"
+    slot="1"
+    deployment="1" />
+
+    <animation state_key="running" 		animation_key="walking, laptop" />
+    <animation state_key="walking" 		animation_key="walking, laptop" />
+    <animation state_key="walking_backwards" 	animation_key="walking backwards, laptop" />
+    <animation state_key="hold" 		animation_key="still, laptop" />
+    <animation state_key="hold_on_wall" 	animation_key="still, laptop" />
+    <animation state_key="hold_casual" 		animation_key="still, laptop" />
+    <animation state_key="still_against_wall"	animation_key="still, laptop" />
+
+    <animation state_key="recoil" 		animation_key="use laptop" />
+    <animation state_key="crouching" 		animation_key="crouch still, laptop" />
+    <animation state_key="crouch_moving" 		animation_key="crouching forwards, laptop" />
+    <animation state_key="crouch_moving_backwards"     animation_key="crouching backwards, laptop" />
+    <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
+
+    <sound class="impact" fileref="sandbag_drop.wav" />
+
+    <model mesh_filename="cigars.mesh" texture_filename="laptop_gps.png" />
+
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="1.0" />
+
+    <hud_icon filename="call_Airborne_pierre.png" />
+    <commonness value="0.0" can_respawn_with="0" in_stock="1" />
+
+    <inventory encumbrance="25.0" price="10000.0" />
+
+    <modifier class="speed" value="-0.2" />
+
+</weapon>
+
+<!-- 反坦克型：陶式 + 火箭同轴 / 沙漠涂装 -->
+<weapon on_ground_up="0 1 0" key="fairy_vehicle_m1a1_off_c2_w3_s3.weapon" radius="0.25" time_to_live_out_in_the_open="150.0" drop_count_factor_on_death="1.0">
+    <tag name="engineer" />
+    <specification
+    magazine_size="1"
+    can_shoot_standing="0"
+    can_shoot_crouching="1"
+    carry_in_two_hands="1"
+    can_shoot_prone="0"
+    name="Parachute Fairy-[M1A1 Abrams Anti-Tank][Cost 500 DP + 50 TP]"
+    class="5"
+    spawn_instance_class="call"
+    spawn_instance_key="gk_vehicle_m1a1_off_c2_w3_s3.call"
+    consume="1"
+    sight_range_modifier="1"
+    slot="1"
+    deployment="1" />
+
+    <animation state_key="running" 		animation_key="walking, laptop" />
+    <animation state_key="walking" 		animation_key="walking, laptop" />
+    <animation state_key="walking_backwards" 	animation_key="walking backwards, laptop" />
+    <animation state_key="hold" 		animation_key="still, laptop" />
+    <animation state_key="hold_on_wall" 	animation_key="still, laptop" />
+    <animation state_key="hold_casual" 		animation_key="still, laptop" />
+    <animation state_key="still_against_wall"	animation_key="still, laptop" />
+
+    <animation state_key="recoil" 		animation_key="use laptop" />
+    <animation state_key="crouching" 		animation_key="crouch still, laptop" />
+    <animation state_key="crouch_moving" 		animation_key="crouching forwards, laptop" />
+    <animation state_key="crouch_moving_backwards"     animation_key="crouching backwards, laptop" />
+    <animation state_key="changing_weapon_in" 	animation_key="change weapon in, single hand carry" />
+
+    <sound class="impact" fileref="sandbag_drop.wav" />
+
+    <model mesh_filename="cigars.mesh" texture_filename="laptop_gps.png" />
+
+    <capacity value="0" source="rank" source_value="0.0" />
+    <capacity value="1" source="rank" source_value="1.0" />
+
+    <hud_icon filename="call_Airborne_pierre.png" />
+    <commonness value="0.0" can_respawn_with="0" in_stock="1" />
+
+    <inventory encumbrance="25.0" price="10000.0" />
+
+    <modifier class="speed" value="-0.2" />
+
+</weapon>
+</weapons>

@@ -104,6 +104,11 @@ class call_event : Tracker {
             string profile_hash = playerinfo.getStringAttribute("profile_hash");
 
             if (phase == "launch") {
+                // M1A1 家族：前缀路由，新增改型无需改动本文件的 switch
+                if (startsWith(callKey, m1a1_call_prefix)) {
+                    handleM1A1Call(event, callKey, playerName, profile_hash);
+                    return;
+                }
                 switch(int(callLaunchIndex[callKey]))
                 {
                     case 1001:{
@@ -2104,7 +2109,8 @@ class call_event : Tracker {
                             addItemInBackpack(m_metagame,characterId,"weapon","fairy_vehicle_t14.weapon");
                             break;
                         }
-                        int vehicle_number_exist = getNumberedVehicle(m_metagame,factionId,"t14_gk.vehicle");
+                        // 与 M1A1 家族共享在场上限：任一重装坦克在场即不可再召唤
+                        int vehicle_number_exist = getHeavyTankNumber(factionId);
                         if(vehicle_number_exist >= 1)
                         {
                             notify(m_metagame, "vehicle limited", dictionary(), "misc", playerId, false, "", 1.0);
@@ -2349,6 +2355,131 @@ class call_event : Tracker {
             notify(m_metagame, "call event,not enough point", a, "misc", player_id, false, "", 1.0);
             return false;
         }
+    }
+
+    // M1A1 系列载具召唤：研发点（存档级）+ 战术点（局内）双扣费
+    // 顺序：冷却 -> 共享在场上限 -> 玩家在线 -> TP 预检 -> DP 实扣写档 -> TP 实扣 -> 冷却/标记/生成
+    // 任何一步失败都退还武器且不改动存档
+    // 注意：GFL_battleInfo.getDevPoint() 是"局内战术点待转换量"，与本方法里的 player_data.getDevPoint() 同名不同物
+    protected void handleM1A1Call(const XmlElement@ event, string callKey, string playerName, string profile_hash) {
+        int characterId = event.getIntAttribute("character_id");
+        int factionId   = event.getIntAttribute("faction_id");
+        int playerId    = event.getIntAttribute("player_id");
+        string position = event.getStringAttribute("target_position");
+
+        string variant = parseM1A1Variant(callKey);
+        if (variant == "") {
+            _log("WARN: call_event_handler.as: handleM1A1Call(): invalid call key " + callKey);
+            return;                                   // 开发期错误，无法推导武器 key，不退还
+        }
+        string weaponKey  = "fairy_vehicle_" + variant + ".weapon";
+        string vehicleKey = variant + ".vehicle";
+
+        // 1) 冷却
+        if (findCooldown(playerName, "vehicle")) {
+            returnCooldown("vehicle", 0, characterId, playerName, playerId, "vehicle_drop_cooldown");
+            addItemInBackpack(m_metagame, characterId, "weapon", weaponKey);
+            return;
+        }
+        // 2) 共享在场上限：T-14 + M1A1 全家族合计每阵营 1 辆
+        if (getHeavyTankNumber(factionId) >= 1) {
+            notify(m_metagame, "vehicle limited", dictionary(), "misc", playerId, false, "", 1.0);
+            addItemInBackpack(m_metagame, characterId, "weapon", weaponKey);
+            return;
+        }
+        // 3) 玩家在线校验
+        GFL_playerInfo@ m_playerinfo = getPlayerInfoFromListbyPid(playerId);
+        if (m_playerinfo.getPlayerName() == default_string) {
+            _log("WARN: call_event_handler.as: handleM1A1Call(): player not in list, pid=" + playerId);
+            addItemInBackpack(m_metagame, characterId, "weapon", weaponKey);
+            return;
+        }
+        GFL_battleInfo@ battleInfo = m_playerinfo.getBattleInfo();
+
+        // 4) 战术点预检（只读）
+        int tp_have = int(battleInfo.getTacticPoint());
+        if (tp_have < m1a1_call_tp_cost) {
+            dictionary a;
+            a["%num"] = "" + (m1a1_call_tp_cost - tp_have);
+            notify(m_metagame, "call event,not enough point", a, "misc", playerId, false, "", 1.0);
+            addItemInBackpack(m_metagame, characterId, "weapon", weaponKey);
+            return;
+        }
+        // 5) 研发点：tryCostDevPoint 不足时不改内存，可兼作预检
+        int dp_cost = getM1A1DevCost(variant);
+        if (dp_cost < 0) {
+            // 变体未在 m1a1_devcost 登记（配置错误，多半是 key 拼写不一致）：
+            // 拒绝召唤并退还武器，绝不按兜底价静默扣费
+            addItemInBackpack(m_metagame, characterId, "weapon", weaponKey);
+            return;
+        }
+        player_data newdata = PlayerProfileLoad(readFile(m_metagame, playerName, profile_hash));
+        if (!newdata.tryCostDevPoint(dp_cost)) {
+            dictionary a;
+            a["%num"]      = "" + (dp_cost - newdata.getDevPoint());   // 缺额（失败未改动，仍是原值）
+            a["%cost_num"] = "" + dp_cost;
+            notify(m_metagame, "call event,not enough dev point", a, "misc", playerId, false, "", 1.0);
+            addItemInBackpack(m_metagame, characterId, "weapon", weaponKey);
+            return;
+        }
+        writeXML(m_metagame, "save_" + profile_hash + ".xml", PlayerProfileSave(newdata));
+
+        // 6) 战术点实扣
+        costTacticPoint(battleInfo, m1a1_call_tp_cost, playerId);
+
+        // 7) 研发点消耗提示
+        {
+            dictionary a;
+            a["%cost_num"] = "" + dp_cost;
+            a["%num"]      = "" + newdata.getDevPoint();
+            notify(m_metagame, "call event,cost dev point", a, "misc", playerId, false, "", 1.0);
+        }
+        // 8) 冷却 + 落点标记 + 伞降生成
+        Vector3 call_pos = stringToVector3(position).add(Vector3(0, 50, 0));
+        CallEvent_cooldown.insertLast(Call_Cooldown(playerName, playerId, m1a1_call_cooldown, "vehicle"));
+        int flagId = m_DummyCallID + 15000;
+        CastlingMarker@ FairyRequest = CastlingMarker(characterId, factionId, stringToVector3(position));
+        FairyRequest.setIconTypeKey("call_marker_drop");
+        FairyRequest.setIndex(8);
+        FairyRequest.setSize(0.5);
+        FairyRequest.setDummyId(flagId);
+        TaskSequencer@ tasker = m_metagame.getTaskManager().newTaskSequencer();
+        tasker.add(TimerMarker(m_metagame, 3, FairyRequest));
+        m_DummyCallID++;
+        float ori4 = rand(0.0, 3.14);
+        spawnVehicle(m_metagame, 1, factionId, call_pos, Orientation(0, 1, 0, ori4), vehicleKey);
+    }
+
+    // 从 call key 推导变体 id
+    protected string parseM1A1Variant(string callKey) {
+        int preLen = int(gk_vehicle_call_prefix.length());
+        int len    = int(callKey.length());
+        if (!startsWith(callKey, m1a1_call_prefix)) return "";
+        if (len <= preLen + 5) return "";
+        if (callKey.substr(len - 5) != ".call") return "";
+        return callKey.substr(preLen, len - preLen - 5);
+    }
+
+    // 重装坦克共享在场上限：T-14 + M1A1 全家族合计存活数
+    protected int getHeavyTankNumber(int factionId) {
+        int total = getNumberedVehicle(m_metagame, factionId, "t14_gk.vehicle");
+        if (total < 0) total = 0;
+        array<string>@ variants = m1a1_devcost.getKeys();
+        for (uint i = 0; i < variants.length(); ++i) {
+            if (variants[i].isEmpty()) continue;
+            int n = getNumberedVehicle(m_metagame, factionId, variants[i] + ".vehicle");
+            if (n > 0) total += n;
+        }
+        return total;
+    }
+
+    // 研发点成本查询；未登记改型返回 -1（属配置错误，调用方必须拒绝召唤，不得按兜底价静默扣费）
+    protected int getM1A1DevCost(string variant) {
+        if (!m1a1_devcost.exists(variant)) {
+            _log("WARN: call_event_handler.as: getM1A1DevCost(): variant not registered: " + variant, 1);
+            return -1;
+        }
+        return int(m1a1_devcost[variant]);
     }
 
     protected void returnCooldown(string type, int rp, int characterId, string playerName, int playerId, string message) {
