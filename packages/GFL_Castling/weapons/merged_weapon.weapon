@@ -107682,8 +107682,8 @@
 	<animation key="reload" animation_key="reloading, magazine rifle 0.8"/>
 	<inventory encumbrance="50.0" buy_price="26.0" sell_price="26.0"/>
 	<sound key="fire" fileref="ls26_fire_FromBFV.wav" pitch_variety="0.05" volume="1.0"/>
-	<sound key="magazine_out" fileref="ls26_mgz_out_FromBFV" volume="1.0"/>
-	<sound key="magazine_in" fileref="ls26_mgz_in_FromBFV" volume="1.0"/>
+	<sound key="magazine_out" fileref="ls26_mgz_out_FromBFV.wav" volume="1.0"/>
+	<sound key="magazine_in" fileref="ls26_mgz_in_FromBFV.wav" volume="1.0"/>
 	<sound key="cycle" fileref="ls26_cycle_FromBFV.wav" volume="1.0"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
 	<sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0"/>
