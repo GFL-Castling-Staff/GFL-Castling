@@ -58,8 +58,8 @@
     <weak_hand_hold offset="0.3" />
     <projectile file="bullet_rf.projectile">
         <result class="hit" 
-        kill_probability="3.3"
-        kill_probability_offset_on_successful_hit="12.0" 
+        kill_probability="7.3"
+        kill_probability_offset_on_successful_hit="8.5" 
         kill_decay_start_time="1.448" 
         kill_decay_end_time="2.414" />
         <trail probability="1" key="BulletApTrail_rf"/>
@@ -69,8 +69,8 @@
     <stance state_key="running" accuracy="0.5" />
     <stance state_key="walking" accuracy="0.55" />
     <stance state_key="crouch_moving" accuracy="0.55" />
-    <stance state_key="standing" accuracy="0.95" />
-    <stance state_key="crouching" accuracy="0.98" />
+    <stance state_key="standing" accuracy="0.98" />
+    <stance state_key="crouching" accuracy="1.0" />
     <stance state_key="prone" accuracy="1.1" /> 
     <stance state_key="prone_moving" accuracy="0.5" />								
     <stance state_key="over_wall" accuracy="1" />
