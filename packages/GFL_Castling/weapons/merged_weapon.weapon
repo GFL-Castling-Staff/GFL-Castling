@@ -108780,7 +108780,7 @@
 
 <weapon on_ground_up="0 1 0" key="fairy_vehicle_m1a1_off_m1_c0_w1_s1.weapon" radius="0.25" time_to_live_out_in_the_open="150.0" drop_count_factor_on_death="1.0">
 	<tag name="engineer"/>
-	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" name="Parachute Fairy-[M1A1 Abrams Base][Cost 300 DP + 50 TP]" class="5" spawn_instance_class="call" spawn_instance_key="gk_vehicle_m1a1_off_m1_c0_w1_s1.call" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
+	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" name="Parachute Fairy-[M1A1 Abrams Base][Unlock 2500 DP / Deploy 50 TP]" class="5" spawn_instance_class="call" spawn_instance_key="gk_vehicle_m1a1_off_m1_c0_w1_s1.call" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
 	<animation state_key="running" animation_key="walking, laptop"/>
 	<animation state_key="walking" animation_key="walking, laptop"/>
 	<animation state_key="walking_backwards" animation_key="walking backwards, laptop"/>
@@ -108805,7 +108805,7 @@
 
 <weapon on_ground_up="0 1 0" key="fairy_vehicle_m1a1_off_m1_c1_w2_s4.weapon" radius="0.25" time_to_live_out_in_the_open="150.0" drop_count_factor_on_death="1.0">
 	<tag name="engineer"/>
-	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" name="Parachute Fairy-[M1A1 Abrams Suppression][Cost 500 DP + 50 TP]" class="5" spawn_instance_class="call" spawn_instance_key="gk_vehicle_m1a1_off_m1_c1_w2_s4.call" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
+	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" name="Parachute Fairy-[M1A1 Abrams Suppression][Unlock 5000 DP / Deploy 70 TP]" class="5" spawn_instance_class="call" spawn_instance_key="gk_vehicle_m1a1_off_m1_c1_w2_s4.call" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
 	<animation state_key="running" animation_key="walking, laptop"/>
 	<animation state_key="walking" animation_key="walking, laptop"/>
 	<animation state_key="walking_backwards" animation_key="walking backwards, laptop"/>
@@ -108830,7 +108830,7 @@
 
 <weapon on_ground_up="0 1 0" key="fairy_vehicle_m1a1_off_m1_c3_w4_s2.weapon" radius="0.25" time_to_live_out_in_the_open="150.0" drop_count_factor_on_death="1.0">
 	<tag name="engineer"/>
-	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" name="Parachute Fairy-[M1A1 Abrams Breacher][Cost 500 DP + 50 TP]" class="5" spawn_instance_class="call" spawn_instance_key="gk_vehicle_m1a1_off_m1_c3_w4_s2.call" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
+	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" name="Parachute Fairy-[M1A1 Abrams Breacher][Unlock 5000 DP / Deploy 70 TP]" class="5" spawn_instance_class="call" spawn_instance_key="gk_vehicle_m1a1_off_m1_c3_w4_s2.call" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
 	<animation state_key="running" animation_key="walking, laptop"/>
 	<animation state_key="walking" animation_key="walking, laptop"/>
 	<animation state_key="walking_backwards" animation_key="walking backwards, laptop"/>
@@ -108855,7 +108855,7 @@
 
 <weapon on_ground_up="0 1 0" key="fairy_vehicle_m1a1_off_m1_c2_w3_s3.weapon" radius="0.25" time_to_live_out_in_the_open="150.0" drop_count_factor_on_death="1.0">
 	<tag name="engineer"/>
-	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" name="Parachute Fairy-[M1A1 Abrams Anti-Tank][Cost 500 DP + 50 TP]" class="5" spawn_instance_class="call" spawn_instance_key="gk_vehicle_m1a1_off_m1_c2_w3_s3.call" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
+	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" name="Parachute Fairy-[M1A1 Abrams Anti-Tank][Unlock 5000 DP / Deploy 70 TP]" class="5" spawn_instance_class="call" spawn_instance_key="gk_vehicle_m1a1_off_m1_c2_w3_s3.call" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
 	<animation state_key="running" animation_key="walking, laptop"/>
 	<animation state_key="walking" animation_key="walking, laptop"/>
 	<animation state_key="walking_backwards" animation_key="walking backwards, laptop"/>

@@ -52,6 +52,11 @@ Life Dev Point Gained:&#37;life_dev_point"/>
 	<text key="call event,cost point" text="[Tactic Fairy] The call was successful.~ &#37;cost_num point of TP expended. You have &#37;num points to spare." />
 	<text key="call event,not enough dev point" text="[Tactic Fairy] Not enough DP to call for support~ You're still short &#37;num DP (needs &#37;cost_num)!" />
 	<text key="call event,cost dev point" text="[Tactic Fairy] &#37;cost_num DP expended. You have &#37;num DP left." />
+
+	<text key="m1a1 call,need unlock" text="[Vehicle System] This variant is not unlocked yet. Requires &#37;cost_num DP to unlock permanently, &#37;num DP short." />
+	<text key="m1a1 call,unlock success" text="[Vehicle System] Variant permanently unlocked. &#37;cost_num DP spent, &#37;num DP left." />
+	<text key="m1a1 call,unlock but no tp" text="[Vehicle System] Variant permanently unlocked (&#37;cost_num DP spent, &#37;num DP left), but not enough TP - &#37;tp_num TP short. The deployment kit has been refunded." />
+	<text key="m1a1 call,unlock but limited" text="[Vehicle System] Variant permanently unlocked (&#37;cost_num DP spent, &#37;num DP left), but a heavy tank is already deployed - the deployment kit has been refunded." />
 	<text key="call event,cool down" text="[Tactic Fairy] The call was failed~ This support is not ready. We have &#37;time seconds to deploy." />
 	<text key="call event,anti air" text="[Tactic Fairy] The call has failed. Our fighters have no way to break through the enemy's anti-aircraft fire network." />
 
