@@ -108778,9 +108778,9 @@
 	<modifier class="speed" value="-0.2"/>
 </weapon>
 
-<weapon on_ground_up="0 1 0" key="fairy_vehicle_m1a1_off_c0_w1_s1.weapon" radius="0.25" time_to_live_out_in_the_open="150.0" drop_count_factor_on_death="1.0">
+<weapon on_ground_up="0 1 0" key="fairy_vehicle_m1a1_off_m1_c0_w1_s1.weapon" radius="0.25" time_to_live_out_in_the_open="150.0" drop_count_factor_on_death="1.0">
 	<tag name="engineer"/>
-	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" name="Parachute Fairy-[M1A1 Abrams Base][Cost 300 DP + 50 TP]" class="5" spawn_instance_class="call" spawn_instance_key="gk_vehicle_m1a1_off_c0_w1_s1.call" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
+	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" name="Parachute Fairy-[M1A1 Abrams Base][Cost 300 DP + 50 TP]" class="5" spawn_instance_class="call" spawn_instance_key="gk_vehicle_m1a1_off_m1_c0_w1_s1.call" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
 	<animation state_key="running" animation_key="walking, laptop"/>
 	<animation state_key="walking" animation_key="walking, laptop"/>
 	<animation state_key="walking_backwards" animation_key="walking backwards, laptop"/>
@@ -108803,9 +108803,9 @@
 	<modifier class="speed" value="-0.2"/>
 </weapon>
 
-<weapon on_ground_up="0 1 0" key="fairy_vehicle_m1a1_off_c1_w2_s4.weapon" radius="0.25" time_to_live_out_in_the_open="150.0" drop_count_factor_on_death="1.0">
+<weapon on_ground_up="0 1 0" key="fairy_vehicle_m1a1_off_m1_c1_w2_s4.weapon" radius="0.25" time_to_live_out_in_the_open="150.0" drop_count_factor_on_death="1.0">
 	<tag name="engineer"/>
-	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" name="Parachute Fairy-[M1A1 Abrams Suppression][Cost 500 DP + 50 TP]" class="5" spawn_instance_class="call" spawn_instance_key="gk_vehicle_m1a1_off_c1_w2_s4.call" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
+	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" name="Parachute Fairy-[M1A1 Abrams Suppression][Cost 500 DP + 50 TP]" class="5" spawn_instance_class="call" spawn_instance_key="gk_vehicle_m1a1_off_m1_c1_w2_s4.call" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
 	<animation state_key="running" animation_key="walking, laptop"/>
 	<animation state_key="walking" animation_key="walking, laptop"/>
 	<animation state_key="walking_backwards" animation_key="walking backwards, laptop"/>
@@ -108828,9 +108828,9 @@
 	<modifier class="speed" value="-0.2"/>
 </weapon>
 
-<weapon on_ground_up="0 1 0" key="fairy_vehicle_m1a1_off_c3_w4_s2.weapon" radius="0.25" time_to_live_out_in_the_open="150.0" drop_count_factor_on_death="1.0">
+<weapon on_ground_up="0 1 0" key="fairy_vehicle_m1a1_off_m1_c3_w4_s2.weapon" radius="0.25" time_to_live_out_in_the_open="150.0" drop_count_factor_on_death="1.0">
 	<tag name="engineer"/>
-	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" name="Parachute Fairy-[M1A1 Abrams Breacher][Cost 500 DP + 50 TP]" class="5" spawn_instance_class="call" spawn_instance_key="gk_vehicle_m1a1_off_c3_w4_s2.call" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
+	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" name="Parachute Fairy-[M1A1 Abrams Breacher][Cost 500 DP + 50 TP]" class="5" spawn_instance_class="call" spawn_instance_key="gk_vehicle_m1a1_off_m1_c3_w4_s2.call" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
 	<animation state_key="running" animation_key="walking, laptop"/>
 	<animation state_key="walking" animation_key="walking, laptop"/>
 	<animation state_key="walking_backwards" animation_key="walking backwards, laptop"/>
@@ -108853,9 +108853,9 @@
 	<modifier class="speed" value="-0.2"/>
 </weapon>
 
-<weapon on_ground_up="0 1 0" key="fairy_vehicle_m1a1_off_c2_w3_s3.weapon" radius="0.25" time_to_live_out_in_the_open="150.0" drop_count_factor_on_death="1.0">
+<weapon on_ground_up="0 1 0" key="fairy_vehicle_m1a1_off_m1_c2_w3_s3.weapon" radius="0.25" time_to_live_out_in_the_open="150.0" drop_count_factor_on_death="1.0">
 	<tag name="engineer"/>
-	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" name="Parachute Fairy-[M1A1 Abrams Anti-Tank][Cost 500 DP + 50 TP]" class="5" spawn_instance_class="call" spawn_instance_key="gk_vehicle_m1a1_off_c2_w3_s3.call" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
+	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" name="Parachute Fairy-[M1A1 Abrams Anti-Tank][Cost 500 DP + 50 TP]" class="5" spawn_instance_class="call" spawn_instance_key="gk_vehicle_m1a1_off_m1_c2_w3_s3.call" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
 	<animation state_key="running" animation_key="walking, laptop"/>
 	<animation state_key="walking" animation_key="walking, laptop"/>
 	<animation state_key="walking_backwards" animation_key="walking backwards, laptop"/>
@@ -163417,13 +163417,13 @@
 
 <weapon key="gkw_vehicle_m1a1_minigun.weapon" ai_burst_time="4.5" ai_burst_time_variance="0" ai_burst_wait_time="2" ai_burst_wait_time_variance="0">
 	<specification slot="2" retrigger_time="0.02" accuracy_factor="0.75" sustained_fire_grow_step="0.01" sustained_fire_diminish_rate="0.5" sight_range_modifier="1.5" ai_sight_range_modifier="1.25" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="KCCO 1130 MG" class="0" projectile_speed="200.0" use_basic_muzzle_smoke_effect="0"/>
-	<sound key="fire" fileref="1130_fire_FromSAM3.wav" pitch_variety="0.05" volume="1.0"/>
+	<sound key="fire" fileref="1130_fire_FromSAM3.wav" pitch_variety="0.05" volume="0.8"/>
 	<model filename=""/>
 	<hud_icon filename="gkw_v_LM5.png"/>
 	<commonness value="0.0"/>
 	<weak_hand_hold offset="0.0"/>
 	<projectile time_to_live="0.5" class="bullet" name="default" slot="1" pulldown_in_air="4">
-	<result class="blast" damage="2.0" radius="2.0" decal="1" push="0.1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="2.0" radius="2.5" decal="1" push="0.1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
 	<effect class="result" key="terrain" ref="Shine" lighting="0"/>
 	<effect class="result" key="static_object" copy="terrain"/>
@@ -164236,7 +164236,7 @@
 	<trigger class="time" time_to_live="0.0001"/>
 	<rotation class="motion"/>
 	<model/>
-	<result class="blast" radius="21" damage="10" push="0.2" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="spawn" instance_class="projectile" instance_key="blast_shard_rad21_dmg1_01_ap.projectile" min_amount="8" max_amount="8" offset="0 1.0 0" position_spread="0.0 0.0" direction_spread="0 0"/>
 	<hud_icon filename="hud_at_mine.png"/>
 	<commonness value="0.0" can_respawn_with="0"/>
 	<capacity value="1" source="rank" source_value="0.2"/>
@@ -164255,7 +164255,7 @@
 	<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="1"/>
 	<effect class="result" type="splat_map" surface_tag="" size="6.5" atlas_index="4" layer="0"/>
 	<effect class="result" type="splat_map" surface_tag="" size="8.0" atlas_index="0" layer="2" additive="0"/>
-	<effect class="result" key="terrain" ref="woosh_big1" lighting="0"/>
+	<effect class="result" key="other" ref="woosh_big1" lighting="0"/>
 	<effect class="result" key="other" ref="Shine" lighting="0"/>
 	<effect class="result" key="other" ref="Godray" lighting="0"/>
 	<effect class="result" key="static_object" copy="terrain"/>

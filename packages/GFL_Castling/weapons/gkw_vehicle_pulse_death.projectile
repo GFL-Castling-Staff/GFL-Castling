@@ -13,7 +13,7 @@ blast_damage_threshold="5"
 use_time_to_live="1" 
 time_to_live="60">
 
-    <result class="blast" radius="21" damage="10" push="0.2" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+    <result class="spawn" instance_class="projectile" instance_key="blast_shard_rad21_dmg1_01_ap.projectile" min_amount="8" max_amount="8" offset="0 1.0 0" position_spread="0.0 0.0" direction_spread="0 0"/>
     <trigger class="impact"> 
      <collider class="terrain" enabled="1" />  
      <collider class="static_object" enabled="1" />  
@@ -51,7 +51,7 @@ time_to_live="60">
     <effect class="result" type="splat_map" surface_tag="" size="6.5" atlas_index="4" layer="0" />
     <effect class="result" type="splat_map" surface_tag="" size="8.0" atlas_index="0" layer="2" additive="0" /> <!-- remove top snow everywhere -->
 
-    <effect class="result" key="terrain" ref="woosh_big1" lighting="0" />
+    <effect class="result" key="other" ref="woosh_big1" lighting="0" />
     <effect class="result" key="other" ref="Shine" lighting="0" />
     <effect class="result" key="other" ref="Godray" lighting="0" />
 

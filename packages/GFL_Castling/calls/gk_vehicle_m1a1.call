@@ -3,7 +3,7 @@
     <!-- M1A1「空降妖精」模块化改型召唤
          新增改型：复制下方任意一块，替换 key 即可（key 必须为 "gk_vehicle_" + 变体id + ".call"）
          实际的扣费与载具生成由 call_event_handler.as 的 handleM1A1Call() 前缀路由统一处理 -->
-    <call name="" key="gk_vehicle_m1a1_off_c0_w1_s1.call" initiation_comment1="" acknowledge_comment="" launch_comment="" notify_metagame="1">
+    <call name="" key="gk_vehicle_m1a1_off_m1_c0_w1_s1.call" initiation_comment1="" acknowledge_comment="" launch_comment="" notify_metagame="1">
 
         <round launch_time="3.0" spawn_time="5.0">
         </round>
@@ -12,7 +12,7 @@
         <capacity value="100" source="rank" source_value="0.0" />
         <inventory encumbrance="0.0" price="0.0" />
     </call>
-    <call name="" key="gk_vehicle_m1a1_off_c1_w2_s4.call" initiation_comment1="" acknowledge_comment="" launch_comment="" notify_metagame="1">
+    <call name="" key="gk_vehicle_m1a1_off_m1_c1_w2_s4.call" initiation_comment1="" acknowledge_comment="" launch_comment="" notify_metagame="1">
 
         <round launch_time="3.0" spawn_time="5.0">
         </round>
@@ -21,7 +21,7 @@
         <capacity value="100" source="rank" source_value="0.0" />
         <inventory encumbrance="0.0" price="0.0" />
     </call>
-    <call name="" key="gk_vehicle_m1a1_off_c3_w4_s2.call" initiation_comment1="" acknowledge_comment="" launch_comment="" notify_metagame="1">
+    <call name="" key="gk_vehicle_m1a1_off_m1_c3_w4_s2.call" initiation_comment1="" acknowledge_comment="" launch_comment="" notify_metagame="1">
 
         <round launch_time="3.0" spawn_time="5.0">
         </round>
@@ -30,7 +30,7 @@
         <capacity value="100" source="rank" source_value="0.0" />
         <inventory encumbrance="0.0" price="0.0" />
     </call>
-    <call name="" key="gk_vehicle_m1a1_off_c2_w3_s3.call" initiation_comment1="" acknowledge_comment="" launch_comment="" notify_metagame="1">
+    <call name="" key="gk_vehicle_m1a1_off_m1_c2_w3_s3.call" initiation_comment1="" acknowledge_comment="" launch_comment="" notify_metagame="1">
 
         <round launch_time="3.0" spawn_time="5.0">
         </round>

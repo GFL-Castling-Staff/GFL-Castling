@@ -937,13 +937,13 @@ class BasicCommandHandler : Tracker {
 		} else  if(checkCommand(message, "spawnm1a19")) {
 			spawnInstanceNearPlayer(senderId, "m1a1_off_test_9.vehicle", "vehicle", 0);		
 		} else  if(checkCommand(message, "spawnm1a1basic")) {
-			spawnInstanceNearPlayer(senderId, "m1a1_off_c0_w1_s1.vehicle", "vehicle", 0);				
+			spawnInstanceNearPlayer(senderId, "m1a1_off_m1_c0_w1_s1.vehicle", "vehicle", 0);				
 		} else  if(checkCommand(message, "spawnm1a1test1")) {
-			spawnInstanceNearPlayer(senderId, "m1a1_off_c1_w2_s4.vehicle", "vehicle", 0);				
+			spawnInstanceNearPlayer(senderId, "m1a1_off_m1_c1_w2_s4.vehicle", "vehicle", 0);				
 		} else  if(checkCommand(message, "spawnm1a1test2")) {
-			spawnInstanceNearPlayer(senderId, "m1a1_off_c3_w4_s2.vehicle", "vehicle", 0);
+			spawnInstanceNearPlayer(senderId, "m1a1_off_m1_c3_w4_s2.vehicle", "vehicle", 0);
 		} else  if(checkCommand(message, "spawnm1a1test3")) {
-			spawnInstanceNearPlayer(senderId, "m1a1_off_c2_w3_s3.vehicle", "vehicle", 0);			
+			spawnInstanceNearPlayer(senderId, "m1a1_off_m1_c2_w3_s3.vehicle", "vehicle", 0);			
 		} else  if(checkCommand(message, "spawnm1a1")) {
 			spawnInstanceNearPlayer(senderId, "m1a1_off_test_fin.vehicle", "vehicle", 0);							
 		} else  if(checkCommand(message, "spawnt14")) {
