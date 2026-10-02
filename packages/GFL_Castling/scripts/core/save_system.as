@@ -67,6 +67,9 @@ class player_data
         GFL_call_info("call_ui_t1_bombardment_fairy_155mm_air_burst")
 
     };
+    // 已永久解锁的载具变体 id（如 m1a1_off_m1_c0_w1_s1），默认空 = 无预解锁
+    array<string> m_unlocked_vehicle={};
+
     array<tdoll_intimacy_info@> m_tdoll_intimacy={};
 
     player_data() {}
@@ -251,6 +254,26 @@ class player_data
         {
             m_unlocked_call.insertLast(call);
         }
+    }
+
+    // deal with vehicle unlock（独立于支援解锁，存的是载具变体 id，不带 .vehicle 后缀）
+
+    bool FindVehicleUnlock(const string key)
+    {
+        for (uint i = 0; i < m_unlocked_vehicle.length(); ++i)
+        {
+            if (m_unlocked_vehicle[i] == key)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    void addUnlockedVehicle(const string key)
+    {
+        if (FindVehicleUnlock(key)) return;
+        m_unlocked_vehicle.insertLast(key);
     }
 
     void addIntimacy(tdoll_intimacy_info@ info)
@@ -533,10 +556,20 @@ XmlElement@ PlayerProfileSave(player_data@ player_info) {
         subroot_3.appendChild(e);
     }
 
+    //已永久解锁的载具变体
+    XmlElement subroot_4("unlocked_vehicles");
+    for (uint i = 0; i < player_info.m_unlocked_vehicle.length(); i++)
+    {
+        XmlElement e("unlocked_vehicle");
+        e.setStringAttribute("key", player_info.m_unlocked_vehicle[i]);
+        subroot_4.appendChild(e);
+    }
+
     root.appendChild(subroot_0);
     root.appendChild(subroot_1);
     root.appendChild(subroot_2);
     root.appendChild(subroot_3);
+    root.appendChild(subroot_4);
     return root;
 }
 
@@ -582,6 +615,22 @@ player_data@ PlayerProfileLoad(const XmlElement@ player_profile){
                 if(call_ui_key =="") continue;
                 GFL_call_info@ new_call_info = GFL_call_info(call_ui_key);
                 output.addUnlockedCall(new_call_info);
+            }
+        }
+    }
+
+    // 已永久解锁的载具变体（旧存档无该节点 → 保持空 = 未解锁任何型号）
+    const XmlElement@ unlocked_vehicle_dump = player_profile.getFirstElementByTagName("unlocked_vehicles");
+    if(unlocked_vehicle_dump !is null)
+    {
+        array<const XmlElement@> unlocked_vehicle_list = unlocked_vehicle_dump.getElementsByTagName("unlocked_vehicle");
+        if(unlocked_vehicle_list !is null)
+        {
+            for(uint i = 0; i < unlocked_vehicle_list.length();i++)
+            {
+                string vehicle_key = unlocked_vehicle_list[i].getStringAttribute("key");
+                if(vehicle_key =="") continue;
+                output.addUnlockedVehicle(vehicle_key);
             }
         }
     }

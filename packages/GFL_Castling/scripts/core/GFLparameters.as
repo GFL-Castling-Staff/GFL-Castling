@@ -591,6 +591,32 @@
 	};
 
 
+// parameters for "call_event_handler.as": M1A1「空降妖精」半模块化召唤
+    // key 约定（由变体 id 推导，脚本零改动扩张）：
+    //   变体 id = m1a1_off_m{m}_c{c}_w{w}_s{s}（m = 主炮配装，c = 侧面同轴，w = 车顶武器站，s = 涂装）
+    //   载具 key = 变体 id + ".vehicle"
+    //   call key = "gk_vehicle_" + 变体 id + ".call"；武器 key = "fairy_vehicle_" + 变体 id + ".weapon"
+    // 新增改型：1) 补 .vehicle 文件并注册 2) 补 weapon 块 3) 补 call 块 4) 在此登记一行（未登记会拒绝召唤并退还武器）
+    const string gk_vehicle_call_prefix = "gk_vehicle_";
+    const string m1a1_call_prefix     = "gk_vehicle_m1a1_";
+    const float  m1a1_call_cooldown   = 300.0; // 与 T-14 共用 "vehicle" 冷却类型
+
+    // 变体 id -> 永久解锁所需研发点（同时充当家族在场上限扫描的变体注册表，勿加哨兵键）
+    dictionary m1a1_unlock_dp = {
+        {"m1a1_off_m1_c0_w1_s1",2500},   // 基础型
+        {"m1a1_off_m1_c1_w2_s4",5000},   // 压制型
+        {"m1a1_off_m1_c3_w4_s2",5000},   // 突破型
+        {"m1a1_off_m1_c2_w3_s3",5000}    // 反装甲型
+    };
+
+    // 变体 id -> 每次部署消耗的战术点（键集必须与 m1a1_unlock_dp 完全一致）
+    dictionary m1a1_deploy_tp = {
+        {"m1a1_off_m1_c0_w1_s1",50},     // 基础型
+        {"m1a1_off_m1_c1_w2_s4",70},     // 压制型
+        {"m1a1_off_m1_c3_w4_s2",70},     // 突破型
+        {"m1a1_off_m1_c2_w3_s3",70}      // 反装甲型
+    };
+
 // parameters for "save_system.as":
     const string call_slot_default_1 = "t1_bombardment_fairy_82mm_mortar";
     const string call_slot_default_2 = "t2_airstrike_fairy_precise";

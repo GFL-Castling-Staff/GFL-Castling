@@ -3450,7 +3450,7 @@
 	<hud_icon filename="gkw_supersass.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.3" kill_probability_offset_on_successful_hit="7.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="7.3" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -49613,7 +49613,7 @@
 	<hud_icon filename="gkw_grizzly.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile time_to_live="0.25" class="bullet" name="default" slot="1" pulldown_in_air="4">
-	<result class="spawn" instance_class="projectile" instance_key="desert_eagle.projectile" min_amount="5" max_amount="5" offset="0 1.0 0" position_spread="0.3 0.2" direction_spread="0 0" damage_origin_vehicle="0"/>
+	<result class="spawn" instance_class="projectile" instance_key="desert_eagle.projectile" min_amount="5" max_amount="5" offset="0 0.5 0" position_spread="0.3 0.2" direction_spread="0 0" damage_origin_vehicle="0"/>
 	<effect class="result" key="terrain" ref="Ct_Shine_50AE"/>
 	<effect class="result" key="other" ref="Ct_Shine_50AE"/>
 	<effect class="result" key="vehicle" ref="Ct_Shine_50AE"/>
@@ -49734,7 +49734,7 @@
 	<hud_icon filename="gkw_grizzly_4303.png"/>
 	<weak_hand_hold offset="0.1"/>
 	<projectile time_to_live="0.25" class="bullet" name="default" slot="1" pulldown_in_air="4">
-	<result class="spawn" instance_class="projectile" instance_key="desert_eagle.projectile" min_amount="5" max_amount="5" offset="0 1.0 0" position_spread="0.3 0.2" direction_spread="0 0" damage_origin_vehicle="0"/>
+	<result class="spawn" instance_class="projectile" instance_key="desert_eagle.projectile" min_amount="5" max_amount="5" offset="0 0.5 0" position_spread="0.3 0.2" direction_spread="0 0" damage_origin_vehicle="0"/>
 	<effect class="result" key="terrain" ref="Ct_Shine_50AE"/>
 	<effect class="result" key="other" ref="Ct_Shine_50AE"/>
 	<effect class="result" key="vehicle" ref="Ct_Shine_50AE"/>
@@ -50723,7 +50723,7 @@
 </weapon>
 
 <weapon key="gkw_k11_20mm_impact.weapon" on_ground_up="0 0 1" drop_count_factor_on_death="0" drop_count_factor_on_player_death="0" time_to_live_out_in_the_open="0">
-	<specification retrigger_time="0.2" accuracy_factor="1.0" barrel_offset="0.4" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="0" slot="0" magazine_size="6" name="K11 weapon system-[Terror Grenades]" projectile_speed="100" suppressed="0" spread_range="0.05" sight_range_modifier="1.2" sustained_fire_diminish_rate="5.0" sustained_fire_grow_step="1.0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" stance_accuracy_rate="2.0"/>
+	<specification retrigger_time="0.2" accuracy_factor="1.0" barrel_offset="0.4" can_shoot_standing="1" can_shoot_crouching="1" can_shoot_prone="0" class="0" slot="0" magazine_size="6" name="K11 weapon system-[Terror Grenades]" projectile_speed="100" suppressed="0" spread_range="0.05" sight_range_modifier="1.75" sustained_fire_diminish_rate="5.0" sustained_fire_grow_step="1.0" stab_enabled="1" carry_in_two_hands="1" burst_shots="1" last_burst_retrigger_time="-1" stance_accuracy_rate="2.0"/>
 	<next_in_chain key="gkw_k11_ar.weapon" share_ammo="0"/>
 	<inventory encumbrance="35.0" buy_price="300.0" sell_price="300.0"/>
 	<animation key="reload" animation_key="reloading, magazine rifle 1.8"/>
@@ -87995,6 +87995,8 @@
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="speed" value="0.35"/>
+	<modifier class="detectability" value="-0.1"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -88105,6 +88107,8 @@
 	<stance state_key="crouching" accuracy="1"/>
 	<stance state_key="prone" accuracy="1"/>
 	<stance state_key="over_wall" accuracy="1"/>
+	<modifier class="speed" value="0.35"/>
+	<modifier class="detectability" value="-0.1"/>
 	<target_factors tag="mecha" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="shotgun" distance="1.0" direction="0.0" squad_command="1.0" base_score="1.0"/>
@@ -108718,7 +108722,7 @@
 	<model mesh_filename="cigars.mesh" texture_filename="laptop_gps.png"/>
 	<capacity value="0" source="rank" source_value="0.0"/>
 	<capacity value="1" source="rank" source_value="1.0"/>
-	<hud_icon filename="call_Airborne_pierre.png"/>
+	<hud_icon filename="call_Airborne_tank.png"/>
 	<commonness value="0.0" can_respawn_with="0" in_stock="1"/>
 	<inventory encumbrance="25.0" price="10000.0"/>
 	<modifier class="speed" value="-0.2"/>
@@ -108771,6 +108775,106 @@
 	<hud_icon filename="call_Airborne_degeyter.png"/>
 	<commonness value="0.0" can_respawn_with="0" in_stock="1"/>
 	<inventory encumbrance="25.0" price="400.0"/>
+	<modifier class="speed" value="-0.2"/>
+</weapon>
+
+<weapon on_ground_up="0 1 0" key="fairy_vehicle_m1a1_off_m1_c0_w1_s1.weapon" radius="0.25" time_to_live_out_in_the_open="150.0" drop_count_factor_on_death="1.0">
+	<tag name="engineer"/>
+	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" name="Parachute Fairy-[M1A1 Abrams Base][Unlock 2500 DP / Deploy 50 TP]" class="5" spawn_instance_class="call" spawn_instance_key="gk_vehicle_m1a1_off_m1_c0_w1_s1.call" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
+	<animation state_key="running" animation_key="walking, laptop"/>
+	<animation state_key="walking" animation_key="walking, laptop"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, laptop"/>
+	<animation state_key="hold" animation_key="still, laptop"/>
+	<animation state_key="hold_on_wall" animation_key="still, laptop"/>
+	<animation state_key="hold_casual" animation_key="still, laptop"/>
+	<animation state_key="still_against_wall" animation_key="still, laptop"/>
+	<animation state_key="recoil" animation_key="use laptop"/>
+	<animation state_key="crouching" animation_key="crouch still, laptop"/>
+	<animation state_key="crouch_moving" animation_key="crouching forwards, laptop"/>
+	<animation state_key="crouch_moving_backwards" animation_key="crouching backwards, laptop"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
+	<sound class="impact" fileref="sandbag_drop.wav"/>
+	<model mesh_filename="cigars.mesh" texture_filename="laptop_gps.png"/>
+	<capacity value="0" source="rank" source_value="0.0"/>
+	<capacity value="1" source="rank" source_value="1.0"/>
+	<hud_icon filename="call_Airborne_tank.png"/>
+	<commonness value="0.0" can_respawn_with="0" in_stock="1"/>
+	<inventory encumbrance="25.0" price="10000.0"/>
+	<modifier class="speed" value="-0.2"/>
+</weapon>
+
+<weapon on_ground_up="0 1 0" key="fairy_vehicle_m1a1_off_m1_c1_w2_s4.weapon" radius="0.25" time_to_live_out_in_the_open="150.0" drop_count_factor_on_death="1.0">
+	<tag name="engineer"/>
+	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" name="Parachute Fairy-[M1A1 Abrams Suppression][Unlock 5000 DP / Deploy 70 TP]" class="5" spawn_instance_class="call" spawn_instance_key="gk_vehicle_m1a1_off_m1_c1_w2_s4.call" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
+	<animation state_key="running" animation_key="walking, laptop"/>
+	<animation state_key="walking" animation_key="walking, laptop"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, laptop"/>
+	<animation state_key="hold" animation_key="still, laptop"/>
+	<animation state_key="hold_on_wall" animation_key="still, laptop"/>
+	<animation state_key="hold_casual" animation_key="still, laptop"/>
+	<animation state_key="still_against_wall" animation_key="still, laptop"/>
+	<animation state_key="recoil" animation_key="use laptop"/>
+	<animation state_key="crouching" animation_key="crouch still, laptop"/>
+	<animation state_key="crouch_moving" animation_key="crouching forwards, laptop"/>
+	<animation state_key="crouch_moving_backwards" animation_key="crouching backwards, laptop"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
+	<sound class="impact" fileref="sandbag_drop.wav"/>
+	<model mesh_filename="cigars.mesh" texture_filename="laptop_gps.png"/>
+	<capacity value="0" source="rank" source_value="0.0"/>
+	<capacity value="1" source="rank" source_value="1.0"/>
+	<hud_icon filename="call_Airborne_tank.png"/>
+	<commonness value="0.0" can_respawn_with="0" in_stock="1"/>
+	<inventory encumbrance="25.0" price="10000.0"/>
+	<modifier class="speed" value="-0.2"/>
+</weapon>
+
+<weapon on_ground_up="0 1 0" key="fairy_vehicle_m1a1_off_m1_c3_w4_s2.weapon" radius="0.25" time_to_live_out_in_the_open="150.0" drop_count_factor_on_death="1.0">
+	<tag name="engineer"/>
+	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" name="Parachute Fairy-[M1A1 Abrams Breacher][Unlock 5000 DP / Deploy 70 TP]" class="5" spawn_instance_class="call" spawn_instance_key="gk_vehicle_m1a1_off_m1_c3_w4_s2.call" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
+	<animation state_key="running" animation_key="walking, laptop"/>
+	<animation state_key="walking" animation_key="walking, laptop"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, laptop"/>
+	<animation state_key="hold" animation_key="still, laptop"/>
+	<animation state_key="hold_on_wall" animation_key="still, laptop"/>
+	<animation state_key="hold_casual" animation_key="still, laptop"/>
+	<animation state_key="still_against_wall" animation_key="still, laptop"/>
+	<animation state_key="recoil" animation_key="use laptop"/>
+	<animation state_key="crouching" animation_key="crouch still, laptop"/>
+	<animation state_key="crouch_moving" animation_key="crouching forwards, laptop"/>
+	<animation state_key="crouch_moving_backwards" animation_key="crouching backwards, laptop"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
+	<sound class="impact" fileref="sandbag_drop.wav"/>
+	<model mesh_filename="cigars.mesh" texture_filename="laptop_gps.png"/>
+	<capacity value="0" source="rank" source_value="0.0"/>
+	<capacity value="1" source="rank" source_value="1.0"/>
+	<hud_icon filename="call_Airborne_tank.png"/>
+	<commonness value="0.0" can_respawn_with="0" in_stock="1"/>
+	<inventory encumbrance="25.0" price="10000.0"/>
+	<modifier class="speed" value="-0.2"/>
+</weapon>
+
+<weapon on_ground_up="0 1 0" key="fairy_vehicle_m1a1_off_m1_c2_w3_s3.weapon" radius="0.25" time_to_live_out_in_the_open="150.0" drop_count_factor_on_death="1.0">
+	<tag name="engineer"/>
+	<specification magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" name="Parachute Fairy-[M1A1 Abrams Anti-Tank][Unlock 5000 DP / Deploy 70 TP]" class="5" spawn_instance_class="call" spawn_instance_key="gk_vehicle_m1a1_off_m1_c2_w3_s3.call" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
+	<animation state_key="running" animation_key="walking, laptop"/>
+	<animation state_key="walking" animation_key="walking, laptop"/>
+	<animation state_key="walking_backwards" animation_key="walking backwards, laptop"/>
+	<animation state_key="hold" animation_key="still, laptop"/>
+	<animation state_key="hold_on_wall" animation_key="still, laptop"/>
+	<animation state_key="hold_casual" animation_key="still, laptop"/>
+	<animation state_key="still_against_wall" animation_key="still, laptop"/>
+	<animation state_key="recoil" animation_key="use laptop"/>
+	<animation state_key="crouching" animation_key="crouch still, laptop"/>
+	<animation state_key="crouch_moving" animation_key="crouching forwards, laptop"/>
+	<animation state_key="crouch_moving_backwards" animation_key="crouching backwards, laptop"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, single hand carry"/>
+	<sound class="impact" fileref="sandbag_drop.wav"/>
+	<model mesh_filename="cigars.mesh" texture_filename="laptop_gps.png"/>
+	<capacity value="0" source="rank" source_value="0.0"/>
+	<capacity value="1" source="rank" source_value="1.0"/>
+	<hud_icon filename="call_Airborne_tank.png"/>
+	<commonness value="0.0" can_respawn_with="0" in_stock="1"/>
+	<inventory encumbrance="25.0" price="10000.0"/>
 	<modifier class="speed" value="-0.2"/>
 </weapon>
 
@@ -112238,7 +112342,7 @@
 	<hud_icon filename="gkw_supersassmod3.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.3" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="7.3" kill_probability_offset_on_successful_hit="8.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -112305,8 +112409,8 @@
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.55"/>
 	<stance state_key="crouch_moving" accuracy="0.55"/>
-	<stance state_key="standing" accuracy="0.95"/>
-	<stance state_key="crouching" accuracy="0.98"/>
+	<stance state_key="standing" accuracy="0.98"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.1"/>
 	<stance state_key="prone_moving" accuracy="0.5"/>
 	<stance state_key="over_wall" accuracy="1"/>
@@ -117925,7 +118029,7 @@
 	<hud_icon filename="gkw_supersass_1407.png"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.3" kill_probability_offset_on_successful_hit="7.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="7.3" kill_probability_offset_on_successful_hit="3.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -134780,7 +134884,7 @@
 	<capacity value="1" source="rank" source_value="0.0"/>
 	<weak_hand_hold offset="0.3"/>
 	<projectile class="bullet" name="default" slot="1" time_to_live="3.0" pulldown_in_air="4" radius="0.4">
-	<result class="hit" kill_probability="3.3" kill_probability_offset_on_successful_hit="12.0" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
+	<result class="hit" kill_probability="7.3" kill_probability_offset_on_successful_hit="8.5" kill_decay_start_time="1.448" kill_decay_end_time="2.414" damage_origin_vehicle="0"/>
 	<trail probability="1" key="BulletApTrail_rf"/>
 	<trigger class="impact"/>
 	<rotation class="motion"/>
@@ -134847,8 +134951,8 @@
 	<stance state_key="running" accuracy="0.5"/>
 	<stance state_key="walking" accuracy="0.55"/>
 	<stance state_key="crouch_moving" accuracy="0.55"/>
-	<stance state_key="standing" accuracy="0.95"/>
-	<stance state_key="crouching" accuracy="0.98"/>
+	<stance state_key="standing" accuracy="0.98"/>
+	<stance state_key="crouching" accuracy="1.0"/>
 	<stance state_key="prone" accuracy="1.1"/>
 	<stance state_key="prone_moving" accuracy="0.5"/>
 	<stance state_key="over_wall" accuracy="1"/>
@@ -163313,13 +163417,13 @@
 
 <weapon key="gkw_vehicle_m1a1_minigun.weapon" ai_burst_time="4.5" ai_burst_time_variance="0" ai_burst_wait_time="2" ai_burst_wait_time_variance="0">
 	<specification slot="2" retrigger_time="0.02" accuracy_factor="0.75" sustained_fire_grow_step="0.01" sustained_fire_diminish_rate="0.5" sight_range_modifier="1.5" ai_sight_range_modifier="1.25" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="KCCO 1130 MG" class="0" projectile_speed="200.0" use_basic_muzzle_smoke_effect="0"/>
-	<sound key="fire" fileref="1130_fire_FromSAM3.wav" pitch_variety="0.05" volume="1.0"/>
+	<sound key="fire" fileref="1130_fire_FromSAM3.wav" pitch_variety="0.05" volume="0.8"/>
 	<model filename=""/>
 	<hud_icon filename="gkw_v_LM5.png"/>
 	<commonness value="0.0"/>
 	<weak_hand_hold offset="0.0"/>
 	<projectile time_to_live="0.5" class="bullet" name="default" slot="1" pulldown_in_air="4">
-	<result class="blast" damage="2.0" radius="2.0" decal="1" push="0.1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="2.0" radius="2.5" decal="1" push="0.1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
 	<effect class="result" key="terrain" ref="Shine" lighting="0"/>
 	<effect class="result" key="static_object" copy="terrain"/>
@@ -164132,7 +164236,7 @@
 	<trigger class="time" time_to_live="0.0001"/>
 	<rotation class="motion"/>
 	<model/>
-	<result class="blast" radius="21" damage="10" push="0.2" decal="1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="spawn" instance_class="projectile" instance_key="blast_shard_rad21_dmg1_01_ap.projectile" min_amount="8" max_amount="8" offset="0 1.0 0" position_spread="0.0 0.0" direction_spread="0 0"/>
 	<hud_icon filename="hud_at_mine.png"/>
 	<commonness value="0.0" can_respawn_with="0"/>
 	<capacity value="1" source="rank" source_value="0.2"/>
@@ -164151,7 +164255,7 @@
 	<effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="1"/>
 	<effect class="result" type="splat_map" surface_tag="" size="6.5" atlas_index="4" layer="0"/>
 	<effect class="result" type="splat_map" surface_tag="" size="8.0" atlas_index="0" layer="2" additive="0"/>
-	<effect class="result" key="terrain" ref="woosh_big1" lighting="0"/>
+	<effect class="result" key="other" ref="woosh_big1" lighting="0"/>
 	<effect class="result" key="other" ref="Shine" lighting="0"/>
 	<effect class="result" key="other" ref="Godray" lighting="0"/>
 	<effect class="result" key="static_object" copy="terrain"/>
