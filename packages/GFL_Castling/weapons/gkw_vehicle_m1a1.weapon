@@ -173,13 +173,13 @@
 </weapon>
 <weapon key="gkw_vehicle_m1a1_minigun.weapon" ai_burst_time="4.5" ai_burst_time_variance="0" ai_burst_wait_time="2" ai_burst_wait_time_variance="0">
 	<specification slot="2" retrigger_time="0.02" accuracy_factor="0.75" sustained_fire_grow_step="0.01" sustained_fire_diminish_rate="0.5" sight_range_modifier="1.5" ai_sight_range_modifier="1.25" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="KCCO 1130 MG" class="0" projectile_speed="200.0" use_basic_muzzle_smoke_effect="0"/>
-	<sound key="fire" fileref="1130_fire_FromSAM3.wav" pitch_variety="0.05" volume="1.0"/>
+	<sound key="fire" fileref="1130_fire_FromSAM3.wav" pitch_variety="0.05" volume="0.8"/>
 	<model filename=""/>
 	<hud_icon filename="gkw_v_LM5.png"/>
 	<commonness value="0.0"/>
 	<weak_hand_hold offset="0.0"/>
 	<projectile file="bullet_paradeus.projectile" time_to_live="0.5">
-	<result class="blast" damage="2.0" radius="2.0" decal="1" push="0.1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+	<result class="blast" damage="2.0" radius="2.5" decal="1" push="0.1" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
 	<effect class="result" key="terrain" ref="BigBurst" use_surface_color="1"/>
 	<effect class="result" key="terrain" ref="Shine" lighting="0"/>
 	<effect class="result" key="static_object" copy="terrain"/>

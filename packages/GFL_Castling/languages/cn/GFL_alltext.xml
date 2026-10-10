@@ -273,6 +273,10 @@
     <text key="Parachute Fairy-[Sidecar Motorcycle]" text="空降妖精-[边三轮机车]"/>
     <text key="Parachute Fairy-[ELMO? Store]" text="空降妖精-[艾莫号?补给车]"/>
     <text key="Parachute Fairy-[T-14 Armata][Cost 50 TP]" text="空降妖精-[T-14 阿玛塔主战坦克][需求50战术点]"/>
+    <text key="Parachute Fairy-[M1A1 Abrams Base][Unlock 2500 DP / Deploy 50 TP]" text="空降妖精-[M1A1 艾布拉姆斯 基础型][解锁2500研发点 / 部署50战术点]"/>
+    <text key="Parachute Fairy-[M1A1 Abrams Suppression][Unlock 5000 DP / Deploy 70 TP]" text="空降妖精-[M1A1 艾布拉姆斯 压制型][解锁5000研发点 / 部署70战术点]"/>
+    <text key="Parachute Fairy-[M1A1 Abrams Breacher][Unlock 5000 DP / Deploy 70 TP]" text="空降妖精-[M1A1 艾布拉姆斯 突破型][解锁5000研发点 / 部署70战术点]"/>
+    <text key="Parachute Fairy-[M1A1 Abrams Anti-Tank][Unlock 5000 DP / Deploy 70 TP]" text="空降妖精-[M1A1 艾布拉姆斯 反装甲型][解锁5000研发点 / 部署70战术点]"/>
 
 
     <text key="call_confirm" text="[确认当前选择]"/>
@@ -2212,6 +2216,13 @@
 
     <text key="call event,not enough point" text="[战术妖精] 战术点不够呼叫本次支援哦~ 还缺少&#37;num点战术点" />
     <text key="call event,cost point" text="[战术妖精] 呼叫成功~ 消耗了&#37;cost_num点战术点,您还有&#37;num点可供调遣捏~" />
+    <text key="call event,not enough dev point" text="[战术妖精] 研发点不够呼叫本次支援哦~ 还缺少&#37;num点研发点（本次需要&#37;cost_num点）" />
+    <text key="call event,cost dev point" text="[战术妖精] 消耗了&#37;cost_num点研发点，您还有&#37;num点研发点可供调遣捏~" />
+
+    <text key="m1a1 call,need unlock" text="[载具系统] 该型号尚未解锁，需&#37;cost_num点研发点永久解锁，还差&#37;num点" />
+    <text key="m1a1 call,unlock success" text="[载具系统] 已永久解锁该型号~ 消耗&#37;cost_num点研发点，剩余&#37;num点" />
+    <text key="m1a1 call,unlock but no tp" text="[载具系统] 已永久解锁该型号（消耗&#37;cost_num点研发点，剩余&#37;num点），但战术点不足还差&#37;tp_num点，部署包已退还" />
+    <text key="m1a1 call,unlock but limited" text="[载具系统] 已永久解锁该型号（消耗&#37;cost_num点研发点，剩余&#37;num点），但战场上已有部署的坦克，部署包已退还" />
     <text key="call event,cool down" text="[战术妖精] 呼叫失败~ 该支援还没准备好，还有&#37;time秒才能部署" />
     <text key="call event,anti air" text="[战术妖精] 呼叫失败，我们的战机没有办法突破敌人的防空火力网" />
     <text key="call event,equiped" text="[战术妖精] 您当前的战术支援列表如下
