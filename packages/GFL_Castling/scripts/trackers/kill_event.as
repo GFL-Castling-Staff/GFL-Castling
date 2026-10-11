@@ -266,6 +266,10 @@ class kill_event : Tracker {
 
         {"gkw_cx4.weapon",3},
         {"gkw_cx4_6606.weapon",3},
+        {"gkw_cf05.weapon",3},
+        {"gkw_cf05_skill.weapon",3},
+        {"gkw_mt9.weapon",3},
+        {"gkw_ots39.weapon",3},
 
 
 

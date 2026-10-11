@@ -702,7 +702,7 @@ dictionary tdoll_complex_index = {
 
     {modded_key(167).toString(),"gkw_hk45.weapon"},
 
-    {modded_key(168).toString(),"gkw_spitfire.weapon"},
+    // {modded_key(168).toString(),"gkw_spitfire.weapon"},
 
     {modded_key(169).toString(),"gkw_scw.weapon"},
 
@@ -1212,7 +1212,7 @@ dictionary tdoll_complex_index = {
 
     {modded_key(369).toString(),"gkw_m327.weapon"},
 
-    {modded_key(371).toString(),"gkw_saiga308.weapon"},
+    // {modded_key(371).toString(),"gkw_saiga308.weapon"},
 
     {modded_key(372).toString(),"gkw_ar18.weapon"},
     {modded_key(372,8504).toString(),"gkw_ar18_8504.weapon"},
@@ -1267,7 +1267,7 @@ dictionary tdoll_complex_index = {
 
     {modded_key(406).toString(),"gkw_xm556.weapon"},
 
-    {modded_key(407).toString(),"gkw_hti.weapon"},
+    // {modded_key(407).toString(),"gkw_hti.weapon"},
 
     {modded_key(1033).toString(),"gkw_yurine.weapon"},
 
