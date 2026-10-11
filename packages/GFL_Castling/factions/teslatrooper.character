@@ -11,6 +11,7 @@
 	<sound key="footstep" fileref="step_sound_mecha_medium_04.wav" volume="1.4" />
 	<sound key="footstep" fileref="step_sound_mecha_medium_05.wav" volume="1.4" />
 	<sound key="footstep" fileref="step_sound_mecha_medium_06.wav" volume="1.4" />
+	<sound key="throw" fileref="static.wav" volume="0.0" />
 
 	<parameter class="throwing_self_over_initial_bounce" value="0.10" />
 	<parameter class="throwing_self_over_steer_amount" value="0.30" />
@@ -18,6 +19,9 @@
     <parameter class="lifting_up_initial_bounce" value="0.15"/>
     <parameter class="jumping_up_bounce" value="0.15"/>
 	<parameter class="use_walk_animation_instead_of_run_speed_threshold" value="0.6" />
+
+	<parameter class="walking_steer_amount" value="0.63" />
+	<parameter class="running_steer_amount" value="0.63" />
 
 	<parameter class="can_use_vehicles" value="0" /> 
 
@@ -61,7 +65,7 @@
 	<animation key="stunned" target_key="stuned_big_unit" />
 	<animation key="surrender" target_key="stuned_big_unit" />
 	<animation key="stabbing" target_key="hit ground_big_unit" />
-	<animation key="throwing, upside" target_key="throwing, large mecha" />
+	<animation key="throwing, upside" target_key="throwing, teslatrooper" />
 	<animation key="change weapon out" target_key="still_big_unit" />
 	<animation key="change weapon in" target_key="still_big_unit" />
 	<animation key="change weapon out, reversed" target_key="still_big_unit" />

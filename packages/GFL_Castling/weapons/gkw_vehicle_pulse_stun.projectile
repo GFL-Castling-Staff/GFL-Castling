@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile 
 class="grenade" 
-name="AT mine" 
+name="" 
 key="gkw_vehicle_pulse_stun.projectile" 
 slot="0" 
 on_ground_up="0 1 0" 
@@ -24,9 +24,7 @@ time_to_live="60">
     <rotation class="random" />
 
     <model />
-    <hud_icon filename="hud_at_mine.png" />
-
-<!--    <throwable curve_height="0.0" near_far_distance="0.0" speed_estimation_near="2.0" speed_estimation_far="2.0" max_speed="2.0" randomness="0.01" /> -->
+    <hud_icon filename="testing.png" />
 
     <commonness value="0.0" can_respawn_with="0" />
     <capacity value="1" source="rank" source_value="0.2" />
@@ -34,9 +32,7 @@ time_to_live="60">
 
     <inventory encumbrance="4.0" price="5.0" />
 
-    <sound class="result" key="other" fileref="explosion_FromCOD16_1.wav" volume="2.8" />
-    <sound class="result" key="other" fileref="explosion_FromCOD16_2.wav" volume="2.8" />
-    <sound class="result" key="other" fileref="explosion_FromCOD16_3.wav" volume="2.8" />
+    <sound class="result" key="other" fileref="em2_voidblast_fromCSOL.wav" volume="2.5" />
 
     <sound class="result" key="terrain" copy="other" />
     <sound class="result" key="static_object" copy="other" />

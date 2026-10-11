@@ -2,45 +2,50 @@
 
 // parameters for "commandskill.as"
 
+    // 已弃用，建议使用reward_pool_list
     array<string> eliteEnemyName = {
 
         // sf
-        "sfw_hunter",
-        "sfw_architect",
-        "sfw_Intruder",
-        "sfw_Dreamer",
-        "sfw_Alchemist",
-        "sfw_Gager",
-        "sfw_Excutioner-Wind_rose",
-        "sfw_Excutioner-Queen_of_the_Moon",
-        "sfw_M16A1",
-        "sfw_Agent",
-        "sfw_Destroyer",
-        "sfw_Weaver",
-        "sfw_Justice",
-        "sfw_Scarecrow",
+        "sf_hunter",
+        "sf_architect",
+        "sf_intruder",
+        "sf_dreamer",
+        "sf_alchemist",
+        "sf_gager",
+        "sf_executioner_wind_rose",
+        "sf_executioner_queen_of_the_moon",
+        "sf_m16a1",
+        "sf_agent",
+        "sf_destroyer",
+        "sf_weaver",
+        "sf_justice",
+        "sf_scarecrow",
         "sf_manticore",
+        "sf_cerberus",
 
         // paradeus
         "alina",
-        "Thunder",
+        "thunder",
         "teal",
         "eagleyes",
         "vanguard",
         "wrath",
         "aileron",
-        "Nimogen",
-        "Narciss",
-        "Adeline",
-        "Paradeus_doppelsoldner",
-        "Paradeus_roarer",
-        "Paradeus_Hannibal",
-        "parw_grenadier",
-        "parw_hammer",
-        "parw_commander",
+        "nimogen",
+        "narciss",
+        "adeline",
+        "pard_doppelsoldner",
+        "pard_roarer",
+        "pard_hannibal",
+        "tareus",
+        "ladon",
+        "pard_arachne",
+        "pard_grenadier",
+        "pard_hammer",
+        "pard_commander",
 
         // kcco
-        "kcco_Hydra",
+        "kcco_hydra",
         "kcco_teslatrooper",
         "kcco_human_sniper",
         "kcco_quartz_ranger",
@@ -57,22 +62,22 @@
 
     array<string> scarh_list = {
         "gkw_scarh.weapon",
-        "gkw_scarh_only.weapon"        
+        "gkw_scarh_only.weapon"
     };
 
     array<string> Daybreak_Squad = {
         "gkw_scarl.weapon",
         "gkw_scarl_only.weapon",
         "gkw_scarh.weapon",
-        "gkw_scarh_only.weapon",   
+        "gkw_scarh_only.weapon",
         "gkw_contender.weapon",
         "gkw_contender_1502.weapon",
         "gkw_contender_3201.weapon",
-        "gkw_scr.weapon",               
-        "gkw_scr_10102.weapon",               
-        "gkw_m249saw.weapon",               
-        "gkw_m249saw_3604.weapon",               
-        "gkw_m60.weapon"          
+        "gkw_scr.weapon",
+        "gkw_scr_10102.weapon",
+        "gkw_m249saw.weapon",
+        "gkw_m249saw_3604.weapon",
+        "gkw_m60.weapon"
     };
 
 // parameters for "GFLhelpers.as":
@@ -147,8 +152,11 @@
 
             // 下面这行是用来占位的，在这之上添加新的即可
             {"666",-1}
-    };    
-    
+    };
+
+    // nadebag手雷回复分数需求
+    int nadebag_recovery_threshold = 25;
+
     array<string> resupply_grenade_list = {
         "hand_grenade.projectile",
         "hand_88grenade.projectile",
@@ -158,15 +166,19 @@
     };
 
     dictionary resupply_grenade_index = {
-        {"hand_grenade.projectile",8},
+        {"gkw_cz75_axe.projectile",10},
+        {"hand_grenade.projectile",6},
+        {"hand_defence_grenade.projectile",6},
         {"hand_88grenade.projectile",4},
         {"hand_atgrenade.projectile",4},
-        {"hand_defence_grenade.projectile",4},
-        {"c4.projectile",2}
-        // {"at_mine.projectile",6},
-        // {"gkw_cz75_axe.projectile",6}
+        {"at_mine.projectile",3},
+        {"smoke_device.projectile",2},
+        {"hand_repair_grenade.projectile",2},
+        {"c4.projectile",2},
+        {"hand_golyat_b.throwable",2},
+        {"hand_golyat.throwable",1}
     };
-    
+
     array<string> resupply_secondary_list = {
         "gkw_88rocker.weapon",
         "gkw_consume_at4.weapon",
@@ -221,6 +233,7 @@
         {"typhon.vehicle",5},
         {"coeus.vehicle",5},
         {"neosu_kuergants.vehicle",4},
+        {"kcco_aa_aegis.vehicle",4},
         {"kcco_pathfinder_factory.vehicle",3},
         {"sandstorm.vehicle",3},
 
@@ -254,6 +267,7 @@
         {"typhon.vehicle",5},
         {"coeus.vehicle",5},
         {"neosu_kuergants.vehicle",4},
+        {"kcco_aa_aegis.vehicle",4},
         {"kcco_pathfinder_factory.vehicle",3},
         {"sandstorm.vehicle",3},
 
@@ -279,7 +293,7 @@
         {"hornet_ct.vehicle",2},
 
         {"",0}
-    };    
+    };
 
 // parameters for "ItemDropEvent.as":
 
@@ -287,8 +301,8 @@
         // 空
 
         {"firecontrol.carry_item",1},       // 火控核心
-        {"core_mask.carry_item",2},         // 真核面具  
-        {"black_card.carry_item",114},         // 黑卡  
+        {"core_mask.carry_item",2},         // 真核面具
+        {"black_card.carry_item",114},         // 黑卡
         {"upgrade_masterkey.carry_item",514}, //
 
         {"upgrade_type88.carry_item",3},    // 汉阳造加速线圈
@@ -323,7 +337,7 @@
         {"",0},
 
         {"mod3",1},                         // 火控核心
-        {"truecore",2},                     // 真核面具  
+        {"truecore",2},                     // 真核面具
         {"type88",3},                       // 汉阳造加速线圈
         {"aa12",4},                         // AA12独头弹
         {"m1garand",5},                     // M1加兰德弹鼓
@@ -358,19 +372,24 @@
         {"",0},
 
         {"exchange_t6_ticket_1",1},
-        {"exchange_t6_ticket_2",2}, 
-        {"exchange_t6_ticket_3",3}, 
-        {"exchange_t6_ticket_4",4},     
-        {"exchange_t6_ticket_5",5}, 
-        {"exchange_t6_ticket_6",6}, 
-        {"exchange_t6_ticket_7",7}, 
-        {"exchange_t6_ticket_8",8}, 
-        {"exchange_t6_ticket_9",9}, 
-        {"exchange_t6_ticket_10",10}, 
-        {"exchange_t6_ticket_11",11}, 
-        {"exchange_t6_ticket_12",12}, 
-        {"exchange_t6_ticket_13",13}, 
-        {"exchange_t6_ticket_14",14}, 
+        {"exchange_t6_ticket_2",2},
+        {"exchange_t6_ticket_3",3},
+        {"exchange_t6_ticket_4",4},
+        {"exchange_t6_ticket_5",5},
+        {"exchange_t6_ticket_6",6},
+        {"exchange_t6_ticket_7",7},
+        {"exchange_t6_ticket_8",8},
+        {"exchange_t6_ticket_9",9},
+        {"exchange_t6_ticket_10",10},
+        {"exchange_t6_ticket_11",11},
+        {"exchange_t6_ticket_12",12},
+        {"exchange_t6_ticket_13",13},
+        {"exchange_t6_ticket_14",14},
+        {"exchange_t6_ticket_15",15},
+        {"exchange_t6_ticket_16",16},
+        {"exchange_t6_ticket_17",17},
+        {"exchange_t6_ticket_18",18},
+        {"exchange_t6_ticket_19",19},
 
         {"666",0}
     };
@@ -384,19 +403,19 @@
             {"update_beta","_update_beta"},
 
             {"update_gamma","_update_gamma"},
-            
+
             {"666",-1}
-    };    
+    };
 
     dictionary callUI_Slot = {
         // 空
         {"",0},
 
         {"call_ui_t1_bombardment_fairy_82mm_mortar_free",1},
-        {"call_ui_t1_bombardment_fairy_82mm_mortar",1}, 
-        {"call_ui_t1_bombardment_fairy_105mm_grenade_barrage",1}, 
-        {"call_ui_t1_bombardment_fairy_155mm_air_burst",1}, 
-        {"call_ui_t2_bombardment_fairy_170mm_cannon",2}, 
+        {"call_ui_t1_bombardment_fairy_82mm_mortar",1},
+        {"call_ui_t1_bombardment_fairy_105mm_grenade_barrage",1},
+        {"call_ui_t1_bombardment_fairy_155mm_air_burst",1},
+        {"call_ui_t2_bombardment_fairy_170mm_cannon",2},
 
         {"call_ui_t2_airstrike_fairy_bomber",2},
         {"call_ui_t1_airstrike_fairy_cas",1},
@@ -440,10 +459,10 @@
         {"call_ui_t1_bombardment_fairy_155mm_air_burst_update_alpha",250},
         {"call_ui_t1_bombardment_fairy_155mm_air_burst_update_beta",250},
         {"call_ui_t1_bombardment_fairy_155mm_air_burst_update_gamma",250},
-        
+
         {"call_ui_t1_airstrike_fairy_cas_update_alpha",125},
         {"call_ui_t1_airstrike_fairy_cas_update_beta",125},
-        {"call_ui_t1_airstrike_fairy_cas_update_gamma",125},   
+        {"call_ui_t1_airstrike_fairy_cas_update_gamma",125},
 
         {"call_ui_t1_airstrike_fairy_cas_p2p_update_alpha",125},
         {"call_ui_t1_airstrike_fairy_cas_p2p_update_beta",125},
@@ -465,9 +484,17 @@
 
         //
 
-        // {"call_ui_t1_rocket_fairy_missile_update_alpha",250},
-        // {"call_ui_t1_rocket_fairy_missile_update_beta",250},
-        // {"call_ui_t1_rocket_fairy_missile_update_gamma",250},
+        {"call_ui_t1_rocket_fairy_missile_update_alpha",500},
+        {"call_ui_t1_rocket_fairy_missile_update_beta",500},
+        {"call_ui_t1_rocket_fairy_missile_update_gamma",500},
+
+        {"call_ui_t2_rocket_fairy_bm30_update_alpha",750},
+        {"call_ui_t2_rocket_fairy_bm30_update_beta",750},
+        {"call_ui_t2_rocket_fairy_bm30_update_gamma",750},
+
+        {"call_ui_t2_bombardment_fairy_170mm_cannon_update_alpha",250},
+        {"call_ui_t2_bombardment_fairy_170mm_cannon_update_beta",250},
+        {"call_ui_t2_bombardment_fairy_170mm_cannon_update_gamma",250},
 
         {"call_ui_t2_airstrike_fairy_bomber_update_alpha",500},
         {"call_ui_t2_airstrike_fairy_bomber_update_beta",500},
@@ -476,6 +503,10 @@
         {"call_ui_t2_warrior_fairy_recon_heli_update_alpha",2000},
         {"call_ui_t2_warrior_fairy_recon_heli_update_beta",2000},
         {"call_ui_t2_warrior_fairy_recon_heli_update_gamma",2000},
+
+        {"call_ui_t2_warrior_fairy_vtol_sentry_update_alpha",1000},
+        {"call_ui_t2_warrior_fairy_vtol_sentry_update_beta",1000},
+        {"call_ui_t2_warrior_fairy_vtol_sentry_update_gamma",1000},
 
         {"666",0}
     };
@@ -560,6 +591,25 @@
 	};
 
 
+// parameters for "call_event_handler.as": M1A1「空降妖精」半模块化召唤
+    // key 约定（由变体 id 推导，脚本零改动扩张）：
+    //   变体 id = m1a1_off_m{m}_c{c}_w{w}_s{s}（m = 主炮配装，c = 侧面同轴，w = 车顶武器站，s = 涂装）
+    //   载具 key = 变体 id + ".vehicle"
+    //   call key = "gk_vehicle_" + 变体 id + ".call"；武器 key = "fairy_vehicle_" + 变体 id + ".weapon"
+    // 新增改型：1) 补 .vehicle 文件并注册 2) 补 weapon 块 3) 补 call 块 4) 在此登记一行（未登记会拒绝召唤并退还武器）
+    const string gk_vehicle_call_prefix = "gk_vehicle_";
+    const string m1a1_call_prefix     = "gk_vehicle_m1a1_";
+    const int    m1a1_call_tp_cost    = 50;    // 每次召唤的战术点消耗
+    const float  m1a1_call_cooldown   = 300.0; // 与 T-14 共用 "vehicle" 冷却类型
+
+    // 变体 id -> 研发点花费（同时充当家族在场上限扫描的变体注册表，勿加哨兵键）
+    dictionary m1a1_devcost = {
+        {"m1a1_off_m1_c0_w1_s1",0},   // 基础型
+        {"m1a1_off_m1_c1_w2_s4",500},   // 侵略型
+        {"m1a1_off_m1_c3_w4_s2",500},   // 突破型
+        {"m1a1_off_m1_c2_w3_s3",500}    // 反装甲型
+    };
+
 // parameters for "save_system.as":
     const string call_slot_default_1 = "t1_bombardment_fairy_82mm_mortar";
     const string call_slot_default_2 = "t2_airstrike_fairy_precise";
@@ -583,6 +633,7 @@
 		"neosu_kuergants.vehicle",
 		"kcco_pathfinder_factory.vehicle",
 		"sandstorm.vehicle",
+        "kcco_aa_aegis.vehicle",
 
 		"par_uhlan.vehicle",
 		"par_elenusinus.vehicle",
@@ -621,6 +672,7 @@
 		"neosu_kuergants.vehicle",
 		"kcco_pathfinder_factory.vehicle",
 		"sandstorm.vehicle",
+        "kcco_aa_aegis.vehicle",
 
 		"par_uhlan.vehicle",
 		"par_elenusinus.vehicle",

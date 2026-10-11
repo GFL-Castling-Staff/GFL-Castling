@@ -8,7 +8,7 @@
     name="Quick Restoration Contract" 
     class="5" 
     untransform_equipment_class="vest"
-    untransform_count="20"  
+    untransform_count="50"  
     consume="1" 
     sight_range_modifier="1" 
     slot="1" />
@@ -29,7 +29,7 @@
 
     <model filename="vest_repair.xml" />
 
-    <capacity value="1" source="rank" source_value="0.0" />
+    <capacity value="3" source="rank" source_value="0.0" />
 
     <hud_icon filename="quick_repair.png" />
     <commonness value="0.0" can_respawn_with="0" in_stock="0" />

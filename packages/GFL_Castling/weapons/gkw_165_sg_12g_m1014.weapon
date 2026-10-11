@@ -6,8 +6,8 @@
     can_shoot_running="1"
 	retrigger_time="-1.0" 
 	accuracy_factor="1.0" 
-	sustained_fire_grow_step="1.3" 
-	sustained_fire_diminish_rate="1.8" 
+	sustained_fire_grow_step="3.0" 
+	sustained_fire_diminish_rate="3.0" 
 	magazine_size="8" 
 	can_shoot_standing="1" 
 	suppressed="0" 
@@ -15,17 +15,17 @@
 	class="4" 
 	last_burst_retrigger_time="0.2"
 	reload_one_at_a_time="1"
-	sight_range_modifier="1.0" 
+	sight_range_modifier="1.5" 
 	projectile_speed="100" 
 	barrel_offset="0.5" 
 	projectiles_per_shot="15"
-    spread_range="0.3"
+    spread_range="0.2"
 	burst_shots="1" />
     <inventory encumbrance="12.5" buy_price="101.4" sell_price="101.4" />
     <next_in_chain key="gkw_m1014_skill.weapon" share_ammo="1" />  
 
     <!--Animations-->
-    <animation key="reload" animation_key="reloading, oaat" />
+    <animation key="reload" animation_key="reloading, oaat fast hand" />
     <animation state_key="next_in_chain_in" animation_key="sheath bayonet part 2" />
     <animation state_key="next_in_chain_out" animation_key="mount bayonet part 1" />
     <!--Sounds-->
@@ -44,7 +44,7 @@
     <projectile file="bullet_sg.projectile">
         <result class="hit" 
         kill_probability="2.4"
-        kill_probability_offset_on_successful_hit="0.3"
+        kill_probability_offset_on_successful_hit="1.0"
         kill_decay_start_time="0.5" 
         kill_decay_end_time="0.5" />
         <trail probability="1.0" key="bullet_buckshot"/>
@@ -53,7 +53,7 @@
     <modifier class="hit_success_probability" value="-0.4" />
     <stance state_key="running" accuracy="0.9" />
     <stance state_key="walking" accuracy="0.9" />
-    <stance state_key="crouch_moving" accuracy="0.85" />
+    <stance state_key="crouch_moving" accuracy="0.9" />
     <stance state_key="standing" accuracy="0.9" />
     <stance state_key="crouching" accuracy="0.9" />
     <stance state_key="prone" accuracy="0.9" /> 
@@ -66,7 +66,7 @@
 	retrigger_time="-1.0" 
 	accuracy_factor="1.0" 
 	sustained_fire_grow_step="1.0" 
-	sustained_fire_diminish_rate="1.8" 
+	sustained_fire_diminish_rate="3.0" 
 	magazine_size="8" 
 	can_shoot_standing="1" 
 	suppressed="1" 
@@ -74,17 +74,17 @@
 	class="4" 
 	last_burst_retrigger_time="0.3"
 	reload_one_at_a_time="1"
-	sight_range_modifier="1.0" 
-	projectile_speed="85" 
+	sight_range_modifier="2.0" 
+	projectile_speed="120" 
 	barrel_offset="0.8" 
-	projectiles_per_shot="15"
-    spread_range="0.2"
+	projectiles_per_shot="1"
+    spread_range="0.25"
 	burst_shots="1" />
     <inventory encumbrance="12.5" buy_price="101.4" sell_price="101.4" />
     <next_in_chain key="gkw_m1014.weapon" share_ammo="1" />  
 
     <!--Animations-->
-    <animation key="reload" animation_key="reloading, oaat" />
+    <animation key="reload" animation_key="reloading, oaat fast hand" />
     <animation state_key="next_in_chain_in" animation_key="sheath bayonet part 2" />
     <animation state_key="next_in_chain_out" animation_key="mount bayonet part 1" />
     <!--Sounds-->
@@ -100,26 +100,25 @@
     <hud_icon filename="gkw_m1014_skill.png" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.2" />
-    <projectile file="bullet_sg.projectile">
-        <result class="hit" 
-        kill_probability="2.4"
-        kill_probability_offset_on_successful_hit="0.3"
-        kill_decay_start_time="0.4" 
-        kill_decay_end_time="0.4" />
-        <trail probability="1.0" key="bullet_buckshot"/>
+    <projectile file="bullet_sg.projectile" can_be_detected_by_footmen="0">
+        <result 
+		class="hit" 
+		kill_probability="30"
+		kill_probability_offset_on_successful_hit="10.0" 
+		kill_decay_start_time="0.16" 
+		kill_decay_end_time="0.5"
+		/>
     </projectile>
     <!--Accuracy, Movement speed-->
     <modifier class="hit_success_probability" value="-0.4" />
     <modifier class="detectability" value="-0.1" />
-    <modifier class="speed" value="-0.1" />    
-    <stance state_key="running" accuracy="0.9" />
+    <stance state_key="running" accuracy="1" />
     <stance state_key="walking" accuracy="1" />
-    <stance state_key="crouch_moving" accuracy="0.85" />
+    <stance state_key="crouch_moving" accuracy="1" />
     <stance state_key="standing" accuracy="1" />
     <stance state_key="crouching" accuracy="1" />
     <stance state_key="prone" accuracy="1" /> 
     <stance state_key="prone_moving" accuracy="1" />
     <stance state_key="over_wall" accuracy="1" />
-
 </weapon>
 </weapons>

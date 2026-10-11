@@ -7,7 +7,6 @@
 #include "generic_call_task.as"
 #include "task_sequencer.as"
 #include "GFLhelpers.as"
-#include "event_system.as"
 
 // 目前正在播放的点歌机中的歌曲剩余时间
 
@@ -762,7 +761,7 @@ class BasicCommandHandler : Tracker {
             spawnInstanceNearPlayer(senderId, "default", "soldier", 1);
             spawnInstanceNearPlayer(senderId, "default", "soldier", 1);                 
 		} else if (checkCommand(message, "spawnbhh")) {
-			spawnInstanceNearPlayer(senderId, "Paradeus_roarer", "soldier", 0);            
+			spawnInstanceNearPlayer(senderId, "pard_roarer", "soldier", 0);            
 		} else if (checkCommand(message, "foe")) {
 			spawnInstanceNearPlayer(senderId, "default", "soldier", 1);
 		} else if (checkCommand(message, "eod")) {
@@ -936,9 +935,17 @@ class BasicCommandHandler : Tracker {
 		} else  if(checkCommand(message, "spawnm1a18")) {
 			spawnInstanceNearPlayer(senderId, "m1a1_off_test_8.vehicle", "vehicle", 0);				
 		} else  if(checkCommand(message, "spawnm1a19")) {
-			spawnInstanceNearPlayer(senderId, "m1a1_off_test_9.vehicle", "vehicle", 0);				
+			spawnInstanceNearPlayer(senderId, "m1a1_off_test_9.vehicle", "vehicle", 0);		
+		} else  if(checkCommand(message, "spawnm1a1basic")) {
+			spawnInstanceNearPlayer(senderId, "m1a1_off_m1_c0_w1_s1.vehicle", "vehicle", 0);				
+		} else  if(checkCommand(message, "spawnm1a1test1")) {
+			spawnInstanceNearPlayer(senderId, "m1a1_off_m1_c1_w2_s4.vehicle", "vehicle", 0);				
+		} else  if(checkCommand(message, "spawnm1a1test2")) {
+			spawnInstanceNearPlayer(senderId, "m1a1_off_m1_c3_w4_s2.vehicle", "vehicle", 0);
+		} else  if(checkCommand(message, "spawnm1a1test3")) {
+			spawnInstanceNearPlayer(senderId, "m1a1_off_m1_c2_w3_s3.vehicle", "vehicle", 0);			
 		} else  if(checkCommand(message, "spawnm1a1")) {
-			spawnInstanceNearPlayer(senderId, "m1a1_off_test_fin.vehicle", "vehicle", 0);				
+			spawnInstanceNearPlayer(senderId, "m1a1_off_test_fin.vehicle", "vehicle", 0);							
 		} else  if(checkCommand(message, "spawnt14")) {
 			spawnInstanceNearPlayer(senderId, "t14_gk.vehicle", "vehicle", 0);				
 		} else  if(checkCommand(message, "spawnrabits")) {
@@ -949,12 +956,10 @@ class BasicCommandHandler : Tracker {
 			spawnInstanceNearPlayer(senderId, "para_heal_skill.projectile", "projectile", 0);			 						 						
 		} else if (checkCommand(message,"givetestweapon")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_type82.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","ff_hunter.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"carry_item","black_card.carry_item");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_consume_papertank3.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","kcco_rpg7_player.weapon");
-			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","parw_rocket_player.weapon");			
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_uzi.weapon");
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_uzimod3.weapon");
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_m14mod3.weapon");
+			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","gkw_ots14.weapon");			
 		} else if (checkCommand(message,"gsft")){		
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
 			addItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"projectile","skill_sf_boss_arch_knight.projectile");	
@@ -979,9 +984,11 @@ class BasicCommandHandler : Tracker {
 			int cid = playerInfo.getIntAttribute("character_id");
 			string sid = playerInfo.getStringAttribute("profile_hash");
 			string name = playerInfo.getStringAttribute("name");
-		} else if (checkCommand(message,"1919test")){
+		} else if (checkCommand(message,"114514test")){
 			const XmlElement@ playerInfo = getPlayerInfo(m_metagame, senderId);
-			addMutilItemInBackpack(m_metagame,playerInfo.getIntAttribute("character_id"),"carry_item","complete_box.carry_item",20);  			            			
+			addItemInArmory(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","sfw_brute.weapon");
+			addItemInArmory(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","sfw_destroyer.weapon");
+			addItemInArmory(m_metagame,playerInfo.getIntAttribute("character_id"),"weapon","sfw_dinergate.weapon");
 		} else  if(checkCommand(message, "wound")) {
 			for (int i = 2; i < 100; ++i) {
 				string command =

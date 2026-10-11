@@ -10658,7 +10658,8 @@ separator_depth = 0.2;
 penetrability = 1.0;
 see_through = 1;
 climb_type = 1;
-hack1 = 1;</desc>
+hack1 = 1;
+	static_object_type_key=security_fence.static_object;</desc>
     </rect>
     <rect
        style="display:inline;fill:#f0f0f0;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:5;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
@@ -17535,7 +17536,7 @@ separator_depth = 0.2;
 penetrability = 1.0;
 see_through = 1;
 climbable = 0; 
-static_object_type_key=barbed_wire_fence.static_object;
+static_object_type_key=barbed_wire.static_object;
 </desc>
     </rect>
   </g>

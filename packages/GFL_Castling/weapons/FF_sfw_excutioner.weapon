@@ -12,7 +12,7 @@
 		can_shoot_standing="1"
 		carry_in_two_hands="0"
 		suppressed="0"
-		name="Excutioner-Wind rose"
+		name="Executioner-Wind rose"
 		class="4"
 		reload_one_at_a_time="0"
 		burst_shots="1"
@@ -45,8 +45,8 @@
 		<animation state_key="crouch_moving" animation_key="crouching forwards, single hand carry" />
 		<animation state_key="crouch_moving_backwards" animation_key="crouching backwards, single hand carry" />
 		<animation state_key="prone_still" animation_key="prone_still, pistol" />
-		<animation state_key="changing_weapon_in" animation_key="change weapon in ntw" />
-		<animation state_key="changing_weapon_out" animation_key="change weapon in ntw" />
+		<animation state_key="changing_weapon_in" animation_key="change weapon in, 0.5s" />
+		<animation state_key="changing_weapon_out" animation_key="change weapon in, 0.5s" />
 		<animation state_key="stabbing" animation_key="pistol whip" />
 		<animation state_key="stabbing" animation_key="pistol whip 3" />
 		<!-- Sounds -->
@@ -87,7 +87,7 @@
 		can_shoot_prone="0"
 		carry_in_two_hands="0"
 		use_basic_muzzle_smoke_effect="0"
-		name="Excutioner-Queen of the Moon"
+		name="Executioner-Queen of the Moon"
 		range="6.5"
 		character_state="death" 
 		consume="0" 
@@ -134,12 +134,12 @@
 		<modifier class="hit_success_probability" value="-0.2" />
         <modifier class="detectability" value="0.45" />
 		<shield offset="-0.60 0.0 0" extent="0.4 1.5 2.0" usable_for_cover="0" />
-		<modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
-		<modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-		<modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
-		<modifier class="projectile_blast_result" input_character_state="death" output_character_state="none" consumes_item="0" />
-		<modifier class="projectile_blast_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
-		<modifier class="projectile_blast_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="death" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="wound" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_hit_result" input_character_state="stun" output_character_state="none" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="death" output_character_state="death" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="wound" output_character_state="wound" consumes_item="0" />
+        <modifier class="projectile_blast_result" input_character_state="stun" output_character_state="stun" consumes_item="0" />
 
 		<sound key="stab" fileref="melee_swing_nothing1_fromFO4.wav" pitch_variety="0.05" volume="2.5" />
 		<sound key="stab" fileref="melee_swing_nothing2_fromFO4.wav" pitch_variety="0.05" volume="2.5" />

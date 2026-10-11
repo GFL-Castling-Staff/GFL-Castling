@@ -46,7 +46,6 @@
         <trail probability="1.0" key="bullet_thick_long"/>
     </projectile>
     <effect class="muzzle" ref="ejection_76251" />
-    <effect class="muzzle" ref="at_bullet_smoke_trail" lighting="0"/> 
     <!--Accuracy, Movement speed-->
     <stance state_key="running" accuracy="0.5" />
     <stance state_key="walking" accuracy="0.6" />

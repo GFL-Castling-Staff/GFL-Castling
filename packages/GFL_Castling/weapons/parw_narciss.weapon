@@ -64,4 +64,8 @@
     <stance state_key="prone" accuracy="1" />
     <modifier class="speed" value="0.3" />
 
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+    <target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>     
+    <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0"/>
+
 </weapon>

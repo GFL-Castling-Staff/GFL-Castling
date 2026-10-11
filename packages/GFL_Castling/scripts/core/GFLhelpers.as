@@ -167,6 +167,14 @@ void addItemInBackpack(Metagame@ metagame, int characterId, string ItemType, str
 	metagame.getComms().send(c);
 }
 
+void addItemInArmory(Metagame@ metagame, int characterId, string ItemType, string ItemKey) {
+	string c = 
+		"<command class='update_inventory' character_id='" + characterId + "' container_type_class='armory'>" + 
+			"<item class='" + ItemType + "' key='" + ItemKey + "' />" +
+		"</command>";
+	metagame.getComms().send(c);
+}
+
 void addItemInStash(Metagame@ metagame, int characterId, string ItemType, string ItemKey){
 	XmlElement c ("command");
 	c.setStringAttribute("class", "update_inventory");
@@ -385,9 +393,8 @@ float getAimUnitDistance(float scale, Vector3 s_pos, Vector3 e_pos) {
 	return scale*ds;
 }
 
-int getAmosPosition(Metagame@ metagame, uint ownerid, Vector3 judgePos, float radius) {
-	
-	array<const XmlElement@>@ vehicles = getAllVehicles(metagame, 0);
+int hasVipVehicleNear(Metagame@ metagame, array<const XmlElement@>@ vehicles, Vector3 judgePos, float radius) {
+	if(vehicles is null){return -1;}
 	for(uint i=0;i<vehicles.length();i++){
 		Vector3 vehiclePos = stringToVector3(vehicles[i].getStringAttribute("position"));
 		if(getAimUnitDistance(1.0,judgePos,vehiclePos)>radius){continue;} //载具在查询范围外
@@ -395,10 +402,16 @@ int getAmosPosition(Metagame@ metagame, uint ownerid, Vector3 judgePos, float ra
 		int vehicleid = vehicles[i].getIntAttribute("id");
 		const XmlElement@ vehicleInfo = getVehicleInfo(metagame, vehicleid);
 		if(vehicleInfo is null){continue;}  //载具不存在
-		if(vip_vehicles.find(vehicleInfo.getStringAttribute("key"))==-1){continue;} //载具是VIP载具
+		if(vehicleInfo.getFloatAttribute("health") <= 0.0){continue;} //载具已被击毁
+		if(vip_vehicles.find(vehicleInfo.getStringAttribute("key"))==-1){continue;} //载具不是VIP载具
 		return 1;
 	}
-	return -1;	
+	return -1;
+}
+
+int getAmosPosition(Metagame@ metagame, uint ownerid, Vector3 judgePos, float radius) {
+	//修复：原本硬编码faction 0，现在按ownerid查询对应阵营的载具
+	return hasVipVehicleNear(metagame, getAllVehicles(metagame, int(ownerid)), judgePos, radius);
 }
 
 int getNearByEnemyVehicle(Metagame@ metagame, uint ownerfid, Vector3 judgePos, float radius) {
@@ -482,6 +495,16 @@ Vector3 getRandomOffsetVector(Vector3 pos,float strike_randX,float strike_randY)
 	float rand_x = rand(-strike_randX,strike_randX);
 	float rand_z = rand(-strike_randY,strike_randY);
 	return pos.add(Vector3(rand_x,0,rand_z));
+}
+
+Vector3 getRandomOffsetVectorMinMax(Vector3 pos, float min_offset, float max_offset) {
+	if (max_offset <= 0) return pos;
+	if (min_offset >= max_offset) min_offset = 0;
+	float rand_x = rand(min_offset, max_offset);
+	if (rand(0, 1) == 0) rand_x = -rand_x;
+	float rand_z = rand(min_offset, max_offset);
+	if (rand(0, 1) == 0) rand_z = -rand_z;
+	return pos.add(Vector3(rand_x, 0, rand_z));
 }
 
 void spawnVehicle(Metagame@ metagame, uint count, uint factionId, Vector3 position, Orientation@ dir, string instanceKey) {
@@ -770,6 +793,14 @@ void playAnimationKey(Metagame@ m_metagame,int characterId,string animekey,bool 
 	m_metagame.getComms().send(command);
 }
 
+void setPlayerWound(Metagame@ m_metagame,int characterId,bool wounded){
+	XmlElement command("command");
+	command.setStringAttribute("class", "update_character");
+	command.setIntAttribute("id", characterId);
+	command.setIntAttribute("wounded", (wounded ? 1 : 0));
+	m_metagame.getComms().send(command);
+}
+
 void addMutilItemInBackpack(Metagame@ metagame, int characterId, const Resource@ r,uint num) {
 	XmlElement command("command");
 	command.setStringAttribute("class", "update_inventory");
@@ -809,6 +840,7 @@ void playPrivateSound(const Metagame@ metagame, string filename, int playerId) {
 int getNearbyRandomLuckyGuyId(GameMode@ metagame, int factionid, Vector3 pos, float range){
 	uint cur_factionid_num = metagame.getFactionCount();
     array<const XmlElement@> affectedCharacter;
+    affectedCharacter.reserve(64);
 	for(uint i=0;i<cur_factionid_num;i++) 
 		if(int(i)!=factionid) {
 			array<const XmlElement@> possible_affectedCharacter;
@@ -1048,9 +1080,11 @@ void deleteItemToGrenadeSlot(Metagame@ metagame,int cid,uint num,string m_key,st
 	metagame.getComms().send(c);
 }
 
-void GrenadeSupply(Metagame@ metagame,int cid,uint num,string m_key,string m_type="projectile")
+void GrenadeSupply(Metagame@ metagame,int cid,uint num,string m_key,string add_type="normal",string m_type="projectile",bool check_list=true)
 {
-	if(resupply_grenade_list.find(m_key)==-1) return;
+	if(check_list && resupply_grenade_list.find(m_key)==-1) return;
+	if (!resupply_grenade_index.exists(m_key)) return;
+	if(add_type=="asindex") num = uint(resupply_grenade_index[m_key]);
 	_log("adding grenade weapon");
 	addItemToGrenadeSlot(metagame,cid,num,m_key,m_type);
 }
@@ -1081,6 +1115,7 @@ array<const XmlElement@>@ getEnemyCharactersNearPosition(GameMode@ metagame, con
 	//获取技能影响的敌人数量
 	int m_fnum = metagame.getFactionCount();
 	array<const XmlElement@> affectedCharacter;
+    affectedCharacter.reserve(64);
 	Vector3 max_character_pos =  Vector3(0,0,0);
 
 	uint num_jud = 0;
@@ -1096,22 +1131,21 @@ array<const XmlElement@>@ getEnemyCharactersNearPosition(GameMode@ metagame, con
 		for(uint x=0;x<affectedCharacter2.length();x++){
 			affectedCharacter.insertLast(affectedCharacter2[x]);
 			num_jud += 1;
-			if(num_jud>num_max_character)break;
+			if(num_jud>=num_max_character)break;
 		}
-		if(num_jud>num_max_character)break;
+		if(num_jud>=num_max_character)break;
 	}
 	return affectedCharacter;
 }
 
-void GrenadeSupplyGroup(Metagame@ metagame,array<const XmlElement@>@ characters,uint num,string add_type="normal",string m_type="projectile")
+void GrenadeSupplyGroup(Metagame@ metagame,array<const XmlElement@>@ characters,uint num,string add_type="normal",string m_type="projectile",bool check_list=true)
 {
 	for (uint i = 0; i < characters.length(); i++) {
 		int luckyhealguyid = characters[i].getIntAttribute("id");
 		if (!checkCharacterIdisPlayerOwn(luckyhealguyid)) continue;
 		string key = getPlayerWeaponFromListByID(luckyhealguyid,2);
 		if(key == "-nan-") continue;
-		if(add_type=="asindex") num = uint(resupply_grenade_index[key]);
-		GrenadeSupply(metagame,luckyhealguyid,num,key,m_type);
+		GrenadeSupply(metagame,luckyhealguyid,num,key,add_type,m_type,check_list);
 	}
 }
 
@@ -1275,11 +1309,19 @@ string getPlayerInfoName(const XmlElement@ player)
 	return player.getStringAttribute("name");
 }
 
-void changeSoldierGroupResource(Metagame@ metagame, int factionId, const array<const Resource@>@ resources, bool add, string soldier_group_name) {
+void changeSoldierGroupResource(Metagame@ metagame, int factionId, array<Resource@> resources, bool add, string soldier_group_name,bool clear) {
     XmlElement command("command");
     command.setStringAttribute("class", "faction_resources");
     command.setIntAttribute("faction_id", factionId);
+    if(clear)
+    {
+        command.setBoolAttribute("clear_calls", clear);
+        command.setBoolAttribute("clear_weapons", clear);
+        command.setBoolAttribute("clear_carry_items", clear);
+        command.setBoolAttribute("clear_grenades", clear);    
+    }
     command.setStringAttribute("soldier_group_name", soldier_group_name);
+    
 
     for (uint i = 0; i < resources.size(); ++i) {
         const Resource@ resource = resources[i];
@@ -1289,15 +1331,47 @@ void changeSoldierGroupResource(Metagame@ metagame, int factionId, const array<c
     metagame.getComms().send(command);
 }
 
-void changeSoldierGroupResource(Metagame@ metagame, int factionId, const Resource@ resource, bool add, string soldier_group_name) {
+void changeSoldierGroupResource(Metagame@ metagame, int factionId, const Resource@ resource, bool add, string soldier_group_name,bool clear) {
+    XmlElement command("command");
+    command.setStringAttribute("class", "faction_resources");
+    command.setIntAttribute("faction_id", factionId);
+    if(clear)
+    {
+        command.setBoolAttribute("clear_calls", clear);
+        command.setBoolAttribute("clear_weapons", clear);
+        command.setBoolAttribute("clear_carry_items", clear);
+        command.setBoolAttribute("clear_grenades", clear);    
+    }
+    command.setStringAttribute("soldier_group_name", soldier_group_name);
+
+    addFactionResourceElements(command, resource.m_type, array<string> = {resource.m_key}, add);
+
+    metagame.getComms().send(command);
+}
+
+XmlElement@ getChangeSoldierGroupResourceCommand(int factionId, array<Resource@> resources, bool add, string soldier_group_name)
+{
+    XmlElement command("command");
+    command.setStringAttribute("class", "faction_resources");
+    command.setIntAttribute("faction_id", factionId);
+    command.setStringAttribute("soldier_group_name", soldier_group_name);
+
+    for (uint i = 0; i < resources.size(); ++i) {
+        const Resource@ resource = resources[i];
+        addFactionResourceElements(command, resource.m_type, array<string> = {resource.m_key}, add);
+    }
+    return command;
+}
+
+XmlElement@ getChangeSoldierGroupResourceCommand(int factionId, const Resource@ resource, bool add, string soldier_group_name)
+{
     XmlElement command("command");
     command.setStringAttribute("class", "faction_resources");
     command.setIntAttribute("faction_id", factionId);
     command.setStringAttribute("soldier_group_name", soldier_group_name);
 
     addFactionResourceElements(command, resource.m_type, array<string> = {resource.m_key}, add);
-
-    metagame.getComms().send(command);
+    return command;
 }
 
 class SoldierInfo {

@@ -31,13 +31,13 @@
     <sound key="reload_one" fileref="sg3_reload_FromREALLIFE.wav" volume="0.5" />
     <sound key="reload_one" fileref="sg4_reload_FromREALLIFE.wav" volume="0.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
-        <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
+    <sound key="dry_fire" fileref="dryfire_FromREALLIFE.wav" pitch_variety="0.05" volume="1.0" />
     <!--Model, Icon, Cost-->
     <model filename="gkw_ltlx7000_melondove.xml" />
     <hud_icon filename="gkw_ltlx7000_icecream.png" />
     <!--Ballistics-->
     <weak_hand_hold offset="0.3" />
-    <projectile file="icecream.projectile"/>
+    <projectile file="icecream_wound.projectile"/>
     <!--Accuracy, Movement speed-->
     <stance state_key="walking" accuracy="0.6" />
     <stance state_key="crouch_moving" accuracy="0.5" />

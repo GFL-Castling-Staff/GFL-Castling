@@ -29,7 +29,7 @@ class CraftQueue
     CraftQueue(int pId,string key){
         m_playerId=pId;
         m_typekey=key;
-    }    
+    }
     CraftQueue(int pId,string key,string str){
         m_playerId=pId;
         m_typekey=key;
@@ -39,7 +39,7 @@ class CraftQueue
         m_playerId=pId;
         m_typekey=key;
         m_time = time;
-    }    
+    }
 }
 
 class ItemDropEvent : Tracker {
@@ -50,7 +50,7 @@ class ItemDropEvent : Tracker {
 		@m_metagame = @metagame;
 	}
 
-	protected void handleItemDropEvent(const XmlElement@ event) 
+	protected void handleItemDropEvent(const XmlElement@ event)
 	{
         int type_id = event.getIntAttribute("target_container_type_id");
         if (type_id == 3){
@@ -63,7 +63,7 @@ class ItemDropEvent : Tracker {
             string key = event.getStringAttribute("item_key");
             if(key == "gkw_doll_logger.weapon")
             {
-                int pId = event.getIntAttribute("player_id");     
+                int pId = event.getIntAttribute("player_id");
                 notify(m_metagame, "Help - logger system", dictionary(), "misc", pId, true, "Help - logger system title", 1.0);
             }
             //选择基础支援
@@ -115,14 +115,14 @@ class ItemDropEvent : Tracker {
                     {
                         int slot = int(callUI_Slot[update_call_key]);
                         newdata.setCallSlot(slot,updated_call_key);
-                        string filename = ("save_" + profile_hash +".xml" );     
+                        string filename = ("save_" + profile_hash +".xml" );
                         writeXML(m_metagame,filename,PlayerProfileSave(newdata));
                         dictionary a;
                         a["%call_key"] = "Hint - call - title - " + update_call_key;
                         a["%slot"] = "Tier " + slot;
                         notify(m_metagame, "Hint - call - changesuccess", a, "misc", pId, false, "", 1.0);
                         m_craftQueue.removeAt(findQueueIndex(pId,call_key));
-                    }                    
+                    }
                 }
                 else
                 {
@@ -144,7 +144,7 @@ class ItemDropEvent : Tracker {
                     if(call_key.findFirst("_update") < 0)
                     {
                         notify(m_metagame, "Hint - call - notadvanced", dictionary(), "misc", pId, false, "", 1.0);
-                        m_craftQueue.removeAt(findQueueIndex(pId,call_key));                        
+                        m_craftQueue.removeAt(findQueueIndex(pId,call_key));
                     }
                     else
                     {
@@ -152,7 +152,7 @@ class ItemDropEvent : Tracker {
                         if(newdata.FindCallUnlock(call_key))
                         {
                             notify(m_metagame, "Hint - call - already dev", dictionary(), "misc", pId, false, "", 1.0);
-                            m_craftQueue.removeAt(findQueueIndex(pId,call_key));  
+                            m_craftQueue.removeAt(findQueueIndex(pId,call_key));
                         }
                         else
                         {
@@ -176,7 +176,7 @@ class ItemDropEvent : Tracker {
                 {
                     notify(m_metagame, "Hint - call - 404notfound dev",dictionary(), "misc", pId, false, "", 1.0);
                 }
-            }            
+            }
             //升级支援
             else if(call_update_const.exists(key))
             {
@@ -222,13 +222,28 @@ class ItemDropEvent : Tracker {
             {
                 deleteItemInBackpack(m_metagame,cId,"weapon",key);
                 addMutilItemInBackpack(m_metagame,cId,"projectile","c4.projectile",8);
-            }            
-        }        
+            }
+            else if(key == "pack_88rocket")
+            {
+                deleteItemInBackpack(m_metagame,cId,"weapon",key);
+                addMutilItemInBackpack(m_metagame,cId,"weapon","gkw_88rocker.weapon",10);
+            }
+            else if(key == "pack_m202")
+            {
+                deleteItemInBackpack(m_metagame,cId,"weapon",key);
+                addMutilItemInBackpack(m_metagame,cId,"weapon","gkw_consume_m202.weapon",6);
+            }
+            else if(key == "pack_repair_grenade")
+            {
+                deleteItemInBackpack(m_metagame,cId,"weapon",key);
+                addMutilItemInBackpack(m_metagame,cId,"projectile","hand_repair_grenade.projectile",8);
+            }
+        }
         if (type_id == 1){
             string itemKey = event.getStringAttribute("item_key");
             int itemClass = event.getIntAttribute("item_class");
             int cId = event.getIntAttribute("character_id");
-            int pId = event.getIntAttribute("player_id");     
+            int pId = event.getIntAttribute("player_id");
             int jud_num =  int(itemDropFileIndex[itemKey]);
             string secondary_key = getPlayerWeaponFromListByPID(pId,1);
             int secondary_num = getPlayerWeaponAmountFromListByPID(pId,1);
@@ -237,7 +252,7 @@ class ItemDropEvent : Tracker {
             if(secondary_key == "gkw_doll_logger.weapon" && itemClass == 0 && secondary_num!=0)
             {
                 string loggerKey = normalizeWeaponKey(itemKey);
-                if (!reverse_tdoll_complex_index.exists(loggerKey)) 
+                if (!reverse_tdoll_complex_index.exists(loggerKey))
                 {
                     dictionary a;
                     a["%doll_key"] = "" + loggerKey;
@@ -252,7 +267,7 @@ class ItemDropEvent : Tracker {
                 if(newdata.FindWeapon(loggerKey))
                 {
                     dictionary a;
-                    a["%doll_key"] = "" + loggerKey;                    
+                    a["%doll_key"] = "" + loggerKey;
                     notify(m_metagame, "Doll logged already", a, "misc", pId, false, "", 1.0);
                     return;
                 }
@@ -299,7 +314,7 @@ class ItemDropEvent : Tracker {
                 case 5:{
                     upgrade(cId, pId, "m1garand", "upgrade_m1.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
-                } 
+                }
                 case 6:{
                     upgrade(cId, pId, "fg42", "upgrade_fg42.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
@@ -319,11 +334,11 @@ class ItemDropEvent : Tracker {
                 case 10:{
                     upgrade(cId, pId, "m1903_2", "upgrade_m1903_2.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
-                }   
+                }
                 case 11:{
                     upgrade(cId, pId, "fn49", "upgrade_fn49.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
-                }     
+                }
                 case 12:{
                     upgrade(cId, pId, "9a91", "upgrade_9a91.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
@@ -335,7 +350,7 @@ class ItemDropEvent : Tracker {
                 case 14:{
                     upgrade(cId, pId, "g3", "upgrade_g3.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
-                }             
+                }
                 case 15:{
                     upgrade(cId, pId, "m1897", "upgrade_m1897.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
@@ -343,7 +358,7 @@ class ItemDropEvent : Tracker {
                 case 16:{
                     upgrade(cId, pId, "stg44", "upgrade_stg44.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
-                }   
+                }
                 case 17:{
                     upgrade(cId, pId, "wa2000", "upgrade_wa2000.carry_item", "upgrade_common", "sfx_equip.wav");
                     break;
@@ -391,6 +406,7 @@ class ItemDropEvent : Tracker {
                             a["%doll_name"] = getResourceName(m_metagame, itemKey, "weapon");
                             sendPrivateMessageKey(m_metagame, pId, "digimindupdatesuccess",a);
                             playPrivateSound(m_metagame,"digimind_sfx2.wav",pId);
+                            GiveRP(m_metagame,cId,-2500);
                             //下面是自动录入功能
                             GFL_playerInfo@ playerInfo = getPlayerInfoFromListbyPid(pId);
                             if (playerInfo.getPlayerName() == default_string) return;
@@ -407,7 +423,7 @@ class ItemDropEvent : Tracker {
                                 newdata.addWeapon(outputItem);
                                 notify(m_metagame, "Logger Mask Auto", dictionary(), "misc", pId, false, "", 1.0);
                                 string filename = ("save_" + profile_hash +".xml" );
-                                writeXML(m_metagame,filename,PlayerProfileSave(newdata));  
+                                writeXML(m_metagame,filename,PlayerProfileSave(newdata));
                                 return;
                             }
                             else
@@ -415,177 +431,183 @@ class ItemDropEvent : Tracker {
                                 newdata.addWeapon(outputItem);
                                 notify(m_metagame, "Logger Mask Auto", dictionary(), "misc", pId, false, "", 1.0);
                                 string filename = ("save_" + profile_hash +".xml" );
-                                writeXML(m_metagame,filename,PlayerProfileSave(newdata));  
-                                return;                                
+                                writeXML(m_metagame,filename,PlayerProfileSave(newdata));
+                                return;
                             }
                         }
                         else{
-                            addItemInBackpack(m_metagame,cId,"carry_item","firecontrol.carry_item");;
+                            addItemInBackpack(m_metagame,cId,"carry_item","firecontrol.carry_item");
                             addItemInBackpack(m_metagame,cId,"weapon",itemKey);
                             m_craftQueue.removeAt(findQueueIndex(pId,"mod3"));
                             sendPrivateMessageKey(m_metagame, pId, "digimindupdatefailed");
                             playPrivateSound(m_metagame,"sfx_failed.wav",pId);
+                            GiveRP(m_metagame,cId,-10000);
                         }
                     }
-                    else if (checkQueue(pId,"type88") && (itemKey=="gkw_88typemod3.weapon" 
-                    || itemKey=="gkw_88typemod3_skill.weapon" 
-                    || itemKey=="gkw_88typemod3_7106.weapon" 
+                    else if (checkQueue(pId,"type88") && (itemKey=="gkw_88typemod3.weapon"
+                    || itemKey=="gkw_88typemod3_skill.weapon"
+                    || itemKey=="gkw_88typemod3_7106.weapon"
                     || itemKey=="gkw_88typemod3_7106_skill.weapon"
+                    || itemKey=="gkw_88typemod3_11406.weapon"
+                    || itemKey=="gkw_88typemod3_11406_skill.weapon"
                     || itemKey=="gkw_88typemod3_50001.weapon"
                     || itemKey=="gkw_88typemod3_50001_skill.weapon"
                     )){
-                        giveDigimindItem(cId, pId, "gkw_88typemod3_6503.weapon", "type88");
+                        giveDigimindItem(cId, pId, "gkw_88typemod3_6503.weapon", normalizeWeaponKey(itemKey), "type88");
                     }
                     else if ( (checkQueue(pId,"aa12") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_aa12.weapon" || itemKey=="gkw_aa12_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_aa12_only.weapon", "aa12");
+                        giveDigimindItem(cId, pId, "gkw_aa12_only.weapon", normalizeWeaponKey(itemKey), "aa12");
                     }
                     else if ( (checkQueue(pId,"aa12") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_aa12_4401.weapon" || itemKey=="gkw_aa12_4401_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_aa12_4401_only.weapon", "aa12");
+                        giveDigimindItem(cId, pId, "gkw_aa12_4401_only.weapon", normalizeWeaponKey(itemKey), "aa12");
                     }
                     else if ( (checkQueue(pId,"aa12") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_aa12_2403.weapon" || itemKey=="gkw_aa12_2403_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_aa12_2403_only.weapon", "aa12");
-                    }                    
+                        giveDigimindItem(cId, pId, "gkw_aa12_2403_only.weapon", normalizeWeaponKey(itemKey), "aa12");
+                    }
                     else if ( (checkQueue(pId,"m1garand") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1.weapon" || itemKey=="gkw_m1_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m1_sf.weapon", "m1garand");
+                        giveDigimindItem(cId, pId, "gkw_m1_sf.weapon", normalizeWeaponKey(itemKey), "m1garand");
                     }
                     else if ( (checkQueue(pId,"m1garand") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1_1106.weapon" || itemKey=="gkw_m1_1106_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m1_sf_1106.weapon", "m1garand");
+                        giveDigimindItem(cId, pId, "gkw_m1_sf_1106.weapon", normalizeWeaponKey(itemKey), "m1garand");
                     }
                     else if ( (checkQueue(pId,"m1garand") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1_6907.weapon" || itemKey=="gkw_m1_6907_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m1_sf_6907.weapon", "m1garand");
+                        giveDigimindItem(cId, pId, "gkw_m1_sf_6907.weapon", normalizeWeaponKey(itemKey), "m1garand");
                     }
                     else if ( (checkQueue(pId,"m1garand") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1_10008.weapon" || itemKey=="gkw_m1_10008_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m1_sf_10008.weapon", "m1garand");
-                    }                    
+                        giveDigimindItem(cId, pId, "gkw_m1_sf_10008.weapon", normalizeWeaponKey(itemKey), "m1garand");
+                    }
                     else if ( (checkQueue(pId,"fg42") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_fg42.weapon" || itemKey=="gkw_fg42_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_fg42_only.weapon", "fg42");
+                        giveDigimindItem(cId, pId, "gkw_fg42_only.weapon", normalizeWeaponKey(itemKey), "fg42");
                     }
                     else if ( (checkQueue(pId,"g41") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_g41.weapon" || itemKey=="gkw_g41_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_g41_only.weapon", "g41");
+                        giveDigimindItem(cId, pId, "gkw_g41_only.weapon", normalizeWeaponKey(itemKey), "g41");
                     }
                     else if ( (checkQueue(pId,"g41") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_g41_2401.weapon" || itemKey=="gkw_g41_2401_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_g41_2401_only.weapon", "g41");
+                        giveDigimindItem(cId, pId, "gkw_g41_2401_only.weapon", normalizeWeaponKey(itemKey), "g41");
                     }
                     else if ( (checkQueue(pId,"g41") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_g41_7406.weapon" || itemKey=="gkw_g41_7406_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_g41_7406_only.weapon", "g41");
+                        giveDigimindItem(cId, pId, "gkw_g41_7406_only.weapon", normalizeWeaponKey(itemKey), "g41");
                     }
                     else if ( (checkQueue(pId,"vz61") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_vz61.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_vz61_only.weapon", "vz61");
+                        giveDigimindItem(cId, pId, "gkw_vz61_only.weapon", normalizeWeaponKey(itemKey), "vz61");
                     }
                     else if ( (checkQueue(pId,"m1903_1") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1903.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m1903_only.weapon", "m1903_1");
+                        giveDigimindItem(cId, pId, "gkw_m1903_only.weapon", normalizeWeaponKey(itemKey), "m1903_1");
                     }
-                    else if ( (checkQueue(pId,"m1903_2") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1903.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m1903_exp.weapon", "m1903_2");
+                    else if ( (checkQueue(pId,"m1903_2")) && (itemKey=="gkw_m1903.weapon")){
+                        giveDigimindItem(cId, pId, "gkw_m1903_exp.weapon", normalizeWeaponKey(itemKey), "m1903_2");
                     }
                     else if ( (checkQueue(pId,"m1903_1") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1903_302.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m1903_302_only.weapon", "m1903_1");
+                        giveDigimindItem(cId, pId, "gkw_m1903_302_only.weapon", normalizeWeaponKey(itemKey), "m1903_1");
                     }
-                    else if ( (checkQueue(pId,"m1903_2") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1903_302.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m1903_302_exp.weapon", "m1903_2");
+                    else if ( (checkQueue(pId,"m1903_2")) && (itemKey=="gkw_m1903_302.weapon")){
+                        giveDigimindItem(cId, pId, "gkw_m1903_302_exp.weapon", normalizeWeaponKey(itemKey), "m1903_2");
                     }
                     else if ( (checkQueue(pId,"m1903_1") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1903_1107.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m1903_1107_only.weapon", "m1903_1");
+                        giveDigimindItem(cId, pId, "gkw_m1903_1107_only.weapon", normalizeWeaponKey(itemKey), "m1903_1");
                     }
-                    else if ( (checkQueue(pId,"m1903_2") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1903_1107.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m1903_1107_exp.weapon", "m1903_2");
+                    else if ( (checkQueue(pId,"m1903_2")) && (itemKey=="gkw_m1903_1107.weapon")){
+                        giveDigimindItem(cId, pId, "gkw_m1903_1107_exp.weapon", normalizeWeaponKey(itemKey), "m1903_2");
                     }
                     else if ( (checkQueue(pId,"fn49") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_fn49.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_fn49mod3.weapon", "fn49");
-                    }                                        
+                        giveDigimindItem(cId, pId, "gkw_fn49mod3.weapon", normalizeWeaponKey(itemKey), "fn49");
+                    }
                     else if ( (checkQueue(pId,"fn49") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_fn49_4709.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_fn49mod3_4709.weapon", "fn49");
-                    }           
+                        giveDigimindItem(cId, pId, "gkw_fn49mod3_4709.weapon", normalizeWeaponKey(itemKey), "fn49");
+                    }
                     else if ( (checkQueue(pId,"9a91") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_9a91.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_9a91_only.weapon", "9a91");
-                    }   
+                        giveDigimindItem(cId, pId, "gkw_9a91_only.weapon", normalizeWeaponKey(itemKey), "9a91");
+                    }
                     else if ( (checkQueue(pId,"9a91") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_9a91_1302.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_9a91_1302_only.weapon", "9a91");
+                        giveDigimindItem(cId, pId, "gkw_9a91_1302_only.weapon", normalizeWeaponKey(itemKey), "9a91");
                     }
                     else if ( (checkQueue(pId,"9a91") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_9a91_8304.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_9a91_8304_only.weapon", "9a91");
+                        giveDigimindItem(cId, pId, "gkw_9a91_8304_only.weapon", normalizeWeaponKey(itemKey), "9a91");
                     }
                     else if ( (checkQueue(pId,"m14") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m14.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m14mod3.weapon", "m14");
+                        giveDigimindItem(cId, pId, "gkw_m14mod3.weapon", normalizeWeaponKey(itemKey), "m14");
                     }
                     else if ( (checkQueue(pId,"m14") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m14_303.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m14mod3_303.weapon", "m14");
-                    }                    
+                        giveDigimindItem(cId, pId, "gkw_m14mod3_303.weapon", normalizeWeaponKey(itemKey), "m14");
+                    }
                     else if ( (checkQueue(pId,"g3") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_g3.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_g3mod3.weapon", "g3");
+                        giveDigimindItem(cId, pId, "gkw_g3mod3.weapon", normalizeWeaponKey(itemKey), "g3");
                     }
                     else if ( (checkQueue(pId,"g3") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_g3_1303.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_g3mod3_1303.weapon", "g3");
+                        giveDigimindItem(cId, pId, "gkw_g3mod3_1303.weapon", normalizeWeaponKey(itemKey), "g3");
                     }
                     else if ( (checkQueue(pId,"m1897") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1897.weapon" || itemKey=="gkw_m1897_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m1897mod3.weapon", "m1897");
-                    }         
+                        giveDigimindItem(cId, pId, "gkw_m1897mod3.weapon", normalizeWeaponKey(itemKey), "m1897");
+                    }
                     else if ( (checkQueue(pId,"m1897") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1897_2505.weapon" || itemKey=="gkw_m1897_2505_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_m1897mod3_2505.weapon", "m1897");
-                    }                      
+                        giveDigimindItem(cId, pId, "gkw_m1897mod3_2505.weapon", normalizeWeaponKey(itemKey), "m1897");
+                    }
+                    else if ( (checkQueue(pId,"m1897") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_m1897_4805.weapon" || itemKey=="gkw_m1897_4805_skill.weapon")){
+                        giveDigimindItem(cId, pId, "gkw_m1897mod3_4805.weapon", normalizeWeaponKey(itemKey), "m1897");
+                    }
                     else if ( (checkQueue(pId,"stg44") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_stg44.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_stg44mod3.weapon", "stg44");
+                        giveDigimindItem(cId, pId, "gkw_stg44mod3.weapon", normalizeWeaponKey(itemKey), "stg44");
                     }
                     else if ( (checkQueue(pId,"stg44") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_stg44_8612.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_stg44mod3_8612.weapon", "stg44");
-                    }                    
+                        giveDigimindItem(cId, pId, "gkw_stg44mod3_8612.weapon", normalizeWeaponKey(itemKey), "stg44");
+                    }
                     else if ( (checkQueue(pId,"stg44") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_g43.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_g43_kurz.weapon", "stg44");
-                    }                   
+                        giveDigimindItem(cId, pId, "gkw_g43_kurz.weapon", normalizeWeaponKey(itemKey), "stg44");
+                    }
                     else if ( (checkQueue(pId,"stg44") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_g43_7607.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_g43_7607_kurz.weapon", "stg44");
-                    }                                
+                        giveDigimindItem(cId, pId, "gkw_g43_7607_kurz.weapon", normalizeWeaponKey(itemKey), "stg44");
+                    }
                     else if ( (checkQueue(pId,"wa2000") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_wa2000.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_wa2000_only.weapon", "wa2000");
+                        giveDigimindItem(cId, pId, "gkw_wa2000_only.weapon", normalizeWeaponKey(itemKey), "wa2000");
                     }
                     else if ( (checkQueue(pId,"wa2000") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_wa2000_306.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_wa2000_306_only.weapon", "wa2000");
-                    }        
+                        giveDigimindItem(cId, pId, "gkw_wa2000_306_only.weapon", normalizeWeaponKey(itemKey), "wa2000");
+                    }
                     else if ( (checkQueue(pId,"wa2000") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_wa2000_1108.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_wa2000_1108_only.weapon", "wa2000");
-                    }                            
+                        giveDigimindItem(cId, pId, "gkw_wa2000_1108_only.weapon", normalizeWeaponKey(itemKey), "wa2000");
+                    }
                     else if ( (checkQueue(pId,"pkp") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_pkp.weapon" || itemKey=="gkw_pkp_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_pkp_only.weapon", "pkp");
+                        giveDigimindItem(cId, pId, "gkw_pkp_only.weapon", normalizeWeaponKey(itemKey), "pkp");
                     }
                     else if ( (checkQueue(pId,"pkp") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_pkp_4203.weapon" || itemKey=="gkw_pkp_4203_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_pkp_4203_only.weapon", "pkp");
+                        giveDigimindItem(cId, pId, "gkw_pkp_4203_only.weapon", normalizeWeaponKey(itemKey), "pkp");
                     }
                     else if ( (checkQueue(pId,"pkp") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_pkp_5904.weapon" || itemKey=="gkw_pkp_5904_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_pkp_5904_only.weapon", "pkp");
-                    }                            
+                        giveDigimindItem(cId, pId, "gkw_pkp_5904_only.weapon", normalizeWeaponKey(itemKey), "pkp");
+                    }
                     else if ( (checkQueue(pId,"scarl") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_scarl.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_scarl_only.weapon", "scarl");
+                        giveDigimindItem(cId, pId, "gkw_scarl_only.weapon", normalizeWeaponKey(itemKey), "scarl");
                     }
                     else if ( (checkQueue(pId,"scarh") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_scarh.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_scarh_only.weapon", "scarh");
+                        giveDigimindItem(cId, pId, "gkw_scarh_only.weapon", normalizeWeaponKey(itemKey), "scarh");
                     }
                     else if ( (checkQueue(pId,"cso") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_svd.weapon" || itemKey=="gkw_svd_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_svdex.weapon", "cso");
-                    }                    
+                        giveDigimindItem(cId, pId, "gkw_svdex.weapon", normalizeWeaponKey(itemKey), "cso");
+                    }
                     else if ( (checkQueue(pId,"cso") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_svd_5506.weapon" || itemKey=="gkw_svd_5506_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_svdex_5506.weapon", "cso");
-                    }   
+                        giveDigimindItem(cId, pId, "gkw_svdex_5506.weapon", normalizeWeaponKey(itemKey), "cso");
+                    }
                     else if ( (checkQueue(pId,"cso") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_ak47.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_ak47_60r.weapon", "cso");
+                        giveDigimindItem(cId, pId, "gkw_ak47_60r.weapon", normalizeWeaponKey(itemKey), "cso");
                     }
                     else if ( (checkQueue(pId,"cso") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_ak47_501.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_ak47_60r_501.weapon", "cso");
-                    }     
+                        giveDigimindItem(cId, pId, "gkw_ak47_60r_501.weapon", normalizeWeaponKey(itemKey), "cso");
+                    }
                     else if ( (checkQueue(pId,"type4") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_4type.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_4type_only.weapon", "type4");
+                        giveDigimindItem(cId, pId, "gkw_4type_only.weapon", normalizeWeaponKey(itemKey), "type4");
                     }
                     else if ( (checkQueue(pId,"sr3mp") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_sr3mp.weapon" || itemKey=="gkw_sr3mp_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_sr3mp_only.weapon", "sr3mp");
+                        giveDigimindItem(cId, pId, "gkw_sr3mp_only.weapon", normalizeWeaponKey(itemKey), "sr3mp");
                     }
                     else if ( (checkQueue(pId,"sr3mp") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_sr3mp_4101.weapon" || itemKey=="gkw_sr3mp_4101_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_sr3mp_4101_only.weapon", "sr3mp");
+                        giveDigimindItem(cId, pId, "gkw_sr3mp_4101_only.weapon", normalizeWeaponKey(itemKey), "sr3mp");
                     }
                     else if ( (checkQueue(pId,"usas12") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_usas12.weapon" || itemKey=="gkw_usas12_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_usas12_only.weapon", "usas12");
+                        giveDigimindItem(cId, pId, "gkw_usas12_only.weapon", normalizeWeaponKey(itemKey), "usas12");
                     }
                     else if ( (checkQueue(pId,"usas12") || checkQueue(pId,"masterkey") ) && (itemKey=="gkw_usas12_2704.weapon" || itemKey=="gkw_usas12_2704_skill.weapon")){
-                        giveDigimindItem(cId, pId, "gkw_usas12_2704_only.weapon", "usas12");
-                    }                                        
+                        giveDigimindItem(cId, pId, "gkw_usas12_2704_only.weapon", normalizeWeaponKey(itemKey), "usas12");
+                    }
                     break;
                 }
             }
@@ -639,41 +661,66 @@ class ItemDropEvent : Tracker {
                         addMutilItemInBackpack(m_metagame,cId,"carry_item","ultra_bp_t6.carry_item",3);
                         playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
                         break;
-                    }        
+                    }
                     case 10:{
                         addMutilItemInBackpack(m_metagame,cId,"carry_item","gk_persica.carry_item",3);
                         playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
                         break;
-                    }       
+                    }
                     case 11:{
                         addMutilItemInBackpack(m_metagame,cId,"carry_item","chip_a_t6.carry_item",3);
                         playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
                         break;
-                    }    
+                    }
                     case 12:{
                         addMutilItemInBackpack(m_metagame,cId,"carry_item","chip_b_t6.carry_item",3);
                         playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
                         break;
-                    }        
+                    }
                     case 13:{
                         addMutilItemInBackpack(m_metagame,cId,"carry_item","gk_persica_alt.carry_item",3);
                         playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
                         break;
-                    } 
+                    }
                     case 14:{
                         addMutilItemInBackpack(m_metagame,cId,"carry_item","dima_bunny.carry_item",3);
                         playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
                         break;
-                    }                                                                                                                                                        
+                    }
+                    case 15:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","gk_kalina_swim.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }
+                    case 16:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","tcc_t6.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }
+                    case 17:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","cbs_t6.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }
+                    case 18:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","chip_y_t6.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }
+                    case 19:{
+                        addMutilItemInBackpack(m_metagame,cId,"carry_item","nadebag_t6.carry_item",3);
+                        playPrivateSound(m_metagame,"digimind_sfx1.wav",pId);
+                        break;
+                    }
                     default:{
                         break;
                     }
                 }
             }
-        }  
+        }
     }
 
-    protected void giveDigimindItem(int cId, int pId, string weapon_xml_name,string weapon_name){
+    protected void giveDigimindItem(int cId, int pId, string weapon_xml_name, string source_weapon_xml_name, string weapon_name){
         addItemInBackpack(m_metagame,cId,"weapon",weapon_xml_name);
         int index =findQueueIndex(pId,weapon_name);
         if(index == -1 ) index = findQueueIndex(pId,"masterkey");
@@ -692,12 +739,16 @@ class ItemDropEvent : Tracker {
         }
         else
         {
+            if(!newdata.FindWeapon(source_weapon_xml_name))
+            {
+                newdata.addWeapon(source_weapon_xml_name);
+            }
             newdata.addWeapon(weapon_xml_name);
             notify(m_metagame, "Logger Mask Auto", dictionary(), "misc", pId, false, "", 1.0);
             string filename = ("save_" + profile_hash +".xml" );
-            writeXML(m_metagame,filename,PlayerProfileSave(newdata));  
+            writeXML(m_metagame,filename,PlayerProfileSave(newdata));
             return;
-        }        
+        }
     }
 
     protected void failedUpgrade(int cId, int pId, string weapon_xml_name){
@@ -728,11 +779,11 @@ class ItemDropEvent : Tracker {
                 XmlElement c ("command");
                 c.setStringAttribute("class", "update_inventory");
                 c.setIntAttribute("container_type_id", 4);
-                c.setIntAttribute("character_id", cId); 
+                c.setIntAttribute("character_id", cId);
                 {
-                    XmlElement k("item");;
-                    k.setStringAttribute("class", "carry_item");;
-                    k.setStringAttribute("key", "exo_t5_16lab.carry_item");;
+                    XmlElement k("item");
+                    k.setStringAttribute("class", "carry_item");
+                    k.setStringAttribute("key", "exo_t5_16lab.carry_item");
                     c.appendChild(k);
                 }
                 m_metagame.getComms().send(c);
@@ -755,13 +806,6 @@ class ItemDropEvent : Tracker {
             int cId=player.getIntAttribute("character_id");
             string profile_hash = player.getStringAttribute("profile_hash");
             string itemKey = getKeyfromIndex(s);
-            if(itemKey.find(s)>-1)
-            {
-                addItemInBackpack(m_metagame,cId,"carry_item","core_mask.carry_item");
-                sendPrivateMessageKey(m_metagame, senderId, "truemask_failed");
-                playPrivateSound(m_metagame,"sfx_failed.wav",senderId);                
-                return;
-            }
             if (itemKey==""){
                 addItemInBackpack(m_metagame,cId,"carry_item","core_mask.carry_item");
                 sendPrivateMessageKey(m_metagame, senderId, "truemask_failed");
@@ -777,11 +821,11 @@ class ItemDropEvent : Tracker {
             else{
                 addItemInBackpack(m_metagame,cId,"weapon",itemKey);
                 dictionary a;
-                a["%doll_name"] = getResourceName(m_metagame, itemKey, "weapon");                    
+                a["%doll_name"] = getResourceName(m_metagame, itemKey, "weapon");
                 sendPrivateMessageKey(m_metagame, senderId, "truemask_success",a);
                 playPrivateSound(m_metagame,"sfx_big.wav",senderId);
-                player_data newdata = PlayerProfileLoad(readFile(m_metagame,sender,profile_hash)); 
-                if(newdata.FindWeapon(itemKey)) 
+                player_data newdata = PlayerProfileLoad(readFile(m_metagame,sender,profile_hash));
+                if(newdata.FindWeapon(itemKey))
                 {
                     return;
                 }
@@ -790,8 +834,8 @@ class ItemDropEvent : Tracker {
                     newdata.addWeapon(itemKey);
                     notify(m_metagame, "Logger Mask Auto", dictionary(), "misc", senderId, false, "", 1.0);
                     string filename = ("save_" + profile_hash +".xml" );
-                    writeXML(m_metagame,filename,PlayerProfileSave(newdata));  
-                    return;                  
+                    writeXML(m_metagame,filename,PlayerProfileSave(newdata));
+                    return;
                 }
             }
         }
@@ -807,11 +851,11 @@ class ItemDropEvent : Tracker {
 
             array<string> word = MassageBreakUp(message, " ", -1);
             int ws = word.size();
-            if (ws == 0 || ws == 1 || ws == 2) 
+            if (ws == 0 || ws == 1 || ws == 2)
             {
                 addItemInBackpack(m_metagame,cId,"carry_item","black_card.carry_item");
                 sendPrivateMessageKey(m_metagame, senderId, "blackcard_hint_syntax");
-                playPrivateSound(m_metagame,"sfx_failed.wav",senderId);                
+                playPrivateSound(m_metagame,"sfx_failed.wav",senderId);
                 return;
             }
             string doll_index = word[1];
@@ -821,8 +865,8 @@ class ItemDropEvent : Tracker {
             {
                 addItemInBackpack(m_metagame,cId,"carry_item","black_card.carry_item");
                 sendPrivateMessageKey(m_metagame, senderId, "blackcard_hint_dumb");
-                playPrivateSound(m_metagame,"sfx_failed.wav",senderId);                
-                return;                
+                playPrivateSound(m_metagame,"sfx_failed.wav",senderId);
+                return;
             }
 
             string weapon_key = getKeyfromIndex(doll_index,skin_index,"none");
@@ -830,17 +874,23 @@ class ItemDropEvent : Tracker {
             {
                 addItemInBackpack(m_metagame,cId,"carry_item","black_card.carry_item");
                 sendPrivateMessageKey(m_metagame, senderId, "blackcard_hint_failed");
-                playPrivateSound(m_metagame,"sfx_failed.wav",senderId);                
-                return;                
+                playPrivateSound(m_metagame,"sfx_failed.wav",senderId);
+                return;
             }
-            
+            if (blackcard_blacklist.find(weapon_key) > -1){
+                addItemInBackpack(m_metagame,cId,"carry_item","black_card.carry_item");
+                sendPrivateMessageKey(m_metagame, senderId, "blackcard_hint_failed");
+                playPrivateSound(m_metagame,"sfx_failed.wav",senderId);
+                return;
+            }
+
             addItemInBackpack(m_metagame,cId,"weapon",weapon_key);
             dictionary a;
             a["%doll_name"] = getResourceName(m_metagame, weapon_key, "weapon");
             sendPrivateMessageKey(m_metagame, senderId, "blackcard_hint_success",a);
             playPrivateSound(m_metagame,"sfx_big.wav",senderId);
-            player_data newdata = PlayerProfileLoad(readFile(m_metagame,sender,profile_hash)); 
-            if(newdata.FindWeapon(weapon_key)) 
+            player_data newdata = PlayerProfileLoad(readFile(m_metagame,sender,profile_hash));
+            if(newdata.FindWeapon(weapon_key))
             {
                 return;
             }
@@ -849,11 +899,11 @@ class ItemDropEvent : Tracker {
                 newdata.addWeapon(weapon_key);
                 notify(m_metagame, "Logger Mask Auto", dictionary(), "misc", senderId, false, "", 1.0);
                 string filename = ("save_" + profile_hash +".xml" );
-                writeXML(m_metagame,filename,PlayerProfileSave(newdata));  
-                return;                  
+                writeXML(m_metagame,filename,PlayerProfileSave(newdata));
+                return;
             }
         }
-        
+
 		if (!m_metagame.getAdminManager().isAdmin(sender, senderId)) {
 			return;
 		}
@@ -866,11 +916,11 @@ class ItemDropEvent : Tracker {
                 string itemKey= getKeyfromIndex(s);
                 addItemInBackpack(m_metagame,cId,"weapon",itemKey);
                 dictionary a;
-                a["%doll_name"] = getResourceName(m_metagame, itemKey, "weapon");                    
+                a["%doll_name"] = getResourceName(m_metagame, itemKey, "weapon");
                 sendPrivateMessageKey(m_metagame, senderId, "truemask_success",a);
-                playPrivateSound(m_metagame,"sfx_big.wav",senderId);                           
+                playPrivateSound(m_metagame,"sfx_big.wav",senderId);
             }
-        }                
+        }
     }
 	bool hasEnded() const {
 		// always on
@@ -906,8 +956,8 @@ class ItemDropEvent : Tracker {
                             case 114:{ // 黑卡
                                 upgradeTimeout(cId, pId, "black_card.carry_item");
                                 break;
-                            }             
-                            case 514:{ // 
+                            }
+                            case 514:{ //
                                 upgradeTimeout(cId, pId, "upgrade_masterkey.carry_item");
                                 break;
                             }
@@ -942,7 +992,7 @@ class ItemDropEvent : Tracker {
                             case 10:{ // m1903
                                 upgradeTimeout(cId, pId, "upgrade_m1903_2.carry_item");
                                 break;
-                            }                    
+                            }
                             case 11:{
                                 upgradeTimeout(cId, pId, "upgrade_fn49.carry_item");
                                 break;
@@ -950,7 +1000,7 @@ class ItemDropEvent : Tracker {
                             case 12:{
                                 upgradeTimeout(cId, pId, "upgrade_9a91.carry_item");
                                 break;
-                            }   
+                            }
                             case 13:{
                                 upgradeTimeout(cId, pId, "upgrade_m14.carry_item");
                                 break;
@@ -962,11 +1012,11 @@ class ItemDropEvent : Tracker {
                             case 15:{
                                 upgradeTimeout(cId, pId, "upgrade_m1897.carry_item");
                                 break;
-                            }     
+                            }
                             case 16:{
                                 upgradeTimeout(cId, pId, "upgrade_stg44.carry_item");
                                 break;
-                            }         
+                            }
                             case 17:{
                                 upgradeTimeout(cId, pId, "upgrade_wa2000.carry_item");
                                 break;
@@ -974,7 +1024,7 @@ class ItemDropEvent : Tracker {
                             case 18:{
                                 upgradeTimeout(cId, pId, "upgrade_pkp.carry_item");
                                 break;
-                            }   
+                            }
                             case 19:{
                                 upgradeTimeout(cId, pId, "upgrade_scarl.carry_item");
                                 break;
@@ -982,19 +1032,19 @@ class ItemDropEvent : Tracker {
                             case 20:{
                                 upgradeTimeout(cId, pId, "upgrade_scarh.carry_item");
                                 break;
-                            }                 
+                            }
                             case 21:{
                                 upgradeTimeout(cId, pId, "upgrade_cso.carry_item");
                                 break;
-                            }            
+                            }
                             case 22:{
                                 upgradeTimeout(cId, pId, "upgrade_type4.carry_item");
                                 break;
-                            }                        
+                            }
                             case 23:{
                                 upgradeTimeout(cId, pId, "upgrade_sr3mp.carry_item");
                                 break;
-                            }          
+                            }
                             case 24:{
                                 upgradeTimeout(cId, pId, "upgrade_usas12.carry_item");
                                 break;
@@ -1002,10 +1052,10 @@ class ItemDropEvent : Tracker {
                             case 25:{
                                 upgradeTimeout(cId, pId, "upgrade_tac50.carry_item");
                                 break;
-                            }                                                                                                                                                                        
+                            }
                             default:
                                 break;
-                        }                                      
+                        }
                     }
                     m_craftQueue.removeAt(a);
                 }
@@ -1097,7 +1147,7 @@ class ItemDropEvent : Tracker {
                 m_craftQueue[i].m_typekey += add;
                 m_craftQueue[i].m_time = 10;
             }
-        }        
+        }
     }
 
 }

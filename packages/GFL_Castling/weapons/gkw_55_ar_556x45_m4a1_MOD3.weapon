@@ -12,7 +12,7 @@
         projectile_speed="240"
         retrigger_time="0.086"
 		suppressed="1" 
-        sight_range_modifier="1.6"
+        sight_range_modifier="2.0"
         stance_accuracy_rate="2.5"
         sustained_fire_diminish_rate="2.0"
         sustained_fire_grow_step="0.3"/>
@@ -107,7 +107,7 @@
         <animation state_key="running" animation_key="walking, pistol dual" />
         <animation state_key="walking" animation_key="walking, pistol dual" />
         <animation state_key="walking_backwards" animation_key="walking backwards, pistol dual" />
-        <animation state_key="next_in_chain_in" animation_key="change weapon in m4s" />
+        <animation state_key="next_in_chain_out" animation_key="change weapon in, single hand, 0.5s" />
         <animation state_key="prone_still" animation_key="prone_still, pistol dual" />
         <animation state_key="stabbing" animation_key="pistol whip" />
         <animation state_key="stabbing" animation_key="pistol whip 2" />

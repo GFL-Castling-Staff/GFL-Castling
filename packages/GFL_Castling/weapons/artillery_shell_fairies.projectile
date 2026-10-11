@@ -615,7 +615,7 @@
 </projectile>
 <projectile class="grenade" name="bomb shell" slot="1" pulldown_in_air="30" key="artillery_shell_fairies_170.projectile">
     <tag name="rocket"/>
-    <result class="blast" radius="15" damage="100.0" push="1.5" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+    <result class="blast" radius="15" damage="120.0" push="1.5" decal="0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
     <trigger class="impact"/>
     <rotation class="motion" />
     <collision class="bounce"/>

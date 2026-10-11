@@ -37180,12 +37180,13 @@ separator_top_texture = wall_atlas1.png;
 separator_top_texture_scale = 1 1.0; 
 separator_top_texture_atlas_cell = 6 5 16 16 0.015625; 
 separator_color = 1.0 1.0 1.0 1.0; 
-separator_over_height = 1.0; 
-separator_depth = 0.4; 
-penetrability = 1.0; 
-see_through = 1; 
-climb_type = 1; 
-hack1 = 1;</desc>
+separator_over_height = 1.0;
+separator_depth = 0.4;
+penetrability = 1.0;
+see_through = 1;
+climb_type = 1;
+hack1 = 1;
+	static_object_type_key=security_fence.static_object;</desc>
     </rect>
     <rect
        inkscape:label="#mesh_template"

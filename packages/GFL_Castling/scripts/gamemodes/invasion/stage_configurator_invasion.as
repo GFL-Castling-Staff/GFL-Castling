@@ -225,7 +225,7 @@ class StageConfiguratorInvasion : StageConfigurator {
         addStage(setupStagePolarizedLight01()); //
 		// addStage(setupStage14());         // map6_2
 		// addStage(setupStage5());          // map1
-		addStage(setupStage108());		  // xiaoxieshen by diling
+		// addStage(setupStage108());		  // xiaoxieshen by diling
 		// addStage(setupStage11());         // map13
 		addStage(setupStage4());          // map7
 	}
@@ -3127,7 +3127,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		}
 		{
 			// neutral
-			Faction f(getFactionConfigs()[3], createCommanderAiCommand(3));
+			Faction f(getFactionConfigs()[3], createCommanderAiCommand(2));
 			f.m_capacityMultiplier = 0.0;
 			stage.m_factions.insertLast(f);
 		}

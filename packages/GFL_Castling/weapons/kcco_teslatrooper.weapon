@@ -5,6 +5,7 @@
     <tag name="metal_heavy" />
     <tag name="bazooka"/>
     <specification 
+    can_shoot_running="1"
 	can_shoot_standing="1" 
 	can_shoot_crouching="0"
 	can_shoot_prone="0"
@@ -32,7 +33,7 @@
     <sound key="fire" fileref=""/>
     <sound key="cycle" fileref="" />
     <sound key="reload_one" fileref=""/>
-    <sound key="effect" fileref="tesla_fire.wav" pitch_variety="0.05" volume="2.0" />
+    <sound key="effect" fileref="tesla_fire.wav" pitch_variety="0.05" volume="2.5" />
     <sound class="impact" fileref="rifle_drop.wav" />
     <weak_hand_hold offset="0.2" />
 	<drop_on_death_result class="spawn" instance_class="projectile" instance_key="spontaneous_explosion_spawn_kcco.projectile" min_amount="0" max_amount="1" offset="0 1.0 0" position_spread="0 0" direction_spread="0 0"/>

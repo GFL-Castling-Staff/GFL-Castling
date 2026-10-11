@@ -41,7 +41,10 @@ particle_system ct_heal_woosh
     particle_width 4
     particle_height 4
     renderer billboard 
-    billboard_type oriented_common
+    billboard_type perpendicular_common
+    billboard_origin center
+    billboard_rotation_type vertex
+    common_direction 0 1 0
     common_up_vector 0 0 1 
 
     emitter Point 
@@ -77,7 +80,10 @@ particle_system ct_para_heal_woosh_6rad
     particle_width 6
     particle_height 6
     renderer billboard 
-    billboard_type oriented_common
+    billboard_type perpendicular_common
+    billboard_origin center
+    billboard_rotation_type vertex
+    common_direction 0 1 0
     common_up_vector 0 0 1 
 
     emitter Point 
@@ -113,8 +119,11 @@ particle_system ct_para_nytro_support_woosh_12rad
     particle_width 12
     particle_height 6
     renderer billboard 
-    billboard_type oriented_common
-    common_up_vector 0 0 1 
+    billboard_type perpendicular_common
+    billboard_origin center
+    billboard_rotation_type vertex
+    common_direction 0 1 0
+    common_up_vector 0 0 1
 
     emitter Point 
     {
@@ -150,7 +159,10 @@ particle_system ct_kcco_sniper_purple_woosh
     particle_width 9
     particle_height 9
     renderer billboard 
-    billboard_type oriented_common
+    billboard_type perpendicular_common
+    billboard_origin center
+    billboard_rotation_type vertex
+    common_direction 0 1 0
     common_up_vector 0 0 1 
 
     emitter Point 
@@ -187,7 +199,10 @@ particle_system ct_kcco_sniper_yellow_woosh
     particle_width 12
     particle_height 12
     renderer billboard 
-    billboard_type oriented_common
+    billboard_type perpendicular_common
+    billboard_origin center
+    billboard_rotation_type vertex
+    common_direction 0 1 0
     common_up_vector 0 0 1 
 
     emitter Point 
@@ -224,7 +239,10 @@ particle_system ct_kcco_sniper_red_woosh
     particle_width 20
     particle_height 20
     renderer billboard 
-    billboard_type oriented_common
+    billboard_type perpendicular_common
+    billboard_origin center
+    billboard_rotation_type vertex
+    common_direction 0 1 0
     common_up_vector 0 0 1 
 
     emitter Point 
@@ -253,6 +271,45 @@ particle_system ct_kcco_sniper_red_woosh
     }
 }
 
+particle_system ct_heal_woosh_6rad
+{
+    quota 50
+    material woosh
+    particle_width 10
+    particle_height 10
+    renderer billboard 
+    billboard_type perpendicular_common
+    billboard_origin center
+    billboard_rotation_type vertex
+    common_direction 0 1 0
+    common_up_vector 0 0 1 
+
+    emitter Point 
+    {
+        colour	0.5 1.0 0.5 0.8
+        position 0 0 0
+        direction	0 1 0
+        emission_rate	21
+        time_to_live	0.3
+        duration	0.05
+        duration_min	0.05
+        duration_max	0.05
+    }
+
+    affector Scaler 
+    {
+        rate 36.0
+    }
+
+    affector ColourFader
+    {
+        red	-1.0
+        green	-1.0
+        blue	-1.0
+        alpha	-1.0
+    }
+}
+
 particle_system ct_heal_woosh_10rad
 {
     quota 50
@@ -260,8 +317,11 @@ particle_system ct_heal_woosh_10rad
     particle_width 10
     particle_height 10
     renderer billboard 
-    billboard_type oriented_common
-    common_up_vector 0 0 1 
+    billboard_type perpendicular_common
+    billboard_origin center
+    billboard_rotation_type vertex
+    common_direction 0 1 0
+    common_up_vector 0 0 1
 
     emitter Point 
     {
@@ -296,8 +356,11 @@ particle_system ct_heal_woosh_25rad
     particle_width 10
     particle_height 10
     renderer billboard 
-    billboard_type oriented_common
-    common_up_vector 0 0 1 
+    billboard_type perpendicular_common
+    billboard_origin center
+    billboard_rotation_type vertex
+    common_direction 0 1 0
+    common_up_vector 0 0 1
 
     emitter Point 
     {

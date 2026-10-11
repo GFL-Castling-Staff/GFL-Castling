@@ -53,10 +53,10 @@
         <turret index="0" />
         <state class="idle" animation_key="crouch still, no weapon, 62" position="0 0.5 -0.3" />
     </character_slot>
-	<character_slot type="passenger" position="-0.7 1.8 -3.0" enter_position="-0.7 1.8 -3.0" rotation="-1.57" exit_rotation="-1.57" hiding="0" allow_weapon="1" animation_key="still" />
-	<character_slot type="passenger" position="0.7 1.8 -3.0" enter_position="0.7 1.8 -3.0" rotation="1.57" exit_rotation="1.57" hiding="0" allow_weapon="1" animation_key="still" />  
-	<character_slot type="passenger" position="-0.7 1.8 0.6" enter_position="-0.7 1.8 0.9" rotation="-1.57" exit_rotation="-1.57" hiding="0" allow_weapon="1" animation_key="still" />
-	<character_slot type="passenger" position="0.7 1.8 0.6" enter_position="0.7 1.8 0.9" rotation="1.57" exit_rotation="1.57" hiding="0" allow_weapon="1" animation_key="still" />       
+	<character_slot type="passenger" position="-0.7 1.8 -3.0" enter_position="-0.7 1.8 -3.0" rotation="-1.57" exit_rotation="-1.57" hiding="0" allow_weapon="1" animation_key="stand passenger, free weapon" />
+	<character_slot type="passenger" position="0.7 1.8 -3.0" enter_position="0.7 1.8 -3.0" rotation="1.57" exit_rotation="1.57" hiding="0" allow_weapon="1" animation_key="stand passenger, free weapon" />  
+	<character_slot type="passenger" position="-0.7 1.8 0.6" enter_position="-0.7 1.8 0.9" rotation="-1.57" exit_rotation="-1.57" hiding="0" allow_weapon="1" animation_key="stand passenger, free weapon" />
+	<character_slot type="passenger" position="0.7 1.8 0.6" enter_position="0.7 1.8 0.9" rotation="1.57" exit_rotation="1.57" hiding="0" allow_weapon="1" animation_key="stand passenger, free weapon" />       
     <rev_sound filename="truck_rev0.wav" low_pitch="0.95" high_pitch="1.05" low_rev="0.0" high_rev="0.2" volume="1.0" />
     <rev_sound filename="truck_rev1.wav" low_pitch="0.8" high_pitch="1.1" low_rev="0.05" high_rev="0.7" volume="0.75" />
     <rev_sound filename="truck_rev3.wav" low_pitch="0.8" high_pitch="1.1" low_rev="0.4" high_rev="1.0" volume="1.0" />

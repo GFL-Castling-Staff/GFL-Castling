@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <translation>
 	<text key="Hint - call - rebuytochange" text="[Tactic Point system]Purchase the same Fairy system again to equip this Tactic Fairy in that slot." />
+	<text key="Hint - call - update_hint" text="[Tactic Point system]Press (Tactical Fairy) → (Branch Button) → (Confirm Button) to equip an advanced version." />
 	<text key="Hint - call - changesuccess" text="[Tactic Point system]Already equipped with &#37;call_key in slot &#37;slot" />
 	<text key="Hint - call - locked" text="[Tactic Point system]Failed to equip Tactic Fairy, you do not have call sign access for this type of support" />
 	<text key="Hint - call - 404notfound" text="[Tactic Point system]Failed to equip Tactical Fairy, please select a type first" />
@@ -9,32 +10,152 @@
 	<text key="Hint - call - already dev" text="[Tactic Point system]You have already developed this type" />
 	<text key="Hint - call - devsuccess" text="[Tactic Point system]Developed successfully" />
 	<text key="Hint - call - cantafford" text="[Tactic Point system]You cant afford the devpoint" />
-	<text key="Hint - call - dev - cost" text="[Tactic Point system]研发该分支需要&#37;cost点研发点" />
-	
+	<text key="Hint - call - dev - cost" text="[Tactic Point system]Development of this branch requires &#37;cost dev points" />
+
+	<!-- Mortar Squad Support - 82mm Mortar Strike -->
+
 	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_82mm_mortar_free" text="Mortar Squad Support - 82mm Mortar Strike" />
 	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_82mm_mortar_free" text="<cooldown 240s cost 0TP>
--Marks target point, fires mortar after 2 seconds, 4 shells per round for 3 rounds after 1 round of calibration test fire
--Each 82mm round deals (7.5x4) blast damage at range 7.5"/>
+-Marks target point, fires mortar after 5 seconds, 1 calibration test shot, then 4 shells per round for 3 rounds
+-Each 82mm round deals (7.5x6) blast damage at range 7.5"/>
+
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_82mm_mortar_free_update_alpha" text="Mortar Squad Support - 82mm Mortar Strike" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_82mm_mortar_free_update_alpha" text="<cooldown 120s cost 0TP>
+-Marks target point, fires mortar after 5 seconds, 1 calibration test shot, then 4 shells per round for 3 rounds
+-Each 82mm round deals (7.5x6) blast damage at range 7.5
+#####Branch α[Elite Squad]#####
+(Can relocate fire position faster after attacking, cooldown reduced to 120s)"/>
+
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_82mm_mortar_free_update_beta" text="Mortar Squad Support - 82mm Mortar Strike" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_82mm_mortar_free_update_beta" text="<cooldown 240s cost 0TP>
+-Marks target point, fires mortar after 5 seconds, 1 calibration test shot, then 4 shells per round for 3 rounds
+-Each 82mm round deals 40 blast damage at range 10
+#####Branch β[Enhanced Warhead]#####
+(Uses more destructive shells, damage increased to 40, range increased to 10)"/>
+
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_82mm_mortar_free_update_gamma" text="Mortar Squad Support - 82mm Mortar Strike" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_82mm_mortar_free_update_gamma" text="<cooldown 240s cost 0TP>
+-Marks target point, fires mortar after 5 seconds, 1 calibration test shot, then 8 shells per round for 3 rounds
+-Each 82mm round deals (7.5x6) blast damage at range 7.5
+#####Branch γ[Expanded Squad]#####
+(Expands the heavy equipment unit, firing 4 extra shells per round)"/>
+
+
+	<!-- Bombardment Fairy - 82mm Mortar Strike -->
 
 	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_82mm_mortar" text="Bombardment Fairy - 82mm Mortar Strike" />
 	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_82mm_mortar" text="<cooldown 60s cost 15TP>
--Marks target point, fires mortar after 2 seconds, 8 shells per round for 3 rounds after 1 calibration test shot
--Each 82mm round deals (7.5x4) blast damage at range 7.5"/>
+-Marks target point, fires mortar after 5 seconds, 1 calibration test shot, then 8 shells per round for 3 rounds
+-Each 82mm round deals (7.5x6) blast damage at range 7.5"/>
+
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_82mm_mortar_update_alpha" text="Bombardment Fairy - 82mm Mortar Strike" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_82mm_mortar_update_alpha" text="<cooldown 45s cost 10TP>
+-Marks target point, fires mortar after 5 seconds, 1 calibration test shot, then 8 shells per round for 3 rounds
+-Each 82mm round deals (7.5x6) blast damage at range 7.5
+#####Branch α[Vehicle-Mounted Mortar]#####
+(Can relocate fire position faster after attacking, tactical point cost reduced to 10, cooldown changed to 3 charges with 45s recharge)"/>
+
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_82mm_mortar_update_beta" text="Bombardment Fairy - 82mm Mortar Strike" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_82mm_mortar_update_beta" text="<cooldown 60s cost 15TP>
+-Marks target point, fires mortar after 5 seconds, 1 calibration test shot, then 8 shells per round for 4 rounds
+-Each 82mm round deals 40 blast damage at range 10
+#####Branch β[Superior Firepower]#####
+(Uses more destructive shells, damage increased to 40, range increased to 10, one extra salvo)"/>
+
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_82mm_mortar_update_gamma" text="Bombardment Fairy - 82mm Mortar Strike" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_82mm_mortar_update_gamma" text="<cooldown 60s cost 15TP>
+-Marks target point, fires mortar after 5 seconds, 1 calibration test shot, then 16 shells per round for 3 rounds
+-Each 82mm round deals (7.5x6) blast damage at range 7.5
+#####Branch γ[Saturation Strike]#####
+(Increases artillery unit count, firing 8 extra shells per round with increased coverage)"/>
+
+	<!-- Bombardment Fairy - 105mm Artillery Barrage -->
 
 	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_105mm_grenade_barrage" text="Bombardment Fairy - 105mm Artillery Barrage" />
 	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_105mm_grenade_barrage" text="<cooldown 90s cost 30TP>
--Marks target point and fires cluster howitzer shells after 1seconds, splitting 8-10 warheads per round for 6 rounds.
--Each cluster warhead deals 7.1 blast damage at range 7.
+-Marks target point, fires cluster howitzer shells after 5 seconds, splitting 8-10 warheads per round for 6 rounds
+-Each cluster warhead deals 20 blast damage at range 7
 -Finally fires 1 round of 105mm high explosive warheads to finish, dealing 40 blast damage at range 9"/>
 
-	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_155mm_air_burst" text="Bombardment Fairy - 155mm Airburst Grenade Strike" />
-	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_155mm_air_burst" text="<cooldown  105s cost 45TP>
--Marks target point, fires 1 airburst grenade after 3 seconds, exploding in the air at a distance of 10 from the ground, dealing (20x10) blast damage to range 30"/>
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_105mm_grenade_barrage_update_alpha" text="Bombardment Fairy - 105mm Artillery Barrage" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_105mm_grenade_barrage_update_alpha" text="<cooldown 45s cost 25TP>
+-Marks target point, fires cluster howitzer shells after 5 seconds, splitting 8-10 warheads per round for 6 rounds
+-Each cluster warhead deals 20 blast damage at range 7
+-Finally fires 1 round of 105mm high explosive warheads to finish, dealing 40 blast damage at range 9
+#####Branch α[Self-Propelled Artillery]#####
+(Increased funding, upgraded from towed to self-propelled artillery, can relocate faster after attacking, cooldown reduced to 45s, tactical point cost reduced to 25)"/>
 
-	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_170mm_cannon" text="Bombardment Fairy - 170mm Cannon" />
-	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_170mm_cannon" text="<cooldown  90seconds cost 30TP>
--Marks the target point and fires after 5 seconds, canon rounds do 100 blast damage at range 15
--The point of impact is not precise, there is an error of distance 10 from the actual position"/>
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_105mm_grenade_barrage_update_beta" text="Bombardment Fairy - 105mm Artillery Barrage" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_105mm_grenade_barrage_update_beta" text="<cooldown 90s cost 30TP>
+-Marks target point, fires cluster howitzer shells, splitting 8-10 warheads per round for 6 rounds
+-Each cluster warhead deals 20 blast damage at range 7
+-Finally fires 1 round of 105mm high explosive warheads to finish, dealing 40 blast damage at range 9
+#####Branch β[Artillery Firing Tables]#####
+(Pre-observed and charted, artillery can fire immediately, cooldown changed to 3 charges)"/>
+
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_105mm_grenade_barrage_update_gamma" text="Bombardment Fairy - 105mm Artillery Barrage" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_105mm_grenade_barrage_update_gamma" text="<cooldown 90s cost 30TP>
+-Marks target point, fires cluster howitzer shells after 5 seconds, splitting 8-10 warheads per round for 6 rounds
+-Each cluster warhead deals 20 blast damage at range 7
+-Finally fires 1 round of 105mm high explosive warheads to finish, dealing (100x2) blast damage at range 12
+#####Branch γ[Carnival Finale]#####
+(Finishes with Sangvis Ferri 105mm high explosive shells, damage increased to (100x2)b, range increased to 12)"/>
+
+	<!-- Bombardment Fairy - 155mm Airburst -->
+
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_155mm_air_burst" text="Bombardment Fairy - 155mm Airburst Grenade Strike" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_155mm_air_burst" text="<cooldown 105s cost 45TP>
+-Marks target point, fires 1 airburst grenade after 7 seconds, exploding in the air at distance 10 from the ground, dealing (20x10) blast damage to range 20"/>
+
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_155mm_air_burst_update_alpha" text="Bombardment Fairy - 155mm Airburst Grenade Strike" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_155mm_air_burst_update_alpha" text="<cooldown 105s cost 30TP>
+-Marks target point, fires 1 airburst grenade after 7 seconds, exploding in the air at distance 10 from the ground, dealing (20x10) blast damage to range 20
+#####Branch α[Equipment Upgrade]#####
+(Optimized efficiency, tactical point cost reduced to 30)"/>
+
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_155mm_air_burst_update_beta" text="Bombardment Fairy - 155mm Airburst Grenade Strike" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_155mm_air_burst_update_beta" text="<cooldown 105s cost 45TP>
+-Marks target point, fires 1 airburst grenade after 1 second, exploding in the air at distance 10 from the ground, dealing (20x10) blast damage to range 20
+#####Branch β[Smart Ballistic Rangefinder]#####
+(Uses the latest chip-equipped rangefinder device, can now fire faster)"/>
+
+	<text key="Hint - call - title - call_ui_t1_bombardment_fairy_155mm_air_burst_update_gamma" text="Bombardment Fairy - 155mm Airburst Grenade Strike" />
+	<text key="Hint - call - intro - call_ui_t1_bombardment_fairy_155mm_air_burst_update_gamma" text="<cooldown 45s cost 45TP>
+-Marks target point, fires 1 airburst grenade after 7 seconds, exploding in the air at distance 10 from the ground, dealing (20x10) blast damage to range 20
+#####Branch γ[Efficient Loading]#####
+(Gives cake to the loading doll, now operates much faster, cooldown reduced to 45s)"/>
+
+
+	<!-- Bombardment Fairy - 170mm Cannon -->
+
+	<text key="Hint - call - title - call_ui_t2_bombardment_fairy_170mm_cannon" text="Bombardment Fairy - 170mm Cannon" />
+	<text key="Hint - call - intro - call_ui_t2_bombardment_fairy_170mm_cannon" text="<cooldown 90s cost 30TP>
+-Marks target point, fires after 5 seconds, cannon rounds deal 120 blast damage at range 15
+-Impact point is imprecise with distance 10 deviation"/>
+
+	<text key="Hint - call - title - call_ui_t2_bombardment_fairy_170mm_cannon_update_alpha" text="Bombardment Fairy - 170mm Cannon" />
+	<text key="Hint - call - intro - call_ui_t2_bombardment_fairy_170mm_cannon_update_alpha" text="<cooldown 90s cost 30TP>
+-Fires immediately after marking, cannon rounds deal 120 blast damage at range 15
+-Zero deviation
+#####Branch α[Veteran Gunner]#####
+(Fires immediately after marking, deviation reduced to 0)"/>
+
+	<text key="Hint - call - title - call_ui_t2_bombardment_fairy_170mm_cannon_update_beta" text="Bombardment Fairy - 170mm Cannon" />
+	<text key="Hint - call - intro - call_ui_t2_bombardment_fairy_170mm_cannon_update_beta" text="<cooldown 30s cost 20TP>
+-Marks target point, fires after 5 seconds, cannon rounds deal 120 blast damage at range 15
+-Impact point is imprecise with distance 10 deviation
+#####Branch β[Fixed Emplacement]#####
+(Cooldown reduced to 30s, tactical point cost reduced to 20)"/>
+
+	<text key="Hint - call - title - call_ui_t2_bombardment_fairy_170mm_cannon_update_gamma" text="Bombardment Fairy - 170mm Cannon" />
+	<text key="Hint - call - intro - call_ui_t2_bombardment_fairy_170mm_cannon_update_gamma" text="<cooldown 90s cost 30TP>
+-Marks target point, three cannons fire simultaneously after 5 seconds, each round deals 120 blast damage at range 15
+-Impact point is imprecise with distance 12 deviation
+#####Branch γ[Saturation Fire]#####
+(Three cannons fire at once now, but the dispersion of the shots has slightly increased)"/>
+
+
+	<!-- Airstrike Fairy - High-Altitude Bomber -->
 
 	<text key="Hint - call - title - call_ui_t2_airstrike_fairy_bomber" text="Airstrike Fairy - High-Altitude Bombardment" />
 	<text key="Hint - call - intro - call_ui_t2_airstrike_fairy_bomber" text="<cooldown 90s cost 45TP>
@@ -42,89 +163,400 @@
 -Drops a total of 9 aerial bombs, each dealing 75 blast damage to range 10
 -(This support is affected by airspace bans)"/>
 
+	<text key="Hint - call - title - call_ui_t2_airstrike_fairy_bomber_update_alpha" text="Airstrike Fairy - High-Altitude Bombardment" />
+	<text key="Hint - call - intro - call_ui_t2_airstrike_fairy_bomber_update_alpha" text="<cooldown 90s cost 45TP>
+-Marks the target point, then summons a bomber from a path perpendicular to (the line between you and the target point) to drop bombs
+-Drops a total of 9 aerial bombs, each dealing 75 blast damage to range 10
+-After bomb explosions, generates a persistent corrosive burning zone lasting 20 seconds, dealing 20 burn damage every 4 seconds
+-Burning settlement stops on character death
+-(This support is affected by airspace bans)
+#####Branch α[Inferno Dragonflame]#####
+(Uses napalm bombs, generating a persistent corrosive burning zone lasting 20 seconds after bomb explosions, dealing 20 burn damage every 4 seconds to enemies within range 12)"/>
+
+	<text key="Hint - call - title - call_ui_t2_airstrike_fairy_bomber_update_beta" text="Airstrike Fairy - High-Altitude Bombardment" />
+	<text key="Hint - call - intro - call_ui_t2_airstrike_fairy_bomber_update_beta" text="<cooldown 60s cost 40TP>
+-Marks the target point, then summons a bomber from a path perpendicular to (the line between you and the target point) to drop bombs
+-Drops a total of 9 aerial bombs, each dealing 75 blast damage to range 10
+-(This support is affected by airspace bans)
+#####Branch β[Wingman Formation]#####
+(Forms a bomber formation, gains 2 charges, recharge time reduced to 60s, tactical point cost reduced to 40)"/>
+
+	<text key="Hint - call - title - call_ui_t2_airstrike_fairy_bomber_update_gamma" text="Airstrike Fairy - High-Altitude Bombardment" />
+	<text key="Hint - call - intro - call_ui_t2_airstrike_fairy_bomber_update_gamma" text="<cooldown 90s cost 45TP>
+-Marks the target point, then summons a bomber from a path perpendicular to (the line between you and the target point) to drop bombs
+-Drops a total of 5 aerial bombs, each dealing 200 blast damage to range 12
+-(This support is affected by airspace bans)
+#####Branch γ[Glide Kit]#####
+(Uses larger-yield glide kit bombs, strike speed is slower with only 5 bombs, explosion damage increased to 200b, range increased to 12)"/>
+
+
+	<!-- Airstrike Fairy - Precise Airstrike -->
+
 	<text key="Hint - call - title - call_ui_t1_airstrike_fairy_precise" text="Airstrike Fairy - Precise Airstrike" />
 	<text key="Hint - call - intro - call_ui_t1_airstrike_fairy_precise" text="<cooldown 30s cost 20TP>
--Marks the target point, after 3seconds a precision bomb is dropped on the target point, dealing 100b damage to range 7.5
+-Marks the target point, after 3 seconds a precision bomb is dropped on the target point, dealing 120b damage to range 7.5
 -(This support is affected by airspace bans)"/>
 
 	<text key="Hint - call - title - call_ui_t2_airstrike_fairy_precise" text="Airstrike Fairy - Precise Airstrike" />
 	<text key="Hint - call - intro - call_ui_t2_airstrike_fairy_precise" text="<cooldown 30s cost 20TP>
--Marks the target point, after 3 seconds a precision bomb is dropped on the target point, dealing 100b damage to range 7.5
+-Marks the target point, after 3 seconds a precision bomb is dropped on the target point, dealing 120b damage to range 7.5
 -(This support is affected by airspace bans)"/>
 
 	<text key="Hint - call - title - call_ui_t3_airstrike_fairy_precise" text="Airstrike Fairy - Precise Airstrike" />
 	<text key="Hint - call - intro - call_ui_t3_airstrike_fairy_precise" text="<cooldown 30s cost 20TP>
--Marks the target point, after 3 seconds a precision bomb is dropped on the target point, dealing 100b damage to range 7.5
+-Marks the target point, after 3 seconds a precision bomb is dropped on the target point, dealing 120b damage to range 7.5
 -(This support is affected by airspace bans)"/>
+
+	<text key="Hint - call - title - call_ui_t1_airstrike_fairy_precise_update_alpha" text="Airstrike Fairy - Precise Airstrike" />
+	<text key="Hint - call - intro - call_ui_t1_airstrike_fairy_precise_update_alpha" text="<cooldown 30s cost 20TP>
+-Marks the target point, after 3 seconds a precision bomb is dropped on the target point, dealing 200b damage to range 12
+-(This support is affected by airspace bans)
+#####Branch α[High-Energy Charge]#####
+(Uses larger-yield aerial bombs, explosion range increased to 12, damage increased to 200b)"/>
+
+	<text key="Hint - call - title - call_ui_t2_airstrike_fairy_precise_update_alpha" text="Airstrike Fairy - Precise Airstrike" />
+	<text key="Hint - call - intro - call_ui_t2_airstrike_fairy_precise_update_alpha" text="<cooldown 30s cost 20TP>
+-Marks the target point, after 3 seconds a precision bomb is dropped on the target point, dealing 200b damage to range 12
+-(This support is affected by airspace bans)
+#####Branch α[High-Energy Charge]#####
+(Uses larger-yield aerial bombs, explosion range increased to 12, damage increased to 200b)"/>
+
+	<text key="Hint - call - title - call_ui_t3_airstrike_fairy_precise_update_alpha" text="Airstrike Fairy - Precise Airstrike" />
+	<text key="Hint - call - intro - call_ui_t3_airstrike_fairy_precise_update_alpha" text="<cooldown 30s cost 20TP>
+-Marks the target point, after 3 seconds a precision bomb is dropped on the target point, dealing 200b damage to range 12
+-(This support is affected by airspace bans)
+#####Branch α[High-Energy Charge]#####
+(Uses larger-yield aerial bombs, explosion range increased to 12, damage increased to 200b)"/>
+
+	<text key="Hint - call - title - call_ui_t1_airstrike_fairy_precise_update_beta" text="Airstrike Fairy - Precise Airstrike" />
+	<text key="Hint - call - intro - call_ui_t1_airstrike_fairy_precise_update_beta" text="<cooldown 15s cost 20TP>
+-Marks the target point, after 0.5 seconds a precision bomb is dropped on the target point, dealing 120b damage to range 7.5
+-(This support is affected by airspace bans)
+#####Branch β[Efficient Response]#####
+(Replaces human pilots with T-Dolls, Zener Protocol communication is more efficient, and T-Dolls can withstand higher-stress aerial maneuvers. Bomb drop delay reduced to 0.5s, cooldown reduced to 15s)"/>
+
+	<text key="Hint - call - title - call_ui_t2_airstrike_fairy_precise_update_beta" text="Airstrike Fairy - Precise Airstrike" />
+	<text key="Hint - call - intro - call_ui_t2_airstrike_fairy_precise_update_beta" text="<cooldown 15s cost 20TP>
+-Marks the target point, after 0.5 seconds a precision bomb is dropped on the target point, dealing 120b damage to range 7.5
+-(This support is affected by airspace bans)
+#####Branch β[Efficient Response]#####
+(Replaces human pilots with T-Dolls, Zener Protocol communication is more efficient, and T-Dolls can withstand higher-stress aerial maneuvers. Bomb drop delay reduced to 0.5s, cooldown reduced to 15s)"/>
+
+	<text key="Hint - call - title - call_ui_t3_airstrike_fairy_precise_update_beta" text="Airstrike Fairy - Precise Airstrike" />
+	<text key="Hint - call - intro - call_ui_t3_airstrike_fairy_precise_update_beta" text="<cooldown 15s cost 20TP>
+-Marks the target point, after 0.5 seconds a precision bomb is dropped on the target point, dealing 120b damage to range 7.5
+-(This support is affected by airspace bans)
+#####Branch β[Efficient Response]#####
+(Replaces human pilots with T-Dolls, Zener Protocol communication is more efficient, and T-Dolls can withstand higher-stress aerial maneuvers. Bomb drop delay reduced to 0.5s, cooldown reduced to 15s)"/>
+
+	<text key="Hint - call - title - call_ui_t1_airstrike_fairy_precise_update_gamma" text="Airstrike Fairy - Precise Airstrike" />
+	<text key="Hint - call - intro - call_ui_t1_airstrike_fairy_precise_update_gamma" text="<cooldown 30s cost 20TP>
+-Marks the target point, after 3 seconds a precision bomb is dropped on the target point, dealing 120b damage to range 7.5
+#####Branch γ[Stealth Raid]#####
+(An expensive high-speed stealth fighter enters the battlefield at low altitude, can attack while ignoring enemy air defense installations)"/>
+
+	<text key="Hint - call - title - call_ui_t2_airstrike_fairy_precise_update_gamma" text="Airstrike Fairy - Precise Airstrike" />
+	<text key="Hint - call - intro - call_ui_t2_airstrike_fairy_precise_update_gamma" text="<cooldown 30s cost 20TP>
+-Marks the target point, after 3 seconds a precision bomb is dropped on the target point, dealing 120b damage to range 7.5
+#####Branch γ[Stealth Raid]#####
+(An expensive high-speed stealth fighter enters the battlefield at low altitude, can attack while ignoring enemy air defense installations)"/>
+
+	<text key="Hint - call - title - call_ui_t3_airstrike_fairy_precise_update_gamma" text="Airstrike Fairy - Precise Airstrike" />
+	<text key="Hint - call - intro - call_ui_t3_airstrike_fairy_precise_update_gamma" text="<cooldown 30s cost 20TP>
+-Marks the target point, after 3 seconds a precision bomb is dropped on the target point, dealing 120b damage to range 7.5
+#####Branch γ[Stealth Raid]#####
+(An expensive high-speed stealth fighter enters the battlefield at low altitude, can attack while ignoring enemy air defense installations)"/>
+
+	<!-- Airstrike Fairy - Close Air Support -->
 
 	<text key="Hint - call - title - call_ui_t1_airstrike_fairy_cas" text="Airstrike Fairy - Close Air Support" />
-	<text key="Hint - call - intro - call_ui_t1_airstrike_fairy_cas" text="<cooldown 90s cost 20TP>
+	<text key="Hint - call - intro - call_ui_t1_airstrike_fairy_cas" text="<cooldown 90s cost 15TP>
 -Marks the target point, then summons an attack plane from a path perpendicular to (the line connecting you to the target point) for close air support
 -Each round deals (2x3.1) blast damage at range 4
--0.5seconds after the end of the sweep, an aerial bomb is dropped on the target location, dealing 50 blast damage at range 5
+-0.5 seconds after the end of the sweep, an aerial bomb is dropped on the target location, dealing 50 blast damage at range 7.5
 -(This support is affected by airspace bans)"/>
+
+	<text key="Hint - call - title - call_ui_t1_airstrike_fairy_cas_update_alpha" text="Airstrike Fairy - Close Air Support" />
+	<text key="Hint - call - intro - call_ui_t1_airstrike_fairy_cas_update_alpha" text="<cooldown 30s cost 15TP>
+-Marks the target point, then summons an attack plane from a path perpendicular to (the line connecting you to the target point) for close air support
+-Each round deals (2x3.1) blast damage at range 4
+-0.5 seconds after the end of the sweep, an aerial bomb is dropped on the target location, dealing 50 blast damage at range 7.5
+-(This support is affected by airspace bans)
+#####Branch α[Elite Crew]#####
+(Can enter cruise mode faster after attacking, cooldown reduced to 30s)"/>
+
+	<text key="Hint - call - title - call_ui_t1_airstrike_fairy_cas_update_beta" text="Airstrike Fairy - Close Air Support" />
+	<text key="Hint - call - intro - call_ui_t1_airstrike_fairy_cas_update_beta" text="<cooldown 90s cost 15TP>
+-Marks the target point, then summons an attack plane from a path perpendicular to (the line connecting you to the target point) for close air support
+-Each round deals (2x4.1) blast damage at range 4
+-0.5 seconds after the end of the sweep, an aerial bomb is dropped on the target location, dealing 50 blast damage at range 7.5
+-(This support is affected by airspace bans)
+#####Branch β[Armed Pod]#####
+(Fires 2 extra autocannon rounds per shot, damage per round increased to (2x4.1) blast)"/>
+
+	<text key="Hint - call - title - call_ui_t1_airstrike_fairy_cas_update_gamma" text="Airstrike Fairy - Close Air Support" />
+	<text key="Hint - call - intro - call_ui_t1_airstrike_fairy_cas_update_gamma" text="<cooldown 90s cost 15TP>
+-Marks the target point, then summons an attack plane from a path perpendicular to (the line connecting you to the target point) for close air support
+-Each round deals (2x3.1) blast damage at range 4
+-0.5 seconds after the end of the sweep, an aerial bomb is dropped on the target location, dealing 110 blast damage at range 10
+-(This support is affected by airspace bans)
+#####Branch γ[Bomb Upgrade]#####
+(Uses larger-yield aerial bombs, dealing 110 blast damage at range 10)"/>
+
+	<!-- Airstrike Fairy - Close Air Support - P2P -->
 
 	<text key="Hint - call - title - call_ui_t1_airstrike_fairy_cas_p2p" text="Airstrike Fairy - Close Air Support - P2P" />
-	<text key="Hint - call - intro - call_ui_t1_airstrike_fairy_cas_p2p" text="<cooldown 90s cost 20TP>
+	<text key="Hint - call - intro - call_ui_t1_airstrike_fairy_cas_p2p" text="<cooldown 90s cost 15TP>
 -Marks the target point, and when it does so again within 5 seconds, summons an attack plane from the direction of the line between the two points for close air support.
 -Each round deals (2x3.1) blast damage at range 4.
--0.5seconds after strafing ends, an aerial bomb is dropped on the target, dealing 50 blast damage at range 5.
+-0.5 seconds after strafing ends, an aerial bomb is dropped on the target, dealing 50 blast damage at range 7.5.
 -(This support is affected by airspace bans)"/>
 
-	<text key="Hint - call - title - call_ui_t2_warrior_fairy_recon_heli" text="Warrior Fairy - Recon Helicopter" />
-	<text key="Hint - call - intro - call_ui_t2_warrior_fairy_recon_heli" text="<cooldown 120s cost 50TP>
--Marked the target point and then called a recon helicopter from base to cruise the area for 20seconds
--Fires a YAK-B 12.7mm aerial machine gun every 3seconds at a random target, each round does 3.1 blast damage at range 3.0
--Scan the area at 5seconds and if there are enemy carriers in the area, fire 2 x 9M114 Cocoon Anti-tank Missiles dealing 50 blast damage at range 4
+	<text key="Hint - call - title - call_ui_t1_airstrike_fairy_cas_p2p_update_alpha" text="Airstrike Fairy - Close Air Support - P2P" />
+	<text key="Hint - call - intro - call_ui_t1_airstrike_fairy_cas_p2p_update_alpha" text="<cooldown 30s cost 15TP>
+-Marks the target point, and when it does so again within 5 seconds, summons an attack plane from the direction of the line between the two points for close air support.
+-Each round deals (2x3.1) blast damage at range 4.
+-0.5 seconds after strafing ends, an aerial bomb is dropped on the target, dealing 50 blast damage at range 7.5.
+-(This support is affected by airspace bans)
+#####Branch α[Elite Crew]#####
+(Can enter cruise mode faster after attacking, cooldown reduced to 30s)"/>
+
+	<text key="Hint - call - title - call_ui_t1_airstrike_fairy_cas_p2p_update_beta" text="Airstrike Fairy - Close Air Support - P2P" />
+	<text key="Hint - call - intro - call_ui_t1_airstrike_fairy_cas_p2p_update_beta" text="<cooldown 90s cost 15TP>
+-Marks the target point, and when it does so again within 5 seconds, summons an attack plane from the direction of the line between the two points for close air support.
+-Each round deals (2x4.1) blast damage at range 4.
+-0.5 seconds after strafing ends, an aerial bomb is dropped on the target, dealing 50 blast damage at range 7.5.
+-(This support is affected by airspace bans)
+#####Branch β[Armed Pod]#####
+(Fires 2 extra autocannon rounds per shot, damage per round increased to (2x4.1) blast)"/>
+
+	<text key="Hint - call - title - call_ui_t1_airstrike_fairy_cas_p2p_update_gamma" text="Airstrike Fairy - Close Air Support - P2P" />
+	<text key="Hint - call - intro - call_ui_t1_airstrike_fairy_cas_p2p_update_gamma" text="<cooldown 90s cost 15TP>
+-Marks the target point, and when it does so again within 5 seconds, summons an attack plane from the direction of the line between the two points for close air support.
+-Each round deals (2x3.1) blast damage at range 4.
+-0.5 seconds after strafing ends, an aerial bomb is dropped on the target, dealing 110 blast damage at range 10.
+-(This support is affected by airspace bans)
+#####Branch γ[Bomb Upgrade]#####
+(Uses larger-yield aerial bombs, dealing 110 blast damage at range 10)"/>
+
+
+    <!-- Warrior Fairy - Recon Helicopter -->
+
+    <text key="Hint - call - title - call_ui_t2_warrior_fairy_recon_heli" text="Warrior Fairy - Recon Helicopter" />
+    <text key="Hint - call - intro - call_ui_t2_warrior_fairy_recon_heli" text="<cooldown 120s cost 50TP>
+-Marks target point, then calls a recon helicopter from base to cruise the area for 20 seconds
+-Fires a YAK-B 12.7mm aerial machine gun every 2 seconds at a random target, each round deals 5.1 blast damage at range 3.0
+-At 5 seconds scans the area, if enemy vehicles are present, fires 2 x 9M114 Cocoon Anti-tank Missiles dealing 50 blast damage at range 4
 -(This support is affected by airspace bans)"/>
+
+	<text key="Hint - call - title - call_ui_t2_warrior_fairy_recon_heli_update_alpha" text="Warrior Fairy - Recon Helicopter" />
+	<text key="Hint - call - intro - call_ui_t2_warrior_fairy_recon_heli_update_alpha" text="<cooldown 120s cost 50TP>
+-Marks target point, then calls a recon helicopter from base to cruise the area for 40 seconds
+-Fires a YAK-B 12.7mm aerial machine gun every 2 seconds at a random target, each round deals 5.1 blast damage at range 3.0
+-At 5 seconds scans the area, if enemy vehicles are present, fires 2 x 9M114 Cocoon Anti-tank Missiles dealing 50 blast damage at range 4
+-(This support is affected by airspace bans)
+#####Branch α[Endurance Upgrade]#####
+(Patrol duration increased to 40 seconds)"/>
+
+    <text key="Hint - call - title - call_ui_t2_warrior_fairy_recon_heli_update_beta" text="Warrior Fairy - Recon Helicopter" />
+    <text key="Hint - call - intro - call_ui_t2_warrior_fairy_recon_heli_update_beta" text="<cooldown 120s cost 50TP>
+-Marks target point, then calls a recon helicopter from base to cruise the area for 20 seconds
+-Fires a YAK-B 12.7mm aerial machine gun every 2 seconds at a random target, each round deals 5.1 blast damage at range 3.0
+-At 5 seconds scans the area, if enemy vehicles are present, fires 2 x 9M114 Cocoon Anti-tank Missiles dealing 50 blast damage at range 4
+-At 10 seconds deploys an 8-person squad via fast-rope into the target point
+-(This support is affected by airspace bans)
+#####Branch β[Fast-Rope Squad]#####
+(The recon helicopter deploys 8 combat T-Dolls for support, squad composition: 4 MG dolls, 2 shotgun dolls, and 2 assault rifle dolls)"/>
+
+    <text key="Hint - call - title - call_ui_t2_warrior_fairy_recon_heli_update_gamma" text="Warrior Fairy - Recon Helicopter" />
+    <text key="Hint - call - intro - call_ui_t2_warrior_fairy_recon_heli_update_gamma" text="<cooldown 120s cost 50TP>
+-Marks target point, then calls a recon helicopter from base to cruise the area for 20 seconds
+-Fires a YAK-B 12.7mm aerial machine gun every 2 seconds at a random target, each round deals 5.1 blast damage at range 4.5, rounds advance in random directions
+-At 5 seconds scans the area, if enemy vehicles are present, fires 2 x 9M114 Cocoon Anti-tank Missiles dealing 50 blast damage at range 4
+-(This support is affected by airspace bans)
+#####Branch γ[Suppressive Fire]#####
+(Number of rounds tripled, strafing changed to advance in random directions, damage range increased)"/>
+
+
+	<!-- Warrior Fairy - VTOL Jet -->
 
 	<text key="Hint - call - title - call_ui_t2_warrior_fairy_vtol_sentry" text="Warrior Fairy - VTOL Jet" />
 	<text key="Hint - call - intro - call_ui_t2_warrior_fairy_vtol_sentry" text="<cooldown 150s cost 60TP>
 -Marks the target point, then calls in a vertical takeoff and landing fighter from the base for a single aerial bombardment of the target point.
 -Drops a total of 2 aerial bombs, each doing 50 blast damage at range 7.5
--Switches to hover mode for the next 30seconds, sentrying the area around the caller.
--Fires the Gsh-30-1 cannon every 2seconds at enemies within a 20-second radius of the character.
+-Switches to hover mode for the next 30 seconds, sentrying the area around the caller.
+-Fires the Gsh-30-1 cannon every 2 seconds at enemies within a 55 radius of the character.
 -Does 5.0 blast damage per round at range 4
 -(This support is affected by airspace bans)"/>
 
+	<text key="Hint - call - title - call_ui_t2_warrior_fairy_vtol_sentry_update_alpha" text="Warrior Fairy - VTOL Jet" />
+	<text key="Hint - call - intro - call_ui_t2_warrior_fairy_vtol_sentry_update_alpha" text="<cooldown 150s cost 60TP>
+-Marks the target point, then calls in a vertical takeoff and landing fighter from the base for a single aerial bombardment of the target point.
+-Drops a total of 2 aerial bombs, each doing 50 blast damage at range 7.5
+-Switches to hover mode for the next 30 seconds, sentrying the area around the caller.
+-Fires the Gsh-30-1 cannon every 2 seconds at 2 enemies within a 55 radius of the character.
+-Does 6.1 blast damage per round at range 5.0
+-(This support is affected by airspace bans)
+#####Branch α[Cannon Iteration]#####
+(Engages 2 targets per strafe, the number of projectiles increases, and projectile damage increased to 6.1b at range 5.0)"/>
+
+	<text key="Hint - call - title - call_ui_t2_warrior_fairy_vtol_sentry_update_beta" text="Warrior Fairy - VTOL Jet" />
+	<text key="Hint - call - intro - call_ui_t2_warrior_fairy_vtol_sentry_update_beta" text="<cooldown 150s cost 60TP>
+-Marks the target point, then calls in a vertical takeoff and landing fighter from the base for a single aerial bombardment of the target point.
+-Drops a total of 2 aerial bombs, each doing 50 blast damage at range 7.5
+-Switches to hover mode for the next 30 seconds, sentrying the area around the caller.
+-Fires the Gsh-30-1 cannon every 2 seconds at enemies within a 55 radius of the character, restoring 2 armor to the guarded character at the same time.
+-Does 5.0 blast damage per round at range 4
+-If the character is downed, forcibly revives them and restores 10 armor, and performs an additional strafe on nearby enemies (limited to 1 rescue)
+-(This support is affected by airspace bans)
+#####Branch β[Conjugate Guardian]#####
+(Restores 2 armor per strafe; one-time revive with 10 armor and extra strafe when downed)"/>
+
+	<text key="Hint - call - title - call_ui_t2_warrior_fairy_vtol_sentry_update_gamma" text="Warrior Fairy - VTOL Jet" />
+	<text key="Hint - call - intro - call_ui_t2_warrior_fairy_vtol_sentry_update_gamma" text="<cooldown 150s cost 60TP>
+-Marks the target point, then calls in a vertical takeoff and landing fighter from the base for a single aerial bombardment of the target point.
+-Drops a total of 2 aerial bombs, each doing 50 blast damage at range 7.5
+-Switches to hover mode for the next 60 seconds, sentrying the area around the caller.
+-Fires the Gsh-30-1 cannon every 2 seconds at enemies within a 55 radius of the character.
+-Does 5.0 blast damage per round at range 4
+-(This support is affected by airspace bans)
+#####Branch γ[Extended Cruise]#####
+(VTOL hover sentry duration extended to 60 seconds)"/>
+
+
+	<!-- Warrior Fairy - Attack Helicopter -->
+
 	<text key="Hint - call - title - call_ui_t3_warrior_fairy_armed_heli" text="Warrior Fairy - Attack Helicopter" />
 	<text key="Hint - call - intro - call_ui_t3_warrior_fairy_armed_heli" text="<cooldown 120s cost 75TP>
--Marks target points and then calls in a helicopter gunship from base to conduct area sweeps for 30seconds
+-Marks target points and then calls in a helicopter gunship from base to conduct area sweeps for 30 seconds
 -Fires a 2A42 30mm cannon at a random target every 2 seconds, with each round doing 10 blast damage at range 4.0
 -Scan the area every 10 seconds and if there are enemy carriers in the area, fire a 9M127 Vortex Anti-tank Missile, dealing 100 blast damage at range 4.0
 -Fires a total of 5 S-13 rockets at random targets every 10 seconds, each rocket dealing 20 blast damage at range 5.0
 -(This support is affected by airspace bans)"/>
 
-	<text key="Hint - call - title - call_ui_t3_rampage_fairy_gunship" text="Fury Fairy - Gunship Run" />
+	<!-- Rampage Fairy - Gunship Run -->
+
+	<text key="Hint - call - title - call_ui_t3_rampage_fairy_gunship" text="Rampage Fairy - Gunship Run" />
 	<text key="Hint - call - intro - call_ui_t3_rampage_fairy_gunship" text="<cooldown 300s cost 120TP>
 -Marking of target points, followed by calling in a gunship from the base to sweep the area until fuel or ammunition is depleted.
 -The gunship has three attack modes
 -Machine gun fire: Fires 4-8 rounds of 25mm cannon, dealing 6.1 blast damage at a range of 4.0.
 -Shotgun Cannon: Fires 4 high velocity armor piercing rounds in a single burst, dealing 40 blast damage at a range of 5.0.
-Air-to-Surface Missile: fires three 120mm rockets, each dealing 20 blast damage at a range of 10.0.
+-Air-to-Surface Missile: fires three 120mm rockets, each dealing 20 blast damage at a range of 10.0.
 -(This support is affected by airspace bans)"/>
+
+	<!-- Rocket Fairy - Cruise Missile -->
 
 	<text key="Hint - call - title - call_ui_t1_rocket_fairy_missile" text="Rocket Fairy - Cruise Missile" />
-	<text key="Hint - call - intro - call_ui_t1_rocket_fairy_missile" text="<cooldown 90seconds cost 25TP>
--Refreshes its position every seconds after use and drops the missile at the mouse pointer after 3 seconds.
--(This support is affected by airspace bans)"/>
+	<text key="Hint - call - intro - call_ui_t1_rocket_fairy_missile" text="<cooldown 90s cost 25TP>
+-Refreshes its position every second after use and drops the missile at the mouse pointer after 3 seconds.
+-Missile deals 120 blast damage at range 7.5"/>
+
+	<text key="Hint - call - title - call_ui_t1_rocket_fairy_missile_update_alpha" text="Rocket Fairy - Cruise Missile" />
+	<text key="Hint - call - intro - call_ui_t1_rocket_fairy_missile_update_alpha" text="<cooldown 90s cost 25TP>
+-Refreshes its position every second after use and drops the missile at the mouse pointer after 3 seconds.
+-Missile deals 120 blast damage at range 7.5
+-The missile splits into 3 sensor-fuzed submunitions, each targeting a random enemy unit dealing 80 blast damage at range 5.0
+#####Branch α[Sensor-Fuzed Storm]#####
+(When determining the final strike position, fires three sensor-fuzed submunitions at three random enemy units nearby, dealing 80b damage at range 5.0)"/>
+
+	<text key="Hint - call - title - call_ui_t1_rocket_fairy_missile_update_beta" text="Rocket Fairy - Cruise Missile" />
+	<text key="Hint - call - intro - call_ui_t1_rocket_fairy_missile_update_beta" text="<cooldown 90s cost 25TP>
+-Refreshes its position every second after use and drops the missile at the mouse pointer after 3 seconds.
+-Missile deals 200 blast damage at range 7.5
+-The missile causes an additional mid-air blast at the target point, dealing 200 damage to all vehicles and structures within range 20
+#####Branch β[Bunker Buster]#####
+(Direct hit damage increased to 200b, and deals 200HP damage to all vehicles within range 20 of the target point)"/>
+
+	<text key="Hint - call - title - call_ui_t1_rocket_fairy_missile_update_gamma" text="Rocket Fairy - Cruise Missile" />
+	<text key="Hint - call - intro - call_ui_t1_rocket_fairy_missile_update_gamma" text="<cooldown 90s cost 25TP>
+-Refreshes its position every second after use and drops the missile at the mouse pointer after 3 seconds.
+-The missile deploys 20 high-explosive anti-personnel mines at the designated point
+-When triggered, mines deal 20x3.1 damage to enemies within range 8
+#####Branch γ[Mine-Laying Kit]#####
+(No longer deals direct damage, instead deploys 20 high-explosive anti-personnel mines at the designated point via cluster dispersal. When triggered, mines deal 20x3.1 damage to enemies within range 8)"/>
+
+
+	<!-- Rocket Fairy - Rocket Artillery -->
 
 	<text key="Hint - call - title - call_ui_t2_rocket_fairy_bm30" text="Rocket Fairy - Rocket Artillery" />
-	<text key="Hint - call - intro - call_ui_t2_rocket_fairy_bm30" text="<cooldown  90seconds cost 50TP>
--Marks target point, then fires a total of 10 300mm rockets, 2 per seconds
+	<text key="Hint - call - intro - call_ui_t2_rocket_fairy_bm30" text="<cooldown 90s cost 50TP>
+-Marks target point, then fires a total of 10 300mm rockets, 2 rockets every 2 seconds
 -Rockets land randomly in the area, dealing 30 blast damage at range 8.0"/>
 
+	<text key="Hint - call - title - call_ui_t2_rocket_fairy_bm30_update_alpha" text="Rocket Fairy - Rocket Artillery" />
+	<text key="Hint - call - intro - call_ui_t2_rocket_fairy_bm30_update_alpha" text="<cooldown 90s cost 50TP>
+-Marks target point, then fires a total of 20 300mm rockets, 2 rockets per second
+-Rockets land randomly in the area, dealing 30 blast damage at range 8.0
+#####Branch α[Rapid Fire Formation]#####
+(Fire interval halved, total rocket count increased to 20)"/>
+
+	<text key="Hint - call - title - call_ui_t2_rocket_fairy_bm30_update_beta" text="Rocket Fairy - Rocket Artillery" />
+	<text key="Hint - call - intro - call_ui_t2_rocket_fairy_bm30_update_beta" text="<cooldown 75s cost 30TP>
+-Marks target point, then fires a total of 10 300mm rockets, 2 rockets every 2 seconds
+-Rockets land randomly in the area, dealing 30 blast damage at range 8.0
+#####Branch β[Field Mobility]#####
+(Changed to 3-point charge system, charge time reduced to 75s, tactical point cost reduced to 30)"/>
+
+	<text key="Hint - call - title - call_ui_t2_rocket_fairy_bm30_update_gamma" text="Rocket Fairy - Rocket Artillery" />
+	<text key="Hint - call - intro - call_ui_t2_rocket_fairy_bm30_update_gamma" text="<cooldown 90s cost 50TP>
+-Marks target point, then fires a total of 10 300mm rockets, 2 rockets every 2 seconds
+-Rockets prioritize targeting enemies in the area, dealing 30 blast damage at range 8.0
+#####Branch γ[Smart Fire Control]#####
+(Each rocket now prioritizes targeting enemies rather than random impact points)"/>
+
+	<!-- Rocket Fairy - Aircraft Rush -->
+
 	<text key="Hint - call - title - call_ui_t3_rocket_fairy_aircraft" text="Rocket Fairy - Aircraft Rush" />
-	<text key="Hint - call - intro - call_ui_t3_rocket_fairy_aircraft" text="<cooldown  90seconds cost 50TP>
+	<text key="Hint - call - intro - call_ui_t3_rocket_fairy_aircraft" text="<cooldown 90s cost 50TP>
 -Mark the target point, then call an attack plane from a path perpendicular (to your line with the target point) to fire a straight line of S-8 rockets.
 -4 rockets per round, 5 rounds total.
 -Rockets do 15 blast damage at range 6.0.
 -(This support is affected by airspace bans)"/>
 
+	<!-- Rocket Fairy - Saturation Attack -->
+
 	<text key="Hint - call - title - call_ui_t3_rocket_fairy_cover" text="Rocket Fairy - Saturation Attack" />
 	<text key="Hint - call - intro - call_ui_t3_rocket_fairy_cover" text="<cooldown 300s cost 120TP>
--Marks the target point and starts rocket coverage after 5seconds, 24 rockets per round, spread range 35
--Continues for 9 rounds, 3seconds between rounds.
+-Marks the target point and starts rocket coverage after 5 seconds, 24 rockets per round, spread range 35
+-Continues for 9 rounds, 3 seconds between rounds.
 -From the second wave onwards, each round will have a 10 radius deviation, allowing for a wider strike area.
--Rockets do 10 blast damage at range 6.0"/>
+-Rockets do 15.1 blast damage at range 6.0"/>
+
+    <!-- Kaguyahime - Orbital Laser Strike -->
+
+    <text key="Hint - call - title - call_ui_t2_kaguya_strike" text="Kaguyahime - Orbital Laser Strike" />
+    <text key="Hint - call - intro - call_ui_t2_kaguya_strike" text="<cooldown 120s cost 35TP>
+-Fires orbital laser after 2 seconds, dealing damage to the designated area
+-Deals 150 blast damage to the direct impact point at range 4
+-Deals 10x3 blast damage to the direct impact point at range 8
+-Deals 5x6 blast damage to the direct impact point at range 12"/>
+
+    <text key="Hint - call - title - call_ui_t2_kaguya_strike_update_alpha" text="Kaguyahime - Orbital Laser Strike" />
+    <text key="Hint - call - intro - call_ui_t2_kaguya_strike_update_alpha" text="<cooldown 120s cost 35TP>
+-Fires orbital laser after 2 seconds, dealing damage to the designated area
+-Deals 300 blast damage to the direct impact point at range 4
+-Deals 100 blast damage to the direct impact point at range 8
+-Deals 50 blast damage to the direct impact point at range 12
+#####Branch α[Focusing Unit]#####
+(Damage to enemies within range 4 increased to 300b, damage to enemies within range 8 increased to 100b, damage to enemies within range 12 increased to 50b)"/>
+
+    <text key="Hint - call - title - call_ui_t2_kaguya_strike_update_beta" text="Kaguyahime - Orbital Laser Strike" />
+    <text key="Hint - call - intro - call_ui_t2_kaguya_strike_update_beta" text="<cooldown 120s cost 35TP>
+-Fires orbital laser after 2 seconds, dealing damage to the designated area
+-Deals 150 blast damage to the direct impact point at range 4
+-Deals 10x3 blast damage to the direct impact point at range 8
+-Deals 5x6 blast damage to the direct impact point at range 12
+-The direct impact point leaves a burning zone, dealing 20 burn damage every 2 seconds to enemies within range 12
+#####Branch β[Scorched Earth]#####
+(The laser leaves a burning zone on the ground, the burning zone deals 20 damage every 2 seconds to enemies within range 12, lasting 10 seconds)"/>
+
+    <text key="Hint - call - title - call_ui_t2_kaguya_strike_update_gamma" text="Kaguyahime - Orbital Laser Strike" />
+    <text key="Hint - call - intro - call_ui_t2_kaguya_strike_update_gamma" text="<cooldown 120s cost 35TP>
+-Fires orbital laser after 2 seconds, selecting three targets in the area every 4 seconds to fire lasers dealing damage
+-Deals 50 damage to the direct target at range 5
+#####Branch γ[Yata no Kagami Radiance]#####
+(Changed to sustained laser strike, selecting three random targets in the area every 4 seconds dealing damage, lasting 16 seconds, damage changed to 50 blast)"/>
+
+
 </translation>

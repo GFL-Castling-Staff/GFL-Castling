@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectiles>
     <projectile class="grenade" name="" key="skill_obr_knife_damage.projectile" slot="2" radius="0.15" can_be_detected_by_driver="0" can_be_detected_by_footmen="0">
-        <result class="spawn" instance_class="grenade" instance_key="skill_obr_knife_damage_sub.projectile" min_amount="10" max_amount="10" offset="0 0.25 0" position_spread="0 0" direction_spread="0 0" />
+        <result class="spawn" instance_class="grenade" instance_key="skill_obr_knife_damage_sub.projectile" min_amount="20" max_amount="20" offset="0 0.25 0" position_spread="0 0" direction_spread="0 0" />
         <trigger class="time" time_to_live="0.0"/>
         <rotation class="random" />
         <model mesh_filename="" />
@@ -11,7 +11,7 @@
         <capacity value="1" source="rank" source_value="0.0" />
     </projectile>
     <projectile class="grenade" name="Blade of Frost" key="skill_obr_knife_damage_1.projectile" pulldown_in_air="160" slot="2" radius="0.15" can_be_detected_by_driver="0" can_be_detected_by_footmen="0">
-        <result class="spawn" instance_class="grenade" instance_key="skill_obr_knife_damage_sub.projectile" min_amount="10" max_amount="10" offset="0 0.25 0" position_spread="0 0" direction_spread="0 0" />
+        <result class="spawn" instance_class="grenade" instance_key="skill_obr_knife_damage_sub.projectile" min_amount="20" max_amount="20" offset="0 0.25 0" position_spread="0 0" direction_spread="0 0" />
         <trigger class="impact">
             <collider class="terrain" enabled="1" />     
             <collider class="static_object" enabled="1" /> 

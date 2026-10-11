@@ -42,7 +42,7 @@
         <sound class="impact" fileref="rifle_drop.wav" />
         <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.3" />  
         <model filename="gkw_smg_sr3mp_only.xml" />
-        <hud_icon filename="gkw_sr3mp.png" />
+        <hud_icon filename="gkw_sr3mp_only.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile">
             <result class="hit" kill_probability="2.6" kill_probability_offset_on_successful_hit="4.5" kill_decay_start_time="0.6" kill_decay_end_time="1.0" />
@@ -94,7 +94,7 @@
         <sound class="impact" fileref="rifle_drop.wav" />
         <sound key="dry_fire" fileref="dryfire_9mmhg.wav" pitch_variety="0.05" volume="1.3" />
         <model filename="gkw_smg_sr3mp_only.xml" />
-        <hud_icon filename="gkw_sr3mp_skill.png" />
+        <hud_icon filename="gkw_sr3mp_only_skill.png" />
         <weak_hand_hold offset="0.2" />
         <projectile file="bullet.projectile" can_be_detected_by_footmen="0">
             <result class="hit" kill_probability="2.6" kill_probability_offset_on_successful_hit="6.2" kill_decay_start_time="0.6" kill_decay_end_time="1.0" />

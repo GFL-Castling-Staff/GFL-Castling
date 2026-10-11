@@ -19959,8 +19959,8 @@ top_material = terrain;</desc>
        sodipodi:nodetypes="ccccc" />
     <path
        id="path9642-5-7-1"
-       style="fill:#7f7567;fill-opacity:1;stroke:#000000;stroke-opacity:1;display:inline;enable-background:new"
-       d="m 1096.3,658.06 3.7,-5.48 -3.7,-8.02 -6.3,-1.11 -8.4,2.51 1.6,3.76 3,6.91 2,4.49 z"
+       style="display:inline;fill:#7f7567;fill-opacity:1;stroke:#000000;stroke-opacity:1;enable-background:new"
+       d="m 1096.3,658.06 3.7,-5.48 -3.7,-8.02 -6.3,-1.11 -11.9255,3.70867 1.8115,4.00678 2.7885,6.69847 1.9648,4.45475 z"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccccc" />
     <path
@@ -45398,8 +45398,8 @@ alpha_blend = 1;</desc>
            inkscape:label="#path9642_platform"
            inkscape:connector-curvature="0"
            id="path9642-5"
-           d="m 1081.6,645.91 1.6,3.76 3,6.91 2,4.49"
-           style="fill:none;stroke:#d23b3b;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;enable-background:new">
+           d="m 1078.0745,647.14392 1.6,3.76 3,6.91 2,4.49"
+           style="display:inline;fill:none;stroke:#d23b3b;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;enable-background:new">
           <desc
              id="desc9646-8">type = deck_end; height = 4.5; wall_height = 1.0; wall_template = StoneWall1; top_material = pavement;</desc>
         </path>
@@ -53590,8 +53590,8 @@ top_material = terrain;</desc>
          sodipodi:nodetypes="ccccc" />
       <path
          id="path9642-5-7"
-         style="fill:#808080;fill-opacity:1;stroke:none;display:inline;enable-background:new"
-         d="m 1096.3,658.01 3.7,-5.48 -3.7,-8.02 -6.3,-1.11 -8.4,2.51 1.6,3.76 3,6.91 2,4.49 z"
+         style="display:inline;fill:#808080;fill-opacity:1;stroke:none;enable-background:new"
+         d="m 1096.3,658.01 3.7,-5.48 -3.7,-8.02 -6.3,-1.11 -11.9607,3.70867 1.8115,4.1478 2.859,6.5222 1.9295,4.56051 z"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccccccccc" />
       <path
@@ -56385,12 +56385,12 @@ material = BuildingWhite2Busy; offset=0 -0.9 0; roof_type=elevated;</desc>
          inkscape:transform-center-x="-1.7655"
          inkscape:transform-center-y="0.11329" />
       <rect
-         style="opacity:0.79775002;fill:#2cffe7;fill-opacity:1;fill-rule:nonzero;stroke:none;display:inline;enable-background:new"
+         style="display:inline;opacity:0.79775;fill:#2cffe7;fill-opacity:1;fill-rule:nonzero;stroke:none;enable-background:new"
          id="rect7651-13-9-6-4-6"
-         width="6"
+         width="5.9999995"
          height="2.25"
-         x="-1022.1"
-         y="748.02002"
+         x="-1022.5074"
+         y="744.49249"
          inkscape:label="#ladder"
          transform="matrix(-0.38302,-0.92374,0.92374,-0.38302,0,0)"
          inkscape:transform-center-x="-0.73795"
@@ -116640,12 +116640,12 @@ tag = mortar_deploy;</desc>
       <rect
          transform="matrix(-0.35199534,-0.93600175,0.93600175,-0.35199534,0,0)"
          inkscape:label=""
-         y="788.68561"
-         x="-997.44049"
+         y="786.76294"
+         x="-997.24475"
          height="7"
          width="7"
          id="spawn1-70-1-4-922-9-1-6-7"
-         style="fill:#00ffff;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new">
+         style="display:inline;fill:#00ffff;stroke:#ffff00;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new">
         <desc
            id="desc152873-6-7-0-6">type = vehicle;
 tag =only_aa;</desc>

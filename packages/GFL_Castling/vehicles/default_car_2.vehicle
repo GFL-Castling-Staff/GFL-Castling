@@ -11,12 +11,12 @@
 	<character_slot type="driver" position="0.47 0.6 0.86" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
 	<character_slot type="passenger" position="-0.47 0.6 0.86" rotation="0" exit_rotation="-1.57" hiding="1" />
 
-	<character_slot type="passenger" position="0.2 0.84 -2.6" exit_rotation="1.57" hiding="0" rotation="1.57" animation_key="passenger, boat" rotation_range="3.00" />
-	<character_slot type="passenger" position="-0.2 0.84 -2.6" exit_rotation="-1.57" hiding="0" rotation="-1.57" animation_key="passenger, boat" rotation_range="3.00" />
-	<character_slot type="passenger" position="0.2 0.84 -1.8" exit_rotation="1.57" hiding="0" rotation="1.57" animation_key="passenger, boat" rotation_range="3.00" />
-	<character_slot type="passenger" position="-0.2 0.84 -1.8" exit_rotation="-1.57" hiding="0" rotation="-1.57" animation_key="passenger, boat" rotation_range="3.00" />
-	<character_slot type="passenger" position="0.2 0.84 -1.0" exit_rotation="1.57" hiding="0" rotation="1.57" animation_key="passenger, boat" rotation_range="3.00" />
-	<character_slot type="passenger" position="-0.2 0.84 -1.0" exit_rotation="-1.57" hiding="0" rotation="-1.57" animation_key="passenger, boat" rotation_range="3.00" />
+	<character_slot type="passenger" position="0.2 0.84 -2.6" exit_rotation="1.57" hiding="0" rotation="1.57" animation_key="passenger, free weapon" rotation_range="3.00" />
+	<character_slot type="passenger" position="-0.2 0.84 -2.6" exit_rotation="-1.57" hiding="0" rotation="-1.57" animation_key="passenger, free weapon" rotation_range="3.00" />
+	<character_slot type="passenger" position="0.2 0.84 -1.8" exit_rotation="1.57" hiding="0" rotation="1.57" animation_key="passenger, free weapon" rotation_range="3.00" />
+	<character_slot type="passenger" position="-0.2 0.84 -1.8" exit_rotation="-1.57" hiding="0" rotation="-1.57" animation_key="passenger, free weapon" rotation_range="3.00" />
+	<character_slot type="passenger" position="0.2 0.84 -1.0" exit_rotation="1.57" hiding="0" rotation="1.57" animation_key="passenger, free weapon" rotation_range="3.00" />
+	<character_slot type="passenger" position="-0.2 0.84 -1.0" exit_rotation="-1.57" hiding="0" rotation="-1.57" animation_key="passenger, free weapon" rotation_range="3.00" />
 
 	<!--	<character_slot type="passenger" position="-0.47 0.6 1.12" rotation="0" exit_rotation="-1.57" hiding="1" animation_id="37" />   -->
 	<!-- <item_container class="armory" offset="1.0 0.45 0.0" soldier_group="icecream" /> -->

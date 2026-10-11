@@ -57,7 +57,7 @@
 	<!--Ballistics-->
 	<weak_hand_hold offset="0.1" />
 	<projectile file="bullet.projectile" time_to_live="0.25">
-		<result class="spawn" instance_class="projectile" instance_key="desert_eagle.projectile" min_amount="5" max_amount="5" offset="0 1.0 0" position_spread="0.3 0.2" direction_spread="0 0" />
+		<result class="spawn" instance_class="projectile" instance_key="desert_eagle.projectile" min_amount="5" max_amount="5" offset="0 0.5 0" position_spread="0.3 0.2" direction_spread="0 0" />
 		<effect class="result" key="terrain" ref="Ct_Shine_50AE"/>
 		<effect class="result" key="other" ref="Ct_Shine_50AE"/>
 		<effect class="result" key="vehicle" ref="Ct_Shine_50AE"/>

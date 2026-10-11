@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <projectile class="grenade" name="" key="grenade_scarecrow.projectile" slot="1" radius="0.25" pulldown_in_air="50">
 
-    <result class="blast" radius="10.0" damage="10.0" push="0.8" decal="1" character_state="death" faction_compare="not_equal" />
+    <result class="spawn" instance_class="projectile" instance_key="blast_snipe_airburst.projectile" min_amount="8" max_amount="8" make_vehicle_hit_sound="0" offset="0 0.5 0" position_spread="0 0" direction_spread="0.0 0.0" />
     <trigger class="impact"/>
     <rotation class="random" />
     <model mesh_filename="" />

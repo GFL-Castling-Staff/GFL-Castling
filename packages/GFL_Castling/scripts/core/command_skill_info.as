@@ -97,6 +97,9 @@ dictionary commandSkillIndex = {
 
         // FF_INTRUDER
         {"ff_Intruder.weapon",8},
+        {"ff_Intruder_1.weapon",8},
+        {"ff_intruder_skin.weapon",8},
+        {"ff_intruder_skin_1.weapon",8},
 
         // FF_AGENT
         {"ff_agent.weapon",9},
@@ -111,6 +114,7 @@ dictionary commandSkillIndex = {
 
         // FF_BAIBAOZI
         {"ff_parw_alina.weapon",12},
+        {"ff_parw_alina_skin.weapon",12},
 
         // G3 Mod3
         {"gkw_g3mod3.weapon",13},
@@ -133,9 +137,11 @@ dictionary commandSkillIndex = {
 
         // PP19
         {"gkw_pp19.weapon",16},
+        {"gkw_pp19_10105.weapon",16},
 
         // PP19MOD3
         {"gkw_pp19mod3.weapon",17},
+        {"gkw_pp19mod3_10105.weapon",17},
 
         // AK15MOD3
         {"gkw_ak15mod3.weapon",18},
@@ -174,8 +180,10 @@ dictionary commandSkillIndex = {
         // PPSH41, PPSH41MOD3
         {"gkw_ppsh41.weapon",24},
         {"gkw_ppsh41_602.weapon",24},
+        {"gkw_ppsh41_5808.weapon",24},
         {"gkw_ppsh41mod3.weapon",25},
         {"gkw_ppsh41mod3_602.weapon",25},
+        {"gkw_ppsh41mod3_5808.weapon",25},
 
         // fo-12
         {"gkw_fo12.weapon",26},
@@ -184,6 +192,8 @@ dictionary commandSkillIndex = {
         // Flashbang
         {"gkw_type79.weapon",27},
         {"gkw_type79_1402.weapon",27},
+        {"gkw_type79mod3.weapon",27},
+        {"gkw_type79mod3_1402.weapon",27},
         {"gkw_ump9.weapon",27},
         {"gkw_ump9_409.weapon",27},
         {"gkw_ump9_536.weapon",27},
@@ -195,6 +205,8 @@ dictionary commandSkillIndex = {
         {"gkw_mab38.weapon",27},
         {"gkw_mab38_oc.weapon",27},
         {"gkw_64type.weapon",27},
+        {"gkw_64type_7108.weapon",27},
+        {"gkw_64type_8507.weapon",27},
         {"gkw_m16a1.weapon",27},
         {"gkw_m16a1_533.weapon",27},
         {"gkw_m16a1_553.weapon",27},
@@ -267,6 +279,9 @@ dictionary commandSkillIndex = {
         {"gkw_88type_7106.weapon",40},
         {"gkw_88typemod3_7106.weapon",41},
         {"gkw_88typemod3_7106_skill.weapon",41},
+        {"gkw_88type_11406.weapon",40},
+        {"gkw_88typemod3_11406.weapon",41},
+        {"gkw_88typemod3_11406_skill.weapon",41},
         {"gkw_88type_50001.weapon",40},
         {"gkw_88typemod3_50001.weapon",41},
         {"gkw_88typemod3_50001_skill.weapon",41},
@@ -393,18 +408,17 @@ dictionary commandSkillIndex = {
         {"gkw_m99_1701.weapon",53},
         {"gkw_m99_3304.weapon",53},
         {"gkw_m99_404.weapon",53},
-        {"gkw_ptrd.weapon",53},
+        {"gkw_m99_30019.weapon",53},
         {"gkw_ntw20.weapon",53},
         {"gkw_ntw20_307.weapon",53},
         {"gkw_ntw20_4801.weapon",53},
-        {"gkw_ntw20mod3.weapon",53},
-        {"gkw_ntw20mod3_307.weapon",53},
-        {"gkw_ntw20mod3_4801.weapon",53},
         {"gkw_rt20.weapon",53},
 
         // 这几位都要重做
         {"gkw_m82a1.weapon",53},
         {"gkw_m82a1_skill.weapon",53},
+        {"gkw_m82a1_5803.weapon",53},
+        {"gkw_m82a1_5803_skill.weapon",53},
         {"gkw_gepardm1.weapon",53},
         {"gkw_gepardm1mod3.weapon",53},
         {"gkw_gepardm1_4006.weapon",53},
@@ -427,6 +441,8 @@ dictionary commandSkillIndex = {
         // {"gkw_emp35_8003.weapon",58},
 
         {"gkw_64typemod3.weapon",59},
+        {"gkw_64typemod3_7108.weapon",59},
+        {"gkw_64typemod3_8507.weapon",59},
 
         {"gkw_zasm21.weapon",60},
         {"gkw_zasm21_2104.weapon",60},
@@ -501,6 +517,8 @@ dictionary commandSkillIndex = {
         {"gkw_m1897mod3_skill.weapon",78},
         {"gkw_m1897mod3_2505.weapon",78},
         {"gkw_m1897mod3_2505_skill.weapon",78},
+        {"gkw_m1897mod3_4805.weapon",78},
+        {"gkw_m1897mod3_4805_skill.weapon",78},
 
         {"gkw_type82.weapon",79},
 
@@ -560,6 +578,45 @@ dictionary commandSkillIndex = {
 
         {"ff_parw_nyto_black.weapon",94},
         {"ff_parw_nyto_black_1.weapon",94},
+
+        {"ff_scarecrow.weapon",95},
+        {"ff_scarecrow_skill.weapon",95},
+        {"ff_scarecrow_skin.weapon",95},
+        {"ff_scarecrow_skin_skill.weapon",95},
+
+        {"gkw_g36mod3.weapon",96},
+        {"gkw_g36mod3_565.weapon",96},
+        {"gkw_g36mod3_1507.weapon",96},
+        {"gkw_g36mod3_1904.weapon",96},
+        {"gkw_g36mod3_2407.weapon",96},
+        {"gkw_g36mod3_6807.weapon",96},
+        {"gkw_g36mod3_8609.weapon",96},
+
+        {"gkw_mp7.weapon",97},
+        {"gkw_mp7_2405.weapon",97},
+        {"gkw_mp7_6806.weapon",97},
+
+        // // OTS-14 闪电突击步枪
+        // {"gkw_ots14.weapon",98},
+        // {"gkw_ots14_1203.weapon",98},
+        // {"gkw_ots14_4501.weapon",98},
+        // 为什么闪电会有闪电链
+
+        {"gkw_ntw20mod3.weapon",99},
+        {"gkw_ntw20mod3_307.weapon",99},
+        {"gkw_ntw20mod3_4801.weapon",99},
+
+        {"gkw_hs50.weapon",100},
+        {"gkw_hs50_6805.weapon",100},
+
+        {"gkw_ptrd.weapon",101},
+
+        {"gkw_m327.weapon",102},
+
+        {"gkw_mg15.weapon",103},
+
+        {"gkw_martini.weapon",104},
+        {"gkw_martini_30023.weapon",104},
 
         // 下面这行是用来占位的，在这之上添加新的枪和index即可
         {"666",-1}

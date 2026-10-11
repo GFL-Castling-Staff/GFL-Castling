@@ -57,6 +57,7 @@
     <target_factors tag="elite" distance="1.0" direction="0.0" squad_command="1.0" base_score="3.0"/>
     <target_factors tag="antiarmor" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
     <target_factors tag="rifle" distance="1.0" direction="0.0" squad_command="1.0" base_score="2.0"/>
+    <target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>
     <animation key="recoil" animation_key="recoil1"/>
     <animation key="recoil" animation_key="recoil2"/>
     <animation key="recoil" animation_key="recoil3"/>

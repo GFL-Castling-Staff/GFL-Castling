@@ -62,6 +62,11 @@
 
     <effect class="result" key="other" ref="BulletImpact" />
 
+    <effect class="result" key="static_object" copy="other" />
+    <effect class="result" key="terrain" copy="other" />
+    <effect class="result" key="vehicle" copy="other" />
+    <effect class="result" key="character" copy="other" />
+
     <effect class="result" type="splat_map" surface_tag="" size="3.0" atlas_index="0" layer="1" />
     <effect class="result" type="splat_map" surface_tag="" size="4.5" atlas_index="4" layer="0" />
     <effect class="result" type="splat_map" surface_tag="" size="5.0" atlas_index="0" layer="2" additive="0" />

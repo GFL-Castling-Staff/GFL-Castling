@@ -29,8 +29,7 @@
 
     <projectile file="teal.projectile"/>
 
-    <capacity value="0" source="rank" source_value="0.0" />
-    <capacity value="1" source="rank" source_value="0.3" />
+    <capacity value="1" source="rank" source_value="0.0" />
 
     <stance state_key="running" accuracy="1" />
     <stance state_key="walking" accuracy="1" />
@@ -74,5 +73,9 @@
 	<sound key="stab_hit_any" fileref="melee_impact_flesh1_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
 	<sound key="stab_hit_any" fileref="melee_impact_flesh2_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
 	<sound key="stab_hit_any" fileref="melee_impact_flesh3_fromFO4.wav" pitch_variety="0.05" volume="1.6" />
+    
+    <target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
+    <target_factors tag="melee" distance="1.0" direction="0.0" squad_command="1.0" base_score="10.0"/>     
+    <target_factors tag="punchme" distance="1.0" direction="0.0" squad_command="1.0" base_score="30.0"/>
 
 </weapon>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- https://iopwiki.com/wiki/Enemy_Index -->
-<faction name="E.I.L.D." color="0.3 0.17 0.11" firstnames="E.I.L.D." lastnames="" chat_icon_filename="par_chat_soldier.png" chat_icon_commander_filename="par_chat_commander.png" chat_icon_filename_supporter="par_chat_soldier_s.png" campaign_completion_icon_filename="campaign_win_gk.png" radio_queue_size="3">
+<faction name="E.L.I.D." color="0.3 0.17 0.11" firstnames="E.L.I.D." lastnames="" chat_icon_filename="par_chat_soldier.png" chat_icon_commander_filename="par_chat_commander.png" chat_icon_filename_supporter="par_chat_soldier_s.png" campaign_completion_icon_filename="campaign_win_gk.png" radio_queue_size="3">
 	<rank xp="0" name="10">
 		<hud_icon filename="lv_000.png" />
 	</rank>
@@ -365,7 +365,7 @@
 		<hud_icon filename="commander_ye.png" />
 	</rank>
 	<!-- player group -->
-	<soldier name="default" spawn_score="0.0" firstnames="E.I.L.D." lastnames="">
+	<soldier name="default" spawn_score="0.0" firstnames="E.L.I.D." lastnames="">
 		<character filename="default_infected.character" />
 		<ai filename="default.ai" />
 		<models file="elid.models" />

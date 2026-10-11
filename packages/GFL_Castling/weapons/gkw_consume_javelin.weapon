@@ -29,7 +29,7 @@
 	<animation key="reload" stance_key="prone" animation_key="reloading, sniper1, prone"/>
 	<animation key="hold" animation_key="still, with law"/>
 	<animation key="hold_on_wall" animation_key="still, with law"/>
-    <animation state_key="changing_weapon_in" 	animation_key="change weapon in,jav" />
+    <animation state_key="changing_weapon_in" 	animation_key="change weapon in, 1s" />
 	<sound key="cycle" fileref="sniper_cycle.wav"/>
 	<sound key="magazine_out" fileref="sniper_clip_out.wav"/>
 	<sound key="magazine_in" fileref="sniper_clip_in.wav"/>

@@ -6,7 +6,7 @@
     accuracy_factor="1.0"
     sustained_fire_grow_step="3.0"
     sustained_fire_diminish_rate="1.0"
-    stance_accuracy_rate="0.7"
+    stance_accuracy_rate="4.0"
     leave_crouch_accuracy_penalty="0.35"
     magazine_size="1"
     sight_range_modifier="3.0"
@@ -27,7 +27,7 @@
     <animation key="reload" animation_key="reloading, at rocket 4s"/>
     <animation key="hold" animation_key="still, with law"/>
     <animation key="hold_on_wall" animation_key="still, with law"/>
-    <animation state_key="changing_weapon_in" 	animation_key="change weapon in,jav" />
+    <animation state_key="changing_weapon_in" 	animation_key="change weapon in, 1s" />
     <sound key="fire" fileref="mk153_fire_FromBFH.wav" volume="1.5"/>
     <sound key="cycle" fileref=""/>
     <sound key="magazine_out" fileref="mk153_mgz_out_FromSQUAD.wav"/>
@@ -38,7 +38,7 @@
     <model filename="gkw_hvy_mk153.xml"/>
     <ballistics near_far_distance="1000.0" speed_estimation_near="100.0" speed_estimation_far="100.0" max_speed="125.0" randomness="0.0"/>
     <projectile file="mk153_HEAT.projectile">
-        <result class="blast" damage="60.0" radius="3.5" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+        <result class="blast" damage="80.0" radius="3.5" decal="1" push="1.0" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
     </projectile>
     <weak_hand_hold offset="0.3"/>
     <hud_icon filename="gkw_mk153.png"/>
@@ -80,7 +80,7 @@
     accuracy_factor="1.0"
     sustained_fire_grow_step="3.0"
     sustained_fire_diminish_rate="2.0"
-    stance_accuracy_rate="0.7"
+    stance_accuracy_rate="4.0"
     leave_crouch_accuracy_penalty="0.35"
     magazine_size="2"
     burst_shots="2"
@@ -102,7 +102,7 @@
     <animation key="reload" animation_key="reloading, at rocket 5s"/>
     <animation key="hold" animation_key="still, with law"/>
     <animation key="hold_on_wall" animation_key="still, with law"/>
-    <animation state_key="changing_weapon_in" animation_key="change weapon in,jav" />
+    <animation state_key="changing_weapon_in" animation_key="change weapon in, 1s" />
     <sound key="fire" fileref="mk153_fire_FromBFH.wav" volume="1.5"/>
     <sound key="cycle" fileref=""/>
     <sound key="magazine_out" fileref="mk153_mgz_out_FromSQUAD.wav"/>
@@ -213,8 +213,8 @@
 	<animation state_key="crouch_moving" animation_key="crouching forwards, single hand carry"/>
 	<animation state_key="crouch_moving_backwards" animation_key="crouching backwards, pistol 2"/>
 	<animation state_key="prone_still" animation_key="prone_still, pistol"/>
-	<animation state_key="changing_weapon_in" animation_key="change weapon in,hvy pdw mode"/>
-    <animation state_key="next_in_chain_out" animation_key="change weapon in,hvy pdw mode"/>
+	<animation state_key="changing_weapon_in" animation_key="change weapon in, 1s"/>
+    <animation state_key="next_in_chain_out" animation_key="change weapon in, 1s"/>
 	<animation state_key="stabbing" animation_key="pistol whip"/>
 	<animation state_key="stabbing" animation_key="pistol whip 3"/>
 </weapon>

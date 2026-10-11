@@ -143,7 +143,11 @@ dictionary airstrikeIndex = {
         {"rocket_missile",117},
         {"rocket_bm30_2round",118},
         {"rocket_bm21_24round",119},
+        {"rocket_missile_beta",132},
+        {"warrior_vtol_strafe_alpha",133},
+        {"rocket_bm30_2round_gamma",134},
 
+        {"ntw20_wildhunt",2110},
 
         // 下面这行是用来占位的，在这之上添加新的即可
         {"666",-1}
@@ -158,6 +162,7 @@ class GFLairstrike : Tracker {
 	// --------------------------------------------
 	GFLairstrike(GameMode@ metagame) {
 		@m_metagame = @metagame;
+        Airstrike_strafe.resize(0);
 	}
 
 	void update(float time) {
@@ -663,13 +668,13 @@ class GFLairstrike : Tracker {
                 }
 
                 case 22:{
-                    float strike_rand=3.0;
-                    int projectile_num = 5;
+                    float strike_rand=1.8;
+                    int projectile_num = 6;
                     for(int j=1;j<=projectile_num;j++)
                     {
                         float rand_x = rand(-strike_rand,strike_rand);
                         float rand_y = rand(-strike_rand,strike_rand);
-                        CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"ASW_BF109_strafe.projectile",cid,fid,100);
+                        CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"ASW_BF109_strafe.projectile",cid,fid,140);
                     } 
                     Airstrike_strafe.removeAt(a);
                     break;
@@ -879,7 +884,13 @@ class GFLairstrike : Tracker {
                 case 131:{ //单发航弹 滑翔航弹
                     CreateDirectProjectile(m_metagame,start_pos,end_pos,"artillery_shell_airstrike_bomber_gamma.projectile",cid,fid,30);
                     Airstrike_strafe.removeAt(a);
-                    break;                    
+                    break;
+                }
+
+                case 132:{ // 火箭妖精beta — 200伤害巡曳飞弹
+                    CreateDirectProjectile(m_metagame,start_pos,end_pos,"fairy_rocket_cruise_missile_beta.projectile",cid,fid,125);
+                    Airstrike_strafe.removeAt(a);
+                    break;
                 }
 
                 case 105:{ // cas 23mm
@@ -1139,6 +1150,24 @@ class GFLairstrike : Tracker {
                     break;
                 }
 
+                case 133:{ //VTOL alpha strafe
+                    float strike_rand = 2.5;
+                    //每单轮扫射10发
+                    for(int j=1;j<=10;j++)
+                    {
+                        float rand_speed = rand(150,180);
+                        float rand_x = rand(-strike_rand,strike_rand);
+                        float rand_y = rand(-strike_rand,strike_rand);
+                        CreateDirectProjectile(m_metagame,start_pos,end_pos.add(Vector3(rand_x,0,rand_y)),"fairy_warrior_vtol_gsh23_alpha.projectile",cid,fid,rand_speed);
+                    }
+                    array<string> Voice={
+                        "gsh23l_23mm_shot_fromWarthunder.wav"
+                    };
+                    playRandomSoundArray(m_metagame,Voice,fid,end_pos,2.9);
+                    Airstrike_strafe.removeAt(a);
+                    break;
+                }
+
                 case 116:{ //VTOL Bomb
                     float strike_rand = 3.0;
                     float rand_x = rand(-strike_rand,strike_rand);
@@ -1167,28 +1196,59 @@ class GFLairstrike : Tracker {
                 }
 
                 case 119:{//BM21 122mm
-                    spawnStaticProjectile(m_metagame,"rocket_fairy_cover_24round.projectile",start_pos,cid,fid);	
+                    spawnStaticProjectile(m_metagame,"rocket_fairy_cover_24round.projectile",start_pos,cid,fid);
                     playSoundAtLocation(m_metagame,"bm21_woosh_byBadGoose.wav",fid,start_pos,1.5);
                     Airstrike_strafe.removeAt(a);
-                    break;                        
+                    break;
+                }
+
+                case 134:{//BM30 gamma
+                    float spread_range = 15;
+                    array<const XmlElement@> enemies = getEnemyCharactersNearPosition(m_metagame, end_pos, fid, spread_range, 2);
+
+                    int enemyCount = 0;
+                    if(enemies !is null)
+                    {
+                        for(uint i = 0; i < enemies.length(); i++)
+                        {
+                            int enemyId = enemies[i].getIntAttribute("id");
+                            const XmlElement@ enemyInfo = getCharacterInfo(m_metagame, enemyId);
+                            if(enemyInfo !is null)
+                            {
+                                Vector3 enemyPos = stringToVector3(enemyInfo.getStringAttribute("position"));
+                                spawnStaticProjectile(m_metagame, "fairy_rocket_bm30_300mm.projectile", enemyPos.add(Vector3(0, 50, 0)), cid, fid);
+                                enemyCount++;
+                            }
+                        }
+                    }
+
+                    int remaining = 2 - enemyCount;
+                    for(int i = 0; i < remaining; i++)
+                    {
+                        Vector3 randPos = getRandomOffsetVector(end_pos, spread_range);
+                        spawnStaticProjectile(m_metagame, "fairy_rocket_bm30_300mm.projectile", randPos.add(Vector3(0, 50, 0)), cid, fid);
+                    }
+
+                    playSoundAtLocation(m_metagame, "bm21_woosh_byBadGoose.wav", fid, start_pos, 1.5);
+                    Airstrike_strafe.removeAt(a);
+                    break;
                 }
 
 
                 case 2110:{//狂猎燃魂 NTW20
                     //扫射位置偏移单位向量 与 扫射位置偏移单位距离
                     Vector3 strike_vector = getAimUnitVector(1,start_pos,end_pos); 
-                    float strike_didis = 3.0;
+                    float strike_didis = 4.0;
                     //扫射起点 从弹头终点指向弹头起点的位置 
                     //扫射终点的起点与终点（就生成弹头的终点的起始位置与终止位置）
                     //依据扫射位置偏移单位距离而设置的扫射次数
-                    int strike_time = int(getAimUnitDistance(1,start_pos,end_pos)/strike_didis);
+                    int strike_time = 15;
                     Vector3 endPos = start_pos.add(Vector3(0,1.0,0));
-
+                    playSoundAtLocation(m_metagame,"ntw20_fire_FromBF2042.wav",fid,start_pos,1.0);
                     for(int i=0;i<=strike_time;i++){
-                        //水平偏移
+                        // spawnStaticProjectile(m_metagame,"snipe_blast_40.projectile",endPos,cid,fid);         
+                        CreateDirectProjectile(m_metagame,endPos.add(Vector3(0,6,0)),endPos,"snipe_wildhunt_ntw20_main.projectile",cid,fid,200);
                         endPos = endPos.add(getMultiplicationVector(strike_vector,Vector3(strike_didis,0,strike_didis)));
-                        //每单轮扫射生成1次对点扫射
-                        spawnStaticProjectile(m_metagame,"ASW_IonCannon_strafe.projectile",endPos,cid,fid);                            
                     }                               
                     Airstrike_strafe.removeAt(a);
                     break;
