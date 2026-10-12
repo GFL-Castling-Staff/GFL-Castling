@@ -635,7 +635,7 @@ class kill_event : Tracker {
                 {
                     int i = findSkillIndexbyPname(playerName,"m327");
                     if(i >=0){
-                        SkillArray[i].m_time-=20.0;
+                        SkillArray[i].m_time-=5.0;
                         notify(m_metagame, "减CD", dictionary(), "misc", playerId, false, "", 1.0);
                     }
                 }
