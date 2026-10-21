@@ -83,7 +83,7 @@
 	spread_range="0.1"/>
     <commonness value="0.0" />
     <projectile file="bullet_ai.projectile">
-        <result class="blast"  damage="1.1"  radius="3.0" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
+        <result class="blast"  damage="3.1"  radius="4.0" decal="1" push="0.2" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
     </projectile>
     <sound key="fire" fileref="pierre_fire_FromBF2042.wav" pitch_variety="0.02" volume="1.7"/>
 	<sound key="magazine_out" fileref="mg_clip_out.wav"/>
