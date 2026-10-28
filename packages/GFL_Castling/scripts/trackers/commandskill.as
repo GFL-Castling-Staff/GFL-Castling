@@ -4899,7 +4899,9 @@ class CommandSkill : Tracker {
                 c.setIntAttribute("character_id", soldierId);
                 c.setIntAttribute("untransform_count", 5);
                 m_metagame.getComms().send(c);
-                setPlayerWound(m_metagame,soldierId,false);
+                // setPlayerWound(m_metagame,soldierId,false);
+                Vector3 t_pos = stringToVector3(characters[i].getStringAttribute("position"));
+                spawnStaticProjectile(m_metagame, "fairy_warrior_vtol_unwound.projectile", t_pos, characterId, factionid);
             }
             spawnStaticProjectile(m_metagame,"particle_effect_radius_heal.projectile",c_pos,characterId,factionid);
         }
