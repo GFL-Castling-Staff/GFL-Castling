@@ -68,7 +68,7 @@
 		<turret index="1" />
 		<turret index="2" />
 	</character_slot>
-	<item_container class="armory" offset="0.0 0.78 -2.25" soldier_group="default_hvy"/>
+	<item_container class="armory" offset="0.0 0.78 -2.25" soldier_group="player_hvy"/>
 	<spawn_point />
 	<!-- sound handling -->
 	<rev_sound filename="truck_rev0.wav" low_pitch="0.95" high_pitch="1.05" low_rev="0.0" high_rev="0.2" volume="1.0" />
