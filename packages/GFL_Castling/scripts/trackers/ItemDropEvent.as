@@ -275,7 +275,6 @@ class ItemDropEvent : Tracker {
                     return;
                 }
                 newdata.addWeapon(loggerKey);
-                string format_string = string(reverse_tdoll_complex_index[loggerKey]);
                 dictionary a;
                 a["%doll_key"] = "" + loggerKey;
                 a["%doll_num"] = "" + newdata.getAllNum();

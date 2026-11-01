@@ -41,7 +41,10 @@ class player_data
     string m_call_slot_3;
 
 
+    // 有序武器列表，保持原有写出顺序
     array<string> m_weapons={};
+    // 与 m_weapons 同步的成员索引，把 addWeapon/FindWeapon 的 O(n) 线性扫描降为 O(1)
+    dictionary m_weapon_index;
     array<GFL_call_info@> m_unlocked_call={
         GFL_call_info("call_ui_t1_bombardment_fairy_82mm_mortar_free"),
         GFL_call_info("call_ui_t1_bombardment_fairy_82mm_mortar"),
@@ -84,19 +87,10 @@ class player_data
 
     void addWeapon(const string key)
     {
-        bool isDuplicate = false;
-        for (uint i = 0; i < m_weapons.length(); ++i)
-        {
-            if (m_weapons[i] == key)
-            {
-                isDuplicate = true;
-                break;
-            }
-        }
-        if (!isDuplicate)
-        {
-            m_weapons.insertLast(key);
-        }
+        if (key == "") { return; }
+        if (m_weapon_index.exists(key)) { return; }
+        m_weapon_index.set(key, true);
+        m_weapons.insertLast(key);
     }
 
     //研发点相关
@@ -161,11 +155,13 @@ class player_data
     void formatWeaponList()
     {
         array<string> new_weapons = {};
+        m_weapon_index.deleteAll();
         for (uint i = 0; i < m_weapons.length(); ++i)
         {
             if (existKeyinList(m_weapons[i]))
             {
                 new_weapons.insertLast(m_weapons[i]);
+                m_weapon_index.set(m_weapons[i], true);
             }
             else
             {
@@ -175,6 +171,19 @@ class player_data
         m_weapons = new_weapons;
     }
 
+    // 依据 m_weapons 重建成员索引，用于直接从外部整体替换列表后同步状态
+    void rebuildWeaponIndex()
+    {
+        m_weapon_index.deleteAll();
+        for (uint i = 0; i < m_weapons.length(); ++i)
+        {
+            if (m_weapons[i] != "")
+            {
+                m_weapon_index.set(m_weapons[i], true);
+            }
+        }
+    }
+
     int getAllNum() const
     {
         return m_weapons.length();
@@ -182,14 +191,7 @@ class player_data
 
     bool FindWeapon(const string weaponToFind)
     {
-        for (uint i = 0; i < m_weapons.length(); ++i)
-        {
-            if (m_weapons[i] == weaponToFind)
-            {
-                return true;
-            }
-        }
-        return false;
+        return m_weapon_index.exists(weaponToFind);
     }
 
     string getRandomWeapon() const
@@ -516,7 +518,9 @@ XmlElement@ PlayerProfileSave(player_data@ player_info) {
     root.setIntAttribute("dev_point_lifemax", player_info.m_dev_point_lifemax);
     string FILENAME =  ("save_" + player_info.m_sid +".xml" );
 
+    // 预分配子节点容量：存档武器数可达数百条，避免 appendChild 过程中反复扩容拷贝
     XmlElement subroot_0("weapons");
+    subroot_0.reserveChildren(player_info.m_weapons.length());
     for (uint i = 0; i < player_info.m_weapons.length(); i++)
     {
         XmlElement e("weapon");
@@ -539,6 +543,7 @@ XmlElement@ PlayerProfileSave(player_data@ player_info) {
 
     //处理解锁的支援列表
     XmlElement subroot_2("unlocked_calls");
+    subroot_2.reserveChildren(player_info.m_unlocked_call.length());
     for (uint i = 0; i < player_info.m_unlocked_call.length(); i++)
     {
         XmlElement e("unlocked_call");
@@ -549,6 +554,7 @@ XmlElement@ PlayerProfileSave(player_data@ player_info) {
 
     //好感度
     XmlElement subroot_3("intimacy");
+    subroot_3.reserveChildren(player_info.m_tdoll_intimacy.length());
     for (uint i = 0; i < player_info.m_tdoll_intimacy.length(); i++)
     {
         XmlElement e("doll");
@@ -560,6 +566,7 @@ XmlElement@ PlayerProfileSave(player_data@ player_info) {
         subroot_3.appendChild(e);
     }
 
+    root.reserveChildren(4);
     root.appendChild(subroot_0);
     root.appendChild(subroot_1);
     root.appendChild(subroot_2);
@@ -581,12 +588,14 @@ player_data@ PlayerProfileLoad(const XmlElement@ player_profile){
     output.setDevPoint(m_dev_point);
     output.setDevPointLife(m_dev_point_lifemax);
 
+    // 预热索引容器，避免逐条 addWeapon/set 过程中反复 rehash
     const XmlElement@ weapon_dump = player_profile.getFirstElementByTagName("weapons");
     if(weapon_dump !is null)
     {
         array<const XmlElement@> weapon_list = weapon_dump.getElementsByTagName("weapon");
         if(weapon_list !is null)
         {
+            output.m_weapons.reserve(weapon_list.length());
             for(uint i = 0; i < weapon_list.length();i++)
             {
                 string weapon_key = weapon_list[i].getStringAttribute("key");
@@ -603,6 +612,7 @@ player_data@ PlayerProfileLoad(const XmlElement@ player_profile){
         array<const XmlElement@> unlocked_call_list = unlocked_call_dump.getElementsByTagName("unlocked_call");
         if(unlocked_call_list !is null)
         {
+            output.m_unlocked_call.reserve(output.m_unlocked_call.length() + unlocked_call_list.length());
             for(uint i = 0; i < unlocked_call_list.length();i++)
             {
                 string call_ui_key = unlocked_call_list[i].getStringAttribute("call_key");
@@ -639,6 +649,7 @@ player_data@ PlayerProfileLoad(const XmlElement@ player_profile){
         array<const XmlElement@> tdoll_intimacy_list = tdoll_intimacy_dump.getElementsByTagName("doll");
         if(tdoll_intimacy_list !is null)
         {
+            output.m_tdoll_intimacy.reserve(output.m_tdoll_intimacy.length() + tdoll_intimacy_list.length());
             for(uint i = 0; i < tdoll_intimacy_list.length();i++)
             {
                 int index = tdoll_intimacy_list[i].getIntAttribute("index");

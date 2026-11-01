@@ -132,10 +132,11 @@ class XmlElement {
 	// --------------------------------------------
 	array<const XmlElement@>@ getElementsByTagName(string name) const {
 		array<const XmlElement@> elements;
-        elements.reserve(128);
 
+		// 先取一次 Children，按实际数量预留，避免固定 128 在大存档（数百条武器）下反复扩容
 		array<dictionary>@ childrenData = null;
-		if (m_data.exists("Children") && m_data.get("Children", @childrenData)) {
+		if (m_data.exists("Children") && m_data.get("Children", @childrenData) && childrenData !is null) {
+			elements.reserve(childrenData.size());
 			for (uint i = 0; i < childrenData.size(); ++i) {
 				if(childrenData[i] is null){continue;}
 				const XmlElement child(childrenData[i]);
@@ -162,38 +163,37 @@ class XmlElement {
 	}
 
 	// --------------------------------------------
-	void appendChild(const XmlElement@ child) {
-		array<dictionary>@ childrenData;
-		if (!m_data.exists("Children")) {
-			@childrenData = array<dictionary>();
-			m_data.set("Children", @childrenData);
-		} else {
-			m_data.get("Children", @childrenData);
+	// 取 Children 数组句柄，不存在或损坏时创建。供 appendChild/appendChilds/reserveChildren 复用，
+	// 避免每次追加都对 m_data 做 exists + get 两次字典查找。
+	array<dictionary>@ getOrCreateChildren() {
+		array<dictionary>@ childrenData = null;
+		if (m_data.exists("Children") && m_data.get("Children", @childrenData) && childrenData !is null) {
+			return childrenData;
 		}
+		@childrenData = array<dictionary>();
+		m_data.set("Children", @childrenData);
+		return childrenData;
+	}
 
-		if (childrenData !is null) {
-			childrenData.insertLast(child.toDictionary());
-		}else{
-			@childrenData = array<dictionary>();
-			m_data.set("Children", @childrenData);
-		}
+	void appendChild(const XmlElement@ child) {
+		array<dictionary>@ childrenData = getOrCreateChildren();
+		childrenData.insertLast(child.toDictionary());
 	}
 
 	void appendChilds(array<const XmlElement@> childs) {
+		if (childs.size() <= 0) { return; }
+		array<dictionary>@ childrenData = getOrCreateChildren();
+		childrenData.reserve(childrenData.size() + childs.size());
 		for(uint i=0;i<childs.size();++i){
 			const XmlElement@ child = childs[i];
-			array<dictionary>@ childrenData;
-			if (!m_data.exists("Children")) {
-				@childrenData = array<dictionary>();
-				m_data.set("Children", @childrenData);
-			} else {
-				m_data.get("Children", @childrenData);
-			}
-
-			if (childrenData !is null) {
-				childrenData.insertLast(child.toDictionary());
-			}
+			if (child is null) { continue; }
+			childrenData.insertLast(child.toDictionary());
 		}
+	}
+
+	// 预估子节点数量，避免大批量 appendChild 时反复扩容
+	void reserveChildren(uint count) {
+		getOrCreateChildren().reserve(count);
 	}
 
 	// --------------------------------------------
