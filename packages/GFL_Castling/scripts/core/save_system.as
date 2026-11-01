@@ -443,28 +443,55 @@ class tdoll_intimacy_info
     }
 }
 
+// 返回存档根节点。返回 null 表示读取失败，调用方必须判空并中止，禁止在失败状态下写入。
 const XmlElement@ readFile(const Metagame@ metagame,string name, string profile_hash){
     string filename = ("save_" + profile_hash +".xml" );
-    const XmlElement@ root = readXML(metagame,filename).getFirstChild();
-    if(root is null){
-        _log("readFile is null,create");
-        XmlElement@ new_xml = PlayerProfileSave(player_data(name,profile_hash));
-        writeXML(metagame,filename,new_xml);
-        @root = readXML(metagame,filename).getFirstChild();
+
+    const XmlElement@ xml = readXML(metagame, filename);
+    if (xml is null) {
+        // 通信层读取失败（例如已收到退出信号），不允许写入，直接失败
+        _log("WARN: readFile read failed, abort: " + filename, -1);
+        return null;
     }
-    return root;
+
+    const XmlElement@ root = xml.getFirstChild();
+    if (root !is null) {
+        return root;
+    }
+
+    // 存档存在但没有内容：为首次进入的玩家创建初始存档
+    _log("readFile is null,create");
+    writeXML(metagame,filename,PlayerProfileSave(player_data(name,profile_hash)));
+
+    const XmlElement@ xml_retry = readXML(metagame, filename);
+    if (xml_retry is null) {
+        _log("WARN: readFile reread failed, abort: " + filename, -1);
+        return null;
+    }
+    // 仍可能为 null，由调用方判空
+    return xml_retry.getFirstChild();
 }
 
+// 单次查询，失败返回 null。旧实现的递归自我调用在 query 持续失败时会无限展开打穿堆栈。
 const XmlElement@ readXML(const Metagame@ metagame, string filename){
     XmlElement@ query = XmlElement(
         makeQuery(metagame, array<dictionary> = {
             dictionary = { {"TagName", "data"}, {"class", "saved_data"}, {"filename", filename}}}));
+
     const XmlElement@ xml = metagame.getComms().query(query);
-    if(xml is null){
-        writeXML(metagame,filename,XmlElement(filename));
-        @xml = readXML(metagame,filename);
+    if (xml is null) {
+        _log("WARN: readXML query failed: " + filename, -1);
     }
     return xml;
+}
+
+// 读取并解析玩家存档。返回 null 表示失败，调用方必须判空并中止，禁止写入。
+player_data@ loadProfile(const Metagame@ metagame, string name, string profile_hash){
+    const XmlElement@ root = readFile(metagame, name, profile_hash);
+    if (root is null) {
+        return null;
+    }
+    return PlayerProfileLoad(root);
 }
 
 void writeXML(const Metagame@ metagame, string filename, XmlElement@ xml, string location = "" ){
@@ -688,7 +715,8 @@ class Save_System : Tracker {
                 string weapon_key = getKeyfromIndex(girl_index,skin_index,mode_index);
 
 
-                player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+                player_data@ newdata = loadProfile(m_metagame,p_name,profile_hash);
+                if (newdata is null) return;
 
                 if(newdata.FindWeapon(weapon_key))
                 {
@@ -723,7 +751,8 @@ class Save_System : Tracker {
             }
 
             string girl_index = message.substr(message.findFirst(" ")+1);
-            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+            player_data@ newdata = loadProfile(m_metagame,p_name,profile_hash);
+            if (newdata is null) return;
 
             int girl_index_i = parseInt(girl_index);
             _log("图鉴里有" +newdata.getAllNum() +"个武器");
@@ -769,7 +798,8 @@ class Save_System : Tracker {
             string profile_hash = playerInfo.getHash();
             string sid = playerInfo.getSid();
             int player_id = playerInfo.getPlayerPid();
-            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+            player_data@ newdata = loadProfile(m_metagame,p_name,profile_hash);
+            if (newdata is null) return;
             string weapon_key = newdata.getRandomWeapon();
             const XmlElement@ player = getPlayerInfo(m_metagame,player_id);
             if (player is null) return;
@@ -788,7 +818,8 @@ class Save_System : Tracker {
             string profile_hash = playerInfo.getHash();
             string sid = playerInfo.getSid();
             int player_id = playerInfo.getPlayerPid();
-            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+            player_data@ newdata = loadProfile(m_metagame,p_name,profile_hash);
+            if (newdata is null) return;
             const XmlElement@ player = getPlayerInfo(m_metagame,player_id);
             if (player is null) return;
             int cId = player.getIntAttribute("character_id");
@@ -807,7 +838,8 @@ class Save_System : Tracker {
             string profile_hash = playerInfo.getHash();
             string sid = playerInfo.getSid();
             int player_id = playerInfo.getPlayerPid();
-            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+            player_data@ newdata = loadProfile(m_metagame,p_name,profile_hash);
+            if (newdata is null) return;
             const XmlElement@ player = getPlayerInfo(m_metagame,player_id);
             if (player is null) return;
             int cId = player.getIntAttribute("character_id");
@@ -845,7 +877,8 @@ class Save_System : Tracker {
             string profile_hash = playerInfo.getHash();
             string sid = playerInfo.getSid();
             int player_id = playerInfo.getPlayerPid();
-            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+            player_data@ newdata = loadProfile(m_metagame,p_name,profile_hash);
+            if (newdata is null) return;
             const XmlElement@ player = getPlayerInfo(m_metagame,player_id);
             if (player is null) return;
             int cId = player.getIntAttribute("character_id");
@@ -860,7 +893,8 @@ class Save_System : Tracker {
             string profile_hash = playerInfo.getHash();
             string sid = playerInfo.getSid();
             int player_id = playerInfo.getPlayerPid();
-            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+            player_data@ newdata = loadProfile(m_metagame,p_name,profile_hash);
+            if (newdata is null) return;
             const XmlElement@ player = getPlayerInfo(m_metagame,player_id);
             if (player is null) return;
             int cId = player.getIntAttribute("character_id");
@@ -924,7 +958,8 @@ class Save_System : Tracker {
             string profile_hash = playerInfo.getHash();
             string sid = playerInfo.getSid();
             int player_id = playerInfo.getPlayerPid();
-            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+            player_data@ newdata = loadProfile(m_metagame,p_name,profile_hash);
+            if (newdata is null) return;
             newdata.addDevPoint(1000);
             string filename = ("save_" + profile_hash +".xml" );
             writeXML(m_metagame,filename,PlayerProfileSave(newdata));
@@ -936,7 +971,8 @@ class Save_System : Tracker {
             string profile_hash = playerInfo.getHash();
             string sid = playerInfo.getSid();
             int player_id = playerInfo.getPlayerPid();
-            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+            player_data@ newdata = loadProfile(m_metagame,p_name,profile_hash);
+            if (newdata is null) return;
 
             string weapon_key = getKeyfromIndex(girl_index);
             if(weapon_key=="")

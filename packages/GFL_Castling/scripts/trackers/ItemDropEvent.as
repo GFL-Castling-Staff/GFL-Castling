@@ -102,14 +102,15 @@ class ItemDropEvent : Tracker {
                 if(call_key != "" && callUI_Slot.exists(call_key))
                 {
                     string update_call_key = call_key;
-                    player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+                    player_data@ newdata = loadProfile(m_metagame,p_name,profile_hash);
+                    if (newdata is null) return;
                     string updated_call_key = getCallKeyfromPlayerData(newdata,update_call_key);
                     _log("更新前的key==="+ update_call_key);
                     _log("更新后的key==="+ updated_call_key);
                     if(updated_call_key =="")
                     {
                         notify(m_metagame, "Hint - call - locked",dictionary(), "misc", pId, false, "", 1.0);
-                        m_craftQueue.removeAt(findQueueIndex(pId,call_key));
+                        removeQueueEntry(pId,call_key);
                     }
                     else
                     {
@@ -121,7 +122,7 @@ class ItemDropEvent : Tracker {
                         a["%call_key"] = "Hint - call - title - " + update_call_key;
                         a["%slot"] = "Tier " + slot;
                         notify(m_metagame, "Hint - call - changesuccess", a, "misc", pId, false, "", 1.0);
-                        m_craftQueue.removeAt(findQueueIndex(pId,call_key));
+                        removeQueueEntry(pId,call_key);
                     }
                 }
                 else
@@ -144,15 +145,16 @@ class ItemDropEvent : Tracker {
                     if(call_key.findFirst("_update") < 0)
                     {
                         notify(m_metagame, "Hint - call - notadvanced", dictionary(), "misc", pId, false, "", 1.0);
-                        m_craftQueue.removeAt(findQueueIndex(pId,call_key));
+                        removeQueueEntry(pId,call_key);
                     }
                     else
                     {
-                        player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+                        player_data@ newdata = loadProfile(m_metagame,p_name,profile_hash);
+                        if (newdata is null) return;
                         if(newdata.FindCallUnlock(call_key))
                         {
                             notify(m_metagame, "Hint - call - already dev", dictionary(), "misc", pId, false, "", 1.0);
-                            m_craftQueue.removeAt(findQueueIndex(pId,call_key));
+                            removeQueueEntry(pId,call_key);
                         }
                         else
                         {
@@ -168,7 +170,7 @@ class ItemDropEvent : Tracker {
                             {
                                 notify(m_metagame, "Hint - call - cantafford", dictionary(), "misc", pId, false, "", 1.0);
                             }
-                            m_craftQueue.removeAt(findQueueIndex(pId,call_key));
+                            removeQueueEntry(pId,call_key);
                         }
                     }
                 }
@@ -204,7 +206,7 @@ class ItemDropEvent : Tracker {
                     }
                     else
                     {
-                        m_craftQueue.removeAt(findQueueIndex(pId,call_key));
+                        removeQueueEntry(pId,call_key);
                         notify(m_metagame, "Hint - call - 404notfound dev",dictionary(), "misc", pId, false, "", 1.0);
                     }
                 }
@@ -263,7 +265,8 @@ class ItemDropEvent : Tracker {
                 if (playerInfo.getPlayerName() == default_string) return;
                 string profile_hash = playerInfo.getHash();
                 string p_name = playerInfo.getPlayerName();
-                player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+                player_data@ newdata = loadProfile(m_metagame,p_name,profile_hash);
+                if (newdata is null) return;
                 if(newdata.FindWeapon(loggerKey))
                 {
                     dictionary a;
@@ -401,7 +404,7 @@ class ItemDropEvent : Tracker {
                         string outputItem = string(MOD3craftList[itemKey]);
                         if (outputItem != ""){
                             addItemInBackpack(m_metagame,cId,"weapon",outputItem);
-                            m_craftQueue.removeAt(findQueueIndex(pId,"mod3"));
+                            removeQueueEntry(pId,"mod3");
                             dictionary a;
                             a["%doll_name"] = getResourceName(m_metagame, itemKey, "weapon");
                             sendPrivateMessageKey(m_metagame, pId, "digimindupdatesuccess",a);
@@ -412,7 +415,8 @@ class ItemDropEvent : Tracker {
                             if (playerInfo.getPlayerName() == default_string) return;
                             string profile_hash = playerInfo.getHash();
                             string p_name = playerInfo.getPlayerName();
-                            player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+                            player_data@ newdata = loadProfile(m_metagame,p_name,profile_hash);
+                            if (newdata is null) return;
                             if(newdata.FindWeapon(outputItem))
                             {
                                 return;
@@ -438,7 +442,7 @@ class ItemDropEvent : Tracker {
                         else{
                             addItemInBackpack(m_metagame,cId,"carry_item","firecontrol.carry_item");
                             addItemInBackpack(m_metagame,cId,"weapon",itemKey);
-                            m_craftQueue.removeAt(findQueueIndex(pId,"mod3"));
+                            removeQueueEntry(pId,"mod3");
                             sendPrivateMessageKey(m_metagame, pId, "digimindupdatefailed");
                             playPrivateSound(m_metagame,"sfx_failed.wav",pId);
                             GiveRP(m_metagame,cId,-10000);
@@ -732,7 +736,8 @@ class ItemDropEvent : Tracker {
         if (playerInfo.getPlayerName() == default_string) return;
         string profile_hash = playerInfo.getHash();
         string p_name = playerInfo.getPlayerName();
-        player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+        player_data@ newdata = loadProfile(m_metagame,p_name,profile_hash);
+        if (newdata is null) return;
         if(newdata.FindWeapon(weapon_xml_name))
         {
             return;
@@ -799,7 +804,7 @@ class ItemDropEvent : Tracker {
 		int senderId = event.getIntAttribute("player_id");
         if(checkCommand(message,"mask")){
             if(checkQueue(senderId,"truecore") != true) return;
-            m_craftQueue.removeAt(findQueueIndex(senderId,"truecore"));
+            removeQueueEntry(senderId,"truecore");
             string s = message.substr(message.findFirst(" ")+1);
             const XmlElement@ player = getPlayerInfo(m_metagame,senderId);
             if (player is null) return;
@@ -824,7 +829,8 @@ class ItemDropEvent : Tracker {
                 a["%doll_name"] = getResourceName(m_metagame, itemKey, "weapon");
                 sendPrivateMessageKey(m_metagame, senderId, "truemask_success",a);
                 playPrivateSound(m_metagame,"sfx_big.wav",senderId);
-                player_data newdata = PlayerProfileLoad(readFile(m_metagame,sender,profile_hash));
+                player_data@ newdata = loadProfile(m_metagame,sender,profile_hash);
+                if (newdata is null) return;
                 if(newdata.FindWeapon(itemKey))
                 {
                     return;
@@ -842,7 +848,7 @@ class ItemDropEvent : Tracker {
 
         if(checkCommand(message,"bc")){
             if(checkQueue(senderId,"blackcard") != true) return;
-            m_craftQueue.removeAt(findQueueIndex(senderId,"blackcard"));
+            removeQueueEntry(senderId,"blackcard");
 
             const XmlElement@ player = getPlayerInfo(m_metagame,senderId);
             if (player is null) return;
@@ -889,7 +895,8 @@ class ItemDropEvent : Tracker {
             a["%doll_name"] = getResourceName(m_metagame, weapon_key, "weapon");
             sendPrivateMessageKey(m_metagame, senderId, "blackcard_hint_success",a);
             playPrivateSound(m_metagame,"sfx_big.wav",senderId);
-            player_data newdata = PlayerProfileLoad(readFile(m_metagame,sender,profile_hash));
+            player_data@ newdata = loadProfile(m_metagame,sender,profile_hash);
+            if (newdata is null) return;
             if(newdata.FindWeapon(weapon_key))
             {
                 return;
@@ -1120,6 +1127,17 @@ class ItemDropEvent : Tracker {
             }
         }
         return -1;
+    }
+
+    // 安全移除队列项：findQueueIndex 返回 -1 时 removeAt(-1) 属未定义行为会破坏数组，这里统一拦掉
+    bool removeQueueEntry(int pId,string type){
+        int index = findQueueIndex(pId,type);
+        if(index < 0){
+            _log("WARN: ItemDropEvent: queue entry not found, pid=" + pId + " key=" + type);
+            return false;
+        }
+        m_craftQueue.removeAt(index);
+        return true;
     }
 
     void startQueue(int playerId,string key){

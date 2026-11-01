@@ -121,7 +121,8 @@ class call_event : Tracker {
                             GFL_playerInfo@ m_playerinfo = getPlayerInfoFromListbyPid(playerId);
                             if (m_playerinfo.getPlayerName() == default_string ) break;
                             GFL_battleInfo@ battleInfo = m_playerinfo.getBattleInfo();
-                            player_data newdata = PlayerProfileLoad(readFile(m_metagame,playerName,profile_hash));
+                            player_data@ newdata = loadProfile(m_metagame,playerName,profile_hash);
+                            if (newdata is null) break;
                             string call_slot_key = newdata.getCallSlot(1);
                             if(call_slot_key == "") break;
                             switch(int(call_tier_index[call_slot_key]))
@@ -931,7 +932,8 @@ class call_event : Tracker {
                             GFL_playerInfo@ m_playerinfo = getPlayerInfoFromListbyPid(playerId);
                             if (m_playerinfo.getPlayerName() == default_string ) break;
                             GFL_battleInfo@ battleInfo = m_playerinfo.getBattleInfo();
-                            player_data newdata = PlayerProfileLoad(readFile(m_metagame,playerName,profile_hash));
+                            player_data@ newdata = loadProfile(m_metagame,playerName,profile_hash);
+                            if (newdata is null) break;
                             string call_slot_key = newdata.getCallSlot(2);
                             if(call_slot_key == "") break;
                             switch(int(call_tier_index[call_slot_key]))
@@ -1539,7 +1541,8 @@ class call_event : Tracker {
                             GFL_playerInfo@ m_playerinfo = getPlayerInfoFromListbyPid(playerId);
                             if (m_playerinfo.getPlayerName() == default_string ) break;
                             GFL_battleInfo@ battleInfo = m_playerinfo.getBattleInfo();
-                            player_data newdata = PlayerProfileLoad(readFile(m_metagame,playerName,profile_hash));
+                            player_data@ newdata = loadProfile(m_metagame,playerName,profile_hash);
+                            if (newdata is null) break;
                             string call_slot_key = newdata.getCallSlot(3);
                             if(call_slot_key == "") break;
                             switch(int(call_tier_index[call_slot_key]))
@@ -2266,7 +2269,8 @@ class call_event : Tracker {
             GFL_playerInfo@ playerInfo = getPlayerInfoFromList(p_name);
             if (playerInfo.getPlayerName() == default_string ) return;
             int player_id = playerInfo.getPlayerPid();
-            player_data newdata = PlayerProfileLoad(readFile(m_metagame,playerInfo.getPlayerName(),playerInfo.getHash()));
+            player_data@ newdata = loadProfile(m_metagame,playerInfo.getPlayerName(),playerInfo.getHash());
+            if (newdata is null) return;
             string call_slot_key1 = newdata.getCallSlot(1);
             string call_slot_key2 = newdata.getCallSlot(2);
             string call_slot_key3 = newdata.getCallSlot(3);
@@ -2413,7 +2417,11 @@ class call_event : Tracker {
             addItemInBackpack(m_metagame, characterId, "weapon", weaponKey);
             return;
         }
-        player_data newdata = PlayerProfileLoad(readFile(m_metagame, playerName, profile_hash));
+        player_data@ newdata = loadProfile(m_metagame, playerName, profile_hash);
+        if (newdata is null) {
+            addItemInBackpack(m_metagame, characterId, "weapon", weaponKey);
+            return;
+        }
         if (!newdata.tryCostDevPoint(dp_cost)) {
             dictionary a;
             a["%num"]      = "" + (dp_cost - newdata.getDevPoint());   // 缺额（失败未改动，仍是原值）

@@ -334,7 +334,8 @@ class GFL_playerInfo{
         string profile_hash = this.getHash();
         string sid = this.getSid();
         int player_id = this.getPlayerPid();        
-        player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+        player_data@ newdata = loadProfile(m_metagame,p_name,profile_hash);
+        if (newdata is null) return;
 
         for(uint i1=0;i1 < this.m_tdoll_intimacy_buck.length();i1++)
         {
@@ -991,7 +992,8 @@ class GFL_playerlist_system : Tracker {
                 m_dev_point_add = min(250,m_dev_point_add);
                 m_dev_point_add += m_dev_point_complete;
 
-                player_data newdata = PlayerProfileLoad(readFile(m_metagame,p_name,profile_hash));
+                player_data@ newdata = loadProfile(m_metagame,p_name,profile_hash);
+                if (newdata is null) return;
                 newdata.addDevPoint(m_dev_point_add);
 
                 string c_weaponType = playerInfo.getPlayerEquipment().getWeapon(0);
