@@ -758,7 +758,13 @@ class kill_event : Tracker {
                 }
             }
 
-            updateHealByKillEvent(characterId,factionId,int(healOnKillWeaponList[c_weaponType]),10,"weapon",kill_to_heal_scale,getRecoverVestNum(c_weaponType));
+            // 注意：不要直接写 healOnKillWeaponList[c_weaponType]。
+            // 该字典里的键是"武器键"，而 c_weaponType 是玩家当前武器；
+            // 字典下标访问对不存在的键会插入空条目，长时间运行会让这个成员字典持续膨胀
+            // （每次查一个未注册武器就多一条记录），这里改为先判存在再取值。
+            if (healOnKillWeaponList.exists(c_weaponType)) {
+                updateHealByKillEvent(characterId,factionId,int(healOnKillWeaponList[c_weaponType]),10,"weapon",kill_to_heal_scale,getRecoverVestNum(c_weaponType));
+            }
 
 
             ///指定武器handle(响应特殊条件)
@@ -802,21 +808,10 @@ class kill_event : Tracker {
             && killway=="hit")
             {
                 Vector3 dead_position = stringToVector3(dead_pos);
-                int m_fnum = m_metagame.getFactionCount();
                 for (uint m = 0; m < m14_active_tasks.length(); m++) {
                     if (m14_active_tasks[m].m_characterId == characterId && m14_active_tasks[m].m_ammo > 0) {
-                        // 搜索被击杀目标附近的敌人
-                        array<const XmlElement@> nearbyEnemies;
-                        for (int f = 0; f < m_fnum; f++) {
-                            if (f != factionId) {
-                                array<const XmlElement@> found = getCharactersNearPosition(m_metagame, dead_position, f, 15.0f);
-                                if (found !is null) {
-                                    for (uint x = 0; x < found.length(); x++) {
-                                        nearbyEnemies.insertLast(found[x]);
-                                    }
-                                }
-                            }
-                        }
+                        // 搜索被击杀目标附近的敌人：单次查询 + 本地阵营过滤，避免按阵营重复同步 query
+                        array<const XmlElement@> nearbyEnemies = getEnemyCharactersNearPositionSingleQuery(m_metagame, dead_position, factionId, 15.0f);
                         // 找最近的敌人（排除被击杀目标自身）
                         if (nearbyEnemies.length() > 0) {
                             int closestIdx = -1;
@@ -996,18 +991,7 @@ class kill_event : Tracker {
                 {
                     playerInfo.removeTag("NTW20_Wildhunt_Main");
                     Vector3 shooter_pos = stringToVector3(killer.getStringAttribute("position"));
-                    int m_fnum = m_metagame.getFactionCount();
-                    array<const XmlElement@> nearbyEnemies;
-                    for (int f = 0; f < m_fnum; f++) {
-                        if (f != factionId) {
-                            array<const XmlElement@> found = getCharactersNearPosition(m_metagame, shooter_pos, f, 30.0f);
-                            if (found !is null) {
-                                for (uint x = 0; x < found.length(); x++) {
-                                    nearbyEnemies.insertLast(found[x]);
-                                }
-                            }
-                        }
-                    }
+                    array<const XmlElement@> nearbyEnemies = getEnemyCharactersNearPositionSingleQuery(m_metagame, shooter_pos, factionId, 30.0f);
                     // 找最近的敌人（排除被击杀目标自身）
                     if (nearbyEnemies.length() > 0) {
                         int closestIdx = -1;
@@ -1044,18 +1028,7 @@ class kill_event : Tracker {
                         }
                     }
                     Vector3 dead_position = stringToVector3(dead_pos);
-                    int m_fnum = m_metagame.getFactionCount();
-                    array<const XmlElement@> nearbyEnemies;
-                    for (int f = 0; f < m_fnum; f++) {
-                        if (f != factionId) {
-                            array<const XmlElement@> found = getCharactersNearPosition(m_metagame, dead_position, f, 18.0f);
-                            if (found !is null) {
-                                for (uint x = 0; x < found.length(); x++) {
-                                    nearbyEnemies.insertLast(found[x]);
-                                }
-                            }
-                        }
-                    }
+                    array<const XmlElement@> nearbyEnemies = getEnemyCharactersNearPositionSingleQuery(m_metagame, dead_position, factionId, 18.0f);
                     // 找最近的敌人（排除被击杀目标自身）
                     if (nearbyEnemies.length() > 0) {
                         int closestIdx = -1;

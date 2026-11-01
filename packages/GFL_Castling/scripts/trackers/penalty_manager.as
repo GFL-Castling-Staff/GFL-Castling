@@ -101,8 +101,10 @@ class PenalizedPlayerBucket {
 
 	// --------------------------------------------
 	void addPlayersToSave(XmlElement@ root) {
-		for (uint i = 0; i < m_players.getKeys().size(); ++i) {
-			string sid = m_players.getKeys()[i];
+		// 缓存 key 列表：getKeys() 每次调用都会新建数组，放进循环条件里会变成 O(n^2) 的分配
+		array<string>@ keys = m_players.getKeys();
+		for (uint i = 0; i < keys.size(); ++i) {
+			string sid = keys[i];
 			PenalizedPlayer@ player = get(sid);
 
 			// with forgiving team kills actually removing tracking this won't be needed,

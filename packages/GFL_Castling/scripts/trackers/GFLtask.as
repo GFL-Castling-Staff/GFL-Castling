@@ -4175,17 +4175,19 @@ int chainFindNextTarget(ChainExecutionContext@ ctx, Vector3 searchOrigin) {
 
         Vector3 cPos = ctx.m_candidate_positions[i];
         float dist   = getAimUnitDistance(1.0f, searchOrigin, cPos);
-        _log("chain candidate id=" + cId +
-             " jump=" + ctx.m_jump_index +
-             " dist=" + dist +
-             " radius=" + radius +
-             " origin=" + searchOrigin.toString() +
-             " pos=" + cPos.toString(), 1);
+        // 先做范围剔除再打日志：原来每个候选都会拼接 6 段字符串，即便这条日志因为
+        // 日志级别被丢弃，拼接成本也已经付掉了。连锁技能每跳都会走这里。
         if (dist > radius) continue;
 
         if (bestId == -1 || dist < bestDist) {
             bestId   = cId;
             bestDist = dist;
+            _log("chain candidate id=" + cId +
+                 " jump=" + ctx.m_jump_index +
+                 " dist=" + dist +
+                 " radius=" + radius +
+                 " origin=" + searchOrigin.toString() +
+                 " pos=" + cPos.toString(), 1);
         }
     }
 
@@ -4365,32 +4367,34 @@ class DelayChainBootstrapTask : Task {
         int enemyFactionCount = factionCount - 1;
         if (enemyFactionCount < 0) enemyFactionCount = 0;
 
-        _log("chain bootstrap start source=" + m_sourceId +
-             " range=" + queryRange +
-             " factions=" + enemyFactionCount, 1);
+        // 这条日志只用于调试，且字符串拼接在 level>m_logLevel 时依然会发生，
+        // 挪到 level 1 才输出的同时避免默认级别下的无谓拼接。
+        if (_logger.m_logLevel >= 1) {
+            _log("chain bootstrap start source=" + m_sourceId +
+                 " range=" + queryRange +
+                 " factions=" + enemyFactionCount, 1);
+        }
 
-        for (int i = 0; i < factionCount; i++) {
-            if (i == m_factionId) continue;
+        // 单次查询 + 本地阵营过滤：原来每个阵营都要做一次同步 query，
+        // 且一旦第一个阵营就攒满候选，后面的阵营查询纯属浪费。
+        array<const XmlElement@>@ characters =
+            getEnemyCharactersNearPositionSingleQuery(m_metagame, m_triggerPos, m_factionId, queryRange);
 
-            array<const XmlElement@>@ characters = getCharactersNearPosition(m_metagame, m_triggerPos, i, queryRange);
-            if (characters is null) continue;
+        for (uint j = 0; j < characters.length(); j++) {
+            const XmlElement@ c = characters[j];
+            if (checkCharacterDead(c)) continue;
 
-            for (uint j = 0; j < characters.length(); j++) {
-                const XmlElement@ c = characters[j];
-                if (checkCharacterDead(c)) continue;
+            int cId = c.getIntAttribute("id");
+            if (candidateIds.find(cId) >= 0) continue;
 
-                int cId = c.getIntAttribute("id");
-                if (candidateIds.find(cId) >= 0) continue;
-
-                candidateIds.insertLast(cId);
-                candidatePositions.insertLast(stringToVector3(c.getStringAttribute("position")));
-                if (int(candidateIds.length()) >= m_definition.m_candidate_limit) break;
-            }
-
+            candidateIds.insertLast(cId);
+            candidatePositions.insertLast(stringToVector3(c.getStringAttribute("position")));
             if (int(candidateIds.length()) >= m_definition.m_candidate_limit) break;
         }
 
-        _log("chain bootstrap candidates=" + candidateIds.length(), 1);
+        if (_logger.m_logLevel >= 1) {
+            _log("chain bootstrap candidates=" + candidateIds.length(), 1);
+        }
         if (candidateIds.length() > 0) {
             startChainEffectFromCandidates(m_metagame, m_sourceId, m_factionId, m_triggerPos, m_definition, candidateIds, candidatePositions);
         }

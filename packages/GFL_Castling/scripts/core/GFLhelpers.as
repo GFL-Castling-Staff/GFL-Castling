@@ -838,20 +838,10 @@ void playPrivateSound(const Metagame@ metagame, string filename, int playerId) {
 }
 
 int getNearbyRandomLuckyGuyId(GameMode@ metagame, int factionid, Vector3 pos, float range){
-	uint cur_factionid_num = metagame.getFactionCount();
-    array<const XmlElement@> affectedCharacter;
-    affectedCharacter.reserve(64);
-	for(uint i=0;i<cur_factionid_num;i++) 
-		if(int(i)!=factionid) {
-			array<const XmlElement@> possible_affectedCharacter;
-			possible_affectedCharacter = getCharactersNearPosition(metagame,pos,i,range);
-			if (possible_affectedCharacter !is null){
-				for(uint x=0;x<possible_affectedCharacter.length();x++){
-					affectedCharacter.insertLast(possible_affectedCharacter[x]);
-				}
-			}
-		}
-                
+	// 原来按阵营逐个同步 query；随机选取与阵营顺序无关，改成单次查询 + 本地过滤
+    array<const XmlElement@> affectedCharacter =
+        getEnemyCharactersNearPositionSingleQuery(metagame, pos, factionid, range);
+
     if (affectedCharacter.length()>0) {
         uint luckyGuyindex = rand(0,affectedCharacter.length()-1);
         uint luckyGuyid = affectedCharacter[luckyGuyindex].getIntAttribute("id");
@@ -1109,6 +1099,23 @@ void SecondarySupply(Metagame@ metagame,int cid,uint num,string m_key,string m_t
 	if(resupply_secondary_list.find(m_key)==-1) return;
 	_log("adding secondary weapon");
 	addItemToSecondarySlot(metagame,cid,num,m_key,m_type);
+}
+
+// 收集范围内所有敌方角色：一次同步 query + 本地阵营过滤。
+//
+// getCharactersNearPosition 是同步阻塞的 comms query，按阵营逐个调用等于 N 倍开销
+// （阵营多的图上，击杀/技能路径每次循环要打好几次 query）。
+// getCharactersNearPosition2 本身就是不分阵营的附近角色查询，直接复用它，
+// 再在本地按 faction_id 剔除己方，效果等价但只付出一次 query 的代价。
+array<const XmlElement@>@ getEnemyCharactersNearPositionSingleQuery(const Metagame@ metagame, const Vector3@ position, int excludeFactionId, float range = 80.0f) {
+	array<const XmlElement@> all = getCharactersNearPosition2(metagame, position, range);
+	array<const XmlElement@> result;
+	result.reserve(all.length());
+	for (uint i = 0; i < all.length(); ++i) {
+		if (all[i].getIntAttribute("faction_id") == excludeFactionId) continue;
+		result.insertLast(all[i]);
+	}
+	return result;
 }
 
 array<const XmlElement@>@ getEnemyCharactersNearPosition(GameMode@ metagame, const Vector3@ position, int factionId, float range = 80.0f, int num = 1) {

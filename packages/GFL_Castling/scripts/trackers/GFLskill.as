@@ -101,14 +101,10 @@ class GFLskill : Tracker {
 					if (player !is null) {
 						Vector3 grenade_pos = stringToVector3(event.getStringAttribute("position"));
 						int factionid = player.getIntAttribute("faction_id");
-						int affectedNumber =0;
-						//获取技能影响的敌人数量
-						int n=m_metagame.getFactionCount();
-						for(int i=0;i<n;i++){
-							if (i == factionid) continue;
-							array<const XmlElement@> affectedCharacter = getCharactersNearPosition(m_metagame,grenade_pos,i,15.0f);
-							affectedNumber += affectedCharacter.length;
-						}
+						//获取技能影响的敌人数量：单次查询 + 本地阵营过滤（原来按阵营逐个同步 query）
+						int affectedNumber = 0;
+						array<const XmlElement@> affectedList = getEnemyCharactersNearPositionSingleQuery(m_metagame, grenade_pos, factionid, 15.0f);
+						affectedNumber = int(affectedList.length());
 						string sendtext= "白鸮轰鸣击中了"+ affectedNumber +"个敌人";
 						sendPrivateMessage(m_metagame,playerId,sendtext);
 						int PlayerfactionId = player.getIntAttribute("faction_id");

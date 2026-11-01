@@ -993,7 +993,8 @@ class GFL_playerlist_system : Tracker {
                 m_dev_point_add += m_dev_point_complete;
 
                 player_data@ newdata = loadProfile(m_metagame,p_name,profile_hash);
-                if (newdata is null) return;
+                // 单个人存档失败不能中断其它玩家的结算（20+ 人服务器上影响面很大）
+                if (newdata is null) continue;
                 newdata.addDevPoint(m_dev_point_add);
 
                 string c_weaponType = playerInfo.getPlayerEquipment().getWeapon(0);
@@ -1037,7 +1038,7 @@ class GFL_playerlist_system : Tracker {
                     int j = findNodeleteDataIndex(strname,"kar98k");
                     string weaponkey = normalizeWeaponKey(c_weaponType);
                     tdoll_intimacy_info@ kar98k_intimacy = newdata.getIntimacyFromKey(weaponkey);
-                    if (kar98k_intimacy is null) return;
+                    if (kar98k_intimacy is null) continue;
                     int kar98k_level = floor(kar98k_intimacy.getScore());
                     int min_medal_level=0;
                     if (kar98k_level >= 20)
@@ -1270,15 +1271,15 @@ class GFL_playerlist_system : Tracker {
         player_equipment.setNum(weapon1num,weapon2num,grenadenum);
 
         if(g_playerInfo_Buck is null){return;}
-        if(g_playerInfo_Buck.existName(player_username)){
+        // 只扫描一次：原来 existName + getIndexByName + update 对同一列表线性遍历了 3 遍
+        int index = g_playerInfo_Buck.getIndexByName(player_username);
+        if(index >= 0){
             //已有玩家信息
-            int index = getPlayerIndexFromList(player_username);
-            if(index < 0) return;
             if(g_playerInfo_Buck.m_playerInfo[index].check_Available() != true) //如果发现玩家连回来了
             {
                 g_playerInfo_Buck.m_playerInfo[index].ForceEnable();
             }
-            g_playerInfo_Buck.update(player_username,player_playerid,player_characterid,player_factionid,player_profile_hash,player_sid,player_equipment,player_color);
+            g_playerInfo_Buck.m_playerInfo[index].update(player_username,player_playerid,player_characterid,player_factionid,player_profile_hash,player_sid,player_equipment,player_color);
         }
         else{
             g_playerInfo_Buck.addNewInfo(player_username,player_playerid,player_characterid,player_factionid,player_profile_hash,player_sid,player_equipment,player_color);

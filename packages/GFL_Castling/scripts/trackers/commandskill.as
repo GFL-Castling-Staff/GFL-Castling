@@ -579,13 +579,15 @@ class CommandSkill : Tracker {
 
     int getCooldownIndex(int characterId,SkillModifer@ modifer,string checkstr,bool NoRemoveOnDeath=false)
     {
-        int j =-1;
+        // 原来即使命中也没有 break，会把整个 SkillArray 扫完只为了拿最后一个命中项；
+        // 调用方（checkCooldown/getCooldown/getCooldownNum/refreshCooldown）都只关心第一个命中项。
         for (uint i=0;i<SkillArray.length();i++){
-            if (existCooldown(characterId,modifer,SkillArray[i],NoRemoveOnDeath) && SkillArray[i].m_weapontype==checkstr) {
-                j=i;
+            if (SkillArray[i].m_weapontype!=checkstr) continue;
+            if (existCooldown(characterId,modifer,SkillArray[i],NoRemoveOnDeath)) {
+                return i;
             }
         }
-        return j;
+        return -1;
     }
 
     bool refreshCooldown(int characterId,SkillModifer@ modifer,string checkstr,bool NoRemoveOnDeath=false)
