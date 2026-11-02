@@ -107,7 +107,7 @@
         <effect class="muzzle" ref="iws2000_recoil_smoke" />
         <effect class="muzzle" ref="crescent_smoke_impact" />
         <projectile file="bullet_iwsAPFSDS.projectile">
-            <result class="spawn" instance_class="projectile" instance_key="sub_damage_iws2000s.projectile" min_amount="12" max_amount="12" offset="0 0.8 0" position_spread="0.2 0.3" direction_spread="0 0" />	
+            <result class="spawn" instance_class="projectile" instance_key="sub_damage_iws2000s.projectile" min_amount="10" max_amount="10" offset="0 0.8 0" position_spread="0.2 0.3" direction_spread="0 0" />	
             <trigger class="impact" />
             <rotation class="motion" />
             <collision class="sticky" />
