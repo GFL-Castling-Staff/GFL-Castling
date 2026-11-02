@@ -61,7 +61,6 @@
 	<stance state_key="prone" accuracy="1.2"/>
 	<stance state_key="prone_moving" accuracy="1.2"/>
 	<stance state_key="over_wall" accuracy="1.2"/>
-	<modifier class="detectability" value="0.15" />
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
 	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
@@ -129,7 +128,6 @@
 	<stance state_key="prone_moving" accuracy="1.2"/>
 	<stance state_key="over_wall" accuracy="1.2"/>
 	<modifier class="speed" value="-6.0"/>
-	<modifier class="detectability" value="0.15"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
 	<target_factors tag="heavy_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="8.0"/>
 	<target_factors tag="light_combat" distance="1.0" direction="0.0" squad_command="1.0" base_score="6.0"/>
@@ -168,7 +166,7 @@
     <hud_icon filename="gkw_mk47_mutant.png"/>
     <weak_hand_hold offset="0.2"/>
     <projectile file="bullet.projectile">
-        <result class="hit" kill_probability="5.65" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
+        <result class="hit" kill_probability="7.62" kill_decay_start_time="1.023" kill_decay_end_time="1.705" />
     </projectile>
     <effect class="muzzle" ref="ejection_556" />
     <stance state_key="running" accuracy="0.2" />
