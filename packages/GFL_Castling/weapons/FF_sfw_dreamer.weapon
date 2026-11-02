@@ -53,7 +53,7 @@
 
     <weak_hand_hold offset="0.4" />
     <projectile file="bullet_dreamer.projectile">
-        <result class="spawn" instance_class="projectile" instance_key="sub_damage_dreamer.projectile" min_amount="2" max_amount="2" offset="0 0.5 0" position_spread="0 0" direction_spread="0 0" />
+        <result class="spawn" instance_class="projectile" instance_key="sub_damage_dreamer.projectile" min_amount="3" max_amount="3" offset="0 0.5 0" position_spread="0 0" direction_spread="0 0" />
     </projectile>
 
 	<stance state_key="running" accuracy="0.5" />
@@ -165,7 +165,6 @@
 
 	<next_in_chain key="ff_dreamer.weapon" share_ammo="0" />
     <inventory encumbrance="20.0" buy_price="3000.0" sell_price="648.0"/>
-
 	<animation state_key="recoil"	animation_key="recoil2, dreamer" />
     <animation key="recoil" stance_key="over_wall" animation_key="recoil2, dreamer" />
     <animation key="recoil" stance_key="crouching" animation_key="recoil2, dreamer" />
@@ -187,14 +186,13 @@
     <sound class="impact" fileref="rifle_drop.wav" />    
 	
     <model filename="sfw_dreamer_skill.xml" />
-
     <hud_icon filename="sfw_dreamer_skill2.png" />
 	<effect class="muzzle" ref="dreamer"/>
 
     <weak_hand_hold offset="0.4" />
 	<projectile file="rocket_dreamer.projectile">
 	    <trail probability="1.0" key="laser_dreamer" />
-		<result class="blast" damage="0.4" radius="5.0" decal="1" push="0.0" character_state="death" faction_compare="not_equal" damage_as_probability="1" />
+		<result class="blast" damage="0.75" radius="5.0" decal="1" push="0.0" character_state="death" faction_compare="not_equal" damage_as_probability="1" />
     </projectile>
 	<stance state_key="running" accuracy="1.0" />
     <stance state_key="walking" accuracy="1.0" />
