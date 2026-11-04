@@ -6,6 +6,7 @@
 #include "phase_controller_map12.as"
 #include "phase_controller_shockzone.as"
 #include "phase_controller_deadzone.as"
+#include "phase_controller_breakthrough.as"
 
 #include "pausing_koth_timer.as"
 #include "pausing_koth_timer_target.as"
@@ -228,6 +229,7 @@ class StageConfiguratorInvasion : StageConfigurator {
 		// addStage(setupStage108());		  // xiaoxieshen by diling
 		// addStage(setupStage11());         // map13
 		addStage(setupStage4());          // map7
+		// addStage(setupStage10b());        // map10 breakthrough variant
 	}
 
 	// --------------------------------------------
@@ -2006,6 +2008,124 @@ class StageConfiguratorInvasion : StageConfigurator {
 
 		setDefaultAttackBreakTimes(stage);
 		
+		return stage;
+	}
+
+	// ------------------------------------------------------------------------------------------------
+	// map10 breakthrough variant.
+	//
+	// The R0..Rn sector division is defined in breakthrough_map_data.as.
+	// This stage keeps the normal stage definition: map info, factions, preset
+	// ownership, call handlers and metadata.
+	protected Stage@ setupStage10b() {
+		PhasedStage@ stage = createPhasedStage();
+
+		stage.m_mapInfo.m_name = "Railroad Gap - Breakthrough";
+		stage.m_mapInfo.m_path = "media/packages/GFL_Castling/maps/map10";
+		stage.m_mapInfo.m_id = "map10b";
+
+		stage.m_maxSoldiers = 13 * 12;
+		stage.m_soldierCapacityVariance = 0.45;
+		stage.m_playerAiCompensation = 2 + m_playerAiCompensation_offset;
+		stage.m_playerAiReduction = 0;
+
+		stage.addTracker(CommsCapacityHandler(m_metagame));
+		stage.addTracker(jupiter(m_metagame));
+
+		stage.m_minRandomCrates = 2;
+		stage.m_maxRandomCrates = 3;
+
+		{
+			Faction f(getFactionConfigs()[0], createFellowCommanderAiCommand(0, 0.4, 0.2));
+			f.m_overCapacity = 0;
+			f.m_capacityOffset = 8;
+			f.m_capacityMultiplier = 1.0;
+			// initial ownership comes from m_presetBases below
+			stage.m_factions.insertLast(f);
+		}
+		{
+			Faction f(getFactionConfigs()[getRandomEnemyIndex()], createCommanderAiCommand(1, 0.5, 0.2));
+			f.m_overCapacity = 70;
+			f.m_capacityOffset = 20;
+			stage.m_factions.insertLast(f);
+		}
+		{
+			// vanilla neutral faction, fixed by name (not a random playable faction)
+			Faction f(FactionConfig(2, "neutral.xml", "Neutral", "1.0 1.0 0.95"),
+			          createCommanderAiCommand(2, 0.0, 0.0, false));
+			f.m_capacityMultiplier = 0.0;
+			f.m_overCapacity = 0;
+			f.m_capacityOffset = 0;
+			// Keep the neutral from auto-losing when it reaches 0 bases at phase 3.
+			// Final victory does not depend on this flag: the player keeps the default
+			// win_with_all_bases=true; the engine's all-bases result decides the match.
+			f.m_loseWithoutBases = false;
+			f.m_winWithAllBases = false;
+			stage.m_factions.insertLast(f);
+		}
+
+		{
+			// map11 pattern: a forced-lost faction does not spawn units.
+			// capacity_multiplier=0 alone is not enough (map7/map12 pseudo-neutral does spawn units).
+			XmlElement command("command");
+			command.setStringAttribute("class", "set_match_status");
+			command.setIntAttribute("faction_id", 2);
+			command.setBoolAttribute("lose", true);
+			stage.addTracker(RunAtStart(m_metagame, command));
+		}
+		{
+			// belt and suspenders: explicitly disable soldier spawning for the neutral.
+			XmlElement command("command");
+			command.setStringAttribute("class", "set_soldier_spawn");
+			command.setIntAttribute("faction_id", 2);
+			command.setBoolAttribute("enabled", false);
+			stage.addTracker(RunAtStart(m_metagame, command));
+		}
+
+		{
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_assault.call", "sf_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_mecha.call", "sf_mecha_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_mecha_inf.call", "sf_mecha_inf_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "sf_mecha_manticore.call", "sf_mecha_manticore_sub.call", array<string> = {""}, false,false,false,"infantry"));
+
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_assault.call", "kcco_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_zircon.call", "kcco_zircon_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_zircon1.call", "kcco_zircon1_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_dog.call", "kcco_dog_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_quartz.call", "kcco_quartz_sub.call", array<string> = {""}, false,false,false,"infantry"));
+
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_assault.call", "para_assault_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_eod.call", "para_eod_sub.call", array<string> = {""}, false,false,false,"infantry"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_nyto_summon.call", "para_nyto_summon_sub.call", array<string> = {""}, false,false,false,"infantry"));
+		}
+
+		{
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_coeus.call", "kcco_deploy_coeus_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_typhon.call", "kcco_deploy_typhon_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_uhlan_nyto.call", "para_deploy_uhlan_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "para_deploy_cherub_nyto.call", "para_deploy_cherub_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_k25.call", "kcco_deploy_k25_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+			stage.addTracker(SpawnInBaseCallHandler(m_metagame, "kcco_deploy_k25_boss.call", "kcco_deploy_k25_boss_sub.call", array<string> = {""}, false,true,false,"vehicle"));
+		}
+
+		// Initial ownership (base ids follow the bases.default order in map10/objects.svg):
+		// player: Gas station
+		// enemy: Main road, City Center, Market, Terminus, Embassy
+		// neutral: Container Port, Mosque, Chemical factory, Racing Track, Warehouse, Tennis Club
+		stage.m_presetBases.insertLast(array<int> = {0});
+		stage.m_presetBases.insertLast(array<int> = {1, 2, 4, 7, 8});
+		stage.m_presetBases.insertLast(array<int> = {3, 5, 6, 9, 10, 11});
+
+		stage.setPhaseController(PhaseControllerBreakthrough(m_metagame, stage.m_mapInfo.m_id));
+
+		// metadata
+		stage.m_primaryObjective = "phases";
+		stage.m_radioObjectivePresent = false;
+
+		setDefaultAttackBreakTimes(stage);
+
 		return stage;
 	}
 
