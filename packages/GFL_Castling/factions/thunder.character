@@ -6,10 +6,7 @@
 	<sound key="death" fileref="kill_sound_mechabot_big_01.wav" volume="0.4" pitch_variety="0.025" />
 	<sound key="death" fileref="kill_sound_mechabot_big_02.wav" volume="0.4" pitch_variety="0.025" />
 	<sound key="death" fileref="kill_sound_mechabot_big_03.wav" volume="0.4" pitch_variety="0.025" />
-	<sound key="footstep" fileref="step_sound_mecha_small_01.wav" volume="0.9" />
-	<sound key="footstep" fileref="step_sound_mecha_small_02.wav" volume="0.9" />
-	<sound key="footstep" fileref="step_sound_mecha_small_03.wav" volume="0.9" />
-	<sound key="footstep" fileref="step_sound_mecha_small_04.wav" volume="0.9" />
+	<sound key="footstep" fileref="step_sound_mecha_big.wav" volume="0.75" pitch_variety="0.1" />
 
 
 	<parameter class="throwing_self_over_initial_bounce" value="0.15" />
