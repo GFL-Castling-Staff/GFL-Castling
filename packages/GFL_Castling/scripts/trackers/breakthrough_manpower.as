@@ -80,7 +80,7 @@ class BreakthroughManpower : Tracker {
     protected void initialiseMatchState() {
         m_matchDecided = false;
         m_lostTriggered = false;
-        m_onlinePlayers = countFactionPlayers();
+        m_onlinePlayers = getPlayerCount(m_metagame);
         m_max = maxManpowerForPlayers(m_onlinePlayers);
         m_remaining = m_max;
         m_lastDeathCount = getFactionDeathCount(0);
@@ -91,21 +91,6 @@ class BreakthroughManpower : Tracker {
         clearDisplay();
         updateScoreDisplay();
         m_displayDirty = false;
-    }
-
-    // --------------------------------------------
-    protected int countFactionPlayers() {
-        // one synchronous player query at match start; afterwards the count is
-        // maintained from player_connect_event / player_disconnect_event
-        array<const XmlElement@>@ players = getPlayers(m_metagame);
-        int count = 0;
-        for (uint i = 0; i < players.size(); ++i) {
-            if (!players[i].hasAttribute("faction_id") ||
-                players[i].getIntAttribute("faction_id") == 0) {
-                ++count;
-            }
-        }
-        return count;
     }
 
     // --------------------------------------------
@@ -123,42 +108,6 @@ class BreakthroughManpower : Tracker {
             return 300;
         }
         return 250;
-    }
-
-    // --------------------------------------------
-    protected int getPlayerEventFactionId(const XmlElement@ event) {
-        const XmlElement@ player = event.getFirstElementByTagName("player");
-        if (player !is null && player.hasAttribute("faction_id")) {
-            return player.getIntAttribute("faction_id");
-        }
-
-        if (event.hasAttribute("faction_id")) {
-            return event.getIntAttribute("faction_id");
-        }
-        return 0;
-    }
-
-    // --------------------------------------------
-    protected void handlePlayerConnectEvent(const XmlElement@ event) {
-        if (!m_started) {
-            return;
-        }
-        if (getPlayerEventFactionId(event) == 0) {
-            m_onlinePlayers += 1;
-        }
-    }
-
-    // --------------------------------------------
-    protected void handlePlayerDisconnectEvent(const XmlElement@ event) {
-        if (!m_started) {
-            return;
-        }
-        if (getPlayerEventFactionId(event) == 0) {
-            m_onlinePlayers -= 1;
-            if (m_onlinePlayers < 0) {
-                m_onlinePlayers = 0;
-            }
-        }
     }
 
     // --------------------------------------------
@@ -228,6 +177,10 @@ class BreakthroughManpower : Tracker {
         // then apply the reinforcement before any loss decision
         pollDeathDelta();
 
+        // Re-check the live player count on the server for every captured
+        // sector. This is the authoritative count and avoids event drift.
+        m_onlinePlayers = getPlayerCount(m_metagame);
+
         int newMax = maxManpowerForPlayers(m_onlinePlayers);
         int reinforce = newMax / 2;
         m_max = newMax;
@@ -239,6 +192,10 @@ class BreakthroughManpower : Tracker {
         if (m_remaining < 0) {
             m_remaining = 0;
         }
+
+        _log("BreakthroughManpower sector refresh: players=" + m_onlinePlayers +
+             ", max=" + m_max + ", reinforce=" + reinforce +
+             ", remaining=" + m_remaining, 1);
 
         m_displayDirty = true;
         m_displayTimer = 0.0;
@@ -275,11 +232,12 @@ class BreakthroughManpower : Tracker {
             shown = 0;
         }
 
-        string command = "<command class='update_score_display' id='0'" +
-            " text='" + shown + "'" +
-            " max_text='" + m_max + "'" +
-            " color='" + m_color + "' />";
-        m_metagame.getComms().send(command);
+        string value = shown + " / " + m_max;
+
+        m_metagame.getComms().send(
+            "<command class='update_score_display' id='0'" +
+            " text='" + value + "'" +
+            " color='" + m_color + "' />");
     }
 
     // --------------------------------------------
@@ -298,6 +256,31 @@ class BreakthroughManpower : Tracker {
     protected void handleMatchEndEvent(const XmlElement@ event) {
         m_matchDecided = true;
         clearDisplay();
+    }
+
+    // --------------------------------------------
+    protected void handleChatEvent(const XmlElement@ event) {
+        Tracker::handleChatEvent(event);
+
+        string message = event.getStringAttribute("message");
+        if (!startsWith(message, "/")) {
+            return;
+        }
+
+        string sender = event.getStringAttribute("player_name");
+        int senderId = event.getIntAttribute("player_id");
+        if (!m_metagame.getAdminManager().isAdmin(sender, senderId)) {
+            return;
+        }
+
+        if (checkCommand(message, "mandec")) {
+            m_remaining -= 200;
+            if (m_remaining < 0) {
+                m_remaining = 0;
+            }
+            m_displayDirty = true;
+            m_displayTimer = 0.0;
+        }
     }
 
     // --------------------------------------------

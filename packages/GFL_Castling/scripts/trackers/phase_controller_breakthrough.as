@@ -60,6 +60,10 @@ class PhaseControllerBreakthrough : PhaseController {
     // avoid spamming the log every safety poll if a base name cannot be resolved
     protected bool m_missingLogged;
 
+    // resolve base names to engine keys once at start
+    protected dictionary m_baseKeyByName;
+    protected bool m_baseKeysLoaded;
+
     // --------------------------------------------
     PhaseControllerBreakthrough(GameModeInvasion@ metagame, string mapId, BreakthroughManpower@ manpower) {
         @m_metagame = @metagame;
@@ -78,6 +82,7 @@ class PhaseControllerBreakthrough : PhaseController {
         m_checkPending = false;
         m_checkDelay = 0.0;
         m_missingLogged = false;
+        m_baseKeysLoaded = false;
     }
 
     // --------------------------------------------
@@ -150,6 +155,10 @@ class PhaseControllerBreakthrough : PhaseController {
     protected void applySector(bool continuing) {
         int contested = m_playerSector + 1;
         int staging = m_playerSector + 2;
+
+        if (!ensureBaseKeys()) {
+            _log(m_logTag + ", base key map not ready yet", -1);
+        }
 
         for (uint i = 0; i < m_sectors.size(); ++i) {
             for (uint j = 0; j < m_sectors[i].m_bases.size(); ++j) {
@@ -245,15 +254,57 @@ class PhaseControllerBreakthrough : PhaseController {
     }
 
     // --------------------------------------------
+    protected bool ensureBaseKeys() {
+        if (m_baseKeysLoaded) {
+            return true;
+        }
+
+        array<const XmlElement@>@ bases = getBases(m_metagame);
+        if (bases is null || bases.size() == 0) {
+            return false;
+        }
+
+        for (uint i = 0; i < bases.size(); ++i) {
+            string key = bases[i].getStringAttribute("key");
+            if (key == "") {
+                continue;
+            }
+
+            // a key resolves to itself, so callers that already pass the
+            // engine key keep working
+            m_baseKeyByName[key] = key;
+
+            string name = bases[i].getStringAttribute("name");
+            if (name != "") {
+                m_baseKeyByName[name] = key;
+            }
+        }
+
+        m_baseKeysLoaded = true;
+        _log(m_logTag + ", base key map loaded: " + bases.size() + " bases", 1);
+        return true;
+    }
+
+    // --------------------------------------------
+    protected string resolveBaseKey(const string&in key) {
+        if (m_baseKeysLoaded && m_baseKeyByName.exists(key)) {
+            return string(m_baseKeyByName[key]);
+        }
+        return key;
+    }
+
+    // --------------------------------------------
     protected void setBase(string key, int ownerId, int capturable) {
+        string resolved = resolveBaseKey(key);
         m_metagame.getComms().send(
-            "<command class='update_base' base_key='" + key + "' owner_id='" + ownerId + "' capturable='" + capturable + "' />");
+            "<command class='update_base' base_key='" + resolved + "' owner_id='" + ownerId + "' capturable='" + capturable + "' />");
     }
 
     // --------------------------------------------
     protected void setCapturable(string key, int capturable) {
+        string resolved = resolveBaseKey(key);
         m_metagame.getComms().send(
-            "<command class='update_base' base_key='" + key + "' capturable='" + capturable + "' />");
+            "<command class='update_base' base_key='" + resolved + "' capturable='" + capturable + "' />");
     }
 
     // --------------------------------------------
@@ -330,14 +381,13 @@ class PhaseControllerBreakthrough : PhaseController {
         m_checkPending = false;
         m_checkDelay = 0.0;
 
-        announceSectorCaptured();
-
         bool finalSector = (m_playerSector + 1 >= int(m_sectors.size()));
         if (m_manpower !is null) {
             m_manpower.onSectorCaptured(finalSector);
         }
 
-        if (m_playerSector + 1 < int(m_sectors.size())) {
+        if (!finalSector) {
+            announceSectorCaptured();
             _log(m_logTag + ", sector " + m_playerSector + " secured", 1);
             applySector(false);
         } else {
