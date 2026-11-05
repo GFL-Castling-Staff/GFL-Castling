@@ -43,6 +43,7 @@
 // GFL castling trackers
 #include "GFLskill.as"
 #include "kill_event.as"
+#include "death_stats.as"
 #include "fairy_command.as"
 #include "ServerHelper.as"
 #include "commandskill.as"
@@ -235,6 +236,9 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 	void preBeginMatch() {
 		_log("preBeginMatch", 1);
 
+		// fresh death counters for the new match
+		resetFactionDeaths(int(getFactionCount()));
+
 		// all trackers are cleared when match is about to begin
 		GameMode::preBeginMatch();
 
@@ -316,6 +320,7 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 		addTracker(JavelinTracker(this));
 		addTracker(GFLskill(this));
 		addTracker(kill_event(this,getUserSettings()));
+		addTracker(DeathStatsTracker(this));
 		addTracker(fairyCommand(this));
 		addTracker(ServerHelper(this));
 		addTracker(CommandSkill(this));

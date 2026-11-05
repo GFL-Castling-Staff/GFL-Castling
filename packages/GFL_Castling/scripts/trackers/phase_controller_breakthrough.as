@@ -6,6 +6,7 @@
 #include "phase_controller.as"
 #include "gamemode_invasion.as"
 #include "breakthrough_map_data.as"
+#include "breakthrough_manpower.as"
 
 // ------------------------------------------------------------------------------------------------
 // Generic linear-sector breakthrough controller.
@@ -40,6 +41,9 @@ class PhaseControllerBreakthrough : PhaseController {
 
     protected array<BreakthroughSector@> m_sectors;
 
+    // optional per-stage manpower/death budget; null when the stage did not enable it
+    protected BreakthroughManpower@ m_manpower;
+
     // index of the sector currently used as the player base
     protected int m_playerSector;
 
@@ -57,8 +61,9 @@ class PhaseControllerBreakthrough : PhaseController {
     protected bool m_missingLogged;
 
     // --------------------------------------------
-    PhaseControllerBreakthrough(GameModeInvasion@ metagame, string mapId) {
+    PhaseControllerBreakthrough(GameModeInvasion@ metagame, string mapId, BreakthroughManpower@ manpower) {
         @m_metagame = @metagame;
+        @m_manpower = @manpower;
         m_mapId = mapId;
         m_logTag = "PhaseControllerBreakthrough(" + mapId + ")";
         m_sectors = getBreakthroughSectors(mapId);
@@ -326,6 +331,11 @@ class PhaseControllerBreakthrough : PhaseController {
         m_checkDelay = 0.0;
 
         announceSectorCaptured();
+
+        bool finalSector = (m_playerSector + 1 >= int(m_sectors.size()));
+        if (m_manpower !is null) {
+            m_manpower.onSectorCaptured(finalSector);
+        }
 
         if (m_playerSector + 1 < int(m_sectors.size())) {
             _log(m_logTag + ", sector " + m_playerSector + " secured", 1);
