@@ -95,6 +95,7 @@ class Stage {
 	float m_playerAiReduction;
 	bool m_showMapAtStartIfDead;
 	bool m_useCustomTimerMode;
+	bool m_enableBreakthroughManpower;
 	array<Comment@> m_startComments;
 
 	// metadata, mostly for instructions comment selection logic
@@ -132,6 +133,7 @@ class Stage {
 		m_allowChangeCapacityOnTheFly = true;
 		m_showMapAtStartIfDead = false;
 		m_useCustomTimerMode = false;
+		m_enableBreakthroughManpower = false;
 
 		m_includeLayers.insertLast("bases.default");
 		m_includeLayers.insertLast("layer1.default");
