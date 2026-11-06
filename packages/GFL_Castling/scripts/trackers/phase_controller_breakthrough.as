@@ -60,6 +60,10 @@ class PhaseControllerBreakthrough : PhaseController {
     // avoid spamming the log every safety poll if a base name cannot be resolved
     protected bool m_missingLogged;
 
+    // first applySector of this match initialises the manpower player count at
+    // the same moment the base capturability is applied
+    protected bool m_firstApply;
+
     // resolve base names to engine keys once at start
     protected dictionary m_baseKeyByName;
     protected bool m_baseKeysLoaded;
@@ -83,6 +87,7 @@ class PhaseControllerBreakthrough : PhaseController {
         m_checkDelay = 0.0;
         m_missingLogged = false;
         m_baseKeysLoaded = false;
+        m_firstApply = true;
     }
 
     // --------------------------------------------
@@ -94,6 +99,7 @@ class PhaseControllerBreakthrough : PhaseController {
         m_checkPending = false;
         m_checkDelay = 0.0;
         m_missingLogged = false;
+        m_firstApply = true;
 
         applySector(false);
     }
@@ -105,6 +111,7 @@ class PhaseControllerBreakthrough : PhaseController {
         m_checkPending = false;
         m_checkDelay = 0.0;
         m_missingLogged = false;
+        m_firstApply = true;
 
         applySector(true);
     }
@@ -155,6 +162,15 @@ class PhaseControllerBreakthrough : PhaseController {
     protected void applySector(bool continuing) {
         int contested = m_playerSector + 1;
         int staging = m_playerSector + 2;
+
+        // Read the online player count at the same point where the sector /
+        // base capturability is applied, not earlier in the manpower start().
+        if (m_firstApply) {
+            m_firstApply = false;
+            if (m_manpower !is null) {
+                m_manpower.onMatchStart();
+            }
+        }
 
         if (!ensureBaseKeys()) {
             _log(m_logTag + ", base key map not ready yet", -1);

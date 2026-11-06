@@ -24,6 +24,7 @@ class BreakthroughManpower : Tracker {
     protected GameModeInvasion@ m_metagame;
 
     protected bool m_started;
+    protected bool m_initialised;
     protected bool m_matchDecided;
     protected bool m_lostTriggered;
 
@@ -43,6 +44,7 @@ class BreakthroughManpower : Tracker {
     BreakthroughManpower(GameModeInvasion@ metagame) {
         @m_metagame = @metagame;
         m_started = false;
+        m_initialised = false;
         m_matchDecided = false;
         m_lostTriggered = false;
         m_remaining = 0;
@@ -60,15 +62,37 @@ class BreakthroughManpower : Tracker {
             return;
         }
         m_started = true;
-        initialiseMatchState();
-        _log("BreakthroughManpower started, max=" + m_max + ", players=" + m_onlinePlayers, 1);
+        m_initialised = false;
+        m_matchDecided = false;
+        m_lostTriggered = false;
+        m_displayDirty = false;
+        m_displayTimer = 0.0;
+        _log("BreakthroughManpower started, waiting for the first sector apply", 1);
     }
 
     // --------------------------------------------
     void gameContinuePreStart() {
         m_started = true;
+        m_initialised = false;
+        m_matchDecided = false;
+        m_lostTriggered = false;
+        m_displayDirty = false;
+        m_displayTimer = 0.0;
+        _log("BreakthroughManpower continued, waiting for the first sector apply", 1);
+    }
+
+    // --------------------------------------------
+    // Called by PhaseControllerBreakthrough::applySector() on the first apply.
+    // The player count is read here, at the same moment the sector/base
+    // capturability is applied, instead of too early in start().
+    void onMatchStart() {
+        if (m_initialised) {
+            return;
+        }
+        m_initialised = true;
         initialiseMatchState();
-        _log("BreakthroughManpower continued, max=" + m_max + ", players=" + m_onlinePlayers, 1);
+        _log("BreakthroughManpower initialised at sector apply, max=" + m_max +
+             ", players=" + m_onlinePlayers, 1);
     }
 
     // --------------------------------------------
@@ -134,7 +158,7 @@ class BreakthroughManpower : Tracker {
 
     // --------------------------------------------
     void update(float time) {
-        if (!m_started || m_matchDecided) {
+        if (!m_started || !m_initialised || m_matchDecided) {
             return;
         }
 
@@ -162,7 +186,7 @@ class BreakthroughManpower : Tracker {
     // Called by PhaseControllerBreakthrough::advance().
     // finalSector is true for the last sector: the match is won, never lost.
     void onSectorCaptured(bool finalSector) {
-        if (m_matchDecided) {
+        if (!m_initialised || m_matchDecided) {
             return;
         }
 
@@ -286,6 +310,7 @@ class BreakthroughManpower : Tracker {
     // --------------------------------------------
     void onRemove() {
         m_started = false;
+        m_initialised = false;
         clearDisplay();
     }
 }
