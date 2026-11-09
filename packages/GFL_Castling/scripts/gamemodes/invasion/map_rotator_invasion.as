@@ -119,7 +119,14 @@ class MapRotatorInvasion : MapRotator {
 
 		if (factionId == 0) {
 			// friendly faction lost, restart the map
-			waitAndStart(10, false);		
+			// NOTE: waitAndStart() decides between "restart same map" and "change map"
+			// by comparing m_currentStageIndex with getNextStageIndex() (== m_nextStageIndex).
+			// After a server restart, startMap() used to leave m_nextStageIndex at its
+			// default 0 while m_currentStageIndex was set to the loaded index, so losing
+			// on that map was misread as an advance to stage 0. Force them equal here so
+			// a lost battle always really restarts the current map.
+			m_nextStageIndex = m_currentStageIndex;
+			waitAndStart(10, false);
 		}
 	}
 
@@ -368,6 +375,13 @@ class MapRotatorInvasion : MapRotator {
 	// --------------------------------------------
 	protected int getStageCount() const override {
 		return m_stages.size();
+	}
+
+	// --------------------------------------------
+	// public accessor for the gamemode, which needs the stage count right after
+	// init() in order to validate the loaded stage index
+	int getConfiguredStageCount() const {
+		return int(m_stages.size());
 	}
 
 	// --------------------------------------------
@@ -843,19 +857,42 @@ class MapRotatorInvasion : MapRotator {
 	
 	// --------------------------------------------
     void startMap(int index, bool beginOnly = false) {
-		_log("start_map, index=" + index + ", begin_only=" + beginOnly);
-		// in invasion, store the faction settings in gamemode
-		// so that we can juggle with them when the match is on
-		// and reset them back to defaults when needed
-		Stage@ stage = m_stages[index];
-		m_metagame.setFactions(stage.m_factions);
-		m_metagame.setMapInfo(stage.m_mapInfo);
+        _log("start_map, index=" + index + ", begin_only=" + beginOnly);
 
-		//parent::start_map($index, $begin_only);
-		// extra commands need to happen before the correct game is started
-		// so that faction resource configs are in before mass spawning
+        // guard against a corrupt or out of range index (e.g. a damaged
+        // current_stage_index.xml) which would otherwise crash on m_stages[index]
+        int stageCount = int(m_stages.size());
+        if (stageCount <= 0) {
+            _log("ERROR, start_map called with no stages configured, index=" + index, -1);
+            return;
+        }
+        if (index < 0 || index >= stageCount) {
+            _log("WARNING, start_map index out of range, index=" + index + ", stage count=" + stageCount + ", clamping");
+            if (index < 0) {
+                index = 0;
+            } else {
+                index = stageCount - 1;
+            }
+        }
 
-		m_currentStageIndex = index;
+        // in invasion, store the faction settings in gamemode
+        // so that we can juggle with them when the match is on
+        // and reset them back to defaults when needed
+        Stage@ stage = m_stages[index];
+        m_metagame.setFactions(stage.m_factions);
+        m_metagame.setMapInfo(stage.m_mapInfo);
+
+        //parent::start_map($index, $begin_only);
+        // extra commands need to happen before the correct game is started
+        // so that faction resource configs are in before mass spawning
+
+        m_currentStageIndex = index;
+        // keep the "current == next means restart the same map" invariant intact.
+        // this path (startRotation -> startMap) bypasses commitToMapChange(), which
+        // is the only other place that writes m_nextStageIndex. without this, a
+        // restart load would leave m_nextStageIndex stale (0) and a lost battle
+        // would jump to stage 0 instead of restarting the current map.
+        m_nextStageIndex = index;
 
 		if (!beginOnly) {
 			// change map 

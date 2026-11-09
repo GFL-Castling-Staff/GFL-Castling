@@ -125,11 +125,11 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 					}
 				}
 
-				if (loading_map_index !=0)
-				{
-					for (int x1=0;x1<(loading_map_index);x1++){
-						m_mapRotator.setStageCompleted(x1);
-					}
+				// a damaged or hand edited save file could hold a negative index,
+				// which would later be used as an array index when starting the map
+				if (loading_map_index < 0) {
+					_log("WARNING, negative map index in " + FILENAME + ", resetting to 0");
+					loading_map_index = 0;
 				}
 			}
 
@@ -138,6 +138,22 @@ class GameModeInvasion : GameMode, UnlockRemoveListener, UnlockListener {
 			// - init sets up map rotator according to settings
 			// - settings are stored in metagame savegame data
 			m_mapRotator.init();
+
+			// mark the stages before the loaded one as completed.
+			// this has to happen after init(), because that is where the stages are created;
+			// doing it afterwards also lets us clamp the index against the real stage count,
+			// so a corrupt or too large saved index can't mark non existing stages as
+			// completed nor make start_map run with an out of range index
+			if (isInServerMode() && loading_map_index > 0) {
+				int stageCount = m_mapRotator.getConfiguredStageCount();
+				if (stageCount > 0 && loading_map_index >= stageCount) {
+					_log("WARNING, loaded map index " + loading_map_index + " >= stage count " + stageCount + ", clamping");
+					loading_map_index = stageCount - 1;
+				}
+				for (int x1 = 0; x1 < loading_map_index; x1++) {
+					m_mapRotator.setStageCompleted(x1);
+				}
+			}
 
 			
 			// changes map, start the match, calls pre/post_begin_match
