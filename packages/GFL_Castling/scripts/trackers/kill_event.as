@@ -305,6 +305,7 @@ class kill_event : Tracker {
         {"gkw_x95_10205.weapon",4},
         {"gkw_ar57.weapon",4},
         {"gkw_ar57_6705.weapon",4},
+        {"gkw_scw.weapon",4},
 
         //SG 5kill
         {"gkw_hawk97mod3.weapon",5},
