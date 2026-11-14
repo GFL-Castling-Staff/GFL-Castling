@@ -52,9 +52,9 @@
 	gravity="-70"
 	drag_offset="-0.05" />
 	<sky_diving chute_offset="0 2.55 0.0" trigger_height="20.0" gravity="-10" mesh_filename="chute_large.mesh" texture_filename="chute.png" />
-	<visual class="chassis" mesh_filename="jeep_base.mesh" texture_filename="jeep.png" />
+	<visual class="chassis" mesh_filename="jeep_base.mesh" texture_filename="jeep.dds" />
 	<visual class="chassis" key="broken" mesh_filename="jeep_ruin.mesh" texture_filename="humvee_broken.png" />
-	<visual class="tire" mesh_filename="jeep_wheel.mesh" texture_filename="jeep.png" />
+	<visual class="tire" mesh_filename="jeep_wheel.mesh" texture_filename="jeep.dds" />
 	<visual class="tire" key="broken" />
 	<item_container class="stash" offset="0.0 0.78 -2.4" />
 	<spawn_point />

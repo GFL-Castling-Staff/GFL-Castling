@@ -85,35 +85,35 @@ material radar_scan_mix : add_base
 		scene_blend add
         depth_func always_pass
         texture_unit{
-            texture radar_scan_1.png 	
+            texture radar_scan_1.dds 	
 			rotate_anim 0.1 
 			tex_address_mode border
             tex_border_colour 0 0 0 0
             tex_border_colour 0 0 0 0
 		}
         texture_unit{
-            texture radar_scan_2.png 	
+            texture radar_scan_2.dds 	
             colour_op add
 			rotate_anim -0.1 
 			tex_address_mode border
             tex_border_colour 0 0 0 0
 		}
         texture_unit{
-            texture radar_scan_3.png 	
+            texture radar_scan_3.dds 	
             colour_op add
 			rotate_anim 0.15 
 			tex_address_mode border
             tex_border_colour 0 0 0 0
 		}
         texture_unit{
-            texture radar_scan_4.png 	
+            texture radar_scan_4.dds 	
             colour_op add
 			rotate_anim -0.15 
 			tex_address_mode border
             tex_border_colour 0 0 0 0
 		}
         texture_unit{
-            texture DF39_singing_2.png 	
+            texture DF39_singing_2.dds 	
             colour_op add
 			wave_xform scale_x sine 0.5 2 0 0.2
 			wave_xform scale_y sine 0.5 2 0 0.2
@@ -122,7 +122,7 @@ material radar_scan_mix : add_base
             tex_border_colour 0 0 0 0
 		}
 		texture_unit{
-            texture radar_scan_main.png 
+            texture radar_scan_main.dds 
 			colour_op modulate
 			rotate_anim 2.5
 			tex_address_mode border

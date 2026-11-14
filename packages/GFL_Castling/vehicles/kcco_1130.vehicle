@@ -10,9 +10,9 @@
     <turret offset="0.0 0.0 0.0" weapon_key="kccow_vehicle_1130mg.weapon" weapon_offset="0.0 1.72 1.64" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.0003" rotation_range="6.30" />
     <modifier class="blast_range" value="-1.0" />
 
-    <visual class="turret" turret_index="0" mesh_filename="KCCO1130.mesh" texture_filename="KCCO1130_Base_color.png" />
+    <visual class="turret" turret_index="0" mesh_filename="KCCO1130.mesh" texture_filename="KCCO1130_Base_color.dds" />
     <visual class="turret" turret_index="0" key="broken" mesh_filename="KCCO1130.mesh" texture_filename="humvee_broken.png" />
-	<visual class="chassis" mesh_filename="" texture_filename="KCCO1130_Base_color.png" />
+	<visual class="chassis" mesh_filename="" texture_filename="KCCO1130_Base_color.dds" />
 	<visual class="chassis" key="broken" mesh_filename="" texture_filename="humvee_broken.png" />
     <character_slot type="gunner" position="0 0.7 0" rotation="0" exit_rotation="3.14" hiding="1" animation_id="37">
         <turret index="0" />

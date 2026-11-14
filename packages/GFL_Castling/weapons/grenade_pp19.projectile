@@ -8,7 +8,7 @@
     </trigger>
     <rotation class="random" />
 	<!-- <trail probability="1.0" key="BulletApTrail_ct" /> -->
-    <model mesh_filename="grenade_rgd_5.mesh" texture_filename="grenade_rgd_5.png" />
+    <model mesh_filename="grenade_rgd_5.mesh" texture_filename="grenade_rgd_5.dds" />
     <hud_icon filename="" />
 
     <commonness value="0.8" />
@@ -54,7 +54,7 @@
     </trigger>
     <rotation class="random" />
 	<!-- <trail probability="1.0" key="BulletApTrail_ct" /> -->
-    <model mesh_filename="grenade_rgd_5.mesh" texture_filename="grenade_rgd_5.png" />
+    <model mesh_filename="grenade_rgd_5.mesh" texture_filename="grenade_rgd_5.dds" />
     <hud_icon filename="" />
 
     <commonness value="0.8" />

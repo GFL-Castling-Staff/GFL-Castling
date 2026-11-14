@@ -267,7 +267,7 @@ material bao_7_5_pass : alpha_blend_base
     pass{
 		depth_func always_pass
         texture_unit{
-            texture bao_7_5.png 	
+            texture bao_7_5.dds 	
 }}}}
 material bao_7_6_pass : alpha_blend_base
 {   
@@ -275,7 +275,7 @@ material bao_7_6_pass : alpha_blend_base
     pass{
 		depth_func always_pass
         texture_unit{
-            texture bao_7_6.png 	
+            texture bao_7_6.dds 	
 }}}}
 material bao_7_7_pass : alpha_blend_base
 {   
@@ -291,7 +291,7 @@ material tuan_7_23_1_pass : alpha_blend_base
     pass{
 		depth_func always_pass
         texture_unit{
-            texture tuan_7_23_1.png 	
+            texture tuan_7_23_1.dds 	
 }}}}
 material ring_7_5_pass : alpha_blend_base
 {   

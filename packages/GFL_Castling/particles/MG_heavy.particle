@@ -407,21 +407,21 @@ material Tex_0147_1_pass : alpha_blend_base
     pass{
         depth_func always_pass
         texture_unit{
-            texture Tex_0147_1.png 	
+            texture Tex_0147_1.dds 	
 }}}}
 material Tex_Spark18A : alpha_blend_base
 {   
     technique{
     pass{
         texture_unit{
-            texture Tex_Spark18A.png 	
+            texture Tex_Spark18A.dds 	
 }}}}
 material Tex_Spark17A : alpha_blend_base
 {   
     technique{
     pass{
         texture_unit{
-            texture Tex_Spark17A.png 	
+            texture Tex_Spark17A.dds 	
 }}}}
 material Tex_Spark25 : alpha_blend_base
 {   
@@ -435,14 +435,14 @@ material Tex_Spark26 : alpha_blend_base
     technique{
     pass{
         texture_unit{
-            texture Tex_Spark26.png 	
+            texture Tex_Spark26.dds 	
 }}}}
 material Tex_Spark06A : alpha_blend_base
 {   
     technique{
     pass{
         texture_unit{
-            texture Tex_Spark06A.png 	
+            texture Tex_Spark06A.dds 	
 }}}}
 material Dust2 : alpha_blend_base
 {   
@@ -450,7 +450,7 @@ material Dust2 : alpha_blend_base
     pass{
         depth_func always_pass
         texture_unit{
-            texture Tex_Glow16A.png 	
+            texture Tex_Glow16A.dds 	
 }}}}
 material Dust : alpha_blend_base
 {   
@@ -458,7 +458,7 @@ material Dust : alpha_blend_base
     pass{
         depth_func always_pass
         texture_unit{
-            texture Particle_Swarm_02.png 	
+            texture Particle_Swarm_02.dds 	
         }
         texture_unit{
             texture point_soft_edge_alpha.png 

@@ -57,7 +57,7 @@
 
     <turret offset="0 3.0 0" weapon_key="cherub_weapon_1" weapon_offset="0.0 -0.19 2.8" weapon_recoil="0.0" physics_recoil="0.0" rotation_range="0.5" max_rotation_step="0.0009" />
     <turret offset="0 3.0 0" weapon_key="cherub_weapon_2" weapon_offset="0.0 -0.19 2.8" weapon_recoil="0.0" physics_recoil="0.0" rotation_range="0.5" max_rotation_step="0.0009" />
-    <visual class="turret" turret_index="0" mesh_filename="cherub.mesh" texture_filename="cherub_main.jpg" max_tilt="0.06" />
+    <visual class="turret" turret_index="0" mesh_filename="cherub.mesh" texture_filename="cherub_main.dds" max_tilt="0.06" />
 	<visual class="turret" key="broken" mesh_filename="cherub.mesh" texture_filename="tank_2_broken.png" />
 
     <character_slot type="driver" position="1.1 0.5 0.0" seat_position="0 3.0 -0.5" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />

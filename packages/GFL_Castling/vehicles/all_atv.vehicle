@@ -85,7 +85,7 @@
 	<physics max_health="8" mass="100" broken_mass="100" extent="1.44 0.0 2.7" offset="0 0.0 0.0" top_offset="0 0.54 0" collision_model_pos="0.0 0.54 0.0" collision_model_extent="1.62 1.485 3.06" visual_offset="0 0.135 0" gravity="-38" friction_offset="0.1"  drag_offset="-0.25" destroy_on_top_hit="1" destroy_on_top_hit_time="1.0" top_hit_tracking_time="0.6" />  
 
 
-	<visual class="chassis" mesh_filename="atv_body.mesh" texture_filename="atv_pard.png" max_tilt="0.04" />
+	<visual class="chassis" mesh_filename="atv_body.mesh" texture_filename="atv_pard.dds" max_tilt="0.04" />
 	<visual class="chassis" key="broken" mesh_filename="atv_body_broken.mesh" texture_filename="atv_broken.png" />
  	<visual class="front_tire" mesh_filename="atv_wheel_front.mesh" texture_filename="atv_wheel_front.png" />
 	<visual class="rear_tire" mesh_filename="atv_wheel_back.mesh" texture_filename="atv_wheel_back.png" />

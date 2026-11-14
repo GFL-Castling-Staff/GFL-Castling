@@ -387,7 +387,7 @@ material laser_beam : add_base
         {
             texture_unit
             {
-                texture laser_beam.png 	
+                texture laser_beam.dds 	
             }
         }
     }
@@ -401,7 +401,7 @@ material laser_beam_ioncannon : add_base
         {
             texture_unit
             {
-                texture laser_beam_ioncannon.png 	
+                texture laser_beam_ioncannon.dds 	
             }
         }
     }
@@ -415,7 +415,7 @@ material explosion_smoke_04_bw_laser : add_base
         {
             texture_unit
             {
-                texture explosion_smoke_04_bw.png 	
+                texture explosion_smoke_04_bw.dds 	
                 rotate_anim 0.1
                 tex_address_mode border
                 tex_border_colour 0 0 0 0

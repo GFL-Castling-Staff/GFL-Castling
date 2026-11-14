@@ -12,12 +12,12 @@
 	<turret offset="0.87 0.96 -0.5" weapon_key="bunker_mg2.weapon" weapon_offset="0 0.5 1.0" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="2.10" rotation_range="1.84" />	
 	<turret offset="-0.87 0.96 -0.5" weapon_key="bunker_mg2.weapon" weapon_offset="0 0.5 1.0" weapon_recoil="0.02" physics_recoil="0.0"  max_rotation_step="0.005" rotation="-2.10" rotation_range="1.84" />
 
-	<visual offset="0 1.6 0" class="turret" turret_index="0" mesh_filename="m1a1_tow.mesh" texture_filename="m1a1_tow.png" />
+	<visual offset="0 1.6 0" class="turret" turret_index="0" mesh_filename="m1a1_tow.mesh" texture_filename="m1a1_tow.dds" />
 	<visual offset="0.1 0.5 0" class="turret" turret_index="1" mesh_filename="deployable_mg2.mesh" texture_filename="deployable_mg.png" />
 	<visual offset="0.1 0.5 0" class="turret" turret_index="2" mesh_filename="deployable_mg2.mesh" texture_filename="deployable_mg.png" />
 	<visual offset="0.1 0.5 0" class="turret" turret_index="3" mesh_filename="deployable_mg2.mesh" texture_filename="deployable_mg.png" />
 
-	<visual class="chassis" mesh_filename="fin_bunker_base.mesh" texture_filename="texture_bunker_temp.png" />
+	<visual class="chassis" mesh_filename="fin_bunker_base.mesh" texture_filename="texture_bunker_temp.dds" />
 	<visual class="chassis" key="broken" mesh_filename="fin_bunker_base.mesh" texture_filename="humvee_broken.png" />
 	<character_slot type="gunner" seat_position="0.0 0.0 -0.8" enter_position="0 0 -2.0" rotation="0" exit_rotation="-1.57" hiding="1" animation_key="tank mg still">
 		<state class="entering" animation_key="crouching forwards short, no weapon" position="0 0 -1.0" rotation="0" />

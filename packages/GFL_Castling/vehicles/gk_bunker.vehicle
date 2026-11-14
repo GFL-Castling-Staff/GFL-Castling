@@ -15,7 +15,7 @@
 	<turret offset="0 0 0" weapon_key="bunker_hornet2.weapon" weapon_offset="1.0 2.6 0.0" weapon_recoil="0.02" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" />
 	<turret offset="0 0 0" weapon_key="bunker_self_destruct.weapon" weapon_offset="0.0 -1.0 0.0" weapon_recoil="0.00" physics_recoil="0.0" max_rotation_step="0.005" rotation="0" />
 	<visual offset="0 -0.4 0" class="turret" turret_index="0" mesh_filename="fin_bunker_turret.mesh" texture_filename="deployable_mg.png" />
-	<visual class="chassis" mesh_filename="fin_bunker_base.mesh" texture_filename="texture_bunker_temp.png" />
+	<visual class="chassis" mesh_filename="fin_bunker_base.mesh" texture_filename="texture_bunker_temp.dds" />
 	<visual class="chassis" key="broken" mesh_filename="fin_bunker_base.mesh" texture_filename="humvee_broken.png" />
 	<character_slot type="gunner" attached_on_turret="1" seat_position="0.0 0.0 -0.8" enter_position="0 0 -2.0" rotation="0" exit_rotation="-1.57" hiding="1" animation_key="tank mg still">
 		<state class="entering" animation_key="crouching forwards short, no weapon" position="0 0 -1.0" rotation="0" />

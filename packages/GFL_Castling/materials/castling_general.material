@@ -205,7 +205,7 @@ material at_bullet_smoke_trail : alpha_blend_base
 		{
 			texture_unit
 			{
-				texture at_bullet_smoke_trail.png 	
+				texture at_bullet_smoke_trail.dds 	
 				wave_xform scale_y sine 1 0.3 -0.2 0.5 
 				//正弦波 变换Y
 				tex_address_mode clamp

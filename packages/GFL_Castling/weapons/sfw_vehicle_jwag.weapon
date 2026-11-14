@@ -28,7 +28,7 @@
 	<sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8" />
 	<sound key="cycle" fileref="kccoar_cycle_FromINS.wav" volume="0.8" />
 	<sound class="impact" fileref="rifle_drop.wav" />
-	<model mesh_filename="assultgun_cannon.mesh" texture_filename="assultgun_cannon.jpg"/>
+	<model mesh_filename="assultgun_cannon.mesh" texture_filename="assultgun_cannon.dds"/>
 	<hud_icon filename="sfw_dreamer.png" />
 	<effect class="muzzle" ref="dreamer"/>
 	<weak_hand_hold offset="0.4" />

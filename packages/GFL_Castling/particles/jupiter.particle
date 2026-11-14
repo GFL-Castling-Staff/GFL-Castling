@@ -129,7 +129,7 @@ material juptier_red_quan : alpha_blend_base
             depth_func always_pass
             texture_unit
             {
-                texture buff_dm_quan.png 	
+                texture buff_dm_quan.dds 	
             }
         }
     }
@@ -144,7 +144,7 @@ material juptier_aim : alpha_blend_base
             depth_func always_pass
             texture_unit
             {
-                texture quan_7_15.png 	
+                texture quan_7_15.dds 	
             }
         }
     }

@@ -136,7 +136,7 @@ material quan_7_14_add_anim : add_base
     pass{
 		depth_func always_pass
         texture_unit{
-            texture quan_7_14_add.png 	
+            texture quan_7_14_add.dds 	
 			wave_xform scale_x sine 0.25 2 0 0.2
 			wave_xform scale_y sine 0.25 2 0 0.2
 			tex_address_mode border
@@ -149,7 +149,7 @@ material quan_fangde_anim : add_base
     pass{
 		depth_func always_pass
         texture_unit{
-            texture quan_fangde_add.png 	
+            texture quan_fangde_add.dds 	
 			wave_xform scale_x sine 0.25 2 0 0.1
 			wave_xform scale_y sine 0.25 2 0 0.1
 			tex_address_mode border
@@ -162,7 +162,7 @@ material aim_arrow_anim : add_base
     pass{
 		depth_func always_pass
         texture_unit{
-            texture aim_arrow.png 
+            texture aim_arrow.dds 
 			wave_xform scroll_y sine 0 2 0 -0.2
 			tex_address_mode border
 			tex_border_colour 0 0 0 0
@@ -174,7 +174,7 @@ material warning_sign_anim : add_base
     pass{
 		depth_func always_pass
         texture_unit{
-            texture warning_sign_add.png 
+            texture warning_sign_add.dds 
 			wave_xform scroll_y sine 0 2 0 -0.2
 			tex_address_mode border
 			tex_border_colour 0 0 0 0

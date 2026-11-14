@@ -78,7 +78,7 @@ material alert_marker : alpha_blend_base
     technique{
     pass{
         texture_unit{
-            texture alert_marker.png
+            texture alert_marker.dds
 }}}}
 
 material alert_sign : no_depth_alpha_blend_base

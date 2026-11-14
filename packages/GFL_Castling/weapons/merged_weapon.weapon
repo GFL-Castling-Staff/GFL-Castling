@@ -155002,7 +155002,7 @@
 	<sound key="magazine_in" fileref="kccoar_mgz_in_FromINS.wav" volume="0.8"/>
 	<sound key="cycle" fileref="kccoar_cycle_FromINS.wav" volume="0.8"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
-	<model mesh_filename="assultgun_cannon.mesh" texture_filename="assultgun_cannon.jpg"/>
+	<model mesh_filename="assultgun_cannon.mesh" texture_filename="assultgun_cannon.dds"/>
 	<hud_icon filename="sfw_dreamer.png"/>
 	<effect class="muzzle" ref="dreamer"/>
 	<weak_hand_hold offset="0.4"/>
@@ -161305,7 +161305,7 @@
 
 <weapon key="deployable_callui.weapon" radius="0.25" time_to_live_out_in_the_open="60.0" drop_count_factor_on_death="0" drop_count_factor_on_player_death="1">
 	<specification name="Tactic Fairy Console" spawn_instance_class="vehicle" spawn_instance_key="call_ui_store" magazine_size="1" can_shoot_standing="0" can_shoot_crouching="1" carry_in_two_hands="1" can_shoot_prone="0" class="5" consume="1" sight_range_modifier="1" slot="1" deployment="1"/>
-	<model filename="fairy_radio.mesh" texture_filename="fairy_radio.jpg"/>
+	<model filename="fairy_radio.mesh" texture_filename="fairy_radio.dds"/>
 	<hud_icon filename="gki_callui.png"/>
 	<tag name="engineer"/>
 	<stance state_key="running" accuracy="0.3"/>
@@ -163091,7 +163091,7 @@
 
 <weapon key="amos_drone_mg1.weapon">
 	<specification slot="2" retrigger_time="0.075" accuracy_factor="0.5" sustained_fire_grow_step="0.25" sustained_fire_diminish_rate="2.0" sight_range_modifier="0.01" ai_sight_range_modifier="150.0" magazine_size="-1" suppressed="0" name="Amos MG" class="0" projectile_speed="195"/>
-	<model mesh_filename="Amos_drone.mesh" texture_filename="AMOS_drone.png"/>
+	<model mesh_filename="Amos_drone.mesh" texture_filename="AMOS_drone.dds"/>
 	<hud_icon filename="testing.png"/>
 	<commonness value="0.0"/>
 	<weak_hand_hold offset="0.4"/>
@@ -163163,7 +163163,7 @@
 
 <weapon key="amos_drone_mg2.weapon">
 	<specification slot="2" retrigger_time="0.075" accuracy_factor="1.2" sustained_fire_grow_step="0.25" sustained_fire_diminish_rate="2.0" sight_range_modifier="0.01" ai_sight_range_modifier="150.0" magazine_size="-1" suppressed="0" name="Drone MG" class="0" projectile_speed="195"/>
-	<model mesh_filename="Amos_drone.mesh" texture_filename="AMOS_drone.png"/>
+	<model mesh_filename="Amos_drone.mesh" texture_filename="AMOS_drone.dds"/>
 	<hud_icon filename="testing.png"/>
 	<sound key="fire" fileref="MG34_fire_FromCOD16.wav" pitch_variety="0.05" volume="0.5"/>
 	<commonness value="0.0"/>
@@ -165507,7 +165507,7 @@
 
 <weapon key="Jupiter_main_cannon.weapon">
 	<specification retrigger_time="9.6" accuracy_factor="1" sustained_fire_grow_step="1.2" sustained_fire_diminish_rate="0.6" sight_range_modifier="3.0" ai_sight_range_modifier="1.0" magazine_size="-1" can_shoot_standing="0" can_shoot_crouching="0" suppressed="0" name="Bunker Hornet" class="0" projectile_speed="180.0" slot="2" barrel_offset_3d="0.0 3.5 5.0" projectiles_per_shot="1" sight_height_offset="4.0"/>
-	<model mesh_filename="Jupiter_cannon_2.mesh" texture_filename="Jupiter.jpg"/>
+	<model mesh_filename="Jupiter_cannon_2.mesh" texture_filename="Jupiter.dds"/>
 	<hud_icon filename="hud_hornet.png"/>
 	<commonness value="0.0"/>
 	<weak_hand_hold offset="0.2"/>
@@ -166231,7 +166231,7 @@
 	<sound key="magazine_in" fileref="mg_clip_in.wav"/>
 	<sound key="cycle" fileref="rifle_chamber.wav"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
-	<model mesh_filename="neosu_kuergants_cannon.mesh" texture_filename="neosu_kuergants_main.jpg"/>
+	<model mesh_filename="neosu_kuergants_cannon.mesh" texture_filename="neosu_kuergants_main.dds"/>
 	<hud_icon filename="commander_ye.png"/>
 	<commonness value="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
@@ -166282,7 +166282,7 @@
 	<sound key="magazine_in" fileref="mg_clip_in.wav"/>
 	<sound key="cycle" fileref="rifle_chamber.wav"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
-	<model mesh_filename="neosu_kuergants_cannon.mesh" texture_filename="neosu_kuergants_main.jpg"/>
+	<model mesh_filename="neosu_kuergants_cannon.mesh" texture_filename="neosu_kuergants_main.dds"/>
 	<hud_icon filename="commander_ye.png"/>
 	<commonness value="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
@@ -166333,7 +166333,7 @@
 	<sound key="magazine_in" fileref="mg_clip_in.wav"/>
 	<sound key="cycle" fileref="rifle_chamber.wav"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
-	<model mesh_filename="neosu_kuergants_cannon.mesh" texture_filename="neosu_kuergants_main.jpg"/>
+	<model mesh_filename="neosu_kuergants_cannon.mesh" texture_filename="neosu_kuergants_main.dds"/>
 	<hud_icon filename="commander_ye.png"/>
 	<commonness value="0.0"/>
 	<target_factors tag="" distance="1.0" direction="0.0" squad_command="1.0" base_score="0.5"/>
@@ -167364,7 +167364,7 @@
 	<sound key="magazine_in" fileref="mg_clip_in.wav"/>
 	<sound key="cycle" fileref="rifle_chamber.wav"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
-	<model mesh_filename="Sentry_Moth.mesh" texture_filename="Sentry_Moth_Base_color.jpg"/>
+	<model mesh_filename="Sentry_Moth.mesh" texture_filename="Sentry_Moth_Base_color.dds"/>
 	<hud_icon filename="gkw_v_LM5.png"/>
 	<commonness value="0.0"/>
 	<weak_hand_hold offset="0.0"/>
@@ -167629,7 +167629,7 @@
 	<sound key="cycle_out" fileref="sniper_cycle_out.wav"/>
 	<sound key="cycle_in" fileref="sniper_cycle_in.wav"/>
 	<sound class="impact" fileref="rifle_drop.wav"/>
-	<model mesh_filename="Sentry_Moth.mesh" texture_filename="Sentry_Moth_Base_color.jpg"/>
+	<model mesh_filename="Sentry_Moth.mesh" texture_filename="Sentry_Moth_Base_color.dds"/>
 	<ballistics near_far_distance="1000.0" speed_estimation_near="50.0" speed_estimation_far="50.0" max_speed="125.0" randomness="0.0"/>
 	<projectile class="grenade" name="rocket" slot="2" pulldown_in_air="0.5" radius="0.4">
 	<result class="blast" damage="6.0" radius="3.5" decal="1" push="0.75" character_state="death" faction_compare="not_equal" damage_origin_vehicle="0"/>
