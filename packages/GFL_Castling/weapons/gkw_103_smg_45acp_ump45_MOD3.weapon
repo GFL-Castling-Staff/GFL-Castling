@@ -3,21 +3,22 @@
   <tag name="smg" />
   <tag name="elite" />
   <specification 
-    can_shoot_running="1"
+        can_shoot_running="1"
 		accuracy_factor="1" 
 		barrel_offset="0.45" 
 		class="0"
-    slot="0"
+        slot="0"
 		magazine_size="25" 
-    carry_in_two_hands="1"
+        carry_in_two_hands="1"
 		name="UMP45(MOD3)" 
 		projectile_speed="100" 
 		retrigger_time="0.085" 
 		suppressed="1" 
-    burst_shots="1"
+        burst_shots="1"
+        spread_range="0.18"
 		sustained_fire_diminish_rate="3.6" 
 		sustained_fire_grow_step="0.4"
-    stab_enabled="1" />
+        stab_enabled="1" />
   <commonness value="0.00001" in_stock="0" can_respawn_with="1" />
   <inventory encumbrance="12.5" buy_price="145.0" sell_price="145.0"/>
   <capacity value="1" source="rank" source_value="0.0" />

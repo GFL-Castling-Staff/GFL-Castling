@@ -4,18 +4,19 @@
   <tag name="smg" />
   <tag name="elite" />
   <specification 
-    can_shoot_running="1"
+        can_shoot_running="1"
 		accuracy_factor="1" 
 		barrel_offset="0.45" 
-    class="0"
-    slot="0"
-    magazine_size="25" 
-    carry_in_two_hands="1"
-    name="UMP45(MOD3)-[Lonely Traveller of Eternity]" 
-    projectile_speed="100" 
-    retrigger_time="0.085" 
-    suppressed="1" 
-    burst_shots="1"
+        class="0"
+        slot="0"
+        magazine_size="25" 
+        carry_in_two_hands="1"
+        name="UMP45(MOD3)-[Lonely Traveller of Eternity]" 
+        projectile_speed="100" 
+        retrigger_time="0.085" 
+        suppressed="1" 
+        burst_shots="1"
+        spread_range="0.18"
 		sustained_fire_diminish_rate="3.6" 
 		sustained_fire_grow_step="0.4"
     stab_enabled="1" />
@@ -74,8 +75,8 @@
   <tag name="smg" />
   <specification 
     can_shoot_running="1"
-		accuracy_factor="1" 
-		barrel_offset="0.45" 
+    accuracy_factor="1" 
+    barrel_offset="0.45" 
     class="0"
     slot="0"
     magazine_size="25" 
@@ -85,8 +86,9 @@
     retrigger_time="0.085" 
     suppressed="1" 
     burst_shots="1"
-		sustained_fire_diminish_rate="3.6" 
-		sustained_fire_grow_step="0.4"
+    sustained_fire_diminish_rate="3.6" 
+    sustained_fire_grow_step="0.4"
+    spread_range="0.18"
     stab_enabled="1" />
   <commonness value="0" in_stock="0" can_respawn_with="1" />
   <next_in_chain key="gkw_ump45mod3_5405.weapon" share_ammo="1" />
