@@ -35,9 +35,9 @@
 	<modifier class="blast_damage" value="-2.0" />
 	<modifier class="blast_range" value="-1.0" />
 
-	<visual class="chassis" mesh_filename="apc_base.mesh" texture_filename="btr_albedo.jpg" />
+	<visual class="chassis" mesh_filename="apc_base.mesh" texture_filename="btr_albedo.dds" />
 	<visual class="chassis" key="broken" mesh_filename="apc_base.mesh" texture_filename="apc_1_broken.png" />
-	<visual class="tire" mesh_filename="apc_wheel.mesh" texture_filename="btr_albedo.jpg" />
+	<visual class="tire" mesh_filename="apc_wheel.mesh" texture_filename="btr_albedo.dds" />
 	<visual class="tire" key="broken" mesh_filename="apc_wheel.mesh" texture_filename="apc_1_broken.png" />
 	
 	<character_slot type="driver" position="0.7 0.3 1.0" rotation="0" exit_rotation="1.57" hiding="1" />      

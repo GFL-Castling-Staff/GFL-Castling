@@ -721,21 +721,21 @@ material explosion_smoke_05_bw : add_base_real
     technique{
     pass{
         texture_unit{
-            texture explosion_smoke_05_bw.png 	
+            texture explosion_smoke_05_bw.dds 	
 }}}}
 material TEX_boomachi_03 : alpha_blend_base_real
 {   
     technique{
     pass{
         texture_unit{
-            texture TEX_boomachi_03.png 	
+            texture TEX_boomachi_03.dds 	
 }}}}
 material Tex_0147_1 : alpha_blend_base_real
 {   
     technique{
     pass{
         texture_unit{
-            texture Tex_0147_1.png 	
+            texture Tex_0147_1.dds 	
 }}}}
 material Tex_Smoke17C_real : alpha_blend_base_real
 {   
@@ -743,12 +743,12 @@ material Tex_Smoke17C_real : alpha_blend_base_real
     pass{
 		scene_blend alpha_blend 
         texture_unit{
-            texture Tex_Smoke17C.png 	
+            texture Tex_Smoke17C.dds 	
 			scroll_anim 0 -0.2
 			tex_address_mode wrap
 		}
 		texture_unit{
-            texture Tex_Smoke17C.png 
+            texture Tex_Smoke17C.dds 
 			colour_op_ex modulate src_texture src_current
 			alpha_op_ex modulate src_texture src_current
 			scroll_anim 0.1 -0.1
@@ -757,7 +757,7 @@ material Tex_Smoke17C_real : alpha_blend_base_real
 			tex_border_colour 0 0 0 0
 		}
 		texture_unit{
-			texture Tex_Smoke09G.png
+			texture Tex_Smoke09G.dds
 			colour_op_ex source2 src_texture src_current
 			alpha_op_ex modulate src_texture src_current
 			tex_address_mode wrap
@@ -769,21 +769,21 @@ material Tex_Spark06A : alpha_blend_base_real
     technique{
     pass{
         texture_unit{
-            texture Tex_Spark06A.png 	
+            texture Tex_Spark06A.dds 	
 }}}}
 material Tex_Spark17A : alpha_blend_base_real
 {   
     technique{
     pass{
         texture_unit{
-            texture Tex_Spark17A.png 	
+            texture Tex_Spark17A.dds 	
 }}}}
 material Tex_Spark18A : alpha_blend_base_real
 {   
     technique{
     pass{
         texture_unit{
-            texture Tex_Spark17A.png 	
+            texture Tex_Spark17A.dds 	
 }}}}
 material Tex_Spark05A_pass : alpha_blend_base_real
 {   
@@ -791,7 +791,7 @@ material Tex_Spark05A_pass : alpha_blend_base_real
     pass{
 		depth_func always_pass
         texture_unit{
-            texture Tex_Spark05A.png 	
+            texture Tex_Spark05A.dds 	
 }}}}
 material Tex_Decal07F_Diffuse_3 : alpha_blend_base_real
 {   
@@ -799,14 +799,14 @@ material Tex_Decal07F_Diffuse_3 : alpha_blend_base_real
     pass{
 		depth_func less
         texture_unit{
-            texture Tex_Decal07F_Diffuse_3.png 	
+            texture Tex_Decal07F_Diffuse_3.dds 	
 }}}}
 material Tex_Diffusion01A_real : alpha_blend_base_real
 {   
     technique{
     pass{
         texture_unit{
-            texture Tex_Diffusion01A.png 	
+            texture Tex_Diffusion01A.dds 	
 }}}}
 material Tex_Glow16A_pass : alpha_blend_base_real
 {   
@@ -814,14 +814,14 @@ material Tex_Glow16A_pass : alpha_blend_base_real
     pass{
 		depth_func always_pass
         texture_unit{
-            texture Tex_Glow16A.png 	
+            texture Tex_Glow16A.dds 	
 }}}}
 material Tex_Smoke09C : alpha_blend_base_real
 {   
     technique{
     pass{
         texture_unit{
-            texture Tex_Smoke09C.png 	
+            texture Tex_Smoke09C.dds 	
 }}}}
 material wand_stone_06_pass : alpha_blend_base_real
 {   
@@ -836,12 +836,12 @@ material TEX_boomachi_02_real : alpha_blend_base_real
     technique{
     pass{
         texture_unit{
-            texture TEX_cloud_02.png 	
+            texture TEX_cloud_02.dds 	
 			scroll_anim 0 -1
 			tex_address_mode wrap
 		}
         texture_unit{
-            texture TEX_boomachi_02.png 	
+            texture TEX_boomachi_02.dds 	
 			colour_op_ex source2 src_texture src_current
 			alpha_op_ex modulate src_texture src_current
 
@@ -854,13 +854,13 @@ material Tex_Smoke09G_real : alpha_blend_base_real
     pass{
 		separate_scene_blend alpha_blend alpha_blend
         texture_unit{
-            texture Tex_Smoke09G.png 	
+            texture Tex_Smoke09G.dds 	
 			scroll_anim 0 0
 			rotate_anim 0.05
 			tex_address_mode wrap
 		}
 		texture_unit{
-            texture Tex_Smoke09G.png 
+            texture Tex_Smoke09G.dds 
 			colour_op_ex modulate src_texture src_current
 			alpha_op_ex modulate src_texture src_current
 			scroll_anim 0 -0.05
@@ -876,17 +876,17 @@ material Tex_FireSmoke_real_01 : add_base_real
     pass{
 		scene_blend colour_blend
         texture_unit{
-            texture Tex_Fire05F.png 	
+            texture Tex_Fire05F.dds 	
 			scroll_anim 0.1 -0.5
 			tex_address_mode wrap
 		}
         texture_unit{
-            texture Tex_Fire05E.png 	
+            texture Tex_Fire05E.dds 	
 			scroll_anim 0.05 -0.3
 			tex_address_mode wrap
 		}
 		texture_unit{
-			texture Tex_Smoke09A.png
+			texture Tex_Smoke09A.dds
 			colour_op modulate 
 			tex_address_mode wrap
 		}
@@ -898,17 +898,17 @@ material Tex_FireSmoke_real_02 : add_base_real
     pass{
 		scene_blend add
         texture_unit{
-            texture Tex_Fire05F.png 	
+            texture Tex_Fire05F.dds 	
 			scroll_anim 0.1 -0.5
 			tex_address_mode wrap
 		}
         texture_unit{
-            texture Tex_Fire05E.png 	
+            texture Tex_Fire05E.dds 	
 			scroll_anim 0.05 -0.3
 			tex_address_mode wrap
 		}
 		texture_unit{
-			texture Tex_Smoke09A.png
+			texture Tex_Smoke09A.dds
 			colour_op modulate 
 			tex_address_mode wrap
 		}

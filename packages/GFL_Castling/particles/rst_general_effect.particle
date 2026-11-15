@@ -2924,91 +2924,91 @@ material bow_flare : add_base
     technique{
     pass{
         texture_unit{
-            texture bow_flare.png 	
+            texture bow_flare.dds 	
 }}}}
 material flame_tex_bw_01 : add_base
 {   
     technique{
     pass{
         texture_unit{
-            texture flame_tex_bw_01.png 	
+            texture flame_tex_bw_01.dds 	
 }}}}
 material flame_tex_bw_02 : add_base
 {   
     technique{
     pass{
         texture_unit{
-            texture flame_tex_bw_02.png 	
+            texture flame_tex_bw_02.dds 	
 }}}}
 material flame_tex_bw_03 : add_base
 {   
     technique{
     pass{
         texture_unit{
-            texture flame_tex_bw_03.png 	
+            texture flame_tex_bw_03.dds 	
 }}}}
 material flame_tex_bw_04 : add_base
 {   
     technique{
     pass{
         texture_unit{
-            texture flame_tex_bw_04.png 	
+            texture flame_tex_bw_04.dds 	
 }}}}
 material flame_tex_bw_05 : add_base
 {   
     technique{
     pass{
         texture_unit{
-            texture flame_tex_bw_05.png 	
+            texture flame_tex_bw_05.dds 	
 }}}}
 material flame_tex_bw_06 : add_base
 {   
     technique{
     pass{
         texture_unit{
-            texture flame_tex_bw_06.png 	
+            texture flame_tex_bw_06.dds 	
 }}}}
 material flame_tex_01 : alpha_blend_base
 {   
     technique{
     pass{
         texture_unit{
-            texture flame_tex_01.png 	
+            texture flame_tex_01.dds 	
 }}}}
 material flame_tex_02 : alpha_blend_base
 {   
     technique{
     pass{
         texture_unit{
-            texture flame_tex_02.png 	
+            texture flame_tex_02.dds 	
 }}}}
 material flame_tex_03 : alpha_blend_base
 {   
     technique{
     pass{
         texture_unit{
-            texture flame_tex_03.png 	
+            texture flame_tex_03.dds 	
 }}}}
 material flame_tex_04 : alpha_blend_base
 {   
     technique{
     pass{
         texture_unit{
-            texture flame_tex_04.png 	
+            texture flame_tex_04.dds 	
 }}}}
 material flame_tex_05 : alpha_blend_base
 {   
     technique{
     pass{
         texture_unit{
-            texture flame_tex_05.png 	
+            texture flame_tex_05.dds 	
 }}}}
 material flame_tex_06 : alpha_blend_base
 {   
     technique{
     pass{
         texture_unit{
-            texture flame_tex_06.png 	
+            texture flame_tex_06.dds 	
 }}}}
 material add_smoke_1 : add_base
 {   
@@ -3029,14 +3029,14 @@ material rx1_smoke : alpha_blend_base
     technique{
     pass{
         texture_unit{
-            texture rx1_smoke.png 	
+            texture rx1_smoke.dds 	
 }}}}
 material lens_circle_07 : add_base
 {   
     technique{
     pass{
         texture_unit{
-            texture lens_circle_07.png 	
+            texture lens_circle_07.dds 	
 }}}}
 material lens_circle_08 : add_base
 {   
@@ -3064,21 +3064,21 @@ material qiliu_circle : add_base
     technique{
     pass{
         texture_unit{
-            texture qiliu_circle.png 	
+            texture qiliu_circle.dds 	
 }}}}
 material general_muzzle_01 : add_base
 {   
     technique{
     pass{
         texture_unit{
-            texture general_muzzle_01.png 	
+            texture general_muzzle_01.dds 	
 }}}}
 material general_muzzle_02 : alpha_blend_base
 {   
     technique{
     pass{
         texture_unit{
-            texture general_muzzle_02.png 	
+            texture general_muzzle_02.dds 	
 }}}}
 material muzzle_smoke_1 : alpha_blend_base
 {   
@@ -3114,7 +3114,7 @@ material firestreak1_pass : add_base
     pass{
 		depth_func always_pass
         texture_unit{
-            texture firestreak1.png 	
+            texture firestreak1.dds 	
 }}}}
 material muzzle_side_smoke_pass : alpha_blend_base
 {   
@@ -3122,7 +3122,7 @@ material muzzle_side_smoke_pass : alpha_blend_base
     pass{
 		depth_func always_pass
         texture_unit{
-            texture muzzle_side_smoke.png 	
+            texture muzzle_side_smoke.dds 	
 }}}}
 material ct_thick_smoke : alpha_blend_base
 {   
@@ -3130,7 +3130,7 @@ material ct_thick_smoke : alpha_blend_base
     pass{
 		depth_func always_pass
         texture_unit{
-            texture ct_thick_smoke.png 	
+            texture ct_thick_smoke.dds 	
 }}}}
 material ct_ground_smoke : alpha_blend_base
 {   
@@ -3145,7 +3145,7 @@ material disaster_smoke : alpha_blend_base
     technique{
     pass{
         texture_unit{
-            texture disaster_smoke.png 	
+            texture disaster_smoke.dds 	
 }}}}
 material hud_shield : alpha_blend_base
 {   

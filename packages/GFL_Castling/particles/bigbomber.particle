@@ -462,7 +462,7 @@ material pump_flare_03_01_pass : add_base
     pass{
         depth_func always_pass
         texture_unit{
-            texture pump_flare_03_01.png 	
+            texture pump_flare_03_01.dds 	
 		}
 	}
 }}
@@ -472,7 +472,7 @@ material Tex_0147_1_SMS : alpha_blend_base
     pass{
         depth_func always_pass
         texture_unit{
-            texture Tex_0147_1.png 	
+            texture Tex_0147_1.dds 	
 		}
 	}
 }}

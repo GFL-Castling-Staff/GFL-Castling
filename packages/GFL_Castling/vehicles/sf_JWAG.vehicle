@@ -38,16 +38,16 @@ minimum_fill_requirement="1.0">
 	<modifier class="blast_range" value="-1.0" />
 
 	<turret offset="0 2.1 -1" weapon_key="sfw_vehicle_jwag.weapon" weapon_offset="0 0.1 -0.8"  weapon_recoil="2.0" physics_recoil="0.8" max_rotation_step="0.0002" rotation_range="2.12" />
-	<visual offset="0 0 0" class="turret" turret_index="0" mesh_filename="assultgun_turret.mesh" texture_filename="assultgun_turret.jpg" />
+	<visual offset="0 0 0" class="turret" turret_index="0" mesh_filename="assultgun_turret.mesh" texture_filename="assultgun_turret.dds" />
 
 	<character_slot type="driver" position="0.8 0.6 0.4" rotation="0" exit_rotation="1.57" hiding="1" animation_id="36" />
 	<character_slot type="gunner" position="-0.8 0.6 0.4" rotation="0" exit_rotation="-1.57" hiding="1" animation_key="tank mg still" marker_offset="0 1.2 0">
 		<turret index="0" />
 	</character_slot>
 
-	<visual class="chassis" mesh_filename="assultgun_body.mesh" texture_filename="assultgun_body.jpg" />
+	<visual class="chassis" mesh_filename="assultgun_body.mesh" texture_filename="assultgun_body.dds" />
 	<visual class="chassis" key="broken" mesh_filename="assultgun_body.mesh" texture_filename="apc_1_broken.png" />
-	<visual class="tire" mesh_filename="assultgun_wheel_l.mesh" texture_filename="assultgun_wheel.jpg" />
+	<visual class="tire" mesh_filename="assultgun_wheel_l.mesh" texture_filename="assultgun_wheel.dds" />
 	<visual class="tire" key="broken" mesh_filename="assultgun_wheel_l.mesh" texture_filename="apc_1_broken.png" />
 
 	<!-- sound handling -->

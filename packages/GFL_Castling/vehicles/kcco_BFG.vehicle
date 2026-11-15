@@ -11,10 +11,10 @@
     <turret offset="0.0 0.0 0.0" weapon_key="kccow_vehicle_BFG.weapon" weapon_offset="0.0 0.0 0.0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.00016" rotation_range="1.05" />
     <modifier class="blast_damage" value="-3.0" />
 
-    <visual class="chassis" mesh_filename="bfg_base.mesh" texture_filename="BFG_Texture.png" offset="0.0 -0.8 0.0" max_tilt="-0.05" />
-    <visual class="chassis" key="broken" mesh_filename="bfg_base.mesh" texture_filename="BFG_Texture.png" />
-    <visual class="turret" turret_index="0" mesh_filename="bfg_turret.mesh" texture_filename="BFG_Texture.png" />
-    <visual class="turret" key="broken" mesh_filename="bfg_turret.mesh" texture_filename="BFG_Texture.png" />
+    <visual class="chassis" mesh_filename="bfg_base.mesh" texture_filename="BFG_Texture.dds" offset="0.0 -0.8 0.0" max_tilt="-0.05" />
+    <visual class="chassis" key="broken" mesh_filename="bfg_base.mesh" texture_filename="BFG_Texture.dds" />
+    <visual class="turret" turret_index="0" mesh_filename="bfg_turret.mesh" texture_filename="BFG_Texture.dds" />
+    <visual class="turret" key="broken" mesh_filename="bfg_turret.mesh" texture_filename="BFG_Texture.dds" />
     <character_slot type="gunner" position="-1.5 0.7 0" rotation="0" exit_rotation="-1.57" hiding="1" animation_id="37">
         <turret index="0" />
         <turret index="1" />

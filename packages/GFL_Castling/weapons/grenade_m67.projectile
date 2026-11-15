@@ -5,7 +5,7 @@
     <result class="blast" radius="12.0" damage="8.0" push="0.75" decal="1" character_state="death" faction_compare="not_equal" />
     <trigger class="time" time_to_live="2.0"/>
     <rotation class="random" />
-    <model mesh_filename="grenade_m67.mesh" texture_filename="grenade_m67.png" />
+    <model mesh_filename="grenade_m67.mesh" texture_filename="grenade_m67.dds" />
     <hud_icon filename="hud_grenade.png" />
 
     <commonness value="0.8" />
@@ -50,7 +50,7 @@
         <collider class="character" enabled="1" faction_compare="not_equal"/>
     </trigger>
     <rotation class="random" />
-    <model mesh_filename="grenade_m67.mesh" texture_filename="grenade_m67.png" />
+    <model mesh_filename="grenade_m67.mesh" texture_filename="grenade_m67.dds" />
     <hud_icon filename="88r.png" />
 
     <commonness value="0.8" />
@@ -95,7 +95,7 @@
         <collider class="character" enabled="1" faction_compare="not_equal"/>
     </trigger>
     <rotation class="random" />
-    <model mesh_filename="grenade_m67.mesh" texture_filename="grenade_m67.png" />
+    <model mesh_filename="grenade_m67.mesh" texture_filename="grenade_m67.dds" />
     <hud_icon filename="88r.png" />
 
     <commonness value="0.8" />

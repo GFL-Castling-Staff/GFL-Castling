@@ -632,14 +632,14 @@ material lens_light_explosive_pass : add_base
     pass{
         depth_func always_pass
         texture_unit{
-            texture lens_light_explosive.png 	
+            texture lens_light_explosive.dds 	
 }}}}
 material splash_anim_a_3 : add_base
 {   
     technique{
     pass{
         texture_unit{
-            texture splash_anim_a_3.png 	
+            texture splash_anim_a_3.dds 	
 }}}}
 material pa15_side_shockwave_pass : add_base
 {   
@@ -647,7 +647,7 @@ material pa15_side_shockwave_pass : add_base
     pass{
         depth_func always_pass
         texture_unit{
-            texture pa15_side_shockwave.png 	
+            texture pa15_side_shockwave.dds 	
 }}}}
 material bao_7_7_bw : add_base
 {   
@@ -661,7 +661,7 @@ material bao_7_6 : add_base
     technique{
     pass{
         texture_unit{
-            texture bao_7_6.png 	
+            texture bao_7_6.dds 	
 }}}}
 material pa15_stop : add_base
 {   
@@ -675,5 +675,5 @@ material hammer_projectile : alpha_blend_base
     technique{
     pass{
         texture_unit{
-            texture hammer_projectile.png 	
+            texture hammer_projectile.dds 	
 }}}}

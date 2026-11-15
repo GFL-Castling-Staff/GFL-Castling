@@ -35,5 +35,5 @@
 		<result class="spawn" instance_class="visual_item" instance_key="burning_piece_jeep2.visual_item" min_amount="2" max_amount="4" offset="0 1.0 0" position_spread="1.5 1.5" direction_spread="0.05 0.2" />
 	</event>
 	
-    <visual class="chassis" mesh_filename="werlod_shelter.mesh" texture_filename="werlod_shelter_Texture.png" />
+    <visual class="chassis" mesh_filename="werlod_shelter.mesh" texture_filename="werlod_shelter_Texture.dds" />
 </vehicle>

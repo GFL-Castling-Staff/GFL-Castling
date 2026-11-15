@@ -305,7 +305,7 @@ material Shadow_smokeIntegrated2 : ShadowIntegrated2 {
 		pass Basic {	
 			texture_unit Basic {
 			    tex_address_mode clamp
-                texture Tex_Smoke09C.png
+                texture Tex_Smoke09C.dds
                 filtering trilinear
                 //scale 1 1
 			}
@@ -331,6 +331,6 @@ material Tex_Smoke09C_smoke : alpha_blend_base
     pass{
         depth_func less
         texture_unit{
-            texture Tex_Smoke09C.png 	
+            texture Tex_Smoke09C.dds 	
 }}}}
 

@@ -569,12 +569,12 @@ material high_transparent_point : alpha_blend_base
     technique{
     pass{
         texture_unit{
-            texture R_point_02.png 	
+            texture R_point_02.dds 	
 }}}}
 material R_point_01 : alpha_blend_base
 {   
     technique{
     pass{
         texture_unit{
-            texture R_point_01.png 	
+            texture R_point_01.dds 	
 }}}}

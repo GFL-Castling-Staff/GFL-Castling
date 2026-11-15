@@ -24,9 +24,9 @@ name='T-14 Armata' key="t14_gk.vehicle" respawn_time="-1.0" time_to_live_unsteer
 
 	<visual class="chassis" mesh_filename="" />
 
-0	<visual class="turret" turret_index="0" mesh_filename="t14_body.mesh" texture_filename="t14.png" />
-1	<visual class="turret" turret_index="1" mesh_filename="t14_turret.mesh" texture_filename="t14.png" />
-2	<visual class="turret" turret_index="2" mesh_filename="t14_top_mg.mesh" texture_filename="t14.png" />
+0	<visual class="turret" turret_index="0" mesh_filename="t14_body.mesh" texture_filename="t14.dds" />
+1	<visual class="turret" turret_index="1" mesh_filename="t14_turret.mesh" texture_filename="t14.dds" />
+2	<visual class="turret" turret_index="2" mesh_filename="t14_top_mg.mesh" texture_filename="t14.dds" />
 
 	<visual class="chassis" key="broken" mesh_filename="" />
 
@@ -38,14 +38,14 @@ name='T-14 Armata' key="t14_gk.vehicle" respawn_time="-1.0" time_to_live_unsteer
 
 	<visual class="track" mesh_filename="t14_track.mesh" offset="-1.4 0.6 0.1" >
 		<part texture_filename="is2_m1895_track.jpg" texture_animation="translate" factor="-1" tire_binding="0" />
-		<part texture_filename="is2_m1895_wheel.jpg" texture_animation="rotate" tire_binding="0" />
-		<part texture_filename="is2_m1895_main.jpg" />
+		<part texture_filename="is2_m1895_wheel.dds" texture_animation="rotate" tire_binding="0" />
+		<part texture_filename="is2_m1895_main.dds" />
 	</visual>
 
 	<visual class="track" mesh_filename="t14_track.mesh" offset="1.4 0.6 0.1" >
 		<part texture_filename="is2_m1895_track.jpg" texture_animation="translate" factor="-1" tire_binding="1" />
-		<part texture_filename="is2_m1895_wheel.jpg" texture_animation="rotate" tire_binding="1" />
-		<part texture_filename="is2_m1895_main.jpg" />
+		<part texture_filename="is2_m1895_wheel.dds" texture_animation="rotate" tire_binding="1" />
+		<part texture_filename="is2_m1895_main.dds" />
 	</visual>
 
 	<character_slot type="driver" enter_position="-1.8 0.2 2" seat_position="-1.0 0.1 2" rotation="0" exit_rotation="-1.57" hiding="1" animation_id="36" />

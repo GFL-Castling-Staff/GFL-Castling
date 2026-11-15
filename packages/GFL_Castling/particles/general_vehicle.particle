@@ -232,7 +232,7 @@ material tire_smoke_2 : alpha_blend_base
     technique{
     pass{
         texture_unit{
-            texture rx1_smoke.png 	
+            texture rx1_smoke.dds 	
 }}}}
 
 material tire_smoke_3 : alpha_blend_base

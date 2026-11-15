@@ -12,8 +12,8 @@
 	
     <modifier class="blast_range" value="+1.5" />
 
-	<visual class="chassis" mesh_filename="Sentry_Tower.mesh" texture_filename="Sentry_Tower_Texture.jpg"/>
-	<visual class="chassis" key="broken" mesh_filename="Sentry_Tower.mesh" texture_filename="Sentry_Tower_Texture_broken.jpg" />
+	<visual class="chassis" mesh_filename="Sentry_Tower.mesh" texture_filename="Sentry_Tower_Texture.dds"/>
+	<visual class="chassis" key="broken" mesh_filename="Sentry_Tower.mesh" texture_filename="Sentry_Tower_Texture_broken.dds" />
 
     <rev_sound filename="tank_rev0.wav" low_pitch="0.4" high_pitch="0.5" low_rev="0.0" high_rev="1.0" volume="0.9" />
     <rev_sound filename="tank_rev0_b.wav" low_pitch="0.6" high_pitch="0.7" low_rev="0.0" high_rev="1.0" volume="0.6" />

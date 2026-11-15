@@ -22,20 +22,20 @@
 	<turret offset="0.66 2.2 -1.15" weapon_key="vehicle_is2_dt.weapon" weapon_offset="0 0 0" weapon_recoil="0.0" physics_recoil="0.0" max_rotation_step="0.002" parent_turret_index="0" rotation_range="1.8" rotation="3.14" />
 
 	
-	<visual class="chassis" mesh_filename="is2_m1895_chassis.mesh" texture_filename="is2_m1895_main.jpg" />
-	<visual class="turret" offset="0 0 -0.85" turret_index="0" mesh_filename="is2_m1895_turret.mesh" texture_filename="is2_m1895_main.jpg" />
-	<visual class="turret" turret_index="2" mesh_filename="is2_m1895_dshk.mesh" texture_filename="is2_m1895_main.jpg" />
+	<visual class="chassis" mesh_filename="is2_m1895_chassis.mesh" texture_filename="is2_m1895_main.dds" />
+	<visual class="turret" offset="0 0 -0.85" turret_index="0" mesh_filename="is2_m1895_turret.mesh" texture_filename="is2_m1895_main.dds" />
+	<visual class="turret" turret_index="2" mesh_filename="is2_m1895_dshk.mesh" texture_filename="is2_m1895_main.dds" />
 
 	<visual class="track" mesh_filename="is2_m1895_track.mesh" offset="-1.57 0.6 -0.74" >
 		<part texture_filename="is2_m1895_track.jpg" texture_animation="translate" factor="-1" tire_binding="0" />
-		<part texture_filename="is2_m1895_wheel.jpg" texture_animation="rotate" tire_binding="0" />
-		<part texture_filename="is2_m1895_main.jpg" />
+		<part texture_filename="is2_m1895_wheel.dds" texture_animation="rotate" tire_binding="0" />
+		<part texture_filename="is2_m1895_main.dds" />
 	</visual>
 
 	<visual class="track" mesh_filename="is2_m1895_track.mesh" offset="1.57 0.6 -0.74" >
 		<part texture_filename="is2_m1895_track.jpg" texture_animation="translate" factor="-1" tire_binding="1" />
-		<part texture_filename="is2_m1895_wheel.jpg" texture_animation="rotate" tire_binding="1" />
-		<part texture_filename="is2_m1895_main.jpg" />
+		<part texture_filename="is2_m1895_wheel.dds" texture_animation="rotate" tire_binding="1" />
+		<part texture_filename="is2_m1895_main.dds" />
 	</visual>
 
 	<character_slot type="driver" enter_position="-1.8 0.2 2" seat_position="-1.0 0.1 2" rotation="0" exit_rotation="-1.57" hiding="1" animation_id="36" />

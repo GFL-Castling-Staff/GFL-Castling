@@ -59,7 +59,7 @@
     <!-- <sound key="cycle" fileref="rifle_chamber.wav" /> -->
     <!-- <sound class="impact" fileref="rifle_drop.wav" /> -->
     <!-- <model filename="" /> -->
-	<model mesh_filename="Amos_drone.mesh" texture_filename="AMOS_drone.png" />
+	<model mesh_filename="Amos_drone.mesh" texture_filename="AMOS_drone.dds" />
     <hud_icon filename="testing.png" />
     <commonness value="0.0" />
     <weak_hand_hold offset="0.4" />
@@ -89,7 +89,7 @@
     <!-- <sound key="cycle" fileref="rifle_chamber.wav" /> -->
     <!-- <sound class="impact" fileref="rifle_drop.wav" /> -->
     <!-- <model filename="" /> -->
-	<model mesh_filename="Amos_drone.mesh" texture_filename="AMOS_drone.png" />
+	<model mesh_filename="Amos_drone.mesh" texture_filename="AMOS_drone.dds" />
     <hud_icon filename="testing.png" />
     <sound key="fire" fileref="MG34_fire_FromCOD16.wav" pitch_variety="0.05" volume="0.5" />
     <commonness value="0.0" />

@@ -69,9 +69,9 @@
     <turret offset="0 0 0" weapon_key="kcco_ags30_vehicle_1" weapon_offset="1.2 2.6 0.3" weapon_recoil="0.0" physics_recoil="0" max_rotation_step="0.0005" rotation_range="1.4" rotation="0.6"/>
     <turret offset="0 0 0" weapon_key="kcco_ags30_vehicle_1" weapon_offset="-1.2 2.6 0.3" weapon_recoil="0.0" physics_recoil="0" max_rotation_step="0.0005" rotation_range="1.4" rotation="-0.6"/>
 
-    <visual class="chassis" mesh_filename="neosu_kuergants_main_edited.mesh" texture_filename="neosu_kuergants_main.jpg" offset="0 0.6 0"/>
+    <visual class="chassis" mesh_filename="neosu_kuergants_main_edited.mesh" texture_filename="neosu_kuergants_main.dds" offset="0 0.6 0"/>
     <visual class="chassis" key="broken" mesh_filename="neosu_kuergants_main_edited.mesh" texture_filename="tank_2_broken.png" offset="0 0.6 0"/>
-    <visual class="turret" turret_index="0" mesh_filename="neosu_kuergants_turret.mesh" texture_filename="neosu_kuergants_main.jpg" offset="0 -0.72 -0.55"/> 
+    <visual class="turret" turret_index="0" mesh_filename="neosu_kuergants_turret.mesh" texture_filename="neosu_kuergants_main.dds" offset="0 -0.72 -0.55"/> 
     <visual class="turret" key="broken" turret_index="0" mesh_filename="neosu_kuergants_turret.mesh" texture_filename="tank_2_broken.png" offset="0 -0.72 -0.55"/> 
     <!-- <visual class="turret" turret_index="1" mesh_filename="moth_dir.mesh" texture_filename="none.png" offset="0 -4.64 -1.24"/>
     <visual class="turret" turret_index="2" mesh_filename="moth_dir.mesh" texture_filename="none.png" offset="0 -4.64 -1.24"/>
@@ -83,14 +83,14 @@
 	<effect event_key="slide_hard" type="particle" key="terrain" surface_tag="road" ref="ct_vehicle_tire_smoke_3" use_surface_color="1" />
 
     <visual class="track" mesh_filename="neosu_kuergants_track.mesh" offset="1.333 -0.903 -0.129">
-        <part texture_filename="neosu_kuergants_track.jpg" texture_animation="translate" tire_binding="0" />                
-        <part texture_filename="neosu_kuergants_main.jpg" />
-        <part texture_filename="neosu_kuergants_wheel.jpg" texture_animation="rotate" tire_binding="0" />
+        <part texture_filename="neosu_kuergants_track.dds" texture_animation="translate" tire_binding="0" />                
+        <part texture_filename="neosu_kuergants_main.dds" />
+        <part texture_filename="neosu_kuergants_wheel.dds" texture_animation="rotate" tire_binding="0" />
     </visual>
     <visual class="track" mesh_filename="neosu_kuergants_track.mesh" offset="-1.333 -0.903 -0.129">
-        <part texture_filename="neosu_kuergants_track.jpg" texture_animation="translate" tire_binding="1" />
-        <part texture_filename="neosu_kuergants_main.jpg" />        
-        <part texture_filename="neosu_kuergants_wheel.jpg" texture_animation="rotate" tire_binding="1" />
+        <part texture_filename="neosu_kuergants_track.dds" texture_animation="translate" tire_binding="1" />
+        <part texture_filename="neosu_kuergants_main.dds" />        
+        <part texture_filename="neosu_kuergants_wheel.dds" texture_animation="rotate" tire_binding="1" />
     </visual>
 
     <!-- broken -->
