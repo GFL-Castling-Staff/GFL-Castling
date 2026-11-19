@@ -2980,7 +2980,7 @@ class CommandSkill : Tracker {
                         CreateProjectile_H(m_metagame,c_pos.add(v2),stringToVector3(target),"88typeGUNDAM_rocket.projectile",characterId,factionid,150.0,15.0);
 
                     }
-                    addCooldown("88typeGUNDAM",40,characterId,modifer);
+                    addCooldown("88typeGUNDAM",30,characterId,modifer);
                 }
             }
         }
